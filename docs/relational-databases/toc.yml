@@ -1,186 +1,169 @@
 items:
-- name: Información general
-  href: database-features.md
+- name: Base de datos relacional
   items:
-  - name: Documentación para desarrolladores de motor de base de datos
-    href: database-engine-developer-documentation.md
-- name: Guías de SQL Server
-  href: sql-server-guides.md
+  - name: Información general
+    href: database-features.md
+- name: Conceptos
   items:
-  - name: Guía de solución de problemas y supervisión de grupos de disponibilidad AlwaysOn
-    href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
-  - name: Arquitectura y diseño de los índices
-    href: sql-server-index-design-guide.md
-  - name: Arquitectura de administración de memoria
-    href: memory-management-architecture-guide.md
+  - name: Copia de seguridad y restauración +
+    href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
+  - name: Diseño de la base de datos
     items:
-    - name: Leer páginas
-      href: reading-pages.md
-    - name: Escribir páginas
-      href: writing-pages.md
-  - name: Arquitectura de páginas y extensiones
-    href: pages-and-extents-architecture-guide.md
-  - name: Optimización y validación posterior a la migración
-    href: post-migration-validation-and-optimization-guide.md
-  - name: Rendimiento
-    href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-  - name: Arquitectura de procesamiento de consultas
-    href: query-processing-architecture-guide.md
-  - name: Arquitectura de subprocesos y tareas
-    href: thread-and-task-architecture-guide.md
-  - name: Guía de arquitectura y administración de registros de transacciones
-    href: sql-server-transaction-log-architecture-and-management-guide.md
-  - name: Guía de versiones de fila y bloqueo de transacciones
-    href: sql-server-transaction-locking-and-row-versioning-guide.md
-  - name: Proceso de limpieza de registros fantasma
-    href: ghost-record-cleanup-process-guide.md
-- name: Copias de seguridad y restauración
-  href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-- name: Blob
-  href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
-- name: Intercalaciones
-  href: ../relational-databases/collations/collation-and-unicode-support.md
-- name: Administrador de configuración
-  href: sql-server-configuration-manager.md
-- name: Cursores
-  href: cursors.md
-- name: datos, recopilación
-  href: ../relational-databases/data-collection/data-collection.md
-- name: Compresión de datos
-  href: ../relational-databases/data-compression/data-compression.md
-- name: Aplicaciones de capa de datos
-  href: ../relational-databases/data-tier-applications/data-tier-applications.md
-- name: Correo electrónico de base de datos
-  href: ../relational-databases/database-mail/database-mail.md
-- name: Bases de datos
-  href: ../relational-databases/databases/databases.md
-- name: Desarrollar clientes
-  items:
-  - name: integración CLR
-    href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
-  - name: Programación de procedimientos almacenados extendidos
-    href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
-  - name: Referencia de procedimientos almacenados extendidos
-    href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
-  - name: Referencia de SQL Server Express LocalDB
-    href: sql-server-express-localdb-reference.md
-  - name: Mensajes de error de Express LocalDB
-    href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
-  - name: API de instancia de Express LocalDB
-    href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
-  - name: Native Client
-    href: ../relational-databases/native-client/sql-server-native-client-programming.md
-  - name: Objetos de administración de SQL Server (SMO)
-    href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-  - name: SQLXML
-    href: ../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
-  - name: Proveedor WMI (Instrumental de administración de Windows)
+    - name: Secuencia de archivos, Tabla de archivos y Blob +
+      href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
+    - name: Intercalaciones +
+      href: ../relational-databases/collations/collation-and-unicode-support.md
+    - name: Bases de datos +
+      href: ../relational-databases/databases/databases.md
+    - name: Gráficos +
+      href: ../relational-databases/graphs/sql-graph-overview.md
+    - name: Datos jerárquicos
+      href: hierarchical-data-sql-server.md
+    - name: Índices +
+      href: ../relational-databases/indexes/indexes.md
+    - name: Números de secuencia +
+      href: ../relational-databases/sequence-numbers/sequence-numbers.md
+    - name: Datos espaciales +
+      href: ../relational-databases/spatial/spatial-data-sql-server.md
+    - name: Procedimientos almacenados +
+      href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+    - name: Tablas +
+      href: ../relational-databases/tables/tables.md
+    - name: Seguimiento de cambios +
+      href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - name: Desencadenadores +
+      href: ../relational-databases/triggers/logon-triggers.md
+    - name: Funciones definidas por el usuario +
+      href: ../relational-databases/user-defined-functions/user-defined-functions.md
+    - name: Vistas +
+      href: ../relational-databases/views/views.md
+    - name: Datos XML +
+      href: ../relational-databases/xml/xml-data-sql-server.md
+  - name: Movimiento de datos
     items:
-    - name: Configuración del proveedor WMI
-      href: ../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md
-    - name: Clases de configuración del proveedor WMI
-      href: ../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
-    - name: Eventos de servidor del proveedor WMI
-      href: wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
-    - name: Error de proveedor WMI 0x8007052f
-      href: wmi-provider-error-0x8007052f.md
-  - name: SqlToolsVSNativeHelpers
-    href: sqltoolsvsnativehelpers.md
-  - name: SqlToolsVSNativeHelpers - FrameWindowVisible
-    href: sqltoolsvsnativehelpers-framewindowvisible.md
-- name: Errores y eventos
-  href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
-- name: Clases de evento
-  href: ../relational-databases/event-classes/sql-server-event-class-reference.md
-- name: Eventos extendidos
-  href: ../relational-databases/extended-events/extended-events.md
-- name: Gráficos
-  href: ../relational-databases/graphs/sql-graph-overview.md
-- name: Datos jerárquicos
-  href: hierarchical-data-sql-server.md
-- name: Importación y exportación
-  href: ../relational-databases/import-export/overview-import-export.md
-- name: OLTP en memoria
-  href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-- name: Índices
-  href: ../relational-databases/indexes/indexes.md
-- name: JSON
-  href: ../relational-databases/json/json-data-sql-server.md
-- name: Servidores vinculados
-  href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-- name: Planes de mantenimiento
-  href: ../relational-databases/maintenance-plans/maintenance-plans.md
-- name: Administración
-  href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
-  items:
-  - name: Administración del ciclo de vida de base de datos
-    href: database-lifecycle-management.md
-  - name: Administrar varios servidores mediante Servidores de administración central
-    href: administer-multiple-servers-using-central-management-servers.md
-- name: Combinaciones
-  href: ../relational-databases/performance/joins.md
-- name: Particiones
-  href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
-- name: Administración basada en directivas
-  href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
-- name: PolyBase
-  href: ../relational-databases/polybase/polybase-guide.md
-- name: REPLICATION
-  href: ../relational-databases/replication/sql-server-replication.md
-- name: regulador de recursos
-  href: ../relational-databases/resource-governor/resource-governor.md
-- name: Scripting
-  href: ../relational-databases/scripting/database-engine-scripting.md
-- name: Buscar
-  href: ../relational-databases/search/full-text-search.md
-- name: Seguridad
-  href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Números de secuencia
-  href: ../relational-databases/sequence-numbers/sequence-numbers.md
-- name: Service Broker
-  href: ../relational-databases/service-broker/event-notifications.md
-- name: Operadores de plan de presentación
-  href: showplan-logical-and-physical-operators-reference.md
-- name: Espacial
-  href: ../relational-databases/spatial/spatial-data-sql-server.md
-- name: Seguimiento de SQL
-  href: ../relational-databases/sql-trace/sql-trace.md
-- name: Estadísticas
-  href: ../relational-databases/statistics/statistics.md
-- name: Procedimientos almacenados
-  href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
-- name: Subconsultas
-  href: ../relational-databases/performance/subqueries.md
-- name: Sinónimos
-  href: ../relational-databases/synonyms/synonyms-database-engine.md
-- name: Vistas de catálogo del sistema.
-  href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
-- name: Vistas de compatibilidad del sistema
-  href: ../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md
-- name: Vistas de administración dinámica del sistema
-  href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-- name: Funciones del sistema
-  href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
-- name: Vistas de esquema de información del sistema
-  href: ../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
-- name: Procedimientos almacenados del sistema
-  href: ../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
-- name: Tablas del sistema
-  href: ../relational-databases/system-tables/system-tables-transact-sql.md
-- name: Vistas del sistema
-  href: ../relational-databases/system-views/replication-views-transact-sql.md
-- name: Tablas
-  href: ../relational-databases/tables/tables.md
-- name: Seguimiento de cambios
-  href: ../relational-databases/track-changes/track-data-changes-sql-server.md
-- name: Desencadenadores
-  href: ../relational-databases/triggers/logon-triggers.md
-- name: Funciones definidas por el usuario
-  href: ../relational-databases/user-defined-functions/user-defined-functions.md
-- name: Vistas
-  href: ../relational-databases/views/views.md
-- name: xml
-  href: ../relational-databases/xml/xml-data-sql-server.md
+    - name: Replicación +
+      href: ../relational-databases/replication/sql-server-replication.md
+    - name: Importación y exportación +
+      href: ../relational-databases/import-export/overview-import-export.md
+  - name: Desarrollo
+    items:
+    - name: Aplicaciones de capa de datos +
+      href: ../relational-databases/data-tier-applications/data-tier-applications.md
+    - name: Service Broker +
+      href: ../relational-databases/service-broker/event-notifications.md
+    - name: Desarrollar clientes
+      items:
+      - name: Integración con CLR +
+        href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
+      - name: Programación de procedimientos almacenados extendidos +
+        href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
+      - name: Referencia de procedimientos almacenados extendidos +
+        href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+      - name: Mensajes de error de Express LocalDB +
+        href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
+      - name: API de instancia de Express LocalDB +
+        href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
+      - name: JSON +
+        href: ../relational-databases/json/json-data-sql-server.md
+      - name: Cliente nativo +
+        href: ../relational-databases/native-client/sql-server-native-client-programming.md
+      - name: Objetos de administración de SQL Server (SMO) +
+        href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+      - name: SQLXML +
+        href: ../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
+      - name: Proveedor WMI (Instrumental de administración de Windows)
+      - name: Configuración del proveedor WMI +
+        href: ../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md
+      - name: Clases de configuración del proveedor WMI
+        href: ../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
+      - name: Eventos de servidor del proveedor WMI +
+        href: ../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+  - name: Elementos internos y arquitectura
+    href: sql-server-guides.md
+    items:
+    - name: Proceso de limpieza de registros fantasma
+      href: ghost-record-cleanup-process-guide.md
+    - name: Arquitectura y diseño de los índices
+      href: sql-server-index-design-guide.md
+    - name: Arquitectura de administración de memoria
+      href: memory-management-architecture-guide.md
+      items:
+      - name: Leer páginas
+        href: reading-pages.md
+      - name: Escribir páginas
+        href: writing-pages.md
+    - name: Arquitectura de páginas y extensiones
+      href: pages-and-extents-architecture-guide.md
+    - name: Optimización y validación posterior a la migración
+      href: post-migration-validation-and-optimization-guide.md
+    - name: Arquitectura de procesamiento de consultas
+      href: query-processing-architecture-guide.md
+    - name: Arquitectura de subprocesos y tareas
+      href: thread-and-task-architecture-guide.md
+    - name: Guía de arquitectura y administración de registros de transacciones
+      href: sql-server-transaction-log-architecture-and-management-guide.md
+    - name: Guía de versiones de fila y bloqueo de transacciones
+      href: sql-server-transaction-locking-and-row-versioning-guide.md
+  - name: Administración, supervisión y optimización
+    items:
+    - name: Administración
+      items:
+      - name: Administrar varios servidores mediante Servidores de administración central
+        href: administer-multiple-servers-using-central-management-servers.md
+      - name: Administrador de configuración
+        href: sql-server-configuration-manager.md
+      - name: Administración del ciclo de vida de base de datos
+        href: database-lifecycle-management.md
+      - name: Correo electrónico de base de datos +
+        href: ../relational-databases/database-mail/database-mail.md
+      - name: Compresión de datos +
+        href: ../relational-databases/data-compression/data-compression.md
+      - name: Planes de mantenimiento +
+        href: ../relational-databases/maintenance-plans/maintenance-plans.md
+      - name: Administración basada en directivas +
+        href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+    - name: Monitor
+      items:
+      - name: Recopilación de datos +
+        href: ../relational-databases/data-collection/data-collection.md
+      - name: Eventos extendidos +
+        href: ../relational-databases/extended-events/extended-events.md
+      - name: Seguimiento de SQL +
+        href: ../relational-databases/sql-trace/sql-trace.md
+    - name: Optimización
+      items:
+      - name: OLTP en memoria +
+        href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+      - name: Índices +
+        href: ../relational-databases/indexes/indexes.md
+      - name: Particiones +
+        href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+      - name: Resource Governor +
+        href: ../relational-databases/resource-governor/resource-governor.md
+      - name: Operadores de plan de presentación
+        href: showplan-logical-and-physical-operators-reference.md
+      - name: Estadísticas +
+        href: ../relational-databases/statistics/statistics.md
+      - name: Rendimiento +
+        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+  - name: PolyBase +
+    href: ../relational-databases/polybase/polybase-guide.md
+  - name: Datos de consultas
+    items:
+    - name: Cursores
+      href: cursors.md
+    - name: Servidores vinculados +
+      href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+    - name: Scripting +
+      href: ../relational-databases/scripting/database-engine-scripting.md
+    - name: Búsqueda de texto completo +
+      href: ../relational-databases/search/full-text-search.md
+    - name: Subconsultas +
+      href: ../relational-databases/performance/subqueries.md
+    - name: Sinónimos +
+      href: ../relational-databases/synonyms/synonyms-database-engine.md
+  - name: Seguridad +
+    href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: Tutoriales
   href: database-engine-tutorials.md
   items:
@@ -199,28 +182,31 @@ items:
     href: tutorial-ownership-chains-and-context-switching.md
   - name: Usar el servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016
     href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
-    items:
-    - name: 'Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure'
-      href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
-    - name: 'Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido'
-      href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
-    - name: 'Lesson 3: Database backup to URL (Lección 3: Copia de seguridad de base de datos en la dirección URL)'
-      href: lesson-3-database-backup-to-url.md
-    - name: 'Lección 4: Restaurar la base de datos a la máquina virtual desde la dirección URL'
-      href: lesson-4-restore-database-to-virtual-machine-from-url.md
-    - name: 'Lesson 5: Backup database using file-snapshot backup (Lección 5: Realizar una copia de seguridad de la base de datos mediante la copia de seguridad de instantáneas de archivos)'
-      href: lesson-5-backup-database-using-file-snapshot-backup.md
-    - name: 'Lección 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos'
-      href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md
-    - name: 'Lección 7: Restaurar una base de datos a un momento dado'
-      href: lesson-7-restore-a-database-to-a-point-in-time.md
-    - name: 'Lección 8: Restaurar como una base de datos nueva desde una copia de seguridad de registros'
-      href: lesson-8-restore-as-new-database-from-log-backup.md
-    - name: 'Lección 9: Administrar conjuntos de copia de seguridad y copias de seguridad de instantáneas de archivos'
-      href: lesson-9-manage-backup-sets-and-file-snapshot-backups.md
-ms.openlocfilehash: 7aa665b7a768684ca75efb045a1d7951afe1c3c9
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+- name: Referencia
+  items:
+  - name: Errores y eventos +
+    href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
+  - name: Clases de eventos +
+    href: ../relational-databases/event-classes/sql-server-event-class-reference.md
+  - name: Vistas de catálogo del sistema +
+    href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
+  - name: Vistas de compatibilidad del sistema +
+    href: ../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md
+  - name: Vistas de administración dinámica del sistema +
+    href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+  - name: Funciones del sistema +
+    href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
+  - name: Vistas de esquema de información del sistema +
+    href: ../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
+  - name: Procedimientos almacenados del sistema +
+    href: ../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
+  - name: Tablas del sistema +
+    href: ../relational-databases/system-tables/system-tables-transact-sql.md
+  - name: Vistas del sistema +
+    href: ../relational-databases/system-views/replication-views-transact-sql.md
+ms.openlocfilehash: acbbc26643f176a668c2259f27b77f28fb2a7e4a
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534037"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877968"

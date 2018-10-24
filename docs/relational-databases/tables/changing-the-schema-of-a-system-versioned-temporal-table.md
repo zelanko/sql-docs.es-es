@@ -5,22 +5,19 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c8aa3a14937c0855b3cd91ba35dd4868af075f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 765e480e8fa01daf99036c2526ee9b5dc0dccfe2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679483"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Cambiar el esquema de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ ALTER TABLE dbo.Department
   
 -   Durante una operación **ALTER TABLE** , el sistema mantiene un bloqueo de esquema en ambas tablas.  
   
--   El cambio de esquema especificado se propaga a la tabla de historial de manera adecuada (según el tipo de cambio)  
+-   El cambio de esquema especificado se propaga a la tabla de historial de manera adecuada (según el tipo de cambio).  
   
 -   Si agrega una columna que no admite valores NULL o modifica una columna existente para que no admita valores NULL, debe especificar el valor predeterminado de las filas existentes. El sistema generará un valor predeterminadas adicional con el mismo valor y lo aplicará a la tabla de historial. Agregar **DEFAULT** a una tabla no vacía es una operación de tamaño de datos en todas las ediciones excepto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (donde es una operación de metadatos).  
   

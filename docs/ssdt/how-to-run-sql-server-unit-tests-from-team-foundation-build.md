@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797363"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Cómo: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
 Puede usar Team Foundation Build para ejecutar las pruebas unitarias de SQL Server como parte de una prueba de comprobación de la compilación (BVT). Puede configurar las pruebas unitarias para implementar la base de datos, generar datos de prueba y ejecutar las pruebas seleccionadas. Si no está familiarizado con Team Foundation Build, debe revisar la siguiente información antes de seguir los procedimientos de este tema:  
@@ -118,7 +115,7 @@ De forma predeterminada, Team Foundation Build crea un archivo de configuración
   
 3.  Haga clic con el botón derecho en el archivo denominado **Copia de app.config** y haga clic en Cambiar nombre.  
   
-4.  Escriba *BuildComputer***.sqlunitttest.config** y presione ENTRAR, donde *BuildComputer* es el nombre del equipo en el que se ejecuta el agente de compilación.  
+4.  Escriba _BuildComputer_**.sqlunitttest.config** y presione ENTRAR, donde *BuildComputer* es el nombre del equipo en el que se ejecuta el agente de compilación.  
   
 5.  Haga doble clic en *BuildComputer*.sqlunitttest.config.  
   
@@ -277,7 +274,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
 1.  En Team Explorer, expanda el nodo de proyecto de equipo, expanda el nodo Compilaciones, haga clic con el botón secundario en la definición de compilación que desea ejecutar y, a continuación, haga clic en Poner nueva compilación en cola.  
   
-    Se abrirá el cuadro de diálogo **Compilación en cola {***TeamProjectName***}** con una lista de todos los tipos de compilación existentes.  
+    Se abrirá el cuadro de diálogo **Poner en cola compilación {**_NombreDelProyectoDeEquipo_**}** con una lista de todos los tipos de compilación existentes.  
   
 2.  Si fuera necesario, en **Definición de compilación**, haga clic en la nueva definición de compilación.  
   

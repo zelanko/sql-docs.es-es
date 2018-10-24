@@ -13,12 +13,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcf5d6989b7485ddd993b39d3f9f0f35c1f357ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a06d6b029a4d64f52d9d939e3935fed32d7b37b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654433"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120332"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar un intervalo de datos modificados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la primera tarea consiste en calcular los extremos del intervalo de cambios. Estos extremos son valores **datetime** y se almacenarán en variables de paquete para su uso posterior en el paquete.  
@@ -101,7 +101,7 @@ ms.locfileid: "47654433"
 3.  En la página **Conjunto de resultados** del **Editor de la tarea Ejecutar SQL**, asigne el resultado de ExtractStartTime a la variable de paquete ExtractStartTime y el resultado de ExtractEndTime a la variable de paquete ExtractEndTime.  
   
     > [!NOTE]  
-    >  Al usar una expresión para establecer el valor de una variable de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , dicha expresión se evalúa cada vez que se accede al valor de la variable.  
+    >  Al usar una expresión para establecer el valor de una variable de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], dicha expresión se evalúa cada vez que se accede al valor de la variable.  
   
 ## <a name="next-step"></a>Paso siguiente  
  Una vez calculados los puntos inicial y final de un intervalo de cambios, el paso siguiente consiste en determinar si están listos los datos modificados.  

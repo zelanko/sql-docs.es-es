@@ -3,21 +3,19 @@ title: Complemento de privacidad de SQL Server | Microsoft Docs
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40c6bfb24ea3e711ca6b14509921d5599b316ebf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975292"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878118"
 ---
 # <a name="sql-server-privacy-supplement"></a>Complemento de privacidad de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +25,7 @@ En este artículo se resume el comportamiento de diferentes objetos de datos usa
 - Base de datos SQL de Azure
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Database Migration Assistant
 - Asistente para migración de SQL Server
 - Extensión MS-SQL
@@ -130,6 +128,7 @@ La información siguiente se considera metadatos del sistema cuando no incluye c
 - Datos de configuración del servidor, por ejemplo, las opciones de sp_configure
 - Datos de configuración de características
 - Nombres de eventos y códigos de error
+- Configuración de hardware e identificación, por ejemplo, Fabricante OEM
 
 Microsoft examina los valores de nombre de aplicación definidos por otros programas que usan SQL Server (por ejemplo, SharePoint o programas empaquetados de terceros) e incluye esta información en los metadatos de sistemas enviados a Microsoft cuando los datos de uso están habilitados. Los clientes no deben incluir datos personales, como información de identificación del usuario final, en campos de metadatos de sistemas ni crear aplicaciones diseñadas para almacenar datos personales en dichos campos. 
 

@@ -1,21 +1,79 @@
+items:
 - name: Información general
-  href: polybase-guide.md
-- name: Introducción
-  href: get-started-with-polybase.md
-- name: Resumen de características
-  href: polybase-versioned-feature-summary.md
-- name: Grupos de escalado horizontal
-  href: polybase-scale-out-groups.md
-- name: Installation
-  href: polybase-installation.md
-- name: Configuración
-  href: polybase-configuration.md
-- name: Objetos de T-SQL
-  href: polybase-t-sql-objects.md
-- name: Consultas
-  href: polybase-queries.md
-- name: Solucionar problemas
-  href: polybase-troubleshooting.md
   items:
-    - name: Solución de problemas de conectividad de Kerberos con PolyBase
+  - name: ¿Qué es PolyBase?
+    href: polybase-guide.md
+- name: Conceptos
+  items:
+  - name: Escenarios de consulta
+    href: polybase-queries.md
+  - name: Cálculo de inserción
+    href: polybase-pushdown-computation.md
+  - name: Grupos de escalado horizontal
+    href: polybase-scale-out-groups.md
+  - name: Asignación de tipos
+    href: polybase-type-mapping.md
+- name: Guías de procedimientos
+  items:
+  - name: Install
+    items:
+    - name: Instalar en Windows
+      href: polybase-installation.md
+    - name: Características y limitaciones
+      href: polybase-versioned-feature-summary.md
+  - name: Configuración de orígenes de datos externos
+    items:
+    - name: Hadoop
+      items:
+      - name: Conectarse a Hadoop
+        href: polybase-configure-hadoop.md
+      - name: Parámetros de configuración
+        href: polybase-configuration.md
+    - name: Azure Blob Storage
+      href: polybase-configure-azure-blob-storage.md
+    - name: SQL Server
+      href: polybase-configure-sql-server.md
+    - name: Oracle
+      href: polybase-configure-oracle.md
+    - name: Teradata
+      href: polybase-configure-teradata.md
+    - name: MongoDB
+      href: polybase-configure-mongodb.md
+  - name: Grupos de escalado horizontal
+    items:
+    - name: Configuración de un grupo de escalado horizontal
+      href: configure-scale-out-groups-windows.md
+  - name: Asistente para la virtualización de datos
+    items:
+    - name: Asistente para la virtualización de datos
+      href: data-virtualization.md
+  - name: Solucionar problemas
+    items:
+    - name: Supervisión y solución de problemas
+      href: polybase-troubleshooting.md
+    - name: Conectividad de Kerberos
       href: polybase-troubleshoot-connectivity.md
+- name: Referencia
+  items:
+  - name: Referencia de Transact-SQL
+    href: polybase-t-sql-objects.md
+- name: Recursos
+  items:
+  - name: SQL Server, documentación
+    href: /sql/sql-server/sql-server-technical-documentation?view=sql-server-linux-2017
+  - name: Cambio de la pila DBA
+    href: https://dba.stackexchange.com/questions/tagged/sql-server
+  - name: Stack Overflow
+    href: http://stackoverflow.com/questions/tagged/sql-server
+  - name: Foros de MSDN
+    href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+  - name: Enviar comentarios
+    href: https://feedback.azure.com/forums/908035-sql-server
+  - name: Reddit
+    href: https://www.reddit.com/r/SQLServer
+ms.openlocfilehash: fce4843898ceda44353610afc960e9b55dbcb0f8
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264855"

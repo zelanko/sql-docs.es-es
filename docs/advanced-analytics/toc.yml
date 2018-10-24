@@ -58,10 +58,16 @@ items:
       href: tutorials/rtsql-working-with-inputs-and-outputs.md
     - name: Control de tipos de datos y objetos
       href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+    - name: Uso de funciones de R
+      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
     - name: Crear un modelo predictivo
       href: tutorials/rtsql-create-a-predictive-model-r.md
     - name: Predecir y trazar a partir del modelo
       href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: Python
+    items:
+    - name: Encapsulamiento de Python en un procedimiento almacenado
+      href: tutorials/wrap-python-in-tsql-stored-procedure.md
 - name: Tutoriales
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -139,8 +145,6 @@ items:
     - name: Ejecutar Python mediante T-SQL
       href: tutorials/run-python-using-t-sql.md
       items:
-      - name: Encapsulamiento de Python en un procedimiento almacenado
-        href: tutorials/wrap-python-in-tsql-stored-procedure.md
       - name: Entrenamiento y puntuación de un modelo de Python en SQL Server
         href: tutorials/train-score-using-python-in-tsql.md
       - name: Creación de un modelo usando revoscalepy en un contexto de proceso de SQL Server
@@ -172,37 +176,37 @@ items:
     href: concepts/extension-r.md
   - name: Extensión de Python
     href: concepts/extension-python.md
+  - name: Seguridad
+    href: concepts/security.md
 - name: Guías de procedimientos
   href: r/sql-server-machine-learning-tasks.md
   items:
   - name: Administración de paquetes
     items:
-    - name: Administración de paquetes
+    - name: Paquetes predeterminados
+      href: r/installing-and-managing-r-packages.md
+    - name: Obtención de información del paquete
+      href: r/determine-which-packages-are-installed-on-sql-server.md
+    - name: Instalación de paquetes de Python adicionales
+      href: python/install-additional-python-packages-on-sql-server.md
+    - name: Instalación de paquetes de R adicionales
+      href: r/install-additional-r-packages-on-sql-server.md
       items:
-      - name: Paquetes predeterminados
-        href: r/installing-and-managing-r-packages.md
-      - name: Obtención de información del paquete
-        href: r/determine-which-packages-are-installed-on-sql-server.md
-      - name: Instalación de paquetes de Python adicionales
-        href: python/install-additional-python-packages-on-sql-server.md
-      - name: Instalación de paquetes de R adicionales
-        href: r/install-additional-r-packages-on-sql-server.md
+      - name: Uso de administradores de paquetes de R
+        href: r/use-r-package-managers-on-sql-server.md
+      - name: Uso de T-SQL
+        href: r/install-r-packages-tsql.md
+      - name: Uso de RevoScaleR
+        href: r/use-revoscaler-to-manage-r-packages.md
         items:
-        - name: Uso de administradores de paquetes de R
-          href: r/use-r-package-managers-on-sql-server.md
-        - name: Uso de T-SQL
-          href: r/install-r-packages-tsql.md
-        - name: Uso de RevoScaleR
-          href: r/use-revoscaler-to-manage-r-packages.md
-          items:
-          - name: Habilitación de la administración de paquetes de R remota
-            href: r/r-package-how-to-enable-or-disable.md
-          - name: Sincronización de paquetes de R
-            href: r/package-install-uninstall-and-sync.md
-        - name: Creación de un repositorio de miniCRAN
-          href: r/create-a-local-package-repository-using-minicran.md
-        - name: Sugerencias para usar paquetes de R
-          href: r/packages-installed-in-user-libraries.md
+        - name: Habilitación de la administración de paquetes de R remota
+          href: r/r-package-how-to-enable-or-disable.md
+        - name: Sincronización de paquetes de R
+          href: r/package-install-uninstall-and-sync.md
+      - name: Creación de un repositorio de miniCRAN
+        href: r/create-a-local-package-repository-using-minicran.md
+      - name: Sugerencias para usar paquetes de R
+        href: r/packages-installed-in-user-libraries.md
   - name: Modelado y exploración de datos
     items:
     - name: Bibliotecas de R y tipos de datos
@@ -243,44 +247,34 @@ items:
       href: r/using-r-code-profiling-functions.md
   - name: Seguridad
     items:
-    - name: Consideraciones relativas a la seguridad
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: Seguridad para R
-      href: r/security-overview-sql-server-r.md
-    - name: Seguridad para Python
-      href: python/security-overview-sql-server-python-services.md
-    - name: Cuenta de SQL Server Launchpad
-      href: general/sql-server-launchpad-service-account.md
-    - name: Modificar SQLRUserGroup
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: Concesión de permiso a los usuarios
+      href: security/user-permission.md
+    - name: Configuración de Launchpad
+      href: security/sql-server-launchpad-service-account.md
+    - name: Configuración del firewall
+      href: security/firewall-configuration.md
     - name: Agregar SQLRUserGroup como usuario de base de datos
-      href: r/add-sqlrusergroup-to-database.md
+      href: security/add-sqlrusergroup-to-database.md
   - name: Administración
     items:
-    - name: Configurar y administrar R
-      href: r/configuration-sql-server-r-services.md
-    - name: Opciones de configuración avanzada de Machine Learning Services
-      href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: Implementar y usar modelos mediante servicios web
-      href: operationalization-with-mrsdeploy.md
-    - name: Administración y supervisión de soluciones
+    - name: Administración de la integración
       href: r/managing-and-monitoring-r-solutions.md
-    - name: Regulación de recursos para Machine Learning Services
-      href: r/resource-governance-for-r-services.md
-    - name: Creación de grupos de recursos para el aprendizaje automático
-      href: r/how-to-create-a-resource-pool-for-r.md
-    - name: Eventos extendidos de Machine Learning Services
-      href: r/extended-events-for-sql-server-r-services.md
-    - name: Eventos extendidos para la supervisión de instrucciones PREDICT
-      href: xe-event-predict-tsql.md
-    - name: DMV de Machine Learning Services
-      href: r/dmvs-for-sql-server-r-services.md
-    - name: DMV para Python
-      href: python/dmvs-for-python.md
-    - name: Uso de funciones de generación de perfiles de código de R
-      href: r/using-r-code-profiling-functions.md
-    - name: Supervisar Machine Learning Services con informes personalizados en Management Studio
+    - name: Supervisión con informes SSMS
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+    - name: Escalado de la ejecución de scripts
+      href: administration/modify-user-account-pool.md
+    - name: Uso de regulación de recursos
+      href: administration/resource-governance.md
+    - name: Creación de un grupo de recursos
+      href: administration/how-to-create-a-resource-pool.md
+    - name: Eventos extendidos
+      href: r/extended-events-for-sql-server-r-services.md
+    - name: Eventos extendidos de PREDICT T-SQL
+      href: xe-event-predict-tsql.md
+    - name: Vistas de administración de datos (DMV)
+      href: r/dmvs-for-sql-server-r-services.md
+    - name: Funciones de generación de perfiles de código de R
+      href: r/using-r-code-profiling-functions.md
 - name: Referencia
   href: r/machine-learning-services-r-reference.md
   items:
@@ -332,9 +326,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: a260cd92015fbbf8864f24ee1091fff86e892a00
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 263f18263288b78c183f4fc7e0dd129b192105dd
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713707"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169238"

@@ -5,9 +5,7 @@ ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84bfd4050ba971d74532f9a8b8adc6abbfae57c5
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699363"
 ---
 # <a name="join-a-role"></a>combinar un rol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +79,9 @@ ms.locfileid: "43118137"
   
 4.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo *Propiedades del rol de servidor –***nombre_del_rol_de_servidor*, en la página **Miembros**, haga clic en **Agregar**.  
+5.  En el cuadro de diálogo **Propiedades del rol de servidor –**_nombre\_rol\_servidor_, en la página **Miembros**, haga clic en **Agregar**.  
   
-6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de servidor –***nombre_del_rol_de_servidor*.  
+6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de servidor –**_nombre\_rol\_servidor_.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -104,9 +101,9 @@ ms.locfileid: "43118137"
   
 7.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-8.  En el cuadro de diálogo *Propiedades del rol de base de datos –***nombre_del_rol_de_la_base_de_datos*, en la página **General**, haga clic en **Agregar**.  
+8.  En el cuadro de diálogo **Propiedades del rol de base de datos –**_nombre\_rol\_base de datos_, en la página **General**, haga clic en **Agregar**.  
   
-9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de base de datos –***nombre_del_rol_de_la_base_de_datos*.  
+9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de base de datos –**_nombre\_rol\_base de datos_.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

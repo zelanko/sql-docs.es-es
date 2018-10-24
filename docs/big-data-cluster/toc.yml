@@ -1,0 +1,83 @@
+items:
+- name: Información general
+  items:
+  - name: ¿Qué es el clúster de macrodatos de SQL Server?
+    href: big-data-cluster-overview.md
+  - name: Notas de la versión
+    href: big-data-cluster-release-notes.md
+- name: Tutoriales rápidos
+  items:
+  - name: Implementar el clúster de macrodatos de SQL Server
+    href: quickstart-big-data-cluster-deploy.md
+- name: Conceptos
+  items:
+  - name: Controlador
+    href: concept-controller.md
+  - name: Instancia principal
+    href: concept-master-instance.md
+  - name: Grupo de datos
+    href: concept-data-pool.md
+  - name: Grupo de almacenamiento
+    href: concept-storage-pool.md
+  - name: Grupo de proceso
+    href: concept-compute-pool.md
+  - name: Persistencia de datos
+    href: concept-data-persistence.md
+  - name: Seguridad
+    href: concept-security.md
+- name: Guías de procedimiento
+  items:
+  - name: Install
+    items:
+    - name: Guía para la implementación
+      href: deployment-guidance.md
+    - name: Implementar en Minikube
+      href: deploy-on-minikube.md
+    - name: Implementar en AKS
+      href: deploy-on-aks.md
+    - name: Conectar con Azure Data Studio
+      href: deploy-big-data-tools.md
+  - name: Virtualización de datos
+    items:
+    - name: Virtualizar datos externos
+      href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: Ingesta de datos
+    items:
+    - name: Cargar datos con curl
+      href: data-ingestion-curl.md
+    - name: Restaurar una base de datos
+      href: data-ingestion-restore-databse.md
+  - name: Macrodatos/Machine Learning
+    items:
+    - name: Limpieza y transformación de datos mediante el acelerador de código PROSE
+      href: use-prose-for-big-data-automation.md
+  - name: Administrar el clúster de macrodatos de SQL Server
+    items:
+    - name: Portal de administración de clústeres
+      href: cluster-admin-portal.md
+  - name: PC de bolsillo
+    items:
+    - name: Información general de PC de bolsillo
+      href: notebooks-guidance.md
+    - name: Administrar los PC de bolsillo existentes
+      href: notebooks-how-to-manage.md
+  - name: Trabajos de Spark
+    items:
+    - name: Enviar trabajos de Spark
+      href: spark-submit-job.md
+    - name: Usar el servidor de historial de Spark extendido
+      href: spark-history-server.md
+- name: Recursos
+  items:
+  - name: Versión preliminar de SQL Server 2019
+    href: ../sql-server/what-s-new-in-sql-server-ver15.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: Documentación de PolyBase
+    href: ../relational-databases/polybase/polybase-guide.md
+  - name: Solicitar acceso a clústeres de macrodatos
+    href: https://aka.ms/eapsignup
+ms.openlocfilehash: c8a685c849acf82b9fdfa078093528e9c0972964
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085312"

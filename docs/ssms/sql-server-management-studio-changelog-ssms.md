@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9d845f04220b01e7ca4223d419cbb91369887f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700323"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307149"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -167,7 +167,7 @@ Opciones de SSMS:
 
 Editor de SSMS:
 
-- Se ha corregido un problema en el que "Tabla del sistema de SQL" al restaurar los colores predeterminados cambiaba el color a verde lima, y no a verde predeterminado, lo que lo hacía muy difícil de leer sobre un fondo blanco (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).
+- Se ha corregido un problema en el que "Tabla del sistema de SQL", al restaurar los colores predeterminados. cambiaba el color a verde lima, y no a verde predeterminado, lo que resultaba muy difícil de leer sobre un fondo blanco (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).
 - Se ha corregido un problema por el que IntelliSense no funcionaba cuando se estaba conectado a Azure SQL Data Warehouse con autenticación de AAD.
 - Se ha corregido IntelliSense en Azure cuando el usuario carece de acceso maestro.
 - Se han corregido fragmentos de código para crear "tablas temporales" que se interrumpieron cuando la intercalación de la base de datos de destino distinguía mayúsculas y minúsculas.

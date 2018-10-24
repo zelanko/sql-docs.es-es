@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864393"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Recomendaciones y trucos adicionales al usar SSMS
 En este tutorial se le ofrecen algunos trucos adicionales al usar SQL Server Management Studio (SSMS). En este artículo aprenderá a: 
@@ -83,12 +82,19 @@ Se puede usar el botón **Comentario** de la barra de herramientas para agregar 
 7. Resáltelo todo excepto el comando **Alter Database** y, después, seleccione el botón **Comentario**:
 
     ![Agregar un comentario a todo](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > El método abreviado de teclado para comentar el texto es **CTRL + K, CTRL + C**. 
 
 8. Resalte la sección **Alter Database** del texto y, después, seleccione el botón **Quitar la marca de comentario** para quitar las marcas de comentario del texto:
 
     ![Quitar la marca de comentario del texto](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > El método abreviado de teclado para eliminar comentarios del texto es **CTRL + K, CTRL + U**. 
+    
 9. Seleccione **Ejecutar** para ejecutar la sección del texto a la que se ha quitado la marca de comentario. 
+
 
 ## <a name="indent-your-text"></a>Aplicar sangría al texto
 Puede usar los botones de sangría de la barra de herramientas para aumentar o reducir la sangría del texto. 

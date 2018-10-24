@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625523"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120012"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47625523"
     > [!NOTE]  
     >  Si la instancia de **SQL Server** es la instancia predeterminada, escriba el nombre del equipo que hospede la instancia de **SQL Server**. Si **SQL Server** es una instancia con nombre, escriba el nombre del equipo y el de la instancia, por ejemplo, **Accounting\SQLExpress**.  
   
-3.  En el área **Tipo de servidor** , seleccione **SQL Server** para indicar que el servidor vinculado es otra instancia de **SQL Server**.  
+3.  En el área **Tipo de servidor**, seleccione **SQL Server** para indicar que el servidor vinculado es otra instancia de **SQL Server**.  
   
 4.  En la página **Seguridad** , especifique el contexto de seguridad que se usará cuando la versión original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecte con el servidor vinculado. En un entorno de dominio donde los usuarios se conectan mediante sus inicios de sesión, la selección de **Se establecerán usando el contexto de seguridad actual del inicio de sesión** suele ser la mejor opción. Cuando los usuarios se conecten a la versión original de **SQL Server** usando un inicio de sesión de **SQL Server** , la mejor opción suele ser seleccionar **Se establecerán usando este contexto de seguridad**y, a continuación, proporcionar las credenciales necesarias para la autenticación en el servidor vinculado.  
   

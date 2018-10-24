@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c402cbbf3dca4a34b8e60b9b5482dc63051b63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842884"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119943"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
   Los responsables de administrar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden usar la información de este tema para conocer los límites de tamaño de los informes cuando se publican en un servidor de informes, cuando se representan en tiempo de ejecución y cuando se guardan en el sistema de archivos. En este tema también se incluyen directrices prácticas para medir el tamaño de una base de datos del servidor de informes y se describe cómo afecta el tamaño de las instantáneas al rendimiento del servidor.  
@@ -43,7 +43,7 @@ ms.locfileid: "47842884"
   
 -   PDF, Excel, TIFF, XML y CSV procesan el informe completo en memoria antes de mostrarlo al usuario.  
   
- Para medir el tamaño de un informe representado se puede ver el registro de la ejecución de informes. Para más información, vea [Registro de ejecución del servidor de informes y la vista ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Para medir el tamaño de un informe representado se puede ver el registro de la ejecución de informes. Para obtener más información, vea [Registro de ejecución del servidor de informes y la vista ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  Para calcular el tamaño de un informe representado en el disco, se puede exportar el informe y, después, guardarlo en el sistema de archivos (el archivo guardado incluye los datos y la información de formato del informe).  
   
@@ -80,6 +80,6 @@ EXEC sp_spaceused
 ## <a name="see-also"></a>Ver también  
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Procesamiento de informes grandes](../../reporting-services/report-server/process-large-reports.md)  
+ [Procesar informes grandes](../../reporting-services/report-server/process-large-reports.md)  
   
   

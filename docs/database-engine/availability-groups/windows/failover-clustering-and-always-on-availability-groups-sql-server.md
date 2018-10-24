@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864313"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)
 
@@ -37,13 +34,6 @@ ms.locfileid: "40405995"
 > [!NOTE]  
 >  Para obtener información sobre los conceptos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- **En este tema:**  
-  
--   [Clústeres de conmutación por error de Windows Server](#WSFC)  
-  
--   [Clústeres de conmutación por error de SQL Server](#SQLServerFC)  
-  
--   [Restricciones en el uso del Administrador de clústeres de conmutación por error de WSFC con grupos de disponibilidad](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Grupos de disponibilidad y clústeres de conmutación por error de Windows Server  
  La implementación de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requiere un clúster de WSFC (clústeres de conmutación por error de Windows Server). Para que una instancia de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se habilite para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe residir en un nodo de WSFC y el clúster y el nodo de WSFC deben estar en línea. Además, cada réplica de disponibilidad de un determinado grupo de disponibilidad debe residir en otro nodo del mismo clúster de WSFC. La única excepción es que mientras se migra a otro clúster de WSFC, un grupo de disponibilidad puede ocupar temporalmente dos clústeres.  
@@ -114,7 +104,10 @@ ms.locfileid: "40405995"
   
 -   No cambie las propiedades de los grupos de disponibilidad, como los propietarios posibles y los propietarios preferidos. El grupo de disponibilidad establece automáticamente estas propiedades.  
   
--   No use el Administrador de clústeres de conmutación por error para mover los grupos de disponibilidad a otros nodos o para conmutar los grupos de disponibilidad. El Administrador de clústeres de conmutación por error no conoce el estado de sincronización de las réplicas de disponibilidad y hacer esto puede conducir a un tiempo de inactividad extendido. Debe usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+-   **No use el Administrador de clústeres de conmutación por error para mover los grupos de disponibilidad a otros nodos o para conmutar los grupos de disponibilidad.** El Administrador de clústeres de conmutación por error no conoce el estado de sincronización de las réplicas de disponibilidad y hacer esto puede conducir a un tiempo de inactividad extendido. Debe usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+
+  >[!WARNING]
+  > Si usa el Administrador de clústeres de conmutación por error para mover una *instancia de clúster de conmutación por error* que hospeda un grupo de disponibilidad a un nodo que *ya* hospeda una réplica del mismo grupo de disponibilidad, podría provocar la pérdida de la réplica del grupo de disponibilidad, impidiendo que se ponga en línea en el nodo de destino. Un único nodo de un clúster de conmutación por error no puede hospedar más de una réplica para el mismo grupo de disponibilidad. Para más información sobre cómo se produce esto y cómo recuperar, eche un vistazo a la entrada de blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Réplica dejada inesperadamente en grupo de disponibilidad). 
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   

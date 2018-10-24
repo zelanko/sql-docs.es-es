@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c84391103acc56a4602bb91d960557f190cb52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845013"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Crear consultas de inserción de resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,11 +78,11 @@ Cuando se crea una consulta de inserción de resultados, el panel Criterios var�
     > [!NOTE]  
     > El Diseñador de consultas y vistas no puede determinar con antelación las tablas y vistas que se pueden actualizar. Por tanto, en la lista **Nombre de la tabla** del cuadro de diálogo **Elegir tabla de destino para Insertar resultados** , se muestran todas las tablas y vistas disponibles en la conexión de datos que está consultando, incluso aquellas en las que no se pueden copiar filas.  
   
-4.  En el rectángulo que representa la tabla o el objeto con valores de tabla, elija los nombres de las columnas cuyo contenido desea copiar. Para copiar filas enteras, elija **\&#42; (Todas las columnas)**.  
+4.  En el rectángulo que representa la tabla o el objeto con valores de tabla, elija los nombres de las columnas cuyo contenido desea copiar. Para copiar filas enteras, elija **&#42; (Todas las columnas)**.  
   
     El Diseñador de consultas y vistas agrega las columnas elegidas a la columna **Columna** del panel Criterios.  
   
-5.  En la columna **Anexar** del panel Criterios, seleccione una columna de la tabla de destino para cada columna que vaya a copiar. Elija *tablename.\&#42;* si va a copiar filas enteras. Las columnas de la tabla de destino deben tener el mismo tipo de datos que las columnas de la tabla de origen o un tipo de datos compatible.  
+5.  En la columna **Anexar** del panel Criterios, seleccione una columna de la tabla de destino para cada columna que vaya a copiar. Elija *tablename.#42;* si va a copiar filas enteras. Las columnas de la tabla de destino deben tener el mismo tipo de datos que las columnas de la tabla de origen o un tipo de datos compatible.  
   
 6.  Si desea copiar las filas en un orden determinado, especifique un criterio de ordenación. Para detalles, consulte [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

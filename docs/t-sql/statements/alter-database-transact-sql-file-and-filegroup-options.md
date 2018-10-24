@@ -1,13 +1,11 @@
 ---
 title: Opciones File y Filegroup de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -41,17 +39,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44090005"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252152"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opciones File y Filegroup de ALTER DATABASE (Transact-SQL) 
 
@@ -69,6 +66,8 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 > |||
 > |-|-|-|
 > |**_\* SQL Server \*_**<br />&nbsp;|[Instancia administrada de <br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 
@@ -190,7 +189,7 @@ Especifica un nombre lógico nuevo para el archivo.
 *new_logical_file_name*  
 Es el nombre que reemplaza el nombre del archivo lógico existente. El nombre debe ser único en la base de datos y debe cumplir las mismas reglas que los [identificadores](../../relational-databases/databases/database-identifiers.md). El nombre puede ser una constante Unicode o de caracteres, un identificador regular o un identificador delimitado.  
   
-FILENAME { **'***os_file_name***'** | **'***filestream_path***'** | **'***memory_optimized_data_path***'**}  
+FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**}  
 Especifica el nombre de archivo (físico) del sistema operativo.  
   
 ' *os_file_name* '  
@@ -295,7 +294,7 @@ Quita un grupo de archivos de la base de datos. El grupo de archivos no se puede
 > [!NOTE]  
 > A menos que el recolector de elementos no utilizados de FILESTREAM haya quitado todos los archivos de un contenedor de FILESTREAM, la operación ALTER DATABASE REMOVE FILE para quitar un contenedor de FILESTREAM no se ejecutará correctamente y devolverá un error. Vea la sección "Quitar un contenedor de FILESTREAM" en el epígrafe Comentarios más adelante en este tema.  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que hace que el grupo de archivos se convierta en predeterminado para la base de datos o que se cambie el nombre del grupo de archivos.  
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que convierte al grupo de archivos en predeterminado para la base de datos o cambia el nombre del grupo de archivos.  
   
 \<filegroup_updatability_option>  
 Establece la propiedad de solo lectura o solo lectura/escritura para el grupo de archivos.  
@@ -674,20 +673,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Instancia administrada<br />de SQL Database *</em></strong></th>
-> </tr>
-> </table>
+> |||
+> |-|-|-|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* Instancia administrada de <br />SQL Database \*_**<br />&nbsp;|
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
 
 Use esta instrucción con una base de datos en Instancia administrada de Azure SQL Database.
 
@@ -829,7 +821,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 REMOVE FILEGROUP *filegroup_name*  
 Quita un grupo de archivos de la base de datos. El grupo de archivos no se puede quitar a menos que esté vacío. Quita todos los archivos del primer grupo de archivos. Para más información, vea "REMOVE FILE *logical_file_name*" anteriormente en este tema.  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que hace que el grupo de archivos se convierta en predeterminado para la base de datos o que se cambie el nombre del grupo de archivos.  
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que convierte al grupo de archivos en predeterminado para la base de datos o cambia el nombre del grupo de archivos.  
   
 \<filegroup_updatability_option>  
 Establece la propiedad de solo lectura o solo lectura/escritura para el grupo de archivos.  

@@ -5,22 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f318a0d82a2fc131554f12d0d15f049d588a3928
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abc5cb2557c3620ff9088520113a33b4f1a06bcc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768583"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Establecer la opción de configuración del servidor Umbral de costo para paralelismo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +57,9 @@ ms.lasthandoff: 05/03/2018
   
     -   La opción **grado máximo de paralelismo** está establecida en 1.  
   
- Un procesador lógico es la unidad básica de hardware de procesador que permite al sistema operativo enviar una tarea o ejecutar un contexto de subproceso. Cada procesador lógico puede ejecutar solo un contexto de subproceso a la vez. El núcleo del procesador es el conjunto de circuitos que proporciona capacidad para descodificar y ejecutar instrucciones. El núcleo de un procesador puede contener uno o varios procesadores lógicos. La siguiente consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] se puede utilizar para obtener información de CPU para el sistema.  
+Un procesador lógico es la unidad básica de hardware de procesador que permite al sistema operativo enviar una tarea o ejecutar un contexto de subproceso. Cada procesador lógico puede ejecutar solo un contexto de subproceso a la vez. El núcleo del procesador es el conjunto de circuitos que proporciona capacidad para descodificar y ejecutar instrucciones. El núcleo de un procesador puede contener uno o varios procesadores lógicos. La siguiente consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] se puede utilizar para obtener información de CPU para el sistema.  
   
-```  
+```sql  
 SELECT (cpu_count / hyperthread_ratio) AS PhysicalCPUs,   
 cpu_count AS logicalCPUs   
 FROM sys.dm_os_sys_info  
@@ -71,9 +69,9 @@ FROM sys.dm_os_sys_info
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un profesional certificado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   En determinados casos, puede elegirse un plan paralelo aunque el costo del plan de la consulta sea inferior al valor actual de **umbral de costo para paralelismo** . Esto se debe a que la decisión de utilizar un plan serie o un plan paralelo se basa en un costo estimado proporcionado antes de finalizar la optimización completa.  
+-   En determinados casos, puede elegirse un plan paralelo aunque el costo del plan de la consulta sea inferior al valor actual de **umbral de costo para paralelismo** . Esto se debe a que la decisión de usar un plan serie o un plan paralelo se basa en un costo estimado proporcionado anteriormente durante el proceso de optimización. Para más información, vea la [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).  
 
--   Mientras que el valor predeterminado de 5 se conserva por motivos de compatibilidad con versiones anteriores, es probable que sea apropiado usar un valor más alto para los sistemas actuales. Muchos profesionales de SQL Server recomiendan un valor de 25 o 50 como punto de partida y para realizar pruebas de aplicaciones con valores superiores e inferiores a fin de optimizar el rendimiento de la aplicación.
+-   Aunque el valor predeterminado 5 es adecuado para la mayoría de los sistemas, es posible que resulte adecuado otro valor. Si es necesario, realice pruebas en la aplicación con valores superiores e inferiores para optimizar el rendimiento de la aplicación.
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -88,7 +86,7 @@ FROM sys.dm_os_sys_info
   
 2.  Haga clic en el nodo **Avanzado** .  
   
-3.  En **Paralelismo**, cambie la opción **CostThresholdForParallelism** al valor que desee. Escriba o seleccione un valor entre 0 y 32767.  
+3.  En **Paralelismo**, cambie la opción **Umbral de costo para paralelismo** al valor que quiera. Escriba o seleccione un valor entre 0 y 32767.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

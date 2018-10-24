@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], modifying
 - modifying SQL Server Agent proxy
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 213eba99b7774cf1000d413a719eed02198ed099
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 64cc72a6c44a310b308fd031b179f351560f4fce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774816"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783443"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden crear, modificar 
   
 5.  Haga clic con el botón derecho en la cuenta de proxy que desee modificar y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo *Propiedades de cuenta de proxy***nombre_de_proxy*, realice los cambios que considere necesarios en la cuenta de proxy. Para más información acerca de las opciones de este cuadro de diálogo, consulte [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+6.  En el cuadro de diálogo **Propiedades de cuenta de proxy** _nombre\_proxy_, realice los cambios que considere necesarios en la cuenta de proxy. Para más información acerca de las opciones de este cuadro de diálogo, consulte [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

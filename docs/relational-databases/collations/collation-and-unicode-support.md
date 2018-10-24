@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -26,25 +24,24 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a63f848899d06b46f612cde3740a3b2f02d519eb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bc81d7a915a79af3406d5fc90ef9920d5e19055a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757054"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se usan con tipos de datos de caracteres como **char** y **varchar** dictan la página de códigos y los caracteres correspondientes que se pueden representar para ese tipo de datos. Si va a instalar una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurar una copia de seguridad de la base de datos o conectar el servidor a bases de datos cliente, es importante conocer los requisitos de configuración regional, el criterio de ordenación y la distinción entre mayúsculas y minúsculas y acentos de los datos con los que está trabajando. Para ver una lista de las intercalaciones disponibles en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
+Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se usan con tipos de datos de caracteres como **char** y **varchar** dictan la página de códigos y los caracteres correspondientes que se pueden representar para ese tipo de datos. Si va a instalar una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurar una copia de seguridad de la base de datos o conectar el servidor a bases de datos cliente, es importante conocer los requisitos de configuración regional, el criterio de ordenación y la distinción entre mayúsculas y minúsculas y acentos de los datos con los que está trabajando. Para ver una lista de las intercalaciones disponibles en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
- Al seleccionar una intercalación para un servidor, base de datos, columna o expresión, se están asignando ciertas características a los datos que afectan a los resultados de muchas operaciones de la base de datos. Por ejemplo, cuando se crea una consulta con ORDER BY, el criterio de ordenación del conjunto de resultados puede depender de la intercalación que se aplica a la base de datos o que se dicta en una cláusula COLLATE en el nivel de expresión de la consulta.    
+Al seleccionar una intercalación para un servidor, base de datos, columna o expresión, se están asignando ciertas características a los datos que afectan a los resultados de muchas operaciones de la base de datos. Por ejemplo, cuando se crea una consulta con `ORDER BY`, el criterio de ordenación del conjunto de resultados puede depender de la intercalación que se aplica a la base de datos o que se dicta en una cláusula `COLLATE` en el nivel de expresión de la consulta.    
     
- Para hacer el mejor uso posible de la compatibilidad con la intercalación en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se deben conocer los términos que se definen en este tema y cómo se relacionan con las características de los datos.    
+Para hacer el mejor uso posible de la compatibilidad con la intercalación en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se deben conocer los términos que se definen en este tema y cómo se relacionan con las características de los datos.    
     
 ##  <a name="Terms"></a> Términos de intercalación    
     
@@ -57,65 +54,66 @@ ms.locfileid: "43097612"
 -   [Criterio de ordenación](#Sort_Order_Defn)    
     
 ###  <a name="Collation_Defn"></a> Intercalación    
- Una intercalación especifica los patrones de bits que representan a cada carácter de un conjunto de datos. Las intercalaciones también determinan las reglas que ordenan y comparan los datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite almacenar los objetos que tienen intercalaciones diferentes en una sola base de datos. En las columnas que no sean Unicode, la configuración de intercalación especifica la página de códigos de los datos y qué caracteres se pueden representar. Los datos que se mueven entre columnas que no sean Unicode se deben convertir de la página de códigos de origen a la página de códigos de destino.    
+Una intercalación especifica los patrones de bits que representan a cada carácter de un conjunto de datos. Las intercalaciones también determinan las reglas que ordenan y comparan los datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite almacenar los objetos que tienen intercalaciones diferentes en una sola base de datos. En las columnas que no sean Unicode, la configuración de intercalación especifica la página de códigos de los datos y qué caracteres se pueden representar. Los datos que se mueven entre columnas que no sean Unicode se deben convertir de la página de códigos de origen a la página de códigos de destino.    
     
- Los resultados de las instrucciones de[!INCLUDE[tsql](../../includes/tsql-md.md)] pueden variar cuando se ejecutan en el contexto de bases de datos distintas que tengan una configuración de intercalación diferente. Si es posible, utilice una intercalación normalizada para su organización. De esta manera no tiene que especificar explícitamente la intercalación en cada carácter o expresión Unicode. Si debe trabajar con objetos que tienen configuraciones de intercalación y de página de códigos diferentes, conviene codificar las consultas para tener en cuenta las reglas de prioridad de intercalación. Para obtener más información, vea [Prioridad de intercalación (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
+Los resultados de las instrucciones de[!INCLUDE[tsql](../../includes/tsql-md.md)] pueden variar cuando se ejecutan en el contexto de bases de datos distintas que tengan una configuración de intercalación diferente. Si es posible, utilice una intercalación normalizada para su organización. De esta manera no tiene que especificar explícitamente la intercalación en cada carácter o expresión Unicode. Si debe trabajar con objetos que tienen configuraciones de intercalación y de página de códigos diferentes, conviene codificar las consultas para tener en cuenta las reglas de prioridad de intercalación. Para obtener más información, vea [Prioridad de intercalación (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
- Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho y la distinción de selector de variación. Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` es una intercalación con distinción de mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana y distinción de ancho. Otro ejemplo: la intercalación `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` distingue mayúsculas y minúsculas, los acentos, los tipos de kana, el ancho y el selector de variación.  En la tabla siguiente se describe el comportamiento asociado a estas diversas opciones.    
+Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho y la distinción de selector de variación. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta una opción adicional para la codificación UTF-8. Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` es una intercalación con distinción entre mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana, distinción de ancho y con codificación UTF-8. Otro ejemplo: la intercalación `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` no distingue entre mayúsculas y minúsculas y acentos, distingue los tipos de kana, el ancho, el selector de variación y usa codificación distinta de Unicode. En la tabla siguiente se describe el comportamiento asociado a estas diversas opciones.    
     
 |Opción|Descripción|    
 |------------|-----------------|    
-|Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Si esta opción no está seleccionada, la intercalación no distinguirá mayúsculas de minúsculas. Es decir, que SQL Server considera las versiones mayúscula y minúscula de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir entre mayúsculas y minúsculas especificando _CI.|    
-|Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a' no es igual a 'ấ'. Si esta opción no está seleccionada, la intercalación no distinguirá acentos. Es decir, que SQL Server considera las versiones acentuadas y no acentuadas de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|    
-|Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres Kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, que SQL Server considera los caracteres Hiragana y Katakana como caracteres iguales para la ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|    
-|Distinguir ancho (_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se activa esta opción, SQL Server considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas para la ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|    
+|Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Si esta opción no está seleccionada, la intercalación no distinguirá mayúsculas de minúsculas. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera las versiones mayúscula y minúscula de las letras como letras idénticas a efectos de ordenación. Puede seleccionar explícitamente no distinguir entre mayúsculas y minúsculas especificando _CI.|    
+|Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a' no es igual a 'ấ'. Si esta opción no está seleccionada, la intercalación no distinguirá acentos. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera las versiones acentuadas y no acentuadas de las letras como letras idénticas a efectos de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|    
+|Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres Kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales a efectos de ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|    
+|Distinguir ancho (_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se activa esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas para la ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|    
 |Distinguir selector de variación (_VSS) | Distingue distintos selectores de variación ideográfica en las intercalaciones del japonés Japanese_Bushu_Kakusu_140 y Japanese_XJIS_140, introducidas por primera vez en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona la opción _VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, SQL Server considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Consulte también  [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)(Base de datos de variaciones ideográficas de Unicode). <br/><br/> Las intercalaciones que distinguen selectores de variación (_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (_AS), que distinguen kana (_KS) y que distinguen ancho (_WS). Los motores XML y CLR de SQL Server no admiten selectores de variación (_VSS).
+|UTF-8 (_UTF8)|Permite que los datos con codificación UTF-8 se almacenen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el formato de codificación distinto de Unicode de forma predeterminada para los tipos de datos aplicables.| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes conjuntos de intercalación:    
     
- intercalaciones de Windows    
- Las intercalaciones de Windows definen reglas para almacenar los datos de caracteres que se basan en una configuración regional del sistema Windows asociada. En una intercalación de Windows, la comparación de datos no Unicode se implementa con el mismo algoritmo que la de los datos Unicode. Las reglas de intercalación básicas de Windows especifican qué alfabeto o idioma se utilizan cuando se aplica un orden de diccionario, y la página de códigos que se usa para almacenar los datos de caracteres que no son Unicode. Tanto la ordenación Unicode y como la ordenación no Unicode son compatibles con comparaciones de cadenas de una determinada versión de Windows. De este modo se proporciona coherencia entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también se ofrece a los programadores la posibilidad de ordenar las cadenas de sus aplicaciones usando las mismas reglas que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).    
+#### <a name="windows-collations"></a>intercalaciones de Windows    
+Las intercalaciones de Windows definen reglas para almacenar los datos de caracteres que se basan en una configuración regional del sistema Windows asociada. En una intercalación de Windows, la comparación de datos no Unicode se implementa con el mismo algoritmo que la de los datos Unicode. Las reglas de intercalación básicas de Windows especifican qué alfabeto o idioma se utilizan cuando se aplica un orden de diccionario, y la página de códigos que se usa para almacenar los datos de caracteres que no son Unicode. Tanto la ordenación Unicode y como la ordenación no Unicode son compatibles con comparaciones de cadenas de una determinada versión de Windows. De este modo se proporciona coherencia entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también se ofrece a los programadores la posibilidad de ordenar las cadenas de sus aplicaciones usando las mismas reglas que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
- Intercalaciones binarias    
- Las intercalaciones binarias ordenan los datos según la secuencia de valores codificados definidos por la configuración regional y el tipo de datos. Distinguen entre mayúsculas y minúsculas. Una intercalación binaria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define la configuración regional y la página de códigos ANSI que se usa. Esto exige un criterio de ordenación binario. Dado que son relativamente simples, las intercalaciones binarias ayudan a mejorar el rendimiento de la aplicación. En los tipos de datos no Unicode, las comparaciones de datos se basan en los puntos de código que se definen en la página de códigos ANSI. En tipos de datos Unicode, las comparaciones de datos dependen de los puntos de código Unicode. En intercalaciones binarias de tipos de datos Unicode, la configuración regional no se tiene en cuenta a la hora de ordenar los datos. Por ejemplo, Latin_1_General_BIN y Japanese_BIN producen resultados de orden idénticos cuando se usan en datos Unicode.    
+#### <a name="binary-collations"></a>Intercalaciones binarias    
+Las intercalaciones binarias ordenan los datos según la secuencia de valores codificados definidos por la configuración regional y el tipo de datos. Distinguen entre mayúsculas y minúsculas. Una intercalación binaria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define la configuración regional y la página de códigos ANSI que se usa. Esto exige un criterio de ordenación binario. Dado que son relativamente simples, las intercalaciones binarias ayudan a mejorar el rendimiento de la aplicación. En los tipos de datos no Unicode, las comparaciones de datos se basan en los puntos de código que se definen en la página de códigos ANSI. En tipos de datos Unicode, las comparaciones de datos dependen de los puntos de código Unicode. En intercalaciones binarias de tipos de datos Unicode, la configuración regional no se tiene en cuenta a la hora de ordenar los datos. Por ejemplo, Latin_1_General_BIN y Japanese_BIN producen resultados de orden idénticos cuando se usan en datos Unicode.    
     
- Hay dos tipos de intercalaciones binarias en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; las intercalaciones **BIN** antiguas y las intercalaciones **BIN2** nuevas. En una intercalación **BIN2** todos los caracteres se ordenan de acuerdo a sus puntos de código. En una intercalación **BIN** solamente el primer carácter se ordena de acuerdo al punto de código y el resto de ellos se ordenan según sus valores de byte. (Dado que la plataforma de Intel tiene una arquitectura "litte endian", los caracteres de codificación Unicode siempre se intercambian por bytes).    
+Hay dos tipos de intercalaciones binarias en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; las intercalaciones **BIN** antiguas y las intercalaciones **BIN2** nuevas. En una intercalación **BIN2** todos los caracteres se ordenan de acuerdo a sus puntos de código. En una intercalación **BIN** solamente el primer carácter se ordena de acuerdo al punto de código y el resto de ellos se ordenan según sus valores de byte. (Dado que la plataforma de Intel tiene una arquitectura "litte endian", los caracteres de codificación Unicode siempre se intercambian por bytes).    
     
- Intercalaciones de SQL Server    
- Las intercalaciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) son compatibles en cuanto al criterio de ordenación con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las reglas de ordenación alfabética de datos no Unicode son incompatibles con cualquier rutina de ordenación suministrada por los sistemas operativos Windows. Sin embargo, la ordenación de datos Unicode es compatible con una versión especial de las reglas de ordenación de Windows. Como las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan reglas de comparación diferentes para los datos Unicode y para los que no son Unicode, ve resultados diferentes en las comparaciones de los mismos datos, dependiendo del tipo de datos subyacente. Para obtener más información, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+#### <a name="sql-server-collations"></a>Intercalaciones de SQL Server    
+Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) son compatibles en cuanto al criterio de ordenación con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las reglas de ordenación alfabética de datos no Unicode son incompatibles con cualquier rutina de ordenación suministrada por los sistemas operativos Windows. Sin embargo, la ordenación de datos Unicode es compatible con una versión especial de las reglas de ordenación de Windows. Como las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan reglas de comparación diferentes para los datos Unicode y para los que no son Unicode, ve resultados diferentes en las comparaciones de los mismos datos, dependiendo del tipo de datos subyacente. Para obtener más información, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
     
 > [!NOTE]    
->  Al actualizar una instancia en idioma inglés de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede especificar la compatibilidad de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) con las instancias existentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se define durante la instalación, asegúrese de especificar con cuidado la configuración de la intercalación cuando se cumple lo siguiente:    
+> Al actualizar una instancia en idioma inglés de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede especificar la compatibilidad de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) con las instancias existentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se define durante la instalación, asegúrese de especificar con cuidado la configuración de la intercalación cuando se cumple lo siguiente:    
 >     
->  -   El código de la aplicación depende del comportamiento de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores.    
+> -   El código de la aplicación depende del comportamiento de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores.    
 > -   Se deben almacenar datos de caracteres que reflejen varios idiomas.    
     
  Se admite el establecimiento de intercalaciones en los siguientes niveles de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
     
- Intercalaciones de nivel de servidor    
- La intercalación predeterminada de servidor se establece durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también se convierte en la intercalación predeterminada de las bases de datos del sistema y de todas las bases de datos del usuario. Observe que las intercalaciones exclusivas de Unicode no pueden seleccionarse durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque no se admiten como intercalaciones de nivel de servidor.    
+#### <a name="server-level-collations"></a>Intercalaciones de nivel de servidor   
+La intercalación predeterminada de servidor se establece durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también se convierte en la intercalación predeterminada de las bases de datos del sistema y de todas las bases de datos del usuario. Observe que las intercalaciones exclusivas de Unicode no pueden seleccionarse durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque no se admiten como intercalaciones de nivel de servidor.    
     
- Después de que una intercalación se haya asignado al servidor, no puede cambiar la intercalación excepto exportando todos los objetos y datos de base de datos, recompilando la base de datos **master** e importando todos los objetos y datos de base de datos. En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar la intercalación deseada en el momento de crear una base de datos o una columna de base de datos.    
+Después de que una intercalación se haya asignado al servidor, no puede cambiar la intercalación excepto exportando todos los objetos y datos de base de datos, recompilando la base de datos **master** e importando todos los objetos y datos de base de datos. En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar la intercalación deseada en el momento de crear una base de datos o una columna de base de datos.    
     
- Intercalaciones de nivel de base de datos    
- Cuando se crea una base de datos, se puede usar la cláusula COLLATE de la instrucción CREATE DATABASE para especificar la intercalación predeterminada de la base de datos. Si no se especifica ninguna intercalación, se asigna a la base de datos la intercalación de servidor.    
+#### <a name="database-level-collations"></a>Intercalaciones de nivel de base de datos    
+Cuando se crea una base de datos, se puede usar la cláusula COLLATE de la instrucción CREATE DATABASE para especificar la intercalación predeterminada de la base de datos. Si no se especifica ninguna intercalación, se asigna a la base de datos la intercalación de servidor.    
     
- No puede cambiar la intercalación de base de datos del sistema excepto cambiando la intercalación del servidor.    
+No puede cambiar la intercalación de base de datos del sistema excepto cambiando la intercalación del servidor.    
     
- La intercalación de base de datos se usa para todos los metadatos de la base de datos, y es la predeterminada para todas las columnas de cadena, los objetos temporales, los nombres de variable, y cualquier otra cadena usada en la base de datos. Cuando se cambia la intercalación de una base de datos de usuario, pueden producirse conflictos de intercalación cuando las consultas en la base de datos tienen acceso a tablas temporales. Las tablas temporales se almacenan siempre en la base de datos del sistema de **tempdb**, que usa la intercalación de la instancia. Las consultas que comparan datos de caracteres entre la base de datos de usuario y **tempdb** pueden generar un error si las intercalaciones producen un conflicto en la evaluación de los datos de caracteres. Puede resolver esto especificando la cláusula COLLATE en la consulta. Para obtener más información, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).    
+La intercalación de base de datos se usa para todos los metadatos de la base de datos, y es la predeterminada para todas las columnas de cadena, los objetos temporales, los nombres de variable, y cualquier otra cadena usada en la base de datos. Cuando se cambia la intercalación de una base de datos de usuario, pueden producirse conflictos de intercalación cuando las consultas en la base de datos tienen acceso a tablas temporales. Las tablas temporales se almacenan siempre en la base de datos del sistema de **tempdb**, que usa la intercalación de la instancia. Las consultas que comparan datos de caracteres entre la base de datos de usuario y **tempdb** pueden generar un error si las intercalaciones producen un conflicto en la evaluación de los datos de caracteres. Puede resolver esto especificando la cláusula COLLATE en la consulta. Para obtener más información, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).    
     
- Intercalaciones de columna    
- Cuando cree o altere una tabla, puede especificar intercalaciones para cada columna de cadena de caracteres mediante la cláusula COLLATE. Si no se especifica una intercalación, a la columna se le asigna la intercalación predeterminada de la base de datos.    
+#### <a name="column-level-collations"></a>Intercalaciones de columna    
+Cuando cree o altere una tabla, puede especificar intercalaciones para cada columna de cadena de caracteres mediante la cláusula COLLATE. Si no se especifica una intercalación, a la columna se le asigna la intercalación predeterminada de la base de datos.    
     
- Intercalaciones de nivel de expresión    
- Las intercalaciones de nivel de expresión se establecen cuando se ejecuta una instrucción y afectan al modo en que se devuelve un conjunto de resultados. Esto permite que los resultados de la ordenación ORDER BY sean específicos de la configuración regional. Utilice una cláusula COLLATE como la siguiente para implementar intercalaciones de nivel de expresión:    
+#### <a name="expression-level-collations"></a>Intercalaciones de nivel de expresión    
+Las intercalaciones de nivel de expresión se establecen cuando se ejecuta una instrucción y afectan al modo en que se devuelve un conjunto de resultados. Esto permite que los resultados de la ordenación ORDER BY sean específicos de la configuración regional. Utilice una cláusula COLLATE como la siguiente para implementar intercalaciones de nivel de expresión:    
     
-```    
+```sql    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
 ###  <a name="Locale_Defn"></a> Configuración regional    
- Una configuración regional es un conjunto de información que está asociado a una ubicación o cultura. Puede incluir el nombre e identificador del idioma hablado, la escritura que se usa para escribir el idioma y las convenciones culturales. Las intercalaciones pueden estar asociadas a una o varias configuraciones regionales. Para obtener más información, vea [Id. de configuración regional asignados por Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
+Una configuración regional es un conjunto de información que está asociado a una ubicación o cultura. Puede incluir el nombre e identificador del idioma hablado, la escritura que se usa para escribir el idioma y las convenciones culturales. Las intercalaciones pueden estar asociadas a una o varias configuraciones regionales. Para obtener más información, vea [Id. de configuración regional asignados por Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Una página de códigos es un juego ordenado de caracteres en un script determinado en el que un índice numérico, o un valor de punto de código, está asociado con cada carácter. Una página de códigos de Windows se denomina normalmente *juego de caracteres* o *charset*. Las páginas de códigos se usan para ofrecer compatibilidad con los juegos de caracteres y las distribuciones de teclado que se usan en distintas configuraciones regionales del sistema Windows.     
@@ -123,27 +121,51 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  El criterio de ordenación especifica cómo se ordenan los valores de datos. Esto afecta a los resultados de la comparación de los datos. Los datos se ordenan con las intercalaciones, y se pueden optimizar mediante los índices.    
     
 ##  <a name="Unicode_Defn"></a> Compatibilidad con Unicode    
- Unicode es un estándar que permite asignar puntos de código con caracteres. Puesto que se ha diseñado para cubrir todos los caracteres de todos los idiomas del mundo, no es preciso usar páginas de códigos diferentes para controlar los distintos juegos de caracteres. Si almacena datos de caracteres que reflejan varios idiomas, use siempre tipos de datos Unicode (**nchar**, **nvarchar**y **ntext**) en lugar de tipos de datos que no sean Unicode (**char**, **varchar**y **text**).    
+Unicode es un estándar que permite asignar puntos de código con caracteres. Puesto que se ha diseñado para cubrir todos los caracteres de todos los idiomas del mundo, no es preciso usar páginas de códigos diferentes para controlar los distintos juegos de caracteres. Si almacena datos de caracteres que reflejan varios idiomas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de datos Unicode (UTF-16) (**nchar**, **nvarchar** y **ntext**) en lugar de tipos de datos que no sean Unicode (**char**, **varchar** y **text**). Como alternativa, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si se usa una intercalación compatible con UTF-8 (\_UTF8), los tipos de datos anteriores que no son Unicode (**char** y **varchar**) se convierten en tipos de datos Unicode (UTF-8). 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] no cambia el comportamiento de tipos de datos Unicode (UTF-16) que existieran antes (**nchar**, **nvarchar** y **ntext**).   
     
- Hay limitaciones significativas asociadas a los tipos de datos no Unicode. Esto se debe a que un equipo no Unicode se limita a usar una única página de códigos. Podría experimentar una ganancia en el rendimiento mediante Unicode porque se requieren menos conversiones de páginas de códigos. Las intercalaciones Unicode deben seleccionarse de forma individual en el nivel de expresión, base de datos o columna porque no se admiten en el nivel de servidor.    
+Hay limitaciones significativas asociadas a los tipos de datos no Unicode. Esto se debe a que un equipo no Unicode se limita a usar una única página de códigos. Podría experimentar una ganancia en el rendimiento mediante Unicode porque se requieren menos conversiones de páginas de códigos. Las intercalaciones Unicode deben seleccionarse de forma individual en el nivel de expresión, base de datos o columna porque no se admiten en el nivel de servidor.    
     
- Las páginas de códigos que un cliente usa se determinan en la configuración del sistema operativo. Para establecer las páginas de códigos del cliente en los sistemas operativos Windows, use **Configuración regional** en el Panel de control.    
+Las páginas de códigos que un cliente usa se determinan en la configuración del sistema operativo. Para establecer las páginas de códigos del cliente en los sistemas operativos Windows, use **Configuración regional** en el Panel de control.    
     
- Al mover los datos de un servidor a un cliente, los controladores de cliente anteriores podrían no reconocer la intercalación del servidor. Esto puede ocurrir al mover los datos de un servidor Unicode a un cliente no Unicode. La mejor opción podría ser actualizar el sistema operativo cliente para que las intercalaciones del sistema subyacentes se actualicen. Si el cliente tiene instalado software cliente de base de datos, se puede considerar la posibilidad de aplicar a dicho software una actualización de servicio.    
+Al mover los datos de un servidor a un cliente, los controladores de cliente anteriores podrían no reconocer la intercalación del servidor. Esto puede ocurrir al mover los datos de un servidor Unicode a un cliente no Unicode. La mejor opción podría ser actualizar el sistema operativo cliente para que las intercalaciones del sistema subyacentes se actualicen. Si el cliente tiene instalado software cliente de base de datos, se puede considerar la posibilidad de aplicar a dicho software una actualización de servicio.    
     
- También puede intentar utilizar una intercalación diferente para los datos del servidor. Elija una intercalación que se asigne a una página de códigos en el cliente.    
+También puede intentar utilizar una intercalación diferente para los datos del servidor. Elija una intercalación que se asigne a una página de códigos en el cliente.    
     
- Para usar las intercalaciones UTF-16 disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo intercalaciones de Windows), puede seleccionar una de las intercalaciones de caracteres adicionales (_SC) o una de las intercalaciones de la versión 140.    
+Para usar las intercalaciones UTF-16 disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo intercalaciones de Windows), puede seleccionar una de las intercalaciones de caracteres adicionales (\_SC) o una de las intercalaciones de la versión 140.    
+ 
+Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo intercalaciones de Windows), debe seleccionar las intercalaciones compatibles con la codificación UTF-8 (\_UTF8).
+ 
+-   La marca UTF8 se puede aplicar a:    
+   
+    -   Intercalaciones de la versión 90 
     
- Para evaluar completamente los problemas relacionados con el uso de tipos de datos Unicode y no Unicode, pruebe su escenario para cuantificar las diferencias de rendimiento en su entorno. Se recomienda normalizar la intercalación que se usa en los sistemas de una organización e implementar servidores y clientes Unicode siempre que sea posible.    
+        > [!NOTE]
+        > Solo en esta versión ya hay intercalaciones que reconocen los caracteres complementarios (\_SC) o distinguen entre selector de variación (\_VSS).
     
- En muchos casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interactúa con otros servidores o clientes, y la organización podría usar varios estándares de acceso a datos entre las aplicaciones y las instancias de servidor. Los clientes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son uno de los dos tipos principales:    
+    -   Intercalaciones de la versión 100    
+    
+    -   Intercalaciones de la versión 140    
+    
+-   La marca UTF8 no se puede aplicar a:    
+    
+    -   Intercalaciones de la versión 90 que no son compatibles con caracteres adicionales (\_SC) o la distinción de selector de variación (\_VSS)    
+    
+    -   Intercalaciones binarias BIN o BIN2    
+    
+    -   Intercalaciones SQL\*       
+    
+Para evaluar completamente los problemas relacionados con el uso de tipos de datos Unicode y no Unicode, pruebe su escenario para cuantificar las diferencias de rendimiento en su entorno. Se recomienda normalizar la intercalación que se usa en los sistemas de una organización e implementar servidores y clientes Unicode siempre que sea posible.    
+    
+En muchos casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interactúa con otros servidores o clientes, y la organización podría usar varios estándares de acceso a datos entre las aplicaciones y las instancias de servidor. Los clientes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son uno de los dos tipos principales:    
     
 -   **Clientes Unicode** que usan OLE DB y Conectividad abierta de bases de datos (ODBC) versión 3.7 o posteriores.    
     
 -   **Clientes no Unicode** que usan DB-Library y ODBC versión 3.6 o anteriores.    
     
- En la tabla siguiente se proporciona información acerca de cómo usar datos multilingües con varias combinaciones de servidores Unicode y no Unicode.    
+En la tabla siguiente se proporciona información acerca de cómo usar datos multilingües con varias combinaciones de servidores Unicode y no Unicode.    
     
 |Servidor|Cliente|Beneficios o limitaciones|    
 |------------|------------|-----------------------------|    
@@ -153,13 +175,15 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |No Unicode|No Unicode|Se trata de un escenario muy limitado para datos multilingües. Puede usar solo una única página de códigos.|    
     
 ##  <a name="Supplementary_Characters"></a> Caracteres complementarios    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona tipos de datos, como **nchar** y **nvarchar** , para almacenar los datos Unicode. Estos tipos de datos codifican el texto en un formato denominado *UTF-16*. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustan a una palabra de 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF requieren dos palabras de 16 bits consecutivas. Estos caracteres se denominan *caracteres adicionales*y las dos palabras de 16 bits consecutivas, *pares suplentes*.    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona tipos de datos, como por ejemplo, **nchar** y **nvarchar**, para almacenar datos Unicode (UTF-16) en cualquier intercalación, y tipos de datos como por ejemplo **char** y **varchar** para almacenar datos Unicode (UTF-8) en intercalaciones compatibles con UTF-8 (\_UTF8). Estos tipos de datos codifican el texto en un formato denominado *UTF-16* y *UTF-8* respectivamente. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustan a una palabra de 8 o 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF necesitan entre dos y cuatro palabras consecutivas de 8 bits (UTF-8) o dos palabras consecutivas de 16 bits (UTF-16). Estos caracteres se denominan *caracteres adicionales* y las dos palabras consecutivas de 8 o 16 bits se denominan *pares suplentes*.    
     
- A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se puede usar una nueva familia de intercalaciones de caracteres adicionales (_SC) con los tipos de datos **nchar**, **nvarchar** y **sql_variant**. Por ejemplo: `Latin1_General_100_CI_AS_SC`o `Japanese_Bushu_Kakusu_100_CI_AS_SC`si usa una intercalación japonesa.    
+A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se puede usar una nueva familia de intercalaciones de caracteres adicionales (\_SC) con los tipos de datos **nchar**, **nvarchar** y **sql_variant**. Por ejemplo: `Latin1_General_100_CI_AS_SC`o `Japanese_Bushu_Kakusu_100_CI_AS_SC`si usa una intercalación japonesa. 
+ 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] amplía la compatibilidad de caracteres complementarios a los tipos de datos **char** y **varchar** con las nuevas intercalaciones compatibles con UTF-8 (\_UTF8).   
 
- A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todas las nuevas intercalaciones admiten automáticamente los caracteres adicionales.
+A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todas las nuevas intercalaciones admiten automáticamente los caracteres adicionales.
 
- Si utiliza caracteres adicionales:    
+Si utiliza caracteres adicionales:    
     
 -   Los caracteres adicionales se pueden utilizar en las operaciones de ordenación y comparación en las versiones de intercalación 90 o mayores.    
     
@@ -185,7 +209,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
     -   Intercalaciones de la versión 140 (estas no necesitan la marca SC, dado que ya admiten caracteres adicionales)    
     
- En la siguiente tabla se compara el comportamiento de algunas funciones de cadena y algunos operadores de cadena cuando usan caracteres adicionales con y sin intercalación de caracteres adicionales (SCA):    
+En la siguiente tabla se compara el comportamiento de algunas funciones de cadena y algunos operadores de cadena cuando usan caracteres adicionales con y sin intercalación de caracteres adicionales (SCA):    
     
 |Función u operador de cadena|Con intercalación de caracteres adicionales (SCA)|Sin intercalación SCA|    
 |---------------------------------|--------------------------|-----------------------------|    
@@ -209,10 +233,11 @@ Las aplicaciones de base de datos que interactúan con [!INCLUDE[ssNoVersion](..
 
 ##  <a name="Japanese_Collations"></a> Intercalaciones japonesas agregadas en  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], se admiten dos nuevas familias de intercalaciones japonesas, con las permutaciones de varias opciones (\_CS, \_AS, \_KS, \_WS, \_VSS). 
+A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], se admiten nuevas familias de intercalaciones japonesas, con las permutaciones de varias opciones (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
-Para obtener una lista de estas intercalaciones, puede consultar al Motor de base de datos de SQL Server:
-``` 
+Para escuchar en estas intercalaciones, puede consultar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
+
+```sql 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
@@ -233,16 +258,14 @@ Estas intercalaciones se admiten en los índices de Motor de base de datos, las 
 |Describe cómo cambiar el idioma de la sesión permite cambiar el idioma de los mensajes de error y las preferencias acerca de cómo usar y mostrar los datos de fecha, hora y divisa.|[Establecer un idioma de la sesión](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Contenido relacionado    
- [Prácticas recomendadas para cambiar las intercalaciones en SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
-    
- ["Migración de las prácticas recomendadas de SQL Server a Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)    
-    
- [Sitio web de Unicode Consortium](http://go.microsoft.com/fwlink/?LinkId=48619)    
+[Prácticas recomendadas para cambiar las intercalaciones en SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[Usar el formato de caracteres Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+["Migración de las prácticas recomendadas de SQL Server a Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890) - Ya no se mantiene   
+[Sitio web de Unicode Consortium](http://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>Consulte también    
- [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)     
- [Elegir un idioma al crear un índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
+[Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)     
+[Elegir un idioma al crear un índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
+[sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
-  
-
+ 

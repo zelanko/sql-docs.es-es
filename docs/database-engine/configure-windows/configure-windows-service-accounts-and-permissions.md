@@ -5,9 +5,7 @@ ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695001"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -306,7 +303,8 @@ En esta sección se describen los permisos que el programa de instalación de [!
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Iniciar sesión como servicio** (SeServiceLogonRight)|  
 |**Motor de PolyBase y DMS**| **Iniciar sesión como servicio** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Iniciar sesión como servicio** (SeServiceLogonRight) <br /><br /> **Reemplazar un token de nivel de proceso** (SeAssignPrimaryTokenPrivilege)<br /><br />**Omitir comprobación de recorrido** (SeChangeNotifyPrivilege)<br /><br />**Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup**  |**Permitir el inicio de sesión local** |   
+|**R Services:** **SQLRUserGroup** (SQL 2016 y 2017)  |**Permitir el inicio de sesión local** |   
+|**Machine Learning** '**Todos los paquetes de aplicación' [AppContainer]** (SQL 2019)  |**Permisos de lectura y escritura** para los directorios “Binn”, R_Services y PYTHON_Services de SQL Server |   
 
  \*El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deshabilita en las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

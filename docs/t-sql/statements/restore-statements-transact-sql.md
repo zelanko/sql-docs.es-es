@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b16e9925a2c7af141db9ea6e4e160081f2e63e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677939"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252162"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
 Restaura copias de seguridad de bases de datos de SQL realizadas con el comando BACKUP. 
@@ -62,22 +62,13 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">paralelos<br />paralelos de SQL</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |**_\* SQL Server \*_**|[Instancia administrada de <br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Almacenamiento de datos<br /> paralelos](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 Este comando le permite realizar los siguientes escenarios de restauración:  
   
@@ -714,22 +705,13 @@ RESTORE DATABASE Sales
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Instancia administrada<br />de SQL Database *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">paralelos<br />paralelos de SQL</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* Instancia administrada de <br />SQL Database \*_**|[Almacenamiento de datos<br /> paralelos](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
 
 Este comando permite restaurar una base de datos completa a partir de una copia de seguridad completa de la base de datos (restauración completa) desde una cuenta de Azure Blob Storage.
 
@@ -855,22 +837,13 @@ WHERE r.command = 'RESTORE DATABASE'
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
->   <th><strong><em>* paralelos<br />paralelos de SQL *</em></strong></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[Instancia administrada de <br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Almacenamiento de datos<br /> paralelos \*_**
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>Almacenamiento de datos paralelos
+## <a name="parallel-data-warehouse"></a>Almacenamiento de datos paralelos
 
 
 Restaura una base de datos de usuario de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] desde una copia de seguridad de base de datos a un dispositivo de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. La base de datos se restaura desde una copia de seguridad que se creó anteriormente con el comando [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Almacenamiento de datos paralelos&#41;](../../t-sql/statements/backup-transact-sql.md). Use las operaciones de copia de seguridad y de restauración para crear un plan de recuperación ante desastres o para mover bases de datos de un dispositivo a otro.  

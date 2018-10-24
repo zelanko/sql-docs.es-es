@@ -11,17 +11,17 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bda792731bbaf97732575453a284865bd243a84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636133"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071718"
 ---
 # <a name="how-to-debug-database-objects"></a>Cómo: Depurar objetos de base de datos
 Una prueba unitaria de SQL Server consta de lo siguiente:  
   
--   El código de la prueba unitaria se escribe en Visual Basic o Visual C\#. Este código, que lo genera el Diseñador de pruebas unitarias de SQL Server, es el responsable de ejecutar el script de Transact\-SQL que conforma el cuerpo de la prueba.  
+-   El código de la prueba unitaria escrito en Visual C\# o Visual Basic. Este código, que lo genera el Diseñador de pruebas unitarias de SQL Server, es el responsable de ejecutar el script de Transact\-SQL que conforma el cuerpo de la prueba.  
   
 -   Una o varias condiciones de prueba, que se escriben en Visual C\# o Visual Basic. Para depurar condiciones de prueba, siga el procedimiento para depurar pruebas unitarias que se describe en [Cómo: Depurar mientras se ejecuta una prueba (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) o [Cómo: Depurar mientras se ejecuta una prueba (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx).  
   

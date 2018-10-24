@@ -1,13 +1,11 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -53,17 +51,16 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd2ee86fe01f568f6eb2a91800632f6f896ed3e5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777733"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +241,7 @@ Crea un índice que especifica la ordenación lógica de una tabla. Con un índi
  *column*  
  Es la columna o columnas en las que se basa el índice. Especifique dos o más nombres de columna para crear un índice compuesto sobre los valores combinados de las columnas especificadas. Enumere las columnas que desee incluir en el índice compuesto (en orden de prioridad) entre paréntesis después de *table_or_view_name*.  
   
- Se pueden combinar hasta 32 columnas en la clave de un único índice compuesto. Todas las columnas de una clave del índice compuesto deben encontrarse en la misma tabla o vista. El tamaño máximo permitido de los valores de índice combinados es de 900 bytes para un índice agrupado o de 1700 para un índice no agrupado. Los límites son 16 columnas y 900 bytes para las versiones anteriores a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ Se pueden combinar hasta 32 columnas en la clave de un único índice compuesto. Todas las columnas de una clave del índice compuesto deben encontrarse en la misma tabla o vista. El tamaño máximo permitido de los valores de índice combinados es de 900 bytes para un índice agrupado o de 1700 para un índice no agrupado. Los límites son 16 columnas y 900 bytes para las versiones anteriores a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
  Las columnas de los tipos de datos de objetos grandes (LOB) **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** o **image** no pueden especificarse como columnas clave para un índice. Además, una definición de vista no puede incluir columnas **ntext**, **text** ni **image**, aunque no se haga referencia a ellas en la instrucción CREATE INDEX.  
   
@@ -253,7 +250,7 @@ Crea un índice que especifica la ordenación lógica de una tabla. Con un índi
  [ **ASC** | DESC ]  
  Determina la dirección ascendente o descendente del orden de la columna de índice determinada. El valor predeterminado es ASC.  
   
- INCLUDE **(***column* [ **,**... *n* ] **)**  
+ INCLUDE **(**_column_ [ **,**... *n* ] **)**  
  Especifica las columnas que no son de clave que se agregarán en el nivel hoja del índice no clúster. El índice no clúster puede ser único o no único.  
   
  Los nombres de columna no se pueden repetir en la lista INCLUDE y no se pueden utilizar simultáneamente como columnas de clave y que no son de clave. Los índices no clúster siempre contienen las columnas de índice clúster si se define un índice clúster en la tabla. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
@@ -337,9 +334,9 @@ ON *partition_scheme_name* **( *column_name* )**
   
  A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el objeto puede ser una tabla almacenada con un índice de almacén de columnas agrupado.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes *database_name***.**[* schema_name *]**.***object_name* cuando *database_name* es la base de datos actual o *database_name* es tempdb y *object_name* comienza por #.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes _database\_name_**.**[*schema_name*]**.**_object\_name_ cuando *database_name* es la base de datos actual o *database_name* es tempdb y *object_name* comienza por #.  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  Especifica las opciones que se van a utilizar en la creación del índice.  
   
@@ -358,7 +355,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  En la sintaxis compatible con versiones anteriores, WITH PAD_INDEX es equivalente a WITH PAD_INDEX = ON.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o nueva generación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. Si *fillfactor* es 100, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea índices con las páginas hoja llenas al máximo de su capacidad.  
@@ -465,7 +462,7 @@ Especifica si las tablas subyacentes y los índices asociados están disponibles
  
 RESUMABLE **=** { ON | **OFF**}
 
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] como característica de versión preliminar pública
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
  Especifica si una operación de índice en línea se puede reanudar.
 
@@ -475,7 +472,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
  
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] como característica de versión preliminar pública 
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
 Indica el tiempo (valor entero especificado en minutos) durante el cual se ejecuta una operación de índice en línea reanudable antes de ponerse en pausa. 
 
@@ -647,7 +644,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Para obtener información sobre los índices XML, vea [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md) e [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="index-key-size"></a>Tamaño de clave de índice  
- El tamaño máximo de una clave de índice es de 900 bytes para un índice agrupado y de 1700 bytes para un índice no agrupado. (En las versiones anteriores a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el límite era siempre de 900 bytes). Se pueden crear índices en las columnas **varchar** cuyo tamaño sea superior al límite de bytes si los datos que contienen no superan ese tamaño al crearse el índice. Sin embargo, se producirá un error en las acciones de inserción o actualización posteriores en las columnas que hagan que el tamaño total sea mayor que el límite. La clave de índice de un índice agrupado no puede contener columnas **varchar** con datos existentes en la unidad de asignación ROW_OVERFLOW_DATA. Si se crea un índice agrupado en una columna **varchar** y los datos existentes están en la unidad de asignación IN_ROW_DATA, no se realizarán correctamente las siguientes acciones de inserción o actualización en la columna que intenten insertar los datos de manera no consecutiva.  
+ El tamaño máximo de una clave de índice es de 900 bytes para un índice agrupado y de 1700 bytes para un índice no agrupado. (Antes de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el límite era siempre de 900 bytes). Se pueden crear índices en las columnas **varchar** cuyo tamaño sea superior al límite de bytes si los datos que contienen no superan ese tamaño al crearse el índice. Sin embargo, se producirá un error en las acciones de inserción o actualización posteriores en las columnas que hagan que el tamaño total sea mayor que el límite. La clave de índice de un índice agrupado no puede contener columnas **varchar** con datos existentes en la unidad de asignación ROW_OVERFLOW_DATA. Si se crea un índice agrupado en una columna **varchar** y los datos existentes están en la unidad de asignación IN_ROW_DATA, no se realizarán correctamente las siguientes acciones de inserción o actualización en la columna que intenten insertar los datos de manera no consecutiva.  
   
  Los índices no clúster pueden incluir columnas que no son de clave en el nivel de hoja del índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta estas columnas al calcular el tamaño de clave de índice. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
@@ -691,7 +688,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>Especificar opciones de índice  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incluye opciones de índice nuevas y también modifica el modo en que se especifican las opciones. En la sintaxis compatible con versiones anteriores, WITH *option_name* es equivalente a WITH **(** \<option_name> **= ON )**. Al establecer opciones de índice, se aplican las siguientes reglas: 
   
--   Solo se pueden especificar nuevas opciones de índice mediante (***option_name* = ON | OFF**).  
+-   Las nuevas opciones de índice solo se pueden especificar mediante WITH (**_option\_name_ = ON | OFF**).  
 -   Las opciones no se pueden especificar utilizando la sintaxis compatible con versiones anteriores y la nueva sintaxis en la misma instrucción. Por ejemplo, al especificar WITH (**DROP_EXISTING, ONLINE = ON**), se genera un error en la instrucción.  
 -   Cuando se crea un índice XML, las opciones se deben especificar mediante WITH (***option_name*= ON | OFF**).  
   
@@ -719,7 +716,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a> Operaciones de índice reanudable
 
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] como característica de versión preliminar pública.
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
 Se aplican las directrices siguientes para las operaciones de índice reanudable:
 
@@ -731,14 +728,12 @@ Se aplican las directrices siguientes para las operaciones de índice reanudable
 - Al volver a ejecutar la instrucción CREATE INDEX para el índice reanudable, se reanuda automáticamente una operación de creación de índice en pausa.
 - La opción SORT_IN_TEMPDB=ON no es compatible con el índice reanudable. 
 - El comando DDL con RESUMABLE=ON no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin TRAN … COMMIT).
-- Para reanudar o anular la compilación o recompilación de un índice, use la sintaxis [ALTER INDEX](alter-index-transact-sql.md) de T-SQL.
+- Para reanudar o anular una creación o recompilación de índice, use la sintaxis de T-SQL [ALTER INDEX](alter-index-transact-sql.md)
 
 > [!NOTE]
 > El comando DDL se ejecuta hasta que se completa, se pone en pausa o genera un error. En caso de que el comando se ponga en pausa, se emite un error que indica que se pausó la operación y que no se completó la creación de índice. Para más información sobre el estado actual del índice, vea [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Como ocurrió antes, en caso de fallo se generará también un error. 
 
-Para indicar que la creación de un índice se ejecuta como una operación reanudable y para comprobar su estado de ejecución actual, consulte [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Para la versión preliminar pública, las columnas siguientes de esta vista se establecen en 0:
-- total_execution_time
-- percent_complete y page_count
+Para indicar que la creación de un índice se ejecuta como una operación reanudable y para comprobar su estado de ejecución actual, consulte [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). 
 
 **Recursos** Los recursos siguientes son necesarios para la operación de creación de índice en línea
 - el espacio adicional necesario para mantener el índice que se está generando, incluida la hora en que se pausó el índice;
@@ -748,17 +743,12 @@ Para indicar que la creación de un índice se ejecuta como una operación reanu
 
 **Limitaciones funcionales actuales**
 
-> [!IMPORTANT]
-> **Creación de índices en línea reanudables** actualmente solo es compatible con los índices no agrupados.
-
 Abajo se detallan las funciones que se deshabilitan para las operaciones de creación de índices reanudables
-- Creación de índices reanudables no es compatible con un índice agrupado en la versión preliminar pública.
 - Después de poner en pausa una operación de creación de índice reanudable en línea, no es posible modificar el valor inicial de MAXDOP
-- La cláusula DROP EXISTING no es compatible
 - Crear un índice que contiene 
  - Columna calculada o columna TIMESTAMP como columnas de clave
  - Columna LOB como columna incluida para la creación de índices reanudables
-- Índice filtrado
+ - Índice filtrado
  
 ## <a name="row-and-page-locks-options"></a>Opciones de bloqueo de fila y página  
  Si ALLOW_ROW_LOCKS = ON y ALLOW_PAGE_LOCK = ON, se permiten los bloqueos de nivel de fila, página y tabla cuando se tiene acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige el bloqueo apropiado y puede cambiar de escala el bloqueo: de un bloqueo de fila o página a un bloqueo de tabla.  
@@ -1048,6 +1038,8 @@ GO
 ```  
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Crear, reanudar, pausar y anular operaciones de índices reanudables
 
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1066,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### <a name="n-basic-syntax"></a>N. Sintaxis básica  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Crear, reanudar, pausar y anular operaciones de índices reanudables
+
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

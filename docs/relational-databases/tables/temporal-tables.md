@@ -5,22 +5,19 @@ ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4171beb8274ab12235b435c7c7fc4a2eab048bb5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856723"
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  Las horas registradas en las columnas datetime2 del sistema se basan en la hora de inicio de la propia transacción. Por ejemplo, todas las filas insertadas en una única transacción tendrán la misma hora UTC registrada en la columna correspondiente al inicio del período **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>¿Cómo se consultan los datos temporales?  
- La cláusula **FROM***\<tabla>* de la instrucción **SELECT** tiene una nueva cláusula **FOR SYSTEM_TIME** con cinco subcláusulas específicas para temporal con las que se pueden consultar datos de las tablas actual y de historial. Esta nueva sintaxis de la instrucción **SELECT** se puede usar directamente en una sola tabla, propagarse por varias combinaciones y por las vistas de varias tablas temporales.  
+ La cláusula **FROM**_\<tabla\>_ de la instrucción **SELECT** tiene una nueva cláusula **FOR SYSTEM_TIME** con cinco subcláusulas temporales específicas con las que se pueden consultar datos de la tabla actual y las tablas históricas. Esta nueva sintaxis de la instrucción **SELECT** se puede usar directamente en una sola tabla, propagarse por varias combinaciones y por las vistas de varias tablas temporales.  
   
  ![Temporal: consultar](../../relational-databases/tables/media/temporal-querying.PNG "Temporal: consultar")  
   
@@ -152,7 +149,7 @@ SELECT * FROM Employee
 |**ALL**|Todas las filas|Devuelve la unión de las filas pertenecientes a la tabla actual y a la tabla de historial.|  
   
 > [!NOTE]  
->  Si quiere, puede ocultar estas columnas de periodo, de forma que las consultas que no hagan referencia explícitamente a estas columnas de periodo no devuelvan esas columnas (el escenario de **SELECT \* FROM***\<table>*). Para devolver una columna oculta, basta con hacer referencia explícita a dicha columna en la consulta. Del mismo modo, las instrucciones **INSERT** y **BULK INSERT** continuarán como si estas nuevas columnas de periodo no estuvieran presentes (y los valores de columna se rellenarán automáticamente). Para obtener más información sobre cómo usar la cláusula **HIDDEN** , vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+>  Si quiere, puede ocultar estas columnas de período, de forma que las consultas que no hagan referencia explícitamente a estas columnas de período no devuelvan esas columnas (el escenario de **SELECT \* FROM**_\<tabla\>_). Para devolver una columna oculta, basta con hacer referencia explícita a dicha columna en la consulta. Del mismo modo, las instrucciones **INSERT** y **BULK INSERT** continuarán como si estas nuevas columnas de periodo no estuvieran presentes (y los valores de columna se rellenarán automáticamente). Para obtener más información sobre cómo usar la cláusula **HIDDEN** , vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="see-also"></a>Ver también  
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba3c41e2366643e07f07307537e735ec8d259d0e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e88dbe70181dfa4000858a48ce4ebe6250a65d52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836213"
 ---
 # <a name="analyze-script-performance"></a>Analizar el rendimiento de los scripts
 Puede usar las herramientas proporcionadas por SQL Server Data Tools para determinar si puede mejorar el rendimiento de la consulta, los procedimientos almacenados o los scripts. Por ejemplo, supervisando estadísticas de cliente como los tiempos de respuesta a las consultas usadas con frecuencia, puede determinar si es necesario cambiar la consulta o los índices de las tablas. Esas estadísticas pueden incluir el tiempo de ejecución del cliente, el perfil de consulta y los paquetes/bytes enviados y recibidos.  
@@ -35,7 +32,7 @@ Para alternar la recopilación de estadísticas de cliente, cuando el Editor de 
   
 Si activó las estadísticas de cliente, aparecerá la pestaña **Estadísticas** junto a la pestaña **Mensaje** cuando se ejecute la consulta. Si ha desactivado las estadísticas de cliente, la pestaña **Estadísticas** no aparecerá. Las estadísticas de ejecuciones de consultas sucesivas se muestran junto con los valores promedio.  
   
-Para más información sobre las estadísticas recopiladas, consulte [Consultar el panel de estadísticas de ventana](http://msdn.microsoft.com/en-us/library/aa216969(SQL.80).aspx) y la sección ["Pestaña Estadísticas de cliente” de este tema](http://msdn.microsoft.com/en-us/library/aa833205.aspx).  
+Para más información sobre las estadísticas recopiladas, consulte [Consultar el panel de estadísticas de ventana](http://msdn.microsoft.com/library/aa216969(SQL.80).aspx) y la sección ["Pestaña Estadísticas de cliente” de este tema](http://msdn.microsoft.com/library/aa833205.aspx).  
   
 ## <a name="using-execution-plans"></a>Usar planes de ejecución  
 Los planes de ejecución muestran cómo el motor de base de datos navega por tablas y usa índices para obtener acceso a datos o procesarlos para una consulta u otra instrucción DML, como una actualización. Este enfoque gráfico resulta muy útil para comprender las características de rendimiento de una consulta.  
@@ -44,7 +41,7 @@ Abra o escriba un script de Transact\-SQL que contenga las consultas que desee a
   
 Cuando el script se haya analizado o ejecutado, haga clic en la pestaña **Plan de ejecución** para ver una representación gráfica del mismo.  
   
-La salida del plan de ejecución gráfico se lee de derecha a izquierda y de arriba abajo. Todas las consultas del lote se analizan y se presentan, incluido el costo de cada consulta como un porcentaje del costo total del lote. Para ver información adicional como el costo y la operación para cada paso, mantenga el puntero sobre los [iconos de operador lógico y físico](http://msdn.microsoft.com/en-us/library/ms175913.aspx) en el plan gráfico.  
+La salida del plan de ejecución gráfico se lee de derecha a izquierda y de arriba abajo. Todas las consultas del lote se analizan y se presentan, incluido el costo de cada consulta como un porcentaje del costo total del lote. Para ver información adicional como el costo y la operación para cada paso, mantenga el puntero sobre los [iconos de operador lógico y físico](http://msdn.microsoft.com/library/ms175913.aspx) en el plan gráfico.  
   
 Para cambiar la visualización del plan de ejecución, haga clic con el botón derecho en el **plan de ejecución** y seleccione **Acercar**, **Alejar**, **Zoom personalizado** o **Zoom para ajustar**. **Acercar** y **Alejar** permiten aumentar o reducir el plan de ejecución en incrementos fijos. **Zoom personalizado** le permite definir su propia ampliación de la visualización, como alejar hasta un 80 por ciento.  **Zoom para ajustar** ajusta el plan de ejecución para adaptarse al panel de resultados.  
   
@@ -55,5 +52,5 @@ Puede usar Análisis de código para detectar posibles problemas en los scripts,
   
 Para usar Análisis de código manualmente, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Ejecutar análisis de código**. Las advertencias de análisis de código se mostrarán en la ventana **Lista de errores** . Puede hacer doble clic en una advertencia para navegar hasta el código fuente que contiene el problema, y puede ver información adicional y posibles correcciones de una advertencia usando el menú contextual **Ayuda para Mostrar mensaje**.  
   
-Para obtener más información sobre Análisis de código, vea [Analizar el código de base de datos para mejorar la calidad del código](http://msdn.microsoft.com/en-us/library/dd172133.aspx).  
+Para obtener más información sobre Análisis de código, vea [Analizar el código de base de datos para mejorar la calidad del código](http://msdn.microsoft.com/library/dd172133.aspx).  
   

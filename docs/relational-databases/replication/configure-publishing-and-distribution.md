@@ -1,30 +1,26 @@
 ---
 title: Configuración de la publicación y la distribución | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7314f0938cc7ef97ad87a6777f9717d33cd2905a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c5d302195025be0d9ab1e19ac0227e427e7b4bbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832093"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +65,7 @@ La publicación y distribución de replicaciones se puede configurar mediante pr
 
 2. En el distribuidor, que también es el publicador, ejecute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) y especifique el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para `@working_directory`.
 
-   Para un distribuidor en Instancia administrada de SQL Database (versión preliminar), use una cuenta de Azure Storage para `@working_directory` y la clave de acceso de almacenamiento para `@storage_connection_string`. 
+   Para un distribuidor en Instancia administrada de SQL Database, use una cuenta de Azure Storage para `@working_directory` y la clave de acceso de almacenamiento para `@storage_connection_string`. 
 
 3. En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Especifique la base de datos que se está publicando para `@dbname`, el tipo de replicación para `@optname` y el valor `true` para `@value`.
 
@@ -83,7 +79,7 @@ La publicación y distribución de replicaciones se puede configurar mediante pr
 
 2. En el distribuidor, ejecute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) y especifique el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para `@working_directory`. Si el distribuidor va a utilizar Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse al publicador, también debe especificar el valor `0` para `@security_mode` y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para `@login` y `@password`.
 
-   Para un distribuidor en Instancia administrada de SQL Database (versión preliminar), use una cuenta de Azure Storage para `@working_directory` y la clave de acceso de almacenamiento para `@storage_connection_string`. 
+   Para un distribuidor en Instancia administrada de SQL Database, use una cuenta de Azure Storage para `@working_directory` y la clave de acceso de almacenamiento para `@storage_connection_string`. 
 
 3. En la base de datos maestra del publicador, ejecute [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md). Especifique la contraseña segura usada en el paso 1 para `@password`. El publicador utilizará esta contraseña cuando se conecte al distribuidor.
 

@@ -1,7 +1,7 @@
 ---
 title: Cambio de nombre de una base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 11/20/2017
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,83 +16,103 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b040059f7ad2fd1b58998e2b29279b4125374076
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6b97d2d670754f8205ffe269883d6791f605f5b
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232539"
 ---
 # <a name="rename-a-database"></a>Cambiar el nombre de una base de datos
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En este tema se describe cómo cambiar el nombre de una base de datos definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El nombre de la base de datos puede incluir cualquier carácter que se ajuste a las reglas para identificadores.  
+  En este tema se describe cómo cambiar el nombre de una base de datos definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o Azure SQL Database mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El nombre de la base de datos puede incluir cualquier carácter que se ajuste a las reglas para identificadores.  
   
- **En este tema**  
+## <a name="in-this-topic"></a>En este tema
   
--   **Antes de empezar:**  
+- Antes de empezar:  
   
-     [Limitaciones y restricciones](#Restrictions)  
+     [Limitaciones y restricciones](#limitations-and-restrictions)  
   
-     [Seguridad](#Security)  
+     [Seguridad](#security)  
   
--   **Para cambiar el nombre de una base de datos, use:**  
+- Para cambiar el nombre de una base de datos, use:  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#rename-a-database-using-sql-server-management-studio)  
   
-     [Transact-SQL](#TsqlProcedure)  
+     [Transact-SQL](#rename-a-database-using-transact-sql)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
-> Para cambiar el nombre de una base de datos en Azure SQL Database, use la instrucción [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Para cambiar el nombre de una base de datos en Azure SQL Data Warehouse o en Almacenamiento de datos paralelos, utilice la instrucción [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
+> Para cambiar el nombre de una base de datos en Azure SQL Data Warehouse o en Almacenamiento de datos paralelos, utilice la instrucción [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
   
--   No se puede cambiar el nombre de las bases de datos del sistema.  
+- No se puede cambiar el nombre de las bases de datos del sistema.
+- No se puede cambiar el nombre de la base de datos mientras otros usuarios estén accediendo a la base de datos. 
+  - En SQL Server, puede establecer una base de datos en modo de usuario único para cerrar cualquier conexión abierta. Para más información, vea [Establecer una base de datos en modo de usuario único](../../relational-databases/databases/set-a-database-to-single-user-mode.md).
+  - En Azure SQL Database, debe asegurarse de que ningún otro usuario tiene una conexión abierta a la base de datos cuyo nombre se va a cambiar.
   
-###  <a name="Security"></a> Seguridad  
+### <a name="security"></a>Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
- Requiere el permiso ALTER en la base de datos.  
+#### <a name="permissions"></a>Permisos
+
+Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+## <a name="rename-a-database-using-sql-server-management-studio"></a>Cambiar el nombre de una base de datos con SQL Server Management Studio
+
+Siga estos pasos para cambiar el nombre de una base de datos de SQL Server o Azure SQL Database mediante SQL Server Management Studio.
   
-#### <a name="to-rename-a-database"></a>Para cambiar el nombre de una base de datos  
+1. En el **Explorador de objetos**, conéctese a la instancia de SQL.  
   
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
+2. Asegúrese de que no hay ninguna conexión abierta a la base de datos. Si usa SQL Server, puede [establecer la base de datos en el modo de usuario único](../../relational-databases/databases/set-a-database-to-single-user-mode.md) para cerrar todas las conexiones abiertas y evitar que otros usuarios se conecten mientras está cambiando el nombre de la base de datos.  
   
-2.  Asegúrese de que nadie usa la base de datos y luego [establezca la base de datos en modo de usuario único](../../relational-databases/databases/set-a-database-to-single-user-mode.md).  
+3. En el Explorador de objetos, expanda **Bases de datos**, haga clic con el botón derecho en la base de datos cuyo nombre quiere cambiar y luego haga clic en **Cambiar nombre**.  
   
-3.  Expanda **Bases de datos**, haga clic con el botón derecho en la base de datos cuyo nombre quiere cambiar y luego haga clic en **Cambiar nombre**.  
+4. Escriba el nuevo nombre de la base de datos y haga clic en **Aceptar**.  
   
-4.  Escriba el nuevo nombre de la base de datos y haga clic en **Aceptar**.  
+## <a name="rename-a-database-using-transact-sql"></a>Cambiar el nombre de una base de datos mediante Transact-SQL  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>Para cambiar el nombre de una base de datos de SQL Server cambiándola al modo de usuario único
+
+Siga estos pasos para cambiar el nombre de una base de datos de SQL Server mediante T-SQL en SQL Server Management Studio, incluidos los pasos para establecer la base de datos en modo de usuario único y, después de cambiar el nombre, volver a establecer la base de datos en modo multiusuario.
   
-#### <a name="to-rename-a-database"></a>Para cambiar el nombre de una base de datos  
+1. Conéctese a la base de datos `master` de la instancia.  
+2. Abra una ventana de consulta.  
+3. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. Este ejemplo cambia el nombre de la base de datos `MyTestDatabase` a `MyTestDatabaseCopy`.
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+   ```sql
+   USE master;  
+   GO  
+   ALTER DATABASE MyTestDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+   GO
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   GO  
+   ALTER DATABASE MyTestDatabaseCopy SET MULTI_USER
+   GO
+   ```  
+
+### <a name="to-rename-an-azure-sql-database-database"></a>Para cambiar el nombre de una base de datos de Azure SQL Database
+
+Siga estos pasos para cambiar el nombre de una base de datos de Azure SQL Database mediante T-SQL en SQL Server Management Studio.
   
-2.  En la barra Estándar, haga clic en **Nueva consulta**.  
+1. Conéctese a la base de datos `master` de la instancia.  
+2. Abra una ventana de consulta.
+3. Asegúrese de que nadie está usando la base de datos.
+4. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. Este ejemplo cambia el nombre de la base de datos `MyTestDatabase` a `MyTestDatabaseCopy`.
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. Este ejemplo cambia el nombre de la base de datos `AdventureWorks2012` a `Northwind`.  
+   ```sql
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   ```  
+
+## <a name="backup-after-renaming-a-database"></a>Copia de seguridad después de cambiar el nombre de una base de datos  
+
+Después de cambiar el nombre de una base de datos en SQL Server, haga una copia de seguridad de la base de datos `master`. En Azure SQL Database, esto no es necesario porque las copias de seguridad se realizan automáticamente.  
   
-```sql  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012  
-Modify Name = Northwind ;  
-GO  
-```  
-  
-###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Seguimiento: Después de cambiar el nombre de una base de datos  
- Después de cambiar el nombre de cualquier base de datos, realice una copia de seguridad de la base de datos **maestra** .  
-  
-## <a name="see-also"></a>Ver también  
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Identificadores de base de datos](../../relational-databases/databases/database-identifiers.md)  
-  
-  
+## <a name="see-also"></a>Ver también
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [Identificadores de base de datos](../../relational-databases/databases/database-identifiers.md)  

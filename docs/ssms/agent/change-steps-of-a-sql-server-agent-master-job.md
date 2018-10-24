@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0909562fb69695b3efde0663bc0afa48178c4358
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 41fcde697bcdaa0334ed364c7c12cd9d3e8481d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42776520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733693"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,13 +63,13 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 4.  Haga clic con el botón derecho en el trabajo del que quiera modificar los pasos y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del trabajo –***nombre_de_trabajo*, en **Seleccionar una página**, seleccione **Pasos**.  
+5.  En el cuadro de diálogo **Propiedades del trabajo –**_nombre\_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
   
-6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo –***nombre_de_paso_de_trabajo*, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo –**_nombre\_paso\_trabajo_, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   
-8.  En el cuadro de diálogo *Propiedades del trabajo –***nombre_de_trabajo*, haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **Propiedades del trabajo –**_nombre\_trabajo_, haga clic en **Aceptar**.  
   
 ## <a name="TsqlProcedure"></a>Usar Transact-SQL  
   

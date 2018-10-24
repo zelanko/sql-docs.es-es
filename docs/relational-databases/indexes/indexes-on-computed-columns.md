@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789863"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851880"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Todas las referencias a funciones de la columna calculada deben tener el mismo p
 > [!IMPORTANT]  
 >  Las expresiones son deterministas si siempre devuelven el mismo resultado para un conjunto de entradas específico. La propiedad **IsDeterministic** de la función [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) informa de si una expresión *computed_column_expression* es determinista.  
   
- La expresión *computed_column_expression* debe ser determinista. Una expresión *computed_column_expression* es determinista si se cumplen una o varias de las condiciones siguientes:  
+ La expresión *computed_column_expression* debe ser determinista. Una expresión *computed_column_expression* es determinista cuando se cumplen todas estas condiciones:  
   
 -   Todas las funciones a las que hace referencia la expresión son deterministas y precisas. Esto incluye las funciones definidas por el usuario y las funciones integradas. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Puede que las funciones sean imprecisas si el valor de la columna calculada es PERSISTED. Para obtener más información, vea [Crear índices en columnas calculadas persistentes](#BKMK_persisted) más adelante en este tema.  
   

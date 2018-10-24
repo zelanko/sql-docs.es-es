@@ -1,13 +1,11 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -45,17 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 275
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 60fae479512b89afe2d9499716071a9376edd439
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40415865"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252212"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,23 +68,14 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[Instancia administrada de <br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Almacenamiento de datos<br /> paralelos](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 Hace copia de seguridad de una base de datos completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para crear una copia de seguridad de la base de datos, o uno o más archivos o grupos de archivos de la base de datos para crear una copia de seguridad de archivo (BACKUP DATABASE). Además, con el modelo de recuperación completa o con el modelo de recuperación optimizado para cargas masivas de registros, realiza la copia de seguridad del registro de transacciones de la base de datos para crear una copia de seguridad de registros (BACKUP LOG). 
   
@@ -213,7 +201,8 @@ Puede restaurar una copia de seguridad del registro hasta un momento o transacci
 > [!NOTE]  
 >  Después de una copia de seguridad del registro típica, algunas entradas del registro de transacciones se quedan inactivas, a menos que se especifique `WITH NO_TRUNCATE` o `COPY_ONLY`. El registro se trunca después de que todos los registros de uno o varios archivos del registro virtual se queden inactivos. Si el registro no se trunca después de las copias de seguridad del registro rutinarias, algo podría estar retrasando el truncamiento de los registros. Para más información, vea [Factores que pueden ralentizar el truncamiento del registro](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
-{ *database_name* | **@***database_name_var* } Es la base de datos para la que se realiza la copia de seguridad del registro de transacciones, de una parte de la base de datos o de la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var***=***nombre de la base de datos*) o como una variable de un tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+{ _database\_name_ | **@**_database\_name\_var_ }   
+Es la base de datos para la que se realiza la copia de seguridad del registro de transacciones, de una parte de la base de datos o de la base de datos completa. Si se proporciona como una variable (**@**_database\_name\_var_), este nombre se puede especificar como una constante de cadena (**@**_database\_name\_var_**=**_database name_) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
 > [!NOTE]  
 > No se puede hacer una copia de seguridad de la base de datos reflejada en una asociación de creación de reflejo de la base de datos.  
@@ -221,10 +210,10 @@ Puede restaurar una copia de seguridad del registro hasta un momento o transacci
 \<file_or_filegroup> [ **,**...*n* ]  
 Se utiliza solo con BACKUP DATABASE, especifica un grupo de archivos o un archivo de copia de seguridad que se va a incluir en una copia de seguridad de archivos, o especifica un grupo de archivos o un archivo de solo lectura que se va a incluir en una copia de seguridad parcial.  
   
-FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
+FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }  
 Es el nombre lógico de un archivo o una variable cuyo valor equivale al nombre lógico de un archivo que se va a incluir en la copia de seguridad.  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }  
 Es el nombre lógico de un grupo de archivos o una variable cuyo valor equivale al nombre lógico de un grupo de archivos que se va a incluir en la copia de seguridad. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.  
   
 > [!NOTE]  
@@ -235,7 +224,7 @@ Es un marcador de posición que indica que se pueden especificar varios archivos
   
 Para más información, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]  
 Especifica una copia de seguridad parcial. Una copia de seguridad parcial incluye todos los archivos de lectura/escritura en una base de datos: el grupo de archivos principal y los grupos de archivos secundarios de lectura/escritura, así como los grupos de archivos o archivos de solo lectura especificados.  
   
 READ_WRITE_FILEGROUPS  
@@ -244,7 +233,7 @@ Especifica que en la copia de seguridad parcial se copiarán todos los grupos de
 > [!IMPORTANT]  
 > Si se enumeran de forma explícita los grupos de archivos de lectura/escritura con FILEGROUP en vez de READ_WRITE_FILEGROUPS, se crea una copia de seguridad de archivos.  
   
-FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
 Es el nombre lógico de un grupo de archivos de solo lectura o una variable cuyo valor equivale al nombre lógico de un grupo de archivos de solo lectura que se va a incluir en la copia de seguridad parcial. Para más información, vea "\<file_or_filegroup>" anteriormente en este tema.
   
 *n*  
@@ -258,9 +247,10 @@ TO \<backup_device> [ **,**...*n* ] Indica que el conjunto de [dispositivos de c
 
 Especifica el dispositivo de copia de seguridad físico o lógico que se va a utilizar para la operación de copia de seguridad.  
   
-{ *logical_device_name* | **@***logical_device_name_var* } **Se aplica a:** SQL Server Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@* logical_device_name_var *), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (@* logical_device_name_var***=** nombre lógico del dispositivo de copia de seguridad) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Applies to:** SQL Server   
+Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (@_logical\_device\_name\_var_**=** logical backup device name) o como una variable de cualquier tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
-{ DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **Se aplica a:** DISK, TAPE y URL se aplican a SQL Server. 
+{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **Se aplica a:** DISK, TAPE y URL se aplican a SQL Server. 
 Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Microsoft Azure Blob Storage. El formato de las direcciones URL solo se usa para crear copias de seguridad en el servicio de almacenamiento Microsoft Azure. Para obtener información y ejemplos, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
@@ -371,13 +361,13 @@ Habilita de forma explícita la compresión de copia de seguridad.
 NO_COMPRESSION  
 Deshabilita de forma explícita la compresión de copia de seguridad.  
   
-DESCRIPTION **=** { **'***texto***'** | **@***variable_de_texto* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 Especifica el texto de forma libre que describe el conjunto de copia de seguridad. La cadena puede tener un máximo de 255 caracteres.  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.  
   
-{ EXPIREDATE **='***date***'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
 Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Si se usan las dos opciones, RETAINDAYS tiene precedencia sobre EXPIREDATE.  
   
 Si no se especifica ninguna opción, la fecha de expiración se determina con el valor de configuración **mediaretention**. Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -385,9 +375,10 @@ Si no se especifica ninguna opción, la fecha de expiración se determina con el
 > [!IMPORTANT]  
 > Estas opciones solo impiden que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobrescriba un archivo. Las cintas se pueden borrar utilizando otros métodos, y los archivos de disco se pueden eliminar usando el sistema operativo. Para obtener más información acerca de la comprobación de la expiración, vea SKIP y FORMAT en este tema.  
   
-EXPIREDATE **=** { **'***date***'** |**@***date_var* } Especifica cuándo expira el conjunto de copia de seguridad y se puede sobrescribir. Si se proporciona como una variable (@* date_var*), esta fecha debe seguir el formato **datetime** configurado para el sistema y se debe especificar de uno de los siguientes modos:  
+EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }  
+Especifica cuándo expira el conjunto de copia de seguridad y se puede sobrescribir. Si se proporciona como una variable (@_date\_var_), esta fecha debe seguir el formato **datetime** configurado para el sistema y se debe especificar de uno de los siguientes modos:  
   
-- Constante de cadena (@*date_var* **=** date)  
+- Una constante de cadena (@_date\_var_ **=** date)  
 - Variable de un tipo de datos de cadena de caracteres (excepto los tipos de datos **ntext** o **text**)  
 - Un **smalldatetime**  
 - Una variable **datetime**  
@@ -402,7 +393,8 @@ Para más información sobre cómo especificar valores **datetime**, vea [Tipos 
 > [!NOTE]  
 > Para omitir la fecha de caducidad, use la opción `SKIP`.  
   
-RETAINDAYS **=** { *days* | **@***days_var* } Especifica el número de días que deben transcurrir antes de que se pueda sobrescribir este conjunto de medios de copia de seguridad. Si se proporciona como una variable (**@***days_var*), se debe especificar como un entero.  
+RETAINDAYS **=** { *days* | **@**_days\_var_ }  
+Especifica el número de días que deben transcurrir antes de que se pueda sobrescribir este conjunto de medios de copia de seguridad. Si se proporciona como una variable (**@**_days\_var_), se debe especificar como un entero.  
   
 **Opciones de conjuntos de medios**  
   
@@ -456,13 +448,13 @@ Especifica que se debe crear un conjunto de medios nuevo. FORMAT hace que la ope
   
 La especificación de FORMAT implica `SKIP` y no es necesario especificar `SKIP` de forma explícita.  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 Especifica el nombre del medio para el conjunto completo de medios de copia de seguridad. El nombre del medio no puede tener más de 128 caracteres y, si se especifica `MEDIANAME`, debe coincidir con el nombre de medio especificado que ya existe en los volúmenes de copia de seguridad. Si no se especifica o se especifica la opción SKIP, no se realiza la comprobación del nombre del medio.  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 Especifica el tamaño de bloque físico, en bytes. Los tamaños admitidos son 512, 1024, 2048, 4096, 8192, 16384, 32768 y 65536 (64 KB) bytes. El valor predeterminado es 65536 para dispositivos de cinta y 512 para otros dispositivos. Normalmente, esta opción no es necesaria, ya que BACKUP selecciona automáticamente un tamaño de bloque apropiado para el dispositivo. La especificación explícita de un tamaño de bloque invalida la selección automática del tamaño de bloque.  
   
 Si va a realizar una copia de seguridad en CD-ROM que pretende utilizar para copiar y restaurar, especifique BLOCKSIZE=2048.  
@@ -472,7 +464,7 @@ Si va a realizar una copia de seguridad en CD-ROM que pretende utilizar para cop
   
 **Opciones de transferencia de datos**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 Especifica el número total de búferes de E/S que se van a utilizar para la operación de copia de seguridad. Puede especificar cualquier entero positivo; no obstante, un número de búferes demasiado grande podría provocar errores de "memoria insuficiente" a causa de un espacio de direcciones virtuales inadecuado en el proceso Sqlservr.exe.  
   
 El espacio total usado por los búferes viene determinado por: *buffercount/maxtransfersize*.  
@@ -480,7 +472,7 @@ El espacio total usado por los búferes viene determinado por: *buffercount/maxt
 > [!NOTE]  
 > Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
 
 > [!NOTE]  
 > Al crear copias de seguridad con el Servicio del objeto de escritura de SQL, si la base de datos tiene configurado [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) o incluye [grupos de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), el valor de `MAXTRANSFERSIZE` en el momento de una restauración debe ser mayor o igual que el valor de `MAXTRANSFERSIZE` que se usó cuando se creó la copia de seguridad. 
@@ -945,23 +937,14 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Instancia administrada<br />de SQL Database *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[Almacenamiento de datos<br /> paralelos](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
 
 Realiza una copia de seguridad de una base de datos SQL colocada u hospedada en una instancia administrada de Azure SQL Database. La [Instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) de SQL Database tiene copias de seguridad automáticas y permite a los usuarios crear copias de seguridad `COPY_ONLY` de la base de datos completas. No se admiten las copias de seguridad de instantáneas de archivos, de registros ni diferenciales.  
 
@@ -1009,7 +992,8 @@ Especifica una copia de seguridad completa de la base de datos. Durante una copi
   
 Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de seguridad de datos*), se restaura la copia de seguridad completa. Para restaurar desde copias de seguridad automáticas de una instancia administrada de Azure SQL Database, vea [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore) (Restaurar SQL Database)  
   
-{ *database_name* | **@***database_name_var* } Es la base de datos para la que se realiza la copia de seguridad de la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var***=***nombre de la base de datos*) o como una variable de un tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+{ *database_name* | **@**_database\_name\_var_ }   
+Es la base de datos desde la que se realiza la copia de seguridad de la base de datos completa. Si se proporciona como una variable (**@**_database\_name\_var_), este nombre se puede especificar como una constante de cadena (**@**_database\_name\_var_**=**_database name_) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
 Para más información, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
@@ -1061,24 +1045,24 @@ Habilita de forma explícita la compresión de copia de seguridad.
 NO_COMPRESSION  
 Deshabilita de forma explícita la compresión de copia de seguridad.  
   
-DESCRIPTION **=** { **'***texto***'** | **@***variable_de_texto* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 Especifica el texto de forma libre que describe el conjunto de copia de seguridad. La cadena puede tener un máximo de 255 caracteres.  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 Especifica el nombre del medio para el conjunto completo de medios de copia de seguridad. El nombre del medio no puede tener más de 128 caracteres y, si se especifica `MEDIANAME`, debe coincidir con el nombre de medio especificado que ya existe en los volúmenes de copia de seguridad. Si no se especifica o se especifica la opción SKIP, no se realiza la comprobación del nombre del medio.  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 Especifica el tamaño de bloque físico, en bytes. Los tamaños admitidos son 512, 1024, 2048, 4096, 8192, 16384, 32768 y 65536 (64 KB) bytes. El valor predeterminado es 65536 para dispositivos de cinta y 512 para otros dispositivos. Normalmente, esta opción no es necesaria, ya que BACKUP selecciona automáticamente un tamaño de bloque apropiado para el dispositivo. La especificación explícita de un tamaño de bloque invalida la selección automática del tamaño de bloque.  
   
 **Opciones de transferencia de datos**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 Especifica el número total de búferes de E/S que se van a utilizar para la operación de copia de seguridad. Puede especificar cualquier entero positivo; no obstante, un número de búferes demasiado grande podría provocar errores de "memoria insuficiente" a causa de un espacio de direcciones virtuales inadecuado en el proceso Sqlservr.exe.  
   
 El espacio total usado por los búferes viene determinado por: *buffercount/maxtransfersize*.  
@@ -1086,7 +1070,7 @@ El espacio total usado por los búferes viene determinado por: *buffercount/maxt
 > [!NOTE]  
 > Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
 
 > [!NOTE]  
 > En el caso de las bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, el valor predeterminado de `MAXTRANSFERSIZE` es 65536 (64 KB). En las bases de datos que no tienen cifrado TDE, el valor predeterminado de `MAXTRANSFERSIZE` es 1048576 (1 MB) cuando se usa la copia de seguridad en DISK y 65536 (64 KB) al usar VDI o TAPE.
@@ -1159,25 +1143,16 @@ WITH STATS = 5;
 [Restaurar base de datos](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
->   <th><strong><em>* Almacenamiento de datos<br />paralelos de SQL *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de <br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Almacenamiento de datos<br /> paralelos \*_** &nbsp;|  
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>Almacenamiento de datos paralelos de SQL
+## <a name="parallel-data-warehouse"></a>Almacenamiento de datos paralelos
 
 Crea una copia de seguridad de una base de datos de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] y la almacena fuera del dispositivo en una ubicación de red especificada por el usuario. Use esta instrucción con [RESTORE DATABASE &#40;Almacenamiento de datos paralelos&#41;](../../t-sql/statements/restore-statements-transact-sql.md) para la recuperación ante desastres, o bien para copiar una base de datos de un dispositivo a otro.  
   
@@ -1221,12 +1196,12 @@ La ruta de acceso de red y el directorio en el que [!INCLUDE[ssPDW](../../includ
 - La longitud máxima de la ruta de acceso UNC y el nombre del directorio de copia de seguridad es de 200 caracteres.  
 - El servidor o host se debe especificar como una dirección IP.  No se puede especificar como el nombre de host o servidor.  
   
-DESCRIPTION = **"***texto***"**  
+DESCRIPTION = **'**_text_**'**  
 Especifica una descripción textual de la copia de seguridad. La longitud máxima del texto es 255 caracteres.  
   
 La descripción se almacena en los metadatos y se mostrará cuando se restaure el encabezado de copia de seguridad con RESTORE HEADERONLY.  
   
-NAME = **'***backup _name***'**  
+NAME = **'**_backup \_name_**'**  
 Especifica el nombre de la copia de seguridad. El nombre de la copia de seguridad puede ser distinto del nombre de la base de datos.  
   
 - Los nombres pueden tener un máximo de 128 caracteres.  

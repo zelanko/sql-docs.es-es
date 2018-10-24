@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e3337d0912e0249c7ac49523bb4159458ba36e8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274052"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775049"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrar Reporting Services con SOAP: aplicación Windows
   Puede tener acceso a la funcionalidad completa del servidor de informes a través de la API SOAP de Reporting Services. Se trata de un servicio web y, como tal, se puede tener acceso con facilidad al mismo con el fin de proporcionar características de informes de empresa para aplicaciones empresariales personalizadas. Puede tener acceso al servicio web en una aplicación Windows simplemente escribiendo código que realice llamadas al servicio. Con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puede generar una clase de proxy que exponga las propiedades y los métodos del servicio web y le permita usar una infraestructura y herramientas conocidas para compilar aplicaciones empresariales integradas en la tecnología [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -90,11 +87,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Sin embargo, el método <xref:ReportExecution2005.ReportExecutionService.Render%2A> de la API SOAP se puede utilizar para representar los informes y guardarlos en varios formatos de salida mediante programación. Esto es una ventaja sobre el acceso URL, que requiere la interacción con el usuario. Al representar un informe usando el método <xref:ReportExecution2005.ReportExecutionService.Render%2A> de la API SOAP, puede usar cualquiera de los formatos de salida admitidos.  
   
- También puede usar los controles ReportViewer que se distribuyen de forma gratuita y están incluidos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Los controles ReportViewer permiten incrustar fácilmente la funcionalidad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones personalizadas. Los controles ReportViewer se han concebido para los programadores que desean proporcionar informes prediseñados, completamente creados, como parte del conjunto de características de una aplicación (por ejemplo, una aplicación de administración de un sitio web debería incluir informes que mostrasen análisis de flujos de clic de los sitios web de la compañía). Incrustar los controles en una aplicación es una alternativa simplificada frente a incluir los componentes de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la implementación de la aplicación. Los controles proporcionan funcionalidad de informes, pero sin las características de compatibilidad adicionales de creación, publicación, distribución y entrega de informes que se incluyen en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ También puede usar los controles del Visor de informes que se distribuyen de forma gratuita y están incluidos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Los controles del Visor de informes permiten insertar fácilmente la característica de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplicaciones personalizadas. Los controles del Visor de informes se han concebido para los programadores que quieren proporcionar informes prediseñados, completamente creados, como parte del conjunto de características de una aplicación (por ejemplo, una aplicación de administración de un sitio web debería incluir informes que mostrasen análisis de flujos de clic de los sitios web de la compañía). Incrustar los controles en una aplicación es una alternativa simplificada frente a incluir los componentes de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la implementación de la aplicación. Los controles proporcionan funcionalidad de informes, pero sin las características de compatibilidad adicionales de creación, publicación, distribución y entrega de informes que se incluyen en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Hay dos versiones de los controles ReportViewer, una para aplicaciones cliente de Windows completas y otra para las aplicaciones [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Los controles admiten tanto el modo de procesamiento local como el modo de procesamiento remoto. En el modo de procesamiento local, la aplicación proporciona la definición y los conjuntos de datos de los informes y desencadena el procesamiento de los informes. En el modo de procesamiento remoto, la recuperación de datos y el procesamiento de informes tienen lugar en el servidor de informes y el control se utiliza para la visualización y navegación en informes. Este modelo le permite crear aplicaciones completas que pueden distribuirse del escritorio a la empresa.  
+ Hay dos versiones de los controles del Visor de informes, una para aplicaciones cliente de Windows completas y otra para las aplicaciones [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Los controles admiten tanto el modo de procesamiento local como el modo de procesamiento remoto. En el modo de procesamiento local, la aplicación proporciona la definición y los conjuntos de datos de los informes y desencadena el procesamiento de los informes. En el modo de procesamiento remoto, la recuperación de datos y el procesamiento de informes tienen lugar en el servidor de informes y el control se utiliza para la visualización y navegación en informes. Este modelo le permite crear aplicaciones completas que pueden distribuirse del escritorio a la empresa.  
   
- Los controles ReportViewer se describen en la Ayuda en pantalla de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Para obtener más información, vea la documentación del producto de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Los controles del Visor de informes se describen en la Ayuda en pantalla de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Para obtener más información, vea la documentación del producto de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Ver también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

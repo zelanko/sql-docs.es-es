@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
@@ -18,16 +15,15 @@ helpviewer_keywords:
 - number of values
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 829b3dc894e3976aef20a239f30ed33af9ac27fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0c049d11cf1e7a7a1d3fa4654756652b242183f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048812"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759983"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar las filas de una tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +45,7 @@ Los procedimientos para los tres tipos de recuentos son similares.
   
 2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agregar grupo por** en el menú contextual. El [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) agrega una columna **Agrupar por** a la cuadrícula en el panel Criterios.  
   
-3.  Seleccione **\&#42; (Todas las columnas)** en el rectángulo que representa la tabla o el objeto con valores de tabla.  
+3.  Seleccione **#42; (Todas las columnas)** en el rectángulo que representa la tabla o el objeto con valores de tabla.  
   
     El Diseñador de consultas y vistas escribe automáticamente el término **Recuento** en la columna **Agrupar por** del panel Criterios y asigna un alias a la columna que se va a resumir. Puede sustituir este alias generado automáticamente por otro más significativo. Para más información, consulte [Crear alias de columna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
@@ -61,7 +57,7 @@ Los procedimientos para los tres tipos de recuentos son similares.
   
 2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agregar grupo por** en el menú contextual. El Diseñador de consultas y vistas agrega una columna **Agrupar por** a la cuadrícula en el panel Criterios.  
   
-3.  Seleccione **\&#42;(Todas las columnas)** en el rectángulo que representa la tabla o el objeto estructurado en tabla.  
+3.  Seleccione **#42;(Todas las columnas)** en el rectángulo que representa la tabla o el objeto estructurado en tabla.  
   
     El Diseñador de consultas y vistas escribe automáticamente el término **Recuento** en la columna **Agrupar por** del panel Criterios y asigna un alias a la columna que se va a resumir. Para crear un encabezado de columna más útil en el resultado de la consulta, vea [Crear alias de columna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   

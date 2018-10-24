@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentación de Microsoft Azure
-description: Obtenga información sobre cómo compilar y administrar potentes aplicaciones mediante Microsoft Azure Cloud Services. Obtenga documentación, un código de ejemplo, tutoriales y mucho más.
+title: Centro de aprendizaje de SQL Server
+description: Explore una compilación de recursos educativos para SQL Server.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 59e087c88ca3addf6afc3425770de77c2a851f5e
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: a50d7112ca9f3e8ff9fa5d2a37a037a3322e2cf3
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878008"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336184"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -461,10 +461,16 @@ ms.locfileid: "48878008"
         <h2>Manténgase en contacto con nosotros</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuya a los documentos de SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuir </a>
             </li>
            <li>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQjIxMzJORE1BTVk4WU9YSlNaWVVIRElPRC4u" data-linktype="external"> Comentarios de los documentos de SQL </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obtener ayuda </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Comentarios </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Encuesta </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>

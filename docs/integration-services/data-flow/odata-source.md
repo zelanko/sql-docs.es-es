@@ -1,13 +1,11 @@
 ---
 title: Origen OData| Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692133"
 ---
 # <a name="odata-source"></a>Origen OData
-Use el componente de origen OData en un paquete SSIS para consumir datos de un servicio de Open Data Protocol (OData). El componente admite los protocolos OData v3 y v4.  
+Use el componente de origen OData en un paquete SSIS para consumir datos de un servicio de Open Data Protocol (OData).
+
+## <a name="supported-protocols-and-data-formats"></a>Protocolos y formatos de datos admitidos
+
+El componente admite los protocolos OData v3 y v4.  
   
 -   Protocolo OData V3: el componente admite los formatos de datos JSON y ATOM.  
   
 -   Protocolo OData V4: el componente admite el formato de datos JSON.  
 
+## <a name="supported-data-sources"></a>Orígenes de datos admitidos
+
 El origen OData incluye compatibilidad con los orígenes de datos siguientes:
 -   Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online
 -   Listas de SharePoint. Para ver todas las listas en un servidor de SharePoint, use la dirección URL siguiente: http://\<servidor>/_vti_bin/ListData.svc. Para obtener más información sobre las convenciones de direcciones URL de SharePoint, vea [Interfaz de REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
 
-> [!NOTE]
+## <a name="supported-data-types"></a>Tipos de datos admitidos
+
+El origen OData admite los siguientes tipos de datos simples: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string y TimeSpan.
+
+Para detectar los tipos de datos de las columnas del origen de datos, vea la página `http://<OData feed endpoint>/$metadata`.
+
+> [!IMPORTANT]
 > El componente de origen de OData no admite tipos complejos, como los elementos de opción múltiple, en las listas de SharePoint.
 
 ## <a name="odata-format-and-performance"></a>Formato y rendimiento de OData

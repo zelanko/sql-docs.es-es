@@ -1,7 +1,7 @@
 ---
 title: Conexión a orígenes de datos y a recursos compartidos de archivos con la autenticación de Windows | Microsoft Docs
 description: Aprenda a configurar el catálogo de SSIS en Azure SQL Database y Azure-SSIS Integration Runtime para ejecutar paquetes que se conectar a orígenes de datos y recursos compartidos de archivos con la autenticación de Windows.
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608654"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119982"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Conexión a orígenes de datos y a recursos compartidos de archivos con la autenticación de Windows de paquetes SSIS en Azure
 Puede usar la autenticación de Windows para conectarse a orígenes de datos y recursos compartidos de archivos que están en la misma red virtual que Azure SSIS Integration Runtime (IR), tanto en máquinas virtuales locales o de Azure como en Azure Files. Hay tres métodos para conectarse a orígenes de datos y recursos compartidos de archivos con la autenticación de Windows de paquetes SSIS que se ejecutan en Azure-SSIS IR:
@@ -34,7 +34,7 @@ Puede usar la autenticación de Windows para conectarse a orígenes de datos y r
 En el resto de este artículo se describe cómo configurar el catálogo de SSIS en Azure SQL Database para ejecutar paquetes que usan la autenticación de Windows para conectarse a orígenes de datos y a recursos compartidos de archivos. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>Solo se puede usar un conjunto de credenciales
-En este método, solo se puede usar un conjunto de credenciales en un paquete. Las credenciales de dominio que proporcione al seguir los pasos descritos en este artículo se aplican a todas las ejecuciones de paquetes, tanto interactivas como programadas, en la instancia de Azure-SSIS IR hasta que cambie o quite esas credenciales. Si el paquete tiene que conectarse a varios orígenes de datos y recursos compartidos de archivos con diferentes conjuntos de credenciales, es posible que considerar los métodos alternativos anteriores.
+Al utilizar la autenticación de Windows en un paquete SSIS, solo puede usar un conjunto de credenciales en un paquete. Las credenciales de dominio que proporcione al seguir los pasos descritos en este artículo se aplican a todas las ejecuciones de paquetes, tanto interactivas como programadas, en la instancia de Azure-SSIS IR hasta que cambie o quite esas credenciales. Si el paquete tiene que conectarse a varios orígenes de datos y recursos compartidos de archivos con diferentes conjuntos de credenciales, es posible que considerar los métodos alternativos anteriores.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Proporcionar credenciales de dominio de autenticación de Windows
 Para proporcionar las credenciales de dominio que permiten que los paquetes usen la autenticación de Windows para conectarse a orígenes de datos/recursos compartidos de archivos locales, realice lo siguiente:
@@ -100,7 +100,7 @@ Para conectarse a un servidor SQL local desde un paquete que se ejecuta en Azure
 3.  Para conectarse con la autenticación de Windows, asegúrese de que Azure-SSIS IR pertenece a una red virtual que también incluye la instancia local de SQL Server.  Para obtener más información, consulte [Unión de una instancia de Integration Runtime de SSIS de Azure a una red virtual](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Luego, use `catalog.set_execution_credential` para proporcionar las credenciales, como se describe en este artículo.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>Conectarse a un recurso compartido de archivos local
-Para comprobar si puede conectarse a un recurso compartido de archivos local, haga lo siguiente:
+Para probar si puede conectarse a un recurso compartido de archivos local, haga lo siguiente:
 
 1.  Para ejecutar esta prueba, busque un equipo que no esté unido a ningún dominio.
 

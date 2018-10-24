@@ -5,9 +5,7 @@ ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a03b86fcd019a1e53d592acc5a23a352ab12d3a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760343"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Configuración|char(*n*) NOT NULL o binary(*n*) NOT NULL|char(*n*) NULL o binary(*n*) NULL|varchar(*n*) o varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **char(***n***)** o **binary(***n***)** NOT NULL cuando SET ANSI_PADDING está establecido en ON.|Los espacios en blanco finales en los valores de caracteres insertados en las columnas **varchar** no se recortan. Los ceros a la derecha en los valores binarios insertados en las columnas **varbinary** no se recortan. Los valores no se rellenan hasta completar la longitud de la columna.|  
+|ON|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **char(**_n_**)** o **binary(**_n_**)** NOT NULL cuando SET ANSI_PADDING es ON.|Los espacios en blanco finales en los valores de caracteres insertados en las columnas **varchar** no se recortan. Los ceros a la derecha en los valores binarios insertados en las columnas **varbinary** no se recortan. Los valores no se rellenan hasta completar la longitud de la columna.|  
 |OFF|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **varchar** o **varbinary** cuando SET ANSI_PADDING está en OFF.|Los espacios en blanco finales en los valores de carácter insertados en una columna **varchar** se recortan. Los ceros a la derecha en los valores binarios insertados en una columna **varbinary** se recortan.|  
   
 > [!NOTE]  

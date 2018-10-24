@@ -1,22 +1,18 @@
 ---
 title: Integración del servidor de informes de Power BI (Administrador de configuración) | Microsoft Docs
-ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.suite: pro-bi
-ms.topic: conceptual
-f1_keywords:
-- pbi
-- power bi
-- power bi integration
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.topic: conceptual
+ms.date: 09/17/2017
+ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759433"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integración del servidor de informes de Power BI (Administrador de configuración)
 
@@ -55,6 +51,9 @@ Complete los pasos siguientes desde el Administrador de configuración de [!INCL
 1. Seleccione la página de integración de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 
 2. Seleccione **Registrarse con Power BI**.
+
+    >[!Note]
+    > Asegúrese de que el puerto 443 no está bloqueado.
 
 3. En el cuadro de diálogo de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , escriba las credenciales que use para iniciar sesión en [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 

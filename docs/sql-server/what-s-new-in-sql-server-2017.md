@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1cb9cb1c8a7b48e2001b106ca98f6d82a71be6fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fd438c408b9719e4976b112c28f09e154e17339
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807553"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120352"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Ahora, los desarrolladores de SQL Server tienen acceso a las bibliotecas ampliad
 - **Operacionalización de Python con T-SQL**: implemente fácilmente código de Python con el procedimiento almacenado `sp_execute_external_script`. Obtenga un gran rendimiento transmitiendo datos de SQL a procesos de Python y con paralelización de anillos de MPI.
 - **Contextos de cálculo de Python en SQL Server**: los desarrolladores y los científicos que trabajan con datos pueden ejecutar código de Python de forma remota desde sus entornos de desarrollo para explorar datos y desarrollar modelos sin mover datos.
 - **Puntuación nativa**: la función PREDICT de Transact-SQL puede utilizarse para realizar la puntuación en cualquier instancia de SQL Server 2017, incluso si no está instalado R. Tan solo hay que entrenar el modelo con uno de los algoritmos RevoScaleR y revoscalepy admitidos y guardarlo en un nuevo formato binario compacto.
-- **Administración de paquetes**: T-SQL ahora es compatible con la instrucción CREATE EXTERNAL LIBRARY para poder proporcionar a los administradores de bases de datos mayor capacidad de administración en los paquetes de R. Utilice los roles para controlar el acceso privado o compartido a los paquetes de R en la base de datos, y comparta dichos roles entre los usuarios.
+- **Administración de paquetes**: T-SQL ahora es compatible con la instrucción CREATE EXTERNAL LIBRARY para poder proporcionar a los administradores de bases de datos mayor capacidad de administración en los paquetes de R. Use roles para controlar el acceso privado o compartido a los paquetes, almacene paquetes de R en la base de datos y compártalos con los usuarios.
 - **Mejoras de rendimiento**: el procedimiento almacenado `sp_execute_external_script` se ha optimizado para admitir la ejecución en modo por lotes en los datos de almacén de columnas.
 
 

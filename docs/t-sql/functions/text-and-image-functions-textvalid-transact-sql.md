@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faccfb4456001f6a807e69cc69c89f31e8320955
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 01e165cf75dbb411507ead1bab3728cf4e142df9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799733"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Funciones de texto e imagen - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Función o instrucción|Descripción|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'*%pattern%**'***,** *expression***)**|Devuelve la posición de carácter de una cadena de caracteres especificada en columnas de tipo **text** y **ntext**.|  
-|DATALENGTH **(***expression***)**|Devuelve la longitud de datos en columnas **text**, **ntext** e **image**.|  
+|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|Devuelve la posición de carácter de una cadena de caracteres especificada en columnas de tipo **text** y **ntext**.|  
+|DATALENGTH **(**_expression_**)**|Devuelve la longitud de datos en columnas **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Devuelve el límite en bytes de los datos de tipo **text**, **ntext** o **image** que se devuelven con una instrucción SELECT.|  
   
 ## <a name="examples"></a>Ejemplos  

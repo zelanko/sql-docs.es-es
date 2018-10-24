@@ -83,7 +83,7 @@ ms.locfileid: "48181223"
  El administrador de la base de datos puede utilizar la conmutación por error manual para actualizar hardware o software sin sacrificar la disponibilidad. Para utilizar la creación de reflejo de la base de datos para las actualizaciones de software, el servidor reflejado y/o el sistema deben haber recibido ya las actualizaciones.  
   
 > [!NOTE]  
->  La creación de reflejo de la base de datos podrá realizar una actualización gradual, pero no está garantizado, ya que no se conocen los cambios futuros. Para más información, consulte [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+>  La creación de reflejo de la base de datos podrá realizar una actualización gradual, pero no está garantizado, ya que no se conocen los cambios futuros. Para más información, consulte [Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor](upgrading-mirrored-instances.md).  
   
  En la ilustración siguiente se muestra un ejemplo del uso de la conmutación por error manual para mantener la disponibilidad de la base de datos mientras se actualiza una instancia de servidor de bases de datos. Cuando se ha completado la actualización, un administrador puede realizar la conmutación por error para volver a la instancia de servidor original. Esto resulta útil cuando el administrador desea detener la sesión de creación de reflejos y utilizar el servidor reflejado en cualquier otro lugar. De este modo, se puede utilizar repetidamente una única instancia de servidor al actualizar una serie de instancias de servidor de bases de datos.  
   

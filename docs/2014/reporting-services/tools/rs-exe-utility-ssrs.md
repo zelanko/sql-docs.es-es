@@ -120,7 +120,7 @@ ms.locfileid: "48141845"
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- Para obtener un ejemplo detallado, vea [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ Para obtener un ejemplo detallado, vea [Script rs.exe de ejemplo de Reporting Services para migrar contenido entre servidores de informes](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  Para ver otros ejemplos, vea [Ejecutar un archivo de script de Reporting Services](run-a-reporting-services-script-file.md).  
   
@@ -130,7 +130,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Es necesario escribir el script en código de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET y guardarlo en un archivo de texto Unicode o UTF-8 con la extensión de nombre de archivo .rss. No se pueden depurar scripts mediante la utilidad **rs** . Para depurar un script, ejecute el código dentro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 > [!TIP]  
->  Para obtener un ejemplo detallado, vea [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+>  Para obtener un ejemplo detallado, vea [Script rs.exe de ejemplo de Reporting Services para migrar contenido entre servidores de informes](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Ejecutar un archivo de Script de Reporting Services](run-a-reporting-services-script-file.md)   

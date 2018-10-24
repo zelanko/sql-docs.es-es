@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 27a66ab0882c057bbaa4aa48962a15e68aeb7abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612713"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169305"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra *<número_de_conexiones_activas>***Conexiones activas** (por ejemplo, **1 conexiones activas**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _\<número\_de\_conexiones\_activas\>_**Conexiones activas** (por ejemplo, **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
@@ -190,7 +190,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
   
 8.  En el cuadro de diálogo **Adjuntar bases de datos** , en **Bases de datos que se van a adjuntar**, haga clic en **Agregar**.  
   
-9. En el cuadro de diálogo **Buscar archivos de base de datos –***nombre_servidor*, seleccione el archivo de base de datos que quiera adjuntar al servidor nuevo y haga clic en **Aceptar**.  
+9. En el cuadro de diálogo **Buscar archivos de base de datos –**_nombre\_servidor_, seleccione el archivo de base de datos que quiera adjuntar al servidor nuevo y haga clic en **Aceptar**.  
   
      En el cuadro de diálogo **Adjuntar bases de datos** están disponibles las siguientes opciones.  
   

@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670281"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169295"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  Si se especifica *language_term*, se usará el idioma que representa al indizar los datos almacenados en las columnas **char**, **nchar**, **varchar**, **nvarchar**, **text** y **ntext**. Este es el idioma predeterminado que se usa en el momento de la consulta si *language_term* no se especifica como parte de un predicado de texto completo en relación con la columna.  
   
- Si se especifica como una cadena, *language_term* corresponde al valor de columna alias de la tabla del sistema syslanguages. La cadena debe estar delimitada con comillas sencillas, como en **'***language_term***'**. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* es 0x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
+ Si se especifica como una cadena, *language_term* corresponde al valor de columna alias de la tabla del sistema syslanguages. La cadena debe estar delimitada con comillas sencillas, como en **'**_language\_term_**'**. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* es 0x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
   
  Si el valor está en formato DBCS (juego de caracteres de doble byte), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
   

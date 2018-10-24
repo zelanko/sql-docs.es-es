@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171897"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906475"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -120,7 +117,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -267,7 +264,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -430,7 +428,7 @@ TEXTIMAGE_ON solo cambia la ubicación del "espacio de almacenamiento de LOB", p
   
  Si quiere consultar temas sobre FILESTREAM relacionados, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  Especifica el tipo de datos de la columna y el esquema al que pertenece. Para las tablas basadas en disco, el tipo de datos puede ser uno de los siguientes:  
   
 -   Tipo de datos del sistema.  
@@ -496,7 +494,7 @@ TEXTIMAGE_ON solo cambia la ubicación del "espacio de almacenamiento de LOB", p
   
  Especifica que el sistema usará una determinada columna datetime2 para registrar la hora de inicio para la que un registro es válido o la hora de finalización para la que un registro es válido. La columna debe definirse como NOT NULL. Si intenta especificarlas como NULL, el sistema producirá un error. Si no especifica explícitamente NOT NULL para una columna de período, el sistema definirá la columna como NOT NULL de forma predeterminada. Use este argumento junto con los argumentos PERIOD FOR SYSTEM_TIME y WITH SYSTEM_VERSIONING = ON para habilitar el control de versiones del sistema en una tabla. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
- Los usuarios pueden marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM***`<table>`* no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal. Para cambiar el atributo **HIDDEN** para una columna de período existente, debe quitarse **PERIOD** y volver a crearlo con una etiqueta oculta distinta.  
+ Los usuarios pueden marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM**_`<table>`_ no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal. Para cambiar el atributo **HIDDEN** para una columna de período existente, debe quitarse **PERIOD** y volver a crearlo con una etiqueta oculta distinta.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,7 +516,7 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
   
  El índice de almacén de columnas no en clúster se almacena y administra como un índice de almacén de columnas agrupado. Se denomina índice de almacén de columnas no en clúster porque las columnas pueden ser limitadas y está presente como un índice secundario en una tabla.  
   
- ON *partition_scheme_name ***(*** column_name***)**  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
  Especifica el esquema de partición que define los grupos de archivos a los que se asignarán las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Se puede especificar cualquier columna de la tabla base, excepto en el caso de partición de un índice UNIQUE, en el que se debe elegir *column_name* entre las columnas usadas como clave única. Esta restricción permite que [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la unicidad de los valores de clave en una única partición solamente.  
   
 > [!NOTE]  
@@ -569,9 +567,11 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  El**cifrado determinista** usa un método que genera siempre el mismo valor cifrado para cualquier valor de texto no cifrado concreto. Al usar cifrado determinista se pueden realizar búsquedas mediante comparación de igualdad, agrupar y unir tablas mediante combinaciones de igualdad basadas en valores cifrados, y además se puede permitir a usuarios no autorizados que averigüen la información sobre valores cifrados mediante el análisis de patrones en la columna cifrada. La combinación de dos tablas en columnas cifradas de manera determinista solo es posible si ambas columnas están cifradas con la misma clave de cifrado de columna. El cifrado determinista debe usar una intercalación de columna con un criterio de ordenación binario 2 para columnas de caracteres.  
   
- El**cifrado aleatorio** utiliza un método que cifra los datos de una manera menos predecible. El cifrado aleatorio es más seguro, pero impide las búsquedas de igualdad, la agrupación y la unión en columnas cifradas. No se pueden indizar columnas que usen cifrado aleatorio.  
+ El**cifrado aleatorio** utiliza un método que cifra los datos de una manera menos predecible. El cifrado aleatorio es más seguro, pero impide todos los cálculos y la indexación en columnas cifradas, a menos que la instancia de SQL Server admita Always Encrypted con enclaves seguros. Para más información, vea [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
- Use el cifrado determinista para las columnas que se vayan a usar como parámetros de búsqueda o de agrupación, como por ejemplo, un número de identificación gubernamental. Use el cifrado aleatorio para datos como números de tarjeta de crédito, que no estén agrupados con otros registros ni se estén usando para combinar tablas, y en los que no se realicen búsquedas porque se estén usando otras columnas (por ejemplo, un número de transacción) para buscar la fila que contiene la columna cifrada en cuestión.  
+ Si usa Always Encrypted (sin los enclaves seguros), utilice el cifrado determinista para que se busquen columnas con parámetros o parámetros de agrupación, por ejemplo, un número de identificación gubernamental. Use el cifrado aleatorio para datos como números de tarjeta de crédito, que no estén agrupados con otros registros ni se estén usando para combinar tablas, y en los que no se realicen búsquedas porque se estén usando otras columnas (por ejemplo, un número de transacción) para buscar la fila que contiene la columna cifrada en cuestión.
+
+ Si usa Always Encrypted con enclaves seguros, se recomienda, por ejemplo, el cifrado aleatorio.
   
  Las columnas deben ser de un tipo de datos aplicable.  
   
@@ -653,7 +653,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  Es una restricción que proporciona integridad referencial para los datos de la columna o columnas. Las restricciones FOREIGN KEY requieren que cada valor de la columna exista en la columna o columnas de referencia correspondientes de la tabla a la que se hace referencia. Las restricciones FOREIGN KEY pueden hacer referencia solo a columnas que sean restricciones PRIMARY KEY o UNIQUE en la tabla de referencia o a columnas a las que se haga referencia en UNIQUE INDEX en la tabla de referencia. Las claves externas en las columnas calculadas deben marcarse también como PERSISTED.  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  Es el nombre de la tabla a la que hace referencia la restricción FOREIGN KEY y el esquema al que pertenece.  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -724,13 +724,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  Es el nombre del esquema de partición que define los grupos de archivos a los que se van a asignar las particiones de una tabla con particiones. El esquema de partición debe existir en la base de datos.  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  Especifica la columna en la que se van a crear las particiones de la tabla con particiones. La columna debe coincidir con la especificada en la función de partición que *partition_scheme_name* está usando en términos de tipo de datos, longitud y precisión. Una columna calculada que participa en una función de partición se debe marcar como PERSISTED de forma explícita.  
   
 > [!IMPORTANT]  
 >  Se recomienda especificar NOT NULL en la columna de partición de las tablas con particiones y también de las tablas sin particiones que sean orígenes o destinos de operaciones ALTER TABLE...SWITCH. De esta forma se garantiza que las restricciones CHECK en columnas de partición no tengan que comprobar si hay valores NULL.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  Especifica en qué medida el [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe llenar cada página de índice que se va a utilizar para almacenar los datos de índice. Los valores de *fillfactor* especificados por el usuario pueden estar comprendidos entre 1 y 100. Si no se especifica un valor, el valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.  
   
 > [!IMPORTANT]  
@@ -815,7 +815,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  Cuando es ON, el porcentaje de espacio disponible especificado por FILLFACTOR se aplica a las páginas de nivel intermedio del índice. Cuando es OFF o no se especifica ningún valor de FILLFACTOR, las páginas de nivel intermedio se rellenan casi al máximo de su capacidad dejando espacio suficiente para al menos una fila del tamaño máximo que el índice puede contener teniendo en cuenta el conjunto de claves de las páginas intermedias. El valor predeterminado es OFF.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o modificación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. El valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  

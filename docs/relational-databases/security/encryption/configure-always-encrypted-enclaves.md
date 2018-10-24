@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e6fd1a6bdb0ada4f7256c07b487c31574756191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712479"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307129"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configuración de Always Encrypted con enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -31,8 +31,9 @@ Para configurar Always Encrypted con enclaves seguros, use el siguiente flujo de
 4. Configure el tipo de enclave en su instancia de SQL Server.
 5. Aprovisione claves habilitadas para el enclave.
 6. Cifre las columnas con datos confidenciales.
- 
 
+>[!NOTE]
+>Para ver un tutorial paso a paso sobre cómo configurar el entorno de prueba y probar la funcionalidad de Always Encrypted con enclaves seguros en SSMS, consulte [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) (Tutorial: Introducción a Always Encrypted con enclaves seguros mediante SSMS).
 
 ## <a name="configure-your-environment"></a>Configurar su entorno
 
@@ -78,7 +79,7 @@ Instale las siguientes herramientas en el equipo de desarrollo/cliente:
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [Versión 18.0 de SSMS o posterior](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. Versión 21.5 o posterior del [módulo de SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md).
+3. Versión 21.1 o posterior del [módulo de SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md).
 4. [Visual Studio (se recomienda la versión de 2017 o posterior)](https://visualstudio.microsoft.com/downloads/).
 5. [Paquete de desarrollador de .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. [Paquete NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), versión 2.2.0 o posterior.

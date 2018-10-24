@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b01860fbdc7b53ac3ad157c5dcc487e77f25637e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f51ff3b290fca3284a72f1b5ba1ea2a38ff0cbb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834583"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906045"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar columnas de una tabla a otra (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47834583"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se copia una columna con el tipo de datos de alias desde una base de datos a otra, el tipo de datos de alias podría no estar disponible en la base de datos de destino. En ese caso, se asignará a la columna el tipo de datos de base más parecido que esté disponible en la base de datos.  
@@ -78,7 +78,7 @@ ms.locfileid: "47834583"
 
 4.  En el cuadro de diálogo **Agregar tabla** , seleccione la tabla de origen y destino, haga clic en **Agregar**y, luego, cierre el cuadro de diálogo **Agregar tabla** . 
 
-5.  Haga clic con el botón derecho en un área abierta del Editor de consultas, seleccione **Cambiar tipo**y, luego, haga clic en **Insertar resultados**.  
+5.  Haga clic con el botón derecho en un área abierta del Editor de consultas, seleccione **Cambiar tipo** y, luego, haga clic en **Insertar resultados**.  
 
 6.  En el cuadro de diálogo **Elegir tabla de destino para insertar resultados** , seleccione la tabla de destino. 
 

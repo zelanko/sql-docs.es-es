@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710713"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906535"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47710713"
  Mediante funciones de la API e instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)], puede iniciar transacciones en una instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] como transacciones explícitas, de confirmación automática o implícitas.  
   
  **Transacciones explícitas**  
- En una transacción explícita se define explícitamente tanto el inicio como el final de la transacción a través de una función API o emitiendo las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] BEGIN TRANSACTION, COMMIT TRANSACTION, COMMIT WORK, ROLLBACK TRANSACTION o ROLLBACK WORK. Cuando la transacción termina, la conexión vuelve al modo de transacción en que estaba antes de iniciar la transacción explícita, es decir, el modo implícito o el modo de confirmación automática.  
+ En una transacción explícita se define explícitamente tanto el inicio como el final de la transacción a través de una función API o emitiendo las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] BEGIN TRANSACTION, COMMIT TRANSACTION, COMMIT WORK, ROLLBACK TRANSACTION o ROLLBACK WORK. Cuando la transacción termina, la conexión vuelve al modo de transacción en que estaba antes de iniciar la transacción explícita, es decir, el modo implícito o el modo de confirmación automática.  
   
  En una transacción explícita se pueden utilizar todas las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)], excepto las siguientes:  
   

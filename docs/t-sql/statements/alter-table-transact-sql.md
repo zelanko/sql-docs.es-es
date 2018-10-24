@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171877"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085541"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ Algunos cambios del tipo de datos podrían suponer un cambio en los datos. Por e
 >  
 > Las columnas incluidas en una restricción de clave principal no se pueden cambiar de **NOT NULL** a **NULL**.  
   
-Si la columna que se está modificando se cifra mediante `ENCRYPTED WITH`, puede cambiar el tipo de datos por un tipo de datos compatible (como INT por BIGINT), pero no se puede cambiar cualquier valor de cifrado.  
+Al utilizar Always Encrypted (sin enclaves seguros), si la columna que se está modificando se cifra mediante "ENCRYPTED WITH", puede cambiar el tipo de datos por un tipo de datos compatible (como INT por BIGINT), pero no se puede cambiar cualquier valor de cifrado.  
+
+Al usar Always Encrypted con enclaves seguros, puede cambiar cualquier configuración de cifrado, siempre y cuando la clave de cifrado de columna que protege la columna (y la nueva clave de cifrado de columna, si va a cambiar la clave) admita los cálculos de enclave (se cifra con claves maestras de columna habilitadas para el enclave). Para más información, vea [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
  *column_name*  
  Es el nombre de la columna que se va a modificar, agregar o quitar. *column_name* puede tener un máximo de 128 caracteres. Si se trata de columnas nuevas, *column_name* se puede omitir para las columnas creadas con un tipo de datos **timestamp**. Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp**, se usa el nombre **timestamp**.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  Es el nuevo tipo de datos de la columna modificada o el tipo de datos de la columna agregada. *type_name* no se puede especificar para columnas existentes de tablas con particiones. *type_name* puede ser cualquiera de los siguientes:  
   
 -   Un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  Utilice este argumento junto con el argumento SET SYSTEM_VERSIONING para habilitar el control de versiones del sistema en una tabla existente. Para obtener más información, consulte [Tablas temporales](../../relational-databases/tables/temporal-tables.md) e [Introducción a las tablas temporales de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- A partir de [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], los usuarios podrán marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM***\<table>* no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal.  
+ A partir de [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], los usuarios podrán marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM**_\<table/>_ no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal.  
   
 DROP  
 Especifica que se quitan una o más definiciones de columna, definiciones de columnas calculadas o restricciones de tabla, o que se quita la especificación para las columnas que el sistema utilizará para el control de versiones del sistema.  
@@ -716,7 +715,7 @@ Especifica que *constraint_name* o *column_name* se quita de la tabla. Pueden es
 > [!NOTE]  
 > Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica una ubicación a la que mover las filas de datos que se encuentran en el nivel hoja del índice clúster. La tabla se mueve a la nueva ubicación. Esta opción solo se aplica a las restricciones que crean un índice clúster.  
@@ -753,7 +752,7 @@ Especifica que *constraint_name* o *column_name* se quita de la tabla. Pueden es
   
  Especifica si [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza el seguimiento de las columnas sometidas a seguimiento de cambios que se actualizaron. El valor predeterminado es OFF.  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Modifica un bloqueo de datos de una de las formas siguientes:  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>D. Cifrado de una columna  
+ El ejemplo siguiente muestra cómo cifrar una columna mediante [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). 
+
+En primer lugar, se crea una tabla sin columnas cifradas.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ Después, se cifra la columna "C2" con una clave de cifrado de columna, denominada CEK1, y cifrado aleatorio. Tenga en cuenta que para la siguiente instrucción se realice correctamente:
+- La clave de cifrado de columna debe estar habilitada para enclave, lo que significa que debe cifrarse con una clave maestra de columna que permita los cálculos de enclave.
+- La instancia de SQL Server de destino debe admitir Always Encrypted con enclaves seguros.
+- La instrucción debe emitirse a través de una conexión configurada para Always Encrypted con enclaves seguros y con un controlador cliente compatible.
+- La aplicación que realiza la llamada debe tener acceso a la clave maestra de columna que protege CEK1.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> Modificar una definición de tabla  
  En los ejemplos de esta sección se muestra cómo modificar la definición de una tabla.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 249025217a11483d1538c7fe0c72ee1cf0832f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17a6be9dcb025b1a7d654a954f8b42b817702223
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717253"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906285"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
 En este tutorial, creará un informe paginado que actúa como un boletín. Cada página muestra texto estático, objetos visuales de resumen y datos de ventas de ejemplo detallados.

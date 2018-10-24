@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839763"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100466"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,6 +127,44 @@ La compilación diferida de variables de tabla **no** cambia ninguna otra caract
 La compilación diferida de variables de tabla **no aumenta la frecuencia de recompilación**.  En su lugar, se desplaza a donde se produce la compilación inicial. El plan en caché resultante se genera en función del recuento de filas de variables de tabla de la compilación diferida. Consultas consecutivas vuelven a usar el plan en caché hasta que este se expulsa o vuelve a compilar. 
 
 Si el recuento de filas de variables de tabla usado para la compilación del plan inicial representa un valor típico que es significativamente distinto de una estimación del número de filas corregidas, las operaciones de bajada se beneficiarán.  Si el recuento de filas de variables de tabla varía significativamente entre las ejecuciones, es posible que esta característica no mejore el rendimiento.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Deshabilitación de la compilación diferida de variables de tabla sin cambiar el nivel de compatibilidad
+La compilación diferida de variables de tabla se puede deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 150 o posterior. Para deshabilitar la compilación diferida de variables de tabla para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+Para volver a habilitar la compilación diferida de variables de tabla para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+También puede deshabilitar la compilación diferida de variables de tabla para una consulta específica mediante la designación de DISABLE_DEFERRED_COMPILATION_TV como una sugerencia de consulta USE HINT.  Por ejemplo:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>Ejemplos  

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a57110500cc51bda0ddaea459d69af7a127ec67c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82df0d5ba110bd7e7f26699ad9b34f3ac50cfacb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605973"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119913"
 ---
 # <a name="report-server-web-service-endpoints"></a>Extremos de servicios web del servidor de informes
   El servicio web del servidor de informes proporciona varios extremos para administrar un servidor de informes además de ejecutar los informes y navegar por ellos.  
   
 ## <a name="the-management-endpoints"></a>Extremos de administración  
- Hay tres extremos disponibles para administrar objetos en un servidor de informes: <xref:ReportService2005>, <xref:ReportService2006> y <xref:ReportService2010>. El extremo <xref:ReportService2005> se utiliza para administrar los objetos en un servidor de informes que esté configurado para el modo nativo. El extremo <xref:ReportService2006> se utiliza para administrar los objetos en un servidor de informes que esté configurado para el modo integrado de SharePoint. El extremo <xref:ReportService2010> combina las funcionalidades de <xref:ReportService2005> y <xref:ReportService2006>, y puede administrar los objetos en un servidor de informes que esté configurado para el modo nativo o para el modo integrado de SharePoint.  
+ Hay tres extremos disponibles para administrar objetos en un servidor de informes: <xref:ReportService2005>, <xref:ReportService2006> y <xref:ReportService2010>. El extremo <xref:ReportService2005> se utiliza para administrar los objetos en un servidor de informes que esté configurado para el modo nativo. El extremo <xref:ReportService2006> se utiliza para administrar los objetos en un servidor de informes que esté configurado para el modo integrado de SharePoint. El punto de conexión <xref:ReportService2010> combina las funcionalidades de <xref:ReportService2005> y <xref:ReportService2006>, y puede administrar los objetos en un servidor de informes que esté configurado para el modo nativo o para el modo integrado de SharePoint.  
   
 > [!IMPORTANT]  
 >  Cuando un servidor de informes se configura para el modo integrado de SharePoint, las API de <xref:ReportService2005> devuelven un error **rsOperationNotSupportedSharePointMode**. Cuando un servidor de informes se configura para el modo nativo, las API de <xref:ReportService2006> devuelven un error **rsOperationNotSupportedNativeMode**. De igual forma, cuando las API específicas del modo en <xref:ReportService2010> se utilizan en modos imprevistos, las API devolverán los errores respectivos.  

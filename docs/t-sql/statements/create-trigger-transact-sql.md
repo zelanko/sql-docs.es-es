@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719643"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120442"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>Optimización de los desencadenadores DML
  Los desencadenadores funcionan en transacciones (implícitas o no) y, mientras están abiertos, bloquean recursos. El bloqueo seguirá vigente hasta que la transacción se confirme (con COMMIT) o se rechace (con ROLLBACK). Cuanto más tiempo se ejecute un desencadenador, mayor será la probabilidad de que se bloquee otro proceso. Por lo tanto, los desencadenadores se deben escribir de forma que se reduzca su duración siempre que sea posible. Una manera de conseguirlo consiste en liberar un desencadenador cuando una instrucción DML cambie 0 filas. 
 
-Para liberar el desencadenador de un comando que no cambia ninguna fila, use la variable del sistema [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+Para liberar el desencadenador de un comando que no cambia ninguna fila, use la variable del sistema [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
 El siguiente fragmento de código de T-SQL lo consigue, y debería aparecer al principio de cada desencadenador DML:
 

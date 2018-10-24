@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ccc1b9d142bb88af046415f76d91073c539d1f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169034"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ WITH
  por  
  Presenta las cláusulas que definen la ruta que se va a modificar.  
   
- SERVICE_NAME **='***service_name***'**  
+ SERVICE_NAME **='**_service\_name_**'**  
  Especifica el nombre del servicio remoto señalado por esta ruta. El *service_name* debe coincidir exactamente con el nombre que usa el servicio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con *service_name*. En otras palabras, en la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. Una ruta con el nombre de servicio **'SQL/ServiceBroker/BrokerConfiguration'** es una ruta a un servicio de notificación de configuración del agente. Es posible que una ruta a este servicio no especifique una instancia de agente.  
   
  Si se omite la cláusula SERVICE_NAME, el nombre de servicio de la ruta no varía.  
   
- BROKER_INSTANCE **="***instancia_de_broker***"**  
+ BROKER_INSTANCE **='**_broker\_instance_**'**  
  Especifica la base de datos que hospeda el servicio de destino. El parámetro *instancia_de_broker* debe ser el identificador de la instancia de broker para la base de datos remota, que se puede obtener al ejecutar la consulta siguiente en la base de datos seleccionada:  
   
 ```  
@@ -79,10 +79,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  Especifica el tiempo, en segundos, durante el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retiene la ruta en la tabla de enrutamiento. Transcurrido este tiempo, la ruta expira y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no la tiene en cuenta al elegir una ruta para una conversación nueva. Si se omite esta cláusula, la vigencia de la ruta no varía.  
   
- ADDRESS **="***dirección_de_próximo_salto"*  
+ ADDRESS **='**_next\_hop\_address_'  
 
  Para la Instancia administrada de SQL Database, `ADDRESS` debe ser local.
 
@@ -109,7 +109,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- MIRROR_ADDRESS **="***dirección_de_reflejo_de_próximo_salto***"**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  Especifica la dirección de red del servidor reflejado de un par reflejado cuyo servidor principal se encuentra en *dirección_de_reflejo_de_próximo_salto*. En *dirección_de_reflejo_de_próximo_salto* se especifica una dirección TCP/IP en el formato siguiente:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

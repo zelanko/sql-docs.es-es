@@ -2,7 +2,7 @@
 title: Procesamiento de consultas adaptable en bases de datos de Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Características de procesamiento de consultas adaptable para mejorar el rendimiento de las consultas en SQL Server (2017 y versiones posteriores) y Azure SQL Database.
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851423"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324638"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Puede realizar un seguimiento de los eventos de comentarios de concesión de mem
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Comentarios de concesión de memoria, regulador de recursos y sugerencias de consulta
 La memoria real concedida respeta el límite de memoria de consulta determinado por el regulador de recursos o la sugerencia de consulta.
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deshabilitar los comentarios de concesión de memoria sin cambiar el nivel de compatibilidad
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deshabilitar los comentarios de concesión de memoria en modo de lote sin cambiar el nivel de compatibilidad
 Los comentarios de concesión de memoria se pueden deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 140 o posterior. Para deshabilitar los comentarios de concesión de memoria en modo por lotes para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory muestra la memoria concedida en Kilobytes (KB) desde la ejec
 
 > [!NOTE]
 > Los atributos del plan de comentarios de concesión de memoria del modo de fila en versión preliminar pública son visibles en los planes de ejecución de consultas gráficas de SQL Server Management Studio en las versiones 17.9 y superiores. 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deshabilitar los comentarios de concesión de memoria en modo de fila sin cambiar el nivel de compatibilidad
+Los comentarios de concesión de memoria en modo de fila se pueden deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 150 o posterior. Para deshabilitar los comentarios de concesión de memoria en modo de fila para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+Para volver a habilitar los comentarios de concesión de memoria en modo de fila para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+También puede deshabilitar los comentarios de concesión de memoria en modo de fila para una consulta específica designando DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK como sugerencia de consulta USE HINT.  Por ejemplo:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
+
 
 ## <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables del modo por lotes
 La característica de combinaciones adaptables del modo por lotes permite elegir un método [Combinación hash o combinación de bucles anidados](../../relational-databases/performance/joins.md) que se aplace hasta **después** de que se haya examinado la primera entrada. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. El plan, por tanto, puede cambiar de forma dinámica para una mejor estrategia de combinación durante la ejecución.

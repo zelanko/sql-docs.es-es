@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/142018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3287045867598d3707c2d98e593207e395c36c56
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405706"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085392"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +43,10 @@ ms.locfileid: "40405706"
 - Habilitar o deshabilitar un código auxiliar de plan compilado que se almacenará en caché cuando se compile un lote por primera vez.  
 - Habilitar o deshabilitar la recolección de estadísticas de ejecución para los módulos de T-SQL compilados de forma nativa.
 - Habilitar o deshabilitar ONLINE mediante opciones predeterminadas para las instrucciones de DDL que admiten la sintaxis ONLINE=.
-- Habilitar o deshabilitar RESUMABLE mediante opciones predeterminadas para las instrucciones de DDL que admiten la sintaxis RESUMABLE=. 
+- Habilitar o deshabilitar RESUMABLE mediante opciones predeterminadas para las instrucciones de DDL que admiten la sintaxis RESUMABLE=.
+- Habilitar o deshabilitar la funcionalidad para quitar automáticamente las tablas temporales globales 
 
- ![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -73,6 +71,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 }  
 ```  
   
@@ -100,7 +99,7 @@ Solo se puede establecer para las secundarias, mientras la base de datos está e
   
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }  
 
-Permite establecer el modelo de estimación de la cardinalidad del optimizador de consultas en SQL Server 2012 y versiones anteriores, independientemente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que establece el modelo de estimación de la cardinalidad del optimizador de consultas en función del nivel de compatibilidad de la base de datos. Establecer este valor en **ON** es equivalente a habilitar la [marca de seguimiento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+Permite establecer el modelo de estimación de la cardinalidad del optimizador de consultas en SQL Server 2012 y versiones anteriores, independientemente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que establece el modelo de estimación de la cardinalidad del optimizador de consultas en función del nivel de compatibilidad de la base de datos. El establecimiento de LEGACY_CARDINALITY_ESTIMATION en **ON** equivale a habilitar la [marca de seguimiento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
 > [!TIP] 
 > Para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **USE HINT** en lugar de usar la marca de seguimiento. 
@@ -111,14 +110,14 @@ Este valor solo es válido en las bases de datos secundarias mientras la base de
   
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
 
-Habilita o deshabilita el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). El valor predeterminado es ON. Es equivalente a la [Marca de seguimiento 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Habilita o deshabilita el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). El valor predeterminado es ON. El establecimiento de PARAMETER_SNIFFING en ON equivale a habilitar la [marca de seguimiento 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > Para realizar esta acción en el nivel de consulta, vea la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para realizar esta acción en el nivel de consulta, también está disponible la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **USE HINT**. 
   
 PRIMARY  
   
-Este valor solo es válido en las bases de datos secundarias mientras la base de datos se encuentra en la principal y especifica que el valor de esta configuración en todas las bases de datos secundarias será el valor establecido para la principal. Si cambia la configuración de la principal para usar el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing), el valor en las secundarias cambiará en consecuencia sin necesidad de establecer explícitamente el valor de las secundarias. Esta es la configuración predeterminada para las secundarias.  
+Este valor solo es válido en las bases de datos secundarias mientras la base de datos se encuentra en la principal y especifica que el valor de esta configuración en todas las bases de datos secundarias será el valor establecido para la principal. Si cambia la configuración de la principal para usar el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing), el valor en las secundarias cambiará en consecuencia sin necesidad de establecer explícitamente el valor de las secundarias. PRIMARY es la configuración predeterminada para las secundarias.  
   
 QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
@@ -129,11 +128,11 @@ Habilita o deshabilita las revisiones de optimización de consulta independiente
   
 PRIMARY  
   
-Este valor solo es válido en las bases de datos secundarias mientras la base de datos se encuentra en la principal y especifica que el valor de esta configuración en todas las bases de datos secundarias es el valor establecido para la principal. Si cambia la configuración de la principal, el valor en las secundarias cambia en consecuencia sin necesidad de establecer explícitamente el valor de las secundarias. Esta es la configuración predeterminada para las secundarias.  
+Este valor solo es válido en las bases de datos secundarias mientras la base de datos se encuentra en la principal y especifica que el valor de esta configuración en todas las bases de datos secundarias es el valor establecido para la principal. Si cambia la configuración de la principal, el valor en las secundarias cambia en consecuencia sin necesidad de establecer explícitamente el valor de las secundarias. PRIMARY es la configuración predeterminada para las secundarias.  
   
 CLEAR PROCEDURE_CACHE  
 
-Borra la caché de procedimientos (plan) para la base de datos. Esto se puede ejecutar en la base de datos principal y en las secundarias.  
+Borra la memoria caché de procedimiento (plan) de la base de datos, y se puede ejecutar tanto en la principal como en las secundarias.  
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
@@ -166,13 +165,13 @@ Habilita o deshabilita la recopilación de estadísticas de ejecución a nivel d
 
 Las estadísticas de ejecución a nivel de instrucción de los módulos de T-SQL compilados de forma nativa se recopilan si esta opción está activada o si se habilita la recopilación de estadísticas mediante [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
-Para obtener información más detallada sobre la supervisión del rendimiento de los módulos de T-SQL compilados de forma nativa, vea [Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
+Para obtener información más detallada sobre la supervisión del rendimiento de los módulos de T-SQL compilados de forma nativa, consulte [Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
 **Se aplica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
 
-Le permite seleccionar opciones que hacen que el motor eleve automáticamente las operaciones admitidas a ONLINE. El valor predeterminado es OFF, que significa que las operaciones no se elevarán a ONLINE a menos que se especifique en la instrucción. [Sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) refleja el valor actual de ELEVATE_ONLINE. Estas opciones solo se aplicarán a las operaciones que generalmente son compatibles con ONLINE.  
+Le permite seleccionar opciones que hacen que el motor eleve automáticamente las operaciones admitidas a ONLINE. El valor predeterminado es OFF, que significa que las operaciones no se elevarán a ONLINE a menos que se especifique en la instrucción. [Sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) refleja el valor actual de ELEVATE_ONLINE. Estas opciones solo se aplicarán a las operaciones que son compatibles con ONLINE.  
 
 FAIL_UNSUPPORTED
 
@@ -187,9 +186,9 @@ Este valor eleva las operaciones que admiten ONLINE. Las operaciones que no admi
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Se aplica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
+***Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
-Le permite seleccionar opciones que hacen que el motor eleve automáticamente las operaciones admitidas a RESUMABLE. El valor predeterminado es OFF, que significa que las operaciones no se elevarán a RESUMABLE a menos que se especifique en la instrucción. [Sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) refleja el valor actual de ELEVATE_RESUMABLE. Estas opciones solo se aplican a las operaciones que generalmente son compatibles con RESUMABLE. 
+Le permite seleccionar opciones que hacen que el motor eleve automáticamente las operaciones admitidas a RESUMABLE. El valor predeterminado es OFF, que significa que las operaciones no se elevarán a RESUMABLE a menos que se especifique en la instrucción. [Sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) refleja el valor actual de ELEVATE_RESUMABLE. Estas opciones solo se aplican a las operaciones que son compatibles con RESUMABLE. 
 
 FAIL_UNSUPPORTED
 
@@ -202,6 +201,15 @@ Este valor eleva las operaciones que admiten RESUMABLE. Las operaciones que no s
 > [!NOTE]
 > Puede invalidar la configuración predeterminada enviando una instrucción con la opción RESUMABLE especificada. 
 
+GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+
+**Se aplica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
+
+Permite la configuración de la funcionalidad para quitar automáticamente las [tablas temporales globales](create-table-transact-sql.md). El valor predeterminado es ON, lo que significa que las tablas temporales globales se quitan automáticamente cuando no están en uso en ninguna sesión. Cuando se establece en OFF, las tablas temporales globales deben quitarse explícitamente mediante una instrucción DROP TABLE o se quitarán automáticamente al reiniciar el servidor. 
+
+- En el servidor lógico de Azure SQL Database, esta opción se puede establecer en las bases de datos de usuario individuales del servidor lógico.
+- En SQL Server y la instancia administrada de Azure SQL Database, esta opción está establecida en TEMPDB y la configuración de las bases de datos de usuario individuales no surte ningún efecto.
+
 ##  <a name="Permissions"></a> Permissions  
  Requiere ALTER ANY DATABASE SCOPE CONFIGURATION   
 en la base de datos. Este permiso se puede conceder por un usuario con permiso CONTROL en una base de datos.  
@@ -213,9 +221,9 @@ en la base de datos. Este permiso se puede conceder por un usuario con permiso C
   
  Para las consultas con nombres de tres elementos, la configuración de la conexión de base de datos actual para la consulta se cumplirá, menos para los módulos SQL (como procedimientos, funciones y desencadenadores) que se compilan en el contexto de base de datos actual y, por tanto, se usan las opciones de la base de datos en la que residen.  
   
- El evento ALTER_DATABASE_SCOPED_CONFIGURATION se agrega como un evento de DDL que se puede usar para activar un desencadenador DDL. Se trata de un elemento secundario del grupo de desencadenador ALTER_DATABASE_EVENTS.  
+ El evento ALTER_DATABASE_SCOPED_CONFIGURATION se agrega como un evento de DDL que se puede usar para activar un desencadenador DDL, y es un elemento secundario del grupo de desencadenadores de ALTER_DATABASE_EVENTS.  
  
- Las opciones de configuración con ámbito de base de datos se transfieren con la base de datos. Esto significa que cuando se restaura o adjunta una base de datos, se conservan las opciones de configuración existentes.
+ Las opciones de configuración con ámbito de la base de datos se transfieren con la base de datos, lo que significa que, cuando una base de datos se restaura o se adjunta, permanecen las opciones de configuración existentes.
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
 **MAXDOP**  
@@ -238,11 +246,11 @@ en la base de datos. Este permiso se puede conceder por un usuario con permiso C
   
 **GeoDR**  
   
- Las bases de datos secundarias legibles (por ejemplo, los Grupos de disponibilidad AlwaysOn y GeoReplication) usan el valor secundario comprobando el estado de la base de datos. Aunque la nueva compilación no se produce en la conmutación por error y técnicamente la nuevo base de datos principal tiene consultas que usan la configuración de la secundaria, la idea es que la configuración entre principal y secundaria solo varía cuando la carga de trabajo es diferente y, por tanto, las consultas en caché usan la configuración óptima, mientras que las consultas nuevas eligen la configuración nueva que es adecuada para ellas.  
+ Las bases de datos secundarias legibles (por ejemplo, los Grupos de disponibilidad AlwaysOn y las bases de datos con replicación geográfica de Azure SQL Database) usan el valor secundario comprobando el estado de la base de datos. Aunque la nueva compilación no se produce en la conmutación por error y técnicamente la nuevo base de datos principal tiene consultas que usan la configuración de la secundaria, la idea es que la configuración entre principal y secundaria solo varía cuando la carga de trabajo es diferente y, por tanto, las consultas en caché usan la configuración óptima, mientras que las consultas nuevas eligen la configuración nueva que es adecuada para ellas.  
   
 **DacFx**  
   
- Como ALTER DATABASE SCOPED CONFIGURATION es una característica nueva de Azure SQL Database y SQL Server a partir de SQL Server 2016 que afecta al esquema de base de datos, las exportaciones del esquema (con o sin datos) no se pueden importar a una versión anterior de SQL Server como [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por ejemplo, una exportación a un [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) o un [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) desde una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que usara esta nueva característica no podría importarse a un servidor de nivel inferior.  
+Como ALTER DATABASE SCOPED CONFIGURATION es una característica nueva de Azure SQL Database y SQL Server a partir de SQL Server 2016 que afecta al esquema de base de datos, las exportaciones del esquema (con o sin datos) no se pueden importar a una versión anterior de SQL Server como [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por ejemplo, una exportación a un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) desde una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que usara esta nueva característica no podría importarse a un servidor de nivel inferior.  
 
 **ELEVATE_ONLINE** 
 
@@ -250,8 +258,7 @@ Esta opción solo se aplica a las instrucciones de DDL que admiten la sintaxis W
 
 **ELEVATE_RESUMABLE**
 
-Esta opción solo se aplica a las instrucciones de DDL que admiten la sintaxis WITH(ONLINE =. Los índices XML no se ven afectados. 
-
+Esta opción solo se aplica a las instrucciones de DDL que admiten la sintaxis WITH(RESUMABLE=. Los índices XML no se ven afectados. 
   
 ## <a name="metadata"></a>Metadatos  
 
@@ -356,7 +363,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i--set-elevateonline"></a>I.  Establecer ELEVATE_ONLINE 
 
-**Se aplica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] como una característica en vista previa pública
  
 Este ejemplo establece ELEVATE_ONLINE en FAIL_UNSUPPORTED.  tsqlCopy 
 
@@ -366,7 +373,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevateresumable"></a>J. Establecer ELEVATE_RESUMABLE 
 
-**Se aplica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
 Este ejemplo establece ELEVEATE_RESUMABLE en WHEN_SUPPORTED.  tsqlCopy 
 
@@ -401,8 +408,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [Directrices para operaciones de índices en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## <a name="more-information"></a>Más información  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Vistas de catálogo de archivos y bases de datos (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Opciones de configuración de servidor (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [Vistas de catálogo de archivos y bases de datos](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [Opciones de configuración del servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Realizar operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

@@ -11,12 +11,12 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aae4a61ed74777c39638d837f9fb1512df24108e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 504c4b5f8ecd8a98379d726dbd53117d39c4db19
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727673"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336204"
 ---
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47727673"
 catalog.create_customized_logging_level [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
     , [ @profile_value = ] profile_value  
-    , [ @event_value = ] event_value  
+    , [ @events_value = ] events_value  
     , [ @level_id = ] level_id OUT   
 ```  
   
@@ -42,7 +42,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_description = ] *level_description*  
  Descripción del nuevo nivel de registro personalizado.  
   
- El parámetro *level_description* es de tipo **nvarchar(1024)**.  
+ El parámetro *level_description* es de tipo **nvarchar(max)**.  
   
  [ @profile_value =] *profile_value*  
  Estadísticas que quiere que registre el nuevo nivel de registro personalizado.  
@@ -53,11 +53,11 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
 -   Volumen = 1  
   
--   Rendimiento = 2  
+-   Rendimiento = 2    
   
  El parámetro *property_value* es de tipo **bigint**.  
   
- [ @event_value = ] *event_value*  
+ [ @events_value = ] *events_value*  
  Eventos que quiere que registre el nuevo nivel de registro personalizado.  
   
  Los valores válidos de los eventos incluyen los siguientes. Estos valores se corresponden con los valores de la pestaña **Eventos** del cuadro de diálogo **Administración del nivel de registro personalizado**.  
@@ -66,7 +66,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
 |----------------------------------|-------------------------------|  
 |OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> Diagnostic = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext = 35<br /><br /> OnPreValidate_IncludeContext = 36<br /><br /> OnPostValidate_IncludeContext = 37<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext = 42<br /><br /> OnQueryCancel_IncludeContext= 43<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext = 46<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext = 48|  
   
- El parámetro *event_value* es de tipo **bigint**.  
+ El parámetro *events_value* es de tipo **bigint**.  
   
  [ @level_id =] *level_id* OUT  
  Identificador del nuevo nivel de registro personalizado.  
@@ -74,7 +74,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  El parámetro *level_id* es de tipo **bigint**.  
   
 ## <a name="remarks"></a>Notas  
- Para combinar varios valores en Transact-SQL para el argumento *profile_value* o *event_value*, siga este ejemplo. Para capturar los eventos OnError (8) y DiagnosticEx (15), la fórmula para calcular *event_value* es `2^8 + 2^15 = 33024`.  
+ Para combinar varios valores en Transact-SQL para el argumento *profile_value* o *events_value*, siga este ejemplo. Para capturar los eventos OnError (8) y DiagnosticEx (15), la fórmula para calcular *events_value* es `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Códigos de retorno  
  0 (correcto)  

@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aca79a451c925b9c8c7734ecf3545152328a65f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683763"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878138"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lección 2: Configurar permisos en objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ Escriba y ejecute las siguientes instrucciones (reemplace `computer_name` con el
 ## <a name="create-views-and-stored-procedures"></a>Creación de vistas y procedimientos almacenados
 Como administrador, puede ejecutar la instrucción SELECT desde la tabla **Products** y la vista **vw_Names** , y ejecutar el procedimiento **pr_Names** ; en cambio, Mary no puede hacerlo. Para conceder a Mary los permisos necesarios, use la instrucción GRANT.  
 
-### <a name="grant-permission-to-stored-prcoedure"></a>Concesión de permiso a procedimientos almacenados  
+### <a name="grant-permission-to-stored-procedure"></a>Concesión de permiso a procedimientos almacenados  
 Ejecute la siguiente instrucción para conceder a `Mary` el permiso `EXECUTE` para el procedimiento almacenado `pr_Names` .
   
   ```sql  

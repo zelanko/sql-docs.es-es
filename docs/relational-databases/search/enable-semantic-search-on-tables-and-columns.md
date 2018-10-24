@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00b487d0828d13d4905f609b2631b45b8c61802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630503"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169350"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
 Puede quitar la indexación semántica cuando modifique un índice de texto completo existente con la instrucción **ALTER FULLTEXT INDEX** . También puede quitar la indización semántica con varios cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Agregar o quitar un índice semántico con Transact-SQL  
-Para quitar la indexación semántica solo de una columna o de algunas columnas, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN***nombre_columna***DROP STATISTICAL_SEMANTICS**. Puede quitar la indización de varias columnas en una sola instrucción **ALTER** .  
+Para quitar la indexación semántica solo de una columna o de algunas columnas, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS**. Puede quitar la indización de varias columnas en una sola instrucción **ALTER** .  
   
 ```sql  
 USE database_name  
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Para quitar la indexación de texto completo y semántica de una columna, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN***nombre_columna***DROP**.  
+Para quitar la indexación de texto completo y semántica de una columna, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN**_column\_name_**DROP**.  
   
 ```sql  
 USE database_name  

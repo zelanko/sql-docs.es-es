@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847516f3bb32f32bd20f039252b99946c63f4c7d
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783573"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906335"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -252,7 +252,7 @@ ms.locfileid: "47783573"
 ###  <a name="ForcedFailoverRisks"></a> Riesgos de forzar la conmutación por error  
  Es esencial tener en cuenta que si se fuerza la conmutación por error se pueden perder datos. La pérdida de datos es posible porque la réplica de destino no puede comunicarse con la réplica principal y, por lo tanto, no se puede garantizar que las bases de datos estén sincronizadas. Al forzar la conmutación por error se inicia una nueva bifurcación de recuperación. Puesto que la base de datos principal original y las bases de datos secundarias están en bifurcaciones de recuperación diferentes, cada una de ellas contiene ahora datos que las otras bases de datos no contienen: cada base de datos principal original contiene los cambios que aún no se han enviado desde su cola de envío a la base de datos secundaria anterior (registro sin enviar); las bases de datos secundarias anteriores contienen los cambios que se han producido después de forzar la conmutación por error.  
   
- Si la conmutación por error se fuerza debido a que la réplica principal no funcionó, la posible pérdida de datos depende de si no se ha enviado ningún registro de transacciones a la réplica secundaria antes del problema. En el modo de confirmación asincrónica, la acumulación del registro sin enviar siempre es una posibilidad. En modo de confirmación sincrónica, esto solo es posible hasta que las bases de datos secundarias estén sincronizadas.  
+ Si la conmutación por error se fuerza debido a que la réplica principal no funcionó, la posible pérdida de datos depende de si se ha enviado o no algún registro de transacciones a la réplica secundaria antes del problema. En el modo de confirmación asincrónica, la acumulación del registro sin enviar siempre es una posibilidad. En modo de confirmación sincrónica, esto solo es posible hasta que las bases de datos secundarias estén sincronizadas.  
   
  En la tabla siguiente se resume la posibilidad de perder datos para una base de datos determinada en la réplica en la que se fuerza la conmutación por error.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47783573"
 |Confirmación sincrónica|no|Sí|  
 |Confirmación asincrónica|no|Sí|  
   
- Las bases de datos secundarias realizan el seguimiento solo en dos bifurcaciones de recuperación, por lo que, si se realizan varias conmutaciones por error forzadas, no podrá reanudarse ninguna de las bases de datos secundarias que comenzaron la sincronización de datos con la conmutación por error forzada anterior. Si esto se produce, las bases de datos secundarias que no puedan reanudarse tendrán que quitarse del grupo de disponibilidad, restaurarse en el punto de tiempo preciso y unirse de nuevo al grupo de disponibilidad. Una restauración no funcionará entre varias bifurcaciones de recuperación; por tanto, asegúrese de realizar una copia de seguridad de registros después de realizar varias conmutaciones por error forzadas.  
+ Las bases de datos secundarias realizan el seguimiento solo en dos bifurcaciones de recuperación, por lo que, si se realizan varias conmutaciones por error forzadas, no podrá reanudarse ninguna de las bases de datos secundarias que comenzaron la sincronización de datos con la conmutación por error forzada anterior. Si esto se produce, las bases de datos secundarias que no puedan reanudarse tendrán que quitarse del grupo de disponibilidad, restaurarse en el punto de tiempo preciso y unirse de nuevo al grupo de disponibilidad. En este escenario, se puede observar el error 1408 con el estado 103 (error: 1408, gravedad: 16, estado: 103). Una restauración no funcionará entre varias bifurcaciones de recuperación; por tanto, asegúrese de realizar una copia de seguridad de registros después de realizar varias conmutaciones por error forzadas.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Por qué se requiere la conmutación por error después de forzar el quórum  
  Después de forzar el cuórum en el clúster WSFC (*cuórum forzado*), debe realizarse una conmutación por error forzada (con posible pérdida de datos) en todos los grupos de disponibilidad. La conmutación por error forzada es necesaria porque el estado real de los valores del clúster WSFC puede haberse perdido. Es necesario evitar las conmutaciones por error normales después de un quórum forzado debido a la posibilidad de que una réplica secundaria no sincronizada parezca sincronizada en el clúster WSFC reconfigurado.  

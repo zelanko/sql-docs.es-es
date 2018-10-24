@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629153"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169275"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Las conversaciones permanecen abiertas hasta que se quita la notificación de eventos. Algunos errores pueden hacer que las conversaciones se cierren antes. Es posible que la finalización de algunas o todas las conversaciones explícitamente evite que el servicio de destino reciba más mensajes.  
   
- { **'***broker_instance_specifier***'** | **'current database'** }  
+ { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
  Especifica una instancia de Service Broker en la que se resuelve *broker_service*. Se puede adquirir el valor de un Service Broker específico al realizar una consulta en la columna **service_broker_guid** de la vista de catálogo **sys.databases**. Utilice **'current database'** para especificar la instancia de Service Broker en la base de datos actual. **'current database'** es un literal de cadena que no distingue mayúsculas de minúsculas.  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  En los ejemplos A y B siguientes, el GUID de la cláusula `TO SERVICE 'NotifyService'` (8140a771-3c4b-4479-8ac0-81008ab17984') es específico para el equipo en el que se configuró el ejemplo. Para esa instancia, ese era el GUID para la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Para copiar y ejecutar estos ejemplos, necesita reemplazar este GUID por uno de su equipo y su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tal como se ha explicado en la sección Argumentos anterior, puede adquirir el **'***broker_instance_specifier***'** consultando la columna de service_broker_guid de la vista de catálogo sys.databases.  
+>  Para copiar y ejecutar estos ejemplos, necesita reemplazar este GUID por uno de su equipo y su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tal como se ha explicado en la sección Argumentos anterior, puede adquirir el **'**_broker\_instance\_specifier_**'** consultando la columna de service_broker_guid de la vista de catálogo sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Crear una notificación de eventos en el ámbito de un servidor  
  En el ejemplo siguiente se crean los objetos necesarios para configurar un servicio de destino utilizando [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El servicio de destino hace referencia al contrato y tipo de mensaje del servicio de inicio específicamente para notificaciones de eventos. Después, se crea una notificación de eventos en el servicio de destino que envía una notificación cada vez que tiene lugar un evento de seguimiento `Object_Created` en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

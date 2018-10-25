@@ -37,10 +37,10 @@ ms.locfileid: "48067585"
  Use el panel **Editor de Formulario de acción** de la vista Formulario para editar acciones estándar contenidas en el cubo. Para más información sobre este panel, vea [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Editor de formulario de acción de obtención de detalles**  
- Use el panel **Editor de Formulario de acción de obtención de detalles** para editar acciones de obtención de detalles contenidas en el cubo. Para más información sobre este panel, vea [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Use el panel **Editor de Formulario de acción de obtención de detalles** para editar acciones de obtención de detalles contenidas en el cubo. Para más información sobre este panel, vea [Editor de Formulario de acción de obtención de detalles &#40;pestaña Acciones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Editor de formulario de acción de informe**  
- Use panel **Editor de Formulario de acción de informe** para editar acciones de informes contenidas en el cubo. Para más información sobre este panel, vea [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Use panel **Editor de Formulario de acción de informe** para editar acciones de informes contenidas en el cubo. Para más información sobre este panel, vea [Editor de Formulario de acción de informe &#40;pestaña Acciones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Acciones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

@@ -114,7 +114,7 @@ ms.locfileid: "48116356"
   
 8.  Reinicie el servidor de informes para borrar las sesiones que estén abiertas en ese momento.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolver errores de autenticación Kerberos al conectarse a un servidor de informes  
  En un servidor de informes que esté configurado para usar la autenticación Kerberos o Negotiate, se producirá un error en una conexión de cliente con el servidor de informes si hay un error de autenticación Kerberos. Se producen errores de autenticación Kerberos cuando:  
   
 -   El servicio del servidor de informes se ejecuta como una cuenta de usuario de dominio de Windows y no se registró un nombre de la entidad de seguridad del servicio (SPN) para la cuenta.  

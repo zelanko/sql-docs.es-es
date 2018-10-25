@@ -66,11 +66,37 @@ items:
       href: tutorials/rtsql-predict-and-plot-from-model.md
   - name: Python
     items:
-    - name: Encapsulamiento de Python en un procedimiento almacenado
-      href: tutorials/wrap-python-in-tsql-stored-procedure.md
+    - name: Ejecutar Python mediante T-SQL
+      href: tutorials/run-python-using-t-sql.md
 - name: Tutoriales
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: data
+    items:
+    - name: Conjunto de datos Airline
+      href: tutorials/demo-data-airlinedemo-in-sql.md
+    - name: Conjunto de datos Iris
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: Conjunto de datos NYC Taxi
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Entrenamiento y uso del primer modelo
+      href: tutorials/train-score-using-python-in-tsql.md
+    - name: Información sobre análisis en base de datos
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: Explorar y visualizar datos
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Crear características de datos
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Entrenar y guardar el modelo
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Hacer operativo el modelo
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: Creación de un modelo mediante revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -79,15 +105,13 @@ items:
     - name: Información sobre análisis en base de datos
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1. Preparar datos de demostración
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2. Visualizar datos
+      - name: '1: Visualización de datos'
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3. Crear características de datos
+      - name: '2: Creación de características de datos'
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4. Entrenar y guardar en SQL
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5. Predecir los resultados
+      - name: '3: Entrenamiento y almacenamiento en SQL'
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: '4: Predicción de los resultados'
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Tutorial integral de ciencia de datos
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -139,31 +163,6 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Crear una simulación sencilla
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Ejecutar Python mediante T-SQL
-      href: tutorials/run-python-using-t-sql.md
-      items:
-      - name: Entrenamiento y puntuación de un modelo de Python en SQL Server
-        href: tutorials/train-score-using-python-in-tsql.md
-      - name: Creación de un modelo usando revoscalepy en un contexto de proceso de SQL Server
-        href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Información sobre análisis en base de datos
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: Obtener datos y scripts
-        href: tutorials/sqldev-py1-download-the-sample-data.md
-      - name: Importar datos
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: Explorar y visualizar datos
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Crear características de datos
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Entrenar y guardar el modelo
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Hacer operativo el modelo
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Ejemplos
   href: https://github.com/Microsoft/sql-server-samples
 - name: Soluciones
@@ -326,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 263f18263288b78c183f4fc7e0dd129b192105dd
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169238"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806785"

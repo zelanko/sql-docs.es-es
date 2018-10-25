@@ -23,7 +23,7 @@ ms.locfileid: "48074479"
   
  Puede pasar varios valores de parámetro al informe dentro de la dirección URL del informe. Para un ejemplo de dirección URL incluye un parámetro de varios valores, vea [pasar un parámetro de informe Within a URL](../pass-a-report-parameter-within-a-url.md).  
   
- Para obtener información sobre cómo pasar varios valores de parámetro a un procedimiento almacenado, vea [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) (Trabajar con parámetros de selección múltiple en informes de SSRS) en mssqltips.com.  
+ Para obtener información sobre cómo pasar varios valores de parámetro a un procedimiento almacenado, vea [Trabajar con parámetros de selección múltiple en informes de SSRS](http://go.microsoft.com/fwlink/?LinkId=321529) en mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Para agregar un parámetro de varios valores  
   

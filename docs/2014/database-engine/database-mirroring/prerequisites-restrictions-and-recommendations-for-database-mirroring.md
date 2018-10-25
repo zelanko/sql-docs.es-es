@@ -51,7 +51,7 @@ ms.locfileid: "48164795"
 -   Los dos asociados, el servidor principal y el servidor reflejado, deben ejecutar la misma edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El testigo, si existe, puede ejecutarse en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita la creación de reflejo de la base de datos.  
   
     > [!NOTE]  
-    >  Puede actualizar las instancias del servidor que sean asociados en una sesión de creación de reflejo a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, consulte [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+    >  Puede actualizar las instancias del servidor que sean asociados en una sesión de creación de reflejo a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, consulte [Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor](upgrading-mirrored-instances.md).  
   
 -   La base de datos debe usar el modelo de recuperación completa. Los modelos de recuperación simple y de recuperación optimizado para cargas masivas de registros no admiten la creación de reflejo de la base de datos. Por tanto, las operaciones masivas siempre se registran completamente para una base de datos reflejada. Para obtener información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   

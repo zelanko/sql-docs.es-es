@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874353"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460320"
 ---
 # <a name="polybase-features-and-limitations"></a>Características y limitaciones de PolyBase
 
@@ -80,13 +80,11 @@ PolyBase presenta las siguientes limitaciones:
 - [PolyBase no se instala cuando se agrega un nodo a un clúster de conmutación por error de SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+
 - No se admite la autenticación de integración. Por el momento solo se admiten el nombre de usuario y la contraseña.  
-- El cifrado se habilita de forma predeterminada. Para deshabilitar el cifrado, debe... (hablar con thanh)
-- [Limitaciones de asignación de tipos](polybase-type-mapping.md)
 
+- El cifrado está habilitado de manera predeterminada.
 
-## <a name="security-and-authentication"></a>Autenticación y seguridad 
+## <a name="next-steps"></a>Pasos siguientes
 
-## <a name="see-also"></a>Ver también  
-
-[Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
+Para más información sobre PolyBase, consulte [¿Qué es PolyBase?](polybase-guide.md)

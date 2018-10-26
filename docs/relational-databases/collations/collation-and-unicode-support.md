@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc81d7a915a79af3406d5fc90ef9920d5e19055a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757054"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636484"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Una intercalación especifica los patrones de bits que representan a cada carác
     
 Los resultados de las instrucciones de[!INCLUDE[tsql](../../includes/tsql-md.md)] pueden variar cuando se ejecutan en el contexto de bases de datos distintas que tengan una configuración de intercalación diferente. Si es posible, utilice una intercalación normalizada para su organización. De esta manera no tiene que especificar explícitamente la intercalación en cada carácter o expresión Unicode. Si debe trabajar con objetos que tienen configuraciones de intercalación y de página de códigos diferentes, conviene codificar las consultas para tener en cuenta las reglas de prioridad de intercalación. Para obtener más información, vea [Prioridad de intercalación (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho y la distinción de selector de variación. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta una opción adicional para la codificación UTF-8. Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` es una intercalación con distinción entre mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana, distinción de ancho y con codificación UTF-8. Otro ejemplo: la intercalación `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` no distingue entre mayúsculas y minúsculas y acentos, distingue los tipos de kana, el ancho, el selector de variación y usa codificación distinta de Unicode. En la tabla siguiente se describe el comportamiento asociado a estas diversas opciones.    
+Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho y la distinción de selector de variación. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta una opción adicional para la codificación [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` es una intercalación con distinción entre mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana, distinción de ancho y con codificación UTF-8. Otro ejemplo: la intercalación `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` no distingue entre mayúsculas y minúsculas y acentos, distingue los tipos de kana, el ancho, el selector de variación y usa codificación distinta de Unicode. En la tabla siguiente se describe el comportamiento asociado a estas diversas opciones.    
     
 |Opción|Descripción|    
 |------------|-----------------|    

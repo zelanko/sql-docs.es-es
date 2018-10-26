@@ -26,9 +26,9 @@ ms.locfileid: "48103497"
 ## <a name="workflow-for-data-quality-matching"></a>Flujo de trabajo de la coincidencia de calidad de datos  
  Al usar DQS con MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use el siguiente flujo de trabajo:  
   
-1.  Recupere una lista de los datos administrados con MDS y combínelos con una lista que no se administre en MDS. Para obtener más información, consulte [Combine Data &#40;MDS Add-in for Excel&#41;](combine-data-mds-add-in-for-excel.md).  
+1.  Recupere una lista de los datos administrados con MDS y combínelos con una lista que no se administre en MDS. Para obtener más información, consulte [Combinar datos &#40;Complemento MDS para Excel&#41;](combine-data-mds-add-in-for-excel.md).  
   
-2.  Use el conocimiento de DQS para comparar los datos de la lista combinada. Para obtener más información, consulte [Match Similar Data &#40;MDS Add-in for Excel&#41;](match-similar-data-mds-add-in-for-excel.md).  
+2.  Use el conocimiento de DQS para comparar los datos de la lista combinada. Para obtener más información, consulte [Coincidir datos similares &#40;Complemento MDS para Excel&#41;](match-similar-data-mds-add-in-for-excel.md).  
   
 3.  Para ver más detalles sobre las similitudes encontradas por DQS, muestre las columnas de detalles.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48103497"
   
 -   La base de conocimiento predeterminada (DQS Data) se crea al instalar DQS. Si elige utilizar la base de conocimiento predeterminada (sin agregar una directiva correspondiente a la base de conocimiento predeterminada en Data Quality Client), debe asignar columnas en la hoja de cálculo en los dominios de la base de conocimiento y asignar después un valor de ponderación a los dominios que elija.  
   
--   Puede utilizar Data Quality Client para crear una base de conocimiento nueva con una directiva correspondiente o agregar una directiva correspondiente a la base de conocimiento predeterminada. En este caso, los valores de ponderación se determinan mediante la directiva de coincidencia que creó previamente y solo tiene que asignar las columnas a los dominios. Para más información, consulte [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md).  
+-   Puede utilizar Data Quality Client para crear una base de conocimiento nueva con una directiva correspondiente o agregar una directiva correspondiente a la base de conocimiento predeterminada. En este caso, los valores de ponderación se determinan mediante la directiva de coincidencia que creó previamente y solo tiene que asignar las columnas a los dominios. Para más información, consulte [crear una directiva de coincidencia](../../data-quality-services/create-a-matching-policy.md).  
   
  Para obtener más información acerca de las bases de conocimiento, vea [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   

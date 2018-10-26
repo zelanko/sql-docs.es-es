@@ -71,7 +71,7 @@ ms.locfileid: "48084835"
   
 ## <a name="other-options"></a>Otras opciones  
  **Perfil rápido**  
- Muestre el **Formulario de perfil rápido de tabla única**. Este formulario simplifica la tarea de generar perfiles de una tabla o vista únicas con la configuración predeterminada. Para más información, vea [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](single-table-quick-profile-form-data-profiling-task.md).  
+ Muestre el **Formulario de perfil rápido de tabla única**. Este formulario simplifica la tarea de generar perfiles de una tabla o vista únicas con la configuración predeterminada. Para más información, vea [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md).  
   
  **Abrir el visor de perfil**  
  Abre el Visor de perfil de datos. El Visor de perfil de datos independiente muestra el resultado del perfil de datos de la tarea Generación de perfiles de datos. El resultado del perfil de datos puede verse después de ejecutar la tarea Generación de perfiles de datos dentro del paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y de calcular los perfiles de datos.  

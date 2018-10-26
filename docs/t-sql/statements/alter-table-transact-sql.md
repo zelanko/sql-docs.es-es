@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,138 +60,143 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: c92b931c8c55fbaeeb5e2ec839025fddc5ae231e
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085541"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636504"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Modifica una definición de tabla al alterar, agregar o quitar columnas y restricciones, reasignar y regenerar particiones, o deshabilitar o habilitar restricciones y desencadenadores.  
+  Modifica una definición de tabla al alterar, agregar o quitar columnas y restricciones, reasignar y regenerar particiones, o deshabilitar o habilitar restricciones y desencadenadores.
 
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
--- Disk-Based ALTER TABLE Syntax for SQL Server and Azure SQL Database
-  
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
-{   
-    ALTER COLUMN column_name   
-    {   
-        [ type_schema_name. ] type_name   
-            [ (   
-                {   
-                   precision [ , scale ]   
-                 | max   
-                 | xml_schema_collection   
-                }   
-            ) ]   
-        [ COLLATE collation_name ]   
+Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+
+> [!IMPORTANT]
+> La sintaxis de ALTER TABLE es diferente para las tablas basadas en disco y las tablas optimizadas para memoria. Utilice los siguientes vínculos para acceder directamente al bloque de sintaxis apropiado para los tipos de tabla y a los ejemplos de sintaxis apropiados:
+> - Tablas basadas en disco:
+>    - [Sintaxis](#syntax-for-disk-based-tables)
+>    - [Ejemplos](#Example_Top)
+> - Tablas con optimización para memoria
+>   - [Sintaxis](#syntax-for-memory-optimized-tables)
+>   - [Ejemplos](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+
+## <a name="syntax-for-disk-based-tables"></a>Sintaxis para las tablas basadas en disco  
+
+``` 
+ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+{
+    ALTER COLUMN column_name
+    {
+        [ type_schema_name. ] type_name
+            [ (
+                {
+                   precision [ , scale ]
+                 | max
+                 | xml_schema_collection
+                }
+            ) ]
+        [ COLLATE collation_name ]
         [ NULL | NOT NULL ] [ SPARSE ]  
-      | { ADD | DROP }   
+      | { ADD | DROP }
           { ROWGUIDCOL | PERSISTED | NOT FOR REPLICATION | SPARSE | HIDDEN }  
       | { ADD | DROP } MASKED [ WITH ( FUNCTION = ' mask_function ') ]  
-    }   
+    }
     [ WITH ( ONLINE = ON | OFF ) ]  
     | [ WITH { CHECK | NOCHECK } ]  
   
-    | ADD   
-    {   
+    | ADD
+    {
         <column_definition>  
       | <computed_column_definition>  
-      | <table_constraint>   
-      | <column_set_definition> 
+      | <table_constraint>
+      | <column_set_definition>
     } [ ,...n ]  
-      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
-                   [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-            system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END   
-                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-         ]  
+      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START
+                [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+                system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END
+                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+        ]  
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-       
-    | DROP   
+    | DROP
      [ {  
          [ CONSTRAINT ]  [ IF EXISTS ]  
-         {   
-              constraint_name   
-              [ WITH   
-               ( <drop_clustered_constraint_option> [ ,...n ] )   
-              ]   
+         {
+              constraint_name
+              [ WITH
+               ( <drop_clustered_constraint_option> [ ,...n ] )
+              ]
           } [ ,...n ]  
           | COLUMN  [ IF EXISTS ]  
           {  
-              column_name   
+              column_name
           } [ ,...n ]  
           | PERIOD FOR SYSTEM_TIME  
      } [ ,...n ]  
-    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT   
-        { ALL | constraint_name [ ,...n ] }   
+    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT
+        { ALL | constraint_name [ ,...n ] }
   
-    | { ENABLE | DISABLE } TRIGGER   
+    | { ENABLE | DISABLE } TRIGGER
         { ALL | trigger_name [ ,...n ] }  
   
-    | { ENABLE | DISABLE } CHANGE_TRACKING   
+    | { ENABLE | DISABLE } CHANGE_TRACKING
         [ WITH ( TRACK_COLUMNS_UPDATED = { ON | OFF } ) ]  
   
     | SWITCH [ PARTITION source_partition_number_expression ]  
-        TO target_table   
+        TO target_table
         [ PARTITION target_partition_number_expression ]  
         [ WITH ( <low_priority_lock_wait> ) ]  
-    
-    | SET   
+
+    | SET
         (  
-            [ FILESTREAM_ON =   
+            [ FILESTREAM_ON =
                 { partition_scheme_name | filegroup | "default" | "NULL" } ]  
-            | SYSTEM_VERSIONING =   
-                  {   
-                      OFF   
-                  | ON   
-                      [ ( HISTORY_TABLE = schema_name . history_table_name   
-                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
-                          [, HISTORY_RETENTION_PERIOD = 
-                          { 
-                               INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                 | MONTH | MONTHS | YEAR | YEARS } 
-                          } 
+            | SYSTEM_VERSIONING =
+                  {
+                      OFF
+                  | ON
+                      [ ( HISTORY_TABLE = schema_name . history_table_name
+                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ]
+                          [, HISTORY_RETENTION_PERIOD =
+                          {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }
                           ]  
                         )  
                       ]  
                   }  
           )  
-      
-    | REBUILD   
+
+    | REBUILD
       [ [PARTITION = ALL]  
-        [ WITH ( <rebuild_option> [ ,...n ] ) ]   
-      | [ PARTITION = partition_number   
+        [ WITH ( <rebuild_option> [ ,...n ] ) ]
+      | [ PARTITION = partition_number
            [ WITH ( <single_partition_rebuild_option> [ ,...n ] ) ]  
         ]  
       ]  
   
     | <table_option>  
-  
     | <filetable_option>  
-  
     | <stretch_configuration>  
 }  
 [ ; ]  
   
 -- ALTER TABLE options  
   
-<column_set_definition> ::=   
+<column_set_definition> ::=
     column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
 
-<drop_clustered_constraint_option> ::=    
-    {   
+<drop_clustered_constraint_option> ::=
+    {
         MAXDOP = max_degree_of_parallelism  
       | ONLINE = { ON | OFF }  
-      | MOVE TO   
+      | MOVE TO
          { partition_scheme_name ( column_name ) | filegroup | "default" }  
     }  
 <table_option> ::=  
@@ -208,7 +213,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 <stretch_configuration> ::=  
     {  
       SET (  
-        REMOTE_DATA_ARCHIVE   
+        REMOTE_DATA_ARCHIVE
         {  
             = ON (  <table_stretch_options>  )  
           | = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED )  
@@ -236,11 +241,11 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ], 
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }  
-```  
-  
-```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
-  
+```
+
+## <a name="syntax-for-memory-optimized-tables"></a>Sintaxis para las tablas optimizadas para memoria  
+
+```
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
     ALTER COLUMN column_name   
@@ -617,14 +622,14 @@ ALTER INDEX *index_name* especifica que es necesario cambiar o modificar el núm
   
 La sintaxis ALTER TABLE... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.    
 
-> [!NOTE]
-> Si no se usa una instrucción ALTER TABLE, las instrucciones CREATE INDEX, DROP INDEX y ALTER INDEX no son compatibles con los índices de las tablas optimizadas para memoria. 
+> [!IMPORTANT]
+> Si no se usa una instrucción ALTER TABLE, las instrucciones [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) y [PAD_INDEX](alter-table-index-option-transact-sql.md) no son compatibles con los índices de las tablas optimizadas para memoria.
 
 ADD  
 Especifica que se agregan una o más definiciones de columna, definiciones de columnas calculadas o restricciones de tabla, o las columnas que el sistema utilizará para el control de versiones del sistema. Se puede agregar un índice para las tablas optimizadas para memoria.
 
-> [!NOTE]
-> Si no se usa una instrucción ALTER TABLE, las instrucciones CREATE INDEX, DROP INDEX y ALTER INDEX no son compatibles con los índices de las tablas optimizadas para memoria. 
+> [!IMPORTANT]
+> Si no se usa una instrucción ALTER TABLE, las instrucciones [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) y [PAD_INDEX](alter-table-index-option-transact-sql.md) no son compatibles con los índices de las tablas optimizadas para memoria.
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
 **Se aplica a**: desde [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -649,8 +654,8 @@ INDEX *index_name* especifica que *index_name* se quita de la tabla.
   
 La sintaxis ALTER TABLE... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.    
 
-> [!NOTE]
-> Si no se usa una instrucción ALTER TABLE, las instrucciones CREATE INDEX, DROP INDEX y ALTER INDEX no son compatibles con los índices de las tablas optimizadas para memoria. 
+> [!IMPORTANT]
+> Si no se usa una instrucción ALTER TABLE, las instrucciones [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) y [PAD_INDEX](alter-table-index-option-transact-sql.md) no son compatibles con los índices de las tablas optimizadas para memoria.
       
 COLUMN *column_name*  
 Especifica que *constraint_name* o *column_name* se quita de la tabla. Pueden especificarse varias columnas.  
@@ -1076,7 +1081,8 @@ En versiones anteriores, al especificar el formato servidor.baseDeDatos.esquema.
   
 Para resolver el problema, quite el uso de un prefijo de 4 partes.  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
+
  Requiere el permiso ALTER en la tabla.  
   
  Los permisos ALTER TABLE se aplican a las tablas relacionadas con una instrucción ALTER TABLE SWITCH. Los datos que se modifican heredan la seguridad de la tabla de destino.  
@@ -1085,7 +1091,7 @@ Para resolver el problema, quite el uso de un prefijo de 4 partes.
   
  La adición de una columna que actualiza las filas de la tabla requiere el permiso **UPDATE** en ella. Por ejemplo, agregar una columna **NOT NULL** con un valor predeterminado o agregar una columna de identidad si la tabla no está vacía.  
   
-##  <a name="Example_Top"></a> Ejemplos  
+## <a name="Example_Top"></a> Ejemplos
   
 |Categoría|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
@@ -1095,10 +1101,12 @@ Para resolver el problema, quite el uso de un prefijo de 4 partes.
 |[Modificar una definición de tabla](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • seguimiento de cambios|  
 |[Deshabilitar y habilitar restricciones y desencadenadores](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|  
   
-###  <a name="add"></a>Agregar columnas y restricciones  
+### <a name="add"></a>Agregar columnas y restricciones
+  
  En los ejemplos de esta sección se muestra cómo agregar columnas y restricciones a una tabla.  
   
-#### <a name="a-adding-a-new-column"></a>A. Agregar una columna nueva  
+#### <a name="a-adding-a-new-column"></a>A. Agregar una columna nueva
+
  En el ejemplo siguiente se agrega una columna que permite valores NULL y a la que no se han proporcionado valores mediante una definición DEFAULT. En la nueva columna, cada fila tendrá valores `NULL`.  
   
 ```sql  

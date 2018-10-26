@@ -34,7 +34,7 @@ ms.locfileid: "48199955"
   
 -   **Línea escalonada**. Gráfico de líneas que usa una línea escalonada en lugar de una línea normal. La línea escalonada conecta puntos mediante una línea que adopta la apariencia de los peldaños de una escalera.  
   
--   **Gráficos sparkline**. Variaciones del gráfico de líneas que muestran solo la serie de líneas en la celda de una tabla o una matriz. Para obtener más información, vea [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+-   **Gráficos sparkline**. Variaciones del gráfico de líneas que muestran solo la serie de líneas en la celda de una tabla o una matriz. Para obtener más información, vea [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="data-considerations-for-line-charts"></a>Consideraciones sobre los datos para los gráficos de líneas  
   

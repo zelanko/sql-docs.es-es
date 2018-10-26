@@ -40,7 +40,7 @@ ms.locfileid: "48071155"
 ## <a name="before-you-start"></a>Antes de empezar  
  Revise la lista siguiente antes de agregar usuarios a un servidor de informes en modo nativo.  
   
--   Debe ser miembro del grupo local de administradores en el equipo del servidor de informes. Si implementa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, se requiere la configuración adicional antes de poder administrar localmente un servidor de informes. Para obtener más información, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+-   Debe ser miembro del grupo local de administradores en el equipo del servidor de informes. Si implementa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, se requiere la configuración adicional antes de poder administrar localmente un servidor de informes. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 -   Para delegar esta tarea en otros usuarios, cree asignaciones de roles que asignen cuentas de usuario a los roles de administrador de contenido y de sistema. Los usuarios con permisos de administrador de contenido y de sistema pueden agregar usuarios a un servidor de informes.  
   

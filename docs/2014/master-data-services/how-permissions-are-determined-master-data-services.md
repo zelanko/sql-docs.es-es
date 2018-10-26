@@ -67,14 +67,14 @@ ms.locfileid: "48217833"
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
 ### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Paso 3: se determina la intersección los permisos de atributo y de miembro.  
- Si los permisos de atributo efectivos son diferentes que los permisos de miembro efectivos, los permisos se deben determinar para cada valor de atributo individual. Para obtener más información, consulte [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
+ Si los permisos de atributo efectivos son diferentes que los permisos de miembro efectivos, los permisos se deben determinar para cada valor de atributo individual. Para obtener más información, consulte [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Permisos asignados a varios grupos  
  Si un usuario pertenece a uno o más grupos y se asignan permisos al usuario y a los grupos, el flujo de trabajo se vuelve más complejo.  
   
  ![mds_conc_security_group_overlap](../../2014/master-data-services/media/mds-conc-security-group-overlap.gif "mds_conc_security_group_overlap")  
   
- En este caso, los permisos de usuario y de grupo que se superpongan se deben resolver para poder comparar los permisos del objeto de modelo y del miembro de jerarquía. Para obtener más información, consulte [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
+ En este caso, los permisos de usuario y de grupo que se superpongan se deben resolver para poder comparar los permisos del objeto de modelo y del miembro de jerarquía. Para obtener más información, consulte [Superponer permisos de usuario y de grupo &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Superponer permisos de grupo y usuario &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   

@@ -61,7 +61,7 @@ ms.locfileid: "48176112"
   
 -   El error se produce durante una inserción en la tabla del sistema **MSmerge_contents**.  
   
-     Este error se puede producir debido a un valor incorrecto de la propiedad del filtro de combinación **join_unique_key**. Esta propiedad debe definirse como TRUE solo si la columna combinada de la tabla primaria es única. El error se produce si la propiedad se define como TRUE pero la columna no es única. Para obtener más información acerca de cómo configurar esta propiedad, vea [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Este error se puede producir debido a un valor incorrecto de la propiedad del filtro de combinación **join_unique_key**. Esta propiedad debe definirse como TRUE solo si la columna combinada de la tabla primaria es única. El error se produce si la propiedad se define como TRUE pero la columna no es única. Para obtener más información acerca de cómo configurar esta propiedad, vea [Definir y modificar un filtro de combinación entre artículos de mezcla](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)  

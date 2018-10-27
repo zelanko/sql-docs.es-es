@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevel (MDX) | Documentos de Microsoft
+title: DrilldownLevel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2aa0ae2406b7e53445c9c84c98b4240f834f01c6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740224"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145660"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
 
   Aumenta los detalles de los miembros de un conjunto a un nivel por debajo del nivel más bajo representado en el conjunto.  
   
- Especifican el nivel en el que se va a explorar hacia abajo es opcional, pero si establece el nivel, puede utilizar cualquiera una **nivel expresión** o **nivel de índice**. Estos argumentos son mutuamente exclusivos. Por último, si los miembros calculados están presentes en la consulta, puede especificar un argumento para incluirlos en el conjunto de filas.  
+ Especificando el nivel de donde se va a explorar en profundidad es opcional, pero si establece el nivel, puede usar cualquiera un **expresión de nivel** o **nivel de índice**. Estos argumentos son mutuamente exclusivos. Por último, si los miembros calculados están presentes en la consulta, puede especificar un argumento para incluirlos en el conjunto de filas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,25 +42,25 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Opcional). Marca que indica si se deben incluir en el nivel de detalle los miembros calculados, si existen.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **DrilldownLevel** función devuelve un conjunto de secundarios miembros en un orden jerárquico, basado en los miembros incluidos en el conjunto especificado. El orden se mantiene entre los miembros originales del conjunto especificado, aunque todos los miembros secundarios incluidos en el conjunto de resultados de la función se incluyen inmediatamente bajo su miembro primario.  
   
- Si hay una estructura de datos jerárquica de varios niveles, puede elegir de forma explícita un nivel en el que aumentar los detalles. Hay dos métodos, que se excluyen mutuamente, de especificar el nivel. El primer enfoque consiste en establecer el **level_expression** argumento utilizando una expresión MDX que devuelve el nivel, una solución alternativa consiste en especificar el **índice** argumento, utilizando una expresión numérica que especifica el nivel por número.  
+ Si hay una estructura de datos jerárquica de varios niveles, puede elegir de forma explícita un nivel en el que aumentar los detalles. Hay dos métodos, que se excluyen mutuamente, de especificar el nivel. El primer enfoque consiste en establecer el **level_expression** argumento utilizando una expresión MDX que devuelve el nivel, un enfoque alternativo consiste en especificar el **índice** argumento, mediante una expresión numérica que Especifica el nivel por número.  
   
  Si se especifica una expresión de nivel, la función crea un conjunto en un orden jerárquico mediante la recuperación de los elementos secundarios de solo aquellos miembros que se encuentran en el nivel especificado. Si se especifica una expresión de nivel y no hay ningún miembro en ese nivel, la expresión de nivel no se tiene en cuenta.  
   
  Si se especifica un valor del índice, la función crea un conjunto en orden jerárquico mediante la recuperación de los elementos secundarios de solo aquellos miembros que se encuentran en el nivel más bajo siguiente de la jerarquía a la que se hace referencia en el conjunto especificado, en función de un índice basado en cero dado.  
   
- Si se especifica una expresión de nivel ni un valor de índice, la función crea un conjunto en un orden jerárquico mediante la recuperación de los elementos secundarios de solo aquellos miembros que se encuentran en el nivel más bajo de la primera dimensión hace referencia en el conjunto especificado.  
+ Si se especifica una expresión de nivel ni un valor de índice, la función crea un conjunto en orden jerárquico mediante la recuperación de los elementos secundarios de solo aquellos miembros que están en el nivel más bajo de la primera dimensión hace referencia en el conjunto especificado.  
   
- Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones obtener detalles. vea [admite propiedades XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) para obtener más información.  
+ Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones de obtención de detalles; consulte [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obtener más información.  
   
 ## <a name="examples"></a>Ejemplos  
  Puede probar los ejemplos siguientes en la ventana de consulta MDX de SSMS, utilizando el cubo de Adventure Works.  
   
  **Ejemplo 1: muestra la sintaxis mínima**  
   
- El primer ejemplo muestra la sintaxis mínima de **DrilldownLevel**. El único argumento necesario es una expresión de conjunto. Tenga en cuenta que al ejecutar esta consulta, obtendrá el primario [All Categories] y los miembros del siguiente nivel hacia abajo: [Accessories], [Bikes], y así sucesivamente. Aunque este ejemplo es sencillo, muestra la finalidad básica de la **DrilldownLevel** función, que es profundizando hasta el siguiente nivel inferior.  
+ El primer ejemplo muestra la sintaxis mínima de **DrilldownLevel**. El único argumento necesario es una expresión de conjunto. Tenga en cuenta que al ejecutar esta consulta, obtendrá el primario [All Categories] y los miembros del siguiente nivel hacia abajo: [Accessories], [Bikes], y así sucesivamente. Aunque este ejemplo es sencillo, muestra el propósito básico de la **DrilldownLevel** función, que es desglosar hasta el siguiente nivel inferior.  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
@@ -83,7 +83,7 @@ FROM [Adventure Works]
   
  En el ejemplo siguiente se muestra cómo usar una expresión de nivel. Con un conjunto dado que represente una estructura jerárquica, el uso de una expresión de nivel le permite elegir un nivel de la jerarquía para empezar el aumento de los detalles.  
   
- En este ejemplo, el nivel de detalle empieza en [City], como el segundo argumento de la **DrilldownLevel** función. Al ejecutar esta consulta, el aumento de detalles empieza en el nivel [City], para los estados de Washington y Oregón. Por el **DrilldownLevel** función, el resultado conjunto también incluye los miembros del siguiente nivel hacia abajo, [Postal codes].  
+ En este ejemplo, el nivel de exploración en profundidad empieza en [City], como el segundo argumento de la **DrilldownLevel** función. Al ejecutar esta consulta, el aumento de detalles empieza en el nivel [City], para los estados de Washington y Oregón. Por el **DrilldownLevel** función, el resultado también incluye los miembros del siguiente nivel hacia abajo, [Postal codes].  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -100,7 +100,7 @@ FROM [Adventure Works]
   
  **Ejemplo 4: incluidos a los miembros calculados**  
   
- El último ejemplo se muestra un miembro calculado, que aparece en la parte inferior del resultado se establece al agregar el **include_calculated_members** marca. Observe que la marca se especifica como cuarto parámetro.  
+ El último ejemplo se muestra un miembro calculado, que aparece en la parte inferior del resultado se establece cuando se agrega el **include_calculated_members** marca. Observe que la marca se especifica como cuarto parámetro.  
   
  Este ejemplo funciona porque el miembro calculado está en el mismo nivel que los miembros no calculados. El miembro calculado [West Coast] está formado por miembros de [United States] más todos los miembros que están un nivel por debajo de [United States].  
   

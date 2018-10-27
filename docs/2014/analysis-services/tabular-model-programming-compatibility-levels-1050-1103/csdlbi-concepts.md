@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098145"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146521"
 ---
 # <a name="csdlbi-concepts"></a>Conceptos de CSDLBI
   El lenguaje de definición de esquemas conceptuales con anotaciones BI (CSDLBI) se basa en Entity Data Framework, que es una abstracción para representar datos de una forma que permita el acceso, la consulta o la exportación de conjuntos de datos diversos mediante programación. CSDLBI se emplea para representar modelos de datos creados mediante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] porque admite informes y aplicaciones completos controlados por datos.  
@@ -131,7 +131,7 @@ ms.locfileid: "48098145"
   
  **Dimensiones:** una dimensión se representa en CSDLBI como una entidad (tabla) con columnas y propiedades. Tenga en cuenta que, aunque no se incluya en una perspectiva, una dimensión incluida en el modelo se representará en la salida de CSDL marcada como `Hidden`.  
   
- **Perspectivas:** un cliente puede solicitar CSDL para perspectivas individuales. Para obtener más información, consulte [conjunto de filas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Perspectivas:** un cliente puede solicitar CSDL para perspectivas individuales. Para obtener más información, consulte [conjunto de filas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
  **Jerarquías:** se admiten y se representan en CSDLBI como un conjunto de niveles de jerarquías.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098145"
  **Limitaciones:** no se admite la seguridad de celda.  
   
 ## <a name="see-also"></a>Vea también  
- [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

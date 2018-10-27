@@ -1,5 +1,5 @@
 ---
-title: Usar las propiedades de celda (MDX) | Documentos de Microsoft
+title: Uso de las propiedades de celda (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023432"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145310"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>Propiedades de celda MDX: con propiedades de celda
+# <a name="mdx-cell-properties---using-cell-properties"></a>Propiedades de celdas MDX: uso de las propiedades de celda
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Las propiedades de celda de las expresiones multidimensionales (MDX) contienen información sobre el contenido y el formato de las celdas de un origen de datos multidimensional, como un cubo.  
   
@@ -42,7 +42,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Propiedades de celda intrínsecas compatibles  
  En la siguiente tabla figuran las propiedades de celda intrínsecas compatibles que se utilizan en el valor `<property>` .  
   
-|Propiedad|Description|  
+|Property|Descripción|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Máscara de bits que indica los tipos de acciones de la celda. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: Las acciones de obtención de detalles no se incluyen para las consultas que contienen un conjunto en la cláusula WHERE.|  
 |**BACK_COLOR**|Color de fondo para mostrar las propiedades **VALUE** o **FORMATTED_VALUE**. Para obtener más información, vea [Contenido de FORE_COLOR y BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   La celda no puede actualizarse porque no se admite la actualización en dimensiones indirectas, de minería de datos o de modelos de minería de datos.|  
 |**VALUE**|Valor sin formato de la celda.|  
   
- Solo son obligatorias las propiedades de celda **CELL_ORDINAL**, **FORMATTED_VALUE**y **VALUE** . Todas las propiedades de celda, intrínsecas o específicas del proveedor, se definen en el conjunto de filas de esquema **PROPERTIES** , incluidos los tipos de datos y la compatibilidad con el proveedor. Para obtener más información sobre el conjunto de filas de esquema **PROPERTIES** , vea [Conjunto de filas MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Solo son obligatorias las propiedades de celda **CELL_ORDINAL**, **FORMATTED_VALUE**y **VALUE** . Todas las propiedades de celda, intrínsecas o específicas del proveedor, se definen en el conjunto de filas de esquema **PROPERTIES** , incluidos los tipos de datos y la compatibilidad con el proveedor. Para obtener más información sobre el conjunto de filas de esquema **PROPERTIES** , vea [Conjunto de filas MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  De forma predeterminada, si no se usa la palabra clave **CELL PROPERTIES** , las propiedades de celda devueltas son **VALUE**, **FORMATTED_VALUE**y **CELL_ORDINAL** (en este orden). Si se utiliza la palabra clave **CELL PROPERTIES** , se devuelven únicamente las propiedades de celda especificadas explícitamente con la palabra clave.  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

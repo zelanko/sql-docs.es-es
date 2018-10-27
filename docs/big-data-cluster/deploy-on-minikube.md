@@ -1,26 +1,26 @@
 ---
-title: Configurar Minikube para las implementaciones de SQL Server de 2019 CTP 2.0 | Microsoft Docs
-description: ''
+title: Configuración de Minikube para las implementaciones de clústeres de SQL Server 2019 macrodatos | Microsoft Docs
+description: Obtenga información sobre cómo configurar Minikube para las implementaciones de clústeres (versión preliminar) de macrodatos de 2019 de SQL Server en un solo equipo.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050787"
 ---
-# <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>Configurar Minikube para SQL Server de 2019 CTP 2.0
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configuración de Minikube para las implementaciones de clústeres de macrodatos de SQL Server 2019
 
-Minikube es una herramienta que facilita la tarea Ejecutar Kubernetes en un único equipo como un equipo portátil o un equipo de escritorio. Minikube ejecuta un clúster de Kubernetes de nodo único dentro de una máquina virtual en el equipo portátil para los usuarios que desean probar Kubernetes o desarrollar con ella diarias. 
+En este artículo se describe cómo configurar **minikube** en una única máquina para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019. Minikube es una herramienta que facilita la tarea Ejecutar Kubernetes en un único equipo como un equipo portátil o un equipo de escritorio. Minikube ejecuta un clúster de Kubernetes de nodo único dentro de una máquina virtual en el equipo portátil para los usuarios que desean probar Kubernetes o desarrollar con ella diarias. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Para ejecutar un clúster de Minikube para SQL Server de 2019 CTP 2.0 en una configuración de clúster de SQL Big Data, se recomienda que la máquina tenga al menos 32 GB de RAM.
+- Para ejecutar un clúster de Minikube para SQL Server de 2019 CTP 2.0 en una configuración de clúster de macrodatos SQL, se recomienda que la máquina tenga al menos 32 GB de RAM.
 
    > [!TIP] 
    > Si el equipo tiene solo el mínimo de memoria recomendado, a continuación, configurar la implementación de clúster tenga la instancia del grupo de 1 almacenamiento, 1 instancia del grupo de datos y solo 1 instancia de grupo de proceso. Esta configuración solo debe usar para entornos de evaluación donde la durabilidad y disponibilidad de los datos no son importantes. Consulte la [documentación de implementación](deployment-guidance.md#define-environment-variables) para obtener más información sobre las variables de entorno para establecer el número de réplicas para grupos de datos de configuración, calcular los grupos y grupos de almacenamiento.
@@ -72,6 +72,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los pasos descritos en este artículo, configuran un clúster de Minikube. El siguiente paso es implementar SQL Server 2019 CTP 2.0 en el clúster.
+Los pasos descritos en este artículo, configuran un clúster de Minikube. El siguiente paso es implementar el clúster de macrodatos de SQL Server 2019. Para obtener instrucciones, consulte el artículo siguiente:
 
 [Implementar 2019 CTP 2.0 de SQL Server en Kubernetes](deployment-guidance.md#deploy)

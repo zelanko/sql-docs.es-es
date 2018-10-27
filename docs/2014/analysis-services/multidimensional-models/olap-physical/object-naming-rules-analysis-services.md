@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abe054c97e13ffe5428eddfded09fa18b5060aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063395"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147852"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
   En este tema se describen las convenciones de nomenclatura de los objetos, así como las palabras y los caracteres reservados que no se pueden usar en ningún nombre de objeto, código o script en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "48063395"
   
 |Objeto|Caracteres no válidos|  
 |------------|------------------------|  
-|`Server`|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Consulte [convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más información.|  
+|`Server`|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Vea [Convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más detalles.|  
 |`DataSource`|: / \ * &#124; ? "[] () {} <>|  
 |`Level` o `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` o `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
@@ -92,6 +92,6 @@ ms.locfileid: "48063395"
 ## <a name="see-also"></a>Vea también  
  [Palabras reservadas de MDX](/sql/mdx/mdx-reserved-words)   
  [Traducciones &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [Compatibilidad de análisis con XML for &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [Compatibilidad de análisis con XML for &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

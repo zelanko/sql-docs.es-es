@@ -1,5 +1,5 @@
 ---
-title: Activar la integración de Power Pivot para colecciones de sitios en la entidad emisora de certificados | Documentos de Microsoft
+title: Activar la integración de PowerPivot para colecciones de sitios en la entidad emisora de certificados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77c8cb0d9e9617bfa0560ae1e9bc6389a297a5c2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 564ff616ec13b5f7f669db4cf6402114175f5670
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100066"
 ---
-# <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>Activar la integración de Power Pivot para colecciones de sitios en la entidad emisora de certificados
+# <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>Activar la integración de PowerPivot para colecciones de sitios en la entidad de certificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Es necesario activar la integración de características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para colecciones de sitios concretos si se ha usado la opción de instalación Granja existente para instalar SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Si ha instalado [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint con la opción Nuevo servidor, puede omitir esta tarea, porque el programa de instalación de SQL Server ya ha activado la integración de características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para la colección de sitios raíz al configurar la implementación.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34026122"
   
 1.  En un sitio de SharePoint, haga clic en **Acciones de sitio**.  
   
-     De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que puede acceder a menudo un sitio de SharePoint escribiendo http://\<nombre de equipo > para abrir la colección de sitios raíz.  
+     De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que puede acceder a menudo un sitio de SharePoint escribiendo http://\<nombre_equipo > para abrir la colección de sitios raíz.  
   
 2.  Haga clic en **Configuración del sitio**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34026122"
   
 ## <a name="see-also"></a>Vea también  
  [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
- [Instalación de PowerPivot para SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
+ [Instalación de PowerPivot para SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4176e9dc902ae4c83024ba5e659a2467585d71c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099526"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importar HTML en un informe (Generador de informes y SSRS)
   Se puede usar un cuadro de texto para insertar en un informe texto con formato HTML recuperado de un campo de conjunto de datos. El texto puede proceder de cualquier expresión simple o compleja que se evalúe como HTML con un formato correcto. El texto con formato se puede representar en todos los formatos de salida compatibles, incluso PDF.  
@@ -61,7 +61,7 @@ ms.locfileid: "48115715"
   
     -   Las unidades de longitud de CSS relativas se pasan por algo y no se admiten. Las unidades no admitidas son em, ex, px,%,rem.  
   
-     Para más información sobre unidades de CSS, consulte: [CSS Values and Units Reference](http://msdn.microsoft.com/en-us/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx) (Valores de CSS y unidades de referencia).  
+     Para más información sobre unidades de CSS, consulte: [CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx) (Valores de CSS y unidades de referencia).  
   
 -   color  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48115715"
 -   Para los atributos y los estilos CSS, si una propiedad se especifica más de una vez, solo se aplica la última instancia de la propiedad. Por ejemplo, si el texto es **\<p align="left" align="right">**, el texto estará alineado a la derecha.  
   
 ## <a name="see-also"></a>Vea también  
- [Representación en HTML &#40;generador de informes y SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Representar en HTML &#40;Generador de informes y SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

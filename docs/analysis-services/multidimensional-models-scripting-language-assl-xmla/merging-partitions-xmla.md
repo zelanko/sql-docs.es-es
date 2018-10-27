@@ -1,5 +1,5 @@
 ---
-title: Mezclar particiones (XMLA) | Documentos de Microsoft
+title: Mezclar particiones (XMLA) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32c212ee7ffdfe234c5a4dd7760c32b0504ac38b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 419ebd0d67b65213fde7393430aedec14249b2ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025132"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147910"
 ---
 # <a name="merging-partitions-xmla"></a>Mezclar particiones (XMLA)
-  Si las particiones tienen el mismo diseño de agregaciones y la estructura, puede combinar la partición mediante la [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando de XML for Analysis (XMLA). Combinar particiones es una acción importante que se debe realizar cuando se administran particiones, sobre todo aquellas particiones que contienen datos históricos con particiones por fecha.  
+  Si las particiones tienen el mismo diseño de agregaciones y la estructura, puede combinar la partición mediante la [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando XML for Analysis (XMLA). Combinar particiones es una acción importante que se debe realizar cuando se administran particiones, sobre todo aquellas particiones que contienen datos históricos con particiones por fecha.  
   
  Por ejemplo, un cubo financiero puede usar dos particiones:  
   
@@ -25,22 +25,22 @@ ms.locfileid: "34025132"
   
 -   Otra partición contiene los datos financieros de años anteriores, usando la configuración de almacenamiento de OLAP multidimensional (MOLAP) para el almacenamiento.  
   
- Ambas particiones usan valores de almacenamiento diferentes, pero utilizan el mismo diseño de agregaciones. En lugar de procesar el cubo a través de años de datos históricos al final del año, puede utilizar el **MergePartitions** comando para mezclar la partición para el año actual con la partición de años anteriores. Con ello se conservan los datos de agregación sin tener que realizar un proceso completo del cubo que puede requerir mucho tiempo.  
+ Ambas particiones usan valores de almacenamiento diferentes, pero utilizan el mismo diseño de agregaciones. En lugar de procesar el cubo a través de años de datos históricos al final del año, puede usar en su lugar el **MergePartitions** comando para combinar la partición para el año actual en la partición de años anteriores. Con ello se conservan los datos de agregación sin tener que realizar un proceso completo del cubo que puede requerir mucho tiempo.  
   
 ## <a name="specifying-partitions-to-merge"></a>Especificar particiones para combinar  
- Cuando el **MergePartitions** comando se ejecuta, los datos de agregación almacenados en las particiones de origen especificadas en el [origen](../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) propiedad se agrega a la partición de destino especificada en el [destino ](../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md) propiedad.  
+ Cuando el **MergePartitions** comando se ejecuta, los datos de agregación almacenados en las particiones de origen especificadas en el [origen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propiedad se agrega a la partición de destino especificada en el [destino ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) propiedad.  
   
 > [!NOTE]  
->  El **origen** propiedad puede contener más de una referencia de objeto de partición. Sin embargo, el **destino** propiedad no se puede.  
+>  El **origen** propiedad puede contener más de una referencia de objeto de partición. Sin embargo, el **destino** no de la propiedad.  
   
- Que se combinarán correctamente, las particiones especificadas tanto en el **origen** y **destino** debe estar incluido en el mismo grupo de medida y usar el mismo diseño de agregaciones. De lo contrario, se produce un error.  
+ Se combinen correctamente, las particiones especificadas tanto en el **origen** y **destino** debe estar incluido en el mismo grupo de medida y usar el mismo diseño de agregaciones. De lo contrario, se produce un error.  
   
  Las particiones especificadas en el **origen** se eliminan después de la **MergePartitions** comando se ha completado correctamente.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="description"></a>Description  
- En el ejemplo siguiente se combina todas las particiones en el **Customer Counts** grupo de medida de la **Adventure Works** de cubo en el **Adventure Works DW** ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos la **Customers_2004** partición.  
+### <a name="description"></a>Descripción  
+ El ejemplo siguiente combina todas las particiones de la **Customer Counts** grupo de medida de la **Adventure Works** del cubo en el **Adventure Works DW** ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos la **Customers_2004** partición.  
   
 ### <a name="code"></a>código  
   
@@ -76,6 +76,6 @@ ms.locfileid: "34025132"
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

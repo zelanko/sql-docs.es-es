@@ -1,5 +1,5 @@
 ---
-title: Miembros calculados en subselecciones y los subcubos | Documentos de Microsoft
+title: Miembros calculados en subselecciones y subcubos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 673f73c91f4cf3206e9f9df15f248b059a4e78d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8bae68e24f6a7f2dfd42e335a9e003f56cf1d610
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023832"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145320"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Un miembro calculado es un miembro de dimensión cuyo valor se calcula a partir de una expresión en tiempo de ejecución, y se puede usar en las subselecciones y los subcubos para definir con mayor precisión el espacio del cubo de una consulta.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Habilitación de los miembros calculados en el subespacio  
- La propiedad de cadena de conexión **SubQueries** en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la propiedad **DBPROPMSMDSUBQUERIES** en [Propiedades XMLA compatibles &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definen el comportamiento o concesión de miembros calculados o conjuntos calculados en subselecciones o subcubos. En el contexto de este documento, subselección hace referencia a subselecciones y subcubos, a menos que se indique lo contrario.  
+ La propiedad de cadena de conexión **SubQueries** en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la propiedad **DBPROPMSMDSUBQUERIES** en [Propiedades XMLA compatibles &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) definen el comportamiento o concesión de miembros calculados o conjuntos calculados en subselecciones o subcubos. En el contexto de este documento, subselección hace referencia a subselecciones y subcubos, a menos que se indique lo contrario.  
   
  La propiedad SubQueries permite los siguientes valores.  
   
 |||  
 |-|-|  
-|Value|Descripción|  
+|Valor|Descripción|  
 |0|Los miembros calculados no se permiten en subselecciones ni en subcubos.<br /><br /> Se produce un error al evaluar la subselección o subcubo si se hace referencia a un miembro calculado.|  
 |1|Los miembros calculados se permiten en subselecciones y subcubos pero sin que se introduzca ningún miembro antecesor en el subespacio que se devuelve.|  
 |2|Los miembros calculados se permiten en subselecciones y subcubos y los miembros antecesores se introducen en el subespacio que se devuelve. Asimismo, la granularidad mixta se permite en la selección de miembros calculados.|  
@@ -125,6 +125,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Subselecciones en las consultas](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Propiedades XMLA compatibles & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Propiedades XMLA compatibles &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

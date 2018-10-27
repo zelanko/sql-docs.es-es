@@ -1,5 +1,5 @@
 ---
-title: Usar procedimientos almacenados (MDX) | Documentos de Microsoft
+title: Uso de procedimientos almacenados (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2a0ba1b350e59406f04796924385059c323facd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0d4d455ed7bd804f4c2d4ce036c00f85fd94629f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743804"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148190"
 ---
 # <a name="using-stored-procedures-mdx"></a>Usar procedimientos almacenados (MDX)
 
 
-  Puede ampliar la funcionalidad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y MDX (Expresiones Multidimensionales) escribiendo funciones definidas por el usuario o procedimientos almacenados de .NET. Para obtener más información, vea [ADOMD.NET Server Programming](../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+  Puede ampliar la funcionalidad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y MDX (Expresiones Multidimensionales) escribiendo funciones definidas por el usuario o procedimientos almacenados de .NET. Para obtener más información, consulte [programación de servidor ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
  Cuando haga referencia o llame a un procedimiento almacenado, especifique el nombre de la función seguido de paréntesis. Dentro de los paréntesis puede especificar expresiones denominadas argumentos, que proporcionan los datos que se van a pasar a los parámetros. Cuando llame una función, debe proporcionar valores de argumentos para todos los parámetros, así como especificar los valores de argumentos en la misma secuencia en la que se definen los parámetros en la función definida por el usuario.  
   
@@ -33,7 +33,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *Procedimiento almacenado* es la terminología utilizada en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para estos tipos de funciones. Las versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] llama a estos tipos de funciones como *funciones definidas por el usuario*.  
+>  *Procedimiento almacenado* es la terminología usada en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para estos tipos de funciones. Las versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] llama a estos tipos de funciones como *funciones definidas por el usuario*.  
   
 ## <a name="types-of-stored-procedures"></a>Tipos de procedimientos almacenados  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] es compatible con ambos tipos de ensamblados: COM y CLR. Se recomienda usar los ensamblados CLR porque ofrecen una seguridad mejorada. Si se instala Microsoft Office Excel en el servidor, también se pueden usar funciones de Excel.  
@@ -42,6 +42,6 @@ WHERE [Measures].[Reseller Freight Cost]
 >  Los ensamblados COM de Microsoft Visual Basic para Aplicaciones (VBA) se registran de forma automática.  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones &#40;sintaxis MDX&#41;](../mdx/functions-mdx-syntax.md)  
+ [Funciones &#40;sintaxis de MDX&#41;](../mdx/functions-mdx-syntax.md)  
   
   

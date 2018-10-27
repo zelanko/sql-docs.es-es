@@ -19,26 +19,26 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44624d6e223c00d76142b2b0859e8b312647da9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186185"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144920"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Adjuntar y separar bases de datos de Analysis Services
   Con frecuencia se producen situaciones en las que un administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere dejar sin conexión una base de datos durante un tiempo para después volver a ponerla en línea en la misma instancia de servidor o en otra distinta. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto. Para todos estos y otros casos, el `Attach` y `Detach` comandos permiten la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba para desconectar la base de datos y ponerla a conectarla con poco esfuerzo.  
   
 ## <a name="attach-and-detach-commands"></a>Los comandos Attach y Detach  
- El `Attach` comando le permite poner en línea una base de datos que se dejó sin conexión. Puede adjuntar la base de datos a la instancia del servidor original o a otra instancia. Al adjuntar una base de datos, es posible especificar el valor de la propiedad **ReadWriteMode** de la base de datos. El comando `Detach` le permite dejar sin conexión una base de datos del servidor.  
+ El comando `Attach` le permite poner en línea una base de datos que se dejó sin conexión. Puede adjuntar la base de datos a la instancia del servidor original o a otra instancia. Al adjuntar una base de datos, es posible especificar el valor de la propiedad **ReadWriteMode** de la base de datos. El comando `Detach` le permite dejar sin conexión una base de datos del servidor.  
   
 ## <a name="attach-and-detach-usage"></a>Uso de Attach y Detach  
- El `Attach` comando se usa para poner en línea una estructura de base de datos existente. Si la base de datos se adjunta en `ReadWrite` modo, puede ser solo una vez conectada a una instancia del servidor. Sin embargo, si la base de datos se adjunta en `ReadOnly` modo, puede adjuntarse varias veces a distintas instancias del servidor. No obstante, la misma base de datos no puede adjuntarse más de una vez a la misma instancia de servidor. Se produce un error cuando se intenta adjuntar la misma base de datos más de una vez, incluso si los datos se han copiado en carpetas distintas.  
+ El comando `Attach` se utiliza para poner en línea una estructura de base de datos existente. Si la base de datos se adjunta en el modo `ReadWrite`, solo puede adjuntarse una vez a una instancia de servidor. Sin embargo, si la base de datos se adjunta en el modo `ReadOnly`, puede adjuntarse varias veces a distintas instancias de servidor. No obstante, la misma base de datos no puede adjuntarse más de una vez a la misma instancia de servidor. Se produce un error cuando se intenta adjuntar la misma base de datos más de una vez, incluso si los datos se han copiado en carpetas distintas.  
   
 > [!IMPORTANT]  
 >  Si se necesitó una contraseña para separar la base de datos, deberá usarse la misma contraseña para adjuntarla.  
   
- El `Detach` comando se utiliza para dejar sin conexión una estructura de base de datos existente. Cuando separe una base de datos, conviene que proporcione una contraseña para proteger los metadatos confidenciales.  
+ El comando `Detach` se utiliza para dejar sin conexión una estructura de base de datos existente. Cuando separe una base de datos, conviene que proporcione una contraseña para proteger los metadatos confidenciales.  
   
 > [!IMPORTANT]  
 >  Para proteger el contenido de los archivos de datos, debería utilizar una lista de control de acceso para la carpeta, las subcarpetas y los archivos de datos.  
@@ -52,7 +52,7 @@ ms.locfileid: "48186185"
  Los comandos `Attach` y `Detach` se deben ejecutar como operaciones únicas. No se pueden combinar con otras operaciones en la misma transacción. Además, el `Attach` y `Detach` comandos son comandos transaccionales atómicos. Esto significa que la operación se realizará correctamente o producirá un error. No se dejará ninguna base de datos en un estado incompleto.  
   
 > [!IMPORTANT]  
->  Se necesitan privilegios de administrador de base de datos o servidor para ejecutar el `Detach` comando.  
+>  Se necesitan privilegios de administrador de bases de datos o de servidores para ejecutar el comando `Detach`.  
   
 > [!IMPORTANT]  
 >  Se necesitan privilegios de administrador de servidores para ejecutar el comando `Attach`.  
@@ -61,9 +61,9 @@ ms.locfileid: "48186185"
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Mover una base de datos de Analysis Services](move-an-analysis-services-database.md)   
- [ReadWriteModes de base de datos](database-readwritemodes.md)   
- [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Elemento Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)  
+ [Modos de la propiedad de base de datos ReadWriteMode](database-readwritemodes.md)   
+ [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

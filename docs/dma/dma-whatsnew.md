@@ -1,7 +1,7 @@
 ---
 title: Novedades de Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655663"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643953"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
 En este artículo se enumera las adiciones en cada versión de Data Migration Assistant (DMA).
+
+## <a name="dma-v41"></a>DMA v4.1
+La versión de la versión 4.1 de DMA incorpora compatibilidad para una evaluación completa de bases de datos de SQL Server en el entorno local la migración a instancia administrada de Azure SQL Database.
+
+El flujo de trabajo de evaluación le ayuda a detectar los problemas siguientes, que pueden afectar a la migración a instancia administrada de Azure SQL Database:
+
+- **No admitido o características admitidas parcialmente**. DMA evalúa la base de datos de SQL Server de origen para las características de uso que son parcialmente compatibles o no admitido en el destino de la instancia administrada de Azure SQL Database. La herramienta, a continuación, proporciona un conjunto completo de recomendaciones, alternativas disponibles en Azure y mitigar los pasos para que los clientes pueden aprovechar esta información en cuenta al planear sus proyectos de migración.
+
+- **Problemas de compatibilidad**. DMA también identifica los problemas de compatibilidad relacionados con las siguientes áreas:
+
+    - Cambios importantes: los objetos de esquema específico que se pueden interrumpir la funcionalidad de migración a la base de datos de destino.  Se recomienda corregir estos objetos de esquema después de la migración de base de datos.
+    - Cambios de comportamiento: notifica los objetos de esquema pueden seguir funcionando, pero presentan un comportamiento diferente, por ejemplo una degradación del rendimiento.
+    - Problemas informativos: estos objetos no afectará a la migración, pero es posible que se han quedado en desuso desde la característica de versiones de SQL Server.
+
+Una vez completada la evaluación, use nuestro [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) para realizar la migración de las bases de datos de SQL Server a instancia administrada de Azure SQL Database.  DMS es compatible con ambos [sin conexión](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (única) y [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) migraciones de base de datos (tiempo de inactividad mínimo) a la instancia administrada de Azure SQL Database.
 
 ## <a name="dma-v40"></a>DMA v4.0
 La versión v4.0 de DMA presenta la característica de recomendaciones de SKU de base de datos de SQL Azure, que permite a los usuarios identificar las mínimas recomendadas SKU de base de datos de SQL Azure en función de los contadores de rendimiento recopilados de los equipos que aloja las bases de datos. Esta característica proporciona recomendaciones relacionadas con los precios de nivel, el nivel de proceso y tamaño máximo de datos, así como el costo estimado por mes. También ofrece la posibilidad de aprovisionar todas las bases de datos a Azure de forma masiva.
@@ -35,7 +50,7 @@ Para obtener detalles adicionales, consulte el artículo [identificar la SKU de 
 ## <a name="dma-v36"></a>DMA v3.6
 La versión 3.6 de DMA presenta "Corrección automática" para los objetos de esquema que se ven afectadas por los bloqueadores de migración más comunes.
 
-Esta versión proporciona la reparación automática para el bloqueador de migración siguientes y problemas de cambio de comportamiento:
+Esta versión proporciona corrección automática para el bloqueador de migración siguientes y problemas de cambio de comportamiento:
 - Los objetos de esquema que utilizan la sintaxis de combinación no calificado.
 - Los objetos de esquema que utilice la instrucción RAISEERROR heredada.
 - Instrucciones SQL que usan el orden por entero Literal.

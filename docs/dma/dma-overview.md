@@ -2,7 +2,7 @@
 title: Información general del Asistente de migración de datos (SQL Server) | Microsoft Docs
 description: Aprenda a usar Data Migration Assistant para migrar bases de datos de SQL Server a otro servidor de SQL o bases de datos de Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: ce503f2b6cb39296d85c7e917e5600d8de44545a
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100376"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643863"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Información general de Data Migration Assistant
 
@@ -66,20 +66,18 @@ DMA reemplaza todas las versiones anteriores del Asesor de actualizaciones de SQ
 - SQL Server 2005
 - SQL Server 2008
 - SQL Server 2008 R2
-- SQL Server 2012 
+- SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 en Windows
 
 **Destinos**
-- SQL Server 2012
+- SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 en Windows y Linux
 - Se aplica a: Base de datos SQL de Azure
-
-> [!NOTE] 
-> DMA no admite actualmente la instancia administrada de Azure SQL Database como destino.
+- Instancia administrada de Azure SQL Database
 
 ## <a name="installation"></a>Installation
 

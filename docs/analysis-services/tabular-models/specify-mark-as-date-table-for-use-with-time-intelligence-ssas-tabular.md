@@ -1,5 +1,5 @@
 ---
-title: Especificar marcar como tabla de fechas | Documentos de Microsoft
+title: Especificar marcar como tabla de fechas | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6a4ad929c866658ce241f33ddd2a5326dc78e19
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039790"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099338"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Especificar marcar como tabla de fechas para su uso con inteligencia de tiempo
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Para poder utilizar las funciones de inteligencia de tiempo en fórmulas DAX, debe especificar una tabla de fechas y una columna de identificador único (datetime) del tipo de datos de fecha. Una vez especificada una columna en la tabla de fechas como identificador único, puede crear relaciones entre las columnas de la tabla de fechas y cualquier tabla de hechos.  
+  Para poder usar las funciones de inteligencia de tiempo en fórmulas DAX, debe especificar una tabla de fechas y una columna de identificador único (datetime) del tipo de datos de fecha. Una vez especificada una columna en la tabla de fechas como identificador único, puede crear relaciones entre las columnas de la tabla de fechas y cualquier tabla de hechos.  
   
- Cuando se utilizan funciones de inteligencia de tiempo, se aplican las siguientes reglas:  
+ Al utilizar las funciones de inteligencia de tiempo, se aplican las reglas siguientes:  
   
--   Cuando use funciones de inteligencia de tiempo DAX, no especifique nunca una columna datetime desde una tabla de hechos. Cree siempre una tabla de fechas independiente en el modelo con al menos una columna datetime del tipo de datos Date y con valores únicos.  
+-   Al utilizar las funciones de inteligencia de tiempo DAX, no especifique nunca una columna de fecha y hora de una tabla de hechos. Cree siempre una tabla de fechas independiente en el modelo con al menos una columna datetime del tipo de datos Date y con valores únicos.  
   
 -   Asegúrese de que la tabla de fechas tiene un intervalo de fechas continuo.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34039790"
   
 3.  En el cuadro de diálogo **Marcar como tabla de fechas** , en el cuadro de lista **Fecha** , seleccione la columna que se utilizará como identificador único. Esta columna debe contener valores únicos y debe ser de tipo de datos Date. Por ejemplo:  
   
-    |Date|  
+    |date|  
     |----------|  
     |1/7/2010 12:00:00 a.m.|  
     |2/7/2010 12:00:00 a.m.|  
@@ -52,6 +52,6 @@ ms.locfileid: "34039790"
   
 ## <a name="see-also"></a>Vea también  
  [Cálculos](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Funciones de inteligencia de tiempo (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Funciones de inteligencia de tiempo (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

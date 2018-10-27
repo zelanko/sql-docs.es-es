@@ -1,5 +1,5 @@
 ---
-title: Ver historial (PowerPivot para SharePoint) de actualización de datos | Documentos de Microsoft
+title: Ver historial (PowerPivot para SharePoint) de la actualización de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099686"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Ver el Historial de actualización de datos (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34028656"
 ##  <a name="pageelements"></a> Usar la información del historial  
  La página del historial de actualización de datos proporciona información detallada sobre cada operación de actualización. Puede utilizar la información de esta página para confirmar si la actualización tuvo lugar o determinar por qué se produjo un error.  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |----------|-----------------|  
 |Nombre|Especifica el nombre de archivo del libro de Excel que contiene los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Estado actual|Los valores son **Programado**, **Actualizando**, **Correcto**o **Error**.<br /><br /> **Programado** aparece cuando se crea por primera vez la programación. Después de que la actualización de datos se ejecuta la primera vez, este mensaje de estado ya no aparece.<br /><br /> **Actualizando** indica que la actualización de datos está en curso. Una solicitud está en la cola de procesos o ejecutándose activamente en el servidor.<br /><br /> **Correcto** indica que la última operación de actualización de datos se completó y que el libro actualizado se vuelve a poner en la biblioteca de SharePoint.<br /><br /> **Error** indica que la última operación de actualización de datos no tuvo éxito. Los datos actualizados no se guardaron. El libro contiene los mismos datos que tenía antes de que la actualización de datos comenzara.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34028656"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la recolección de datos de uso para Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Programar una actualización de datos (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
- [Actualización de datos de PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
+ [Programar una actualización de datos (Power Pivot para SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [Actualización de datos PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

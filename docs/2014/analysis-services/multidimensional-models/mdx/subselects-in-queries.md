@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212095"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148460"
 ---
 # <a name="subselects-in-queries"></a>Subselecciones en las consultas
   Las expresiones de subselección son expresiones SELECT anidadas que se utilizan para restringir el espacio del cubo donde se evalúa la instrucción SELECT externa exterior. Las subselecciones permiten definir un nuevo espacio en el que se evalúan todos los cálculos.  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La cláusula HAVING no se permite en una cláusula de eje; use una expresión de la función [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) en su lugar.  
   
--   De forma predeterminada no se permiten miembros calculados en subselecciones; Sin embargo, esta restricción puede cambiarse, en cada sesión, asignando un valor para el `SubQueries` propiedad de cadena de conexión de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o `DBPROP_MSMD_SUBQUERIES` propiedad [propiedades XMLA compatibles &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Consulte [miembros calculados en subselecciones y subcubos](calculated-members-in-subselects-and-subcubes.md) para obtener una explicación detallada del comportamiento de los miembros calculados según los valores de `SubQueries` o `DBPROP_MSMD_SUBQUERIES`.  
+-   De forma predeterminada no se permiten miembros calculados en subselecciones; Sin embargo, esta restricción puede cambiarse, en cada sesión, asignando un valor para el `SubQueries` propiedad de cadena de conexión de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o `DBPROP_MSMD_SUBQUERIES` propiedad [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Consulte [miembros calculados en subselecciones y subcubos](calculated-members-in-subselects-and-subcubes.md) para obtener una explicación detallada del comportamiento de los miembros calculados según los valores de `SubQueries` o `DBPROP_MSMD_SUBQUERIES`.  
   
   

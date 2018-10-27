@@ -2,7 +2,7 @@
 title: Analizar los informes de evaluación de Data Migration Assistant consolidados con Power BI (SQL Server) | Microsoft Docs
 description: Aprenda a usar Power BI para analizar los informes de evaluación de migración de datos que ha importado y consolidado en SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832243"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643973"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analizar los informes de evaluación consolidada creados por Data Migration Assistant con Power BI
 
@@ -120,7 +120,7 @@ Este informe muestra la preparación para la base de datos para migrar a Azure S
 
 Use este informe para resaltar el *características de nivel de instancia* que no son compatibles con Azure SQL Database V12.
 
-Cuando se elige una característica en el gráfico de embudo, los datos en la parte inferior muestran las instancias y las características de base de datos que no son compatibles. En el ejemplo siguiente, se selecciona esta característica: **siempre en configuración del grupo de disponibilidad no se admite en Azure SQL Database**.  
+Cuando se selecciona una característica en el gráfico de embudo, los datos en la parte inferior muestran las instancias y las características de base de datos que no son compatibles. En el ejemplo siguiente, se selecciona esta característica: **siempre en configuración del grupo de disponibilidad no se admite en Azure SQL Database**.  
 
 ![Característica de grupo de disponibilidad de AlwaysOn](../dma/media/Feature_AlwaysOnAvailability.png)
 

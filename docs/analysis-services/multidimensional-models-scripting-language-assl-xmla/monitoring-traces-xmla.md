@@ -1,5 +1,5 @@
 ---
-title: Supervisar los seguimientos (XMLA) | Documentos de Microsoft
+title: Supervisar los seguimientos (XMLA) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,32 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24aab35b34ed9339ec2d7950efab21a94b2c0d96
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021522"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145751"
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
-  Puede usar el [suscribir](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El **suscribir** comando devuelve los resultados de un seguimiento como un conjunto de filas.  
+  Puede usar el [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de comando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El **Subscribe** comando devuelve los resultados de un seguimiento como un conjunto de filas.  
   
 ## <a name="specifying-a-trace"></a>Especificar un seguimiento  
- El [objeto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) propiedad de la **suscribir** comando debe contener una referencia de objeto a una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia o un seguimiento en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. Si el **objeto** no se especifica la propiedad o un identificador de seguimiento no se especifica en el **objeto** propiedad, el **suscribir** comando supervisa el seguimiento de sesión predeterminada para la sesión explícita especificada en el encabezado SOAP para el comando.  
+ El [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propiedad de la **Subscribe** comando debe contener una referencia de objeto a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia o un seguimiento en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. Si el **objeto** no se especifica la propiedad o un identificador de seguimiento no se especifica en el **objeto** propiedad, el **Subscribe** comando supervisa el seguimiento de sesión predeterminado para la sesión explícita especificada en el encabezado SOAP para el comando.  
   
 ## <a name="returning-results"></a>Devolver resultados  
- El **suscribir** comando devuelve un conjunto de filas que contiene los eventos de seguimiento capturados por el seguimiento especificado. El **suscribir** comando devuelve los resultados de seguimiento hasta que se cancela el comando por el [cancelar](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) comando.  
+ El **Subscribe** comando devuelve un conjunto de filas que contiene los eventos de seguimiento capturados por el seguimiento especificado. El **Subscribe** comando devuelve los resultados de seguimiento hasta que el comando cancelado por el [cancelar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) comando.  
   
  El conjunto de filas contiene las columnas que se muestran en la tabla siguiente.  
   
-|Columna|Data type|Description|  
+|columna|Data type|Descripción|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|Clase del evento que recibe el seguimiento.|  
 |EventSubclass|Entero largo|Subclase del evento que recibe el seguimiento.|  
-|CurrentTime|Fecha y hora|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|StartTime|Fecha y hora|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|EndTime|Fecha y hora|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
-|Duración|Entero largo|Tiempo total transcurrido (en milisegundos) para el evento.|  
+|CurrentTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|StartTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|EndTime|DATETIME|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
+|Duration|Entero largo|Tiempo total transcurrido (en milisegundos) para el evento.|  
 |CPUTime|Entero largo|Tiempo de procesador transcurrido (en milisegundos) para el evento.|  
 |JobID|Entero largo|Identificador de trabajo para el proceso.|  
 |SessionID|String|Identificador de la sesión para la que se produjo el evento.|  
@@ -49,7 +49,7 @@ ms.locfileid: "34021522"
 |NestLevel|Integer|Nivel de la transacción para la que se produjo el evento.|  
 |NumSegments|Entero largo|Número de segmentos de datos afectados por el comando para el que se produjo el evento o a los que éste tuvo acceso.|  
 |Severity|Integer|Nivel de gravedad de una excepción del evento La columna puede contener uno de los siguientes valores:<br /><br /> <br /><br /> 0: correcto<br /><br /> <br /><br /> 1: información<br /><br /> <br /><br /> 2: advertencia<br /><br /> <br /><br /> 3: error|  
-|Success|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
+|Correcto|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
 |Error|Entero largo|Número de error del evento, si procede.|  
 |ConnectionID|String|Identificador de la conexión para la que se produjo el evento.|  
 |DatabaseName|String|Nombre de la base de datos para la que se produjo el evento.|  
@@ -66,6 +66,6 @@ ms.locfileid: "34021522"
 |RequestProperties|String|Propiedades del método XMLA para el que se produjo el evento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

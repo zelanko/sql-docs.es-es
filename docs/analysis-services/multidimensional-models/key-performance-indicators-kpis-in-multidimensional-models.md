@@ -1,5 +1,5 @@
 ---
-title: Indicadores de rendimiento (KPI) en modelos multidimensionales clave | Documentos de Microsoft
+title: Indicadores de rendimiento (KPI) en modelos multidimensionales clave | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027565"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147790"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicadores clave de rendimiento (KPI) en modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027565"
   
  En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI es un conjunto de cálculos asociados a un grupo de medida de un cubo, que se usa para evaluar el éxito empresarial. Normalmente, estos cálculos son una combinación de expresiones MDX (Expresiones multidimensionales) o miembros calculados. Los KPI también tienen metadatos adicionales que proporcionan información acerca de cómo deberían las aplicaciones cliente mostrar los resultados de los cálculos de KPI.  
   
- Un KPI administra información sobre un objetivo establecido, la fórmula real del rendimiento registrada en el cubo y medidas para mostrar la tendencia y el estado del rendimiento. Para definir las fórmulas y otras definiciones acerca de los valores se un KPI se usa AMO. La aplicación cliente usa una interfaz de consulta, como ADOMD.NET, para recuperar y exponer los valores de KPI al usuario final. Para obtener más información, vea [Desarrollar con ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Un KPI administra información sobre un objetivo establecido, la fórmula real del rendimiento registrada en el cubo y medidas para mostrar la tendencia y el estado del rendimiento. Para definir las fórmulas y otras definiciones acerca de los valores se un KPI se usa AMO. La aplicación cliente usa una interfaz de consulta, como ADOMD.NET, para recuperar y exponer los valores de KPI al usuario final. Para obtener más información, vea [Desarrollar con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un objeto <xref:Microsoft.AnalysisServices.Kpi> simple se compone de la información básica, el objetivo, el valor real logrado, un valor de estado, un valor de tendencia y una carpeta donde se ve el KPI. La información básica incluye el nombre y la descripción del KPI. El objetivo es una expresión MDX que se evalúa como un número. El valor real es una expresión MDX que se evalúa como un número. El estado y el valor de tendencia son expresiones MDX que se evalúan como un número. La carpeta es una ubicación sugerida para el KPI que se va a presentar al cliente.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34027565"
 |Término|Definición|  
 |----------|----------------|  
 |Objetivo|Expresión numérica MDX o cálculo que devuelve el valor de destino del KPI.|  
-|Value|Expresión númerica MDX que devuelve el valor real del KPI.|  
+|Valor|Expresión númerica MDX que devuelve el valor real del KPI.|  
 |Estado|Expresión MDX que representa el estado del KPI en un punto temporal específico.<br /><br /> La expresión MDX de estado debe devolver un valor normalizado entre -1 y 1. Los valores iguales o inferiores a -1 se interpretarán como "malos" o "bajos". El valor cero (0) se interpreta como "aceptable" o "medio." Los valores iguales o superiores a 1 se interpretarán como "correctos" o "altos".<br /><br /> Opcionalmente puede devolverse un número ilimitado de valores intermedios que se pueden utilizar para mostrar gran cantidad de estados adicionales, si la aplicación cliente lo admite.|  
 |Tendencia|Expresión MDX que evalúa el valor del KPI con el paso del tiempo. La tendencia puede ser cualquier criterio basado en el tiempo que sea útil en determinado contexto empresarial.<br /><br /> La expresión MDX de tendencia permite a un usuario corporativo determinar si el KPI mejora o empeora a lo largo del tiempo.|  
 |Indicador de estado|Elemento visual que proporciona una indicación rápida del estado de un KPI. La visualización del elemento se determina con el valor de la expresión MDX que evalúa el estado.|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027565"
 ## <a name="parent-kpis"></a>KPI primarios  
  Una organización puede realizar el seguimiento de distintas métricas empresariales a varios niveles. Por ejemplo, solo pueden utilizarse dos o tres KPI para medir el éxito empresarial de toda una compañía, pero estos KPI de toda la compañía pueden basarse en otros tres o cuatro KPI de los que las unidades empresariales de la compañía han realizado un seguimiento. Asimismo, las unidades empresariales de una compañía pueden utilizar estadísticas diferentes para calcular el mismo KPI, cuyos resultados se acumulan en el KPI de toda la compañía.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]le permite definir una relación de elementos primarios y secundarios entre los KPI. Esta relación de elementos primarios y secundarios permite utilizar los resultados del KPI secundario para calcular los resultados del KPI primario. Las aplicaciones cliente también pueden usar esta relación para mostrar correctamente los KPI primarios y secundarios.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir una relación de elementos primarios y secundarios entre los KPI. Esta relación de elementos primarios y secundarios permite utilizar los resultados del KPI secundario para calcular los resultados del KPI primario. Las aplicaciones cliente también pueden usar esta relación para mostrar correctamente los KPI primarios y secundarios.  
   
 ## <a name="weights"></a>Pesos  
  También se pueden asignar pesos a los KPI secundarios. Los pesos permiten a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajustar proporcionalmente los resultados del KPI primario cuando se calcula el valor del KPI primario.  

@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092837"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146561"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Crear predicciones en un modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
   Una vez que comprenda el mejor modelo de clústeres examinando en el Visor de secuencia, puede crear consultas de predicción utilizando el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en el Diseñador de minería de datos. Para crear una predicción, seleccione primero el modelo de agrupación en clústeres de secuencia y, a continuación, seleccione los datos de entrada. Para las entradas, puede utilizar un origen de datos externo o puede crear una consulta singleton y proporcionar los valores en un cuadro de diálogo.  
@@ -198,10 +198,10 @@ NATURAL PREDICTION JOIN
 ## <a name="next-steps"></a>Pasos siguientes  
  Si ya ha terminado todas las secciones de la [Tutorial intermedio de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), podría ser el siguiente paso aprender a usar las instrucciones de extensiones de minería de datos (DMX) para crear modelos y generar predicciones. Para obtener más información, consulte [crear y consultar datos de modelos de minería con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
- Si tiene algunos conceptos de programación, también puede utilizar Objetos de administración de análisis (AMO) para trabajar mediante programación con objetos de minería de datos. Para obtener más información, vea [Clases de minería de datos de AMO](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Si tiene algunos conceptos de programación, también puede utilizar Objetos de administración de análisis (AMO) para trabajar mediante programación con objetos de minería de datos. Para obtener más información, vea [Clases de minería de datos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de consultas de modelo de clústeres de secuencia](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Ejemplos de consultas de modelos de clústeres de secuencia](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

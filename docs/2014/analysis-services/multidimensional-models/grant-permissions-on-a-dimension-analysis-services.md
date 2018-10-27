@@ -18,12 +18,12 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c230750377d2667d70d239a7a90a7a69d4ff209
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068335"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146330"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Otorgar permisos para una dimensión (Analysis Services)
   La seguridad de dimensión se usa para establecer permisos en un objeto de dimensión, no en sus datos. Por lo general, el principal objetivo a la hora de establecer permisos en una dimensión es permitir o denegar el acceso a las operaciones de procesamiento.  
@@ -66,13 +66,13 @@ ms.locfileid: "48068335"
      De forma predeterminada, los permisos se heredan de la dimensión de base de datos que corresponda. Desactive la casilla **Heredar** para modificar los permisos de **Lectura** a **Lectura y escritura**. Antes de usar **Lectura y escritura**, asegúrese de leer la nota de la sección anterior.  
   
 > [!IMPORTANT]  
->  Si configura permisos de rol de base de datos con Objetos de administración de análisis (AMO), cualquier referencia a una dimensión de cubo en el atributo DimensionPermission de un cubo interrumpe la herencia de permisos del atributo DimensionPermission de la base de datos. Para más información, vea [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Si configura permisos de rol de base de datos con Objetos de administración de análisis (AMO), cualquier referencia a una dimensión de cubo en el atributo DimensionPermission de un cubo interrumpe la herencia de permisos del atributo DimensionPermission de la base de datos. Para más información, vea [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>Vea también  
  [Roles y permisos &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Conceder permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder permisos en las estructuras de minería de datos y modelos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder acceso personalizado a datos de la celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

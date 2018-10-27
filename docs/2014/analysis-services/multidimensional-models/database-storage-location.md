@@ -13,22 +13,22 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216545"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148200"
 ---
 # <a name="database-storage-location"></a>Ubicación de almacenamiento de las bases de datos
   Con frecuencia se producen situaciones en las que un administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desea que una base de datos determinada resida fuera de la carpeta de datos del servidor. Estas situaciones suelen responder a necesidades empresariales, como mejorar el rendimiento o ampliar la capacidad de almacenamiento. Para estas situaciones, el `DbStorageLocation` habilita la propiedad de base de datos la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba para especificar la ubicación de la base de datos en un dispositivo de disco o de red local.  
   
 ## <a name="dbstoragelocation-database-property"></a>Propiedad de base de datos DbStorageLocation  
- El `DbStorageLocation` propiedad de base de datos especifica la carpeta donde [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea y administra todos los datos y metadatos de archivos base. Todos los archivos de metadatos se almacenan en el `DbStorageLocation` carpeta, excepto el archivo de metadatos de la base de datos, que se almacena en la carpeta de datos del servidor. Hay dos consideraciones importantes al establecer el valor de `DbStorageLocation` propiedad de base de datos:  
+ La propiedad de base de datos `DbStorageLocation` especifica la carpeta en la que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea y administra todos los datos y los archivos de metadatos de la base de datos. Todos los archivos de metadatos se almacenan en la carpeta `DbStorageLocation`, con la excepción del archivo de metadatos de la base de datos, que se almacena en la carpeta de datos del servidor. Debe tener en cuenta dos consideraciones importantes al establecer el valor de propiedad de base de datos `DbStorageLocation`:  
   
--   El `DbStorageLocation` propiedad de base de datos debe establecerse en una ruta UNC de carpeta existente o una cadena vacía. De manera predeterminada, la carpeta de datos del servidor es una cadena vacía. Si la carpeta no existe, se producirá un error al ejecutar un `Create`, `Attach`, o `Alter` comando.  
+-   La propiedad de base de datos `DbStorageLocation` se debe establecer en una ruta UNC de carpeta existente o en una cadena vacía. De manera predeterminada, la carpeta de datos del servidor es una cadena vacía. Si la carpeta no existe, se producirá un error al ejecutar un `Create`, `Attach`, o `Alter` comando.  
   
--   El `DbStorageLocation` no se puede establecer la propiedad de base de datos para que apunte a la carpeta de datos del servidor o cualquiera de sus subcarpetas. Si la ubicación apunta a la carpeta de datos del servidor o a cualquiera de sus subcarpetas, se producirá un error al ejecutar un comando `Create`, `Attach` o `Alter`.  
+-   La propiedad de la base de datos `DbStorageLocation` no se puede establecer para que apunte a la carpeta de datos del servidor ni a ninguna de sus subcarpetas. Si la ubicación apunta a la carpeta de datos del servidor o a cualquiera de sus subcarpetas, se producirá un error al ejecutar un comando `Create`, `Attach` o `Alter`.  
   
 > [!IMPORTANT]  
 >  Se recomienda que establezca la ruta UNC para utilizar una red SAN, una red basada en iSCSI o un disco local adjunto. Cualquier ruta UNC a un recurso compartido de red o a una solución de almacenamiento remoto de latencia conduce a una instalación no compatible.  
@@ -46,9 +46,9 @@ ms.locfileid: "48216545"
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Adjuntar y separar bases de datos de Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Mover una base de datos de Analysis Services](move-an-analysis-services-database.md)   
- [Elemento DbStorageLocation](../xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [Crear elemento &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Elemento Synchronize &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Elemento Create &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

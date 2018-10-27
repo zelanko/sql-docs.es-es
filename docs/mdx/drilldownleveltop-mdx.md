@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevelTop (MDX) | Documentos de Microsoft
+title: DrilldownLevelTop (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3564a1ac5ab899f4fb731381b74d9d39999845c9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 8d6532998f65625bf3dacd11de2949a3478ba6ea
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739864"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146220"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
 
@@ -33,7 +33,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Recuento*  
+ *Count*  
  Expresión numérica válida que especifica el número de tuplas que serán devueltas.  
   
  *Level_Expression*  
@@ -45,14 +45,14 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Include_Calc_Members*  
  Una palabra clave para agregar miembros calculados a los resultados de exploración en profundidad.  
   
-## <a name="remarks"></a>Notas  
- Si se especifica una expresión numérica, la **DrilldownLevelTop** función clasifica, en orden descendente, los elementos secundarios de cada miembro del conjunto especificado según el valor de la expresión numérica, según se ha evaluado sobre el conjunto de miembros secundarios. Si no se especifica una expresión numérica, la función clasifica, en orden descendente, los elementos secundarios de cada miembro del conjunto especificado de acuerdo con los valores de las celdas representadas por el conjunto de miembros secundarios, según determine el contexto de consulta.  
+## <a name="remarks"></a>Comentarios  
+ Si se especifica una expresión numérica, la **DrilldownLevelTop** función clasifica, en orden descendente, los elementos secundarios de cada miembro del conjunto especificado de acuerdo con el valor de la expresión numérica, según se ha evaluado sobre el conjunto de secundarios miembros. Si no se especifica una expresión numérica, la función clasifica, en orden descendente, los elementos secundarios de cada miembro del conjunto especificado de acuerdo con los valores de las celdas representadas por el conjunto de miembros secundarios, según determine el contexto de consulta.  
   
- Tras realizar la clasificación, el **DrilldownLevelTop** función devuelve un conjunto que contiene los miembros primarios y el número de miembros secundarios especificados en *recuento,* con el valor más alto.  
+ Después de la clasificación, el **DrilldownLevelTop** función devuelve un conjunto que contiene los miembros primarios y el número de miembros secundarios especificados en *recuento,* con el valor más alto.  
   
  El **DrilldownLevelTop** función es similar a la [DrilldownLevel](../mdx/drilldownlevel-mdx.md) función, pero en lugar de incluir todos los elementos secundarios de cada miembro en el nivel especificado, el **DrilldownLevelTop** función devuelve el número más alto de miembros secundarios.  
   
- Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones obtener detalles. vea [admite propiedades XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) para obtener más información.  
+ Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones de obtención de detalles; consulte [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obtener más información.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve los tres primeros elementos secundarios del nivel Product Category según la medida predeterminada. En el cubo de ejemplo de Adventure Works, los tres elementos secundarios principales de Accessories son Bike Racks, Bike Stands y Bottles and Cages. En Management Studio, en la ventana de consulta MDX, puede ir a Products | Product Categories | Members | All Products | Accessories para ver la lista completa. Puede incrementar el argumento Count para que devuelva más miembros.  
@@ -66,7 +66,7 @@ SELECT DrilldownLevelTop
    FROM [Adventure Works]  
 ```  
   
- En el ejemplo siguiente se muestra cómo utilizar el **include_calc_members** indicador, que se utiliza para incluir los miembros calculados en el nivel de detalle. La medida [Reseller Order Count] se incluye en el **DrilldownLevelTop** instrucción para asegurarse de que los valores devueltos se ordenan por esa medida.  
+ El ejemplo siguiente se muestra cómo utilizar el **include_calc_members** marca, que se usa para incluir miembros calculados en el nivel de detalle. La medida [Reseller Order Count] se incluye en el **DrilldownLevelTop** instrucción para asegurarse de que los valores devueltos se ordenan por esa medida.  
   
 ```  
 WITH MEMBER   

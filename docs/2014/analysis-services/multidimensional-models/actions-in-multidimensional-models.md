@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084685"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146430"
 ---
 # <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
   Una acción es una operación iniciada por el usuario final en un cubo seleccionado o en una parte de un cubo. La operación puede iniciar una aplicación con el elemento seleccionado como parámetro o recuperar información acerca del elemento seleccionado. Para más información sobre las acciones, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48084685"
  Después de seleccionar el tipo de objeto de destino, en **Objeto de destino**, seleccione el objeto de cubo del tipo designado.  
   
  **Condición (opcional)**  
- Especifique una expresión opcional de Expresiones multidimensionales (MDX) que se resuelva en un valor booleano. Si el valor es `True`, la acción se realiza en el destino especificado. Si el valor es `False`, no se realiza la acción.  
+ Especifique una expresión opcional de Expresiones multidimensionales (MDX) que se resuelva en un valor booleano. Si el valor es `True`, la acción se realiza en el destino especificado. Si el valor es `False`, la acción no se realiza.  
   
  **Contenido de la acción**  
  Seleccione el tipo de acción. La siguiente tabla contiene los tipos disponibles.  
@@ -77,10 +77,10 @@ ms.locfileid: "48084685"
 |**Aplicación**|Describe la aplicación de la acción.|  
 |**Descripción**|Describe la acción.|  
 |**Caption**|Proporciona un título que se muestra para la acción. Si el título es MDX, especifique `True` para **título es MDX**.|  
-|**El título es MDX**|Especificar `True` si el título es MDX o `False` si no lo está.|  
+|**El título es MDX**|Especifique `True` si el título es MDX o `False` si no lo es.|  
   
 > [!NOTE]  
->  Debe usar Lenguaje de scripting de Analysis Services (ASSL) u Objetos de administración de análisis (AMO) para definir tipos de acciones de la línea de comandos y HTML. Para más información, vea [Elemento Action &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) y [Programar objetos avanzados OLAP en AMO](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Debe usar Lenguaje de scripting de Analysis Services (ASSL) u Objetos de administración de análisis (AMO) para definir tipos de acciones de la línea de comandos y HTML. Para más información, vea [Elemento Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) y [Programar objetos avanzados OLAP en AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Crear una acción de informe  
  El servidor de informes responde a las solicitudes basadas en URL para los informes. Para crear una acción de informe, en el menú **Cubo** , haga clic en **Nueva acción de informe**. Las siguientes opciones son específicas de una acción de informe.  

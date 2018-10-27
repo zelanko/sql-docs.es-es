@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127439"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991178"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   El Asistente para la optimización de motor de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (DTA) analiza las bases de datos y hace recomendaciones que puede usar para optimizar el rendimiento de las consultas. Puede usar el Asistente para la optimización de motor de base de datos a fin de seleccionar y crear un conjunto óptimo de índices, vistas indizadas o particiones de tabla sin necesidad de conocer detalladamente la estructura de la base de datos ni el funcionamiento interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, puede realizar las siguientes tareas.  
@@ -94,7 +94,7 @@ ms.locfileid: "48127439"
   
     2.  Los índices recomendados no ofrecen claras posibilidades de mejora del rendimiento de las consultas respecto al diseño de la base de datos física actual.  
   
-    3.  El usuario que ejecuta el Asistente para la optimización de motor de base de datos no es un miembro de la `db_owner` rol de base de datos o el `sysadmin` rol fijo de servidor. Las consultas de la carga de trabajo se analizan en el contexto de seguridad del usuario que ejecuta el Asistente para la optimización de motor de base de datos. El usuario debe ser miembro del rol de base de datos `db_owner`.  
+    3.  El usuario que ejecuta el Asistente para la optimización de motor de base de datos no es miembro del rol de base de datos `db_owner`, o el rol fijo de servidor `sysadmin`. Las consultas de la carga de trabajo se analizan en el contexto de seguridad del usuario que ejecuta el Asistente para la optimización de motor de base de datos. El usuario debe ser miembro del rol de base de datos `db_owner`.  
   
 -   El Asistente para la optimización de motor de base de datos almacena la información de optimización de la sesión y otros datos en la base de datos `msdb`. Si se realizan cambios en la base de datos `msdb`, existe el riesgo de que se pierdan los datos de optimización de la sesión. Para eliminar este riesgo, implemente una estrategia de copia de seguridad adecuada para la base de datos `msdb`.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127439"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dependencia en el procedimiento almacenado extendido xp_msver  
  El Asistente para la optimización de motor de base de datos depende del procedimiento almacenado extendido **xp_msver** para poder ofrecer una funcionalidad completa. Este procedimiento almacenado extendido está activado de manera predeterminada. El Asistente para la optimización de motor de base de datos usa este procedimiento almacenado extendido para obtener el número de procesadores y la memoria disponible del equipo en el que reside la base de datos que está optimizando. Si **xp_msver** no está disponible, el Asistente para la optimización de motor de base de datos adopta las características de hardware del equipo donde se ejecuta el Asistente para la optimización de motor de base de datos. Si no están disponibles las características de hardware del equipo donde se ejecuta el Asistente para la optimización de motor de base de datos, se presuponen un procesador y 1.024 MB de memoria.  
   
- Esta dependencia afecta a las recomendaciones de partición porque el número de particiones recomendadas depende de estos dos valores (número de procesadores y memoria). La dependencia afecta además a los resultados de optimización si utiliza un servidor de prueba para optimizar el servidor de producción. En este escenario, el Asistente para la optimización de motor de base de datos usa **xp_msver** para obtener propiedades de hardware del servidor de producción. Después de optimizar la carga de trabajo en el servidor de prueba, el Asistente para la optimización de motor de base de datos usa estas propiedades de hardware para generar una recomendación. Para obtener más información, consulte [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ Esta dependencia afecta a las recomendaciones de partición porque el número de particiones recomendadas depende de estos dos valores (número de procesadores y memoria). La dependencia afecta además a los resultados de optimización si utiliza un servidor de prueba para optimizar el servidor de producción. En este escenario, el Asistente para la optimización de motor de base de datos usa **xp_msver** para obtener propiedades de hardware del servidor de producción. Después de optimizar la carga de trabajo en el servidor de prueba, el Asistente para la optimización de motor de base de datos usa estas propiedades de hardware para generar una recomendación. Para obtener más información, vea [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>Tareas del Asistente para la optimización de motor de base de datos  
  En la tabla siguiente se enumeran las tareas comunes del Asistente para la optimización de motor de base de datos y los temas en los que se describe cómo realizarlas.  

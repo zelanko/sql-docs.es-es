@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050904"
 ---
 # <a name="run-python-using-t-sql"></a>Ejecutar Python mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,6 +63,33 @@ Los pasos siguientes se confirmación que Python está habilitado y se está eje
     Debe agregar el grupo de usuarios de Windows `SQLRUserGroup` como inicio de sesión en la instancia, para asegurarse de que Launchpad puede proporcionar comunicación entre Python y SQL Server. (El mismo grupo se usa para ambos R y ejecución de código de Python). Para obtener más información, consulte [autenticación implícita habilitada](../security/add-sqlrusergroup-to-database.md).
     
     Además, deberá habilitar los protocolos de red que se han deshabilitado o abrir el firewall para que SQL Server puedan comunicarse con los clientes externos. Para obtener más información, consulte [solucionar problemas de instalación](../common-issues-external-script-execution.md).
+
+### <a name="call-revoscalepy-functions"></a>Llamar a funciones de revoscalepy
+
+Para comprobar que **revoscalepy** está disponible, ejecute un script que incluya [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) que genera un resumen datos estadísticos. Este script muestra cómo recuperar un archivo de datos de ejemplo xdf de ejemplos integrados incluidos en revoscalepy. La función RxOptions ofrece el **sampleDataDir** parámetro que devuelve la ubicación de los archivos de ejemplo.
+
+Dado que rx_summary devuelve un objeto de tipo `class revoscalepy.functions.RxSummary.RxSummaryResults`, que contiene varios elementos, puede usar pandas para extraer la trama de datos en formato tabular.
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
 
 ## <a name="basic-python-interaction"></a>Interacción básica de Python
 

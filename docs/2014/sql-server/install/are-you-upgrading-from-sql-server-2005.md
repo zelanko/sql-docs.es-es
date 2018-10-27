@@ -11,12 +11,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e211d3c6d787cc57f8f64378bac34659b3a6545c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099666"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>¿Desea actualizar desde SQL Server 2005?
   Como el soporte extendido de SQL Server 2005 llega a su fin, es un buen momento para actualizar a una versión más reciente de SQL Server y a Base de datos SQL de Azure. La actualización permite mantener la seguridad y el cumplimiento, lograr un rendimiento excepcional y optimizar la infraestructura de su plataforma de datos.  
@@ -83,6 +83,6 @@ ms.locfileid: "48133225"
 ## <a name="see-also"></a>Vea también  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
  [Finalización del soporte de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [Actualización de SQL Server 2005 a SQL Server 2016](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [Actualización de SQL Server 2005 a SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

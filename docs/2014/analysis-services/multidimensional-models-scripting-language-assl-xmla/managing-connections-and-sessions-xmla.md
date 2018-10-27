@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062815"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146240"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Administrar conexiones y sesiones (XMLA)
   *Disponibilidad de estados* es una condición durante el cual el servidor conserva la identidad y el contexto de un cliente entre las llamadas de método. *Dinamismo* es una condición durante el cual el servidor no recuerda la identidad y el contexto de un cliente después de que finalice una llamada al método.  
@@ -37,7 +37,7 @@ ms.locfileid: "48062815"
   
 -   Se pueden ejecutar varios comandos en el contexto de una sesión única.  
   
--   Compatibilidad con transacciones en el contexto XMLA es a través de los comandos específicos del proveedor enviados con el [Execute](../xmla/xml-elements-methods-execute.md) método.  
+-   Compatibilidad con transacciones en el contexto XMLA es a través de los comandos específicos del proveedor enviados con el [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método.  
   
  XMLA define una manera de admitir sesiones en un entorno web de modo similar al enfoque utilizado por el protocolo de creación y control de versiones distribuidas (DAV) para implementar el bloqueo en un entorno de acoplamiento flexible. Esta implementación se asemeja a DAV en que se permite al proveedor finalizar sesiones por distintas razones (por ejemplo, se supera un tiempo de espera o se produce un error de conexión). Cuando se admiten sesiones, los servicios web deben tenerlo en cuenta y estar listos para controlar conjuntos de comandos interrumpidos que se deben reiniciar.  
   

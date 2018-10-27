@@ -14,12 +14,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216655"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145880"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubos locales (Analysis Services - Datos multidimensionales)
   Para crear, actualizar o eliminar los cubos locales, debe escribir y ejecutar un script ASSL o un programa AMO.  
@@ -40,8 +40,8 @@ ms.locfileid: "48216655"
   
 |Origen de los datos del cubo local|Método de creación|  
 |------------------------------------|---------------------|  
-|Cubo basado en servidor|Puede usar la instrucción CREATE GLOBAL CUBE o un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script Scripting Language (ASSL) para crear y rellenar un cubo a partir de un cubo basado en servidor. Para obtener más información, consulte [instrucción CREATE GLOBAL CUBE &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) o [Analysis Services Scripting Language &#40;ASSL&#41; referencia](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
-|Origen de datos relacionales|Puede usar un script ASSL para crear y rellenar una base de datos relacional OLE DB. Para crear un cubo local mediante ASSL, conéctese a un archivo de cubo local (*.cub) y ejecute el script ASSL de la misma forma que ejecuta un script ASSL en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para crear un cubo de servidor. Para obtener más información, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referencia](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Cubo basado en servidor|Puede usar la instrucción CREATE GLOBAL CUBE o un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script Scripting Language (ASSL) para crear y rellenar un cubo a partir de un cubo basado en servidor. Para obtener más información, consulte [instrucción CREATE GLOBAL CUBE &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) o [Analysis Services Scripting Language &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|Origen de datos relacionales|Puede usar un script ASSL para crear y rellenar una base de datos relacional OLE DB. Para crear un cubo local mediante ASSL, conéctese a un archivo de cubo local (*.cub) y ejecute el script ASSL de la misma forma que ejecuta un script ASSL en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para crear un cubo de servidor. Para obtener más información, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
   
  Use la instrucción REFRESH CUBE  para volver a generar un cubo local y actualizar sus datos. Para obtener más información, consulte [REFRESH CUBE, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube).  
   

@@ -1,5 +1,5 @@
 ---
-title: Cubos locales (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Los cubos locales (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 11c4a7b2917d7baa4860137fa0764026264024a8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bf47347967dcc4344ee71ee131951923df47713
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025752"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148470"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubos locales (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,21 +32,21 @@ ms.locfileid: "34025752"
 >  El uso de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] para administrar cubos locales no está admitido.  
   
 ## <a name="local-cubes"></a>Cubos locales  
- Se pueden crear y rellena a partir de un cubo existente en un cubo local un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia o un origen de datos relacional.  
+ Se puede crear un cubo local y rellena a partir de un cubo existente en un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia o desde un origen de datos relacional.  
   
 |Origen de los datos del cubo local|Método de creación|  
 |------------------------------------|---------------------|  
-|Cubo basado en servidor|Puede usar la instrucción CREATE GLOBAL CUBE o un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script Scripting Language (ASSL) para crear y rellenar un cubo a partir de un cubo basado en servidor. Para obtener más información, consulte [instrucción CREATE GLOBAL CUBE &#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) o [Analysis Services Scripting Language &#40;ASSL para XMLA&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
-|Origen de datos relacionales|Puede usar un script ASSL para crear y rellenar una base de datos relacional OLE DB. Para crear un cubo local mediante ASSL, conéctese a un archivo de cubo local (*.cub) y ejecute el script ASSL de la misma forma que ejecuta un script ASSL en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para crear un cubo de servidor. Para más información, vea [Referencia de Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Cubo basado en servidor|Puede usar la instrucción CREATE GLOBAL CUBE o un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script Scripting Language (ASSL) para crear y rellenar un cubo a partir de un cubo basado en servidor. Para obtener más información, consulte [instrucción CREATE GLOBAL CUBE &#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) o [Analysis Services Scripting Language &#40;ASSL para XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|Origen de datos relacionales|Puede usar un script ASSL para crear y rellenar una base de datos relacional OLE DB. Para crear un cubo local mediante ASSL, conéctese a un archivo de cubo local (*.cub) y ejecute el script ASSL de la misma forma que ejecuta un script ASSL en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para crear un cubo de servidor. Para más información, vea [Referencia de Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
   
- Use la instrucción REFRESH CUBE  para volver a generar un cubo local y actualizar sus datos. Para obtener más información, consulte [actualizar CUBE, instrucción &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md).  
+ Use la instrucción REFRESH CUBE  para volver a generar un cubo local y actualizar sus datos. Para obtener más información, consulte [REFRESH CUBE, instrucción &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md).  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>Cubos locales creados desde cubos basados en servidor  
  Al crear cubos locales creados a partir de cubos basados en servidor, debe tener en cuenta las siguientes consideraciones:  
   
 -   Las medidas de recuento distintivas no están admitidas.  
   
--   Cuando agrega una medida, también debe incluir como mínimo una dimensión relacionada con la medida que se agrega. Para obtener más información acerca de las relaciones de dimensión para grupos de medida, vea [las relaciones entre dimensiones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+-   Cuando agrega una medida, también debe incluir como mínimo una dimensión relacionada con la medida que se agrega. Para obtener más información acerca de las relaciones de dimensión para grupos de medida, vea [relaciones de dimensión](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 -   Cuando agrega una jerarquía de elementos primarios y secundarios, los niveles y los filtros de la jerarquía de elementos primarios y secundarios se omiten y se incluye la totalidad de la jerarquía de elementos primarios y secundarios.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "34025752"
 -   Solo los miembros calculados, los conjuntos con nombres y las asignaciones que dependen de medidas y dimensiones agregadas al cubo local se mostrarán en el cubo local. Los miembros calculados, los conjuntos con nombre y las asignaciones no válidos se excluirán automáticamente.  
   
 ### <a name="security"></a>Seguridad  
- En orden para crear un cubo local desde un cubo de servidor, se debe conceder al usuario **obtención de detalles y cubo Local** permisos en el cubo de servidor. Para obtener más información, consulte [conceder permisos para cubos o modelos &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ Para que un usuario crear un cubo local desde un cubo de servidor, se debe conceder al usuario **obtención de detalles y cubo Local** permisos en el cubo del servidor. Para obtener más información, consulte [conceder permisos para cubos o modelos &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Los cubos locales no se protegen mediante roles como los cubos de servidor. Cualquier usuario con acceso de nivel de archivo a un archivo de cubo local puede realizar consultas en los cubos que allí residen. Puede usar el **contraseña de cifrado** propiedad de conexión en un archivo de cubo local para establecer una contraseña en el archivo de cubo local. Al establecer una contraseña en un archivo de cubo local es preciso que todas las conexiones futuras al archivo de cubo local usen esta contraseña para consultar el archivo.  
   
 ## <a name="see-also"></a>Vea también  
  [Instrucción CREATE GLOBAL CUBE &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
  [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Instrucción de actualización de cubo &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
+ [REFRESH CUBE, instrucción &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Determinar el modo de servidor de análisis de un instancia de servicios | Documentos de Microsoft
+title: Determinar el modo de servidor de análisis de un instancia de servicios | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52f12b7d828f9d863f3efe29355e59b6a76d33ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017462"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099726"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinar el modo de servidor de una instancia de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services se puede instalar en uno de estos tres modos de servidor: multidimensional y de minería de datos (valor predeterminado), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint y tabular. El modo de servidor de una instancia de Analysis Services se determina durante la instalación al elegir las opciones para instalar el servidor.  
   
- El modo de servidor determina el tipo de solución que se crea e implementa. Si no ha instalado el software de servidor y desea saber en qué modo se instaló el servidor, puede utilizar la información de este tema para determinar el modo. Para obtener más información sobre las características disponibles en un modo determinado, consulte [comparar tabulares y multidimensionales ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ El modo de servidor determina el tipo de solución que se crea e implementa. Si no ha instalado el software de servidor y desea saber en qué modo se instaló el servidor, puede utilizar la información de este tema para determinar el modo. Para obtener más información sobre las características disponibles en un modo específico, consulte [comparar tabulares y las soluciones multidimensionales ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
  Si no desea utilizar el modo de servidor que instaló, debe desinstalar y volver a instalar el software, seleccionando el modo que prefiera. También puede instalar una instancia adicional de Analysis Services en el mismo equipo para tener varias instancias ejecutándose en distintos modos.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "34017462"
   
  Los valores válidos de esta propiedad incluyen los siguientes:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|0|Es el valor predeterminado. Especifica el modo multidimensional, utilizado para dar servicio a las bases de datos multidimensionales que usan el almacenamiento MOLAP, HOLAP y ROLAP, así como a los modelos de minería de datos.|  
+|0|Este es el valor predeterminado. Especifica el modo multidimensional, utilizado para dar servicio a las bases de datos multidimensionales que usan el almacenamiento MOLAP, HOLAP y ROLAP, así como a los modelos de minería de datos.|  
 |1|Especifica las instancias de Analysis Services que se instalaron como parte de una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. No cambie la propiedad del modo de implementación de la instancia de Analysis Services que forma parte de una instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dejarán de ejecutarse en el servidor si cambia el modo.|  
 |2|Especifica el modo tabular empleado para hospedar las bases de datos de modelos tabulares que utilizan el almacenamiento en memoria o el almacenamiento DirectQuery.|  
   
@@ -51,10 +51,10 @@ ms.locfileid: "34017462"
 ## <a name="see-also"></a>Vea también  
  [Instalar Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Instalar Analysis Services en el modo de minería de datos y multidimensional](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
- [Instalación de Power Pivot para SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
- [Conectarse a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Instalación de Power Pivot para SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Soluciones de modelos tabulares](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [Soluciones de modelos multidimensionales ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Modelos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

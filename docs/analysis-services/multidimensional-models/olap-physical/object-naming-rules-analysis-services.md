@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348646"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147962"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "43348646"
   
 |Objeto|Caracteres no válidos|  
 |------------|------------------------|  
-|**Server**|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Consulte [convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más información.|  
+|**Server**|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Vea [Convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más detalles.|  
 |**DataSource**|: / \ * &#124; ? "[] () {} <>|  
 |**Level** o **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
 |**Dimension** o **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
@@ -88,6 +88,6 @@ ms.locfileid: "43348646"
 ## <a name="see-also"></a>Vea también  
  [Palabras reservadas de MDX](../../../mdx/mdx-reserved-words.md)   
  [Compatibilidad con traducción en Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [Compatibilidad de análisis con XML for &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [Compatibilidad de análisis con XML for &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

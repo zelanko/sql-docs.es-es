@@ -1,5 +1,5 @@
 ---
-title: Descripción de Power View para modelos multidimensionales | Documentos de Microsoft
+title: Descripción de Power View para modelos multidimensionales | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300503"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147460"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,14 +57,14 @@ ms.locfileid: "34300503"
 |-----------------------------|--------------------|  
 |Cube|Modelo|  
 |Dimensión de cubo|Table|  
-|Atributos de dimensión (claves, nombre)|Columna|  
+|Atributos de dimensión (claves, nombre)|columna|  
 |Grupo de medida|Table|  
 |Measure|Measure|  
 |Medida sin grupo de medida|En una tabla denominada Medidas|  
 |Relación de la dimensión del cubo del grupo de medida|Relación|  
 |Perspective|Perspective|  
 |KPI|KPI|  
-|Jerarquías de usuario y elementos primarios y secundarios|Jerarquía|  
+|Jerarquías de usuario y elementos primarios y secundarios|Hierarchy|  
 |Carpeta para mostrar|Carpeta para mostrar|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Medidas, grupos de medida y KPI  
@@ -76,7 +76,7 @@ ms.locfileid: "34300503"
   
  **Grupos de medida en la lista de campos de Power View**  
   
- ![Lista en la vista avanzada de campos](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "campo lista en la vista avanzada")  
+ ![Campo de lista en la vista avanzada](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "campo de lista en la vista avanzada")  
   
  Las medidas dentro de un grupo de medida aparecen como medidas. Si hay medidas calculadas que no tienen un grupo de medida asociado, se agruparán en una tabla especial denominada Medidas.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34300503"
  ![Jerarquía no agregable de Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Jerarquía no agregable de Power View")  
   
 ### <a name="implicit-measures"></a>Medidas implícitas  
- Los modelos tabulares proporcionan a los usuarios la posibilidad de crear medidas *implícitas* como recuento, suma o promedio en los campos. En los modelos multidimensionales, dado que los datos de atributos de dimensión se almacenan de forma diferente, consulta las medidas implícitas puede tardar mucho tiempo. Por ello, las medidas implícitas no están disponibles en Power View.  
+ Los modelos tabulares proporcionan a los usuarios la posibilidad de crear medidas *implícitas* como recuento, suma o promedio en los campos. Los modelos multidimensionales, dado que los datos de atributos de dimensión se almacenan de forma diferente, consulta las medidas implícitas puede tardar mucho tiempo. Por ello, las medidas implícitas no están disponibles en Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensiones, atributos y jerarquías  
  Las dimensiones de cubo se exponen como tablas en los metadatos tabulares. En la lista de campos de Power View, los atributos de dimensión se muestran como columnas dentro de carpetas para mostrar.  Estos atributos tienen establecida en false la propiedad AttributeHierarchyEnabled; por ejemplo, el atributo Birth Date de la dimensión Customer o la propiedad AttributeHierarchyVisible establecida en false no aparecerá en la lista de campos de Power View. Las jerarquías de varios niveles o las jerarquías de usuario, por ejemplo Customer Geography en la dimensión Customer, se exponen como jerarquías en la lista de campos de Power View. Los miembros desconocidos ocultos de un atributo de dimensión se exponen en consultas DAX en Power View.  
@@ -108,7 +108,7 @@ ms.locfileid: "34300503"
   
  **Tipos geography de atributos de dimensión en SSDT y en la lista de campos de Power View**  
   
- ![Tipos de geografía de atributos de dimensión](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "tipos geography de atributos de dimensión")  
+ ![Tipos geography de atributos de dimensión](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "tipos geography de atributos de dimensión")  
   
 ### <a name="dimension-calculated-members"></a>Miembros calculados de dimensión  
  Los modelos multidimensionales admiten miembros calculados para los secundarios de todos con un único miembro real. Las restricciones adicionales al exponer este tipo de miembro calculado son:  
@@ -125,7 +125,7 @@ ms.locfileid: "34300503"
   
  **Informe de Power View con miembros calculados**  
   
- ![Miembros calculados en Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "miembros calculados en la vista avanzada")  
+ ![Miembros calculados en Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "miembros calculados en Power View")  
   
 ### <a name="default-members"></a>Miembros predeterminados  
  Los modelos multidimensionales admiten miembros predeterminados para los atributos de dimensión. El miembro predeterminado se usa en Analysis Services al agregar datos para una consulta. El miembro predeterminado de un atributo de dimensión se expone como valor predeterminado o filtro para la columna correspondiente en los metadatos tabulares.  
@@ -147,7 +147,7 @@ ms.locfileid: "34300503"
   
  **Tipo de atributo de dimensión ImageURL en SSDT**  
   
- ![Propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "propiedades de los atributos de dimensión")  
+ ![Propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "las propiedades de atributo de dimensión")  
   
 ## <a name="parent-child-hierarchies"></a>Jerarquías de elementos primarios y secundarios  
  Los modelos multidimensionales admiten jerarquías de elementos primarios y secundarios, que se exponen como jerarquía en los metadatos tabulares. Cada nivel de la jerarquía se expone como una columna oculta. El atributo clave de la dimensión primaria-secundaria no se expone en los metadatos tabulares.  
@@ -217,7 +217,7 @@ ms.locfileid: "34300503"
   
  La solicitud DISCOVER_CSDL_METADATA tiene las restricciones siguientes:  
   
-|Nombre|Obligatorio|Description|  
+|Nombre|Obligatorio|Descripción|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sí|El nombre de la base de datos o catálogo.|  
 |PERSPECTIVE_NAME|Sí, si el cubo contiene más de una perspectiva. Opcional si hay solo un cubo o una perspectiva predeterminada.|El nombre del cubo o de la perspectiva en la base de datos multidimensional.|  
@@ -225,7 +225,7 @@ ms.locfileid: "34300503"
   
  El documento CSDL out devuelto representa el modelo como un espacio de nombres que contiene entidades, asociaciones y propiedades.  
   
- Para obtener información más detallada sobre las anotaciones CSDLBI para los modelos tabulares, vea [Referencia técnica para las anotaciones de Business Intelligence en CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) en MSDN y [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)([MS-CSDLBI]: Formato de archivo de definiciones de esquema conceptual con anotaciones de Business Intelligence).  
+ Para obtener información más detallada sobre las anotaciones CSDLBI para los modelos tabulares, vea [Referencia técnica para las anotaciones de Business Intelligence en CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) en MSDN y [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)([MS-CSDLBI]: Formato de archivo de definiciones de esquema conceptual con anotaciones de Business Intelligence).  
   
 ## <a name="client-help-on-officecom"></a>Ayuda de cliente en Office.com  
  Los artículos siguientes se proporcionan en Office.com para ayudar a los usuarios a conocer el modo en que los objetos del modelo multidimensional aparecen en Power View y cómo crear un informe de ejemplo:  

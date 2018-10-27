@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016092"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146000"
 ---
 # <a name="what39s-new-in-analysis-services"></a>¿Qué&#39;s de Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "38016092"
 SQL Server 2016 Analysis Services incluye muchas mejoras que proporcionan un mejor rendimiento, creación de soluciones sea más fácil, administración automatizada de la base de datos, relaciones mejoradas con bidireccional entre el filtrado, procesamiento de particiones en paralelo y y mucho más. En el centro de la mayoría de las mejoras de esta versión se encuentra el nuevo nivel de compatibilidad 1200 para bases de datos de modelo tabular.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-Anunciado en la conferencia de SQL PASS de 2016, Analysis Services está ahora disponible en la nube como un servicio de Azure. **Azure Analysis Services** admite modelos tabulares en los niveles de compatibilidad 1200 y superior. Se admiten todas las traducciones, particiones, seguridad de nivel de fila, relaciones bidireccionales y DirectQuery. Para obtener más información y probar esta función de forma gratuita, consulte [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
+Anunciado en la conferencia de SQL PASS de 2016, Analysis Services está ahora disponible en la nube como un servicio de Azure. **Azure Analysis Services** admite modelos tabulares en los niveles de compatibilidad 1200 y superior. Se admiten DirectQuery, las particiones, la seguridad de nivel de fila, las relaciones bidireccionales y las traducciones. Para obtener más información y probar esta función de forma gratuita, consulte [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>Novedades de SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 
@@ -94,7 +94,7 @@ Una *tabla calculada* es una construcción de solo modelo basada en una consulta
  ### <a name="powershell-for-tabular-models"></a>PowerShell para modelos tabulares    
  En esta versión se han incluido mejoras de PowerShell para los modelos tabulares en el nivel de compatibilidad 1200. Puede usar todos los cmdlets aplicables y, además, cmdlets específicos del modo tabular, como [Invoke ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) y el [cmdlet Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Operaciones de base de datos de script de SSMS    
- En la última versión de [SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), el script está ahora habilitado para los comandos de base de datos, que incluyen Create, Alter, Delete, Backup, Restore, Attach y Detach. El resultado es TMSL (Tabular Model Scripting Language, lenguaje de scripting del modelo tabular) en JSON. Vea [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Referencia de Tabular Model Scripting Language [TMSL]) para obtener más información.    
+ En la última versión de [SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), el script está ahora habilitado para los comandos de base de datos, que incluyen Create, Alter, Delete, Backup, Restore, Attach y Detach. El resultado es TMSL (Tabular Model Scripting Language, lenguaje de scripting del modelo tabular) en JSON. Vea [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) (Referencia de Tabular Model Scripting Language [TMSL]) para obtener más información.    
  ### <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services    
  La[tarea Ejecutar DDL de Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md) ahora acepta también los comandos de Tabular Model Scripting Language (TMSL).     
  ### <a name="ssas-powershell-cmdlet"></a>Cmdlet de PowerShell de SSAS    
@@ -103,7 +103,7 @@ Para obtener información detallada, vea [Analysis Services PowerShell Reference
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>Tabular Model Scripting Language (TMSL) compatible en SSMS    
   Con la [versión más reciente de SSMS](http://msdn.microsoft.com/library/mt238290.aspx), ahora puede crear scripts para automatizar la mayoría de las tareas administrativas para los modelos tabulares 1200. Actualmente, se pueden crear scripts de las siguientes tareas: proceso en cualquier nivel, además de los comandos CREATE, ALTER y DELETE en el nivel de base de datos.    
     
- Funcionalmente, TMSL es equivalente a la extensión ASSL de XMLA que proporciona las definiciones de objetos multidimensionales, salvo que TMSL usa descriptores como **model**, **table**y **relationship** para describir los metadatos tabulares. Vea [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Referencia de Tabular Model Scripting Language [TMSL]) para obtener más información sobre el esquema.    
+ Funcionalmente, TMSL es equivalente a la extensión ASSL de XMLA que proporciona las definiciones de objetos multidimensionales, salvo que TMSL usa descriptores como **model**, **table**y **relationship** para describir los metadatos tabulares. Vea [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) (Referencia de Tabular Model Scripting Language [TMSL]) para obtener más información sobre el esquema.    
     
  Un script basado en JSON generado para un modelo tabular podría ser similar al siguiente:    
     
@@ -121,7 +121,7 @@ Para obtener información detallada, vea [Analysis Services PowerShell Reference
 }    
 ```    
 
-La carga es un documento JSON que puede ser mínimo, como en el ejemplo anterior, o adornarse mucho con el conjunto completo de definiciones de objetos. En [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Referencia de Tabular Model Scripting Language [TMSL]) se describe la sintaxis.
+La carga es un documento JSON que puede ser mínimo, como en el ejemplo anterior, o adornarse mucho con el conjunto completo de definiciones de objetos. En [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) (Referencia de Tabular Model Scripting Language [TMSL]) se describe la sintaxis.
 
 En el nivel de base de datos, los comandos CREATE, ALTER y DELETE darán como resultado un script de TMSL en la ventana de XMLA familiar.  Otros comandos, como PROCESS, también pueden incluirse en scripts en esta versión. En una versión futura podría agregarse compatibilidad con scripts para muchas otras acciones.    
 

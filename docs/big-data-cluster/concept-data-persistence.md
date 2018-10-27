@@ -1,18 +1,18 @@
 ---
 title: Persistencia de datos con SQL Server al clúster de macrodatos en Kubernetes | Microsoft Docs
-description: ''
+description: Obtenga información sobre cómo funciona la persistencia de los datos en un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050843"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con el clúster de macrodatos de SQL Server en Kubernetes
 
@@ -31,7 +31,7 @@ El clúster de macrodatos de SQL Server consume estos volúmenes persistentes de
 Para usar el almacenamiento persistente durante la implementación, configure el **USE_PERSISTENT_VOLUME** y **STORAGE_CLASS_NAME** variables de entorno antes de ejecutar `mssqlctl create cluster` comando. **USE_PERSISTENT_VOLUME** está establecido en `true` de forma predeterminada. Puede invalidar el valor predeterminado y establézcalo como `false` y, en este caso, el clúster de macrodatos de SQL Server usa emptyDir montajes. 
 
 > [!WARNING]
-> Puede dar lugar a ejecución sin almacenamiento persistente en un clúster que no son funcionales. Tras el reinicio de pod, datos de metadatos o el usuario del clúster se perderán permanentemente.
+> Se ejecute sin almacenamiento persistente puede funcionar en un entorno de prueba, pero podría dar como resultado en un clúster que no son funcionales. Tras el reinicio de pod, datos de metadatos o el usuario del clúster se perderán permanentemente.
 
 Si establece la marca en true, también debe proporcionar **STORAGE_CLASS_NAME** como un parámetro en el momento de la implementación.
 
@@ -41,20 +41,25 @@ AKS viene con [dos clases de almacenamiento integradas](https://docs.microsoft.c
 
 ## <a name="minikube-storage-class"></a>Clase de almacenamiento de Minikube
 
-Minikube viene con una clase de almacenamiento integrada llamada **estándar** junto con una dinámica aprovisionador para él. Tenga en cuenta que en Minikube, si USE_PERSISTENT_VOLUME = true (valor predeterminado), también debe invalidar el valor predeterminado de la variable de entorno STORAGE_CLASS_NAME porque el valor predeterminado es diferente. Establezca el valor en `standard`: 
-```
+Minikube viene con una clase de almacenamiento integrada llamada **estándar** junto con una dinámica aprovisionador para él. Tenga en cuenta que en minikube, si `USE_PERSISTENT_VOLUME=true` (valor predeterminado), también debe invalidar el valor predeterminado para el **STORAGE_CLASS_NAME** variable de entorno porque el valor predeterminado es diferente. Establezca el valor en `standard`: 
+
+En Windows, use el siguiente comando:
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-Como alternativa, puede suprimir con volúmenes persistentes en Minikube:
-```
-SET USE_PERSISTENT_VOLUME=false
+En Linux, use el siguiente comando:
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+Como alternativa, puede suprimir con volúmenes persistentes en minikube estableciendo `USE_PERSISTENT_VOLUME=false`.
 
 ## <a name="kubeadm"></a>Kubeadm
 
-Kubeadm no se incluye con una clase de almacenamiento integradas; por lo tanto, hemos creado las secuencias de comandos para configurar los volúmenes persistentes y las clases de almacenamiento mediante el almacenamiento local o [torre](https://github.com/rook/rook) almacenamiento.
+Kubeadm no viene con una clase de almacenamiento integrada. Puede elegir crear su propio volúmenes persistentes y las clases de almacenamiento con almacenamiento local o el aprovisionador preferido, como [torre](https://github.com/rook/rook). En ese caso, establecería el **STORAGE_CLASS_NAME** a la clase de almacenamiento que configuró. Como alternativa, puede establecer `USE_PERSISTENT_VOLUME=false` en entornos de prueba, pero tenga en cuenta la advertencia anterior en el **configuración de implementación** sección de este artículo.  
 
 ## <a name="on-premises-cluster"></a>Clúster local
 
@@ -75,7 +80,7 @@ export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
-Esta es una lista completa de las variables de entorno relacionadas con la configuración de almacenamiento persistente para el clúster de SQL Server Big Data:
+Esta es una lista completa de las variables de entorno relacionadas con la configuración de almacenamiento persistente para el clúster de macrodatos de SQL Server:
 
 | Variable de entorno | Valor predeterminado | Descripción |
 |---|---|---|

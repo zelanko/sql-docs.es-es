@@ -15,12 +15,12 @@ ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a23859191c8a1dfaf5f81a38d5a07c92e3a6394a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9296e5270fc3cb6114595dd1709b1a90e69a12ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225315"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147140"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Desarrollador&#39;s guía (Analysis Services)
     
@@ -34,13 +34,13 @@ ms.locfileid: "48225315"
  [Programación de modelos multidimensionales](multidimensional-models/multidimensional-model-programming.md)  
  Describe las tareas y los métodos de desarrollo para integrar objetos del modelo multidimensional en una solución personalizada.  
   
- [Conjuntos de filas de esquema de Analysis Services](schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Conjuntos de filas de esquema de Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Describe los conjuntos de filas de esquema que proporcionan información sobre el estado del servidor, las operaciones de servidor y los objetos de base de datos.  
   
- [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Describe las extensiones de ASSL para XMLA. ASSL ofrece un lenguaje de definición y manipulación de datos para modelos multidimensionales de Analysis Services que complementa la especificación XMLA.  
   
- [XML for Analysis &#40;XMLA&#41; referencia](xmla/xml-for-analysis-xmla-reference.md)  
+ [Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Describe los conceptos de XMLA que pueden ayudarle a entender cómo contribuye XMLA a una solución personalizada. También describe el nivel de cumplimiento de la especificación XMLA 1.1.  
   
   

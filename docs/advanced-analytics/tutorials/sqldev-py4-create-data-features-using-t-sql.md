@@ -1,5 +1,5 @@
 ---
-title: Paso 4 crear características de datos mediante T-SQL | Documentos de Microsoft
+title: Crear características de datos mediante T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,17 +7,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202077"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806685"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>Paso 4: Crear características de datos mediante T-SQL
+# <a name="create-data-features-using-t-sql"></a>Crear características de datos mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Después de la exploración de datos, ha recopilado la información de los datos y está listo para mover en *característica ingeniería*. Este proceso de creación de características de los datos sin formato puede ser un paso crítico en análisis avanzados de modelado.
+Después de la exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a *ingeniería de características*. Este proceso de creación de características de los datos sin formato puede ser un paso crítico en el modelado de análisis avanzado.
 
 Este artículo forma parte de un tutorial, [análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -29,9 +29,9 @@ Los valores de distancia notificados en los datos originales se basan en la dist
 
 Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular la distancia usando la fórmula Haversine, y una segunda función personalizada de T-SQL, _fnEngineerFeatures_, para crear una tabla que contiene todas las características.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de viaje con fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de viaje mediante fnCalculateDistance
 
-1.  La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación para este tutorial. Dedique un minuto a revisar el código.
+1.  La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación para este tutorial. Tómese un minuto para revisar el código.
   
     En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programación**, expanda **Funciones** y, después, **Funciones escalares**.
     Haga clic con el botón derecho en _fnCalculateDistance_y seleccione **Modificar** para abrir el script de [!INCLUDE[tsql](../../includes/tsql-md.md)] en una nueva ventana de consulta.
@@ -59,14 +59,14 @@ Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular
     END
     GO
     ```
-**Comentarios:**
+**Notas:**
 
 - La función es una función escalar y devuelve un único valor de datos de un tipo predefinido.
 - Toma los valores de latitud y longitud como entradas, obtenidos de las ubicaciones de origen y destino de los viajes. La fórmula Haversine convierte ubicaciones en radianes y usa esos valores para calcular la distancia directa en millas entre las dos ubicaciones.
 
 Para agregar el valor calculado a una tabla y poder usarlo para entrenar el modelo, deberá usar otra función, _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Guarde las características con _fnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>Guardar las características mediante _fnEngineerFeatures_
 
 1.  Tómese un minuto para revisar el código de la función personalizada de T-SQL, _fnEngineerFeatures_, que debe haberse creado como parte de la preparación para este tutorial.
   
@@ -106,16 +106,16 @@ Para agregar el valor calculado a una tabla y poder usarlo para entrenar el mode
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Se trata de por qué es importante la ingeniería de característica.
+    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Esto es por eso es importante la ingeniería de características.
 
-En el paso siguiente, aprenderá cómo utilizar estas características de datos para crear y entrenar un modelo de aprendizaje automático con Python.
+En el paso siguiente, obtendrá información sobre cómo usar estas características de datos para crear y entrenar un modelo de aprendizaje automático con Python.
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Paso 5: Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Paso 3: Explorar y visualizar los datos](sqldev-py3-explore-and-visualize-the-data.md)
+[Explorar y visualizar los datos](sqldev-py3-explore-and-visualize-the-data.md)
 
 

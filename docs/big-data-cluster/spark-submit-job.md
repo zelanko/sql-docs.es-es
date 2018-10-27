@@ -9,19 +9,19 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 93ddd7a049bfadd4b2a3ac9ab9db87742d557f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050847"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar a trabajo de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
 
 Uno de los escenarios claves es la capacidad de enviar el trabajo de Spark para SQL Server de 2019 CTP 2.0. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con las referencias al clúster de macrodatos de SQL Server 2019. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
 
 ## <a name="prerequisite"></a>Requisito previo 
-Instalar herramientas de macrodatos para SQL Server y conéctese a un clúster de Macrodatos antes de poder enviar trabajo de Spark. Para obtener detalles de la instalación, consulte para vincular [implementar Big Data Tools](deploy-big-data-tools.md).
+Instalar herramientas de macrodatos para SQL Server y conéctese a un clúster de macrodatos antes de poder enviar trabajo de Spark. Para obtener detalles de la instalación, consulte para vincular [implementar herramientas de macrodatos](deploy-big-data-tools.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Abrir cuadro de diálogo de envío de trabajos de Spark
 Hay varias maneras de abrir el cuadro de diálogo de envío de trabajos de Spark. Las formas de incluyen el panel, menú contextual en el Explorador de objetos y la paleta de comandos.

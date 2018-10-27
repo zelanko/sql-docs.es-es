@@ -24,12 +24,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc9d8f4396be64de2160b39b57374dd1ab1bf3cf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099276"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmos de minería de datos (Complementos de minería de datos de SQL Server)
   Los Complementos de minería de datos para Office admiten la creación de modelos analíticos con los siguientes algoritmos de minería de datos. Todos los algoritmos se basan en métodos conocidos de aprendizaje automático y los ha implementado Microsoft Research.  
@@ -43,7 +43,7 @@ ms.locfileid: "48161565"
 |Algoritmo de árboles de decisión de Microsoft|Identificar relaciones desconocidas previamente entre diferentes elementos de los datos para tomar decisiones más informadas o buscar los factores que conducen a resultados específicos.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
 |Algoritmo de regresión lineal de Microsoft|Buscar una fórmula matemática que describe los factores que contribuyen a un resultado numérico.<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
 |Algoritmo de regresión logística de Microsoft|Identificar los factores que contribuyen a resultados binarios y aprender a utilizarlos para modificar los resultados.<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Algoritmo Bayes Naïve de Microsoft|Explorar las relaciones en los datos y buscar las correlacionadas más estrechamente con un resultado.<br /><br /> [http://msdn.microsoft.com/en-us/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
+|Algoritmo Bayes Naïve de Microsoft|Explorar las relaciones en los datos y buscar las correlacionadas más estrechamente con un resultado.<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
 |Algoritmo de redes neuronales de Microsoft|Buscar relaciones ocultas entre varias entradas e incluso varias salidas. Se usa para la exploración o la predicción.<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
 |Algoritmo de serie temporal de Microsoft|Usar datos históricos para predecir valores futuros.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
   

@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164715"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148444"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Descripción del modelo de objetos tabulares
-  Un modelo tabular es una representación lógica de tablas, relaciones, jerarquías, perspectivas, medidas y rendimiento clave. En esta sección se presenta la implementación interna mediante AMO. Consulte [desarrollar con objetos de administración de análisis &#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) si aún no ha usado AMO antes.  
+  Un modelo tabular es una representación lógica de tablas, relaciones, jerarquías, perspectivas, medidas y rendimiento clave. En esta sección se presenta la implementación interna mediante AMO. Consulte [desarrollar con objetos de administración de análisis &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si aún no ha usado AMO antes.  
   
  El método empleado es de arriba abajo: todos los objetos pertinentes del modelo tabular se asignan de forma lógica a objetos de AMO y se explica la interacción o el flujo de trabajo necesario. Hay un ejemplo de código fuente para crear un modelo tabular con AMO, AMO a tabular, disponible en Codeplex. Nota importante sobre el código del ejemplo: se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción. El ejemplo se proporciona sin soporte técnico o garantía.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48164715"
  Consulte [representación de indicadores clave de rendimiento &#40;Tabular&#41; ](tables-key-performance-indicator-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de KPI.  
   
 ### <a name="partition-representation"></a>Representación de partición  
- A efectos operativos, una tabla se puede dividir en distintos subconjuntos de filas que, al combinarse, forman la tabla. Cada uno de esos subconjuntos es una partición de la tabla. En términos de objetos AMO, una representación de partición tiene una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Partition> y no hay otros objetos AMO principales son necesarios. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en el objeto de base de datos de AMO se puedan usar para realizar el modelado.  
+ A efectos operativos, una tabla se puede dividir en distintos subconjuntos de filas que, al combinarse, forman la tabla. Cada uno de esos subconjuntos es una partición de la tabla. Por lo que respecta a los objetos de AMO, las representaciones de particiones tienen una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Partition> y no se necesitan otros objetos principales de AMO. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en el objeto de base de datos de AMO se puedan usar para realizar el modelado.  
   
  Consulte [representación de partición &#40;Tabular&#41; ](tables-partition-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de partición.  
   

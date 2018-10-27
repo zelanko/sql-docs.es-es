@@ -1,6 +1,6 @@
 ---
 title: Descargue los datos de demostración de taxis de Nueva York y scripts incrustado R y Python (SQL Server Machine Learning) | Microsoft Docs
-description: Instrucciones para descargar datos de ejemplo de taxi de Nueva York y crear una base de datos. Datos que se utilizan en los tutoriales de SQL Server que se muestra cómo insertar código de R y Python en SQL Server los procedimientos almacenados y funciones de Transact-SQL.
+description: Instrucciones para descargar datos de ejemplo de taxi de Nueva York y crear una base de datos. Datos se utilizan en los tutoriales de lenguaje Python de SQL Server y R que se muestra cómo incrustar secuencias de comandos en las funciones de Transact-SQL y procedimientos almacenados de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463060"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806715"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>Datos de demostración de taxis de Nueva York para SQL Server
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de taxis de Nueva York demostración para ver tutoriales de Python de SQL Server y R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo se explica cómo configurar una base de datos de ejemplo que consta de datos públicos del [ciudad de Nueva York taxis y limusinas Comisión](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Estos datos se usan en los tutoriales de varias R y Python para realizar análisis en bases de datos en SQL Server. Los datos de ejemplo están uno por ciento del conjunto de datos público. En el sistema, el archivo de copia de seguridad de base de datos es ligeramente más de 90 MB, proporcionar 1,7 millones de filas en la tabla de datos principal.
@@ -26,7 +26,7 @@ Tutoriales y guías de inicio rápido con este conjunto de datos incluyen lo sig
 
 +  [Usar un modelo de Python en SQL Server para el entrenamiento y puntuación](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>Descargue la base de datos de demostración
+## <a name="download-files"></a>Descargar archivos
 
 La base de datos de ejemplo es un archivo de copia de seguridad hospedado por Microsoft. Descarga de archivos comienza inmediatamente al hacer clic en el vínculo. 
 
@@ -66,7 +66,7 @@ En la tabla siguiente se resume los objetos creados en la base de datos de demos
 |**PredictTipSingleMode**  |procedimiento almacenado| Crea el script PredictTipSingleMode.sql. Llama al modelo entrenado para crear predicciones usando el modelo. Este procedimiento almacenado acepta una observación nueva como entrada, con valores de características individuales pasados como parámetros en línea, y devuelve un valor que predice el resultado de la nueva observación. Este procedimiento almacenado se usa en [Operacionalizar el modelo de R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |procedimiento almacenado|Crea el script TrainTipPredictionModel.sql. Entrena un modelo de regresión logística mediante una llamada a un paquete de R. El modelo predice el valor de la columna tipped y se entrena usando un 70 % de los datos seleccionados aleatoriamente. El resultado del procedimiento almacenado es el modelo entrenado, que se guarda en la tabla nyc_taxi_models. Este procedimiento almacenado se usa en [entrenar y guardar un modelo](sqldev-train-and-save-a-model-using-t-sql.md).|
 
-## <a name="query-data-for-verification"></a>Consultar los datos para la comprobación
+## <a name="query-the-data"></a>Consultar los datos
 
 Como paso de validación, ejecute una consulta para confirmar que se han cargado los datos.
 

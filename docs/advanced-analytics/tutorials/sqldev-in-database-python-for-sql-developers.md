@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461861"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806765"
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Análisis de Python en bases de datos para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,30 +37,23 @@ Los datos están en el conocido conjunto de datos de taxis de Nueva York. Para r
 
 Todas las tareas que pueden hacerse mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados en el entorno familiar de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [Paso 1: Descargar los datos de ejemplo](demo-data-nyctaxi-in-sql.md)
 
-    Descargue el conjunto de datos de ejemplo y todos los archivos de script en un equipo local.
-
-- [Paso 2: Importar datos a SQL Server mediante PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    Ejecutar un script de PowerShell que crea una base de datos y una tabla en la instancia especificada y carga los datos de ejemplo a la tabla.
-
-- [Paso 3: Explorar y visualizar datos mediante Python](sqldev-py3-explore-and-visualize-the-data.md)
+- [Explorar y visualizar datos mediante Python](sqldev-py3-explore-and-visualize-the-data.md)
 
     Realizar la exploración de datos básicos y la visualización, que realiza la llamada de Python desde [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados.
 
-- [Paso 4: Crear características de datos mediante Python en T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Crear características de datos mediante Python en T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Cree nuevas características de datos mediante funciones personalizadas de SQL.
   
-- [Paso 5: Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Generar y guardar el modelo de aprendizaje automático, uso de Python en procedimientos almacenados.
   
     Este tutorial muestra cómo realizar una tarea de clasificación binaria. También puede usar los datos para crear modelos de regresión o clasificación multiclase.
 
   
--  [Paso 6: Hacer operativo el modelo de Python](sqldev-py6-operationalize-the-model.md)
+-  [ Poner en marcha el modelo de Python](sqldev-py6-operationalize-the-model.md)
 
     Después de que el modelo se ha guardado en la base de datos, llamar al modelo de predicción utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

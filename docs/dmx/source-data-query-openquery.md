@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6f7b4744c3f521ed4c51e461f2b01a748b9b6496
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 895c28f0989debb899c1e01c80a18483d3cda5a1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989763"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147820"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;consulta de origen de datos&gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,10 +35,10 @@ OPENQUERY(<named datasource>, <query syntax>)
  *sintaxis de consulta*  
  Sintaxis de consulta que devuelve un conjunto de filas.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **OPENQUERY** proporciona una forma más segura para tener acceso a datos externos mediante la compatibilidad con los permisos de origen de datos. La cadena de conexión se almacena en el origen de datos, lo que permite a los administradores utilizar las propiedades del origen de datos para administrar el acceso a los mismos. Para obtener más información acerca de los orígenes de datos, vea [orígenes de datos admitidos &#40;SSAS - multidimensionales&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
- Puede obtener una lista de los orígenes de datos que están disponibles en un servidor consultando la **MDSCHEMA_INPUT_DATASOURCES** de filas de esquema. Para obtener más información sobre el uso de **MDSCHEMA_INPUT_DATASOURCES**, consulte [de filas MDSCHEMA_INPUT_DATASOURCES](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md).  
+ Puede obtener una lista de los orígenes de datos que están disponibles en un servidor consultando la **MDSCHEMA_INPUT_DATASOURCES** de filas de esquema. Para obtener más información sobre el uso de **MDSCHEMA_INPUT_DATASOURCES**, consulte [de filas MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
   
  También puede devolver una lista de orígenes de datos en la base de datos de Analysis Services actual utilizando la consulta DMX siguiente:  
   

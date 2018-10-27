@@ -14,12 +14,12 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8aa16d708683a33281ee0836321e11f0a16e3211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d0148c1f8284610178cde16852494c297fb4c6e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047705"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147360"
 ---
 # <a name="data-mining-programming"></a>Programación de minería de datos
   Si los visores y las herramientas integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no cumplen sus requisitos, puede extender la capacidad de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] codificando sus propias extensiones. En este enfoque, tiene dos opciones:  
@@ -57,10 +57,10 @@ ms.locfileid: "48047705"
  Describe las adiciones realizadas en la especificación para admitir la minería de datos y los datos multidimensionales: nuevas columnas y nuevos conjuntos de filas de esquema y el lenguaje DMX (Extensiones de minería de datos) para crear y administrar las estructuras de minería de datos.  
   
 ## <a name="related-reference"></a>Referencia relacionada  
- [Desarrollo con ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Desarrollo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
  Presenta el cliente ADOMD.NET y objetos de programación de servidor.  
   
- [Desarrollar con objetos de administración de análisis &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  Presenta la biblioteca de programación de AMO.  
   
  [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
@@ -68,6 +68,6 @@ ms.locfileid: "48047705"
   
 ## <a name="see-also"></a>Vea también  
  [Guía del desarrollador &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

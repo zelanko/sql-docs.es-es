@@ -1,24 +1,24 @@
 ---
-title: Configurar Azure Kubernetes Service para las implementaciones de SQL Server de 2019 CTP 2.0 | Microsoft Docs
-description: ''
+title: Configuración de Azure Kubernetes Service para las implementaciones de clústeres de SQL Server 2019 macrodatos | Microsoft Docs
+description: Obtenga información sobre cómo configurar Azure Kubernetes Service (AKS) para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050917"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurar el servicio de Kubernetes de Azure para SQL Server de 2019 CTP 2.0
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurar Azure Kubernetes Service para las implementaciones de SQL Server 2019 (versión preliminar)
 
-Azure Kubernetes Service (AKS) facilita las tareas de crear, configurar y administrar un clúster de máquinas virtuales que están preconfiguradas con un clúster de Kubernetes para ejecutar aplicaciones en contenedores. 
+En este artículo se describe cómo configurar Azure Kubernetes Service (AKS) para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019. 
 
-Esto permite usar sus conocimientos o recurrir a un gran Corpus creciente de expertos comunitarios, implementar y administrar aplicaciones basadas en contenedores en Microsoft Azure.
+AKS simplifica crear, configurar y administrar un clúster de máquinas virtuales que están preconfiguradas con un clúster de Kubernetes para ejecutar aplicaciones en contenedores. Esto permite usar sus conocimientos o recurrir a un gran Corpus creciente de expertos comunitarios, implementar y administrar aplicaciones basadas en contenedores en Microsoft Azure.
 
 En este artículo se describe los pasos para implementar en Kubernetes en AKS mediante la CLI de Azure. Si no tiene una suscripción de Azure, cree una cuenta gratuita antes de comenzar.
 
@@ -34,7 +34,7 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
 
 - En esta sección tiene que estar ejecutando la CLI de Azure versión 2.0.4 o posterior. Si necesita instalarla o actualizarla, consulte [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Ejecute `az --version` para buscar la versión si es necesario.
 
-- Instalar [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de Macrodatos de SQL Server requiere cualquier versión secundaria dentro del intervalo de 1,10 versiones para Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Para AKS deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada. Tenga en cuenta que en el período de versión CTP2.0, AKS solo admite las versiones 1.10.7 y 1.10.8. 
+- Instalar [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de macrodatos de SQL Server requiere que cualquier versión secundaria dentro del intervalo de 1,10 versiones de Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Para AKS deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada. Tenga en cuenta que en el período de versión CTP2.0, AKS solo admite las versiones 1.10.7 y 1.10.8. 
 
 
 > [!NOTE]
@@ -108,6 +108,6 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los pasos descritos en este artículo, configuran un clúster de Kubernetes en AKS. El siguiente paso es implementar SQL Server 2019 Big Data en el clúster.
+Los pasos descritos en este artículo, configuran un clúster de Kubernetes en AKS. El siguiente paso es implementar datos de gran tamaño 2019 de SQL Server en el clúster.
 
-[Implementar el clúster de SQL Server de 2019 Big Data en Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)

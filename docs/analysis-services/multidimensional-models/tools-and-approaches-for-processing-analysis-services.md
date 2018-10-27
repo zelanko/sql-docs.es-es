@@ -1,5 +1,5 @@
 ---
-title: Herramientas y enfoques de procesamiento (Analysis Services) | Documentos de Microsoft
+title: Herramientas y enfoques de procesamiento (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027322"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147740"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Herramientas y enfoques de procesamiento (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34027322"
   
 -   Supervisar el procesamiento con SQL Server Profiler  
   
--   Programar una solución personalizada mediante AMO Para más información, consulte [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Programar una solución personalizada mediante AMO Para más información, consulte [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  El procesamiento es una operación altamente configurable, controlada por un conjunto de opciones de procesamiento que determinan si se produce un procesamiento completo o incremental en el nivel de objeto. Para más información sobre las opciones de procesamiento, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) y [Procesar objetos de Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   

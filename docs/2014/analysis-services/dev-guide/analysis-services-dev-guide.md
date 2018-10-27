@@ -11,12 +11,12 @@ ms.topic: reference
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e55bbbdad6816580c1ecd30ec2467b97bf89ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0bbb1126a870834c4bf70dcfba0039139eb0830
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090175"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147102"
 ---
 # <a name="analysis-services-developers-guide"></a>Guía del desarrollador de Analysis Services
     
@@ -27,10 +27,10 @@ ms.locfileid: "48090175"
   
 - [Programación de modelos multidimensionales](../multidimensional-models/multidimensional-model-programming.md)  
   
-- [Conjuntos de filas de esquema de Analysis Services](../schema-rowsets/analysis-services-schema-rowsets.md)  
+- [Conjuntos de filas de esquema de Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
   
-- [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+- [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
-- [XML for Analysis &#40;XMLA&#41; referencia](../xmla/xml-for-analysis-xmla-reference.md)  
+- [Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

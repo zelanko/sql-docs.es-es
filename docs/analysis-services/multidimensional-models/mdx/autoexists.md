@@ -1,5 +1,5 @@
 ---
-title: Autoexist | Documentos de Microsoft
+title: Autoexists | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5f7c111f85e3b43a560b70171f8af470a9fc505a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024772"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146256"
 ---
-# <a name="autoexists"></a>Autoexists
+# <a name="autoexists"></a>autoexist
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   El concepto de *autoexists* limita el espacio del cubo a esas celdas que realmente existen en el cubo en contraposición a aquellas que podrían existir como resultado de la creación de todas las posibles combinaciones de miembros de jerarquía de atributo a partir de la misma jerarquía. Esto es así porque los miembros de una jerarquía de atributo no pueden existir con los miembros de otra jerarquía de atributo de la misma dimensión. Cuando dos o más jerarquías de atributos de la dimensión se usan en una instrucción SELECT, Analysis Services evalúa las expresiones de los atributos para asegurarse de que los miembros de dichos atributos están correctamente delimitados, a fin de cumplir los criterios de todos los demás atributos.  
   
@@ -308,15 +308,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01 %**|  
   
- Comportamiento de Autoexists puede modificarse mediante el AUTOEXISTS = [1 | 2 | 3] parámetro en la cadena de conexión; vea [admite propiedades XMLA &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros.  
+ Comportamiento de Autoexists puede modificarse mediante el AUTOEXISTS = [1 | 2 | 3] parámetro en la cadena de conexión; consulte [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos clave de MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Conceptos clave de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Espacio de cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuplas](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Trabajar con miembros, tuplas y conjuntos de & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Los totales visuales y totales no visuales](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Referencia del lenguaje MDX & #40; MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Expresiones multidimensionales & #40; MDX & #41; Referencia](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Totales visuales y totales no visuales](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
+ [Referencia del lenguaje MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Referencia de expresiones multidimensionales &#40;MDX&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

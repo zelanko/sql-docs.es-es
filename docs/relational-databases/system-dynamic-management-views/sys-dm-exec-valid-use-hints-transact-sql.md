@@ -19,17 +19,17 @@ ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fe3f6ed0e5a1760d70040a573376cc0306000a0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 628ef2cde5b345366a7ba0fb7ffff6c8e5143a0c
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663373"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806695"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>Sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Devuelve [USE HINT](../../t-sql/queries/hints-transact-sql-query.md) admite nombres de sugerencia. Muestra un nombre de sugerencia por fila.  
+Devuelve [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) admite nombres de sugerencia. Muestra un nombre de sugerencia por fila.  
   
 Utilice esta DMV para ver la lista de todas las sugerencias de admitidos en la notación de USE HINT.  
   
@@ -37,7 +37,7 @@ Utilice esta DMV para ver la lista de todas las sugerencias de admitidos en la n
 |-----------------|---------------|-----------------|  
 |NAME|**sysname**|El nombre de la sugerencia.|
 
-Consulte [sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md) para obtener descripciones de cada sugerencia.
+Consulte [sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) para obtener descripciones de cada sugerencia.
 
 Introducido en [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
   

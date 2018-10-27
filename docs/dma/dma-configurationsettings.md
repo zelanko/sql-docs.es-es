@@ -2,7 +2,7 @@
 title: Configurar opciones para Data Migration Assistant (SQL Server) | Microsoft Docs
 description: Aprenda a configurar la configuración de Data Migration Assistant actualizando los valores del archivo de configuración
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755583"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643823"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurar opciones para Data Migration Assistant
 
@@ -42,7 +42,7 @@ No olvide guardar una copia del archivo de configuración original antes de real
 
 Data Migration Assistant evalúa varias bases de datos en paralelo. Durante la evaluación de Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de base de datos. Esta operación puede tiempo de espera si varias bases de datos en el mismo servidor que se evalúan en paralelo. 
 
-Comenzando con la versión 2.0 de Data Migration Assistant, puede controlar esto estableciendo el parallelDatabases del valor de configuración. Valor predeterminado es 8.
+A partir de la versión 2.0 de Data Migration Assistant, puede controlar esto estableciendo el parallelDatabases del valor de configuración. Valor predeterminado es 8.
 
 ```
 <advisorGroup>
@@ -87,15 +87,15 @@ Durante la valoración, Data Migration Assistant extrae la aplicación de capa d
 
 - commandTimeout
 
-   Esto establece la propiedad IDbCommand.CommandTimeout *segundos*. (Predeterminado = 60)
+   Este parámetro establece la propiedad IDbCommand.CommandTimeout *segundos*. (Predeterminado = 60)
 
 - databaseLockTimeout
 
-   Esto es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período ](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Predeterminado = 5000)
+   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Predeterminado = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   Número de conexiones de grupo de conexión SQL a usar. (Predeterminado = 8)
+  Este parámetro establece el número de conexiones de grupo de conexión SQL a usar. (Predeterminado = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Umbral de recomendación
 

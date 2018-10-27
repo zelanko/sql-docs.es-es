@@ -1,18 +1,18 @@
 ---
 title: ¿Qué es los clústeres de macrodatos de SQL Server master instancia? | Microsoft Docs
-description: ''
+description: En este artículo se describe la instancia maestra en un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3b17330f38d30400564171ba09328dc4f8c8be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796893"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051067"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>¿Qué es los big data de SQL Server del clúster instancia maestra?
 
@@ -63,6 +63,6 @@ Con los clústeres de SQL Server 2019 datos de gran tamaño, puede hacer más co
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de datos grandes de SQL Server, consulte la información general siguiente:
+Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte la información general siguiente:
 
-- [¿Qué es clústeres grandes de datos de SQL Server de 2019?](big-data-cluster-overview.md)
+- [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Conjunto de datos de demostración de iris para SQL Server | Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: Conjunto de datos de iris demostración de tutoriales de Python de SQL Server y R | Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463051"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806675"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>Datos de demostración de iris para SQL Server
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de demostración de iris para los tutoriales de Python de SQL Server y R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este ejercicio, preparar una base de datos de SQL Server que contiene las tablas para el [conjunto de datos Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) y almacenamiento del modelo. Datos de iris se incluyen en las distribuciones de R y Python instaladas con SQL Server. Se utiliza en los tutoriales sobre aprendizaje automático para SQL Server. 
+En este ejercicio, creará una base de datos de SQL Server para almacenar los datos de la [conjunto de datos Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) y modelos basados en los mismos datos. Datos de iris se incluyen en las distribuciones de R y Python instaladas con SQL Server y se usan en los tutoriales sobre aprendizaje automático de SQL Server. 
 
 Para completar este ejercicio, debe tener [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) u otra herramienta que puede ejecutar consultas de T-SQL.
 
@@ -26,7 +26,7 @@ Tutoriales y guías de inicio rápido con este conjunto de datos incluyen lo sig
 
 +  [Usar un modelo de Python en SQL Server para el entrenamiento y puntuación](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>Preparar la base de datos y tablas
+## <a name="create-the-database"></a>Crear la base de datos
 
 1. Inicie SQL Server Management Studio y abra una nueva **consulta** ventana.  
 
@@ -139,7 +139,7 @@ Puede obtener datos de Iris integrados de R o Python. Puede usar Python o R para
     > Más adelante, para modificar el procedimiento almacenado no debe quitar y volver a crearla. Use la [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) instrucción. 
 
 
-## <a name="query-data-for-verification"></a>Consultar los datos para la comprobación
+## <a name="query-the-data"></a>Consultar los datos
 
 Como paso de validación, ejecute una consulta para confirmar que se han cargado los datos.
 

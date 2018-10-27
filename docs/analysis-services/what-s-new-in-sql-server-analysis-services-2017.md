@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042363"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145990"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Novedades de SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -173,9 +173,9 @@ db.Update(UpdateOptions.ExpandFull);
 [DMV](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) son consultas en SQL Server Profiler que devuelven información sobre las operaciones del servidor local y el estado del servidor.
 Esta versión incluye mejoras a [vistas de administración dinámica](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) para los modelos tabulares en los niveles de compatibilidad 1200 y 1400.
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md) ahora funciona con los modelos tabulares 1200 y 1400. Los modelos tabulares 1400 mostrar las dependencias entre las particiones de M, expresiones de M y orígenes de datos estructurados. Para obtener más información, consulte el [blog de Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/).
+[DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset) ahora funciona con los modelos tabulares 1200 y 1400. Los modelos tabulares 1400 mostrar las dependencias entre las particiones de M, expresiones de M y orígenes de datos estructurados. Para obtener más información, consulte el [blog de Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/).
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md) mejoras se incluyen para esta DMV, que se usa por diversas herramientas de cliente para mostrar la dimensionalidad de medida. Por ejemplo, la característica de exploración en las tablas dinámicas de Excel permite al usuario para la exploración entre a dimensiones relacionadas con las medidas seleccionadas. Esta versión corrige las columnas de la cardinalidad, que anteriormente se mostraban valores incorrectos.
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) mejoras se incluyen para esta DMV, que se usa por diversas herramientas de cliente para mostrar la dimensionalidad de medida. Por ejemplo, la característica de exploración en las tablas dinámicas de Excel permite al usuario para la exploración entre a dimensiones relacionadas con las medidas seleccionadas. Esta versión corrige las columnas de la cardinalidad, que anteriormente se mostraban valores incorrectos.
 
 ## <a name="dax-enhancements"></a>Mejoras de DAX
 Esta versión incluye compatibilidad con nuevas funciones de DAX y funciones. Con el fin de aprovechar las ventajas, deberá usar la versión más reciente de SSDT. Para obtener más información, consulte [funciones DAX nuevas](https://msdn.microsoft.com/library/mt704075.aspx).

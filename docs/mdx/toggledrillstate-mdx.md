@@ -1,5 +1,5 @@
 ---
-title: ToggleDrillState (MDX) | Documentos de Microsoft
+title: ToggleDrillState (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2ed3251b5bf8bc17e832f87947cfc41231d35c0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 652afb0595634d7fb4474ed9042edda26f83a52a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743434"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147310"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -41,14 +41,14 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  (Opcional). Marca que indica si se deben incluir en el nivel de detalle los miembros calculados, si existen.  
   
-## <a name="remarks"></a>Notas  
- El **ToggleDrillState** función alterna el estado de detalle de cada miembro del segundo conjunto que está presente en el primer conjunto. El primer conjunto puede contener tuplas con cualquier dimensionalidad, pero el segundo conjunto debe contener miembros de una sola dimensión. El **ToggleDrillState** función es una combinación de la **DrillupMember** y **DrilldownMember** funciones. Si el miembro *m*, del segundo conjunto está presente en el primer conjunto y se aumenta el detalle de ese miembro (es decir, tiene un descendiente que le sigue), a continuación, `DrillupMember(Set_Expression1, {m})` se aplica al miembro o tupla del primer conjunto. Si ese *m* miembro se reduce el detalle (es decir, no hay ningún descendiente del *m* que sigue inmediatamente a *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` se aplica al primer conjunto.  
+## <a name="remarks"></a>Comentarios  
+ El **ToggleDrillState** función cambia el estado de detalle de cada miembro del segundo conjunto que se encuentra en el primer conjunto. El primer conjunto puede contener tuplas con cualquier dimensionalidad, pero el segundo conjunto debe contener miembros de una sola dimensión. El **ToggleDrillState** función es una combinación de la **DrillupMember** y **DrilldownMember** funciones. Si el miembro, *m*del segundo conjunto está presente en el primer conjunto y se aumenta el detalle de ese miembro (es decir, tiene un descendiente que le sigue), a continuación, `DrillupMember(Set_Expression1, {m})` se aplica al miembro o tupla del primer conjunto. Si ese *m* se reducirá el detalle de miembros (es decir, no hay ningún descendiente del *m* que sigue inmediatamente a *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` se aplica al primer conjunto.  
   
- Si la parte opcional **RECURSIVA** marca se utiliza, resumir y explorar en profundidad se aplican de forma recursiva. Para obtener más información acerca de la marca recursiva, consulte el [DrillupMember](../mdx/drillupmember-mdx.md) y [DrilldownMember](../mdx/drilldownmember-mdx.md) funciones.  
+ Si el elemento opcional **RECURSIVA** marca se utiliza, resumir y explorar en profundidad se aplican de forma recursiva. Para obtener más información acerca de la marca recursiva, vea el [DrillupMember](../mdx/drillupmember-mdx.md) y [DrilldownMember](../mdx/drilldownmember-mdx.md) funciones.  
   
- Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones obtener detalles. vea [admite propiedades XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) para obtener más información.  
+ Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones de obtención de detalles; consulte [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obtener más información.  
   
- Vea [diario de base de datos: funciones de conjunto MDX: la función ToggleDrillState()](http://go.microsoft.com/fwlink/?LinkId=517759) para escenarios y ejemplos que utilizan esta función.  
+ Consulte [diario de la base de datos: funciones de conjunto MDX: la función ToggleDrillState()](http://go.microsoft.com/fwlink/?LinkId=517759) para escenarios y ejemplos que utilizan esta función.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente aumenta el detalle del miembro Australia del primer conjunto y reduce el detalle del miembro United States del primer conjunto.  

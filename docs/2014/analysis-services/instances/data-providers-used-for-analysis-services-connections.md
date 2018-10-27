@@ -11,17 +11,17 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137005"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145231"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Proveedores de datos usados para las conexiones de Analysis Services
   Analysis Services proporciona tres proveedores de datos para el acceso al servidor y a datos. Todas las aplicaciones que se conectan a Analysis Services lo hacen mediante uno de estos proveedores. Dos de los proveedores, ADOMD.NET y Objetos de administración de Analysis Services (AMO), son proveedores de datos administrados. El proveedor OLE DB de Analysis Services (MSOLAP DLL) es un proveedor de datos nativo.  
   
- En las organizaciones que ejecutan varias versiones de Analysis Services, puede que tenga que instalar versiones más recientes de los proveedores de datos en las estaciones de trabajo de los usuarios que se conectan a datos de Analysis Services. La conexiones a las versiones más recientes de Analysis Services requieren proveedores de datos de la misma versión principal. Por ejemplo, para conectarse a [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], cada estación de trabajo debe tener un proveedor de datos de la versión 2014. Aunque Excel instala los proveedores de datos que necesita para conectarse, ese proveedor puede estar obsoleto con respecto a las instancias de Analysis Services que usa.  
+ En las organizaciones que ejecutan varias versiones de Analysis Services, puede que tenga que instalar versiones más recientes de los proveedores de datos en las estaciones de trabajo de los usuarios que se conectan a datos de Analysis Services. La conexiones a las versiones más recientes de Analysis Services requieren proveedores de datos de la misma versión principal. Por ejemplo, para conectarse a [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], todas las estaciones de trabajo deben tener un proveedor de datos de la versión 2014. Aunque Excel instala los proveedores de datos que necesita para conectarse, ese proveedor puede estar obsoleto con respecto a las instancias de Analysis Services que usa.  
   
  Este tema contiene las secciones siguientes:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48137005"
   
 -   En SQL Server Management Studio, conéctese a la instancia de Analysis Services. Haga clic en la instancia que desee comprobar, vaya a **informes**y haga clic en **General**. La información de la edición y la compilación de versión aparece en el informe.  
   
- El mayor número de compilación de la versión inicial de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] es 12.0.2000.9.  
+ El número de compilación principal de la versión inicial de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] es 12.0.2000.9.  
   
  Para más información acerca de cómo obtener información sobre la versión y la compilación, vea [Cómo determinar la versión y la edición de SQL Server y sus componentes](http://support.microsoft.com/kb/321185).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48137005"
   
  Al conectarse a una base de datos, las propiedades de cadena de conexión para las tres bibliotecas son iguales en gran medida. Casi todas las cadenas de conexión que defina para ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) funcionarán también para AMO y el proveedor OLE DB de Analysis Services. Para más información, vea [Propiedades de cadena de conexión &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
- Para obtener más información sobre la conexión mediante programación, vea [Establishing Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md).  
+ Para obtener más información sobre la conexión mediante programación, vea [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  AMO es un proveedor de datos administrado que se usa para la administración del servidor y la definición de datos. Por ejemplo, SQL Server Management Studio usa AMO para conectarse a Analysis Services.  
@@ -109,7 +109,7 @@ ms.locfileid: "48137005"
   
  Una conexión mediante AMO es suele ser mínima, que consta de "origen de datos =\<servername >". Una vez establecida una conexión, use la API para trabajar con colecciones de base de datos y los objetos principales. Tanto SSDT como SSMS usan AMO para conectarse a una instancia de Analysis Services.  
   
- Para obtener más información sobre la conexión mediante programación, vea [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
+ Para obtener más información sobre la conexión mediante programación, vea [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
 ## <a name="see-also"></a>Vea también  
  [Conectar a Analysis Services](connect-to-analysis-services.md)  

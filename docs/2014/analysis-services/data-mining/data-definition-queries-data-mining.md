@@ -11,12 +11,12 @@ ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 602aae01c3ce19c83e44f039fdf3f996dfdb72b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164135"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147523"
 ---
 # <a name="data-definition-queries-data-mining"></a>Consultas de definición de datos (minería de datos)
   Para la minería de datos, la categoría *consulta de definición de datos* significa instrucciones DMX o comandos XMLA que hacen lo siguiente:  
@@ -82,14 +82,14 @@ ms.locfileid: "48164135"
   
 |||  
 |-|-|  
-|Trabajar con plantillas para consultas DMX.|[Uso de las plantillas de Analysis Services en SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Trabajar con plantillas para consultas DMX.|[Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Diseñar consultas de todo tipo, utilizando el Generador de consultas de predicción.|[Crear una consulta de predicción con el Generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Capturar definiciones de consultas utilizando SQL Server Profiler y utilizar seguimientos para supervisar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Usar SQL Server Profiler para supervisar Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Obtener más información sobre los lenguajes de scripting y lenguajes de programación proporcionados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis &#40;XMLA&#41; referencia](../xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Desarrollar con objetos de administración de análisis &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Obtener información sobre la administración de modelos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de minería de datos](export-and-import-data-mining-objects.md)<br /><br /> [EXPORTAR &AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORTACIÓN &AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)|  
+|Capturar definiciones de consultas utilizando SQL Server Profiler y utilizar seguimientos para supervisar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Obtener más información sobre los lenguajes de scripting y lenguajes de programación proporcionados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|Obtener información sobre la administración de modelos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de minería de datos](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |Obtener más información sobre OPENROWSET y otras maneras de consultar datos externos.|[&#60;source data query&#62;](/sql/dmx/source-data-query).|  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119b06da83da044f2ab8663433f76312540c72a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5047647ef5f440987b4b20db99ad42dacf4fc4d0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141755"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147930"
 ---
 # <a name="backup-options"></a>Opciones de copia de seguridad
   Existen varias formas de hacer una copia de seguridad de las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero todas ellas tienen en común la necesidad de disponer de permisos de administrador de servidor y administrador de base de datos. Puede abrir el cuadro de diálogo **Copia de seguridad** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccionar las opciones adecuadas y, a continuación, ejecutar la copia de seguridad desde el mismo cuadro de diálogo. También puede crear un script mediante la configuración que ya está especificada en el archivo. A continuación, el script puede guardarse y ejecutarse siempre que sea necesario.  
@@ -31,9 +31,9 @@ ms.locfileid: "48141755"
 >  La cuenta de servicio de Analysis Services debe tener permiso para escribir en la ubicación de copia de seguridad especificada para cada archivo. Además, el usuario debe tener uno de los roles siguientes: rol de administrador en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o ser miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos de la que se va a hacer copia de seguridad.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de la base de datos de copia de seguridad &#40;Analysis Services - datos multidimensionales&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Cuadro de diálogo Copia de seguridad de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](backup-and-restore-of-analysis-services-databases.md)   
- [Elemento de copia de seguridad &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [Copia de seguridad, restaurar, sincronizar y las bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Elemento de copia de seguridad &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ubicación de almacenamiento de base de datos | Documentos de Microsoft
+title: Ubicación de almacenamiento de base de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9f96b5a919a898f987892fb517ed9687b1d2498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0544e7e7d552098806d4c3d93751631d03520139
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022522"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146300"
 ---
 # <a name="database-storage-location"></a>Ubicación de almacenamiento de las bases de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "34022522"
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Adjuntar y separar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Mover una base de datos de Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Elemento DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [Crear elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)   
- [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Sincronizar el elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Elemento Create &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

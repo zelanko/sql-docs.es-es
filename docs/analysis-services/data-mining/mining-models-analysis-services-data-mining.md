@@ -1,5 +1,5 @@
 ---
-title: 'Modelos de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Los modelos de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8febdd6f68cae6f28182a5734e46717a3b597624
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 78c4085a674bce6cca75394ee2c7f376c14d6a93
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018142"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146030"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelos de minería de datos (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34018142"
   
  Un modelo de minería de datos está vacío hasta que los datos que proporciona la estructura de minería de datos se procesan y analizan. Una vez procesado el modelo, contiene los metadatos, resultados y enlaces de la estructura de minería de datos.  
   
- ![modelo contiene metadatos, patrones y enlaces](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "modelo contiene metadatos, patrones y enlaces")  
+ ![modelo que contiene los metadatos, patrones y enlaces](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "modelo contiene los metadatos, patrones y enlaces")  
   
  Los metadatos especifican el nombre del modelo y el servidor donde está almacenado, así como una definición del mismo, incluidas las columnas de la estructura de minería de datos que se usaron para generarlo, las definiciones de los filtros que se aplicaron al procesarlo y el algoritmo empleado para analizar los datos. Todas estas opciones, las columnas de datos y sus tipos de datos, filtros y algoritmo, influyen en gran medida en los resultados del análisis.  
   
@@ -118,22 +118,22 @@ ms.locfileid: "34018142"
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Cómo generar estructuras de minería de datos que pueden admitir varios modelos de minería de datos. Cómo usar las columnas en los modelos.|[Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [Contenido tipos & #40; minería de datos & #41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
-|Obtener información sobre los distintos algoritmos, y cómo la elección del algoritmo afecta al contenido del modelo.|[Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
-|Cómo establecer propiedades en el modelo que afecten a su composición y comportamiento.|[Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [Modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
-|Obtener información sobre las interfaces programables para la minería de datos.|[Desarrollar con objetos de administración de análisis & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)|  
+|Cómo generar estructuras de minería de datos que pueden admitir varios modelos de minería de datos. Cómo usar las columnas en los modelos.|[Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
+|Obtener información sobre los distintos algoritmos, y cómo la elección del algoritmo afecta al contenido del modelo.|[Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Cómo establecer propiedades en el modelo que afecten a su composición y comportamiento.|[Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [Marcas de modelado &#40;Minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|Obtener información sobre las interfaces programables para la minería de datos.|[Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)|  
 |Cómo usar los visores personalizados de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Ver ejemplos de los diferentes tipos de consultas que se pueden usar con los modelos de minería de datos.|[Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Use los vínculos siguientes para obtener información más específica sobre cómo trabajar con modelos de minería de datos  
   
 |Tarea|Vínculo|  
 |----------|----------|  
 |Agregar y eliminar modelos de minería de datos|[Agregar un modelo de minería de datos a una estructura de minería de datos existente](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [Eliminar un modelo de minería de datos de una estructura de minería de datos](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|Trabajar con las columnas del modelo de minería de datos|[Excluir una columna de un modelo de minería de datos](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Crear un Alias para una columna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [Cambiar la discretización de una columna en un modelo de minería de datos](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Modificar las propiedades del modelo|[Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [Aplicar un filtro a un modelo de minería de datos](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [Eliminar un filtro de un modelo de minería de datos](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [Habilitar obtención de detalles para un modelo de minería de datos](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [Ver o cambiar parámetros del algoritmo](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
-|Copiar, mover o administrar modelos|[Realizar una copia de un modelo de minería de datos](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [Copiar una vista de un modelo de minería de datos](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORTAR & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|Trabajar con las columnas del modelo de minería de datos|[Excluir una columna de un modelo de minería de datos](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Crear un alias para una columna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [Cambiar la discretización de una columna en un modelo de minería de datos](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Modificar las propiedades del modelo|[Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [Aplicar un filtro a un modelo de minería de datos](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [Eliminar un filtro de un modelo de minería de datos](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [Habilitar la obtención de detalles para un modelo de minería](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [Ver o cambiar parámetros del algoritmo](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
+|Copiar, mover o administrar modelos|[Realizar una copia de un modelo de minería de datos](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [Copiar una vista de un modelo de minería de datos](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |Rellenar los modelos con datos, o actualizar los datos de un modelo|[Procesar un modelo de minería de datos](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |Trabajar con modelos OLAP|[Crear una dimensión de minería de datos](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   

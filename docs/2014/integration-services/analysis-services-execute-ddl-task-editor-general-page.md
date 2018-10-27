@@ -15,12 +15,12 @@ ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362839a835436f68bf22158228f18f1b3c291abb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 272240e73be28bcfe29b21b86d4d7b4e59d99f46
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146735"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148310"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar DDL de Analysis Services** para nombrar y describir la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -38,11 +38,11 @@ ms.locfileid: "48146735"
  Escriba una descripción de la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services Execute DDL Editor de la tarea &#40;página DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
- [Página expresiones](expressions/expressions-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea Ejecutar DDL de Analysis Services &#40;página DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
+ [Página Expresiones](expressions/expressions-page.md)   
  [Flujo de control](control-flow/control-flow.md)   
- [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis &#40;XMLA&#41; referencia](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

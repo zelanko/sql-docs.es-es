@@ -1,5 +1,5 @@
 ---
-title: Otorgar permisos Leer definición en metatados de objetos (Analysis Services) | Documentos de Microsoft
+title: Otorgar permisos Leer definición en metatados de objetos (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a30da6aa162cf729dd5e829b8baa2528ce80a39a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e6cc110a773981a7592f8cdd06b3fd10b2d83144
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021852"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146380"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Otorgar permisos Leer definición en metatados de objetos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Los permisos para leer una definición de objeto o sus metadatos en objetos seleccionados permiten a los administradores otorgar permisos para ver información sobre los objetos sin necesidad de otorgar permisos para modificar la definición del objeto, modificar la estructura del objeto o ver los propios datos del objeto. Los permisos de**Leer definición** se pueden conceder en los niveles de base de datos, origen de datos, dimensión, estructura de minería de datos y modelo de minería de datos. Si necesita permisos de **Leer definición** para un cubo, deberá habilitar **Leer definición** para la base de datos. Recuerde que los permisos son acumulativos. Por ejemplo, un rol otorga permisos para leer los metadatos de un cubo, mientras que otro rol otorga al mismo usuario permisos para leer los metadatos de una dimensión. Los permisos de los dos roles diferentes se combinan para conceder al usuario permiso para leer tanto los metadatos para el cubo como los metadatos para la dimensión dentro de la base de datos.  
   
 > [!NOTE]  
->  El permiso para leer los metadatos de una base de datos es el mínimo necesario para conectar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un usuario que tenga permiso para leer los metadatos también puede usar el conjunto de filas del esquema DISCOVER_XML_METADATA para hacer consultas en el objeto y ver sus metadatos. Para obtener más información, vea [Conjunto de filas DISCOVER_XML_METADATA](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+>  El permiso para leer los metadatos de una base de datos es el mínimo necesario para conectar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un usuario que tenga permiso para leer los metadatos también puede usar el conjunto de filas del esquema DISCOVER_XML_METADATA para hacer consultas en el objeto y ver sus metadatos. Para obtener más información, vea [Conjunto de filas DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="set-read-definition-permissions-on-a-database"></a>Establecer permisos de Leer definición en una base de datos  
  Al otorgar un permiso para leer los metadatos de una base de datos, también se otorga permiso para leer los metadatos de todos los objetos de la base de datos.  
@@ -55,7 +55,7 @@ ms.locfileid: "34021852"
 5.  Haga clic en **Aceptar** para completar la creación del rol.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceder permisos de base de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [Otorgar permisos de procesamiento & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

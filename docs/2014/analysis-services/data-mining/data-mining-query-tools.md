@@ -19,12 +19,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110535"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148240"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de consultas de minería de datos
   Las consultas de minería de datos se basan en el lenguaje DMX (Extensiones de minería de datos). DMX se usa para todas las tareas de predicción y modelado, incluida la clasificación, el análisis de riesgos, la generación de recomendaciones y la regresión lineal. También puede recuperar los patrones y estadísticas que se generaron al procesar el modelo.  
@@ -87,16 +87,16 @@ ms.locfileid: "48110535"
   
  Sin embargo, XMLA constituye el formato del mensaje subyacente para todas las interacciones con un servidor de Analysis Services. En un mensaje XMLA, las consultas se representan de forma diferente dependiendo de si se envía una consulta de predicción basada en DMX, una consulta de contenido o una consulta que recupera metadatos del modelo mediante los conjuntos de filas de esquema de minería de datos.  
   
--   El texto de las **consultas de predicción** (y el resto de las instrucciones DMX) se envían en XMLA con el [método Execute &#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md), con la consulta DMX colocada como texto en el [elemento Statement &#40;XMLA&#41;](../xmla/xml-elements-commands/statement-element-xmla.md) del [elemento Command &#40;XMLA&#41;](../xmla/xml-elements-properties/command-element-xmla.md).  
+-   El texto de las **consultas de predicción** (y el resto de las instrucciones DMX) se envían en XMLA con el [método Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), con la consulta DMX colocada como texto en el [elemento Statement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) del [elemento Command &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Para recuperar el **contenido del modelo** y los **metadatos del modelo**, como el número de clústeres, los atributos usados en los árboles de decisión, la fecha en que se procesó el modelo por última vez y los parámetros del algoritmo que se usaron al crear el modelo, puede usar el método [Discover &#40;XMLA&#41;](../xmla/xml-elements-methods-discover.md) y especificar uno de los conjuntos de filas del esquema de minería de datos en el encabezado del [elemento RequestType &#40;XMLA&#41;](../xmla/xml-elements-properties/type-element-xmla.md). Para restringir el ámbito de la consulta, escriba los criterios como restricciones en el [elemento RestrictionList &#40;XMLA&#41;](../xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Para recuperar el **contenido del modelo** y los **metadatos del modelo**, como el número de clústeres, los atributos usados en los árboles de decisión, la fecha en que se procesó el modelo por última vez y los parámetros del algoritmo que se usaron al crear el modelo, puede usar el método [Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) y especificar uno de los conjuntos de filas del esquema de minería de datos en el encabezado del [elemento RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla). Para restringir el ámbito de la consulta, escriba los criterios como restricciones en el [elemento RestrictionList &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Soluciones de minería de datos](data-mining-solutions.md)   
  [Descripción de la instrucción Select de DMX](/sql/dmx/understanding-the-dmx-select-statement)   
- [Estructura y el uso de consultas de predicción DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [Crear una consulta de predicción mediante el generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Estructura y uso de las consultas de predicción DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [Crear una consulta de predicción con el Generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Crear una consulta DMX en SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

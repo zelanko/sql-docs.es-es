@@ -1,5 +1,5 @@
 ---
-title: MODIFICAR LA ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Documentos de Microsoft
+title: MODIFICAR LA ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842698"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145930"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea un nuevo modelo de minería de datos basado en una estructura de minería de datos existente.  Cuando se usa el **ALTER MINING STRUCTURE** instrucción para crear un nuevo modelo de minería de datos, la estructura ya debe existir. En cambio, cuando se utiliza la instrucción, [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), crea un modelo y generar automáticamente su estructura de minería de datos subyacente al mismo tiempo.  
+  Crea un nuevo modelo de minería de datos basado en una estructura de minería de datos existente.  Cuando se usa el **ALTER MINING STRUCTURE** instrucción para crear un nuevo modelo de minería de datos, la estructura ya debe existir. En cambio, cuando se usa la instrucción, [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), crear un modelo y generar automáticamente su estructura de minería de datos subyacente al mismo tiempo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,33 +49,33 @@ USING <algorithm> [(<parameter list>)]
  *lista de definiciones de columna anidada*  
  Lista delimitada por comas de columnas de una tabla anidada, si procede.  
   
- *criterios de filtro anidados*  
+ *criterios de filtro anidado*  
  Expresión de filtro que se aplica a las columnas de una tabla anidada.  
   
- *Algoritmo*  
+ *algoritmo*  
  Nombre de un algoritmo de minería de datos definido por el proveedor.  
   
 > [!NOTE]  
->  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [filas DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [filas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
- *Lista de parámetros*  
+ *lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
   
  *criterios de filtro*  
  Expresión de filtro que se aplica a las columnas de la tabla de casos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si la estructura de minería de datos contiene claves compuestas, el modelo de minería debe incluir todas las columnas de clave que están definidas en la estructura.  
   
  Si el modelo no requiere una columna de predicción, como ocurre con los modelos que se generan mediante los algoritmos de clústeres de [!INCLUDE[msCoName](../includes/msconame-md.md)] y de agrupación en clústeres de secuencia de [!INCLUDE[msCoName](../includes/msconame-md.md)], no es necesario incluir una definición de columna en la instrucción. Todos los atributos del modelo resultante se tratarán como entradas.  
   
- En el **WITH** cláusula que se aplica a la tabla de casos, puede especificar opciones de filtrado y obtención de detalles:  
+ En el **WITH** cláusula que se aplica a la tabla de casos, puede especificar opciones de filtrado y de obtención de detalles:  
   
 -   Agregar el **filtro** palabra clave y una condición de filtro. El filtro se aplica a los casos del modelo de minería de datos.  
   
--   Agregar el **obtención de detalles** palabra clave que se va a permitir que los usuarios del modelo de minería de datos obtener detalles de los resultados del modelo a los datos del caso. En las extensiones de minería de datos (DMX), se puede habilitar obtención de detalles solo cuando se crea el modelo.  
+-   Agregar el **obtención de detalles** palabra clave para permitir que los usuarios del modelo de minería de datos explorar en profundidad los resultados del modelo para los datos del caso. En las extensiones de minería de datos (DMX), obtención de detalles puede habilitarse únicamente cuando se crea el modelo.  
   
- Para usar mayúsculas filtrado y la obtención de detalles, combine las palabras clave en una sola **WITH** cláusula utilizando la sintaxis que se muestra en el ejemplo siguiente:  
+ Para usar mayúsculas filtrado y la obtención de detalles, combina las palabras clave en una sola **WITH** cláusula utilizando la sintaxis que se muestra en el ejemplo siguiente:  
   
  `WITH DRILLTHROUGH, FILTER(Gender = 'Male')`  
   
@@ -88,7 +88,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   Marcas de modelado  
   
--   Solicitud de predicción, que indica al algoritmo si la columna contiene un valor de predicción, indicado por la **PREDICT** o **PREDICT_ONLY** cláusula  
+-   Solicitud de predicción, que indica al algoritmo si la columna contiene un valor de predicción, indicado por el **PREDICT** o **PREDICT_ONLY** cláusula  
   
  Use la siguiente sintaxis en la lista de definiciones de columna para definir una sola columna:  
   
@@ -130,15 +130,15 @@ USING <algorithm> [(<parameter list>)]
   
  Las expresiones de criterios de filtro son predicados DMX simplificados, similares a una cláusula WHERE. Las expresiones de filtro se reducen a fórmulas que utilizan operadores matemáticos básicos, escalares y nombres de columna. La excepción la constituye el operador EXISTS; se evalúa como TRUE si la subconsulta devuelve al menos una fila. Los predicados se pueden combinar mediante los operadores lógicos comunes: AND, OR y NOT.  
   
- Para obtener más información acerca de los filtros utilizados con los modelos de minería de datos, vea [filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Para obtener más información acerca de los filtros utilizados con los modelos de minería de datos, vea [filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Las columnas de un filtro deben ser columnas de estructura de minería de datos. No se puede crear un filtro para una columna del modelo ni para una columna con alias.  
   
- Para obtener más información sobre los operadores DMX y la sintaxis, vea [columnas del modelo de minería de datos](../analysis-services/data-mining/mining-model-columns.md).  
+ Para obtener más información sobre la sintaxis y los operadores DMX, vea [columnas del modelo de minería de datos](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="parameter-definition-list"></a>Lista de definiciones de parámetros  
- Para ajustar el rendimiento y la funcionalidad de un modelo, se pueden agregar parámetros del algoritmo a la lista de parámetros. Los parámetros que se pueden utilizar dependen del algoritmo que se especifique en la cláusula USING. Para obtener una lista de parámetros que están asociados a cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Para ajustar el rendimiento y la funcionalidad de un modelo, se pueden agregar parámetros del algoritmo a la lista de parámetros. Los parámetros que se pueden utilizar dependen del algoritmo que se especifique en la cláusula USING. Para obtener una lista de parámetros que están asociados con cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  La sintaxis de la lista de parámetros es:  
   
@@ -178,7 +178,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
 ```  
   
 ## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Ejemplo 3: agregar un modelo filtrado a una estructura con una tabla anidada  
- En el ejemplo siguiente se agrega un modelo de minería de datos a una versión modificada de la estructura de minería de datos Market Basket. Se ha modificado la estructura de minería de datos utilizada en el ejemplo para agregar una **región** columna, que contiene los atributos de la región del cliente, y un **Income Group** columna, que clasifica los ingresos del cliente mediante el uso de los valores **alta**, **moderado**, o **bajo**.  
+ En el ejemplo siguiente se agrega un modelo de minería de datos a una versión modificada de la estructura de minería de datos Market Basket. La estructura de minería de datos usada en el ejemplo se ha modificado para agregar un **región** columna, que contiene los atributos de la región del cliente, y un **Income Group** columna, que clasifica los ingresos del cliente mediante el uso de los valores **alta**, **moderado**, o **bajo**.  
   
  La estructura de minería de datos también incluye una tabla anidada que contiene los artículos comprados por el cliente.  
   
@@ -202,7 +202,7 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

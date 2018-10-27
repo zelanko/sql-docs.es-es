@@ -2,7 +2,7 @@
 title: Actualización en SQL Server local a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant | Microsoft Docs
 description: Aprenda a usar Data Migration Assistant para actualizar un servidor de SQL en el entorno local a una versión posterior de SQL Server o a SQL Server en máquinas virtuales de Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833133"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643843"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Actualización local de SQL Server a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant
 
@@ -81,7 +81,7 @@ Este artículo proporciona instrucciones paso a paso para actualizar SQL Server 
 
 5. Seleccione **Siguiente**.
 
-Data Migration Assistant realiza validaciones en las carpetas de copia de seguridad, datos y registro de ubicaciones de archivos. Si se produce un error de validación, corrija las opciones y, a continuación, seleccione **siguiente**.
+Data Migration Assistant realiza comprobaciones en las carpetas de copia de seguridad, datos y ubicaciones de archivos de registro. Si se produce un error de validación, corregir las opciones y, a continuación, seleccione **siguiente**.
 
 ## <a name="select-logins"></a>Seleccione los inicios de sesión
 

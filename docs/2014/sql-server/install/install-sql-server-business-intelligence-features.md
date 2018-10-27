@@ -1,32 +1,31 @@
 ---
-title: Instalar las características de BI de SQL Server 2014 | Microsoft Docs
+title: Instalar las características de SQL Server 2014 BI
 ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
 ms.topic: conceptual
-ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3fec33fe160d5ee901eefda541133e6c7b9610b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.date: 10/24/2018
+ms.openlocfilehash: a1d8d4c96ec6008b66e8b1be65767e413b0a4db7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051147"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>Instalar las características de SQL Server 2014 BI
+
   Las características de SQL Server que forman parte de la plataforma Microsoft Business Intelligence incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. En esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se explica cómo instalar estas características.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden instalar como servidores independientes, en configuraciones escaladas o como aplicaciones de servicio compartido en una granja de SharePoint. Al instalar los servicios en una granja de servidores, se habilitan las características de BI que solo están disponibles en SharePoint, incluido [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], el diseñador de informes interactivo ad hoc de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecuta en bases de datos de modelo tabular de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Si ya está familiarizado con los pasos de instalación para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o PowerPivot para SharePoint, puede ir directamente a las listas de comprobación para obtener información sobre cómo habilitar escenarios concretos. Para obtener más información, consulte [listas de comprobación para instalar las características de BI con SharePoint](checklists-for-installing-bi-features-with-sharepoint.md).  
   
-## <a name="contents"></a>Contenido  
- En esta sección:  
+## <a name="contents"></a>Contenido
+
+En esta sección:
   
 |Vínculo|Tarea|  
 |----------|----------|  
@@ -42,10 +41,12 @@ ms.locfileid: "48116965"
 |[Actualizar a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [Actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [Actualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|Siga las instrucciones de esta sección para actualizar los servidores y el contenido de una versión anterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Desinstalar SQL Server 2014](uninstall-sql-server.md)<br /><br /> [Desinstalar PowerPivot para SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [Desinstalar Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)|Use las instrucciones de esta sección para desinstalar las características de BI.|  
   
-## <a name="see-also"></a>Vea también  
- [¿Qué novedades &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)   
- [Novedades de Analysis Services y Business Intelligence](../../analysis-services/what-s-new-in-analysis-services.md)   
- [Instalar a SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
- [Actualizar a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
-  
+## <a name="see-also"></a>Vea también
+
+* [¿Qué novedades &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
+
+* [Novedades de Analysis Services y Business Intelligence](../../analysis-services/what-s-new-in-analysis-services.md)
+
+* [Instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)
+
+* [Actualizar a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Arquitectura lógica (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Arquitectura lógica (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fa39b3e6e0bce7596ea38c6aa049fd7e942a08d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018592"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145531"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "34018592"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Una estructura de minería de datos es un contenedor de datos lógico que define el dominio de datos a partir del cual se generan los modelos de minería de datos. Una sola estructura de minería de datos puede admitir varios modelos de minería de datos.  
   
- Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie la propiedad **CacheMode** en el objeto de estructura de minería de datos por el valor **ClearAfterProcessing**. Para obtener más información, vea [Clases de minería de datos de AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie la propiedad **CacheMode** en el objeto de estructura de minería de datos por el valor **ClearAfterProcessing**. Para obtener más información, vea [Clases de minería de datos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
- Analysis Services también proporciona la capacidad de separar los datos en conjuntos de datos, aprendizaje y prueba para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado de forma aleatoria. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
+ Analysis Services también proporciona la capacidad de separar los datos en conjuntos de datos, aprendizaje y pruebas para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado aleatoriamente. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
   
  Para obtener más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
@@ -81,9 +81,9 @@ ms.locfileid: "34018592"
  Para obtener más información, vea [Administración de ensamblados de modelos multidimensionales](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procedimientos almacenados personalizados**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] La minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
   
- [Definir procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Definición de procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Los procedimientos almacenados siguientes pueden usarse al realizar la validación cruzada.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "34018592"
  Además, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene muchos procedimientos almacenados del sistema que se usan internamente para la minería de datos. Aunque los procedimientos almacenados del sistema son para uso interno, es posible le resulten útiles. Microsoft se reserva el derecho de cambiar estos procedimientos almacenados según sea necesario; por consiguiente, para utilizarlos en producción, se recomienda crear consultas con DMX, AMO o XMLA.  
   
  **Crear algoritmos de complemento**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Proporciona un mecanismo para crear sus propios algoritmos y, a continuación, agregar los algoritmos como un nuevo servicio de minería de datos a la instancia del servidor.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un mecanismo para crear sus propios algoritmos y, después, agregar los algoritmos como un nuevo servicio de minería de datos en la instancia de servidor.  
   
  Analysis Services utiliza las interfaces COM para comunicarse con los algoritmos de complemento. Para obtener más información sobre cómo implementar nuevos algoritmos, vea [Plugin Algorithms](../../analysis-services/data-mining/plugin-algorithms.md).  
   
@@ -101,6 +101,6 @@ ms.locfileid: "34018592"
   
 ## <a name="see-also"></a>Vea también  
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8057222588cb388eafcb3e3bf1bd6daec443cca6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3322b71162b93204591dbb1c0bffb6bac4856454
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077295"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148400"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Propiedades de conexión (cuadro de diálogo) (SSAS: tabular)
   Utilice esta página para ver o modificar en SQL Server Management Studio las propiedades de conexión de un origen de datos que usa una base de datos modelo tabular.  
@@ -36,7 +36,7 @@ ms.locfileid: "48077295"
 |**Última actualización de esquema**|Muestra la fecha y hora en que se actualizaron por última vez los metadatos de la base de datos.|  
 |**Cadena de conexión**|Muestra la cadena de conexión utilizada para conectarse al origen de datos que proporciona datos al modelo.|  
 |**Número máximo de conexiones**|Especifica el número máximo de conexiones de cliente para esta base de datos.|  
-|**Aislamiento**|Los valores válidos son ReadCommitted o Snapshot. Para más información, vea [Elemento de aislamiento &#40;ASSL&#41;](scripting/properties/isolation-element-assl.md).|  
+|**Aislamiento**|Los valores válidos son ReadCommitted o Snapshot. Para más información, vea [Elemento de aislamiento &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
 |**Tiempo de espera de la consulta**|Especifica el tiempo, en segundos, después del que se agotará el tiempo de espera si se intentan recuperar los datos.|  
 |**Proveedor administrado**|Especifica el nombre del proveedor administrado. Si la conexión de origen de datos usa un proveedor OLE DB nativo, este valor está vacío.|  
 |**Información de suplantación**|Especifica la cuenta de suplantación que se usa en las conexiones a bases de datos al procesar o actualizar los datos, las consultas que se ejecutan en un almacén de datos relacional (mediante DirectQuery), los enlaces fuera de línea, las particiones remotas y la sincronización de bases de datos del destino al origen.<br /><br /> Los valores válidos incluyen la cuenta de servicio de Analysis Services o un conjunto específico de credenciales de Windows. No especifique **Usar las credenciales del usuario actual** o **Heredar**. Esas opciones de credenciales no se admiten para una base de datos de modelo tabular.|  

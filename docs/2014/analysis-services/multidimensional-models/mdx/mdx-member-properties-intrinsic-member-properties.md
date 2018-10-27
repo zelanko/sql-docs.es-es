@@ -13,17 +13,17 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92a9bd2db457b4bf9ea18c73daf2bdf1978ea836
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049336"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148380"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propiedades de miembro intrínsecas (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expone propiedades intrínsecas de los miembros de dimensión que se pueden incluir en una consulta para devolver datos o metadatos adicionales para usarlos en una aplicación personalizada o como ayuda durante la investigación o la construcción de un modelo. Si utiliza las herramientas de cliente de SQL Server, puede ver las propiedades intrínsecas en SQL Server Management Studio (SSMS).  
   
- Las propiedades intrínsecas son `ID`, `KEY`, `KEYx` y `NAME`, que son las propiedades que exponen todos los miembros de cualquier nivel. También puede devolver información de posición, como `LEVEL_NUMBER` o `PARENT_UNIQUE_NAME`, entre otros.  
+ Las propiedades intrínsecas son `ID`, `KEY`, `KEYx` y `NAME`, que son las propiedades que exponen todos los miembros de cualquier nivel. También se puede devolver información de posición mediante propiedades como `LEVEL_NUMBER` o `PARENT_UNIQUE_NAME`, entre otras.  
   
  Dependiendo de cómo se crea la consulta, y de la aplicación cliente que se utiliza para ejecutar las consultas, las propiedades de miembro pueden o no estar visibles en el conjunto de resultados. Si utiliza SQL Server Management Studio para probar o ejecutar consultas, puede hacer doble clic en un miembro del conjunto de resultados para abrir el cuadro de diálogo Propiedades del miembro, que muestra los valores de cada propiedad de miembro intrínseca.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48049336"
  Propiedades de miembro no contextuales  
  Estas propiedades de miembro no pueden utilizarse en el contexto de una dimensión o un nivel específicos y devuelven los valores para todos los miembros de un eje.  
   
- Las propiedades no contextuales son independientes y no incluyen información de ruta de acceso. Observe cómo no hay ninguna dimensión o un nivel especificado para `PARENT_UNIQUE_NAME` en el ejemplo siguiente: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ Las propiedades no contextuales son independientes y no incluyen información de ruta de acceso. Observe que no se especifica ni la dimensión ni el nivel para `PARENT_UNIQUE_NAME` en el ejemplo siguiente: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  Independientemente de si la propiedad de miembro intrínseca es contextual o no, se rige por las siguientes reglas:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48049336"
  En la tabla siguiente se incluyen las propiedades intrínsecas no contextuales compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Las columnas del conjunto de filas del esquema MEMBERS admiten las propiedades de miembro intrínsecas incluidas en la siguiente tabla. Para obtener más información sobre la `MEMBERS` de filas de esquema, vea [filas MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Las columnas del conjunto de filas del esquema MEMBERS admiten las propiedades de miembro intrínsecas incluidas en la siguiente tabla. Para obtener más información sobre la `MEMBERS` de filas de esquema, vea [filas MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Property|Descripción|  
 |--------------|-----------------|  
@@ -108,7 +108,7 @@ ms.locfileid: "48049336"
 |`MEMBER_CAPTION`|Etiqueta o descripción asociada al miembro. El título se utiliza principalmente para la visualización. Si no existe ningún título, la consulta devuelve `MEMBER_NAME`.|  
 |`MEMBER_KEY`|Valor de la clave de miembro en el tipo de datos original. MEMBER_KEY se incluye por cuestiones de compatibilidad con versiones anteriores.  La propiedad MEMBER_KEY tiene el mismo valor que KEY0 para las claves no compuestas y es NULL para las claves compuestas.|  
 |`MEMBER_NAME`|Nombre del miembro.|  
-|`MEMBER_TYPE`|Tipo del miembro. Esta propiedad admite cualquiera de los siguientes valores: <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA tiene precedencia sobre MDMEMBER_TYPE_MEASURE. Por lo tanto, si hay un miembro (calculado) de fórmula en la dimensión Measures, la `MEMBER_TYPE` propiedad para el miembro calculado será MDMEMBER_TYPE_FORMULA.|  
+|`MEMBER_TYPE`|Tipo del miembro. Esta propiedad admite cualquiera de los siguientes valores: <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA tiene precedencia sobre MDMEMBER_TYPE_MEASURE. Por tanto, si hay un miembro (calculado) de fórmula en la dimensión Measures, la propiedad `MEMBER_TYPE` del miembro calculado será MDMEMBER_TYPE_FORMULA.|  
 |`MEMBER_UNIQUE_NAME`|Nombre único del miembro. Los proveedores que generan nombres únicos por calificación tienen delimitados todos los componentes del nombre.|  
 |`MEMBER_VALUE`|Valor del miembro en el tipo de datos original.|  
 |`PARENT_COUNT`|Número de primarios que tiene este miembro.|  
@@ -119,13 +119,13 @@ ms.locfileid: "48049336"
 |`UNIQUE_NAME`|El nombre completo del miembro, con este formato: [dimensión].[nivel].[key6.]|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>Sintaxis de PROPERTIES para las propiedades no contextuales  
- Use la siguiente sintaxis para especificar una propiedad de contexto que no son miembro intrínseca mediante el `PROPERTIES` palabra clave:  
+ Utilice la siguiente sintaxis para especificar una propiedad de miembro intrínseca no contextual mediante la palabra clave `PROPERTIES`:  
   
  `DIMENSION PROPERTIES Property`  
   
  Tenga en cuenta que esta sintaxis no permite calificar la propiedad con una dimensión o un nivel. La propiedad no puede calificarse porque las propiedades de miembro intrínsecas no contextuales se aplican a todos los miembros de un eje.  
   
- Por ejemplo, una instrucción MDX que especifica el `DESCRIPTION` propiedad de miembro intrínseca tendría la siguiente sintaxis:  
+ Por ejemplo, una instrucción MDX que especifique la propiedad de miembro intrínseca `DESCRIPTION` debería tener la siguiente sintaxis:  
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
@@ -208,15 +208,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vea también  
  [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [Los elementos secundarios &#40;MDX&#41;](/sql/mdx/children-mdx)   
+ [Children &#40;MDX&#41;](/sql/mdx/children-mdx)   
  [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Recuento &#40;establecer&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [Filtro &#40;MDX&#41;](/sql/mdx/filter-mdx)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
  [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
  [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Propiedades &#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [Uso de las propiedades de miembro &#40;MDX&#41;](mdx-member-properties.md)   
+ [Usar las propiedades de miembro &#40;MDX&#41;](mdx-member-properties.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

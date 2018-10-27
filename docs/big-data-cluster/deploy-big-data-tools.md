@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 971fc2f8e8a77b00f3d2c5cd6390fec351ffc0f3
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827306"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643793"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio
 
@@ -32,22 +32,31 @@ Para instalar la extensión, consulte [instalar la extensión de SQL Server 2019
 
 Cuando se conecta a un clúster de macrodatos, tiene la opción para conectarse a SQL Server [instancia maestra](concept-master-instance.md) o a la puerta de enlace de Spark o HDFS. Las secciones siguientes muestran cómo conectarse a cada uno.
 
-## <a name="master-instance"></a>Instancia principal
+## <a id="master"></a> Instancia principal
 
 1. En Azure Data Studio, presione **F1** > **nueva conexión**.
+
 1. En **tipo de conexión**, seleccione **Microsoft SQL Server**.
+
 1. Escriba la dirección IP de la instancia principal de SQL Server en **nombre del servidor** (por ejemplo:  **\<dirección IP\>, 31433**).
+
+1. Escriba un inicio de sesión SQL **nombre de usuario** y **contraseña**.
+
 1. Cambiar el **nombre de base de datos** a la **high_value_data** base de datos.
 
    ![Conéctese a la instancia maestra](./media/deploy-big-data-tools/connect-to-cluster.png)
 
 1. Presione **Connect**y el **panel Server** debería aparecer.
 
-## <a name="hdfsspark-gateway"></a>Puerta de enlace de Spark o HDFS
+## <a id="hdfs"></a> Puerta de enlace de Spark o HDFS
 
 1. En Azure Data Studio, presione **F1** > **nueva conexión**.
+
 1. En **tipo de conexión**, seleccione **clúster grande de datos de SQL Server**.
+
 1. Escriba la dirección IP del clúster de macrodatos en **nombre del servidor**.
+
+1. Escriba `root` para el **usuario** y especifique el **contraseña** a su clúster de macrodatos.
 
    ![Conectarse a la puerta de enlace de Spark o HDFS](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
 

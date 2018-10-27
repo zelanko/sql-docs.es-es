@@ -2,7 +2,7 @@
 title: Realizar una evaluación de migración de SQL Server (Data Migration Assistant) | Microsoft Docs
 description: Aprenda a usar Data Migration Assistant para evaluar un servidor local SQL Server antes de migrar a otro servidor SQL Server o a Azure SQL Database
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706193"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643983"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar una evaluación de migración de SQL Server con Data Migration Assistant
 
@@ -32,7 +32,7 @@ Las siguientes instrucciones paso a paso para ayudarán a realizar la primera ev
 
 2.  Establezca el tipo de servidor de origen y destino.
 
-    Si va a actualizar la instancia de SQL Server local a una instancia de SQL Server modernas de forma local o a SQL Server hospedado en una máquina virtual de Azure, establezca el tipo de servidor de origen y destino **SQL Server**. Si va a migrar a Azure SQL Database, en su lugar, establezca el tipo de servidor de destino **Azure SQL Database**.
+    Si va a actualizar la instancia de SQL Server local a una instancia de SQL Server modernas de forma local o a SQL Server hospedado en una máquina virtual de Azure, establezca el tipo de servidor de origen y destino **SQL Server**. Si está migrando a Azure SQL Database, en su lugar, establezca el tipo de servidor de destino **Azure SQL Database**.
 
 3.  Haga clic en **Crear**.
 

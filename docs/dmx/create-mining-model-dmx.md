@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980595"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148050"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Nombre de un algoritmo de minería de datos definido por el proveedor actual.  
   
 > [!NOTE]  
->  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [filas DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [filas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
@@ -101,7 +101,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Distribuciones de columnas &#40;minería de datos&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Las marcas de modelado &#40;minería de datos&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Marcas de modelado &#40;Minería de datos&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite el uso de las siguientes acciones \<relación de columna > cláusula.  
   
@@ -124,7 +124,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obtener una lista de los parámetros que están asociados con cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si desea crear un modelo que tenga un conjunto de datos de pruebas integrado, debe utilizar la instrucción CREATE MINING STRUCTURE seguida de ALTER MINING STRUCTURE. Sin embargo, no todos los tipos de modelo admiten un conjunto de datos de exclusiones. Para obtener más información, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Para ver un tutorial sobre cómo crear un modelo de minería de datos mediante la instrucción CREATEMODEL, vea [Tutorial DMX de predicción de Series de temporales](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  

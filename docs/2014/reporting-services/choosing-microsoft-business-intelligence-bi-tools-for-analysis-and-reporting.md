@@ -11,19 +11,19 @@ ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1d70c3276c479de8d8f8d67256729ad9f2bce005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63cbcd4defa3840fc7fdb5c80340e5fd1ea1244e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223825"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099826"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>Elegir herramientas de análisis e informes de Microsoft
   En la tabla siguiente se asignan las cargas de trabajo para el análisis de datos y los informes a las herramientas de Microsoft BI más adecuadas para esas cargas de trabajo.  
   
  La intención es ayudarle a elegir la herramienta que mejor satisface sus necesidades. Para obtener más información acerca de un producto, haga clic en el vínculo del producto en la tabla.  
   
- Si está buscando una breve información general de estas herramientas para ayudarle a decidir cuáles son las herramientas adecuadas para su caso, vea [Introducción a las herramientas de Microsoft Business Intelligence (BI)](http://msdn.microsoft.com/en-us/library/dn655131.aspx).  
+ Si está buscando una breve introducción a estas herramientas para ayudarle a decidir cuáles son las adecuadas en su caso, vea [Introducing Microsoft Business Intelligence (BI) Tools (Introducción a las herramientas de Microsoft Business Intelligence (BI))](http://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Cargas de trabajo|Usuario|||Herramientas de BI|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -32,7 +32,7 @@ ms.locfileid: "48223825"
 |Detectar y acceder fácilmente a datos públicos y corporativos||[Power Query](http://go.microsoft.com/fwlink/p/?LinkId=391845)|||[Catálogo de datos](http://go.microsoft.com/fwlink/p/?LinkId=391855)<br /><br /> [Centro de administración](http://go.microsoft.com/fwlink/p/?LinkId=391856)||  
 |Crear modelos de datos eficaces||[Power Pivot](http://go.microsoft.com/fwlink/p/?LinkId=391846)|||||  
 |Realizar análisis predictivos de autoservicio||||||[Complementos de minería de datos para Excel de datos](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
-|Visualizar y explorar datos||[Vista avanzada](http://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Asignación de energía](http://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
+|Visualizar y explorar datos||[Power View](http://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Asignación de energía](http://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |Formular preguntas mediante consultas en lenguaje natural|||||[PREGUNTAS Y RESPUESTAS](http://go.microsoft.com/fwlink/p/?LinkId=391857)||  
 |Acceder a informes mediante dispositivos móviles||||[HTML 5 (admite la visualización de archivos de <10 MB)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (admite ver < 250MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI para la aplicación de Windows](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [aplicación de iPad para Power BI](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
 |Colaborar y compartir|||[Sitios de SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sitios de grupo de SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sitios de Power BI](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  

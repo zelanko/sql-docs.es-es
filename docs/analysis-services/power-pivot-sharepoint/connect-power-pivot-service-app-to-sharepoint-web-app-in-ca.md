@@ -1,5 +1,5 @@
 ---
-title: Conectar la aplicación de servicio de Power Pivot para la aplicación Web de SharePoint en la entidad emisora de certificados | Documentos de Microsoft
+title: Conectar aplicación de servicio de Power Pivot para la aplicación Web de SharePoint en la entidad emisora de certificados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4699746404fcc7e5f4384f2ce9871232d9aa44a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098978"
 ---
-# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conectar la aplicación de servicio de Power Pivot para la aplicación Web de SharePoint en la entidad emisora de certificados
+# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conectar aplicación de servicio de Power Pivot para la aplicación Web de SharePoint en la entidad de certificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] puede ser utilizada por cualquier número de aplicaciones web de SharePoint de la granja de servidores. Para hacer que una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esté disponible, agréguela a una lista de asociaciones de servicio.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "34024152"
   
 ## <a name="see-also"></a>Vea también  
  [Creación y configuración de una aplicación de servicio PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
+ [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Crear una consulta de minería de datos utilizando XMLA | Documentos de Microsoft
+title: Crear una consulta de minería de datos mediante XMLA | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a786279915b38abb93941d7485f2b8c3a3413d6f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9741a81c10a71623f6e336795bb47ae199ee13d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017412"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146960"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Crear una consulta de minería de datos utilizando XMLA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "34017412"
      El panel Resultados muestra la definición de esquema, junto con los valores para el modelo especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Conjuntos de filas de esquema de minería de datos](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

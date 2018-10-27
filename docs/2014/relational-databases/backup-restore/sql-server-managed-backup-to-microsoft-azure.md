@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159805"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100256"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Copia de seguridad administrada de SQL Server en Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] administra y automatiza las copias de seguridad de SQL Server en el servicio de almacenamiento Blob de Windows Azure. La estrategia de copia de seguridad que usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se basa en el período de retención y en la carga de trabajo de transacciones en la base de datos. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite la restauración a un momento dado para el período de retención especificado.   
@@ -42,7 +42,7 @@ ms.locfileid: "48159805"
  Una característica de SQL Server que automatiza la copia de seguridad de la base de datos y mantiene las copias de seguridad según el período de retención.  
   
  Período de retención  
- El período de retención se utiliza por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para determinar qué archivos de copia de seguridad deben conservarse en el almacenamiento para recuperar una base de datos a un momento dado dentro del período de tiempo especificado.  Los valores admitidos están en el intervalo de 1 a 30 días.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa el período de retención para determinar qué archivos de copia de seguridad se deben conservar en el almacenamiento para recuperar una base de datos hasta un momento dado en el intervalo de tiempo especificado.  Los valores admitidos están en el intervalo de 1 a 30 días.  
   
  Cadena de registros  
  Una secuencia continua de copias de seguridad de registros se denomina cadena de registros. Una cadena de registros empieza con una copia de seguridad completa de la base de datos.  
@@ -50,7 +50,7 @@ ms.locfileid: "48159805"
 ##  <a name="Concepts"></a> Los requisitos, conceptos y componentes  
   
   
-###  <a name="Security"></a> Permisos  
+###  <a name="Security"></a> Permissions  
  Transact-SQL es la interfaz principal que se utiliza para configurar y supervisar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. En general ejecutar la configuración de procedimientos almacenados, **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos, y `EXECUTE` permisos **sp_delete_ backuphistory** se requiere un procedimiento almacenado.  Los procedimientos almacenados y las funciones que se usan para revisar la información normalmente requieren permisos `Execute` en el procedimiento almacenado y `Select` en la función, respectivamente.  
   
 ###  <a name="Prereqs"></a> Requisitos previos  
@@ -72,7 +72,7 @@ ms.locfileid: "48159805"
 |-|-|  
 |Objeto del sistema|Descripción|  
 |**MSDB**|Almacena los metadatos y el historial de copias de seguridad de todas las copias de seguridad creadas por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|Procedimiento almacenado del sistema para habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Procedimiento almacenado del sistema para habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Procedimiento para habilitar y configurar la configuración predeterminada almacenado del sistema [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia de SQL Server.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Procedimiento almacenado del sistema para pausar y reanudar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Procedimiento almacenado del sistema para habilitar y configurar la supervisión de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ejemplos: habilitar eventos extendidos, configuración de correo para las notificaciones.|  
@@ -140,7 +140,7 @@ ms.locfileid: "48159805"
   
 -   El servicio de almacenamiento Blob de Windows Azure es la única opción admitida de almacenamiento de copia de seguridad. Las copias de seguridad en disco o cinta no se admiten.  
   
--   Actualmente, el tamaño de archivo máximo permitido para un blob de páginas de Azure Storage es 1 TB. Los archivos de copia de seguridad mayores que 1 TB mayor producirán un error. Para evitar esta situación, se recomienda usar la compresión para las bases de datos grandes y se pruebe el tamaño del archivo de copia de seguridad antes de configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Puede probar haciendo la copia de seguridad en un disco local o manualmente en Almacenamiento de Windows Azure con la instrucción Transact-SQL `BACKUP TO URL`. Para obtener más información, vea [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+-   Actualmente, el tamaño de archivo máximo permitido para un blob de páginas de Azure Storage es 1 TB. Los archivos de copia de seguridad mayores que 1 TB mayor producirán un error. Para evitar esta situación, se recomienda usar la compresión para las bases de datos grandes y se pruebe el tamaño del archivo de copia de seguridad antes de configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Puede probar haciendo la copia de seguridad en un disco local o manualmente en Almacenamiento de Windows Azure con la instrucción Transact-SQL `BACKUP TO URL`. Para más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Modelos de recuperación: solo se admiten las bases de datos establecidas para el modelo de registro masivo o completo.  Las bases de datos establecidas en el modelo de recuperación simple no se admiten.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48159805"
 |Herramientas y pasos para solucionar problemas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server Backup and Restore con el servicio de Windows Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Copia de seguridad SQL Server a URL](sql-server-backup-to-url.md)   
  [Copia de seguridad en Windows Azure administrada de SQL Server: interoperabilidad y coexistencia](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  

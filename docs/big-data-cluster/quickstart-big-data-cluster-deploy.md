@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050997"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -26,9 +26,9 @@ Este inicio rápido requiere que ya ha configurado un clúster de AKS con una ve
 
 En el equipo que está usando para ejecutar los comandos para instalar el clúster de macrodatos de SQL Server, instale [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de macrodatos de SQL Server requiere una versión de 1,10 mínima de Kubernetes, de servidor y cliente (kubectl). Para instalar kubectl, consulte [instalar kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-Para instalar el `mssqlctl` herramienta CLI para administrar los datos grandes de SQL Server del clúster en el equipo cliente, primero debe instalar [Python](https://www.python.org/downloads/) v3.0 versión mínima y [pip3](https://pip.pypa.io/en/stable/installing/). `pip` ya está instalada si está utilizando una versión de Python de al menos 3.4 descargados de [python.org](https://www.python.org/).
+Para instalar el **mssqlctl** herramienta CLI para administrar los datos grandes de SQL Server del clúster en el equipo cliente, primero debe instalar [Python](https://www.python.org/downloads/) v3.0 versión mínima y [pip3](https://pip.pypa.io/en/stable/installing/). `pip` ya está instalada si está utilizando una versión de Python de al menos 3.4 descargados de [python.org](https://www.python.org/).
 
-Si la instalación de Python no se encuentra el `requests` paquete, debe instalar `requests` mediante `python -m pip install requests`. Si ya tiene un `requests` empaquetar, actualizarla a la versión más reciente mediante `python -m pip install requests --upgrade`.
+Si la instalación de Python no se encuentra el `requests` paquete, debe instalar `requests` mediante `python -m pip install requests` (usar `python3` para estos comandos en Linux). Si ya tiene un `requests` empaquetar, actualizarla a la versión más reciente mediante `python -m pip install requests --upgrade`.
 
 ## <a name="verify-aks-configuration"></a>Comprobar la configuración de AKS
 
@@ -40,11 +40,14 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Instalar la herramienta de administración de CLI mssqlctl
 
-Ejecute el siguiente comando para instalar `mssqlctl` herramienta en el equipo cliente. El comando funciona desde un Windows y un cliente Linux, pero asegúrese de que se está ejecutando desde una ventana de cmd que se ejecuta con privilegios administrativos en Windows o un prefijo con `sudo` en Linux:
+Ejecute el siguiente comando para instalar **mssqlctl** herramienta en el equipo cliente. El comando funciona desde un Windows y un cliente Linux, pero asegúrese de que se está ejecutando desde una ventana de cmd que se ejecuta con privilegios administrativos en Windows o un prefijo con `sudo` en Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
 ```
+
+> [!TIP]
+> Si **mssqlctl** no se instaló correctamente, revise los requisitos previos en el artículo [instalar mssqlctl](deployment-guidance.md#mssqlctl).
 
 ## <a name="define-environment-variables"></a>Definir variables de entorno
 
@@ -103,7 +106,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
 > [!NOTE]
-> Durante la versión preliminar pública limitada, se proporcionan las credenciales de Docker para descargar las imágenes de clúster de SQL Server Big Data a cada cliente por Microsoft. Para solicitar acceso, registrar [aquí](https://aka.ms/eapsignup)y especifique su interés para probar los clústeres grandes de datos de SQL Server.
+> Durante la versión preliminar pública limitada, se proporcionan las credenciales de Docker para descargar las imágenes de clúster de SQL Server datos de gran tamaño a cada cliente por Microsoft. Para solicitar acceso, registrar [aquí](https://aka.ms/eapsignup)y especifique su interés para probar los clústeres grandes de datos de SQL Server.
 
 ## <a name="deploy-a-big-data-cluster"></a>Implementar un clúster de macrodatos
 

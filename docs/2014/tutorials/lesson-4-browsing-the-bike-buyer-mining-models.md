@@ -11,17 +11,17 @@ ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171425"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147350"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lección 4: Examinar los modelos de minería de datos de Bike Buyer
   En esta lección, usará el [SELECT (DMX)](/sql/dmx/select-dmx) instrucción para explorar el contenido en el árbol de decisión y agrupación en clústeres de minería de datos que haya creado en los modelos [lección 2: agregar modelos de minería a la estructura de minería de datos predictivos](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- Las columnas incluidas en un modelo de minería de datos no son las columnas definidas por la estructura de minería de datos, sino un conjunto específico de columnas que describen las tendencias y los patrones encontrados por el algoritmo. Estas columnas del modelo de minería de datos se describen en la [de filas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) de filas de esquema. Por ejemplo, la columna MODEL_NAME del conjunto de filas del esquema de contenido incluye el nombre del modelo de minería de datos. Para un modelo de minería de datos de agrupación en clústeres, la columna NODE_CAPTION contiene el nombre de cada clúster y la columna NODE_DESCRIPTION, una descripción de las características de cada clúster. Puede examinar estas columnas mediante el uso de SELECT FROM \<modelo >. Instrucción contenido en DMX. También puede utilizar esta instrucción para explorar los datos utilizados para crear el modelo de minería de datos. La obtención de detalles debe estar habilitada en la estructura de minería de datos para poder usar esta instrucción. Para obtener más información acerca de la instrucción, consulte [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
+ Las columnas incluidas en un modelo de minería de datos no son las columnas definidas por la estructura de minería de datos, sino un conjunto específico de columnas que describen las tendencias y los patrones encontrados por el algoritmo. Estas columnas del modelo de minería de datos se describen en la [de filas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) de filas de esquema. Por ejemplo, la columna MODEL_NAME del conjunto de filas del esquema de contenido incluye el nombre del modelo de minería de datos. Para un modelo de minería de datos de agrupación en clústeres, la columna NODE_CAPTION contiene el nombre de cada clúster y la columna NODE_DESCRIPTION, una descripción de las características de cada clúster. Puede examinar estas columnas mediante el uso de SELECT FROM \<modelo >. Instrucción contenido en DMX. También puede utilizar esta instrucción para explorar los datos utilizados para crear el modelo de minería de datos. La obtención de detalles debe estar habilitada en la estructura de minería de datos para poder usar esta instrucción. Para obtener más información acerca de la instrucción, consulte [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
  También se pueden devolver todos los estados de una columna discreta mediante la instrucción SELECT DISTINCT. Por ejemplo, si realiza esta operación en una columna que contiene géneros, la consulta devolverá `male` y `female`.  
   
@@ -50,7 +50,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- La cláusula .CONTENT junto al nombre del modelo de minería de datos especifica que se devuelve el contenido del modelo de minería de datos. Para obtener más información acerca de las columnas contenidas en el modelo de minería de datos, vea [de filas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ La cláusula .CONTENT junto al nombre del modelo de minería de datos especifica que se devuelve el contenido del modelo de minería de datos. Para obtener más información acerca de las columnas contenidas en el modelo de minería de datos, vea [de filas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Opcionalmente, puede utilizar la última línea del código para filtrar los resultados devueltos por la instrucción:  
   
@@ -86,7 +86,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     También puede reemplazar * con una lista de cualquiera de las columnas contenidas en el [de filas DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+     También puede reemplazar * con una lista de cualquiera de las columnas contenidas en el [de filas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
 4.  Reemplace lo siguiente:  
   

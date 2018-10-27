@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e5b11bda21fe877af419442cb8b98acd4d29c21b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989917"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144551"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *estructura*  
  Identificador de estructura.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si no especifica **MINING MODEL** o **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] busca el tipo de objeto según el nombre y procesa el objeto correcto. Si el servidor contiene una estructura y un modelo de minería de datos con el mismo nombre, se devuelve un error.  
   
  En la siguiente tabla se describen los resultados de usar las diferentes formas de sintaxis.  
@@ -47,7 +47,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |DELETE FROM MINING STRUCTURE*\<estructura >*. CASOS|Realiza ProcessClearStructureOnly en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y se dejan intactos sus modelos de minería de datos asociados. La obtención de detalles de los modelos de minería de datos asociados produce un error tras el borrado de la estructura de minería de datos.|  
 |ELIMINAR del modelo de minería de datos*\<modelo >*<br /><br /> o Administrador de configuración de<br /><br /> ELIMINAR del modelo de minería de datos*\<modelo >*. CONTENIDO|Realiza ProcessClear en el modelo de minería de datos, pero deja intactos los valores de estado. Los valores de estado son los estados posibles de una columna. Por ejemplo, los valores de estado de una columna de género serían masculino y femenino.|  
   
- Para obtener más información acerca de los tipos de procesamiento, vea [elemento Type &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
+ Para obtener más información acerca de los tipos de procesamiento, vea [elemento Type &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita todo el contenido del modelo NB_Sample.  

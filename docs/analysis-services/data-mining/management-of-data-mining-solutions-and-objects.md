@@ -1,5 +1,5 @@
 ---
-title: Administración de soluciones de minería de datos y objetos | Documentos de Microsoft
+title: Administración de soluciones de minería de datos y objetos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015822"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145690"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "34015822"
   
  Los vínculos siguientes proporcionan información sobre cómo puede modificar objetos de minería de datos utilizando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Editar la vista del origen de datos utilizada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar la vista del origen de datos usada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Ver o cambiar modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Ver o cambiar marcas de modelado &#40;minería de datos&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Ver o cambiar parámetros del algoritmo](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015822"
 ### <a name="analysis-management-objects-amo"></a>Objetos de administración de análisis (AMO)  
  Objetos de administración de análisis (AMO) es un modelo de objetos basado en XMLA que le proporciona un control total sobre los objetos de minería de datos. AMO le permite crear, implementar y supervisar estructuras y modelos de minería de datos.  
   
--   [Modelo de objetos y conceptos de AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Modelo de objetos y conceptos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

@@ -18,21 +18,21 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061165"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146090"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Restaurar, sincronizar y realizar copias de seguridad de bases de datos (XMLA)
   En XML for Analysis, hay tres comandos que sirven para restaurar, sincronizar y realizar copias de seguridad de las bases de datos:  
   
--   El [copia de seguridad](../xmla/xml-elements-commands/backup-element-xmla.md) comando realiza una copia un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos mediante un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] el archivo de copia de seguridad (.abf), como se describe en la sección, [Backing Up Databases](#backing_up_databases).  
+-   El [copia de seguridad](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) comando realiza una copia un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos mediante un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] el archivo de copia de seguridad (.abf), como se describe en la sección, [Backing Up Databases](#backing_up_databases).  
   
--   El [restaurar](../xmla/xml-elements-commands/restore-element-xmla.md) comando restaura un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de datos desde un archivo .abf, como se describe en la sección [restaurar bases de datos](#restoring_databases).  
+-   El [restaurar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) comando restaura un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de datos desde un archivo .abf, como se describe en la sección [restaurar bases de datos](#restoring_databases).  
   
--   El [Synchronize](../xmla/xml-elements-commands/synchronize-element-xmla.md) comando sincroniza una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de datos con los datos y metadatos de otra base de datos, como se describe en la sección [sincronizar bases de datos](#synchronizing_databases).  
+-   El [Synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) comando sincroniza una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de datos con los datos y metadatos de otra base de datos, como se describe en la sección [sincronizar bases de datos](#synchronizing_databases).  
   
 ##  <a name="backing_up_databases"></a> La copia de seguridad de bases de datos  
  Como ya se ha mencionado anteriormente, el comando `Backup` realiza una copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada en un archivo de copia de seguridad. El comando `Backup` tiene varias propiedades que permiten especificar la base de datos de la que se va a hacer la copia de seguridad, el archivo de copia de seguridad que se va a usar, cómo hacer una copia de seguridad de las definiciones de seguridad y las particiones remotas de las que se va a hacer la copia de seguridad.  
@@ -41,23 +41,23 @@ ms.locfileid: "48061165"
 >  La cuenta de servicio de Analysis Services debe tener permiso para escribir en la ubicación de copia de seguridad especificada para cada archivo. Además, el usuario debe tener uno de los roles siguientes: rol de administrador en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o ser miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos de la que se va a hacer copia de seguridad.  
   
 ### <a name="specifying-the-database-and-backup-file"></a>Especificar la base de datos y el archivo de copia de seguridad  
- Para especificar la base de datos de una copia de seguridad, establezca el [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad de la `Backup` comando. La propiedad `Object` debe contener un identificador de objeto para una base de datos; de lo contrario, se produce un error.  
+ Para especificar la base de datos de una copia de seguridad, establezca el [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propiedad de la `Backup` comando. La propiedad `Object` debe contener un identificador de objeto para una base de datos; de lo contrario, se produce un error.  
   
- Para especificar el archivo que se va a ser creadas y usadas por el proceso de copia de seguridad, establezca el [archivo](../xmla/xml-elements-properties/file-element-xmla.md) propiedad de la `Backup` comando. Para crear el archivo de copia de seguridad, debe establecerse una ruta UNC y un nombre de archivo para la propiedad `File`.  
+ Para especificar el archivo que se va a ser creadas y usadas por el proceso de copia de seguridad, establezca el [archivo](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/file-element-xmla) propiedad de la `Backup` comando. Para crear el archivo de copia de seguridad, debe establecerse una ruta UNC y un nombre de archivo para la propiedad `File`.  
   
  Además de especificar qué archivo se va a utilizar para la copia de seguridad, puede establecer las siguientes opciones para el archivo de copia de seguridad especificado:  
   
--   Si establece la [AllowOverwrite](../xmla/xml-elements-properties/allowoverwrite-element-xmla.md) en true, el `Backup` comando sobrescribe el archivo de copia de seguridad si el archivo especificado ya existe. Si establece la propiedad `AllowOverwrite` en false, se produce un error si el archivo de copia de seguridad especificado ya existe.  
+-   Si establece la [AllowOverwrite](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/allowoverwrite-element-xmla) en true, el `Backup` comando sobrescribe el archivo de copia de seguridad si el archivo especificado ya existe. Si establece la propiedad `AllowOverwrite` en false, se produce un error si el archivo de copia de seguridad especificado ya existe.  
   
--   Si establece la [ApplyCompression](../xmla/xml-elements-properties/applycompression-element-xmla.md) en true, el archivo de copia de seguridad se comprime una vez creado el archivo.  
+-   Si establece la [ApplyCompression](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/applycompression-element-xmla) en true, el archivo de copia de seguridad se comprime una vez creado el archivo.  
   
--   Si establece la [contraseña](../xmla/xml-elements-properties/password-element-xmla.md) propiedad en cualquier valor en blanco, el archivo de copia de seguridad se cifra con la contraseña especificada.  
+-   Si establece la [contraseña](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/password-element-xmla) propiedad en cualquier valor en blanco, el archivo de copia de seguridad se cifra con la contraseña especificada.  
   
     > [!IMPORTANT]  
     >  Si no se especifican las propiedades `ApplyCompression` y `Password`, el archivo de copia de seguridad almacena en texto no cifrado los nombres de usuario y las contraseñas que se incluyen en las cadenas de conexión. Los datos almacenados en texto no cifrado se pueden recuperar. Para mayor seguridad, utilice los valores `ApplyCompression` y `Password` a fin de comprimir y cifrar el archivo de copia de seguridad.  
   
 ### <a name="backing-up-security-settings"></a>Realizar copias de seguridad de la configuración de seguridad  
- El [seguridad](../xmla/xml-elements-properties/security-element-xmla.md) propiedad determina si el `Backup` comando realiza una copia las definiciones de seguridad, como roles y permisos, definidas en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos. La propiedad `Security` también determina si el archivo de copia de seguridad incluye las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad.  
+ El [seguridad](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) propiedad determina si el `Backup` comando realiza una copia las definiciones de seguridad, como roles y permisos, definidas en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos. La propiedad `Security` también determina si el archivo de copia de seguridad incluye las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad.  
   
  El valor de la propiedad `Security` se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48061165"
 |*IgnoreSecurity*|Excluye las definiciones de seguridad del archivo de copia de seguridad.|  
   
 ### <a name="backing-up-remote-partitions"></a>Realizar copias de seguridad de particiones remotas  
- Realizar copias de seguridad de las particiones remotas en el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos, Establece la [BackupRemotePartitions](../xmla/xml-elements-properties/backupremotepartitions-element-xmla.md) propiedad de la `Backup` comando a true. Esta configuración hace que el comando `Backup` cree un archivo de copia de seguridad remoto para cada origen de datos remoto que se utiliza para almacenar particiones remotas de la base de datos.  
+ Realizar copias de seguridad de las particiones remotas en el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos, Establece la [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) propiedad de la `Backup` comando a true. Esta configuración hace que el comando `Backup` cree un archivo de copia de seguridad remoto para cada origen de datos remoto que se utiliza para almacenar particiones remotas de la base de datos.  
   
- Para que cada origen de datos remoto una copia de seguridad, puede especificar el archivo de copia de seguridad correspondiente mediante la inclusión de un [ubicación](../xmla/xml-elements-properties/location-element-xmla.md) elemento en el [ubicaciones](../xmla/xml-elements-properties/locations-element-xmla.md) propiedad de la `Backup` comando. El `Location` elemento debería tener su `File` propiedad establecida en el nombre de archivo y ruta UNC del archivo de copia de seguridad remoto y su [DataSourceID](../xmla/xml-elements-properties/id-element-xmla.md) propiedad establecida en el identificador del origen de datos remoto definido en la base de datos.  
+ Para que cada origen de datos remoto una copia de seguridad, puede especificar el archivo de copia de seguridad correspondiente mediante la inclusión de un [ubicación](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) elemento en el [ubicaciones](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) propiedad de la `Backup` comando. El `Location` elemento debería tener su `File` propiedad establecida en el nombre de archivo y ruta UNC del archivo de copia de seguridad remoto y su [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) propiedad establecida en el identificador del origen de datos remoto definido en la base de datos.  
   
 ##  <a name="restoring_databases"></a> Restaurar bases de datos  
  El comando `Restore` restaura una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada a partir de un archivo de copia de seguridad. El comando `Restore` tiene varias propiedades que permiten especificar la base de datos que se va a restaurar, el archivo de copia de seguridad que se va a utilizar, cómo restaurar definiciones de seguridad, las particiones remotas que se van a almacenar y la reubicación de objetos OLAP relacionales (ROLAP).  
@@ -98,13 +98,13 @@ ms.locfileid: "48061165"
 |*IgnoreSecurity*|Excluye las definiciones de seguridad de la base de datos.|  
   
 ### <a name="restoring-remote-partitions"></a>Restaurar particiones remotas  
- Para restaurar la partición remota asociada a cada archivo de copia de seguridad remoto creado durante la ejecución anterior de un comando `Backup`, incluya un elemento `Location` en la propiedad `Locations` del comando `Restore`. El [DataSourceType](../xmla/xml-elements-properties/type-element-xmla.md) propiedad para cada `Location` elemento debe excluirse o bien establece explícitamente en *remoto*.  
+ Para restaurar la partición remota asociada a cada archivo de copia de seguridad remoto creado durante la ejecución anterior de un comando `Backup`, incluya un elemento `Location` en la propiedad `Locations` del comando `Restore`. El [DataSourceType](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) propiedad para cada `Location` elemento debe excluirse o bien establece explícitamente en *remoto*.  
   
  Por cada elemento `Location` especificado, la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se pone en contacto con el origen de datos remoto especificado en la propiedad `DataSourceID` para restaurar las particiones definidas en el archivo de copia de seguridad remoto especificado en la propiedad `File`. Además de las propiedades `DataSourceID` y `File`, para cada elemento `Location` utilizado para restaurar una partición remota están disponibles las siguientes propiedades:  
   
 -   Para invalidar la cadena de conexión del origen de datos remoto especificado en `DataSourceID`, puede establecer la propiedad `ConnectionString` del elemento `Location` en una cadena de conexión distinta. A continuación, el comando `Restore` utilizará la cadena de conexión contenida en la propiedad `ConnectionString`. Si no se especifica `ConnectionString`, el comando `Restore` utiliza la cadena de conexión almacenada en el archivo de copia de seguridad para el origen de datos remoto especificado. Puede utilizar el valor `ConnectionString` para mover una partición remota a otra instancia remota distinta. Sin embargo, no puede utilizar el valor `ConnectionString` para restaurar una partición remota en la misma instancia que contiene la base de datos restaurada. En otras palabras, no puede utilizar la propiedad `ConnectionString` para realizar una partición remota en una partición local.  
   
--   Para cada carpeta original utilizada para almacenar las particiones remotas en el origen de datos remoto, puede especificar un [carpeta](../xmla/xml-elements-properties/folder-element-xmla.md) elemento para indicar la nueva carpeta en la que se va a restaurar todas las particiones remotas almacenadas en la carpeta original. Si no se especifica un elemento `Folder`, el comando `Restore` utiliza las carpetas originales especificadas para las particiones remotas contenidas en el archivo de copia de seguridad remoto.  
+-   Para cada carpeta original utilizada para almacenar las particiones remotas en el origen de datos remoto, puede especificar un [carpeta](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/folder-element-xmla) elemento para indicar la nueva carpeta en la que se va a restaurar todas las particiones remotas almacenadas en la carpeta original. Si no se especifica un elemento `Folder`, el comando `Restore` utiliza las carpetas originales especificadas para las particiones remotas contenidas en el archivo de copia de seguridad remoto.  
   
 ### <a name="relocating-rolap-objects"></a>Reubicar objetos ROLAP  
  El comando `Restore` no puede restaurar agregaciones ni datos para los objetos que utilizan el almacenamiento ROLAP, ya que dicha información se almacena en tablas en un origen de datos relacional subyacente. Sin embargo, pueden restaurarse los metadatos de los objetos ROLAP. Para restaurar los metadatos del objeto ROLAP, el comando `Restore` vuelve a crear la estructura de tabla en un origen de datos relacional.  
@@ -118,14 +118,14 @@ ms.locfileid: "48061165"
 >  Solamente pueden ejecutar el comando `Synchronize` los administradores de servidor y los administradores de bases de datos. Las bases de datos de origen y de destino deben tener el mismo nivel de compatibilidad de base de datos.  
   
 ### <a name="specifying-the-source-database"></a>Especificar la base de datos de origen  
- El [origen](../xmla/xml-elements-properties/source-element-xmla.md) propiedad de la `Synchronize` comando contiene dos propiedades, `ConnectionString` y `Object`. La propiedad `ConnectionString` contiene la cadena de conexión de la instancia que contiene la base de datos de origen y la propiedad `Object` contiene el identificador de objeto para la base de datos de origen.  
+ El [origen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propiedad de la `Synchronize` comando contiene dos propiedades, `ConnectionString` y `Object`. La propiedad `ConnectionString` contiene la cadena de conexión de la instancia que contiene la base de datos de origen y la propiedad `Object` contiene el identificador de objeto para la base de datos de origen.  
   
  La base de datos de destino es la base de datos activa en la sesión en la que se ejecuta el comando `Synchronize`.  
   
  Si la propiedad `ApplyCompression` del comando `Synchronize` se establece en true, la información enviada desde la base de datos de origen a la base de datos de destino se comprime antes de enviarse.  
   
 ### <a name="synchronizing-security-settings"></a>Sincronizar la configuración de seguridad  
- El [SynchronizeSecurity](../xmla/xml-elements-properties/synchronizesecurity-element-xmla.md) propiedad determina si el `Synchronize` comando sincroniza las definiciones de seguridad, como los roles y permisos, definidas en la base de datos de origen. La propiedad `SynchronizeSecurity` también determina si el comando `Sychronize` incluye las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad.  
+ El [SynchronizeSecurity](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) propiedad determina si el `Synchronize` comando sincroniza las definiciones de seguridad, como los roles y permisos, definidas en la base de datos de origen. La propiedad `SynchronizeSecurity` también determina si el comando `Sychronize` incluye las cuentas de usuario de Windows y los grupos definidos como miembros de las definiciones de seguridad.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
@@ -148,9 +148,9 @@ ms.locfileid: "48061165"
  Puede utilizar el elemento `Location` en un comando Synchronize para sincronizar los objetos ROLAP. Para cada `Location` elemento utilizado para reubicar un origen de datos, el `DataSourceType` propiedad debe establecerse explícitamente en *Local*. . Asimismo, tiene que establecer la propiedad `ConnectionString` del elemento `Location` en la cadena de conexión de la nueva ubicación. Durante la sincronización, el comando `Synchronize` reemplazará la cadena de conexión del origen de datos identificado para la propiedad `DataSourceID` del elemento `Location` por el valor de la propiedad `ConnectionString` del elemento `Location`.  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento de copia de seguridad &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [Elemento restore &#40;XMLA&#41;](../xmla/xml-elements-commands/restore-element-xmla.md)   
- [Elemento Synchronize &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Elemento de copia de seguridad &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [Elemento Restore &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

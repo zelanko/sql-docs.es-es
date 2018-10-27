@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63354280ef9c955c081d34d87d337ba0c9d4f87
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042053"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144840"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Descripción de la instrucción Select de DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "38042053"
 |SELECT DISTINCT FROM  *\<modelo >*|Devuelve todos los valores de estado del modelo de minería de datos para la columna especificada.<br /><br /> El dominio de datos de este tipo de consulta es el modelo de minería de datos.<br /><br /> [SELECT DISTINCT FROM &#60;modelo &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<modelo >*. CONTENIDO|Devuelve contenido que describe el modelo de minería de datos.<br /><br /> El dominio de datos este tipo de consulta es el conjunto de filas de esquema CONTENT.<br /><br /> [SELECT FROM &#60;modelo&#62;. CONTENIDO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<modelo >*. DIMENSION_CONTENT|Devuelve contenido que describe el modelo de minería de datos.<br /><br /> El dominio de datos este tipo de consulta es el conjunto de filas de esquema CONTENT.<br /><br /> [SELECT FROM &#60;modelo&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM  *\<modelo >*. PMML|Devuelve la representación PMML (Lenguaje de marcado de modelos de predicción) del modelo de minería de datos para los algoritmos que admiten esta funcionalidad.<br /><br /> El dominio de este tipo de consulta es el conjunto de filas de esquema PMML.<br /><br /> [Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT_PMML](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
+|SELECT FROM  *\<modelo >*. PMML|Devuelve la representación PMML (Lenguaje de marcado de modelos de predicción) del modelo de minería de datos para los algoritmos que admiten esta funcionalidad.<br /><br /> El dominio de este tipo de consulta es el conjunto de filas de esquema PMML.<br /><br /> [Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [Volver a tipos Select](#Select_Types)  
   
@@ -96,12 +96,12 @@ ms.locfileid: "38042053"
 |----------------|-----------------|  
 |SELECT FROM  *\<modelo >*. CASOS|Devuelve los casos empleados para entrenar el modelo de minería de datos.<br /><br /> El dominio de este tipo de consulta es el modelo de minería de datos.<br /><br /> [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Crear consultas de obtención de detalles usando DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<modelo >*. SAMPLE_CASES|Devuelve un caso de ejemplo, representativo de los casos empleados para entrenar el modelo de minería de datos.<br /><br /> El dominio de este tipo de consulta es el modelo de minería de datos.<br /><br /> [SELECT FROM &#60;modelo&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM  *\<estructura >*. CASOS|Devuelve las filas de datos detalladas de la estructura de minería de datos subyacente, aunque algunos detalles no se usaran al entrenar el modelo de minería de datos.<br /><br /> [SELECT FROM &#60;estructura&#62;. CASOS](../dmx/select-from-structure-cases.md)<br /><br /> [Las consultas de obtención de detalles &#40;minería de datos&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
+|SELECT FROM  *\<estructura >*. CASOS|Devuelve las filas de datos detalladas de la estructura de minería de datos subyacente, aunque algunos detalles no se usaran al entrenar el modelo de minería de datos.<br /><br /> [SELECT FROM &#60;estructura&#62;. CASOS](../dmx/select-from-structure-cases.md)<br /><br /> [Consultas de obtención de detalles &#40;minería de datos&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
  [Volver a tipos Select](#Select_Types)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   

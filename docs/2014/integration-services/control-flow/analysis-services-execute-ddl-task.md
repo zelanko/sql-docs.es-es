@@ -16,12 +16,12 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 115ee695d8e5ae509499850113851f7bc565f562
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19da5b920b31791eacaf362819ce731d2822c0c4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190675"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148110"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services
   La tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta instrucciones del lenguaje de definición de datos (DDL) que pueden crear, quitar o modificar modelos de minería de datos y objetos multidimensionales, como cubos y dimensiones. Por ejemplo, una instrucción DDL puede crear una partición en el cubo de **Adventure Works** o eliminar una dimensión de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], la base de datos de ejemplo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,9 +39,9 @@ ms.locfileid: "48190675"
 ## <a name="ddl-statements"></a>Instrucciones DDL  
  Las instrucciones de DDL se representan como instrucciones del Lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) y se generan como comandos de XML for Analysis (XMLA).  
   
--   ASSL se usa para definir y describir una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , así como las bases de datos y los objetos de base de datos que contiene. Para obtener más información, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referencia](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+-   ASSL se usa para definir y describir una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , así como las bases de datos y los objetos de base de datos que contiene. Para obtener más información, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).  
   
--   XMLA es un lenguaje de comandos que se usa para enviar comandos de acción, como Create, Alter o Process, a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información, vea [Referencia XML for Analysis &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
+-   XMLA es un lenguaje de comandos que se usa para enviar comandos de acción, como Create, Alter o Process, a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información, vea [Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference).  
   
  Si se almacena el código de DDL en un archivo independiente, la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza un administrador de conexiones de archivos para especificar la ruta del archivo. Para obtener más información, consulte [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
@@ -219,9 +219,9 @@ ms.locfileid: "48190675"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Analysis Services Execute DDL Editor de la tarea &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Ejecutar DDL de Analysis Services &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services Execute DDL Editor de la tarea &#40;página DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Editor de la tarea Ejecutar DDL de Analysis Services &#40;página DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2999a98efa64f84ad01671d156745801b7bdadc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c451111875b2e1a638f49ad710b7456d3ba5eb17
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110355"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148450"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Desconectar usuarios y sesiones en el servidor de Analysis Services
   Como administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede que desee la actividad del usuario final como parte de la administración de la carga de trabajo. Esto se lleva a cabo cancelando sesiones y conexiones. Las sesiones se pueden formar automáticamente cuando se ejecuta una consulta (implícito) o definirse en el momento en que las crea el administrador (explícito). Las conexiones son conductos abiertos con los que se pueden ejecutar las consultas. Tanto las sesiones como las conexiones se pueden terminar aunque estén activas. Por ejemplo, es posible que un administrador desee finalizar el procesamiento de una sesión si dicho procesamiento está tardando demasiado o si han surgido dudas sobre si el comando que se está ejecutando está correctamente escrito.  
@@ -70,12 +70,12 @@ ms.locfileid: "48110355"
   
  En muy pocos casos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no cerrará una conexión si no puede realizar el seguimiento de todas las sesiones y SPID asociados a la conexión (por ejemplo, cuando haya varias sesiones abiertas en un escenario HTTP).  
   
- Para obtener más información sobre el XMLA al que se hace referencia en este tema, vea [Método Execute &#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md) y [Elemento Cancel &#40;XMLA&#41;](../xmla/xml-elements-commands/cancel-element-xmla.md).  
+ Para obtener más información sobre el XMLA al que se hace referencia en este tema, vea [Método Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) y [Elemento Cancel &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar conexiones y sesiones &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Elemento BeginSession &#40;XMLA&#41;](../xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [Elemento EndSession &#40;XMLA&#41;](../xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Elemento de la sesión &#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
+ [Elemento BeginSession &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
+ [EndSession, elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   
+ [Session, elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/session-element-xmla)  
   
   

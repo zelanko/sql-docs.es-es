@@ -15,18 +15,18 @@ ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c517445eaf8fd82e42ffa6250b9958ef3afdc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087705"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148360"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Otorgar permisos Leer definición en metatados de objetos (Analysis Services)
   Los permisos para leer una definición de objeto o sus metadatos en objetos seleccionados permiten a los administradores otorgar permisos para ver información sobre los objetos sin necesidad de otorgar permisos para modificar la definición del objeto, modificar la estructura del objeto o ver los propios datos del objeto. `Read Definition` se pueden conceder permisos en la base de datos de origen de datos, dimensión, estructura de minería de datos y los niveles de modelo de minería de datos. Si necesita `Read Definition` permisos para un cubo, debe habilitar `Read Definition` para la base de datos. Recuerde que los permisos son aditivos. Por ejemplo, un rol otorga permisos para leer los metadatos de un cubo, mientras que otro rol otorga al mismo usuario permisos para leer los metadatos de una dimensión. Los permisos de los dos roles diferentes se combinan para conceder al usuario permiso para leer tanto los metadatos para el cubo como los metadatos para la dimensión dentro de la base de datos.  
   
 > [!NOTE]  
->  El permiso para leer los metadatos de una base de datos es el mínimo necesario para conectar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un usuario que tenga permiso para leer los metadatos también puede usar el conjunto de filas del esquema DISCOVER_XML_METADATA para hacer consultas en el objeto y ver sus metadatos. Para obtener más información, vea [Conjunto de filas DISCOVER_XML_METADATA](../schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+>  El permiso para leer los metadatos de una base de datos es el mínimo necesario para conectar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un usuario que tenga permiso para leer los metadatos también puede usar el conjunto de filas del esquema DISCOVER_XML_METADATA para hacer consultas en el objeto y ver sus metadatos. Para obtener más información, vea [Conjunto de filas DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="set-read-definition-permissions-on-a-database"></a>Establecer permisos de Leer definición en una base de datos  
  Al otorgar un permiso para leer los metadatos de una base de datos, también se otorga permiso para leer los metadatos de todos los objetos de la base de datos.  
@@ -60,7 +60,7 @@ ms.locfileid: "48087705"
 5.  Haga clic en **Aceptar** para completar la creación del rol.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceder permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Conceder permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [Otorgar permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

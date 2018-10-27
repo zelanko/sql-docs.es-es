@@ -1,5 +1,5 @@
 ---
-title: Subselecciones en las consultas | Documentos de Microsoft
+title: Subselecciones en las consultas | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025272"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147890"
 ---
 # <a name="subselects-in-queries"></a>Subselecciones en las consultas
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "34025272"
   
 |||||  
 |-|-|-|-|  
-||Suma de años|Año 1|...|  
+||Suma de años|Año 1|…|  
 |Suma de los 10 productos más vendidos||||  
 |Producto A||||  
-|...||||  
+|…||||  
   
  Para hacer algo como lo anterior, podría escribir la siguiente expresión MDX:  
   
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La cláusula HAVING no se permite en una cláusula de eje; use una expresión de la función [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) en su lugar.  
   
--   De forma predeterminada, los miembros calculados no se permiten en subselecciones; Sin embargo, esta restricción se puede cambiar, en una base por cada sesión, asignando un valor a la **subconsultas** propiedad de cadena de conexión en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** propiedad en [ Propiedades XMLA compatibles &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Vea [Miembros calculados en subselecciones y subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obtener una explicación detallada del comportamiento de los miembros calculados según los valores de **SubQueries** o **DBPROP_MSMD_SUBQUERIES**.  
+-   De forma predeterminada no se permiten miembros calculados en subselecciones; Sin embargo, esta restricción puede cambiarse, en cada sesión, asignando un valor para el **subconsultas** propiedad de cadena de conexión de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** propiedad [ Propiedades XMLA compatibles &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Vea [Miembros calculados en subselecciones y subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obtener una explicación detallada del comportamiento de los miembros calculados según los valores de **SubQueries** o **DBPROP_MSMD_SUBQUERIES**.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Acciones en modelos multidimensionales | Documentos de Microsoft
+title: Acciones en modelos multidimensionales | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024282"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145710"
 ---
 # <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34024282"
   
 -   miembros de dimensión  
   
--   Jerarquía  
+-   Hierarchy  
   
 -   Miembros de la jerarquía  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34024282"
  **Contenido de la acción**  
  Seleccione el tipo de acción. La siguiente tabla contiene los tipos disponibles.  
   
-|Tipo|Description|  
+|Tipo|Descripción|  
 |----------|-----------------|  
 |Conjunto de datos|Recupera un conjunto de datos.|  
 |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
@@ -65,16 +65,16 @@ ms.locfileid: "34024282"
  **Propiedades adicionales**  
  Seleccione la propiedad. En la siguiente tabla se resumen las propiedades disponibles.  
   
-|Propiedad|Description|  
+|Property|Descripción|  
 |--------------|-----------------|  
 |**Invocación**|Especifica cómo se ejecuta la acción. Interactiva, que es la opción predeterminada, especifica que la acción se ejecuta cuando un usuario tiene acceso a un objeto. Los valores posibles son:<br /><br /> Lote<br /><br /> Interactiva<br /><br /> Al abrir|  
 |**Aplicación**|Describe la aplicación de la acción.|  
-|**Description**|Describe la acción.|  
+|**Descripción**|Describe la acción.|  
 |**Caption**|Proporciona un título que se muestra para la acción. Si el título es MDX, especifique **True** para **El título es MDX**.|  
 |**El título es MDX**|Especifique **True** si el título es MDX o **False** si no lo es.|  
   
 > [!NOTE]  
->  Debe usar Lenguaje de scripting de Analysis Services (ASSL) u Objetos de administración de análisis (AMO) para definir tipos de acciones de la línea de comandos y HTML. Para más información, vea [Elemento Action &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) y [Programar objetos avanzados OLAP en AMO](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Debe usar Lenguaje de scripting de Analysis Services (ASSL) u Objetos de administración de análisis (AMO) para definir tipos de acciones de la línea de comandos y HTML. Para más información, vea [Elemento Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) y [Programar objetos avanzados OLAP en AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Crear una acción de informe  
  El servidor de informes responde a las solicitudes basadas en URL para los informes. Para crear una acción de informe, en el menú **Cubo** , haga clic en **Nueva acción de informe**. Las siguientes opciones son específicas de una acción de informe.  
@@ -82,7 +82,7 @@ ms.locfileid: "34024282"
  **Servidor de informes**  
  Las propiedades descritas en la siguiente tabla se especifican para el servidor de informes.  
   
-|Propiedad|Description|  
+|Property|Descripción|  
 |--------------|-----------------|  
 |**Nombre del servidor**|Nombre del equipo en el que se ejecuta el servidor de informes.|  
 |**Ruta de acceso al servidor**|La ruta de acceso expuesta por un servidor de informes.|  

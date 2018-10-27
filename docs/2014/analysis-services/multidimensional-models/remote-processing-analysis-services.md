@@ -11,12 +11,12 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173105"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146070"
 ---
 # <a name="remote-processing-analysis-services"></a>Procesamiento remoto (Analysis Services)
   Puede ejecutar el procesamiento programado o desatendido en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remota, donde la solicitud de procesamiento se origina en un equipo, pero se ejecuta en otro equipo de la misma red.  
@@ -92,10 +92,10 @@ ms.locfileid: "48173105"
 2.  Como paso final, modifique el trabajo para que se ejecute según una programación definida y agregue las alertas o las notificaciones necesarias para administrar el trabajo. También podría ser conveniente ajustar el script de procesamiento o crear varios pasos en el trabajo para procesar objetos de forma independiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Componentes del Agente SQL Server](../../ssms/agent/sql-server-agent.md#Components)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
  [Programar tareas administrativas de SSAS con el Agente SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Procesamiento por lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
- [Procesar objetos &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [Procesar objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

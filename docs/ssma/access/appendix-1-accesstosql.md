@@ -10,12 +10,12 @@ ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d750afec53670a06b6e10cd654c114502e088169
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd380541c42e7e49434a0683609c3fb8dd6ae64a
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098988"
 ---
 # <a name="appendix---1-accesstosql"></a>Apéndice - 1 (AccessToSQL)
 Vista rápida de las opciones de línea de comandos de la consola SSMA:  
@@ -32,5 +32,5 @@ Vista rápida de las opciones de línea de comandos de la consola SSMA:
 |8|-?|no|No aplicable|No aplicable|  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (acceso)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Ejecución de la consola SSMA (acceso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

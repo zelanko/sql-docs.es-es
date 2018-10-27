@@ -15,12 +15,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a25bcc56bdd0a0f07c0ebaa6e59de0b44979661d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fb601bdbf190c84401c64f5f469bc6b5b6956ef
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165855"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148270"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensiones en modelos multidimensionales
   Una dimensión de base de datos es una colección de objetos relacionados, denominados atributos, que se pueden usar para proporcionar información sobre los datos de hechos de uno o varios cubos. Por ejemplo, los atributos típicos de una dimensión de producto pueden ser el nombre, la categoría, la línea, el tamaño y el precio del producto. Estos objetos están enlazados a una o varias columnas de una o varias tablas de una vista del origen de datos. De manera predeterminada, estos atributos están visibles como jerarquías de atributo y se pueden utilizar para comprender los datos de hechos en un cubo. Los atributos se pueden organizar en jerarquías definidas por el usuario que proporcionan rutas de navegación para ayudar a los usuarios al examinar los datos de un cubo.  
@@ -36,7 +36,7 @@ ms.locfileid: "48165855"
  Cuando se crea un cubo, también se pueden agregar al nuevo cubo las dimensiones que existen en la base de datos. Estas dimensiones pueden haber sido definidas previamente para otro cubo o por el Asistente para dimensiones. Una vez definida una dimensión de base de datos, no puede modificar ni configurar la dimensión de base de datos en el Diseñador de dimensiones. También puede personalizar la dimensión de cubo, de forma limitada, en el Diseñador de cubos  
   
 > [!NOTE]  
->  Además puede diseñar y configurar dimensiones, atributos y jerarquías mediante programación utilizando XMLA u Objetos de administración de análisis (AMO). Para obtener más información, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referencia](../scripting/analysis-services-scripting-language-assl-for-xmla.md) y [desarrollar con objetos de administración de análisis &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Además puede diseñar y configurar dimensiones, atributos y jerarquías mediante programación utilizando XMLA u Objetos de administración de análisis (AMO). Para obtener más información, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) y [desarrollar con objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="in-this-section"></a>En esta sección  
  En la tabla siguiente se describen los temas de esta sección.  

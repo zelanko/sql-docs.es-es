@@ -1,5 +1,5 @@
 ---
-title: Herramientas de consulta de minería de datos | Documentos de Microsoft
+title: Herramientas de consulta de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e24cab61196e8d16f8bb79caeb47e075725d6ab2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015182"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147950"
 ---
 # <a name="data-mining-query-tools"></a>Herramientas de consulta de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34015182"
  El Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] también le permite crear y ejecutar consultas DMX. Puede conectarse a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y, después, seleccionar una base de datos, columnas de estructura de minería de datos y un modelo de minería de datos. El **Explorador de metadatos** contiene una lista de funciones de predicción que puede examinar.  
   
 ##  <a name="bkmk_Templates"></a> Plantillas DMX  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]proporciona plantillas de consulta DMX interactivas que puede usar para compilar consultas DMX. Si no ve la lista de plantillas, haga clic en **Ver** en la barra de herramientas y seleccione **Explorador de plantillas**. Para ver todas las plantillas de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidas las plantillas para DMX, MDX y XMLA, haga clic en el icono de cubo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona plantillas de consulta DMX interactivas que puede usar para compilar consultas DMX. Si no ve la lista de plantillas, haga clic en **Ver** en la barra de herramientas y seleccione **Explorador de plantillas**. Para ver todas las plantillas de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidas las plantillas para DMX, MDX y XMLA, haga clic en el icono de cubo.  
   
  Para compilar una consulta mediante una plantilla, puede arrastrar la plantilla a una ventana de consulta abierta, o puede hacer doble clic en la plantilla para abrir una nueva conexión y un nuevo panel de consulta.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34015182"
 ##  <a name="bkmk_SSIS"></a> Componentes de minería de datos de Integration Services  
  También puede incluir consultas de predicción como parte de un paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las siguientes tareas y transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admiten la creación y ejecución de consultas de predicción DMX e instrucciones DMX.  
   
-|Componente|Description|  
+|Componente|Descripción|  
 |---------------|-----------------|  
 |Tarea Consulta de minería de datos|Ejecuta consultas DMX y otras instrucciones DMX como parte de un flujo de control.<br /><br /> El editor de tareas incorpora el Generador de consultas de predicción y un cuadro de texto para modificar la consulta DMX manualmente. Sin embargo, el editor de tareas no puede validar la consulta con los objetos de una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Por consiguiente, es mejor crear una consulta dentro de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y, a continuación, pegar el texto de la instrucción o consulta en el editor de tareas.|  
 |Consulta de minería de datos, transformación|Ejecuta una consulta de predicción en un flujo de datos usando los datos proporcionados por un origen de flujo de datos.<br /><br /> El editor de tareas incorpora el Generador de consultas de predicción y un cuadro de texto para modificar la consulta DMX manualmente.<br /><br /> La transformación solo se puede utilizar para crear consultas que utilicen los datos del flujo de datos; es decir, consultas que utilicen la sintaxis de PREDICTION JOIN. Este componente no se puede utilizar para ejecutar consultas de contenido u otros tipos de instrucciones DMX.|  
@@ -63,16 +63,16 @@ ms.locfileid: "34015182"
   
  Sin embargo, XMLA constituye el formato del mensaje subyacente para todas las interacciones con un servidor de Analysis Services. En un mensaje XMLA, las consultas se representan de forma diferente dependiendo de si se envía una consulta de predicción basada en DMX, una consulta de contenido o una consulta que recupera metadatos del modelo mediante los conjuntos de filas de esquema de minería de datos.  
   
--   El texto de las **consultas de predicción** (y el resto de las instrucciones DMX) se envían en XMLA con el [método Execute &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md), con la consulta DMX colocada como texto en el [elemento Statement &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) del [elemento Command &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md).  
+-   El texto de las **consultas de predicción** (y el resto de las instrucciones DMX) se envían en XMLA con el [método Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), con la consulta DMX colocada como texto en el [elemento Statement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) del [elemento Command &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Para recuperar el **contenido del modelo** y los **metadatos del modelo**, como el número de clústeres, los atributos usados en los árboles de decisión, la fecha en que se procesó el modelo por última vez y los parámetros del algoritmo que se usaron al crear el modelo, puede usar el método [Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) y especificar uno de los conjuntos de filas del esquema de minería de datos en el encabezado del [elemento RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Para restringir el ámbito de la consulta, escriba los criterios como restricciones en el [elemento RestrictionList &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Para recuperar el **contenido del modelo** y los **metadatos del modelo**, como el número de clústeres, los atributos usados en los árboles de decisión, la fecha en que se procesó el modelo por última vez y los parámetros del algoritmo que se usaron al crear el modelo, puede usar el método [Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) y especificar uno de los conjuntos de filas del esquema de minería de datos en el encabezado del [elemento RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla). Para restringir el ámbito de la consulta, escriba los criterios como restricciones en el [elemento RestrictionList &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos & #40; DMX & #41; Referencia](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Descripción de la instrucción Select de DMX](../../dmx/understanding-the-dmx-select-statement.md)   
- [Estructura y el uso de consultas de predicción DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Crear una consulta de predicción mediante el generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Estructura y uso de las consultas de predicción DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Crear una consulta de predicción con el Generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Crear una consulta DMX en SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

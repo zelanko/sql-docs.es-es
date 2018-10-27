@@ -1,5 +1,5 @@
 ---
-title: Instrucción CREATE MEASURE (MDX) | Documentos de Microsoft
+title: Instrucción CREATE MEASURE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aa895099420b022cf15d7cd3a91472511c1100e3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 37a8b8ef757184e7467c3551148c8c149bb45097
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741443"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144461"
 ---
-# <a name="mdx-data-definition---create-measure"></a>Definición de datos MDX - crear medida
+# <a name="mdx-data-definition---create-measure"></a>Definición de datos de MDX: CREATE MEASURE
 
 
   Crea una medida en un modelo tabular.  
@@ -40,10 +40,10 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  Expresión DAX válida que devuelve un solo valor escalar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El *Measure_Name* debe ir entre corchetes.  
   
- La instrucción CREATE MEASURE solo puede usarse dentro de una definición de script MDX; vea [elemento MdxScript &#40;ASSL&#41;](../analysis-services/scripting/objects/mdxscript-element-assl.md).  
+ La instrucción CREATE MEASURE solo puede usarse dentro de una definición de la secuencia de comandos MDX; consulte [elemento MdxScript &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl).  
   
  También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, consulte [generar medidas en MDX](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md).  
   

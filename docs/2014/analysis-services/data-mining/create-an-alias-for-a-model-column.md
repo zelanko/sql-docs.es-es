@@ -15,17 +15,17 @@ ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae3e9f2d0ecf1a5a4fe41f053d8c6cc582663857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73461578a939c11771ba329524ef36d2b52cc83
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148765"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147480"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Crear un alias para una columna de modelo
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear un alias para una columna de modelo. Esto puede resultar útil cuando el nombre de la estructura de minería de datos es demasiado largo para trabajar con él fácilmente, o si desea cambiar el nombre de la columna para que describa mejor su contenido o su uso en el modelo. Por ejemplo, si realiza una copia de una columna de estructura y, a continuación, discretiza la columna de manera diferente para un modelo determinado, puede cambiar el nombre de la columna para reflejar con más precisión el contenido.  
   
- Para crear un alias para una columna de modelo, utilice el panel **Propiedades** y establezca la propiedad [Name](../scripting/properties/name-element-assl.md) de la columna.  
+ Para crear un alias para una columna de modelo, utilice el panel **Propiedades** y establezca la propiedad [Name](https://docs.microsoft.com/bi-reference/assl/properties/name-element-assl) de la columna.  
   
  En la pestaña **Modelos de minería de datos** del Diseñador de minería de datos, el alias parece entre paréntesis al lado de la etiqueta de uso de columna.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48148765"
 2.  En la ventana **Propiedades** situada a la derecha de la pantalla, haga clic en la celda existente junto a la propiedad Name y elimine el valor actual. Escriba un nuevo nombre para la columna.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas del modelo de minería de datos y procedimientos](mining-model-tasks-and-how-tos.md)   
+ [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)   
  [Propiedades del modelo de minería de datos](mining-model-properties.md)  
   
   

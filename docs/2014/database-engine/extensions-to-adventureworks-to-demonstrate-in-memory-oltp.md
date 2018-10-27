@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120392"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100416"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensiones de AdventureWorks para mostrar OLTP en memoria
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120392"
  Este ejemplo muestra la nueva característica [!INCLUDE[hek_2](../includes/hek-2-md.md)], que forma parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Muestra las nuevas tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa, y se puede usar para mostrar las ventajas de rendimiento de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
->  Para ver este tema de SQL Server 2016, consulte [Extensiones de AdventureWorks para mostrar OLTP en memoria](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  Para ver este tema de SQL Server 2016, consulte [Extensiones de AdventureWorks para mostrar OLTP en memoria](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  El ejemplo migra 5 tablas de la base de datos AdventureWorks a tablas optimizadas para memoria e incluye una carga de trabajo de demostración para el procesamiento de pedidos de venta. Puede usar esta carga de trabajo de demostración para ver la ventaja de rendimiento que supone emplear [!INCLUDE[hek_2](../includes/hek-2-md.md)] en el servidor.  
   
@@ -386,7 +386,7 @@ ms.locfileid: "49120392"
     -   Usa los procedimientos del asistente dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
   
 ##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
- Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
+ Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
   
 ### <a name="installing-ostress"></a>Instalar ostress  
  Ostress se instala como parte de las utilidades de RML; no hay ninguna instalación independiente para ostress.  
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Podemos ver un total de unos 6,5 GB de datos. Tenga en cuenta que el tamaño de los índices de la tabla SalesOrderHeader_inmem y SalesOrderDetail_inmem es el mismo que el tamaño de los índices antes de insertar los pedidos de ventas. El tamaño del índice no cambió porque ambas tablas emplean índices hash y los índices hash son estáticos.  
+ Podemos ver un total de unos 6,5 GB de datos. Observe que el tamaño de los índices de la tabla SalesOrderHeader_inmem y SalesOrderDetail_inmem es el mismo que el tamaño de los índices antes de insertar los pedidos de venta. El tamaño del índice no cambió porque ambas tablas emplean índices hash y los índices hash son estáticos.  
   
 #### <a name="after-demo-reset"></a>Después de restablecer la demostración  
  Se puede usar el procedimiento almacenado Demo.usp_DemoReset para restablecer la demostración. Elimina los datos de las tablas SalesOrderHeader_inmem y SalesOrderDetail_inmem, y reinicializa los datos de las tablas originales SalesOrderHeader y SalesOrderDetail.  

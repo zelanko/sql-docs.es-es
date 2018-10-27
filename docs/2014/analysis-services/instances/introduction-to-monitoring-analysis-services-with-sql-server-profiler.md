@@ -17,12 +17,12 @@ ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e81e0e7acf0d31be45f1d653ed2a6926f55b57fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7d83a8422bc8bfbe851a77d8dc42f83db159454
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113415"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146990"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introducción a Supervisar Analysis Services con SQL Server Profiler
   Puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar eventos generados por una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede hacer lo siguiente:  
@@ -60,7 +60,7 @@ ms.locfileid: "48113415"
  Con el fin de obtener un rendimiento óptimo, utilice él [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar solamente aquellos eventos en los que esté más interesado. La supervisión de demasiados eventos agrega carga y puede hacer que el archivo de seguimiento o la tabla se vuelvan muy grandes, sobre todo al supervisar un período largo de tiempo. Además, utilice filtros para limitar la cantidad de datos recopilados y para evitar que los seguimientos se vuelvan demasiado grandes.  
   
 ## <a name="see-also"></a>Vea también  
- [Eventos de seguimiento de Analysis Services](../trace-events/analysis-services-trace-events.md)   
- [Creación de seguimientos de Profiler para reproducción &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
+ [Eventos de seguimiento de Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
+ [Crear seguimientos del generador de perfiles para su reproducción &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

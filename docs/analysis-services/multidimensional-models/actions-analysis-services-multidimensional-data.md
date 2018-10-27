@@ -1,5 +1,5 @@
 ---
-title: Acciones (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Acciones (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020492"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146370"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Acciones (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020492"
   
 -   Acciones estándar, que devuelven el elemento de acción (URL, HTML, DataSet, RowSet y otros elementos) asociado a la sección seleccionada del cubo donde se produce la acción.  
   
- La aplicación cliente usa una interfaz de consulta, como ADOMD.NET, para recuperar y exponer las acciones al usuario final. Para más información, vea [Desarrollar con ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ La aplicación cliente usa una interfaz de consulta, como ADOMD.NET, para recuperar y exponer las acciones al usuario final. Para más información, vea [Desarrollar con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un objeto <xref:Microsoft.AnalysisServices.Action> simple se compone de la información básica, el destino donde se va a producir la acción, una condición para limitar el ámbito de acción y el tipo. La información básica incluye el nombre de la acción, la descripción de la acción, la sugerencia de título para la acción y otros elementos.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "34020492"
 ## <a name="types-of-actions"></a>Tipos de acciones  
  En la tabla siguiente se enumeran los tipos de acciones que se incluyen en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Tipo de acción|Description|  
+|Tipo de acción|Descripción|  
 |-----------------|-----------------|  
 |CommandLine|Ejecuta un comando en el símbolo del sistema.|  
-|Conjunto de datos|Devuelve un conjunto de datos a una aplicación cliente.|  
+|Dataset|Devuelve un conjunto de datos a una aplicación cliente.|  
 |Obtención de detalles|Devuelve una instrucción de obtención de detalles como una expresión, que el cliente ejecuta para devolver un conjunto de filas.|  
 |Html|Ejecuta un script HTML en un explorador de Internet.|  
 |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  

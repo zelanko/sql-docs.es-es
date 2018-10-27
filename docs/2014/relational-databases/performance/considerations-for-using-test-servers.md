@@ -20,12 +20,12 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be2320f3e13dc7bb2110f6bd05f0bccefda58464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50d488f4de5dc3581dae12655790bc935265d8f2
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170785"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991288"
 ---
 # <a name="considerations-for-using-test-servers"></a>Consideraciones acerca del uso de servidores de prueba
   El uso de un servidor de prueba para optimizar una base de datos en un servidor de producción es una ventaja importante del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Mediante esta característica se puede descargar la sobrecarga de optimización en un servidor de prueba sin copiar los datos reales del servidor de producción a ese servidor de prueba.  
@@ -39,7 +39,7 @@ ms.locfileid: "48170785"
   
 -   El usuario que desea utilizar un servidor de prueba para optimizar una base de datos de un servidor de producción debe existir en ambos servidores; de lo contrario, este escenario no funcionará.  
   
--   El procedimiento almacenado extendido, **xp_msver**, debe estar habilitado para usar el escenario del servidor de prueba/servidor de producción. [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza este procedimiento almacenado extendido para capturar el número de procesadores y la memoria disponible del servidor de producción para utilizarlos durante la optimización del servidor de prueba. Si **xp_msver** no está habilitado, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] adopta las características de hardware del equipo donde se está ejecutando el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si no están disponibles las características de hardware del equipo donde se está ejecutando el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , se presupone el uso de un procesador y 1024 megabytes (MB) de memoria. Este procedimiento almacenado extendido se activa de manera predeterminada al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Surface Area Configuration](../security/surface-area-configuration.md) y [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+-   El procedimiento almacenado extendido, **xp_msver**, debe estar habilitado para usar el escenario del servidor de prueba/servidor de producción. [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza este procedimiento almacenado extendido para capturar el número de procesadores y la memoria disponible del servidor de producción para utilizarlos durante la optimización del servidor de prueba. Si **xp_msver** no está habilitado, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] adopta las características de hardware del equipo donde se está ejecutando el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si no están disponibles las características de hardware del equipo donde se está ejecutando el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , se presupone el uso de un procesador y 1024 megabytes (MB) de memoria. Este procedimiento almacenado extendido se activa de manera predeterminada al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración de Área expuesta](../security/surface-area-configuration.md) y [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] espera que las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sean las mismas en el servidor de prueba y el servidor de producción. Si hay ediciones diferentes, tiene prioridad la edición del servidor de prueba. Por ejemplo, si el servidor de prueba está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no incluirá vistas indizadas, particionamientos ni operaciones en línea en sus recomendaciones, aunque el servidor de producción esté ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise.  
   

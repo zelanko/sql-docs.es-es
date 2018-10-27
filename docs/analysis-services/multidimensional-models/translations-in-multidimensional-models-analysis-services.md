@@ -1,5 +1,5 @@
 ---
-title: Traducciones en modelos multidimensionales (Analysis Services) | Documentos de Microsoft
+title: Traducciones en modelos multidimensionales (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026682"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147080"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Particiones en modelos multidimensionales (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34026682"
   
 4.  Haga clic con el botón derecho en cualquier campo y seleccione **Explorar datos**. Verá las traducciones de inglés, español y francés de cada miembro.  
   
- Los formatos de fecha, hora y moneda no se implementan con traducciones. Para proporcionar de forma dinámica los formatos de cada cultura en función de la configuración regional del cliente, utilice el Asistente de conversión de moneda y la propiedad **FormatString** . Para más información, vea [Conversiones de moneda &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) y [Elemento FormatString &#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md).  
+ Los formatos de fecha, hora y moneda no se implementan con traducciones. Para proporcionar de forma dinámica los formatos de cada cultura en función de la configuración regional del cliente, utilice el Asistente de conversión de moneda y la propiedad **FormatString** . Para más información, vea [Conversiones de moneda &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) y [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
  [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) , en el Tutorial de Analysis Services, le guiará por los pasos necesarios para crear y probar las traducciones.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026682"
   
 4.  Compile e implemente el proyecto.  
   
-5.  Conéctese a la base de datos con una aplicación cliente, como Excel, y modifique la cadena de conexión para usar el identificador de configuración regional. Para más información, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
+5.  Conéctese a la base de datos con una aplicación cliente, como Excel, y modifique la cadena de conexión para usar el identificador de configuración regional. Para más información, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Agregar traducciones a una dimensión y atributos  
  Puede agregar traducciones a dimensiones de una base de datos, atributos, jerarquías y niveles de una jerarquía.  
@@ -90,11 +90,11 @@ ms.locfileid: "34026682"
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto | **Editar base de datos** para abrir el Diseñador de bases de datos.  
   
-2.  En Traducciones, especifique el idioma de destino (se resuelve en un LCID), el título traducido y la descripción traducida. La lista de idiomas es coherente en Analysis Services, tanto si configura el idioma del servidor en Management Studio como si agrega la sustitución de una traducción en un solo atributo.  
+2.  En Traducciones, especifique el idioma de destino (se resuelve en un LCID), el título traducido y la descripción traducida. La lista de idiomas es coherente en todo Analysis Services, tanto si configura el idioma del servidor en Management Studio como si agrega una invalidación de traducción en un solo atributo.  
   
 3.  En la página de propiedades de la base de datos, configure **Language** con el mismo LCID que especificó para la traducción. Si quiere, configure también **Collation** si el valor predeterminado no es adecuado.  
   
-4.  Compilar e implementar la base de datos.  
+4.  Compile e implemente la base de datos.  
   
 ## <a name="deleting-translation-objects"></a>Eliminar objetos de traducción  
  Puede hacer clic con el botón secundario en un objeto de traducción en el diseñador de cubos o dimensiones para quitarlo de forma definitiva. No es posible restaurar ni reciclar un objeto eliminado, de modo que asegúrese de revisar la lista de objetos afectados antes de continuar.  

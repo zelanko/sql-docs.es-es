@@ -1,26 +1,26 @@
 ---
 title: Conceptos de seguridad de clúster de macrodatos de SQL Server | Microsoft Docs
-description: ''
+description: Este artículo describe los conceptos de seguridad de clúster de macrodatos de SQL Server 2019.
 author: nelgson
 ms.author: negust
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bd9e49344108b65898e38065ed88fd06467803cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050887"
 ---
 # <a name="security-concepts-for-sql-server-big-data-cluster"></a>Conceptos de seguridad de clúster de macrodatos de SQL Server
 
-Un clúster seguro de Big Data implica la compatibilidad de consistente y coherente para los escenarios de autenticación y autorización, a través de SQL Server y Spark o HDFS. La autenticación es el proceso de comprobar la identidad de un usuario o servicio y asegurarse de que es quien se afirma ser. Autorización hace referencia a conceder o denegar el acceso a recursos específicos según la identidad del usuario solicitante. Este paso se realiza después de que un usuario se identifica mediante la autenticación.
+Un clúster seguro macrodatos implica la compatibilidad de consistente y coherente para los escenarios de autenticación y autorización, a través de SQL Server y Spark o HDFS. La autenticación es el proceso de comprobar la identidad de un usuario o servicio y asegurarse de que es quien se afirma ser. Autorización hace referencia a conceder o denegar el acceso a recursos específicos según la identidad del usuario solicitante. Este paso se realiza después de que un usuario se identifica mediante la autenticación.
 
 Autorización en el contexto de datos de gran tamaño normalmente se realiza a través de listas de control de acceso (ACL), que asociar las identidades de usuario con permisos específicos. HDFS admite la autorización mediante la limitación de acceso a las API del servicio, los archivos HDFS y ejecución del trabajo.
 
-Este artículo trata los conceptos clave relacionados con la seguridad en el clúster de Macrodatos.
+Este artículo trata los conceptos clave relacionados con la seguridad en el clúster de macrodatos.
 
 ## <a name="cluster-endpoints"></a>Puntos de conexión de clúster
 
@@ -80,5 +80,5 @@ Comunicación con los servicios que no son de SQL dentro del clúster de macroda
 
 Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los artículos siguientes:
 
-- [¿Qué es SQL Server 2019 macrodatos clústeres?](big-data-cluster-overview.md)
+- [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
 - [Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Kubernetes](quickstart-big-data-cluster-deploy.md)

@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112043"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145600"
 ---
 # <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
   Este tema proporciona a los autores de modelos tabulares una descripción de cómo usa Analysis Services las credenciales de inicio de sesión al conectarse a un origen de datos para importar y procesar (actualizar) datos.  
@@ -71,7 +71,7 @@ ms.locfileid: "48112043"
 |**Nombre de usuario de Windows específico y la contraseña** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario tienen el siguiente formato:**\<nombre de dominio >\\< nombre de la cuenta de usuario\>**. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
 |**Cuenta de servicio**|ImpersonateServiceAccount|Esta opción especifica que el modelo usa las credenciales de seguridad asociadas a la instancia de servicio de Analysis Services que administra el modelo.|  
   
- <sup>1</sup>ImpersonationMode especifica el valor de la [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) propiedad del origen de datos.  
+ <sup>1</sup>ImpersonationMode especifica el valor de la [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) propiedad del origen de datos.  
   
  <sup>2</sup>cuando se usa esta opción, si se quita la base de datos del área de trabajo de la memoria, ya sea debido a un reinicio o el **retención de área de trabajo** propiedad está establecida en **descargar de la memoria** o  **Eliminar área de trabajo**, y el proyecto de modelos está cerrado, en la sesión posterior, si intenta procesar los datos de tabla, se le pedirá que escriba las credenciales para cada origen de datos. De forma similar, si una base de datos de modelo implementada se quita de la memoria, se le pedirán las credenciales para cada origen de datos.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48112043"
   
 ## <a name="see-also"></a>Vea también  
  [Modo DirectQuery &#40;SSAS tabular&#41;](directquery-mode-ssas-tabular.md)   
- [Orígenes de datos &#40;Tabular de SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Implementación de la solución de modelo tabular &#40;Tabular de SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Orígenes de datos &#40;SSAS tabular&#41;](../data-sources-ssas-tabular.md)   
+ [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

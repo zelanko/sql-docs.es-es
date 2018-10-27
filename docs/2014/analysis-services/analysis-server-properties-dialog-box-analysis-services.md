@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078065"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145100"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Cuadro de diálogo Propiedades de Analysis Server (Analysis Services)
   Use el cuadro de diálogo **Propiedades de Analysis Server** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer la configuración general, de idioma o intercalación, y de seguridad para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para mostrar el cuadro de diálogo **Propiedades de Analysis Server**, haga clic con el botón derecho en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de objetos** y seleccione **Propiedades** en el menú contextual. El cuadro de diálogo **Propiedades de Analysis Server** contiene las propiedades siguientes.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078065"
   
 -   **1103** es el nivel de compatibilidad predeterminado para los modos de implementación 1 o 2, para las instalaciones que admiten el modo tabular o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- El servidor devuelve este valor cuando un cliente que admite el espacio de nombres solicita DISCOVER_XML_METADATA. Para más información, vea [Conjunto de filas DISCOVER_XML_METADATA](schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+ El servidor devuelve este valor cuando un cliente que admite el espacio de nombres solicita DISCOVER_XML_METADATA. Para más información, vea [Conjunto de filas DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="general-properties"></a>Propiedades generales  
  Use esta página para establecer las propiedades generales básicas y avanzadas, como la ubicación de carpetas y la configuración de red de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

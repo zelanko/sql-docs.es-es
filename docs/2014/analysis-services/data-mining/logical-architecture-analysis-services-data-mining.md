@@ -17,12 +17,12 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166255"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144870"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
   La minería de datos es un proceso que implica la interacción de varios componentes.  
@@ -51,7 +51,7 @@ ms.locfileid: "48166255"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Una estructura de minería de datos es un contenedor de datos lógico que define el dominio de datos a partir del cual se generan los modelos de minería de datos. Una sola estructura de minería de datos puede admitir varios modelos de minería de datos.  
   
- Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie el `CacheMode` propiedad en el objeto de estructura de minería de datos en el valor, `ClearAfterProcessing`. Para obtener más información, vea [Clases de minería de datos de AMO](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie la propiedad `CacheMode` en el objeto de estructura de minería de datos por el valor `ClearAfterProcessing`. Para obtener más información, vea [Clases de minería de datos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] también proporciona la capacidad de separar los datos en conjuntos de datos de prueba y de entrenamiento, para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado de forma aleatoria. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
   
@@ -83,18 +83,18 @@ ms.locfileid: "48166255"
  Para obtener más información, vea [Administración de ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procedimientos almacenados personalizados**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] La minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
   
  [Definición de procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Los procedimientos almacenados siguientes pueden usarse al realizar la validación cruzada.  
   
- [Procedimientos almacenados de minería de datos &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Además, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene muchos procedimientos almacenados del sistema que se usan internamente para la minería de datos. Aunque los procedimientos almacenados del sistema son para uso interno, es posible le resulten útiles. Microsoft se reserva el derecho de cambiar estos procedimientos almacenados según sea necesario; por consiguiente, para utilizarlos en producción, se recomienda crear consultas con DMX, AMO o XMLA.  
   
  **Crear algoritmos de complemento**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Proporciona un mecanismo para crear sus propios algoritmos y, a continuación, agregar los algoritmos como un nuevo servicio de minería de datos en la instancia del servidor.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un mecanismo para crear sus propios algoritmos y, después, agregar los algoritmos como un nuevo servicio de minería de datos en la instancia de servidor.  
   
  Analysis Services utiliza las interfaces COM para comunicarse con los algoritmos de complemento. Para obtener más información sobre cómo implementar nuevos algoritmos, vea [Plugin Algorithms](plugin-algorithms.md).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "48166255"
   
 ## <a name="see-also"></a>Vea también  
  [Procesamiento de objetos de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

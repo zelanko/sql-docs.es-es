@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1e14033255d45eaacda1d553c71224e11dfe964
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8db29de7da29b2d446ea74cf818814502dfc5bfd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054703"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148340"
 ---
-# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programación de modelos tabulares para la compatibilidad de los niveles de 1050 a 1103
+# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programación de modelos tabulares para los niveles de compatibilidad 1050 a 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Los modelos tabulares utilizan estructuras relacionales para modelar los datos de Analysis Services utilizados por aplicaciones analíticas y de informes. Estos modelos se ejecutan en una instancia de Analysis Services configurada para el modo tabular, usando un motor de análisis en memoria para el almacenamiento y recorridos de tabla rápidos que agregan y calculan datos conforme se solicitan.  
   
@@ -27,11 +27,11 @@ ms.locfileid: "38054703"
  A partir de SQL Server 2016, los modelos tabulares pueden ser creados o actualizados al nivel de compatibilidad 1200 o superior, que usa metadatos tabulares para definir el modelo. Los metadatos y la capacidad de programación son fundamentalmente distintas en este nivel. Consulte [programación de modelos tabulares de nivel de compatibilidad 1200 y superior](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md) y [actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) para obtener más información.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Descripción del modelo de objetos tabulares en la compatibilidad de los niveles de 1050 a 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Referencia técnica para las anotaciones de Business Intelligence en CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referencia técnica para las anotaciones de Business Intelligence en CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
 
 [Interfaz IMDEmbeddedData](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md)

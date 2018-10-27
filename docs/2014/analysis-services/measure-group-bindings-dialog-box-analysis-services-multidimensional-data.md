@@ -15,12 +15,12 @@ ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24faef5cd2e65ae89cc200f3461133d00cc81716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c803d434fac98c6f2397465738599bac5fa1d8ad
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059945"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147230"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Enlaces de grupo de medida (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Enlaces de grupo de medida** para crear y modificar las relaciones directas entre los atributos que no son de granularidad de una dimensión de cubo y las columnas de un grupo de medida para una relación de dimensión regular, así como para especificar opciones de procesamiento de valores NULL para los atributos de una dimensión de cubo del cuadro de diálogo **Definir relación**.  
@@ -44,7 +44,7 @@ ms.locfileid: "48059945"
 |------------|----------------|  
 |**Columnas de dimensión**|Muestra las columnas de la tabla de dimensiones en la que se basa el atributo seleccionado en **Atributos** .|  
 |**Columnas de grupo de medida**|Seleccione **Heredado de la dimensión** para utilizar la relación de grupo de medida heredado de la dimensión o seleccione una columna de la tabla de hechos en la que se basa el grupo de medida para definir explícitamente una relación.|  
-|**Procesamiento de valores null**|Seleccione una opción de procesamiento de valores NULL para el atributo. Para más información sobre las opciones de procesamiento de valores NULL, vea [Elemento NullProcessing &#40;ASSL&#41;](scripting/properties/nullprocessing-element-assl.md).|  
+|**Procesamiento de valores null**|Seleccione una opción de procesamiento de valores NULL para el atributo. Para más información sobre las opciones de procesamiento de valores NULL, vea [Elemento NullProcessing &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl).|  
   
 ## <a name="see-also"></a>Vea también  
  [Definir el cuadro de diálogo relación &#40;Analysis Services - datos multidimensionales&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   

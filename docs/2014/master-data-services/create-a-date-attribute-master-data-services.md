@@ -14,12 +14,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4eeebefcda3a1ecb542e33b2a4a59a46f302b303
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1da9ecf9ec7278b91e16a6c91a95aa09473ca023
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100126"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Crear un atributo de fecha (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de fecha cuando desee que los usuarios escriban una fecha como un valor de atributo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48083745"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Debe tener una entidad para la que crear el atributo. Para obtener más información, consulte [Crear una entidad &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48083745"
   
  Después de escribir una fila con los valores anteriores en la tabla mdm.tblList, la máscara "dd/MMM/yyyy hh:mm:ss tt" estará disponible en el cuadro de lista Máscara de entrada. Entonces puede seleccionar esa máscara para mostrar la fecha y la hora de una columna de atributos datetime de una entidad en el Explorador MDS.  
   
- La Máscara de entrada es una cadena con formato de fecha y hora de .NET personalizado. Para más información, consulte [Cadenas con formato de fecha y hora personalizado](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
+ La Máscara de entrada es una cadena con formato de fecha y hora de .NET personalizado. Para más información, consulte [Cadenas con formato de fecha y hora personalizado](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   

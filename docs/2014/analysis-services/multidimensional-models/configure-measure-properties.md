@@ -42,17 +42,17 @@ ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9303e3d2ddfa53560b900b92bc75763d44c7f87e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f54906f8fbaa363495619318a5197957c96e1250
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177725"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148390"
 ---
 # <a name="configure-measure-properties"></a>Configurar propiedades de medidas
   Las medidas tienen propiedades que permiten definir su funcionamiento, así como controlar cómo aparecen ante los usuarios.  
   
- Puede establecer propiedades en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al crear o editar un cubo o una medida. También puede establecerlas mediante programación, usando MDX o AMO. Vea [Crear medidas y grupos de medida en modelos multidimensionales](create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member) y [Programar objetos básicos OLAP en AMO](analysis-management-objects/programming-amo-olap-basic-objects.md) para obtener más información.  
+ Puede establecer propiedades en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al crear o editar un cubo o una medida. También puede establecerlas mediante programación, usando MDX o AMO. Vea [Crear medidas y grupos de medida en modelos multidimensionales](create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member) y [Programar objetos básicos OLAP en AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects) para obtener más información.  
   
 ## <a name="measure-properties"></a>Propiedades de medidas  
  Las medidas heredan determinadas propiedades del grupo de medida del que son miembro, aunque estas propiedades se reemplazan en el nivel de medida. Las propiedades de medidas determinan cómo se agrega una medida, su tipo de datos, el nombre que se muestra al usuario, la carpeta para mostrar en la que aparecerá la medida, su cadena de formato, cualquier expresión de medida, la columna de origen subyacente y la visibilidad para los usuarios.  
@@ -63,7 +63,7 @@ ms.locfileid: "48177725"
 |`DataType`|Requerido. Especifica el tipo de datos de la columna de la tabla de hechos subyacente a la que se enlaza la medida. Este valor se hereda de la columna de origen de forma predeterminada.|  
 |`Description`|Ofrece una descripción de la medida, que se puede mostrar en aplicaciones cliente.|  
 |`DisplayFolder`|Especifica la carpeta en la que se mostrará la medida a los usuarios cuando se conecten al cubo. Cuando un cubo tiene muchas medidas, se pueden utilizar carpetas para mostrar para categorizar las medidas y mejorar la exploración para el usuario.|  
-|`FormatString`|Puede seleccionar el formato que se usa para mostrar los valores de medida a los usuarios mediante la `FormatString` propiedad de la medida.<br /><br /> Aunque se proporciona una lista de los formatos de visualización en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se pueden especificar muchos otros formatos que no están en la lista. Puede especificar cualquier formato con nombre o definido por el usuario que sea válido en Microsoft Visual Basic.|  
+|`FormatString`|Puede seleccionar el formato que se utiliza para mostrar los valores de las medidas a los usuarios mediante la propiedad `FormatString` de la medida.<br /><br /> Aunque se proporciona una lista de los formatos de visualización en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se pueden especificar muchos otros formatos que no están en la lista. Puede especificar cualquier formato con nombre o definido por el usuario que sea válido en Microsoft Visual Basic.|  
 |`ID`|Requerido. Muestra el identificador único (Id.) de la medida. Esta propiedad es de solo lectura.|  
 |`MeasureExpression`|Especifica una expresión MDX restringida que define el valor de la medida. La expresión se evalúa en el nivel de hoja antes de agregarse, y permite la ponderación de un valor. Por ejemplo, en la conversión de moneda en que la tasa de cambio pondera un importe de ventas.|  
 |`Name`|Requerido. Especifica el nombre de la medida.|  
@@ -71,7 +71,7 @@ ms.locfileid: "48177725"
 |`Visible`|Determina la visibilidad de la medida en las aplicaciones cliente.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades del grupo de medida](configure-measure-group-properties.md)   
+ [Configurar las propiedades de los grupos de medida](configure-measure-group-properties.md)   
  [Modificar medidas](../lesson-3-1-modifying-measures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Servicios de minería de datos y orígenes de datos | Documentos de Microsoft
+title: Servicios de minería de datos y orígenes de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016592"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145890"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servicios de minería de datos y orígenes de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34016592"
 ### <a name="xmla-listener"></a>Componente de escucha XMLA  
  El componente de escucha XMLA controla todas las comunicaciones XMLA entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y sus clientes. Puede utilizarse el valor de configuración [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Puerto** del archivo msmdsrv.ini para especificar un puerto en el que escucha una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un valor de 0 en este archivo indica que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en el puerto predeterminado. A menos que se especifique lo contrario, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza los siguientes puertos TCP predeterminados:  
   
-|Puerto|Description|  
+|Puerto|Descripción|  
 |----------|-----------------|  
 |2383|Instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |2382|Redirector de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -88,7 +88,7 @@ ms.locfileid: "34016592"
  También puede establecer propiedades que permitan ajustar el servidor y controlar la seguridad para uso del cliente. Para más información, consulte [Feature Properties](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre la compatibilidad con algoritmos de complemento en las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obtener más información sobre la compatibilidad con los algoritmos de complemento con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acceso a objetos de minería de datos mediante programación  
  Puede utilizar los modelos de objetos siguientes para crear una conexión a una base de datos de Analysis Services y trabajar con objetos de minería de datos:  
@@ -117,14 +117,14 @@ ms.locfileid: "34016592"
   
  Si el procedimiento devuelve un conjunto de datos, el cliente recibirá un conjunto de datos o una tabla de datos con una tabla anidada que contenga las filas. Por ejemplo, si crea una consulta con el contenido del modelo, esta devuelve el modelo completo. Para evitar que se devuelvan demasiadas filas, puede escribir los procedimientos almacenados con el modelo de objetos ADOMD+.  
   
- Para escribir un procedimiento almacenado de servidor, debe hacer referencia al espacio de nombres Microsoft.AnalysisServices.AdomdServer. Para obtener más información sobre cómo crear y usar procedimientos almacenados, vea [User Defined Functions and Stored Procedures](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Para escribir un procedimiento almacenado de servidor, debe hacer referencia al espacio de nombres Microsoft.AnalysisServices.AdomdServer. Para obtener más información sobre cómo crear y usar procedimientos almacenados, vea [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Los procedimientos almacenados no se pueden utilizar para cambiar la seguridad en los objetos de servidor de datos. Cuando se ejecuta un procedimiento almacenado, el contexto actual del usuario se utiliza para determinar el acceso a todos los objetos de servidor. Por consiguiente, los usuarios deben disponer de los permisos adecuados en cualquier objeto de base de datos al que tengan acceso.  
   
 ## <a name="see-also"></a>Vea también  
  [Arquitectura física &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Arquitectura física & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Administración de soluciones de minería de datos y objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Administración de las soluciones y los objetos de minería de datos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

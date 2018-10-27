@@ -15,12 +15,12 @@ ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abbc415f86eed4433fc6dc41b474515e2b801ce6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05aee754db65811d450fb06e0e433cb4b207c372
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177502"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145630"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Arquitectura de objetos de servidor ADOMD.NET
   Los objetos de servidor ADOMD.NET son objetos auxiliares que pueden usarse para crear funciones definidas por el usuario (UDF) o procedimientos almacenados en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -42,6 +42,6 @@ Modelo de objetos ADOMD.NET
 |Admitir la conversión implícita entre los seis tipos básicos del lenguaje MDX|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> El objeto <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> proporciona conversión implícita entre los tipos siguientes:<br /><br /> -   <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Level><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Member><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Set><br />-Escalares, o tipos de valor|  
   
 ## <a name="see-also"></a>Vea también  
- [Programación del servidor ADOMD.NET](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [Programación del servidor ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

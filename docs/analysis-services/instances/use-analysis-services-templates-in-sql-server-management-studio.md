@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981188"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148140"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar las plantillas de Analysis Services en SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "38981188"
 5.  Haga doble clic en el texto dentro de la \<archivo > elemento. Escriba el nombre del archivo de copia de seguridad, incluida la extensión de archivo .abf. Especifique la ruta de acceso completa si no usa la ubicación predeterminada de copia de seguridad. Para más información, vea [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Generar una consulta de conjunto de filas de esquema usando una plantilla XMLA  
- El **Explorador de plantillas** contiene solo una plantilla para las consultas de conjunto de filas de esquema. Para usar esta plantilla, debe conocer los requisitos del conjunto de filas de esquema individual que desea utilizar, incluido cualquier elemento necesario, y las columnas que se pueden usa como restricciones. Para más información, vea [Conjuntos de filas de esquema de Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+ El **Explorador de plantillas** contiene solo una plantilla para las consultas de conjunto de filas de esquema. Para usar esta plantilla, debe conocer los requisitos del conjunto de filas de esquema individual que desea utilizar, incluido cualquier elemento necesario, y las columnas que se pueden usa como restricciones. Para más información, vea [Conjuntos de filas de esquema de Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).  
   
  Tenga en cuenta que muchos de los conjuntos de filas de esquema también se han expuesto como vistas de administración dinámica (DMV) por simplicidad. Mediante la DMV correspondiente, puede consultar el conjunto de filas de esquema con una sintaxis similar a la de Transact-SQL. Por ejemplo, las siguientes consultas devuelven los mismos resultados, pero uno está en formato XML y otro en formato tabular. Para más información sobre las DMV, vea [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Abra **Explorador de plantillas**y arrastre la plantilla **Detectar conjuntos de filas de esquema**, en la ventana de consulta en blanco.  
   
-3.  En la plantilla, reemplace el [elemento RequestType &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento con el texto siguiente: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  En la plantilla, reemplace el [elemento RequestType &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla) elemento con el texto siguiente: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Haga clic en **Ejecutar**.  
   
@@ -216,7 +216,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ## <a name="see-also"></a>Vea también  
  [Referencia de expresiones multidimensionales &#40;MDX&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Referencia de Analysis Services Scripting Language &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Lenguaje de Scripting de Analysis Services &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Referencia de Analysis Services Scripting Language &#40;ASSL para XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Referencia de Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

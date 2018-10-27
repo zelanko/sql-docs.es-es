@@ -17,21 +17,21 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077885"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146470"
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
-  Puede usar el [Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md) XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de comando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El comando `Subscribe` devuelve los resultados de un seguimiento como conjunto de filas.  
+  Puede usar el [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de comando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El comando `Subscribe` devuelve los resultados de un seguimiento como conjunto de filas.  
   
 ## <a name="specifying-a-trace"></a>Especificar un seguimiento  
- El [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propiedad de la `Subscribe` comando debe contener una referencia de objeto a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia o un seguimiento en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. Si no se especifica la propiedad `Object`, o no se especifica un identificador de seguimiento en la propiedad `Object`, el comando `Subscribe` supervisa el seguimiento de sesión predeterminado para la sesión explícita especificada en el encabezado SOAP del comando.  
+ El [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propiedad de la `Subscribe` comando debe contener una referencia de objeto a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia o un seguimiento en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. Si no se especifica la propiedad `Object`, o no se especifica un identificador de seguimiento en la propiedad `Object`, el comando `Subscribe` supervisa el seguimiento de sesión predeterminado para la sesión explícita especificada en el encabezado SOAP del comando.  
   
 ## <a name="returning-results"></a>Devolver resultados  
- El comando `Subscribe` devuelve un conjunto de filas que contiene los eventos de seguimiento capturados por el seguimiento especificado. El `Subscribe` comando devuelve los resultados de seguimiento hasta que el comando cancelado por el [cancelar](../xmla/xml-elements-commands/cancel-element-xmla.md) comando.  
+ El comando `Subscribe` devuelve un conjunto de filas que contiene los eventos de seguimiento capturados por el seguimiento especificado. El `Subscribe` comando devuelve los resultados de seguimiento hasta que el comando cancelado por el [cancelar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) comando.  
   
  El conjunto de filas contiene las columnas que se muestran en la tabla siguiente.  
   

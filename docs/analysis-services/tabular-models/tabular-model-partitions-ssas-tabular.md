@@ -1,5 +1,5 @@
 ---
-title: Particiones de modelos tabulares | Documentos de Microsoft
+title: Particiones de modelos tabulares | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045268"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146290"
 ---
 # <a name="tabular-model-partitions"></a>Particiones de modelos tabulares 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34045268"
   
 -   [Ventajas](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [Permisos](#bkmk_permissions)  
   
 -   [Procesar particiones](#bkmk_process_partitions)  
   
@@ -60,13 +60,13 @@ ms.locfileid: "34045268"
 |Procesar|Leer, procesar|  
 |Solo lectura|Lectura|  
   
- Para más información sobre cómo crear roles durante la creación del modelo mediante el uso de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md). Para más información acerca de cómo administrar los miembros del rol para implementar roles de modelos tabulares mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Roles de modelos tabulares](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Para más información sobre cómo crear roles durante la creación del modelo mediante el uso de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md). Para más información sobre cómo administrar los miembros del rol para implementar roles de modelos tabulares mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Roles de modelos tabulares](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Procesamiento paralelo  
-Analysis Services incluye el procesamiento en paralelo para tablas con dos o más particiones, aumentando el rendimiento de procesamiento. No hay valores de configuración para el procesamiento en paralelo (vea las notas). El procesamiento en paralelo se produce de forma predeterminada al procesar una tabla o seleccionar varias particiones para la misma tabla y proceso. Todavía puede procesar las particiones de tablas por separado.  
+Analysis Services incluye procesamiento en paralelo para las tablas con dos o más particiones, aumentar el rendimiento del procesamiento. No hay valores de configuración para el procesamiento en paralelo (vea las notas). El procesamiento en paralelo se produce de forma predeterminada al procesar una tabla o seleccionar varias particiones para la misma tabla y proceso. Todavía puede procesar las particiones de tablas por separado.  
   
 > [!NOTE]  
->  Para especificar si las operaciones de actualización se ejecutan de manera secuencial o en paralelo, puede usar la opción de la propiedad **maxParallism** con el [Comando Sequence (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).
+>  Para especificar si las operaciones de actualización se ejecutan de manera secuencial o en paralelo, puede usar la opción de la propiedad **maxParallism** con el [Comando Sequence (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl).
 
 > [!NOTE]  
 >  Si se detecta la recodificación, el procesamiento paralelo puede producir el aumento del uso de recursos del sistema. Esto es porque es necesario interrumpir varias operaciones de partición y reiniciarlas con la nueva codificación en paralelo.  
@@ -74,7 +74,7 @@ Analysis Services incluye el procesamiento en paralelo para tablas con dos o má
 ##  <a name="bkmk_process_partitions"></a> Procesar particiones  
  Las particiones se pueden procesar (actualizar) de forma independiente de las demás particiones con el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o con un script. Existen las opciones siguientes de procesamiento:  
   
-|Modo|Description|  
+|Mode|Descripción|  
 |----------|-----------------|  
 |Proceso predeterminado|Detecta el estado de proceso de un objeto de partición y realiza el procesamiento necesario para devolver objetos de partición sin procesar o procesados parcialmente a un estado de procesamiento completo. Se cargan los datos de las tablas vacías y las particiones; se generan o se vuelven a generar las jerarquías, las columnas calculadas y las relaciones.|  
 |Proceso completo|Procesa un objeto de partición y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto.|  
@@ -84,7 +84,7 @@ Analysis Services incluye el procesamiento en paralelo para tablas con dos o má
   
 ##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |[Crear y administrar particiones de modelos tabulares](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Describe cómo crear y administrar particiones en un modelo tabular implementado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |[Procesar particiones de modelos tabulares](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Describe cómo procesar particiones en un modelo tabular implementado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  

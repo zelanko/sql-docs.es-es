@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4471bba7b99010c2138acd2c49d0ad650945724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055161"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145330"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover una base de datos de Analysis Services
   Con frecuencia, se producen situaciones en las que un administrador de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere mover una base de datos modelo multidimensional o tabular a otra ubicación. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto.  
@@ -144,11 +144,11 @@ ms.locfileid: "48055161"
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Adjuntar y separar bases de datos de Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Ubicación de almacenamiento de base de datos](database-storage-location.md)   
- [ReadWriteModes de base de datos](database-readwritemodes.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Elemento Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Elemento ReadWriteMode](../xmla/xml-elements-properties/readwritemode-element.md)   
- [Elemento DbStorageLocation](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Ubicación de almacenamiento de las bases de datos](database-storage-location.md)   
+ [Modos de la propiedad de base de datos ReadWriteMode](database-readwritemodes.md)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

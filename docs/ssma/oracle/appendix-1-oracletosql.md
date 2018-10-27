@@ -10,12 +10,12 @@ ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: c7e4b188d72e52608f8768a3d50c0d0af2af747d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f667b429cc86eaf7055433f3c8bfdaf8fdf041
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099429"
 ---
 # <a name="appendix---1-oracletosql"></a>Apéndice - 1 (OracleToSQL)
 Vista rápida de las opciones de línea de comandos de la consola SSMA:  
@@ -32,5 +32,5 @@ Vista rápida de las opciones de línea de comandos de la consola SSMA:
 |8|-?|no|No aplicable|No aplicable|  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Ejecución de la consola SSMA (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

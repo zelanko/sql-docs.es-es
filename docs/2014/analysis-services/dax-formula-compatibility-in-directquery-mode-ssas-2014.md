@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100327"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilidad de fórmulas DAX en el modo DirectQuery (SSAS 2014)
 El lenguaje de expresiones de análisis de datos (DAX) puede usarse para crear medidas y otras fórmulas personalizadas para su uso en los modelos tabulares de Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de datos en los libros de Excel y modelos de datos de Power BI Desktop. En todos los sentidos, los modelos crean en estos entornos son idénticos, y puede usar el mismo medidas, relaciones y los KPI, etcetera. Sin embargo, si se crea un modelo Tabular de Analysis Services e implementarlo en el modo DirectQuery, hay algunas restricciones en las fórmulas que puede usar. En este tema proporciona información general sobre estas diferencias, se enumera las funciones que no se admiten en el modelo de tabulars de SQL Server 2014 Analysis Services en el nivel de compatibilidad 1100 o 1103 y en el modo DirectQuery, y enumera las funciones que se admiten pero puede ser devolver resultados diferentes.  
   
-En este tema, utilizaremos el término *modelo en memoria* para hacer referencia a los modelos tabulares, que son totalmente hospedadas en memoria los datos almacenados en caché en un servidor de Analysis Services que se ejecuta en modo Tabular. Usamos *los modelos DirectQuery* para hacer referencia a los modelos tabulares que se han creado y/o implementado en modo DirectQuery. Para obtener información sobre el modo DirectQuery, vea [el modo DirectQuery (SSAS Tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+En este tema, utilizaremos el término *modelo en memoria* para hacer referencia a los modelos tabulares, que son totalmente hospedadas en memoria los datos almacenados en caché en un servidor de Analysis Services que se ejecuta en modo Tabular. Usamos *los modelos DirectQuery* para hacer referencia a los modelos tabulares que se han creado y/o implementado en modo DirectQuery. Para obtener información sobre el modo DirectQuery, vea [el modo DirectQuery (SSAS Tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Diferencias entre en memoria y el modo DirectQuery  
@@ -92,7 +92,7 @@ Para obtener información acerca de las reglas que rigen las conversiones de cad
 Los modelos que utilizan el almacén de datos en memoria admiten una gama más limitada de formatos de texto para fechas que los formatos de cadena para fechas que admite SQL Server. Sin embargo, DAX admite formatos de fecha y hora personalizados.  
   
 **Conversión de valores de cadena en otros valores no booleanos**  
-Cuando se realiza la conversión de cadenas en valores no booleanos, el modo DirectQuery se comporta igual que SQL Server. Para más información, vea [CAST y CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Cuando se realiza la conversión de cadenas en valores no booleanos, el modo DirectQuery se comporta igual que SQL Server. Para más información, vea [CAST y CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **No se permite la conversión de números en cadenas**  
 EJEMPLO: `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ En el modo DirectQuery, el formato de mayúsculas o minúsculas que se devuelve 
   
 De forma predeterminada, se utiliza la intercalación Latin1_General, que no distingue entre mayúsculas y minúsculas pero que sí distingue los acentos. Por lo tanto, si hay varias instancias de una cadena de texto en minúsculas, mayúsculas o en ambas, todas las instancias se consideran la misma cadena, y solo la primera de ellas se almacena en el índice. Todas las funciones de texto que actúan sobre cadenas almacenadas recuperarán la porción especificada de la forma indizada. Por lo tanto, la fórmula del ejemplo devolverá el mismo valor para toda la columna, utilizando la primera instancia como entrada.  
   
-[Almacenamiento e intercalación de cadenas en modelos tabulares](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[Almacenamiento e intercalación de cadenas en modelos tabulares](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 Este comportamiento también se aplica a otras funciones de texto, incluyendo RIGHT, MID, etc.  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Vea también  
-[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

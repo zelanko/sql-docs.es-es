@@ -15,12 +15,12 @@ ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22cbeffa7a313c043467c8ff95074ac7ed87b500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 224d920ab8a349409a9dd5b25eb87c3a1aa0e626
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140236"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147390"
 ---
 # <a name="adomdnet-server-programming"></a>Programación del servidor ADOMD.NET
   Los componentes de servidor ADOMD.NET de ADOMD.NET residen en el espacio de nombres `Microsoft.AnalysisServices.AdomdServer` (en msmgdsrv.dll). Utilice estos componentes de servidor para crear funciones personalizadas de expresiones multidimensionales (MDX) y los procedimientos almacenados que se ejecutan en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los objetos de servidor proporcionan las capacidades necesarias para realizar consultas en cubos y modelos de minería de datos, así como para evaluar expresiones en un contexto determinado. Entre las ventajas de crear funciones y procedimientos almacenados personalizados se incluyen una ejecución rápida, una implementación centralizada y un mantenimiento mejorado.  
@@ -29,12 +29,12 @@ ms.locfileid: "48140236"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Funcionalidad del servidor ADOMD.NET](adomd-net-server-functionality.md)|Describe los usos de los objetos de servidor ADOMD.NET.|  
-|[Arquitectura de objetos de servidor ADOMD.NET](adomd-net-server-object-architecture.md)|Describe la arquitectura de los objetos de servidor ADOMD.NET.|  
-|[Funciones definidas por el usuario y procedimientos almacenados](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)|Le guía por el proceso de creación de una función o un procedimiento almacenado definidos por el usuario.|  
+|[Funcionalidad del servidor ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|Describe los usos de los objetos de servidor ADOMD.NET.|  
+|[Arquitectura de objetos de servidor ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|Describe la arquitectura de los objetos de servidor ADOMD.NET.|  
+|[Funciones definidas por el usuario y procedimientos almacenados](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|Le guía por el proceso de creación de una función o un procedimiento almacenado definidos por el usuario.|  
   
 ## <a name="see-also"></a>Vea también  
- [Programación del cliente ADOMD.NET](../multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   
- [Desarrollo con ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Programación del cliente ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
+ [Desarrollo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sincronizar bases de datos de Analysis Services | Documentos de Microsoft
+title: Sincronizar bases de datos de Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025372"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145920"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025372"
   
  El puerto TCP 2383 debe estar abierto en ambos servidores para permitir conexiones remotas entre las instancias predeterminadas. Para obtener más información sobre cómo crear una excepción en Firewall de Windows, vea [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Servidores de origen y destino deben ser la misma versión y service pack. Dado que también se sincronizan los metadatos del modelo, para garantizar la compatibilidad de la compilación número para ambos servidores debe ser el mismo. La edición de cada instalación debe admitir la sincronización de base de datos. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la sincronización de base de datos se admite en las ediciones Enterprise, Developer y Business Intelligence. Para obtener más información sobre las características de cada edición, consulte [ediciones y características admitidas en SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Servidores de origen y destino deben ser la misma versión y service pack. Dado que también se sincronizan los metadatos del modelo, para garantizar la compatibilidad de la compilación número para ambos servidores debe ser el mismo. La edición de cada instalación debe admitir la sincronización de base de datos. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la sincronización de base de datos se admite en las ediciones Enterprise, Developer y Business Intelligence. Para obtener más información sobre las características de cada edición, consulte [ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  El modo de implementación del servidor debe ser idéntico en cada servidor. Si la base de datos que va a sincronizar es multidimensional, los servidores de origen y de destino deben estar configurados para el modo de servidor multidimensional. Para obtener más información acerca de los modos de implementación, vea [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -182,8 +182,8 @@ ms.locfileid: "34025372"
  Si no sincronizó los roles o la pertenencia, recuerde especificar los permisos de acceso de usuario ahora en la base de datos de destino.  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Implementar soluciones de modelo mediante XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Implementar soluciones con el Asistente para implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Implementar soluciones con el Asistente para la implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

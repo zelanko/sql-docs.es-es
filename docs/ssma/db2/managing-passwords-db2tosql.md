@@ -10,12 +10,12 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6b521c051ec44806ece9c4b3493aa93ec6b72b12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3761e7918b76b5917c53e93356bc07f51a521992
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099226"
 ---
 # <a name="managing-passwords-db2tosql"></a>Administración de contraseñas (DB2ToSQL)
 En esta sección es acerca de cómo proteger las contraseñas de la base de datos y el procedimiento para importar o exportar a ellos a través de servidores:  
@@ -129,5 +129,5 @@ Ejemplo:
 
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola de SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Ejecución de la consola de SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

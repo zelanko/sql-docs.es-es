@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos para una dimensión (Analysis Services) | Documentos de Microsoft
+title: Conceder permisos en una dimensión (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 396969e35cff70f94bfe07ea1cf57d5221f485e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 834cfe3629aed196c27391c48829b6b66884b82d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022582"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147730"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Otorgar permisos para una dimensión (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,18 +53,18 @@ ms.locfileid: "34022582"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
   
-2.  En el **dimensiones** panel, el cambio de la dimensión se establece en \<nombre del cubo > **dimensiones de cubo**.  
+2.  En el **dimensiones** panel, cambie la dimensión conjunto a \<cubo-name > **dimensiones del cubo**.  
   
      De forma predeterminada, los permisos se heredan de la dimensión de base de datos que corresponda. Desactive la casilla **Heredar** para modificar los permisos de **Lectura** a **Lectura y escritura**. Antes de usar **Lectura y escritura**, asegúrese de leer la nota de la sección anterior.  
   
 > [!IMPORTANT]  
->  Si configura permisos de rol de base de datos con Objetos de administración de análisis (AMO), cualquier referencia a una dimensión de cubo en el atributo DimensionPermission de un cubo interrumpe la herencia de permisos del atributo DimensionPermission de la base de datos. Para más información, vea [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Si configura permisos de rol de base de datos con Objetos de administración de análisis (AMO), cualquier referencia a una dimensión de cubo en el atributo DimensionPermission de un cubo interrumpe la herencia de permisos del atributo DimensionPermission de la base de datos. Para más información, vea [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>Vea también  
  [Roles y permisos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Conceder el cubo o modelo permisos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder permisos en las estructuras de minería de datos y modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder acceso personalizado a la dimensión de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder acceso personalizado a una celda de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

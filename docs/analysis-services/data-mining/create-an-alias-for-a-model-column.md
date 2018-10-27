@@ -1,5 +1,5 @@
 ---
-title: Crear un Alias para una columna de modelo | Documentos de Microsoft
+title: Crear un Alias para una columna de modelo | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c7f7a6139adb75c9a041238e4c8f911bb88ff711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e051c454223fc7fc710f45b97a1a76ecceb10f2b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019102"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147450"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Crear un alias para una columna de modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear un alias para una columna de modelo. Esto puede resultar útil cuando el nombre de la estructura de minería de datos es demasiado largo para trabajar con él fácilmente, o si desea cambiar el nombre de la columna para que describa mejor su contenido o su uso en el modelo. Por ejemplo, si realiza una copia de una columna de estructura y, a continuación, discretiza la columna de manera diferente para un modelo determinado, puede cambiar el nombre de la columna para reflejar con más precisión el contenido.  
   
- Para crear un alias para una columna de modelo, utilice el panel **Propiedades** y establezca la propiedad [Name](../../analysis-services/scripting/properties/name-element-assl.md) de la columna.  
+ Para crear un alias para una columna de modelo, utilice el panel **Propiedades** y establezca la propiedad [Name](https://docs.microsoft.com/bi-reference/assl/properties/name-element-assl) de la columna.  
   
  En la pestaña **Modelos de minería de datos** del Diseñador de minería de datos, el alias parece entre paréntesis al lado de la etiqueta de uso de columna.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34019102"
 2.  En la ventana **Propiedades** situada a la derecha de la pantalla, haga clic en la celda existente junto a la propiedad Name y elimine el valor actual. Escriba un nuevo nombre para la columna.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)  
   
   

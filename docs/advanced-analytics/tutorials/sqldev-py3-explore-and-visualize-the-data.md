@@ -1,5 +1,5 @@
 ---
-title: Paso 3 explorar y visualizar los datos | Documentos de Microsoft
+title: Explorar y visualizar los datos | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,32 +7,32 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2575b1c0d5de8d546d1b1ef1775f3c9e7145adc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f6c9b42016d180c68741d00f761339f0ff1cd707
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202787"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806855"
 ---
-# <a name="step-3-explore-and-visualize-the-data"></a>Paso 3: Explorar y visualizar los datos
+# <a name="explore-and-visualize-the-data"></a>Explorar y visualizar los datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial, [análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-En este paso, explorar los datos de ejemplo y generar algunos gráficos. Más adelante, se muestra cómo serializar gráficos de objetos de Python y, a continuación, deserializar los objetos y hacer trazados.
+En este paso, explorar los datos de ejemplo y generará algunos trazados. Más adelante, obtendrá información sobre cómo serializar gráficos de objetos en Python y, a continuación, deserializar los objetos y hacer los trazados.
 
 ## <a name="review-the-data"></a>Revise los datos
 
-En primer lugar, tómese un minuto para examinar el esquema de datos, tal y como hemos realizado algunos cambios para que resulten más fáciles de usar los datos de Nueva York Taxi
+En primer lugar, tómese un minuto para examinar el esquema de datos, como hemos hecho algunos cambios para que sea más fácil usar los datos de taxis de Nueva York
 
-+ El conjunto de datos original utiliza archivos independientes para los identificadores de taxi y los registros de ida y vuelta. Nos hemos combinadas los dos conjuntos de datos originales en las columnas _medallion_, _hack_license_, y _pickup_datetime_.  
-+ El conjunto de datos original que abarca todos los archivos y es bastante grande. Hemos reduce para obtener solo el 1% del número de registros original. La tabla de datos actual tiene 1,703,957 filas y 23 columnas.
++ El conjunto de datos original utiliza archivos independientes para los identificadores de taxis y los registros de ida y vuelta. Nos hemos unido los dos conjuntos de datos originales en las columnas _medallion_, _hack_license_, y _pickup_datetime_.  
++ El conjunto de datos original abarca muchos archivos y era bastante grande. Hemos downsampled para obtener solo un 1% del número de registros original. La tabla de datos actual tiene 1 703 957 filas y 23 columnas.
 
 **Identificadores de taxis**
 
 El _medallion_ columna representa el número de identificación único del taxi.
 
-El _hack_license_ columna contiene el número de licencia del controlador taxi (anónimos).
+El _hack_license_ columna contiene el número de licencia del conductor del taxi (anónimo).
 
 **Registros de viajes y tarifas**
 
@@ -48,11 +48,11 @@ Los valores utilizados para las columnas de etiqueta se basan en la `tip_amount`
 
     Si `tip_amount` > 0, `tipped` = 1; en caso contrario `tipped` = 0
 
-+ Columna de etiqueta `tip_class` tiene clase posibles valores de 0 a 4
++ Columna de etiqueta `tip_class` tiene valores de la clase posible 0-4
 
-    Clase 0: `tip_amount` = $0
+    Clase 0: `tip_amount` = 0 $
 
-    Clase 1: `tip_amount` > $0 y `tip_amount` < = $5
+    Clase 1: `tip_amount` > $0 y `tip_amount` < = 5 $
     
     Clase 2: `tip_amount` > $5 y `tip_amount` < = 10 $
     
@@ -60,23 +60,23 @@ Los valores utilizados para las columnas de etiqueta se basan en la `tip_amount`
     
     Clase 4: `tip_amount` > $20
 
-## <a name="create-plots-using-python-in-t-sql"></a>Crear gráficos con Python en T-SQL
+## <a name="create-plots-using-python-in-t-sql"></a>Crear trazados con Python en T-SQL
 
-Desarrollar una solución de ciencia de datos incluye normalmente la exploración de datos intensivos y la visualización de datos. Dado que visualización es una herramienta eficaz para comprender la distribución de los datos y los valores atípicos, Python proporciona varios paquetes para la visualización de datos. El **matplotlib** módulo es una de las bibliotecas más populares para la visualización e incluye muchas funciones para crear histogramas, los gráficos de dispersión, cuadro gráficos y otros gráficos de exploración de datos.
+Desarrollar una solución de ciencia de datos incluye normalmente la exploración de datos intensivos y la visualización de datos. Porque la visualización es una herramienta eficaz para comprender la distribución de los datos y los valores atípicos, Python proporciona muchos paquetes para visualizar datos. El **matplotlib** módulo es una de las bibliotecas más populares para la visualización e incluye muchas funciones para crear histogramas, gráficos de dispersión, caja y otros gráficos de exploración de datos.
 
-En esta sección, aprenderá a trabajar con gráficos de uso de procedimientos almacenados. En su lugar de abrir la imagen en el servidor, almacena el objeto de Python `plot` como **varbinary** datos y después escribir que en un archivo que puede compartir o visualizarse en otro lugar.
+En esta sección, obtendrá información sobre cómo trabajar con trazados con procedimientos almacenados. En lugar de abrir la imagen en el servidor, almacena el objeto de Python `plot` como **varbinary** datos y después escribir que en un archivo que puede compartir o visualizarse en otro lugar.
 
 ### <a name="create-a-plot-as-varbinary-data"></a>Crear un gráfico como datos varbinary
 
-El **revoscalepy** módulo incluido con SQL Server de 2017 Machine Learning Services admite características parecidas a las de la **RevoScaleR** paquete de R.  Este ejemplo utiliza el equivalente de Python de `rxHistogram` para trazar un histograma en función de los datos de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. 
+El **revoscalepy** módulo incluido con SQL Server 2017 Machine Learning Services es compatible con características similares a los de la **RevoScaleR** paquete de R.  Este ejemplo usa el equivalente de Python `rxHistogram` para trazar un histograma según datos de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. 
 
-El procedimiento almacenado devuelve un número de serie de Python `figure` objeto como un flujo de **varbinary** datos. No se puede ver los datos binarios directamente, pero puede utilizar código de Python en el cliente para deserializar y ver las cifras y, a continuación, guarde el archivo de imagen en un equipo cliente.
+El procedimiento almacenado devuelve un número de serie de Python `figure` objeto como un flujo de **varbinary** datos. No se puede ver los datos binarios directamente, pero puede usar código de Python en el cliente para deserializar y ver las cifras y, a continuación, guarde el archivo de imagen en un equipo cliente.
 
-1. Crear el procedimiento almacenado _SerializePlots_, si la secuencia de comandos de PowerShell ya no lo hizo.
+1. Crear el procedimiento almacenado _SerializePlots_, si el script de PowerShell ya no lo hizo.
 
-    - La variable `@query` define el texto de consulta `SELECT tipped FROM nyctaxi_sample`, que se pasa al bloque de código Python como argumento para la variable de entrada de secuencia de comandos, `@input_data_1`.
-    - El script de Python es bastante sencillo: **matplotlib** `figure` objetos se usan para hacer el gráfico de dispersión y de histograma, y estos objetos, a continuación, se serializan con la `pickle` biblioteca.
-    - El objeto de gráfico de Python se serializa a un **pandas** trama de datos de salida.
+    - La variable `@query` define el texto de consulta `SELECT tipped FROM nyctaxi_sample`, que se pasa al bloque de código Python como el argumento de la variable de entrada de secuencia de comandos, `@input_data_1`.
+    - El script de Python es bastante simple: **matplotlib** `figure` objetos sirven para hacer que el trazado de dispersión y de histograma, y estos objetos se serializan utilizando la `pickle` biblioteca.
+    - El objeto de gráficos de Python se serializa a un **pandas** trama de datos de salida.
   
     ```SQL
     CREATE PROCEDURE [dbo].[SerializePlots]
@@ -131,7 +131,7 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
     GO
     ```
 
-2. Ahora puede ejecutar el procedimiento almacenado sin argumentos para generar un gráfico de los datos codificados de forma rígida como consulta de entrada.
+2. Ahora puede ejecutar el procedimiento almacenado sin argumentos para generar un trazado de los datos codificados de forma rígida como consulta de entrada.
 
     ```
     EXEC [dbo].[SerializePlots]
@@ -148,9 +148,9 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
     ```
 
   
-4. Desde un cliente de Python, ahora puede conectarse a la instancia de SQL Server que generan los objetos de trazado binario y ver los gráficos. 
+4. Desde un cliente de Python, ahora puede conectarse a la instancia de SQL Server que generan los objetos de trazado binario y ver los trazados. 
 
-    Para ello, ejecute el siguiente código de Python, reemplazando el nombre del servidor, nombre de base de datos y las credenciales según corresponda. Asegúrese de que la versión de Python es el mismo en el cliente y el servidor. Además, asegúrese de que las bibliotecas de Python en el cliente (por ejemplo, matplotlib) tienen la versión igual o mayor en relación con las bibliotecas instaladas en el servidor.
+    Para ello, ejecute el siguiente código de Python, reemplazando el nombre del servidor, nombre de base de datos y las credenciales según corresponda. Asegúrese de que la versión de Python es el mismo en el cliente y el servidor. Además, asegúrese de que las bibliotecas de Python en el cliente (como matplotlib) son la versión igual o superior en relación con las bibliotecas instaladas en el servidor.
   
     **Mediante la autenticación de SQL Server:**
     
@@ -184,19 +184,19 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-5.  Si la conexión se realiza correctamente, verá un mensaje similar al siguiente:
+5.  Si la conexión se realiza correctamente, debería ver un mensaje similar al siguiente:
   
-    *Los gráficos se guardan en el directorio: xxxx*
+    *Los trazados se guardan en el directorio: xxxx*
   
 6.  El archivo de salida se crea en el directorio de trabajo de Python. Para ver el trazado, busque el directorio de trabajo de Python y abra el archivo. La siguiente imagen muestra un gráfico que se guardan en el equipo cliente.
   
-    ![Sugerencia de cantidad de tarifa de vs cantidad](media/sqldev-python-sample-plot.png "cantidad de tarifa de vs de cantidad de sugerencia") 
+    ![Sugerencia de importe de cantidad vs](media/sqldev-python-sample-plot.png "importe de vs de cantidad de sugerencia") 
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Paso 4: Crear características de datos mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Crear características de datos mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Paso 2: Importar datos a SQL Server mediante PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
+[Descargue el conjunto de datos de taxis de Nueva York](demo-data-nyctaxi-in-sql.md)
 

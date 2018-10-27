@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164295"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147580"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
@@ -31,7 +31,7 @@ ms.locfileid: "48164295"
   
  [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Uso de SQL Server Profiler para supervisar la minería de datos &#40;Analysis Services - minería de datos&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Usar SQL Server Profiler para supervisar la minería de datos &#40;Analysis Services - Minería de datos&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Ubicación de los objetos de minería de datos  
  Las estructuras y los modelos de minería de datos que se han procesado se almacenan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "48164295"
 > [!WARNING]  
 >  Todos los cambios realizados en una estructura o modelo de minería de datos, incluso los cambios realizados en los metadatos, como un nombre o una descripción, requieren que se vuelva a procesar la estructura o modelo.  
   
- Si no tiene el archivo de solución que se usó para crear el proyecto de minería de datos u objetos, puede importar el proyecto existente desde el servidor mediante el Asistente para importación de Analysis Services, realizar modificaciones en los objetos y, a continuación, volver a implementarlo con el `Incremental` opción. Para obtener más información, vea [Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Si no tiene el archivo de solución que se usó para crear el proyecto o los objetos de minería de datos, puede importar el proyecto existente del servidor mediante el asistente para la importación de Analysis Services, realizar modificaciones en los objetos y, a continuación, volver a implementarlo con la opción `Incremental`. Para obtener más información, vea [Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Administrar objetos de minería de datos en SQL Server Management Studio  
  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede crear scripts, procesar o eliminar estructuras y modelos de minería de datos. Solo podrá visualizar un conjunto limitado de propiedades utilizando el Explorador de objetos; sin embargo, puede ver metadatos adicionales relativos a los modelos de minería de datos abriendo una ventana de **consultas DMX** y seleccionando una estructura de minería de datos.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164295"
 ### <a name="analysis-management-objects-amo"></a>Objetos de administración de análisis (AMO)  
  Objetos de administración de análisis (AMO) es un modelo de objetos basado en XMLA que le proporciona un control total sobre los objetos de minería de datos. AMO le permite crear, implementar y supervisar estructuras y modelos de minería de datos.  
   
--   [Modelo de objetos y conceptos de AMO](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Modelo de objetos y conceptos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164295"
 ### <a name="data-mining-extensions-dmx"></a>Extensiones de minería de datos (DMX)  
  Las extensiones de minería de datos (DMX) se pueden utilizar con otras interfaces de comandos, como [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net para crear, eliminar y consultar estructuras y modelos de minería de datos.  
   
--   [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](/sql/dmx/dmx-statements-data-definition)  
+-   [Instrucciones de definición de datos de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/dmx-statements-data-definition)  
   
  **Restricciones:** algunas propiedades no se pueden cambiar utilizando DMX.  
   

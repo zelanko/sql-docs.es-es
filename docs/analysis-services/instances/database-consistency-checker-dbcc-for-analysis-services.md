@@ -1,5 +1,5 @@
 ---
-title: El Comprobador de coherencia (DBCC) para Analysis Services de la base de datos | Documentos de Microsoft
+title: Comprobador de coherencia (DBCC) para Analysis Services de la base de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb131f76c839f446cbdc31dae51e98431bb87902
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019692"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147870"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Comprobador de coherencia de base de datos (DBCC) para Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ El comando toma una definición de objeto y devuelve un conjunto de resultados v
   
 -   Las bases de datos multidimensionales y tabulares anteriores a SQL Server 2016 de nivel de compatibilidad 1100 o 1103 se describen en estructuras de modelado multidimensional como **cubeID**, **measuregroupID**y **partitionID**.  
   
--   Metadatos de las nuevas bases de datos de modelo Tabular en el nivel de compatibilidad 1200 y superior constan de descriptores como **TableName** y **PartitionName**.  
+-   Los metadatos de las nuevas bases de datos de modelo Tabular en el nivel de compatibilidad 1200 y superior constan de descriptores como **TableName** y **PartitionName**.  
   
  DBCC para Analysis Services se ejecutará en cualquier base de datos de Analysis Services en cualquier nivel de compatibilidad, siempre que la base de datos se ejecute en una instancia de SQL Server 2016. Asegúrese de que está utilizando la sintaxis de comando correcta para cada tipo de base de datos.  
   
@@ -41,9 +41,9 @@ El comando toma una definición de objeto y devuelve un conjunto de resultados v
  Debe ser administrador de servidor o base de datos de Analysis Services (un miembro del rol de servidor) para ejecutar el comando. Para tener instrucciones, vea [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) o [Conceder permisos de administrador de servidor (Analysis Services)](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 ## <a name="command-syntax"></a>Sintaxis del comando 
- Bases de datos tabulares 1200 y niveles de compatibilidad más altos utilizan metadatos tabulares para definiciones de objeto. En el ejemplo siguiente, se muestra la sintaxis completa de DBCC para una base de datos tabular creada en un nivel funcional de SQL Server 2016.  
+ Bases de datos tabulares 1200 y mayores niveles de compatibilidad utilizan metadatos tabulares para definiciones de objeto. En el ejemplo siguiente, se muestra la sintaxis completa de DBCC para una base de datos tabular creada en un nivel funcional de SQL Server 2016.  
   
- Las principales diferencias entre las dos sintaxis incluyen un espacio de nombres más reciente de XMLA, ya no \<objeto > elemento y no \<modelo > elemento (hay solo un modelo por base de datos).  
+ Diferencias clave entre las dos sintaxis incluyen un espacio de nombres XMLA más reciente, no \<objeto > elemento y ningún \<modelo > elemento (hay solo un modelo por base de datos).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2014/engine">  
@@ -58,7 +58,7 @@ El comando toma una definición de objeto y devuelve un conjunto de resultados v
  Puede obtener los nombres de objeto y los identificadores DatabaseID desde Management Studio, a través de la página de propiedades de cada objeto.  
   
 ## <a name="command-syntax-for-multidimensional-and-tabular-110x-databases"></a>Sintaxis del comando para bases de datos multidimensionales y tabulares 110x  
- DBCC utiliza una sintaxis idéntica para las bases de datos multidimensionales y tabulares 1100 y 1103. Puede ejecutar DBCC en objetos de base de datos específicos, incluida la base de datos completa. Para más información sobre la definición de objetos, vea [Elemento de objeto &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md).  
+ DBCC utiliza una sintaxis idéntica para las bases de datos multidimensionales y tabulares 1100 y 1103. Puede ejecutar DBCC en objetos de base de datos específicos, incluida la base de datos completa. Para más información sobre la definición de objetos, vea [Elemento de objeto &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -166,7 +166,7 @@ Execution complete
   
 4.  En SQL Server Profiler, la actividad de DBCC se indica mediante eventos **Command** con una subclase de eventos de DBCC:  
   
-     ![SSAS-dbcc-generador de perfiles-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "eventsubclass-ssas-dbcc-generador de perfiles")  
+     ![SSAS-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      El código de evento 32 es la ejecución de DBCC.  
   
@@ -176,7 +176,7 @@ Execution complete
   
      Para ambas subclases de evento, revise los valores **TextData** para los mensajes devueltos por DBCC.  
   
-     Mensajes de estado empiezan con "Comprobando la coherencia de \<objeto >", "ha iniciado la comprobación \<objeto >", o "ha finalizado la comprobación \<objeto >".  
+     Los mensajes de estado empiezan por "Comprobando la coherencia de \<objeto >", "inició la comprobación \<objeto >", o "ha finalizado la comprobación \<objeto >".  
   
     > [!NOTE]  
     >  En CTP 3.0, los objetos se identifican por nombres internos. Por ejemplo, una jerarquía de categorías se articula como H$ Categories -\<objectID >. Los nombres internos deben reemplazarse por nombres descriptivos en una próxima versión de CTP.  
@@ -196,7 +196,7 @@ Execution complete
   
 5.  Revise los valores de TextData para los mensajes devueltos por DBCC.  TextData es una propiedad de un campo de evento y muestra los mensajes de estado y de error devueltos por el evento.  
   
-     Mensajes de estado empiezan con "Comprobando la coherencia de \<objeto >", "ha iniciado la comprobación \<objeto >", o "ha finalizado la comprobación \<objeto >".  
+     Los mensajes de estado empiezan por "Comprobando la coherencia de \<objeto >", "inició la comprobación \<objeto >", o "ha finalizado la comprobación \<objeto >".  
   
      Los mensajes de error se enumeran más adelante.  
   
@@ -227,20 +227,20 @@ Execution complete
 |Partición|Genera un error si el número total de registros, segmentos o registros por segmento no es válido (inferior a cero), o si el número de segmentos no coincide con el número calculado de segmentos requeridos en función del número total de registros.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
 |Relación|Genera un error si la estructura que se utiliza para almacenar datos acerca de la relación no contiene registros o si el nombre de la tabla utilizada en la relación está vacío.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las relaciones.|  
 |Relación|Comprueba que el nombre de la tabla principal, la columna principal, la tabla externa y la columna externa están configurados y que es posible acceder a las columnas y las tablas que participan en la relación.<br /><br /> Comprueba que los tipos de columna implicados son válidos y que el índice de valores de Clave principal-Clave externa resulta en una estructura de consulta válida.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las relaciones.|  
-|Jerarquía|Genera un error si el criterio de ordenación para la jerarquía no es un valor reconocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
-|Jerarquía|Las comprobaciones realizadas en la jerarquía dependen del tipo interno de asignación de jerarquía utilizado.<br /><br /> Todas las jerarquías se comprueban para verificar el estado de procesado correcto, que el almacén de jerarquía existe y que, cuando sea aplicable, existen las estructuras de datos utilizadas para una conversión de identificador de datos a posición de jerarquía.<br /><br /> Suponiendo que todas las comprobaciones sean correctas, se recorre la estructura de la jerarquía para comprobar que cada posición en la jerarquía señala al miembro correcto.<br />Si se produce un error en cualquiera de estas pruebas, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
+|Hierarchy|Genera un error si el criterio de ordenación para la jerarquía no es un valor reconocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
+|Hierarchy|Las comprobaciones realizadas en la jerarquía dependen del tipo interno de asignación de jerarquía utilizado.<br /><br /> Todas las jerarquías se comprueban para verificar el estado de procesado correcto, que el almacén de jerarquía existe y que, cuando sea aplicable, existen las estructuras de datos utilizadas para una conversión de identificador de datos a posición de jerarquía.<br /><br /> Suponiendo que todas las comprobaciones sean correctas, se recorre la estructura de la jerarquía para comprobar que cada posición en la jerarquía señala al miembro correcto.<br />Si se produce un error en cualquiera de estas pruebas, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
 |Jerarquía definida por el usuario|Comprueba que están configurados los nombres de nivel de jerarquía.<br /><br /> Si se ha procesado la jerarquía, comprueba que el almacén de datos de jerarquía interna tiene el formato correcto.  Comprueba que el almacén interno de jerarquía no contiene valores de datos no válidos.<br /><br /> Si la jerarquía está marcada como sin procesar, confirma que este estado se aplica a las estructuras de datos anteriores y que todos los niveles de la jerarquía se marcan como vacíos.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
-|Columna|Genera un error si no se establece la codificación utilizada para la columna en un valor conocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|Columna|Comprueba si la columna se comprimió por el motor incorporado en la memoria o no.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|Columna|Comprueba el tipo de compresión de la columna para valores conocidos.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|Columna|Cuando la columna "tokenization" no se establece en un valor conocido, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|Columna|Si el intervalo de identificadores almacenados para un diccionario de datos de columnas no coincide con el número de valores en el diccionario de datos o está fuera del intervalo permitido, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar el diccionario de datos.|  
-|Columna|Comprueba que el número de segmentos de datos para una columna coincide con el número de segmentos de datos para la tabla a la que pertenece.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
-|Columna|Comprueba que el número de particiones de una columna de datos coincide con el número de particiones para la asignación de segmentos de datos para la columna.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
-|Columna|Comprueba que el número de registros en un segmento de columna coincide con el número de registros almacenados en el índice para ese segmento de columna.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
-|Columna|Si una columna no tiene estadísticas del segmento, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
-|Columna|Si una columna no tiene información de compresión o almacenamiento de segmento, se producirá un error.|Los archivos de base de datos no superaron las comprobaciones de coherencia.|  
-|Columna|Notifica un error si las estadísticas de segmento para una columna no coinciden con los valores de columna reales para el identificador de datos mínimo, el identificador de datos máximo, el número de valores distintos, el número de filas o la presencia de valores NULL.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
+|columna|Genera un error si no se establece la codificación utilizada para la columna en un valor conocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|columna|Comprueba si la columna se comprimió por el motor incorporado en la memoria o no.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|columna|Comprueba el tipo de compresión de la columna para valores conocidos.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|columna|Cuando la columna "tokenization" no se establece en un valor conocido, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|columna|Si el intervalo de identificadores almacenados para un diccionario de datos de columnas no coincide con el número de valores en el diccionario de datos o está fuera del intervalo permitido, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar el diccionario de datos.|  
+|columna|Comprueba que el número de segmentos de datos para una columna coincide con el número de segmentos de datos para la tabla a la que pertenece.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
+|columna|Comprueba que el número de particiones de una columna de datos coincide con el número de particiones para la asignación de segmentos de datos para la columna.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
+|columna|Comprueba que el número de registros en un segmento de columna coincide con el número de registros almacenados en el índice para ese segmento de columna.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
+|columna|Si una columna no tiene estadísticas del segmento, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
+|columna|Si una columna no tiene información de compresión o almacenamiento de segmento, se producirá un error.|Los archivos de base de datos no superaron las comprobaciones de coherencia.|  
+|columna|Notifica un error si las estadísticas de segmento para una columna no coinciden con los valores de columna reales para el identificador de datos mínimo, el identificador de datos máximo, el número de valores distintos, el número de filas o la presencia de valores NULL.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
 |ColumnSegment|Si el identificador de datos mínimo o el identificador de datos máximo es inferior al valor reservado del sistema para NULL, marque la información de segmento de la columna como dañado.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
 |ColumnSegment|Si no hay ninguna fila para este segmento, los valores de datos mínimo y máximo para la columna deben establecerse en el valor reservado del sistema para NULL.  Si el valor no es NULL, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
 |ColumnSegment|Si la columna tiene filas y al menos un valor distinto de NULL, comprueba que el identificador de datos mínimo y máximo para la columna es mayor que el valor reservado para el sistema para NULL.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
@@ -252,8 +252,8 @@ Execution complete
 |Tabla DBCC|Para la tabla en la validación, comprueba si el número de columnas es inferior a cero y genera un error si es así.  También se produce un error si el almacén de columnas para una columna de la tabla es NULL.|Hay daños en la capa de almacenamiento. La colección de columnas de la tabla '%{parent/}' está dañada.|  
 |Partición DBCC|Comprueba la tabla a la que pertenece la partición que se valida, y si el número de columnas de la tabla es inferior a cero, indica que la colección de columnas se ha dañado para la tabla. También se producirá un error si el almacén de columnas para una columna de la tabla es NULL.|Hay daños en la capa de almacenamiento. La colección de columnas de la tabla '%{parent/}' está dañada.|  
 |Partición DBCC|Itera por cada columna de la partición seleccionada y comprueba que cada segmento de la partición tiene un vínculo válido a una estructura de segmento de columna.  Si algún segmento tiene un vínculo NULL, la partición se considera dañada.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
-|Columna|Devuelve un error si el tipo de columna no es válido.|Se ha encontrado un tipo de segmento incorrecto.|  
-|Columna|Devuelve un error si alguna columna tiene una cantidad negativa para el número de segmentos de una columna, o si el puntero a la estructura de segmentos de las columnas para un segmento tiene un vínculo NULL.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
+|columna|Devuelve un error si el tipo de columna no es válido.|Se ha encontrado un tipo de segmento incorrecto.|  
+|columna|Devuelve un error si alguna columna tiene una cantidad negativa para el número de segmentos de una columna, o si el puntero a la estructura de segmentos de las columnas para un segmento tiene un vínculo NULL.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
 |Comando DBCC|El comando DBCC notificará varios mensajes de estado mientras pasa a través de la operación de DBCC.  Emitirá un mensaje de estado antes de iniciar que incluye el nombre de la base de datos, la tabla o la columna del objeto, y otro después de finalizar cada comprobación de los objetos.|Comprobando la coherencia de la \<objectname > \<objecttype >. Fase: comprobación previa.<br /><br /> Comprobando la coherencia de la \<objectname > \<objecttype >. Fase: comprobación posterior.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Soluciones habituales de las condiciones de error  
@@ -261,15 +261,15 @@ Execution complete
   
 |Error|Problema|Solución|  
 |-----------|-----------|----------------|  
-|**Errores del administrador de metadatos.**<br /><br /> La referencia al objeto '\<objectID >' no es válido. No coincide con la estructura de la jerarquía de clases de metadatos.|comando incorrecto|Compruebe la sintaxis del comando. Lo más probable es que haya incluido un objeto de nivel inferior sin especificar uno o varios de sus objetos primarios.|  
-|**Errores del administrador de metadatos.**<br /><br /> Ya sea la \<objeto > con el Id. de '\<objectID >' no existe en el \<parentobject > con el Id. de '\<parentobjectID >', o el usuario no tiene permisos para tener acceso al objeto.|Daños en el índice (multidimensional)|Vuelva a procesar el objeto y los objetos dependientes.|  
-|**Error durante la comprobación de coherencia de la partición**<br /><br /> Se produjo un error al comprobar la coherencia de la \<nombre de partición > partición de la \<nombre del grupo de medida > grupo de medida para el \<nombre del cubo > cubo desde el \<nombre de base de datos > base de datos. Vuelva a procesar la partición o los índices para corregir los daños.|Daños en el índice (multidimensional)|Vuelva a procesar el objeto y los objetos dependientes.|  
+|**Errores del administrador de metadatos.**<br /><br /> La referencia de objeto '\<objectID >' no es válido. No coincide con la estructura de la jerarquía de clases de metadatos.|comando incorrecto|Compruebe la sintaxis del comando. Lo más probable es que haya incluido un objeto de nivel inferior sin especificar uno o varios de sus objetos primarios.|  
+|**Errores del administrador de metadatos.**<br /><br /> Ya sea el \<objeto > con el Id. de '\<objectID >' no existe en el \<parentobject > con el Id. de '\<parentobjectID >', o el usuario no tiene permisos para tener acceso al objeto.|Daños en el índice (multidimensional)|Vuelva a procesar el objeto y los objetos dependientes.|  
+|**Error durante la comprobación de coherencia de la partición**<br /><br /> Se produjo un error al comprobar la coherencia de la \<nombre de la partición > partición de la \<nombre del grupo de medida > grupo de medida para el \<nombre del cubo > cubo desde el \<nombre de la base de datos > base de datos. Vuelva a procesar la partición o los índices para corregir los daños.|Daños en el índice (multidimensional)|Vuelva a procesar el objeto y los objetos dependientes.|  
 |**Daños en las estadísticas del segmento de la partición**|Daños en el índice (multidimensional)|Vuelva a procesar el objeto y los objetos dependientes.|  
 |**El segmento de partición está dañado.**|Daños en los metadatos (tipo multidimensional o tabular)|Elimine y vuelva a implementar el proyecto, o restaure una copia de seguridad y procese de nuevo.<br /><br /> Para obtener instrucciones, vea la entrada de blog [How to handle corruption in Analysis Services databases (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Reparar bases de datos dañadas de Analysis Services).|  
-|**Daños en los metadatos de una tabla**<br /><br /> Tabla \<nombre de tabla > archivo de metadatos está dañado. La tabla principal no se encuentra en el nodo DataFileList.|Daños en los metadatos (solo en tipo tabular)|Elimine y vuelva a implementar el proyecto, o restaure una copia de seguridad y procese de nuevo.<br /><br /> Para obtener instrucciones, vea la entrada de blog [How to handle corruption in Analysis Services databases (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Reparar bases de datos dañadas de Analysis Services).|  
-|**Daños en la capa de almacenamiento**<br /><br /> Daños en la capa de almacenamiento: colección de \<nombre de tipo > en \<primario-name > \<tipo-primario > está dañado.|Daños en los metadatos (solo en tipo tabular)|Elimine y vuelva a implementar el proyecto, o restaure una copia de seguridad y procese de nuevo.<br /><br /> Para obtener instrucciones, vea la entrada de blog [How to handle corruption in Analysis Services databases (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Reparar bases de datos dañadas de Analysis Services).|  
-|**Falta tabla del sistema**<br /><br /> Tabla del sistema \<nombre de tabla > falta.|Daños en objeto (solo en tipo tabular)|Vuelva a procesar el objeto y los objetos dependientes.|  
-|**Daños en las estadísticas de la tabla**<br /><br /> Las estadísticas de la tabla de sistema \<nombre de tabla > falta.|Daños en los metadatos (solo en tipo tabular)|Elimine y vuelva a implementar el proyecto, o restaure una copia de seguridad y procese de nuevo.<br /><br /> Para obtener instrucciones, vea la entrada de blog [How to handle corruption in Analysis Services databases (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Reparar bases de datos dañadas de Analysis Services).|  
+|**Daños en los metadatos de una tabla**<br /><br /> Tabla \<table-name > archivo de metadatos está dañado. La tabla principal no se encuentra en el nodo DataFileList.|Daños en los metadatos (solo en tipo tabular)|Elimine y vuelva a implementar el proyecto, o restaure una copia de seguridad y procese de nuevo.<br /><br /> Para obtener instrucciones, vea la entrada de blog [How to handle corruption in Analysis Services databases (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Reparar bases de datos dañadas de Analysis Services).|  
+|**Daños en la capa de almacenamiento**<br /><br /> Daños en la capa de almacenamiento: colección de \<nombre-tipo > en \<nombre-primario > \<tipo-primario > está dañado.|Daños en los metadatos (solo en tipo tabular)|Elimine y vuelva a implementar el proyecto, o restaure una copia de seguridad y procese de nuevo.<br /><br /> Para obtener instrucciones, vea la entrada de blog [How to handle corruption in Analysis Services databases (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Reparar bases de datos dañadas de Analysis Services).|  
+|**Falta tabla del sistema**<br /><br /> Tabla del sistema \<table-name > falta.|Daños en objeto (solo en tipo tabular)|Vuelva a procesar el objeto y los objetos dependientes.|  
+|**Daños en las estadísticas de la tabla**<br /><br /> Estadísticas de tabla de sistema \<table-name > falta.|Daños en los metadatos (solo en tipo tabular)|Elimine y vuelva a implementar el proyecto, o restaure una copia de seguridad y procese de nuevo.<br /><br /> Para obtener instrucciones, vea la entrada de blog [How to handle corruption in Analysis Services databases (blog)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Reparar bases de datos dañadas de Analysis Services).|  
   
 ## <a name="disable-automatic-consistency-checks-on-database-load-operations-through--the-msmdsrvini-configuration-file"></a>Deshabilite las comprobaciones de coherencia automáticas en las operaciones de carga de base de datos a través del archivo de configuración msmdsrv.ini.  
  Aunque no es recomendable, puede deshabilitar las comprobaciones de coherencia de la base de datos integradas que se producen automáticamente en los eventos de carga de la base de datos (solo en bases de datos tabulares). Para ello, tiene que modificar una opción de configuración en el archivo msmdsrv.ini:  
@@ -299,8 +299,8 @@ Execution complete
 ## <a name="see-also"></a>Vea también  
  [Procesar base de datos, tabla o partición &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Propiedades del servidor de Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
+ [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

@@ -1,18 +1,18 @@
 ---
 title: ¿Qué es el controlador del clúster de macrodatos de SQL Server? | Microsoft Docs
-description: ''
+description: En este artículo se describe el controlador de un clúster de macrodatos de SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cb6a999c1ca791eea683e71e37ac788b8018672e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460610"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050877"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>¿Qué es el controlador de clústeres de macrodatos de SQL Server?
 
@@ -48,7 +48,7 @@ El controlador y los objetos de Kubernetes (conjuntos con estado, pods, secretos
 
 `mssqlctl` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clúster arrancar y administrar clústeres de macrodatos a través de las API de REST expuestas por el servicio del controlador.
 
-### <a name="cluster-administration-portal"></a>Portal de administración de clúster
+### <a name="cluster-administration-portal"></a>Portal de administración de clústeres
 
 Una vez que el servicio de controlador está en funcionamiento, el Administrador de clústeres puede usar el Portal de administración de clúster para supervisar el progreso de la implementación, detectar y solucionar problemas con los servicios dentro del clúster. 
 
@@ -69,4 +69,4 @@ Autenticación en el punto de conexión de servicio de controlador se basa en el
 
 To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

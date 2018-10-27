@@ -2,7 +2,7 @@
 title: Migrar los inicios de sesión de SQL Server con Data Migration Assistant | Microsoft Docs
 description: Obtenga información sobre cómo migrar los inicios de sesión de SQL Server con Data Migration Assistant
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836943"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643813"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrar los inicios de sesión de SQL Server con Data Migration Assistant
 
@@ -44,7 +44,7 @@ En este artículo se proporciona información general de migrar los inicios de s
 
 - Como parte de la migración de inicio de sesión, Data Migration Assistant asigna los permisos a los elementos protegibles en el destino de SQL Server tal y como aparecen en el origen de SQL Server. 
 
-  Si el inicio de sesión ya existe en el destino de SQL Server, Data Migration Assistant migra solo los permisos asignados a los elementos protegibles y no volverá a crear el inicio de sesión completa.
+  Si el inicio de sesión ya existe en el destino de SQL Server, Data Migration Assistant migra solo los permisos asignados a los elementos protegibles y no volver a crear el inicio de sesión completa.
 
 - Asistente para migración de datos hace que sea el mejor esfuerzo para asignar el inicio de sesión a los usuarios de base de datos si el inicio de sesión ya existe en el servidor de destino.
 

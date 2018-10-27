@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Management Dashboard and Usage Data | Documentos de Microsoft
+title: Power Pivot Management Dashboard and Usage Data | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099936"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Panel de administración de Power Pivot y datos de uso
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34030346"
 ##  <a name="items"></a> Información general de las secciones del panel  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] contiene elementos webs e informes incrustados que detallan categorías de información concretas. En la lista siguiente se describen todas las partes del panel:  
   
-|Panel|Description|  
+|Panel|Descripción|  
 |---------------|-----------------|  
 |Infraestructura: estado del servidor|Muestra las tendencias de uso de la CPU, el consumo de memoria y los tiempos de respuesta de las consultas a lo largo del tiempo para poder evaluar si los recursos del sistema se están acercando a la capacidad máxima o están infrautilizados.|  
 |Acciones|Contiene vínculos a otras páginas de Administración central, incluida la aplicación de servicio actual, una lista de aplicaciones de servicio y registro de uso.|  
@@ -95,7 +95,7 @@ ms.locfileid: "34030346"
   
 5.  Abra el archivo .odc en un editor de texto.  
   
-6.  En el  **\<ODC: ConnectionString >** elemento, desplácese hasta el final de la línea y quite **datos incrustados = False**y, a continuación, quitar **del modo de edición = 0**. Si el último carácter en la cadena es un punto y coma, quítelo ahora.  
+6.  En el  **\<ODC: ConnectionString >** elemento, desplácese hasta el final de la línea y quite **datos incrustados = False**y, a continuación, quitar **Edit Mode = 0**. Si el último carácter en la cadena es un punto y coma, quítelo ahora.  
   
 7.  Guarde el archivo. Los pasos restantes serán distintos según la versión de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] y de Excel que esté usando.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34030346"
     9. En Especificar una consulta MDX, haga clic en **Diseño** para abrir el diseñador de consultas MDX con el fin de ensamblar los datos con los que desea trabajar y, a continuación, cree un informe de tabla dinámica o de gráfico dinámico para visualizar los datos en Excel.  
   
 ## <a name="see-also"></a>Vea también  
- [Actualización de datos Power Pivot con SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Actualización de datos Power Pivot con SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configurar la recolección de datos de uso para Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

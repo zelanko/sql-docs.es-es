@@ -1,5 +1,5 @@
 ---
-title: Configurar propiedades de medidas | Documentos de Microsoft
+title: Configurar propiedades de medidas | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e579d8090300e205e99807f8016be066f557b6fb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8662339e7f3b0d77b48ad480317bc7558d0801e7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022232"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147500"
 ---
 # <a name="configure-measure-properties"></a>Configurar propiedades de medidas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Las medidas tienen propiedades que permiten definir su funcionamiento, así como controlar cómo aparecen ante los usuarios.  
   
- Puede establecer propiedades en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al crear o editar un cubo o una medida. También puede establecerlas mediante programación, usando MDX o AMO. Vea [Crear medidas y grupos de medida en modelos multidimensionales](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER &#40;instrucción MDX&#41;](../../mdx/mdx-data-definition-create-member.md) y [Programar objetos básicos OLAP en AMO](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md) para obtener más información.  
+ Puede establecer propiedades en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al crear o editar un cubo o una medida. También puede establecerlas mediante programación, usando MDX o AMO. Vea [Crear medidas y grupos de medida en modelos multidimensionales](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER &#40;instrucción MDX&#41;](../../mdx/mdx-data-definition-create-member.md) y [Programar objetos básicos OLAP en AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects) para obtener más información.  
   
 ## <a name="measure-properties"></a>Propiedades de medidas  
  Las medidas heredan determinadas propiedades del grupo de medida del que son miembro, aunque estas propiedades se reemplazan en el nivel de medida. Las propiedades de medidas determinan cómo se agrega una medida, su tipo de datos, el nombre que se muestra al usuario, la carpeta para mostrar en la que aparecerá la medida, su cadena de formato, cualquier expresión de medida, la columna de origen subyacente y la visibilidad para los usuarios.  
   
-|Propiedad|Definición|  
+|Property|Definición|  
 |--------------|----------------|  
 |**AggregateFunction**|Requerido. Determina cómo se agregan las medidas. **Sum** es la agregación predeterminada. Para más información, vea [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) para obtener una descripción de cada función.|  
 |**DataType**|Requerido. Especifica el tipo de datos de la columna de la tabla de hechos subyacente a la que se enlaza la medida. Este valor se hereda de la columna de origen de forma predeterminada.|  
-|**Description**|Ofrece una descripción de la medida, que se puede mostrar en aplicaciones cliente.|  
+|**Descripción**|Ofrece una descripción de la medida, que se puede mostrar en aplicaciones cliente.|  
 |**DisplayFolder**|Especifica la carpeta en la que se mostrará la medida a los usuarios cuando se conecten al cubo. Cuando un cubo tiene muchas medidas, se pueden utilizar carpetas para mostrar para categorizar las medidas y mejorar la exploración para el usuario.|  
 |**FormatString**|Puede seleccionar el formato que se utiliza para mostrar los valores de las medidas a los usuarios mediante la propiedad **FormatString** de la medida.<br /><br /> Aunque se proporciona una lista de los formatos de visualización en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se pueden especificar muchos otros formatos que no están en la lista. Puede especificar cualquier formato con nombre o definido por el usuario que sea válido en Microsoft Visual Basic.|  
 |**ID**|Requerido. Muestra el identificador único (Id.) de la medida. Esta propiedad es de solo lectura.|  
@@ -39,7 +39,7 @@ ms.locfileid: "34022232"
 |**Visible**|Determina la visibilidad de la medida en las aplicaciones cliente.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de grupo de medida](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
+ [Configurar las propiedades de los grupos de medida](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
  [Modificar medidas](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   

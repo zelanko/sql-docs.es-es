@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716559"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636444"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression*  
- Cuando la intercalación de la base de datos no contiene la marca de carácter complementario (SC), se trata de un número entero positivo de 0 a 65535 (de 0 a 0xFFFF). Si se especifica un valor fuera de este rango, se devuelve NULL. Para más información sobre el formato de caracteres, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Cuando la intercalación de la base de datos no contiene la marca de [carácter complementario (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), se trata de un entero positivo de 0 a 65535 (de 0 a 0xFFFF). Si se especifica un valor fuera de este rango, se devuelve NULL. Para más información sobre el formato de caracteres, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Cuando la intercalación de la base de datos admite la marca de carácter complementario (SC), se trata de un número entero positivo de 0 a 1114111 (de 0 a 0x10FFFF). Si se especifica un valor fuera de este rango, se devuelve NULL.  
+ Cuando la intercalación de la base de datos admite la marca SC, se trata de un entero positivo de 0 a 1114111 (de 0 a 0x10FFFF). Si se especifica un valor fuera de este rango, se devuelve NULL.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **nchar(1)** cuando la intercalación de la base de datos predeterminada no admite caracteres complementarios.  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  Si el parámetro *integer_expression* cae dentro del intervalo comprendido entre 0 y 0xFFFF, solo se devuelve un carácter. Con valores más altos, NCHAR devuelve el par suplente correspondiente. No cree un par suplente mediante `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. En su lugar, utilice una intercalación de base de datos que admita caracteres complementarios y después especifique el punto de código Unicode para el par suplente. En el ejemplo siguiente se muestra el método antiguo de creación de un par suplente y el método preferido de especificación del punto de código Unicode.  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. Usar NCHAR y UNICODE  
  En el siguiente ejemplo se utilizan las funciones `UNICODE` y `NCHAR` para imprimir el valor `UNICODE` y `NCHAR` (carácter Unicode) del segundo carácter de la cadena de caracteres `København`, y para imprimir el segundo carácter real, `ø`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. Usar SUBSTRING, UNICODE, CONVERT y NCHAR  
  En el siguiente ejemplo se utilizan las funciones `SUBSTRING`, `UNICODE`, `CONVERT` y `NCHAR` para imprimir el número de carácter, el carácter Unicode y el valor de UNICODE para cada uno de los caracteres de la cadena `København`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

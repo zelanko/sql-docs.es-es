@@ -20,16 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db923d432be92abfea17ee12a2bcdf61601c9fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802923"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419281"
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Ejecutar un procedimiento almacenado](execute-a-stored-procedure.md).
 
   En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47802923"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -69,7 +68,7 @@ ms.locfileid: "47802923"
   
 -   Ejecutar procedimientos almacenados del sistema  
   
-     Los procedimientos del sistema comienzan por el prefijo **sp_**. Puesto que aparecen lógicamente en todas las bases de datos definidas por el usuario y por el sistema, se pueden ejecutar desde cualquier base de datos sin necesidad de que calificar totalmente el nombre del procedimiento. Pero se recomienda calificar como de esquema todos los nombres de procedimientos del sistema con el nombre de esquema **sys** para evitar conflictos de nombres. En el ejemplo siguiente se muestra el método recomendado para llamar a un procedimiento del sistema.  
+     Los procedimientos del sistema comienzan por el prefijo **sp_**. Puesto que aparecen lógicamente en todas las bases de datos definidas por el usuario y por el sistema, se pueden ejecutar desde cualquier base de datos sin necesidad de calificar totalmente el nombre del procedimiento. Pero se recomienda calificar como de esquema todos los nombres de procedimientos del sistema con el nombre de esquema **sys** para evitar conflictos de nombres. En el ejemplo siguiente se muestra el método recomendado para llamar a un procedimiento del sistema.  
   
     ```sql  
     EXEC sys.sp_who;  

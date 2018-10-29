@@ -1,7 +1,7 @@
 ---
 title: nchar y nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,31 +17,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ca8eb44756561bd8a4a4a0ddce43f6f321bdf72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733503"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643893"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar y nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipos de datos de caracteres para datos Unicode de longitud fija, **nchar** o de longitud variable, **nvarchar**, y que usan el juego de caracteres UNICODE UCS-2.
+Los tipos de datos de caracteres son de longitud fija, **nchar**, o de longitud variable, **nvarchar**. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cuando se usa una intercalación con [carácter complementario (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-16](http://www.wikipedia.org/wiki/UTF-16). Si se especifica una intercalación que no es de tipo SC, estos tipos de datos almacenan solo el subconjunto de datos de caracteres admitidos por la codificación de caracteres [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
   
 ## <a name="arguments"></a>Argumentos  
 **nchar** [ ( n ) ]  
-Datos de cadena Unicode de longitud fija. *n* define la longitud de la cadena y debe ser un valor entre 1 y 4.000. El tamaño de almacenamiento es dos veces *n* bytes. Si la página de códigos de la intercalación usa caracteres de doble byte, el tamaño de almacenamiento sigue siendo de *n* bytes. Dependiendo de la cadena, el tamaño de almacenamiento de *n* bytes puede ser inferior al valor especificado para *n*. Los sinónimos ISO de **nchar** son **national char** y **national character**.
+Datos de cadena de longitud fija. *n* define la longitud de la cadena en pares de bytes y debe ser un valor entre 1 y 4000. El tamaño de almacenamiento es dos veces *n* bytes. Para la codificación [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), el tamaño de almacenamiento es el doble de *n* bytes y el número de caracteres que se pueden almacenar también en *n*. Para la codificación UTF-16, el tamaño de almacenamiento sigue siendo el doble de *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n* porque los caracteres complementarios usan dos pares de bytes (también denominados [par suplente](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Los sinónimos ISO de **nchar** son **national char** y **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Datos de cadena Unicode de longitud variable. *n* define la longitud de la cadena y puede ser un valor entre 1 y 4.000. **max** indica que el tamaño máximo de almacenamiento es de 2^30-1 caracteres.  El tamaño de almacenamiento máximo en bytes es de 2 GB. El tamaño de almacenamiento real, en bytes, es dos veces el número de caracteres especificado + 2 bytes. Los sinónimos ISO de **nvarchar** son **national char varying** y **national character varying**.
+Datos de cadena de longitud variable. *n* define la longitud de la cadena en pares de bytes y puede ser un valor entre 1 y 4000. **max** indica que el tamaño máximo de almacenamiento es de 2^30-1 caracteres (2 GB). El tamaño de almacenamiento es el doble de *n* bytes + 2 bytes. Para la codificación [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), el tamaño de almacenamiento es el doble de *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también en *n*. Para la codificación UTF-16, el tamaño de almacenamiento sigue siendo el doble de *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n* porque los caracteres complementarios usan dos pares de bytes (también denominados [par suplente](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Los sinónimos ISO de **nvarchar** son **national char varying** y **national character varying**.
   
 ## <a name="remarks"></a>Notas  
 Cuando no se especifica el argumento *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* con la función CAST, la longitud predeterminada es 30.
-  
-Use **nchar** cuando sea probable que el tamaño de las entradas de datos de las columnas sea similar.
-  
-Use **nvarchar** cuando sea probable que el tamaño de las entradas de datos de las columnas varíe.
+
+Si usa **nchar** o **nvarchar**, se recomienda:
+- Utilice **nchar** cuando los tamaños de las entradas de datos de columna sean coherentes.  
+- Use **nvarchar** cuando los tamaños de las entradas de datos de columna varíen considerablemente.  
+- Utilice **nvarchar(max)** cuando los tamaños de las entradas de datos de columna varíen de forma considerable y la longitud de la cadena pueda superar los 4000 pares de bytes.  
   
 **sysname** es un tipo de datos definido por el usuario y suministrado por el sistema que es funcionalmente equivalente a **nvarchar(128)**, excepto que no acepta valores NULL. **sysname** se usa para hacer referencia a nombres de objetos de base de datos.
   
@@ -49,43 +50,16 @@ Los objetos que usan **nchar** o **nvarchar** se asignan a la intercalación pre
   
 SET ANSI_PADDING siempre es ON para **nchar** y **nvarchar**. SET ANSI_PADDING OFF no se aplica a los tipos de datos **nchar** ni **nvarchar**.
   
-Anteponga el prefijo N en las constantes de cadena de caracteres Unicode. Sin este prefijo, la cadena se convierte en la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada puede no reconocer determinados caracteres.
+Prefijo de una constante de cadena de caracteres Unicode con la letra N para señalar la entrada UCS-2 o UTF-16, dependiendo de si se utiliza una intercalación SC o no. Sin el prefijo N, la cadena se convierte a la página de códigos predeterminada de la base de datos que puede no reconocer determinados caracteres. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se utiliza una intercalación con UTF-8 habilitado, la página de códigos predeterminada es capaz de almacenar el juego de caracteres UNICODE UTF-8. 
  
 > [!NOTE]  
->  Cuando se antepone un prefijo con la letra N en una constante de cadena, la conversión implícita dará como resultado una cadena Unicode si la constante que se convierte no supera la longitud máxima de un tipo de datos de cadena Unicode (4000). En caso contrario, la conversión implícita generará un valor grande de Unicode (max).
+> Cuando se antepone un prefijo con la letra N en una constante de cadena, la conversión implícita dará como resultado una cadena UCS-2 o UTF-16 si la constante que se convierte no supera la longitud máxima de un tipo de datos de cadena nvarchar (4000). En caso contrario, la conversión implícita generará un valor grande nvarchar(max).
   
 > [!WARNING]  
->  Cada columna **varchar(max)** o **nvarchar(max)** cuyo valor no sea NULL requiere 24 bytes de asignación fija adicional, que se descuentan del límite de 8.060 bytes de las filas durante una operación de ordenación. Estos bytes adicionales pueden crear un límite implícito del número de columnas **varchar(max)** o **nvarchar(max)** cuyo valor no sea NULL en una tabla. No se produce ningún error especial cuando se crea la tabla (más allá de la advertencia habitual de que el tamaño máximo de la fila supera el máximo permitido de 8060 bytes) ni en el momento de la inserción de los datos. Este gran tamaño de fila puede provocar errores (como el error 512) que los usuarios no puedan prever durante algunas operaciones habituales.  Dos ejemplos de operaciones son las actualizaciones de la clave de índice agrupado o las ordenaciones del conjunto de columnas completo.
+> Cada columna **varchar(max)** o **nvarchar(max)** cuyo valor no sea NULL requiere 24 bytes de asignación fija adicional, que se descuentan del límite de 8060 bytes de las filas durante una operación de ordenación. Estos bytes adicionales pueden crear un límite implícito del número de columnas **varchar(max)** o **nvarchar(max)** cuyo valor no sea NULL en una tabla. No se produce ningún error especial cuando se crea la tabla (más allá de la advertencia habitual de que el tamaño máximo de la fila supera el máximo permitido de 8060 bytes) ni en el momento de la inserción de los datos. Este gran tamaño de fila puede provocar errores (como el error 512) que los usuarios no puedan prever durante algunas operaciones habituales.  Dos ejemplos de operaciones son las actualizaciones de la clave de índice agrupado o las ordenaciones del conjunto de columnas completo.
   
 ## <a name="converting-character-data"></a>Convertir datos de caracteres  
 Para más información sobre cómo convertir datos de caracteres, vea [char y varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).
-  
-## <a name="examples"></a>Ejemplos  
-  
-```sql
-CREATE TABLE dbo.MyTable  
-(  
-  MyNCharColumn nchar(15)  
-,MyNVarCharColumn nvarchar(20)
-  
-);  
-  
-GO  
-INSERT INTO dbo.MyTable VALUES (N'Test data', N'More test data');  
-GO  
-SELECT MyNCharColumn, MyNVarCharColumn  
-FROM dbo.MyTable;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-MyNCharColumn   MyNVarCharColumn  
---------------- --------------------  
-Test data       More test data  
-  
-(1 row(s) affected)  
-```  
   
 ## <a name="see-also"></a>Vea también
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
@@ -96,7 +70,7 @@ Test data       More test data
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
-[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
-  
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)    
+[Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)     
+[Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
   

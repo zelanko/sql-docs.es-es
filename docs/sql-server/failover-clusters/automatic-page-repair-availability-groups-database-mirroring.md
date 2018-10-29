@@ -16,12 +16,12 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844654"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383570"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparación de página automática (grupos de disponibilidad: creación de reflejo de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "47844654"
   
 1.  Con la creación de reflejo de la base de datos, si el servidor reflejado encuentra uno o más errores de E/S de página cuando vuelve a generar una entrada del registro, la sesión de creación de reflejo establece el estado SUSPENDED. Con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], si una réplica secundaria encuentra uno o varios errores de E/S de página cuando rehace una entrada de registro, la base de datos secundaria entra en el estado SUSPENDED. En ese momento, el servidor reflejado o secundario inserta una fila en la tabla **suspect_pages** con el estado de error adecuado. A continuación, el servidor reflejado o secundario solicita una copia de la página al servidor principal.  
   
-2.  El servidor principal intenta tener acceso a la página en su copia de la base de datos. Si se puede tener acceso a la página, el servidor principal envía la copia de la página al servidor reflejado o secundario.  
+2.  El servidor principal intenta tener acceso a la página en su copia de la base de datos. Si se puede acceder a la página, el servidor principal envía la copia de la página al servidor reflejado o secundario.  
   
 3.  Si el servidor reflejado o secundario recibe copias de cada página que ha solicitado, el servidor secundario intentará reanudar la sesión de creación de reflejo. Si un intento de reparación de página automática repara una página sospechosa, la página se marcará en la tabla **suspect_pages** como restaurada (**event_type** = 4).  
   

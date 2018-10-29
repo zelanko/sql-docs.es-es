@@ -11,12 +11,12 @@ ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40c21bef138111f6b8ea7d7870a3a3d7209526c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c11459a9ec28f6f32b14590c2a85148920280a54
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099306"
 ---
 # <a name="projects-sql-server-management-studio"></a>Proyectos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,5 +60,5 @@ Para modificar información sobre una conexión, use la ventana de propiedades d
 ## <a name="see-also"></a>Ver también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/library/ms173879.aspx)  
   

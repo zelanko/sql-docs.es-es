@@ -38,7 +38,7 @@ ms.locfileid: "48178305"
   
 3.  En el panel de detalles, haga clic con el botón derecho en **MSSQLServer**y, después, haga clic en **Propiedades**.  
   
-4.  En el **SQL Server \< ***nombreDeInstancia***> propiedades** cuadro de diálogo el **propiedades** cuadro, establezca el valor de **iniciar modo de**a **Manual**.  
+4.  En el **SQL Server \<***nombreDeInstancia***> propiedades** cuadro de diálogo el **propiedades** cuadro, establezca el valor de **iniciar modo de**a **Manual**.  
   
 5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de \<***nombredeinstancia***> de SQL Server** y, luego, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

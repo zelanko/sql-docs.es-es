@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733173"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100316"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Usar expresiones en informes (Generador de informes y SSRS)
 En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , las expresiones se usan durante la definición de informe para especificar o calcular valores para parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes, y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad de un cuadro de diálogo que muestre el botón (**fx**) de la expresión o en una lista desplegable que muestre **\<Expression...>**.  
@@ -53,7 +53,7 @@ En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnove
 |-------------------|---------------------------------------|--------------------|  
 |Calcular los valores agregados para un conjunto de datos.|Propiedad Value de un marcador de posición dentro de un cuadro de texto. Use **Propiedades del marcador de posición (cuadro de diálogo), General**.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |Concatenar texto y expresiones en el mismo cuadro de texto.|Propiedad Value de un marcador de posición dentro de un cuadro de texto situado en un encabezado o pie de página. Use **Propiedades del marcador de posición (cuadro de diálogo), General**.|`="This report began processing at " & Globals!ExecutionTime`|  
-|Calcular un valor agregado para un conjunto de datos de otro ámbito.|Propiedad Value de un marcador de posición dentro de un cuadro de texto situado en un grupo de Tablix. Use **Propiedades del marcador de posición (cuadro de diálogo), General**.|`=Max(Fields!Total.Value,"DataSet2)`|  
+|Calcular un valor agregado para un conjunto de datos de otro ámbito.|Propiedad Value de un marcador de posición dentro de un cuadro de texto situado en un grupo de Tablix. Use **Propiedades del marcador de posición (cuadro de diálogo), General**.|`=Max(Fields!Total.Value,"DataSet2")`|  
 |Dar formato a los datos de un cuadro de texto en función del valor.|Propiedad Color de un marcador de posición dentro de un cuadro de texto de la fila de detalles de Tablix. Use **Propiedades de cuadro de texto (cuadro de diálogo), Fuente**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcular un valor una sola vez y hacer referencia a él en el informe.|Propiedad Value de una variable de informe. Use **Propiedades del informe (cuadro de diálogo), Variables**.|`=Variables!MyCalculation.Value`|  
 |Incluir valores específicos de varios campos de un conjunto de datos.|Ecuación de filtro de un grupo de Tablix. Use **Propiedades de Tablix (cuadro de diálogo), Filtros**.|Como tipo de datos, seleccione **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

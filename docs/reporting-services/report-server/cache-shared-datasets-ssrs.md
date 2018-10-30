@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905659"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021500"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Almacenar en caché conjuntos de datos compartidos (SSRS)
   Los resultados de las consultas para un conjunto de datos compartido se pueden copiar en una memoria caché para proporcionar datos coherentes a varios informes y mejorar el tiempo de respuesta de la consulta del conjunto de datos. Al igual que los informes, puede configurar un conjunto de datos compartido que se va a almacenar en memoria caché al usarse por primera vez o especificando una programación.  
@@ -51,7 +51,7 @@ ms.locfileid: "48905659"
   
  Mientras los resultados de la consulta para una combinación de parámetros concreta estén en la memoria caché, cada informe que se inicie para procesarse y que incluya una referencia al conjunto de datos compartido con esos valores de parámetros utilizará los datos de la memoria caché.  
   
- Puede especificar cuánto tiempo se mantendrán los datos en la memoria caché antes de que expiren. Para más información, vea [Página de almacenamiento en caché, conjuntos de datos compartidos &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ Puede especificar cuánto tiempo se mantendrán los datos en la memoria caché antes de que expiren. Para más información, vea [Página de almacenamiento en caché, conjuntos de datos compartidos &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
   
 ## <a name="preloading-the-cache"></a>Cargar previamente la memoria caché  
  Puede cargar previamente la memoria caché creando un plan de actualización de caché. Con un plan de actualización, puede especificar la frecuencia de la actualización de la memoria caché utilizando una programación específica de los elementos o una programación compartida. Para evitar varias entradas en la memoria caché para el mismo elemento, la programación que especifique debería permitir suficiente tiempo para el procesamiento de las consultas en el origen de datos externo. Por ejemplo, si la consulta tarda 20 minutos en ejecutarse, la programación de la actualización debería ser mayor de 20 minutos. Para obtener más información, vea [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "48905659"
   
 -   Debe tener los permisos ReadPolicy y UpdatePolicy en el conjunto de datos compartido.  
   
- Los planes de actualización de memoria caché se aplican a los conjuntos de datos compartidos y a los informes. Para más información, vea [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Los planes de actualización de memoria caché se aplican a los conjuntos de datos compartidos y a los informes. Para más información, vea [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Situaciones que pueden provocar la expiración de la memoria caché  
  Las siguientes condiciones pueden hacer que una memoria caché del conjunto de datos compartido deje de ser válida.  

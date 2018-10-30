@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5f848443fbfcbbb1c45aadf910f6493f408bf59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849323"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021880"
 ---
 # <a name="preload-the-cache-report-manager"></a>Cargar previamente la memoria caché (Administrador de informes)
   Puede cargar previamente la memoria caché para un conjunto de datos compartido creando un plan de actualización de caché para él.  
@@ -37,7 +37,7 @@ ms.locfileid: "47849323"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Para cargar previamente la memoria caché creando un plan de actualización de caché  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  En el Administrador de informes, navegue a la página **Contenido** y después navegue al elemento que desee almacenar en caché.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47849323"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Para cargar previamente la memoria caché con un informe específico del usuario utilizando una suscripción controlada por datos  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  En el Administrador de informes, navegue a la página **Contenido** y después, al informe para el que desea crear una suscripción.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47849323"
      O bien, para crear una programación personalizada, haga clic en **Según una programación creada para esta suscripción** y, a continuación, en **Siguiente**. Configure la programación y, a continuación, haga clic en **Finalizar**.  
   
     > [!NOTE]  
-    >  Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para más información, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para más información, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configure las opciones de Ejecución correspondientes al informe de la forma siguiente: En la página del informe, haga clic en la pestaña **Propiedades** .  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47849323"
 18. Haga clic en **Aplicar**.  
   
 ## <a name="see-also"></a>Ver también  
- [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Rendimiento, instantáneas, almacenamiento en caché &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   

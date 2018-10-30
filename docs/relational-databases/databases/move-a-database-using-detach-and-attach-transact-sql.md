@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776563"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150176"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover una base de datos mediante Separar y Adjuntar (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776563"
 1.  Separe la base de datos. Para obtener más información, vea [Separar una base de datos](../../relational-databases/databases/detach-a-database.md)  
   
 2.  En el Explorador de Windows o en una ventana del símbolo del sistema de Windows, mueva el archivo o archivos de la base de datos separada y el archivo o archivos de registro a la nueva ubicación.  
-  
-    > [!NOTE]  
-    >  Para mover una base de datos de un solo archivo, puede usar el correo electrónico si el tamaño del archivo es lo suficientemente pequeño para acomodar el correo electrónico.  
   
      Debe mover los archivos de registro, incluso si piensa crear nuevos archivos de registro. En algunos casos, para volver a adjuntar una base de datos son necesarios sus archivos de registro. Por tanto, mantenga siempre todos los archivos de registro separados hasta que la base de datos se haya adjuntado correctamente sin ellos.  
   

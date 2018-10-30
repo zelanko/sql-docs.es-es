@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c70ad78a8746f261130c7348f92582629c17a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849263"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021949"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
   Las tablas, las matrices, los gráficos y las imágenes que se incluyen en los informes, se pueden publicar como *elementos de informe*. Se trata de elementos de informe paginado que se han publicado por separado en un servidor de informes y se pueden volver a usar en otros informes paginados. Los elementos de informe tienen una extensión de archivo .rsc.  
@@ -107,7 +107,7 @@ ms.locfileid: "47849263"
  Cada vez que abre un informe, el Generador de informes comprueba si las instancias del servidor de elementos de ese informe se han actualizado en el servidor. También comprueba los cambios de los elementos dependientes de elementos de informe, como el conjunto de datos y los parámetros. Si algún elemento de informe publicado o sus dependencias se han actualizado en el servidor, una barra de información del informe muestra el número de elementos actualizados. Puede elegir ver, y aceptar o rechazar las actualizaciones, o bien descartar la barra de información. Si decide ver las actualizaciones, ve una miniatura del elemento de informe, quien realizó la última modificación y cuando tuvo lugar. A continuación, puede aceptar alguno de los elementos actualizados, o todos ellos.  
   
 > [!NOTE]  
->  Puede deshabilitar la barra de información y no ser informado si un elemento de informe ha cambiado. Establece esta opción al agregar el elemento de informe a su informe. Aunque haya deshabilitado la barra de información, aún puede comprobar las actualizaciones. Para más información, consulte [Buscar o desactivar actualizaciones (Generador de informes y SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  Puede deshabilitar la barra de información y no ser informado si un elemento de informe ha cambiado. Establece esta opción al agregar el elemento de informe a su informe. Aunque haya deshabilitado la barra de información, aún puede comprobar las actualizaciones. Para obtener más información, vea [Buscar o desactivar actualizaciones (Generador de informes y SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
   
  El Generador de informes busca diferencias entre la fecha de la última actualización del elemento de informe del servidor y la fecha en que usted sincronizó por última vez ese elemento de informe con el servidor. No comprueba la fecha en que modificó el elemento en su informe. Así, el elemento de informe en su informe y el elemento de informe en el servidor podrían ser bastante distintos, pero cuando el Generador de informes comprueba si hay actualizaciones, no encontrará ninguno.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "47849263"
   
  [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Buscar o desactivar actualizaciones (Generador de informes y SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [Buscar o desactivar actualizaciones (Generador de informes y SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>Ver también  
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solucionar problemas de elementos de informe (Generador de informes y SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Administración de elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
+ [Solucionar problemas de elementos de informe (Generador de informes y SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Administrar elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
   
   

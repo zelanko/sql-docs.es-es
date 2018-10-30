@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099916"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
@@ -56,7 +56,7 @@ ms.locfileid: "47643313"
   
      **rsconfig -e -u\<dominio/nombreDeUsuario> -p\<password>**  
   
- **rsconfig -e** admite argumentos adicionales. Para más información sobre la sintaxis y para ver ejemplos de comandos, vea [rsconfig (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
+ **rsconfig -e** admite argumentos adicionales. Para obtener más información sobre la sintaxis y para ver ejemplos de comandos, consulte [rsconfig (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Cómo se almacena la información de la cuenta  
  Al establecer la cuenta, la configuración siguiente se especifica en forma de valores cifrados en el archivo RSreportserver.config de una instancia local o remota del servidor de informes:  
@@ -101,6 +101,6 @@ ms.locfileid: "47643313"
  La información de cuenta se quita del archivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Ver también  
- [Administrador de configuración de Reporting Services (Modo nativo de SSRS)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Administrador de configuración de Reporting Services (Modo nativo de SSRS)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

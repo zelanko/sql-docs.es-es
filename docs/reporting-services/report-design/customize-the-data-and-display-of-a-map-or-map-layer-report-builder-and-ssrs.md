@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 867e0fff62bf38f5f2d4d42a24e6c3bf49a9ee34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a17aac87516dcc3903c6802435762f962258efe9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633713"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028794"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
   Después de agregar un mapa o una capa de mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con un asistente, puede que quiera cambiar el aspecto del mapa en el informe. Puede realizar mejoras considerando las ideas siguientes:  
@@ -86,7 +86,7 @@ ms.locfileid: "47633713"
   
 -   Resolución y simplificación. Buscar un equilibro entre el tiempo de dibujo y los contornos detallados de las líneas y polígonos.  
   
- Para cambiar estas opciones, haga clic con el botón derecho en la ventanilla del mapa y use la página [Cuadro de diálogo Propiedades de ventanilla de mapa, General](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) y las páginas relacionadas.  
+ Para cambiar estas opciones, haga clic con el botón derecho en la ventanilla del mapa y use la página [Cuadro de diálogo Propiedades de ventanilla de mapa, General](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) y las páginas relacionadas.  
   
 ##  <a name="Legends"></a> Cambiar las opciones de las leyendas  
  Las leyendas ayudan a los usuarios a interpretar los datos de un mapa.  
@@ -121,7 +121,7 @@ ms.locfileid: "47633713"
   
  La expresión de grupo especifica cómo se agregan los datos analíticos que tienen relación con los datos espaciales para cada elemento de mapa de la capa. De forma predeterminada, la expresión de grupo es el conjunto de campos coincidentes que se especificó para la relación entre los datos espaciales y los datos analíticos. Por ejemplo, en un mapa de burbujas que muestra las ubicaciones de las ciudades y el tamaño de la población de un país o región, los campos coincidentes incluyen el nombre de la ciudad [City] y el nombre de la región [Region] porque puede haber varias ciudades con el mismo nombre. La expresión de grupo correspondiente incluye dos campos: [City ] y [Region].  
   
- Para obtener más información, vea [Sugerencias sobre mapas: cómo importar archivos de forma en SQL Server y agregar datos espaciales](http://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para obtener más información, vea [Sugerencias sobre mapas: cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
 ##  <a name="MapElements"></a> Cambiar las opciones de los elementos de mapa de la capa  
  Los elementos de mapa son los puntos, líneas o polígonos de una capa que se basan en los datos espaciales. Se pueden establecer las opciones siguientes para los elementos de mapa. Estas opciones se aplican a todos los elementos de mapa de la capa, tanto si están incrustados como si no:  

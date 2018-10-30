@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744573"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030204"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creación de un informe móvil de Reporting Services
 Con el Publicador de informes móviles de Microsoft SQL Server, puede crear informes móviles de SQL Server 2016 Reporting Services con un escalado adecuado hasta cualquier tamaño de pantalla en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles.  
   
-La primera vez que crea un informe móvil, puede instalar el Publicador de informes móviles de Microsoft SQL Server en la máquina local desde el portal web de Reporting Services. También puede instalarlo desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Después de la primera ejecución, puede iniciarlo desde el portal web o localmente.   
+La primera vez que crea un informe móvil, puede instalar el Publicador de informes móviles de Microsoft SQL Server en la máquina local desde el portal web de Reporting Services. También puede instalarlo desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Después de la primera ejecución, puede iniciarlo desde el portal web o localmente.   
     
 1. En la barra superior del portal web de Reporting Services, seleccione **Nuevo** > **Informe móvil**.  
   

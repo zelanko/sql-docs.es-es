@@ -8,23 +8,23 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6397e574376e652217ec909a02a47e0c9c26eae
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: d86215287683e9ff8ab3c7c01f410ff8b2fd0896
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851924"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031964"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
 
   En versiones recientes del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, la protección ampliada es un conjunto de mejoras. La protección ampliada mejora cómo protegen las aplicaciones las credenciales y la autenticación. La propia característica no proporciona directamente protección contra ataques específicos como el reenvío de credenciales, sino que proporciona una infraestructura para aplicaciones como [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el fin de aplicar la protección ampliada para la autenticación.  
   
- Las principales mejoras de autenticación que forman parte de la protección ampliada son los enlaces de servicio y de canal. El enlace de canal usa un token de enlace de canal (CBT) para comprobar que no se ha puesto en peligro el canal establecido entre dos extremos. El enlace de servicio usa nombres principales de servicio (SPN) para validar el destino previsto de los tokens de autenticación. Para obtener información general sobre la protección ampliada, vea [Autenticación de Windows integrada con protección ampliada](http://go.microsoft.com/fwlink/?LinkId=179922).  
+ Las principales mejoras de autenticación que forman parte de la protección ampliada son los enlaces de servicio y de canal. El enlace de canal usa un token de enlace de canal (CBT) para comprobar que no se ha puesto en peligro el canal establecido entre dos extremos. El enlace de servicio usa nombres principales de servicio (SPN) para validar el destino previsto de los tokens de autenticación. Para obtener información general sobre la protección ampliada, vea [Autenticación de Windows integrada con protección ampliada](https://go.microsoft.com/fwlink/?LinkId=179922).  
   
 SQL Server Reporting Services (SSRS) admite y aplica la protección ampliada que se ha habilitado en el sistema operativo y se ha configurado en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación Negotiate o NTLM y, por tanto, pueden beneficiarse de la compatibilidad de la protección ampliada del sistema operativo y de las características de la protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  De forma predeterminada, Windows no habilita la protección ampliada. Para obtener información sobre cómo habilitar la protección ampliada de Windows, vea [Protección ampliada para la autenticación](http://go.microsoft.com/fwlink/?LinkID=178431). Tanto el sistema operativo como la pila de autenticación de cliente deben ser compatibles con la protección ampliada para la autenticación se realice correctamente. En sistemas operativos más antiguos, quizá deba instalar varias actualizaciones para disponer de un equipo totalmente preparado para la protección ampliada. Para obtener información sobre los desarrollos recientes con la protección ampliada, vea [Actualizar información con protección ampliada](http://go.microsoft.com/fwlink/?LinkId=183362).  
+>  De forma predeterminada, Windows no habilita la protección ampliada. Para obtener información sobre cómo habilitar la protección ampliada de Windows, vea [Protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=178431). Tanto el sistema operativo como la pila de autenticación de cliente deben ser compatibles con la protección ampliada para la autenticación se realice correctamente. En sistemas operativos más antiguos, quizá deba instalar varias actualizaciones para disponer de un equipo totalmente preparado para la protección ampliada. Para obtener información sobre los desarrollos recientes con la protección ampliada, vea [Actualizar información con protección ampliada](https://go.microsoft.com/fwlink/?LinkId=183362).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Información general sobre la protección ampliada de Reporting Services
 
@@ -164,11 +164,11 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[Introducción a la protección ampliada para la autenticación](http://go.microsoft.com/fwlink/?LinkID=177943)   
-[Autenticación de Windows integrada con protección ampliada](http://go.microsoft.com/fwlink/?LinkId=179922)   
-[Asesor de seguridad de Microsoft: protección ampliada para la autenticación](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[Introducción a la protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=177943)   
+[Autenticación de Windows integrada con protección ampliada](https://go.microsoft.com/fwlink/?LinkId=179922)   
+[Asesor de seguridad de Microsoft: protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

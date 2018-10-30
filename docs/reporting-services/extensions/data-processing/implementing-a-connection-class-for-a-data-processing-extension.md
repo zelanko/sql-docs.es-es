@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0a9e5a7385239a68e23426e026ae477b7dccb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa0709d4bfde776221c5c5f234c1a3acb502406
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700713"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031814"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementar una clase Connection para una extensión de procesamiento de datos
   El objeto **Connection** representa una conexión a bases de datos o un recurso similar, y es el punto inicial para los usuarios de una extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Representa las conexiones a los servidores de bases de datos, aunque cualquier entidad con un comportamiento similar se puede exponer como **Connection**.  
@@ -44,7 +44,7 @@ ms.locfileid: "47700713"
 > [!NOTE]  
 >  Implementar de forma implícita <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> le exige que implemente los miembros de las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> y <xref:Microsoft.ReportingServices.Interfaces.IExtension>.  
 >   
->  Para obtener una muestra de la implementación de la clase **Connection**, vea [Muestras de productos de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+>  Para obtener una muestra de la implementación de la clase **Connection**, vea [Muestras de productos de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Ver también  
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

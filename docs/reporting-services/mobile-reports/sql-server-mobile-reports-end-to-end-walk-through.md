@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717223"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021179"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.
@@ -32,17 +32,17 @@ Para poder continuar, necesita estos productos:
   
 * Para crear orígenes de datos y KPI, además de publicar informes móviles y conjuntos de datos, necesita tener acceso a un [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Para [crear conjuntos de datos compartidos](../install-windows/install-report-builder.md).  
-* Para crear informes móviles, [instale Publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
+* Para crear informes móviles, [instale Publicador de informes móviles de SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
 *  O BIEN: Base de datos de ejemplo de World Wide Importers, disponible en la página [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para ver el resultado: 
-  *   [Suscríbase al servicio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) y
+  *   [Suscríbase al servicio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) y
   *  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil: dispositivo iOS, teléfono Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Crear un origen de datos compartido  
   
-Puede crear un origen de datos compartido para los informes móviles desde cualquiera de los orígenes de datos compatibles con Reporting Services. Vea la [lista de orígenes de datos admitidos](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Puede crear un origen de datos compartido para los informes móviles desde cualquiera de los orígenes de datos compatibles con Reporting Services. Consulte una [lista de orígenes de los datos admitidos](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. En el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , haga clic en **Nuevo** > **Origen de datos**.  
   
@@ -63,7 +63,7 @@ Lea más información sobre los [orígenes de datos compartidos en Reporting Ser
    
 ## <a name="shared-dataset">Creación de un conjunto de datos compartido</a>  
   
-Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existente, como Diseñador de informes en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para crear el conjunto de datos compartido.  Este tutorial usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale el Generador de informes](../install-windows/install-report-builder.md) o ábralo desde el portal web. Creará tres conjuntos de datos, uno para: el valor del KPI, la tendencia del KPI y otro con más campos para el informe móvil de Reporting Services.     
+Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existente, como Diseñador de informes en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para crear el conjunto de datos compartido.  Este tutorial usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instalar el Generador de informes](../install-windows/install-report-builder.md)o ábralo desde el portal web. Creará tres conjuntos de datos, uno para: el valor del KPI, la tendencia del KPI y otro con más campos para el informe móvil de Reporting Services.     
   
 1. En el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , haga clic en **Nuevo** > **Informe paginado** para iniciar [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -133,7 +133,7 @@ Puede crear KPI directamente en el portal web de [!INCLUDE[PRODUCT_NAME](../../i
     
 ## <a name="create-mobile-report">Creación de un informe móvil de Reporting Services</a>  
    
-Para crear un informe móvil de Reporting Services, [instale Publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766)o inícielo desde el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
+Para crear un informe móvil de Reporting Services, [instale Publicador de informes móviles de SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)o inícielo desde el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 Cuando se abra [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]por primera vez, verá un lienzo en blanco donde podrá crear el informe móvil. Para empezar, puede crear objetos visuales primero o puede comenzar con los datos. Si crea primero los objetos visuales, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera automáticamente datos simulados asociados al informe y cambia dinámicamente a medida que cambian sus selecciones visuales. Inténtelo.   
   
@@ -259,7 +259,7 @@ Puede guardar localmente el informe o en un portal web de [!INCLUDE[PRODUCT_NAME
   
 Para ver el informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe hacer lo siguiente:
 
-*  [Suscríbase en el servicio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879), si todavía no tiene una cuenta.
+*  [Suscríbase en el servicio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879), si todavía no tiene una cuenta.
 *  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil.  
 
 ### <a name="view-your-mobile-report"></a>Ver el informe móvil

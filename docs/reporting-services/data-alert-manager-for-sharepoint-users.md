@@ -12,12 +12,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79bf8462483347964fc1dece4486167d44f67d1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bd21f8be841437b15f780001221da72d9f665aa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668723"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030684"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
 
@@ -46,7 +46,7 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
   
  ![Abrir el Administrador de alertas desde el menú contextual del informe](../reporting-services/media/rs-openalertmanager.gif "Abrir el Administrador de alertas desde el menú contextual del informe")  
   
- El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+ El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  En la tabla siguiente se muestran datos de ejemplo de una tabla del Administrador de alertas de datos. Cuando se produce un error, el mensaje de error y el identificador de la entrada del registro (un GUID) se incluyen en el campo **Estado** de la tabla.  
   
@@ -88,4 +88,4 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
 [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

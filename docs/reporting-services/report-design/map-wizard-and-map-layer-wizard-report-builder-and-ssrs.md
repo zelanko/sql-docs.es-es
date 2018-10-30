@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645173"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021059"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
  En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el Asistente para mapas y el Asistente para capas de mapa automatizan las tareas de crear un mapa, agregar una capa de mapa o cambiar las opciones de capas de mapa en una capa existente.  
@@ -128,13 +128,13 @@ ms.locfileid: "47645173"
  En el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], agregue el archivo .shp y el archivo .dbf al proyecto de informe y, a continuación, especifique el nombre del archivo .shp como el origen de datos espaciales.  
   
 ###  <a name="GetShapefiles"></a> ¿Dónde se pueden obtener archivos de forma ESRI?  
- Los archivos de forma ESRI están disponibles en Internet. Para obtener más información, vea [Buscar archivos de forma ESRI para un mapa](http://go.microsoft.com/fwlink/?linkid=178814).  
+ Los archivos de forma ESRI están disponibles en Internet. Para obtener más información, vea [Buscar archivos de forma ESRI para un mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> ¿Qué es una consulta espacial de SQL Server?  
  Una consulta espacial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una consulta de conjunto de datos que especifica datos de tipo SQLGeometry o SQLGeography de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para más información, vea [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para más información, vea [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Al ejecutar la consulta en el diseñador de consultas, el conjunto de resultados muestra una columna con datos espaciales que aparece como texto. Por ejemplo, una fila podría contener datos espaciales que sean un único punto y la siguiente fila podría contener datos espaciales que definan un conjunto de puntos. Cada fila se convierte en un elemento de mapa. Puede variar la presentación de cada elemento de mapa como una unidad indivisible.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "47645173"
   
 -   **Híbrido.** Muestra la combinación de las vistas **Carretera** y **Aéreo** .  
   
- Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371).  
+ Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para más información, vea [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y [Planear un informe de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   

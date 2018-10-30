@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031414"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Pin Reporting Services items to Power BI Dashboards (Anclar elementos de Reporting Services en paneles de Power BI)
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permite a los usuarios anclar elementos de informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de la barra de herramientas del Visor de informes en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] como un nuevo icono.   Para anclarlos, el administrador tendrá que integrar primero el servidor de informes con Azure Active Directory y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "47710559"
   
 ##  <a name="bkmk_requirements_to_pin"></a> Requisitos para el anclado  
   
--   El servidor de informes está configurado para su integración con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Si no se ha configurado el servidor de informes, no verá el botón **Anclar al panel de Power BI** en la barra de herramientas.  
+-   El servidor de informes está configurado para su integración con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Para más información, vea [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Si no se ha configurado el servidor de informes, no verá el botón **Anclar al panel de Power BI** en la barra de herramientas.  
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47710559"
   
 ##  <a name="bkmk_to_pin"></a> Para anclar un elemento de informe  
   
-1. Compruebe que haya iniciado sesión en [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. En el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], seleccione el elemento de menú **Mi configuración** e inicie sesión. Para más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+1. Compruebe que haya iniciado sesión en [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. En el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], seleccione el elemento de menú **Mi configuración** e inicie sesión. Para más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -107,13 +107,13 @@ En el panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , el elemento 
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **En los elementos anclados se muestran datos obsoletos** en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] y ya se han actualizado durante un período de tiempo.  El token de las credenciales de usuario ha expirado y tendrá que volver a iniciar sesión.  El registro de las credenciales de usuario en Azure y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] es válido durante 90 días. En el[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], haga clic en **Mi configuración**. Para más información, vea [La configuración de la integración de Power BI &#40;portal web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **En los elementos anclados se muestran datos obsoletos** en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] y ya se han actualizado durante un período de tiempo.  El token de las credenciales de usuario ha expirado y tendrá que volver a iniciar sesión.  El registro de las credenciales de usuario en Azure y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] es válido durante 90 días. En el[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], haga clic en **Mi configuración**. Para más información, vea [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
 -   **Los elementos anclados muestran datos obsoletos** en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] y no se han actualizado ni siquiera una vez.  El problema es que el informe no está configurado para utilizar credenciales almacenadas. Un informe debe utilizar credenciales almacenadas, porque al anclar elemento de informe se crea una suscripción de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para administrar la programación de actualización de los iconos. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] requieren credenciales almacenadas. Si consulta la página **Mis suscripciones** , verá un mensaje de error similar al siguiente:  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Credenciales de Power BI expiradas:**  está tratando de anclar un elemento y se le muestra el siguiente mensaje de error. En el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], haga clic en **Mi configuración** y, en la página que se muestre, haga clic en **Iniciar sesión**. Para más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Credenciales de Power BI expiradas:**  está tratando de anclar un elemento y se le muestra el siguiente mensaje de error. En el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], haga clic en **Mi configuración** y, en la página que se muestre, haga clic en **Iniciar sesión**. Para más información, vea  [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) .  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -140,7 +140,7 @@ En el panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , el elemento 
 
 ## <a name="see-also"></a>Ver también  
  [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [La configuración de la integración de Power BI &#40;portal web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Paneles en Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

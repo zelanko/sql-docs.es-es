@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a7759473698ebdae0a9e97e7487f8812983d5b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533391424ab1eeacb52d59e56070f0b874320942
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030394"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Cómo crear, modificar y eliminar suscripciones controladas por datos
   Una suscripción controlada por datos es una suscripción basada en consultas que obtiene los valores de los datos que se utilizan para procesar la suscripción en tiempo de ejecución. Cuando se desencadena la suscripción, se procesa una consulta para obtener información actualizada sobre destinatarios, opciones de entrega del informe, formatos de representación y valores de los parámetros. Los resultados de la consulta se combinan con la definición de la suscripción para crear una suscripción dinámica que utiliza datos que se mantienen en una base de datos de empleados, de clientes o de cualquier otro tipo que contenga información que se pueda utilizar como datos de suscriptor.  
@@ -36,7 +36,7 @@ ms.locfileid: "47849153"
 -   [Ejecutar la suscripción](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Administrar y eliminar una suscripción controlada por datos  
- Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante la página Administrar trabajos del Administrador de informes. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante la página Administrar trabajos del Administrador de informes. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
   
  Para eliminar una suscripción controlada por datos, selecciónela en la página Mis suscripciones o en la página Suscripciones de un informe y, después, haga clic en **Eliminar**.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47849153"
 ## <a name="see-also"></a>Ver también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [old_Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Mis suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Crear y administrar suscripciones para servidores de informes en modo nativo](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [Suscripciones &#40;página del Administrador de informes&#41;](https://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Mis suscripciones &#40;página del Administrador de informes&#41;](https://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

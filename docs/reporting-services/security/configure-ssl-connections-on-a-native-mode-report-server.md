@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ef9ae610a977c372503918b128141485e05dc17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020279"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexiones SSL en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  
@@ -30,7 +30,7 @@ ms.locfileid: "47613763"
   
  En esta prueba, puede generar un certificado localmente. Si usa la utilidad **MakeCert** y el comando de ejemplo como una plantilla, asegúrese de especificar el nombre del servidor como host y quite todos los saltos de línea antes de ejecutar el comando. Si ejecuta el comando en una ventana DOS, puede que tenga que aumentar el tamaño de búfer de la ventana para que pueda contener todo el comando.  
   
- Si ejecuta IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conjuntamente en el mismo equipo, puede usar la aplicación de consola Administrador de IIS para instalar el certificado en el equipo. En Administrador de IIS se incluyen opciones para crear y empaquetar un archivo de solicitud de certificado (.crt) para su posterior procesamiento por parte una entidad de certificación de confianza. La entidad de certificación que use generará un archivo de certificado (.cer) y se lo enviará de vuelta. Puede utilizar la Consola de administración de IIS para instalar el archivo de certificado en el almacén local. Para obtener más información, vea [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) en Technet.  
+ Si ejecuta IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conjuntamente en el mismo equipo, puede usar la aplicación de consola Administrador de IIS para instalar el certificado en el equipo. En Administrador de IIS se incluyen opciones para crear y empaquetar un archivo de solicitud de certificado (.crt) para su posterior procesamiento por parte una entidad de certificación de confianza. La entidad de certificación que use generará un archivo de certificado (.cer) y se lo enviará de vuelta. Puede utilizar la Consola de administración de IIS para instalar el archivo de certificado en el almacén local. Para obtener más información, vea [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) en Technet.  
   
 ## <a name="interoperability-issues-with-iis"></a>Problemas de interoperabilidad con IIS  
  La presencia de IIS en el mismo equipo que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afectará significativamente a las conexiones SSL con un servidor de informes:  

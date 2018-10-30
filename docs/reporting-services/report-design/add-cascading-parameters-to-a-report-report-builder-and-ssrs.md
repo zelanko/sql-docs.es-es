@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3696e2e1a299a79ad0eea95db4783297474ea3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 209e4ad60eb364a0cbc1ac873dd04af62fa986e3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030844"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Agregar parámetros en cascada a un informe (Generador de informes y SSRS)
   Los parámetros en cascada permiten administrar grandes cantidades de datos de informe. Es posible definir un conjunto de parámetros relacionados de manera que la lista de valores de uno de ellos dependa del valor seleccionado en otro parámetro. Por ejemplo, el primer parámetro es independiente y podría presentar una lista de categorías de productos. Cuando el usuario selecciona una categoría, el segundo parámetro depende del valor del primer parámetro. Sus valores se actualizan con una lista de subcategorías para la categoría elegida. Cuando el usuario ve el informe, los valores de los parámetros de categoría y subcategoría se usan para filtrar los datos del informe.  
@@ -25,7 +25,7 @@ ms.locfileid: "47744023"
   
  El orden es importante para los parámetros en cascada, dado que la consulta del conjunto de datos de un parámetro que aparece más adelante en la lista incluye una referencia a cada parámetro que aparece antes en la lista. En tiempo de ejecución, el orden de los parámetros en el panel Datos de informe determina el orden en que aparecen las consultas de parámetros en el informe, y por consiguiente, el orden en el que el usuario elige cada uno de los valores de los parámetros sucesivos.  
   
- Para obtener información sobre la creación de parámetros en cascada con varios valores e incluso la función Select All, vea [Tener un parámetro en cascada con varios valores y Select All](http://go.microsoft.com/fwlink/?LinkId=184757).  
+ Para obtener información sobre la creación de parámetros en cascada con varios valores e incluso la función Select All, vea [Tener un parámetro en cascada con varios valores y Select All](https://go.microsoft.com/fwlink/?LinkId=184757).  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Para crear el conjunto de datos principal con una consulta que incluye varios parámetros relacionados  
   

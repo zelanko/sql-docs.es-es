@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 419e1a3e6bf886625edd260f48afea9bcb4bc109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6a632c7d5bb1579f7fdee84d390b47bf0c863e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614853"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030444"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deshabilitar o pausar el procesamiento de informes y suscripciones
   Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este tema comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con ambos modos de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En las tablas siguientes se resumen los métodos y los modos de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   Biblioteca de SharePoint (solo disponible desde un sitio de SharePoint integrado con un servidor de informes en el modo integrado de SharePoint)  
   
- Para poder usar la entrega por correo electrónico, debe configurarse previamente. Si no se configura, no estará disponible. Para más información, consulte [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Para poder usar la entrega por correo electrónico, debe configurarse previamente. Si no se configura, no estará disponible. Para más información, consulte [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
- Si quiere desactivar extensiones concretas, puede quitar las entradas de extensión del archivo **RSReportServer.config** . Para más información, consulte [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) y [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Si quiere desactivar extensiones concretas, puede quitar las entradas de extensión del archivo **RSReportServer.config** . Para obtener más información, vea [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) y [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Una vez que quite una extensión de entrega, ya no estará disponible en el Administrador de informes o un sitio de SharePoint. Si quita una extensión de entrega, es posible que algunas suscripciones queden inactivas. Asegúrese de eliminar las suscripciones o configurarlas para usar una extensión de entrega diferente antes de quitar una extensión.  
   
@@ -167,7 +167,7 @@ ForEach ($subscription in $subscriptions)
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Página de propiedades de seguridad, elementos &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Página de propiedades de seguridad, elementos &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   

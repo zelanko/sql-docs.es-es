@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6963674fe21754b9194cf8b3024e85db7291e370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935749fe3bd88171892874b2643c6803a59fde92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029824"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -28,7 +28,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  El diseñador de consultas muestra automáticamente las listas de SharePoint para las que el usuario tiene los permisos necesarios para obtener acceso.  
   
- Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes. Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos. Los tipos de credenciales que se pueden utilizar con esta extensión de datos dependen de la configuración de la tecnología de SharePoint para la lista de SharePoint que se esté utilizando como origen de datos.  
@@ -71,7 +71,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Para obtener más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar credenciales en el Generador de informes](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Para obtener más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Consultas  
  Para diseñar una consulta, cree un nuevo conjunto de datos basado en el origen de datos y, a continuación, abra el diseñador de consultas asociado. Para obtener más información, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -90,7 +90,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  No se admite la selección de campos de varias listas. Puede crear un conjunto de datos para cada lista y seleccionar campos de cada conjunto de datos. Si las listas tienen un campo común, puede utilizar la función de búsqueda en una región de datos de Tablix enlazada a un conjunto de datos para recuperar un valor del otro conjunto de datos que no está enlazado a la región de datos. Para obtener más información, vea [Función Lookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
 -   **Filtros aplicados**  Limita los datos que se devuelven desde la lista de SharePoint, antes de que los datos se devuelvan al informe. Seleccione el nombre de campo, el operador y el valor que se deben usar para limitar los datos que se recuperan de la lista. Los operadores varían en función del tipo de datos del valor que se seleccione.  
   
@@ -98,7 +98,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
 -   **Resultados de consulta**  Muestra filas de ejemplo que se devuelven cuando se ejecuta la consulta. Si los valores de lista de SharePoint cambian con frecuencia en el sitio de SharePoint, los valores que se ven en el panel de resultados de la consulta podrían diferir de los valores que se ven en el informe.  
   
--   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
 -   **Filtros aplicados**  Limita los datos que se devuelven desde la lista de SharePoint, antes de que los datos se devuelvan al informe. Seleccione el nombre de campo, el operador y el valor que se deben usar para limitar los datos que se recuperan de la lista. Los operadores varían en función del tipo de datos del valor que se seleccione.  
   
@@ -169,7 +169,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -178,7 +178,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
 
 ## <a name="see-also"></a>Ver también
@@ -187,4 +187,4 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 [Filtrar, agrupar y ordenar datos](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

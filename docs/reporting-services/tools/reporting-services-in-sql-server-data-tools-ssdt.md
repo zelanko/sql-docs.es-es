@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030384"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es un entorno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para crear soluciones de inteligencia empresarial. SSDT cuenta con un Diseñador de informes para crear el entorno, donde puede abrir, modificar, obtener una vista previa, guardar e implementar definiciones de informe paginadas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no se incluye con SQL Server. Descargar [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es un entorno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para crear soluciones de inteligencia empresarial. SSDT cuenta con un Diseñador de informes para crear el entorno, donde puede abrir, modificar, obtener una vista previa, guardar e implementar definiciones de informe paginadas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no se incluye con SQL Server. Descargar [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
  En este tema se describen las soluciones, proyectos, plantillas de proyecto y configuraciones de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] utilizadas para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], y las vistas, menús, barras de herramientas y métodos abreviados que se pueden usar en el Diseñador de informes.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48906005"
   
  Use el panel de propiedades para:  
   
--   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)**. La mayoría de las propiedades pueden aceptar una expresión (las expresiones complejas se indican con el valor **\<Expression>**). Haga clic en **\<Expression>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)**. La mayoría de las propiedades pueden aceptar una expresión (las expresiones complejas se indican con el valor **\<Expression>**). Haga clic en **\<Expression>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use los botones de la barra de herramientas del panel de propiedades para cambiar la cuadrícula de la vista por categorías a la vista alfabética. En la vista por categorías, es probable que tenga que expandir una categoría para ver todas las propiedades de la misma. Para abrir el cuadro de diálogo Propiedades de un elemento, haga clic en el botón **Páginas de propiedades** en la barra de herramientas, o bien haga clic con el botón derecho en el elemento y seleccione **Propiedades**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48906005"
   
 
 ##  <a name="bkmk_SourceControl"></a> Control de código fuente  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se puede integrar con complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se puede integrar con complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo Opciones** para especificar el complemento y configurar las propiedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Plantillas de informe personalizadas  
  Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en la ubicación siguiente: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  
@@ -305,10 +305,10 @@ ms.locfileid: "48906005"
   
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Descargar SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
+[Descargar SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)   
 [Informes de Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Lenguaje RDL (Report Definition Language)](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Implementación y compatibilidad de versiones en SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

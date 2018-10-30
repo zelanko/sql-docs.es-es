@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651883"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020189"
 ---
 # <a name="process-large-reports"></a>Procesar informes grandes
   Los informes de gran tamaño presentan determinados problemas de procesamiento y requieren determinadas configuraciones para que se ejecuten correctamente. Estos informes no deben ejecutarse a petición a menos que estén configurados para admitir paginación.  
@@ -31,7 +31,7 @@ ms.locfileid: "47651883"
   
  En el caso de informes que incluyen datos volátiles, el tamaño puede variar drásticamente de una ejecución a otra del informe. En este caso, debe supervisar el origen de datos para determinar cómo afecta la volatilidad de los datos al informe y si es preciso seguir los pasos que se exponen en este tema.  
   
- Para obtener más información y sugerencias sobre cómo diagnosticar errores de tiempo de espera y errores de memoria insuficiente, vea el artículo sobre [cómo diagnosticar problemas cuando se ejecutan informes en el servidor de informes](http://go.microsoft.com/fwlink/?LinkId=85634) en blogs.msdn.com.  
+ Para obtener más información y sugerencias sobre cómo diagnosticar errores de tiempo de espera y errores de memoria insuficiente, vea el artículo sobre [cómo diagnosticar problemas cuando se ejecutan informes en el servidor de informes](https://go.microsoft.com/fwlink/?LinkId=85634) en blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Recomendaciones para la configuración  
  Entre las recomendaciones para la ejecución de informes, la representación de informes y el acceso a los informes, se contemplan los siguientes aspectos:  

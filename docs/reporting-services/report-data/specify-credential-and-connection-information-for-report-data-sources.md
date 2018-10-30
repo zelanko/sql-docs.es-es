@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756413"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031604"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -48,7 +48,7 @@ ms.locfileid: "47756413"
   
      La primera vez que guarda en, publica en o va a un servidor de informes o un sitio de SharePoint, es posible que necesite escribir sus credenciales. Las credenciales que escribe se utilizan hasta el final de la sesión en el Generador de informes. Si decide guardar las credenciales, se almacenan con seguridad en el equipo junto con su configuración de usuario. En las siguientes sesiones del Generador de informes, se usan las credenciales guardadas para conectar con el mismo servidor de informes o con el sitio de SharePoint. El administrador del servidor de informes o el administrador de SharePoint especifica qué tipo de credenciales hay que utilizar.  
   
--   Las credenciales del origen de datos que escriba en la página [Propiedades del origen de datos (cuadro de diálogo), Credenciales &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) de un origen de datos incrustados.  
+-   Las credenciales del origen de datos que escriba en la página [Propiedades del origen de datos (cuadro de diálogo), Credenciales &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) de un origen de datos incrustados.  
   
      El servidor de informes utiliza estas credenciales para realizar una conexión de datos al origen de datos externo. Para algunos tipos de orígenes de datos, las credenciales pueden estar almacenadas con seguridad en el servidor de informes. Estas credenciales permiten a otros usuarios ejecutar el informe sin proporcionar las credenciales para la conexión de datos subyacente.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47756413"
   
      Para los orígenes de datos compartidos, utilice la opción **Guardar mi contraseña** para guardar localmente las credenciales con sus valores de usuario en su equipo. El Generador de informes utiliza las credenciales guardadas cada vez que se realiza una conexión al origen de datos externo correspondiente.  
   
- Para más información, vea [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) y [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Para más información, vea [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) y [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Usar orígenes de datos remotos  
  Si el informe recupera datos de un servidor de bases de datos remoto, compruebe lo siguiente:  

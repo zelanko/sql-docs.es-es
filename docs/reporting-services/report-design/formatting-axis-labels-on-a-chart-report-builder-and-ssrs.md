@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c66eb9c4f9636cd77d78fd8e77ddc8f6f0b5c3d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 263cd5cc24a293192c434c644c387f5678e120fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795433"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031424"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
   Los tipos de gráficos basados en coordenadas (de columnas, de barras, de áreas, de puntos, de líneas y de intervalos) tienen dos ejes que se usan para clasificar y mostrar las relaciones entre los datos. A cada eje se le aplican distintos tipos de formato.  
@@ -105,7 +105,7 @@ ms.locfileid: "47795433"
   
  Hay dos maneras de establecer un eje escalar:  
   
--   Seleccione la opción **Eje escalar** en el cuadro de diálogo **Propiedades del eje** . Esto agregará valores numéricos o de fecha u hora al eje donde no existan valores de agrupación de datos. Para más información, vea [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Seleccione la opción **Eje escalar** en el cuadro de diálogo **Propiedades del eje** . Esto agregará valores numéricos o de fecha u hora al eje donde no existan valores de agrupación de datos. Para más información, vea [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   Seleccione un campo o escriba una expresión para la opción **Campo de categorías** en el cuadro de diálogo **Propiedades de la serie** . El gráfico agregará intervalos al eje para todos los valores del campo de categorías que especificó.  
   

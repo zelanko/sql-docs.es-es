@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bf9452c7b0e05d5e8fc02aeb3166637ce66bb93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e6f46f3a89cc26d2c683ebcf2f9a96cced17cd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663173"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028054"
 ---
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016
 
@@ -42,4 +42,4 @@ Una *característica suspendida* es una característica que ya no se admite. Tam
 [Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 [Características en desuso de SQL Server Reporting Services en SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

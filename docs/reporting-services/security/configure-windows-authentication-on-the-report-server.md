@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031614"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -130,7 +130,7 @@ ms.locfileid: "47770903"
   
 -   Registre un SPN para el servicio del servidor de informes en la cuenta de usuario de dominio. Para más información, vea [Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Cambie la cuenta de servicio para que se ejecute en una cuenta integrada como servicio de red. Las cuentas integradas asignan el SPN HTTP al SPN de host, que se define al unir un equipo a la red. Para más información, vea [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Cambie la cuenta de servicio para que se ejecute en una cuenta integrada como servicio de red. Las cuentas integradas asignan el SPN HTTP al SPN de host, que se define al unir un equipo a la red. Para más información, vea [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
   
 -   Use NTLM. Generalmente, NTLM funcionará en los casos en que no lo haga la autenticación Kerberos. Para utilizar NTLM, quite **RSWindowsNegotiate** del archivo RSReportServer.config y compruebe que solo se especifica **RSWindowsNTLM** . Si elige esta solución, puede continuar utilizando una cuenta de usuario de dominio para el servicio del servidor de informes aunque no defina un SPN para él.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770903"
   
 -   Una opción para convertir el valor decimal al formato hexadecimal es usar la Calculadora de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La Calculadora de Windows admite varios modos que muestran las opciones 'Dec' y 'Hexadecimal'. Seleccione la opción 'Dec', pegue o escriba en ella el valor decimal que encuentre en el archivo de registro y, a continuación, seleccione la opción  'Hex'.  
   
--   Después, vea el tema [User-Account-Control attribute](http://go.microsoft.com/fwlink/?LinkId=183366) (Atributo User-Account-Control) para derivar el atributo para la cuenta de servicio.  
+-   Después, vea el tema [User-Account-Control attribute](https://go.microsoft.com/fwlink/?LinkId=183366) (Atributo User-Account-Control) para derivar el atributo para la cuenta de servicio.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>SPN configurados en Active Directory para la cuenta de servicio de Reporting Services.  
  Para registrar los SPN en el archivo de registro de seguimiento del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puede habilitar temporalmente la característica Protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -202,7 +202,7 @@ ms.locfileid: "47770903"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Para obtener información adicional con respecto a Kerberos y los servidores de informes, vea [Implementar una solución de Business Intelligence con SharePoint, Reporting Services y servidor de supervisión de PerformancePoint con Kerberos.](http://go.microsoft.com/fwlink/?LinkID=177751)  
+-   Para obtener información adicional con respecto a Kerberos y los servidores de informes, vea [Implementar una solución de Business Intelligence con SharePoint, Reporting Services y servidor de supervisión de PerformancePoint con Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
 ## <a name="see-also"></a>Ver también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
@@ -210,6 +210,6 @@ ms.locfileid: "47770903"
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Configurar la autenticación básica en el servidor de informes](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [Configurar la autenticación de formularios o personalizada en el servidor de informes](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Protección ampliada para la autenticación con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

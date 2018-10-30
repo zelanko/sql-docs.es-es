@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657173"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030334"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Los informes paginados son definiciones de informes basados en XML donde se incluyen datos y elementos de diseño de informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe paginado, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes paginados son una parte de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También puede [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "47657173"
 ## <a name="view-reports"></a>Ver informes  
  Además de mostrar una vista previa de un informe guardado localmente o publicado en un servidor de informes, puede proporcionar diversas experiencias de visualización a los lectores del informe. Para ver un informe:  
   
--   **Explorador.**  Use el servicio web del servidor de informes o del sitio de SharePoint para ver los informes publicados. En un sitio de SharePoint, también puede configurar un elemento web para ver los informes publicados. Para más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) y [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Explorador.**  Use el servicio web del servidor de informes o del sitio de SharePoint para ver los informes publicados. En un sitio de SharePoint, también puede configurar un elemento web para ver los informes publicados. Para más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) y [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
 -   **Entrega.**  Configure una suscripción para entregar informes a los lectores a través de un mensaje de correo electrónico o una carpeta de archivos compartida.  Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657173"
   
 -   **Impresión.**  Un lector de informes puede imprimir un informe o algunas de las páginas de un informe, en función del modo en que lo esté viendo. Para más información, vea [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Aplicación web o formulario Windows Forms.**  Use Visual Studio para desarrollar una aplicación ASP.NET AJAX o una aplicación de Windows Forms que hospede el control de visor de informes. El control puede apuntar a informes publicados en un servidor de informes. Para obtener más información, vea [Informes de Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Aplicación web o formulario Windows Forms.**  Use Visual Studio para desarrollar una aplicación ASP.NET AJAX o una aplicación de Windows Forms que hospede el control de visor de informes. El control puede apuntar a informes publicados en un servidor de informes. Para obtener más información, vea [Informes de Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Administrar informes  
  Para administrar un informe publicado:  

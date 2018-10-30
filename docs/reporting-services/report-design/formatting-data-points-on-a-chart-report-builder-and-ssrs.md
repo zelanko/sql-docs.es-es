@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624573"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021229"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
 En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un punto de datos es la entidad individual más pequeña del gráfico. En los gráficos que no son de formas, los puntos de datos se representan en función del tipo de gráfico. Por ejemplo, una serie de líneas está formada por uno o más puntos de datos conectados. En los gráficos de formas, los puntos de datos se representan por sectores o segmentos individuales que se agregan al gráfico. Por ejemplo, en un gráfico circular, cada sector es un punto de datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -74,7 +74,7 @@ En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
 |#MAX|Máximo de todos los valores Y de la serie.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|El primero de todos los valores Y de la serie.|All|`=First(Fields!MyDataField.Value)`|  
   
- Para dar formato a la palabra clave, incluya una cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre paréntesis. Por ejemplo, para especificar el valor del punto de datos en una información sobre herramientas como un número con dos posiciones decimales, incluya la cadena de formato "N2" entre llaves (por ejemplo, "#VALY {N2}" para la propiedad **ToolTip** de la serie). Para obtener más información sobre las cadenas de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=112024) en MSDN. Para obtener más información sobre cómo dar formato a los números en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Para dar formato a la palabra clave, incluya una cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre paréntesis. Por ejemplo, para especificar el valor del punto de datos en una información sobre herramientas como un número con dos posiciones decimales, incluya la cadena de formato "N2" entre llaves (por ejemplo, "#VALY {N2}" para la propiedad **ToolTip** de la serie). Para obtener más información sobre las cadenas de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Aplicar formato a tipos](https://go.microsoft.com/fwlink/?LinkId=112024) en MSDN. Para obtener más información sobre cómo dar formato a los números en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  Para obtener más información sobre cómo agregar palabras clave a un gráfico, vea [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   

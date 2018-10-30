@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 851451b025b28db88b7939511778c259b337dfd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f43b7dc312439d6ae9691caa86f8eb33f234949
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020199"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
   Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  
@@ -29,7 +29,7 @@ ms.locfileid: "47785703"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- Para empezar a usar un mapa inmediatamente, vea [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md) o [Ejemplos de informes (Generador de informes y SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Para empezar a usar un mapa inmediatamente, vea [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md) o [Ejemplos de informes (Generador de informes y SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Puede guardar los mapas de forma independiente de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "47785703"
     > [!NOTE]  
     >  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
--   **Archivos de forma ESRI.** Los archivos de forma ESRI contienen datos que cumplen con el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). Hacen referencia a un conjunto de archivos. Los datos del archivo .shp especifican las formas geográficas o geométricas. Los datos del archivo .dbf proporcionan los atributos para las formas. Para ver un mapa en la vista de diseño o ejecutar un mapa desde el servidor de informes, ambos archivos deben estar en la misma carpeta. Al agregar los datos espaciales de un archivo .shp al sistema de archivos local, los datos espaciales se incrustan en el informe. Para recuperar los datos espaciales de forma dinámica en tiempo de ejecución, cargue los archivos de forma en el servidor de informes y especifíquelos como el origen de los datos espaciales. Para obtener más información, vea [Buscar archivos de forma ESRI para un mapa](http://go.microsoft.com/fwlink/?linkid=178814).  
+-   **Archivos de forma ESRI.** Los archivos de forma ESRI contienen datos que cumplen con el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). Hacen referencia a un conjunto de archivos. Los datos del archivo .shp especifican las formas geográficas o geométricas. Los datos del archivo .dbf proporcionan los atributos para las formas. Para ver un mapa en la vista de diseño o ejecutar un mapa desde el servidor de informes, ambos archivos deben estar en la misma carpeta. Al agregar los datos espaciales de un archivo .shp al sistema de archivos local, los datos espaciales se incrustan en el informe. Para recuperar los datos espaciales de forma dinámica en tiempo de ejecución, cargue los archivos de forma en el servidor de informes y especifíquelos como el origen de los datos espaciales. Para obtener más información, vea [Buscar archivos de forma ESRI para un mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 -   **Datos espaciales de SQL Server almacenados en una base de datos.** Puede usar una consulta que especifique los tipos de datos **SQLGeometry** o **SQLGeography** de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47785703"
   
  Para obtener instrucciones paso a paso, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371).  
+ Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
 ##  <a name="MapLayers"></a> Descripción de las capas de mapa y los elementos de mapa  
  Un mapa puede tener varias capas. Hay tres tipos de capas. Cada capa muestra un tipo de datos espaciales:  

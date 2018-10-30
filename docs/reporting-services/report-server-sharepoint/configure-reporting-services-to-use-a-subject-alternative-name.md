@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: feb3a973ced242d52a6fda8e1bcb1222cb24ecae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade77624ec83c39d89cde2d5f98d5f01d15ceec4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635463"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020529"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar Reporting Services para usar un nombre alternativo del asunto
 
@@ -124,4 +124,4 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
  [Modificar un archivo de configuración de Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurar las direcciones URL del servidor de informes](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

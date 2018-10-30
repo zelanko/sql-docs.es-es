@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d02bcf4e91bdea5c4df59b7f850adbe5e5c2ce0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800993"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029804"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de informes de Reporting Services (modo de SharePoint)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47800993"
 
  Para obtener información sobre la instalación y la configuración, vea lo siguiente:  
   
--   [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
+-   [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
 -   [Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47800993"
   
 -   Todas las páginas de aplicación, herramientas, errores, advertencias y mensajes que se originan en Reporting Services se muestran en el idioma usado por la instancia de Reporting Services en uno de los idiomas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Las páginas de aplicación que abra en un sitio de SharePoint, el elemento web Visor de informes y el Generador de informes aparecen en uno de los idiomas compatibles con el complemento Reporting Services. Para ver la lista de idiomas compatibles, vaya a la página de [descargas de SQL Server](http://msdn.microsoft.com/sql/downloads/) y busque la página de descarga del complemento SQL Server 2016 Reporting Services.  
+-   Las páginas de aplicación que abra en un sitio de SharePoint, el elemento web Visor de informes y el Generador de informes aparecen en uno de los idiomas compatibles con el complemento Reporting Services. Para ver la lista de idiomas compatibles, vaya a la página de [descargas de SQL Server](https://msdn.microsoft.com/sql/downloads/) y busque la página de descarga del complemento SQL Server 2016 Reporting Services.  
   
 -   Los sitios de SharePoint, la Administración central de SharePoint, la Ayuda en pantalla y los mensajes están disponibles en los idiomas compatibles con los productos Office Server.  
   
@@ -128,16 +128,16 @@ ms.locfileid: "47800993"
   
 |**Tarea**|**Vínculo**|  
 |--------------|--------------|  
-|Pasos detallados para instalar y configurar Reporting Services en el modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) y [Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Escale la implementación de SharePoint de Reporting Services al agregar servidores de informes adicionales.|[Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [Topologías de implementación para las características BI de SQL Server en SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Pasos detallados para instalar y configurar Reporting Services en el modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) y [Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Escale la implementación de SharePoint de Reporting Services al agregar servidores de informes adicionales.|[Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [Topologías de implementación para las características BI de SQL Server en SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Agregue front-end web de SharePoint adicionales que tengan los componentes de Reporting Services instalados para ver e imprimir elementos.|[Agregar un front-end web adicional de Reporting Services a una granja de servidores](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure el correo electrónico para el servidor de informes en SharePoint.|[Configurar el correo electrónico para una aplicación de servicio de Reporting Services](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|Información reciente sobre esta versión, incluida en TechNet Wiki.|[Sugerencias, trucos y solución de problemas de SQL Server 2012 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Información reciente sobre esta versión, incluida en TechNet Wiki.|[Sugerencias, trucos y solución de problemas de SQL Server 2012 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Cuestionario: Configurar SSRS 2012 para la integración de SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[Cuestionario: Configurar SSRS 2012 para la integración de SharePoint](https://go.microsoft.com/fwlink/?LinkId=306443)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ddbd23aa9a37033c65115c02e49fde8bcedd5dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8329ef7eadc543a6672b88887a356da4e3c6daa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021495"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Iniciar y detener el servicio del servidor de informes
   Un servidor de informes se implementa como un servicio de Windows que contiene el servicio web del servidor de informes, el Administrador de informes y una aplicación de procesamiento en segundo plano. El servicio se debe estar ejecutando si desea usar cualquier funcionalidad del servidor de informes. Al detener el servicio se detienen todas las operaciones del servidor de informes.  
@@ -51,6 +51,6 @@ ms.locfileid: "47738703"
   
 ## <a name="see-also"></a>Ver también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Iniciar, detener o pausar el servicio del Agente SQL Server](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [Iniciar, detener o pausar el servicio del Agente SQL Server](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

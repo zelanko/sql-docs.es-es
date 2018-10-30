@@ -17,19 +17,19 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a590a8f0738a5717f7982cdd095d73bfcc18dc55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029214"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Aplicar formato a números y fechas (Generador de informes y SSRS)
   Para dar formato a los números y fechas de las regiones de datos, seleccione un formato en la página **Número** del cuadro de diálogo **Propiedades** de la región de datos correspondiente.  
   
  Para especificar las cadenas de formato dentro de un elemento de informe de cuadro de texto, debe seleccionar el elemento al que quiere dar formato, hacer clic con el botón derecho, seleccionar **Propiedades de cuadro de texto**y, después, hacer clic en **Número**. Puede dar formato de la misma manera a las celdas individuales de una tabla o región de datos de la matriz, porque las celdas de una tabla o la matriz son cuadros de texto individuales.  
   
- Normalmente, una región de datos de gráfico muestra las fechas a lo largo del eje de categorías (x) y los valores a lo largo del eje de valores (y). Para especificar el formato en un gráfico, haga clic con el botón derecho en un eje y seleccione **Propiedades del eje**. En el eje de valores solo se pueden especificar formatos para los números. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ Normalmente, una región de datos de gráfico muestra las fechas a lo largo del eje de categorías (x) y los valores a lo largo del eje de valores (y). Para especificar el formato en un gráfico, haga clic con el botón derecho en un eje y seleccione **Propiedades del eje**. En el eje de valores solo se pueden especificar formatos para los números. Para más información, vea [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  Para especificar el formato en una región de datos Medidor, haga clic con el botón derecho en la escala del medidor y seleccione **Propiedades de escala radial** o **Propiedades de escala lineal**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47803763"
   
 -   De forma predeterminada, se da formato a los números de acuerdo con la configuración de referencia cultural del equipo cliente. Use cadenas de formato para especificar cómo se muestran los números y hacer que el formato sea coherente, independientemente de dónde se encuentre la persona que está viendo el informe.  
   
--   Los formatos proporcionados en la página **Número** son un subconjunto de las cadenas de formato numérico estándar de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para dar formato a un número o una fecha mediante un formato personalizado que no se muestra en el cuadro de diálogo, puede usar cualquier cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números o fechas. Para obtener más información sobre las cadenas de formato personalizado, vea el tema [Aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=112024) en MSDN.  
+-   Los formatos proporcionados en la página **Número** son un subconjunto de las cadenas de formato numérico estándar de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para dar formato a un número o una fecha mediante un formato personalizado que no se muestra en el cuadro de diálogo, puede usar cualquier cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números o fechas. Para obtener más información sobre las cadenas de formato personalizado, vea el tema [Aplicar formato a tipos](https://go.microsoft.com/fwlink/?LinkId=112024) en MSDN.  
   
 -   Si se especifica una cadena de formato personalizado, ésta tiene una prioridad más alta que la configuración predeterminada específica de la referencia cultural. Por ejemplo, imagine que establece una cadena con formato personalizado de "#, ###" para mostrar el número 1234 como 1,234. Esto puede tener un significado diferente para los usuarios de los Estados Unidos y para los usuarios de Europa. Antes de especificar un formato personalizado, tenga en cuenta cómo afectará el formato que elija a los usuarios de diferentes culturas que vean el informe.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020349"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Archivo de configuración RSReportServer.config
 El archivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** almacena valores que utiliza el servicio web del servidor de informes y los procesamientos en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
@@ -57,7 +57,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
  La tabla siguiente proporciona información sobre las opciones de configuración generales que aparecen en la primera parte del archivo. Los parámetros se presentan en el orden en que aparecen en el archivo de configuración. La última columna de la tabla indica si el valor se aplica a un servidor de informes en modo nativo **(N)** , un servidor de informes en modo de SharePoint **(S)** o ambos.  
   
 > [!NOTE]  
->  En este tema, "entero máximo" hace referencia al valor INT_MAX de 2147483647.  Para más información, consulte [Límites de enteros](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  En este tema, "entero máximo" hace referencia al valor INT_MAX de 2147483647.  Para más información, consulte [Límites de enteros](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Configuración|Descripción|Mode|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
  **URLReservations** define el acceso HTTP al servicio web del servidor de informes y al portal web para la instancia actual. Las direcciones URL se reservan y almacenan en HTTP.SYS al configurar el servidor de informes.  
   
 > [!WARNING]  
->  En el modo de SharePoint, las reservas de direcciones URL se configuran en Administración central de SharePoint. Para más información, consulte [Configurar las asignaciones de acceso alternativas (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  En el modo de SharePoint, las reservas de direcciones URL se configuran en Administración central de SharePoint. Para más información, consulte [Configurar las asignaciones de acceso alternativas (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  No modifique directamente las reservas de URL en el archivo de configuración. Utilice siempre el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el proveedor WMI del servidor de informes para crear o modificar las reservas de URL para un servidor de informes de modo nativo. Si modifica los valores del archivo de configuración, puede dañar la reserva, lo que producirá errores de servidor en tiempo de ejecución o dejará reservas huérfanas en HTTP.SYS que no se quitan si desinstala el software. Para obtener más información, vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) y [Direcciones URL en archivos de configuración &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -236,7 +236,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**ExcludedRenderFormats**, **RenderingExtension**|Esta configuración se utiliza para excluir de forma intencionada los formatos de exportación que no funcionan correctamente con la entrega a recursos compartidos de archivos. Estos formatos se utilizan normalmente para informes interactivos, vistas previas o la carga previa de la caché de informes. No generan archivos de aplicación que puedan verse fácilmente desde una aplicación de escritorio.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> NULL|  
   
 ####  <a name="bkmk_email_extension"></a> Opciones de configuración de la extensión de correo electrónico del servidor de informes  
- El correo electrónico del servidor de informes utiliza un dispositivo de red SMTP para enviar los informes a las direcciones de correo electrónico. Esta extensión de entrega se debe configurar antes de poderse utilizar. Para obtener más información, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) y [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ El correo electrónico del servidor de informes utiliza un dispositivo de red SMTP para enviar los informes a las direcciones de correo electrónico. Esta extensión de entrega se debe configurar antes de poderse utilizar. Para obtener más información, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) y [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Configuración|Descripción|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |-------------|-----------------|  
 |**MaxConnections**|Especifica el número máximo de conexiones a los servicios web de Bing Maps.|  
 |**Timeout**|Especifica el timeout en segundos que debe transcurrir para obtener una respuesta de los servicios web de Bing Maps.|  
-|**AppID**|Especifica el identificador de la aplicación (AppID) que se debe usar en los servicios web de Bing Maps. **(Default)** especifica el AppID de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] predeterminado.<br /><br /> Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> No modifique este valor a menos que deba especificar un AppID personalizado para su contrato de licencia de Bing Maps. Cuando modifique AppID, no será necesario reiniciar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que el cambio surta efecto.|  
-|**CacheLevel**|Especifica un valor en HttpRequestCacheLevel (Enumeración) de System.Net.Cache. El valor predeterminado es **Default**. Para obtener más información, vea [HttpRequestCacheLevel (Enumeración)](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Especifica el identificador de la aplicación (AppID) que se debe usar en los servicios web de Bing Maps. **(Default)** especifica el AppID de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] predeterminado.<br /><br /> Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> No modifique este valor a menos que deba especificar un AppID personalizado para su contrato de licencia de Bing Maps. Cuando modifique AppID, no será necesario reiniciar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que el cambio surta efecto.|  
+|**CacheLevel**|Especifica un valor en HttpRequestCacheLevel (Enumeración) de System.Net.Cache. El valor predeterminado es **Default**. Para obtener más información, vea [HttpRequestCacheLevel (Enumeración)](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Archivo de configuración predeterminada para un servidor de informes de modo nativo  
  El archivo rsreportserver.config se instala en la siguiente ubicación de forma predeterminada:  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+ ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
   
   

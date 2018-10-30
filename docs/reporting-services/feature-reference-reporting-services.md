@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eaada7d40896156dee1ba51b9a02b90b1ff9e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741393"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021049"
 ---
 # <a name="feature-reference-reporting-services"></a>Referencia de características (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye varias herramientas y aplicaciones que se pueden usar para crear, administrar y ver informes. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo, las páginas web y los asistentes de estas herramientas y aplicaciones.  
@@ -29,7 +29,7 @@ ms.locfileid: "47741393"
  [Diseñador de informes (Ayuda F1)](../reporting-services/tools/report-designer-f1-help.md)  
  Proporciona ayuda para el Diseñador de informes y los cuadros de diálogo relacionados, el Asistente para informes y el Asistente para imágenes.  
   
- [Temas de Ayuda del Administrador de configuración de Reporting Services](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Temas de Ayuda del Administrador de configuración de Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Proporciona ayuda para la herramienta de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se usa para implementar y administrar las instancias del servidor de informes.  
   
  [Servidor de informes en Management Studio ayuda F1](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -43,6 +43,6 @@ ms.locfileid: "47741393"
  [Informes de Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
  [Introducción al Generador de informes](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Diseñar e implementar informes usando el Generador de informes 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Diseñar e implementar informes usando el Generador de informes 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

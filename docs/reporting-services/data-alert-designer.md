@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0fe7960d68c43f7afe46ca518c84be58a60c6463
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031174"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
 
@@ -216,4 +216,4 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

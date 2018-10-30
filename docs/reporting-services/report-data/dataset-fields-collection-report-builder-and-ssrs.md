@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031864"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  
@@ -76,9 +76,9 @@ ms.locfileid: "47853396"
   
 -   **Origen de datos** : los tipos de datos admitidos por la versión del tipo de origen de datos con el que se está conectando.  
   
-     Por ejemplo, para un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , son típicos los tipos de datos **int**, **datetime**y **varchar**. Con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , se han agregado los tipos de datos **date**, **time**, **datetimetz**y **datetime2**. Para obtener más información, vea [Tipos de datos (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     Por ejemplo, para un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , son típicos los tipos de datos **int**, **datetime**y **varchar**. Con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , se han agregado los tipos de datos **date**, **time**, **datetimetz**y **datetime2**. Para obtener más información, vea [Tipos de datos (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Proveedor de datos o extensión de procesamiento de datos** : los tipos de datos admitidos por la versión del proveedor de datos de la extensión de procesamiento de datos que se selecciona al conectar con el origen de datos. Los proveedores de datos basados en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usan tipos de datos admitidos por CLR. Para obtener más información sobre los tipos de datos de los proveedores de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Asignar tipos de datos en ADO.NET](http://go.microsoft.com/fwlink/?LinkId=112178) y [Trabajar con tipos base en .NET Framework](http://go.microsoft.com/fwlink/?LinkId=112177) en MSDN.  
+-   **Proveedor de datos o extensión de procesamiento de datos** : los tipos de datos admitidos por la versión del proveedor de datos de la extensión de procesamiento de datos que se selecciona al conectar con el origen de datos. Los proveedores de datos basados en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usan tipos de datos admitidos por CLR. Para obtener más información sobre los tipos de datos de los proveedores de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Asignar tipos de datos en ADO.NET](https://go.microsoft.com/fwlink/?LinkId=112178) y [Trabajar con tipos base en .NET Framework](https://go.microsoft.com/fwlink/?LinkId=112177) en MSDN.  
   
      Por ejemplo, los tipos de datos típicos admitidos por [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] son **Int32** y **String**. La estructura **DateTime** admite las fechas y horas del calendario. En el Service Pack 1 de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 se introdujo la compatibilidad con la estructura **DateTimeOffset** para las fechas con un ajuste de zona horaria.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47853396"
     |**DateTimeTZ**|**DateTimeOffset**|Fecha y hora con ajuste de zona horaria|  
     |**DateTime2**|**DateTime**|Fecha y hora con fracciones de milisegundos|  
   
- Para obtener más información sobre los tipos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos (motor de base de datos)](http://go.microsoft.com/fwlink/?linkid=98362) y [Tipos de datos y funciones de fecha y hora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Para obtener más información sobre los tipos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos (motor de base de datos)](https://go.microsoft.com/fwlink/?linkid=98362) y [Tipos de datos y funciones de fecha y hora (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  Para obtener más información sobre cómo incluir referencias a un campo de conjunto de datos desde una expresión, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47853396"
   
   
 ## <a name="see-also"></a>Ver también  
- [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

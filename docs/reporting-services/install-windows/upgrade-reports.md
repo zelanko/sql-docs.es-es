@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d46045779c71ecbe1743d2497344e812d323f04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 072b8d78d0dcb70b56fe596bd3e994395bd6e64b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028904"
 ---
 # <a name="upgrade-reports-ssrs"></a>Actualizar informes (SSRS)
 
@@ -97,7 +97,7 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
   
      Para obtener más información, vea [Abrir un informe en el Diseñador de informes](#OpeningaReport) , más adelante en este tema.  
   
- Para más información sobre cómo identificar el espacio de nombres RDL actual para un servidor de informes, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o un informe, vea [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Para obtener más información sobre cómo identificar el espacio de nombres RDL actual para un servidor de informes, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o un informe, vea [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Actualizar los informes en un servidor de informes  
  La primera vez que un informe de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecuta en un servidor de informes actualizado a un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , el informe se actualiza automáticamente al espacio de nombres de la definición de informe actual que admite el servidor de informes. El informe podría haber existido en el servidor de informes antes de la actualización, o bien se podría haber cargado a través del portal web o haberse publicado en el servidor de informes desde el Diseñador de informes en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -142,4 +142,4 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
 [Elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Actualización de una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

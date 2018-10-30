@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d9586dd7777b306b7c25cf67124026ce8255
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba27d665c40e84cd8240f996d3f6b8f5e782e7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727053"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031144"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Agregar un informe nuevo o existente a un proyecto de informe (SSRS)
   En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede agregar un nuevo informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando el Asistente para informes o agregando un nuevo informe en blanco al proyecto. También puede agregar un informe existente. Después de agregar un informe, puede ver el nombre de informe en la lista que se muestra bajo la carpeta **Informes** del proyecto.  
@@ -33,7 +33,7 @@ ms.locfileid: "47727053"
   
     -   **Seleccionar un origen de datos.** El primer paso para crear un informe es definir un origen de datos. El Asistente para informes muestra una lista de todos los orígenes de datos compartidos del proyecto de informe y, además, una opción para crear un nuevo origen de datos.  
   
-    -   **Diseñar una consulta.** El siguiente paso es diseñar una consulta. Puede escribir la cadena de consulta, compilarla mediante el Diseñador de consultas o importar una consulta de otro informe. Para obtener información acerca de Diseñador de consultas, vea [Reporting Services Query Designers](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
+    -   **Diseñar una consulta.** El siguiente paso es diseñar una consulta. Puede escribir la cadena de consulta, compilarla mediante el Diseñador de consultas o importar una consulta de otro informe. Para obtener información acerca de Diseñador de consultas, vea [Reporting Services Query Designers](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
   
     -   **Elegir un tipo de informe.** El siguiente paso es seleccionar el tipo de informe que desea. Puede elegir un informe tabular o de matriz. Un informe tabular tiene un número fijo de columnas. Un informe de matriz, o tabla de referencias cruzadas, tiene un número variable de columnas en función de los resultados de la consulta. Un informe de mapa muestra datos analíticos con un fondo geográfico.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "47727053"
   
 ## <a name="see-also"></a>Ver también  
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+ ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
   
   

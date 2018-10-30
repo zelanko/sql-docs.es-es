@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759433"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029584"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integración del servidor de informes de Power BI (Administrador de configuración)
 
@@ -24,7 +24,7 @@ La página  **Integración de Power BI** del Administrador de configuración de 
 
 Además de una conexión activa a Internet para que pueda examinar el servicio [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , se requiere lo siguiente para completar la integración de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory:** su organización debe usar Azure Active Directory, que proporciona administración de identidades y directorios para servicios de Azure y aplicaciones web. Para más información, vea [¿Qué es Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** su organización debe usar Azure Active Directory, que proporciona administración de identidades y directorios para servicios de Azure y aplicaciones web. Para obtener más información, consulte [¿Qué es Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
 
 - **Inquilino administrado:** el panel de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] en el que quiere anclar elementos de informe debe formar parte de un inquilino administrado de Azure AD.  La primera vez que su organización se suscribe a servicios de Azure, como Office 365 y Microsoft Intune, se crea automáticamente un inquilino administrado.   Actualmente no se admiten inquilinos virales.  Para obtener más información, vea las secciones "Qué es un inquilino de Azure AD" y "Obtención de un directorio de Azure AD" en [¿Qué es un directorio de Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
@@ -113,7 +113,7 @@ En esta sección se resumen los pasos básicos y las tecnologías implicadas en 
 
 1. Los usuarios obtienen una vista previa de los informes en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] y la primera vez que hacen clic para anclar un elemento de informe desde el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Se les redirigirá a la página de inicio de sesión de Azure AD. También pueden iniciar sesión desde la página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Cuando los usuarios inicien sesión en el inquilino administrado de Azure, se establecerá una relación entre su cuenta de Azure y los permisos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para más información, vea [La configuración de la integración de Power BI &#40;portal web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Se les redirigirá a la página de inicio de sesión de Azure AD. También pueden iniciar sesión desde la página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Cuando los usuarios inicien sesión en el inquilino administrado de Azure, se establecerá una relación entre su cuenta de Azure y los permisos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obtener más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
 3. Se devuelve un token de seguridad del usuario al servidor de informes.
 
@@ -125,7 +125,7 @@ En esta sección se resumen los pasos básicos y las tecnologías implicadas en 
 
 7. Se crea una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar la actualización programada del elemento de informe en el icono del panel. La suscripción usa el token de seguridad que se creó cuando el usuario inició sesión.
 
-     El token es válido durante **90 días**. Transcurrido este tiempo, los usuarios deben iniciar sesión de nuevo para crear un nuevo token de usuario. Cuando el token expire, los iconos anclados seguirán mostrándose en el panel, pero ya no se actualizarán los datos.  Las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se usan para los elementos anclados generarán un error hasta que se cree un nuevo token de usuario. Vea [La configuración de la integración de Power BI &#40;portal web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obtener más información.
+     El token es válido durante **90 días**. Transcurrido este tiempo, los usuarios deben iniciar sesión de nuevo para crear un nuevo token de usuario. Cuando el token expire, los iconos anclados seguirán mostrándose en el panel, pero ya no se actualizarán los datos.  Las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se usan para los elementos anclados generarán un error hasta que se cree un nuevo token de usuario. Vea [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obtener más información.
 
 La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4. En su lugar, se recuperarán el identificador de la aplicación y las direcciones URL de la base de datos ReportServer y el flujo continuará con el paso 5.
 
@@ -149,8 +149,8 @@ La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Mi configuración para la integración de Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Mi configuración para la integración de Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Pin Reporting Services items to Power BI Dashboards (Anclar elementos de Reporting Services en paneles de Power BI)](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Paneles en Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

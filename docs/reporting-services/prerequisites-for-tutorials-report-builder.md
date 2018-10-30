@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 54529326e61d796d16b93e9bc0a6f20f0d5673a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031944"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Requisitos previos para los tutoriales (Generador de informes)
 
@@ -35,14 +35,14 @@ Debe disponer de los siguientes requisitos previos para poder completar los tuto
   
 -   El nombre de una instancia de SQL Server y las credenciales suficientes para el acceso de solo lectura a cualquier base de datos. Las consultas del conjunto de datos de los tutoriales usan datos literales, pero cada consulta debe ser procesada por una instancia de SQL Server para que devuelva los metadatos necesarios para un conjunto de datos de informe. Por ejemplo, la siguiente cadena de conexión especifica solo un servidor: `data source=<servername>`. Debe tener acceso de lectura a la base de datos predeterminada que le ha asignado el administrador del sistema que otorga los permisos de acceso al servidor. También puede especificar una base de datos, como se muestra en la siguiente cadena de conexión: `data source=<servername>;initial catalog=<database>`.  
   
--   Para el [Tutorial: Informe de asignaciones (Generador de informes)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md), debe configurarse el servidor de informes para que admita mapas de Bing como fondo. Para obtener más información, consulte [Planear la compatibilidad de informe de mapa](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   Para el [Tutorial: Informe de asignaciones (Generador de informes)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md), debe configurarse el servidor de informes para que admita mapas de Bing como fondo. Para obtener más información, consulte [Planear la compatibilidad de informe de mapa](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
 -   El [Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) necesita acceso al cubo Contoso Sales. Para obtener más información, consulte el tutorial. 
   
-El administrador del servidor de informes debe otorgarle los permisos necesarios en el servidor de informes, configurar las ubicaciones de carpeta de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] y configurar las opciones predeterminadas del Generador de informes. Para obtener más información, consulte [Instalar y desinstalar el Generador de informes](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416).  
+El administrador del servidor de informes debe otorgarle los permisos necesarios en el servidor de informes, configurar las ubicaciones de carpeta de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] y configurar las opciones predeterminadas del Generador de informes. Para obtener más información, consulte [Instalar y desinstalar el Generador de informes](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

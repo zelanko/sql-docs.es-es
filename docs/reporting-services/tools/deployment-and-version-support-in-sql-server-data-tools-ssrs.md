@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 559bfe5a33697aad946c5859a598ceaa5bde4ff6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eaa61ab4f13bb96b2ee9d00bae31f76056929622
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769003"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031244"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implementación y compatibilidad de versiones en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] admite los escenarios siguientes:  
@@ -50,7 +50,7 @@ ms.locfileid: "47769003"
 ##  <a name="bkmk_SupportedVersions"></a> Versiones admitidas  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
   
  En la tabla siguiente se describen las versiones compatibles para crear y publicar los informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47769003"
 |Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema RDL 2008 R2|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Solo el servidor de informes|Actualiza localmente el esquema RDL 2003 y RDL 2005 al esquema RDL 2008.|  
   
- Para obtener más información sobre la forma de abrir informes en una versión anterior del esquema de definición de informes, vea [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Para obtener más información sobre la forma de abrir informes en una versión anterior del esquema de definición de informes, vea [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Ver también  
  [Publicar orígenes de datos e informes](../../reporting-services/reports/publishing-data-sources-and-reports.md)  

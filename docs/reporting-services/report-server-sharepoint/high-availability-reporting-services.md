@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d310371ce9b5f564b6cd48929bd3da39f68d828a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fb4216a0322a0d3f077f237b2ece3cdef7958b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030764"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>Alta disponibilidad en SQL Server Reporting Services
 
@@ -30,4 +30,4 @@ Un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
   
  El servicio de Windows y el servicio web del servidor de informes están estrechamente integrados y se ejecutan en conjunto como una instancia del servidor de informes única. No puede configurar la disponibilidad para un servicio de manera independiente del otro.  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

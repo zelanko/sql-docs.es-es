@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f68945ab92db13f80236cfa900067a7d38533849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 900ec3c13cae856dea769d6a761cf502557a4d22
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614123"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028985"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrar Reporting Services en las aplicaciones
 
@@ -42,7 +42,7 @@ ms.locfileid: "47614123"
  [Integración de Reporting Services con SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  Describe cómo integrar la navegación en informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y la administración en las aplicaciones empresariales existentes utilizando el servicio web del servidor de informes.  
   
- [Integración de Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Integración de Reporting Services con los controles del Visor de informes](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Describe cómo integrar la vista del informe en las aplicaciones existentes utilizando controles ReportViewer.  
   
  [Integración de Reporting Services con el acceso URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
@@ -54,4 +54,4 @@ Para decidir sobre el uso de acceso URL o API de SOAP, vea [Elegir entre acceso 
 
 Para más información sobre la API de REST de SQL Server 2017 Reporting Services, vea [Desarrollo con las API de REST para Reporting Services](../developer/rest-api.md).
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

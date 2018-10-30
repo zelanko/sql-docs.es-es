@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: add231df29906b945d1637c09969b670f4419909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08af2a5d42742dcb165aa2038b858ae1ae2b491
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703783"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028634"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Generador de informes y SSRS)
   Un gráfico de barras muestra las series como conjuntos de barras horizontales. El gráfico de barras sencillo está estrechamente relacionado con el gráfico de columnas, que muestra las series como conjuntos de barras verticales, y con el gráfico de intervalos de barras, que muestra las series como conjuntos de barras horizontales con puntos iniciales y finales que varían.  
@@ -65,7 +65,7 @@ ms.locfileid: "47703783"
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Agregar un gráfico de barras a un informe](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Tutorial: Adding a Bar Chart to a Report (Report Builder) (Tutorial: Agregar un gráfico de barras a un informe [Generador de informes])](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Agregar un gráfico de barras a un informe](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

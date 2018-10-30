@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d4391fb3957c9b0d3529ebb51d038398786c15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031774"
 ---
 # <a name="set-report-processing-properties"></a>Establecer las propiedades del procesamiento de informes
   Las propiedades de ejecución del informe controlan el modo en que se procesa un informe. Estas propiedades deben establecerse de forma individual para cada uno de los informes.  
   
- Para establecer las propiedades de ejecución, abra el informe en el Administrador de informes y navegue a la página de propiedades Ejecución. Para más información, vea [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). También puede establecer propiedades mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; vea [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Para establecer las propiedades de ejecución, abra el informe en el Administrador de informes y navegue a la página de propiedades Ejecución. Para más información, vea [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). También puede establecer propiedades mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; vea [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>Modos de ejecución del informe  
  Los informes pueden ejecutarse a petición o como una instantánea. La siguiente sección describe cada una de estas opciones.  
@@ -57,7 +57,7 @@ ms.locfileid: "47838583"
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurar las propiedades de ejecución de un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Cómo: Agregar una instantánea al historial de informes](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Cómo agregar una instantánea al historial de informes](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

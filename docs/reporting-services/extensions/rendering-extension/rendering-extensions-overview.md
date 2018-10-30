@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027954"
 ---
 # <a name="rendering-extensions-overview"></a>Información general de las extensiones de representación
   Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o texto, XML, imagen y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  
@@ -54,7 +54,7 @@ ms.locfileid: "47679343"
   
  Escribir una extensión de representación personalizada es difícil. Normalmente, debe admitir todas las combinaciones posibles de elementos de informe y requiere que implemente centenares de clases, interfaces, métodos y propiedades. Si debe representar un informe en un formato que no está incluido con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y decide escribir su propia implementación de código administrado de una extensión de representación, el código de la extensión de representación debe implementar la interfaz **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**, que requiere el servidor de informes.  
   
- Para obtener documentación complementaria y notas del producto de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea los recursos técnicos más recientes en el [sitio web de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ Para obtener documentación complementaria y notas del producto de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea los recursos técnicos más recientes en el [sitio web de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Ver también  
  [Implementar una extensión de representación](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

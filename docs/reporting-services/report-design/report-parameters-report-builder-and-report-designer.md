@@ -15,15 +15,15 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681493"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032084"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
-  En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede usar parámetros de informe en los informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y en el Diseñador de informes, y también en los informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+  En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede utilizar parámetros de informe en informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y en el Diseñador de informes y también en informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
@@ -159,7 +159,7 @@ ms.locfileid: "47681493"
   
 -   En las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] , cada origen de datos es compatible con una sintaxis para parámetros diferente. La compatibilidad varía para los parámetros que se identifican en la consulta por su posición o los que se identifican por su nombre. Para más información, vea los temas relacionados con los tipos de orígenes de datos externos específicos en [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). En el diseñador de consultas relacional, debe seleccionar la opción de parámetro de un filtro para crear una consulta parametrizada. Para obtener más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   En las consultas basadas en un origen de datos multidimensionales, como Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, podrá especificar si desea crear un parámetro en función del filtro que haya especificado en el diseñador de consultas. Para más información, vea el tema sobre el Diseñador de consultas en [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) que se corresponda con la extensión de datos.  
+-   En las consultas basadas en un origen de datos multidimensionales, como Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, podrá especificar si desea crear un parámetro en función del filtro que haya especificado en el diseñador de consultas. Para más información, vea el tema sobre el Diseñador de consultas en [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) que se corresponda con la extensión de datos.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Administración de parámetros para un informe publicado  
  Cuando diseñe un informe, los parámetros de informe se guardarán en la definición de informe. Cuando diseñe un informe, los parámetros de informe se guardarán y administrarán por separado, no con la definición de informe.  
@@ -233,13 +233,13 @@ ms.locfileid: "47681493"
   
 
 ##  <a name="bkmk_Related_Topics"></a> Secciones relacionadas  
- [Configurar parámetros de informe de SSRS (cuestionario)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configurar parámetros de informe de SSRS (cuestionario)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [Ejemplos de informes (Generador de informes y SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Ejemplos de informes (Generador de informes y SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

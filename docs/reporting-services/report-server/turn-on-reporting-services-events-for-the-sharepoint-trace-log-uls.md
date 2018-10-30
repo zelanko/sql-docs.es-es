@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 440d78222dff3bdbbc1918e563671f5735a76df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020379"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
 
@@ -146,11 +146,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  También hay herramientas que puede descargar para leer registros ULS. Por ejemplo, [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), disponible en GitHub. 
   
- Para más información sobre cómo usar PowerShell para ver datos de registro, vea [Visualización de registros de diagnóstico (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
+ Para más información sobre cómo usar PowerShell para ver datos de registro, vea [Visualización de registros de diagnóstico (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
   
 ##  <a name="bkmk_trace"></a> Ubicación del registro de seguimiento  
  Los archivos de registro de seguimiento se encuentran normalmente en la carpeta **c:\Archivos de programa\Common files\Microsoft Shared\Web Server Extensions\14\logs** , pero puede comprobar o cambiar la ruta de acceso en la página **Registro de diagnóstico** de Administración central de SharePoint.  
   
- Para más información y conocer los pasos para configurar el registro de diagnóstico en un servidor de SharePoint en Administración Central de SharePoint 2010, vea [Configuración de las opciones del registro de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ Para más información y conocer los pasos para configurar el registro de diagnóstico en un servidor de SharePoint en Administración Central de SharePoint 2010, vea [Configuración de las opciones del registro de diagnóstico (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

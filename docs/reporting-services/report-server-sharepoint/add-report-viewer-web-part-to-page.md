@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e0b05a9d3f78215a11d5ae4071a3a3ed39e225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595613"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030424"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint
 
@@ -74,4 +74,4 @@ Para configurar el elemento web para que señale a un informe específico, haga 
 * Los informes de Power BI no se pueden usar con el elemento web Visor de informes.
 * Si no ve el elemento web Visor de informes, para agregarlo a la página, asegúrese de que tiene [implementado el elemento web Visor de informes](deploy-report-viewer-web-part.md).
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

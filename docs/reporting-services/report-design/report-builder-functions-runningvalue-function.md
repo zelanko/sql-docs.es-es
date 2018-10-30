@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e779abdd10eb5b71fa7d7bbf7a6d6938bf469c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742573"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021519"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funciones del Generador de informes: función RunningValue
   Devuelve un agregado actualizado de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  
@@ -46,7 +46,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** no se puede utilizar en un filtro o expresión de ordenación.  
   
- El conjunto de datos para los que se calcula el valor en ejecución debe tener el mismo tipo de datos. Si desea convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como **CInt**, **CDbl** o **CDec**. Para obtener más información, vea [Funciones de conversión de tipos](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ El conjunto de datos para los que se calcula el valor en ejecución debe tener el mismo tipo de datos. Si desea convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como **CInt**, **CDbl** o **CDec**. Para obtener más información, vea [Funciones de conversión de tipos](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  *Scope* no puede ser una expresión.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bc9f71e2cec93ef3077f5cbd32ca1f4000ab275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028704"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Script con la utilidad rs.exe y el servicio Web
   Los desarrolladores y administradores del servidor de informes pueden realizar operaciones en un servidor de informes con la utilidad **rs** (RS.exe). Con esta utilidad, puede administrar un servidor de informes mediante programación usando los scripts escritos con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
@@ -30,11 +30,11 @@ ms.locfileid: "47816913"
   
  [Script rs.exe para copiar contenido entre servidores de informes de servicios de informes de ejemplo](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
- [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Ver también  
  [Script para tareas administrativas y de implementación](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Servicio web del servidor de informes](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [servicio web del servidor de informes](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Referencia técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Utilidad RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   

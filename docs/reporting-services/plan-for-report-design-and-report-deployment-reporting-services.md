@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b5e541af99ac03562347a893d67de8ad0390940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55eff13b6c766d5c10270e79b8b8d986d1a08f5e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029144"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes paginados. Sepa cómo planear un entorno de servidor de informes y creación de informes que operen en conjunto.
@@ -35,13 +35,13 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
  Para obtener más información acerca de RDL y los esquemas RDL, vea lo siguiente:  
   
--   [Esquemas XML de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Esquemas XML de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Especificación RDL de SQL Server](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Especificación RDL de SQL Server](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- Para más información sobre los controles ReportViewer, vea [Controles ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
+ Para más información sobre los controles ReportViewer, vea [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Compatibilidad del servidor de informes y el esquema RDL  
  Un archivo de definición de informe se puede implementar en un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] de las maneras siguientes:  
@@ -101,11 +101,11 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
  Para obtener más información, vea:  
   
--   [Convertir archivos RDLC en archivos RDL](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Convertir archivos RDLC en archivos RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [Controles ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [Agregar y configurar los controles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Agregar y configurar los controles ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Ver también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   

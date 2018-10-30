@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710823"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021269"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos y barras de datos (Generador de informes y SSRS)
   Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo conjuntamente con texto.   
@@ -25,7 +25,7 @@ ms.locfileid: "47710823"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Para empezar a trabajar rápidamente con elementos de informe, vea [Tutorial: Agregar un minigráfico a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) y los vídeos [How to: Create a Sparkline in a Table](http://go.microsoft.com/fwlink/?LinkId=197092) (Cómo crear un minigráfico en una tabla) y [Sparklines, Bar Charts, and Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) (Minigráficos, gráficos de barras e indicadores del Generador de informes).  
+ Para empezar a trabajar rápidamente con elementos de informe, vea [Tutorial: Agregar un minigráfico a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) y los vídeos [How to: Create a Sparkline in a Table](https://go.microsoft.com/fwlink/?LinkId=197092) (Cómo crear un minigráfico en una tabla) y [Sparklines, Bar Charts, and Indicators in Report Builder](https://technet.microsoft.com/bi/video/ff877165) (Minigráficos, gráficos de barras e indicadores del Generador de informes).  
   
 > [!NOTE]  
 >  Puede publicar minigráficos y barras de datos con su lista, matriz o tabla primaria por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

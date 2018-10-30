@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cafcc36570f06bfd85b8b9579a9b7c9ec94f7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752533"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030634"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Aplicaciones de servicio y servicio de SharePoint de Reporting Services
 
@@ -28,7 +28,7 @@ ms.locfileid: "47752533"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Creación de una aplicación de servicio de Reporting Services
 
- Puede usar los scripts de PowerShell o la Administración central de SharePoint para crear las aplicaciones de servicio de Reporting Services. Para más información sobre cómo usar la Administración central de SharePoint, vea la sección "Crear una aplicación de servicio de Reporting Services" en [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Consulte la sección de PowerShell más adelante en este tema para ver un ejemplo de un script de PowerShell para crear aplicaciones de servicio.  
+ Puede usar los scripts de PowerShell o la Administración central de SharePoint para crear las aplicaciones de servicio de Reporting Services. Para más información sobre cómo usar la Administración central de SharePoint, vea la sección "Crear una aplicación de servicio de Reporting Services" en [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Consulte la sección de PowerShell más adelante en este tema para ver un ejemplo de un script de PowerShell para crear aplicaciones de servicio.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Modificar las asociaciones de la aplicación de servicio con un grupo de servidores proxy
 
@@ -83,4 +83,4 @@ ms.locfileid: "47752533"
 |Administre la configuración de la aplicación de servicio.|[Administración de una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
 |Realizar una copia de seguridad y restauración de la aplicación de servicio y de los componentes relacionados como las claves de cifrado y el proxy.|[Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

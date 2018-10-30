@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8ba62b63324bb8aceeef976a482325af9248d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1385736df737044304649ddf5b17797d052f5a8e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029244"
 ---
 # <a name="previewing-reports"></a>Obtener la vista previa de informes
   Después de diseñar un informe de     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puede que quiera verlo antes de publicarlo en un entorno de producción. Existen varias maneras de verlo: cambiar al modo de vista previa del Diseñador de informes, usar la ventana de vista previa del Diseñador de informes y publicar el informe en un servidor de informes en un entorno de prueba.  
@@ -51,7 +51,7 @@ ms.locfileid: "47785443"
 ## <a name="see-also"></a>Ver también  
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Imprimir un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [Publicar informes](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
- [Uso de ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Publicar informes](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+ [Usar ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd89bede228d7a54e0bbfe7cab967facdcbec563
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ae1e843a2f4c829f5dd21f7795681bb962e025
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031584"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -86,7 +86,7 @@ ms.locfileid: "47719903"
   
 ## <a name="see-also"></a>Ver también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

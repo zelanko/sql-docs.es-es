@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029172"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
@@ -25,7 +25,7 @@ En la siguiente ilustración se muestran los informes que creará y se muestra c
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
-Para realizar este tutorial se requiere acceso al cubo de ventas de Contoso para los informes principal y detallado. Este conjunto de datos está formado por el almacenamiento de datos de ContosoDW y la base de datos de procesamiento analítico en línea (OLAP) de Contoso_Retail. Los informes que creará en este tutorial recuperan los datos del informe desde el cubo de ventas de Contoso. La base de datos OLAP de Contoso_Retail se puede descargar desde el [Centro de descarga Microsoft](http://go.microsoft.com/fwlink/?LinkID=191575). Solo necesita descargar el archivo ContosoBIdemoABF.exe. Contiene la base de datos OLAP.  
+Para realizar este tutorial se requiere acceso al cubo de ventas de Contoso para los informes principal y detallado. Este conjunto de datos está formado por el almacenamiento de datos de ContosoDW y la base de datos de procesamiento analítico en línea (OLAP) de Contoso_Retail. Los informes que creará en este tutorial recuperan los datos del informe desde el cubo de ventas de Contoso. La base de datos OLAP de Contoso_Retail se puede descargar desde el [Centro de descarga Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Solo necesita descargar el archivo ContosoBIdemoABF.exe. Contiene la base de datos OLAP.  
   
 El otro archivo, ContosoBIdemoBAK.exe, es para el almacenamiento de datos de ContosoDW, que no se utiliza en este tutorial.  
   
@@ -82,7 +82,7 @@ Una conexión de datos contiene la información necesaria para conectarse a un o
 10. Haga clic en **Tipo de credenciales**.  
   
     > [!NOTE]  
-    > Dependiendo de cómo se configuran los permisos en el origen de datos, podría necesitar cambiar las opciones de autenticación predeterminadas. Para más información, vea [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > Dependiendo de cómo se configuran los permisos en el origen de datos, podría necesitar cambiar las opciones de autenticación predeterminadas. Para más información, vea [Seguridad &#40;Generador de informes&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

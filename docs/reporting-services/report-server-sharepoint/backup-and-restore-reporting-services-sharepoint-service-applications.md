@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817503"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021249"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint de Reporting Services
 
@@ -71,9 +71,9 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
  Para obtener más información, consulte los siguientes temas en la documentación de SharePoint:  
   
- [Copia de seguridad de una aplicación de servicio (SharePoint Foundation 2010) en la documentación de SharePoint](http://msdn.microsoft.com/library/ee748601.aspx).  
+ [Copia de seguridad de una aplicación de servicio (SharePoint Foundation 2010) en la documentación de SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Copia de seguridad de una aplicación de servicio (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Copia de seguridad de una aplicación de servicio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Comprobación de la cuenta de ejecución y autenticación de la base de datos
 
@@ -125,7 +125,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
  Para obtener más información, consulte los siguientes temas en la documentación de SharePoint:  
   
- [Restauración de una aplicación de servicio (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restauración de una aplicación de servicio (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
  [Restauración de una aplicación de servicio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
 
@@ -161,4 +161,4 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 6.  Seleccione **Aceptar**.
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

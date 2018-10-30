@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c638b35676966bdb899b0537f410a8c5552179b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b79fb66dcb582a95d3b19d327e6b716ee20bd7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657124"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028174"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar una Conexión de datos de Office (.odc) con informes
   En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  
@@ -44,7 +44,7 @@ ms.locfileid: "47657124"
   
  Si no está familiarizado con los archivos .odc, puede usar las siguientes instrucciones para crear y exportar uno. Una forma fácil de crear un archivo .odc para un origen de datos OLE DB es usar Excel 2007 y el Asistente para la conexión de datos. Tenga en cuenta que el asistente no crea un origen de datos; debe tener un origen de datos externo que ya esté definido.  
   
- Un archivo .odc existente solo debería utilizarse si es totalmente compatible con el informe y las consultas. Si se producen errores que exigen modificaciones importantes del informe o archivo .odc, debe crear un nuevo archivo .rsds para el informe. Para más información sobre cómo crear un origen de datos compartido que use un archivo .rsds, vea [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Un archivo .odc existente solo debería utilizarse si es totalmente compatible con el informe y las consultas. Si se producen errores que exigen modificaciones importantes del informe o archivo .odc, debe crear un nuevo archivo .rsds para el informe. Para más información sobre cómo crear un origen de datos compartido que use un archivo .rsds, vea [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Para crear y exportar un archivo .odc  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728806"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030134"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Registro de cambios de SQL Server Reporting Services (SSRS) 2017 y versiones posteriores
 
@@ -33,15 +33,15 @@ Este error se ha solucionado:
 
 Se han corregido estos errores:
 
-- El cuadro de texto dentro del rectángulo hace que el rectángulo no crezca verticalmente si rc:Toolbar=False y tiene texto largo 
-- El tamaño del texto no se escala si pageHeight es inferior a 0,5 pulg. 
-- Interbloqueo en la base de datos de catálogos de SSRS al usarse con CRM 
-- Encabezados de columna alineados de manera vertical mostrados de forma incorrecta al desplazarse hasta el informe 
-- Los usuarios agregados al rol de informes SCOM tendrán bloqueado el acceso al portal web de SSRS 
-- El carácter tailandés no se exporta correctamente en PDF 
-- Cambio de comportamiento del rol Explorador 
-- rc:Toolbar=false no funciona en Express Edition 
-- Barra de desplazamiento vertical que falta en el área de mensajes del parámetro 
+- El cuadro de texto dentro del rectángulo hace que el rectángulo no crezca verticalmente si rc:Toolbar=False y tiene texto largo 
+- El tamaño del texto no se escala si pageHeight es inferior a 0,5 pulg. 
+- Interbloqueo en la base de datos de catálogos de SSRS al usarse con CRM 
+- Encabezados de columna alineados de manera vertical mostrados de forma incorrecta al desplazarse hasta el informe 
+- Los usuarios agregados al rol de informes SCOM tendrán bloqueado el acceso al portal web de SSRS 
+- El carácter tailandés no se exporta correctamente en PDF 
+- Cambio de comportamiento del rol Explorador 
+- rc:Toolbar=false no funciona en Express Edition 
+- Barra de desplazamiento vertical que falta en el área de mensajes del parámetro 
 - Tiempo de ejecución de informes móviles actualizado 
 
 ### <a name="version-140600744-released-april-25-2018"></a>Versión 14.0.600.744, publicada el 25 de abril de 2018 
@@ -82,4 +82,4 @@ Versión inicial
 
 [Novedades de Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

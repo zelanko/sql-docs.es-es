@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8fd78d37c9ae890fc2a5412916acc55b30487f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38412eabee8a497532e12e139294ee47a1c57165
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020709"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Gráficos de cotizaciones (Generador de informes y SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "47725483"
   
  ![Gráfico de cotizaciones](../../reporting-services/report-design/media/rs-stockchart.gif "Gráfico de cotizaciones")  
   
- Hay un ejemplo de gráfico de cotizaciones disponible como informe de ejemplo del Generador de informes. Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Hay un ejemplo de gráfico de cotizaciones disponible como informe de ejemplo del Generador de informes. Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,6 +43,6 @@ ms.locfileid: "47725483"
 [Gráficos de intervalos](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Gráficos](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Dar formato a un gráfico](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Cuadro de diálogo Propiedades del eje, Opciones del eje](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Cuadro de diálogo Propiedades del eje, Opciones del eje](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

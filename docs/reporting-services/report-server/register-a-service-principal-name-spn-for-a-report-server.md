@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 895a314c644dfa6ce217c2673cec2ded5e251471
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd8898bd56b140782b0df3d0abdcee56fb7a9b34
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030984"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
   Si está implementando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una red que usa el protocolo Kerberos para la autenticación mutua, debe crear un nombre principal de servicio (SPN) para el servicio Servidor de informes si lo configura para que se ejecute como una cuenta de usuario de dominio.  
@@ -23,7 +23,7 @@ ms.locfileid: "47763903"
   
  Para crear un SPN, puede emplear la utilidad de línea de comandos **SetSPN** . Para obtener más información, vea:  
   
--   [Setspn](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (http://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
 -   [Sintaxis de nombres SetSPN de los nombres de entidad de servicio (SPN) (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
@@ -58,7 +58,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     Por ejemplo, `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+     Por ejemplo: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Ejecute el comando.  
   
@@ -67,7 +67,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 7.  Agregue `<RSWindowsNegotiate/>` como primera entrada en esta sección para habilitar Kerberos.  
   
 ## <a name="see-also"></a>Ver también  
- [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Administración de un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

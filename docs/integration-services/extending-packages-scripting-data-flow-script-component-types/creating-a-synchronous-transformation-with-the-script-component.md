@@ -17,12 +17,12 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36948de07892e24e0aabb1e4bb4ab948e58acfd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77b815ac5cf4a470570e458cd9702d64ebada5ce
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612283"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991278"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Crear una transformación sincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas espera hasta que haya recibido todas las filas de entrada para completar su procesamiento. En este tema se describe una transformación sincrónica. Para obtener información sobre transformaciones asincrónicas, vea [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, consulte [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md) (Descripción de las transformaciones sincrónicas y asincrónicas).  
@@ -260,10 +260,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 ```  
   
 ## <a name="see-also"></a>Ver también  
- [Understanding Synchronous and Asynchronous Transformations (Descripción de las transformaciones sincrónicas y asincrónicas)](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md   
- [Crear una transformación asincrónica con el componente de script](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md   
- [Developing a Custom Transformation Component with Synchronous Outputs (Desarrollo de un componente de transformación personalizado con salidas sincrónicas)](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md  
-  
-  
-
-
+ [Descripción de las transformaciones sincrónicas y asincrónicas](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
+ [Crear una transformación asincrónica con el componente de script](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [Desarrollar un componente de transformación personalizado con salidas sincrónicas](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
+ 

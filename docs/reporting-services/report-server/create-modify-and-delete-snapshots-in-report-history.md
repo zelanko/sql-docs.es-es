@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710603"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029624"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Crear, modificar y eliminar instantáneas del historial de informes
   El historial de informe es un conjunto de instantáneas de informe. Puede mantener el historial del informe agregando y eliminando instantáneas, o bien modificando las propiedades correspondientes al almacenamiento del historial. Es posible crear el historial del informe de manera manual o programada.  
@@ -26,7 +26,7 @@ ms.locfileid: "47710603"
  Las instantáneas del historial del informe se identifican por la fecha y la hora de creación. Estos valores de fecha y hora hacen referencia al momento en que se ejecutó la consulta.  
   
 ## <a name="creating-snapshots-in-report-history"></a>Crear instantáneas en el historial del informe  
- Pueden crearse instantáneas de forma manual o a intervalos programados para cualquier informe compatible con la ejecución desatendida. Para realizar la ejecución de manera desatendida, el informe debe utilizar las credenciales almacenadas o ninguna credencial. Por otra parte, si el informe incluye parámetros, deberá especificar los valores predeterminados que desea utilizar cuando se ejecute el informe. Utilice la página de propiedades del informe para especificar las credenciales almacenadas y los valores de los parámetros. Para más información, vea [Parámetros &#40;página de propiedades del Administrador de informes&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
+ Pueden crearse instantáneas de forma manual o a intervalos programados para cualquier informe compatible con la ejecución desatendida. Para realizar la ejecución de manera desatendida, el informe debe utilizar las credenciales almacenadas o ninguna credencial. Por otra parte, si el informe incluye parámetros, deberá especificar los valores predeterminados que desea utilizar cuando se ejecute el informe. Utilice la página de propiedades del informe para especificar las credenciales almacenadas y los valores de los parámetros. Para más información, vea [Parámetros &#40;página de propiedades del Administrador de informes&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
   
  Cada vez que cree una instantánea de informe, se almacenarán los siguientes elementos junto con la instantánea en la base de datos del servidor de informes:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47710603"
   
 ## <a name="see-also"></a>Ver también  
  [Crear historial de informes &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Limitar el historial de informe &#40;Administrador de informes&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

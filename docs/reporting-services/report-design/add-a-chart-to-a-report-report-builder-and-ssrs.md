@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 624ca72c1cd63f0e830babe5f9ffff2af6726dad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 550459c3b261a42aa1b5be0ad37cd1681f566a02
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617273"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030784"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Agregar un gráfico a un informe (Generador de informes y SSRS)
   Para resumir datos con un formato visual en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , use una región de datos de gráfico. Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Para más información, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -68,9 +68,9 @@ ms.locfileid: "47617273"
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Agregar un gráfico de barras a un informe (Diseñador de informes)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Agregar un gráfico circular al informe (Generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Agregar un gráfico circular a un informe (Diseñador de informes)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Agregar un gráfico de barras a un informe (Diseñador de informes)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Agregar un gráfico circular al informe (Generador de informes)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Agregar un gráfico circular a un informe (Diseñador de informes)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/20/2017
-ms.openlocfilehash: eed0c630bca54b28e78f2c59c5a14fca6e77da54
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: 1353e388a2063c3d25df35d58a8a3f9c594b3ab1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031934"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
 
@@ -30,10 +30,10 @@ Cada instancia del servidor de informes requiere una conexión a la base de dato
   
 -   Cambiar la cuenta o contraseña de usuario que se utiliza para la conexión a la base de datos. Solo tiene que actualizar la conexión a la base de datos cuando la información de la cuenta esté almacenada en el archivo RSReportServer.config. Si utiliza la cuenta de servicio para la conexión (que utiliza la seguridad integrada de Windows como tipo de credenciales), la contraseña no se almacena, por lo que no es necesario actualizar la información de conexión. Para obtener más información sobre cómo cambiar cuentas, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
--   Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para más información sobre cómo llevar a cabo esta operación compuesta de varios pasos, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para obtener más información sobre cómo llevar a cabo esta operación compuesta de varios pasos, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Cómo se conecta Reporting Services al motor de base de datos  
- El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para más información sobre cómo trabajar con las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para obtener más información sobre cómo trabajar con las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
  La base de datos del servidor de informes es un componente interno, al que solo tiene acceso el servidor de informes. El servidor de informes utiliza exclusivamente las credenciales y la información de conexión que se especifique para la base de datos del servidor de informes. Los usuarios que solicitan los informes no requieren permisos de bases de datos o un inicio de sesión de base de datos para la base de datos del servidor de informes.  
   
@@ -122,4 +122,4 @@ Cada instancia del servidor de informes requiere una conexión a la base de dato
 [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Configurar la cuenta del servicio del servidor de informes](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

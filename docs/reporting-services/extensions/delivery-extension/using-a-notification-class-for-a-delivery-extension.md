@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4fdc39665c72a65f0410bc6d46e7d922550f93ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac8e57ab8248a06a10488e6b8ca1743ed57f5eb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603604"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028210"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Usar una clase Notification para una extensión de entrega
   La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> se encuentra en el espacio de nombres <xref:Microsoft.ReportingServices.Interfaces> y representa información de suscripción que las extensiones de entrega utilizan para entregar los informes. La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> proporciona varias propiedades que se pueden utilizar para representar los informes para la entrega, determinar el estado de la notificación y establecer los datos de usuario.  
@@ -30,7 +30,7 @@ La notificación es el objeto central de cualquier entrega
   
  Se pasa el objeto <xref:Microsoft.ReportingServices.Interfaces.Notification> al método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> de la extensión de entrega. El método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> debería contener código concreto para procesar la notificación y entregar el informe.  
   
- Para obtener un ejemplo de cómo usar la clase <xref:Microsoft.ReportingServices.Interfaces.Notification>, vea [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obtener un ejemplo de cómo usar la clase <xref:Microsoft.ReportingServices.Interfaces.Notification>, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="retry-functionality"></a>Funcionalidad de reintento  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le permite crear una cola de reintento para las notificaciones que no se pueden entregar inmediatamente. Una vez que el servidor de informes invoca el método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> de una extensión de entrega, esta puede solicitar que el servidor de informes vuelva a intentar la entrega más adelante. Si ocurre esto, el servidor de informes coloca la notificación en una cola interna y reintenta la entrega cuando transcurra un período concreto. Los administradores pueden configurar el número máximo de reintentos que el servidor de informes realiza y el período entre ellos en la sección correspondiente a la extensión de entrega del archivo RSReportServer.config mediante los elementos XML **MaxNumberOfRetries** y **PeriodBetweenRetries**. Las notificaciones se quitan de la cola de reintento si la entrega posterior tiene éxito o si se alcanza el número máximo de reintentos. Si se produce un error en la entrega después del número máximo de reintentos, se descarta la notificación.  

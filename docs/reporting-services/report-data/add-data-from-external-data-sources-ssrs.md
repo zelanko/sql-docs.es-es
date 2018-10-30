@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da188b4259d12b8c40cdd8a229a7f316a0bc3a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698805"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028414"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Agregar datos de orígenes de datos externos (SSRS)
   Para recuperar datos de un origen de datos externo, use una conexión de datos. La información de la conexión de datos la suele proporcionar el propietario del origen de datos externo, que es responsable de otorgar los permisos y de especificar qué tipos de credenciales se han de usar. La información de la conexión de datos se guarda como un origen de datos de informe. El tipo de origen de datos especifica qué extensión de datos usar para recuperar los datos.  
@@ -38,7 +38,7 @@ ms.locfileid: "47698805"
 -   **Origen de datos externo:** de dónde recuperar los datos de informe; por ejemplo, una base de datos, un archivo, un cubo o un servicio web.  
   
 > [!NOTE]  
->  Al no estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan con el Generador de informes. Obtiene acceso a los datos como un usuario único utilizando las credenciales de su equipo. Al estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan en el servidor de informes. Obtiene acceso a los datos como uno de los diferentes usuarios que ejecutan el informe, para lo que utiliza las credenciales del servidor de informes. Para más información, vea [Especificar credenciales en el Generador de informes](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+>  Al no estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan con el Generador de informes. Obtiene acceso a los datos como un usuario único utilizando las credenciales de su equipo. Al estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan en el servidor de informes. Obtiene acceso a los datos como uno de los diferentes usuarios que ejecutan el informe, para lo que utiliza las credenciales del servidor de informes. Para más información, vea [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="ReportData"></a> Descripción de los datos de informe  
  En su forma más simple, un informe muestra los datos desde un conjunto de datos de informe de una región de datos de la página del informe, es decir, de una tabla única, gráfico, matriz u otro tipo de región de datos del informe. Los datos de un conjunto de datos de informe proceden del primer conjunto de resultados que se devuelve desde un comando de consulta único que ejecuta desde un acceso de solo lectura a un origen de datos externo. Todas las regiones de datos se expanden lo necesario para mostrar todos los datos del conjunto de datos.  
@@ -97,15 +97,15 @@ ms.locfileid: "47698805"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Proporciona información general sobre cómo obtener acceso a los datos del informe.|  
-|[Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Proporciona información sobre las conexiones de datos y los orígenes de datos.|  
+|[Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Proporciona información sobre las conexiones de datos y los orígenes de datos.|  
 |[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Proporciona información sobre conjuntos de datos compartidos e incrustados.|  
 |[Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.|  
-|[Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.|  
-|[Introducción a las extensiones de procesamiento de datos](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](http://go.microsoft.com/fwlink/?linkid=121312).|Proporciona a los usuarios expertos información detallada sobre las extensiones de datos.|  
+|[Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.|  
+|[Introducción a las extensiones de procesamiento de datos](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?linkid=121312).|Proporciona a los usuarios expertos información detallada sobre las extensiones de datos.|  
   
   
 ## <a name="see-also"></a>Ver también  
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039d1bc435103800151a29c790f19584f3721603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c0ab1cae8f3b99cb148096e272a1fd38f91ca31
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021029"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Trabajo con instantáneas (portal web)
 
@@ -76,4 +76,4 @@ Si activa esta casilla, se copiará en el historial de un informe una instantán
 [Trabajo con informes paginados](working-with-paginated-reports-web-portal.md)  
 [Trabajo con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

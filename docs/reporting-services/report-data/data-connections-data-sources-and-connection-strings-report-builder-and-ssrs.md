@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611883"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030020"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Conexiones de datos, orígenes de datos y cadenas de conexión (Generador de informes y SSRS)
 
@@ -50,7 +50,7 @@ ms.locfileid: "47611883"
   
      Los desarrolladores pueden usar la API de <xref:Microsoft.ReportingServices.DataProcessing> para crear extensiones de procesamiento de datos compatibles con tipos de orígenes de datos adicionales.  
   
--   En [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], desplácese a un servidor de informes o un sitio de SharePoint y seleccione orígenes de datos compartidos o cree orígenes de datos incrustados en el informe. No se puede crear un origen de datos compartido en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. No se pueden usar extensiones de datos personalizadas en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+-   En [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], desplácese a un servidor de informes o un sitio de SharePoint y seleccione orígenes de datos compartidos o cree orígenes de datos incrustados en el informe. No puede crear un origen de datos compartido en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. No puede utilizar extensiones de datos personalizadas en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  En la tabla siguiente se resumen las diferencias entre los orígenes de datos compartidos y los incrustados.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47611883"
   
 -   ODBC  
   
--   Modelo semántico de Microsoft BI para Power View: en un sitio de SharePoint que se haya configurado para una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], está disponible este tipo de origen de datos. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Para obtener más información, vea [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modelo semántico de Microsoft BI para Power View: en un sitio de SharePoint que se haya configurado para una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], está disponible este tipo de origen de datos. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Para obtener más información, vea [Building the Perfect BI Semantic Tabular Models for Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Para obtener una lista completa de los orígenes de datos y las versiones que admite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -158,4 +158,4 @@ ms.locfileid: "47611883"
 [Establecimiento de propiedades de implementación](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

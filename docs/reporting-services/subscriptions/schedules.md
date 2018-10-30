@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b36a4528ac1a12ec1a59528e515530b1e009ba2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779673"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029574"
 ---
 # <a name="schedules"></a>Programaciones
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona **programaciones compartidas** y **programaciones específicas del informe** para ayudarle a controlar el procesamiento y distribución de los informes. La diferencia entre los dos tipos de programaciones radica en cómo se definen, almacenan y administran. La construcción interna de los dos tipos de programación es la misma. Todas las programaciones especifican un tipo de periodicidad: mensual, semanal o diaria. Dentro del tipo de periodicidad, se deben establecer los intervalos y el período para la frecuencia con que se debe producir un evento. El tipo de patrón de periodicidad y cómo se especifican los patrones es el mismo si crea una programación compartida o una programación específica del informe.
@@ -29,7 +29,7 @@ ms.locfileid: "47779673"
   
 -   Las programaciones específicas del informe se crean al definir una suscripción o establecer las propiedades de ejecución del informe. Completar la información de la programación forma parte del proceso de definición de una suscripción o de establecimiento de las propiedades. Para definir una programación específica del informe, abra el informe o la suscripción que la utiliza.  
   
- Una programación compartida contiene la información de programación y periodicidad que se puede usar en un número cualquiera de suscripciones e informes publicados que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si tiene muchos informes y suscripciones que se ejecutan al mismo tiempo, puede crear una programación compartida para dichos trabajos. Si desea cambiar el patrón de periodicidad o la fecha de finalización con posterioridad, puede realizar la modificación en un lugar.  
+ Una programación compartida contiene la información de programación y periodicidad que se puede usar en un número cualquiera de suscripciones e informes publicados que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si tiene muchos informes y suscripciones que se ejecutan al mismo tiempo, puede crear una programación compartida para dichos trabajos. Si desea cambiar el patrón de periodicidad o la fecha de finalización con posterioridad, puede realizar la modificación en un lugar.  
   
  Las programaciones compartidas son más sencillas de mantener y le permiten mayor flexibilidad para administrar operaciones programadas. Por ejemplo, puede pausar y reanudar las programaciones compartidas. Además, si desea que se ejecuten demasiadas operaciones programadas al mismo tiempo, puede crear varias programaciones compartidas que se ejecuten en momentos diferentes y, a continuación, ajustar la información de programación hasta que la carga de procesamiento se iguale fuera en el servidor de informes.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47779673"
  Para obtener información detallada acerca de cómo crear y administrar programaciones, vea [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Las operaciones de programación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con la edición de SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
+>  Las operaciones de programación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con la edición de SQL Server 2016](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
   
 ##  <a name="bkmk_compare"></a> Comparar programaciones compartidas y programaciones específicas del informe  
  Ambos tipos de programaciones producen el mismo resultado:.  
@@ -133,7 +133,7 @@ ms.locfileid: "47779673"
 ## <a name="see-also"></a>Ver también  
  [Crear, modificar y eliminar instantáneas del historial de informes](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  

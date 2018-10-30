@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ec5912fc9aff3777fe567461b98651d7e9a91a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6442c6993af76c3d5b14526eb56d237963375a0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744743"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030714"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipos de gráficos (Generador de informes y SSRS)
 
@@ -29,7 +29,7 @@ Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se v
   
  Puede cambiar el tipo de gráfico después de haberlo creado. Para más información, vea [Cambiar un tipo de gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [Informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo de gráfico|Muestra datos de proporción|Muestra datos de acciones|Muestra datos lineales|Muestra datos de varios valores|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -52,4 +52,4 @@ Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se v
 [Puntos de datos vacíos y nulos en los gráficos](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
 [Agregar un gráfico a un informe](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

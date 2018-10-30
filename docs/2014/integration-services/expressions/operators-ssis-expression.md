@@ -54,7 +54,7 @@ ms.locfileid: "48174515"
 |[&#60;= &#40;Menor o igual a&#41; &#40;expresión de SSIS&#41;](less-than-or-equal-to-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es menor o igual que la segunda.|  
 |[? : &#40;Condicional&#41; &#40;expresión de SSIS&#41;](conditional-ssis-expression.md)|Devuelve una de dos expresiones en función del resultado de la evaluación de una expresión booleana.|  
   
- Para obtener información sobre la posición de cada operador en la jerarquía de precedencia, vea [Operator Precedence and Associativity](operator-precedence-and-associativity.md).  
+ Para obtener información sobre la posición de cada operador en la jerarquía de precedencia, vea [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)   

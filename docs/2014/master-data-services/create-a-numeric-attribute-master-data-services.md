@@ -25,14 +25,14 @@ ms.locfileid: "48072635"
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo numérico cuando desee que los usuarios escriban un número como valor de un atributo.  
   
 > [!NOTE]  
->  Los atributos numéricos tienen limitaciones. Para obtener más información, consulte [Attributes &#40;Master Data Services&#41;](attributes-master-data-services.md).  
+>  Los atributos numéricos tienen limitaciones. Para obtener más información, consulte [Atributos &#40;Master Data Services&#41;](attributes-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   Debe existir una entidad para la que crear el atributo. Para obtener más información, consulte [Crear una entidad &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48072635"
   
 12. Desde el **máscara de entrada** lista, seleccione un formato para números negativos.  
   
-13. Si lo desea, seleccione **Habilitar seguimiento de cambios** para realizar el seguimiento de los cambios en los grupos de atributos. Consulte [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) para obtener más información.  
+13. Si lo desea, seleccione **Habilitar seguimiento de cambios** para realizar el seguimiento de los cambios en los grupos de atributos. Consulte [Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) para obtener más información.  
   
 14. Haga clic en **Guardar atributo**.  
   

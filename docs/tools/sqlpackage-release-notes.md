@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050857"
 ---
 # <a name="sqlpackage-release-notes"></a>notas de la versión de Sqlpackage
 
 **[Descargar la última versión](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+Fecha de lanzamiento: 24 de octubre de 2018  
+Compilación: 15.0.4200.1 
+
+La versión incluye las siguientes características y correcciones:
+
+- Se agregó compatibilidad para el nivel de compatibilidad de base de datos 150.
+- Se agregó compatibilidad para instancias administradas.
+- Se ha agregado el parámetro de línea de comandos del MaxParallelism para especificar el grado de paralelismo para las operaciones de base de datos.
+- Agregar parámetro de línea de comandos AccessToken para especificar un token de autenticación al conectarse a SQL Server.
+- Se agregó compatibilidad para tipos de datos BLOB y CLOB secuencia para la importación.
+- Ha agregado compatibilidad con UDF escalar opción "INLINE".
+- Se ha agregado compatibilidad con la sintaxis 'MERGE' de tabla de gráfico.
+- Columna pseudo sin resolver fijo para las tablas de graph.
+- Se ha corregido la creación de una base de datos con el archivo optimizado de memoria se usan grupos de tablas optimizadas para memoria.
+- Se ha corregido, incluidas las propiedades extendidas en tablas externas.
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ Compilación: 14.0.4079.2
 La versión incluye las siguientes correcciones:
 
 - Mejorado los mensajes de error para errores de conexión, incluidos el mensaje de excepción de SqlClient.
-- Se ha agregado el parámetro de línea de comandos del MaxParallelism para especificar el grado de paralelismo para las operaciones de base de datos.
 - Admite la compresión de índice en los índices de partición única para import/export.
 - Se ha corregido un problema de ingeniería inverso para conjuntos de columnas XML con SQL 2017 y versiones posteriores.
 - Se ha corregido un problema donde se omitió el scripting en el nivel de compatibilidad 140 para Azure SQL Database.

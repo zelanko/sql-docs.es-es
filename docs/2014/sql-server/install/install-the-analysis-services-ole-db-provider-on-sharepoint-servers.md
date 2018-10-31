@@ -120,7 +120,7 @@ ms.locfileid: "48128573"
   
 4.  En el **selección de características** página, seleccione **proveedor Analysis Services OLE DB para SQL Server**. Anule la selección de los demás componentes y complete la instalación. Para obtener más información acerca de spPowerPivot.msi, vea [instalar o desinstalar PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+5.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
   
 ##  <a name="bkmk_kj"></a> Instalar el proveedor SQL Server 2008 R2 OLE DB para hospedar anteriormente libros de una versión  

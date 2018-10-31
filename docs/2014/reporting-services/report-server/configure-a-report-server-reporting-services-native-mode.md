@@ -55,7 +55,7 @@ ms.locfileid: "48104514"
   
  Si Firewall de Windows está activado, es probable que el puerto que el servidor de informes está configurado para usar esté cerrado. Una indicación de que un puerto puede estar cerrado es que aparece una página en blanco al intentar abrir el Administrador de informes desde un equipo cliente remoto. Para obtener información sobre cómo configurar el firewall, vea [configurar un Firewall para el acceso al servidor de informes](configure-a-firewall-for-report-server-access.md).  
   
- Si usa Windows Vista o Windows Server 2008, se requieren pasos adicionales para poder abrir el Administrador de informes de forma local. Para obtener más información, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Si usa Windows Vista o Windows Server 2008, se requieren pasos adicionales para poder abrir el Administrador de informes de forma local. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
  Para comprobar la instalación, cree las carpetas, cargue los elementos y ejecute los informes. Siga las instrucciones de [comprobar una instalación de Reporting Services](../install-windows/verify-a-reporting-services-installation.md) para comprobar la instalación.  
   

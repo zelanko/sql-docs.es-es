@@ -34,7 +34,7 @@ ms.locfileid: "48092495"
   
  A menudo se usan operaciones de copias de seguridad y restauración para mover la totalidad o una parte de la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   Si se van a mover únicamente las bases de datos del servidor de informes, se pueden usar las operaciones de copias de seguridad y restauración, o de adjuntar y separar, para reubicar las bases de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente. Para más información, vea [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Si se van a mover únicamente las bases de datos del servidor de informes, se pueden usar las operaciones de copias de seguridad y restauración, o de adjuntar y separar, para reubicar las bases de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente. Para más información, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   El traspaso de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro equipo se conoce como migración. Cuando se migra una instalación, se ejecuta el programa de instalación para instalar una nueva instancia del servidor de informes y luego copiar datos de instancia al nuevo equipo. Para obtener más información sobre la migración de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea los temas siguientes:  
   

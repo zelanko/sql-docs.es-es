@@ -187,7 +187,7 @@ ms.locfileid: "48171525"
 30. Repita este procedimiento con la tabla sysjobs. Se deben conceder al rol RSExecRole permisos de selección para ambas tablas.  
   
 ## <a name="move-the-report-server-database"></a>Mover la base de datos del servidor de informes  
- Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para más información, vea [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para más información, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Si va a actualizar [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], puede hacerlo antes o después de mover la base de datos.  
   

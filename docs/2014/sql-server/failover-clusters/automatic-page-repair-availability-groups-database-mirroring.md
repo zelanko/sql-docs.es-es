@@ -32,7 +32,7 @@ ms.locfileid: "48070594"
   
   
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> Tipos de errores que provocan un intento de reparación de página automática  
  La reparación de página automática de la creación de reflejo de la base de datos intenta reparar únicamente aquellas páginas de un archivo de datos en las que una operación no se ha realizado correctamente debido a uno de los errores que se muestran en la siguiente tabla.  
   
 |Número de error|Descripción|Instancias que provocan el intento de una reparación de página automática|  
@@ -56,7 +56,7 @@ ms.locfileid: "48070594"
   
 
   
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> Control de los errores de E/S en la base de datos reflejada o secundaria  
  En la base de datos principal, solo se intentará realizar la reparación de página automática cuando la base de datos esté en el estado SYNCHRONIZED y la base de datos principal todavía esté enviando entradas de registro de la base de datos al servidor reflejado o secundario. A continuación se muestra la secuencia básica de acciones en un intento de reparación de página automática:  
   
 1.  Cuando se produce un error de lectura en una página de datos de la base de datos principal, esta inserta una fila en la tabla [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) con el estado de error adecuado. Para la creación de reflejo de la base de datos, el servidor principal solicita una copia de la página al reflejo. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], el servidor principal difunde la solicitud a todos los secundarios y obtiene la página del primero que responda. La solicitud especifica el identificador de la página y el LSN que se encuentra actualmente al final del registro vaciado. La página se marca como *pendiente de restauración*. Esto hace que no se pueda tener acceso a ella durante el intento de reparación de página automática. Si se pretende tener acceso a esta página durante el intento de reparación, se producirá el error 829 (pendiente de restauración).  
@@ -71,7 +71,7 @@ ms.locfileid: "48070594"
   
 
   
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> Control de errores de E/S en la base de datos reflejada o secundaria  
  La creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]administran normalmente de la misma forma los errores de E/S en las páginas de datos que se producen en la base de datos reflejada o secundaria.  
   
 1.  Con la creación de reflejo de la base de datos, si el servidor reflejado encuentra uno o más errores de E/S de página cuando vuelve a generar una entrada del registro, la sesión de creación de reflejo establece el estado SUSPENDED. Con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], si una réplica secundaria encuentra uno o varios errores de E/S de página cuando rehace una entrada de registro, la base de datos secundaria entra en el estado SUSPENDED. En ese momento, el servidor reflejado o secundario inserta una fila en la tabla **suspect_pages** con el estado de error adecuado. A continuación, el servidor reflejado o secundario solicita una copia de la página al servidor principal.  

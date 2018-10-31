@@ -72,7 +72,7 @@ ms.locfileid: "48184955"
   
 4.  Haga clic en **Aplicar**.  
   
-5.  Si usa [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, podrían requerirse pasos adicionales para poder usar el Administrador de informes. Para obtener más información, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+5.  Si usa [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, podrían requerirse pasos adicionales para poder usar el Administrador de informes. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="ConfigureSpecificURL"></a> Configurar el Administrador de informes para que use una dirección URL específica del servidor de informes  
  Cuando se configuran direcciones URL en la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , el Administrador de informes detecta y utiliza automáticamente las direcciones URL nuevas y actualizadas para el servidor de informes que se ejecuta en la misma instancia del servidor. Si su implementación requiere el uso de una única dirección URL estática para todas las solicitudes del servidor de informes, puede especificar dicha dirección en el archivo RSReportServer.config.  

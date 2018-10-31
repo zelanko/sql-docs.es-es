@@ -18,7 +18,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48155965"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Actualizar servidores de un grupo de disponibilidad con una pérdida de datos y un tiempo de inactividad mínimos
-  Al actualizar instancias de servidor de SQL Server 2012 a un Srvice Pack o una versión más reciente, puede reducir el tiempo de inactividad de un grupo de disponibilidad a solo una conmutación por error manual realizando una actualización secuencial. La actualización de las versiones de SQL Server se conoce como adaptación (upgrade) gradual; la actualización de la versión actual de SQL Server con revisiones o Service Packs se conoce como actualización (update) gradual.  
+  Al actualizar instancias de servidor de SQL Server 2012 a un Service Pack o una versión más reciente, puede reducir el tiempo de inactividad de un grupo de disponibilidad a solo una conmutación por error manual realizando una actualización secuencial. La actualización de las versiones de SQL Server se conoce como adaptación (upgrade) gradual; la actualización de la versión actual de SQL Server con revisiones o Service Packs se conoce como actualización (update) gradual.  
   
  Este tema limita la explicación únicamente a las adaptaciones y a las actualizaciones de SQL Server (a las que, de aquí en adelante, se hará referencia genéricamente como actualizaciones). Para relacionados con el sistema operativo actualizaciones de que se ejecutan las instancias de SQL Server de alta disponibilidad en, consulte [entre clústeres migración de grupos de disponibilidad AlwaysOn para las actualizaciones del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx)  
   

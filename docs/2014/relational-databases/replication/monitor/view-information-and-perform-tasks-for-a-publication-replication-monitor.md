@@ -63,7 +63,7 @@ ms.locfileid: "48200065"
   
 5.  Para ver información sobre las advertencias del agente y umbrales, haga clic en la pestaña **Advertencias** . Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
-6.  Para ver información acerca de los token de seguimiento, haga clic en la pestaña **Token de seguimiento** . Para obtener más información acerca de cómo utilizar los testigos de seguimiento, vea [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Para ver información acerca de los token de seguimiento, haga clic en la pestaña **Token de seguimiento** . Para obtener más información acerca de cómo utilizar los testigos de seguimiento, vea [Medir la latencia y validar las conexiones de la replicación transaccional](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar propiedades de publicación](../publish/view-and-modify-publication-properties.md)   

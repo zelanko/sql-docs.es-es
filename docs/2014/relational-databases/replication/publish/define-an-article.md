@@ -108,7 +108,7 @@ ms.locfileid: "48084935"
   
 2.  Para filtrar filas horizontalmente en una tabla o ver un artículo, use [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) para definir la cláusula de filtro. Para más información, consulte [Definir y modificar un filtro de fila estático](define-and-modify-a-static-row-filter.md).  
   
-3.  Para filtrar columnas verticalmente en una tabla o ver un artículo, use [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Para más información, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+3.  Para filtrar columnas verticalmente en una tabla o ver un artículo, use [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md).  
   
 4.  Ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) si se filtra el artículo.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48084935"
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique el nombre de la publicación para **@publication**, un nombre para el nombre de artículo para **@article**y el objeto que se está publicando para **@source_object**. Para filtrar horizontalmente filas de tabla, especifique un valor para **@subset_filterclause**. Para obtener más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) y [Definir y modificar un filtro de fila estático](define-and-modify-a-static-row-filter.md). Si el artículo no es un artículo de tabla, especifique el tipo de artículo para **@type**. Para obtener más información, vea [Especificar tipos de artículo &#40;programación de la replicación con Transact-SQL&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
-2.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir un filtro de combinación entre dos artículos. Para más información, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+2.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir un filtro de combinación entre dos artículos. Para más información, consulte [Definir y modificar un filtro de combinación entre artículos de mezcla](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 3.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) para filtrar columnas de tabla. Para más información, consulte [Definir y modificar un filtro de columna](define-and-modify-a-column-filter.md).  
   

@@ -40,7 +40,7 @@ ms.locfileid: "48218245"
   
 -   Suscripción expirada  
   
-     Este valor de estado se aplica a todos los tipos de replicación. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+     Este valor de estado se aplica a todos los tipos de replicación. Para obtener más información, consulte [establecer umbrales y advertencias en el Monitor de replicación](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 -   Rendimiento crítico  
   

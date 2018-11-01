@@ -34,7 +34,7 @@ ms.locfileid: "48148565"
   
 1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para obtener más información, consulte [Configurar la publicación y la distribución](configure-publishing-and-distribution.md) y [Crear, modificar y eliminar publicaciones y artículos &#40;replicación&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
   
-2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Cree un proyecto de Replication Management Objects (RMO) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio que mediante programación inicie sincrónicamente el Agente de mezcla. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48148565"
   
 1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción de extracción a la publicación. La publicación debe admitir la sincronización web o los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Establezca un punto de interrupción en el código del controlador de lógica de negocios, ya sea en el método que se depura o en el constructor de clase. Para obtener más información acerca de los métodos que se pueden implementar en un controlador de lógica de negocios, vea el tema de métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   

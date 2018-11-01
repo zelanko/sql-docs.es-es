@@ -37,7 +37,7 @@ ms.locfileid: "48199451"
   
  SELECT * FROM sys.fulltext_languages  
   
- Si agrega, quita o modifica un separador de palabras, necesita actualizar la lista de identificadores de configuración regional (LCID) de Microsoft Windows que se admiten para la indización y las consultas de texto completo. Para obtener más información, consulte [View or Change Registered Filters and Word Breakers](view-or-change-registered-filters-and-word-breakers.md).  
+ Si agrega, quita o modifica un separador de palabras, necesita actualizar la lista de identificadores de configuración regional (LCID) de Microsoft Windows que se admiten para la indización y las consultas de texto completo. Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Establecer la opción de idioma de texto completo predeterminado  
  Para una versión localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de instalación la `default full-text language` opción para el idioma del servidor, si existe una correspondencia apropiada. Para obtener una versión no localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el `default full-text language` opción es el inglés.  

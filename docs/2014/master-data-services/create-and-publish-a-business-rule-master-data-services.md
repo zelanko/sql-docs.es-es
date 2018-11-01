@@ -29,7 +29,7 @@ ms.locfileid: "48227025"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>Crear y publicar una regla de negocios  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48227025"
   
 18. En el panel **Editar acción** , haga clic en **Guardar elemento**.  
   
-19. Opcionalmente, agregue varias condiciones a la regla. Para obtener más información, vea [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+19. Opcionalmente, agregue varias condiciones a la regla. Para obtener más información, vea [Agregar varias condiciones a una regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 20. Haga clic en **Atrás**.  
   

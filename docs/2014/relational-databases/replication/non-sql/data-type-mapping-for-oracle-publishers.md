@@ -103,7 +103,7 @@ ms.locfileid: "48194745"
   
 -   Cambiar de forma global la opción predeterminada para todos los artículos futuros utilizando procedimientos almacenados (los valores predeterminados no se cambian para los artículos existentes).  
   
- Para especificar asignaciones de datos alternativas, vea [Specify Data Type Mappings for an Oracle Publisher](../publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ Para especificar asignaciones de datos alternativas, vea [Especificar asignaciones de tipos de datos para un publicador de Oracle](../publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar un publicador de Oracle](configure-an-oracle-publisher.md)   

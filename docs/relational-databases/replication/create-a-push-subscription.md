@@ -93,7 +93,7 @@ ms.locfileid: "47841313"
   
     -   Si el valor de **allow_push** es **0**, ejecute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), y especifique **allow_push** para **@property** y **true** para **@value**.  
   
-2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique **@publication**, **@subscriber** y **@destination_db**. Especifique un valor **push** para **@subscription_type**. Para obtener información acerca de cómo actualizar suscripciones, vea [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique **@publication**, **@subscriber** y **@destination_db**. Especifique un valor **push** para **@subscription_type**. Para obtener información acerca de cómo actualizar suscripciones, vea [Crear una suscripción actualizable en una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique lo siguiente:  
   

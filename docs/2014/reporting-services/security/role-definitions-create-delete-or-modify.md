@@ -31,7 +31,7 @@ ms.locfileid: "48166335"
   
  Para crear, modificar o eliminar roles, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Solo puede eliminar roles que no se usan.  
   
- Para asignar usuarios y grupos a los roles que crea, use el Administrador de informes. Para más información, consulte [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Para asignar usuarios y grupos a los roles que crea, use el Administrador de informes. Para más información, consulte [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
   
 > [!NOTE]  
 >  Si el servidor de informes se configura para el modo integrado de SharePoint, y se conectó al sitio de SharePoint con el que se integra el servidor de informes, puede ver y modificar los niveles de permisos que controlan el acceso a las operaciones y el contenido del servidor de informes.  

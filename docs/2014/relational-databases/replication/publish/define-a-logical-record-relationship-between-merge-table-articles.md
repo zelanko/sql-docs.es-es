@@ -59,7 +59,7 @@ ms.locfileid: "48069925"
   
 1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione un filtro de fila en el panel **Tablas filtradas**.  
   
-     Una relación de registros lógicos está asociada con un filtro de combinación, que amplía un filtro de fila. Por tanto, debe definir un filtro de fila antes de poder ampliar el filtro con una combinación y aplicar una relación de registros lógicos. Una vez definido el filtro de combinación, podrá ampliarlo con otro filtro de combinación. Para obtener más información acerca de cómo definir filtros de combinación, vea [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+     Una relación de registros lógicos está asociada con un filtro de combinación, que amplía un filtro de fila. Por tanto, debe definir un filtro de fila antes de poder ampliar el filtro con una combinación y aplicar una relación de registros lógicos. Una vez definido el filtro de combinación, podrá ampliarlo con otro filtro de combinación. Para obtener más información acerca de cómo definir filtros de combinación, vea [Definir y modificar un filtro de combinación entre artículos de mezcla](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 2.  Haga clic en **Agregar**y, a continuación, en **Agregar combinación para ampliar el filtro seleccionado**.  
   

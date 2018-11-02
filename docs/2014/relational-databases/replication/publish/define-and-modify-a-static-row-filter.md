@@ -151,7 +151,7 @@ ms.locfileid: "48184935"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- En este ejemplo de replicación de mezcla, los artículos se filtran horizontalmente para devolver solo las filas que pertenecen al vendedor especificado. También se usa un filtro de combinación. Para más información, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+ En este ejemplo de replicación de mezcla, los artículos se filtran horizontalmente para devolver solo las filas que pertenecen al vendedor especificado. También se usa un filtro de combinación. Para más información, consulte [Definir y modificar un filtro de combinación entre artículos de mezcla](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   

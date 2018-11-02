@@ -4,19 +4,19 @@ description: Explore distintas formas de usar e interactuar con SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/02/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 169ca2d6afc9d6061af0021d97062d12f19c9854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef759f41dd481510524d541751417a4dbe1c02c7
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596553"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753562"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imágenes de contenedor de SQL Server en Docker
 
@@ -463,7 +463,7 @@ Esto actualiza la imagen de SQL Server para los nuevos contenedores que cree, pe
 
 1. Si lo desea, quite del contenedor antiguo con `docker rm`.
 
-## <a id="troubleshooting"></a> Solución de problemas
+## <a id="troubleshooting"></a> Solucionar problemas
 
 Las secciones siguientes proporcionan sugerencias de solución de problemas para ejecutar SQL Server en contenedores.
 

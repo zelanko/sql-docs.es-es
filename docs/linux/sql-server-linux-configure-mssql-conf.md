@@ -4,18 +4,18 @@ description: En este artículo se describe cómo usar la herramienta mssql-conf 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694673"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753592"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694673"
 | [Perfil de Correo electrónico de base de datos](#dbmail) | Establezca el perfil de correo electrónico de base de datos predeterminada para SQL Server en Linux. |
 | [Directorio de datos predeterminado](#datadir) | Cambie el directorio predeterminado para nuevos archivos de datos de base de datos de SQL Server (.mdf). |
 | [Directorio de registro predeterminado](#datadir) | Cambia el directorio predeterminado para nuevos archivos de registro (.ldf) de base de datos de SQL Server. |
-| [Directorio de archivos de base de datos maestra predeterminado](#masterdatabasedir) | Cambia el directorio predeterminado para los archivos de base de datos maestra en la instalación de SQL existente.|
+| [Directorio predeterminado de la base de datos maestra](#masterdatabasedir) | Cambia el directorio predeterminado para los archivos de registro y base de datos maestra.|
 | [Nombre de archivo de base de datos maestra predeterminada](#masterdatabasename) | Cambia el nombre de los archivos de base de datos maestra. |
 | [Directorio de volcado de memoria predeterminado](#dumpdir) | Cambie el directorio predeterminado para nuevos volcados de memoria y otros archivos de solución de problemas. |
 | [Directorio de registro de errores predeterminado](#errorlogdir) | Cambia el directorio predeterminado para nuevos archivos de registro de errores de SQL Server, seguimiento de Profiler de forma predeterminada, XE de sesión de estado del sistema y XE de sesión de Hekaton. |
@@ -190,7 +190,7 @@ El **filelocation.defaultdatadir** y **filelocation.defaultlogdir** configuraci�
 
 ## <a id="masterdatabasedir"></a> Cambiar la ubicación de directorio del archivo de base de datos maestra predeterminada
 
-El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de configuración de la ubicación donde el motor de SQL Server busca los archivos de base de datos maestra. De forma predeterminada, esta ubicación es /var/opt/mssql/data. 
+El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de configuración de la ubicación donde el motor de SQL Server busca los archivos de base de datos maestra. De forma predeterminada, esta ubicación es /var/opt/mssql/data.
 
 Para cambiar esta configuración, use los pasos siguientes:
 
@@ -214,13 +214,16 @@ Para cambiar esta configuración, use los pasos siguientes:
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > Además de mover los archivos de registro y datos maestros, también se mueve la ubicación predeterminada para todas las demás bases de datos del sistema.
+
 1. Detenga el servicio de SQL Server:
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Mover el master.mdf y masterlog.ldf: 
+1. Mover el master.mdf y masterlog.ldf:
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ Para cambiar esta configuración, use los pasos siguientes:
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> Si SQL Server no encuentra los archivos master.mdf y mastlog.ldf en el directorio especificado, se crearán automáticamente una copia de las bases de datos del sistema con plantilla en el directorio especificado y se iniciará correctamente SQL Server. Sin embargo, los metadatos, como las bases de datos de usuario, los inicios de sesión de servidor, los certificados de servidor, las claves de cifrado, trabajos del Agente SQL o antigua contraseña de inicio de sesión de SA no se actualizará en la nueva base de datos maestra. Tendrá que detener SQL Server y mover los antiguos master.mdf y mastlog.ldf a la nueva ubicación especificada e inicie SQL Server para continuar usando los metadatos existentes. 
 
+   > [!NOTE]
+   > Si SQL Server no encuentra los archivos master.mdf y mastlog.ldf en el directorio especificado, se crearán automáticamente una copia de las bases de datos del sistema con plantilla en el directorio especificado y se iniciará correctamente SQL Server. Sin embargo, los metadatos, como las bases de datos de usuario, los inicios de sesión de servidor, los certificados de servidor, las claves de cifrado, trabajos del Agente SQL o antigua contraseña de inicio de sesión de SA no se actualizará en la nueva base de datos maestra. Tendrá que detener SQL Server y mover los antiguos master.mdf y mastlog.ldf a la nueva ubicación especificada e inicie SQL Server para continuar usando los metadatos existentes.
+ 
+## <a id="masterdatabasename"></a> Cambiar el nombre de los archivos de base de datos maestra
 
-## <a id="masterdatabasename"></a> Cambie el nombre de los archivos de base de datos maestra.
+El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de configuración de la ubicación donde el motor de SQL Server busca los archivos de base de datos maestra. También puede usar para cambiar el nombre de los archivos de registro y base de datos maestra. 
 
-El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de configuración de la ubicación donde el motor de SQL Server busca los archivos de base de datos maestra. De forma predeterminada, esta ubicación es /var/opt/mssql/data. Para cambiar esta configuración, use los pasos siguientes:
+Para cambiar esta configuración, use los pasos siguientes:
 
 1. Detenga el servicio de SQL Server:
 
@@ -251,8 +255,11 @@ El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de c
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > Solo puede cambiar el nombre de la base de datos maestra y los archivos de registro después de que SQL Server se ha iniciado correctamente. Antes de la ejecución inicial, SQL Server espera que los archivos se denomine master.mdf y mastlog.ldf.
 
 1. Cambiar el nombre de los archivos de datos y registro de base de datos maestra 
 
@@ -266,8 +273,6 @@ El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de c
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> Cambiar la ubicación predeterminada del directorio de volcado de memoria
 

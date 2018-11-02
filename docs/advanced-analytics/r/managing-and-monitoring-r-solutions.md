@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169085"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743210"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Administrar e integrar las cargas de trabajo de machine learning en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ Si posteriormente decide que las funciones de biblioteca externa son necesarias 
 
 > [!NOTE]
 > Para paquetes de R, derechos de administrador del servidor no son necesarios específicamente para la instalación del paquete si usa los métodos alternativos. Consulte [instalar paquetes de R en SQL Server](install-additional-r-packages-on-sql-server.md) para obtener más información.
+
+## <a name="monitoring-script-execution"></a>Supervisión de la ejecución del script
+
+Scripts de R y Python que se ejecutan en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] iniciados por el [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interfaz. Sin embargo, Launchpad no es un recurso controlado ni supervisado por separado, ya que es un servicio seguro proporcionado por Microsoft que administra los recursos adecuadamente.
+
+Los scripts externos que se ejecutan en el servicio Launchpad se administran mediante el [objeto de trabajo de Windows](/windows/desktop/ProcThread/job-objects). Un objeto de trabajo permite administrar grupos de procesos como una unidad. Cada objeto de trabajo es jerárquico y controla los atributos de todos los procesos asociados con él. Las operaciones realizadas en un objeto de trabajo afectan a todos los procesos asociados con el objeto de trabajo.
+
+Por tanto, si es necesario finalizar un trabajo asociado a un objeto, tenga en cuenta que todos los procesos relacionados también se finalizarán. Si se está ejecutando un script de R asignado a un objeto de trabajo de Windows y ese script ejecuta un trabajo de ODBC relacionado que debe finalizarse, también se finalizará el proceso de script de R primario.
+
+Si inicia un script externo que usa el procesamiento paralelo, un único objeto de trabajo de Windows administra todos los procesos secundarios en paralelo.
+
+Para determinar si un proceso se ejecuta en un trabajo, use la función `IsProcessInJob`.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -1,5 +1,5 @@
 ---
-title: Modificar la dimensión Date | Documentos de Microsoft
+title: Modificar la dimensión fecha | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e45dbb5f33ba17211fcb60bc6d8cca9e47aa1ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019672"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753572"
 ---
-# <a name="lesson-3-4---modifying-the-date-dimension"></a>Lección 3-4-modificar la dimensión Date
+# <a name="lesson-3-4---modifying-the-date-dimension"></a>Lección 3-4: modificar la dimensión Date
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 En las tareas de este tema, debe crear una jerarquía definida por el usuario y cambiar los nombres de miembro que se muestran para los atributos Date, Month, Calendar Quarter y Calendar Semester. También definirá claves compuestas para los atributos, controlará el criterio de ordenación de los miembros de dimensión y definirá las relaciones de atributo.  
@@ -86,7 +86,7 @@ Puede crear una nueva jerarquía si arrastra un atributo desde el panel **Atribu
   
 5.  Arrastre el atributo **Date Key** desde el panel **Atributos** a la celda **<new level>** del panel **Jerarquías** , debajo del nivel **English Month Name** .  
   
-6.  En el panel **Jerarquías** , haga clic con el botón derecho en la barra de título de la jerarquía **Jerarquía** , haga clic en **Cambiar nombre**y escriba **Fecha del calendario**.  
+6.  En el **jerarquías** panel, haga clic en la barra de título de la **jerarquía** jerarquía, haga clic en **cambiar el nombre de**y, a continuación, escriba **fecha del calendario**.  
   
 7.  Mediante el menú contextual, en la jerarquía **Fecha del calendario** , cambie el nombre del nivel **English Month Name** a **Mes del calendario**y cambie el nombre del nivel **Date Key** a **Fecha**.  
   

@@ -4,7 +4,7 @@ description: En este tutorial rápido se muestra cómo usar Docker para ejecutar
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/07/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085291"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753552"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Imágenes de contenedor ejecución de SQL Server con Docker
 
@@ -44,8 +44,9 @@ Esta imagen se compone de SQL Server, que se ejecuta en un sistema Linux basado 
 ## <a id="requirements"></a> Requisitos previos
 
 - Motor de Docker 1.8 o versiones posteriores en cualquier distribución de Linux admitida o Docker para Mac y Windows. Para obtener más información, consulte [Instalar Docker](https://docs.docker.com/engine/installation/).
-- Un mínimo de 2 GB de espacio en disco.
-- Un mínimo de 2 GB de RAM.
+- Docker **overlay2** controlador de almacenamiento. Este es el valor predeterminado para la mayoría de los usuarios. Si encuentra que no usa este proveedor de almacenamiento y necesita cambiar, consulte las instrucciones y las advertencias en el [documentación de docker para configurar overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Mínimo de 2 GB de espacio en disco.
+- Mínimo de 2 GB de RAM.
 - [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so

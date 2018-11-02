@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643983"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965963"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar una evaluación de migración de SQL Server con Data Migration Assistant
 
@@ -47,7 +47,6 @@ Las siguientes instrucciones paso a paso para ayudarán a realizar la primera ev
    Al evaluar la instancia de SQL Server de origen para migrar a un entorno local de SQL Server o a SQL Server hospedadas en los destinos de la máquina virtual de Azure, puede elegir uno o ambos de los siguientes tipos de informe de evaluación:
 
     -   **Problemas de compatibilidad**
-
     -   **Recomendación de las nuevas características**
 
     ![Seleccione un tipo de informe de evaluación para el destino de SQL Server](../dma/media/AssessmentTypes.png)
@@ -55,7 +54,6 @@ Las siguientes instrucciones paso a paso para ayudarán a realizar la primera ev
    Al evaluar la instancia de SQL Server de origen para migrar a Azure SQL Database, puede elegir uno o ambos de los siguientes tipos de informe de evaluación:
 
     -   **Comprobar la compatibilidad de base de datos**
-
     -   **Comprobar paridad de características**
 
     ![Seleccionar tipo de informe de evaluación para el destino de la base de datos SQL](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ Puede revisar los problemas de compatibilidad mediante el análisis de objeto af
 
 De forma similar, puede revisar la recomendación de característica a través de **rendimiento**, **almacenamiento**, y **seguridad** áreas.
 
-Recomendación de característica abarcan una gran variedad de características como OLTP en memoria y almacén de columnas, Stretch Database, Always Encrypted, enmascaramiento dinámico de datos y cifrado de datos transparente.
+Recomendación de característica abarcan una gran variedad de características como OLTP en memoria, almacén de columnas, Stretch Database, Always Encrypted, enmascaramiento dinámico de datos y cifrado de datos transparente.
 
 ![Recomendaciones de características de vista](../dma/media/FeatureRecommendations.png)
 
-Para Azure SQL Database, las evaluaciones proporcionan los problemas de bloqueo de migración y problemas de paridad de características. Revise los resultados para ambas categorías seleccionando las opciones específicas.
+Para Azure SQL Database, las evaluaciones proporcionan los problemas de bloqueo de migración y problemas de paridad de características. Revise los resultados para ambas categorías seleccionando las opciones específicas.
 
 - El **paridad de características de SQL Server** categoría proporciona un conjunto completo de recomendaciones, alternativas disponibles en Azure y pasos de mitigación. Le ayuda a planear este trabajo en los proyectos de migración.
 
   ![Ver la información de paridad de características de SQL Server](../dma/media/SQLFeatureParity.png)
 
-- El **problemas de compatibilidad** categoría proporciona características no admitidas o parcialmente compatibles que bloquean migrar bases de datos de SQL Server local a Azure SQL Database. A continuación, proporciona recomendaciones para ayudarle a resolver esos problemas.
+- El **problemas de compatibilidad** categoría proporciona características no admitidas o parcialmente compatibles que bloquean migrar bases de datos de SQL Server local a Azure SQL Database. A continuación, proporciona recomendaciones para ayudarle a resolver esos problemas.
 
   ![Problemas de compatibilidad de vista](../dma/media/CompatibilityIssues.png)
 

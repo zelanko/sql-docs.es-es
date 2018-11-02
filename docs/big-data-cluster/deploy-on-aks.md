@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050917"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216685"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurar Azure Kubernetes Service para las implementaciones de SQL Server 2019 (versión preliminar)
 
@@ -27,11 +27,8 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Para un entorno de AKS, el requisito mínimo de máquina virtual es al menos dos máquinas virtuales del agente (además de a master) de un tamaño mínimo [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Recursos mínimos requeridos por máquina virtual son 4 CPU y 14 GB de memoria.
+- Para un entorno de AKS, el requisito mínimo de máquina virtual es al menos dos máquinas virtuales del agente (además de master), con al menos 4 CPU y 32 GB de memoria de cada uno. Infraestructura de Azure ofrece varias opciones de tamaño para máquinas virtuales, consulte [aquí](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) selecciones en la región que se va a implementar.
   
-   > [!NOTE]
-   > Si tiene previsto ejecutar varias aplicaciones de Spark o trabajos de macrodatos, el tamaño mínimo es [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), y los recursos mínimos requeridos por máquina virtual son 8 CPU y 32 GB de memoria.
-
 - En esta sección tiene que estar ejecutando la CLI de Azure versión 2.0.4 o posterior. Si necesita instalarla o actualizarla, consulte [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Ejecute `az --version` para buscar la versión si es necesario.
 
 - Instalar [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de macrodatos de SQL Server requiere que cualquier versión secundaria dentro del intervalo de 1,10 versiones de Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Para AKS deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada. Tenga en cuenta que en el período de versión CTP2.0, AKS solo admite las versiones 1.10.7 y 1.10.8. 
@@ -81,7 +78,7 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
+    --node-vm-size Standard_E4s_v3 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```

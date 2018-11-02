@@ -1,7 +1,7 @@
 ---
 title: Agente de instantáneas de replicación | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0914e0c2abea1ab4dc15b5d3410f6d717403ef27
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087165"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237011"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
   El Agente de instantáneas de replicación es un archivo ejecutable que prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución.  
@@ -132,6 +132,9 @@ ms.locfileid: "48087165"
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
 |**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
+
+ > [!NOTE]  
+ >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para el agente pueda conectarse correctamente al establecer EncryptionLevel - 2, crear un alias en el servidor SQL local. El parámetro 'Nombre de Alias' debe ser el nombre del servidor y el parámetro 'Server' debe establecerse en el nombre completo de SQL Server.
   
  Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../security/security-overview-replication.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Usar otros proveedores de Active Directory con SQL Server en Linux | Microsoft Docs
-description: Este tutorial proporcionan los pasos de configuración para la autenticación de AD con proveedores de terceros
+description: Este tutorial proporcionan los pasos de configuración para la autenticación de Active Directory con proveedores de terceros
 author: dylan-MSFT
 ms.date: 07/25/2018
 ms.author: dygray
@@ -11,155 +11,156 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: beb342156098ebb5516466ad7fd4a771cc5a0616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ffe146de3a842f9c273b4dbba2a9fe4d9ff7ff5
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787303"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50758000"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>Usar otros proveedores de Active Directory con SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se explica cómo configurar un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo de host de Linux con la autenticación de Active Directory cuando se usan proveedores de AD de otros fabricantes, como [PowerBroker Identity Services (pbi)](https://www.beyondtrust.com/), [Vintela Authentication Services (VAS)](https://www.oneidentity.com/products/authentication-services/), y [Centrify](https://www.centrify.com/). Esta guía incluye los pasos para comprobar la configuración de AD y no está pensado para indicar cómo unir una máquina a un dominio. Para obtener instrucciones detalladas sobre cómo combinar una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host a un dominio con el dominio KERBEROS y SSSD, consulte [autenticación de uso de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md).
+En este artículo se explica cómo configurar un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un equipo de host de Linux con la autenticación de Active Directory cuando se usan proveedores de Active Directory de terceros. Algunos ejemplos son [PowerBroker Identity Services (pbi)](https://www.beyondtrust.com/), [una sola identidad](https://www.oneidentity.com/products/authentication-services/), y [Centrify](https://www.centrify.com/). Esta guía incluye los pasos para comprobar la configuración de Active Directory. No se ha diseñado para indicar cómo unir una máquina a un dominio. Para obtener instrucciones detalladas sobre cómo combinar una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de host a un dominio con realmd y SSSD, consulte [autenticación de uso de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Antes de configurar la autenticación de AD, deberá configurar un controlador de dominio de AD (Windows) en la red y combinación su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en host de Linux a un dominio de AD. Puede usar [pbi](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), o [Centrify](https://www.centrify.com/).
+Antes de configurar la autenticación de Active Directory, deberá configurar un controlador de dominio de Active Directory, Windows, en la red. A continuación, unir su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en host de Linux a un dominio de Active Directory. Puede usar [pbi](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), o [Centrify](https://www.centrify.com/).
 
 > [!NOTE]
 >
->Este tutorial usa "contoso.com" y "CONTOSO.COM" como nombres de dominio y el dominio Kerberos de ejemplo, respectivamente. También usa "DC1. "CONTOSO.COM" como el nombre de dominio completo del ejemplo del controlador de dominio. Debe reemplazar estos elementos con sus propios valores.
+>Este tutorial se usa **`contoso.com`** y **`CONTOSO.COM`** como nombres de dominio y del dominio de ejemplo, respectivamente. También usa **`DC1.CONTOSO.COM`** como el ejemplo de nombre de dominio del controlador de dominio completo. Debe reemplazar estos nombres con sus propios valores.
 
-## <a name="check-connection-to-domain-controller"></a>Compruebe la conexión al controlador de dominio
+## <a name="check-the-connection-to-a-domain-controller"></a>Compruebe la conexión a un controlador de dominio
 
-Compruebe que puede ponerse en contacto con el controlador de dominio con el nombre corto y completo del dominio.
+Compruebe que puede ponerse en contacto con el controlador de dominio con los nombres cortos y completos del dominio:
 
-   ```bash
-   ping contoso
+```bash
+ping contoso
 
-   ping contoso.com
-   ```
+ping contoso.com
+```
 
-   Si se produce un error en cualquiera de estos, actualice la lista de búsqueda de dominio.
+Si se produce un error en cualquiera de estas comprobaciones de nombre, actualice la lista de búsqueda de dominio:
 
-   - **Ubuntu**:
+- **Ubuntu**
 
-     Editar el `/etc/network/interfaces` archivo para que el dominio de AD está en la lista de búsqueda de dominio: 
+  Editar la `/etc/network/interfaces` de archivos, por lo que es el dominio de Active Directory en la lista de búsqueda de dominio: 
 
-     ```/etc/network/interfaces
-     <...>
-     # The primary network interface
-     auto eth0
-     iface eth0 inet dhcp
-     dns-nameservers **<AD domain controller IP address>**
-     dns-search **<AD domain name>**
-     ```
+  ```/etc/network/interfaces
+  <...>
+  # The primary network interface
+  auto eth0
+  iface eth0 inet dhcp
+  dns-nameservers **<AD domain controller IP address>**
+  dns-search **<AD domain name>**
+  ```
 
-     > [!NOTE]
-     > La interfaz de red (eth0) podría diferir para distintas máquinas. Para averiguar cuál de ellos usa, ejecute ifconfig y copie la interfaz que tiene una dirección IP y los bytes transmitidos y recibidos.
+  > [!NOTE]  
+  > La interfaz de red **eth0**, podrían ser diferentes en distintos equipos. Para averiguar cuál de ellos usa, ejecute **ifconfig**. A continuación, copie la interfaz que tiene una dirección IP y los bytes transmitidos y recibidos.
 
-     Después de editar este archivo, reinicie el servicio de red:
+  Después de editar este archivo, reinicie el servicio de red:
 
-     ```bash
-     sudo ifdown eth0 && sudo ifup eth0
-     ```
+  ```bash
+  sudo ifdown eth0 && sudo ifup eth0
+  ```
 
-     Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:  
+  Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:  
 
-     ```/etc/resolv.conf
-     search contoso.com com  
-     nameserver **<AD domain controller IP address>**
-     ```
+  ```/etc/resolv.conf
+  search contoso.com com  
+  nameserver **<AD domain controller IP address>**
+  ```
 
-   - **RHEL**:
+- **RHEL**
 
-     Editar el `/etc/sysconfig/network-scripts/ifcfg-eth0` archivo (o en otra configuración de interfaz de archivos según corresponda) para que sea su dominio de AD en la lista de búsqueda de dominio:
+  Editar la `/etc/sysconfig/network-scripts/ifcfg-eth0` de archivos, por lo que es el dominio de Active Directory en la lista de búsqueda de dominio. O bien, edite el archivo de configuración de otra interfaz según corresponda:
 
-     ```/etc/sysconfig/network-scripts/ifcfg-eth0
-     <...>
-     PEERDNS=no
-     DNS1=**<AD domain controller IP address>**
-     DOMAIN="contoso.com com"
-     ```
+  ```/etc/sysconfig/network-scripts/ifcfg-eth0
+  <...>
+  PEERDNS=no
+  DNS1=**<AD domain controller IP address>**
+  DOMAIN="contoso.com com"
+  ```
 
-     Después de editar este archivo, reinicie el servicio de red:
+  Después de editar este archivo, reinicie el servicio de red:
 
-     ```bash
-     sudo systemctl restart network
-     ```
+  ```bash
+  sudo systemctl restart network
+  ```
 
-     Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:  
+  Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:  
 
-     ```/etc/resolv.conf
-     search contoso.com com  
-     nameserver **<AD domain controller IP address>**
-     ```
+  ```/etc/resolv.conf
+  search contoso.com com  
+  nameserver **<AD domain controller IP address>**
+  ```
 
-   Si todavía no se puede hacer ping en el controlador de dominio, buscar el nombre de dominio completo (por ejemplo, DC1. CONTOSO.COM) y la dirección IP del controlador de dominio y agregue la siguiente entrada al `/etc/hosts`
+  Si todavía no se puede hacer ping en el controlador de dominio, buscar el nombre de dominio completo y la dirección IP del controlador de dominio. Es un nombre de dominio de ejemplo `DC1.CONTOSO.COM`. Agregue la siguiente entrada al `/etc/hosts`:
 
-   ```/etc/hosts
-   **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
-   ```
+  ```/etc/hosts
+  **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
+  ```
 
-   - **SLES**:
+- **SLES**
 
-     Editar el `/etc/sysconfig/network/config` archivo para que la IP del controlador de dominio de AD se usará para las consultas DNS y el dominio de AD está en la lista de búsqueda de dominio:
+  Editar el `/etc/sysconfig/network/config` archivo, para que la IP del controlador de dominio de Active Directory se utiliza para consultas DNS y el dominio de Active Directory está en la lista de búsqueda de dominio:
 
-     ```/etc/sysconfig/network/config
-     <...>
-     NETCONFIG_DNS_STATIC_SEARCHLIST=""
-     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
-     ```
+  ```/etc/sysconfig/network/config
+  <...>
+  NETCONFIG_DNS_STATIC_SEARCHLIST=""
+  NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+  ```
 
-     Después de editar este archivo, reinicie el servicio de red:
-     ```bash
-     sudo systemctl restart network
-     ```
+  Después de editar este archivo, reinicie el servicio de red:
 
-     Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:
+  ```bash
+  sudo systemctl restart network
+  ```
 
-     ```/etc/resolv.conf
-     search contoso.com com
-     nameserver **<AD domain controller IP address>**
-     ```
+  Ahora compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:
 
-## <a name="check-reverse-dns-is-properly-configured"></a>Comprobación de que DNS inverso está configurado correctamente
+  ```/etc/resolv.conf
+  search contoso.com com
+  nameserver **<AD domain controller IP address>**
+  ```
 
-El siguiente comando debe devolver el nombre de dominio completo del host que ejecuta SQL Server (p. ej. "SqlHost.contoso.com").
+## <a name="check-that-the-reverse-dns-is-properly-configured"></a>Compruebe que el DNS inverso está configurado correctamente
 
-   ```bash
-   host **<IP address of SQL Server host>**
-   # **<reversed IP address>**.in-addr.arpa domain name pointerSqlHost.contoso.com.
-   ```
+El siguiente comando debe devolver el nombre de dominio completo del host que ejecuta SQL Server. Un ejemplo es **`SqlHost.contoso.com`**.
 
-   Si esto no devuelve el FQDN de su host o el FQDN no es correcto, agregue una entrada DNS inversa para su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en host de Linux al servidor DNS.
+```bash
+host **<IP address of SQL Server host>**
+# **<reversed IP address>**.in-addr.arpa domain name pointerSqlHost.contoso.com.
+```
 
-## <a name="check-your-krb5-configuration-is-correct"></a>Compruebe que la configuración de KRB5 es correcta
+Si este comando no devuelve el FQDN de su host, o si el FQDN no es correcto, agregue una entrada DNS inversa para que es [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en host de Linux al servidor DNS.
 
-Compruebe su `/etc/krb5.conf` está configurado correctamente. Para la mayoría de los proveedores de AD de otros fabricantes, esto se hace automáticamente. Sin embargo, comprobar `/etc/krb5.conf` para los valores siguientes evitar problemas futuros:
+## <a name="check-that-your-krb5-configuration-is-correct"></a>Compruebe que la configuración de KRB5 es correcta
 
-   ```/etc/krb5.conf
-   [libdefaults]
-   default_realm = CONTOSO.COM
+Compruebe que su `/etc/krb5.conf` está configurado correctamente. Para la mayoría de los proveedores de Active Directory de terceros, esta configuración se realiza automáticamente. Sin embargo, comprobar `/etc/krb5.conf` para los valores siguientes evitar problemas futuros:
 
-   [realms]
-   CONTOSO.COM = {
-   }
+```/etc/krb5.conf
+[libdefaults]
+default_realm = CONTOSO.COM
 
-   [domain_realm]
-   contoso.com = CONTOSO.COM
-   .contoso.com = CONTOSO.COM
-   ```
+[realms]
+CONTOSO.COM = {
+}
+
+[domain_realm]
+contoso.com = CONTOSO.COM
+.contoso.com = CONTOSO.COM
+```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este artículo, describimos cómo configurar un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo host de Linux con la autenticación de Active Directory cuando se usan proveedores de AD de otros fabricantes. Para finalizar la configuración [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux para admitir cuentas de AD, siga las instrucciones de [autenticación de uso de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md).
+En este artículo se explica cómo configurar un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un equipo de host de Linux con la autenticación de Active Directory cuando se usan proveedores de Active Directory de terceros. Para finalizar la configuración [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux para admitir cuentas de Active Directory, siga las instrucciones de [autenticación de uso de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md).
 
 > [!div class="nextstepaction"]
 > [Usar la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md)
 
 > [!NOTE]
 >
-> Puede omitir la sección "Host de la combinación SQL Server al dominio de AD" en [autenticación de uso de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md) como que acaba de hacer que en este tutorial.
+> Puede omitir el **host Join de SQL Server al dominio de Active Directory** sección [autenticación de uso de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md) como que acaba de hacer que en este tutorial.

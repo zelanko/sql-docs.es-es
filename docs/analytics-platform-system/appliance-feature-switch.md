@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 70eed88b1224a712dcb8d1c76085fffc839155a5
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 0d2aadb0e7c0c56c69d89bc94e0ddaacef54e837
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311645"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236911"
 ---
 #<a name="appliance-feature-switches"></a>Modificadores de características del dispositivo
 El **modificador de característica** página muestra información sobre los conmutadores de característica que se presentan en Analytics Platform System AU7 y versiones posteriores. Utilice esta página de configuración para habilitar o deshabilitar características y la configuración de Analytics Platform System o actualizar. Los cambios en los valores de conmutador de característica requieren un reinicio del servicio.
@@ -24,6 +24,9 @@ El **modificador de característica** página muestra información sobre los con
 
 ##<a name="autostatsenabled"></a>AutoStatsEnabled
 Controla la característica de estadísticas automática. Este modificador de característica se establece en true de forma predeterminada después de actualizar a AU7. Cualquier base de datos creada después de la actualización heredarán la creación automática y la actualización asincrónica de estadísticas. Para las bases de datos existentes, pueden permitir que los administradores de base de datos automática de estadísticas con [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Para obtener más información sobre las estadísticas, consulte [estadísticas](../relational-databases/statistics/statistics.md).
+
+##<a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
+Permite seleccionar la configuración de maxdop mayor que 1 para las operaciones insert o select. Opciones para esta configuración son 0, 1, 2 y 4, con el valor predeterminado es 1.
 
 ##<a name="usecatalogqueries"></a>UseCatalogQueries
 Uso de los objetos de catálogo para algunas llamadas de metadatos en lugar de usar SMO ha demostrado mejora del rendimiento. Establecido en true de forma predeterminada en CU7.1, este modificador controla ese comportamiento. 

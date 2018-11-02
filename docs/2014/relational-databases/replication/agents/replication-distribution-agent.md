@@ -1,7 +1,7 @@
 ---
 title: Agente de distribución de replicación | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93648144c2da900c88888b78bbb77dab9bbc5233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222631"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226337"
 ---
 # <a name="replication-distribution-agent"></a>Agente de distribución de replicación
   El Agente de distribución de replicación es un ejecutable que mueve la instantánea (para la replicación de instantáneas y la replicación transaccional) y las transacciones de las tablas de base de datos de la distribución (para la replicación transaccional) a las tablas de destino en los suscriptores.  
@@ -140,7 +140,10 @@ ms.locfileid: "48222631"
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
 |**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
-  
+ 
+ > [!NOTE]  
+ >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para el agente pueda conectarse correctamente al establecer EncryptionLevel - 2, crear un alias en el servidor SQL local. El parámetro 'Nombre de Alias' debe ser el nombre del servidor y el parámetro 'Server' debe establecerse en el nombre completo de SQL Server.
+
  Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../security/security-overview-replication.md).  
   
  **-ErrorFile** *error_path_and_file_name*  

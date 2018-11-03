@@ -1,7 +1,7 @@
 ---
 title: Agente de mezcla de replicación | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71c35ad53fd9c90b8c7130bac104f370e466448f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154185"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237111"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   El Agente de mezcla de replicación es una utilidad ejecutable que aplica la instantánea inicial contenida en las tablas de base de datos a los Suscriptores. También mezcla los cambios incrementales de los datos que tienen lugar en el publicador después de la creación de la instantánea inicial y reconcilia los conflictos según las reglas configuradas por el usuario o mediante un solucionador personalizado creado por el usuario.  
@@ -169,12 +169,15 @@ ms.locfileid: "48154185"
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
 |**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
+
+ > [!NOTE]  
+ >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para el agente pueda conectarse correctamente al establecer EncryptionLevel - 2, crear un alias en el servidor SQL local. El parámetro 'Nombre de Alias' debe ser el nombre del servidor y el parámetro 'Server' debe establecerse en el nombre completo de SQL Server.
   
- Para obtener más información, vea [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md) (Información general de seguridad &#40;replicación&#41;).  
+ Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../security/security-overview-replication.md).  
   
  **- ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir la carga, use la `@subscriber_upload_options` de `sp_addmergearticle` en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir la carga, use `@subscriber_upload_options` de `sp_addmergearticle` en su lugar.  
   
  Especifica el tipo de intercambio de datos durante la sincronización, que puede ser uno de los siguientes:  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411142"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965962"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descargue e instale Data Studio de Azure
 
@@ -28,9 +28,9 @@ Descargue e instale la versión más reciente, la *versión de octubre*:
 
 |Plataforma|Descargar|Fecha de la versión| Versión |
 |:---|:---|:---|:---|
-|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|18 de octubre de 2018 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|18 de octubre de 2018 |1.1.3|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|18 de octubre de 2018 |1.1.3|
+|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|30 de octubre de 2018 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|30 de octubre de 2018 |1.1.4|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|30 de octubre de 2018 |1.1.4|
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
 
@@ -44,7 +44,7 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 1. Iniciar el [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
-**archivo .zip**
+**archivo zip**
 
 1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip para Windows](https://go.microsoft.com/fwlink/?linkid=2030736).
 2. Busque el archivo descargado y extráigalo.
@@ -146,10 +146,19 @@ Si instaló [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] con un arc
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>Requisitos del sistema recomendados
+Para obtener una experiencia óptima, use los requisitos del sistema recomendados.
+
+|             | Núcleos de CPU | Memoria y RAM |
+|:-----------:|:---------:|:----------:|
+| Se recomienda |     4     |      8     |
+|   Mínima   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>Compruebe si hay actualizaciones
 Para comprobar las actualizaciones más recientes, haga clic en el icono de engranaje en la parte inferior izquierda de la ventana y haga clic en **buscar actualizaciones**
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>Ofertas de SQL admitidas (versión preliminar de SSMS 18.0)
+## <a name="supported-sql-offerings"></a>Ofertas de SQL admitidas
 
 * Esta versión de Azure Data Studio funciona con todas las [las versiones compatibles de SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) y proporciona compatibilidad para trabajar con las últimas características de nube de Azure SQL Database y Azure SQL Data Warehouse. Azure Data Studio también proporciona compatibilidad de versión preliminar para instancia administrada de SQL Azure.
 

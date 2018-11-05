@@ -1,5 +1,5 @@
 ---
-title: Prioridad de intercalación (Transact-SQL) | Microsoft Docs
+title: Prioridad de intercalación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,14 +27,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1271e6d108009ffd30084a6402c790070c0e3d8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621323"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960779"
 ---
-# <a name="collation-precedence-transact-sql"></a>Prioridad de intercalación (Transact-SQL)
+# <a name="collation-precedence"></a>Prioridad de intercalación
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   La prioridad de intercalación, o reglas de coerción de intercalación, determina lo siguiente:  
@@ -43,10 +43,10 @@ ms.locfileid: "47621323"
   
 -   La intercalación utilizada por los operadores que distinguen la intercalación y que utilizan entradas de cadenas de caracteres pero no devuelven una cadena de caracteres, como LIKE e IN.  
   
- Las reglas de prioridad de intercalación solo se aplican a los tipos de datos de cadena de caracteres: **char**, **varchar**, **text**, **nchar**, **nvarchar** y **ntext**. Los objetos con otros tipos de datos no participan en las evaluaciones de intercalación.  
+Las reglas de prioridad de intercalación solo se aplican a los tipos de datos de cadena de caracteres: **char**, **varchar**, **text**, **nchar**, **nvarchar** y **ntext**. Los objetos con otros tipos de datos no participan en las evaluaciones de intercalación.  
   
 ## <a name="collation-labels"></a>Etiquetas de intercalación  
- En la tabla siguiente se enumeran y describen las cuatro categorías en las que se identifican las intercalaciones de todos los objetos. El nombre de cada categoría se denomina etiqueta de intercalación.  
+En la tabla siguiente se enumeran y describen las cuatro categorías en las que se identifican las intercalaciones de todos los objetos. El nombre de cada categoría se denomina etiqueta de intercalación.  
   
 |Etiqueta de intercalación|Tipos de objetos|  
 |---------------------|----------------------|  
@@ -56,11 +56,11 @@ ms.locfileid: "47621323"
 |No-collation|Indica que el valor de una expresión es el resultado de una operación entre dos cadenas que tienen intercalaciones incompatibles de la etiqueta de intercalación implícita. El resultado de la expresión se define como carente de intercalación.|  
   
 ## <a name="collation-rules"></a>Reglas de intercalación  
- La etiqueta de intercalación de una expresión simple que hace referencia a un único objeto de cadena de caracteres es la etiqueta de intercalación del objeto al que se hace referencia.  
+La etiqueta de intercalación de una expresión simple que hace referencia a un único objeto de cadena de caracteres es la etiqueta de intercalación del objeto al que se hace referencia.  
   
- La etiqueta de intercalación de una expresión compleja que hace referencia a dos expresiones de operando con la misma etiqueta de intercalación es la etiqueta de intercalación de las expresiones de operando.  
+La etiqueta de intercalación de una expresión compleja que hace referencia a dos expresiones de operando con la misma etiqueta de intercalación es la etiqueta de intercalación de las expresiones de operando.  
   
- La etiqueta de intercalación del resultado final de una expresión compleja que hace referencia a dos expresiones de operando con distintas intercalaciones se basa en las reglas siguientes:  
+La etiqueta de intercalación del resultado final de una expresión compleja que hace referencia a dos expresiones de operando con distintas intercalaciones se basa en las reglas siguientes:  
   
 -   Explicit tiene prioridad sobre Implicit. Implicit tiene prioridad sobre Coercible-default:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47621323"
   
      No-collation + Explicit X = Explicit   
   
- En la tabla siguiente se resumen las reglas.  
+En la tabla siguiente se resumen las reglas.  
   
 |Etiqueta de coerción de operandos|Explicit X|Implicit X|Coercible-default|No-collation|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "47621323"
 |**Coercible-default**|Da como resultado Explicit X|Da como resultado Implicit X|Da como resultado Coercible-default|Da como resultado No-collation|  
 |**No-collation**|Da como resultado Explicit X|Da como resultado No-collation|Da como resultado No-collation|Da como resultado No-collation|  
   
- Las siguientes reglas adicionales también se aplican a la prioridad de intercalación:  
+Las siguientes reglas adicionales también se aplican a la prioridad de intercalación:  
   
 -   No puede haber varias cláusulas COLLATE en una expresión que ya sea una expresión explícita. Por ejemplo, la cláusula `WHERE` siguiente no es válida porque se ha especificado una cláusula `COLLATE` para una expresión que ya es una expresión explícita:  
   
@@ -99,9 +99,9 @@ ms.locfileid: "47621323"
   
 -   No se permiten las conversiones de páginas de códigos para los tipos de datos **text**. No puede convertir una expresión **text** de una intercalación a otra si tienen páginas de códigos diferentes. El operador de asignación no puede asignar valores cuando la intercalación del operando de texto de la derecha tiene una página de códigos distinta de la del operando de texto de la izquierda.  
   
- La prioridad de intercalación se determina después de la conversión de los tipos de datos. El operando del que se obtiene la intercalación resultante puede ser distinto del operando que proporciona el tipo de datos del resultado final. Considere, por ejemplo, el siguiente lote:  
+La prioridad de intercalación se determina después de la conversión de los tipos de datos. El operando del que se obtiene la intercalación resultante puede ser distinto del operando que proporciona el tipo de datos del resultado final. Considere, por ejemplo, el siguiente lote:  
   
-```  
+```sql  
 CREATE TABLE TestTab  
    (PrimaryKey int PRIMARY KEY,  
     CharCol char(10) COLLATE French_CI_AS  
@@ -112,12 +112,12 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
- El tipo de datos Unicode de la expresión simple `N'abc'` tiene una prioridad de tipo de datos superior. Por tanto, la expresión resultante tiene el tipo de datos Unicode asignado a `N'abc'`. Sin embargo, la expresión `CharCol` tiene una etiqueta de intercalación Implicit y `N'abc'` tiene una etiqueta de coerción Coercible-default, que es inferior. Por lo tanto, la intercalación que se utiliza es la intercalación `French_CI_AS` de `CharCol`.  
+El tipo de datos Unicode de la expresión simple `N'abc'` tiene una prioridad de tipo de datos superior. Por tanto, la expresión resultante tiene el tipo de datos Unicode asignado a `N'abc'`. Sin embargo, la expresión `CharCol` tiene una etiqueta de intercalación Implicit y `N'abc'` tiene una etiqueta de coerción Coercible-default, que es inferior. Por lo tanto, la intercalación que se utiliza es la intercalación `French_CI_AS` de `CharCol`.  
   
 ### <a name="examples-of-collation-rules"></a>Ejemplos de reglas de intercalación  
  En los ejemplos siguientes se muestra el funcionamiento de las reglas de intercalación. Para ejecutar los ejemplos, cree la siguiente tabla de prueba.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -133,7 +133,7 @@ GO
 #### <a name="collation-conflict-and-error"></a>Conflictos y errores de intercalación  
  El predicado de la siguiente consulta presenta un conflicto de intercalación y genera un error.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol;  
@@ -149,7 +149,7 @@ Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_A
 #### <a name="explicit-label-vs-implicit-label"></a>Etiqueta Explicit y etiqueta Implicit  
  El predicado de la siguiente consulta se evalúa en la intercalación `greek_ci_as` porque la expresión de la derecha tiene la etiqueta Explicit. Ésta tiene prioridad sobre la etiqueta Implicit de la expresión de la izquierda.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol COLLATE greek_ci_as;  
@@ -166,9 +166,9 @@ id          GreekCol             LatinCol
 ```  
   
 #### <a name="no-collation-labels"></a>Etiquetas No-Collation  
- Las expresiones `CASE` de las siguientes consultas tienen una etiqueta No-collation, por lo que no pueden aparecer en la lista de selección ni funcionar con operadores que distinguen la intercalación. No obstante, las expresiones pueden funcionar con operadores que no distinguen la intercalación.  
+Las expresiones `CASE` de las siguientes consultas tienen una etiqueta No-collation, por lo que no pueden aparecer en la lista de selección ni funcionar con operadores que distinguen la intercalación. No obstante, las expresiones pueden funcionar con operadores que no distinguen la intercalación.  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END)   
 FROM TestTab;  
 ```  
@@ -180,7 +180,7 @@ Msg 451, Level 16, State 1, Line 1
 Cannot resolve collation conflict for column 1 in SELECT statement.  
 ```  
   
-```  
+```sql  
 SELECT PATINDEX((CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END), 'a')  
 FROM TestTab;  
 ```  
@@ -192,7 +192,7 @@ Msg 446, Level 16, State 9, Server LEIH2, Line 1
 Cannot resolve collation conflict for patindex operation.  
 ```  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END) COLLATE Latin1_General_CI_AS   
 FROM TestTab;  
 ```  
@@ -207,23 +207,23 @@ a
 ```  
   
 ## <a name="collation-sensitive-and-collation-insensitive"></a>Distinción y no distinción de la intercalación  
- Los operadores y las funciones pueden distinguir o no las intercalaciones.  
+Los operadores y las funciones pueden distinguir o no las intercalaciones.  
   
- Distinción de la intercalación  
- Significa que, al especificar un operando No-collation, se genera un error en tiempo de compilación. El resultado de la expresión no puede ser No-collation.  
+Distinción de la intercalación  
+Significa que, al especificar un operando No-collation, se genera un error en tiempo de compilación. El resultado de la expresión no puede ser No-collation.  
   
- No distinción de la intercalación  
- Significa que los operandos y el resultado pueden ser No-collation.  
+No distinción de la intercalación  
+Significa que los operandos y el resultado pueden ser No-collation.  
   
 ### <a name="operators-and-collation"></a>Operadores e intercalación  
- Los operadores de comparación, así como los operadores MAX, MIN, BETWEEN, LIKE e IN, distinguen la intercalación. La cadena que utilizan los operadores se asigna a la etiqueta de intercalación del operando que tiene mayor prioridad. El operador UNION también distingue la intercalación, y todos los operandos de cadena y el resultado final reciben la intercalación del operando que tiene la prioridad más alta. La prioridad de intercalación de los operandos UNION y del resultado se evalúan columna a columna.  
+Los operadores de comparación, así como los operadores MAX, MIN, BETWEEN, LIKE e IN, distinguen la intercalación. La cadena que utilizan los operadores se asigna a la etiqueta de intercalación del operando que tiene mayor prioridad. La instrucción UNION también distingue la intercalación, y todos los operandos de cadena y el resultado final reciben la intercalación del operando que tiene la prioridad más alta. La prioridad de intercalación del operando UNION y del resultado se evalúan columna a columna.  
   
- El operador de asignación no distingue la intercalación y la expresión de la derecha se convierte a la intercalación de la izquierda.  
+El operador de asignación no distingue la intercalación y la expresión de la derecha se convierte a la intercalación de la izquierda.  
   
- El operador de concatenación de cadenas distingue la intercalación, por lo que a los dos operandos de cadena y al resultado se les asigna la etiqueta de intercalación del operando que tiene la prioridad de intercalación más alta. Los operadores UNION ALL y CASE no distinguen la intercalación, y a todos los operandos de cadena y al resultado final se les asigna la etiqueta de intercalación del operando que tiene la prioridad más alta. La prioridad de intercalación de los operandos UNION ALL y del resultado se evalúan columna a columna.  
+El operador de concatenación de cadenas distingue la intercalación, por lo que a los dos operandos de cadena y al resultado se les asigna la etiqueta de intercalación del operando que tiene la prioridad de intercalación más alta. Las instrucciones UNION ALL y CASE no distinguen la intercalación, y a todos los operandos de cadena y al resultado final se les asigna la etiqueta de intercalación del operando que tiene la prioridad más alta. La prioridad de intercalación de los operandos UNION ALL y del resultado se evalúan columna a columna.  
   
 ### <a name="functions-and-collation"></a>Funciones e intercalación  
- Las funciones CAST, CONVERT y COLLATE distinguen la intercalación para los tipos de datos **char**, **varchar** y **text**. Si la entrada y la salida de las funciones CAST y CONVERT son cadenas de caracteres, la cadena de salida tiene la etiqueta de intercalación de la cadena de entrada. Si la entrada no es una cadena de caracteres, la cadena de salida es Coercible-default, y se le asigna la intercalación de la base de datos actual para la conexión o de la base de datos que contiene la función definida por el usuario, el procedimiento almacenado o el desencadenador en el que se hace referencia a CAST o CONVERT.  
+Las funciones CAST, CONVERT y COLLATE distinguen la intercalación para los tipos de datos **char**, **varchar** y **text**. Si la entrada y la salida de las funciones CAST y CONVERT son cadenas de caracteres, la cadena de salida tiene la etiqueta de intercalación de la cadena de entrada. Si la entrada no es una cadena de caracteres, la cadena de salida es Coercible-default, y se le asigna la intercalación de la base de datos actual para la conexión o de la base de datos que contiene la función definida por el usuario, el procedimiento almacenado o el desencadenador en el que se hace referencia a CAST o CONVERT.  
   
  Para las funciones integradas que devuelven una cadena pero no reciben una entrada de cadena, la cadena de resultado es Coercible-default, y se le asigna la intercalación de la base de datos actual o la intercalación de la base de datos que contiene la función definida por el usuario, el procedimiento almacenado o el desencadenador en el que se hace referencia a la función.  
   

@@ -1,7 +1,7 @@
 ---
 title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c3176c1fbd331310ba3389f6884df139806e9af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e4b61fc79000e4977745a25e237004055f85247
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716323"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100286"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   El nivel de aislamiento READ COMMITTED con la opción de base de datos READ_COMMITTED_SNAPSHOT establecida en ON.  
   
--   El nivel de aislamiento SNAPSHOT.  
+-   El nivel de aislamiento SNAPSHOT. Para obtener más información sobre el aislamiento de instantáneas, vea [Aislamiento de instantáneas en SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Especifica que las instrucciones no pueden leer datos que hayan sido modificados, pero no confirmados, por otras transacciones. Esto evita las lecturas de datos sucios. Otras transacciones pueden cambiar datos entre cada una de las instrucciones de la transacción actual, dando como resultado lecturas no repetibles o datos fantasma. Esta opción es la predeterminada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -81,10 +81,13 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Si READ_COMMITTED_SNAPSHOT se establece en OFF (valor predeterminado), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza bloqueos compartidos para impedir que otras transacciones modifiquen las filas mientras la transacción actual esté ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. El tipo de bloqueo compartido determina cuándo se liberará. Los bloqueos de fila se liberan antes de que se procese la fila siguiente. Los bloqueos de página se liberan cuando se lee la página siguiente, y los bloqueos de tabla se liberan cuando la instrucción finaliza.  
   
-    > [!NOTE]  
-    >  Si READ_COMMITTED_SNAPSHOT se establece en ON, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.  
-    >   
-    >  El aislamiento de instantánea admite datos FILESTREAM. En el modo de aislamiento de instantánea, los datos FILESTREAM leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción.  
+-   Si READ_COMMITTED_SNAPSHOT se establece en ON, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.
+
+> [!IMPORTANT]  
+> La elección de un nivel de aislamiento de transacción no afecta a los bloqueos adquiridos para proteger la modificación de datos. Siempre se obtiene un bloqueo exclusivo en los datos modificados de una transacción, bloqueo que se mantiene hasta que se completa la transacción, independientemente del nivel de aislamiento seleccionado para la misma. Además, una actualización realizada en el nivel de aislamiento READ_COMMITTED usa bloqueos de actualización en las filas de datos seleccionadas, mientras que una actualización realizada en el nivel de aislamiento SNAPSHOT emplea versiones de fila para seleccionar filas para actualizar. En el caso de las operaciones de lectura, los niveles de aislamiento de transacción definen básicamente el nivel de protección contra los efectos de las modificaciones que realizan otras transacciones. Vea [Guía de versiones de fila y bloqueo de transacciones](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obtener más información.
+
+> [!NOTE]  
+>  El aislamiento de instantánea admite datos FILESTREAM. En el modo de aislamiento de instantánea, los datos FILESTREAM leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción.  
   
  Cuando la opción de base de datos READ_COMMITTED_SNAPSHOT es ON, se puede usar la sugerencia de tabla READCOMMITTEDLOCK para solicitar el uso del bloqueo compartido en lugar de versiones de fila para las instrucciones individuales de las transacciones que se ejecutan en el nivel de aislamiento READ COMMITTED.  
   

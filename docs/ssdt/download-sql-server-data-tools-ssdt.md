@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419202"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226307"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,16 +87,18 @@ En primer lugar, complete los siguientes pasos en línea:
 
 1. [Descargue el instalador independiente de SSDT](#ssdt-for-vs-2017-standalone-installer).
 2. [Descargue vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
-3. Mientras sigue en línea, ejecute uno de los siguientes comandos para descargar todos los archivos necesarios para la instalación sin conexión. La clave es usar la opción `--layout`. Reemplace <filepath> por la ruta de acceso real para guardar los archivos.
+3. Mientras sigue en línea, ejecute uno de los siguientes comandos para descargar todos los archivos necesarios para la instalación sin conexión. Con la opción `--layout` como clave, descarga los archivos reales para la instalación sin conexión. Reemplace <filepath> por el diseño en trazado real para guardar los archivos.
 
+   
    A.   Para un idioma específico, pase la configuración regional: `vs_sql.exe --layout c:\<filepath> --lang en-us` (un solo lenguaje es ~ 1 GB).  
    B. Para todos los idiomas, omita el argumento `--lang`: `vs_sql.exe --layout c:\<filepath>` (todos los idiomas son ~3,9 GB).
 
+4. Ejecute `SSDT-Setup-ENU.exe /layout c:\<filepath>` para extraer la carga SSDT en la misma ubicación `<filepath>` donde se han descargado los archivos de VS2017. Esto garantiza que todos los archivos de ambas se combinen en una única carpeta de diseños.
+
 Después de completar los pasos anteriores, se puede realizar lo siguiente mientras se está sin conexión:
 
-1. Copie la carga de VS2017 en la carpeta de carga de SSDT. Asegúrese de que todos los archivos de ambas se combinan en una única carpeta de diseños.
-2. Ejecute `vs_setup.exe --NoWeb` para instalar el shell de VS2017 y un proyecto de datos de SQL Server.
-3. Ejecute `SSDT-Setup-ENU.exe /install` y seleccione SSIS, SSRS o SSAS.
+1. Ejecute `vs_setup.exe --NoWeb` para instalar el shell de VS2017 y un proyecto de datos de SQL Server.
+2. Desde la carpeta de diseños, ejecute `SSDT-Setup-ENU.exe /install` y seleccione SSIS/SSRS/SSAS.
 
    - O, si se trata de una instalación desatendida, ejecute `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`.  
 

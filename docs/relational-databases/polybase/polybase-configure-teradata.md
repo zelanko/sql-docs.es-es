@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1baf1655619a3bc4b61939e2de8310956c9678d
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874280"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806635"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Configurar PolyBase para obtener acceso a datos externos en Teradata
 
@@ -27,27 +27,28 @@ En el artículo se explica cómo usar PolyBase en una instancia de SQL Server pa
 
 Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos.
 
-Para usar PolyBase en Teradata, se requiere VC++ Redistributable. 
+Para usar PolyBase en Teradata, se requiere VC++ Redistributable.
  
 ## <a name="configure-an-external-table"></a>Configurar una tabla externa
 
 Para consultar los datos de un origen de datos de Teradata, debe crear tablas externas que hagan referencia a los datos externos. En esta sección se proporciona código de ejemplo para crear estas tablas externas. 
- 
-Se recomienda crear estadísticas en las columnas de tabla externa. Especialmente las que se usan para combinaciones, filtros y agregados, para obtener un rendimiento óptimo de las consultas.
 
 En esta sección se crearán estos objetos:
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
+- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-
-1. Cree una clave maestra en la base de datos. Esto es necesario para cifrar el secreto de credencial.
+1. Cree una clave maestra en la base de datos, si aún no hay ninguna. Esto es necesario para cifrar el secreto de credencial.
 
      ```sql
-     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
+    ## <a name="arguments"></a>Argumentos
+    PASSWORD ='password'
+
+    Es la contraseña usada para cifrar la clave maestra de la base de datos. password debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que hospeda la instancia de SQL Server.
 
 1. Cree una credencial de ámbito de base de datos.
  
@@ -56,31 +57,25 @@ En esta sección se crearán estos objetos:
       *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-     CREATE DATABASE SCOPED CREDENTIAL TeradataCredentials 
+     CREATE DATABASE SCOPED CREDENTIAL credential_name
      WITH IDENTITY = 'username', Secret = 'password'
      ```
 
-1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Especifique la ubicación de origen de datos externos y las credenciales para Teradata.
+1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
      ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    * CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE TeradataInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH ( 
-    LOCATION = teradata://TeradataServer,
-    -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+    LOCATION = teradata://<server address>[:<port>],
+   -- PUSHDOWN = ON | OFF,
+    CREDENTIAL =credential_name
     );
 
-     ```
-
-1. Crear esquemas para datos externos
-
-     ```sql
-     CREATE SCHEMA teradata;
-     GO
      ```
 
 1.  Cree tablas externas que representen los datos almacenados en el sistema de Teradata externo [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -89,7 +84,7 @@ En esta sección se crearán estos objetos:
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
       *  DATA_SOURCE: the external data source, created above.
       */
-     CREATE EXTERNAL TABLE teradata.lineitem(
+     CREATE EXTERNAL TABLE customer(
       L_ORDERKEY INT NOT NULL,
       L_PARTKEY INT NOT NULL,
      L_SUPPKEY INT NOT NULL,
@@ -108,18 +103,18 @@ En esta sección se crearán estos objetos:
      L_COMMENT VARCHAR(44) NOT NULL
      )
      WITH (
-     LOCATION='tpch.lineitem',
-     DATA_SOURCE=TeradataInstance
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
      );
      ```
 
-1. Cree estadísticas en una tabla externa para un rendimiento optimizado.
+1. **Opcional:** cree estadísticas en una tabla externa.
+
+    Se recomienda crear estadísticas en las columnas de tabla externa, sobre todo en las que se usan para las combinaciones, filtros y agregados, para obtener un rendimiento óptimo de las consultas.
 
      ```sql
-      CREATE STATISTICS LineitemOrderKeyStatistics ON teradata.lineitem(L_ORDERKEY) WITH FULLSCAN; 
-      ```
-
-
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+     ```
 
 ## <a name="next-steps"></a>Pasos siguientes
 

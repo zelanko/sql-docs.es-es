@@ -16,12 +16,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87fcb3590b628af4400edf3c3f6541f0f11a9b92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b476cd8c1579ba519d8f045154be4bd7628badc6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598603"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032094"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Características desusadas del motor de base de datos de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Categoría|Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Copias de seguridad y restauración|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD sigue en desuso. BACKUP { DATABASE &#124; LOG } WITH PASSWORD y BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD han dejado de proporcionarse.|Ninguno.|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Niveles de compatibilidad|Actualización desde la versión 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Cuando una versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se queda sin [soporte](http://aka.ms/sqllifecycle), el nivel de compatibilidad de base de datos asociado se marcará como en desuso. Pero seguiremos dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos compatible, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 100|108|  
+|Niveles de compatibilidad|Actualización desde la versión 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Cuando una versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se queda sin [soporte](http://aka.ms/sqllifecycle), el nivel de compatibilidad de base de datos asociado se marcará como en desuso. Pero seguiremos dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos compatible, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 100|108|  
 |Objetos de base de datos|Capacidad de devolver conjuntos de resultados de los desencadenadores|None|Devolver resultados del desencadenador|12|  
 |Cifrado|El cifrado mediante RC4 o RC4_128 está en desuso y se quitará en la próxima versión. El descifrado con RC4 y RC4_128 no está en desuso.|Utilice otro algoritmo de cifrado como AES.|Algoritmo de cifrado desusado|253|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Reemplace los servidores remotos con servidores vinculados. sp_addserver solo se puede usar con la opción local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -64,7 +64,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Categoría|Característica desusada|Sustituta|Nombre de característica|Id. de característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Niveles de compatibilidad|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
-|Niveles de compatibilidad|Nivel de compatibilidad de la base de datos 110 Y 120.|Planee actualizar la base de datos y la aplicación en una versión futura.|Nivel de compatibilidad de la base de datos 110<br /><br /> Nivel de compatibilidad de la base de datos 120||  
+|Niveles de compatibilidad|Nivel de compatibilidad de la base de datos 110 Y 120.|Planee actualizar la base de datos y la aplicación en una versión futura. Pero seguiremos dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos compatible, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 110<br /><br /> Nivel de compatibilidad de la base de datos 120||  
 |XML|Generación de esquemas XDR insertados|La directiva XMLDATA para la opción FOR XML ha quedado desusada. Utilice la XSD generación en los modos RAW y AUTO. No hay sustitución para la directiva XMLDATA en modo EXPLICIT.|XMLDATA|181|  
 |Copias de seguridad y restauración|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
 |Copias de seguridad y restauración|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  

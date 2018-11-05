@@ -1,17 +1,17 @@
 ---
 title: Crear una base de datos del servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs
-ms.date: 09/20/2017
+ms.date: 10/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768243"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050910"
 ---
 # <a name="create-a-report-server-database"></a>Crear una base de datos del servidor de informes
 
@@ -39,7 +39,7 @@ ms.locfileid: "47768243"
   
 -   Automáticamente: usar el Asistente para la instalación de SQL Server, si elige la opción de instalación de configuración predeterminada. En el Asistente para la instalación de SQL Server, es **Instalar y configurar** en la página Opciones de instalación del servidor de informes. Si elige la opción **Solo instalar** , debe usar el Administrador de configuración de Reporting Services para crear la base de datos.  
   
--   Manualmente: use el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Debe crear la base de datos del servidor de informes manualmente si está usando un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedarla. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+-   Manualmente: use el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Debe crear la base de datos del servidor de informes manualmente si está usando un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedarla. Para obtener más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  **Modo de SharePoint:** la página Opciones de instalación del servidor de informes solo tiene una opción para el modo de SharePoint, **Solo instalar**. Esta opción instala todos los archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El paso siguiente consiste en crear al menos una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de una de las siguientes formas:  
   
@@ -60,16 +60,16 @@ ms.locfileid: "47768243"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- Para crear la base de datos del servidor de informes en un equipo remoto es preciso que configure la conexión para usar una cuenta de usuario de dominio o una cuenta de servicio que tenga acceso a la red. Si decide utilizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota, considere detenidamente qué credenciales debe utilizar el servidor de informes para conectarse a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Para crear la base de datos del servidor de informes en un equipo remoto es preciso que configure la conexión para usar una cuenta de usuario de dominio o una cuenta de servicio que tenga acceso a la red. Si decide utilizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota, considere detenidamente qué credenciales debe utilizar el servidor de informes para conectarse a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 >  El servidor de informes y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes pueden estar en dominios diferentes. Para la implementación en Internet, la práctica más común es utilizar un servidor que esté detrás de un firewall. Si va a configurar un servidor de informes para el acceso a Internet, utilice las credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esté detrás del firewall y utilice IPSEC para proteger la conexión.  
   
 ## <a name="database-server-edition-requirements"></a>Requisitos de edición del servidor de base de datos  
- Cuando cree una base de datos del servidor de informes, tenga en cuenta que no se pueden usar todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedarla. Para obtener más información, vea la sección "Requisitos de edición de servidor de la base de datos del servidor de informes" de [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Cuando cree una base de datos del servidor de informes, tenga en cuenta que no se pueden usar todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedarla. Para obtener más información, vea [Requisitos de edición de servidor de la base de datos del servidor de informes](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) en [Características de Reporting Services compatibles con las ediciones de SQL Server 2016](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Administrador de configuración de Reporting Services](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Administrador de configuración de Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

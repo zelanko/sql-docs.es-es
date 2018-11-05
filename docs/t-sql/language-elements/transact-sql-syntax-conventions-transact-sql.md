@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13f8153d681ce4992726f17375cf98c8c5ab9cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7acbaa7d880abca786c995860dbc6d7068392619
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099906"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47605873"
 |{} (llaves)|Elementos obligatorios de sintaxis. No escriba las llaves.|  
 |[**,**…*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa de la siguiente con una coma.|  
 |[...*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa del siguiente con un espacio en blanco.|  
-|;|Terminador de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque el punto y coma no se requiere en la mayoría de las instrucciones de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se requerirá en una versión futura.|  
+|;|Terminador de instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque el punto y coma no es necesario en la mayoría de las instrucciones de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se exigirá en una versión futura.|  
 |\<label> ::=|Nombre de un bloque de sintaxis. Esta convención sirve para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que se puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en que se puede usar el bloque de sintaxis se indica con la etiqueta situada entre comillas angulares: \<label>.<br /><br /> Un conjunto es una colección de expresiones, por ejemplo \<grouping set>; una lista es una colección de conjuntos, por ejemplo \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Nombres de varias partes  

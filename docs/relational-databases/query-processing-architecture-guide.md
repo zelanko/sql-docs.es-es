@@ -17,12 +17,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e41301df0559ac7cbcfc75c9fb90967e7ddfc4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665613"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226387"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] procesa consultas 
 - Ejecución del modo por lotes
 
 ### <a name="row-mode-execution"></a>Ejecución del modo de fila
-La *ejecución del modo de fila* es un método de procesamiento de consultas que se usa con tablas RDMBS tradicionales, donde los datos se almacenan en formato de fila. Cuando una consulta se ejecuta y tiene acceso a los datos de tablas de almacén de filas, los operadores del árbol de ejecución y los operadores secundarios leen todas las filas necesarias, en todas las columnas especificadas en el esquema de tabla. De cada fila que se lee, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recupera las columnas que son necesarias para el conjunto de resultados, como se hace referencia mediante una instrucción SELECT, un predicado JOIN o un predicado de filtro.
+La *ejecución del modo de fila* es un método de procesamiento de consultas que se usa con tablas RDMBS tradicionales, donde los datos se almacenan en formato de fila. Cuando se ejecuta una consulta y accede a los datos de tablas de almacén de filas, los operadores del árbol de ejecución y los operadores secundarios leen todas las filas necesarias, en todas las columnas especificadas en el esquema de tabla. De cada fila que se lee, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recupera las columnas que son necesarias para el conjunto de resultados, como se hace referencia mediante una instrucción SELECT, un predicado JOIN o un predicado de filtro.
 
 > [!NOTE]
 > La ejecución del modo de fila es muy eficaz para escenarios OLTP, pero puede serlo menos cuando se analizan grandes cantidades de datos, por ejemplo en escenarios de almacenamiento de datos.

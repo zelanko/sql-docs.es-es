@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830743"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150196"
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ Para comenzar, consulte: [Mejora del rendimiento de la tabla temporal y de varia
 #### <a name="customer-case-studies"></a>Casos prácticos de clientes
 
 - Un cliente pudo mejorar el rendimiento en un 40% simplemente reemplazando los TVP tradicionales con TVP optimizados para memoria: [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)(Cómo acelerar la ingesta de datos de IoT con OLTP en memoria en Azure)
+- SentryOne ha mejorado considerablemente la capacidad de ingesta de datos con una latencia de casi cero en su solución de supervisión mediante el intercambio de las tablas de tempdb con las tablas OLTP en memoria como parte de sus mejoras de escalabilidad empresarial: [Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (Proveedor de soluciones rompe el techo de rendimiento con innovación de supervisión de datos).
 
 ### <a name="etl-extract-transform-load"></a>ETL (extracción, transformación, carga)
 

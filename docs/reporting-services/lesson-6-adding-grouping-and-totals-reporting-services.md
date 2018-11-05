@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720513"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051018"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar y resumir los datos.  
@@ -33,9 +33,9 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 4.  En el panel **Datos de informe** , arrastre el campo **Order** hasta el panel **Grupos de filas** . Sitúelo debajo de Date y encima de **(Details)**.
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    Observe que el identificador de fila ahora tiene dos corchetes, ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), para mostrar dos grupos. Ahora, la tabla también tiene dos columnas **Order** .  
   
 5.  Elimine las columnas **Date** y **Order** originales situadas a la **derecha** de la línea doble. Esta acción quita los valores de este registro para que solo se muestre el valor de grupo. Seleccione los identificadores de las dos columnas y haga clic con el botón derecho en **Eliminar columnas**.  
   
@@ -84,7 +84,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 4.  En el menú **Formato** , haga clic en **Color de fondo**, en **Anaranjado**y en **Aceptar**.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![Establece el color de fondo en anaranjado](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>Para agregar un total general a un informe  
   
@@ -113,9 +113,9 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
 2.  Haga clic en **Proyecto** y, después, haga clic en **Propiedades del tutorial...**  
   
 3.  En **TargetServerURL** , escriba el nombre del servidor de informes, por ejemplo   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` funciona si está diseñando el informe en el servidor de informes.  
+    - `http://localhost/reportserver` funciona si está diseñando el informe en el servidor de informes.  
   
   
 4. Tenga en cuenta que TargetReportFolder es el tutorial, el nombre del proyecto.  Este es el nombre de la carpeta que en la que se implementará el informe en los pasos siguientes.  
@@ -143,15 +143,15 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
     Vaya a la dirección URL del portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Nota:** La dirección URL del *portal* es "Reports", no la dirección URL del *servidor* de informes de "Reportserver".  Por ejemplo:   
-    - `http://<server name>/reports`.  
-     - `http://localhost/reports` funciona si está diseñando el informe en el servidor de informes.  
+    `http://<server name>/reports`.  
+    `http://localhost/reports` funciona si está diseñando el informe en el servidor de informes.  
   
 8.  Vaya a la carpeta que contiene el informe. El nombre predeterminado es *tutorial*, el nombre del proyecto o el nombre que ha escrito en el campo TargetReportFolder en las propiedades del proyecto.   
 Haga clic en el nombre del informe **Sales Orders** para verlo representado en el explorador.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Ha completado correctamente el tutorial Crear un informe de tabla básico.**  
+Ha completado correctamente el tutorial Crear un informe de tabla básico.  
   
 ## <a name="see-also"></a>Ver también  
 [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

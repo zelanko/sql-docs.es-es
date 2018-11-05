@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644013"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960799"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ Las codificaciones multibyte de [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 Si tiene sitios que admiten varios idiomas:
 - A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], considere el uso de una intercalación con UTF-8 habilitado para admitir Unicode y minimizar los problemas de conversión de caracteres. 
-- Si usa una versión anterior de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], considere el uso de tipos de datos Unicode **nchar** o **nvarchar** para minimizar los problemas de conversión de caracteres.   
+- Si usa una versión anterior de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], considere la posibilidad de usar tipos de datos Unicode **nchar** o **nvarchar** para minimizar los problemas de conversión de caracteres.   
 
 Si usa **char** o **varchar**, se recomienda:
 - Utilice **char** cuando los tamaños de las entradas de datos de columna sean coherentes.  
@@ -69,7 +69,7 @@ No se produce ningún error especial cuando se crea la tabla (más allá de la a
 ##  <a name="_character"></a> Convertir datos de caracteres  
 Cuando se convierten expresiones de caracteres a un tipo de datos de caracteres de un tamaño distinto, se truncan los valores que son demasiado grandes para el nuevo tipo de datos. El tipo **uniqueidentifier** se considera un tipo de carácter para la conversión desde una expresión de caracteres y, por tanto, está sujeto a las reglas de truncamiento para la conversión a un tipo de carácter. Vea la sección Ejemplos que aparece más adelante.
   
-Cuando una expresión de caracteres se convierte a una expresión de caracteres de un tipo de datos o tamaño distinto (como de **char(5)** a **varchar(5)** o de **char(20)** a **char(15)**), se asigna la intercalación del valor de entrada al valor convertido. Si una expresión que no es de carácter se convierte a un tipo de datos de carácter, se asigna al valor convertido la intercalación predeterminada de la base de datos actual. En cualquiera de los casos, puede asignar una intercalación específica mediante la cláusula [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+Cuando una expresión de caracteres se convierte a una expresión de caracteres de un tipo de datos o tamaño distinto (como de **char(5)** a **varchar(5)** o de **char(20)** a **char(15)**), se asigna la intercalación del valor de entrada al valor convertido. Si una expresión que no es de carácter se convierte a un tipo de datos de carácter, se asigna al valor convertido la intercalación predeterminada de la base de datos actual. En cualquiera de los casos, puede asignar una intercalación específica mediante la cláusula [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
 > Las traducciones de páginas de códigos se admiten para los tipos de datos **char** y **varchar**, pero no para el tipo de datos **text**. Al igual que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las pérdidas de datos durante las conversiones de la página de códigos no se notifican.  
@@ -162,7 +162,7 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>Vea también
 [nchar y nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)  
 [Conversiones de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Estimar el tamaño de una base de datos](../../relational-databases/databases/estimate-the-size-of-a-database.md)     

@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031634"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server
 Obtenga información sobre los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , que están optimizados para dispositivos móviles y conectados a datos locales y disponen de una gran variedad de visualizaciones de datos. 
 
 >[!NOTE]
->  ¿Necesita migrar el contenido de un servidor Datazen, como paneles y KPI, a un servidor de SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  ¿Necesita migrar contenido de un servidor Datazen, como paneles y KPI, a un servidor de SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -33,7 +33,7 @@ Con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], puede cre
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Crear informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
 Estos artículos le ayudarán a empezar a trabajar.
--  Descargar el [Publicador de informes móviles de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)  
+-  Descargar el [Publicador de informes móviles de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Creación de un informe móvil de Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [Tutorial de un extremo a otro: creación de informes móviles y KPI en SQL Server 2016 Reporting Services](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan)  
 - [Diseño primero o datos primero](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): decida si desea diseñar primero el informe con datos simulados, o bien si desea comenzar con sus propios datos.  

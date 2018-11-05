@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 677d076d912cc7b3926fdd8ae2ef9dcc79c7b350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762373"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806725"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
@@ -88,12 +88,15 @@ Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicac
 
 Para consultar los datos en el origen de datos de Hadoop, debe definir una tabla externa para usar en las consultas de Transact-SQL. Los pasos siguientes describen cómo configurar la tabla externa.
 
-1. Cree una clave maestra en la base de datos. Esto es necesario para cifrar el secreto de credencial.
+1. Cree una clave maestra en la base de datos, si aún no hay ninguna. Esto es necesario para cifrar el secreto de credencial.
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>Argumentos
+    PASSWORD ='password'
 
+    Es la contraseña usada para cifrar la clave maestra de la base de datos. password debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que hospeda la instancia de SQL Server.
 1. Cree una credencial de ámbito de base de datos para los clústeres de Hadoop protegidos mediante Kerberos.
 
    ```sql

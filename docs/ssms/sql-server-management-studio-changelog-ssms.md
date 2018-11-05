@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307149"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226397"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Tamaño de descarga más pequeño:
 
 SSMS 18.x se basa en el nuevo shell aislado de Visual Studio 2017:
 
-- Esto implica un shell moderno (seleccionamos Visual Studio 2107 15.6.4). El nuevo shell desbloquea todas las correcciones de accesibilidad que se incluyeron en SSMS y Visual Studio.
+- Esto significa un shell moderno (se ha seleccionado Visual Studio 2017 15.6.4). El nuevo shell desbloquea todas las correcciones de accesibilidad que se incluyeron en SSMS y Visual Studio.
 
 Mejoras de accesibilidad:
 
@@ -127,7 +127,8 @@ AlwaysOn:
 Archivos de auditoría:
 
 - Se ha cambiado el método de autenticación basada en Clave de cuenta de almacenamiento a autenticación basada en AD Azure.
-Always Encrypted basado en AD:
+
+Always Encrypted:
 
 - Se ha agregado una pestaña Always Encrypted con una casilla *Habilitar Always Encrypted* (en el diálogo *Conectar con el servidor*) que ahora ofrece una manera fácil de habilitar y deshabilitar Always Encrypted para una conexión de base de datos.
 - Se han realizado varias mejoras para admitir Always Encrypted con enclaves seguros:
@@ -1128,7 +1129,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Se ha corregido un problema por el cual se produce un error en "Generar script…" para bases de datos SQL de Azure.
 - Se ha corregido la opción "Script como" y el "Asistente para generar scripts" para que no agreguen nuevas líneas adicionales al generar scripts para objetos, como procedimientos almacenados. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Proveedor SQLAS de PowerShell: se ha agregado la propiedad LastProcessed a las carpetas Dimension y MeasureGroup. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- Estadísticas de consultas activas: se ha corregido un problema que hacía que solo se mostrase la primera consulta de un lote. [Artículo de Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Estadísticas de consultas activas: se ha corregido un problema que hacía que solo se mostrase la primera consulta de un lote. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Plan de presentación: se muestra el máximo en lugar de la suma de los subprocesos en la ventana Propiedades.
 - Almacén de consultas: se ha agregado un nuevo informe en las consultas con una alta variación de ejecución.
 - Problemas de rendimiento del Explorador de objetos: el menú contextual [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114074) de las tablas se bloquea momentáneamente. SSMS funciona con lentitud cuando se hace clic con el botón derecho en el índice de una tabla (a través de una conexión remota de Internet). Se impide la emisión de consultas de tabla que se ordenan en el servidor.
@@ -1139,8 +1140,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Se ha corregido un problema que podía hacer que SSMS se bloquease al intentar mostrar los permisos de una base de datos.
 - Almacén de consultas: se han realizado mejoras generales en los elementos del menú contextual para las cuadrículas de resultados del informe del almacén de consultas.
 - La configuración de Always Encrypted para una tabla existente produce errores en los objetos relacionados. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- La Configuración de Always Encrypted para una base de datos existente con varios esquemas no funciona. [Artículo de Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- El Asistente para columnas cifradas de Always Encrypted produce un error debido a la base de datos que contiene vistas que hacen referencia a vistas del sistema. [Artículo de Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- La Configuración de Always Encrypted para una base de datos existente con varios esquemas no funciona. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- El Asistente para columnas cifradas de Always Encrypted produce un error debido a la base de datos que contiene vistas que hacen referencia a vistas del sistema. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - Cuando se cifra mediante Always Encrypted, los errores al actualizar los módulos después del cifrado se tratan incorrectamente.
 - Se ha corregido un problema de truncamiento de la interfaz de usuario del cuadro de diálogo "Nuevo registro de servidor".
 - Se ha corregido la interfaz de usuario de la condición DMF, que actualizaba incorrectamente las expresiones con valores de constante de cadena que incluían comillas.

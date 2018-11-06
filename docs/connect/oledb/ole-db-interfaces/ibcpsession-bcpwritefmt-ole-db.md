@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPWriteFmt (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7d36d65f59bfffc72b71f9e09dbe8bc5aaeb34b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d26a74919341b5d5838b95d085bc658a31a2370
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651769"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030424"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,9 +41,9 @@ HRESULT BCPWriteFmt(
 ## <a name="remarks"></a>Notas  
  El archivo de formato especifica el formato de los datos de un archivo de datos creado mediante copia masiva. Las llamadas a los métodos [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) definen el formato del archivo de datos. El método **BCPWriteFmt** guarda esta definición en el archivo al que se hace referencia en el argumento pwszFormatFile.  
   
- El método **BCPWriteFmt** puede guardar los archivos de formato en formato xml o de texto. Esto se debe indicar mediante la opción de control BCP_OPTION_XML con el método [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md).  
+ El método **BCPWriteFmt** puede guardar los archivos de formato en formato xml o de texto. Esto se debe indicar utilizando la opción de control BCP_OPTION_XML con el método [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) .  
   
- Para cargar un archivo de formato guardado, use el método [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md).  
+ Para cargar un archivo de formato guardado, utilice el método [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) .  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszFormatFile*[in]  

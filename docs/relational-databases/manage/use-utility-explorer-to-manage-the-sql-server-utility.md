@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ec2295d10374f9fc861ed1778a9a3851db021a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 662ace2d6ce6e3f74b2c4f77f58dcf5bc1d6df0f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753563"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030932"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,6 +69,6 @@ ms.locfileid: "47753563"
 ## <a name="see-also"></a>Ver también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configurar las directivas de mantenimiento &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Ver](../../ssms/object/object-explorer.md)  
+ [Explorador de objetos](../../ssms/object/object-explorer.md)  
   
   

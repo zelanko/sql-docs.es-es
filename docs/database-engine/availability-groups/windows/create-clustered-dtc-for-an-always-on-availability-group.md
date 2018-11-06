@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2c03cecb508788e1852ee154d783a8f25320298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411785"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Crear un DTC agrupado para un grupo de disponibilidad AlwaysOn
 
@@ -452,7 +452,7 @@ IF ($restart -eq 1)
 
 Para garantizar que las transacciones distribuidas usen el recurso DTC agrupado, deshabilite el DTC local en ambos nodos.  El siguiente script deshabilitará y detendrá el servicio DTC local en cada nodo.  Ejecute el siguiente script de PowerShell en `SQLNODE1`.
 ```powershell  
-# Disble local DTC service
+# Disable local DTC service
 
 \<#
 Script: 

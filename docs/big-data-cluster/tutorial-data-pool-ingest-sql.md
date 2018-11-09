@@ -4,15 +4,15 @@ description: Este tutorial muestra cómo introducir datos en el grupo de datos d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c909379c92b2eb9a98c1c191987570946a8cc002
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644240"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221701"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducción de datos en un grupo de datos de SQL Server con Transact-SQL
 
@@ -66,7 +66,7 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
       );
    ```
   
-1. En CTP 2.0, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
+1. En CTP 2.1, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
 
 ## <a name="load-data"></a>Cargar datos
 

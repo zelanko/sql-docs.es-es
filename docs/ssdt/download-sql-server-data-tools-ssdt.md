@@ -14,15 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 4a0a054becfb4c4c4c04d9eca8ce67da6c783f80
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226307"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217833"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
 **SQL Server Data Tools** es una herramienta de desarrollo moderna para crear bases de datos relacionales de SQL Server, bases de datos SQL de Azure, modelos de datos de Analysis Services (AS), paquetes de Integration Services (IS) e informes de Reporting Services (RS). Gracias a SSDT, puede diseñar e implementar cualquier tipo de contenido de SQL Server con la misma facilidad con la que desarrollaría una aplicación en Visual Studio.
 
 *Para la mayoría de los usuarios, SQL Server Data Tools (SSDT) se instala durante la instalación de Visual Studio. Al instalar SSDT mediante el instalador de Visual Studio, se agrega la funcionalidad básica de SSDT, por lo que necesitará ejecutar el [instalador independiente de SSDT](#ssdt-for-vs-2017-standalone-installer) para obtener las herramientas de AS, IS y RS.*
@@ -44,19 +48,20 @@ El instalador enumera las instancias disponibles de Visual Studio a las que se v
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT para VS 2017 (instalador independiente)
 
-[![descargar](../ssdt/media/download.png) Descargar SSDT para Visual Studio 2017 (15.8.1) ](https://go.microsoft.com/fwlink/?linkid=2024393) 
+[![descargar](../ssdt/media/download.png) Descargar SSDT para Visual Studio 2017 (15.8.2) ](https://go.microsoft.com/fwlink/?linkid=2038031) 
 
 > [!IMPORTANT]
-> - Antes de instalar SSDT para Visual Studio 2017 (15.8.1), desinstale las extensiones *Proyectos de Analysis Services* y *Proyectos de Reporting Services*, si están instaladas y cierre todas las instancias de VS.
-> - Al instalar SSDT en Windows 10 1803 y elegir instalar SSIS, podría encontrarse con un reinicio inesperado. Puede iniciar de nuevo el programa de instalación y continuar con la instalación después del reinicio.
+> - Antes de instalar SSDT para Visual Studio 2017 (15.8.2), desinstale las extensiones *Proyectos de Analysis Services* y *Proyectos de Reporting Services*, si están instaladas, y cierre todas las instancias de VS.
+> - Se ha corregido un problema que consistía en que al implementar un proyecto de SSIS que contenía paquetes con destino de tarea Script o archivo plano para Azure-SSIS, los paquetes no se ejecutaban en Azure-SSIS.
+> - SSDT para Visual Studio 2017 (15.8.2) no es compatible con el diseño de paquetes que contienen orígenes y destinos de Oracle o Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
 
 
 
 **Información de versión**  
   
-Número de versión: 15.8.1  
-Número de compilación: 14.0.16179.0  
-Fecha de publicación: 27 de septiembre de 2018  
+Número de versión: 15.8.2  
+Número de compilación: 14.0.16182.0  
+Fecha de publicación: 5 de noviembre de 2018  
 
 Para ver la lista completa de cambios, consulte el [registro de cambios](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -66,17 +71,17 @@ SSDT para Visual Studio 2017 tiene los mismos [requisitos del sistema](https://d
 
 Esta versión de **SSDT para VS 2017** puede instalarse en los idiomas siguientes:  
 
-[Chino (simplificado)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x804) | 
-[Chino (tradicional)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x404) | 
-[Inglés (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x409) | 
-[Francés]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40c)  
-[Alemán]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x407) | 
-[Italiano]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x410) | 
-[Japonés]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x411) | 
-[Coreano]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x412) | 
-[Portugués (Brasil)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x416) | 
-[Ruso]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x419) | 
-[Español]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40a)  
+[Chino (simplificado)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x804) | 
+[Chino (tradicional)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x404) | 
+[Inglés (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x409) | 
+[Francés]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40c)  
+[Alemán]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x407) | 
+[Italiano]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x410) | 
+[Japonés]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x411) | 
+[Coreano]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x412) | 
+[Portugués (Brasil)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x416) | 
+[Ruso]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x419) | 
+[Español]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40a)  
 
 
 ## <a name="offline-install"></a>Instalación sin conexión

@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991308"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216813"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver entradas detalladas sobre las novedades y los cambios, consulte [el blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT para Visual Studio 2017 (15.8.2)
+Número de compilación: 14.0.16182.0  
+Fecha de publicación: 5 de noviembre de 2018  
+
+### <a name="whats-new"></a>Novedades
+**SSIS:**
+
+Se ha corregido un problema que consistía en que al implementar un proyecto de SSIS que contenía paquetes con destino de tarea Script o archivo plano para Azure-SSIS, los paquetes no se ejecutaban en Azure-SSIS. 
+
+### <a name="known-issues"></a>Problemas conocidos:
+
+- La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+- SSDT para Visual Studio 2017 (15.8.2) no es compatible con el diseño de paquetes que contienen orígenes y destinos de Oracle o Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT para Visual Studio 2017 (15.8.1)
@@ -40,6 +55,8 @@ Fecha de publicación: 27 de septiembre de 2018
 ### <a name="known-issues"></a>Problemas conocidos:
 
 - La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+- Al implementar un proyecto de SSIS que contiene paquetes con destino de tarea Script o archivo plano para Azure-SSIS, los paquetes no se ejecutan en Azure-SSIS.
+- SSDT para Visual Studio 2017 (15.8.1) no es compatible con el diseño de paquetes que contienen orígenes y destinos de Oracle o Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT para Visual Studio 2017 (15.8)

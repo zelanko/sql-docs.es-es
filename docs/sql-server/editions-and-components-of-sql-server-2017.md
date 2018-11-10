@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cea5f9c80eb8fa6cba29c451b4b6b20e16d559c
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: de3eb008d9411c33a8c9559e2633236265c493b4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419540"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270238"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -299,8 +299,8 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Integración básica de Python|Sí|Sí|Sí|Sí|no|
 |Integración avanzada de Python|Sí|no|no|no|no| 
 |Machine Learning Server (independiente)|Sí|no|no|no|no|   
-|Nodo de ejecución de Polybase|Sí|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup> | 
-|Nodo principal de Polybase|Sí|no|no|no|no| 
+|Nodo de ejecución de PolyBase|Sí|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup> | 
+|Nodo principal de PolyBase|Sí|no|no|no|no| 
 |JSON|Sí|Sí|Sí|Sí|Sí|   
 |Almacén de consultas|Sí|Sí|Sí|Sí|Sí|   
 |Temporal|Sí|Sí|Sí|Sí|Sí|   

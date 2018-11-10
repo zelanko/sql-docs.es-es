@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22b930ecab06ef6bd635cddd21af8ebbf8f1b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44169d3d7b2744b06af31eb6212383db3a0f8b36
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168655"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032782"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizar el corrector ortográfico de DQS
   El corrector ortográfico de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) comprueba la sintaxis, la ortografía y la estructura de las frases de los valores de cadena de un dominio. El corrector ortográfico es una característica independiente, del lado cliente, que no se integra con los motores del servidor y no tiene ninguna implicación en los flujos o estados actuales. El corrector ortográfico identifica los valores de cadena que considera posibles errores, y los marca con un carácter de subrayado rojo en la misma ubicación en la que se realizan otros cambios manuales en los valores de dominio. Entre estas ubicaciones se incluyen:  
@@ -29,7 +28,7 @@ ms.locfileid: "48168655"
   
  El corrector ortográfico solo funciona en dominios individuales con un tipo de datos de cadena. Todos los valores de un dominio individual del tipo de datos de cadena se envían al corrector ortográfico para su validación. El corrector ortográfico no funciona en los dominios compuestos, ni tampoco en aquellos con tipos distintos al de cadena, ni con valores mixtos (como letras y números sin espacio), numerales romanos, caracteres individuales y valores que constan únicamente de letras mayúsculas.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para ejecutar el corrector ortográfico, es necesario tener una base de conocimiento y un dominio abiertos en la actividad Detección de conocimiento o Administración de dominios; además, es necesario habilitar el corrector en el dominio y en la página donde se va a ejecutar, así como especificar la propiedad de idioma para el dominio.  

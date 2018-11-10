@@ -4,15 +4,15 @@ description: Obtenga información sobre cómo configurar Azure Kubernetes Servic
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216685"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221661"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurar Azure Kubernetes Service para las implementaciones de SQL Server 2019 (versión preliminar)
 
@@ -27,12 +27,11 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Para un entorno de AKS, el requisito mínimo de máquina virtual es al menos dos máquinas virtuales del agente (además de master), con al menos 4 CPU y 32 GB de memoria de cada uno. Infraestructura de Azure ofrece varias opciones de tamaño para máquinas virtuales, consulte [aquí](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) selecciones en la región que se va a implementar.
+- Para un entorno de AKS, para una experiencia óptima al validar escenarios básicos, se recomienda al menos tres agente las máquinas virtuales (principal), con al menos 4 vCPU y 32 GB de memoria cada. Infraestructura de Azure ofrece varias opciones de tamaño para máquinas virtuales, consulte [aquí](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) selecciones en la región que se va a implementar.
   
 - En esta sección tiene que estar ejecutando la CLI de Azure versión 2.0.4 o posterior. Si necesita instalarla o actualizarla, consulte [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Ejecute `az --version` para buscar la versión si es necesario.
 
-- Instalar [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de macrodatos de SQL Server requiere que cualquier versión secundaria dentro del intervalo de 1,10 versiones de Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Para AKS deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada. Tenga en cuenta que en el período de versión CTP2.0, AKS solo admite las versiones 1.10.7 y 1.10.8. 
-
+- Instalar [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) con un mínimo de versión 1.10 para el servidor y cliente. Si desea instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión distinta de la predeterminada.
 
 > [!NOTE]
 Tenga en cuenta que la versión de cliente/servidor que es sesgar admite es +/-1 versión secundaria. La documentación de Kubernetes se afirma que "un cliente debe ser la sesgados no más de una versión secundaria del servidor maestro, pero puede provocar al maestro de hasta una versión secundaria. Por ejemplo, un patrón v1.3 debería funcionar con v1.1, v1.2 y v1.3 nodos y debe funcionar con v1.2, v1.3 y clientes v1.4." Para obtener más información, consulte [Kubernetes admite versiones y componente sesgo](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -79,8 +78,8 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
     --node-vm-size Standard_E4s_v3 \
-    --node-count 2 \
-    --kubernetes-version 1.10.7
+    --node-count 3 \
+    --kubernetes-version 1.10.8
     ```
 
     Puede aumentar o disminuir el número de agentes predeterminado cambiando el `--node-count <n>` donde `<n>` es el número de nodos de agente que desea tener.

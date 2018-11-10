@@ -1,3 +1,4 @@
+items:
 - name: Ayuda del menú de SQL Server Management Studio
   href: sql-server-management-studio-menu-help.md
 - name: Ventana Propiedades (Ayuda F1 de Management Studio)
@@ -12,6 +13,8 @@
   href: customize-commands-page.md
 - name: Opciones (Entorno - Página General)
   href: options-environment-general-page.md
+- name: 'Opciones (entorno: página Configuración)'
+  href: options-environment-startup-page.md
 - name: Opciones (Ayuda F1 de cuadros de diálogos)
   href: options-dialog-boxes-f1-help.md
 - name: Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
@@ -42,3 +45,9 @@
   href: options-environment-help-online-page.md
 - name: Opciones (Entorno - Página Teclado)
   href: options-environment-keyboard-page.md
+ms.openlocfilehash: 2ec740b3ee5d782da7e14c34adc13605dd8ba46d
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221811"

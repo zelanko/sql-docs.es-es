@@ -32,7 +32,7 @@ ms.locfileid: "48050127"
   
 3.  Para agregar un nuevo grupo de archivos de datos optimizados para memoria, haga clic en la página **Grupos de archivos** . En **DATOS OPTIMIZADOS PARA MEMORIA**, haga clic en **Agregar grupo de archivos** y escriba el nombre del grupo de archivos de datos optimizados para memoria.  La columna con la etiqueta **Archivos FILESTREAM** representa el número de contenedores en el grupo de archivos. Los contenedores se agregan en la página **General** .  
   
-4.  Para agregar un archivo (contenedor) al grupo de archivos, haga clic en la página **General** . Debajo de **Archivos de la base de datos**, haga clic en **Agregar**. Seleccione el **Tipo de archivo****Datos de FILESTREAM**, especifique el nombre lógico del contenedor, seleccione el grupo de archivos optimizados para memoria y asegúrese de que **Crecimiento automático/tamaño máximo** se ha establecido en **Ilimitado**.  
+4.  Para agregar un archivo (contenedor) al grupo de archivos, haga clic en la página **General** . Debajo de **Archivos de la base de datos**, haga clic en **Agregar**. Seleccione el **Tipo de archivo** **Datos de FILESTREAM**, especifique el nombre lógico del contenedor, seleccione el grupo de archivos optimizados para memoria y asegúrese de que **Crecimiento automático/tamaño máximo** se ha establecido en **Ilimitado**.  
   
      Para obtener más información sobre cómo crear una base de datos con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea [Crear una base de datos](../databases/create-a-database.md).  
   

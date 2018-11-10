@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693553"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269450"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositorios de instalación y actualización de SQL Server en Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693553"
 En este artículo se describe cómo configurar el repositorio correcto para las actualizaciones e instalaciones de SQL Server 2017 y 2019 de SQL Server en Linux.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 ya está disponible. Para probarlo, use este artículo para configurar el nuevo **mssql-server-vista previa** repositorio. A continuación, instalar con las instrucciones de la [Guía de instalación](sql-server-linux-setup.md).
+> Ya está disponible la versión preliminar de SQL Server 2019. Para probarlo, use este artículo para configurar el nuevo **mssql-server-vista previa** repositorio. A continuación, instalar con las instrucciones de la [Guía de instalación](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Repositorios
 
@@ -32,7 +32,7 @@ Al instalar SQL Server en Linux, debe configurar un repositorio de Microsoft. Es
 | Repositorio | Nombre | Descripción |
 |---|---|---|
 | **Vista previa (2017)** | **MSSQL-server** | Repositorio de SQL Server 2017 CTP y RC (suspendido). |
-| **Vista previa (2019)** | **MSSQL-server-versión preliminar** | Repositorio de 2019 CTP de SQL Server y RC. |
+| **Vista previa (2019)** | **MSSQL-server-versión preliminar** | Vista previa de SQL Server 2019 y repositorio RC. |
 | **CU** | **MSSQL-server-2017** | Repositorio de SQL Server 2017 actualización acumulativa (CU). |
 | **GDR** | **MSSQL-server-2017-gdr** | Repositorio de SQL Server 2017 GDR de sólo las actualizaciones críticas. |
 

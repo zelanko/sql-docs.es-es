@@ -10,45 +10,46 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806635"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757960"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Configurar PolyBase para obtener acceso a datos externos en Teradata
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Teradata.
+En este artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Teradata.
 
 ## <a name="prerequisites"></a>Prerequisites
 
 Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos.
 
-Para usar PolyBase en Teradata, se requiere VC++ Redistributable.
+Para usar PolyBase en Teradata, se necesita VC++ Redistributable.
  
 ## <a name="configure-an-external-table"></a>Configurar una tabla externa
 
 Para consultar los datos de un origen de datos de Teradata, debe crear tablas externas que hagan referencia a los datos externos. En esta sección se proporciona código de ejemplo para crear estas tablas externas. 
 
-En esta sección se crearán estos objetos:
+Estos objetos se crean en esta sección:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Cree una clave maestra en la base de datos, si aún no hay ninguna. Esto es necesario para cifrar el secreto de credencial.
+1. Cree una clave maestra en la base de datos, si aún no hay ninguna. Se necesita una clave maestra para cifrar el secreto de credencial.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>Argumentos
+    **Argumentos**
+
     PASSWORD ='password'
 
-    Es la contraseña usada para cifrar la clave maestra de la base de datos. password debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que hospeda la instancia de SQL Server.
+    Es la contraseña que se usa para cifrar la clave maestra en la base de datos. La contraseña debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que hospeda la instancia de SQL Server.
 
 1. Cree una credencial de ámbito de base de datos.
  
@@ -78,7 +79,7 @@ En esta sección se crearán estos objetos:
 
      ```
 
-1.  Cree tablas externas que representen los datos almacenados en el sistema de Teradata externo [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Cree tablas externas que representen los datos almacenados en un sistema de Teradata externo con [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -108,9 +109,9 @@ En esta sección se crearán estos objetos:
      );
      ```
 
-1. **Opcional:** cree estadísticas en una tabla externa.
+1. *Opcional:* cree estadísticas en una tabla externa.
 
-    Se recomienda crear estadísticas en las columnas de tabla externa, sobre todo en las que se usan para las combinaciones, filtros y agregados, para obtener un rendimiento óptimo de las consultas.
+    Para obtener un rendimiento óptimo de las consultas, cree estadísticas en las columnas de tabla externa, sobre todo las que se usan para las combinaciones, los filtros y los agregados.
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

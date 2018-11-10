@@ -1,11 +1,9 @@
 ---
 title: Creación, modificación y eliminación de índices espaciales | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122355"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018660"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
   Un índice espacial puede realizar de manera más eficaz determinadas operaciones en una columna de la `geometry` o `geography` tipo de datos (un *columna espacial*). Se puede especificar más de un índice espacial en una columna espacial. Por ejemplo, esto es útil para indizar diferentes parámetros de teselación en una columna única.  
@@ -85,7 +83,7 @@ ms.locfileid: "48122355"
   
      La tabla se abre en el Diseñador de tablas.  
   
-2.  Seleccione un `geometry` o `geography` columna para el índice.  
+2.  Seleccione una columna `geometry` o `geography` para el índice.  
   
 3.  En el menú **Diseñador de tablas** , haga clic en **Índice espacial**.  
   

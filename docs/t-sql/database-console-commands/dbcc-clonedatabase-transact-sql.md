@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666683"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965983"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ El nombre de la base de datos en la que se copiará la base de datos de origen. 
 NO_STATISTICS  
 Especifica si las estadísticas de tabla o índice se deben excluir de la clonación. Si no se especifica esta opción, se incluirán automáticamente estadísticas de tabla o de índice. Esta opción está disponible a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
-NO_QUERYSTORE Especifica si se deben excluir de la clonación los datos de almacén de consultas. Si no se especifica esta opción, los datos del almacén de consultas se copiarán en el clon si el almacén de consultas está habilitado en la base de datos de origen. Esta opción está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+NO_QUERYSTORE<br>
+Especifica si se deben excluir del clon los datos del almacén de consultas. Si no se especifica esta opción, los datos del almacén de consultas se copiarán en el clon si el almacén de consultas está habilitado en la base de datos de origen. Esta opción está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 VERIFY_CLONEDB  
-Comprueba la coherencia de la base de datos nueva.  Esta opción es necesaria si la base de datos clonada está pensada para usarse en producción.  La acción de habilitar VERIFY_CLONEDB también deshabilita la recopilación de estadísticas y del almacén de consultas, por lo que equivale a ejecutar WITH VERIFY_CLONEDB, NO_STATISTICS y NO_QUERYSTORE.  Esta opción está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Comprueba la coherencia de la base de datos nueva.  Esta opción es necesaria si la base de datos clonada está pensada para usarse en producción.  La acción de habilitar VERIFY_CLONEDB también deshabilita la recopilación de estadísticas y del almacén de consultas, por lo que equivale a ejecutar WITH VERIFY_CLONEDB, NO_STATISTICS y NO_QUERYSTORE.  Esta opción está disponible a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
 
 > [!NOTE]  
 > El comando siguiente se puede usar para confirmar que la base de datos clonada está preparada para usarse en producción: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Especifica si los catálogos del sistema relacionados con Service Broker deben incluirse en el clon.  No se puede usar la opción SERVICEBROKER en combinación con VERIFY_CLONEDB.  Esta opción está disponible a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
+
 BACKUP_CLONEDB  
-Crea y comprueba una copia de seguridad de la base de datos clonada.  Si se usa en combinación con VERIFY_CLONEDB, la base de datos clonada se comprueba antes de que se realice la copia de seguridad.  Esta opción está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Crea y comprueba una copia de seguridad de la base de datos clonada.  Si se usa en combinación con VERIFY_CLONEDB, la base de datos clonada se comprueba antes de que se realice la copia de seguridad.  Esta opción está disponible a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
 ## <a name="remarks"></a>Notas
 DBCC CLONEDATABASE lleva a cabo las siguientes validaciones. Se produce un error en el comando si alguna de las validaciones no se efectúa correctamente.

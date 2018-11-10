@@ -1,18 +1,19 @@
 ---
-title: Explorar y visualizar los datos | Microsoft Docs
+title: Lección 1 explorar y visualizar datos mediante Python y T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial que muestra cómo incrustar Python en SQL Server los procedimientos almacenados y funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/01/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f6c9b42016d180c68741d00f761339f0ff1cd707
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806855"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030991"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorar y visualizar los datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,18 +69,19 @@ En esta sección, obtendrá información sobre cómo trabajar con trazados con p
 
 ### <a name="create-a-plot-as-varbinary-data"></a>Crear un gráfico como datos varbinary
 
-El **revoscalepy** módulo incluido con SQL Server 2017 Machine Learning Services es compatible con características similares a los de la **RevoScaleR** paquete de R.  Este ejemplo usa el equivalente de Python `rxHistogram` para trazar un histograma según datos de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. 
-
 El procedimiento almacenado devuelve un número de serie de Python `figure` objeto como un flujo de **varbinary** datos. No se puede ver los datos binarios directamente, pero puede usar código de Python en el cliente para deserializar y ver las cifras y, a continuación, guarde el archivo de imagen en un equipo cliente.
 
-1. Crear el procedimiento almacenado _SerializePlots_, si el script de PowerShell ya no lo hizo.
+1. Crear el procedimiento almacenado **PyPlotMatplotlib**, si el script de PowerShell ya no lo hizo.
 
     - La variable `@query` define el texto de consulta `SELECT tipped FROM nyctaxi_sample`, que se pasa al bloque de código Python como el argumento de la variable de entrada de secuencia de comandos, `@input_data_1`.
     - El script de Python es bastante simple: **matplotlib** `figure` objetos sirven para hacer que el trazado de dispersión y de histograma, y estos objetos se serializan utilizando la `pickle` biblioteca.
     - El objeto de gráficos de Python se serializa a un **pandas** trama de datos de salida.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[SerializePlots]
+    DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
+    GO
+
+    CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -134,7 +136,7 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
 2. Ahora puede ejecutar el procedimiento almacenado sin argumentos para generar un trazado de los datos codificados de forma rígida como consulta de entrada.
 
     ```
-    EXEC [dbo].[SerializePlots]
+    EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. Los resultados deben ser algo parecido a esto:
@@ -148,19 +150,20 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
     ```
 
   
-4. Desde un cliente de Python, ahora puede conectarse a la instancia de SQL Server que generan los objetos de trazado binario y ver los trazados. 
+4. Desde un [cliente Python](../python/setup-python-client-tools-sql.md), ahora puede conectarse a la instancia de SQL Server que generan los objetos de trazado binario y ver los trazados. 
 
     Para ello, ejecute el siguiente código de Python, reemplazando el nombre del servidor, nombre de base de datos y las credenciales según corresponda. Asegúrese de que la versión de Python es el mismo en el cliente y el servidor. Además, asegúrese de que las bibliotecas de Python en el cliente (como matplotlib) son la versión igual o superior en relación con las bibliotecas instaladas en el servidor.
   
     **Mediante la autenticación de SQL Server:**
     
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -171,12 +174,13 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
     **Mediante la autenticación de Windows:**
 
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])

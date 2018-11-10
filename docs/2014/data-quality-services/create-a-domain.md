@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
@@ -13,19 +12,19 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 358e0f9718ee6e301b0cf4257d3bda5bea5ae084
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 249e0195d02f0b157e818a0525b0170b0b817b3c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051305"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031612"
 ---
 # <a name="create-a-domain"></a>Crear un dominio
   En este tema se describe cómo crear un dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los valores del dominio son una representación semántica de los datos de un campo. Para más información sobre los dominios, vea [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md).  
   
  Hay dos maneras de crear un nuevo dominio. La primera es durante el paso de asignación de la actividad de detección de conocimiento, cuando se analiza una muestra de los datos para agregar conocimiento a una base de conocimiento nueva o a una ya existente. La segunda es durante la actividad de administración de dominios, cuando se crea un nuevo dominio en lugar de modificar uno ya existente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio, debe haber creado y abierto una base de conocimiento.  
@@ -43,7 +42,7 @@ ms.locfileid: "48051305"
   
 3.  Seleccione **Detección de conocimiento** como actividad y, a continuación, haga clic en **Crear** para crear la nueva base de conocimiento o en **Abrir** para abrir una ya existente.  
   
-4.  En la página **Asignación** , especifique una conexión con el origen de datos. Para obtener más información, consulte [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+4.  En la página **Asignación** , especifique una conexión con el origen de datos. Para obtener más información, vea [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 5.  En la tabla **Asignaciones** , seleccione una columna de origen en la lista desplegable para la columna **Columna de origen** de una fila vacía. Si no existe ningún dominio correspondiente, haga clic en el icono **Crear un dominio** .  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48051305"
 1.  En el cuadro de diálogo **Crear dominio** , escriba un nombre que sea único en la base de conocimiento y una descripción con una longitud máxima de 256 caracteres.  
   
     > [!NOTE]  
-    >  Para obtener más información acerca de las propiedades de dominio, consulte [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+    >  Para obtener más información acerca de las propiedades de dominio, vea [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 2.  En la lista **Tipo de datos** , seleccione un tipo de datos para los valores del dominio. El tipo de datos puede ser **Cadena** (el valor predeterminado), **Fecha**, **Entero**o **Decimal**.  
   

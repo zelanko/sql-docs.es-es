@@ -4,15 +4,15 @@ description: Obtenga información sobre cómo implementar clústeres de macrodat
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051187"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269868"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Cómo implementar SQL Server al clúster de macrodatos en Kubernetes
 
@@ -26,7 +26,7 @@ Clúster de macrodatos de SQL Server se puede implementar como contenedores de d
 
 ## <a id="prereqs"></a> Requisitos previos de clúster de Kubernetes
 
-Clúster de macrodatos de SQL Server requiere una versión de v1.10 mínimo de Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Las versiones más recientes de minikube y AKS son menos 1.10. Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada.
+Clúster de macrodatos de SQL Server requiere una versión de v1.10 mínimo de Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Las versiones más recientes de minikube y AKS son menos 1.10. Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada.
 
 > [!NOTE]
 > Tenga en cuenta que las versiones de Kubernetes de cliente y servidor deben ser la versión secundaria + 1 o -1. Para obtener más información, consulte [Kubernetes admite versiones y componente sesgo](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -54,7 +54,12 @@ Para obtener instrucciones sobre cómo configurar una de estas opciones de clús
 
 ## <a id="deploy"></a> Implementar el clúster de macrodatos de SQL Server
 
-Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de clúster de macrodatos de SQL Server. Para implementar un clúster de macrodatos en Azure con todas las configuraciones predeterminadas para un entorno de desarrollo y pruebas, siga las instrucciones de este artículo:
+Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de clúster de macrodatos de SQL Server. 
+
+> [!NOTE]
+> Si va a actualizar desde una versión anterior, consulte el [actualizar la sección de este artículo](#upgrade).
+
+Para implementar un clúster de macrodatos en Azure con todas las configuraciones predeterminadas para un entorno de desarrollo y pruebas, siga las instrucciones de este artículo:
 
 [Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Kubernetes](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> Instalar mssqlctl
 
 **mssqlctl** es una utilidad de línea de comandos escrita en Python que habilita los administradores para arrancar y administrar el clúster de macrodatos mediante las API de REST de clúster. La versión de Python mínima requerida es v3.5. También debe tener `pip` que se utiliza para descargar e instalar **mssqlctl** herramienta. 
+
+> [!IMPORTANT]
+> Si ha instalado una versión anterior, debe eliminar el clúster *antes* actualizar **mssqlctl** e instalar la nueva versión. Para obtener más información, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
 
 ### <a name="windows-mssqlctl-installation"></a>Instalación de Windows mssqlctl
 
@@ -89,7 +97,7 @@ kubectl config view
 1. Instalar **mssqlctl** con el siguiente comando:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Instalación de Linux mssqlctl
@@ -105,17 +113,10 @@ En Linux, debe instalar la **python3** y **python3-pip** paquetes y, a continuac
    sudo -H pip3 install --upgrade pip
    ```
 
-1. Asegúrese de que tiene la versión más reciente **solicitudes** paquete.
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. Instalar **mssqlctl** con el siguiente comando:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>Definir variables de entorno
@@ -275,6 +276,29 @@ Independientemente de la plataforma usa su clúster de Kubernetes, para obtener 
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> Actualizar a una nueva versión
+
+Actualmente, la única manera de actualizar un clúster de macrodatos a una nueva versión es quitar y volver a crear el clúster manualmente. Cada versión tiene una versión única de **mssqlctl** que no es compatible con la versión anterior. Además, si un clúster anterior había que descargar una imagen en un nodo nuevo, la imagen más reciente es posible que no sea compatible con las imágenes anteriores en el clúster. Para actualizar a la versión más reciente, siga estos pasos:
+
+1. Antes de eliminar el clúster antiguo, realizar una copia de seguridad de los datos en la instancia principal de SQL Server y en HDFS. Para la instancia principal de SQL Server, puede usar [SQL Server backup y restore](data-ingestion-restore-databse.md). HDFS, le [puede copiar los datos con **curl**](data-ingestion-curl.md).
+
+1. Eliminar el clúster antiguo con el `mssqlctl delete cluster` comando.
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. Instale la versión más reciente de **mssqlctl**.
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > Para cada versión, la ruta de acceso **mssqlctl** cambios. Incluso si anteriormente instaló **mssqlctl**, debe volver a instalar desde la ruta de acceso más reciente antes de crear el nuevo clúster.
+
+1. Instalar la versión más reciente mediante las instrucciones de la [implementar sección](#deploy) de este artículo. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 

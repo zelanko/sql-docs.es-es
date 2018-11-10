@@ -4,7 +4,7 @@ description: En este tutorial rápido se muestra cómo usar Docker para ejecutar
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: d48493cb2075f8b6961ed29a0f898055eeff7794
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753552"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272613"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Imágenes de contenedor ejecución de SQL Server con Docker
 
@@ -137,20 +137,20 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
 
 ## <a id="pullandrun2019"></a> Extraer y ejecutar la imagen de contenedor
 
-1. Extraiga la imagen de contenedor de SQL Server de 2019 CTP 2.0 Linux de Docker Hub.
+1. Extraer la versión preliminar de SQL Server 2019 imagen de contenedor de Linux de Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!TIP]
-   > Este tutorial rápido usa la imagen de Docker de SQL Server de 2019 CTP 2.0. Si desea ejecutar la imagen de SQL Server 2017, consulte el [SQL Server 2017, versión de este artículo](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
+   > Este tutorial rápido usa la versión preliminar de SQL Server 2019 imagen de Docker. Si desea ejecutar la imagen de SQL Server 2017, consulte el [SQL Server 2017, versión de este artículo](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
 
-   El comando anterior, extrae la última imagen de contenedor de 2019 de SQL Server CTP 2.0 basada en Ubuntu. Para usar en su lugar imágenes de contenedor basadas en RedHat, consulte [imágenes de contenedor basadas en RHEL ejecutar](sql-server-linux-configure-docker.md#rhel). Si quiere extraer una imagen específica, agregue dos puntos y el nombre de etiqueta (por ejemplo, `mcr.microsoft.com/mssql/server:2017-GA`). Para ver todas las imágenes disponibles, vea [la página mssql-server-linux de Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   El comando anterior, extrae la imagen de contenedor de vista previa de SQL Server 2019 más reciente basada en Ubuntu. Para usar en su lugar imágenes de contenedor basadas en RedHat, consulte [imágenes de contenedor basadas en RHEL ejecutar](sql-server-linux-configure-docker.md#rhel). Si quiere extraer una imagen específica, agregue dos puntos y el nombre de etiqueta (por ejemplo, `mcr.microsoft.com/mssql/server:2017-GA`). Para ver todas las imágenes disponibles, vea [la página mssql-server-linux de Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 
    Para los comandos de bash en este artículo, `sudo` se utiliza. En MacOS, `sudo` podría no ser necesario. En Linux, si no desea usar `sudo` para ejecutar Docker, puede configurar un **docker** agrupar y agregar usuarios a ese grupo. Para obtener más información, consulte [los pasos posteriores a la instalación para Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
@@ -159,20 +159,20 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!NOTE]
    > La contraseña debe seguir la directiva de contraseñas predeterminada de SQL Server. En caso contrario, el contenedor no podrá instalar SQL Server y dejará de funcionar. De forma predeterminada, la contraseña debe tener al menos 8 caracteres y contener caracteres de 3 de los siguientes 4 conjuntos: mayúsculas, minúsculas, dígitos en base 10 y símbolos. Puede examinar el registro de errores ejecutando el comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
 
    > [!NOTE]
-   > De forma predeterminada, esto crea un contenedor con la edición para desarrolladores de SQL Server de 2019 CTP 2.0.
+   > De forma predeterminada, esto crea un contenedor con la edición para desarrolladores de vista previa de SQL Server 2019.
 
    En la tabla siguiente, se proporciona una descripción de los parámetros del ejemplo de `docker run` anterior:
 
@@ -182,7 +182,7 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
    | **-e "contraseña_sa =\<YourStrong! Passw0rd\>'** | Especifique una contraseña segura propia con al menos 8 caracteres y que cumpla los [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Configuración requerida para la imagen de SQL Server. |
    | **-p 1433:1433** | Asigne un puerto TCP en el entorno de host (el primer valor) a un puerto TCP en el contenedor (el segundo valor). En este ejemplo, SQL Server está escuchando en TCP 1433 en el contenedor y se expone al puerto 1433 en el host. |
    | **--name sql1** | Especifique un nombre personalizado para el contenedor en lugar de uno generado aleatoriamente. Si ejecuta más de un contenedor, no podrá usar el mismo nombre. |
-   | **MCR.Microsoft.com/MSSQL/Server:vNext-CTP2.0-Ubuntu** | La imagen de contenedor de Linux de 2.0 CTP de SQL Server de 2019. |
+   | **MCR.Microsoft.com/MSSQL/Server:2019-CTP2.1-Ubuntu** | La imagen de contenedor de Linux de SQL Server de 2019 CTP 2.1. |
 
 3. Para ver los contenedores de Docker, use el comando `docker ps`.
 

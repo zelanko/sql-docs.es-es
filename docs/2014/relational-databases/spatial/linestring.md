@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059755"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018480"
 ---
 # <a name="linestring"></a>LineString
   `LineString` es un objeto unidimensional que representa una secuencia de puntos y los segmentos de línea que los conectan.  
   
 ## <a name="linestring-instances"></a>Instancias de LineString  
- La ilustración siguiente muestra ejemplos de `LineString` instancias.  
+ En la ilustración siguiente se muestran ejemplos de instancias de `LineString`.  
   
  ![Ejemplos de instancias LineString de geometry](../../database-engine/media/linestring.gif "Ejemplos de instancias LineString de geometry")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059755"
   
 -   La figura 1 es una instancia de `LineString` sencilla y sin cerrar.  
   
--   Figura 2 es un no sencilla y sin cerrar `LineString` instancia.  
+-   La figura 2 es una instancia de `LineString` no sencilla y sin cerrar.  
   
 -   La figura 3 es una instancia de `LineString` cerrada y sencilla; por ello, es un anillo.  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` muestra que se puede aceptar una instancia de `LineString`, pero no es válida.  
   
- La siguiente `LineString` no se acepta la instancia. Producirá una `System.FormatException`.  
+ No se acepta la siguiente instancia de `LineString`. Producirá una `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Para un `LineString` instancia sea válida debe cumplir los siguientes criterios.  
+ Para que una instancia de `LineString` sea válida debe cumplir los siguientes criterios.  
   
-1.  El `LineString` instancia debe ser aceptada.  
+1.  La instancia de `LineString` debe ser aceptada.  
   
 2.  Si una instancia de `LineString` no está vacía debe contener dos puntos distintos por lo menos.  
   
-3.  El `LineString` instancia no se puede superponer sobre un intervalo de dos o más puntos consecutivos.  
+3.  La instancia de `LineString` no se puede superponer sobre un intervalo de dos o más puntos consecutivos.  
   
  Las siguientes instancias de `LineString` son válidas.  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- La siguiente `LineString` instancias no son válidas.  
+ Las siguientes instancias de `LineString` no son válidas.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

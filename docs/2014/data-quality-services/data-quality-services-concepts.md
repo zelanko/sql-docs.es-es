@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170985"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032124"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en administración del conocimiento, proyectos de calidad de datos y administración de calidad de datos.  
@@ -34,13 +33,13 @@ ms.locfileid: "48170985"
   
  **Directiva de coincidencia**  
   
- Una directiva de coincidencia contiene las reglas de coincidencia empleadas para realizar la eliminación de datos duplicados. El proceso de la directiva de coincidencia permite crear reglas de coincidencia, optimizarla según los resultados de coincidencia y generar perfiles de datos, así como agregar la directiva a la base de conocimiento. Para más información, consulte [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ Una directiva de coincidencia contiene las reglas de coincidencia empleadas para realizar la eliminación de datos duplicados. El proceso de la directiva de coincidencia permite crear reglas de coincidencia, optimizarla según los resultados de coincidencia y generar perfiles de datos, así como agregar la directiva a la base de conocimiento. Para obtener más información, consulte [Coincidencia de datos](../../2014/data-quality-services/data-matching.md).  
   
  **Reference Data Services**  
   
- Puede usar los datos de referencia para validar, corregir y enriquecer los datos, aprovechando los servicios de compañías que garantizan la calidad de sus datos de referencia. Puede usar los servicios de Windows Azure MarketPlace para conectar con proveedores de datos de referencia o puede usar una conexión directa a un proveedor. Para más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ Puede usar los datos de referencia para validar, corregir y enriquecer los datos, aprovechando los servicios de compañías que garantizan la calidad de sus datos de referencia. Puede usar los servicios de Windows Azure MarketPlace para conectar con proveedores de datos de referencia o puede usar una conexión directa a un proveedor. Para obtener más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Para obtener más información sobre la administración de conocimiento en DQS, vea [dominios y Bases de conocimiento de DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Para obtener más información sobre la administración de conocimiento en DQS, vea [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Conceptos de proyectos de calidad de los datos  
  El administrador de datos realiza las operaciones de calidad de los datos (limpiar y buscar coincidencias) mediante un proyecto de calidad de datos en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -53,7 +52,7 @@ ms.locfileid: "48170985"
   
 -   **Limpieza interactiva**: el administrador de datos puede realizar el proceso de limpieza interactiva para cambiar o aumentar las correcciones de datos que ha propuesto el proceso de limpieza de datos asistido por PC. El administrador de datos lleva a cabo esta operación mediante niveles de confianza y estadísticas que se han identificado mediante el proceso de limpieza de datos o bien especificando sus propios cambios en el proyecto.  
   
- Después de limpiar los datos, el administrador de datos puede exportar los datos procesados a una base de datos SQL Server, a un archivo .csv o un archivo de Excel. Para más información, consulte [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
+ Después de limpiar los datos, el administrador de datos puede exportar los datos procesados a una base de datos SQL Server, a un archivo .csv o un archivo de Excel. Para obtener más información, consulte [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   
  **Coincidencia de datos**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48170985"
   
  La opción de configuración le permite:  
   
--   Configurar los valores de servicio de datos de referencia. Para obtener más información, consulte [configurar DQS para utilizar datos de referencia](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
+-   Configurar los valores de servicio de datos de referencia. Para obtener más información, consulte [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 -   Configurar los valores de umbral para las actividades de limpieza y búsqueda de coincidencias. Para obtener más información, consulte [Configurar los valores de umbral para la limpieza y coincidencia](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -86,9 +85,9 @@ ms.locfileid: "48170985"
   
  **Seguridad de DQS**  
   
- En el mecanismo de seguridad de SQL Server se usan roles para proteger DQS. Hay tres roles de DQS que determinan el nivel de acceso de un usuario en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor y dqs_kb_operator. No puede conceder roles a los usuarios mediante la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; esto se realiza mediante SQL Server Management Studio. Para obtener más información, consulte [seguridad de DQS](../../2014/data-quality-services/dqs-security.md).  
+ En el mecanismo de seguridad de SQL Server se usan roles para proteger DQS. Hay tres roles de DQS que determinan el nivel de acceso de un usuario en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor y dqs_kb_operator. No puede conceder roles a los usuarios mediante la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; esto se realiza mediante SQL Server Management Studio. Para obtener más información, consulte [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
- Para obtener más información acerca de la administración de DQS, vea [administración de DQS](../../2014/data-quality-services/dqs-administration.md).  
+ Para obtener más información acerca de la administración de DQS, vea [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

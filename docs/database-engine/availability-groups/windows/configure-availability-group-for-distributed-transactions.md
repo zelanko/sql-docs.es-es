@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2338ab3c9648af64e772f93639635abf504dafac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411775"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurar un grupo de disponibilidad para las transacciones distribuidas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47595849"
 A fin de garantizar que las transacciones distribuidas sucedan, el grupo de disponibilidad debe estar configurado para registrar las bases de datos como administradores de recursos de transacción distribuida.  
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] El Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. En las versiones de [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] no presenta esta limitación. 
+>[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. En las versiones de [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] no presenta esta limitación. 
 >
 >En [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], los pasos de configuración son los mismos que en [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -147,10 +147,10 @@ El nuevo registro de errores de [!INCLUDE[SQLServer](../../../includes/ssnoversi
 Microsoft Distributed Transaction Coordinator (MS DTC) 
 failed to reenlist citing that the database RMID does 
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
-associated with the transaction.  Please manually resolve
+associated with the transaction.  Please manually resolve
 the transaction.
     
-SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.
 ```

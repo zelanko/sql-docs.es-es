@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,19 +15,19 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076055"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032472"
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
   En este tema se describe cómo crear una base de conocimiento mediante la detección de conocimiento. Durante el proceso de detección, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analiza los datos de un origen de datos de ejemplo mediante un proceso asistido por PC, y agrega el conocimiento adquirido a la base de conocimiento. Este conocimiento se puede modificar y mejorar en el paso **Administrar valores del dominio** de la actividad de detección de conocimiento, o en la actividad de administración de dominios.  
   
  La detección de conocimiento es un proceso asistido por PC que consta de tres pasos que deben completarse obligatoriamente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Es necesario tener instalado Microsoft Excel en el equipo de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si los datos de origen en los que se ejecuta la detección están en un archivo de Excel. De lo contrario, no podrá seleccionar dicho archivo en la fase de asignación. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Si se utiliza la versión de 64 bits de Excel, solo se admitirán los archivos de Excel 2003 (.xls); los archivos de Excel 2007 o 2010 (.xlsx) no son compatibles. Si utiliza la versión de 64 bits de Excel 2007 o 2010, guarde el archivo como un archivo .xls o .csv, o instale una versión de 32 bits de Excel en su lugar.  
@@ -67,12 +66,12 @@ ms.locfileid: "48076055"
   
 4.  En la tabla **Asignaciones** , asigne cada una de las columnas de origen en las que desea realizar la detección de conocimiento a un dominio de la base de conocimiento, de la manera siguiente:  
   
-    1.  Para crear una asignación, seleccione una columna de origen en la lista desplegable de la columna **Columna de origen** de una fila vacía y, a continuación, seleccione un dominio (si lo hay) en la lista desplegable de la columna **Dominio** de la misma fila. Si no existe ningún dominio, haga clic en **Crear un dominio** o en **Crear un dominio compuesto** para crear uno. Para obtener más información, consulte [Cree una regla de dominio](../../2014/data-quality-services/create-a-domain-rule.md) o [Crear un dominio compuesto](../../2014/data-quality-services/create-a-composite-domain.md).  
+    1.  Para crear una asignación, seleccione una columna de origen en la lista desplegable de la columna **Columna de origen** de una fila vacía y, a continuación, seleccione un dominio (si lo hay) en la lista desplegable de la columna **Dominio** de la misma fila. Si no existe ningún dominio, haga clic en **Crear un dominio** o en **Crear un dominio compuesto** para crear uno. Para obtener más información, consulte [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) o [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md).  
   
     2.  Repita el paso anterior para cada asignación. Para cambiar el número de filas de la tabla, haga clic en **Agregar una asignación de columna**, o seleccione una fila y haga clic en **Quitar la asignación de columna seleccionada**. Si hace clic en **Quitar la asignación de columna seleccionada** cuando está seleccionada una fila rellena, la fila seleccionada se eliminará aunque haya una fila vacía.  
   
         > [!NOTE]  
-        >  Solo puede asignar los datos de origen para un dominio DQS a fin de realizar la detección de conocimiento si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener más información acerca de los tipos de datos admitidos, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Solo puede asignar los datos de origen para un dominio DQS a fin de realizar la detección de conocimiento si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener más información acerca de los tipos de datos admitidos, vea [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Haga clic en **Ver o seleccionar dominios compuestos** para mostrar los dominios compuestos definidos. Si no se ha definido ningún dominio compuesto, el control no estará disponible.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "48076055"
   
     -   **Establecer el valor de dominio seleccionado como valor principal de su grupo**: para cambiar el valor inicial del grupo, seleccione un valor de este que no se haya designado como valor inicial y, a continuación, haga clic en el botón **Establecer el valor de dominio seleccionado como valor principal de su grupo** .  
   
-6.  **Corrector ortográfico**: si ha habilitado el corrector ortográfico en la página Propiedades de dominio, busque los valores que aparezcan subrayados con una línea ondulada de color rojo, lo que indicará que el corrector ortográfico sugiere una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../../2014/data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../../2014/data-quality-services/set-domain-properties.md).  
+6.  **Corrector ortográfico**: si ha habilitado el corrector ortográfico en la página Propiedades de dominio, busque los valores que aparezcan subrayados con una línea ondulada de color rojo, lo que indicará que el corrector ortográfico sugiere una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Administrar resultados de detección de datos** para habilitarlo en esta página.  

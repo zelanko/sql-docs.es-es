@@ -4,39 +4,39 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878018"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221641"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Uso de cuadernos en versión preliminar de SQL Server 2019
 
-Este artículo muestra cómo iniciar blocs de notas en un clúster de macrodatos de SQL Server 2019. También se muestra cómo empezar a crear sus propios cuadernos y cómo enviar trabajos en el clúster.
+En este artículo se describe cómo iniciar cuadernos de Jupyter en el clúster y empezar a crear sus propios cuadernos. También muestra cómo enviar trabajos en el clúster.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar los blocs de notas, debe instalar los requisitos previos siguientes:
 
 - [Un clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
-- [Studio datos de Azure](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [La extensión de SQL Server 2019 (versión preliminar)](../azure-data-studio/sql-server-2019-extension.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>Conectar con el punto de conexión del clúster de macrodatos de SQL Server
+## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>Conectar con el punto final de Knox de puerta de enlace de Hadoop
 
-Puede conectarse a diferentes puntos de conexión del clúster. Puede conectarse al tipo de conexión de Microsoft SQL Server o para el punto de conexión del clúster de macrodatos de SQL Server.
-
-En Azure Data Studio (versión preliminar), escriba **F1** > **nueva conexión**y conéctese a su punto de conexión del clúster de macrodatos de SQL Server.
+Puede conectarse a diferentes puntos de conexión del clúster. Puede conectarse al tipo de conexión de Microsoft SQL Server o en el extremo de la puerta de enlace de Spark o HDFS.
+En Azure Data Studio (versión preliminar), presione F1 y haga clic en **nueva conexión** y puede conectarse al punto de conexión de puerta de enlace de Spark o HDFS.
 
 ![Image1](media/notebooks-guidance/image1.png)
 
 ## <a name="browse-hdfs"></a>Examinar HDFS
+
 Una vez conectado, podrá examinar la carpeta HDFS. WebHDFS se inicia cuando se completa la implementación y podrán realizar **actualizar**, agregar **nuevo directorio**, **cargar** archivos, y **eliminar**.
 
 ![image2](media/notebooks-guidance/image2.png)
@@ -45,104 +45,116 @@ Estas operaciones simples permiten traer sus propios datos en HDFS.
 
 ## <a name="launch-new-notebooks"></a>Iniciar nuevos blocs de notas
 
+>[!NOTE]
+>Si tiene varios procesos de Python que se ejecuta en su entorno, primero elimine el `.scaleoutdata` carpeta bajo el directorio instalado. Esto debe desencadenar el `Reinstall Notebook dependencies` tareas en Azure Data Studio. Se tardará algunos minutos para todas las dependencias para instalarse.
+
+Si hay problemas al instalar las dependencias del Bloc de notas, haga clic en Ctrl + Mayús + P o Macintosh Cmd + Mayús + P y el tipo `Reinstall Notebook dependencies` en la paleta de comandos.
+
+![image3](media/notebooks-guidance/image3.png)
+
 Hay varias formas de iniciar un nuevo cuaderno.
 
-1. Desde el panel de administración. Acerca de cómo realizar una nueva conexión, verá un panel. Haga clic en la tarea de nuevo bloc de notas desde el panel.
+1. Desde el **administrar panel**. Después de realizar una nueva conexión, verá un panel. Haga clic en **nuevo cuaderno** tareas desde el panel.
 
-  ![image3](media/notebooks-guidance/image3.png)
+  ![image4](media/notebooks-guidance/image4.png)
 
-1. Haga clic con el botón derecho en la conexión de Spark o HDFS y tendrá un nuevo cuaderno en el menú contextual
+1. Haga clic en la conexión de Spark o HDFS y haga clic en **nuevo cuaderno** en el menú contextual.
 
-![image4](media/notebooks-guidance/image4.png)
+  ![image5](media/notebooks-guidance/image5.png)
 
-Proporcione un nombre del Bloc de notas (ejemplo: *Test.ipynb*) y haga clic en **guardar**.
-
-![image5](media/notebooks-guidance/image5.png)
-
-## <a name="supported-kernels-and-attach-to-context"></a>Admite los kernels y asociar al contexto
-
-En nuestra instalación Bloc de notas, admitimos PySpark y Spark, los kernels de Sparkmagic que permiten a los usuarios escribir código de Python y Scala con Spark. También nos permiten a los usuarios elegir Python para sus fines de desarrollo local.
+  Proporcione un nombre de su portátil, por ejemplo, `Test.ipynb`. Haga clic en **Guardar**.
 
 ![image6](media/notebooks-guidance/image6.png)
 
-Cuando selecciona uno de estos kernels, instalaremos esa kernel en el entorno virtual y puede empezar a escribir código en el idioma.
+## <a name="supported-kernels-and-attach-to-context"></a>Admite los kernels y asociar al contexto
 
-| Kernel | Descripción
-|---- |----
-|Kernel de PySpark| Para escribir código de Python con Spark, proceso del clúster.
-|Kernel de Spark|Para escribir código Scala con Spark, proceso del clúster.
-|Kernel de Python|Para escribir código de Python para el desarrollo local.
-
-La selección para adjuntar proporciona el contexto para el Kernel adjuntar. Cuando se conectan para el punto de conexión del clúster de macrodatos de SQL Server, la selección predeterminada para adjuntar será ese punto de conexión del clúster.
+La instalación de Bloc de notas es compatible con PySpark y Spark, los kernels de Sparkmagic, que le permiten escribir código de Python y Scala con Spark. Si lo desea, puede elegir Python para fines de desarrollo local.
 
 ![image7](media/notebooks-guidance/image7.png)
 
-> [!NOTE]
-> De forma predeterminada, se configura la aplicación Spark con el 1 controlador y 3 ejecutores que tardará aproximadamente 8,5 GB de memoria. La configuración recomendada para ejecutar varias sesiones de spark es para cada servidor en el clúster tenga al menos 32 GB de memoria (por ejemplo, en un entorno de AKS usar **Standard_D8_v3** tamaños de máquina virtual, que tienen 32 GB de memoria).
+Cuando selecciona uno de estos kernels, instalaremos esa kernel en el entorno virtual y puede empezar a escribir código en el idioma.
 
-## <a name="hello-world-in-the-different-contexts"></a>Hola a todos en los contextos diferentes
+|Kernel|Descripción
+|:-----|:-----
+|Kernel de PySpark|Para escribir código de Python mediante el proceso de Spark del clúster.
+|Kernel de Spark|Para escribir código Scala mediante el proceso de Spark del clúster.
+|Kernel de Python|Para escribir código de Python para el desarrollo local.
+
+El `Attach to` proporciona el contexto para el Kernel adjuntar. Cuando se conecta al final de la puerta de enlace de Spark o HDFS (Knox), seleccione el valor predeterminado `Attach to` es ese punto de conexión del clúster.
+
+![image8](media/notebooks-guidance/image8.png)
+
+## <a name="hello-world-in-different-contexts"></a>Hello world en contextos diferentes
 
 ### <a name="pyspark-kernel"></a>Kernel de Pyspark
 
 Elija el Kernel de PySpark y en el tipo de celda en el código siguiente:
 
-![image8](media/notebooks-guidance/image8.png)
+![image9](media/notebooks-guidance/image9.png)
 
 Haga clic en ejecutar y se debe ver la aplicación de Spark que se está iniciando y verá el siguiente resultado:
 
-![image9](media/notebooks-guidance/image9.png)
+![Image10](media/notebooks-guidance/image10.png)
 
 La salida debe tener un aspecto similar a la siguiente imagen.
 
-![Image10](media/notebooks-guidance/image10.png)
-
-### <a name="spark-kernel"></a>Kernel de Spark
-Agregar una nueva celda de código haciendo clic en el + comando en la barra de herramientas de código.
-
 ![Image11](media/notebooks-guidance/image11.png)
 
-Elija el Kernel de Spark en la lista desplegable para los kernels y en el tipo de celda y pegar en 
+### <a name="spark-kernel"></a>Kernel de Spark
+Agregar una nueva celda de código haciendo clic en el **+ código** comando en la barra de herramientas.
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-Haga clic en **ejecutar** debería ver la aplicación de Spark que se está iniciando y se creará la sesión de Spark **spark** y definirá el **HelloWorld** objeto.
-
-El Bloc de notas debe ser similar a la siguiente imagen.
+También puede ver las opciones de"celda" al hacer clic en el icono de opciones siguiente:
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-Una vez que se define el objeto, a continuación, en el siguiente tipo de celda del Bloc de notas en el código siguiente:
+Estas son las opciones para cada celda:
 
-![Image14](media/notebooks-guidance/image14.png)
+![Image14](media/notebooks-guidance/image14.png)-
 
-Haga clic en **ejecutar** en el Bloc de notas y menú verá el "Hello, world!" en la salida.
+Ahora, elija el Kernel de Spark en la lista desplegable de los kernels y en la celda escriba o pegue en:
 
 ![Image15](media/notebooks-guidance/image15.png)
 
-### <a name="local-python-kernel"></a>Kernel de python local
-Elija el Kernel de Python local y en el tipo de celda en **
+Haga clic en **ejecutar** y debería ver la aplicación de Spark que se está iniciando y se creará la sesión de Spark como **spark** y definirá el **HelloWorld** objeto.
+
+El Bloc de notas debe ser similar a la siguiente imagen.
 
 ![Image16](media/notebooks-guidance/image16.png)
 
-Verá lo siguiente:
+Una vez que defina el objeto, a continuación, en la siguiente celda del Bloc de notas, escriba en el código siguiente:
 
 ![Image17](media/notebooks-guidance/image17.png)
 
-### <a name="markdown-text"></a>Text v markdownu
-Agregar una nueva celda de texto haciendo clic en el + comando de texto en la barra de herramientas.
+Haga clic en **ejecutar** en el Bloc de notas y menú verá el "Hello, world!" en la salida.
 
 ![Image18](media/notebooks-guidance/image18.png)
 
-Haga clic en el icono de vista previa para agregar el código de markdown
+### <a name="local-python-kernel"></a>Kernel de python local
+Elija el Kernel de Python local y en el tipo de celda:
 
 ![Image19](media/notebooks-guidance/image19.png)
 
-Haga clic en el icono de vista previa nuevo para alternar para ver el código de markdown
+Verá lo siguiente:
 
 ![Image20](media/notebooks-guidance/image20.png)
 
+### <a name="markdown-text"></a>Text v markdownu
+Agregar una nueva celda de texto haciendo clic en el **+ texto** comando en la barra de herramientas.
+
+![Image21](media/notebooks-guidance/image21.png)
+
+Haga clic en el icono de vista previa para agregar el código de markdown
+
+![Image22](media/notebooks-guidance/image22.png)
+
+Haga clic en el icono de vista previa nuevo para alternar para ver el código de markdown
+
+![Image23](media/notebooks-guidance/image23.png)
+
 ## <a name="manage-packages"></a>Administración de paquetes
-Una de las cosas que hemos optimizado para el desarrollo de Python local era incluyen la capacidad para instalar los paquetes que los clientes tendrían para sus escenarios. De forma predeterminada, se incluyen los paquetes comunes, como pandas, numpy, etc., pero si se espera que un paquete que no se incluye a continuación, escribir el código siguiente en la celda del Bloc de notas
+Una de las cosas que hemos optimizado para el desarrollo de Python local era incluyen la capacidad para instalar los paquetes que los clientes tendrían para sus escenarios. De forma predeterminada, se incluyen los paquetes comunes, como pandas, numpy, etc., pero si se espera que un paquete que no se incluye a continuación, escribir el código siguiente en la celda del Bloc de notas: 
 
 ```python
 import <package-name>
@@ -150,13 +162,13 @@ import <package-name>
 
 Al ejecutar este comando, obtendrá un `Module not found` error. Si el paquete no existe, no obtendrá el error.
 
-Si encuentra un `Module not Found` error y, a continuación, haga clic en el **administrar paquetes** para iniciar el terminal con la ruta de acceso para su Virtualenv identificado. Ahora puede instalar los paquetes localmente. Use el siguiente comando para instalar los paquetes:
+Si encuentra un `Module not Found` error y, a continuación, haga clic en **administrar paquetes** para iniciar el terminal con la ruta de acceso para su Virtualenv identificado. Ahora puede instalar los paquetes localmente. Use los siguientes comandos para instalar los paquetes:
 
-```
+```bash
 ./pip install <package-name>
 ```
 
-Después de instalar el paquete, debe ir en la celda del Bloc de notas y escriba el comando siguiente:
+Después de instalar el paquete, debe ir en la celda del Bloc de notas y escriba en el siguiente comando:
 
 ```python
 import <package-name>
@@ -164,9 +176,9 @@ import <package-name>
 
 Ahora al ejecutar la celda, ya no se debe obtener el `Module not found` error.
 
-Si desea desinstalar un paquete, use el siguiente comando desde el terminal:
+Para desinstalar un paquete, use el siguiente comando desde el terminal:
 
-```
+```bash
 ./pip uninstall <package-name>
 ```
 

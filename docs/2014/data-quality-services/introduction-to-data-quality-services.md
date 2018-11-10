@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -13,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076d2ab9b8c542594c4a13043f591dc679a269ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178766"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030992"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introducción a Data Quality Services
   La solución de calidad de datos que aporta [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite al administrador de datos o al profesional de TI mantener la calidad de los datos y asegurarse de que los datos son apropiados para su uso empresarial. DQS es una solución controlada por conocimiento que proporciona métodos asistidos por PC e interactivos para administrar la integridad y la calidad de los orígenes de datos. DQS permite detectar, compilar y administrar conocimientos sobre sus datos. Puede utilizar ese conocimiento para limpiar datos, buscar coincidencias y generar perfiles de los datos. Asimismo, puede aprovechar los servicios basados en la nube de proveedores de datos de referencia en un proyecto de calidad de datos DQS.  
@@ -35,11 +34,11 @@ ms.locfileid: "48178766"
   
  DQS proporciona las siguientes características para resolver problemas de calidad de datos.  
   
--   **Limpieza de datos:** modificación, eliminación o enriquecimiento de datos que no sean correctos o estén incompletos, mediante el uso de procesos asistidos por PC e interactivos. Para más información, consulte [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
+-   **Limpieza de datos:** modificación, eliminación o enriquecimiento de datos que no sean correctos o estén incompletos, mediante el uso de procesos asistidos por PC e interactivos. Para obtener más información, consulte [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   
--   **Coincidencia:** identificación de duplicados semánticos en un proceso basado en reglas que le permite determinar lo que constituye una coincidencia y realizar la eliminación de los datos duplicados. Para más información, consulte [Data Matching](../../2014/data-quality-services/data-matching.md).  
+-   **Coincidencia:** identificación de duplicados semánticos en un proceso basado en reglas que le permite determinar lo que constituye una coincidencia y realizar la eliminación de los datos duplicados. Para obtener más información, consulte [Data Matching](../../2014/data-quality-services/data-matching.md).  
   
--   **Reference Data Services:** comprobación de la calidad de los datos mediante servicios de un proveedor de datos de referencia. Puede usar los servicios de datos de referencia de Windows Azure Marketplace DataMarket para limpiar, validar, buscar coincidencias y enriquecer datos con facilidad. Para más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+-   **Reference Data Services:** comprobación de la calidad de los datos mediante servicios de un proveedor de datos de referencia. Puede usar los servicios de datos de referencia de Windows Azure Marketplace DataMarket para limpiar, validar, buscar coincidencias y enriquecer datos con facilidad. Para obtener más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Generación de perfiles:** análisis de un origen de datos para proporcionar una visión general de la calidad de los datos en cada etapa de la detección del conocimiento, administración de dominios, búsqueda de coincidencias y procesos de limpieza de datos. La generación de perfiles es una herramienta muy útil en una solución de calidad de datos DQS. Puede crear una solución de calidad de datos en la que la generación de perfiles sea tan importante como la administración del conocimiento, la búsqueda de coincidencias y la limpieza de datos. Para obtener más información, consulte [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

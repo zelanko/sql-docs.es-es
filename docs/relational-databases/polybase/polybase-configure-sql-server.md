@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d2b4bb2249f0c4a6ec57c037db54c490f3066e2b
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806645"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757950"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar PolyBase para acceder a datos externos en SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en otra instancia de SQL Server.
+En este artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en otra instancia de SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -31,16 +31,16 @@ Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-instal
 
 Para consultar los datos de un origen de datos de SQL Server, debe crear tablas externas que hagan referencia a los datos externos. En esta sección se proporciona código de ejemplo para crear estas tablas externas. 
  
-Se recomienda crear estadísticas en las columnas de tabla externa, sobre todo en las que se usan para las combinaciones, filtros y agregados, para obtener un rendimiento óptimo de las consultas.
+Para obtener un rendimiento óptimo de las consultas, cree estadísticas en las columnas de tabla externa, sobre todo en las que se usan para las combinaciones, los filtros y los agregados.
 
-En esta sección se crearán estos objetos:
+Estos objetos se crean en esta sección:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Cree una clave maestra en la base de datos. Esto es necesario para cifrar el secreto de credencial.
+1. Cree una clave maestra en la base de datos. Se necesita una clave maestra para cifrar el secreto de credencial.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -57,7 +57,7 @@ En esta sección se crearán estos objetos:
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
-1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Especifique la ubicación de origen de datos externos y las credenciales para SQL Server.
+1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Especifique la ubicación del origen de datos externo y las credenciales de SQL Server.
 
      ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
@@ -73,14 +73,14 @@ En esta sección se crearán estos objetos:
 
      ```
 
-1. Crear esquemas para datos externos
+1. Cree esquemas para datos externos.
 
      ```sql
      CREATE SCHEMA sqlserver;
      GO
      ```
 
-1.  Cree tablas externas que representen los datos almacenados en la instancia externa de SQL Server [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Cree tablas externas que representen los datos almacenados en una instancia externa de SQL Server con [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -110,7 +110,7 @@ En esta sección se crearán estos objetos:
 
 ## <a name="sql-server-connector-compatible-types"></a>Tipos compatibles con el Conector de SQL Server
 
-Es posible realizar una conexión con otros orígenes de datos que reconozca una conexión de SQL Server. Con el conector de SQL Server PolyBase puede crear una tabla externa de **Azure SQL Data Warehouse y Azure SQL Database**. Esto se consigue mediante los mismos pasos indicados arriba. Asegúrese de que la credencial de ámbito de base de datos, la dirección del servidor, el puerto y la cadena de ubicación se correspondan con los del origen de datos compatible al que quiere conectarse.
+Puede realizar una conexión con otros orígenes de datos que reconozca una conexión de SQL Server. Use el conector de SQL Server PolyBase para crear una tabla externa de Azure SQL Data Warehouse y Azure SQL Database. Para realizar esta tarea, siga los mismos pasos indicados anteriormente. Asegúrese de que la credencial de ámbito de base de datos, la dirección del servidor, el puerto y la cadena de ubicación se correspondan con los del origen de datos compatible al que quiere conectarse.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

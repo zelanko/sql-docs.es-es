@@ -1,11 +1,9 @@
 ---
 title: GeometryCollection | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
@@ -14,12 +12,12 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eea9758d3411c242ade8293a8a52f7c22bd845ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228895"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018520"
 ---
 # <a name="geometrycollection"></a>Colección Geometry
   Un `GeometryCollection` es una colección de cero o más `geometry` o `geography` instancias. Un `GeometryCollection` puede estar vacío.  
@@ -35,14 +33,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- En el ejemplo siguiente se inicia un `System.FormatException` porque el `LinesString` de instancia en el `GeometryCollection` no se acepta la instancia.  
+ El siguiente ejemplo inicia una `System.FormatException` porque la instancia de `LinesString` en la instancia `GeometryCollection` no se acepta.  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Una instancia de `GeometryCollection` es válida cuando todas las instancias que comprenden la instancia de  `GeometryCollection` son válidas. La continuación muestran tres válido `GeometryCollection` instancias y una instancia que no es válida.  
+ Una instancia de `GeometryCollection` es válida cuando todas las instancias que comprenden la instancia de  `GeometryCollection` son válidas. A continuación se muestran tres instancias de `GeometryCollection` válidas y una instancia que no es válida.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

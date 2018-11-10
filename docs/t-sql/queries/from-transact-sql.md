@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753433"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966043"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>Usar APPLY  
  Los operandos izquierdo y derecho del operador APPLY son expresiones de tabla. La diferencia principal entre estos operandos es que *right_table_source* puede usar una función con valores de tabla que tome una columna de *left_table_source* como uno de los argumentos de la función. *left_table_source* puede incluir funciones con valores de tabla, pero no puede contener argumentos que sean columnas de *right_table_source*.  
   
- El operador APPLY funciona del siguiente modo para generar el origen de tabla para la cláusula FROM:  
+El operador APPLY funciona del siguiente modo para generar el origen de tabla para la cláusula FROM:  
   
 1.  Se evalúa como *right_table_source* con respecto a cada fila de *left_table_source* para generar conjuntos de filas.  
   
-     Los valores de *right_table_source* dependen de *left_table_source*. *right_table_source* se puede representar aproximadamente de esta manera: `TVF(left_table_source.row)`, donde `TVF` es una función con valores de tabla.  
+    Los valores de *right_table_source* dependen de *left_table_source*. *right_table_source* se puede representar aproximadamente de esta manera: `TVF(left_table_source.row)`, donde `TVF` es una función con valores de tabla.  
   
 2.  Combina los conjuntos de resultados generados para cada fila en la evaluación de *right_table_source* con *left_table_source* mediante una operación UNION ALL.  
   
-     La lista de columnas que genera el resultado del operador APPLY es el conjunto de columnas de *left_table_source* combinado con la lista de columnas de *right_table_source*.  
+    La lista de columnas que genera el resultado del operador APPLY es el conjunto de columnas de *left_table_source* combinado con la lista de columnas de *right_table_source*.  
   
 ## <a name="using-pivot-and-unpivot"></a>Usar PIVOT y UNPIVOT  
  *pivot_column* y *value_column* son columnas de agrupamiento usadas por el operador PIVOT. Para obtener el conjunto de resultados de salida, PIVOT aplica el siguiente proceso:  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. Usar APPLY  
- En el siguiente ejemplo se da por supuesto que las siguientes tablas con el esquema que se indica existen en la base de datos:  
+En el siguiente ejemplo se da por supuesto que las siguientes tablas y la función con valores de tabla existen en la base de datos:  
+
+|Nombre de objeto|Nombres de columna|      
+|---|---|   
+|Departamentos|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+La función con valores de tabla `GetReports` devuelve la lista de todos los empleados que dependen directa o indirectamente del `MgrID` especificado.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- Se incluye además una función con valores de tabla, `GetReports(MgrID)`, que devuelve la lista de todos los empleados (`EmpID`, `EmpLastName`, `EmpSalary`) que dependen directa o indirectamente del `MgrID` especificado.  
-  
- En el ejemplo se utiliza `APPLY` para devolver todos los departamentos y todos los empleados de cada departamento. Si un departamento concreto no tiene ningún empleado, no se devuelve ninguna fila para dicho departamento.  
+En el ejemplo se utiliza `APPLY` para devolver todos los departamentos y todos los empleados de cada departamento. Si un departamento concreto no tiene ningún empleado, no se devuelve ninguna fila para dicho departamento.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- Si desea que la consulta genere filas para los departamentos sin empleados, lo que genera valores NULL para las columnas `EmpID`, `EmpLastName` y `EmpSalary`, utilice `OUTER APPLY`.  
+Si desea que la consulta genere filas para los departamentos sin empleados, lo que genera valores NULL para las columnas `EmpID`, `EmpLastName` y `EmpSalary`, utilice `OUTER APPLY`.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. Usar CROSS APPLY  
- En el ejemplo siguiente se recupera una instantánea de todos los planes de consulta que residen en la memoria caché del plan mediante una consulta a la vista de administración dinámica `sys.dm_exec_cached_plans` para recuperar los identificadores de todos los planes de consulta almacenados en la memoria caché. A continuación se especifica el operador `CROSS APPLY` para pasar los identificadores del plan a `sys.dm_exec_query_plan`. La salida del plan de presentación XML de todos los planes almacenados actualmente en la caché del plan se muestra en la columna `query_plan` de la tabla devuelta.  
+En el ejemplo siguiente se recupera una instantánea de todos los planes de consulta que residen en la memoria caché del plan mediante una consulta a la vista de administración dinámica `sys.dm_exec_cached_plans` para recuperar los identificadores de todos los planes de consulta almacenados en la memoria caché. A continuación se especifica el operador `CROSS APPLY` para pasar los identificadores del plan a `sys.dm_exec_query_plan`. La salida del plan de presentación XML de todos los planes almacenados actualmente en la caché del plan se muestra en la columna `query_plan` de la tabla devuelta.  
   
 ```sql
 USE master;  

@@ -22,19 +22,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa1dc96a026a08aa66218f0a30ca580fb524e9d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537a2da418940ef267305078f0375d6c51716677
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653481"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970346"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve el rango de cada fila en la partición de un conjunto de resultados. El rango de una fila es uno más el número de rangos anteriores a la fila en cuestión.  
+> [!div class="nextstepaction"]
+> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-  ROW_NUMBER y RANK son similares. ROW_NUMBER enumera todas las filas secuencialmente (por ejemplo 1, 2, 3, 4, 5). RANK proporciona el mismo valor numérico para valores equivalentes (por ejemplo 1, 2, 2, 4, 5).   
+Devuelve el rango de cada fila en la partición de un conjunto de resultados. El rango de una fila es uno más el número de rangos anteriores a la fila en cuestión.  
+
+ROW_NUMBER y RANK son similares. ROW_NUMBER enumera todas las filas secuencialmente (por ejemplo 1, 2, 3, 4, 5). RANK proporciona el mismo valor numérico para valores equivalentes (por ejemplo 1, 2, 2, 4, 5).   
   
 > [!NOTE]
 > RANK es un valor temporal que se calcula cuando se ejecuta la consulta. Para conservar los números de una tabla, vea [Propiedad IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) y [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 

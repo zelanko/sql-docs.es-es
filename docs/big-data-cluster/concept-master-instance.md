@@ -4,15 +4,15 @@ description: En este artículo se describe la instancia maestra en un clúster d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051067"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221601"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>¿Qué es los big data de SQL Server del clúster instancia maestra?
 
@@ -26,7 +26,7 @@ La instancia principal de SQL Server proporciona un punto de conexión accesible
 
 ## <a name="scale-out-query-management"></a>Administración de la consulta de escalabilidad horizontal
 
-La instancia principal de SQL Server contiene el motor de consultas de escalabilidad horizontal que se utiliza para distribuir las consultas entre instancias de SQL Server en nodos de la [proceso grupo](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso a través de Transact-SQL para todas las tablas de Hive en el clúster sin ninguna configuración adicional. (Compatibilidad con las tablas de hive no está en CTP 2.0)
+La instancia principal de SQL Server contiene el motor de consultas de escalabilidad horizontal que se utiliza para distribuir las consultas entre instancias de SQL Server en nodos de la [proceso grupo](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso a través de Transact-SQL para todas las tablas de Hive en el clúster sin ninguna configuración adicional. (Compatibilidad con las tablas de hive no está en CTP 2.1)
 
 ## <a name="metadata-and-user-databases"></a>Bases de datos de usuario y los metadatos
 

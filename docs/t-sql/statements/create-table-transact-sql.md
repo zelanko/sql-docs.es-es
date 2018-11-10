@@ -47,17 +47,20 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461160"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970846"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+> [!div class="nextstepaction"]
+> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!NOTE]   
 >  Para la sintaxis de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
@@ -1048,7 +1051,7 @@ Las tablas temporales globales para [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite tablas temporales globales que se almacenan en tempdb y que tienen como ámbito el nivel de base de datos. Esto significa que las tablas temporales globales se comparten entre las sesiones de todos los usuarios en la misma [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las sesiones de usuario de otras bases de datos no pueden acceder a tablas temporales globales.
 
-Las tablas temporales globales para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] siguen la misma sintaxis y semántica que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las tablas temporales. De manera similar, los procedimientos almacenados temporales globales también tienen el ámbito de nivel de base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las tablas temporales locales (cuyo nombre de tabla empieza por #) también son compatibles con [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y siguen la misma sintaxis y semántica que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Vea la sección anterior sobre [tablas temporales](#temporary-tables).  
+Las tablas temporales globales para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] siguen la misma sintaxis y semántica que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las tablas temporales. De manera similar, los procedimientos almacenados temporales globales también tienen el ámbito de nivel de base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las tablas temporales locales (cuyo nombre de tabla empieza por #) también son compatibles con [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y siguen la misma sintaxis y semántica que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Vea la sección anterior sobre [tablas temporales](#temporary-tables).  
 
 > [!IMPORTANT]
 > Esta característica está disponible para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

@@ -3,17 +3,17 @@ title: Lección 3 entrenar y guardar un modelo mediante R y T-SQL (SQL Server Ma
 description: Tutorial que muestra cómo insertar código de R en SQL Server los procedimientos almacenados y funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 73e1b2ef70821af2247de000eba45a495075e614
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 23387a6074f0c4a1dd6b4cb675b84f7aaced2a06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463050"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033563"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Lección 3: Entrenar y guardar un modelo con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,12 +24,14 @@ En esta lección, obtendrá información sobre cómo entrenar un modelo de apren
 
 ## <a name="create-the-stored-procedure"></a>Crear el procedimiento almacenado
 
-Al llamar a R desde T-SQL, utilice el procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Sin embargo, para los procesos que repita con frecuencia, como el reciclaje de un modelo, es más fácil encapsular la llamada a `sp_execute_exernal_script` en otro procedimiento almacenado.
+Al llamar a R desde T-SQL, utilice el procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Sin embargo, para los procesos que repita con frecuencia, como el reciclaje de un modelo, es más fácil encapsular la llamada a sp_execute_exernal_script en otro procedimiento almacenado.
 
-1.  En primer lugar, cree un procedimiento almacenado que contiene el código de R para generar el modelo de predicción de sugerencia. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra una nueva **consulta** ventana y ejecute la instrucción siguiente para crear el procedimiento almacenado _TrainTipPredictionModel_. Este procedimiento almacenado define los datos de entrada y usa un paquete de R para crear un modelo de regresión logística.
+1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra una nueva **consulta** ventana.
+
+2. Ejecute la instrucción siguiente para crear el procedimiento almacenado **RxTrainLogitModel**. Este procedimiento almacenado define los datos de entrada y usa **rxLogit** de RevoScaleR para crear un modelo de regresión logística.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModel]
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
     
     AS
     BEGIN
@@ -60,17 +62,15 @@ Al llamar a R desde T-SQL, utilice el procedimiento almacenado del sistema, [sp_
     GO
     ```
 
-    - Sin embargo, para asegurarse de que se dejan algunos datos para probar el modelo, un 70% de los datos se seleccionan aleatoriamente de la tabla de datos de taxi.
-    
-    - La consulta SELECT usa la función escalar personalizada _fnCalculateDistance_ para calcular la distancia directa entre las ubicaciones de origen y destino.  Los resultados de la consulta se almacenan en la variable de entrada predeterminada de R `InputDataset`.
+    -Para asegurarse de que se dejan algunos datos para probar el modelo, el 70% de los datos se seleccionan aleatoriamente de la tabla de datos de taxi para fines de aprendizaje.
+
+    - La consulta SELECT usa la función escalar personalizada *fnCalculateDistance* para calcular la distancia directa entre las ubicaciones de origen y destino. los resultados de la consulta se almacenan en la variable de entrada predeterminada de R `InputDataset`.
   
-    - El script de R llama el `rxLogit` función, que es una de las funciones mejoradas de R incluida con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], para crear el modelo de regresión logística.
+    - El script de R llama el **rxLogit** función, que es una de las funciones mejoradas de R incluida con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], para crear el modelo de regresión logística.
   
         La variable binaria _tipped_ se usa como la *etiqueta* o columna del resultado y el modelo se ajusta mediante estas columnas específicas:  _passenger_count_, _trip_distance_, _trip_time_in_secs_y _direct_distance_.
   
     -   El modelo entrenado, guardado en la variable de R `logitObj`, se serializa y se coloca en una trama de datos de salida a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esa salida se inserta en la tabla de base de datos _nyc_taxi_models_, para que la puede usar para predicciones futuras.
-  
-2.  Ejecute la instrucción para crear el procedimiento almacenado, si aún no existe.
 
 ## <a name="generate-the-r-model-using-the-stored-procedure"></a>Generar el modelo de R mediante el procedimiento almacenado
 
@@ -79,7 +79,7 @@ Dado que el procedimiento almacenado ya incluye una definición de los datos de 
 1. Para generar el modelo de R, llame al procedimiento almacenado sin ningún otro parámetro:
 
     ```SQL
-    EXEC TrainTipPredictionModel
+    EXEC RxTrainLogitModel
     ```
 
 2. Inspección del **mensajes** ventana de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para los mensajes que se canalicen al R **stdout** secuencia, como este mensaje: 
@@ -98,11 +98,11 @@ Dado que el procedimiento almacenado ya incluye una definición de los datos de 
     0x580A00000002000302020....
     ```
 
-En el siguiente paso usará el modelo entrenado para crear predicciones.
+En el paso siguiente usará el modelo entrenado para generar predicciones.
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Lección 4: Hacer operativo el modelo](../tutorials/sqldev-operationalize-the-model.md)
+[Lección 4: Predecir resultados posibles con un modelo de R en un procedimiento almacenado](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 

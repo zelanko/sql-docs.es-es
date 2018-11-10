@@ -4,19 +4,21 @@ description: Obtenga información acerca de los clústeres de macrodatos de 2019
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/25/2018
+ms.date: 11/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: 603e84f3f4e1e27052df6996ae06933ace585c0f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226287"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221711"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>¿Qué son los clústeres de macrodatos de 2019 de SQL Server?
 
 A partir de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], clústeres de macrodatos de SQL Server le permiten implementar clústeres escalables de contenedores HDFS, Spark y SQL Server que se ejecutan en Kubernetes. Estos componentes se ejecutan en paralelo para que pueda leer, escribir y procesar los datos grandes de Transact-SQL o Spark, lo que le permite fácilmente combinar y analizar los datos relacionales de gran valor con grandes volúmenes de datos grandes.
+
+Para obtener más información acerca de las nuevas características y problemas conocidos de la versión más reciente, consulte el [notas de la versión](big-data-cluster-release-notes.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

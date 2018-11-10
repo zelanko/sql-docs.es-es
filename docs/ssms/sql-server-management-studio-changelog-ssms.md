@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226397"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270278"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1093,7 +1093,7 @@ Se ha corregido un problema por el que el Asistente de AE no se ejecutaba si el 
 Se ha corregido un problema del Asistente de AE por el que la página de inicio de sesión de Azure Key Vault no mostraba suscripciones de Azure en caso de varias instancias de AAD. Se ha corregido un problema del Asistente de AE por el que la página de inicio de sesión de Azure Key Vault no mostraba suscripciones de Azure para las que el usuario tenía permisos de lectura.
   - Se ha corregido un problema que hacía que los archivos de recursos no cargaran correctamente, por lo que aparecían mensajes de error incorrectos.
 - Se mejoró el contraste de los hipervínculos en la página de configuración de SSMS
-- Se corrigió un problema en que los nodos de Polybase no se mostraban cuando se conectaba a SQL Server Express (2016 SP1)
+- Se ha corregido un problema en que los nodos de PolyBase no se mostraban cuando se conectaba a SQL Server Express (2016 SP1)
 - Se ha corregido un problema que hacía que SSMS no pudiera cambiar el nivel de compatibilidad de una base de datos de Azure a la versión 140.
 - Se mejoró el rendimiento de Explorador de objetos cuando se expande la lista de bases de datos de Azure [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Se corrigió un problema en que el elemento de menú contextual "Ver registro de SQL Server" aparecía de forma incorrecta para los tipos de servidores no relacionales (AS\RS\IS) 

@@ -1,11 +1,9 @@
 ---
 title: Información general sobre los índices espaciales | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113645"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018680"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como `geometry` o `geography`.  
@@ -156,7 +154,7 @@ ms.locfileid: "48113645"
 >  Las densidades de cuadrícula de un índice espacial están visibles en las columnas bounding_box_xmin, bounding_box_ymin, bounding_box_xmax y bounding_box_ymax de la vista de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>El esquema de teselación de cuadrícula de geografía  
- Este esquema de teselación solo se aplica a un `geography` columna. Esta sección resume los métodos admitidos por teselación de cuadrícula de geografía y trata cómo se proyecta el espacio geodésico en un plano, que se descompone a continuación en una jerarquía de cuadrículas.  
+ Este esquema de teselación solo se aplica a una columna `geography`. Esta sección resume los métodos admitidos por teselación de cuadrícula de geografía y trata cómo se proyecta el espacio geodésico en un plano, que se descompone a continuación en una jerarquía de cuadrículas.  
   
 > [!NOTE]  
 >  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) de la instrucción [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
@@ -223,7 +221,7 @@ ms.locfileid: "48113645"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Consultas que usan índices espaciales  
- Los índices espaciales solo se admiten en las consultas que incluyen un operador espacial indizado en la cláusula `WHERE`. Por ejemplo, sintaxis como la siguiente:  
+ Solo se admiten índices espaciales en las consultas que incluyen un operador espacial indizado en la cláusula `WHERE`. Por ejemplo, sintaxis como la siguiente:  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

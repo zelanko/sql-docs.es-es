@@ -1,11 +1,9 @@
 ---
 title: MultiPolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
@@ -14,33 +12,33 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35618fe95194a2c8fe256720bbfb3bb223390e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076872"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018990"
 ---
 # <a name="multipolygon"></a>MultiPolígono
-  Un `MultiPolygon` instancia es una colección de cero o más `Polygon` instancias.  
+  Una instancia de `MultiPolygon` es una colección de cero o más instancias de `Polygon`.  
   
 ## <a name="polygon-instances"></a>Instancias Polygon  
- La ilustración siguiente muestra ejemplos de `MultiPolygon` instancias.  
+ En la ilustración siguiente se muestran ejemplos de instancias de `MultiPolygon`.  
   
  ![Ejemplos de instancias MultiPolygon de geometry](../../database-engine/media/multipolygon.gif "Ejemplos de instancias MultiPolygon de geometry")  
   
  Como se muestra en la ilustración:  
   
--   Figura 1 es un `MultiPolygon` instancia con dos `Polygon` elementos. El límite se define mediante los dos anillos exteriores y los tres interiores.  
+-   La Figura 1 es una instancia de `MultiPolygon` con dos elementos `Polygon`. El límite se define mediante los dos anillos exteriores y los tres interiores.  
   
 -   La Figura 2 es una instancia de `MultiPolygon` con dos elementos `Polygon`. El límite se define mediante los dos anillos exteriores y los tres interiores. Los dos elementos `Polygon` forman una intersección en un punto tangente.  
   
 ### <a name="accepted-instances"></a>Instancias aceptadas  
- Un `MultiPolygon` se acepta la instancia se cumple una de las siguientes condiciones.  
+ Una instancia `MultiPolygon` es una instancia aceptada si se cumple una de las siguientes condiciones.  
   
--   Es un valor vacío `MultiPolygon` instancia.  
+-   Es una instancia `MultiPolygon` vacía.  
   
--   Todas las instancias que comprenden la `MultiPolygon` se aceptan instancia `Polygon` instancias. Para obtener más información sobre aceptado `Polygon` instancias, consulte [polígono](../spatial/polygon.md).  
+-   Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` aceptadas. Para obtener más información sobre aceptado `Polygon` instancias, consulte [polígono](../spatial/polygon.md).  
   
  Los ejemplos siguientes muestran instancias `MultiPolygon` aceptadas.  
   
@@ -74,7 +72,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` es válido porque los dos `Polygon` instancias se tocan solo en un punto tangente. `@g3` no es válido porque los interiores de los dos `Polygon` instancias superponen entre sí.  
+ `@g2` es válido porque las dos instancias de `Polygon` se tocan solo en un punto tangente. `@g3` no es válido porque los interiores de las dos instancias de `Polygon` se superponen.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra la creación de una instancia de `geometry``MultiPolygon` y devuelve el valor Well-Known Text (WKT) del segundo componente.  

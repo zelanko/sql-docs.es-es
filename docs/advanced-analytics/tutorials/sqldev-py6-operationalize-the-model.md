@@ -1,20 +1,21 @@
 ---
-title: Poner en marcha el modelo de Python con SQL Server | Microsoft Docs
+title: Predecir los resultados posibles mediante modelos de Python (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial que muestra cómo poner script incrustado de PYthon en SQL Server en procedimientos almacenados con funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/02/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d95edb081edc0f18a3734025a5902d13f8e9a295
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806815"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033682"
 ---
-# <a name="operationalize-the-python-model-using-sql-server"></a>Poner en marcha el modelo de Python con SQL Server
+# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ejecutar predicciones con Python incrustado en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial, [análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
@@ -30,13 +31,6 @@ Esta lección muestra dos métodos para crear predicciones basadas en un modelo 
 
 Todo el código de Python necesario para la puntuación se proporciona como parte de los procedimientos almacenados.
 
-| Nombre del procedimiento almacenado | Proceso por lotes o único | Origen del modelo|
-|----|----|----|
-|PredictTipRxPy|lote| modelo de revoscalepy|
-|PredictTipSciKitPy|lote |scikit-aprender modelo|
-|PredictTipSingleModeRxPy|fila única| modelo de revoscalepy|
-|PredictTipSingleModeSciKitPy|fila única| scikit-aprender modelo|
-
 ## <a name="batch-scoring"></a>Puntuación por lotes
 
 Los primeros dos procedimientos almacenados muestran la sintaxis básica para el ajuste de una llamada de predicción de Python en un procedimiento almacenado. Ambos procedimientos almacenados requieren una tabla de datos como entradas.
@@ -50,46 +44,46 @@ Los primeros dos procedimientos almacenados muestran la sintaxis básica para el
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-El procedimiento almacenado debe ya creado para usted. Si no lo encuentra, ejecute las siguientes instrucciones de T-SQL para crear los procedimientos almacenados.
-
-Este procedimiento almacenado requiere un modelo basado en el scikit-aprender el paquete, porque utiliza las funciones específicas de ese paquete:
+Instrucciones de Rrun el siguiente comando T-SQL para crear los procedimientos almacenados. Este procedimiento almacenado requiere un modelo basado en el scikit-aprender el paquete, porque utiliza las funciones específicas de ese paquete:
 
 + La trama de datos que contiene las entradas que se pasa a la `predict_proba` función del modelo de regresión logística, `mod`. El `predict_proba` función (`probArray = mod.predict_proba(X)`) devuelve un **float** que representa la probabilidad de que se dará una propina (de cualquier importe).
 
 ```SQL
+DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
+GO
+
 CREATE PROCEDURE [dbo].[PredictTipSciKitPy] (@model varchar(50), @inquery nvarchar(max))
 AS
 BEGIN
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
-  EXEC sp_execute_external_script
-    @language = N'Python',
-    @script = N'
-        import pickle;
-        import numpy;
-        from sklearn import metrics
-        
-        mod = pickle.loads(lmodel2)
-        
-        X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
-        y = numpy.ravel(InputDataSet[["tipped"]])
-        
-        probArray = mod.predict_proba(X)
-        probList = []
-        for i in range(len(probArray)):
-          probList.append((probArray[i])[1])
-        
-        probArray = numpy.asarray(probList)
-        fpr, tpr, thresholds = metrics.roc_curve(y, probArray)
-        aucResult = metrics.auc(fpr, tpr)
-        print ("AUC on testing data is: " + str(aucResult))
-        
-        OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
-        ',  
-    @input_data_1 = @inquery,
-    @input_data_1_name = N'InputDataSet',
-    @params = N'@lmodel2 varbinary(max)',
-    @lmodel2 = @lmodel2
-  WITH RESULT SETS ((Score float));
+DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
+EXEC sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+import pickle;
+import numpy;
+from sklearn import metrics
+
+mod = pickle.loads(lmodel2)
+X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
+y = numpy.ravel(InputDataSet[["tipped"]])
+
+probArray = mod.predict_proba(X)
+probList = []
+for i in range(len(probArray)):
+  probList.append((probArray[i])[1])
+
+probArray = numpy.asarray(probList)
+fpr, tpr, thresholds = metrics.roc_curve(y, probArray)
+aucResult = metrics.auc(fpr, tpr)
+print ("AUC on testing data is: " + str(aucResult))
+
+OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
+',  
+  @input_data_1 = @inquery,
+  @input_data_1_name = N'InputDataSet',
+  @params = N'@lmodel2 varbinary(max)',
+  @lmodel2 = @lmodel2
+WITH RESULT SETS ((Score float));
 END
 GO
 ```
@@ -98,41 +92,41 @@ GO
 
 Este procedimiento almacenado usa las mismas entradas y crea el mismo tipo de puntuaciones que el procedimiento almacenado anterior, pero usa funciones desde la **revoscalepy** paquete proporcionado con el aprendizaje automático de SQL Server.
 
-> [!NOTE] 
-> El código para este procedimiento almacenado ha cambiado ligeramente entre las primeras versiones de lanzamiento y la versión RTM, para reflejar los cambios realizados en el paquete de revoscalepy. Consulte la [cambios](#changes) tabla para obtener más información.
-
 ```SQL
+DROP PROCEDURE IF EXISTS PredictTipRxPy;
+GO
+
 CREATE PROCEDURE [dbo].[PredictTipRxPy] (@model varchar(50), @inquery nvarchar(max))
 AS
 BEGIN
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
+DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
+EXEC sp_execute_external_script 
+  @language = N'Python',
+  @script = N'
+import pickle;
+import numpy;
+from sklearn import metrics
+from revoscalepy.functions.RxPredict import rx_predict;
 
-  EXEC sp_execute_external_script 
-    @language = N'Python',
-    @script = N'
-      import pickle;
-      import numpy;
-      from sklearn import metrics
-      from revoscalepy.functions.RxPredict import rx_predict;
-      
-      mod = pickle.loads(lmodel2)
-      X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
-      y = numpy.ravel(InputDataSet[["tipped"]])
-      
-      probArray = rx_predict(mod, X)
-      prob_list = prob_array["tipped_Pred"].values 
-      
-      probArray = numpy.asarray(probList)
-      fpr, tpr, thresholds = metrics.roc_curve(y, probArray)
-      aucResult = metrics.auc(fpr, tpr)
-      print ("AUC on testing data is: " + str(aucResult))
-      OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
-      ',    
-    @input_data_1 = @inquery,
-    @input_data_1_name = N'InputDataSet',
-    @params = N'@lmodel2 varbinary(max)',
-    @lmodel2 = @lmodel2
-  WITH RESULT SETS ((Score float));
+mod = pickle.loads(lmodel2)
+X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
+y = numpy.ravel(InputDataSet[["tipped"]])
+
+probArray = rx_predict(mod, X)
+probList = probArray["tipped_Pred"].values 
+
+probArray = numpy.asarray(probList)
+fpr, tpr, thresholds = metrics.roc_curve(y, probArray)
+aucResult = metrics.auc(fpr, tpr)
+print ("AUC on testing data is: " + str(aucResult))
+
+OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
+',  
+  @input_data_1 = @inquery,
+  @input_data_1_name = N'InputDataSet',
+  @params = N'@lmodel2 varbinary(max)',
+  @lmodel2 = @lmodel2
+WITH RESULT SETS ((Score float));
 END
 GO
 ```
@@ -164,6 +158,11 @@ Al pasar esos argumentos al procedimiento almacenado, puede seleccionar un model
 2. Para usar el **revoscalepy** del modelo para puntuar, llame al procedimiento almacenado **PredictTipRxPy**, pasando el nombre del modelo y la cadena de consulta como entradas.
 
     ```SQL
+    DECLARE @query_string nvarchar(max) -- Specify input query
+      SET @query_string='
+      select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
+      dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
+      from nyctaxi_sample_testing'
     EXEC [dbo].[PredictTipRxPy] 'revoscalepy_model', @query_string;
     ```
 
@@ -190,6 +189,9 @@ Ambos procedimientos almacenados crean una puntuación basada en el modelo de Py
 Tómese un minuto para revisar el código del procedimiento almacenado que realiza la puntuación mediante el **scikit-aprender** modelo.
 
 ```SQL
+DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
+GO
+
 CREATE PROCEDURE [dbo].[PredictTipSingleModeSciKitPy] (@model varchar(50), @passenger_count int = 0,
   @trip_distance float = 0,
   @trip_time_in_secs int = 0,
@@ -209,42 +211,42 @@ BEGIN
     @dropoff_latitude,
     @dropoff_longitude)
     '
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
-  EXEC sp_execute_external_script 
-    @language = N'Python',
-    @script = N'
-      import pickle;
-      import numpy;
-      
-      # Load model and unserialize
-      mod = pickle.loads(model)
-      
-      # Get features for scoring from input data
-      X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
-      
-      # Score data to get tip prediction probability as a list (of float)
-      probList = []
-      probList.append((mod.predict_proba(X)[0])[1])
-      
-      # Create output data frame
-      OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
-    ',
-    @input_data_1 = @inquery,
-    @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,
-      @trip_time_in_secs int ,
-      @pickup_latitude float ,
-      @pickup_longitude float ,
-      @dropoff_latitude float ,
-      @dropoff_longitude float',
-      @model = @lmodel2,
-      @passenger_count =@passenger_count ,
-      @trip_distance=@trip_distance,
-      @trip_time_in_secs=@trip_time_in_secs,
-      @pickup_latitude=@pickup_latitude,
-      @pickup_longitude=@pickup_longitude,
-      @dropoff_latitude=@dropoff_latitude,
-      @dropoff_longitude=@dropoff_longitude
-  WITH RESULT SETS ((Score float));
+DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
+EXEC sp_execute_external_script 
+  @language = N'Python',
+  @script = N'
+import pickle;
+import numpy;
+
+# Load model and unserialize
+mod = pickle.loads(model)
+
+# Get features for scoring from input data
+X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
+
+# Score data to get tip prediction probability as a list (of float)
+probList = []
+probList.append((mod.predict_proba(X)[0])[1])
+
+# Create output data frame
+OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
+',
+  @input_data_1 = @inquery,
+  @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,
+    @trip_time_in_secs int ,
+    @pickup_latitude float ,
+    @pickup_longitude float ,
+    @dropoff_latitude float ,
+    @dropoff_longitude float',
+    @model = @lmodel2,
+    @passenger_count =@passenger_count ,
+    @trip_distance=@trip_distance,
+    @trip_time_in_secs=@trip_time_in_secs,
+    @pickup_latitude=@pickup_latitude,
+    @pickup_longitude=@pickup_longitude,
+    @dropoff_latitude=@dropoff_latitude,
+    @dropoff_longitude=@dropoff_longitude
+WITH RESULT SETS ((Score float));
 END
 GO
 ```
@@ -254,6 +256,9 @@ GO
 El siguiente procedimiento almacenado realiza la puntuación mediante el **revoscalepy** modelo.
 
 ```SQL
+DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
+GO
+
 CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenger_count int = 0,
   @trip_distance float = 0,
   @trip_time_in_secs int = 0,
@@ -263,56 +268,56 @@ CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenge
   @dropoff_longitude float = 0)
 AS
 BEGIN
-  DECLARE @inquery nvarchar(max) = N'
-    SELECT * FROM [dbo].[fnEngineerFeatures]( 
-      @passenger_count,
-      @trip_distance,
-      @trip_time_in_secs,
-      @pickup_latitude,
-      @pickup_longitude,
-      @dropoff_latitude,
-      @dropoff_longitude)
-    '
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
-  EXEC sp_execute_external_script 
-    @language = N'Python',
-    @script = N'
-      import pickle;
-      import numpy;
-      from revoscalepy.functions.RxPredict import rx_predict;
-      
-      # Load model and unserialize
-      mod = pickle.loads(model)
-      
-      # Get features for scoring from input data
-      X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
-      
-      # Score data to get tip prediction probability as a list (of float)
-      
-      probArray = rx_predict(mod, X)
-      
-      probList = []
-      prob_list = prob_array["tipped_Pred"].values
-      
-      # Create output data frame
-      OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
-      ',
-    @input_data_1 = @inquery,
-    @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,
-      @trip_time_in_secs int ,
-      @pickup_latitude float ,
-      @pickup_longitude float ,
-      @dropoff_latitude float ,
-      @dropoff_longitude float',
-      @model = @lmodel2,
-      @passenger_count =@passenger_count ,
-      @trip_distance=@trip_distance,
-      @trip_time_in_secs=@trip_time_in_secs,
-      @pickup_latitude=@pickup_latitude,
-      @pickup_longitude=@pickup_longitude,
-      @dropoff_latitude=@dropoff_latitude,
-      @dropoff_longitude=@dropoff_longitude
-  WITH RESULT SETS ((Score float));
+DECLARE @inquery nvarchar(max) = N'
+  SELECT * FROM [dbo].[fnEngineerFeatures]( 
+    @passenger_count,
+    @trip_distance,
+    @trip_time_in_secs,
+    @pickup_latitude,
+    @pickup_longitude,
+    @dropoff_latitude,
+    @dropoff_longitude)
+  '
+DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
+EXEC sp_execute_external_script 
+  @language = N'Python',
+  @script = N'
+import pickle;
+import numpy;
+from revoscalepy.functions.RxPredict import rx_predict;
+
+# Load model and unserialize
+mod = pickle.loads(model)
+
+# Get features for scoring from input data
+X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
+
+# Score data to get tip prediction probability as a list (of float)
+
+probArray = rx_predict(mod, X)
+
+probList = []
+prob_list = prob_array["tipped_Pred"].values
+
+# Create output data frame
+OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
+',
+  @input_data_1 = @inquery,
+  @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,
+    @trip_time_in_secs int ,
+    @pickup_latitude float ,
+    @pickup_longitude float ,
+    @dropoff_latitude float ,
+    @dropoff_longitude float',
+    @model = @lmodel2,
+    @passenger_count =@passenger_count ,
+    @trip_distance=@trip_distance,
+    @trip_time_in_secs=@trip_time_in_secs,
+    @pickup_latitude=@pickup_latitude,
+    @pickup_longitude=@pickup_longitude,
+    @dropoff_latitude=@dropoff_latitude,
+    @dropoff_longitude=@dropoff_longitude
+WITH RESULT SETS ((Score float));
 END
 GO
 ```
@@ -337,23 +342,10 @@ Una vez creados los procedimientos almacenados, es fácil generar una puntuació
 2. Para generar una puntuación mediante el **scikit-aprender** modelo, ejecute esta instrucción:
 
     ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'linear_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 La salida de ambos procedimientos es una probabilidad de una propina de la carrera de taxi con los parámetros especificados o características.
-
-### <a name="changes"></a> Cambios
-
-Esta sección enumeran los cambios realizados en el código usado en este tutorial. Estos cambios se realizaron para reflejar la versión más reciente **revoscalepy** versión. Para obtener ayuda de API, consulte [referencia de biblioteca de funciones de Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
-
-| Cambiar detalles | Notas|
-| ----|----|
-| eliminar `import pandas` en todas las muestras| Ahora se cargan de forma predeterminada de pandas|
-| función `rx_predict_ex` ha cambiado a `rx_predict`| Las versiones preliminares y RTM requieren `rx_predict_ex`|
-| función `rx_logit_ex` ha cambiado a `rx_logit`| Las versiones preliminares y RTM requieren `rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])` ha cambiado a `prob_list = prob_array["tipped_Pred"].values`| actualizaciones de API|
-
-Si ha instalado los servicios de Python con una versión preliminar de SQL Server 2017, se recomienda que actualice. También puede actualizar solo los componentes de Python y R mediante el uso de la versión más reciente de Machine Learning Server. Para obtener más información, consulte [mediante el enlace para actualizar una instancia de SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## <a name="conclusions"></a>Conclusiones
 

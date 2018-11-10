@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050847"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221611"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar a trabajo de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
 
-Uno de los escenarios claves es la capacidad de enviar el trabajo de Spark para SQL Server de 2019 CTP 2.0. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con las referencias al clúster de macrodatos de SQL Server 2019. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
+Uno de los escenarios claves es la capacidad de enviar el trabajo de Spark para SQL Server de 2019 CTP 2.1. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con las referencias al clúster de macrodatos de SQL Server 2019. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
 
 ## <a name="prerequisite"></a>Requisito previo 
 Instalar herramientas de macrodatos para SQL Server y conéctese a un clúster de macrodatos antes de poder enviar trabajo de Spark. Para obtener detalles de la instalación, consulte para vincular [implementar herramientas de macrodatos](deploy-big-data-tools.md).

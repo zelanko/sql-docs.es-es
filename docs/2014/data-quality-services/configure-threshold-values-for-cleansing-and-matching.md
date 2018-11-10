@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.general.f1
@@ -17,17 +16,17 @@ ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e69ad6e0cecc592bb25c2d07c48ccc52662538dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a76f3fc589e3be0ae6b35e2cc4fc577eeb284cb
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201445"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031782"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Configurar los valores de umbral para la limpieza y coincidencia
   En este tema se describe cómo configurar los valores de umbral que se utilizarán durante las actividades de limpieza y búsqueda de coincidencias asistidas por PC en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   

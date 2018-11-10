@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea72540271302223a35538e3c97e9f01c47e8d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838993"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743180"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,18 @@ POWER ( float_expression , y )
  Es la potencia a la que elevar *float_expression*. *y* puede ser una expresión de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve el mismo tipo que el enviado en *float_expression*. Por ejemplo, si un **decimal**(2,0) se envía como *float_expression*, el resultado devuelto es **decimal**(2,0).  
+ El tipo de valor devuelto depende del tipo de entrada de *float_expression*:
+ 
+|Tipo de entrada|Tipo de valor devuelto|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
+ 
+Si el resultado no cabe en el tipo de valor devuelto, se produce un error de desbordamiento aritmético.
   
 ## <a name="examples"></a>Ejemplos  
   

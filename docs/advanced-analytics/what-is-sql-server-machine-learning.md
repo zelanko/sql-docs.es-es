@@ -3,24 +3,26 @@ title: R y Python de Machine Learning Services en SQL Server | Microsoft Docs
 description: R en SQL Server y Python en SQL Server, la integración con datos relacionales para ciencia de datos y modelado estadístico, modelos de aprendizaje automático, análisis predictivo, visualización de datos y mucho más.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 11/06/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 0768ae40b110bbb2b85890f0a8b4eff0339cedde
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343120"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269708"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) en SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 Machine Learning Services es un complemento a una instancia del motor de base de datos, utilizado para ejecutar código R y Python en SQL Server. Código se ejecuta en un marco de extensibilidad, aislada de los procesos del motor principal, pero totalmente disponible para datos relacionales como procedimientos almacenados, como script de Transact-SQL que contiene instrucciones de R o Python o como código de R o Python con T-SQL. 
 
-Si usó anteriormente [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services en SQL Server 2017 es la próxima generación de soporte técnico de R, con las versiones actualizadas de base R, RevoScaleR, MicrosoftML, y otras bibliotecas incorporaron en 2016.
+Si usó anteriormente [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services en SQL Server 2017 es la próxima generación de soporte técnico de R, con las versiones actualizadas de base R, RevoScaleR, MicrosoftML, y otras bibliotecas incorporaron en 2016. 
+
+En Azure SQL Database, [Machine Learning Services (con R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)) está actualmente en versión preliminar pública.
 
 La propuesta de valor de clave de Machine Learning Services es la potencia de su empresa R y paquetes de Python para ofrecer análisis avanzado a escala y la capacidad de poner los cálculos y procesamiento de donde residen los datos, lo que elimina la necesidad de extraer los datos a través de la red.
 

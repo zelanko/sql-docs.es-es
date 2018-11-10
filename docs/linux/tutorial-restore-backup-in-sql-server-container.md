@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991198"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269918"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar una base de datos de SQL Server en un contenedor de Linux Docker
 
@@ -30,7 +30,7 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de SQL Server de 2019 CTP 2.0 Linux que se ejecutan en Docker.
+Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de Linux de 2019 preview SQL Server que se ejecutan en Docker.
 
 ::: moniker-end
 
@@ -114,7 +114,7 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
 
 1. Abra un terminal de bash en Linux o Mac o en una sesión de PowerShell con privilegios elevados en Windows.
 
-1. Extraiga la imagen de contenedor de SQL Server de 2019 CTP 2.0 Linux de Docker Hub.
+1. Extraer la versión preliminar de SQL Server 2019 imagen de contenedor de Linux de Docker Hub.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
@@ -143,7 +143,7 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
       -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
-   Este comando crea un contenedor de SQL Server de 2019 CTP 2.0 con la edición Developer (valor predeterminado). Puerto de SQL Server **1433** se expone en el host como puerto **1401**. El elemento opcional `-v sql1data:/var/opt/mssql` parámetro crea un contenedor de volumen de datos denominado **sql1ddata**. Esto se usa para conservar los datos creados por SQL Server.
+   Este comando crea un contenedor de vista previa de SQL Server 2019 con la edición Developer (valor predeterminado). Puerto de SQL Server **1433** se expone en el host como puerto **1401**. El elemento opcional `-v sql1data:/var/opt/mssql` parámetro crea un contenedor de volumen de datos denominado **sql1ddata**. Esto se usa para conservar los datos creados por SQL Server.
 
 1. Para ver los contenedores de Docker, use el comando `docker ps`.
 
@@ -533,7 +533,7 @@ En este tutorial, aprendió a realizar una copia de seguridad de una base de dat
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-En este tutorial, aprendió a realizar una copia de seguridad de una base de datos en Windows y moverlo a un servidor de Linux que ejecuta SQL Server 2019 CTP 2.0. Ha aprendido a:
+En este tutorial, aprendió a realizar una copia de seguridad de una base de datos en Windows y moverlo a un servidor de Linux que ejecuta vista previa de SQL Server 2019. Ha aprendido a:
 
 ::: moniker-end
 

@@ -4,15 +4,15 @@ description: En este artículo se describe el controlador de un clúster de macr
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050877"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221521"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>¿Qué es el controlador de clústeres de macrodatos de SQL Server?
 
@@ -26,8 +26,8 @@ El servicio del controlador proporciona la funcionalidad siguiente:
 - Exponer las herramientas de supervisión para observar el estado del clúster
 - Exponer las herramientas de solución de problemas para detectar y reparar problemas inesperados
 - Administrar seguridad del clúster: asegúrese de puntos de conexión del clúster seguro, administrar usuarios y roles, configurar las credenciales para la comunicación dentro del clúster
-- Administrar el flujo de trabajo de actualización de modo que se implementan de forma segura (no disponible en CTP 2.0)
-- Administración de alta disponibilidad y recuperación ante desastres para los servicios con estado en el clúster (no están disponibles en CTP 2.0)
+- Administrar el flujo de trabajo de actualización de modo que se implementan de forma segura (no disponible en CTP 2.1)
+- Administración de alta disponibilidad y recuperación ante desastres para los servicios con estado en el clúster (no disponible en CTP 2.1)
 
 ## <a name="deploying-the-controller-service"></a>Implementar el servicio de controlador
 

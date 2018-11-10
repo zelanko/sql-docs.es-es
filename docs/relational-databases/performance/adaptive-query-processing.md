@@ -6,7 +6,7 @@ ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324638"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031202"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ A veces, el plan elegido por el optimizador de consultas no es óptimo por una s
 ![Características de procesamiento de consultas adaptable](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Cómo habilitar el procesamiento de consultas adaptable
-Puede hacer que las cargas de trabajo sean aptas automáticamente para el procesamiento de consultas adaptable si habilita el nivel de compatibilidad 140 para la base de datos.  Puede establecerlo con Transact-SQL. Por ejemplo:  
+Puede hacer que las cargas de trabajo sean aptas automáticamente para el procesamiento de consultas adaptable si habilita el nivel de compatibilidad 140 para la base de datos.  Puede establecerlo con Transact-SQL. Por ejemplo:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Comentarios de concesión de memoria de modo de proceso por lotes
-El plan posterior a la ejecución de una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye la memoria mínima necesaria para la ejecución y el tamaño de concesión de memoria ideal para que todas las filas quepan en la memoria. El rendimiento se ve afectado si los tamaños de concesión de memoria son incorrectos. A su vez, unas concesiones excesivas se traducen en memoria desperdiciada y en simultaneidad reducida. Las concesiones de memoria insuficientes provocan un costoso desbordamiento en disco. Al ocuparse de las cargas de trabajo repetidas, los comentarios de concesión de memoria de modo de proceso por lotes vuelven a calcular la memoria real necesaria para una consulta y luego actualizan el valor de la concesión del plan almacenado en caché.  Cuando se ejecuta una instrucción de consulta idéntica, la consulta usa el tamaño de concesión de memoria revisado, con lo que se reducen las concesiones de memoria excesivas que afectan a la simultaneidad y se solucionan las concesiones de memoria subestimadas que provocan costosos desbordamientos en disco.
-El gráfico siguiente muestra un ejemplo de uso de los comentarios de concesión de memoria adaptable de modo de proceso por lotes. Para la primera ejecución de la consulta, la duración es de **88 segundos**, debido a los grandes desbordamientos:   
+El plan posterior a la ejecución de una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye la memoria mínima necesaria para la ejecución y el tamaño de concesión de memoria ideal para que todas las filas quepan en la memoria. El rendimiento se ve afectado si los tamaños de concesión de memoria son incorrectos. A su vez, unas concesiones excesivas se traducen en memoria desperdiciada y en simultaneidad reducida. Las concesiones de memoria insuficientes provocan un costoso desbordamiento en disco. Al ocuparse de las cargas de trabajo repetidas, los comentarios de concesión de memoria de modo de proceso por lotes vuelven a calcular la memoria real necesaria para una consulta y luego actualizan el valor de la concesión del plan almacenado en caché.  Cuando se ejecuta una instrucción de consulta idéntica, la consulta usa el tamaño de concesión de memoria revisado, con lo que se reducen las concesiones de memoria excesivas que afectan a la simultaneidad y se solucionan las concesiones de memoria subestimadas que provocan costosos desbordamientos en disco.
+El gráfico siguiente muestra un ejemplo de uso de los comentarios de concesión de memoria adaptable de modo de proceso por lotes. Para la primera ejecución de la consulta, la duración es de  **88 segundos** debido a los grandes desbordamientos:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -60,7 +60,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![Grandes desbordamientos](./media/2_AQPGraphHighSpills.png)
 
-Con los comentarios de concesión de memoria habilitados para la segunda ejecución, la duración es de **1 segundo** (partiendo de 88 segundos), los desbordamientos se eliminan por completo y la concesión es superior: 
+Con los comentarios de concesión de memoria habilitados para la segunda ejecución, la duración es de  **1 segundo** (partiendo de 88 segundos), los desbordamientos se eliminan por completo y la concesión es superior: 
 
 ![Sin desbordamientos](./media/3_AQPGraphNoSpills.png)
 
@@ -69,14 +69,14 @@ En el caso de una condición de concesión de memoria excesiva, si la memoria co
 En el caso de condiciones de concesión de memoria de tamaño insuficiente, que provocan un desbordamiento en disco para operadores de modo de proceso por lotes, los comentarios de concesión de memoria desencadenarán un nuevo cálculo de la concesión de memoria. Los eventos de desbordamiento se notifican a los comentarios de concesión de memoria y se pueden mostrar a través del evento de xEvent *spilling_report_to_memory_grant_feedback*. Este evento devuelve el identificador de nodo del plan y el tamaño de los datos desbordados de ese nodo.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Comentarios de concesión de memoria y escenarios confidenciales de parámetros
-Los distintos valores de parámetros también pueden necesitar diferentes planes de consulta para seguir siendo óptimos. Este tipo de consulta se define como "sensible a parámetros". En el caso de los planes sensibles a parámetros, los comentarios de concesión de memoria se deshabilitarán en una consulta si esta tiene requisitos de memoria inestables. El plan se deshabilita después de que se ejecute la consulta de forma repetida y esto puede observarse mediante la supervisión de xEvent *memory_grant_feedback_loop_disabled*. Para obtener más información sobre la sensibilidad y el examen de los parámetros, consulte la [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Los distintos valores de parámetros también pueden necesitar diferentes planes de consulta para seguir siendo óptimos. Este tipo de consulta se define como "sensible a parámetros". En el caso de los planes sensibles a parámetros, los comentarios de concesión de memoria se deshabilitarán en una consulta si esta tiene requisitos de memoria inestables. El plan se deshabilita después de que se ejecute la consulta de forma repetida y esto puede observarse mediante la supervisión de xEvent *memory_grant_feedback_loop_disabled*. Para obtener más información sobre la sensibilidad y el examen de los parámetros, consulte la [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="memory-grant-feedback-caching"></a>Almacenamiento en caché de los comentarios de concesión de memoria
-Los comentarios pueden almacenarse en el plan almacenado en caché para una sola ejecución. Pero son las ejecuciones consecutivas de esa instrucción las que se benefician de los ajustes de los comentarios de concesión de memoria. Esta característica se aplica a la ejecución repetida de instrucciones. Los comentarios de concesión de memoria solo cambian el plan almacenado en caché. Los cambios no se capturan actualmente en el almacén de consultas.
-Si el plan se elimina de la memoria caché, no se conservan los comentarios. Los comentarios también se pierden si se produce una conmutación por error. Una instrucción con `OPTION (RECOMPILE)` crea un plan y no lo almacena en caché. Puesto que no se almacena, no se generan comentarios de concesión de memoria y no se almacenan para esa compilación y ejecución.  Pero si una instrucción equivalente (es decir, con el mismo hash de consulta) que **no** ha usado `OPTION (RECOMPILE)` se ha almacenado en caché y luego se ha vuelto a ejecutar, la instrucción consecutiva puede beneficiarse de los comentarios de concesión de memoria.
+Los comentarios pueden almacenarse en el plan almacenado en caché para una sola ejecución. Pero son las ejecuciones consecutivas de esa instrucción las que se benefician de los ajustes de los comentarios de concesión de memoria. Esta característica se aplica a la ejecución repetida de instrucciones. Los comentarios de concesión de memoria solo cambian el plan almacenado en caché. Los cambios no se capturan actualmente en el almacén de consultas.
+Si el plan se elimina de la memoria caché, no se conservan los comentarios. Los comentarios también se pierden si se produce una conmutación por error. Una instrucción con `OPTION (RECOMPILE)` crea un plan y no lo almacena en caché. Puesto que no se almacena, no se generan comentarios de concesión de memoria y no se almacenan para esa compilación y ejecución.  Pero si una instrucción equivalente (es decir, con el mismo hash de consulta) que **no** ha usado `OPTION (RECOMPILE)` se ha almacenado en caché y luego se ha vuelto a ejecutar, la instrucción consecutiva puede beneficiarse de los comentarios de concesión de memoria.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Seguimiento de la actividad de los comentarios de concesión de memoria
-Puede realizar un seguimiento de los eventos de comentarios de concesión de memoria mediante el evento de xEvent *memory_grant_updated_by_feedback*. Este evento realiza un seguimiento del historial de recuentos de ejecución actual, del número de veces que los comentarios de concesión de memoria han provocado una actualización del plan, de la concesión de memoria adicional ideal antes de la modificación y de la concesión de memoria adicional ideal después de que los comentarios de concesión de memoria hayan modificado el plan almacenado en caché.
+Puede realizar un seguimiento de los eventos de comentarios de concesión de memoria mediante el evento de xEvent *memory_grant_updated_by_feedback*. Este evento realiza un seguimiento del historial de recuentos de ejecución actual, del número de veces que los comentarios de concesión de memoria han provocado una actualización del plan, de la concesión de memoria adicional ideal antes de la modificación y de la concesión de memoria adicional ideal después de que los comentarios de concesión de memoria hayan modificado el plan almacenado en caché.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Comentarios de concesión de memoria, regulador de recursos y sugerencias de consulta
 La memoria real concedida respeta el límite de memoria de consulta determinado por el regulador de recursos o la sugerencia de consulta.
@@ -158,7 +158,7 @@ Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de 
 
 
 ## <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables del modo por lotes
-La característica de combinaciones adaptables del modo por lotes permite elegir un método [Combinación hash o combinación de bucles anidados](../../relational-databases/performance/joins.md) que se aplace hasta **después** de que se haya examinado la primera entrada. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. El plan, por tanto, puede cambiar de forma dinámica para una mejor estrategia de combinación durante la ejecución.
+La característica de combinaciones adaptables del modo por lotes permite elegir un método [Combinación hash o combinación de bucles anidados](../../relational-databases/performance/joins.md) que se aplace hasta **después** de que se haya examinado la primera entrada. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. El plan, por tanto, puede cambiar de forma dinámica para una mejor estrategia de combinación durante la ejecución.
 Funcionamiento:
 -  Si el recuento de filas de la entrada de combinación de compilación es lo suficientemente pequeño como para que una combinación de bucles anidados sea una opción más óptima que una combinación hash, el plan cambia a un algoritmo de bucles anidados.
 -  Si la entrada de combinación de compilación supera un umbral de recuento de filas determinado, no se produce ningún cambio y el plan continúa con una combinación hash.
@@ -166,34 +166,34 @@ Funcionamiento:
 La siguiente consulta se usa para mostrar un ejemplo de combinación adaptable:
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-La consulta devuelve 336 filas. Al habilitar las [estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.MD) se ve el siguiente plan:
+La consulta devuelve 336 filas. Al habilitar las [estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.MD) se ve el siguiente plan:
 
 ![La consulta da lugar a 336 filas](./media/4_AQPStats336Rows.png)
 
 En el plan se ve lo siguiente:
 1. Hay una exploración de índice de almacén de columnas que se usa para proporcionar filas para la fase de compilación de combinación hash.
-1. Hay un nuevo operador de combinación adaptable. Este operador define un umbral que se usa para decidir cuándo cambiar a un plan de bucle anidado. En el ejemplo, el umbral es 78 filas. Todo lo que tenga &gt; = 78 filas usará una combinación hash. Si es inferior al umbral, se usará una combinación de bucle anidado.
+1. Hay un nuevo operador de combinación adaptable. Este operador define un umbral que se usa para decidir cuándo cambiar a un plan de bucle anidado. En el ejemplo, el umbral es 78 filas. Todo lo que tenga &gt; = 78 filas usará una combinación hash. Si es inferior al umbral, se usará una combinación de bucle anidado.
 1. Puesto que se devuelven 336 filas, se supera el umbral y la segunda rama representa la fase de sondeo de una operación de combinación hash estándar. Observe que las estadísticas de consultas activas muestran las filas que pasan por los operadores: en este caso "672 de 672".
 1. La última rama es la búsqueda en índice clúster que usa la combinación de bucle anidado si no se ha superado el umbral. Observe que se ve "0 de 336" filas mostradas (la rama no se usa).
  Ahora vamos a comparar el plan con la misma consulta, pero esta vez para un valor *Cantidad* que solo tiene una fila en la tabla:
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-La consulta devuelve una fila. Al habilitar las estadísticas de consultas activas se ve el siguiente plan:
+La consulta devuelve una fila. Al habilitar las estadísticas de consultas activas se ve el siguiente plan:
 
 ![La consulta da lugar a una fila](./media/5_AQPStatsOneRow.png)
 
@@ -205,7 +205,7 @@ En el plan se ve lo siguiente:
 La cargas de trabajo con oscilaciones frecuentes entre análisis de entrada de combinación pequeños y grandes son las que más se benefician de esta característica.
 
 ### <a name="adaptive-join-overhead"></a>Sobrecarga de la combinación adaptable
-Las combinaciones adaptables tienen unos requisitos de memoria superiores a un plan equivalente de combinación de bucle anidado de índice. La memoria adicional se solicita como si el bucle anidado fuera una combinación hash. También hay sobrecarga para la fase de compilación como una operación de detención e inicio frente a una combinación equivalente de transmisión de bucle anidado. Ese costo adicional va acompañado de flexibilidad en escenarios donde los recuentos de filas pueden fluctuar en la entrada de compilación.
+Las combinaciones adaptables tienen unos requisitos de memoria superiores a un plan equivalente de combinación de bucle anidado de índice. La memoria adicional se solicita como si el bucle anidado fuera una combinación hash. También hay sobrecarga para la fase de compilación como una operación de detención e inicio frente a una combinación equivalente de transmisión de bucle anidado. Ese costo adicional va acompañado de flexibilidad en escenarios donde los recuentos de filas pueden fluctuar en la entrada de compilación.
 
 ### <a name="adaptive-join-caching-and-re-use"></a>Almacenamiento en caché y reutilización de combinación adaptable
 Las combinaciones adaptables de modo de proceso por lotes funcionan para la ejecución inicial de una instrucción y, una vez compiladas, las ejecuciones consecutivas seguirán siendo adaptables según el umbral de combinación adaptable compilado y las filas de runtime que pasan a través de la fase de compilación de la entrada externa.
@@ -236,7 +236,7 @@ Algunas condiciones convierten a una combinación lógica en apta como combinaci
 Si una combinación adaptable cambia a una operación de bucles anidados, usa las filas ya leídas por la compilación de combinación hash. El operador **no** vuelve a leer las filas de la referencia externa.
 
 ### <a name="adaptive-threshold-rows"></a>Filas de umbral adaptable
-El gráfico siguiente muestra una intersección de ejemplo entre el costo de una combinación hash y el de una alternativa de combinación de bucles anidados.  En este punto de intersección, se determina el umbral que a su vez determina el algoritmo real usado para la operación de combinación.
+El gráfico siguiente muestra una intersección de ejemplo entre el costo de una combinación hash y el de una alternativa de combinación de bucles anidados.  En este punto de intersección, se determina el umbral que a su vez determina el algoritmo real usado para la operación de combinación.
 
 ![Umbral de combinación](./media/6_AQPJoinThreshold.png)
 

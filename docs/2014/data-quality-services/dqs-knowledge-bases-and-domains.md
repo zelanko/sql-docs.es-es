@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad3530b8179989f86cc62c9c18c888575890b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc1c6fe8e8d049b7b999984c0dcb5f0ed49e662a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153005"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032412"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de conocimiento y dominios de DQS
   En este tema se describe lo qué es una base de conocimiento en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Para limpiar datos, debe tener conocimiento sobre los datos. Para preparar el conocimiento de un proyecto de calidad de datos, se crea y mantiene una base de conocimiento (BC) que DQS puede usar para identificar datos incorrectos o no válidos. Con DQS puede usar procesos asistidos por PC y procesos interactivos para crear, compilar y actualizar la base de conocimiento. El conocimiento de una base de conocimiento se mantiene en dominios, donde cada uno de ellos es específico para un campo de datos. La base de conocimiento es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad.  
@@ -95,7 +94,7 @@ ms.locfileid: "48153005"
  Las propiedades de dominio definen y controlan el procesamiento que se va a aplicar a los valores asociados. Puede establecer el tipo de datos y el idioma de los valores, especificar que los datos de origen se limpiarán con el valor inicial (si se desactiva esta opción, los datos de origen se limpiarán con el término correcto pero no con el valor inicial), asegurar la normalización de datos configurando el formato que se aplicará cuando se generen los valores de datos del dominio, y definir los algoritmos (error de sintaxis, corrector ortográfico, y normalización de cadena) que se aplicarán.  
   
 ### <a name="reference-data-services"></a>Reference Data Services  
- En el proceso de administración de dominios, puede adjuntar datos de referencia en línea a un dominio. De esta forma compara los datos en el dominio con los datos que mantiene un proveedor de datos de referencia. Primero debe configurar el proveedor de datos de referencia mediante las funciones de configuración de DQS en la sección de **Administración** de aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Para más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ En el proceso de administración de dominios, puede adjuntar datos de referencia en línea a un dominio. De esta forma compara los datos en el dominio con los datos que mantiene un proveedor de datos de referencia. Primero debe configurar el proveedor de datos de referencia mediante las funciones de configuración de DQS en la sección de **Administración** de aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Para obtener más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
 ### <a name="applying-domain-rules"></a>Aplicar reglas de dominio  
  Puede crear reglas de dominio para la validación de datos. Las reglas de dominio garantizan la exactitud de los datos, e incluyen desde una restricción básica, como los posibles términos que puede ser un valor de cadena, hasta una expresión regular más compleja, como los formatos válidos para una dirección de correo electrónico.  
@@ -140,7 +139,7 @@ ms.locfileid: "48153005"
 ##  <a name="Matching"></a> Coincidencia de datos  
  Además de realizar cambios manuales en una base de conocimiento mediante la administración de dominios, puede agregar conocimiento coincidente a una base de conocimiento. Al objeto de preparar a DQS para el proceso de eliminación de datos duplicados, debe crear una directiva de búsqueda de coincidencias que vaya a usar DQS para calcular la probabilidad de encontrar coincidencias. La directiva incluye una o varias reglas de búsqueda de coincidencias que crea el administrador de datos para identificar cómo DQS debe comparar filas de datos. El administrador de datos determina qué campos de datos en la fila se deben comparar y el peso que debe tener cada campo en la comparación. El administrador de datos también determinará cuán alta será la probabilidad para que se identifique como coincidencia. DQS agrega las reglas de búsqueda de coincidencias a la base de conocimiento para su uso en el desarrollo de la actividad de búsqueda de coincidencias en el proyecto de calidad de datos.  
   
- Para obtener más información acerca de la base de conocimiento y coincidencia de datos, vea [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ Para obtener más información acerca de la base de conocimiento y la búsqueda de coincidencias, vea [Coincidencia de datos](../../2014/data-quality-services/data-matching.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  Puede realizar las siguientes operaciones en una base de conocimiento y sus dominios:  

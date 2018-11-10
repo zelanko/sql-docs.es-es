@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
@@ -15,21 +14,21 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091755"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031512"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
   En este tema se describe cómo realizar la búsqueda de coincidencias de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias identifica los clústeres de registros coincidentes en función de las reglas de coincidencia existentes en la directiva de coincidencia, designa un registro de cada clúster como el registro que permanece basándose en una regla de permanencia, y exporta los resultados. DQS realiza el proceso de búsqueda de coincidencias, también denominado eliminación de datos duplicados, en un proceso asistido por PC, pero es usted quien crea las reglas de coincidencia de forma interactiva y quien selecciona la regla de permanencia entre varias opciones, por lo que también es quien controla el proceso de búsqueda de coincidencias.  
   
  La búsqueda de coincidencias se realiza en tres fases: un proceso de asignación en el que se identifica el origen de datos y se asignan los dominios a dicho origen de datos, un proceso de búsqueda de coincidencias en el que se ejecuta el análisis de coincidencia, y un proceso de permanencia y exportación en el que se designa la regla de permanencia y se exportan los resultados de la búsqueda de coincidencias. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad de coincidencia, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso, y cerrar un proceso de búsqueda de coincidencias específico y volver a la misma fase del proceso. DQS proporciona estadísticas sobre los datos de origen, las reglas de coincidencia y los resultados de búsqueda de coincidencias que permiten tomar decisiones fundadas sobre la búsqueda de coincidencias y sobre cómo refinar este proceso.  
   
- Para preparar la búsqueda de coincidencias, debe crear una directiva de coincidencia con una o varias reglas de coincidencia y ejecutar dicha directiva con los datos de ejemplo. El proceso del proyecto de búsqueda de coincidencias es independiente del proceso de la directiva de coincidencia, lo que significa que una base de conocimiento no se rellena con el conocimiento de coincidencia obtenido del proyecto de búsqueda de coincidencias. Para obtener más información acerca de cómo crear una directiva de coincidencia, vea [crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
+ Para preparar la búsqueda de coincidencias, debe crear una directiva de coincidencia con una o varias reglas de coincidencia y ejecutar dicha directiva con los datos de ejemplo. El proceso del proyecto de búsqueda de coincidencias es independiente del proceso de la directiva de coincidencia, lo que significa que una base de conocimiento no se rellena con el conocimiento de coincidencia obtenido del proyecto de búsqueda de coincidencias. Para obtener más información acerca de cómo crear una directiva de coincidencia, vea [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -166,7 +165,7 @@ ms.locfileid: "48091755"
     >  Si finaliza un proyecto de búsqueda de coincidencias y, más adelante, lo vuelve a utilizar, este usará la base de conocimiento que tenía cuando se publicó. No usará ninguno de los cambios realizados en la base de conocimiento desde la finalización del proyecto. Para utilizar estos cambios, o para utilizar una base de conocimiento nueva, tendrá que crear un proyecto de búsqueda de coincidencias nuevo. Por otro lado, si ha creado, pero no finalizado, un proyecto de búsqueda de coincidencias, los cambios que haya publicado en la directiva de coincidencia se utilizarán si ejecuta la búsqueda de coincidencias en el proyecto.  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de ejecutar un proyecto de búsqueda de coincidencias  
- Después de ejecutar un proyecto de búsqueda de coincidencias, puede cambiar la directiva de coincidencia en la base de conocimiento y crear y ejecutar otro proyecto de búsqueda de coincidencias basado en la directiva de coincidencia actualizada. Para más información, consulte [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
+ Después de ejecutar un proyecto de búsqueda de coincidencias, puede cambiar la directiva de coincidencia en la base de conocimiento y crear y ejecutar otro proyecto de búsqueda de coincidencias basado en la directiva de coincidencia actualizada. Para obtener más información, consulte [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Pestañas Generador de perfiles y Resultados  
  Las pestañas Generador de perfiles y Resultados contienen las estadísticas del proceso de búsqueda de coincidencias.  

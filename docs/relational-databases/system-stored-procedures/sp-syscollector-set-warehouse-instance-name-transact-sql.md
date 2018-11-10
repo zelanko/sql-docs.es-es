@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  Es el nombre de la instancia. *instance_name* es **sysname** y los valores predeterminados para la instancia local si es NULL.  
   
-> **Nota:***instance_name* debe ser el nombre de instancia completo, que está formado por el nombre del equipo y el nombre de instancia en el formulario *computerName* \\ *nombreDeInstancia*.    
+> **Nota:** *instance_name* debe ser el nombre de instancia completo, que está formado por el nombre del equipo y el nombre de instancia en el formulario *computerName* \\ *nombreDeInstancia*.    
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

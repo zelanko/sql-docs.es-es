@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a7140e26bfb228234e692c3f1665aba070a32e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f502259f3de895a674a1fd26d94436277cbaed
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107885"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031842"
 ---
 # <a name="manage-a-knowledge-base"></a>Administrar una base de conocimiento
   En este tema se describe cómo realizar funciones de administración en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Puede eliminar una base de conocimiento, desbloquearla, descartar los cambios realizados en ella, cambiarle el nombre y mostrar sus propiedades.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para administrar una base de conocimiento, previamente esta debe haberse creado y estar publicada (si la ha creado otra persona) o cerrada (si la ha creado usted).  
@@ -43,9 +42,9 @@ ms.locfileid: "48107885"
   
     1.  **Abrir**: haga clic aquí para abrir la base de conocimiento de la actividad seleccionada en el panel **Seleccione la actividad** .  
   
-    2.  **Desbloquear**: puede desbloquear la base de conocimiento si es el usuario que estaba trabajando con ella en uno de los pasos de la actividad de administración de dominios, de detección de conocimiento y de directiva de coincidencia, y la cerró. Si desbloquea la base de conocimiento, otra persona podrá abrirla y trabajar con ella. Este comando no está disponible si la base de conocimiento no se encuentra en un estado de una actividad. Para obtener más información, consulte [abrir una Base de conocimiento](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    2.  **Desbloquear**: puede desbloquear la base de conocimiento si es el usuario que estaba trabajando con ella en uno de los pasos de la actividad de administración de dominios, de detección de conocimiento y de directiva de coincidencia, y la cerró. Si desbloquea la base de conocimiento, otra persona podrá abrirla y trabajar con ella. Este comando no está disponible si la base de conocimiento no se encuentra en un estado de una actividad. Para obtener más información, vea [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Descartar trabajo**: haga clic aquí si se está trabajando actualmente en la base de conocimiento, lo que se indica con una entrada en el campo Estado de la tabla. Este comando no está disponible si la base de conocimiento no se encuentra en un estado de una actividad, ni tampoco si está bloqueada. Para obtener más información, consulte [abrir una Base de conocimiento](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    3.  **Descartar trabajo**: haga clic aquí si se está trabajando actualmente en la base de conocimiento, lo que se indica con una entrada en el campo Estado de la tabla. Este comando no está disponible si la base de conocimiento no se encuentra en un estado de una actividad, ni tampoco si está bloqueada. Para obtener más información, vea [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
     4.  **Cambiar nombre**: haga clic aquí para editar el campo Base de conocimiento de la tabla de la base de conocimiento en la que hizo clic con el botón secundario. Cambie el nombre y, a continuación, haga clic en esa base de conocimiento y haga clic de nuevo en el campo para aceptar el cambio de nombre.  
   

@@ -4,15 +4,15 @@ description: Obtenga información sobre cómo configurar Kubernetes en varios Ub
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70ba143bf01336dbd77718007ccd0fb61acc21bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051396"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221781"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>Configuración de Kubernetes en varios equipos para las implementaciones de SQL Server 2019
 
@@ -143,4 +143,4 @@ kubectl get nodes
 
 Los pasos descritos en este artículo, configura un clúster de Kubernetes en varios equipos de Ubuntu. El siguiente paso es implementar el clúster de macrodatos de SQL Server 2019. Para obtener instrucciones, consulte el artículo siguiente:
 
-[Implementar 2019 CTP 2.0 de SQL Server en Kubernetes](deployment-guidance.md#deploy)
+[Implementar SQL Server 2019 CTP 2.1 en Kubernetes](deployment-guidance.md#deploy)

@@ -2,7 +2,7 @@
 title: Extensión de datos Studio SQL Server 2019 Azure (versión preliminar) | Microsoft Docs
 description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
 ms.custom: tools|sos
-ms.date: 10/11/2018
+ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411172"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269818"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
@@ -30,9 +30,9 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
    |Plataforma|Descargar|Fecha de la versión|Versión
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|18 de octubre de 2018|0.7.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|18 de octubre de 2018 |0.7.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|18 de octubre de 2018 |0.7.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|6 de noviembre de 2018 |0.8.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|6 de noviembre de 2018 |0.8.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|6 de noviembre de 2018 |0.8.0
 
 1. En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado.
 
@@ -42,6 +42,27 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
 1. Después de volver a cargar, la extensión instalará las dependencias. Puede ver el progreso en la ventana de salida, y puede tardar varios minutos.
 
+## <a name="release-notes-v080"></a>Notas de la versión (v0.8.0)
+*Blocs de notas*:
+* Agregar celdas antes y después existente ahora se admite celdas, haga clic en el botón de celda "Más acciones"
+* **Agregar nueva conexión** ha agregado la opción para las conexiones en la lista desplegable "Conectar a"
+* Un **volver a instalar las dependencias de Bloc de notas** comando se ha agregado a ayudar con las actualizaciones de paquetes de Python y resolver casos donde se detuvo la instalación cuelga a medio camino cerrando la aplicación. Esto se puede ejecutar desde la paleta de comandos (use `Ctrl/Cmd+Shift+P` y tipo `Reinstall Notebook Dependencies`)
+* El paquete de python PROSE se ha actualizado a la versión 1.1.0 e incluye una serie de correcciones de errores. Use la **volver a instalar las dependencias de Bloc de notas** comando para actualizar este paquete
+* Un **borrar resultado** ahora se admite el comando, haga clic en el **más acciones** botón de celda
+* Se ha corregido los siguientes problemas notificados por los clientes:
+  * No se pudo iniciar sesión de Bloc de notas en Windows debido a problemas de la ruta de acceso
+  * No se pudo iniciar el Bloc de notas de la carpeta raíz de una unidad, como C:\ o D:\
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) no se puede modificar los blocs de notas creados a partir de anuncios en VS Code
+  * Vínculo de la interfaz de usuario de Spark ahora funciona cuando se ejecuta un kernel de Spark
+  * Cambiar el nombre "Administrados paquetes" a "Instalar los paquetes"
+
+*Crear datos externos*:
+
+* Los mensajes de error son que se puede copiar y se han dividido en una vista resumida y detallada para sea más fácil
+* Diseño de interfaz de usuario mejorada y mejorar significativamente la confiabilidad y control de errores
+* Se ha corregido los siguientes problemas notificados por los clientes:
+  * Las tablas con asignaciones de columnas no válido se muestran como deshabilitado y una advertencia, explica el error
+
 ## <a name="release-notes-v072"></a>Notas de la versión (v0.7.2)
 * Explorador de recursos de Azure ahora está integrado en Azure Data Studio y se ha quitado de esta extensión. Le agradecemos sus comentarios sobre este.
 * Rendimiento mejorado de blocs de notas con muchas de las celdas de Markdown.
@@ -50,7 +71,7 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 * Compatibilidad con volver a instalar las dependencias del Bloc de notas. Esto es útil si el usuario cerró anteriormente Azure Data Studio mitad a través de la instalación.
 * Compatibilidad con cancelar la ejecución de la celda en el Bloc de notas.
 * Confiabilidad mejorada cuando se usa el Asistente para crear datos externos, específicamente cuando conexión se producen errores.
-* Bloquea el uso del Asistente para crear datos externos si Polybase no está habilitada o se ejecutan en el servidor de destino.
+* Bloquea el uso del Asistente para crear datos externos si PolyBase no está habilitada o se ejecutan en el servidor de destino.
 * Corrector ortográfico y correcciones relacionados con SQL Server 2019 y crear datos externos de nomenclatura.
 * Quita un gran número de errores de la consola de depuración de Azure Data Studio.
 
@@ -83,7 +104,7 @@ Para obtener más información, consulte [clústeres grandes de datos](../big-da
 * Las celdas de código o marcado mediante los botones se agregan en el encabezado del cuaderno. Eliminación de las celdas con el icono de Papelera a la izquierda de cada celda.
 * Ejecutar las celdas con el botón Reproducir para las celdas de código y activar o desactivar la edición de markdown y obtener una vista previa con el icono de ojo
 
-## <a name="polybase-create-external-table-wizard"></a>Asistente para la tabla externa de la creación de Polybase
+## <a name="polybase-create-external-table-wizard"></a>Asistente para la tabla externa de la creación de PolyBase
 
 * Desde una instancia de SQL Server 2019 el *crear Asistente para la tabla externa* se puede abrir de tres maneras:
   * Haga clic con el botón derecho en un servidor, elija **administrar**, haga clic en la pestaña para SQL Server 2019 (versión preliminar) y elija **Create External Table**.
@@ -106,3 +127,5 @@ Para obtener más información, consulte [clústeres grandes de datos](../big-da
 
 * Si no se guarda la contraseña al crear una conexión, algunas acciones como enviar trabajo de Spark pueden no realizarse correctamente.
 * Blocs de notas .ipynb existentes deben actualizarse a la versión 4 o posterior para cargar contenido en el Visor.
+* Ejecuta el **volver a instalar las dependencias de Bloc de notas** comando puede mostrar 2 tareas en la vista de tareas, uno de los cuales se produce un error. Esto hace que no se instale correctamente
+* Elegir **agregar nueva conexión** en un bloc de notas y haga clic en Cancelar, se producirán **Seleccionar conexión** van a mostrar, incluso si ya se han conectado.

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189555"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018570"
 ---
 # <a name="upgrade-database-engine"></a>Actualizar el motor de base de datos
   Este tema proporciona información que necesitará para preparar y comprender el proceso de actualización; incluye:  
@@ -44,7 +43,7 @@ ms.locfileid: "48189555"
 >  Antes de actualizar de una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra, compruebe que las funciones que actualmente utiliza son compatibles con la edición a la que desea actualizar.  
   
 > [!NOTE]  
->  Al actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, elija entre “Enterprise Edition: Licencia Core” y “Enterprise Edition”. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Al actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, elija entre “Enterprise Edition: Licencia Core” y “Enterprise Edition”. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, vea [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de comprobación previa a la actualización  
  El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la actualización a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una versión anterior. También puede migrar las bases de datos de las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores. La migración puede ser de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra instancia del mismo equipo, o desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otro equipo. Las opciones de migración incluyen el uso del Asistente para copiar bases de datos, la funcionalidad Copia de seguridad y restauración, el uso del Asistente para importar y exportar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los métodos de importación en bloque y exportación masiva.  
@@ -108,7 +107,7 @@ ms.locfileid: "48189555"
  Si el nivel de compatibilidad de una base de datos de usuario era 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad era 90 antes de la actualización, en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Nuevas bases de datos de usuario heredarán el nivel de compatibilidad de la `model` base de datos.  
+>  Las nuevas bases de datos de usuario heredarán el nivel de compatibilidad de la base de datos `model`.  
   
 ## <a name="migrating-databases"></a>Migrar bases de datos  
  Puede mover bases de datos de usuario a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando las funcionalidades de copias de seguridad y restauración o de adjuntar y separar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) o [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -125,7 +124,7 @@ ms.locfileid: "48189555"
   
 -   Vuelva a rellenar los catálogos de texto completo para garantizar la coherencia semántica de los resultados de la consulta.  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala nuevos separadores de palabras para ser usados en la búsqueda de texto completo y la búsqueda semántica. Los separadores de palabras se usan en el momento de la indización y en el momento de la consulta. Si no recompila los catálogos de texto completo, los resultados de la búsqueda pueden ser incoherentes. Si emite una consulta de texto completo que busca una frase que el separador de palabras de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] separó de forma diferente que el separador de palabras actual, es posible que no se recupere un documento o una fila que contengan la frase. Esto se debe a que las frases indizadas se separaron mediante una lógica diferente de la que está usando la consulta. La solución es volver a rellenar (volver a generar) los catálogos de texto completo con los nuevos separadores de palabras de modo que los comportamientos en el momento de la indización y en el momento de la consulta sean idénticos.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala nuevos separadores de palabras para ser utilizados en la búsqueda de texto completo y la búsqueda semántica. Los separadores de palabras se usan en el momento de la indización y en el momento de la consulta. Si no recompila los catálogos de texto completo, los resultados de la búsqueda pueden ser incoherentes. Si emite una consulta de texto completo que busca una frase que el separador de palabras de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] separó de forma diferente que el separador de palabras actual, es posible que no se recupere un documento o una fila que contengan la frase. Esto se debe a que las frases indizadas se separaron mediante una lógica diferente de la que está usando la consulta. La solución es volver a rellenar (volver a generar) los catálogos de texto completo con los nuevos separadores de palabras de modo que los comportamientos en el momento de la indización y en el momento de la consulta sean idénticos.  
   
      Para más información, vea [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   
@@ -133,7 +132,7 @@ ms.locfileid: "48189555"
   
 -   Valide o quite las sugerencias de USE PLAN que genera [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y que se aplican a las consultas en las tablas con particiones e índices.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia la manera en que se procesan las consultas en tablas con particiones e índices. Las consultas en los objetos con particiones que usan la sugerencia USE PLAN para un plan generado por [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] podrían contener un plan que no se pueda usar en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Recomendamos que siga estos procedimientos después de actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia la manera en la que se procesan las consultas en las tablas e índices con particiones. Las consultas en los objetos con particiones que usan la sugerencia USE PLAN para un plan generado por [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] podrían contener un plan que no se pueda usar en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Recomendamos que siga estos procedimientos después de actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
      **Cuando se especifica la sugerencia USE PLAN directamente en una consulta:**  
   

@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679383"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018340"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|SID del inicio de sesión de destino. Acepta valores NULL. Devuelve NULL si no es aplicable.|  
 |target_database_principal_name|**sysname**|Usuario de destino de la acción. Acepta valores NULL. Devuelve NULL si no es aplicable.|  
 |server_instance_name|**sysname**|Nombre de la instancia de servidor donde se ha producido la auditoría. Se usa el formato servidor\instancia estándar.|  
-|database_name|**sysname**|Contexto de base de datos en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se realizan en el nivel de servidor.|  
+|database_name|**sysname**|Contexto de base de datos en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen en el nivel de servidor.|  
 |schema_name|**sysname**|El contexto del esquema en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen fuera de un esquema.|  
 |object_name|**sysname**|El nombre de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación.|  
 |instrucción|**nvarchar(4000)**|Instrucción TSQL, si existe. Acepta valores NULL. Devuelve NULL si no es aplicable.|  

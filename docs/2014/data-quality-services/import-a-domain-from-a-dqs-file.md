@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8506e286015d0c695c4c0d01ac675509a312da6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3153f923cae3a8935dad5e260af5cf5af310de26
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153445"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030162"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar un dominio desde un archivo .dqs
   En este tema se describe cómo importar un dominio desde un archivo .dqs a una base de conocimiento existente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los archivos de datos .dqs se crean al exportar un dominio o una base de conocimiento desde la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . El archivo de datos .dqs está cifrado, por lo que no se puede ver.  
@@ -25,7 +24,7 @@ ms.locfileid: "48153445"
   
  Cuando se importa un dominio, su nombre será el mismo que el del dominio que se exportó originalmente, a menos que exista dicho nombre, en cuyo caso DQS le agregará la cadena “_1”. Lo mismo sucederá si se importa un dominio compuesto que contiene un dominio individual con el mismo nombre que uno ya existente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para importar un dominio desde un archivo .dqs, es necesario haber exportado previamente un dominio individual o uno compuesto (que contiene varios dominios individuales) a dicho archivo. El archivo .dqs solo puede incluir un dominio. También debe haber creado y abierto una base de conocimiento en la que importar el dominio.  

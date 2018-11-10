@@ -16,15 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe4a2a137c55487203d3e2f55ea30cf1283fe595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238ce05661786893afcb8757bd56e4cc31f8dbe4
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641663"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970766"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referencia de Transact-SQL (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 En este tema se proporcionan los conceptos básicos sobre cómo encontrar y utilizar los temas de referencia de Microsoft Transact-SQL (T-SQL). T-SQL es fundamental para trabajar con servicios y productos de Microsoft SQL. Todas las herramientas y aplicaciones que se comunican con una base de datos SQL lo hacen enviando comandos T-SQL.  
 

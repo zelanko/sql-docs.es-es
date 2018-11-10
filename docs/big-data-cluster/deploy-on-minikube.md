@@ -4,15 +4,15 @@ description: Obtenga información sobre cómo configurar Minikube para las imple
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050787"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221579"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configuración de Minikube para las implementaciones de clústeres de macrodatos de SQL Server 2019
 
@@ -20,7 +20,7 @@ En este artículo se describe cómo configurar **minikube** en una única máqui
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Para ejecutar un clúster de Minikube para SQL Server de 2019 CTP 2.0 en una configuración de clúster de macrodatos SQL, se recomienda que la máquina tenga al menos 32 GB de RAM.
+- Para ejecutar un clúster de Minikube para 2019 CTP 2.1 de SQL Server en una configuración de clúster de macrodatos SQL, se recomienda que la máquina tenga al menos 32 GB de RAM.
 
    > [!TIP] 
    > Si el equipo tiene solo el mínimo de memoria recomendado, a continuación, configurar la implementación de clúster tenga la instancia del grupo de 1 almacenamiento, 1 instancia del grupo de datos y solo 1 instancia de grupo de proceso. Esta configuración solo debe usar para entornos de evaluación donde la durabilidad y disponibilidad de los datos no son importantes. Consulte la [documentación de implementación](deployment-guidance.md#define-environment-variables) para obtener más información sobre las variables de entorno para establecer el número de réplicas para grupos de datos de configuración, calcular los grupos y grupos de almacenamiento.
@@ -44,7 +44,7 @@ En este artículo se describe cómo configurar **minikube** en una única máqui
 
 ## <a name="install-minikube"></a>Instalar Minikube
 
-Instalar Minikube según las instrucciones para la [v0.28.2 versión](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). El clúster de macrodatos de SQL Server de 2019 CTP 2.0 sólo funciona con la versión v0.24.1 y posteriores.
+Instalar Minikube según las instrucciones para la [v0.28.2 versión](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). El clúster de SQL Server de 2019 CTP 2.1 macrodatos solo funciona con la versión v0.24.1 y posteriores.
 
 ## <a name="create-a-minikube-cluster"></a>Crear un clúster de Minikube
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 Los pasos descritos en este artículo, configuran un clúster de Minikube. El siguiente paso es implementar el clúster de macrodatos de SQL Server 2019. Para obtener instrucciones, consulte el artículo siguiente:
 
-[Implementar 2019 CTP 2.0 de SQL Server en Kubernetes](deployment-guidance.md#deploy)
+[Implementar SQL Server 2019 CTP 2.1 en Kubernetes](deployment-guidance.md#deploy)

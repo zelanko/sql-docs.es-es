@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
@@ -13,12 +12,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7213b82f77bf283cf3debf268ed089058b05c7e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff3112e552eb037f0f4c000cd0e62bbdfa952150
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140135"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032411"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
   En este tema se describe cómo crear un dominio vinculado en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los dominios vinculados se crean a partir de otros dominios previamente existentes, y heredan todos los valores, reglas y propiedades de los dominios a los que están vinculados, con la excepción del nombre y la descripción. Es posible administrar un conjunto de dominios vinculados como si fuera un único dominio. Al vincular un dominio al otro, se crea un dominio que hereda su contenido de otro dominio.  
@@ -34,7 +33,7 @@ ms.locfileid: "48140135"
   
  Un ejemplo sería un registro que contiene los campos siguientes: Nombre del cliente, Apellidos del cliente y Nombre del padre. Imagine que asigna el nombre del cliente y el nombre del padre a un dominio Nombre, y que incluye tanto este como el dominio Apellidos en el dominio compuesto Nombre completo. El problema es que el nombre del padre se agregará al dominio compuesto sin apellidos. Sin embargo, si vincula cada uno de los dos campos de nombre a un dominio y vincula ambos dominios, podrá agregar el dominio Nombre del cliente al dominio compuesto Nombre completo, y no agregar el campo Nombre del padre a dicho dominio, con lo que evitará que el Nombre del padre se agregue al dominio compuesto.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio vinculado, es necesario tener una base de conocimiento y un dominio existente al que desea vincular.  

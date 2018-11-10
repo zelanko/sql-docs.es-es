@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798943"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031028"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
@@ -62,8 +62,8 @@ Escalado de lectura, alta disponibilidad y protección de datos, puede proporcio
 | |escalado de lectura|Alta disponibilidad & </br> protección de datos | Protección de los datos
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une. 
-|Interrupción de réplica secundaria  | La réplica principal es R / w. No hay conmutación automática por error si se produce un error en la principal. |La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. 
+|Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une. 
+|Interrupción de réplica secundaria  | La réplica principal es R / w. No hay conmutación automática por error si se produce un error en la principal. |La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. 
 <sup>*</sup> Valor predeterminado
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ Un grupo de disponibilidad con dos réplicas sincrónicas proporciona protecció
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w.| Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une.
-|Interrupción de réplica secundaria  |Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos. |Principal no está disponible para las transacciones de usuario hasta que se recupere la secundaria.
+|Interrupción de réplica secundaria  |Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos. |Principal no está disponible para las transacciones de usuario hasta que se recupere la secundaria.
 <sup>*</sup> Valor predeterminado
 
 >[!NOTE]
@@ -108,9 +108,9 @@ El valor predeterminado de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0. E
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupción principal | Conmutación por error automática. La nueva réplica principal es R / w. | Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario. 
-|Interrupción de la réplica secundaria | Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos (si la principal se produce un error y no se puede recuperar). No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica de la conmutación por error a si la principal produce un error también. 
-|Interrupción de réplica de solo configuración | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. 
-|Elemento secundario sincrónico + configuración sólo la interrupción de réplica| Principal no está disponible para las transacciones de usuario. Ninguna conmutación por error automática. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica en conmutación por error como si principal se produce un error también. 
+|Interrupción de la réplica secundaria | Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos (si la principal se produce un error y no se puede recuperar). No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica de la conmutación por error a si la principal produce un error también. 
+|Interrupción de réplica de solo configuración | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. 
+|Elemento secundario sincrónico + configuración sólo la interrupción de réplica| Principal no está disponible para las transacciones de usuario. Ninguna conmutación por error automática. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica en conmutación por error como si principal se produce un error también. 
 <sup>*</sup> Valor predeterminado
 
 >[!NOTE]

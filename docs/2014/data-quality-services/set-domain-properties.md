@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,17 +12,17 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190965"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030882"
 ---
 # <a name="set-domain-properties"></a>Establecer las propiedades de dominio
   En este tema se describe cómo establecer las propiedades del dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para establecer las propiedades de un dominio, debe haber creado una base de conocimiento y un dominio.  
@@ -35,9 +34,9 @@ ms.locfileid: "48190965"
   
 ##  <a name="Set"></a> Establecer las propiedades de dominio  
   
-1.  Establecer propiedades en un dominio existente, abra una base de conocimiento en la actividad de administración de dominios (vea [abrir una Base de conocimiento](../../2014/data-quality-services/open-a-knowledge-base.md)) y, a continuación, seleccione el dominio adecuado en el **dominio** lista. La página Propiedades del dominio se mostrará de forma predeterminada.  
+1.  Para establecer las propiedades de un dominio existente, abra una base de conocimiento en la actividad Administración de dominios (vea [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)) y seleccione el dominio adecuado en la lista **Dominio** . La página Propiedades del dominio se mostrará de forma predeterminada.  
   
-2.  Establecer propiedades de un dominio nuevo después de crearlo, como se describe en [crear un dominio](../../2014/data-quality-services/create-a-domain.md).  
+2.  Para establecer las propiedades de un dominio nuevo después de crearlo, use el procedimiento que se describe en [Create a Domain](../../2014/data-quality-services/create-a-domain.md).  
   
 3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48190965"
 ###  <a name="Speller"></a> Habilitar corrector ortográfico  
  Si el tipo de datos es **Cadena**, haga clic aquí para habilitar el corrector ortográfico de DQS en el dominio. El corrector ortográfico solo funciona en dominios cuyo tipo de datos es de cadena. La casilla **Habilitar corrector ortográfico** habilita el corrector ortográfico solo en el dominio individual que está asociado a la casilla. La casilla no se aplica a un dominio compuesto.  
   
- El corrector ortográfico propone correcciones de sintaxis y de validación para los valores del dominio. Para obtener más información, consulte [utilizar el corrector ortográfico de DQS](../../2014/data-quality-services/use-the-dqs-speller.md).  
+ El corrector ortográfico propone correcciones de sintaxis y de validación para los valores del dominio. Para obtener más información, vea [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Deshabilitar algoritmos de error de sintaxis  
  Si el tipo de datos es **Cadena**, seleccione esta opción para que DQS no identifique los errores de sintaxis en el dominio durante el proceso de limpieza. Active esta casilla si la identificación de los errores de sintaxis en el dominio es irrelevante. Por ejemplo, la identificación de los errores de sintaxis puede no afectar a un número de serie. Este control solo está disponible para el tipo de datos de cadena. DQS no comprobará los errores de sintaxis en los tipos de datos que no son de cadena.  

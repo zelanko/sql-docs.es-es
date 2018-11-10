@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205551"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030172"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Agregar conocimiento a una base de conocimiento
   En este tema se describen las diferentes formas de agregar conocimiento a una base de conocimiento en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Para poder realizar operaciones de calidad de datos, tiene que tener conocimientos sobre estos. Para adquirirlo, deberá generar y mantener una base de conocimiento de calidad de datos (DQKB), y agregar en ella conocimiento relacionado con un tipo específico de origen de datos. La base de conocimiento es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad.  
@@ -69,6 +68,6 @@ ms.locfileid: "48205551"
 ##  <a name="Default"></a> Utilizar la base de conocimiento de DQS predeterminada  
  DQS se suministra con una base de conocimiento denominada Datos de DQS que contiene dominios para datos de direcciones y de empresas de EE. UU. Esta base de conocimiento se puede utilizar para iniciar rápidamente un proyecto sin crear una nueva base de conocimiento. La base de conocimiento Datos de DQS es de solo lectura, pero el administrador de datos puede crear una nueva base de conocimiento basándose en ella.  
   
--   Para obtener más información en la documentación, vea [con la Base de conocimiento predeterminado DQS](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
+-   Para obtener más información en la documentación, vea [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   

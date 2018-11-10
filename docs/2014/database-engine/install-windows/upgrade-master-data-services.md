@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079681"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019020"
 ---
 # <a name="upgrade-master-data-services"></a>Actualizar Master Data Services
   Existen cuatro escenarios para actualizarse a Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Elija el escenario que se corresponde con su situación.  
@@ -34,7 +33,7 @@ ms.locfileid: "48079681"
 > -   Realice una copia de la base de datos antes de realizar cualquier actualización.  
 > -   El proceso de actualización vuelve a crear los procedimientos almacenados y actualiza las tablas que usa [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Cualquier personalización que haya realizado en alguno de estos componentes se podría perder.  
 > -   Los paquetes de implementación de modelos solo se pueden usar en la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se crearon. No se puede implementar paquetes de implementación de modelo que creó en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-> -   Puede seguir usando el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión SP1 de Master Data Services complemento para Excel después de actualizar Master Data Services y Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión SP1 de Master Data Services complemento para Excel desde [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Puede continuar con la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 de servicios del complemento Master Data Services para Excel después de actualizar Master Data Services y Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del complemento de Master Data Services para Excel [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="noengine"></a> Actualizar sin actualización del motor de base de datos  
  Este escenario se puede considerar una instalación en paralelo, porque ambos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se instalan en paralelo, en el mismo equipo o en equipos independientes.  
@@ -65,7 +64,7 @@ ms.locfileid: "48079681"
   
 2.  Una vez completada la instalación, actualice el esquema de la base de datos de MDS.  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Para actualizar el esquema de base de datos de MDS, debe haber iniciado sesión con la cuenta de administrador que se especificó cuando se creó la base de datos de MDS. En la base de datos de MDS, en mdm.tblUser, el usuario tiene el valor de **Id.** establecido en **1**. Para obtener información acerca de cómo cambiar este usuario, consulte [cambiar la cuenta de administrador del sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -78,7 +77,7 @@ ms.locfileid: "48079681"
   
 3.  Una vez completada la actualización, cree una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  En el panel izquierdo, haga clic en **Configuración web**.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "48079681"
   
 4.  Actualice el esquema de la base de datos de MDS.  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Para actualizar el esquema de base de datos de MDS, debe haber iniciado sesión con la cuenta de administrador que se especificó cuando se creó la base de datos de MDS. En la base de datos de MDS, en mdm.tblUser, el usuario tiene el valor de **Id.** establecido en **1**. Para obtener información acerca de cómo cambiar este usuario, consulte [cambiar la cuenta de administrador del sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -149,7 +148,7 @@ ms.locfileid: "48079681"
   
 5.  Una vez completada la actualización, cree una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  En el panel izquierdo, haga clic en **Configuración web**.  
   
@@ -199,7 +198,7 @@ ms.locfileid: "48079681"
   
 2.  Una vez completada la instalación, actualice el esquema de la base de datos de MDS.  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Para actualizar el esquema de base de datos de MDS, debe haber iniciado sesión con la cuenta de administrador que se especificó cuando se creó la base de datos de MDS. En la base de datos de MDS, en mdm.tblUser, el usuario tiene el valor de **Id.** establecido en **1**. Para obtener información acerca de cómo cambiar este usuario, consulte [cambiar la cuenta de administrador del sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -212,7 +211,7 @@ ms.locfileid: "48079681"
   
 3.  Una vez completada la actualización, cree una aplicación web de SQL Server 2014.  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  En el panel izquierdo, haga clic en **Configuración web**.  
   
@@ -262,7 +261,7 @@ ms.locfileid: "48079681"
   
 3.  Una vez completada la instalación, actualice el esquema de la base de datos de MDS.  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Para actualizar el esquema de base de datos de MDS, debe haber iniciado sesión con la cuenta de administrador que se especificó cuando se creó la base de datos de MDS. En la base de datos de MDS, en mdm.tblUser, el usuario tiene el valor de **Id.** establecido en **1**. Para obtener información acerca de cómo cambiar este usuario, consulte [cambiar la cuenta de administrador del sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -275,7 +274,7 @@ ms.locfileid: "48079681"
   
 4.  Una vez completada la actualización, cree una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    1.  Abra el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verzi [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Abra la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  En el panel izquierdo, haga clic en **Configuración web**.  
   

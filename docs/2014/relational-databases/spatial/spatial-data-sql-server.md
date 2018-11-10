@@ -1,11 +1,9 @@
 ---
 title: Datos espaciales (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server], spatial storage design
@@ -19,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f25de7e1aa60d482d5256470d3fb2e1ada08f356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222175"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018100"
 ---
 # <a name="spatial-data-sql-server"></a>Datos espaciales (SQL Server)
   Los datos espaciales representan información sobre la ubicación física y la forma de objetos geométricos. Estos objetos pueden ser ubicaciones de punto u objetos más complejos como países, carreteras o lagos.  
@@ -33,7 +31,7 @@ ms.locfileid: "48222175"
   
 -   El tipo `geometry` representa los datos en un sistema de coordenadas euclidiano (plano).  
   
--   El `geography` tipo representa los datos en un sistema de coordenadas de tierra redonda.  
+-   El tipo `geography` representa los datos en un sistema de coordenadas de tierra redonda.  
   
  Ambos tipos de datos se implementan como tipos de datos .NET Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

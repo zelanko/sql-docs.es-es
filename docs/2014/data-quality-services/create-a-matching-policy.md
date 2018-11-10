@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbmatchingresults.f1
@@ -15,19 +14,19 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2313708f4669b9cde09233d6a87d66eaf5662fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc7379ef20846309872c6faf707aab04fb6a364
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090955"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033122"
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
   En este tema se describe cómo crear una directiva de coincidencia en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias se prepara en DQS ejecutando la actividad Directiva de coincidencia con los datos de ejemplo. En esta actividad creará y probará una o varias reglas de coincidencia en la directiva y después publicará la base de conocimiento para poner a disposición pública las reglas de coincidencia. Solo puede haber una directiva de coincidencia en cada base de conocimiento, pero esta directiva puede contener varias reglas de coincidencia.  
   
  La creación de directivas de coincidencia se realiza en tres etapas: un proceso de asignación en el que se identifica el origen de datos y se asignan dominios a las columnas, un proceso de directiva de coincidencia en el que se pueden crear una o varias reglas de coincidencia y probar cada regla de coincidencia por separado, y un proceso de resultados de búsqueda de coincidencias en el que se ejecutan todas las reglas de coincidencia juntas y, si se está satisfecho con ellas, se agrega la directiva a la base de conocimiento. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad Directiva de coincidencia, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso y cerrar un proceso de directiva de coincidencia específico y volver a la misma fase del proceso. Después de comprobar todas las reglas juntas, si lo desea puede volver a la página **Directiva de coincidencia** , modificar una de las reglas, probarla de nuevo por separado y, a continuación, volver a la página **Resultados de búsqueda de coincidencias** para volver a ejecutar todas las reglas juntas. DQS proporciona estadísticas sobre los datos de origen, las reglas de coincidencia y los resultados de búsqueda de coincidencias que permiten tomar decisiones fundadas sobre la directiva de coincidencia para poder mejorarla.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Si los datos de origen están en un archivo de Excel, es necesario tener instalado Microsoft Excel en el equipo de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . De lo contrario, no podrá seleccionar dicho archivo en la fase de asignación. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Si se utiliza la versión de 64 bits de Excel, solo se admitirán los archivos de Excel 2003 (.xls); los archivos de Excel 2007 o 2010 (.xlsx) no son compatibles. Si utiliza la versión de 64 bits de Excel 2007 o 2010, guarde el archivo como un archivo .xls o .csv, o instale una versión de 32 bits de Excel en su lugar.  

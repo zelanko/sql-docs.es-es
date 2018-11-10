@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 988205e5f81b463d52bc2c2ec809e45c7d712856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833073"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269628"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Inicio rápido: Instalar SQL Server y crear una base de datos en SUSE Linux Enterprise Server
 
@@ -24,13 +24,13 @@ ms.locfileid: "47833073"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-En este tutorial, instale SQL Server 2017 ni SQL Server 2019 CTP 2.0 en SUSE Linux Enterprise Server (SLES) v12 SP2. A continuación, conecte con **sqlcmd** para crear su primera base de datos y ejecutar consultas.
+En este tutorial, instale SQL Server 2017 o la vista previa de 2019 de SQL Server en SUSE Linux Enterprise Server (SLES) v12 SP2. A continuación, conecte con **sqlcmd** para crear su primera base de datos y ejecutar consultas.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-En este tutorial, instale SQL Server 2019 CTP 2.0 en SP2 v12 de SUSE Linux Enterprise Server (SLES). A continuación, conecte con **sqlcmd** para crear su primera base de datos y ejecutar consultas.
+En este tutorial, instalar vista previa de 2019 de SQL Server en SUSE Linux Enterprise Server (SLES) v12 SP2. A continuación, conecte con **sqlcmd** para crear su primera base de datos y ejecutar consultas.
 
 ::: moniker-end
 
@@ -155,7 +155,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termin
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-En este momento, 2019 CTP 2.0 de SQL Server se está ejecutando en el equipo SLES y está listo para usarse.
+En este momento, vista previa de SQL Server 2019 se está ejecutando en el equipo SLES y está listo para usarse.
 
 ::: moniker-end
 

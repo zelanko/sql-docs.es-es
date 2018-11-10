@@ -4,15 +4,15 @@ description: Obtenga información sobre cómo usar el portal de administración 
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356056"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221471"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>Introducción al portal de administración de clúster
 
@@ -32,7 +32,7 @@ Siga el [inicio rápido para implementar el clúster de macrodatos](quickstart-b
 Una vez que se está ejecutando el pod del controlador, puede usar el portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
 
 > [!NOTE]
-> Para CTP 2.0, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
+> Para CTP 2.1, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
 
 ## <a name="overview"></a>Información general
 

@@ -34,7 +34,7 @@ ms.locfileid: "48152815"
 >  Esta opción solo está disponible cuando trabaja con un proyecto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y no está disponible cuando está conectado directamente a una base de datos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Generar tablas en el origen de datos**  
- Seleccione esta opción para crear en primer lugar un cubo primero y, a continuación, generar nuevas tablas en el origen de datos basado** en la definición de cubo.  
+ Seleccione esta opción para crear en primer lugar un cubo primero y, a continuación, generar nuevas tablas en el origen de datos basado en la definición de cubo.  
   
 > [!NOTE]  
 >  Para usar esta opción, debe tener permiso para crear objetos en el origen de datos subyacente.  
@@ -42,7 +42,7 @@ ms.locfileid: "48152815"
  Si selecciona esta opción, se habilitará la opción **Plantilla** .  
   
  **Plantilla**  
- Seleccione la plantilla que desea usar para crear el cubo. Las plantillas proporcionan un conjunto de definiciones orientadas para un motivo** profesional específico.  
+ Seleccione la plantilla que desea usar para crear el cubo. Las plantillas proporcionan un conjunto de definiciones orientadas para un motivo profesional específico.  
   
 > [!NOTE]  
 >  Esta opción solo está disponible cuando se ha activado la opción **Generar tablas en el origen de datos** .  

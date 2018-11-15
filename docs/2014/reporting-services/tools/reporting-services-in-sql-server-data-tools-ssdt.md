@@ -252,7 +252,7 @@ ms.locfileid: "48906305"
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> Control de código fuente  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se puede integrar con los complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo Opciones** para especificar el complemento y configurar las propiedades.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se puede integrar con los complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Plantillas de informe personalizadas  
  Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en \<unidad >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  

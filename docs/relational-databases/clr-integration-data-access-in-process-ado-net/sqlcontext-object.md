@@ -15,12 +15,12 @@ ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c14003652db37ca23addd2ac0dfd14ca0ada9f00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825293"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664875"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47825293"
  Consulta el **SqlContext** clase para ver si el código que se está ejecutando actualmente se está ejecutando en proceso. Para ello, compruebe el **IsAvailable** propiedad de la **SqlContext** objeto. El **IsAvailable** propiedad es de solo lectura y devuelve **True** si se está ejecutando el código de llamada dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si otros **SqlContext** pueden tener acceso a miembros. Si el **IsAvailable** propiedad devuelve **False**, todos los demás **SqlContext** los miembros de producir una **InvalidOperationException**, si se usa . Si **IsAvailable** devuelve **False**, cualquier intento de abrir un objeto de conexión que tiene "conexión de contexto = true" en la cadena de conexión se produce un error.  
   
 ## <a name="retrieving-windows-identity"></a>Recuperar la identidad de Windows  
- El código CLR que se ejecuta dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre se invoca en el contexto de la cuenta de proceso. Si el código debe realizar algunas acciones utilizando la identidad del usuario que realiza la llamada, en lugar de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identidad de proceso, a continuación, se debe obtener un token de suplantación a través de la **WindowsIdentity** propiedad de la  **SqlContext** objeto. El **WindowsIdentity** propiedad devuelve un **WindowsIdentity** instancia que representa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] identidad de Windows del llamador, o null si el cliente se autenticó utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación. Solo los ensamblados marcados con **EXTERNAL_ACCESS** o **UNSAFE** permisos pueden tener acceso a esta propiedad.  
+ El código CLR que se ejecuta dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre se invoca en el contexto de la cuenta de proceso. Si el código debe realizar algunas acciones utilizando la identidad del usuario que realiza la llamada, en lugar de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identidad de proceso, a continuación, se debe obtener un token de suplantación a través de la **WindowsIdentity** propiedad de la  **SqlContext** objeto. El **WindowsIdentity** propiedad devuelve un **WindowsIdentity** instancia que representa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] identidad de Windows del llamador, o null si el cliente se autenticó utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación. Sólo los ensamblados marcan con **EXTERNAL_ACCESS** o **UNSAFE** permisos tener acceso a esta propiedad.  
   
  Después de obtener el **WindowsIdentity** de objeto, los autores de llamadas pueden suplantar la cuenta de cliente y realizar acciones en su nombre.  
   
@@ -132,7 +132,7 @@ End Sub
 ## <a name="see-also"></a>Vea también  
  [Objeto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
  [Objeto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
- [Desencadenadores CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
+ [Desencadenadores CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

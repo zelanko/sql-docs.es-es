@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605513"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603755"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47605513"
 En este tema se analizan las constantes definidas por los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Constantes del controlador PDO_SQLSRV  
-Las constantes incluidas en el [sitio web de PDO](http://php.net/manual/book.pdo.php) son válidas para los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Las constantes incluidas en el [sitio web de PDO](https://php.net/manual/book.pdo.php) son válidas para los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 En las siguientes secciones, se describen las constantes específicas de Microsoft del controlador PDO_SQLSRV.  
   
@@ -132,7 +132,7 @@ En la siguiente lista se enumeran las constantes para especificar la dirección 
 |SQLSRV_PARAM_OUT|Indica un parámetro de salida.|  
   
 ### <a name="phptype-constants"></a>Constantes de PHPTYPE  
-En la siguiente tabla se muestran las constantes que se utilizan para describir tipos de datos PHP. Para obtener información sobre los tipos de datos PHP, vea [Tipos de PHP](http://php.net/manual/en/language.types.php).  
+En la siguiente tabla se muestran las constantes que se utilizan para describir tipos de datos PHP. Para obtener información sobre los tipos de datos PHP, consulte [Tipos de PHP](https://php.net/manual/en/language.types.php).  
   
 |Constante de SQLSRV|Tipo de datos PHP|  
 |-------------------|-----------------|  

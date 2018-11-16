@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 88d50c22a9e48db225f8cd38d8a1050ec0f4c156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af05ede442133465e7f268665bac4cd11a17f653
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851733"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604605"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux y macOS Tutorial de instalación para los Drivers de Microsoft para PHP para SQL Server
 Las siguientes instrucciones suponen un entorno limpio y muestran cómo instalar PHP 7.x, el controlador ODBC de Microsoft, Apache y Microsoft Drivers for PHP for SQL Server en Ubuntu 16.04, 17.10 y 18.04, Red Hat 7, Debian 8 y 9, Suse 12 y macOS 10.11 , 10.12 y 10.13. Estas instrucciones aconseja instalar los controladores con PECL, pero también puede descargar los archivos binarios creados previamente desde la [Microsoft Drivers para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases) Github página project e instalarlos siguiendo las instrucciones de [ Carga de los controladores de Microsoft para PHP para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obtener una explicación de la carga de la extensión y por qué no agregar las extensiones en php.ini, vea la sección sobre [carga de los controladores](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -81,7 +81,7 @@ Para probar la instalación, consulte [comprobación de la instalación](#testin
 ```
 sudo su
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
 subscription-manager repos --enable=rhel-7-server-optional-rpms
 yum-config-manager --enable remi-php72
@@ -187,12 +187,12 @@ Para probar la instalación, consulte [comprobación de la instalación](#testin
 
 > [!NOTE]
 > Para instalar PHP 7.0, omita el siguiente comando Agregar el repositorio - 7.0 es el valor predeterminado PHP en suse 12.
-> Para instalar PHP 7.1, reemplace la dirección URL del repositorio a continuación por la dirección URL siguiente: `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> Para instalar PHP 7.1, reemplace la dirección URL del repositorio a continuación por la dirección URL siguiente: `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### <a name="step-1-install-php"></a>Paso 1. Instalación de PHP
 ```
 sudo su
-zypper -n ar -f http://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
+zypper -n ar -f https://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
 zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-pear php7-devel
 ```
@@ -329,7 +329,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-Dirija el explorador http://localhost/testsql.php (http://localhost:8080/testsql.php en macOS). Ahora podrá conectarse a la base de datos SQL de SQL Server o SQL Azure.
+Dirija el explorador https://localhost/testsql.php (https://localhost:8080/testsql.php en macOS). Ahora podrá conectarse a la base de datos SQL de SQL Server o SQL Azure.
 
 ## <a name="see-also"></a>Ver también  
 [Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

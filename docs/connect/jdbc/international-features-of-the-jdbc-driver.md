@@ -11,21 +11,21 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682573"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601975"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Características internacionales del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Entre las características de internacionalización del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se incluyen las siguientes:  
+  Entre las características de internacionalización de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se incluye lo siguiente:  
   
 -   Compatibilidad con el trabajo en los mismos idiomas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Compatibilidad con las conversiones de idioma de Java para datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los que el idioma sea importante  
+-   Compatibilidad con las conversiones de idioma de Java para datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptibles a la configuración regional  
   
 -   Compatibilidad con idiomas internacionales, independientemente del sistema operativo  
   
@@ -55,10 +55,10 @@ ms.locfileid: "47682573"
 ## <a name="collation-support"></a>Compatibilidad con intercalación  
  El controlador JDBC 3.0 admite todas las intercalaciones compatibles con [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] y [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], así como las nuevas intercalaciones o nuevas versiones de los nombres de intercalación de Windows que se incluyeron en [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Para más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](http://go.microsoft.com/fwlink/?LinkId=131366) y [Nombre de intercalación de Windows (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](https://go.microsoft.com/fwlink/?LinkId=131366) y [Nombre de intercalación de Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Usar nombres de dominio internacionales (IDN)  
- JDBC Driver 6.0 para SQL Server admite el uso de nombres de dominio internacionalizados (IDN) y puede convertir un nombre de servidor Unicode en codificación compatible con ASCII (Punycode) cuando sea necesario durante una conexión.  Si los IDN se almacenan en el sistema de nombres de dominio (DNS) como cadenas ASCII en el formato Punycode (especificado por RFC 3490), habilite la conversión del nombre de servidor Unicode al establecer la propiedad serverNameAsACE en true.  De lo contrario, si el servicio DNS está configurado para permitir el uso de caracteres Unicode, establezca la propiedad serverNameAsACE en false (valor predeterminado).  En versiones anteriores del controlador JDBC, también es posible convertir el valor de serverName en Punycode mediante los métodos [IDN.toASCII de Java](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) antes de establecer la propiedad de una conexión.  
+ JDBC Driver 6.0 para SQL Server admite el uso de nombres de dominio internacionalizados (IDN) y puede convertir un nombre de servidor Unicode en codificación compatible con ASCII (Punycode) cuando sea necesario durante una conexión.  Si los IDN se almacenan en el sistema de nombres de dominio (DNS) como cadenas ASCII en el formato Punycode (especificado por RFC 3490), habilite la conversión del nombre de servidor Unicode al establecer la propiedad serverNameAsACE en true.  De lo contrario, si el servicio DNS está configurado para permitir el uso de caracteres Unicode, establezca la propiedad serverNameAsACE en false (valor predeterminado).  En versiones anteriores del controlador JDBC, también es posible convertir el valor de serverName en Punycode mediante los métodos [IDN.toASCII de Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) antes de establecer la propiedad de una conexión.  
   
 > [!NOTE]  
 >  La mayoría del software de resolver escrito para plataformas distintas de Windows se basa en los estándares DNS de Internet y, por tanto, es probable que use el formato Punycode para los IDN, mientras que un servidor de DNS basado en Windows en una red privada se puede configurar para permitir el uso de caracteres UTF-8 según el servidor.  Para más información, vea [Compatibilidad con caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  

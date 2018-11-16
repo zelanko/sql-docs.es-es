@@ -14,12 +14,12 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2efd1f90526b3113abfa7e3825506051108ca6cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c04077a33c372770fadece491b229ab5bc0f8b4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669513"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604965"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Cómo enviar datos como una secuencia
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aprovechan las sec
 En el tercer ejemplo se muestra cómo enviar datos de secuencia al servidor con el controlador PDO_SQLSRV.  
   
 ## <a name="example-sending-stream-data-at-execution"></a>Ejemplo: Enviar datos de Stream en ejecución
-En el ejemplo siguiente se inserta una fila en la tabla *Production.ProductReview* de la base de datos de AdventureWorks. Los comentarios del cliente (*$comments*) se abren como una secuencia con la función [fopen](http://php.net/manual/en/function.fopen.php) de PHP y luego se transmiten al servidor al ejecutar la consulta.  
+En el ejemplo siguiente se inserta una fila en la tabla *Production.ProductReview* de la base de datos de AdventureWorks. Los comentarios del cliente (*$comments*) se abren como una secuencia con la función [fopen](https://php.net/manual/en/function.fopen.php) de PHP y luego se transmiten al servidor al ejecutar la consulta.  
   
 En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Todos los resultados se agregan a la consola.  
   

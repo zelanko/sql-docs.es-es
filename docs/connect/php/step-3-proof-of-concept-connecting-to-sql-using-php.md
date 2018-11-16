@@ -11,12 +11,12 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770953"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605135"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Step 3: Proof of concept connecting to SQL using PHP (Paso 3: prueba de concepto de la conexión a SQL con PHP)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ Esto **OpenConnection** llama a la función en la parte superior de todas las fu
   
 ## <a name="step-2--execute-query"></a>Paso 2: Ejecutar consulta  
   
-El [sqlsrv_query ()](http://php.net/manual/en/function.sqlsrv-query.php) función puede utilizarse para recuperar un conjunto de resultados de una consulta en SQL Database. Esta función básicamente acepta cualquier consulta y el objeto de conexión y devuelve un conjunto de resultados que se puede iterar mediante el uso de [sqlsrv_fetch_array ()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+El [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) función puede utilizarse para recuperar un conjunto de resultados de una consulta en SQL Database. Esta función básicamente acepta cualquier consulta y el objeto de conexión y devuelve un conjunto de resultados que se puede iterar mediante el uso de [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  

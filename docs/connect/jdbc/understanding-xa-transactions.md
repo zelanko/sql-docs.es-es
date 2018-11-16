@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851980"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605655"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
 
@@ -45,7 +45,7 @@ Las siguientes instrucciones adicionales se aplican a las transacciones fuerteme
 
 - Cuando utiliza transacciones XA junto con MS DTC, puede observar que la versión actual de Microsoft DTC (Coordinador de transacciones distribuidas) no admite el comportamiento de bifurcación XA estrechamente acoplado. Por ejemplo, MS DTC tiene una asignación unívoca entre un identificador de rama de transacción XA (XID) y un identificador de transacción de MS DTC, y el trabajo que realizan las bifurcaciones XA débilmente acopladas se aísla entre estas.  
   
-     La revisión que se proporciona en [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) habilita la compatibilidad con las ramas XA estrechamente ligadas donde varias ramas XA con el mismo identificador de transacción global (GTRID) se asignan a un único identificador de transacción de MS DTC. Esta compatibilidad permite que varias ramas XA estrechamente ligadas vean los cambios respectivos en el administrador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     La revisión que se proporciona en [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) habilita la compatibilidad con las ramas XA estrechamente ligadas donde varias ramas XA con el mismo identificador de transacción global (GTRID) se asignan a un único identificador de transacción de MS DTC. Esta compatibilidad permite que varias ramas XA estrechamente ligadas vean los cambios respectivos en el administrador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - Una marca [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que las aplicaciones usen transacciones XA estrechamente ligadas, que tienen identificadores de rama de transacción XA diferentes (BQUAL), pero el mismo identificador de transacción global (GTRID, Global Transaction ID) e identificador de formato (FormatID). Para usar esta característica, debe establecer el [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) en el parámetro flags del método XAResource.start:  
   
@@ -102,7 +102,7 @@ Puede configurar los componentes de transacciones distribuidas del controlador J
   
 3. Para conceder permisos a un usuario concreto de modo que pueda participar en las transacciones distribuidas con el controlador JDBC, agregue el usuario al rol SqlJDBCXAUser.  
   
-Solo puede configurar una versión del ensamblado sqljdbc_xa.dll en cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada vez. Las aplicaciones pueden necesitar diferentes versiones del controlador JDBC para conectar con la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión XA. En ese caso, sqljdbc_xa.dll, que se incluye en el controlador JDBC más reciente, debe instalarse en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+De manera simultánea solamente puede configurar una versión del ensamblado sqljdbc_xa.dll en cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las aplicaciones pueden necesitar diferentes versiones del controlador JDBC para conectar con la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión XA. En ese caso, sqljdbc_xa.dll, que se incluye en el controlador JDBC más reciente, debe instalarse en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Hay tres maneras de comprobar qué versión de sqljdbc_xa.dll está actualmente instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -117,7 +117,7 @@ Hay tres maneras de comprobar qué versión de sqljdbc_xa.dll está actualmente 
 ### <a name="BKMK_ServerSide"></a> Configurar el valor de tiempo de espera del servidor para la reversión automática de transacciones no preparadas  
 
 > [!WARNING]  
-> Esta opción de servidor es nueva en Microsoft JDBC Driver 4.2 (y superior) para SQL Server. Para obtener el comportamiento actualizado, asegúrese de que se actualiza sqljdbc_xa.dll en el servidor. Para más información sobre cómo establecer los tiempos de espera del cliente, vea [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Esta opción de servidor es nueva en Microsoft JDBC Driver 4.2 (y superior) para SQL Server. Para obtener el comportamiento actualizado, asegúrese de que se actualiza sqljdbc_xa.dll en el servidor. Para más información sobre cómo establecer los tiempos de espera del cliente, vea [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Hay dos configuraciones de registro (valores DWORD) para controlar el comportamiento de tiempo de espera de las transacciones distribuidas:  
   
@@ -167,7 +167,7 @@ Al instalar una nueva versión del controlador JDBC, también debe usar sqljdbc_
   
 ### <a name="configuring-the-user-defined-roles"></a>Configurar los roles definidos por el usuario
 
-Para conceder permisos a un usuario concreto de modo que pueda participar en las transacciones distribuidas con el controlador JDBC, agregue el usuario al rol SqlJDBCXAUser. Por ejemplo, use el siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] para agregar un usuario denominado "shelby" (usuario de inicio de sesión estándar de SQL denominado "shelby") al rol SqlJDBCXAUser:  
+Para conceder permisos a un usuario concreto de modo que pueda participar en las transacciones distribuidas con el controlador JDBC, agregue el usuario al rol SqlJDBCXAUser. Por ejemplo, use el siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] para agregar un usuario denominado 'shelby' (usuario de inicio de sesión estándar de SQL denominado 'shelby') al rol SqlJDBCXAUser:  
 
 ```sql
 USE master  

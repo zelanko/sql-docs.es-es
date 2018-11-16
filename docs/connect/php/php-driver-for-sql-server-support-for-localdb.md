@@ -10,12 +10,12 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728533"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600475"
 ---
 # <a name="support-for-localdb"></a>Compatibilidad con LocalDB
 
@@ -60,7 +60,7 @@ En resumen, LocalDB permite:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Si fuera necesario, puede crear una instancia de LocalDB con sqllocaldb.exe. También puede utilizar sqlcmd.exe para agregar y modificar las bases de datos de una instancia de LocalDB. Por ejemplo, `sqlcmd -S (localdb)\v11.0`. (Cuando se ejecuta en IIS, deberá ejecutar bajo la cuenta correcta para obtener los mismos resultados que al ejecutar la línea de comandos; consulte [usar LocalDB con IIS completo, parte 2: la propiedad de instancia](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obtener más información.)
+Si fuera necesario, puede crear una instancia de LocalDB con sqllocaldb.exe. También puede utilizar sqlcmd.exe para agregar y modificar las bases de datos de una instancia de LocalDB. Por ejemplo, `sqlcmd -S (localdb)\v11.0`. (Cuando se ejecuta en IIS, deberá ejecutar bajo la cuenta correcta para obtener los mismos resultados que al ejecutar la línea de comandos; consulte [usar LocalDB con IIS completo, parte 2: la propiedad de instancia](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obtener más información.)
 
 Estas son cadenas de conexión de ejemplo con el controlador SQLSRV que se conectan a una base de datos en una instancia denominada myInstance con nombre de LocalDB:
 

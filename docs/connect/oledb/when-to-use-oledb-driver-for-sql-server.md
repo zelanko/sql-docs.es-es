@@ -15,19 +15,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 39ad82d9a97781eb63b5de15e20494a0438855b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b2f7bf5a09294803ab620b22a75910c5f5e3e34
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798204"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602815"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Casos de uso del controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Controlador OLE DB para SQL Server es una tecnología que puede usar para tener acceso a datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  Para obtener una explicación de las distintas tecnologías de acceso a datos, vea [Data Access Technologies Road Map](http://go.microsoft.com/fwlink/?LinkID=179186) (Guía básica de las tecnologías de acceso a datos).  
+  Controlador OLE DB para SQL Server es una tecnología que puede usar para tener acceso a datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  Para obtener una explicación de las distintas tecnologías de acceso a datos, vea [Data Access Technologies Road Map](https://go.microsoft.com/fwlink/?LinkID=179186) (Guía básica de las tecnologías de acceso a datos).  
   
  A la hora de decidir si debe usar el controlador OLE DB para SQL Server como la tecnología de acceso a datos de la aplicación, debe tener en cuenta varios factores.  
   

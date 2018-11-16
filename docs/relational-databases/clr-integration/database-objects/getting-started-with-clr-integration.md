@@ -25,12 +25,12 @@ ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 862472365ceb729f7a93715caf65c0a3d90abe7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623533"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661294"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introducción a la integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ vbc /target:library helloworld.vb
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Cargar y ejecutar el procedimiento almacenado "Hello World" en SQL Server  
  Una vez que el procedimiento de ejemplo se haya compilado correctamente, podrá probarlo en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para ello, abra [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y cree una nueva consulta, conectándose a una base de datos de prueba adecuada, como la base de datos de ejemplo AdventureWorks.  
   
- La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El código de CLR puede habilitarse mediante la **sp_configure** procedimiento almacenado del sistema. Para más información, consulte [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+ La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El código CLR se puede habilitar mediante el uso de la **sp_configure** procedimiento almacenado del sistema. Para más información, consulte [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
   
  Tendremos que crear el ensamblado de modo que podamos obtener acceso al procedimiento almacenado. Para este ejemplo, vamos a suponer que ha creado el ensamblado helloworld.dll en el directorio C:\. Agregue la siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] a su consulta.  
   
@@ -176,7 +176,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados de CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensiones específicas en proceso SQL Server a ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Depurar objetos de base de datos CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [Seguridad de la integración CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)  

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c520639c0be9ad22a4ba768bf09a704292d511
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745323"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677614"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,8 +167,8 @@ ms.locfileid: "47745323"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Posible problema cuando se ejecuta con la sincronización de modo de secuenciación
  Puede encontrar un síntoma en la que la funcionalidad de reproducción aparece "pausa" o las reproducciones eventos muy lentamente. Este fenómeno puede producirse si el seguimiento está reproduciendo se basa en datos o eventos que no existen en la base de datos restaurada. 
- 
- Un ejemplo es una carga de trabajo capturada que usa WAITFOR, como en la instrucción WAITFOR de recepción de Service Broker. Cuando se usa el modo de secuenciación de sincronización, los lotes se reproducen en serie. Si se produce una INSERCIÓN en la base de datos de origen después de la copia de seguridad de base de datos, pero antes de la captura de reproducción se inició el seguimiento, la recepción de WAITFOR emitido durante la reproducción que tenga que esperar la duración completa de WAITFOR. Los eventos se establecen en reproducirse después de la recepción de WAITFOR estará detenida. Esto puede producir en el contador del monitor de rendimiento de las solicitudes de Batch/seg. la eliminación de destino de base de datos de reproducción en cero hasta que se complete la WAITFOR. 
+ 
+Un ejemplo es una carga de trabajo capturada que usa WAITFOR, como en la instrucción WAITFOR de recepción de Service Broker. Cuando se usa el modo de secuenciación de sincronización, los lotes se reproducen en serie. Si se produce una INSERCIÓN en la base de datos de origen después de la copia de seguridad de base de datos, pero antes de la captura de reproducción se inició el seguimiento, la recepción de WAITFOR emitido durante la reproducción que tenga que esperar la duración completa de WAITFOR. Los eventos se establecen en reproducirse después de la recepción de WAITFOR estará detenida. Esto puede producir en el contador del monitor de rendimiento de las solicitudes de Batch/seg. la eliminación de destino de base de datos de reproducción en cero hasta que se complete la WAITFOR. 
  
  Si necesita usar el modo de sincronización y deseos para evitar este comportamiento, debe hacer lo siguiente:
  
@@ -185,8 +184,8 @@ ms.locfileid: "47745323"
 ## <a name="see-also"></a>Ver también  
  [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Foro de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Usar Distributed Replay para la prueba de carga de SQL Server, parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Usar Distributed Replay para la prueba de carga de SQL Server, parte 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Foro de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Usar Distributed Replay para la prueba de carga de SQL Server, parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Usar Distributed Replay para la prueba de carga de SQL Server, parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

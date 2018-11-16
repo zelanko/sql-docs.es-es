@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65963e0e41bc4bb85ac3c734efc30835f371191e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613423"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603095"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -38,14 +38,14 @@ JDBC driver archivos disponibles en el repositorio de GitHub para el controlador
 **¿Qué debo saber al actualizar el controlador?**  
  El Microsoft JDBC Driver 7.0 admite el JDBC 4.2 y 4.3 especificaciones (parcialmente) e incluye dos bibliotecas de clases JAR en el paquete de instalación como sigue:
 
-| JAR                        | Especificación de JDBC            | Versión de JDK |
+| JAR                        | Especificación de JDBC            | Versión JDK |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
 El admite Microsoft JDBC Driver 6.4 el JDBC 4.1, 4.2 y 4.3 (parcialmente) especificaciones e incluye tres bibliotecas de clases JAR en el paquete de instalación como sigue:
 
-| JAR                       | Especificación de JDBC                 | Versión de JDK |
+| JAR                       | Especificación de JDBC                 | Versión JDK |
 | ------------------------- | ---------------------------------- | ----------- |
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.1 y 4.2 (parcialmente) 4.3 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 y 4.1                  | JDK 8.0     |
@@ -60,7 +60,7 @@ Microsoft JDBC Driver 6.2 admite las especificaciones de JDBC 4.0, 4.1 y 4.2 e i
 
 Microsoft JDBC Drivers 6.0 y 4.2 para SQL Server es compatible con las especificaciones de JDBC 4.0, 4.1 y 4.2 e incluyen dos bibliotecas de clases JAR en el paquete de instalación como sigue:
 
-| JAR           | Especificación de JDBC     | Versión de JDK |
+| JAR           | Especificación de JDBC     | Versión JDK |
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.0, 4.1 y 4.2 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 y 4.0       | JDK 7.0     |
@@ -105,25 +105,25 @@ En la tabla siguiente se muestran las opciones de autenticación disponibles. La
 Sí. El controlador admite el uso de direcciones IPv6. Use la colección de propiedades de conexión y la propiedad de cadena de conexión serverName. Para más información, consulte [Generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).
 
 **¿Qué es el almacenamiento en búfer adaptable?**  
-Almacenamiento en búfer adaptable se introdujo a partir de Microsoft SQL Server 2005 JDBC Driver versión 1.2. Se diseña para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo del almacenamiento en búfer es "full" de manera predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por tanto, la aplicación no tiene que solicitar explícitamente el comportamiento adaptable para obtener dicho comportamiento. Para más información, consulte [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y la entrada de blog [What is adaptive response buffering and why should I use it?](http://go.microsoft.com/fwlink/?LinkId=111575) (¿Qué es el almacenamiento en búfer adaptable y por qué se debe usar?).
+Almacenamiento en búfer adaptable se introdujo a partir de Microsoft SQL Server 2005 JDBC Driver versión 1.2. Se diseña para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo del almacenamiento en búfer es "full" de manera predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por tanto, la aplicación no tiene que solicitar explícitamente el comportamiento adaptable para obtener dicho comportamiento. Para más información, consulte [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y la entrada de blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (¿Qué es el almacenamiento en búfer adaptable y por qué se debe usar?).
 
 **¿El controlador es compatible con la agrupación de conexiones?**  
-El controlador proporciona compatibilidad con la agrupación de conexiones de Java Platform, Enterprise Edition 5 (Java EE 5). El controlador implementa las interfaces necesarias de JDBC 3.0 para que pueda participar en la implementación de la agrupación de conexiones de los proveedores de servidores de aplicaciones de software intermedio. El controlador participa en las conexiones agrupadas en estos entornos. Para más información, consulte [Usar agrupación de conexiones](../../connect/jdbc/using-connection-pooling.md). El controlador no proporciona su propia implementación de agrupación, sino que se basa en servidores de aplicaciones Java de terceros.
+El controlador proporciona compatibilidad con la agrupación de conexiones de Java Platform, Enterprise Edition 5 (Java EE 5). El controlador implementa las interfaces necesarias de JDBC 3.0 para que pueda participar en la implementación de la agrupación de conexiones de los proveedores de servidores de aplicaciones de software intermedio. El controlador participa en las conexiones agrupadas en estos entornos. Para obtener más información, consulte [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). El controlador no proporciona su propia implementación de agrupación, sino que se basa en servidores de aplicaciones Java de terceros.
 
 **¿Hay servicios de soporte disponibles para el controlador?**  
-Existen varias opciones de soporte. Es posible que publique su pregunta o problema a nuestro [repositorio de GitHub](https://github.com/microsoft/mssql-jdbc) que está supervisado por Microsoft. [Foros](http://go.microsoft.com/fwlink/?LinkID=246673) supervisados por Microsoft, MVP y la Comunidad. También puede ponerse en contacto con el equipo de asistencia al cliente de Microsoft. El equipo de desarrollo puede pedirle que reproduzca el problema fuera de los servidores de aplicaciones de terceros. Si el problema no se puede reproducir fuera del entorno de contenedor host de Java, tendrá que ponerse en contacto con el tercero relacionado para que el equipo pueda seguir ayudándolo. El equipo también puede pedirle que reproduzca el problema en un sistema operativo como Windows, por lo que puede admitirse mejor el problema.
+Existen varias opciones de soporte. Es posible que publique su pregunta o problema a nuestro [repositorio de GitHub](https://github.com/microsoft/mssql-jdbc) que está supervisado por Microsoft. [Foros](https://go.microsoft.com/fwlink/?LinkID=246673) supervisados por Microsoft, MVP y la Comunidad. También puede ponerse en contacto con el equipo de asistencia al cliente de Microsoft. El equipo de desarrollo puede pedirle que reproduzca el problema fuera de los servidores de aplicaciones de terceros. Si el problema no se puede reproducir fuera del entorno de contenedor host de Java, tendrá que ponerse en contacto con el tercero relacionado para que el equipo pueda seguir ayudándolo. El equipo también puede pedirle que reproduzca el problema en un sistema operativo como Windows, por lo que puede admitirse mejor el problema.
 
 **¿Está el controlador certificado para usarse con servidores de aplicaciones de terceros?**
 El controlador se ha probado con los principales servidores de aplicaciones, incluidos IBM WebSphere y SAP NetWeaver.
 
 **¿Cómo se habilita el seguimiento?**  
-El controlador admite el uso del seguimiento (o registro) para ayudar a solucionar problemas con Microsoft JDBC Driver cuando se esté utilizando en su aplicación. Para habilitar el uso de seguimiento de archivos JAR del lado cliente, Microsoft JDBC Driver utiliza las API de registro de java.util.logging. Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md). Para el seguimiento de archivos XA del lado servidor, consulte [Data Access Tracing in SQL Server](http://go.microsoft.com/fwlink/?LinkId=248705)(Seguimiento de datos de acceso en SQL Server).
+El controlador admite el uso del seguimiento (o registro) para ayudar a solucionar problemas con Microsoft JDBC Driver cuando se esté utilizando en su aplicación. Para habilitar el uso de seguimiento de archivos JAR del lado cliente, Microsoft JDBC Driver utiliza las API de registro de java.util.logging. Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md). Para el seguimiento de archivos XA del lado servidor, consulte [Data Access Tracing in SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705)(Seguimiento de datos de acceso en SQL Server).
 
 **¿Dónde puedo descargar las versiones anteriores del controlador como Microsoft JDBC Driver para SQL Server 2000 o 2005, o las versiones 1.0, 1.1 o 1.2?**  
 Estas versiones del controlador no están disponibles para descargarse debido a que ya no son compatibles. Estamos trabajando continuamente para mejorar la compatibilidad con la conectividad de Java. Por tanto, se recomienda encarecidamente trabajar con la versión más reciente de Microsoft JDBC Driver.
 
 **Uso JRE 1.4. ¿Qué controlador es compatible con JRE 1.4?**  
-Los clientes que utilizan productos SAP y requieren compatibilidad con JRE 1.4, pueden ponerse en contacto con [SAPService Marketplace](http://service.sap.com/) para obtener Microsoft JDBC driver 1.2.
+Los clientes que utilizan productos SAP y requieren compatibilidad con JRE 1.4, pueden ponerse en contacto con [SAPService Marketplace](https://service.sap.com/) para obtener Microsoft JDBC driver 1.2.
 
 **¿Puede el controlador comunicarse mediante algoritmos aprobados en FIPS?**  
 Microsoft JDBC Driver no contiene algoritmos criptográficos. Si un cliente utiliza algoritmos de sistemas operativos, aplicaciones y JVM que el estándar federal de procesamiento de información (FIPS) considera aceptables y configura el controlador para usar esos algoritmos, el controlador usa solo los designados para la comunicación.

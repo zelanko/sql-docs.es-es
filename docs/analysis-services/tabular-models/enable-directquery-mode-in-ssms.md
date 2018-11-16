@@ -1,5 +1,5 @@
 ---
-title: Habilitar el modo DirectQuery en SSMS | Documentos de Microsoft
+title: Habilitar el modo DirectQuery en SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e643f90a5df9b113f2fd59a2328868131bf9c63d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045129"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700593"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar el modo DirectQuery en SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34045129"
   
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los pasos de configuración de DirectQuery varían en función del nivel de compatibilidad del modelo. A continuación encontrará unos pasos que funcionan con todos los niveles de compatibilidad.  
   
- Este artículo se supone que ha creado y ha validado un modelo tabular en memoria en el nivel de compatibilidad 1200 o superior y solo es necesario para habilitar el acceso DirectQuery y actualizar las cadenas de conexión. Si empieza desde un nivel de compatibilidad inferior, primero necesitará actualizarlo de forma manual. Vea los pasos en [Actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
+ En este artículo se da por supuesto que ha creado y validado un modelo tabular en memoria en el nivel de compatibilidad 1200 o superior y sólo necesita para habilitar el acceso DirectQuery y actualizar las cadenas de conexión. Si empieza desde un nivel de compatibilidad inferior, primero necesitará actualizarlo de forma manual. Vea los pasos en [Actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
   
 > [!IMPORTANT]  
 >  Se recomienda utilizar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] en lugar de Management Studio para cambiar de modo de almacenamiento de datos. Si se utiliza  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para cambiar el modelo y, después, prosigue con la implementación en el servidor, el modelo y la base de datos permanecerán sincronizados. Además, al cambiar de modos de almacenamiento en el modelo, podrá revisar los errores de validación que se produzcan. Si se usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como se describe en este artículo, los errores de validación no se notifican.  
@@ -32,7 +32,7 @@ ms.locfileid: "34045129"
   
 -   Asegúrese de que el modelo no tiene características que pudieran provocar errores de validación en el modo DirectQuery y, después, cambie el modo de almacenamiento de datos en el modelo de en memoria a DirectQuery.  
   
-     Una lista de restricciones de características se documenta en [Directquerymode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     Una lista de restricciones de características se documenta en [el modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Revise la cadena de conexión y las credenciales que utiliza la base de datos implementada para recuperar datos de la base de datos back-end externa. Asegúrese de que solo hay una conexión y de que su configuración es adecuada para la ejecución de consultas.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "34045129"
   
     |||  
     |-|-|  
-    |**Valores válidos**|**Description**|  
+    |**Valores válidos**|**Descripción**|  
     |**DirectQuery**|Las consultas se ejecutan en una base de datos relacional back-end mediante la conexión de origen de datos definida para el modelo.<br /><br /> Las consultas del modelo se convierten en consultas de bases de datos nativas y se redirigen al origen de datos.<br /><br /> Al procesar un modelo establecido en el modo DirectQuery, solo se compilan e implementan los metadatos. Los datos en sí son externos al modelo y residen en los archivos de base de datos del origen de datos operativo.|  
     |**Importar**|Las consultas se ejecutan en la base de datos tabular en MDX o DAX.<br /><br /> Al procesar un modelo establecido en el modo de importación, los datos se recuperan desde un origen de datos back-end y se almacenan en disco. Cuando haya cargado la base de datos, los datos se copian por completo en la memoria para ofrecer consultas y recorridos de tabla muy rápidos.<br /><br /> Este es el modo predeterminado de los modelos tabulares y es el único modo para determinados orígenes de datos (no relacionales).|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34045129"
   
     |||  
     |-|-|  
-    |**Valores válidos**|**Description**|  
+    |**Valores válidos**|**Descripción**|  
     |**InMemory**|Las consultas utilizan únicamente los datos en memoria almacenados en caché.|  
     |**InMemorywithDirectQuery**|Las consultas usan la memoria caché de forma predeterminada, a menos que se especifique lo contrario en la cadena de conexión desde el cliente.<br /><br /> Se trata de un modo híbrido en el que las particiones se configuran por separado para usar en memoria o DirectQuery.|  
     |**DirectQuery**|Las consultas solo usan el origen de datos relacional.|  
@@ -100,7 +100,7 @@ ms.locfileid: "34045129"
   
 1.  En el Explorador de objetos, expanda **Conexiones** y haga doble clic en una conexión para ver sus propiedades.  
   
-     Para los modelos DirectQuery, solo debe haber una conexión definida para la base de datos; por su parte, el origen de datos debe ser relacional y de un tipo de base de datos compatible. Vea [orígenes de datos admitidos](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     Para los modelos DirectQuery, solo debe haber una conexión definida para la base de datos; por su parte, el origen de datos debe ser relacional y de un tipo de base de datos compatible. Consulte [orígenes de datos admitidos](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  En**Cadena de conexión** se debe especificar el servidor, nombre de la base de datos y el método de autenticación utilizado en las operaciones de DirectQuery. Si utiliza la autenticación de SQL Server, puede especificar aquí el inicio de sesión de base de datos.  
   
@@ -128,6 +128,6 @@ ms.locfileid: "34045129"
  [Nivel de compatibilidad](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Orígenes de datos admitidos](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
- [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

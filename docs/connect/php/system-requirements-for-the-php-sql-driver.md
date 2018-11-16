@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f2828098784601e10136ed8dd0f4b6f0272137d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461130"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601107"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ Se admiten oficialmente las versiones 3.1 y posteriores de Microsoft PHP Driver 
 
 ## <a name="php"></a>PHP
 
-Para obtener información sobre cómo descargar e instalar los archivos binarios estables más recientes, vea [el sitio web de PHP](http://php.net).  Los Drivers de Microsoft para PHP para SQL Server requieren las siguientes versiones de PHP:
+Para obtener información sobre cómo descargar e instalar los archivos binarios estables más recientes, vea [el sitio web de PHP](https://php.net).  Los Drivers de Microsoft para PHP para SQL Server requieren las siguientes versiones de PHP:
 
 |PHP para la versión del controlador de SQL Server&#8594;<br />&#8595; versión de PHP|5.3 y 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|
@@ -42,7 +42,7 @@ Para obtener información sobre cómo descargar e instalar los archivos binarios
 
 -   En el directorio de extensión PHP debe haber una versión del archivo de controlador. Consulte [las versiones del controlador](#driver-versions) para obtener información acerca de los archivos de controlador diferente.  Para descargar los controladores, vea [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md) (Descargar los controladores de Microsoft para PHP para SQL Server). Para obtener información sobre cómo configurar el controlador para el runtime PHP, vea [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Cargar los controladores de Microsoft para PHP para SQL Server).
 
--   Se requiere un servidor web. El servidor web debe estar configurado para ejecutar PHP. Para obtener información sobre cómo hospedar aplicaciones PHP con IIS, vea el [tutorial en el sitio web de PHP](http://php.net/manual/fa/install.windows.iis.php).  
+-   Se requiere un servidor web. El servidor web debe estar configurado para ejecutar PHP. Para obtener información sobre cómo hospedar aplicaciones PHP con IIS, vea el [tutorial en el sitio web de PHP](https://php.net/manual/fa/install.windows.iis.php).  
 
     Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] se han probado utilizando IIS 10 con FastCGI.  
 

@@ -11,12 +11,12 @@ ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5cdf9c694323c345525752c733afc6a49482ac0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bcd06eba29bdc46b0a81f29c974590697b76c73
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722883"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599895"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Cumplimiento de JDBC 4.1 con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "47722883"
   
 |Nuevo método|Descripción|Implementación del controlador JDBC|  
 |----------------|-----------------|--------------------------------|  
-|void abort(Executor executor)|Finaliza una conexión abierta a SQL Server.|Se implementa como se describe en la interfaz java.sql.Connection. Para más información, vea [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
-|void setSchema(String schema)|Establece el esquema de la conexión actual.|SQL Server no admite con la configuración del esquema para la sesión actual. El controlador registra automáticamente un mensaje de advertencia si se llama a este método. Para más información, vea [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
-|String getSchema()|Devuelve el nombre de esquema para la conexión actual.|Puesto que SQL Server no admite la configuración de la conexión actual, el controlador devuelve, en su lugar, el esquema predeterminado del usuario. Para más información, vea [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|void abort(Executor executor)|Finaliza una conexión abierta a SQL Server.|Se implementa como se describe en la interfaz java.sql.Connection. Para más información, vea [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|void setSchema(String schema)|Establece el esquema de la conexión actual.|SQL Server no admite con la configuración del esquema para la sesión actual. El controlador registra automáticamente un mensaje de advertencia si se llama a este método. Para más información, vea [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|String getSchema()|Devuelve el nombre de esquema para la conexión actual.|Puesto que SQL Server no admite la configuración de la conexión actual, el controlador devuelve, en su lugar, el esquema predeterminado del usuario. Para más información, vea [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
   
  **Clase SQLServerDatabaseMetaData**  
   
 |Nuevo método|Descripción|Implementación del controlador JDBC|  
 |----------------|-----------------|--------------------------------|  
-|boolean generatedKeyAlwaysReturned()|Devuelve true, ya que el controlador admite la recuperación de claves generadas|Se implementa como se describe en java.sql. Interfaz DatabaseMetaData. Para más información, vea [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
-|ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|Recupera una descripción de las pseudocolumnas/columnas ocultas|Devuelve un conjunto de resultados vacío, ya que SQL Server no tiene una noción de pseudocolumnas formal. Para más información, vea [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+|boolean generatedKeyAlwaysReturned()|Devuelve true, ya que el controlador admite la recuperación de claves generadas|Se implementa como se describe en java.sql. Interfaz DatabaseMetaData. Para más información, vea [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+|ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|Recupera una descripción de las pseudocolumnas/columnas ocultas|Devuelve un conjunto de resultados vacío, ya que SQL Server no tiene una noción de pseudocolumnas formal. Para más información, vea [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
   
  **Clase SQLServerStatement**  
   
 |Nuevo método|Descripción|Implementación del controlador JDBC|  
 |----------------|-----------------|--------------------------------|  
-|void closeOnCompletion()|Especifica que esta instrucción se cerrará cuando se cierren todos sus conjuntos de resultados dependientes.|Se implementa como se describe en la interfaz java.sql.Statement. Para más información, vea [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
-|isCloseOnCompletion() Boolean|Devuelve un valor que indica si esta instrucción se cerrará cuando se cierren todos sus conjuntos de resultados dependientes.|Se implementa como se describe en la interfaz java.sql.Statement. Para más información, vea [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+|void closeOnCompletion()|Especifica que esta instrucción se cerrará cuando se cierren todos sus conjuntos de resultados dependientes.|Se implementa como se describe en la interfaz java.sql.Statement. Para más información, vea [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+|isCloseOnCompletion() Boolean|Devuelve un valor que indica si esta instrucción se cerrará cuando se cierren todos sus conjuntos de resultados dependientes.|Se implementa como se describe en la interfaz java.sql.Statement. Para más información, vea [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
   
  La especificación de la API de Java Database Connectivity 4.1 es compatible con Microsoft JDBC Driver 4.2 para SQL Server, con las siguientes características.  
   

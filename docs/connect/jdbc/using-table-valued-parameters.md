@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598393"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603535"
 ---
 # <a name="using-table-valued-parameters"></a>Usar parámetros con valores de tabla
 
@@ -35,9 +35,9 @@ Valores de columna de parámetros con valores de tabla se pueden acceder mediant
   
 | Recurso                                                                                                             | Descripción                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Parámetros con valores de tabla (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkId=98363) en los libros en pantalla de SQL Server | Describe cómo crear y usar parámetros con valores de tabla                             |
-| [Tipos de tabla definido por el usuario](http://go.microsoft.com/fwlink/?LinkId=98364) en los libros en pantalla de SQL Server                  | Describe los tipos de tabla definido por el usuario que se usan para declarar parámetros con valores de tabla |
-| El [motor de base de datos de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=120507) sección de CodePlex        | Contiene ejemplos que muestran cómo usar la funcionalidad y características de SQL Server  |
+| [Parámetros con valores de tabla (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=98363) en los libros en pantalla de SQL Server | Describe cómo crear y usar parámetros con valores de tabla                             |
+| [Tipos de tabla definido por el usuario](https://go.microsoft.com/fwlink/?LinkId=98364) en los libros en pantalla de SQL Server                  | Describe los tipos de tabla definido por el usuario que se usan para declarar parámetros con valores de tabla |
+| El [motor de base de datos de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=120507) sección de CodePlex        | Contiene ejemplos que muestran cómo usar la funcionalidad y características de SQL Server  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Pasar varias filas en las versiones anteriores de SQL Server  
 
@@ -53,7 +53,7 @@ Antes de que los parámetros con valores de tabla se introdujeron en SQL Server 
   
 ## <a name="creating-table-valued-parameter-types"></a>Creación de tipos de parámetro con valores de tabla  
 
-Parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante Transact-SQL `CREATE TYPE` instrucciones. Tendrá que crear un tipo de tabla y definir la estructura en SQL Server para poder usar parámetros con valores de tabla en las aplicaciones cliente. Para obtener más información acerca de cómo crear tipos de tabla, vea [tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkID=98364) en libros en pantalla de SQL Server.  
+Parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante Transact-SQL `CREATE TYPE` instrucciones. Tendrá que crear un tipo de tabla y definir la estructura en SQL Server para poder usar parámetros con valores de tabla en las aplicaciones cliente. Para obtener más información acerca de cómo crear tipos de tabla, vea [tipos de tabla definidos por el usuario](https://go.microsoft.com/fwlink/?LinkID=98364) en libros en pantalla de SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ Los métodos siguientes se agregaron a esta clase para admitir la transmisión d
 
 | Nombre                                                                                                    | Descripción                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| final setStructured void público (parameterIndex int, String tvpName, SQLServerDataTable tvpDataTbale)    | Rellena un parámetro con valores de tabla con una tabla de datos. parameterIndex es el índice del parámetro, tvpName es el nombre del parámetro con valores de tabla y tvpDataTable es el objeto de tabla de datos de origen.                                                                                                          |
+| final setStructured void público (parameterIndex int, String tvpName, SQLServerDataTable tvpDataTable)    | Rellena un parámetro con valores de tabla con una tabla de datos. parameterIndex es el índice del parámetro, tvpName es el nombre del parámetro con valores de tabla y tvpDataTable es el objeto de tabla de datos de origen.                                                                                                          |
 | final setStructured void público (parameterIndex int, String tvpName, ResultSet tvpResultSet)             | Un parámetro con valores de tabla se rellena con un conjunto de resultados recuperado de la tabla de otro. parameterIndex es el índice del parámetro, tvpName es el nombre del parámetro con valores de tabla y tvpResultSet es el objeto de conjunto de resultados de origen.                                                                               |
 | final setStructured void público (parameterIndex int, String tvpName, ISQLServerDataRecord tvpDataRecord) | Rellena un parámetro con valores de tabla con un objeto ISQLServerDataRecord. ISQLServerDataRecord se usa para transmitir datos y el usuario decide cómo se usa. parameterIndex es el índice del parámetro, tvpName es el nombre del parámetro con valores de tabla y tvpDataRecord es un objeto ISQLServerDataRecord. |
   

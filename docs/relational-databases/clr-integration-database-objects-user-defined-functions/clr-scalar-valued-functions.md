@@ -17,19 +17,19 @@ ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2f90b3f7ce82a0ad6b21f2ad76d3e986ba1fb68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41c8dad185ad310cda38521819fc46146fe57743
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663873"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677354"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funciones escalares de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Una función escalar (SVF) devuelve un único valor, como un valor de cadena, entero o de bit. Puede crear funciones escalares definidas por el usuario en código administrado mediante cualquier lenguaje de programación de .NET Framework. Estas funciones son accesibles para [!INCLUDE[tsql](../../includes/tsql-md.md)] u otro código administrado. Para obtener información acerca de las ventajas de la integración de CLR y elegir entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [información general de la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisitos de las funciones escalares de CLR  
- Las SVF de .NET Framework se implementan como métodos en una clase de un ensamblado de .NET Framework. Los parámetros de entrada y el tipo devuelto de una SVF pueden ser cualquiera de los tipos de datos escalares admitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto **varchar**, **char**, **rowversion**, **texto**, **ntext**, **imagen**, **timestamp**, **tabla**, o **cursor** . Las SVF deben asegurar una coincidencia entre el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el tipo de datos de retorno del método de implementación. Para obtener más información sobre las conversiones de tipos, vea [asignación de datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Las SVF de .NET Framework se implementan como métodos en una clase de un ensamblado de .NET Framework. Los parámetros de entrada y el tipo devueltos de una SVF pueden ser cualquiera de los tipos de datos escalares admitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto **varchar**, **char**, **rowversion**, **text**, **ntext**, **image**, **timestamp**, **table**o **cursor**. Las SVF deben asegurar una coincidencia entre el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el tipo de datos de retorno del método de implementación. Para obtener más información sobre las conversiones de tipos, vea [asignación de datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Al implementar una SVF de .NET Framework SVF en un lenguaje .NET Framework, el atributo personalizado **SqlFunction** se puede especificar para incluir la información adicional de la función. El atributo **SqlFunction** indica tanto si la función obtiene acceso o modifica los datos como si no, si es determinista y si la función implica las operaciones de coma flotante.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47663873"
 >  No marque una función como determinista si ésta no siempre genera los mismos valores de salida, dados los mismos valores de entrada y el mismo estado de la base de datos. Al marcar una función como determinista cuando la función no es verdaderamente determinista puede producir vistas indizadas dañadas y columnas calculadas. Marque una función como determinista estableciendo la propiedad **IsDeterministic** en true.  
   
 ### <a name="table-valued-parameters"></a>Parámetros con valores de tabla  
- Los parámetros con valores de tabla (TVP), tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los TVP presentan una funcionalidad similar a las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Además, los TVP ayudan a reducir el número de ciclos de ida y vuelta al servidor. En lugar de enviar varias solicitudes al servidor, como con una lista de parámetros escalares, los datos pueden enviarse al servidor como un TVP. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como tampoco puede devolverse desde dicho procedimiento o función. Para obtener más información acerca de Tvp, vea [usar parámetros &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Los parámetros con valores de tabla (TVP), tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los TVP presentan una funcionalidad similar a las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Además, los TVP ayudan a reducir el número de ciclos de ida y vuelta al servidor. En lugar de enviar varias solicitudes al servidor, como con una lista de parámetros escalares, los datos pueden enviarse al servidor como un TVP. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para obtener más información acerca de Tvp, vea [usar parámetros &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Ejemplo de una función escalar de CLR  
  A continuación se muestra una SVF simple que tiene acceso a datos y devuelve un valor entero:  
@@ -85,7 +85,7 @@ End Class
   
  Después, la función recibe el atributo personalizado **SqlFunction** , que se encuentra en el espacio de nombres **Microsoft.SqlServer.Server** . El atributo personalizado indica si la función definida por el usuario (UDF) utiliza o no el proveedor en proceso para leer los datos en el servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite a las UDF actualizar, insertar o eliminar datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede optimizar la ejecución de una UDF que no usa el proveedor en proceso. Esto se indica estableciendo **DataAccessKind** en **DataAccessKind.None**. En la línea siguiente, el método de destino es una estática pública (se comparte en Visual Basic .NET).  
   
- El **SqlContext** (clase), ubicado en el **Microsoft.SqlServer.Server** espacio de nombres, a continuación, puede tener acceso a un **SqlCommand** objeto con una conexión a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia que ya se ha configurado. Aunque no se usa aquí, el contexto de transacción actual también está disponible a través de la interfaz de programación de aplicaciones (API) **System.Transactions** .  
+ El atributo **SqlContext** , ubicada en el espacio de nombres **Microsoft.SqlServer.Server** , puede tener acceso a un objeto **SqlCommand** con una conexión a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ya está establecida. Aunque no se usa aquí, el contexto de transacción actual también está disponible a través de la interfaz de programación de aplicaciones (API) **System.Transactions** .  
   
  Los desarrolladores que han escrito las aplicaciones cliente que usan los tipos situados en el espacio de nombres **System.Data.SqlClient** , deberían estar familiarizados con la mayoría de las líneas de código en el cuerpo de la función.  
   
@@ -132,7 +132,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` indica que se debe generar una biblioteca, en lugar de un ejecutable. Los ejecutables no se pueden registrar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Objetos de base de datos de Visual C++ compilados con **/CLR: pure** no se admiten para su ejecución en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, esos objetos de base de datos incluyen funciones escalares.  
+>  Los objetos de base de datos de Visual C++ compilados con **/clr:pure** no se admiten para la ejecución en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, esos objetos de base de datos incluyen funciones escalares.  
   
  La consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] y una invocación de ejemplo para registrar el ensamblado y una UDF son:  
   
@@ -153,7 +153,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Información general de atributos personalizados de integración de CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [Información general de atributos personalizados de integración de CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Acceso a datos de objetos de base de datos de CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   

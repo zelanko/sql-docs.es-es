@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687045"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600105"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Compatibilidad del controlador ODBC en Linux y macOS para alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Los controladores ODBC para compatibilidad con Linux y macOS [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obtener más información acerca de [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
   
--   [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [Creación y configuración de grupos de disponibilidad (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Creación y configuración de grupos de disponibilidad (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Clúster de conmutación por error y grupos de disponibilidad de AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Clúster de conmutación por error y grupos de disponibilidad de AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 Puede especificar el agente de escucha del grupo de disponibilidad de un determinado grupo de disponibilidad en la cadena de conexión. Si una aplicación de ODBC en Linux o macOS se conecta a una base de datos de un grupo de disponibilidad que conmuta por error, la conexión original se interrumpe y la aplicación debe abrir una nueva conexión para continuar el trabajo después de la conmutación por error.
 

@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f24089803b59e86a4fc8f8b98cd7822a11ba6c2e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737263"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600776"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas de la versión para el controlador JDBC
 
@@ -139,7 +139,7 @@ Microsoft JDBC Driver 6.2 para SQL Server es totalmente compatible con las espec
 >
 > Se realizó otra mejora para actualizar la versión de la biblioteca dependiente de Azure Key Vault a 1.0.0, y se han publicado nuevos archivos JAR (versión 6.2.2) de 19 de octubre de 2017.
 >
-> Descargar las actualizaciones más recientes en JDBC Driver 6.2 en [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), y [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Actualice sus proyectos para usar el 6.2.2 archivos JAR de versión. Vea notas de la versión [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) y [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) para obtener más detalles.
+> Descargar las actualizaciones más recientes en JDBC Driver 6.2 en [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), y [Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Actualice sus proyectos para usar el 6.2.2 archivos JAR de versión. Vea notas de la versión [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) y [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) para obtener más detalles.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Soporte técnico de Azure Active Directory (AAD) para Linux
 

@@ -11,12 +11,12 @@ ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e92ff4f4a4c59862efbebcfb16903714c872749
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6bbff25d47fb5c5a3336f24e9ce49d18c5b41b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699513"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600705"
 ---
 # <a name="python-sql-driver---pymssql"></a>Controlador Python para SQL: pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -28,4 +28,4 @@ ms.locfileid: "47699513"
 * [Paso 3: prueba de concepto de la conexión a SQL con pymssql](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## <a name="documentation"></a>Documentación
-* [documentación de pymssql](http://pymssql.org)  
+* [documentación de pymssql](https://pymssql.org)  

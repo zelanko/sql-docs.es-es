@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "49084933"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600965"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos del sistema, instalación y archivos del controlador
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -84,7 +84,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>Herramientas de línea de comandos: sqlcmd.exe y bcp.exe
 
-El `bcp.exe` y `sqlcmd.exe` las herramientas para usarlo con el controlador puede descargarse en [utilidades de línea de comandos de Microsoft 11 para SQL Server](http://www.microsoft.com/download/details.aspx?id=36433), [13 de utilidades de línea de comandos de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), o [Utilidades de línea de comandos de Microsoft 13.1 para SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). El controlador es un requisito previo para instalar `sqlcmd.exe` y `bcp.exe`.
+El `bcp.exe` y `sqlcmd.exe` las herramientas para usarlo con el controlador puede descargarse en [utilidades de línea de comandos de Microsoft 11 para SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [13 de utilidades de línea de comandos de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), o [Utilidades de línea de comandos de Microsoft 13.1 para SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). El controlador es un requisito previo para instalar `sqlcmd.exe` y `bcp.exe`.
   
 `bcp.exe` y `sqlcmd.exe` están instalados en el `110\Tools` subcarpeta de `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` para la versión 11, y `130\Tools` para 13.1 y 13.
 

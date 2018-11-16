@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3618504d0db8003df7787778d84d62990c83b8fb
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217803"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701353"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de taxis de Nueva York demostración para ver tutoriales de Python de SQL Server y R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se explica cómo configurar una base de datos de ejemplo que consta de datos públicos del [ciudad de Nueva York taxis y limusinas Comisión](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Estos datos se usan en los tutoriales de varias R y Python para realizar análisis en bases de datos en SQL Server. Para que el código de ejemplo se ejecute con mayor rapidez, hemos creado una muestra representativa del 1% de los datos. En el sistema, el archivo de copia de seguridad de base de datos es ligeramente más de 90 MB, proporcionar 1,7 millones de filas en la tabla de datos principal.
+En este artículo se explica cómo configurar una base de datos de ejemplo que consta de datos públicos del [ciudad de Nueva York taxis y limusinas Comisión](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Estos datos se usan en los tutoriales de varias R y Python para realizar análisis en bases de datos en SQL Server. Para que el código de ejemplo se ejecute con mayor rapidez, hemos creado una muestra representativa del 1% de los datos. En el sistema, el archivo de copia de seguridad de base de datos es ligeramente más de 90 MB, proporcionar 1,7 millones de filas en la tabla de datos principal.
 
 Para completar este ejercicio, debe tener [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) u otra herramienta que puede restaurar un archivo de copia de seguridad de base de datos y ejecutar consultas de T-SQL.
 

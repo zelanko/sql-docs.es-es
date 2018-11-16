@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726389"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600865"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resistencia de conexión en el controlador Windows ODBC
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47726389"
 > [!IMPORTANT]  
 >  La característica de resistencia de conexión es compatible con versiones de bases de datos SQL de Microsoft Azure y SQL Server 2014 (y posterior).  
   
- Para obtener más información sobre la resistencia de conexión inactiva, vea [el artículo técnico sobre esta característica](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Para obtener más información sobre la resistencia de conexión inactiva, vea [el artículo técnico sobre esta característica](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Para controlar el comportamiento de reconexión, ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows, tiene dos opciones:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47726389"
   
      Puede modificar el número de reintentos de conexión:  
   
-    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **número de reintentos de conexión**.  
+    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **número de reintentos de conexión** .  
   
     -   Cuando utilice la palabra clave de cadena de conexión **ConnectRetryCount** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47726389"
   
      Puede modificar el intervalo de reintentos de conexión:  
   
-    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **intervalo de reintentos de conexión**.  
+    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **intervalo de reintentos de conexión** .  
   
     -   Cuando utilice la palabra clave de cadena de conexión **ConnectRetryInterval** .  
   

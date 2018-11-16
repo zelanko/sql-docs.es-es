@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810153"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604365"
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,17 +57,17 @@ Asegúrese de que usa `kinit` o PAM (módulo de autenticación acoplable) para o
 
 Cuando una aplicación se ejecuta como un servicio, puesto que las credenciales de Kerberos expiran por diseño, renueve las credenciales para garantizar la disponibilidad continua del servicio. El controlador ODBC no renovarse credenciales; Asegúrese de que hay un `cron` trabajo o un script que se ejecute periódicamente para renovar las credenciales antes de su caducidad. Para evitar la necesidad de la contraseña para cada renovación, puede usar un archivo keytab.  
   
-En este artículo sobre[el uso y la configuración de Kerberos](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) se ofrece información sobre las formas de aplicar la autenticación Kerberos a servicios en Linux.
+En este artículo sobre[el uso y la configuración de Kerberos](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) se ofrece información sobre las formas de aplicar la autenticación Kerberos a servicios en Linux.
   
 ## <a name="tracking-access-to-a-database"></a>Seguimiento del acceso a una base de datos
 
-Los administradores de bases de datos pueden crear una pista de auditoría del acceso a una base de datos cuando se usan cuentas del sistema para acceder a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la autenticación integrada.  
+Los administradores de bases de datos pueden crear una pista de auditoría del acceso a una base de datos cuando se utilizan cuentas del sistema para acceder a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la autenticación integrada.  
   
-Para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se usa la cuenta del sistema, y no existe ninguna función en Linux para suplantar el contexto de seguridad. Por lo tanto, se requieren más acciones para determinar el usuario.
+Para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se utiliza la cuenta del sistema, y no existe ninguna función en Linux para suplantar el contexto de seguridad. Por lo tanto, se requieren más acciones para determinar el usuario.
   
 Para auditar las actividades realizadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a la cuenta del sistema, la aplicación debe usar **EXECUTE AS** de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-Para mejorar su rendimiento, las aplicaciones pueden utilizar la agrupación de conexiones con la autenticación integrada y la auditoría. Pero combinar la agrupación de conexiones, la autenticación integrada y la auditoría trae consigo un riesgo de seguridad, ya que el administrador de controladores unixODBC permite que distintos usuarios reutilicen las conexiones agrupadas. Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
+Para mejorar su rendimiento, las aplicaciones pueden utilizar la agrupación de conexiones con la autenticación integrada y la auditoría. Pero combinar la agrupación de conexiones, la autenticación integrada y la auditoría trae consigo un riesgo de seguridad, ya que el administrador de controladores unixODBC permite que distintos usuarios reutilicen las conexiones agrupadas. Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](https://www.unixodbc.org/doc/conn_pool.html).  
 
 Antes de permitir su reutilización, las aplicaciones deben restablecer las conexiones agrupadas al ejecutar `sp_reset_connection`.  
 
@@ -83,7 +83,7 @@ Los desarrolladores pueden implementar una aplicación que utilice un servidor v
   
 -   El servidor de aplicaciones se autentica como una base de datos distinta y se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como un usuario de base de datos en otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como un usuario de bases de datos en otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Tras configurar la autenticación integrada, las credenciales se transmiten al servidor vinculado.  
   
@@ -126,7 +126,7 @@ La hora en el equipo Linux o macOS y la hora en el centro de distribución de cl
 
 Si se produce un error en la autenticación Kerberos, el controlador ODBC en Linux o macOS no usa la autenticación NTLM.  
 
-Para obtener más información sobre la autenticación de equipos Linux o macOS con Active Directory, consulte [autenticar los clientes de Linux con Active Directory](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) y [procedimientos recomendados para integrar OS X con Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obtener más información sobre la configuración de Kerberos, consulte el [MIT Kerberos documentación](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Para obtener más información sobre la autenticación de equipos Linux o macOS con Active Directory, consulte [autenticar los clientes de Linux con Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) y [procedimientos recomendados para integrar OS X con Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obtener más información sobre la configuración de Kerberos, consulte el [MIT Kerberos documentación](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Ver también  
 [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md)

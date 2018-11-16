@@ -17,12 +17,12 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dde7806e0485bc46ca9b9869e8856836006b9032
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 433e23cdd4805da701d4eaf1104d4f534cdb3a6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216293"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673394"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usar WQL con el proveedor WMI para eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- El argumento de la cláusula `FROM` de la consulta WQL (`DDL_DATABASE_LEVEL_EVENTS`) puede ser cualquier evento válido en el que se pueda crear una notificación de eventos. Los argumentos de las cláusulas `SELECT` y `WHERE` pueden especificar cualquier propiedad de evento asociada a un evento o a su evento principal. Para obtener una lista de eventos válidos y las propiedades de evento, vea [las notificaciones de eventos (motor de base de datos)](http://technet.microsoft.com/library/ms182602.aspx).  
+ El argumento de la cláusula `FROM` de la consulta WQL (`DDL_DATABASE_LEVEL_EVENTS`) puede ser cualquier evento válido en el que se pueda crear una notificación de eventos. Los argumentos de las cláusulas `SELECT` y `WHERE` pueden especificar cualquier propiedad de evento asociada a un evento o a su evento principal. Para obtener una lista de eventos válidos y las propiedades de evento, vea [las notificaciones de eventos (motor de base de datos)](https://technet.microsoft.com/library/ms182602.aspx).  
   
  El proveedor WMI de eventos de servidor admite explícitamente la sintaxis WQL siguiente. Se puede especificar sintaxis WQL adicional, pero no es específica de este proveedor y es analizada en su lugar por el servicio de host de WMI. Para obtener más información acerca del Lenguaje de consulta de WMI, vea la documentación de WQL en Microsoft Developer Network (MSDN).  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  Especifica que se consultan todas las propiedades asociadas a un evento.  
   
  *event_type*  
- Es cualquier evento sobre el que se puede crear una notificación de eventos. Para obtener una lista de eventos disponibles, consulte [proveedor WMI de clases de eventos de servidor y las propiedades](http://technet.microsoft.com/library/ms186449.aspx). Tenga en cuenta que *tipo de evento* nombres corresponden al mismo *event_type* | *event_group* que se puede especificar al crear manualmente una notificación de eventos mediante el uso de CREATE EVENT NOTIFICATION. Ejemplos de *tipo de evento* incluye CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS y TRC_DATABASE.  
+ Es cualquier evento sobre el que se puede crear una notificación de eventos. Para obtener una lista de eventos disponibles, consulte [proveedor WMI de clases de eventos de servidor y las propiedades](https://technet.microsoft.com/library/ms186449.aspx). Tenga en cuenta que *tipo de evento* nombres corresponden al mismo *event_type* | *event_group* que se puede especificar al crear manualmente una notificación de eventos mediante el uso de CREATE EVENT NOTIFICATION. Ejemplos de *tipo de evento* incluye CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS y TRC_DATABASE.  
   
 > [!NOTE]  
 >  Determinados procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar notificaciones de eventos. Pruebe las notificaciones de eventos para determinar su respuesta a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, la instrucción CREATE TYPE y **sp_addtype** procedimiento almacenado activarán una notificación de eventos que se crea en un evento CREATE_TYPE. Sin embargo, el **sp_rename** procedimiento almacenado no activa ninguna notificación de eventos. Para obtener más información, consulte[eventos DDL](../../relational-databases/triggers/ddl-events.md).  
@@ -109,7 +109,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Si `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` se especifica en el `WHERE` cláusula, se realiza un intento para registrar la notificación de eventos directamente en el objeto `Z` en esquema `X`. El registro es satisfactorio si el cliente que realiza la llamada tiene permisos. Tenga en cuenta que actualmente, se admiten los eventos de nivel de objeto solo en las colas y solo para el QUEUE_ACTIVATION *event_type*.  
   
- Observe que no todos los eventos se pueden consultar en cualquier ámbito determinado. Por ejemplo, una consulta WQL en un evento de seguimiento como Lock_Deadlock o un grupo de eventos de seguimiento como TRC_LOCKS, solo se puede registrar en el nivel de servidor. De forma similar, el evento CREATE_ENDPOINT y el grupo de eventos DDL_ENDPOINT_EVENTS también se pueden registrar solo en el nivel de servidor. Para obtener más información acerca del ámbito adecuado para registrar los eventos, vea [diseñar notificaciones de eventos](http://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Consultar un intento de registrar un WQL cuyo *event_type* solo se puede registrar en el servidor de nivel siempre se realiza en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene permisos. De lo contrario, se devuelve un error al cliente. En algunos casos, sin embargo, puede utilizar todavía la cláusula WHERE como filtro para los eventos en el nivel de servidor basados en las propiedades que corresponden al evento. Por ejemplo, muchos de los eventos de seguimiento tienen un **DatabaseName** propiedad que puede usar en la cláusula WHERE como filtro.  
+ Observe que no todos los eventos se pueden consultar en cualquier ámbito determinado. Por ejemplo, una consulta WQL en un evento de seguimiento como Lock_Deadlock o un grupo de eventos de seguimiento como TRC_LOCKS, solo se puede registrar en el nivel de servidor. De forma similar, el evento CREATE_ENDPOINT y el grupo de eventos DDL_ENDPOINT_EVENTS también se pueden registrar solo en el nivel de servidor. Para obtener más información acerca del ámbito adecuado para registrar los eventos, vea [diseñar notificaciones de eventos](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Consultar un intento de registrar un WQL cuyo *event_type* solo se puede registrar en el servidor de nivel siempre se realiza en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene permisos. De lo contrario, se devuelve un error al cliente. En algunos casos, sin embargo, puede utilizar todavía la cláusula WHERE como filtro para los eventos en el nivel de servidor basados en las propiedades que corresponden al evento. Por ejemplo, muchos de los eventos de seguimiento tienen un **DatabaseName** propiedad que puede usar en la cláusula WHERE como filtro.  
   
  Las notificaciones de eventos con ámbito de servidor se crean en el **maestro** de base de datos y se puede consultar para los metadatos mediante el uso de la [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) vista de catálogo.  
   
@@ -142,7 +142,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Proveedor WMI para conocer los conceptos de los eventos de servidor](http://technet.microsoft.com/library/ms180560.aspx)   
- [Notificaciones de eventos (motor de base de datos)](http://technet.microsoft.com/library/ms182602.aspx)  
+ [Proveedor WMI para conocer los conceptos de los eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx)   
+ [Notificaciones de eventos (motor de base de datos)](https://technet.microsoft.com/library/ms182602.aspx)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e69c48d9f5c026f6c71b80a4a9a67ed83c989c25
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2da773ee52b036854b5b908615ebadafb0de591d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099626"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665495"
 ---
 # <a name="generating-reports-mysqltosql"></a>Generación de informes (MySQLToSQL)
 Se generan los informes de ciertas actividades realizadas mediante comandos en la consola de SSMA en nivel de árbol de objetos.  
@@ -144,5 +144,5 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
 -   Error de script  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Ejecución de la consola SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

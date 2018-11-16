@@ -11,12 +11,12 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c87e7b85282c7ca237689296e08d2b7645240ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0134b1f5f20c02a853ef31024191ed69e9129908
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767143"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602655"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectarse usando la autenticación de Azure Active Directory
 
@@ -221,7 +221,7 @@ El ejemplo siguiente contiene una sencilla aplicación Java que se conecta a Azu
     3. Haga clic en la pestaña "Registros de aplicación".
     4. En el cajón, haga clic en "Nuevo registro de aplicaciones".
     5. Escriba mytokentest como un nombre descriptivo para la aplicación, seleccione "aplicación Web o API".
-    6. No necesitamos dirección URL de inicio de sesión. Basta con que proporcione cualquier cosa: "http://mytokentest".
+    6. No necesitamos dirección URL de inicio de sesión. Basta con que proporcione cualquier cosa: "https://mytokentest".
     7. En la parte inferior, haga clic en "Crear".
     9. Mientras sigue en Azure portal, haga clic en la pestaña "Configuración" de la aplicación y abra la pestaña "Propiedades".
     10. Busque el valor "Id. de aplicación" (también conocido como Id. de cliente) y cópielo aparte, necesitará más adelante cuando configure la aplicación (por ejemplo, 1846943b-ad04-4808-aa13-4702d908b5c1). Consulte la siguiente instantánea.

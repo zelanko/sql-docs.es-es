@@ -11,12 +11,12 @@ ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 442e9693bcb06f6ea4fc94acbd3c020a598da504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4091b9334b024519054738c4f3fde6d0d0348625
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664663"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602995"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Controlador Node.js de SQL Server
 
@@ -33,7 +33,7 @@ Puede conectarse a una base de datos SQL mediante Node.js en Windows, Linux o Ma
   
 ## <a name="documentation"></a>Documentación  
   
-[Documentación del módulo tedioso en Github](http://tediousjs.github.io/tedious/)  
+[Documentación del módulo tedioso en Github](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Comunidad  
 * [Centro para desarrolladores de Node.js de Azure](https://azure.microsoft.com/develop/nodejs/)  

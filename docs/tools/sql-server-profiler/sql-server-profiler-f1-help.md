@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767163"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667444"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 |---|---
 |Columna**Eventos** |Especifique los eventos de seguimiento seleccionando o desactivando la casilla de la columna de eventos. Los**eventos** se organizan por categoría. Las clases de evento especificadas en la plantilla se seleccionan automáticamente. Para obtener más información, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Columnas de datos|Especifique las columnas de datos de seguimiento activando la casilla que se corresponda con el evento y la columna de datos necesarios. Todas las columnas de eventos importantes se activan de manera predeterminada en cada evento incluido en el seguimiento.  
-|Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** . Para obtener más información, vea [SQL Server Profiler (Editar filtro)](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** . Para obtener más información, vea [SQL Server Profiler (Editar filtro)](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
 |**Mostrar todos los eventos**|Se muestran todos los eventos disponibles. De forma predeterminada, solo se muestran las filas de la cuadrícula **Selección de eventos** que están seleccionadas. Desactive esta casilla para ocultar todos los eventos que no estén seleccionados en la cuadrícula **Selección de eventos** .  
 |**Mostrar todas las columnas**|Muestra todas las columnas de datos disponibles. De forma predeterminada, solo se muestran las columnas de datos seleccionadas. Desactive esta casilla para ocultar todas las columnas de datos que no estén seleccionadas en la cuadrícula **Selección de eventos** .  
 |**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro** . Puede utilizar este cuadro de diálogo para editar filtros de columnas de datos.  
@@ -179,7 +179,7 @@ Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las 
 |---|---
 |**Cargar todos los archivos de sustitución incremental en secuencia sin preguntar**|Carga automáticamente los archivos de sustitución incremental cuando se abre un archivo de seguimiento. Si se ha creado más de un archivo durante la traza, la selección de esta opción carga automáticamente todos los archivos de sustitución incremental.  
 |**Preguntar antes de cargar archivos de sustitución incremental**|Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pregunta antes de agregar un archivo de sustitución incremental.  
-|**No cargar nunca los archivos siguientes de sustitución incremental**|Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
+|**No cargar nunca los archivos siguientes de sustitución incremental**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
 ### <a name="replay-options"></a>Opciones de reproducción  
 |Elemento|Descripción
 |---|---
@@ -275,6 +275,6 @@ Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccion
 
 ## <a name="see-also"></a>Vea también 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
-[Supervisión de la actividad y el rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+[Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

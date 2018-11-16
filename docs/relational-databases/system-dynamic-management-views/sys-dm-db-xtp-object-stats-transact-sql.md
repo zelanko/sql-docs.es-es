@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b95073ccecbd2cca3663e4f48767764a0aa2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8c41b7f9c42628f4310c3f1a54dc24a7f124202
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780373"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676332"
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Indica el número de filas afectadas por operaciones en cada uno de los objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] desde el último reinicio de la base de datos. Las estadísticas se actualizan cuando se ejecuta la operación, independientemente de si la transacción se confirma o se revirtió.  
   
- sys.dm_db_xtp_object_stats puede ayudarle a identificar las tablas optimizadas para memoria que más cambian. Puede decidir quitar de la tabla los índices que no se usan o que usan con poca frecuencia, ya que cada índice afecta al rendimiento. Si hay índices hash, debe volver a evaluar periódicamente el número de depósitos. Para obtener más información, consulte [determinar el número correcto de depósitos para los índices Hash](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
+ sys.dm_db_xtp_object_stats puede ayudarle a identificar las tablas optimizadas para memoria que más cambian. Puede decidir quitar de la tabla los índices que no se usan o que usan con poca frecuencia, ya que cada índice afecta al rendimiento. Si hay índices hash, debe volver a evaluar periódicamente el número de depósitos. Para obtener más información, vea [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
   
  sys.dm_db_xtp_object_stats puede ayudarle a identificar qué tablas optimizadas para memoria incurren en conflictos de escritura contra escritura, lo que puede afectar al rendimiento de la aplicación. Por ejemplo, si tiene lógica de reintento de transacciones, puede que sea necesario ejecutar más de una vez la misma instrucción. También puede usar esta información para identificar las tablas (y por tanto la lógica de negocios) que necesitan un control de errores de escritura contra escritura.  
   

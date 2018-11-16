@@ -17,12 +17,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71212c1e89cf2b86c76a70b609a9af69adf4db1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2961e4c8345157df3d8b625ccc7bb45501570793
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841313"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675214"
 ---
 # <a name="create-a-push-subscription"></a>Crear una suscripción de inserción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ ms.locfileid: "47841313"
 ##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
  Las suscripciones de inserción se pueden crear mediante programación usando Replication Management Objects (RMO). Las clases RMO que se utilizan para crear una suscripción de inserción dependen del tipo de publicación para el que se crea la suscripción.  
   
-> **IMPORTANTE:** Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](http://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+> **IMPORTANTE:** Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para crear una suscripción de inserción para una publicación de instantáneas o transaccional  
   

@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614443"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658084"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tablas temporales con control de versiones del sistema con tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Las tablas temporales con control de versiones del sistema para [tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) están diseñadas con el objetivo de ofrecer una solución rentable para escenarios donde se requieren [auditorías de los datos y análisis puntales](http://msdn.microsoft.com/library/mt631669.aspx) , además de los datos recopilados con cargas de trabajo de OLTP en memoria. Ofrecen gran rendimiento transaccional, simultaneidad sin bloqueo y, al mismo tiempo, la capacidad de almacenar grandes cantidades de datos de historial en los que se pueden realizar consultas fácilmente.  
+  Las tablas temporales con control de versiones del sistema para [tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) están diseñadas con el objetivo de ofrecer una solución rentable para escenarios donde se requieren [auditorías de los datos y análisis puntales](https://msdn.microsoft.com/library/mt631669.aspx) , además de los datos recopilados con cargas de trabajo de OLTP en memoria. Ofrecen gran rendimiento transaccional, simultaneidad sin bloqueo y, al mismo tiempo, la capacidad de almacenar grandes cantidades de datos de historial en los que se pueden realizar consultas fácilmente.  
   
 ## <a name="overview"></a>Información general  
  Las tablas temporales con control de versiones del sistema mantienen automáticamente un historial completo de los cambios de datos y exponen prácticas extensiones de Transact-SQL para los análisis puntuales. En un escenario típico, se conserva el historial de datos durante un periodo muy largo (varios meses, incluso años), aunque no se realicen consultas en él con regularidad.  

@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874373"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696983"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
 
@@ -110,11 +110,11 @@ ms.locfileid: "48874373"
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, `http://constoso/mds`.|  
+|**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, `https://constoso/mds`.|  
 |**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
 |**Número de notificaciones en un solo correo electrónico**|**NotificationsPerEmail**|El número máximo de problemas de validación que se enumerarán en un solo correo electrónico de notificación. Los problemas adicionales, si los hay, no se incluyen en el correo electrónico, pero están disponibles en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
-|**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expresión regular que se utiliza para validar la dirección de correo electrónico escrita en la pestaña **General** del usuario. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](http://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
+|**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expresión regular que se utiliza para validar la dirección de correo electrónico escrita en la pestaña **General** del usuario. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
 |**Cuenta de Correo electrónico de base de datos**|**EmailProfilePrincipalAccount**|Muestra la cuenta de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. El perfil predeterminado es **mds_email_user**.|  
 |**Perfil de Correo electrónico de base de datos**|**DatabaseMailProfile**|El perfil de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. Está en blanco de forma predeterminada.|  
 ||**ValidationIssueHTML**|En formato HTML, texto que los usuarios de correo electrónico obtienen cuando una regla de negocios produce un error en la validación.|  

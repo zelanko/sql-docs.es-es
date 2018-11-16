@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c1a4fc481f6a7285ded045b1a648ee6e700b5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776623"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606925"
 ---
 # <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Requisitos previos para migrar desde el trasvase de registros a grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,15 +101,15 @@ ms.locfileid: "47776623"
   
      [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
 -   **Notas del producto:**  
   
-     [Guía de migración: migrar a grupos de disponibilidad AlwaysOn desde implementaciones anteriores que combinan creación de reflejo de la base de datos y trasvase de registros](http://msdn.microsoft.com/library/jj635217)  
+     [Guía de migración: migrar a grupos de disponibilidad AlwaysOn desde implementaciones anteriores que combinan creación de reflejo de la base de datos y trasvase de registros](https://msdn.microsoft.com/library/jj635217)  
   
-     [Notas del producto de Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
+     [Notas del producto del equipo de asesoramiento al cliente de SQL Server](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>Ver también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

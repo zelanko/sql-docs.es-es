@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: be1056992fea4b9b1ee7bcd0857ca566d67cab40
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021169"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813858"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
 
@@ -79,7 +79,7 @@ ms.locfileid: "50021169"
   
 1.  Abra el explorador. Para obtener información sobre los exploradores y las versiones de los exploradores compatibles, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-2.  En la barra de direcciones del explorador web, escriba la URL del portal web. De forma predeterminada, la dirección URL es `http://<serverName>/reports`. Puede utilizar la herramienta de configuración de Reporting Services para confirmar el nombre del servidor y la dirección URL. Para obtener más información sobre las direcciones URL que se usan en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+2.  En la barra de direcciones del explorador web, escriba la URL del portal web. De forma predeterminada, la dirección URL es `https://<serverName>/reports`. Puede utilizar la herramienta de configuración de Reporting Services para confirmar el nombre del servidor y la dirección URL. Para obtener más información sobre las direcciones URL que se usan en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  El portal web se abre en la ventana del explorador. La página de inicio es la carpeta Inicio. Según los permisos que posea, podrá ver otras carpetas, hipervínculos a informes y archivos de recursos dentro de la página de inicio. También puede ver otros botones y comandos en la barra de herramientas.  
   

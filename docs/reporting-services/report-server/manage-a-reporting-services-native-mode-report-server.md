@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f8f0b048d540647c41deff629dec5495c91d7e76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021599"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812708"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Administrar un servidor de informes en modo nativo de Reporting Services
   Esta sección contiene procedimientos para configurar una instancia de servidor de informes en modo nativo utilizando el Administrador de configuración de Reporting Services.  
@@ -52,7 +52,7 @@ ms.locfileid: "50021599"
  Explica cómo abrir los puertos que se usan para las solicitudes entrantes y las respuestas salientes desde un servidor de informes.  
   
  [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Describe los pasos adicionales necesarios para conectarse al Administrador de informes o a un servidor de informes mediante `http://localhost`.  
+ Describe los pasos adicionales necesarios para conectarse al Administrador de informes o a un servidor de informes mediante `https://localhost`.  
   
  [Configuración de un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explica cómo configurar una instancia del servidor de informes remota para que pueda conectarse y configurarla desde un equipo diferente.  

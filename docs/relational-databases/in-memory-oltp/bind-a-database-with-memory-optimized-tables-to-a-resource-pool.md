@@ -11,12 +11,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0fcb098d96e8e62bd99f6c9560df1d23d5266ca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ea3f4ea5649f6c23d5874c38f151839cbdc4b4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680733"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672794"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ En este ejemplo supondremos que en sus cálculos ha determinado que las tablas y
 ###  <a name="bkmk_CreateResourcePool"></a> Crear un grupo de recursos de servidor y configurar la memoria  
  A la hora de configurar memoria para las tablas optimizadas para memoria, el planeamiento de capacidad debe realizarse en función de MIN_MEMORY_PERCENT, no de MAX_MEMORY_PERCENT.  Vea [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) para obtener más información sobre MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Esto proporciona una disponibilidad de memoria más predecible en las tablas optimizadas para memoria, ya que MIN_MEMORY_PERCENT produce presión de memoria en otros grupos de recursos de servidor para asegurarse de que se respeta. Para asegurarse de que hay memoria disponible e impedir condiciones de memoria insuficiente, los valores de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT deben ser iguales. Vea la tabla [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) de abajo para conocer el porcentaje de memoria disponible para las tablas optimizadas para memoria según la cantidad de memoria asignada.  
   
- Vea [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obtener más información sobre cómo trabajar en un entorno de máquinas virtuales.  
+ Vea [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obtener más información sobre cómo trabajar en un entorno de máquinas virtuales.  
   
  El siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un grupo de recursos de servidor denominado Pool_IMOLTP con la mitad de memoria disponible para su uso.  Una vez creado el grupo, hay que reconfigurar el Regulador de recursos para incluir Pool_IMOLTP.  
   
@@ -143,7 +143,7 @@ GO
  Ahora, la base de datos está enlazada al grupo de recursos de servidor.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente  
- Si agrega memoria adicional al servidor o si cambia la cantidad de memoria necesaria para las tablas optimizadas para memoria, puede ser necesario modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Los pasos siguientes muestran cómo modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo de recursos de servidor. Vea la próxima sección para obtener información sobre qué valores se deben usar para MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obtener más información.  
+ Si agrega memoria adicional al servidor o si cambia la cantidad de memoria necesaria para las tablas optimizadas para memoria, puede ser necesario modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Los pasos siguientes muestran cómo modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo de recursos de servidor. Vea la próxima sección para obtener información sobre qué valores se deben usar para MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obtener más información.  
   
 1.  Utilice `ALTER RESOURCE POOL` para cambiar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  
   

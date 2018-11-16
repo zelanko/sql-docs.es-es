@@ -17,12 +17,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa43a9bac948f5d03d21689b4272f2c93317792b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0451f0bdb394d66fa8477c43aee801bd25ead1db
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654883"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638762"
 ---
 # <a name="execute-process-task"></a>Tarea Ejecutar proceso
   La tarea Ejecutar proceso ejecuta una aplicación o un archivo por lotes como parte de un flujo de trabajo de paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Aunque puede utilizar la tarea Ejecutar proceso para abrir cualquier aplicación estándar, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], normalmente la utilizará para ejecutar aplicaciones empresariales o archivos por lotes que trabajen con un origen de datos. Por ejemplo, puede utilizar la tarea Ejecutar proceso para expandir un archivo de texto comprimido. Una vez hecho esto, el paquete puede usar el archivo de texto como origen de datos para el flujo de datos. Otro ejemplo sería utilizar la tarea Ejecutar proceso para ejecutar una aplicación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizada que genera un informe de ventas diario. Se puede adjuntar este informe a una tarea Enviar correo para reenviarlo a una lista de distribución.  
@@ -42,12 +42,12 @@ ms.locfileid: "47654883"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="property-settings"></a>Valores de propiedades  
  Cuando la tarea Ejecutar proceso ejecuta una aplicación personalizada, la tarea proporciona la entrada para la aplicación por medio de los métodos siguientes:  
   
--   Una variable que se especifica en la configuración de la propiedad **StandardInputVariable** . Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Una variable que se especifica en la configuración de la propiedad **StandardInputVariable** . Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 -   Un argumento que se especifica en la configuración de la propiedad **Arguments** . Por ejemplo, si la tarea abre un documento en Word, el argumento puede asignar un nombre al archivo .doc.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47654883"
   
  Puede usar una expresión para establecer diversas propiedades de la tarea Ejecutar proceso.  
   
- Cuando use la propiedad **StandardInputVariable** para configurar la tarea Ejecutar proceso para proporcionar la entrada, llame al método **Console.ReadLine** desde la aplicación para leer la entrada. Para obtener más información, vea el tema [Console.ReadLine (Método)](http://go.microsoft.com/fwlink/?LinkId=129201), en la Biblioteca de clases de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Cuando use la propiedad **StandardInputVariable** para configurar la tarea Ejecutar proceso para proporcionar la entrada, llame al método **Console.ReadLine** desde la aplicación para leer la entrada. Para obtener más información, vea el tema [Console.ReadLine (Método)](https://go.microsoft.com/fwlink/?LinkId=129201), en la Biblioteca de clases de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Cuando use la propiedad **Argumentos** para configurar la tarea Ejecutar proceso con el fin de proporcionar la entrada, realice uno de los pasos siguientes para obtener los argumentos:  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47654883"
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     Para obtener más información, vea el tema [My.Application.CommandLineArgs (Propiedad)](http://go.microsoft.com/fwlink/?LinkId=129200)en la Referencia del lenguaje [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+     Para obtener más información, vea el tema [My.Application.CommandLineArgs (Propiedad)](https://go.microsoft.com/fwlink/?LinkId=129200)en la Referencia del lenguaje [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
 -   Si escribe la aplicación en Microsoft Visual C#, use el método **Main**.  
   
-     Para más información, vea el tema [Argumentos de la línea de comandos (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkId=129406)en la Guía de programación de C#.  
+     Para más información, vea el tema [Argumentos de la línea de comandos (Guía de programación de C#)](https://go.microsoft.com/fwlink/?LinkId=129406)en la Guía de programación de C#.  
   
  La tarea Ejecutar proceso también incluye las propiedades **StandardOutputVariable** y **StandardErrorVariable** para especificar las variables que usan la salida estándar y la salida de errores de la aplicación, respectivamente.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47654883"
  **StandardInputVariable**  
  Seleccione una variable para proporcionar la entrada al proceso o haga clic en \<**Nueva variable…**> para crear una:  
   
- **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  Seleccione una variable para capturar la salida del proceso o haga clic en \<**Nueva variable…**> para crear una.  

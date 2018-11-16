@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: de3eb008d9411c33a8c9559e2633236265c493b4
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 8af75cb359e78c0359617f0ba74384a26b49d922
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270238"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703803"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ En este tema se proporcionan detalles de las características compatibles con la
 Para obtener información sobre versiones anteriores, consulte:
 
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
-* [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
+* [SQL Server 2014](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
   
 Los requisitos de instalación varían según las necesidades de las aplicaciones. Las distintas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] han sido diseñadas para satisfacer los requisitos de rendimiento, tiempo de ejecución y precio propios de cada organización y cada persona. Los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que instale también dependen de sus necesidades concretas. Las secciones siguientes le servirán de ayuda para elegir la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -62,7 +62,7 @@ Para leer las notas de la versión más reciente e información sobre las noveda
 
 ### <a name="try-sql-server"></a>Pruebe SQL Server.    
     
-> [![Descargar desde el Centro de evaluación](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Descargar SQL Server 2017 desde el Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![Descargar desde el Centro de evaluación](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Descargar SQL Server 2017 desde el Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
@@ -108,7 +108,7 @@ Para leer las notas de la versión más reciente e información sobre las noveda
   
 |Herramientas de administración|Descripción|  
 |----------------------|-----------------|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un entorno integrado para obtener acceso a los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y configurarlos, administrarlos y desarrollarlos. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permite a los desarrolladores de software y a los administradores de diversos grados de conocimientos utilizar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Descargue e instale <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] desde  [Descargar SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx)|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un entorno integrado para obtener acceso a los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y configurarlos, administrarlos y desarrollarlos. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permite a los desarrolladores de software y a los administradores de diversos grados de conocimientos utilizar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Descargue e instale <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] desde  [Descargar SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|  
 |Administrador de configuración de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |El Administrador de configuración de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona administración de configuración básica para los servicios, protocolos de servidor, protocolos de cliente y alias de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] proporciona una interfaz gráfica de usuario para supervisar una instancia del [!INCLUDE[ssDE](../includes/ssde-md.md)] o de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |Asistente para la optimización de[!INCLUDE[ssDE](../includes/ssde-md.md)] |El Asistente para la optimización de[!INCLUDE[ssDE](../includes/ssde-md.md)] crea conjuntos óptimos de índices, vistas indizadas y particiones.|  
@@ -400,7 +400,7 @@ Para obtener información sobre las características de Business Intelligence Cl
 > [![Descargar SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md)Descargar la versión más reciente de **[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**     
   
 ## <a name="next-steps"></a>Pasos siguientes 
- [Especificaciones de producto para SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
+ [Especificaciones de producto para SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Instalación de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

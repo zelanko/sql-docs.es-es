@@ -5,8 +5,7 @@ ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configure
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], managing
@@ -23,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bbe790a131fe48a4cdfd506aedcde49308ab67d0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657036"
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,11 +85,11 @@ ms.locfileid: "49383410"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es compatible con los protocolos Memoria compartida, TCP/IP y Canalizaciones con nombre. Para obtener más información acerca de cómo elegir un protocolo de red, vea [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no es compatible con los protocolos de red VIA (Protocolo de paquetes secuenciados) de Banyan VINES, Multiprotocolo, AppleTalk o NWLink SPP/IPX. Los clientes anteriormente conectados con estos protocolos deben seleccionar uno distinto para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No es posible utilizar el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para configurar el proxy WinSock. Para configurar el proxy WinSock, consulte la documentación de ISA Server.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+ [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Iniciar, detener o pausar el servicio del Agente SQL Server](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [Iniciar, detener o pausar el servicio del Agente SQL Server](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
  [Configurar una instancia de SQL Server para que se inicie automáticamente &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

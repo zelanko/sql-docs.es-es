@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804663"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641152"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la captura de datos modificados ofrece una solución efectiva al desafío de realizar eficazmente las cargas incrementales de las tablas de origen a los data mart y a los almacenamientos de datos.  
@@ -96,9 +96,9 @@ ms.locfileid: "47804663"
 ## <a name="samples-of-change-data-capture-packages"></a>Ejemplos de paquetes de captura de datos modificados  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos ejemplos que muestran cómo usar la captura de datos modificados en paquetes. Para obtener más información, consulte los temas siguientes:  
   
--   [Léame del ejemplo de captura de datos modificados desde el paquete de la última solicitud](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Léame del ejemplo de captura de datos modificados desde el paquete de la última solicitud](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Léame del ejemplo de captura de datos de cambio desde el paquete de la última solicitud](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Léame del ejemplo de captura de datos de cambio desde el paquete de la última solicitud](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804663"
 -   [Realizar una carga incremental de varias tablas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog, sobre el [patrón de diseño de SSIS y la carga incremental](http://go.microsoft.com/fwlink/?LinkId=217679), en sqlblog.com  
+ Entrada de blog, sobre el [patrón de diseño de SSIS y la carga incremental](https://go.microsoft.com/fwlink/?LinkId=217679), en sqlblog.com  
   
   

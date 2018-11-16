@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 518133fc1023683f5f15af50db6133c28db2cc17
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 3187a7ac06aac6be8d8c6189c8e13322c8c0bdf7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031574"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812272"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexión de SAP NetWeaver BI (SSRS)
   Para incluir en un informe datos de un origen de datos de SAP NetWeaver® Business Intelligence externo, debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos del proveedor de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "50031574"
  Póngase en contacto con el administrador de la base de datos y solicite la información de conexión y las credenciales que debe usar para conectar con el origen de datos. En el siguiente ejemplo de cadena de conexión se especifica un origen de datos de [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] en un servidor que usa el puerto 8000 y XML para Analysis Services (XMLA) en Internet con el protocolo SOAP:  
   
 ```  
-DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
+DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
  Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  

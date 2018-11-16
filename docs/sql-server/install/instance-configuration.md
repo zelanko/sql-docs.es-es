@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764843"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701067"
 ---
 # <a name="installation-wizard-help"></a>Ayuda del Asistente para instalación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
 ### <a name="multiple-instances"></a>Instancias múltiples  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un solo servidor o procesador, pero solo una puede ser la predeterminada. Todas las demás deben ser instancias con nombre. Un equipo puede ejecutar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultáneamente y cada instancia se ejecuta independientemente de las otras instancias.  
   
- Para obtener más información, consulte [Especificaciones de capacidad máxima para SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Para obtener más información, consulte [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="options"></a>Opciones  
  Solo instancias de clústeres de conmutación por error: especifique el nombre de red en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este nombre identifica la instancia en clúster de conmutación por error en la red.  
@@ -121,7 +121,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
  **Especificar administradores** Debe especificar al menos un administrador de servidor para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios o grupos que especifique serán miembros del rol de administrador del servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está instalando. Debe haber cuentas de usuario de dominio de Windows en el mismo dominio que el del equipo en el que se instala el software.  
   
 > [!NOTE]  
->  Control de cuentas de usuario (UAC) es una característica de seguridad de Windows que requiere que un administrador apruebe específicamente acciones administrativas o aplicaciones antes de que se puedan ejecutar. Dado que UAC está activado de forma predeterminada, se le solicitará que permita las operaciones concretas que requieren privilegios elevados. Puede configurar UAC para cambiar el comportamiento predeterminado o personalizar UAC para programas concretos. Para más información sobre UAC y la configuración de UAC, consulte [Guía paso a paso de Control de cuentas de usuario](http://go.microsoft.com/fwlink/?linkid=196350) y el tema sobre [control de cuentas de usuario (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351).  
+>  Control de cuentas de usuario (UAC) es una característica de seguridad de Windows que requiere que un administrador apruebe específicamente acciones administrativas o aplicaciones antes de que se puedan ejecutar. Dado que UAC está activado de forma predeterminada, se le solicitará que permita las operaciones concretas que requieren privilegios elevados. Puede configurar UAC para cambiar el comportamiento predeterminado o personalizar UAC para programas concretos. Para más información sobre UAC y la configuración de UAC, consulte [Guía paso a paso de Control de cuentas de usuario](https://go.microsoft.com/fwlink/?linkid=196350) y el tema sobre [control de cuentas de usuario (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### <a name="see-also"></a>Ver también  
  [Configurar cuentas de servicio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -176,7 +176,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
 |Directorio de registro de base de datos de usuario|Disco local, servidor de archivos SMB, almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
 |Directorio de copia de seguridad|Disco local, servidor de archivos SMB, almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Backup|Establezca los permisos adecuados para evitar la pérdida de datos y asegúrese de que la cuenta de usuario para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenga los permisos adecuados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
   
- *Aunque se admite el uso de discos compartidos, no se recomienda esta práctica para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *Aunque se admite el uso de discos compartidos, esta práctica no es recomendada para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el usuario puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -250,7 +250,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
  Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
     
- [Permisos NTFS y de uso compartido en un servidor de archivos](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [Permisos NTFS y de uso compartido en un servidor de archivos](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>Configuración del motor de base de datos - Secuencia de archivo
   Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un sistema de archivos NTFS almacenando datos de objetos binarios grandes (BLOB) **varbinary(max)** como archivos en el sistema de archivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden insertar, actualizar, consultar, buscar y realizar copias de seguridad de los datos FILESTREAM. Las interfaces del sistema de archivos de Win32 proporcionan el acceso de la transmisión por secuencias a los datos.  
@@ -363,7 +363,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
  Para especificar un recurso compartido de archivos SMB como directorio, deberá escribir manualmente la ruta UNC admitida. No se admite el desplazamiento a un recurso compartido de archivos SMB. Este es un formato de ruta de acceso UNC admitida para un recurso compartido de archivos SMB: \\\NombreServidor\NombreRecursoCompartido\\...  
   
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y de registro para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede configurar durante la instalación.  
+ En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede configurar durante la instalación.  
   
 |Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
 |-----------------|----------------------------|-----------------------|---------------------|  
@@ -385,7 +385,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
   
 -   El valor de**Número de archivos** equivale a la cantidad total de archivos de datos de **tempdb**. El valor predeterminado es el mínimo de los siguientes: bien 8, bien el número de núcleos lógicos detectados por el programa de instalación. Como regla general, si el número de procesadores lógicos es inferior o igual a 8, use el mismo número de archivos de datos que procesadores lógicos. Si el número de procesadores lógicos es superior a 8, utilice 8 archivos de datos y, después, si se mantiene la contención, aumente el número de archivos de datos en múltiplos de 4 (con el número de procesadores lógicos como máximo) hasta que la contención se reduzca a niveles aceptables, o bien modifique el código o la carga de trabajo. 
   
--   **Tamaño inicial (MB)** equivale al tamaño inicial en MB para cada archivo de datos de **tempdb** . El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Todos los archivos de datos de **tempdb** tienen el mismo tamaño inicial. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de la base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
+-   **Tamaño inicial (MB)** equivale al tamaño inicial en MB para cada archivo de datos de **tempdb** . El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Todos los archivos de datos de **tempdb** tienen el mismo tamaño inicial. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite [Inicialización instantánea de archivos de la base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
   
 -   **Tamaño inicial total (MB)** es el tamaño acumulado de todos los archivos de datos de **tempdb** .  
   
@@ -428,7 +428,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
   
 ### <a name="see-also"></a>Ver también  
  [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Permisos NTFS y de uso compartido en un servidor de archivos](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Permisos NTFS y de uso compartido en un servidor de archivos](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>Configuración del motor de base de datos - Instancia de usuario
 Utilice la página **Instancia de usuario** para generar una instancia independiente de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para usuarios sin permisos de administrador, y para agregar usuarios al rol Administrador.  
@@ -443,9 +443,9 @@ Utilice la página **Instancia de usuario** para generar una instancia independi
 >  Los inicios de sesión suministrados como miembros del rol fijo de servidor **sysadmin** durante la instalación se suministran como administradores en la base de datos de plantilla. Son miembros del rol fijo de servidor **sysadmin** en la instancia de usuario a menos que se quiten.  
   
  Agregar usuario al rol Administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- De forma predeterminada, esta casilla está desactivada. Para agregar el usuario del programa de instalación actual al rol Administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , active la casilla.  
+ De forma predeterminada, esta casilla está desactivada. Para agregar el usuario del programa de instalación actual al rol Administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], active la casilla.  
   
- Los usuarios de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que sean miembros de BUILTIN\Administradores no se agregan automáticamente al rol fijo de servidor sysadmin al conectarse a [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]. Solo los usuarios de [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] que se hayan agregado de forma explícita a un rol Administrador de servidor pueden administrar [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Cualquier miembro del grupo BUILTIN\Users se puede conectar a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , pero tendrá permisos limitados para realizar tareas de base de datos. Por este motivo, a los usuarios que hereden los privilegios de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] de los grupos BUILTIN\Administrators y BUILTIN\Users de versiones anteriores de Windows se les debe conceder de forma explícita privilegios administrativos a las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que se ejecuten en [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
+ Los usuarios de [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] que sean miembros de BUILTIN\Administrators no se agregan automáticamente al rol fijo de servidor sysadmin al conectarse a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Solo los usuarios de [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] que se hayan agregado de forma explícita a un rol Administrador de servidor pueden administrar [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Cualquier miembro del grupo BUILTIN\Users se puede conectar a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , pero tendrá permisos limitados para realizar tareas de base de datos. Por este motivo, a los usuarios que hereden los privilegios de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] de los grupos BUILTIN\Administrators y BUILTIN\Users de versiones anteriores de Windows se les debe conceder de forma explícita privilegios administrativos a las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que se ejecuten en [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
  Para realizar cambios en los roles de usuario una vez finalizado este programa de instalación, utilice la Herramienta de configuración de área expuesta (SQLSAC.exe) de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para actualizar la lista de usuarios del rol Administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en el vínculo **Agregar nuevo administrador** .  
   

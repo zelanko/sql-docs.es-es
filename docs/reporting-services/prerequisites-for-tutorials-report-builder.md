@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ee3cd480edacdaa0283c0862076a9ff20b84ecca
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031944"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813108"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Requisitos previos para los tutoriales (Generador de informes)
 
@@ -29,9 +29,9 @@ Debe disponer de los siguientes requisitos previos para poder completar los tuto
   
     En un servidor de informes, seleccione **Nuevo** > **Informe paginado**.
   
-    En un servidor de informes en el modo integrado de SharePoint, en la pestaña **Documentos** , seleccione **Nuevo documento**y, en la lista desplegable, seleccione **Informe del Generador de informes**. Por ejemplo, `http://<servername>/sites/mySite/reports`. El administrador de SharePoint debe habilitar la característica Informe del Generador de informes para cada biblioteca de documentos.  
+    En un servidor de informes en el modo integrado de SharePoint, en la pestaña **Documentos** , seleccione **Nuevo documento**y, en la lista desplegable, seleccione **Informe del Generador de informes**. Por ejemplo, `https://<servername>/sites/mySite/reports`. El administrador de SharePoint debe habilitar la característica Informe del Generador de informes para cada biblioteca de documentos.  
   
--   La dirección URL a un servidor de informes de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o a un sitio de SharePoint integrado con un servidor de informes de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Debe tener el permiso para guardar y ver informes, orígenes de datos compartidos, conjuntos de datos compartidos, elementos de informe y modelos. De manera predeterminada, la dirección URL de un servidor de informes es `http://<servername>/reportserver`. De manera predeterminada, la dirección URL de un sitio de SharePoint es `http://<sitename>` o `http://<server>/site`.  
+-   La dirección URL a un servidor de informes de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o a un sitio de SharePoint integrado con un servidor de informes de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Debe tener el permiso para guardar y ver informes, orígenes de datos compartidos, conjuntos de datos compartidos, elementos de informe y modelos. De manera predeterminada, la dirección URL de un servidor de informes es `https://<servername>/reportserver`. De manera predeterminada, la dirección URL de un sitio de SharePoint es `https://<sitename>` o `https://<server>/site`.  
   
 -   El nombre de una instancia de SQL Server y las credenciales suficientes para el acceso de solo lectura a cualquier base de datos. Las consultas del conjunto de datos de los tutoriales usan datos literales, pero cada consulta debe ser procesada por una instancia de SQL Server para que devuelva los metadatos necesarios para un conjunto de datos de informe. Por ejemplo, la siguiente cadena de conexión especifica solo un servidor: `data source=<servername>`. Debe tener acceso de lectura a la base de datos predeterminada que le ha asignado el administrador del sistema que otorga los permisos de acceso al servidor. También puede especificar una base de datos, como se muestra en la siguiente cadena de conexión: `data source=<servername>;initial catalog=<database>`.  
   

@@ -20,12 +20,12 @@ ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1ebe02d317656b0603b045f0cd048fe6779e32e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7995aa96d83925659458dfb46d3fffb2a3ccbfb1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771563"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641002"
 ---
 # <a name="check-database-integrity-task"></a>Tarea Comprobar la integridad de la base de datos
   La tarea Comprobar la integridad de la base de datos comprueba la asignación y la integridad estructural de todos los objetos de la base de datos especificada. Esta tarea puede comprobar una o varias bases de datos, y se puede elegir comprobar también los índices de las bases de datos.  
@@ -41,6 +41,6 @@ ms.locfileid: "47771563"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

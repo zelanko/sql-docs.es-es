@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6d8de770ff7ef5187db60c359ed0ccea1ab25cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791463"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703603"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -73,11 +73,11 @@ ms.locfileid: "47791463"
 |Administrador de la entidad|Puede ser un administrador de entidad según los permisos de administrador que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> Tiene automáticamente todos los permisos para todos los objetos y miembros en la entidad concreta.<br /><br /> Puede aprobar los conjuntos de cambios pendientes si los cambios de entidad exigen aprobación.|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(Mejoras de seguridad), en msdn.com.  
+ Entrada de blog, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Mejoras de seguridad), en msdn.com.  
   
 ## <a name="see-also"></a>Ver también  
  [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Crear una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Crea una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
   

@@ -17,16 +17,16 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f91d925dbdb8805620fee3ebfc7a0cd29f1fee2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f4fb949c7706aa5b476edde388d747411f3a1a3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840213"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699532"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Crear consultas UNION (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-La palabra clave UNION permite incluir los resultados de dos instrucciones SELECT en una única tabla. Todas las filas devueltas desde la instrucción SELECT se combinan como resultado de la expresión UNION. Para ejemplos, consulte [Ejemplos de SELECT (Transact-SQL)](http://msdn.microsoft.com/9b9caa3d-e7d0-42e1-b60b-a5572142186c).  
+La palabra clave UNION permite incluir los resultados de dos instrucciones SELECT en una única tabla. Todas las filas devueltas desde la instrucción SELECT se combinan como resultado de la expresión UNION. Para ejemplos, consulte [Ejemplos de SELECT (Transact-SQL)](https://msdn.microsoft.com/9b9caa3d-e7d0-42e1-b60b-a5572142186c).  
   
 > [!NOTE]  
 > En el panel Diagrama solo puede aparecer una cláusula SELECT. Por tanto, cuando trabaje con la consulta UNION, el Diseñador de consultas ocultará el panel de operaciones de tablas.  
@@ -55,5 +55,5 @@ La palabra clave UNION permite incluir los resultados de dos instrucciones SELEC
 [Tipos de consultas compatibles (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[UNION (Transact-SQL)](http://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)  
+[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)  
   

@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d17fc7c44e02594a9b5b38941585cfeb8ac613e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a07686a0aefb9b5d41e8c6f231c57214b75f687
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830263"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702763"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47830263"
   
  El límite de distancia máxima permite que la construcción del búfer sea lo más flexible posible.  
   
- El error entre el búfer teórico y el calculado es max(tolerance, extents * 1.E-7), donde tolerance = distance \* .001. Para más información sobre las extensiones, vea [Referencia de los métodos del tipo de datos geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ El error entre el búfer teórico y el calculado es max(tolerance, extents * 1.E-7), donde tolerance = distance \* .001. Para más información sobre las extensiones, vea [Referencia de los métodos del tipo de datos geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `LineString``geography`. A continuación, se usa `STBuffer()` para devolver la región que se encuentra en un radio de 1 metro de la instancia.  

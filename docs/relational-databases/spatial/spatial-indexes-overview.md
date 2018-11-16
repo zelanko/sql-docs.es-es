@@ -13,19 +13,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c335b8bcdc4bdb701c2f211875de32386d0989ce
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 619f32c1a12e5a00a553cb41434dcf4802020c1c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659764"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como **geometría** o **geografía**.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las características que afectan a los índices espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las características que afectan a los índices espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="about"></a> Acerca de los índices espaciales  
   

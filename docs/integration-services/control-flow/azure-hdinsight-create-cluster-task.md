@@ -14,12 +14,12 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1635771d132d12ac078975f506cd51ac7076093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4687c4508bea34e9435bbfe6d33ad47b1c6a9a45
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787845"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638102"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tarea de creación de clúster de HDInsight de Azure
 La **tarea de creación de clúster de Azure HDInsight** permite que un paquete SSIS cree un clúster de Azure HDInsight en la suscripción de Azure y el grupo de recursos especificados.
@@ -28,7 +28,7 @@ La **tarea de creación de clúster de Azure HDInsight** es un componente de [Fe
   
 > [!NOTE]  
 > - La creación de un nuevo clúster de HDInsight puede tardar entre 10 y 20 minutos.  
-> - Hay un costo asociado con la creación y ejecución de un clúster de Azure HDInsight. Vea el tema [Precios de HDInsight](http://azure.microsoft.com/pricing/details/hdinsight/) para más información.  
+> - Hay un costo asociado con la creación y ejecución de un clúster de Azure HDInsight. Vea el tema [Precios de HDInsight](https://azure.microsoft.com/pricing/details/hdinsight/) para más información.  
   
 Para agregar una **tarea de creación de clúster de HDInsight de Azure**, arrástrela y colóquela en el Diseñador SSIS y haga doble clic (o haga clic con el botón derecho y, después, haga clic en **Editar** ) para ver el siguiente cuadro de diálogo del **Editor de la tarea de creación de clúster de HDInsight de Azure** .  
   

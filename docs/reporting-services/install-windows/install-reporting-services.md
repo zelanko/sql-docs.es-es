@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028206"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812978"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalación de SQL Server Reporting Services (2017 y posterior)
 
@@ -98,15 +98,15 @@ Las reservas de direcciones URL están compuestas de un prefijo, un nombre de ho
 |Parte|Descripción|
 |----------|-----------------|
 |Prefijo|El prefijo predeterminado es HTTP. Si ha instalado anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intenta crear reservas de direcciones URL que usen el prefijo HTTPS.|
-|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes acepta cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva en el equipo, incluidos `http://<computername>/reportserver`, `http://localhost/reportserver` o `http://<IPAddress>/reportserver.`.|
+|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes acepta cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva en el equipo, incluidos `https://<computername>/reportserver`, `https://localhost/reportserver` o `https://<IPAddress>/reportserver.`.|
 |Puerto|El puerto predeterminado es 80. Si usa cualquier puerto distinto del 80, tiene que agregarlo explícitamente a la dirección URL cuando abra el portal web en una ventana del explorador.|
 |Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer para el servicio web del servidor de informes y de Reports para el portal web. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el portal web, el directorio virtual predeterminado es **reports**.|
 
 Un ejemplo de cadena de dirección URL completa podría ser el siguiente:
 
-- `http://+:80/reportserver`, proporciona acceso al servidor de informes.
+- `https://+:80/reportserver`, proporciona acceso al servidor de informes.
 
-- `http://+:80/reports`, proporciona acceso al portal web.
+- `https://+:80/reports`, proporciona acceso al portal web.
 
 ## <a name="firewall"></a>Firewall
 

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803726"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607165"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Actualizar SQL Server con el Asistente para instalación (programa de instalación)
 
@@ -112,7 +112,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 14. En la página Configuración del servidor - Cuentas de servicio, las cuentas de servicio predeterminadas se muestran para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a actualizar.  
   
-     La información sobre autenticación e inicio de sesión se obtiene de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. También puede especificar si los servicios se inician de forma automática o manual, o si están deshabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para que se concedan a los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     La información sobre autenticación e inicio de sesión se obtiene de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. También puede especificar si los servicios se inician de forma automática o manual, o si están deshabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para que se concedan a los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar la misma cuenta de inicio de sesión para todas las cuentas de servicio en esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se han de proporcionar credenciales en los campos de la parte inferior de la página.  
   
@@ -120,7 +120,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
      Cuando termine de especificar la información de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Siguiente**.  
   
-15. En la página Opción de actualización de búsqueda de texto completo, especifique las opciones de actualización para las bases de datos que se van a actualizar. Para obtener más información, vea [Opciones de actualización de búsqueda de texto completo](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. En la página Opción de actualización de búsqueda de texto completo, especifique las opciones de actualización para las bases de datos que se van a actualizar. Para obtener más información, vea [Opciones de actualización de búsqueda de texto completo](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 16. La ventana Reglas de características se pasará automáticamente si se cumplen todas las reglas.  
   
@@ -143,6 +143,6 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 ## <a name="see-also"></a>Ver también  
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Compatibilidad con versiones anteriores](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

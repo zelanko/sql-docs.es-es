@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031414"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813238"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Pin Reporting Services items to Power BI Dashboards (Anclar elementos de Reporting Services en paneles de Power BI)
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permite a los usuarios anclar elementos de informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de la barra de herramientas del Visor de informes en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] como un nuevo icono.   Para anclarlos, el administrador tendrá que integrar primero el servidor de informes con Azure Active Directory y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "50031414"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Puede anclar elementos desde el Visor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] (`http://myserver/Reports`).  No se pueden anclar elementos desde [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], desde el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ni desde una dirección URL de servidor de informes.  Por ejemplo `http://myserver/ReportServer`.  
+-   Puede anclar elementos desde el Visor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] (`https://myserver/Reports`).  No se pueden anclar elementos desde [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], desde el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ni desde una dirección URL de servidor de informes.  Por ejemplo `https://myserver/ReportServer`.  
   
 -   El explorador debe configurarse para permitir elementos emergentes en el sitio del servidor de informes.  
   

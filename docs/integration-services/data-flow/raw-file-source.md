@@ -19,12 +19,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccea2475e89d0f0fdd5d89e01162ce5ab7271c90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5a6a40ef5bee1c50ddbaf1f3424d3199e8494e3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821097"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637659"
 ---
 # <a name="raw-file-source"></a>archivo sin formato, origen
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el origen de archivo sin formato puede leer datos más rápidamente que otros orígenes, como el origen de archivo plano o el origen de OLE DB.  
@@ -45,7 +45,7 @@ ms.locfileid: "47821097"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de archivo sin formato](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47821097"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada del blog [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
+-   Entrada del blog [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
   
 ## <a name="raw-file-source-editor-connection-manager-page"></a>Editor de origen de archivos sin formato (página Administrador de conexiones)
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo.   

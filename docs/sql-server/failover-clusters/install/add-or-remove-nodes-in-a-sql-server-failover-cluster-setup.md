@@ -18,12 +18,12 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ae69874fd6f26a7dbb6dff39a4f0571cbea2089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80f4801fec7cdfc35d48d0fa608876cda4783235
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770113"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703693"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47770113"
   
 8.  En la página Configuración de nodo de clúster, use la lista desplegable para especificar el nombre de la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se modificará durante esta operación de instalación.  
   
-9. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a instalar. En las instalaciones de clúster de conmutación por error, la información de nombre de cuenta y tipo de inicio se rellenará automáticamente en esta página en función de la configuración proporcionada para el nodo activo. Debe proporcionar contraseñas para cada cuenta. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a instalar. En las instalaciones de clúster de conmutación por error, la información de nombre de cuenta y tipo de inicio se rellenará automáticamente en esta página en función de la configuración proporcionada para el nodo activo. Debe proporcionar contraseñas para cada cuenta. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Nota de seguridad** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47770113"
   
 #### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Para quitar un nodo de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente  
   
-1.  Inserte el medio de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En la carpeta raíz, haga doble clic en setup.exe. Para realizar la instalación desde un recurso compartido de red, navegue hasta la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
+1.  Inserte el medio de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En la carpeta raíz, haga doble clic en setup.exe. Para realizar la instalación desde un recurso compartido de red, navegue hasta la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
 2.  El Asistente para la instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para quitar un nodo de una instancia en clúster de conmutación por error existente, haga clic en **Mantenimiento** en el panel izquierdo y, después, seleccione **Eliminar nodo de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
   

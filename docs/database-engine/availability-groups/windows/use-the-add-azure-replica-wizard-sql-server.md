@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f06d186ba77c1b65c6ef683a069e718b42c1c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a2f46a7451fa246065ae11b3771e22b7c609f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656393"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602966"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Usar el Asistente para agregar réplica de Azure (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "47656393"
   
 -   **Para agregar una réplica con:**  [Asistente Agregar réplica de Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Si nunca ha agregado una réplica de disponibilidad a un grupo de disponibilidad, vea las secciones "Instancias del servidor" y "Grupos y réplicas de disponibilidad" en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal actual.  
   
--   Debe tener un entorno de tecnologías informáticas híbrido donde la subred local tenga una VPN de sitio a sitio con Windows Azure. Para obtener más información, vea [Configurar una VPN de sitio a sitio en el Portal de administración](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Debe tener un entorno de tecnologías informáticas híbrido donde la subred local tenga una VPN de sitio a sitio con Windows Azure. Para obtener más información, vea [Configurar una VPN de sitio a sitio en el Portal de administración](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Es preciso que el grupo de disponibilidad cuente con réplicas locales disponibles.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47656393"
   
 1.  En primer lugar, descargue un certificado de administración para la suscripción de Windows Azure. Haga clic en **Descargar** para abrir la página de inicio de sesión.  
   
-2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft) y [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852)(Solución de problemas de inicio de sesión con la cuenta corporativa).  
+2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) (Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft) y [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852)(Solución de problemas de inicio de sesión con la cuenta corporativa).  
   
 3.  A continuación, haga clic en **Conectar**para conectarse a su suscripción. Cuando lo haya hecho, las listas desplegables se rellenan con los parámetros de Windows Azure, como **Red virtual** y **Subred de la red virtual**.  
   

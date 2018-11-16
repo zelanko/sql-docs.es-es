@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703663"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604345"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ Si quiere revisar las novedades de los otros componentes de SQL Server, vea [Nov
 
 #### <a name="try-it-out"></a>Pruébelo
 
-- Para descargar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vaya al **[Centro de evaluación](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![descargar](../analysis-services/media/download.png "descargar").
+- Para descargar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vaya al **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![descargar](../analysis-services/media/download.png "descargar").
 
 - ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ya instalado.
 
 > [!NOTE]
-> Para obtener las notas de la versión actuales, vea [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> Para ver las notas de la versión actual, consulte [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  Ahora, la sintaxis `CREATE OR ALTER <object>` está disponible para los [procedimientos](../t-sql/statements/create-procedure-transact-sql.md), [vistas](../t-sql/statements/create-view-transact-sql.md), [ funciones](../t-sql/statements/create-function-transact-sql.md) y [desencadenadores](../t-sql/statements/create-trigger-transact-sql.md).
@@ -441,17 +440,17 @@ Descargar la versión más reciente de [SQL Server Management Studio (SSMS)](../
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] admite la Biblioteca de autenticación de Active Directory (ADAL) que se encuentra en desarrollo para conectarse a Microsoft Azure. Esto reemplaza la autenticación basada en certificados que se usa en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - Un requisito previo de la instalación de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es tener instalado .NET 4.6. .NET 4.6 se instalará automáticamente a través de la configuración cuando se instale [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
 - Una nueva opción de cuadrícula de resultados de consulta admite conservar el retorno de carro o avance de línea (caracteres de línea nueva) cuando se copia o se guarda texto de la cuadrícula de resultados. Puede definir esto en el menú Herramientas/Opciones.
-- Las Herramientas de administración de SQL Server ya no se instalan desde el árbol de características principales; para obtener más detalles, vea [Instalar las Herramientas de administración de SQL Server con SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- Un requisito previo de la instalación de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es tener instalado .NET 4.6.1. .NET 4.6.1 se instalará automáticamente a través de la configuración cuando se instale [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
+- Las Herramientas de administración de SQL Server ya no se instalan desde el árbol de características principales; para obtener más detalles, vea [Instalar las Herramientas de administración de SQL Server con SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
+- Un requisito previo de la instalación de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es tener instalado .NET 4.6.1. .NET 4.6.1 se instalará automáticamente a través de la configuración cuando se instale [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 ### <a name="upgrade-advisor"></a>Asesor de actualizaciones
 La vista previa del Asesor de actualizaciones de SQL Server 2016 es una herramienta independiente que permite que los usuarios de versiones anteriores ejecuten un conjunto de reglas de actualización en su base de datos SQL Server para identificar los cambios principales y de comportamiento y las características en desuso, además de prestar ayuda para la adopción de características nuevas, como Stretch Database.
 
- Puede descargar la vista previa del Asesor de actualizaciones [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=48119) o puede instalarla con el Instalador de plataforma web.
+ Puede descargar la vista previa del Asesor de actualizaciones [aquí](https://www.microsoft.com/download/details.aspx?id=48119) o puede instalarla con el Instalador de plataforma web.
 
 ## <a name="see-also"></a>Ver también
 [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
-[Instalar las Herramientas de administración de SQL Server con SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Instalar las Herramientas de administración de SQL Server con SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

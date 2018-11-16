@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55f98003cc391c3b5cf770646ccc2db783a99495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a02e688f6488fecdaeea6c668bc49d64a5698915
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599473"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641802"
 ---
 # <a name="ftp-task"></a>Tarea FTP
   La tarea FTP descarga y carga archivos de datos, y administra directorios en servidores. Por ejemplo, un paquete puede descargar archivos de datos de un servidor remoto o de una ubicación de Internet como parte de un flujo de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Puede usar la tarea FTP para los siguientes fines:  
@@ -73,7 +73,7 @@ ms.locfileid: "47599473"
 ## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Para obtener más información sobre la configuración mediante programación de estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   

@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6bba11fe5be282ad804fc6dee03229312ec1d37
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970917"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698832"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50970917"
 > [!div class="nextstepaction"]
 > [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-Los tipos de datos de caracteres son de longitud fija, **char**, o de longitud variable, **varchar**. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se usa una intercalación con UTF-8 habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Si se especifica una intercalación cuyo formato no es UTF-8, estos tipos de datos solo almacenan un subconjunto de caracteres admitidos por la página de códigos correspondiente de esa intercalación.
+Los tipos de datos de caracteres son de longitud fija, **char**, o de longitud variable, **varchar**. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se usa una intercalación con UTF-8 habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Si se especifica una intercalación cuyo formato no es UTF-8, estos tipos de datos solo almacenan un subconjunto de caracteres admitidos por la página de códigos correspondiente de esa intercalación.
   
 ## <a name="arguments"></a>Argumentos  
 **char** [ ( *n* ) ] Datos de cadena de longitud fija. *n* define la longitud de la cadena en bytes y debe ser un valor entre 1 y 8000. Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. El sinónimo ISO para **char** es **character**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).

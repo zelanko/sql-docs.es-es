@@ -17,12 +17,12 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb021bb8dc456a1ca8032150500620cfe5e01b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4496c35376a91ca0450a68a08087bac5e034725
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749914"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641972"
 ---
 # <a name="adding-tasks-programmatically"></a>Agregar tareas mediante programación
   Se pueden agregar tareas a los siguientes tipos de objetos en el motor en tiempo de ejecución:  
@@ -411,7 +411,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada del blog sobre [EzAPI, actualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
+ Entrada del blog sobre [EzAPI, actualizado para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
 
 ## <a name="see-also"></a>Ver también  
  [Conectar tareas mediante programación](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

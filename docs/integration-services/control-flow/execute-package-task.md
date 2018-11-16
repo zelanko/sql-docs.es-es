@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 986d3bf99eb08279dab77ed12ff1b04dccce1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818140"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640682"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
   La tarea Ejecutar paquete amplía las capacidades empresariales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ya que permite que los paquetes ejecuten otros paquetes como parte de un flujo de trabajo.  
@@ -63,7 +63,7 @@ ms.locfileid: "47818140"
  De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en **False**y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en **True**, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en **True**, no se podrá depurar el paquete en una instalación de solo herramientas. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Extender transacciones  
- La transacción utilizada por el paquete primario puede ampliarse al paquete secundario; por tanto, puede confirmarse o revertirse el trabajo realizado por ambos paquetes. Por ejemplo, las inserciones en la base de datos realizadas por el paquete primario pueden confirmarse o revertirse en función de las inserciones en la base de datos realizadas por el paquete secundario y viceversa. Para obtener más información, vea [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ La transacción utilizada por el paquete primario puede ampliarse al paquete secundario; por tanto, puede confirmarse o revertirse el trabajo realizado por ambos paquetes. Por ejemplo, las inserciones en la base de datos realizadas por el paquete primario pueden confirmarse o revertirse en función de las inserciones en la base de datos realizadas por el paquete secundario y viceversa. Para obtener más información, vea [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
 ## <a name="propagating-logging-details"></a>Propagar detalles de registro  
  El paquete secundario ejecutado por la tarea Ejecutar paquete puede estar configurado o no para usar registro, pero el paquete secundario siempre reenviará los detalles de registro al paquete primario. Si la tarea Ejecutar paquete está configurada para usar registro, la tarea registra los detalles del paquete secundario. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "47818140"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Configurar la tarea Ejecutar paquete mediante programación  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  

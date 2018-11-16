@@ -12,12 +12,12 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b53c7c52c63fa12b5398b8b09ffeec50262ad9a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6aca1a7488b6767e0259647a320c238ec753836
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730263"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665314"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Entre los escenarios en los que se puede producir este problema se incluyen:
 -   Un usuario intenta restaurar una base de datos del sistema desde una copia de seguridad efectuada en el mismo servidor. Sin embargo, el servidor ejecutaba una compilación diferente cuando se realizó la copia de seguridad. Es decir, el servidor se actualizó después de realizar la copia de seguridad.  
   
 ## <a name="user-action"></a>Acción del usuario  
-En estas situaciones, el proceso de restauración es muy complicado y solo se utiliza como último recurso. Para obtener más información, vea "[No puede restaurar copia de seguridad de base de datos de sistema a una generación distinta de SQL Server](http://support.microsoft.com/kb/264474)".  
+En estas situaciones, el proceso de restauración es muy complicado y solo se utiliza como último recurso. Para obtener más información, vea "[No puede restaurar copia de seguridad de base de datos de sistema a una generación distinta de SQL Server](https://support.microsoft.com/kb/264474)".  
   
 ## <a name="see-also"></a>Ver también  
 [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

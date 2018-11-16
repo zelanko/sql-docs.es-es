@@ -17,12 +17,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7175ed9eed05295ec193dcc5f1cbaef287d27f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7e699eb44ac381fa6cfe5c7dbca857010806753
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826653"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640792"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server
   La tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfiere uno o varios tipos de objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, la tarea puede copiar tablas y procedimientos almacenados. Dependiendo de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utilice como origen, hay diferentes tipos de objetos disponibles para copiar. Por ejemplo, solo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se incluyen esquemas y agregados definidos por el usuario.  
@@ -82,7 +82,7 @@ ms.locfileid: "47826653"
  La tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no indica el progreso incremental de la transferencia de objetos; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  
- El valor de ejecución, almacenado en la propiedad **ExecutionValue** de la tarea, devuelve el número de objetos transferidos. Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir objetos de SQL Server, se puede hacer que la información de la transferencia de objetos esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ El valor de ejecución, almacenado en la propiedad **ExecutionValue** de la tarea, devuelve el número de objetos transferidos. Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir objetos de SQL Server, se puede hacer que la información de la transferencia de objetos esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir objetos de SQL Server incluye las siguientes entradas del registro personalizadas:  
@@ -113,7 +113,7 @@ ms.locfileid: "47826653"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Configuración mediante programación de la tarea Transferir objetos de SQL Server  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  

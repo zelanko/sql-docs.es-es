@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662193"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603575"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Agentes de escucha, conectividad de cliente y conmutación por error de una aplicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662193"
  Un agente de escucha del grupo de disponibilidad se define por lo siguiente:  
   
  Nombre DNS único  
- Esto también se conoce como Nombre de red virtual (VNN). Se aplican las reglas de nomenclatura de Active Directory para los nombres de host DNS. Para obtener más información, vea el artículo de KB [Convenciones de nomenclatura en Active Directory para equipos, dominios, sitios y unidades organizativas](http://support.microsoft.com/kb/909264) .  
+ Esto también se conoce como Nombre de red virtual (VNN). Se aplican las reglas de nomenclatura de Active Directory para los nombres de host DNS. Para obtener más información, vea el artículo de KB [Convenciones de nomenclatura en Active Directory para equipos, dominios, sitios y unidades organizativas](https://support.microsoft.com/kb/909264) .  
   
  Una o varias direcciones IP virtuales (VIP)  
  Las direcciones VIP se configuran para una o varias subredes en las que el grupo de disponibilidad puede realizar la conmutación por error.  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introducción al agente de escucha de grupo de disponibilidad](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (un blog del equipo de SQL Server AlwaysOn)  
   

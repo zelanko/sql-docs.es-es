@@ -16,12 +16,12 @@ ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5302085b959f212e4397a6dc5866c8112c28a681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da0d80542158ab25b37864af106ad9fd1ce6f592
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665963"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668514"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Usar consultas FOR XML anidadas en ASP.NET
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Guarde la aplicación .aspx en el directorio c:\inetpub\wwwroot (GetSalesOrderInfo.aspx).  
   
-3.  Ejecute la aplicación (`http://server/GetSalesOrderInfo.aspx`).  
+3.  Ejecute la aplicación (`https://server/GetSalesOrderInfo.aspx`).  
   
 ## <a name="see-also"></a>Ver también  
  [Usar consultas FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  

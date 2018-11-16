@@ -14,12 +14,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ce3745881465c7f71eed0986e3de669b7488a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830853"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699931"
 ---
 # <a name="change-domain-values"></a>Cambiar valores de dominio
 
@@ -37,7 +37,7 @@ ms.locfileid: "47830853"
   
 -   Importar valores de dominio desde un archivo de Excel  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para cambiar un valor de dominio, es necesario tener una base de conocimiento y un dominio abiertos en la actividad Administración de dominios.  
@@ -90,7 +90,7 @@ ms.locfileid: "47830853"
   
     -   **Establecer el valor de dominio seleccionado como valor principal de su grupo**: para cambiar el valor inicial del grupo, seleccione un valor del grupo que no se haya designado como valor inicial y, a continuación, haga clic en el botón **Establecer el valor de dominio seleccionado como valor principal de su grupo** . De este modo, establecerá el valor inicial que sustituirá al otro valor. Esta operación solo funciona si tiene un grupo con dos o más valores y desea que el valor inicial sea uno distinto del valor designado por DQS. Tenga en cuenta que el valor inicial se muestra en negrita en una fila de color azul.  
   
-7.  **Corrector ortográfico**: si un valor aparece subrayado con una línea ondulada de color rojo, significa que el corrector ortográfico está sugiriendo una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../data-quality-services/set-domain-properties.md).  
+7.  **Corrector ortográfico**: si un valor aparece subrayado con una línea ondulada de color rojo, significa que el corrector ortográfico está sugiriendo una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Valores del dominio** para habilitarlo en esta página.  
@@ -103,7 +103,7 @@ ms.locfileid: "47830853"
   
 11. **Eliminar los valores de dominio seleccionados**: para eliminar uno o varios valores existentes en el dominio, selecciónelos en la tabla Valor y, a continuación, haga clic en el icono **Eliminar los valores de dominio seleccionados** . Las entradas de DQS_NULL no se pueden eliminar, por lo que si opta por eliminar varios valores entre los que hay una de estas entradas, se producirá un error en la operación.  
   
-12. Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de cambiar valores de dominio  
  Una vez cambiados los valores de dominio, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  

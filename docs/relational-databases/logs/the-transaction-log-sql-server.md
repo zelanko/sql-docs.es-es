@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664694"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677304"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Después de una pérdida de hardware o un error de disco que afecten a los archi
 Según restaura cada copia de seguridad del registro, el motor de base de datos vuelve a aplicar todas las modificaciones incluidas en el registro para poner al día todas las transacciones. Cuando se restaura la última copia de seguridad, el motor de base de datos usa la información del registro para revertir todas las transacciones no completadas hasta ese momento. 
 
 ### <a name="supporting-transactional-replication"></a>Permitir la replicación transaccional
-El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para crear replicaciones transaccionales y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. Para obtener más información, consulte [Cómo funciona la replicación transaccional](http://msdn.microsoft.com/library/ms151706.aspx).
+El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para crear replicaciones transaccionales y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. Para obtener más información, consulte [Cómo funciona la replicación transaccional](https://msdn.microsoft.com/library/ms151706.aspx).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Compatibilidad con las soluciones de alta disponibilidad y recuperación ante desastres
 Las soluciones de servidor en espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], creación de reflejo de la base de datos y trasvase de registros dependen en gran medida del registro de transacciones. 
@@ -105,7 +105,7 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
 |valor log_reuse_wait|valor log_reuse_wait_desc|Descripción|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Hay actualmente uno o más [archivos de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) reutilizables.|  
-|1|CHECKPOINT|No se ha producido ningún punto de comprobación desde el último truncamiento o el encabezado del registro no se ha movido más allá de un [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual para retrasar el truncamiento. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|No se ha producido ningún punto de comprobación desde el último truncamiento o el encabezado del registro no se ha movido más allá de un [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual para retrasar el truncamiento. Para obtener más información, vea [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Se requiere una copia de seguridad del registro para que se pueda truncar el registro de transacciones. (Solo modelos de recuperación completa u optimizada para cargas masivas de registros)<br /><br /> Cuando se completa la siguiente copia de seguridad de registros, es posible que se pueda reutilizar parte del espacio de registro.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Existe una recuperación o copia de seguridad de datos en curso (todos los modelos de recuperación).<br /><br /> Si la copia de seguridad de una base de datos impide el truncamiento del registro, la cancelación de la operación de copia de seguridad podría ayudar a solucionar el problema inmediato.|  
 |4|ACTIVE_TRANSACTION|Existe una transacción activa (todos los modelos de recuperación):<br /><br /> Podría existir una transacción de larga duración en el inicio de la copia de seguridad del registro. En este caso, para liberar espacio se podría requerir otra copia de seguridad del registro. Tenga en cuenta que las transacciones de ejecución prolongada impiden el truncamiento del registro en todos los modelos de recuperación, incluido el modelo de recuperación simple, en el que, por lo general, el registro de transacciones se trunca en cada punto de comprobación automático.<br /><br /> Una transacción está diferida. Una *transacción diferida* es efectivamente una transacción activa cuya reversión se bloquea debido a algún recurso no disponible. Para obtener más información sobre las causas de las transacciones diferidas y cómo sacarlas del estado diferido, vea [Transacciones diferidas &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Las transacciones de larga ejecución también podrían llenar el registro de transacciones de tempdb. Las transacciones de usuario usan implícitamente tempdb para objetos internos como tablas de trabajo para ordenar, archivos de trabajo para crear valores hash, tablas de trabajo de cursor y versiones de fila. Incluso si la transacción de usuario incluye datos de solo lectura (consultas de `SELECT`), los objetos internos se pueden crear y usar en las transacciones de usuario. Después, se puede rellenar el registro de transacciones de tempdb.|  
@@ -157,7 +157,7 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
   
     -   Regeneración del nuevo montón [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (si procede). La desasignación de páginas de índice durante una operación `DROP INDEX` **siempre** se registra completamente.
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Administrar el registro de transacciones**  
   
 -   [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
@@ -170,7 +170,7 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
   
  **Restaurar el registro de transacciones (modelo de recuperación completa)**  
   
--   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+-   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 ## <a name="see-also"></a>Vea también  
 [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   

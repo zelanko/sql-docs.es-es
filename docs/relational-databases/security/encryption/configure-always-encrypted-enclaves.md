@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307129"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677145"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configuración de Always Encrypted con enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ Para determinar la dirección URL de servicio de atestación, debe configurar su
 1. Inicie sesión en su equipo con SQL Server como administrador.
 2. Ejecute PowerShell como administrador.
 3. Ejecute [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Escriba y guarde la propiedad AttestationServerURL. Debe tener un aspecto parecido a este: `http://x.x.x.x/Attestation`.
+4. Escriba y guarde la propiedad AttestationServerURL. Debe tener un aspecto parecido a este: `https://x.x.x.x/Attestation`.
 
 
 ### <a name="install-tools"></a>Instalar herramientas
@@ -112,9 +112,9 @@ En el equipo de desarrollo/cliente:
    RECONFIGURE
    ```
 
-4. Reinicie su instancia de SQL Server para que el cambio anterior surta efecto. Puede reiniciar la instancia en SSMS haciendo clic con el botón derecho en ella en el Explorador de objetos y seleccionando Reiniciar. Una vez que se reinicie la instancia, vuelva a conectarse a ella.
+4. Reinicie su instancia de SQL Server para que el cambio anterior surta efecto. Puede reiniciar la instancia en SSMS haciendo clic con el botón derecho en ella en el Explorador de objetos y seleccionando Reiniciar. Cuando se reinicie la instancia, vuelva a conectarse a ella.
 
-5. Confirme que el enclave seguro se ha cargado ahora ejecutando la siguiente consulta:
+5. Confirme que el enclave seguro se ha cargado ejecutando la siguiente consulta:
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
@@ -127,7 +127,7 @@ En el equipo de desarrollo/cliente:
     | ------------------------------ | ----- | -------------- |
     | tipo de enclave de cifrado de columnas | 1     | 1              |
 
-6. Para habilitar cálculos completos en las columnas cifradas, ejecute la siguiente consulta:
+6. Para habilitar los cálculos completos en columnas cifradas, ejecute la siguiente consulta:
 
    ```sql
    DBCC traceon(127,-1)
@@ -163,7 +163,7 @@ Los siguientes pasos crean claves habilitadas para el enclave (se requiere la ve
     2. Seleccione su nombre de clave maestra de columna.
     3. Asegúrese de seleccionar **Almacén de certificados de Windows (usuario actual o máquina local)** o **Azure Key Vault**.
     4. Seleccione **Permitir cálculos de enclave**.
-    5. Si seleccionó Azure Key Vault, inicie sesión en Azure y seleccione su almacén de claves. Para obtener más información sobre cómo crear un almacén de claves para Always Encrypted, consulte [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (Administrar sus almacenes de claves desde Azure Portal).
+    5. Si ha seleccionado Azure Key Vault, inicie sesión en Azure y seleccione su almacén de claves. Para obtener más información sobre cómo crear un almacén de claves para Always Encrypted, consulte [Administrar sus almacenes de claves desde Azure Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Seleccione su clave si ya existe o siga las indicaciones incluidas en el formulario para crear una nueva clave.
     7. Haga clic en **Aceptar**.
 
@@ -760,7 +760,7 @@ La forma más rápida de probar consultas completas sobre sus columnas habilitad
     1.  Seleccione **Consulta** en el menú principal de SSMS.
     2.  Seleccione **Opciones de consulta…**.
     3.  Vaya a **Ejecución** > **Avanzadas**.
-    4.  Seleccione o anule la selección de Habilitar parametrización para Always Encrypted.
+    4.  Seleccione o anule la selección de Habilitar parametrización de Always Encrypted.
     5.  Haga clic en Aceptar.
 
 3.  Cree y ejecute sus consultas mediante los cálculos completos en las columnas cifradas. Debe declarar una variable Transact-SQL para cada valor cuyo destino sea una columna cifrada en su consulta. Las variables deben usar inicializaciones alineadas (no se pueden establecer a través de la instrucción SET).
@@ -853,7 +853,7 @@ Para usar Always Encrypted con enclaves seguros en una aplicación de .NET Frame
 
 ### <a name="develop-and-test-your-app"></a>Desarrollar y probar su aplicación 
 
-Para usar Always Encrypted y los cálculos de enclave, su aplicación debe conectarse a la base de datos con las siguientes dos palabras clave en la cadena de conexión: `Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (donde xxxx puede ser un protocolo de Internet, un dominio, etc).
+Para usar Always Encrypted y los cálculos de enclave, su aplicación debe conectarse a la base de datos con las siguientes dos palabras clave en la cadena de conexión: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (donde xxxx puede ser un protocolo de Internet, un dominio, etc).
 
 Además, su aplicación debe cumplir las directrices habituales que se aplican a las aplicaciones mediante Always Encrypted, por ejemplo, su aplicación debe tener acceso a las claves maestras de columna asociadas a las columnas de base de datos, a las que se hace referencia en las consultas de la aplicación.
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

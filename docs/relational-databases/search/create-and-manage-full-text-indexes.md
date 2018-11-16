@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 512c91ac9e8c089b0154f5b021eaf86d98095599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683903"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669024"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ Para obtener más información, vea [Rellenar índices de texto completo](../../
   
     |Página|Descripción|  
     |----------|-----------------|  
-    |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br />Para obtener más información, vea [Propiedades del índice de texto completo &#40;página General&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
-    |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Propiedades del índice de texto completo &#40;página Columnas&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
+    |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br />Para obtener más información, vea [Propiedades del índice de texto completo &#40;página General&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
+    |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Propiedades del índice de texto completo &#40;página Columnas&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
     |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo** , cualquier programación que se cree se asociará a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *nombre_basededatos*.*nombre_tabla*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  

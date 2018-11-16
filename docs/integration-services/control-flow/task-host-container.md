@@ -16,12 +16,12 @@ ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f421e1d4a127b5f359313c7fb31e66327dd347b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e4cbadcc7f2b31147403e24f943d9a88ed91ee1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694113"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640272"
 ---
 # <a name="task-host-container"></a>contenedor de tarea
   El contenedor del host de la tarea encapsula una tarea individual. En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , el host de la tarea no se configura por separado, sino al establecer las propiedades de la tarea que encapsula. Para obtener más información sobre las tareas encapsuladas por los contenedores del host de la tarea, vea [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
@@ -31,13 +31,13 @@ ms.locfileid: "47694113"
 ## <a name="configuration-of-the-task-host"></a>Configuración del host de la tarea  
  Puede establecer propiedades en la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o mediante programación.  
   
- Para obtener información sobre cómo establecer estas propiedades en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obtener información sobre cómo establecer estas propiedades en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Para obtener información sobre cómo establecer mediante programación estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>Ver también  
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)  

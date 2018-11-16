@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ca812a4b48d1f25b8e190987a66cc97fe891492
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 305b43dd59c39c3e934d079cb1f53d7b1065f393
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670783"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665514"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formato de salida JSON anidada con el modo PATH (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ FOR JSON PATH
   
 ### <a name="microsoft-blog-posts"></a>Entrada de blog de Microsoft  
   
-Para obtener soluciones específicas, casos de uso y recomendaciones, consulte estas [entradas de blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre la compatibilidad integrada de JSON en SQL Server y Azure SQL Database.  
+Para obtener soluciones específicas, casos de uso y recomendaciones, consulte estas [entradas de blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre la compatibilidad integrada de JSON en SQL Server y Azure SQL Database.  
 
 ### <a name="microsoft-videos"></a>Vídeos de Microsoft
 

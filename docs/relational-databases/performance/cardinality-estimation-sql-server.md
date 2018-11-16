@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c5096ef0690e915b1063c684ed60e00bcba8f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854543"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667034"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,11 +83,11 @@ GO
  
 O, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Almacén de consultas**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el almacén de consultas resulta una herramienta muy útil para examinar el rendimiento de las consultas. En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], en el **Explorador de objetos**, debajo del nodo de la base de datos, se muestra un nodo del **Almacén de consultas**, si este está habilitado.  
@@ -108,7 +108,7 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> Se recomienda instalar la última versión de [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) y actualizarlo con frecuencia.  
+> Se recomienda instalar la última versión de [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) y actualizarlo con frecuencia.  
   
 Otra opción para llevar un seguimiento del proceso de estimación de cardinalidad consiste en usar el evento extendido denominado **query_optimizer_estimate_cardinality**. El siguiente código de ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escribe un archivo .xel en `C:\Temp\` (aunque la ruta de acceso se puede cambiar). Cuando abra el archivo .xel en [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], podrá consultar la información detallada de forma muy sencilla.  
   
@@ -139,7 +139,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-Para obtener más información sobre los eventos extendidos adaptados para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Eventos extendidos en SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+Para obtener más información sobre los eventos extendidos adaptados para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Eventos extendidos en SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Pasos para evaluar la versión de estimación de cardinalidad  
   
@@ -270,7 +270,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>Ver también  
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md)     
  [Sugerencias de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    

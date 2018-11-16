@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698233"
 ---
 # <a name="sql-server-help-and-feedback"></a>Ayuda y comentarios de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Si es usted un usuario empresarial, revise las [opciones de soporte técnico](ht
 Si es usted un usuario comercial, revise la página de [contacto](https://support.microsoft.com/gp/contactus81?forceorigin=esmc&Audience=Commercial) de Microsoft.
 
 ## <a name="i-want-to-review-license-information-about-sql-server"></a>Deseo consultar la información de licencias de SQL Server
-Si desea descargar y revisar la información de licencias para SQL Server, puede encontrarla en los [términos de licencia de software adicional de Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299). 
+Si desea descargar y revisar la información de licencias para SQL Server, puede encontrarla en los [términos de licencia de software adicional de Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299). 
 
 ## <a name="i-want-to-ask-the-community-for-help"></a>Me gustaría pedir ayuda a la comunidad 
 Si está interesado en participar en la vibrante comunidad de SQL Server para obtener ayuda, tiene a su disposición varias opciones.
@@ -80,9 +80,9 @@ También puede ponerse en contacto con el equipo de SQL mediante diferentes medi
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Quiero proporcionar comentarios para el contenido de la documentación de SQL
 
 ### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![editar contenido](../includes/media/edit-topic-pencil.png) Edición de contenido
-¿Ha encontrado algún error en la documentación? ¿Sabía que puede editar el contenido usted mismo? Si lo hace, no solo mejorará la documentación, sino que también se le reconocerá como colaborador de la página. Obtenga más información en [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs). 
+¿Ha encontrado algún error en la documentación? ¿Sabía que puede editar el contenido usted mismo? Si lo hace, no solo mejorará la documentación, sino que también se le reconocerá como colaborador de la página. Obtenga más información en [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 ### <a name="surveys"></a>Encuestas
-Si tiene algo de tiempo libre y quiere compartir algunas ideas sobre su experiencia con la documentación de SQL, participe en la encuesta. Se puede encontrar en [http://aka.ms/SQLDocSurvey](http://aka.ms/SQLDocSurvey) y completarla le llevará unos 10-15 minutos. 
+Si tiene algo de tiempo libre y quiere compartir algunas ideas sobre su experiencia con la documentación de SQL, participe en la encuesta. Se puede encontrar en [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) y completarla le llevará unos 10-15 minutos. 
 
-Si tiene algo que compartir con el equipo de contenidos de SQL, como una idea, una sugerencia, comentarios... ¡lo que sea! Puede hacérnoslo llegar en [http://aka.ms/SQLDocsFeedback](http://aka.ms/SQLDocsFeedback). 
+Si tiene algo que compartir con el equipo de contenidos de SQL, como una idea, una sugerencia, comentarios... ¡lo que sea! Puede hacérnoslo llegar en [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

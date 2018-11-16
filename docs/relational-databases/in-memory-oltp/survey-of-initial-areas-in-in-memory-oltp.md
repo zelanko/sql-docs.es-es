@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596133"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657614"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Encuesta de áreas iniciales de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ El presente artículo se centra en OLTP y no en el análisis. Para obtener infor
   
   
 > [!NOTE]
-> Hay disponible un vídeo de dos minutos sobre las características en memoria en [Azure SQL Database - In-Memory Technologies (Base de datos SQL de Azure: tecnologías en memoria)](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). El vídeo tiene fecha de diciembre de 2015.  
+> Hay disponible un vídeo de dos minutos sobre las características en memoria en [Azure SQL Database - In-Memory Technologies (Base de datos SQL de Azure: tecnologías en memoria)](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). El vídeo tiene fecha de diciembre de 2015.  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ Una función definida por el usuario (UDF) compilada de forma nativa se ejecuta 
 Para obtener datos de prueba y una explicación del rendimiento de UDF nativas, vea:  
   
   - [Suavizar el impacto de RBAR con UDF compiladas de forma nativa en SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - Entrada de blog [Natively Compiled User Defined Functions](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) (Funciones definidas por el usuario compiladas de forma nativa) de Gail Shaw, con fecha de enero de 2016.  
+  - Entrada de blog [Natively Compiled User Defined Functions](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) (Funciones definidas por el usuario compiladas de forma nativa) de Gail Shaw, con fecha de enero de 2016.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ Consulte estos otros artículos que tratan consideraciones especiales para tabla
   - [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - El informe de análisis rendimiento de transacciones de SQL Server Management Studio ayuda a evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos.  
   - Utilice el [Asesor de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) que le ayudarán a migrar la tabla de base de datos basada en disco a OLTP en memoria.   
-- [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - El almacenamiento usado por las tablas optimizadas para memoria puede ser mucho mayor que el tamaño de la memoria y eso afecta al tamaño de la copia de seguridad de la base de datos.  
 - [Transacciones con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Incluye información sobre la lógica de reintento en T-SQL para las transacciones en tablas optimizadas para memoria.  

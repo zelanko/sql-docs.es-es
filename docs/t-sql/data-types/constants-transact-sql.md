@@ -33,12 +33,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 526d91118fc7daee18bfa6ec0305bef07825c5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e38cf3dd4e18019a3656be584e799d5a1ee40ff3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663753"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698744"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -200,7 +200,7 @@ Expresiones **money** con signo:
 ```
   
 ## <a name="enhanced-collations"></a>Intercalaciones mejoradas  
-SQL Server admite las constantes de cadena de caracteres y Unicode compatibles con las intercalaciones mejoradas. Para más información, vea la cláusula [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+SQL Server admite las constantes de cadena de caracteres y Unicode compatibles con las intercalaciones mejoradas. Para más información, vea la cláusula [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 ## <a name="see-also"></a>Vea también
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

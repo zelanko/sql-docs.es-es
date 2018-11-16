@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772573"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701323"
 ---
 # <a name="what-are-the-sql-database-functions"></a>¿Cuáles son las funciones de base de datos SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Operan sobre un valor y después devuelven otro valor. Las funciones escalares s
 |[Funciones del cursor](cursor-functions-transact-sql.md)|Devuelven información acerca de los cursores.|  
 |[Tipos de datos y funciones de fecha y hora](date-and-time-data-types-and-functions-transact-sql.md)|Llevan a cabo operaciones sobre un valor de entrada de fecha y hora, y devuelven un valor numérico, de cadena o de fecha y hora.|  
 |[Funciones JSON](json-functions-transact-sql.md)|Validan, consultan o cambian datos JSON.|  
-|[Funciones lógicas](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Realizan operaciones lógicas.|  
+|[Funciones lógicas](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Realizan operaciones lógicas.|  
 |[Funciones matemáticas](mathematical-functions-transact-sql.md)|Realizan cálculos basados en valores de entrada proporcionados como parámetros a las funciones y devuelven valores numéricos.|  
 |[Funciones de metadatos](metadata-functions-transact-sql.md)|Devuelven información acerca de la base de datos y los objetos de la base de datos.|  
 |[Funciones de seguridad](security-functions-transact-sql.md)|Devuelven información acerca de usuarios y roles.|  
 |[Funciones de cadena](string-functions-transact-sql.md)|Realizan operaciones en el valor de entrada de una cadena (**char** o **varchar**) y devuelven una cadena o un valor numérico.|  
 |[Funciones del sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Realizan operaciones y devuelven información acerca de valores, objetos y configuraciones de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funciones estadísticas del sistema](system-statistical-functions-transact-sql.md)|Devuelven información estadística acerca del sistema.|  
-|[Funciones de texto e imagen](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Realizan operaciones sobre los valores de entrada o columnas de texto o imagen, y devuelven información acerca del valor.|  
+|[Funciones de texto e imagen](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Realizan operaciones sobre los valores de entrada o columnas de texto o imagen, y devuelven información acerca del valor.|  
   
 ## <a name="function-determinism"></a>Determinismo de función  
  Las funciones integradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son deterministas o no deterministas. Las funciones son deterministas cuando devuelven siempre el mismo resultado cada vez que se llaman con un conjunto específico de valores de entrada. Las funciones son no deterministas cuando es posible que devuelvan distintos resultados cada vez que se llaman con un mismo conjunto específico de valores de entrada. Para más información, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

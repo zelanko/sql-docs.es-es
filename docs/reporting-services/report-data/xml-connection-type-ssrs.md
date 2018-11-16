@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bcb77ea92b255b15698596f73064404581c34b76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021802"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813158"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
@@ -29,8 +29,8 @@ ms.locfileid: "50021802"
   
 |Tipo de documento XML|Ejemplo de cadena de conexión|  
 |-----------------------|-------------------------------|  
-|servicio web|`http://adventure-works.com/results.aspx`|  
-|Documento XML|`http://localhost/XML/Customers.xml`|  
+|servicio web|`https://adventure-works.com/results.aspx`|  
+|Documento XML|`https://localhost/XML/Customers.xml`|  
 |Documento XML incrustado|*Vacía*|  
   
  Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

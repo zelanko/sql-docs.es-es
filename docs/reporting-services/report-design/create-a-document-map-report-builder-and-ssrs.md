@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1c44173f34c1560da036ca1914649774365fdf42
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020239"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812808"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
 
@@ -82,14 +82,14 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
      Por ejemplo, para los informes de ejemplo de [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] , la dirección URL siguiente especifica el informe denominado Product Catalog.  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  Copie la ruta de acceso del informe en el servidor. En el ejemplo, la ruta de acceso del informe es `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`.  
   
 3.  Cree una nueva dirección URL con los tres componentes siguientes:  
   
-    -   El visor de informes en el servidor de informes: `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   El visor de informes en el servidor de informes: `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   El nombre del informe que copió en el paso 1, por ejemplo: `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -98,7 +98,7 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
      La dirección URL siguiente consta de estos tres componentes anexados en el orden de la lista.  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  

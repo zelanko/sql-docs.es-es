@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2b6b343389c7ce12e7909ddbfe08882a85730a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50819e03af647245949d3c60638767ce3ab859d7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794313"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605815"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurar el enrutamiento de solo lectura para un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
--   El grupo de disponibilidad debe poseer un agente de escucha de grupo de disponibilidad. Para obtener más información, vea [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+-   El grupo de disponibilidad debe poseer un agente de escucha de grupo de disponibilidad. Para obtener más información, vea [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
--   Se deben configurar una o varias réplicas de disponibilidad para aceptar el acceso de solo lectura para el rol secundario (es decir, para ser [replicas secundarias legibles](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). Para obtener más información, vea [Configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+-   Se deben configurar una o varias réplicas de disponibilidad para aceptar el acceso de solo lectura para el rol secundario (es decir, para ser [replicas secundarias legibles](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). Para obtener más información, vea [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal actual.  
   
@@ -114,7 +114,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
          En una cláusula MODIFY REPLICA el ALLOW_CONNECTIONS es opcional si la réplica ya está configurada para permitir conexiones de solo lectura.  
   
-         Para obtener más información, vea [Calcular read_only_routing_url para AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+         Para obtener más información, vea [Calcular read_only_routing_url para AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
     -   Para configurar el enrutamiento de solo lectura para el rol principal, en la cláusula ADD REPLICA o MODIFY REPLICA WITH, especifique la opción PRIMARY_ROLE, del siguiente modo:  
   
@@ -192,7 +192,7 @@ GO
   
          donde, *url* es el nombre de dominio completo (FQDN) y puerto que se usa para el enrutamiento de la réplica para las conexiones de solo lectura. Por ejemplo:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
-         Para obtener más información, vea [Calcular read_only_routing_url para AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+         Para obtener más información, vea [Calcular read_only_routing_url para AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
     -   Para configurar el acceso de conexión para el rol principal, especifique **ReadonlyRoutingList"***server***"** [ **,**...*n* ], donde *server* identifica una instancia del servidor que hospeda una réplica secundaria de solo lectura en el grupo de disponibilidad. Por ejemplo:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
@@ -272,17 +272,17 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 **Blogs:**  
   
--    [Calcular Read_only_routing_url para AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
+-    [Calcular Read_only_routing_url para AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
 -    [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--    [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
+-    [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
 **Notas del producto:**  
   
--    [Notas del producto de Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+-    [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
--    [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
+-    [Notas del producto del equipo de asesoramiento al cliente de SQL Server](https://sqlcat.com/)  
 
 **Contenido adicional**
 

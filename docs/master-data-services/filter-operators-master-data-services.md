@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9407e6c678945f6d4f483c4babbe4d4ce37cb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798053"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700395"
 ---
 # <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
 
@@ -42,8 +42,8 @@ ms.locfileid: "47798053"
 |**Es menor o igual que**|Devuelve valores de atributo que son menores o iguales que los criterios especificados. Por ejemplo, para devolver valores de atributo que comiencen con el número **3** o un número menor, escriba **3**.|  
 |**Coincide**|Utiliza un índice de búsquedas aproximadas para filtrar los resultados.<br /><br /> Use el campo **Nivel de similitud** para especificar la aproximación de la coincidencia de los valores de atributo con respecto a los criterios de filtro (con un valor predeterminado del 30 %).<br /><br /> Seleccione una de las siguientes opciones en el cuadro de lista **Algoritmo** :<br /><br /> **Levenshtein**: una distancia que se basa en el número de modificaciones (por ejemplo, adiciones o eliminaciones) necesarias para que una cadena coincida con otra. Ésta es la opción predeterminada. No requiere ningún parámetro adicional.<br /><br /> **Jaccard**: un índice que resulta óptimo cuando se intentan comparar varias cadenas. Esta búsqueda admite un parámetro adicional de compensación de contención (vea más abajo).<br /><br /> **Jaro-Winkler**: una distancia óptima para buscar nombres de persona duplicados. Este método devuelve más resultados que cualquier otro método. No admite compensación de contención.<br /><br /> **Subsecuencia común más larga**: los trabajos basados en una subsecuencia en la que las letras de un patrón aparecen en orden, pese a que se pueden separar (por ejemplo, "MSR" es una subsecuencia de "MaSteR"). Esta búsqueda admite un parámetro adicional de compensación de contención (vea más abajo).<br /><br /> <br /><br /> Nota: Agregue una **Compensación de contención** para los algoritmos **Jaccard** o **Subsecuencia común más larga**. Se trata de un umbral de longitud que se proporcionada en un porcentaje decimal entre 0 y 1, con un valor predeterminado de 0,62. Un umbral inferior aumentaría el número de coincidencias posibles devueltas.|  
 |**No coincide**|Utiliza un índice de búsquedas aproximadas para filtrar los resultados. Utilice el campo **Nivel de similitud** para especificar la aproximación de la falta de coincidencia de los valores de atributo con respecto a los criterios de filtro.|  
-|**Contiene el patrón**|Utiliza las expresiones regulares de .NET Framework para filtrar los resultados en un patrón especificado. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](http://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
-|**No contiene patrón**|Utiliza las expresiones regulares de .NET Framework para filtrar los resultados que no coinciden con un patrón especificado. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](http://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
+|**Contiene el patrón**|Utiliza las expresiones regulares de .NET Framework para filtrar los resultados en un patrón especificado. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
+|**No contiene patrón**|Utiliza las expresiones regulares de .NET Framework para filtrar los resultados que no coinciden con un patrón especificado. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
 |**Es NULL**|Devuelve valores de atributo que son NULL. El campo **Criterios** se deshabilita cuando selecciona el operador **Es NULL** .|  
 |**No es NULL**|Devuelve valores de atributo que no son NULL. El campo **Criterios** se deshabilita cuando selecciona el operador **No es NULL** .|  
   

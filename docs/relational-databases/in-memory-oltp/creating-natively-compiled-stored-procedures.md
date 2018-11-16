@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7811bc4c7a58f25379e0565090004e92049ce23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bb3879e8f411dc8fa82fe8344df693e8cdaef2a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672904"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ En el ejemplo de código, **NATIVE_COMPILATION** indica que este procedimiento a
 |Opción|Descripción|  
 |------------|-----------------|  
 |**SCHEMABINDING**|Un procedimiento almacenado compilado de forma nativa se debe enlazar al esquema de objetos al que hace referencia. Esto significa que no se puede anular las tablas a las que hace referencia el procedimiento. Las tablas a las que se hace referencia en el procedimiento deben incluir el nombre de esquema y no se admiten caracteres comodín (\*) en las consultas (es decir, sin `SELECT * from...`). **SCHEMABINDING** solo se admite para los procedimientos almacenados compilados de forma nativa en esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**BEGIN ATOMIC**|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Vea [Transaction Isolation Levels for Memory-Optimized Tables](http://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) (Niveles de aislamiento de transacción para tablas con optimización para memoria) para conocer los niveles de aislamiento admitidos.<br /><br /> **LANGUAGE**. El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
+|**BEGIN ATOMIC**|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Vea [Transaction Isolation Levels for Memory-Optimized Tables](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) (Niveles de aislamiento de transacción para tablas con optimización para memoria) para conocer los niveles de aislamiento admitidos.<br /><br /> **LANGUAGE**. El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
   
 ## <a name="see-also"></a>Ver también  
  [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  

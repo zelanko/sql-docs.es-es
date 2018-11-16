@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0785cd58ffed215f9cebf29a62e40c70cc96c720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 594dce3e2a973179d3c056fe6c6ff447bd59c844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850573"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603775"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>El servicio de clúster de WSFC está sin conexión
 
@@ -41,7 +41,7 @@ ms.locfileid: "47850573"
  El estado de la directiva es correcto cuando el estado del clúster está en el quorum normal.  
   
 > [!NOTE]  
->  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El servicio de clúster de WSFC está desconectado](http://go.microsoft.com/fwlink/p/?LinkId=220849) en TechNet Wiki.  
+>  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El servicio de clúster de WSFC está desconectado](https://go.microsoft.com/fwlink/p/?LinkId=220849) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Posibles causas  
  Esto puede deberse a un problema del servicio de clúster o a la pérdida del quorum en el clúster.  

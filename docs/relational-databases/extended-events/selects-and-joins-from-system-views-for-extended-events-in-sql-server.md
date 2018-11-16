@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9a99cfe0941bd96ed8d523ed85587f64c482791
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666834"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Para seleccionar entre las vistas del sistema, se necesita el permiso siguiente:
 
 En esta sección se demuestra que tres perspectivas tecnológicas diferentes coinciden perfectamente en la misma sesión de eventos definida. La sesión se ha definido en el **Explorador de objetos** de SQL Server Management Studio (SSMS.exe) y es visible en dicho explorador, pero no se está ejecutando actualmente.
 
-Se recomienda [instalar la actualización más reciente de SSMS](http://msdn.microsoft.com/library/mt238290.aspx)todos los meses para evitar errores inesperados.
+Se recomienda [instalar la actualización más reciente de SSMS](https://msdn.microsoft.com/library/mt238290.aspx)todos los meses para evitar errores inesperados.
 
 
 Encontrará documentación de referencia sobre las vistas de catálogo para eventos extendidos en [Vistas de catálogo de eventos extendidos (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).

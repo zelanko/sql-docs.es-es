@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020279"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813608"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexiones SSL en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  
   
 > [!TIP]  
->  Si usa el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la documentación de SharePoint para obtener más información. Por ejemplo, la entrada del blog [How to enable SSL on a SharePoint 2010 web application (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) (Cómo habilitar SSL en una aplicación web de SharePoint 2010).  
+>  Si usa el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la documentación de SharePoint para obtener más información. Por ejemplo, la entrada del blog [How to enable SSL on a SharePoint 2010 web application (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) (Cómo habilitar SSL en una aplicación web de SharePoint 2010).  
   
  Como Internet Information Services (IIS) también usa HTTP SSL, hay importantes problemas de interoperabilidad que es necesario tener en cuenta si IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan en el mismo equipo. Asegúrese de revisar la sección Problemas de interoperabilidad con IIS para obtener información sobre cómo resolver estos problemas.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50020279"
   
  Los enlaces SSL son un recurso compartido en Microsoft Windows. Los cambios realizados por el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] u otras herramientas como el Administrador de IIS pueden afectar a otras aplicaciones ubicadas en el mismo equipo. Se recomienda usar la misma herramienta para editar los enlaces que usó para crearlos.  Por ejemplo, si creó enlaces SSL mediante el Administrador de configuración, se recomienda usar este administrador para configurar el ciclo de vida de los enlaces. Si utiliza el administrador de IIS para crear enlaces, se recomienda usar este administrador para administrar el ciclo de vida de los enlaces. Si IIS estaba instalado en el equipo antes de que se instalara [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es recomendable que revise la configuración de SSL en IIS antes de configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si quita enlaces SSL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración de Reporting Services, puede que los enlaces SSL ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quite la siguiente clave del Registro. Cuando se quita esta clave del Registro, también se quita el enlace SSL para IIS. Sin este enlace, SSL no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, use el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace SSL para los sitios web mediante el Administrador de IIS. Para evitar que se produzca este problema en el futuro, use el Administrador de IIS para quitar los enlaces SSL y use el Administrador de IIS para restaurar el enlace para los sitios web que desee. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
+ Si quita enlaces SSL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración de Reporting Services, puede que los enlaces SSL ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quite la siguiente clave del Registro. Cuando se quita esta clave del Registro, también se quita el enlace SSL para IIS. Sin este enlace, SSL no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, use el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace SSL para los sitios web mediante el Administrador de IIS. Para evitar que se produzca este problema en el futuro, use el Administrador de IIS para quitar los enlaces SSL y use el Administrador de IIS para restaurar el enlace para los sitios web que desee. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Ver también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   

@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682507"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641292"
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
   La tarea Enviar correo envía un mensaje de correo electrónico. Un paquete puede utilizar la tarea Enviar correo para enviar mensajes si las tareas del paquete de flujo de trabajo finalizan correctamente o si se producen errores, o para enviar mensajes en respuesta a eventos provocados por el paquete en tiempo de ejecución. Por ejemplo, la tarea puede notificar a un administrador de base de datos si la tarea Copia de seguridad de la base de datos se realizó correctamente o no.  
@@ -79,11 +79,11 @@ ms.locfileid: "47682507"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
+-   Artículo técnico [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
   
 ## <a name="send-mail-task-editor-general-page"></a>Editor de la tarea Enviar correo (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Enviar correo** para asignar un nombre a la tarea Enviar correo y describirla.  
@@ -158,7 +158,7 @@ ms.locfileid: "47682507"
  **MessageSource**  
  Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Ver también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

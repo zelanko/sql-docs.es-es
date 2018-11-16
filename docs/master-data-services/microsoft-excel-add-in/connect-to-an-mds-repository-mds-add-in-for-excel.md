@@ -11,12 +11,12 @@ ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f564932c7a895438c7ff6ab67b4078762921af48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 204f45c5892efd9e06657362fcffc43e769f889b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618733"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695725"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Conectarse a un repositorio MDS (complemento MDS para Excel)
 
@@ -39,7 +39,7 @@ ms.locfileid: "47618733"
   
 4.  En el cuadro de diálogo **Agregar nueva conexión** , en el campo **Descripción** , escriba una descripción de la conexión. Esta conexión se muestra al hacer clic en la flecha situada debajo del botón **Conectar** en la barra de herramientas.  
   
-5.  En el cuadro **Dirección del servidor MDS**, escriba la dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]; por ejemplo, `http://contoso/mds`.  
+5.  En el cuadro **Dirección del servidor MDS**, escriba la dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]; por ejemplo, `https://contoso/mds`.  
   
     > [!NOTE]  
     >  Asegúrese de utilizar el nombre del equipo; no utilice “localhost”.  

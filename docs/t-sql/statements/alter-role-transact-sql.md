@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b24129d26523ec4bee866c96180c0907992099e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51a50d8798dc05ee012d7da9848e45a759b7d9cb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760273"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701403"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +121,7 @@ Además, para cambiar la pertenencia a un rol fijo de base de datos, se necesita
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Cambiar el nombre de un rol de base de datos  
  **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- En el ejemplo siguiente se cambia el nombre del rol `buyers` a `purchasing`.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
+ En el ejemplo siguiente se cambia el nombre del rol `buyers` a `purchasing`.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -130,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. Agregar o quitar a miembros del rol  
  **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- En este ejemplo se crea el rol de base de datos `Sales`. Se agrega un usuario de base de datos denominado Barry a la pertenencia y, luego, se indica cómo quitar el miembro Barry.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
+ En este ejemplo se crea el rol de base de datos `Sales`. Se agrega un usuario de base de datos denominado Barry a la pertenencia y, luego, se indica cómo quitar el miembro Barry.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 CREATE ROLE Sales;  

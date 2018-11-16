@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e61e945523163766a323ec7edb2b40540cb69b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853883"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699934"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Requiere premisos CREATE AGGREGATE y REFERENCES en el ensamblado que se especifica en la cláusula EXTERNAL NAME.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se da por supuesto que una aplicación de ejemplo StringUtilities.csproj está compilada. Para más información, vea [Ejemplo de funciones de la utilidad String](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ En el ejemplo siguiente se da por supuesto que una aplicación de ejemplo StringUtilities.csproj está compilada. Para más información, vea [Ejemplo de funciones de la utilidad String](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
   
  En el ejemplo se crea un agregado `Concatenate`. Antes de crear el agregado, el ensamblado `StringUtilities.dll` se registra en la base de datos local.  
   

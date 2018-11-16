@@ -16,12 +16,12 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19d117028e03fb3223ee3448ca555531ad47d94d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07ec3a12ada376275ab4be5b40078d7ffc9aa469
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633893"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639862"
 ---
 # <a name="file-system-task"></a>Tarea Sistema de archivos
   La tarea Sistema de archivos realiza operaciones en archivos y directorios del sistema de archivos. Por ejemplo, un paquete puede utilizar la tarea Sistema de archivos para crear, mover o eliminar directorios y archivos. También puede utilizar la tarea Sistema de archivos para establecer atributos en archivos y directorios. Por ejemplo, la tarea Sistema de archivos puede convertir los archivos en archivos ocultos o de solo lectura.  
@@ -70,7 +70,7 @@ ms.locfileid: "47633893"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
  Para obtener más información sobre cómo establecer estas propiedades mediante programación , vea el siguiente tema:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47633893"
 ## <a name="file-system-task-editor-general-page"></a>Editor de la tarea Sistema de archivos (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Sistema de archivos** para configurar la operación del sistema de archivos que lleva a cabo la tarea.  
   
- Debe especificar un administrador de conexiones de origen y destino mediante las propiedades SourceConnection y DestinationConnection. Puede proporcionar los nombres de los administradores de conexión de archivos que señalan a los archivos que utiliza la tarea como origen o destino, o bien proporcionar los nombres de las variables si las rutas de acceso de los archivos están almacenadas en variables. Si quiere usar variables para almacenar rutas de acceso de archivo, primero debe establecer la opción IsSourcePathVariable para la conexión de origen y la opción IsDestinationPatheVariable para la conexión de destino en **True**. A continuación, puede elegir las variables definidas por el usuario o del sistema existentes que se utilizarán, o bien puede crear nuevas variables. En el cuadro de diálogo **Agregar variable** , puede configurar y especificar el ámbito de las variables. El ámbito debe ser la tarea Sistema de archivos o un contenedor principal. Para obtener más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Debe especificar un administrador de conexiones de origen y destino mediante las propiedades SourceConnection y DestinationConnection. Puede proporcionar los nombres de los administradores de conexión de archivos que señalan a los archivos que utiliza la tarea como origen o destino, o bien proporcionar los nombres de las variables si las rutas de acceso de los archivos están almacenadas en variables. Si quiere usar variables para almacenar rutas de acceso de archivo, primero debe establecer la opción IsSourcePathVariable para la conexión de origen y la opción IsDestinationPatheVariable para la conexión de destino en **True**. A continuación, puede elegir las variables definidas por el usuario o del sistema existentes que se utilizarán, o bien puede crear nuevas variables. En el cuadro de diálogo **Agregar variable** , puede configurar y especificar el ámbito de las variables. El ámbito debe ser la tarea Sistema de archivos o un contenedor principal. Para obtener más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 > [!NOTE]  
 >  Para invalidar las variables seleccionadas para las propiedades **SourceConnection** y **DestinationConnection** , especifique una expresión para las propiedades **Source** y **Destination** . Las expresiones se especifican en la página **Expresiones** del **Editor de la tarea Sistema de archivos**. Por ejemplo, para establecer la ruta de acceso de los archivos que usa la tarea como destino, tal vez desee utilizar una variable A en determinadas condiciones y una variable B, en otras.  
@@ -143,7 +143,7 @@ ms.locfileid: "47633893"
  **DestinationVariable**  
  Seleccione el nombre de la variable en la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
@@ -157,7 +157,7 @@ ms.locfileid: "47633893"
  **SourceVariable**  
  Seleccione el nombre de la variable en la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  

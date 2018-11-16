@@ -12,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 75cdf58cfe2c5ca7c71654133626700a3ca36db9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9a151f0336e1a411f0bde8b905608349efefb56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798721"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701883"
 ---
 # <a name="deprecated-master-data-services-features"></a>Características en desuso de Master Data Services
 
@@ -54,7 +54,7 @@ El tipo de registro de transacciones de entidad "Attribute" está en desuso, mig
 * [Historial de revisiones de miembro](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Deprecated: Explicit Hierarchies and Collections](http://go.microsoft.com/fwlink/p/?LinkId=615373)(En desuso: jerarquías explícitas y colecciones), en msdn.com.  
+ Entrada de blog, [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(En desuso: jerarquías explícitas y colecciones), en msdn.com.  
   
 ## <a name="see-also"></a>Ver también  
  [Características descontinuadas de Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  

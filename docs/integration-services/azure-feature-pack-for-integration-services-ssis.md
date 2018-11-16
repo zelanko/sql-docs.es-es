@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb19d30afa0f1f1a8f5c9a7db6aaa060d7c92f5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e5bf1999ef81b20d5ae318523891c9ef92326f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686243"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642162"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack para Integration Services (SSIS)
 Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensión que proporciona los componentes que se muestran en esta página para que SSIS se conecte a los servicios de Azure, para transferir datos entre Azure y orígenes de datos locales, y para procesar los datos almacenados en Azure.
@@ -78,7 +78,7 @@ En las páginas de descarga también se incluye información sobre los requisito
     
     -   [Destino de Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Enumerador de archivos de Azure Data Lake Store y Azure Blob. Consultar [Contenedor de bucles Para cada uno](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Enumerador de archivos de Azure Data Lake Store y Azure Blob. Consultar [Contenedor de bucles Para cada uno](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## <a name="scenario-processing-big-data"></a>Escenario: Procesamiento de macrodatos
  Use el Conector Azure para completar el trabajo de procesamiento de macrodatos siguiente:

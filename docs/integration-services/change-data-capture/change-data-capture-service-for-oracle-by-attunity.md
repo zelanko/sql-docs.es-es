@@ -11,18 +11,18 @@ ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b93feec216706e4c5f00f100c7de9aeafe47f6ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6582a2c3d577573d96e5f0c0b6ef9bb04ff7f8f1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796643"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640112"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Servicio de captura de datos modificados para Oracle de Attunity
   El servicio CDC para Oracle es un servicio de Windows que examina los registros de transacciones de Oracle y captura los cambios a las tablas de Oracle deseadas en tablas de cambios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las tablas de cambios de SQL donde se almacenan los cambios capturados de Oracle son el mismo tipo de tablas de cambios empleadas en la característica de captura de datos modificados nativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que el uso de estos cambios sea tan sencillo como el de los cambios realizados a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installation"></a>Installation  
- El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server® 2016 forman parte del Feature Pack de SQL Server 2016. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297).  
+ El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server® 2016 forman parte del Feature Pack de SQL Server 2016. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
  El servicio CDC para Oracle se puede instalar en cualquier equipo compatible con Windows que tenga acceso a las bases de datos de origen de Oracle que se van a capturar y a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino donde reside la base de datos CDC de destino. El servicio CDC no necesita ninguna instalación local de la base de datos de Oracle ni de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , solo sus clientes compatibles. Para obtener información acerca de dónde instalar los componentes de base de datos necesarios, vea **Requisitos previos de la base de datos** en este tema.  
   

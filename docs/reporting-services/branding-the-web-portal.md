@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f691cee39f88bf8fb0aac54f31239a794b9ac6a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028734"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812998"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
 
@@ -135,7 +135,7 @@ También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se 
 ## <a name="metadataxml-example"></a>Ejemplo de metadata.xml
   
     <?xml version="1.0" encoding="utf-8"?>  
-    <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+    <SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
         name="Multicolored example brand"  

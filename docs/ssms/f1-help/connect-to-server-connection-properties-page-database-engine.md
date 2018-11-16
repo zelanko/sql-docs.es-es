@@ -14,12 +14,12 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 890729b400328edaa8a0bdb8904ee7c0b64f2482
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 534691457d3365ca8fe676b5fba0fbcef97da46e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695701"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Seleccione en la lista una base de datos a la que conectarse. Si selecciona **<d
   
 Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
   
-De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta a **master**. Al conectarse a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=163948).  
+De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta a **master**. Al conectarse a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Protocolo de red**  
 Seleccione un protocolo de la lista. Los protocolos de cliente disponibles se configuran con la Configuración de red de cliente en Administración de equipos.  

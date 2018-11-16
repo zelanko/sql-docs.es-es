@@ -18,12 +18,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9d532ff5cf5da8719156a358ecc44abe3591afc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614266"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605395"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ La instancia A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para 
   
  La instancia A, que experimenta actividades de E/S importantes, tiene ahora dos subprocesos de E/S y un subproceso de escritura diferida. La instancia B, que realiza operaciones que requieren un uso intensivo del procesador, solo tiene un subproceso de E/S y un subproceso de escritura diferida. Se pueden asignar diferentes cantidades de memoria a las instancias, pero, a diferencia de lo que ocurre con el NUMA de hardware, ambas reciben memoria del mismo bloque de memoria del sistema operativo y no hay afinidad entre la memoria y el procesador.  
   
- El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, sea cual sea el número de nodos físicos de NUMA que presente el hardware, este será el número de subprocesos de escritura diferida que se creen. Para obtener más información, vea el artículo acerca de [cómo funciona: NUMA de software, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, sea cual sea el número de nodos físicos de NUMA que presente el hardware, este será el número de subprocesos de escritura diferida que se creen. Para obtener más información, vea el artículo acerca de [cómo funciona: NUMA de software, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > Las claves del Registro de **Soft-NUMA** no se copian al actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83be7eae028ba456dd9d2b3191668a3bd68c5e08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26ca39bf7b73381cf518bab2491d13b02d142277
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670203"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606735"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar la dirección URL del punto de conexión - Agregar o modificar una réplica de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "47670203"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Ver también  
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   

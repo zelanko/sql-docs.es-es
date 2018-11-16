@@ -16,12 +16,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ab8fe68907b558b5556f9a68e445fe6412155c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d74b4642fc3a8b9ad08796a4ff032088310acbe
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853663"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639452"
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de paquete
   Este tema describe el modo de copiar elementos de flujo de control, elementos de flujo de datos y administradores de conexión dentro de un paquete o entre paquetes.  
@@ -66,6 +66,6 @@ ms.locfileid: "47853663"
  [Flujo de control](../integration-services/control-flow/control-flow.md)   
  [Flujo de datos](../integration-services/data-flow/data-flow.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copiar los elementos de proyectos](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+ [Copiar los elementos de proyectos](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

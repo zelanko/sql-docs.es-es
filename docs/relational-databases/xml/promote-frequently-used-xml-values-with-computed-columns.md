@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735693"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665574"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Para ello, primero deberá crear la función de transmisión por secuencias de CLR. El tipo de datos **xml** se expone como una clase administrada SqlXml en ADO.NET y admite el método **CreateReader()** que devuelve un XmlReader.  
   
 > [!NOTE]  
->  El código de ejemplo de esta sección usa XPathDocument y XPathNavigator. De este modo, se fuerza la carga de todos los documentos XML en la memoria. Si utiliza código similar en su aplicación para procesar varios documentos XML grandes, este código no es escalable. En lugar de ello, mantenga asignaciones de memoria de pequeño tamaño y use interfaces de transmisión por secuencias siempre que sea posible. Para obtener más información sobre el rendimiento, vea [Arquitectura de integración CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  El código de ejemplo de esta sección usa XPathDocument y XPathNavigator. De este modo, se fuerza la carga de todos los documentos XML en la memoria. Si utiliza código similar en su aplicación para procesar varios documentos XML grandes, este código no es escalable. En lugar de ello, mantenga asignaciones de memoria de pequeño tamaño y use interfaces de transmisión por secuencias siempre que sea posible. Para obtener más información sobre el rendimiento, vea [Arquitectura de integración CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
   
 ```  
 public class c_streaming_xml_tvf {  

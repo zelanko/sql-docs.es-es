@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020379"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814178"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
 
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |Catálogo del servidor de informes||  
 |Fragmento del servidor de informes||  
 |Limpieza del servidor de informes||  
-|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección URL interna del servidor de informes MediumUsing `http://localhost:80/ReportServer`.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
+|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección URL interna del servidor de informes MediumUsing `https://localhost:80/ReportServer`.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
 |Criptografía del servidor de informes||  
 |Extensión de datos del servidor de informes||  
 |Sondeo de base de datos del servidor de informes||  

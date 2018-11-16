@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e967f69b7204fae916cb42ebea2c0c6694ae09fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b15e0448bb230ff209b17cbe5c0bc719686193f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643823"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600725"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Actualizar las herramientas de administración de SQL Server
 
@@ -52,7 +52,7 @@ Considere los problemas siguientes antes de actualizar a [!INCLUDE[ssCurrent](..
   
 ## <a name="see-also"></a>Ver también  
  [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Compatibilidad con versiones anteriores](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
+ [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
  [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) (Actualización de SQL Server mediante el Asistente para instalación [programa de instalación])  
   
   

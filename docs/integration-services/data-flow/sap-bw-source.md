@@ -11,12 +11,12 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49912f010400e81fb120c5f8abd0dbc94718b999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1bd77fa65a3667bdc06934386b293783270bc1a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773583"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641202"
 ---
 # <a name="sap-bw-source"></a>Origen de SAP BW
   El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -115,7 +115,7 @@ ms.locfileid: "47773583"
   
  Si no conoce todos los valores necesarios para configurar el origen, puede que tenga que ponerse en contacto con el administrador de SAP.  
   
- Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server 2008 Integration Services con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
+ Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server 2008 Integration Services con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Usar el Diseñador SSIS para configurar el origen  
  Para obtener más información sobre las propiedades del origen de SAP BW que puede establecer en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  

@@ -14,12 +14,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82644d3a13dbc73ca203a7829e65364e75f6d2fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de1b72abf9f94b2c5618a90f53511dfeacc036ce
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811549"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640093"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Valide documentos XML y obtenga una salida de error enriquecida habilitando la propiedad **ValidationDetails** de la tarea XML.  
@@ -40,7 +40,7 @@ ms.locfileid: "47811549"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>true</result>  
         <errors>0</errors>  
@@ -59,7 +59,7 @@ ms.locfileid: "47811549"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>false</result>  
         <errors>2</errors>  
@@ -89,7 +89,7 @@ FROM OPENROWSET (BULK N'C:\Temp\XMLValidation_2016-02-212T10-41-00.xml', SINGLE_
   
 -- Query # 1, flat list of errors  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -101,7 +101,7 @@ SELECT * FROM rs;
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  

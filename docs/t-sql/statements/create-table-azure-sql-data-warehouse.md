@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120432"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703823"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ Crea una o varias particiones de tabla. Se trata de segmentos de tabla horizonta
 ### <a name="DataTypes"></a> Tipos de datos
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] admite los tipos de datos más usados habitualmente. A continuación se muestra una lista de los tipos de datos admitidos junto con sus detalles y los bytes de almacenamiento. Para entender mejor los tipos de datos y cómo usarlos, vea [Guía de tipos de datos - Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
-Para obtener una tabla de conversiones de tipos de datos, vea la sección Conversiones implícitas de [CAST y CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
+Para obtener una tabla de conversiones de tipos de datos, vea la sección Conversiones implícitas de [CAST y CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
  El valor predeterminado de *n* es 7.  
@@ -291,7 +291,7 @@ Cada tabla definida por el usuario se divide en varias tablas más pequeñas que
  
 Cada distribución contiene todas las particiones de tabla. Por ejemplo, si hay 60 distribuciones y cuatro particiones de tabla, habrá 320 particiones. Si la tabla es un índice de almacén de columnas en clúster, habrá un índice de almacén de columnas por partición, lo que significa que tendrá 320 índices de almacén de columnas.
 
-Se recomienda el uso de menos particiones de tabla para asegurar que cada índice de almacén de columnas tiene suficientes filas para aprovechar las ventajas de los índices de almacén de columnas. Para obtener instrucciones adicionales, vea [Creación de particiones de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) e [lndexación de tablas en SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)  
+Se recomienda el uso de menos particiones de tabla para asegurar que cada índice de almacén de columnas tiene suficientes filas para aprovechar las ventajas de los índices de almacén de columnas. Para obtener instrucciones adicionales, vea [Creación de particiones de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) e [lndexación de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>Tabla de almacén de filas (montón o índice agrupado)  
@@ -304,7 +304,7 @@ Para cambiar una tabla de almacén de filas a una tabla de almacén de columnas,
 
 Para más información, vea estos artículos:
 - [Resumen de las características de los índices de almacén de columnas para cada versión](https://msdn.microsoft.com/library/dn934994/)
-- [Indexación de tablas en SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [Indexación de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

@@ -16,12 +16,12 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c781794fb548baa688596e613270c641eff9d481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37711d75b48118bd180307795d9fbaa3dfc4bf74
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765543"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638022"
 ---
 # <a name="group-or-ungroup-components"></a>Agrupar o desagrupar componentes
   Las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] admiten la agrupación contraíble. Si un paquete tiene muchos componentes, las pestañas pueden estar abarrotadas, lo que dificulta la visión de todos los componentes a la vez y la búsqueda del elemento con el que desea trabajar. La característica de agrupación contraíble puede ahorrar espacio en la superficie de trabajo y facilitar el trabajo con paquetes grandes.  
@@ -62,6 +62,6 @@ ms.locfileid: "47765543"
   
 ## <a name="see-also"></a>Ver también  
  [Agregar o eliminar tareas o contenedores en un flujo de control](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

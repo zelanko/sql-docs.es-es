@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 05f764d1acce6930d4a9f54b590354dfb30b2015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c6b1e4aeeb8a7969c663c42a50035cf0a521274
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608743"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599994"
 ---
 # <a name="upgrade-sql-server"></a>Actualizar SQL Server
 
@@ -55,7 +55,7 @@ Esta sección contiene los siguientes artículos:
  [Actualizar Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Actualizar Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
- [Best Practices Analyzer para SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=197135)   
- [Compatibilidad con versiones anteriores](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Best Practices Analyzer para SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=197135)   
+ [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

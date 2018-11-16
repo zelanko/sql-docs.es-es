@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745333"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699803"
 ---
 # <a name="search-condition-transact-sql"></a>Condiciones de búsqueda (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47745333"
  Especifica las condiciones de las filas devueltas en el conjunto de resultados de una instrucción SELECT, una expresión de consulta o una subconsulta. En una instrucción UPDATE, especifica las filas que se van a actualizar. En una instrucción DELETE, especifica las filas que se van a eliminar. No hay límite en el número de predicados que se pueden incluir en una condición de búsqueda de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  \<graph_search_pattern>  
- Especifica el patrón de coincidencia del grafo. Para más información sobre los argumentos de esta cláusula, consulte [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ Especifica el patrón de coincidencia del grafo. Para obtener más información sobre los argumentos de esta cláusula, vea [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
  
  NOT  
  Niega la expresión booleana que especifica el predicado. Para obtener más información, vea [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
@@ -134,7 +134,7 @@ ms.locfileid: "47745333"
  Es un nombre de columna, una constante, una función, una variable, una subconsulta escalar o cualquier combinación de nombres de columna, constantes y funciones conectados mediante uno o varios operadores o una subconsulta. La expresión también puede contener la expresión CASE.  
   
 > [!NOTE]  
->  Las constantes y las variables de cadena no Unicode usan la página de códigos que corresponde a la intercalación predeterminada de la base de datos. Pueden producirse conversiones de páginas de códigos al trabajar únicamente con datos de caracteres no Unicode y hacer referencia a los tipos de datos de caracteres no Unicode **char**, **varchar** y **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte las variables y constantes de cadena no Unicode a la página de códigos que corresponde a la intercalación de la columna a la que se hace referencia o que se ha especificado mediante COLLATE, si esa página de códigos es diferente a la que corresponde a la intercalación predeterminada de la base de datos. Los caracteres que no se encuentran en la nueva página de códigos se traducen en un carácter similar, si se encuentra una [coincidencia](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), o bien se convierten en el carácter de sustitución predeterminado "?".  
+>  Las constantes y las variables de cadena no Unicode usan la página de códigos que corresponde a la intercalación predeterminada de la base de datos. Pueden producirse conversiones de páginas de códigos al trabajar únicamente con datos de caracteres no Unicode y hacer referencia a los tipos de datos de caracteres no Unicode **char**, **varchar** y **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte las variables y constantes de cadena no Unicode a la página de códigos que corresponde a la intercalación de la columna a la que se hace referencia o que se ha especificado mediante COLLATE, si esa página de códigos es diferente a la que corresponde a la intercalación predeterminada de la base de datos. Los caracteres que no se encuentran en la nueva página de códigos se traducen en un carácter similar, si se encuentra una [coincidencia](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), o bien se convierten en el carácter de sustitución predeterminado "?".  
 >  
 > Cuando se trabaja con varias páginas de códigos, las constantes de caracteres pueden llevar un prefijo con la letra mayúscula 'N' y se pueden usar variables Unicode para evitar las conversiones de páginas de códigos.  
   

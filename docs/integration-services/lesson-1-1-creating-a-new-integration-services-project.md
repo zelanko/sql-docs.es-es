@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d8fff1dbb0d7e44ad814c312be65efccaa731ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3d91b56ea331d443252206f627aa4b0b3b40345
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792483"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639702"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>Lección 1-1: Crear un nuevo proyecto de Integration Services
 El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Este proyecto incluye las plantillas para los objetos —orígenes de datos, vistas de orígenes de datos y paquetes— que se utilizan en una solución de transformación de datos.  
@@ -26,7 +26,7 @@ Los paquetes que creará en este tutorial de [!INCLUDE[ssISnoversion](../include
 > [!NOTE]  
 > Este tutorial necesita Microsoft SQL Server Data Tools.  
 >   
-> Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+> Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Para crear un proyecto de Integration Services  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a004b0d12d6a34b613c710f2018b9151b38f5d84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612864"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814108"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -177,7 +177,7 @@ En un gráfico de proyección solar, la jerarquía se representa mediante una se
 * [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [Tutorial: Gráficos de rectángulos en Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [Gráfico de rectángulos: Aplicaciones de visualización de datos de investigaciones de Microsoft para Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+* [Gráfico de rectángulos: Aplicaciones de visualización de datos de investigaciones de Microsoft para Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

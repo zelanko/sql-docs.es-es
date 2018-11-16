@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4511437b4d4c18fa7834cf7e61af4eda6a74d46a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971086"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703103"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
  *format*  
  Patrón de formato **nvarchar**.  
   
- El argumento *format* debe contener una cadena de formato de .NET Framework válida, ya sea como una cadena de formato estándar (por ejemplo, "C" o "D") o como un modelo de caracteres personalizados para los valores de fecha y numéricos (por ejemplo, "DD de MMMM, aaaa (dddd)"). No se admite el formato compuesto. Para obtener una explicación completa de estos modelos de formato, vea la documentación de .NET Framework sobre el formato de cadena en general, los formatos de fecha y hora personalizados, y los formatos de número personalizados. Un buen punto de partida es el tema "[Formatting Types](http://go.microsoft.com/fwlink/?LinkId=211776)" (Tipos de formato).  
+ El argumento *format* debe contener una cadena de formato de .NET Framework válida, ya sea como una cadena de formato estándar (por ejemplo, "C" o "D") o como un modelo de caracteres personalizados para los valores de fecha y numéricos (por ejemplo, "DD de MMMM, aaaa (dddd)"). No se admite el formato compuesto. Para obtener una explicación completa de estos modelos de formato, vea la documentación de .NET Framework sobre el formato de cadena en general, los formatos de fecha y hora personalizados, y los formatos de número personalizados. Un buen punto de partida es el tema "[Formatting Types](https://go.microsoft.com/fwlink/?LinkId=211776)" (Tipos de formato).  
   
  *culture*  
  Argumento opcional de tipo **nvarchar** que especifica una referencia cultural.  
@@ -128,7 +128,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT con cadenas de formato personalizado  
- En el ejemplo siguiente se muestran valores numéricos de formato especificando un formato personalizado. En el ejemplo se da por supuesto que la fecha actual es el 27 de septiembre de 2012. Para más información sobre estos y otros formatos personalizados, vea [Cadenas con formato numérico personalizado](http://msdn.microsoft.com/library/0c899ak8.aspx).  
+ En el ejemplo siguiente se muestran valores numéricos de formato especificando un formato personalizado. En el ejemplo se da por supuesto que la fecha actual es el 27 de septiembre de 2012. Para más información sobre estos y otros formatos personalizados, vea [Cadenas con formato numérico personalizado](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -147,7 +147,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>C. FORMAT con tipos numéricos  
- En este ejemplo se devuelven 5 filas de la tabla **Sales.CurrencyRate** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La columna **EndOfDateRate** se almacena como el tipo **money** en la tabla. En este ejemplo, la columna se devuelve sin formato y después con formato especificando el formato Number de .NET, el formato General y los tipos de formato Currency. Para más información sobre estos y otros formatos numéricos, vea [Cadenas con formato numérico estándar](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ En este ejemplo se devuelven 5 filas de la tabla **Sales.CurrencyRate** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La columna **EndOfDateRate** se almacena como el tipo **money** en la tabla. En este ejemplo, la columna se devuelve sin formato y después con formato especificando el formato Number de .NET, el formato General y los tipos de formato Currency. Para más información sobre estos y otros formatos numéricos, vea [Cadenas con formato numérico estándar](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

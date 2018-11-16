@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 72a39be860356d2c67208dcdfc3a6b76eead1526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7bbf62397971834da589d7232070300296f10c4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834223"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601955"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Actualizar a una edición diferente de SQL Server (programa de instalación)
 
@@ -82,6 +82,6 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
   
 ## <a name="see-also"></a>Ver también  
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Compatibilidad con versiones anteriores](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

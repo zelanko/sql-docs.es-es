@@ -19,12 +19,12 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c7ece007386a9048db3ec33322d7da0cab332cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3181a92340ae591167aa2b9e667c3af79d32f9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855819"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698283"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47855819"
 > [!IMPORTANT]  
 >  Si la protección de la privacidad es de particular importancia, no utilice esta función. Es posible estimar el valor del GUID generado a continuación y, por tanto, obtener acceso a los datos asociados con dicho GUID.  
   
- NEWSEQUENTIALID es un contenedor de la función [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) de Windows que tiene aplicado algo de [orden de bytes aleatorio](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
+ NEWSEQUENTIALID es un contenedor de la función [UuidCreateSequential](https://go.microsoft.com/fwlink/?LinkId=164027) de Windows que tiene aplicado algo de [orden de bytes aleatorio](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
 >  La función UuidCreateSequential tiene dependencias de hardware. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se pueden general clústeres de valores secuenciales cuando las bases de datos (por ejemplo, las bases de datos independientes) se mueven a otros equipos. Cuando se usa Always On en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], se pueden generar clústeres de valores secuenciales si la base de datos conmuta por error a otro equipo.  

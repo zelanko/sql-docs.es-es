@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737743"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814148"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
 Aprenda a agregar acciones de hipervínculo a cuadros de texto, imágenes, gráficos y medidores en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Los vínculos pueden ir a otros informes, a los marcadores de un informe o a direcciones URL estáticas o dinámicas. 
@@ -73,9 +73,9 @@ Puede crear vínculos a marcadores en una ubicación en el informe actual. Para 
   
 4.  En **Seleccionar dirección URL**, escriba o seleccione una dirección URL o una expresión que se evalúe como una dirección URL, o haga clic en la flecha de lista desplegable y haga clic en el nombre de un campo que contenga una dirección URL. 
 
-    En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, `http://<servername>/images/image1.jpg`. 
+    En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, `https://<servername>/images/image1.jpg`. 
     
-    En el caso de un elemento publicado en un servidor de informes configurado en el modo integrado de SharePoint, use una dirección URL completa. Por ejemplo, `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    En el caso de un elemento publicado en un servidor de informes configurado en el modo integrado de SharePoint, use una dirección URL completa. Por ejemplo, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

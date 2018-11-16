@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c57b9ae4cdf3a8cd34e6fc256f36619ccbb3d2c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cf0f16e4f1a5e831442bf143cd11b45ab2d319f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761463"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813479"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
   La extensión de representación en XML devuelve un informe paginado en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.  
@@ -76,7 +76,7 @@ ms.locfileid: "47761463"
   
  Las definiciones del espacio de nombres y los atributos de referencia del esquema XML también se incluyen en el elemento de informe. Las variables se indican en negrita:  
   
- <**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Los valores de las variables son los siguientes:  
   

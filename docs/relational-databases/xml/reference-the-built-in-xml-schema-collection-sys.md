@@ -17,29 +17,29 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87698562a4f3e62b804e1fc115b9995e0e620d81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2982a8882fde670fa6a148087885116b3bfaf372
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604464"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677961"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Hacer referencia a la colección de esquemas XML integrada (sys)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cada base de datos que se crea posee una colección de esquemas XML **sys** predefinida en el esquema relacional **sys** . Estos esquemas predefinidos se reservan, y son accesibles desde cualquier otra colección de esquemas XML creada por el usuario. Los prefijos utilizados en estos esquemas predefinidos son significativos en XQuery. El único prefijo reservado es **xml** .  
   
 ```  
-xml = http://www.w3.org/XML/1998/namespace  
-xs = http://www.w3.org/2001/XMLSchema  
-xsi = http://www.w3.org/2001/XMLSchema-instance  
-fn = http://www.w3.org/2004/07/xpath-functions  
-sqltypes = http://schemas.microsoft.com/sqlserver/2004/sqltypes  
-xdt = http://www.w3.org/2004/07/xpath-datatypes  
+xml = https://www.w3.org/XML/1998/namespace  
+xs = https://www.w3.org/2001/XMLSchema  
+xsi = https://www.w3.org/2001/XMLSchema-instance  
+fn = https://www.w3.org/2004/07/xpath-functions  
+sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
+xdt = https://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
-(no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
+(no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- Debe tenerse en cuenta que el espacio de nombres **sqltypes** contiene componentes a los que se puede hacer referencia desde cualquier colección de esquemas XML creada por el usuario. Puede descargar el esquema **sqltypes** de el [sitio web de Microsoft](http://go.microsoft.com/fwlink/?linkid=31850). Los componentes integrados son los siguientes:  
+ Debe tenerse en cuenta que el espacio de nombres **sqltypes** contiene componentes a los que se puede hacer referencia desde cualquier colección de esquemas XML creada por el usuario. Puede descargar el esquema **sqltypes** de el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?linkid=31850). Los componentes integrados son los siguientes:  
   
 -   Tipos XSD  
   
@@ -64,12 +64,12 @@ GO
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema   
-   xmlns="http://www.w3.org/2001/XMLSchema"   
+   xmlns="https://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
-   xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
-   <import namespace="http://www.w3.org/XML/1998/namespace"/>  
-   <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+   xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+   <import namespace="https://www.w3.org/XML/1998/namespace"/>  
+   <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
           <sequence>  
@@ -98,9 +98,9 @@ GO
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
-    <schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    <schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace    
-        ="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+        ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
     </schema>'  
     GO  
@@ -123,11 +123,11 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+<schema xmlns="https://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
-        xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+        xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     
-     namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+     namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
             <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -143,7 +143,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 GO  

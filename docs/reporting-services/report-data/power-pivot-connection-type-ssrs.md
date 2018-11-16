@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c6dcae60590d6bcdeaaf06d41326a8fc0cb64f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030854"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812668"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
   Puede utilizar la extensión de procesamiento de datos de SQL Server Analysis Services para recuperar datos de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint.  
@@ -29,7 +29,7 @@ ms.locfileid: "50030854"
  Utilice el origen de datos de informe de tipo **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Cadena de conexión  
- La cadena de conexión es la dirección URL al libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en SharePoint en la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otra biblioteca, por ejemplo, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
+ La cadena de conexión es la dirección URL al libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en SharePoint en la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otra biblioteca, por ejemplo, `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenciales  
  Especifique las credenciales necesarias para tener acceso al libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y el sitio de SharePoint, como Autenticación de Windows (Seguridad integrada). Para más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  

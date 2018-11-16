@@ -17,12 +17,12 @@ ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 077e950192728b3d66e5ea596b46a0af3b037953
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cdb1e4a6efcc2a813343f0bc997fd9ce729b07e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691803"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639632"
 ---
 # <a name="notify-operator-task"></a>Notificar al operador, tarea
   La tarea Notificar al operador envía mensajes de notificación a los operadores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un operador del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un alias para una persona o grupo que puede recibir notificaciones electrónicas. Para obtener más información sobre operadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Operadores](../../ssms/agent/operators.md).  
@@ -40,6 +40,6 @@ ms.locfileid: "47691803"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

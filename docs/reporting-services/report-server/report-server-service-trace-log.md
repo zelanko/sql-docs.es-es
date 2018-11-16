@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031074"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813798"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
   Los registros de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes.  La información de los archivos incluye las operaciones realizadas por el servicio web del servidor de informes, el portal web y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se ha incluido en el registro de eventos o de ejecución. Por ejemplo, cuando existen problemas con las suscripciones.  
@@ -80,7 +80,7 @@ ms.locfileid: "50031074"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Para obtener más información, vea el [artículo 913046 de Knowledge Base](http://support.microsoft.com/?kbid=913046) en el sitio web de Microsoft [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Para obtener más información, vea el [artículo 913046 de Knowledge Base](https://support.microsoft.com/?kbid=913046) en el sitio web de Microsoft [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ##  <a name="bkmk_log_file_fields"></a> Campos del archivo de registro  
  Los registros de seguimiento contienen los siguientes archivos:  

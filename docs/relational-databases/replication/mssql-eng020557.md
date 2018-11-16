@@ -13,12 +13,12 @@ ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4eab35fd976584116b52a785f6d85c17ad74c11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0a3b443e98d565d55f23c91777de06e407c905
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781692"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667534"
 ---
 # <a name="mssqleng020557"></a>MSSQL_ENG020557
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47781692"
   
 -   Si se producen errores al crear o aplicar una instantánea, compruebe los archivos del directorio de la instantánea.  
   
--   Si el error persiste, aumente el registro del agente y especifique un archivo de salida para el registro. Dependiendo del contexto del error, esto puede proporcionar los pasos que conducen al error y a mensajes de error adicionales. Para obtener más información acerca de la configuración del registro para replicación, vea el artículo [312292](http://support.microsoft.com/kb/312292)de Microsoft Knowledge Base.  
+-   Si el error persiste, aumente el registro del agente y especifique un archivo de salida para el registro. Dependiendo del contexto del error, esto puede proporcionar los pasos que conducen al error y a mensajes de error adicionales. Para obtener más información acerca de la configuración del registro para replicación, vea el artículo [312292](https://support.microsoft.com/kb/312292)de Microsoft Knowledge Base.  
   
 ## <a name="see-also"></a>Ver también  
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

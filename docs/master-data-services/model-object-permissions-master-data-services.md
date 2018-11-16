@@ -15,12 +15,12 @@ ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9d2289a199ec54eacb42a5fce175f91872ab8133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ed9891af2905f8f45716c64b5f3ed9ac241905
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848873"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700413"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Permisos de objeto del modelo (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47848873"
  En general, debe asignar el permiso **ALL** al objeto de modelo y después asignar explícitamente permisos a los objetos subordinados.  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(Mejoras de seguridad), en msdn.com.  
+ Entrada de blog, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Mejoras de seguridad), en msdn.com.  
   
 ## <a name="see-also"></a>Ver también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

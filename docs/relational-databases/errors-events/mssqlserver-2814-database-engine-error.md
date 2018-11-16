@@ -12,12 +12,12 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a2620affb6732ef0f48fe5ca29689f7d39ec38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895ec797f0c0182fe1579972d3adb3663302d7d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649923"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677650"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ En la siguiente tabla se muestran los motivos de la recompilación.
     AND qs.plan_handle = *plan_handle*;
     ```
   
-2.  Según sea la descripción del código del motivo, modifique la instrucción, lote o procedimiento para evitar las recompilaciones. Por ejemplo, un procedimiento almacenado puede contener una o más instrucciones SET. Estas instrucciones se deben quitar del procedimiento. Para obtener ejemplos adicionales de causas de la recompilación y sus soluciones, vea [Problemas de compilación y recompilación de lotes, y de almacenamiento en caché de planes en SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=69175).  
+2.  Según sea la descripción del código del motivo, modifique la instrucción, lote o procedimiento para evitar las recompilaciones. Por ejemplo, un procedimiento almacenado puede contener una o más instrucciones SET. Estas instrucciones se deben quitar del procedimiento. Para obtener ejemplos adicionales de causas de la recompilación y sus soluciones, vea [Problemas de compilación y recompilación de lotes, y de almacenamiento en caché de planes en SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=69175).  
   
 3.  Si el problema persiste, póngase en contacto con los Servicios de soporte al cliente (CSS) de Microsoft.  
   

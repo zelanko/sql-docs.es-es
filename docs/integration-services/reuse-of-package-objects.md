@@ -17,12 +17,12 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb638e8bf2715dafa1ae876c227c89f7cd20f7d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daaf8c7fcd44ac814bceeaba61a6d152e7051d99
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600984"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637502"
 ---
 # <a name="reuse-of-package-objects"></a>Volver a utilizar objetos de paquete
   Funcionalidad frecuente de paquetes que desea volver a usar. Por ejemplo, si creó un conjunto de tareas, es posible que desee volver a utilizar todos los elementos como grupo, o que desee volver a utilizar un único elemento, como por ejemplo, un administrador de conexiones que creó en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] diferente.  
@@ -42,8 +42,8 @@ ms.locfileid: "47600984"
   
 -   [Copiar objetos de paquete](../integration-services/copy-package-objects.md)  
   
--   [Copiar los elementos de proyectos](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+-   [Copiar los elementos de proyectos](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
--   [guardar un paquete como una plantilla de paquete](http://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
+-   [guardar un paquete como una plantilla de paquete](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
   
   

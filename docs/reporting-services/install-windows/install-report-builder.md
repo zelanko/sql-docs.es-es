@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021329"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813188"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] es una aplicación independiente que el usuario o un administrador pueden instalar en el equipo. Puede instalarlo desde el Centro de descarga de Microsoft, desde un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o desde un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "50021329"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] con System Center Configuration Manager 
   
- Un administrador también puede usar software como System Center Configuration Manager para insertar el programa en su equipo. Para obtener información sobre la forma de usar software específico para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consulte la documentación del software. Para más información, consulte el [sitio de System Center Configuration Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
+ Un administrador también puede usar software como System Center Configuration Manager para insertar el programa en su equipo. Para obtener información sobre la forma de usar software específico para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consulte la documentación del software. Para más información, consulte el [sitio de System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Las características de seguridad de Windows Vista y Windows 7 exigen permisos elevados para ejecutar operaciones de línea de comandos y solicitarán permiso para ejecutar la línea de comandos. La instalación no es silenciosa. Para que la instalación sea silenciosa, es necesario ejecutar la línea de comandos como administrador.  

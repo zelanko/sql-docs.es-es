@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021909"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812868"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar un servidor de informes en modo nativo para la administración local (SSRS)
   La implementación de un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en uno de los sistemas operativos siguientes requiere más pasos de configuración si desea administrar la instancia del servidor de informes localmente. En este tema, se describe cómo configurar el servidor de informes para la administración local. Si aún no tiene instalado o configurado el servidor de informes, vea [Instalar SQL Server 2016 desde el Asistente para la instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) y [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "50021909"
   
 8.  Haga clic en **Sitios**.  
   
-9. Agregue `http://<your-server-name>`.  
+9. Agregue `https://<your-server-name>`.  
   
 10. Desactive la casilla **Requerir comprobación del servidor (https:) para todos los sitios de esta zona** si no usa HTTP en el sitio predeterminado.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021909"
   
 ###  <a name="bkmk_configure_site_settings"></a> Configuración del sitio del Administrador de informes  
   
-1.  Abra el explorador con privilegios administrativos y vaya al administrador de informes, `http://<server name>/reports`.  
+1.  Abra el explorador con privilegios administrativos y vaya al administrador de informes, `https://<server name>/reports`.  
   
 2.  Haga clic en **Configuración del sitio** en la esquina superior de la página Inicio.  
   

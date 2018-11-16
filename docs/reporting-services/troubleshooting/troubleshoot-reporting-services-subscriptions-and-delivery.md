@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8384ad803f70b6ec4bcca2bca49390f969a661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b6a2665e963f552a7d5cb726b5d7904f7a13415
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604313"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812729"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Solución de problemas de suscripciones y entrega de Reporting Services
   
@@ -67,7 +67,7 @@ Las suscripciones pueden no llevarse a cabo en estas circunstancias.
 * La configuración de las credenciales ha cambiado de almacenadas a integradas o solicitadas.  
 * El tipo de datos o el nombre del parámetro ha cambiado en la definición del informe y se ha vuelto a publicar el informe. Si una suscripción incluye un parámetro que ya no es válido, la suscripción queda inactiva.  
   
-Para más información, vea [Solucionar problemas y errores con Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)en el wiki de TechNet.  
+Para más información, vea [Solucionar problemas y errores con Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)en el wiki de TechNet.  
   
   
     

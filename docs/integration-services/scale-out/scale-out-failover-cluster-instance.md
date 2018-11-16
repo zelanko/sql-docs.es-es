@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1e3aa4a72623e986a4e5a6494829f7e7a53d9cb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312fff4f7221c7ff7f644933494c71afd76b1136
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668643"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640452"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out support for high availability via SQL Server failover cluster instance (Compatibilidad con la escalabilidad horizontal para una alta disponibilidad mediante Instancia de clústeres de conmutación por error de SQL Server).
 
 Para configurar la alta disponibilidad en el lado del servicio principal de escalabilidad horizontal con Instancia de clúster de conmutación por error de SQL Server, realice lo siguiente:
 
 ## <a name="1-prerequisites"></a>1. Prerequisites
-Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
+Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Instalar un clúster de conmutación por error de SQL Server
 Instale un clúster de conmutación por error de SQL Server. Vea [Instalación de un clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) para obtener instrucciones. Durante la instalación, seleccione Servicios de Motor de base de datos en la página Selección de características. Registre el nombre de red de SQL Server para la futura configuración.

@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df9d03fda22eae666d589e6cc3706e84aee6825d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033212"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681343"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "51033212"
  Para continuar, haga clic en **Siguiente**.  
   
 ##  <a name="Instance_name"></a> Especificar la instancia de SQL Server  
- Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar…**. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar…**. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, haga clic en **Siguiente**.  
   
 ##  <a name="Connection_dialog"></a> Cuadro de diálogo de conexión  
- En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Si la conexión está cifrada, se usará la conexión cifrada. Si la conexión no está cifrada, la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volverá a conectarse mediante una conexión cifrada.  
@@ -129,7 +129,7 @@ ms.locfileid: "51033212"
 |Los conjuntos de recopilación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada deben detenerse.|Detenga los conjuntos de recopilación ya existentes sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]especificada. Si se deshabilita el recopilador de datos, habilítelo, detenga cualquier conjunto de recopilación en ejecución y, a continuación, vuelva a ejecutar las reglas de validación para la operación Crear UCP.<br /><br /> Para habilitar el recopilador de datos:<br /><br /> En el Explorador de objetos, expanda el nodo **Administración** .<br /><br /> Haga clic con el botón derecho en **Recopilación de datos**y, luego, haga clic en **Habilitar recopilación de datos**.<br /><br /> Para detener un conjunto de recopilación:<br /><br /> En el Explorador de objetos, expanda el nodo Administración, expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.<br /><br /> Haga clic con el botón derecho en el conjunto de recopilación que quiere detener y, luego, haga clic en **Detener conjunto de recopilación de datos**.<br /><br /> Un cuadro de mensaje muestra los resultados de esta acción y un círculo rojo en el icono para el conjunto de recopilación indica que el conjunto de recopilación se ha detenido.|  
 |Se debe iniciar el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Inicie el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma que se tenga que iniciar manualmente. En caso contrario, configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente.|  
 |Se debe iniciar el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el UCP.|Inicie el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el UCP. Si el UCP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma que se tenga que iniciar manualmente. En caso contrario, configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente.|  
-|WMI debe estar configurado correctamente.|Para solucionar problemas de configuración de WMI, vea [Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI debe estar configurado correctamente.|Para solucionar problemas de configuración de WMI, vea [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |La cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio de Windows válida en el UCP.|Especifique una cuenta de dominio de Windows válida. Para asegurarse de que la cuenta es válida, inicie sesión en el UCP mediante la cuenta de dominio de Windows.|  
 |Si selecciona la opción de cuenta de proxy, la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio de Windows válida en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Especifique una cuenta de dominio de Windows válida. Para asegurarse de que la cuenta es válida, inicie sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada mediante la cuenta de dominio de Windows.|  
 |La cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ser ninguna cuenta integrada, como Servicio de red.|Reasigne la cuenta a una cuenta de dominio de Windows. Para asegurarse de que la cuenta es válida, inicie sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada mediante la cuenta de dominio de Windows.|  
@@ -173,7 +173,7 @@ ms.locfileid: "51033212"
 >   
 >  Información adicional: no se ha podido obtener información sobre el grupo o usuario '\<nombreDeDominio\nombreDeCuenta>' de Windows NT, código de error 0x5. (Microsoft SQL Server, Error: 15404)  
 >   
->  Para obtener más información sobre cómo solucionar este error, vea [Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
+>  Para obtener más información sobre cómo solucionar este error, vea [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
 >  No cambie las propiedades del conjunto de recopilación "Información de la utilidad" en una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y no active ni desactive manualmente la recopilación de datos, ya que la recopilación de datos la controla un trabajo del agente de la Utilidad.  
@@ -199,6 +199,6 @@ ms.locfileid: "51033212"
 ## <a name="see-also"></a>Ver también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

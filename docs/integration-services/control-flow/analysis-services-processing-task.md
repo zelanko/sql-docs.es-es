@@ -18,12 +18,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a4a205f1e1cd89b86bcfc0929d95a638cd24d78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609541"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641782"
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
   La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como modelos tabulares, cubos, dimensiones y modelos de minería de datos.  
@@ -73,7 +73,7 @@ ms.locfileid: "47609541"
   
  Para obtener más información sobre cómo configurar estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configuración mediante programación de la tarea Procesamiento de Analysis Services  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
@@ -132,7 +132,7 @@ ms.locfileid: "47609541"
  **Análisis de impacto**  
  Lleve a cabo el análisis de impacto en el objeto seleccionado.  
   
- **Temas relacionados:** [Cuadro de diálogo Análisis de impacto &#40;Analysis Services - Datos multidimensionales&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **Temas relacionados:** [Cuadro de diálogo Análisis de impacto &#40;Analysis Services - Datos multidimensionales&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Resumen de configuración de lotes**  
  |Propiedad|Descripción|  
@@ -146,5 +146,5 @@ ms.locfileid: "47609541"
  **Cambiar configuración**  
  Cambie las opciones de procesamiento y el control de errores en las claves de dimensiones.  
   
- **Temas relacionados:** [Cuadro de diálogo Cambiar configuración &#40;Analysis Services - Datos multidimensionales&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **Temas relacionados:** [Cuadro de diálogo Cambiar configuración &#40;Analysis Services - Datos multidimensionales&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   

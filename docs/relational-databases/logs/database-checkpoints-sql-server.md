@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd42cf79d99566f6d3d356d8b96bdb5415dc258c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34aeae9faee8d0818f5a8db3c499850e0e969835
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673393"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676656"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ Hay distintos componentes del servidor que generan puntos de comprobación inter
   
 -   Poner fuera de línea una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .      
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Para cambiar el intervalo de recuperación en una instancia de servidor**  
   
 -   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
@@ -142,6 +142,6 @@ Hay distintos componentes del servidor que generan puntos de comprobación inter
   
 ## <a name="see-also"></a>Vea también  
 [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Arquitectura física del registro de transacciones](http://technet.microsoft.com/library/ms179355.aspx) (de los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , pero sigue teniendo vigencia)       
+[Arquitectura física del registro de transacciones](https://technet.microsoft.com/library/ms179355.aspx) (de los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , pero sigue teniendo vigencia)       
   
   

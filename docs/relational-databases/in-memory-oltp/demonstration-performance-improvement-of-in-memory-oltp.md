@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5aa7205329304a6b66fc602999ae2a9ad6837873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626443"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677554"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: mejora de rendimiento de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ go
   
 1.  Decida qué base de datos de prueba existente usará para el ejemplo de código.  
   
-2.  Si decide crear una nueva base de datos de prueba, use el [portal de Azure](http://portal.azure.com) para crear una base de datos denominada **imoltp**.  
+2.  Si decide crear una nueva base de datos de prueba, use el [portal de Azure](https://portal.azure.com) para crear una base de datos denominada **imoltp**.  
   
- Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](http://azure.microsoft.com/documentation/articles/sql-database-get-started).  
+ Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas con optimización para memoria y un NCSProc.  
  En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Realice lo siguiente:  

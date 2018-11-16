@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696823"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lección 1: Creación y consulta de objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ En esta lección se muestra cómo crear una base de datos, crear una tabla en la
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] se pueden escribir y enviar a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las siguientes maneras:  
   
--   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](http://go.microsoft.com/fwlink/?linkid=67359).  
+-   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](https://go.microsoft.com/fwlink/?linkid=67359).  
   
 -   Mediante el uso de la [utilidad sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -213,7 +213,7 @@ Para obtener información sobre algunas de las funciones que puede usar para tra
 |||  
 |-|-|  
 |[Funciones de cadena &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Funciones matemáticas &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Funciones de texto e imagen &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[Funciones matemáticas &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Funciones de texto e imagen &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>Creación de vistas y procedimientos almacenados
 Una vista es una instrucción SELECT almacenada y un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  

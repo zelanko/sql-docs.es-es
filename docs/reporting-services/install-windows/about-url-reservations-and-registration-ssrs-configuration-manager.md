@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d034b7a930de907e0868271b175cabd5507ad07c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031834"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814118"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
   Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el Administrador de informes al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -57,8 +57,8 @@ ms.locfileid: "50031834"
   
 |Reserva de direcciones URL en HTTP.SYS|Dirección URL|Explicación|  
 |---------------------------------|---------|-----------------|  
-|`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|La reserva de direcciones URL especifica un carácter comodín (+) en el puerto 80. Esto coloca en la cola del servidor de informes cualquier solicitud entrante que especifique un host que se resuelva como el equipo del servidor de informes en el puerto 80. Observe que con esta reserva de direcciones URL se puede usar una cantidad cualquiera de direcciones URL para tener acceso al servidor de informes.<br /><br /> Ésta es la reserva de direcciones URL predeterminada para un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la mayoría de los sistemas operativos.|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|Esta reserva de direcciones URL especifica una dirección IP y es mucho más restrictiva que la que tiene un carácter comodín. Solo las direcciones URL que incluyen la dirección IP se pueden utilizar para conectarse al servidor de informes. Dada esta reserva de dirección URL, se produciría un error en una solicitud a un servidor de informes en `http://<computername>/reportserver` o `http://localhost/reportserver`.|  
+|`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|La reserva de direcciones URL especifica un carácter comodín (+) en el puerto 80. Esto coloca en la cola del servidor de informes cualquier solicitud entrante que especifique un host que se resuelva como el equipo del servidor de informes en el puerto 80. Observe que con esta reserva de direcciones URL se puede usar una cantidad cualquiera de direcciones URL para tener acceso al servidor de informes.<br /><br /> Ésta es la reserva de direcciones URL predeterminada para un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la mayoría de los sistemas operativos.|  
+|`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|Esta reserva de direcciones URL especifica una dirección IP y es mucho más restrictiva que la que tiene un carácter comodín. Solo las direcciones URL que incluyen la dirección IP se pueden utilizar para conectarse al servidor de informes. Dada esta reserva de dirección URL, se produciría un error en una solicitud a un servidor de informes en `https://<computername>/reportserver` o `https://localhost/reportserver`.|  
   
 ##  <a name="DefaultURLs"></a> Direcciones URL predeterminadas  
  Si instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, el programa de instalación reservará direcciones URL para el servicio web del servidor de informes y el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. También puede aceptar estos valores predeterminados al definir las reservas de direcciones URL en la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las direcciones URL predeterminadas incluirán un nombre de instancia si instala [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como una instancia con nombre.  
@@ -82,12 +82,12 @@ ms.locfileid: "50031834"
   
 |Tipo de instancia|Aplicación|Dirección URL predeterminada|Reserva de direcciones URL real en HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Instancia predeterminada|servicio web del servidor de informes|`http://\<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|Instancia predeterminada|Portal web|`http://<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|Instancia con nombre|servicio web del servidor de informes|`http://<servername>/reportserver_<instancename>`|`http://<servername>:80/reportserver_<instancename>`|  
-|Instancia con nombre|Portal web|`http://<servername>/reports_<instancename>`|`http://<servername>:80/reports_<instancename>`|  
-|SQL Server Express|servicio web del servidor de informes|`http://<servername>/reportserver_SQLExpress`|`http://<servername>:80/reportserver_SQLExpress`|  
-|SQL Server Express|Portal web|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
+|Instancia predeterminada|servicio web del servidor de informes|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Instancia predeterminada|Portal web|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Instancia con nombre|servicio web del servidor de informes|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
+|Instancia con nombre|Portal web|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
+|SQL Server Express|servicio web del servidor de informes|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
+|SQL Server Express|Portal web|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticación e identidad de servicio de las direcciones URL de Reporting Services  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Las reservas de direcciones URL especifican la cuenta de servicio del servicio Servidor de informes. La cuenta en la que el servicio se ejecuta se utiliza para todas las direcciones URL que se crean para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecutan en la misma instancia. La identidad del servicio de la instancia del servidor de informes está almacenada en el archivo RSReportServer.config.  
@@ -97,9 +97,9 @@ ms.locfileid: "50031834"
  El acceso anónimo está deshabilitado porque la seguridad predeterminada es **RSWindowsNegotiate**. Para el acceso en una intranet, las direcciones URL del servidor de informes usan nombres de equipo de red. Si desea configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para las conexiones a Internet, debe utilizar valores diferentes. Para obtener más información sobre la autenticación, vea [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> Direcciones URL para administración local  
- Puede usar `http://localhost/reportserver` o `http://localhost/reports` si ha especificado un carácter comodín fuerte o débil para la reserva de direcciones URL.  
+ Puede usar `https://localhost/reportserver` o `https://localhost/reports` si ha especificado un carácter comodín fuerte o débil para la reserva de direcciones URL.  
   
- La dirección URL `http://localhost` se interpreta como `http://127.0.0.1`. Si asoció la reserva de direcciones URL a un único nombre de equipo o dirección IP, no puede utilizar el host local a menos que cree una reserva adicional para 127.0.0.1 en el equipo local. De igual forma, si localhost o 127.0.0.1 se deshabilitan en el equipo, no puede utilizar esa dirección URL.  
+ La dirección URL `https://localhost` se interpreta como `https://127.0.0.1`. Si asoció la reserva de direcciones URL a un único nombre de equipo o dirección IP, no puede utilizar el host local a menos que cree una reserva adicional para 127.0.0.1 en el equipo local. De igual forma, si localhost o 127.0.0.1 se deshabilitan en el equipo, no puede utilizar esa dirección URL.  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] y versiones posteriores incluyen nuevas características de seguridad para reducir el riesgo de ejecutar accidentalmente programas con privilegios elevados. Se necesitan pasos adicionales para habilitar la administración local en estos sistemas operativos. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   

@@ -11,12 +11,12 @@ ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668903"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666764"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Cómo: Configurar una ejecución de prueba unitaria de SQL Server
 Al configurar el proyecto de prueba, puede especificar varios valores que controlan aspectos de la ejecución de las pruebas unitarias de SQL Server. Esta configuración se almacena en el archivo app.config del proyecto de prueba. Si edita este archivo directamente, los nuevos valores aparecerán en el cuadro de diálogo de configuración de prueba.  
@@ -30,7 +30,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
 -   **Esquema de implementación**. Un proyecto de base de datos es una representación sin conexión de la base de datos. El proyecto de base de datos representa la estructura de los objetos de base de datos pero no contiene datos. Después de realizar cambios de esquema en un proyecto de base de datos, puede probarlos en una base de datos actual. En el paso de la implementación del esquema, los objetos de base de datos que desea probar se copian del proyecto de base de datos en el que se ejecutan las pruebas. Para más información sobre la implementación del esquema, consulte [Implementar un esquema de la base de datos](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Las pruebas no se ejecutan en la carpeta de la solución, sino en una carpeta independiente en el disco duro local. Aunque se pueden configurar algunos aspectos de la implementación de prueba, normalmente no es necesario configurarlos para las pruebas unitarias. Para más información acerca de la implementación de prueba, consulte [Ejecutar pruebas](http://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Las pruebas no se ejecutan en la carpeta de la solución, sino en una carpeta independiente en el disco duro local. Aunque se pueden configurar algunos aspectos de la implementación de prueba, normalmente no es necesario configurarlos para las pruebas unitarias. Para más información acerca de la implementación de prueba, consulte [Ejecutar pruebas](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
 ## <a name="SpecifyConnectionStrings"></a>Especificar cadenas de conexión  
   

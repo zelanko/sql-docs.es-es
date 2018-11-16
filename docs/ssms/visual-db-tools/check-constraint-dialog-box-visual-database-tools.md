@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298377810a6d0f42b952c94ff6835be506d6559e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611763"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697630"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Restricción CHECK (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Elimina la restricción seleccionada de la tabla. Para cancelar la adición de u
 Se expande para mostrar el campo de la propiedad **Expresión** .  
   
 **Expresión**  
-Muestra la expresión de la restricción CHECK seleccionada. En las restricciones nuevas, debe especificar la expresión antes de salir del cuadro. También puede editar las restricciones CHECK existentes. Para más información, consulte [Trabajar con restricciones (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Muestra la expresión de la restricción CHECK seleccionada. En las restricciones nuevas, debe especificar la expresión antes de salir del cuadro. También puede editar las restricciones CHECK existentes. Para más información, consulte [Trabajar con restricciones (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Categoría Identidad**  
 Se expande para mostrar las propiedades de **Nombre** y **Descripción**.  
@@ -65,6 +65,6 @@ Especifica si se exigirá la restricción cuando se inserten o se actualicen dat
 Indica si se exigirá la restricción cuando un agente de replicación realice una inserción o actualización en esta tabla.  
   
 ## <a name="see-also"></a>Ver también  
-[Trabajar con restricciones (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Trabajar con restricciones (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Cuadro de diálogo Índices o claves &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

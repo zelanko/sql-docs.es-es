@@ -5,8 +5,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
@@ -24,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deaaa7ac9774cc775801ae7946675452cc15a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822413"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669604"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +174,7 @@ Como no se puede predecir qué tipo de acceso tendrá lugar ni cuándo, la mejor
   
 -   Realizar consultas de forma más rápida y eficiente. Cuando las consultas tienen acceso a varias particiones de un índice, el optimizador de consultas puede procesar particiones individuales simultáneamente y excluir particiones que no están afectadas por la consulta.  
   
-Para obtener más información, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+Para obtener más información, vea [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Directrices para diseñar el criterio de ordenación de los índices  
  Al definir índices, debe tenerse en cuenta si los datos de la columna de clave de índice se almacenan en orden ascendente o descendente. El orden ascendente es el predeterminado y mantiene la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintaxis de las instrucciones CREATE INDEX, CREATE TABLE y ALTER TABLE admite las palabras clave ASC (ascendente) y DESC (descendente) en columnas individuales de índices y restricciones.  
@@ -825,7 +824,7 @@ Los índices no agrupados son uno de los posibles tipos de índice de una tabla 
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Arquitectura de los índices no agrupados en memoria
 
-Los índices no agrupados en memoria se implementan mediante una estructura de datos llamada "árbol BW", concebida y descrita originalmente por Microsoft Research en 2011. Un árbol BW es la variación sin bloqueos ni bloqueos temporales de un árbol B. Para obtener más información, vea [The Bw-Tree: A B-tree for New Hardware Platforms](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (Árbol BW: un árbol B para nuevas plataformas de hardware). 
+Los índices no agrupados en memoria se implementan mediante una estructura de datos llamada "árbol BW", concebida y descrita originalmente por Microsoft Research en 2011. Un árbol BW es la variación sin bloqueos ni bloqueos temporales de un árbol B. Para obtener más información, vea [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (Árbol BW: un árbol B para nuevas plataformas de hardware). 
 
 En un nivel muy alto, el árbol BW puede entenderse como una asignación de páginas organizadas por un identificador de página (PidMap), un recurso para asignar y reutilizar identificadores de página (PidAlloc), y un conjunto de páginas vinculadas a la asignación de páginas y también entre sí. Estos tres subcomponentes de alto nivel constituyen la estructura interna básica de un árbol BW.
 
@@ -892,7 +891,7 @@ Al consultar una tabla optimizada para memoria con predicados de desigualdad, el
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Reorganizar y volver a generar índices](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[Mejorar el rendimiento con vistas indizadas de SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Mejorar el rendimiento con vistas indizadas de SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Creación de una clave principal](../relational-databases/tables/create-primary-keys.md)    
 [Índices de tablas con optimización para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -902,4 +901,4 @@ Al consultar una tabla optimizada para memoria con predicados de desigualdad, el
 [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Índices en columnas calculadas](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Índices y ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Desfragmentación de índice adaptable](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Desfragmentación de índice adaptable](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

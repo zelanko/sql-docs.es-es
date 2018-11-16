@@ -12,12 +12,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a236afb02ee2cac24dee6fa4735a90bb28c3bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc31a6b98c12b948dd353ca7f7839f5a1fb0dc04
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631003"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696744"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -44,7 +44,7 @@ ms.locfileid: "47631003"
 -   El modelo de recuperación predeterminado de las bases de datos de DQS está establecido en **Simple**. En el modelo de recuperación simple, se realiza un registro mínimo de las transacciones, y el truncamiento del registro se produce automáticamente después de que la transacción finaliza para liberar espacio en el registro de transacciones (archivo .ldf). Para obtener información detallada sobre el modelo de recuperación simple, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  -   En el modelo de recuperación simple, cuando las entradas de registro permanecen activas durante mucho tiempo (por ejemplo, una transacción prolongada), el truncamiento del registro se puede retrasar y, por tanto, se podría llenar el registro de transacciones. Además, el truncamiento del registro no reduce el tamaño del archivo de registro físico (archivo. ldf). Para reducir el tamaño de un archivo de registro físico, se debe reducir el archivo de registro. Para obtener información sobre la solución de problemas relativos al registro de transacciones, vea [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o el artículo del servicio de soporte técnico de Microsoft en [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446).  
+>  -   En el modelo de recuperación simple, cuando las entradas de registro permanecen activas durante mucho tiempo (por ejemplo, una transacción prolongada), el truncamiento del registro se puede retrasar y, por tanto, se podría llenar el registro de transacciones. Además, el truncamiento del registro no reduce el tamaño del archivo de registro físico (archivo. ldf). Para reducir el tamaño de un archivo de registro físico, se debe reducir el archivo de registro. Para obtener información sobre la solución de problemas relativos al registro de transacciones, vea [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o el artículo del servicio de soporte técnico de Microsoft en [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Debe realizar periódicamente una copia de seguridad completa o diferencial de las bases de datos de DQS, y una copia de seguridad del registro de transacciones para crear un punto de recuperación de los datos. Para más información, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) y [Realizar copias de seguridad de un registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="DetachAttach"></a> Adjuntar y separar las bases de datos de DQS  

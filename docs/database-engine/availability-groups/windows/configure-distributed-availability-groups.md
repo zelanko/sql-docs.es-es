@@ -10,12 +10,12 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694504"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604001"
 ---
 # <a name="configure-distributed-availability-group"></a>Configurar un grupo de disponibilidad distribuido  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** especifica el agente de escucha de cada grupo de disponibilidad, con el punto de conexión de creación de reflejo de la base de datos del grupo de disponibilidad. En este ejemplo, es el puerto `5022` (no el puerto `60173` usado para crear el agente de escucha). Si usa un equilibrador de carga, por ejemplo, en Azure, [agregue una regla de equilibrio de carga para el puerto del grupo de disponibilidad distribuido](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Agregue la regla al puerto de escucha, además del puerto de la instancia de SQL Server. 
+>  **LISTENER_URL** especifica el agente de escucha de cada grupo de disponibilidad, con el punto de conexión de creación de reflejo de la base de datos del grupo de disponibilidad. En este ejemplo, es el puerto `5022` (no el puerto `60173` usado para crear el agente de escucha). Si usa un equilibrador de carga, por ejemplo, en Azure, [agregue una regla de equilibrio de carga para el puerto del grupo de disponibilidad distribuido](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Agregue la regla al puerto de escucha, además del puerto de la instancia de SQL Server. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Unir el grupo de disponibilidad distribuido en el segundo clúster  
  Después, únase al grupo de disponibilidad distribuido del segundo WSFC.  

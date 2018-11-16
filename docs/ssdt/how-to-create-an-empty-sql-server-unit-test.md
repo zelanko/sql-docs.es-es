@@ -13,12 +13,12 @@ ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627596"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681243"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Cómo: Crear una prueba unitaria de SQL Server vacía
 Incluya pruebas unitarias en el proyecto de base de datos para comprobar que los cambios realizados en los objetos de base de datos no interrumpen la funcionalidad existente. En los procedimientos siguientes se explica cómo crear pruebas unitarias de SQL Server para cualquier objeto de base de datos. SQL Server Data Tools incluye compatibilidad adicional para funciones, procedimientos y desencadenadores de base de datos almacenados. Para más información, consulte [Cómo: Crear pruebas unitarias de SQL Server para funciones, desencadenadores y procedimientos almacenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -96,10 +96,10 @@ Después de configurar el proyecto de prueba y crear la prueba unitaria, los pas
 -   Agregar las condiciones de prueba u otra instrucción de aserción para comprobar los resultados del script.  
   
 > [!NOTE]  
-> La condición de prueba no concluyente es la condición predeterminada agregada a cada prueba. Esta condición de prueba se incluye para indicar que la comprobación de la prueba no se ha implementado. Elimine esta condición de prueba de la prueba después de agregar otras condiciones de prueba. Para más información, consulte [Cómo: Agregar condiciones de prueba a pruebas unitarias de bases de datos](http://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condición de prueba no concluyente es la condición predeterminada agregada a cada prueba. Esta condición de prueba se incluye para indicar que la comprobación de la prueba no se ha implementado. Elimine esta condición de prueba de la prueba después de agregar otras condiciones de prueba. Para más información, consulte [Cómo: Agregar condiciones de prueba a pruebas unitarias de bases de datos](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Ver también  
 [Cómo: Ejecutar pruebas unitarias de SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Crear pruebas unitarias](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[Crear pruebas unitarias](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

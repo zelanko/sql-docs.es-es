@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3509c90a4fb5e72eab74742afae302bcbfaeaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821343"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671324"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauración y recuperación de tablas optimizadas para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,6 +68,6 @@ Las tablas optimizadas para memoria se pueden cargar normalmente en memoria a la
 -   Las tablas grandes optimizadas para memoria con un índice no agrupado o más de uno pueden producir un uso de CPU elevado. A diferencia de un índice de hash cuyo número de cubos se establece en el momento de su creación, los índices no agrupados aumentan de forma dinámica.  
   
 ## <a name="see-also"></a>Vea también  
- [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

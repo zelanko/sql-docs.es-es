@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d27a007f72a0e56909e535139f96f4aa1e34ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a394ad6eccf86b3c6aff6168f09fd990651288f7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600753"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812788"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Pasar la configuración de información de dispositivo a las extensiones de representación
   En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la configuración de información de dispositivos se utiliza para pasar los parámetros de representación a una extensión de representación. La configuración en el servicio web del servidor de informes se pasa como un elemento XML **DeviceInfo** y es procesada por el servidor de informes. Dado que la configuración de información de dispositivos tiene valores predeterminados, se consideran como argumentos opcionales en el proceso de representación. Sin embargo, puede utilizar la configuración de información de dispositivos para personalizar la representación y anular los valores predeterminados proporcionados por el servidor.  
@@ -40,13 +40,13 @@ ms.locfileid: "47600753"
 </DeviceInfo>  
 ```  
   
- Cuando un informe se representa como un fragmento HTML, el contenido del informe se incluye dentro de un elemento TABLE sin el uso del elemento BODY o HTML. Puede utilizar el fragmento HTML para incorporar el informe en un documento HTML existente. Para más información sobre la configuración de la información del dispositivo para la salida HTML, vea [Configuración de la información del dispositivo HTML](../../../reporting-services/html-device-information-settings.md).  
+ Cuando un informe se representa como un fragmento HTML, el contenido del informe se incluye dentro de un elemento TABLE sin el uso del elemento BODY o HTML. Puede utilizar el fragmento HTML para incorporar el informe en un documento HTML existente. Para obtener más información sobre la configuración de la información del dispositivo para la salida HTML, vea [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Pasar información del dispositivo mediante acceso URL  
  También puede pasar la configuración de información de dispositivos a través del acceso URL. La configuración de información de dispositivos se pasa como parámetros URL. La cadena de acceso URL siguiente se puede pasar al servidor de informes para generar un informe representado sin la barra de herramientas del Visor HTML.  
   
 ```  
-http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
+https://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
 ```  
   
  Para más información, vea [Especificar la configuración de la información del dispositivo en una dirección URL](../../../reporting-services/specify-device-information-settings-in-a-url.md).  

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613434"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600935"
 ---
 # <a name="upgrade-database-engine"></a>Actualizar el motor de base de datos
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613434"
   
 4.  [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Uno de los pasos que se deben realizar después de actualizar las bases de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste en habilitar las nuevas características cambiando el modo de compatibilidad de base de datos y, después, usando el almacén de consultas para supervisar el rendimiento. En este artículo se explica este proceso y el flujo de trabajo recomendado.  
   
-5.  [Aprovechamiento de las nuevas características de SQL Server](http://www.microsoft.com/sql-server/sql-server-2017) Finalmente, después de haber completado los pasos anteriores, ya está preparado para sacar partido de mejoras concretas del motor de base de datos. En este artículo se sugieren algunas de estas mejoras y se ofrecen vínculos para ampliar información.  
+5.  [Aprovechamiento de las nuevas características de SQL Server](https://www.microsoft.com/sql-server/sql-server-2017) Finalmente, después de haber completado los pasos anteriores, ya está preparado para sacar partido de mejoras concretas del motor de base de datos. En este artículo se sugieren algunas de estas mejoras y se ofrecen vínculos para ampliar información.  
   
   

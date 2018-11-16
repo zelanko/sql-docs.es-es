@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684883"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665744"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Los procedimientos descritos en este tema son el segundo paso para configurar la sincronización web para la replicación de mezcla. Este paso se lleva a cabo después de habilitar una publicación para la sincronización web. Para obtener información general sobre el proceso de configuración, vea [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md). Una vez terminados los procedimientos de este tema, siga con el tercer paso: configurar una suscripción para usar la sincronización web. El tercer paso se describe en los siguientes temas:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Cómo configurar una suscripción para usar la sincronización web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Cómo configurar una suscripción para usar la sincronización web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programación de la replicación con [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Cómo configurar una suscripción para usar la sincronización web (programación de la replicación con Transact-SQL)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programación de la replicación con [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Cómo configurar una suscripción para usar la sincronización web (programación de la replicación con Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Cómo configurar una suscripción para usar la sincronización web (programación con RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Cómo configurar una suscripción para usar la sincronización web (programación con RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  La sincronización web utiliza un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para sincronizar las suscripciones de extracción con las publicaciones de combinación. Las versiones 5.0, 6.0 y 7.0 de IIS son compatibles. El Asistente para configurar la sincronización web no se admite en la versión 7.0 de IIS.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684883"
   
 4.  Haga clic en **Aceptar**.  
   
- Si no puede obtener un certificado de servidor de una CA, puede especificar un certificado para comprobación. Para configurar IIS 6.0 para comprobación, instale un certificado mediante la utilidad SelfSSL. Esta utilidad está disponible en el kit de recursos de IIS 6.0. Puede descargar las herramientas del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Para IIS 5.0, vaya a [Ayuda y soporte técnico de Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Si no puede obtener un certificado de servidor de una CA, puede especificar un certificado para comprobación. Para configurar IIS 6.0 para comprobación, instale un certificado mediante la utilidad SelfSSL. Esta utilidad está disponible en el kit de recursos de IIS 6.0. Puede descargar las herramientas del [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Para IIS 5.0, vaya a [Ayuda y soporte técnico de Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Un sitio web debe asociarse a un certificado antes de que pueda usar SSL. SelfSSL asocia automáticamente el certificado al sitio web predeterminado. Si ya dispone de un certificado o instala uno de una CA más adelante, deberá asociar explícitamente ese certificado al sitio web que se utilice en la sincronización web. Asegúrese de que solo hay un certificado asociado al sitio web que se utiliza para sincronizar suscripciones. Si hay varios certificados, el suscriptor utilizará el primer sitio web que esté disponible.  

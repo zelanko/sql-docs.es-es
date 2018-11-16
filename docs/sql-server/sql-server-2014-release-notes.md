@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a72900cc62e8a517f437975691b858bb1401a5
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419500"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699700"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ La actualización es totalmente compatible. En concreto, puede:
 1.  Adjuntar una base de datos de SQL Server 2014 CTP 2 a una instancia de SQL Server 2014 RTM.    
 2.  Restaurar una copia de seguridad de una base de datos realizada en SQL Server 2014 CTP 2 en una instancia de SQL Server 2014 RTM.    
 3.  Actualizar en contexto a SQL Server 2014 RTM.
-4.  Realizar una actualización gradual a SQL Server 2014 RTM. Es necesario cambiar al modo de conmutación por error manual antes de iniciar la actualización gradual. Vea [Actualizar servidores de un grupo de disponibilidad con una pérdida de datos y un tiempo de inactividad mínimos](http://msdn.microsoft.com/library/dn178483.aspx) para obtener más detalles.    
+4.  Realizar una actualización gradual a SQL Server 2014 RTM. Es necesario cambiar al modo de conmutación por error manual antes de iniciar la actualización gradual. Vea [Actualizar servidores de un grupo de disponibilidad con una pérdida de datos y un tiempo de inactividad mínimos](https://msdn.microsoft.com/library/dn178483.aspx) para obtener más detalles.    
 5.  Los datos recopilados por los conjuntos de recopilación de rendimiento de transacción instalados en SQL Server 2014 CTP 2 no se pueden ver mediante SQL Server Management Studio en SQL Server 2014 RTM y viceversa.
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>Degradar de SQL Server 2014 RTM a SQL Server 2014 CTP 2  
@@ -114,7 +114,7 @@ No se admite esta acción.
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Versión incorrecta del cliente StreamInsight en SQL Server 2014 media/ISO/CAB  
 En la ruta de acceso de SQL Server media /ISO/CAB se encuentra la versión incorrecta de StreamInsight.msi y StreamInsightClient.msi (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
-**Solución alternativa:** descargar e instalar la versión correcta de la [página de descarga de SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solución alternativa:** descargar e instalar la versión correcta de la [página de descarga de SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 ### <a name="ProdDoc"></a>Documentación del producto RTM
   
@@ -158,7 +158,7 @@ SQL Server 2014 Standard incluye los cambios siguientes:
 -   La memoria máxima se ha ampliado de 64 a 128 GB.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>El Asesor de optimización para memoria marca las restricciones DEFAULT como incompatibles  
-**Problema** : el Asesor de optimización para memoria de SQL Server Management Studio marca todas las restricciones DEFAULT como incompatibles. En una tabla optimizada para memoria no se admiten todas las restricciones DEFAULT; el asesor no distingue entre los tipos admitidos y no admitidos de las restricciones DEFAULT. Entre las restricciones DEFAULT admitidas se incluyen todas las constantes, expresiones y funciones integradas que se admiten dentro de los procedimientos almacenados compilados de forma nativa. Para ver la lista de funciones admitidas en los procedimientos almacenados compilados de forma nativa, vea [Construcciones admitidas en procedimientos almacenados compilados de forma nativa](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problema** : el Asesor de optimización para memoria de SQL Server Management Studio marca todas las restricciones DEFAULT como incompatibles. En una tabla optimizada para memoria no se admiten todas las restricciones DEFAULT; el asesor no distingue entre los tipos admitidos y no admitidos de las restricciones DEFAULT. Entre las restricciones DEFAULT admitidas se incluyen todas las constantes, expresiones y funciones integradas que se admiten dentro de los procedimientos almacenados compilados de forma nativa. Para ver la lista de funciones admitidas en los procedimientos almacenados compilados de forma nativa, vea [Construcciones admitidas en procedimientos almacenados compilados de forma nativa](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Solución alternativa**: si quiere usar el asesor para identificar bloqueadores, omita las restricciones DEFAULT compatibles. Para usar el Asesor de optimización para memoria con el fin de migrar tablas que tienen restricciones DEFAULT compatibles, pero no otros bloqueadores, siga estos pasos:  
   
@@ -323,7 +323,7 @@ Keywords:      Classic
 Description:   Report Server (DENALI) cannot connect to the report server database.  
 ```  
   
-Para obtener más información, vea [Sugerencias, trucos y solución de problemas de SQL Server 2014 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=391254).  
+Para obtener más información, vea [Sugerencias, trucos y solución de problemas de SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>Orden necesario para actualizar una granja de servidores de SharePoint de varios nodos a SQL Server 2014 Reporting Services  
 **Problema** : se produce un error en la representación de informes en una granja de varios nodos si las instancias del servicio compartido de SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se actualizan antes que todas las instancias del Complemento de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint.  
@@ -333,7 +333,7 @@ Para obtener más información, vea [Sugerencias, trucos y solución de problema
 1.  Actualice primero todas las instancias del Complemento de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint.    
 2.  Actualice después todas las instancias del servicio compartido de SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-Para obtener más información, vea [Sugerencias, trucos y solución de problemas de SQL Server 2014 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=391254).  
+Para obtener más información, vea [Sugerencias, trucos y solución de problemas de SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 ### <a name="AzureVM"></a>SQL Server 2014 RTM en máquinas virtuales de Windows Azure  
   
@@ -348,7 +348,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
     Esta solución alternativa permitirá que el asistente agregue la réplica a Windows Azure.  
   
-2.  Cuando se complete el asistente, necesitará finalizar la configuración del agente de escucha en Windows Azure como se describe en [Configuración del agente de escucha de los Grupos de disponibilidad de AlwaysOn en Windows Azure](http://msdn.microsoft.com/library/dn376546.aspx).  
+2.  Cuando se complete el asistente, necesitará finalizar la configuración del agente de escucha en Windows Azure como se describe en [Configuración del agente de escucha de los Grupos de disponibilidad de AlwaysOn en Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx).  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -359,9 +359,9 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 **Solución alternativa:**  
   
-1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Más información:**  
   
@@ -374,9 +374,9 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 **Solución alternativa:**  
   
-1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Más información:**  
   
@@ -389,7 +389,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 **Solución alternativa:**  
   
-1.  En Microsoft Excel, desactive las propiedades avanzadas personalizadas. Vea la sección "Solución alternativa" del siguiente artículo [KB 2927748](http://support.microsoft.com/kb/2927748) de Knowledge Base.  
+1.  En Microsoft Excel, desactive las propiedades avanzadas personalizadas. Vea la sección "Solución alternativa" del siguiente artículo [KB 2927748](https://support.microsoft.com/kb/2927748) de Knowledge Base.  
   
 **Más información:**  
   
@@ -411,7 +411,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>El Asesor de actualizaciones de SQL Server 2014 notifica problemas irrelevantes de actualización de SQL Server Reporting Services  
 **Problema** : el Asesor de actualizaciones de SQL Server (SSUA) incluido con SQL Server 2014 notifica incorrectamente varios errores al analizar el servidor de SQL Server Reporting Services.  
   
-**Solución alternativa** : este problema se ha corregido en el Asesor de actualizaciones de SQL Server incluido en el [SQL Server 2014 Feature Pack para SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solución alternativa** : este problema se ha corregido en el Asesor de actualizaciones de SQL Server incluido en el [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>El Asesor de actualizaciones de SQL Server 2014 notifica un error al analizar el servidor de SQL Server Integration Services  
 **Problema** : el Asesor de actualizaciones de SQL Server (SSUA) incluido con SQL Server 2014 notifica un error al analizar el servidor de SQL Server Integration Services.  El error que se muestra al usuario es:  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Solución alternativa** : este problema se ha corregido en el Asesor de actualizaciones de SQL Server incluido en el [SQL Server 2014 Feature Pack para SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solución alternativa** : este problema se ha corregido en el Asesor de actualizaciones de SQL Server incluido en el [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

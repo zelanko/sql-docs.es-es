@@ -5,19 +5,18 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd8d869dd4f53c2628c3154d374a60cc6f40adc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639015"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657575"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde ot
 Para mejorar la seguridad, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]y Windows 7 activan el Firewall de Windows. Si desea conectarse a esta instancia desde otro equipo, debe abrir un puerto de comunicaciones en el firewall. La instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] escucha en el puerto 1433; por tanto, no tiene que configurar un puerto fijo. No obstante, las instancias con nombre incluidas las de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escuchan en puertos dinámicos. Para poder abrir un puerto en el firewall, debe configurar primero [!INCLUDE[ssDE](../includes/ssde-md.md)] para que escuche en un puerto específico conocido como puerto fijo o estático; de lo contrario, es posible que [!INCLUDE[ssDE](../includes/ssde-md.md)] escuche en un puerto distinto cada vez que se inicie. Para obtener más información sobre firewalls, la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al motor de base de datos, Analysis Services, Reporting Services e Integration Services, consulte [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
-> La Internet Assigned Numbers Authority administra las asignaciones del número de puerto, que se muestran en [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Los números de puerto deben tener asignados números de 49152 a 65535.  
+> La Internet Assigned Numbers Authority administra las asignaciones del número de puerto, que se muestran en [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). Los números de puerto deben tener asignados números de 49152 a 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configurar SQL Server para escuchar en un puerto específico  
   

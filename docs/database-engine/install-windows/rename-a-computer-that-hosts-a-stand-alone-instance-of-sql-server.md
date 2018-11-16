@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 85b9c9ab90cfbda1a291cd2516ed2f72a826460e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a65464ddc36d48a047c1b92e3acf2912a0e3baf4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621493"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601625"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server
 
@@ -111,7 +111,7 @@ Los siguientes pasos no se pueden utilizar para cambiar el nombre de una instanc
   
  **Configuraciones de servidores vinculados:** el equipo que realiza la operación de cambio de nombre afectará a las configuraciones de los servidores vinculados. Use **sp_addlinkedserver** o **sp_setnetname** para actualizar las referencias al nombre de equipo. Para obtener más información, vea [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Nombres de alias de cliente:** la operación de cambio de nombre de equipo afectará a los alias de cliente que usen canalizaciones con nombre. Por ejemplo, si se creó un alias "PROD_SRVR" para señalar a SRVR1 y usa el protocolo de canalizaciones con nombre, el nombre de la canalización será similar a `\\SRVR1\pipe\sql\query`. Una vez cambiado el nombre del equipo, la ruta de acceso de la canalización con nombre ya no será válida. Para obtener más información sobre las canalizaciones con nombre, vea el tema sobre cómo [crear una cadena de conexión válida con canalizaciones con nombre](http://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Nombres de alias de cliente:** la operación de cambio de nombre de equipo afectará a los alias de cliente que usen canalizaciones con nombre. Por ejemplo, si se creó un alias "PROD_SRVR" para señalar a SRVR1 y usa el protocolo de canalizaciones con nombre, el nombre de la canalización será similar a `\\SRVR1\pipe\sql\query`. Una vez cambiado el nombre del equipo, la ruta de acceso de la canalización con nombre ya no será válida. Para obtener más información sobre las canalizaciones con nombre, vea el tema sobre cómo [crear una cadena de conexión válida con canalizaciones con nombre](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar SQL Server](../../database-engine/install-windows/install-sql-server.md)  

@@ -11,12 +11,12 @@ ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 850d0d12572178f58a71beeb13bce9e31f66fbeb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a99e5c17049c8cd48e131af7a4902317305d749
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029310"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655475"
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>Solucionar problemas de estado de recursos de SQL Server (Utilidad de SQL Server).
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "51029310"
   
  Tenga en cuenta que si una base de datos se encuentra en estado de “emergencia”, el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
   
- Para obtener más información sobre errores de recopilación de datos que generan iconos de estado deshabilitados en la vista de lista de instancias administradas en un UCP, vea [Características y tareas de la utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453). Para obtener más información para empezar a trabajar con la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+ Para obtener más información sobre errores de recopilación de datos que generan iconos de estado deshabilitados en la vista de lista de instancias administradas en un UCP, vea [Características y tareas de la utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453). Para obtener más información para empezar a trabajar con la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  Para obtener más información sobre cómo mitigar problemas concretos de mantenimiento de recursos identificados por un UCP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte los siguientes temas:  
   
--   [Identificar la versión y edición de SQL Server](http://go.microsoft.com/fwlink/?LinkID=178504)  
+-   [Identificar la versión y edición de SQL Server](https://go.microsoft.com/fwlink/?LinkID=178504)  
   
--   [Solucionar problemas de rendimiento en SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=151354)  
+-   [Solucionar problemas de rendimiento en SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=151354)  
   
   

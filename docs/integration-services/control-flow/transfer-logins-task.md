@@ -17,12 +17,12 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbbe5f928134a6a759129f3c1639c3dd1984b726
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cea93d9a41b2cd7cbac8f35588ae9c071fbcf0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625009"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642182"
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
   La tarea Transferir inicios de sesión transfiere uno o varios inicios de sesión entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "47625009"
  La tarea Transferir inicios de sesión no indica el progreso incremental de la transferencia; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  
- El valor de ejecución, que se define en la propiedad **ExecutionValue** de la tarea, devuelve el número de inicios de sesión transferidos. Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir inicios de sesión, se puede conseguir que la información sobre la transferencia de inicios de sesión esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ El valor de ejecución, que se define en la propiedad **ExecutionValue** de la tarea, devuelve el número de inicios de sesión transferidos. Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir inicios de sesión, se puede conseguir que la información sobre la transferencia de inicios de sesión esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir inicios de sesión incluye las siguientes entradas del registro personalizadas:  
@@ -75,7 +75,7 @@ ms.locfileid: "47625009"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>Configuración mediante programación de la tarea Transferir inicios de sesión  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  

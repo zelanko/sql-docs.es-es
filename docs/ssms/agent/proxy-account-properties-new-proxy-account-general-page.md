@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3cf80df907dfe313d7282d0cf4efe31bd9b7f56
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: d33f7a468dfcff6274c4a48cfd367ea4c64226e1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099646"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696073"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>Propiedades de cuenta de proxy - Nueva cuenta de proxy (página General)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Escriba el nombre del proxy.
 Escriba el nombre de la credencial para el proxy.  
   
 > [!NOTE]  
-> El nombre de la credencial proporcionada debe ser el nombre de una credencial existente. Para información sobre cómo crear credenciales, consulte [Crear un proxy (SQL Server Management Studio)](http://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> El nombre de la credencial proporcionada debe ser el nombre de una credencial existente. Para información sobre cómo crear credenciales, consulte [Crear un proxy (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
 Inicia el cuadro de diálogo **Seleccionar credencial** .  

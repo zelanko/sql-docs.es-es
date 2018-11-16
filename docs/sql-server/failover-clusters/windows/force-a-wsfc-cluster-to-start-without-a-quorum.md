@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cf1a07b2d9c3a428a787fbad87f1ecb5bde3330
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835623"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697583"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzar el inicio de un clúster WSFC sin un quórum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,13 +123,13 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Ver eventos y registros para un clúster de conmutación por error](http://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [Ver eventos y registros para un clúster de conmutación por error](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Cmdlet de clúster de conmutación por error Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Ver también  
  [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
- [Cmdlets de clúster de conmutación por error en Windows PowerShell enumerados por tarea](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Cmdlets de clúster de conmutación por error en Windows PowerShell enumerados por tarea](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

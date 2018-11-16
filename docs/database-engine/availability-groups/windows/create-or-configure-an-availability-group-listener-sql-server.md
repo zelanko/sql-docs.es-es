@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: ad05cbe7415aed8c821664082fcd557d48f3582f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120242"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600907"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Crear o configurar un agente de escucha del grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,14 +103,14 @@ ms.locfileid: "49120242"
  Es recomendable que especifique una cadena que tenga sentido. Por ejemplo, para un grupo de disponibilidad denominado `AG1`, un nombre de host DNS significativo sería `ag1-listener`.  
   
 > [!IMPORTANT]  
->  NetBIOS reconoce solo los 15 primeros caracteres en dns_name. Si tiene dos clústeres de WSFC controlados por la misma instancia de Active Directory e intenta crear agentes de escucha del grupo de disponibilidad en los dos clústeres utilizando nombres con más de 15 caracteres y un prefijo idéntico de 15 caracteres, obtendrá un error notificando que el recurso de nombre de red virtual no se pudo poner en línea. Para obtener información acerca de las reglas de nomenclatura de prefijos para los nombres DNS, vea [Asignación de nombres de dominio](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  NetBIOS reconoce solo los 15 primeros caracteres en dns_name. Si tiene dos clústeres de WSFC controlados por la misma instancia de Active Directory e intenta crear agentes de escucha del grupo de disponibilidad en los dos clústeres utilizando nombres con más de 15 caracteres y un prefijo idéntico de 15 caracteres, obtendrá un error notificando que el recurso de nombre de red virtual no se pudo poner en línea. Para obtener información acerca de las reglas de nomenclatura de prefijos para los nombres DNS, vea [Asignación de nombres de dominio](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
 ###  <a name="WinPermissions"></a> Permisos de Windows  
   
 |Permisos|Vínculo|  
 |-----------------|----------|  
-|El nombre de objeto de clúster (CNO) del clúster de WSFC que hospeda el grupo de disponibilidad debe tener permiso para **crear objetos de equipo** .<br /><br /> En Active Directory, un CNO de forma predeterminada no tiene permiso para **crear objetos de equipo** explícitamente y puede crear diez objetos de equipo virtual (VCO). Una vez creados los 10 VCO, no podrán crearse otros adicionales. Puede evitar esto concediendo el permiso explícitamente al CNO del clúster de WSFC. Observe que los VCO para los grupos de disponibilidad que ha eliminado no son eliminados de forma automática en Active Directory y se contabilizan para el límite predeterminado de 10 VCO a menos que sean eliminados de forma manual.<br /><br /> Nota: En algunas organizaciones, la directiva de seguridad prohíbe conceder permiso para **crear objetos de equipo** a cuentas de usuario individuales.|*Steps for configuring the account for the person who installs the cluster (Pasos para configurar la cuenta para la persona que instala el clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account (Pasos para el ensayo previo de la cuenta de nombre de clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|Si su organización necesita que preconfigure la cuenta de equipo para un nombre de red virtual de agente de escucha, deberá pertenecer al grupo **Operador de cuentas** o pedir ayuda a su administrador de dominio.|*Steps for prestaging an account for a clustered service or application (Pasos para el ensayo previo de una cuenta para un servicio o una aplicación en clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|El nombre de objeto de clúster (CNO) del clúster de WSFC que hospeda el grupo de disponibilidad debe tener permiso para **crear objetos de equipo** .<br /><br /> En Active Directory, un CNO de forma predeterminada no tiene permiso para **crear objetos de equipo** explícitamente y puede crear diez objetos de equipo virtual (VCO). Una vez creados los 10 VCO, no podrán crearse otros adicionales. Puede evitar esto concediendo el permiso explícitamente al CNO del clúster de WSFC. Observe que los VCO para los grupos de disponibilidad que ha eliminado no son eliminados de forma automática en Active Directory y se contabilizan para el límite predeterminado de 10 VCO a menos que sean eliminados de forma manual.<br /><br /> Nota: En algunas organizaciones, la directiva de seguridad prohíbe conceder permiso para **crear objetos de equipo** a cuentas de usuario individuales.|*Steps for configuring the account for the person who installs the cluster (Pasos para configurar la cuenta para la persona que instala el clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account (Pasos para el ensayo previo de la cuenta de nombre de clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|Si su organización necesita que preconfigure la cuenta de equipo para un nombre de red virtual de agente de escucha, deberá pertenecer al grupo **Operador de cuentas** o pedir ayuda a su administrador de dominio.|*Steps for prestaging an account for a clustered service or application (Pasos para el ensayo previo de una cuenta para un servicio o una aplicación en clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
   
 > [!TIP]  
 >  Generalmente, es más sencillo no ensayar previamente la cuenta del equipo para un nombre de red virtual de agente de escucha. Si puede, deje que la cuenta se cree y configure automáticamente al ejecutar el asistente para alta disponibilidad de WSFC.  
@@ -248,9 +248,9 @@ ms.locfileid: "49120242"
 ###  <a name="ADQuotas"></a> No se ha podido crear un agente de escucha del grupo de disponibilidad por las cuotas de Active Directory  
  La creación de un nuevo agente de escucha del grupo de disponibilidad puede producir un error en la creación porque se ha alcanzado una cuota de Active Directory para la cuenta de equipo del nodo de clúster que participa.  Para obtener más información, vea los siguientes artículos:  
   
--   [Cómo solucionar problemas de la cuenta del Servicio de Cluster Server cuando modifica objetos de equipo](http://support.microsoft.com/kb/307532)  
+-   [Cómo solucionar problemas de la cuenta del Servicio de Cluster Server cuando modifica objetos de equipo](https://support.microsoft.com/kb/307532)  
   
--   [Cuotas de Active Directory](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [Cuotas de Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear un agente de escucha del grupo de disponibilidad  
   
@@ -346,17 +346,17 @@ Start-ClusterResource yourListenerName
   
         3.  Agregue una dependencia al recurso de grupo de disponibilidad de WSFC.  
   
-         Para obtener información sobre los cuadros de diálogo y las pestañas del Administrador de clústeres de conmutación por error, vea [Interfaz de usuario: complemento Administrador de clúster de conmutación por error](http://technet.microsoft.com/library/cc772502.aspx).  
+         Para obtener información sobre los cuadros de diálogo y las pestañas del Administrador de clústeres de conmutación por error, vea [Interfaz de usuario: complemento Administrador de clúster de conmutación por error](https://technet.microsoft.com/library/cc772502.aspx).  
   
     -   **Con Windows PowerShell para los clústeres de conmutación por error:**  
   
-        1.  Use [Add-ClusterResource](http://technet.microsoft.com/library/ee460983.aspx) para crear un nombre de red y los recursos de dirección IP.  
+        1.  Use [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) para crear un nombre de red y los recursos de dirección IP.  
   
-        2.  Use [Start-ClusterResource](http://technet.microsoft.com/library/ee461056.aspx) para iniciar el recurso de nombre de red.  
+        2.  Use [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) para iniciar el recurso de nombre de red.  
   
-        3.  Use [Add-ClusterResourceDependency](http://technet.microsoft.com/library/ee461014.aspx) para establecer la dependencia entre el nombre de red y el recurso de grupo de disponibilidad de SQL Server existente.  
+        3.  Use [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) para establecer la dependencia entre el nombre de red y el recurso de grupo de disponibilidad de SQL Server existente.  
   
-         Para obtener información sobre cómo usar Windows PowerShell en los clústeres de conmutación por error, vea [Introducción a los comandos del Administrador del servidor](http://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
+         Para obtener información sobre cómo usar Windows PowerShell en los clústeres de conmutación por error, vea [Introducción a los comandos del Administrador del servidor](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
   
 2.  Inicie la escucha de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nuevo agente de escucha. Después de crear el agente de escucha adicional, conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal del grupo de disponibilidad y use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell para modificar el puerto de escucha.  
   

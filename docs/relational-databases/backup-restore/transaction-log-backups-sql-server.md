@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686003"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664945"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Copias de seguridad de registros de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ Un administrador de bases de datos normalmente crea una copia de seguridad compl
 -   De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro utilizando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
 -   Realice copias de seguridad de registros suficientemente regulares para ajustarse a los requisitos de la empresa, específicamente a la tolerancia a la pérdida de trabajo que un almacenamiento de registro dañado podría provocar. 
-   -   La frecuencia adecuada para realizar copias de seguridad de registros varía en función de la tolerancia al riesgo de pérdida de trabajo y, por otra parte, de la cantidad de copias de seguridad de registros que puede almacenar, administrar y, potencialmente, restaurar. Tenga en cuenta los [RTO](http://wikipedia.org/wiki/Recovery_time_objective) y [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de registros.
+   -   La frecuencia adecuada para realizar copias de seguridad de registros varía en función de la tolerancia al riesgo de pérdida de trabajo y, por otra parte, de la cantidad de copias de seguridad de registros que puede almacenar, administrar y, potencialmente, restaurar. Tenga en cuenta los [RTO](https://wikipedia.org/wiki/Recovery_time_objective) y [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de registros.
    -   Una copia de seguridad de registros cada 15 ó 30 minutos puede ser suficiente. Si su empresa necesita minimizar el riesgo de pérdida de trabajo, piense en la posibilidad de realizar copias de seguridad de registros más frecuentemente. La existencia de copias de seguridad más frecuentes de los registros tiene la ventaja añadida de aumentar la frecuencia de truncamiento del registro, lo que genera archivos de registro menores.  
   
 > [!IMPORTANT]
 > Para limitar el número de copias de seguridad del registro que necesita restaurar, es esencial que realice una copia de seguridad de sus datos periódicamente. Por ejemplo, podría programar una copia de seguridad completa de la base de datos cada semana y copias de seguridad diferenciales de la base de datos a diario.  
-> Una vez más, tenga en cuenta los [RTO](http://wikipedia.org/wiki/Recovery_time_objective) y [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de base de datos completas y diferenciales.
+> Una vez más, tenga en cuenta los [RTO](https://wikipedia.org/wiki/Recovery_time_objective) y [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de base de datos completas y diferenciales.
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Para crear una copia de seguridad del registro de transacciones**  

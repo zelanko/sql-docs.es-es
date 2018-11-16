@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d49e9c7b8b567ff4628e4e2353a6ce0a7a4adc4
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700353"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   Si READ_COMMITTED_SNAPSHOT se establece en ON, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.
 
 > [!IMPORTANT]  
-> La elección de un nivel de aislamiento de transacción no afecta a los bloqueos adquiridos para proteger la modificación de datos. Siempre se obtiene un bloqueo exclusivo en los datos modificados de una transacción, bloqueo que se mantiene hasta que se completa la transacción, independientemente del nivel de aislamiento seleccionado para la misma. Además, una actualización realizada en el nivel de aislamiento READ_COMMITTED usa bloqueos de actualización en las filas de datos seleccionadas, mientras que una actualización realizada en el nivel de aislamiento SNAPSHOT emplea versiones de fila para seleccionar filas para actualizar. En el caso de las operaciones de lectura, los niveles de aislamiento de transacción definen básicamente el nivel de protección contra los efectos de las modificaciones que realizan otras transacciones. Vea [Guía de versiones de fila y bloqueo de transacciones](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obtener más información.
+> La elección de un nivel de aislamiento de transacción no afecta a los bloqueos adquiridos para proteger la modificación de datos. Siempre se obtiene un bloqueo exclusivo en los datos modificados de una transacción, bloqueo que se mantiene hasta que se completa la transacción, independientemente del nivel de aislamiento seleccionado para la misma. Además, una actualización realizada en el nivel de aislamiento READ_COMMITTED usa bloqueos de actualización en las filas de datos seleccionadas, mientras que una actualización realizada en el nivel de aislamiento SNAPSHOT emplea versiones de fila para seleccionar filas para actualizar. En el caso de las operaciones de lectura, los niveles de aislamiento de transacción definen básicamente el nivel de protección contra los efectos de las modificaciones que realizan otras transacciones. Vea [Guía de versiones de fila y bloqueo de transacciones](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obtener más información.
 
 > [!NOTE]  
 >  El aislamiento de instantánea admite datos FILESTREAM. En el modo de aislamiento de instantánea, los datos FILESTREAM leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción.  

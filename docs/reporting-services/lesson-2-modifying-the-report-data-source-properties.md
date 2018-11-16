@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 692ae852147adcf8c51d2ca4c271a20f34baaba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a493772e014445a25b21078ce37ada5585e3226
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847283"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813918"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 En esta lección de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará el portal web para seleccionar un informe que se entregará a los destinatarios. La suscripción controlada por datos que va a definir distribuirá el informe **Sales Order** creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  En los pasos siguientes, modificará la información de conexión del origen de datos que el informe utiliza para obtener los datos. Solo los informes que usan **credenciales almacenadas** para obtener acceso a un origen de datos del informe se pueden distribuir a través de una suscripción controlada por datos. Las credenciales almacenadas son necesarias para el procesamiento desatendido de informes.  
@@ -25,8 +25,8 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
 1.  Vaya al portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con privilegios de administrador, por ejemplo, haga clic con el botón derecho en el icono de Internet Explorer y haga clic en **Ejecutar como administrador**.  
  
 2.    Vaya a la dirección URL del portal web.  Por ejemplo:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports`
+    `https://<server name>/reports`.  
+    `https://localhost/reports`
  **Nota:** La dirección URL del *portal* web es "Reports", no la dirección URL del *servidor* de informes de "Reportserver".  
 3.  Busque la carpeta que contiene el informe **Sales Orders** y, en el menú contextual del informe, haga clic en **Administrar**.  
  

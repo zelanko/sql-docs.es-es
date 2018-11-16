@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029344"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813668"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalación del servidor de informes en modo nativo de Reporting Services 2016
 
@@ -85,15 +85,15 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
 |Parte|Descripción|  
 |----------|-----------------|  
 |Prefijo|El prefijo predeterminado es HTTP. Si instaló anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intentará crear reservas de direcciones URL que usen el prefijo HTTPS.|  
-|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva como el equipo, incluidos `http://<computername>/reportserver`, `http://localhost/reportserver` o `http://<IPAddress>/reportserver`.|  
+|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva como el equipo, incluidos `https://<computername>/reportserver`, `https://localhost/reportserver` o `https://<IPAddress>/reportserver`.|  
 |Puerto|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|  
 |Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer_\<*nombre_instancia*> para el servicio web del servidor de informes y Reports_\<*nombre_instancia*> para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], el directorio virtual predeterminado es **reports**.|  
   
  Un ejemplo de cadena de dirección URL completa podría ser el siguiente:  
   
--   `http://+:80/reportserver`, proporciona acceso al servidor de informes.  
+-   `https://+:80/reportserver`, proporciona acceso al servidor de informes.  
   
--   `http://+:80/reports` proporciona acceso al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
+-   `https://+:80/reports` proporciona acceso al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
   
 ##  <a name="bkmk_installwithwizard"></a> Instalar el modo nativo mediante el Asistente para la instalación de SQL Server  
  En la lista siguiente se describen los pasos y las opciones específicos de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se seleccionan en el Asistente para la instalación de SQL Server. En la lista no se describe cada página que aparece en el asistente para la instalación, solo las páginas relacionadas con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que forman parte de una instalación de modo nativo.  
@@ -130,9 +130,9 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
   
 5.  En la página de configuración de la instancia, recuerde que, si decide configurar una **Instancia con nombre**, deberá usar el nombre de la instancia en direcciones URL cuando vaya al Administrador de informes y al propio servidor de informes. Si el nombre de la instancia era "THESQLINSTANCE", las direcciones URL tendrían el siguiente aspecto:  
   
-    -   `http://[ServerName]/ReportServer_THESQLINSTANCE`  
+    -   `https://[ServerName]/ReportServer_THESQLINSTANCE`  
   
-    -   `http://[ServerName]/Reports_THESQLINSTANCE`  
+    -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
 6.  **Configuración del servidor**: si piensa usar la característica de suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , en la página **Configuración del servidor** , configure el Agente SQL Server en el tipo de inicio **Automático** .   El valor predeterminado es manual.  
   
@@ -153,9 +153,9 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
   
     -   Abra el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y confirme que se puede conectar con el servidor de informes.  
   
-    -   Abra el explorador **con privilegios de administrador** y conéctese al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], por ejemplo `http://localhost/Reports`.  
+    -   Abra el explorador **con privilegios de administrador** y conéctese al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], por ejemplo `https://localhost/Reports`.  
   
-    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo,  `http://localhost/ReportServer`  
+    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo,  `https://localhost/ReportServer`  
   
  Para obtener más información, consulte la sección Nativo de los dos temas siguientes:  
   

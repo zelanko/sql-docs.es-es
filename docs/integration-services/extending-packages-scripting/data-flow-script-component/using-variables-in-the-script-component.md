@@ -13,15 +13,15 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a21bdb4d878f49f78f514696e01dcbc8fbcc81eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51dddf0e5fd971aeb2aa1229bb1af2faae744b6e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649989"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638532"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilizar variables en el componente de script
-  Las variables almacenan valores que un paquete y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  
+  Las variables almacenan valores que un paquete y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md).  
   
  Puede hacer que las variables existentes estén disponibles para el acceso de solo lectura o de lectura/escritura por parte del script personalizado escribiendo listas de variables delimitadas por comas en los campos **ReadOnlyVariables** y **ReadWriteVariables** de la página **Script** del **Editor de transformación Script**. Tenga presente que los nombres de variable distinguen entre mayúsculas y minúsculas. Utilice la propiedad **Value** para leer y escribir en las variables individuales. El componente de script administra en segundo plano cualquier bloqueo necesario cuando el script manipula las variables en tiempo de ejecución.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "47649989"
   
 ## <a name="see-also"></a>Ver también  
  [Variables de Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md)   
- [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

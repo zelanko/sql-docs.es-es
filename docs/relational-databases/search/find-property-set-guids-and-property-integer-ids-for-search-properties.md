@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e51a9c2ca8dbebe5f807b7e286eaa61242b04332
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617653"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657814"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47617653"
 |Tipo|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de archivo percibido basado en su tipo canónico.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título del elemento. Por ejemplo, el título de un documento, el asunto de un mensaje, la leyenda de una foto o el nombre de una pista de música.|  
   
- Para fomentar la coherencia entre los formatos de archivo, Microsoft ha identificado subconjuntos de las propiedades de documento de alta prioridad usadas con frecuencia para diversas categorías de documentos. Esto incluye comunicaciones, contactos, documentos, archivos de música, imágenes y vídeos. Para obtener más información sobre las principales propiedades para cada categoría, vea la sección sobre las [propiedades definidas por el sistema para formatos de archivo personalizados](http://go.microsoft.com/fwlink/?LinkId=144336) en la documentación de Windows Search.  
+ Para fomentar la coherencia entre los formatos de archivo, Microsoft ha identificado subconjuntos de las propiedades de documento de alta prioridad usadas con frecuencia para diversas categorías de documentos. Esto incluye comunicaciones, contactos, documentos, archivos de música, imágenes y vídeos. Para obtener más información sobre las principales propiedades para cada categoría, vea la sección sobre las [propiedades definidas por el sistema para formatos de archivo personalizados](https://go.microsoft.com/fwlink/?LinkId=144336) en la documentación de Windows Search.  
   
  Un formato de archivo específico puede implementar propiedades de tres tipos:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47617653"
   
  Ejecute **filtdump.exe** desde el símbolo del sistema y proporcione un único argumento. Este argumento es el nombre de un archivo individual que tiene un tipo de archivo para el que está instalado un IFilter. La utilidad muestra una lista de todas las propiedades detectadas por el IFilter en el documento, con sus GUID de conjunto de propiedades, identificadores enteros e información adicional.  
   
- Para obtener información acerca de la instalación de este software, vea [SDK de Microsoft Windows para Windows 7 y .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=212980). Después de descargar e instalar el SDK, busque en las siguientes carpetas la utilidad filtdump.exe.  
+ Para obtener información acerca de la instalación de este software, vea [SDK de Microsoft Windows para Windows 7 y .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Después de descargar e instalar el SDK, busque en las siguientes carpetas la utilidad filtdump.exe.  
   
 -   Para la versión de 64 bits, busque en `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   
@@ -84,9 +84,9 @@ propID = 4
 …  
 ```  
   
- Para obtener la descripción completa de esta propiedad, vea [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) en la documentación de Windows Search.  
+ Para obtener la descripción completa de esta propiedad, vea [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) en la documentación de Windows Search.  
   
- Para obtener una lista completa de las propiedades de Windows, vea [Propiedades de Windows](http://go.microsoft.com/fwlink/?LinkId=215013), también en la documentación de Windows Search.  
+ Para obtener una lista completa de las propiedades de Windows, vea [Propiedades de Windows](https://go.microsoft.com/fwlink/?LinkId=215013), también en la documentación de Windows Search.  
   
 ##  <a name="examples"></a> Agregar una propiedad a una lista de propiedades de búsqueda  
  En el ejemplo siguiente se muestra cómo agregar una propiedad a una lista de propiedades de búsqueda. En el ejemplo se usa una instrucción [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) para agregar la propiedad `System.Author` a una lista de propiedades de búsqueda denominada `PropertyList1`y se proporciona un nombre descriptivo para la propiedad, `Author`.  

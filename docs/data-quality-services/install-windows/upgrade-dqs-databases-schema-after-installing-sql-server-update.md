@@ -12,12 +12,12 @@ ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 095ea9646b0b151833daeeb179ccffb5929031ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3743dbd355f2f6a45e3a73559a1bef93f8f2dd9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740973"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699743"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Actualizar el esquema de las bases de datos DQS tras instalar la actualización de SQL Server
 
@@ -32,7 +32,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  La actualización del esquema de bases de datos DQS no afecta a los datos actuales de las bases de datos DQS (bases de conocimiento, proyectos de calidad de datos y resultados exportados en la base de datos DQS_STAGING_DATA). Sin embargo, debe hacer una copia de seguridad de las bases de datos DQS antes de actualizar el esquema de las bases de datos DQS para impedir la pérdida accidental de datos durante la actualización del esquema. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
 > [!NOTE]  
->  La mayor parte de las actualizaciones de SQL Server requerirán una actualización del esquema de bases de datos DQS. Para obtener información acerca de las actualizaciones de SQL Server que requerirán una actualización al esquema de bases de datos DQS, vea el gráfico del paso 1.A en [Actualizar DQS: instalar actualizaciones acumulativas o revisiones en Data Quality Services](http://go.microsoft.com/fwlink/?LinkID=251565).  
+>  La mayor parte de las actualizaciones de SQL Server requerirán una actualización del esquema de bases de datos DQS. Para obtener información acerca de las actualizaciones de SQL Server que requerirán una actualización al esquema de bases de datos DQS, vea el gráfico del paso 1.A en [Actualizar DQS: instalar actualizaciones acumulativas o revisiones en Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
@@ -65,7 +65,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>Next Steps  
  Inicie sesión en el servidor Data Quality Server actualizado desde una aplicación Data Quality Client.  
   
- Para obtener más acerca de cómo actualizar el esquema de bases de datos DQS tras instalar las actualizaciones de SQL Server y sobre los pasos de solución de problemas asociados, vea [Actualizar DQS: instalar actualizaciones acumulativas o revisiones en Data Quality Services](http://go.microsoft.com/fwlink/?LinkID=251565).  
+ Para obtener más acerca de cómo actualizar el esquema de bases de datos DQS tras instalar las actualizaciones de SQL Server y sobre los pasos de solución de problemas asociados, vea [Actualizar DQS: instalar actualizaciones acumulativas o revisiones en Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
 ## <a name="see-also"></a>Ver también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

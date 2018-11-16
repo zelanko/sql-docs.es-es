@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798604"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700323"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Eliminar datos de una tabla remota con la función OPENQUERY  
- En el ejemplo siguiente se eliminan filas de una tabla remota especificando la función de conjunto de filas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). En este ejemplo se usa el nombre del servidor vinculado creado en el ejemplo anterior.  
+ En el ejemplo siguiente se eliminan filas de una tabla remota especificando la función de conjunto de filas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) . En este ejemplo se usa el nombre del servidor vinculado creado en el ejemplo anterior.  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Usar una etiqueta y una sugerencia de consulta con la instrucción DELETE  
- Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con la instrucción DELETE. Para más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION (PDW de SQL Server)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con la instrucción DELETE. Para más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION (PDW de SQL Server)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```sql
 -- Uses AdventureWorks  

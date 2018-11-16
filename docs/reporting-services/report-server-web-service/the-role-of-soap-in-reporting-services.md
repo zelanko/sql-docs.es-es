@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ab251afd774e36f35a2c96e7519d3b799b33a9c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 38e7e01ded63509ea117c3cc344e5ca493cc36f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032074"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814088"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>El rol de SOAP en Reporting Services
   El servicio web del servidor de informes utiliza la mensajería del Protocolo simple de acceso a objetos (SOAP, Simple Object Access Protocol) para enviar comandos basados en texto a través de una red. Estos comandos adoptan la forma de texto XML que se envía a través de World Wide Web utilizando HTTP. Al usar SOAP como protocolo de comunicaciones, el servicio web del servidor de informes permite a las aplicaciones y componentes intercambiar datos con el servidor de informes utilizando una infraestructura abierta y ampliamente aceptada. El estándar SOAP se define en www.w3.org/TR/SOAP.  
@@ -30,9 +30,9 @@ ms.locfileid: "50032074"
  Los mensajes SOAP en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] adoptan muchas formas diferentes, según el tipo de solicitud que realice el cliente. En el ejemplo siguiente se representa una solicitud de cliente SOAP simple para quitar un elemento de la base de datos del servidor de informes.  
   
 ```  
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItem xmlns="http://www.microsoft.com/sql/ReportingServer">  
+        <DeleteItem xmlns="https://www.microsoft.com/sql/ReportingServer">  
             <item>/Samples/Report1</item>  
         </DeleteItem>  
     </soap:Body>  
@@ -48,9 +48,9 @@ public void DeleteItem(string item);
  La respuesta del servidor podría ser similar a la siguiente:  
   
 ```  
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItemResponse xmlns="http://www.microsoft.com/sql/ReportingServer" />  
+        <DeleteItemResponse xmlns="https://www.microsoft.com/sql/ReportingServer" />  
     </soap:Body>  
 </soap:Envelope>  
 ```  

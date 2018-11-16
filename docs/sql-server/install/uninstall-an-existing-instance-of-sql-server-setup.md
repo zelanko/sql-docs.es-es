@@ -16,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d32af5a596d41dc85a2d04fd9e5a6eb98380be3e
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e9b113a9ef0ca0905fa90833a5c9568a9318834a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383840"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698822"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "49383840"
   
 1.  Si el proceso de desinstalación no se completa correctamente, intente corregir el problema que provocó el error de desinstalación. Los siguientes artículos pueden ayudarle a entender la causa del error de desinstalación:  
   
-    -   [Cómo identificar problemas de instalación de SQL Server 2008 en los archivos de registro de instalación](http://support.microsoft.com/kb/955396/en-us)  
+    -   [Cómo identificar problemas de instalación de SQL Server 2008 en los archivos de registro de instalación](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

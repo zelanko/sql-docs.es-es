@@ -13,12 +13,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f2bfc7d8e3f5782851178667305966cc243d8c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602648"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640282"
 ---
 # <a name="expression-task"></a>Texto Expresión
   La tarea de expresión crea y evalúa expresiones que establecen valores de variables en tiempo de ejecución, mediante el Generador de expresiones. Cuando se edita la tarea, se inicia [Expression Builder](../../integration-services/expressions/expression-builder.md) .  
@@ -31,9 +31,9 @@ ms.locfileid: "47602648"
  Para obtener ejemplos de cómo usar expresiones para establecer propiedades, vea la sección **Ejemplo de expresiones de propiedad** de [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [utilizar una expresión en un componente de flujo de datos](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [utilizar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](http://go.microsoft.com/fwlink/?LinkId=746575), en pragmaticworks.com  
+ Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://go.microsoft.com/fwlink/?LinkId=746575), en pragmaticworks.com  
   
   

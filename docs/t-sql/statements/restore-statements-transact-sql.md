@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252162"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703673"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
 Restaura copias de seguridad de bases de datos de SQL realizadas con el comando BACKUP. 
@@ -365,7 +365,7 @@ Los datos de texto completo se restauran junto con otros datos de la base de dat
 La instrucción RESTORE también se puede utilizar para realizar restauraciones en ubicaciones alternativas, restauraciones diferenciales, restauraciones de archivos y grupos de archivos, y restauraciones de archivos y grupos de archivos diferenciales de datos de texto completo. Además, la instrucción RESTORE puede restaurar solo los archivos de texto completo, al igual que con datos de la base de datos.  
   
 > [!NOTE] 
-> Los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se tratan todavía como archivos de base de datos. Para estos, el procedimiento de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para realizar la copia de seguridad de los catálogos de texto completo se sigue pudiendo aplicar, excepto en que ya no es necesario pausar y reanudar la operación de copia de seguridad. Para más información, vea [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> Los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se tratan todavía como archivos de base de datos. Para estos, el procedimiento de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para realizar la copia de seguridad de los catálogos de texto completo se sigue pudiendo aplicar, excepto en que ya no es necesario pausar y reanudar la operación de copia de seguridad. Para más información, vea [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](https://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## <a name="metadata"></a>Metadatos  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye las tablas del historial de copias de seguridad y restauración que realizan el seguimiento de estas actividades para cada instancia del servidor. Cuando se realiza una restauración, se modifican también las tablas del historial de copias de seguridad. Para más información sobre estas tablas, vea [Historial de copias de seguridad e información de encabezados &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
@@ -745,7 +745,7 @@ FROM URL
 Especifica uno o varios dispositivos de copia de seguridad colocados en las direcciones URL que se usarán para la operación de restauración. El formato de las direcciones URL solo se usa para restaurar copias de seguridad del servicio de almacenamiento Microsoft Azure. 
 
 > [!IMPORTANT]  
-> Para restaurar desde varios dispositivos cuando se restaure desde una dirección URL, debe usar tokens de Firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
+> Para restaurar desde varios dispositivos cuando se restaure desde una dirección URL, debe usar tokens de Firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
   
 *n*  
 Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas.  

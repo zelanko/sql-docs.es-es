@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d85d3862eaa418d67174eed7b76920bcc9ffb0db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93f2593aaff1aa3979c4b325b33404ff94d3a0c8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652553"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697633"
 ---
 # <a name="disable-or-enable-a-job"></a>Deshabilitar o habilitar un trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,5 +84,5 @@ Para obtener información detallada, vea [Implement SQL Server Agent Security](.
     GO  
     ```  
   
-Para más información, consulte [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
+Para más información, consulte [sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c363e167a1005981850b93fd12a836d579896b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cf09d6a2e6c4b1699c6c3e6d213bea0d617f2a3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616423"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681313"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Administrar sesiones de eventos en el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47616423"
 -   Eliminar una sesión de eventos extendidos  
   
 ## <a name="create-an-extended-events-session"></a>Crear una sesión de eventos extendidos  
- Para obtener más información acerca de cómo crear una sesión de eventos extendidos, vea [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
+ Para obtener más información acerca de cómo crear una sesión de eventos extendidos, vea [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Iniciar o detener una sesión de eventos extendidos  
  Puede iniciar o detener una sesión de eventos extendidos mediante el **Editor de consultas** usando la instrucción **ALTER EVENT SESSION** o usando el nodo **Eventos extendidos** del **Explorador de objetos**.  

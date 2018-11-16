@@ -11,12 +11,12 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b27249601e1dad8c3c855fc80f14e81d0694723
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b874fa5fa15e765f087327bbf60a3be0d9561077
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770264"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671884"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47770264"
   
 -   Facilidad de administración y administración de directivas en datos no estructurados.  
   
- En su mayor parte, sin embargo, no ha sido cómodo almacenar los datos no estructurados en una base de datos relacional. Hasta ahora no ha sido posible ejecutar sobre sistemas relacionales las aplicaciones existentes basadas Windows. No es práctico volver a escribir aplicaciones establecidas (como Microsoft Word o Adobe Reader) para que se ejecuten en las API de bases de datos relacionales. Estas aplicaciones esperan simplemente que se acceda a los datos a través de las API de Windows. Es decir, las expectativas incluyen:  
+ En su mayor parte, sin embargo, no ha sido cómodo almacenar los datos no estructurados en una base de datos relacional. Hasta ahora no ha sido posible ejecutar las aplicaciones existentes basadas Windows existente en sistemas relacionales. No es práctico volver a escribir aplicaciones establecidas (como Microsoft Word o Adobe Reader) para que se ejecuten en las API de bases de datos relacionales. Estas aplicaciones esperan simplemente que se acceda a los datos a través de las API de Windows. Es decir, las expectativas incluyen:  
   
 -   Las aplicaciones Windows no tienen en cuenta las transacciones de la base de datos y no las necesitan.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47770264"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya incluye la característica FILESTREAM, que proporciona almacenamiento, administración y transmisión de datos eficaces de los datos no estructurados almacenados como archivos en el sistema de archivos. Sin embargo, una solución FILESTREAM requiere la programación personalizada y no satisface el requisito de compatibilidad completa de las aplicaciones Windows descrito anteriormente.  
   
 ##  <a name="FileTables"></a> FileTables  
- La característica FileTable se basa en las capacidades existentes de FILESTREAM para habilitar que los clientes de empresa almacenen los datos de archivos no estructurados y las jerarquías de directorio en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abordando los requisitos de acceso no transaccional y la compatibilidad de las aplicaciones Windows con datos basados en archivos.  
+ La característica FileTable se basa en las capacidades existentes de FILESTREAM para habilitar que los clientes de empresa almacenen los datos de archivos no estructurados y las jerarquías de directorio en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , direccionando los requisitos de acceso no transaccional y la compatibilidad de las aplicaciones Windows con datos basados en archivos.  
   
 ##  <a name="CompareFileTable"></a> Comparar FILESTREAM y FileTable  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47770264"
 |**Acceso relacional a los atributos de archivo**|no|no|**Sí**|  
   
 ##  <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)  
- Para obtener una comparación de estas dos características, vea este artículo del blog del equipo RBS: comparación de características  [del almacén remoto de blobs y FILESTREAM de SQL Server](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ Para obtener una comparación de estas dos características, vea este elemento de blogs del equipo RBS: comparación de característica de [del almacén remoto de blobs y FILESTREAM de SQL Server](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Más información  
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  

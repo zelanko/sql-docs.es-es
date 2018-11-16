@@ -17,12 +17,12 @@ ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a8e9429c2d9e55a54a7b07a2d417dcbbef41eb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a31d2b3bc59a447b14691b45c1a2a323598b2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843003"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696805"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Administrar objetos mediante el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,10 +53,10 @@ Las acciones se llevan a cabo en los objetos haciendo clic con el botón secunda
 Cuando el Explorador de objetos está conectado a un servidor, es posible abrir una ventana nueva del Editor de código mediante los valores de conexión del Explorador de objetos. Para abrir una ventana nueva del Editor de código, haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y, a continuación, haga clic en **Nueva consulta**. Para abrir una ventana del Editor de código mediante una base de datos concreta, haga clic con el botón derecho en el nombre del servidor y, a continuación, haga clic en **Nueva consulta**. Al abrir una consulta nueva para un servidor de Analysis Services, puede seleccionar consultas DMX, MDX o XMLA.  
   
 ### <a name="start-powershell"></a>Iniciar PowerShell  
-Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="see-also"></a>Ver también  
-[Ver](../../ssms/object/object-explorer.md)  
+[Explorador de objetos](../../ssms/object/object-explorer.md)  
 [Abrir y configurar el Explorador de objetos](../../ssms/object/open-and-configure-object-explorer.md)  
 [Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Panel de detalles del Explorador de objetos](../../ssms/object/object-explorer-details-pane.md)  

@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722513"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602870"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: el grupo de disponibilidad superó el RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722513"
   
  Además, resulta útil para comprobar los dos objetos de rendimiento: `SQL Server:Availability Replica > Flow Control Time (ms/sec)` y `SQL Server:Availability Replica > Flow Control/sec`. Al multiplicar estos dos valores, puede saber en el último segundo cuánto tiempo tardó en borrarse el control de flujo. Cuanto más tiempo de espera tarde el control de flujo, menor será la velocidad de envío.  
   
- Las siguientes métricas son útiles para diagnosticar el rendimiento y la latencia de red. Puede usar otras herramientas de Windows, como **ping.exe** y [Monitor de red](http://www.microsoft.com/download/details.aspx?id=4865) para evaluar el uso de la latencia y la red.  
+ Las siguientes métricas son útiles para diagnosticar el rendimiento y la latencia de red. Puede usar otras herramientas de Windows, como **ping.exe** y [Monitor de red](https://www.microsoft.com/download/details.aspx?id=4865) para evaluar el uso de la latencia y la red.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ Para solucionar este problema, intente actualizar el ancho de banda de red o eli
  La pérdida de datos se evita en cuanto el bloque de registro se protege en el archivo de registro. Por lo tanto, es fundamental aislar el archivo de registro del archivo de datos. Si el archivo de registro y el archivo de datos se asignan al mismo disco duro, la carga de trabajo de los informes con lecturas intensivas del archivo de datos consumirá los mismos recursos de E/S necesarios para la operación de protección del registro. Una protección de registro lenta puede traducirse en una aceptación lenta de la réplica principal, lo que puede producir una activación excesiva y largos tiempos de espera del control de flujo.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnóstico y resolución  
- Si ha comprobado que la red no presenta una alta latencia o un rendimiento bajo, verifique si existen contenciones de E/S en la réplica secundaria. Las consultas de [SQL Server: minimizar la E/S de disco](http://technet.microsoft.com/magazine/jj643251.aspx) son útiles para identificar las contenciones. A continuación encontrará los ejemplos de ese artículo.  
+ Si ha comprobado que la red no presenta una alta latencia o un rendimiento bajo, verifique si existen contenciones de E/S en la réplica secundaria. Las consultas de [SQL Server: minimizar la E/S de disco](https://technet.microsoft.com/magazine/jj643251.aspx) son útiles para identificar las contenciones. A continuación encontrará los ejemplos de ese artículo.  
   
  En el siguiente script verá el número de lecturas y escrituras de cada archivo de datos y de registro para cada base de datos de disponibilidad que se ejecute en una instancia de SQL Server. Está ordenado por el tiempo de pausa de E/S promedio, en milisegundos. Tenga en cuenta que los números se acumulan desde la última vez que se inició la instancia del servidor. Por lo tanto, debe tomar la diferencia entre dos mediciones después de que haya transcurrido cierto tiempo.  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Si detecta un cuello de botella de E/S y ha colocado el archivo de registro y el archivo de datos en el mismo disco duro, lo primero que debe hacer es colocar dichos archivos en discos separados. Este procedimiento recomendado impide que la carga de trabajo de informes interfiera con la ruta de transferencia de registros de la réplica principal al búfer de registro y con su capacidad de proteger la transacción en la réplica secundaria.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

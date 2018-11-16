@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2aab2b6a4c19ed5cb8d3e1d5ea73af57cb6e506e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831663"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641382"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Visor y tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos proporciona la funcionalidad para generar perfiles de datos dentro del proceso de extracción, transformación y carga de datos. El uso de esta tarea le permitirá:  
@@ -70,6 +70,6 @@ ms.locfileid: "47831663"
  La tarea de generación de perfiles de datos no tiene características integradas que le permitan utilizar lógica condicional para conectar esta tarea a las tareas de nivel inferior según el perfil generado. Sin embargo, puede agregar fácilmente esta lógica, con una pequeña cantidad de programación, en una tarea Script. Por ejemplo, la tarea Script puede realizar una consulta XPath en el archivo de salida de la tarea de generación de perfiles de datos. La consulta podría determinar si el porcentaje de valores nulos en una columna determinada supera un cierto umbral. Si el porcentaje supera el umbral, puede interrumpir el paquete y resolver el problema en los datos de origen antes de continuar. Para obtener más información, vea [Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Esquema del generador de perfiles de datos](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Esquema del generador de perfiles de datos](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

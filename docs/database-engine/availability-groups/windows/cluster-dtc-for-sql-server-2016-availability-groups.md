@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703733"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601385"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC de clúster para grupos de disponibilidad de SQL Server 2016
 
@@ -48,7 +48,7 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Detenga y deshabilite el servicio DTC local.|[Configurar la forma en que se inicia un servicio](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Reinicie el servicio SQL Server para cada instancia del grupo de disponibilidad.  Conmute por error el grupo de disponibilidad según sea necesario.|[Realizar una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- Si el servidor es Windows Server 2012 R2, el sistema operativo debe tener aplicado [KB 3030373](http://support.microsoft.com/kb/3090973) .
+- Si el servidor es Windows Server 2012 R2, el sistema operativo debe tener aplicado [KB 3030373](https://support.microsoft.com/kb/3090973) .
 
 - Prepare los servidores de los grupos de disponibilidad conforme a las listas de comprobación de [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).
 
@@ -64,6 +64,6 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 [Crear un grupo de disponibilidad (Transact-SQL)](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Compatibilidad con SQL Server 2016 DTC en grupos de disponibilidad) 
+[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Compatibilidad con SQL Server 2016 DTC en grupos de disponibilidad) 
 
-[Vínculo externo a un artículo sobre cómo configurar DTC para una instancia agrupada de SQL Server con Windows Server 2008 R2](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[Vínculo externo a un artículo sobre cómo configurar DTC para una instancia agrupada de SQL Server con Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

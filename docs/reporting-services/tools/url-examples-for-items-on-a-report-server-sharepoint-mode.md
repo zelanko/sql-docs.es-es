@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839563"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812963"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint
   Para publicar informes y elementos relacionados en una biblioteca de SharePoint, puede publicar el contenido con las herramientas de creación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como, por ejemplo, el Diseñador de informes o puede cargar el contenido mediante acciones del sitio de SharePoint.  
@@ -47,21 +47,21 @@ ms.locfileid: "47839563"
  No se admite el uso del extremo proxy de dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un punto de conexión proxy incluye un número de puerto (por ejemplo, `http:*//servername:8080/reportserver*`).  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>Dirección URL para un sitio o subsitio del servidor de SharePoint  
- Al implementar un informe o un origen de datos de informe, debe usar una dirección URL para el sitio y el subsitio de SharePoint, si lo hay. En la dirección URL, el nombre del sitio aparece justo después del nombre de servidor (por ejemplo, `http://*servername/site*` o `http://*servername/site/subsite*`).  
+ Al implementar un informe o un origen de datos de informe, debe usar una dirección URL para el sitio y el subsitio de SharePoint, si lo hay. En la dirección URL, el nombre del sitio aparece justo después del nombre de servidor (por ejemplo, `https://*servername/site*` o `https://*servername/site/subsite*`).  
   
  En una aplicación web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , el sitio y el subsitio suelen corresponderse con las pestañas del sitio principal. Para buscar el nombre del sitio o el subsitio, haga clic en **Inicio**y, a continuación, en **Todo el contenido del sitio**. Desplácese hasta la parte inferior y busque **Áreas de trabajo y sitios**. Aparece la lista de sitios en esta sección.  
   
 ### <a name="url-for-a-sharepoint-library"></a>Dirección URL para una biblioteca de SharePoint  
  Al implementar un informe o un elemento relacionado en una biblioteca de SharePoint, debe usar una dirección URL para la biblioteca de SharePoint. La dirección URL que se usa para la biblioteca varía según la versión de SharePoint usada.  
   
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la biblioteca aparece después del nombre del servidor (por ejemplo, `http://*servername/*Shared Documents`).  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la biblioteca aparece después del nombre del servidor (por ejemplo, `https://*servername/*Shared Documents`).  
   
- En [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la biblioteca aparece después del sitio y el subsitio. Por ejemplo, `http://*servername/site/*Documents`.  
+ En [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la biblioteca aparece después del sitio y el subsitio. Por ejemplo, `https://*servername/site/*Documents`.  
   
  Para buscar la información de ruta de acceso para una biblioteca de SharePoint nueva o para un sitio no conocido, abra un explorador y busque la biblioteca de SharePoint en la que desea publicar los informes. Si la biblioteca está vacía, cargue cualquier archivo. Haga clic con el botón derecho en el archivo y seleccione **Propiedades** para abrir la ventana **Propiedades** . La dirección del archivo contiene los valores de dirección URL necesarios para una operación de publicación.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>Direcciones URL completas para los elementos de un sitio de SharePoint  
- Siempre se obtiene acceso a los elementos almacenados en una biblioteca de SharePoint mediante una dirección URL completa que comienza por la aplicación web (`http://*server*`) como nodo raíz y termina por el nombre del archivo al que se hace referencia.  
+ Siempre se obtiene acceso a los elementos almacenados en una biblioteca de SharePoint mediante una dirección URL completa que comienza por la aplicación web (`https://*server*`) como nodo raíz y termina por el nombre del archivo al que se hace referencia.  
   
  Los nombres de archivo de la dirección URL deben incluir una extensión de nombre de archivo.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839563"
  Para especificar los informes detallados, incluya la dirección URL en una expresión. Por ejemplo, para especificar el informe que se denomina SalesDetails como un informe detallado, en la sección Acción del cuadro de texto o el texto del marcador de posición, establezca ReportName como la expresión siguiente:  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>Nombres reservados en sitios de SharePoint  
@@ -94,11 +94,11 @@ ms.locfileid: "47839563"
   
 |Destino|Dirección URL de ejemplo|  
 |------------|-----------------|  
-|Un servidor de SharePoint.|`http://TestServer`|  
-|Un sitio o subsitio del servidor de SharePoint.|`http://TestServer/toplevelsite/subsite`|  
-|El informe de ejemplo Company Sales de **Documentos compartidos** en una implementación de [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|El informe de ejemplo Company Sales de la carpeta **Documentos/Doc** en una instancia de [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|El informe de ejemplo Company Sales de **Centro de informes** en una instancia de [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|Un servidor de SharePoint.|`https://TestServer`|  
+|Un sitio o subsitio del servidor de SharePoint.|`https://TestServer/toplevelsite/subsite`|  
+|El informe de ejemplo Company Sales de **Documentos compartidos** en una implementación de [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|El informe de ejemplo Company Sales de la carpeta **Documentos/Doc** en una instancia de [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|El informe de ejemplo Company Sales de **Centro de informes** en una instancia de [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> Publicar desde una herramienta de creación a una biblioteca de SharePoint  
  Cuando se usa una herramienta de creación de informes para publicar informes y sus archivos relacionados en una biblioteca, los archivos se validan antes de agregarse. Si carga informes y archivos relacionados mediante la acción **Cargar** en una biblioteca de SharePoint, no se efectúa ninguna comprobación de validación. No podrá saber si el archivo es válido hasta que obtenga acceso al informe para administrarlo, editarlo o ejecutarlo.  
@@ -135,6 +135,6 @@ ms.locfileid: "47839563"
 ## <a name="see-also"></a>Ver también  
  [Publicar un informe en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicación de un origen de datos compartido en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Cuadro Páginas de propiedades del proyecto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   

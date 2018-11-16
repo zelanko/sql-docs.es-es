@@ -5,27 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.policy.f1
 - sql13.swb.dmf.policy.filter.f1
 - sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b1b645ff843ca34e10c628eb8b4a5d31de293df2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76a3fe793e43af89dbbf29c934604d1e3102076a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689793"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661130"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Cuadro de diálogo Crear nueva directiva o Abrir directiva, página General
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Utilice este cuadro de diálogo para crear una directiva nueva de administración basada en directivas o modificar una directiva existente. Utilice las áreas **Para destinos** y **Restricción de servidor** como filtro para limitar las directivas a un subconjunto de todos los destinos posibles. Las condiciones que se usan como filtros de destino se deben definir en una faceta física y no deben contener funciones ni el operador LIKE. Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+  Utilice este cuadro de diálogo para crear una directiva nueva de administración basada en directivas o modificar una directiva existente. Utilice las áreas **Para destinos** y **Restricción de servidor** como filtro para limitar las directivas a un subconjunto de todos los destinos posibles. Las condiciones que se usan como filtros de destino se deben definir en una faceta física y no deben contener funciones ni el operador LIKE. Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="options"></a>Opciones  
  **Nombre**  

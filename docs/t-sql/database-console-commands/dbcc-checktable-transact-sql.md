@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831943"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697201"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ Por tanto, el uso de la opción PHYSICAL_ONLY puede llevar mucho menos tiempo pa
 DATA_PURITY  
  Hace que DBCC CHECKTABLE compruebe si la tabla contiene valores de columna que no son válidos o están fuera del intervalo correcto. Por ejemplo, DBCC CHECKTABLE detecta las columnas cuyos valores de fecha y hora son superiores o inferiores al intervalo de valores válido para el tipo de datos **datetime**, o bien las columnas del tipo de datos **decimal** o numérico aproximado con valores de escala o precisión que no son válidos.  
  Las comprobaciones de integridad de valores de columna están habilitadas de manera predeterminada y no requieren la opción DATA_PURITY. En las bases de datos actualizadas desde versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede usar DBCC CHECKTABLE WITH DATA_PURITY para buscar y corregir errores en una tabla concreta; sin embargo, la comprobación de los valores de columnas de la tabla no se habilitan de forma predeterminada hasta que se ejecute DBCC CHECKDB WITH DATA_PURITY sin errores en la base de datos. Después, DBCC CHECKDB y DBCC CHECKTABLE comprueban la integridad de los valores de columnas de forma predeterminada.  
- Los errores de validación de los que informe esta opción no se pueden corregir con las opciones de reparación de DBCC. Para obtener información sobre cómo corregir manualmente estos errores, vea el artículo 923247 de Knowledge Base: [Solucionar el error DBCC 2570 en SQL Server 2005 y versiones posteriores](http://support.microsoft.com/kb/923247).  
+ Los errores de validación de los que informe esta opción no se pueden corregir con las opciones de reparación de DBCC. Para obtener información sobre cómo corregir manualmente estos errores, vea el artículo 923247 de Knowledge Base: [Solucionar el error DBCC 2570 en SQL Server 2005 y versiones posteriores](https://support.microsoft.com/kb/923247).  
  Si se especifica PHYSICAL_ONLY, no se realizan comprobaciones de integridad de columna.  
     
 MAXDOP  

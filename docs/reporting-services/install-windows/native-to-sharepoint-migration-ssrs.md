@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d413485fc85b0599921524e339a900a5067f496c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 620b936f976bca27ba1bb0c95e8b882d589e77d7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029254"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814038"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migración del modo nativo al modo de SharePoint (SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50029254"
 ##  <a name="bkmk_native_to_sharepoint"></a> Herramienta de migración de Reporting Services  
  La herramienta admite la migración de contenido de una implementación en modo nativo a una implementación en modo de SharePoint. La herramienta no admite la migración del modo de SharePoint al modo de SharePoint o del modo de SharePoint al modo nativo.  
   
- Para más información, consulte la página de la [herramienta de migración de Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+ Para más información, consulte la página de la [herramienta de migración de Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ## <a name="use-script-to-migrate-content"></a>Usar Script para migrar contenido  
  Si la herramienta de migración no satisface sus necesidades, puede migrar manualmente los datos del servidor de informes. A continuación se muestra un resumen de los pasos necesarios para migrar elementos de informe de una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otra. El método admite el modo nativo o de SharePoint como servidores de origen o de destino.  
@@ -34,7 +34,7 @@ ms.locfileid: "50029254"
   
     -   [Script rs.exe para copiar contenido entre servidores de informes de servicios de informes de ejemplo](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). En los temas se explica cómo usar el script de ejemplo que puede descargar de CodePlex.  
   
-    -   El script de rss de ejemplo de CodePlex, [Script Reporting Services RS.exe que migra contenido de un servidor de informes a otro](http://azuresql.codeplex.com/releases/view/115207).  
+    -   El script de rss de ejemplo de CodePlex, [Script Reporting Services RS.exe que migra contenido de un servidor de informes a otro](https://azuresql.codeplex.com/releases/view/115207).  
   
     -   [Secuencias de comandos y PowerShell con Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   

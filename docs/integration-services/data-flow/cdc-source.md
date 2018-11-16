@@ -16,12 +16,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b6d0f537db9195ff0afb9994f48ca14411dcf30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599303"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642248"
 ---
 # <a name="cdc-source"></a>origen de CDC
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -246,6 +246,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada del blog, sobre [Modos de procesamiento para el origen CDC](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), en mattmasson.com.  
+-   Entrada del blog, sobre [Modos de procesamiento para el origen CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), en mattmasson.com.  
   
   

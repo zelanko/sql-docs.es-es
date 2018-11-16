@@ -14,12 +14,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 910b511796411207151b40933cf82c8ea06b9dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c7c01d2ac09ebb1e521dfbf7c762077a3f68379
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821353"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696713"
 ---
 # <a name="set-domain-properties"></a>Establecer las propiedades de dominio
 
@@ -27,7 +27,7 @@ ms.locfileid: "47821353"
 
   En este tema se describe cómo establecer las propiedades del dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para establecer las propiedades de un dominio, debe haber creado una base de conocimiento y un dominio.  
@@ -43,7 +43,7 @@ ms.locfileid: "47821353"
   
 2.  Para establecer las propiedades de un dominio nuevo después de crearlo, use el procedimiento que se describe en [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de establecer las propiedades del dominio  
  Una vez establecidas las propiedades del dominio, puede realizar en él otras tareas de administración, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  

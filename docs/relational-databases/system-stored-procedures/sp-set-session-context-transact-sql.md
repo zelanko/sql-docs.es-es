@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d278e7540ef27e4c6041406bc7c4011976a5a213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832763"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811876"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ Establece un par clave-valor en el contexto de sesión.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'  
+sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'  
     [ , [ @read_only = ] { 0 | 1 } ]  
 [ ; ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @key=] 'key'  
+ [ @key=] N'key'  
  La clave que se establece, de tipo **sysname**. El tamaño de clave máxima es 128 bytes.  
   
  [ @value=] 'value'  
@@ -58,7 +58,7 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
 ## <a name="remarks"></a>Comentarios  
  Al igual que otros procedimientos almacenados, solo literales y variables (llamadas de función o no expresiones) se pueden pasar como parámetros.  
   
- El tamaño total del contexto de sesión está limitado a 256 kb. Si el conjunto un valor que provoca que se supere este límite, la instrucción produce un error. Puede supervisar el uso de memoria en [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ El tamaño total del contexto de sesión se limita a 1 MB. Si establece un valor que provoca que se supere este límite, se produce un error en la instrucción. Puede supervisar el uso de memoria en [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
  Puede supervisar el uso de memoria por consulta [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) como sigue: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
@@ -66,14 +66,14 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  El ejemplo siguiente muestra cómo establecer y, a continuación, devolver una clave de contexto de las sesiones denominada lenguaje con un valor de inglés.  
   
 ```  
-EXEC sp_set_session_context 'language', 'English';  
+EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
  El ejemplo siguiente muestra el uso de la marca de solo lectura opcional.  
   
 ```  
-EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  
+EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
 ## <a name="see-also"></a>Vea también  

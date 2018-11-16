@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9a7538bb51ebe0a04a20aff81e83c3cc1ac92aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747893"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558632"
 ---
 # <a name="rds-tutorial"></a>Tutorial de RDS
 En este tutorial se muestra cómo utilizar el modelo de programación de RDS para consultar y actualizar un origen de datos. En primer lugar, describe los pasos necesarios para realizar esta tarea. A continuación, el tutorial se repite en Microsoft® Visual Basic Scripting Edition (con ADO para Windows Foundation Classes (ADO y WFC)).  
@@ -30,7 +30,7 @@ En este tutorial se muestra cómo utilizar el modelo de programación de RDS par
 -   Si no está seguro de una característica determinada de RDS y conoce un poco de otro idioma, es posible que pueda resolver sus dudas buscando la misma característica expresada en otro idioma.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="how-the-tutorial-is-presented"></a>¿Cómo se presenta el Tutorial  
  En este tutorial se basa en el modelo de programación de RDS. Describe cada paso del modelo de programación individualmente. Además, ilustra cada paso con un fragmento de código de Visual Basic.  

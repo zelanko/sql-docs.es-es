@@ -16,12 +16,12 @@ ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebaffdc7404730a059b38186d55209033c8847c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788443"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670935"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Controlador ODBC de Visual FoxPro
 Microsoft Visual FoxPro es un eficaz entorno orientado a objetos para el desarrollo de construcción y aplicación de base de datos. El controlador ODBC de Microsoft Visual FoxPro permite a las aplicaciones abrir, consulta y actualizar los datos de Visual FoxPro y versiones anteriores de FoxPro a través de la interfaz de conectividad abierta de base de datos (ODBC).  
@@ -45,4 +45,4 @@ Microsoft Visual FoxPro es un eficaz entorno orientado a objetos para el desarro
 |Ver un ejemplo sencillo usando Visual C++ para tener acceso a datos de Visual FoxPro|[Usar el controlador ODBC de Visual FoxPro con su aplicación de C++ o C](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |Ver una lista de software y hardware compatible|[Requisitos del sistema](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- Para obtener información sobre cómo descargar e instalar el controlador ODBC de Visual FoxPro, consulte [Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318) descargas de MSDN.
+ Para obtener información sobre cómo descargar e instalar el controlador ODBC de Visual FoxPro, consulte [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) descargas de MSDN.

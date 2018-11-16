@@ -13,12 +13,12 @@ ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6cd954964af9c2495311423620c95af621021a5b
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: a6c68680152199e0a6605d87701cb68eb3fe0e0c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099247"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670234"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Creación de los archivos de conexión del servidor (MySQLToSQL)
 Información del servidor puede especificarse en la sección de servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>`. Si el mismo identificador de servidor está presente en el archivo de script y el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
@@ -92,5 +92,5 @@ El usuario puede validar fácilmente su archivo de conexión de servidor con el 
 El siguiente paso en el funcionamiento de la consola es [ejecutando la consola de SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Ejecución de la consola SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 572920ccf63f35c74e39cd02a4b32c4fd85b0550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698583"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350239"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Proveedor Microsoft OLE DB para Oracle Introducción
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "47698583"
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
  Para conectarse a este proveedor, establezca el *proveedor* argumento de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad:
 
-```
+```vb
 MSDAORA
 ```
 
@@ -42,7 +42,7 @@ MSDAORA
 ## <a name="typical-connection-string"></a>Cadena de conexión típica
  Una cadena de conexión típica para este proveedor es:
 
-```
+```vb
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
@@ -61,7 +61,7 @@ MSDAORA
 ## <a name="provider-specific-connection-parameters"></a>Parámetros de conexión específica del proveedor
  El proveedor admite varios parámetros de conexión específica del proveedor además de los definidos por ADO. Como con las propiedades de conexión ADO, se pueden establecer estas propiedades específicas del proveedor a través de la [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) o como parte de la **ConnectionString**.
 
- Estos parámetros se describe detalladamente en la [referencia del programador de OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). El [índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) proporciona una referencia cruzada entre estos nombres de parámetro y las propiedades de OLE DB correspondientes.
+ Estos parámetros se describe detalladamente en la [referencia del programador de OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). El [índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) proporciona una referencia cruzada entre estos nombres de parámetro y las propiedades de OLE DB correspondientes.
 
 |Parámetro|Descripción|
 |---------------|-----------------|

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985330"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601466"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **SELECT DISTINCT FROM** instrucción solo funciona con una sola columna o con un conjunto de columnas relacionadas. Esta cláusula no funciona con un conjunto de columnas no relacionadas.  
   
  El **SELECT DISTINCT FROM** instrucción le permite hacer referencia directamente a una columna dentro de una tabla anidada. Por ejemplo:  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|Punto medio de los valores de la columna.|  
   
 ## <a name="discrete-column-example"></a>Ejemplo de columna discreta  
- Ejemplo de código siguiente se basa en el `[TM Decision Tree]` modelo creado en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
+ Ejemplo de código siguiente se basa en el `[TM Decision Tree]` modelo creado en el [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  

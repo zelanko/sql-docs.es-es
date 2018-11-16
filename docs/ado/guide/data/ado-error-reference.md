@@ -15,12 +15,12 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61e3ab4bd3fb7afda858dd7e2b14fd2bddbd599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752393"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600925"
 ---
 # <a name="ado-errors"></a>Errores de tiempo de ejecución de ADO
 El **ErrorValueEnum** constante describe los valores de error de ADO. Para obtener una lista completa de estas constantes enumeradas, incluidos los valores, vea [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). En esta sección examinaremos algunos de los errores más interesantes y explicar algunas situaciones específicas que pueden generar, o soluciones para corregir el problema. Tanto el **ErrorValueEnum** aparecen constante y el número decimal positivo corto.
@@ -64,7 +64,7 @@ El **ErrorValueEnum** constante describe los valores de error de ADO. Para obten
 |**3724**|**adErrCantConvertvalue**|No se puede convertir el valor de datos por razones distintas del desbordamiento de datos o la falta de coincidencia de inicio de sesión. Por ejemplo, conversión habría truncado los datos.|
 |**3725**|**adErrCantCreate**|Valor de datos no se puede establecer o recuperar porque se desconoce el tipo de datos de campo o el proveedor tuvo recursos insuficientes para realizar la operación.|
 |**3726**|**adErrColumnNotOnThisRow**|Registro no contiene este campo. Se especificó un nombre de campo incorrecto o un campo no está en el **campos** se hace referencia a la colección del registro actual.|
-|**3727**|**adErrURLDoesNotExist**|La dirección URL de origen o el elemento primario de la dirección URL de destino no existe. Hay un error tipográfico en la dirección URL de origen o destino. Es posible que tenga `http://mysite/photo/myphoto.jpg` cuando realmente debería tener `http://mysite/photos/myphoto.jpg` en su lugar. El error tipográfico en la dirección URL principal (en este caso, *photo* en lugar de *fotos*) ha provocado el error.|
+|**3727**|**adErrURLDoesNotExist**|La dirección URL de origen o el elemento primario de la dirección URL de destino no existe. Hay un error tipográfico en la dirección URL de origen o destino. Es posible que tenga `https://mysite/photo/myphoto.jpg` cuando realmente debería tener `https://mysite/photos/myphoto.jpg` en su lugar. El error tipográfico en la dirección URL principal (en este caso, *photo* en lugar de *fotos*) ha provocado el error.|
 |**3728**|**adErrTreePermissionDenied**|Los permisos son insuficientes para acceder a árbol o subárbol. El usuario mencionado en la cadena de conexión no tiene los permisos adecuados.|
 |**3729**|**adErrInvalidURL**|Dirección URL contiene caracteres no válidos. Asegúrese de que la dirección URL se ha escrito correctamente. La dirección URL sigue el esquema registrado para el proveedor actual (por ejemplo, el proveedor de publicación en Internet se registra para http).|
 |**3730**|**adErrResourceLocked**|Objeto que representa la dirección URL especificada está bloqueado por uno o varios procesos. Espere a que finalice el proceso e intente la operación de nuevo. Se ha bloqueado el objeto que está intentando obtener acceso a otro usuario o por otro proceso en la aplicación. Esto es más probable que surgen en un entorno multiusuario.|

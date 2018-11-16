@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b678aafac0c189983f69cc6db75bcaa48bd9ccf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002117"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602935"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Tipo de resultado  
  Tabla.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **BottomPercent** función devuelve las filas inferiores en orden ascendente de rango. El rango se basa en el valor evaluado de la \<rank expression > argumento para cada fila, tal que la suma de la \<rank expression > valores sea al menos el porcentaje especificado por el \<% > argumento. **BottomPercent** devuelve el número de elementos más pequeño posible que siga cumpliendo el valor de porcentaje especificado.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea una consulta de predicción en el modelo de asociación creado en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ En el ejemplo siguiente se crea una consulta de predicción en el modelo de asociación creado en el [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Para entender cómo funciona BottomPercent, puede ser útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
   

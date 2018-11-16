@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269848"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669454"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Inicio rápido: Instalar SQL Server y crear una base de datos en Red Hat
 
@@ -41,7 +41,7 @@ En este tutorial, instale versión preliminar de SQL Server 2019 en Red Hat Ente
 
 Debe tener un RHEL 7.3 o 7.4 máquina con **al menos 2 GB** de memoria.
 
-Para instalar la Red Hat Enterprise Linux en su propio equipo, vaya a [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). También puede crear máquinas virtuales RHEL en Azure. Consulte [crear y administrar máquinas virtuales Linux con la CLI de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)y usar `--image RHEL` en la llamada a `az vm create`.
+Para instalar la Red Hat Enterprise Linux en su propio equipo, vaya a [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). También puede crear máquinas virtuales RHEL en Azure. Consulte [crear y administrar máquinas virtuales Linux con la CLI de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)y usar `--image RHEL` en la llamada a `az vm create`.
 
 Si anteriormente ha instalado un CTP o la versión RC de SQL Server 2017, primero debe quitar el repositorio antiguo antes de seguir estos pasos. Para obtener más información, consulte [repositorios de configuración de Linux para SQL Server 2017 y 2019 ](sql-server-linux-change-repo.md).
 

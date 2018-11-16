@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b5b8e1f8d3c27552033b014347108ebbedba75e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a2c01750ac0cb1a743e6961cc693f9912857d8b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708593"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662294"
 ---
 # <a name="sql-server-native-client-programming"></a>Programación de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47708593"
  [Más información sobre SQL Server Native Client](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
  Proporciona recursos adicionales sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluidos vínculos a recursos externos y obtención de más ayuda.  
   
- [Errores de SQL Server Native Client](http://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
+ [Errores de SQL Server Native Client](https://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  Contiene temas sobre errores en tiempo de ejecución asociados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vea también  

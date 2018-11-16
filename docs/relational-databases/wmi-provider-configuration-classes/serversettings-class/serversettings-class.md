@@ -18,12 +18,12 @@ ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fd888d7fe4fd35a54fbf2d30d5a53706c2a88cbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09c5a68c971b141259d4600cba07abb569dd37e3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831323"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658744"
 ---
 # <a name="serversettings-class"></a>Clase ServerSettings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "47831323"
 -   Establecer el certificado de seguridad para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c7e8b5d0583c2f0938c792d4e7fb9980e663a9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667243"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558222"
 ---
 # <a name="required-client-settings"></a>Configuración de cliente requerida
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Especifique la siguiente configuración para utilizar una personalizada **DataFactory** controlador.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47667243"
   
  Se supone que las siguientes secciones **MSDFMAP. INI** y el nombre del origen de datos AdvWorks, se han definido previamente:  
   
-```  
+```console
 [connect CustomerDataBase]  
 Access=ReadWrite  
 Connect="DSN=AdvWorks"  
@@ -51,10 +51,10 @@ SQL="SELECT * FROM Customers WHERE CustomerID = ?"
   
 ## <a name="rdsdatacontrol-version"></a>RDS. Versión de control de datos  
   
-```  
+```vb
 Dim dc as New RDS.DataControl  
 Set dc.Handler = "MSDFMAP.Handler"  
-Set dc.Server = "http://yourServer"  
+Set dc.Server = "https://yourServer"  
 Set dc.Connect = "Data Source=CustomerDatabase"  
 Set dc.SQL = "CustomerById(4)"  
 dc.Refresh  
@@ -62,7 +62,7 @@ dc.Refresh
   
 ## <a name="recordset-version"></a>Versión del conjunto de registros  
   
-```  
+```vb
 Dim rs as New ADODB.Recordset  
 rs.CursorLocation = adUseClient  
 ```  
@@ -71,9 +71,9 @@ rs.CursorLocation = adUseClient
   
  RS. Abra "CustomerById (4)", "controlador = MSDFMAP. Controlador;"& _  
   
-```  
+```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
-"Remote Server=http://yourServer"  
+"Remote Server=https://yourServer"  
 ```  
   
 ## <a name="see-also"></a>Vea también  
@@ -84,25 +84,4 @@ rs.CursorLocation = adUseClient
  [Configuración de cliente requerida](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Descripción del archivo de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

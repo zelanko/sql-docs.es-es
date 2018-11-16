@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678963"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659154"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opciones de línea de comandos en la consola SSMA (DB2ToSQL)
 Microsoft le proporciona un opciones de línea de comandos de un conjunto robusto para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma.  
@@ -120,7 +120,7 @@ Esto indica que la carpeta de configuración del entorno de proyecto para el pro
 ### <a name="secure-password-option-psecurepassword"></a>Opción de contraseña segura: – p/securepassword  
 Esta opción indica que la contraseña cifrada de las conexiones del servidor. Difiere de todas las demás opciones: la opción ni ejecuta cualquier script ni ayuda a las actividades relacionadas con la migración, pero ayuda a administrar el cifrado de contraseña para las conexiones del servidor usado en el proyecto de migración.  
   
-No se puede especificar cualquier otra opción o contraseña como el parámetro de línea de comandos. En caso contrario, produce un error. Para obtener más información, consulte el [administrar contraseñas](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) sección.  
+No se puede especificar cualquier otra opción o contraseña como el parámetro de línea de comandos. En caso contrario, produce un error. Para obtener más información, consulte el [administrar contraseñas](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) sección.  
   
 Se admiten las siguientes opciones secundarias para `–p/securepassword`:  
   

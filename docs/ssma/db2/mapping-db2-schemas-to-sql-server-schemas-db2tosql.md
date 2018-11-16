@@ -10,12 +10,12 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b0f5bcfff72abb16c45aebc12f7c1a2220e2330f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fe903d81bc698ff324b504034ed92025570254c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735503"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656634"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Asignación de esquemas de DB2 a esquemas de SQL Server (DB2ToSQL)
 En DB2, cada base de datos tiene uno o varios esquemas. De forma predeterminada, SSMA migra todos los objetos en un esquema de DB2 a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominado para el esquema de base de datos. Sin embargo, puede personalizar la asignación entre esquemas de DB2 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos.  
@@ -60,7 +60,7 @@ Si personaliza la asignación entre un esquema de DB2 y un [!INCLUDE[ssNoVersion
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos predeterminada y el esquema.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Si desea analizar la conversión de objetos de DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, puede [informe de migración de datos (SSMA comunes)](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
+Si desea analizar la conversión de objetos de DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, puede [informe de migración de datos (SSMA comunes)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
   
 ## <a name="see-also"></a>Vea también  
 [Conectarse a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

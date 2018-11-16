@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3369dfd653f1a0485f60145779b5691e200493a3
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: eb92907b87382c9aad2b7c1a580bf0feb33ac7bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657154"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Procedimientos almacenados de SQL Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50254411"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Algunos procedimientos almacenados se utilizan solo dentro de una instancia de adicionales del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a través del cliente de API y no están diseñados para general de los clientes usar. Estos procedimientos se muestran en [procedimientos almacenados del sistema (Transact-SQL)](http://msdn.microsoft.com/library/ms187961.aspx). Estos procedimientos están sujetos a cambios y no se garantiza la compatibilidad. Todos los procedimientos en la lista no están disponibles en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+>  Algunos procedimientos almacenados se utilizan solo dentro de una instancia de adicionales del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a través del cliente de API y no están diseñados para general de los clientes usar. Estos procedimientos se muestran en [procedimientos almacenados del sistema (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Estos procedimientos están sujetos a cambios y no se garantiza la compatibilidad. Todos los procedimientos en la lista no están disponibles en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones almacenadas del sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e1a8db0077b5ec164fe5939b126cfab98e218bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778393"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668654"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de tipo: Equiparación de tipos de secuencia
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47778393"
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -67,7 +66,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" />'  
 SELECT @var.query('data(/root[1]) instance of  empty() ')  
 GO  
 ```  
@@ -80,7 +79,7 @@ GO
 -- DROP XML SCHEMA COLLECTION SC.  
 -- GO  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
   <element name="root">  
     <complexType>  
        <sequence/>  
@@ -118,7 +117,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -137,7 +136,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte ')   
 GO  
 -- result = false  
@@ -147,7 +146,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte? ')   
 GO  
 -- result = true  
@@ -166,7 +165,7 @@ GO
   
 ```  
 SELECT Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 data(/AWMI:root[1]/AWMI:Location[1]/@LocationID) instance of xs:integer?') as Result   
 FROM Production.ProductModel   
 WHERE ProductModelID = 7  
@@ -261,7 +260,7 @@ element(*, ElementType?)
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
 targetNamespace="myNS" xmlns:ns="myNS">  
   <complexType name="CustomerType">  
      <sequence>  
@@ -310,11 +309,11 @@ GO
 ### <a name="example-b"></a>Ejemplo B  
  En el ejemplo siguiente se muestra cómo determinar si el nodo devuelto por una expresión es un nodo de elemento con un nombre específico. Usa el **element()** probar.  
   
- En el ejemplo siguiente, los dos elementos <`Customer`> de la instancia XML que se consultan son de dos tipos diferentes (`CustomerType` y `SpecialCustomerType`). Se da por supuesto que se desea conocer el tipo del elemento <`Customer`> devuelto por la expresión. En la siguiente colección de esquemas XML se definen los tipos `CustomerType` y `SpecialCustomerType`.  
+ En el ejemplo siguiente, los dos elementos <`Customer`> de la instancia XML que se consultan son de dos tipos diferentes (`SpecialCustomerType` y `CustomerType`). Se da por supuesto que se desea conocer el tipo del elemento <`Customer`> devuelto por la expresión. En la siguiente colección de esquemas XML se definen los tipos `CustomerType` y `SpecialCustomerType`.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
           targetNamespace="myNS"  xmlns:ns="myNS">  
   <complexType name="CustomerType">  
     <sequence>  
@@ -346,7 +345,7 @@ SET @var = '
    <firstName>FirstName1</firstName>  
    <lastName>LastName1</lastName>  
 </x:customer>  
-<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
    <firstName> FirstName2</firstName>  
    <lastName> LastName2</lastName>  
    <Age>21</Age>  
@@ -360,14 +359,14 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- Si se cambia la expresión de la consulta anterior y se recupera el segundo elemento <`customer`> (`/x:customer)[2]`), `instance of` devolverá True.  
+ Si se cambia la expresión de la consulta anterior y se recupera el segundo elemento <`customer`> (`instance of`), `/x:customer)[2]` devolverá True.  
   
 ### <a name="example-c"></a>Ejemplo C  
  En este ejemplo se utiliza la prueba de atributos. El siguiente esquema XML define el tipo complejo CustomerType, con los atributos CustomerID y Age. El atributo Age es opcional. Quizás se desee determinar si el atributo Age está presente en el elemento <`customer`> para una instancia XML específica.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
        targetNamespace="myNS" xmlns:ns="myNS">  
 <complexType name="CustomerType">  
   <sequence>  

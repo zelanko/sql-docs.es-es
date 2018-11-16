@@ -19,12 +19,12 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795033"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664980"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47795033"
 |**begin_lsn**|**Nvarchar (64)**|Número de flujo de registro (LSN) de la entrada de registro de inicio para la transacción.|  
 |**commit_lsn**|**Nvarchar (64)**|LSN de la entrada de registro de confirmación para la transacción.|  
 |**dbid**|**smallint**|Id. de la base de datos.|  
-|**filas**|**int**|Id. del comando replicado en la transacción.|  
+|**rows**|**int**|Id. del comando replicado en la transacción.|  
 |**elemento xdesid**|**Nvarchar (64)**|Id. de la transacción.|  
 |**artcache_table_address**|**varbinary (8)**|Dirección de memoria de la última estructura de la tabla de artículos en caché utilizada para esta transacción.|  
 |**servidor**|**nvarchar(514)**|Nombre de servidor.|  
@@ -77,7 +77,7 @@ ms.locfileid: "47795033"
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con la replicación &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [Vistas de administración dinámica relacionadas con la captura de datos modificados &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Vistas de administración dinámica relacionadas con la captura de datos modificados &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

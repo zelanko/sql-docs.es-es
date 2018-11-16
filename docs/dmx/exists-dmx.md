@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 99f6db275fcddaff3e739311ed588fb0ec776aaf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998587"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602835"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ EXISTS(<subquery>)
 ## <a name="result-type"></a>Tipo de resultado  
  Devuelve **true** si el conjunto de resultados devuelto por la subconsulta contiene al menos una fila; en caso contrario, devuelve **false**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Puede utilizar la palabra clave NOT delante de EXISTS; por ejemplo, `WHERE NOT EXISTS (<subquery>)`.  
   
  La lista de columnas que se agrega al argumento de la subconsulta de EXISTS es irrelevante; la función solo comprueba la existencia de una fila que cumpla la condición.  
@@ -43,7 +43,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>Ejemplos  
  Puede utilizar EXISTS y NOT EXISTS para comprobar las condiciones en una tabla anidada. Esto es útil cuando se crea un filtro que controla los datos que se usan para entrenar o probar un modelo de minería de datos. Para obtener más información, vea [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- En el siguiente ejemplo se basa en el `[Association]` estructura de minería de datos y el modelo de minería de datos que creó en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve solo los casos en los que el cliente compró al menos un Patch kit.  
+ En el siguiente ejemplo se basa en el `[Association]` estructura de minería de datos y el modelo de minería de datos que creó en el [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve solo los casos en los que el cliente compró al menos un Patch kit.  
   
 ```  
 SELECT * FROM [Association].CASES  

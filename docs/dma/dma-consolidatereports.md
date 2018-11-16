@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960789"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601825"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -31,7 +31,7 @@ Las siguientes instrucciones paso a paso para ayudarán a usar Data Migration As
 - Designar un equipo de herramientas de la red desde el que se iniciará DMA. Asegúrese de que este equipo tiene conectividad a sus destinos de SQL Server.
 - Descargue e instale:
     - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 o superior.
-    - [PowerShell](http://aka.ms/wmf5download) v5.0 o superior.
+    - [PowerShell](https://aka.ms/wmf5download) v5.0 o superior.
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 o posterior.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 o posterior.
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).

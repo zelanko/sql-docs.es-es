@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400618"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699461"
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
 Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, para un escenario en el que se roban medios físicos (como unidades o cintas de copia de seguridad), un tercero malintencionado puede simplemente restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
@@ -207,7 +207,7 @@ La clave de cifrado de base de datos (DEK) está protegida por los certificados 
   
 El sistema puede tener acceso a las claves sin intervención del usuario (por ejemplo, para proporcionar una contraseña). Si el certificado no está disponible, el sistema generará un error que indicará que no se puede descifrar la DEK hasta que el certificado correcto esté disponible.  
   
-Al mover una base de datos de un dispositivo a otro, el certificado se usa para proteger su ' DEK primero debe restaurarse en el servidor de destino. A continuación, la base de datos puede restaurarse como de costumbre. Para obtener más información, consulte la documentación de SQL Server estándar, en [mover una base de datos protegida de TDE a otra de SQL Server](http://technet.microsoft.com/library/ff773063.aspx).  
+Al mover una base de datos de un dispositivo a otro, el certificado se usa para proteger su ' DEK primero debe restaurarse en el servidor de destino. A continuación, la base de datos puede restaurarse como de costumbre. Para obtener más información, consulte la documentación de SQL Server estándar, en [mover una base de datos protegida de TDE a otra de SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
   
 Los certificados usados para cifrar la DEK se deben conservar, siempre hay copias de seguridad de base de datos que los usan. Las copias de seguridad del certificado deben incluir la clave privada del certificado, porque sin la clave privada no se puede usar un certificado para la restauración de base de datos. Las copias de seguridad de clave privada de certificado se almacenan en un archivo independiente, protegido mediante contraseña que se debe proporcionar para la restauración de certificado.  
   

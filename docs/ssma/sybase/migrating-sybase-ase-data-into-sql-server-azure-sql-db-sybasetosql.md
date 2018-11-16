@@ -13,23 +13,23 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e9751dcfe8ee708731dbad54860a978f0e498df7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faecf1d3a7ab820ef01a25ea67b2313ab03e056a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604773"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657405"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migración de datos de Sybase ASE a SQL Server: Azure SQL DB (SybaseToSQL)
 Después de haber cargado correctamente los objetos de base de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB, puede migrar datos desde el ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB.  
   
 > [!IMPORTANT]  
-> Si el motor que se va a usar motor de migración de datos de lado servidor, antes de migrar datos, debe instalar SSMA para Sybase ASE extensión Pack y los proveedores de Sybase ASE en el equipo que ejecuta SSMA. También debe ejecutar el servicio Agente SQL Server. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de SSMA en SQL Server (SybaseToSQL)](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+> Si el motor que se va a usar motor de migración de datos de lado servidor, antes de migrar datos, debe instalar SSMA para Sybase ASE extensión Pack y los proveedores de Sybase ASE en el equipo que ejecuta SSMA. También debe ejecutar el servicio Agente SQL Server. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de SSMA en SQL Server (SybaseToSQL)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>Establecer las opciones de migración  
 Antes de migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB, revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo.  
   
--   Mediante este cuadro de diálogo puede establecer opciones como el tamaño del lote de migración, bloqueo de tablas, comprobación de restricciones, tratamiento de los valores null y control de valor de identidad. Para obtener más información acerca de la configuración de proyecto de migración, consulte [configuración del proyecto (migración) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
+-   Mediante este cuadro de diálogo puede establecer opciones como el tamaño del lote de migración, bloqueo de tablas, comprobación de restricciones, tratamiento de los valores null y control de valor de identidad. Para obtener más información acerca de la configuración de proyecto de migración, consulte [configuración del proyecto (migración) (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
     Para obtener más información sobre **configuración de migración de datos extendida**, consulte [configuración de migración de datos](data-migration-settings-sybasetosql.md)  
   
@@ -50,7 +50,7 @@ Antes de migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 **Migración de datos del lado servidor:**  
   
--   Durante la migración de datos del lado servidor, el motor reside en la base de datos de destino. Se instala a través del módulo de extensión. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de SSMA en SQL Server (SybaseToSQL)](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+-   Durante la migración de datos del lado servidor, el motor reside en la base de datos de destino. Se instala a través del módulo de extensión. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de SSMA en SQL Server (SybaseToSQL)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 -   Para iniciar la migración en el servidor, seleccione el **motor de migración de datos de lado servidor** opción el **configuración del proyecto** cuadro de diálogo.  
   
@@ -99,11 +99,11 @@ Para ver los mensajes de la migración, asegúrese de que está visible el panel
   
 5.  En el **conectarse a Sybase ASE** cuadro de diálogo, escriba las credenciales de conexión y, a continuación, haga clic en **Connect**. Para obtener más información sobre cómo conectarse a Sybase ASE, consulte [conectarse a Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
-    Si la base de datos de destino es SQL Server, a continuación, escriba las credenciales de conexión en el **conectar con SQL Server** cuadro de diálogo y haga clic en **Connect**. Para obtener más información sobre cómo conectarse a SQL Server, vea [conectarse a SQL Server(SybaseToSQL)](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
+    Si la base de datos de destino es SQL Server, a continuación, escriba las credenciales de conexión en el **conectar con SQL Server** cuadro de diálogo y haga clic en **Connect**. Para obtener más información sobre cómo conectarse a SQL Server, vea [conectarse a SQL Server(SybaseToSQL)](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
     Si la base de datos de destino es Azure SQL DB, a continuación, escriba las credenciales de conexión en el **Connect a Azure SQL DB** cuadro de diálogo y haga clic en **Connect**. Para obtener más información sobre cómo conectarse a Azure SQL DB, consulte [conexión a Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
-    Los mensajes aparecerán en la **salida** panel. Una vez completada la migración, el **informe de migración de datos** aparece. Si no se ha migrado los datos, haga clic en la fila que contiene los errores y, a continuación, haga clic en **detalles**. Cuando haya terminado con el informe, haga clic en **cerrar**. Para obtener más información sobre el informe de migración de datos, vea [informe de migración de datos (SSMA comunes)](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    Los mensajes aparecerán en la **salida** panel. Una vez completada la migración, el **informe de migración de datos** aparece. Si no se ha migrado los datos, haga clic en la fila que contiene los errores y, a continuación, haga clic en **detalles**. Cuando haya terminado con el informe, haga clic en **cerrar**. Para obtener más información sobre el informe de migración de datos, vea [informe de migración de datos (SSMA comunes)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > Cuando se utiliza SQL Express edition como la base de datos de destino, se permite la migración de datos de lado a solo cliente y no se admite la migración de datos del lado servidor.  

@@ -15,16 +15,16 @@ ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcb4ccd685a5f28377972db03d32496017bda8cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaa379431395f3f5fbb01d777042118553bd7e18
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731230"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599635"
 ---
 # <a name="refresh-method-example-vbscript"></a>Actualización de ejemplo del método (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  El ejemplo siguiente muestra cómo establecer los parámetros necesarios de [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) en tiempo de ejecución. La forma en que un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) se recuperan usando el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método viene determinada por la configuración de la [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) y [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) propiedades. Para probar este ejemplo, cortar y pegar el código siguiente en un documento ASP normal y asígnele el nombre **RefreshVBS.asp**. Usar **buscar** para localizar el archivo Adovbs.inc y colocarlo en el directorio que se va a usar. Secuencia de comandos ASP identificará el servidor.  
   
@@ -86,7 +86,7 @@ body {
    ID=RDC HEIGHT=1 WIDTH=1>  
 </OBJECT>  
 <HR>  
-Server: <Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+Server: <Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 Connect: <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">  
 <HR>  
@@ -104,7 +104,7 @@ SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">
    <TD>Asynchronously: <BR>  
       <Input Type="Radio" Name="optExecuteOptions"  OnClick="SetExO('adcExecAsync')">  
    </TD>  
-   <TD> </TD>  
+   <TD> </TD>  
 </TR>  
 <TR>  
    <TD COLSPAN=3 BGCOLOR=silver>  

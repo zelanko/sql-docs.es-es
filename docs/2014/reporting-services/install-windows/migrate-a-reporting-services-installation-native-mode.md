@@ -1,32 +1,23 @@
 ---
 title: Migrar una instalación de Reporting Services (modo nativo) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082895"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604066"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
+
   En este tema se proporcionan instrucciones paso a paso para migrar una de las siguientes versiones admitidas de una implementación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nueva instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -228,7 +219,7 @@ ms.locfileid: "48082895"
   
 5.  Si instaló el servidor de informes en un equipo nuevo y usa el Firewall de Windows, asegúrese de que el puerto TCP en el que escuche el servidor de informes esté abierto. De forma predeterminada, este puerto es el 80. Para obtener más información, vea [Configurar un firewall para el acceso al servidor de informes](../report-server/configure-a-firewall-for-report-server-access.md).  
   
-6.  Si desea administrar en el servidor de informes en modo nativo localmente, necesita configurar el sistema operativo para permitir la administración local con el Administrador de informes. Para obtener más información, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+6.  Si desea administrar en el servidor de informes en modo nativo localmente, necesita configurar el sistema operativo para permitir la administración local con el Administrador de informes. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="bkmk_copy_custom_config"></a> Copiar los valores de configuración personalizados en el archivo RSReportServer.config  
  Si modificó el archivo RSReportServer.config o el archivo RSWebApplication.config en la instalación anterior, debe realizar las mismas modificaciones en el nuevo archivo RSReportServer.config. En la lista siguiente se resumen algunas de las razones por las que podría haber tenido que modificar el archivo de configuración anterior, y se proporcionan vínculos a información adicional sobre cómo configurar los mismos valores en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -246,7 +237,7 @@ ms.locfileid: "48082895"
   
 1.  Compruebe los directorios virtuales del servidor de informes y del Administrador de informes; para ello, abra un explorador y escriba la dirección URL. Para obtener más información, vea [Comprobar una instalación de Reporting Services](verify-a-reporting-services-installation.md).  
   
-2.  Compruebe los informes para ver si contienen los datos esperados. Revise la información del origen de datos para ver si todavía está especificada la información de conexión del origen de datos. El servidor de informes utiliza el modelo de objetos de informe de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al procesar y representar los informes, pero no reemplaza las construcciones de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] por elementos nuevos del lenguaje de definición de informes (RDL). Para obtener más información sobre cómo se ejecutan los informes existentes en un servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Actualizar informes](upgrade-reports.md).  
+2.  Compruebe los informes para ver si contienen los datos esperados. Revise la información del origen de datos para ver si todavía está especificada la información de conexión del origen de datos. El servidor de informes utiliza el modelo de objetos de informe de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al procesar y representar los informes, pero no reemplaza las construcciones de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] por elementos nuevos del lenguaje de definición de informes (RDL). Para obtener más información sobre cómo se ejecutan los informes existentes en un servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vea [Actualizar informes](upgrade-reports.md).  
   
 ##  <a name="bkmk_remove_unused"></a> Quitar los programas y archivos que no se usan  
  Cuando haya migrado correctamente el servidor de informes a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es recomendable seguir estos pasos para quitar los programas y archivos que ya no sean necesarios.  
@@ -268,8 +259,8 @@ ms.locfileid: "48082895"
 2.  Quite IIS si ya no lo necesita en este equipo.  
   
 ## <a name="see-also"></a>Vea también  
- [Migrar una instalación de Reporting Services &#40;el modo de SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [Base de datos del servidor de informes &#40;modo nativo de SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Migrar una instalación de Reporting Services &#40;modo de SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Actualizar y migrar Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Compatibilidad con versiones anteriores de Reporting Services](../reporting-services-backward-compatibility.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

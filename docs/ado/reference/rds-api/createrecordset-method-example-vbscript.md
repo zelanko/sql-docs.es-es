@@ -15,16 +15,16 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c94f73468a9ba9e09142da7a73ad3763488428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30fcb14c39385c6e7e39ec8ac1556118a4d09f73
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602009"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605955"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>Ejemplo del método CreateRecordset (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Este ejemplo de código se crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en el servidor. Tiene dos columnas con cuatro filas. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **CreateRecordsetVBS.asp**.  
   

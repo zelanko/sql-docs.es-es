@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040423"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602605"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ FROM <existing model>
  *modelo existente*  
  Nombre del modelo existente que se va a copiar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si el modelo existente está entrenado, el nuevo modelo se procesa automáticamente cuando se ejecuta la instrucción. De lo contrario, el nuevo modelo permanece sin procesar.  
   
  El **SELECT INTO** instrucción solo funciona si la estructura del modelo existente es compatible con el algoritmo del nuevo modelo. Por lo tanto, esta instrucción es muy útil para crear y probar rápidamente modelos basados en el mismo algoritmo. Si cambia el tipo de algoritmo, el nuevo algoritmo debe admitir el tipo de datos de cada columna del modelo existente, o se podría producir un error al procesar el modelo.  
@@ -54,7 +54,7 @@ FROM <existing model>
  El **WITH DRILLTHROUGH** cláusula permite la obtención de detalles en el nuevo modelo de minería de datos. La obtención de detalles solo se puede habilitar al crear el modelo.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Ejemplo 1: modificar los parámetros del modelo  
- En el ejemplo siguiente se crea un nuevo modelo de minería de datos basado en un modelo de minería de datos existente, `TM_Clustering`, que se crean en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). En el nuevo modelo, el parámetro CLUSTER_COUNT se modifica de modo que exista un máximo de cinco clústeres en dicho modelo. En cambio, el modelo existente usa el valor predeterminado, que es 10.  
+ En el ejemplo siguiente se crea un nuevo modelo de minería de datos basado en un modelo de minería de datos existente, `TM_Clustering`, que se crean en el [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). En el nuevo modelo, el parámetro CLUSTER_COUNT se modifica de modo que exista un máximo de cinco clústeres en dicho modelo. En cambio, el modelo existente usa el valor predeterminado, que es 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1054596c74c00169f9a043acc3fdf47269c5b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31434e08443bc533c7e2ae14ed70d6962aea04cf
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825213"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558613"
 ---
 # <a name="datafactory-customization"></a>Personalización de DataFactory
 Servicio de datos remoto (RDS) proporciona una manera de realizar fácilmente el acceso a datos en un sistema cliente/servidor de tres niveles. Un control de datos de cliente especifica los parámetros de cadena de conexión y comando para realizar una consulta en un origen de datos remoto o la cadena de conexión y [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) parámetros para realizar una actualización de objeto.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Los parámetros se pasan a un programa de servidor, que realiza la operación de acceso a datos en el origen de datos remoto. RDS proporciona un programa de servidor predeterminado denominado el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto. El **RDSServer.DataFactory** objeto devuelve un valor cualquiera **Recordset** objeto producido por una consulta al cliente.  
   

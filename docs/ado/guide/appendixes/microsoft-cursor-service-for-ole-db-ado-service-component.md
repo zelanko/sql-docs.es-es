@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c859de289a9f93a23702c63bd50269bb0881b34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714993"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350509"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Servicio de cursores de Microsoft para información general OLE DB
 El servicio de cursores de Microsoft para OLE DB complementa las funciones de compatibilidad de cursor de proveedores de datos. Como resultado, el usuario percibe una funcionalidad relativamente uniforme en todos los proveedores de datos.
@@ -31,7 +31,7 @@ El servicio de cursores de Microsoft para OLE DB complementa las funciones de co
 ## <a name="keyword"></a>Palabra clave
  Para llamar a este componente de servicio, establezca el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o [conexión](../../../ado/reference/ado-api/connection-object-ado.md) del objeto [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient**.
 
-```
+```vb
 connection.CursorLocation=adUseClient
 recordset.CursorLocation=adUseClient
 ```
@@ -41,7 +41,7 @@ recordset.CursorLocation=adUseClient
 
  Los cambios a algunas propiedades dinámicas no son visibles para el origen de datos subyacente después de que se ha invocado el servicio de cursores. Por ejemplo, si se establece la *tiempo de espera de comando* propiedad en un **Recordset** no será visible para el proveedor de datos subyacente.
 
-```
+```vb
 
 Recordset1.CursorLocation = adUseClient     'invokes cursor service
 Recordset1.Open "authors", _
@@ -75,7 +75,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 
  También puede establecer o recuperar una propiedad dinámica especificando su nombre como índice de la **propiedades** colección. Por ejemplo, obtener e imprimir el valor actual de la [optimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propiedad dinámica, a continuación, establezca un nuevo valor, como se indica a continuación:
 
-```
+```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```

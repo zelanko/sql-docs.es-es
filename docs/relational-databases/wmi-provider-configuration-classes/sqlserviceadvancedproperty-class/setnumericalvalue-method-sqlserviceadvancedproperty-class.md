@@ -18,12 +18,12 @@ ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9c069400f5be5e24e2e34055507c7a67ed956b95
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 7db43df883cb8b4158bccc40ec559ea820e4abb7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217663"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668054"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Método SetNumericalValue (clase SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,6 +53,6 @@ object.SetNumericalValue(NumValue)
  El tipo de valor de propiedad debe ser numérico para poder establecer la propiedad en un valor numérico.  
   
 ## <a name="see-also"></a>Vea también  
- [Iniciar y detener servicios](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

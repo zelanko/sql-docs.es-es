@@ -1,5 +1,5 @@
 ---
-title: Las operaciones de registro en Analysis Services | Documentos de Microsoft
+title: Las operaciones de registro en Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018612"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701643"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "34018612"
   
 -   [Sugerencias y prácticas recomendadas](#bkmk_tips)  
   
-> [!NOTE]  
->  Si busca información acerca de los registros, también podría interesarle el seguimiento de las operaciones, que muestra el procesamiento y las rutas de ejecución de consultas. En los vínculos que figuran en esta página encontrará objetos de seguimiento ad hoc y continuado (como el acceso al cubo de auditoría), así como recomendaciones sobre el mejor modo de usar la caja negra, SQL Server Profiler y xEvents: [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Ubicación y tipos de registros  
  Analysis Services proporciona los registros que se describen a continuación.  
@@ -99,7 +97,7 @@ ms.locfileid: "34018612"
 ##  <a name="bkmk_querylog"></a> Registros de consultas  
  Quizás "registro de consultas" sea un nombre poco apropiado, ya que no registra la actividad de consulta MDX o DAX de los usuarios. En su lugar, recopila datos sobre las consultas generadas por Analysis Services, que posteriormente se usan como entrada de datos en el Asistente para optimización basada en el uso. Los datos recopilados en el registro de consultas no se usan para realizar análisis directos. En concreto, los conjuntos de datos se describen en las matrices de bits, con un cero o uno que indican las partes del conjunto de datos que se incluyen en la consulta. De nuevo, estos datos sirven para el asistente.  
   
- Para realizar las tareas de supervisión y solución de problemas de consultas, muchos desarrolladores y administradores usan una herramienta de la comunidad, **ASTrace**. También puede utilizar SQL Server Profiler, xEvents o un seguimiento de Analysis Services. Consulte [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md) para obtener vínculos relacionados con el seguimiento.  
+ Para realizar las tareas de supervisión y solución de problemas de consultas, muchos desarrolladores y administradores usan una herramienta de la comunidad, **ASTrace**. También puede utilizar SQL Server Profiler, xEvents o un seguimiento de Analysis Services.
   
  ¿Cuándo se debe utilizar el registro de consultas? Se recomienda habilitar el registro de consultas como parte de un ejercicio de ajuste de rendimiento de la consulta que incluye el Asistente para optimización basada en el uso. El registro de consultas no existe hasta que se habilite la característica, cree las estructuras de datos para admitirla y establece las propiedades que usa Analysis Services para localizar y rellenar el registro.  
   
@@ -117,7 +115,7 @@ ms.locfileid: "34018612"
   
  La configuración del registro de consultas se aplica a todo el servidor. La configuración que especifique se usará en todas las bases de datos que se ejecuten en este servidor.  
   
- ![Consultar la configuración del registro en Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "configuración de registro de consultas en Management Studio")  
+ ![Consultar la configuración del registro en Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "configuración del registro de consultas en Management Studio")  
   
  Una vez especificados los ajustes de configuración, ejecute una consulta MDX varias veces. Si el muestreo está establecido en 10, ejecute la consulta 11 veces. Compruebe que se crea la tabla. En Management Studio, conecte el motor de base de datos relacional, abra la carpeta de la base de datos, abra la carpeta **Tablas** y compruebe que hay un archivo **OlapQueryLog** . Si no ve la tabla inmediatamente, actualice la carpeta para recoger cualquier cambio que haya en su contenido.  
   
@@ -152,7 +150,7 @@ ms.locfileid: "34018612"
   
  El ajuste de configuración que se modificará con más probabilidad es **CreateAndSendCrashReports** , que se usa para determinar si se generará un archivo de volcado de memoria.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|Desactiva el archivo de volcado de memoria. Se omiten todas las demás opciones de la sección Exception.|  
 |1|Habilita, pero no envía, el archivo de volcado de memoria (valor predeterminado).|  
@@ -181,7 +179,7 @@ ms.locfileid: "34018612"
   
 ## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Introducción a la supervisión de Analysis Services con SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Propiedades del servidor de Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
+ [Introducción a Supervisar Analysis Services con SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

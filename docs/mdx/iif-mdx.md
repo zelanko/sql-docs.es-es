@@ -1,5 +1,5 @@
 ---
-title: IIf (MDX) | Documentos de Microsoft
+title: IIf (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740684"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700783"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -29,25 +29,25 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- La función IIf toma tres argumentos: iif (\<condición >, \<, a continuación, crear una bifurcación >, \<rama #else >).  
+ La función IIf toma tres argumentos: iif (\<condición >, \<rama, a continuación, >, \<else branch >).  
   
  *Filter*  
  Una condición que se evalúa como **true** (1) o **false** (0). Debe ser expresión lógica MDX (Expresiones multidimensionales) válida.  
   
- *Sugerencia de expression1 [diligente | Strict | Diferida]]*  
- Utilizar cuando la expresión lógica se evalúa como **true**. Expression1 debe ser una expresión MDX (Expresiones multidimensionales) válida.  
+ *Sugerencia expression1 [diligente | Strict | Diferida]]*  
+ Usa cuando la expresión lógica se evalúa como **true**. Expression1 debe ser una expresión MDX (Expresiones multidimensionales) válida.  
   
- *Sugerencia de expression2 [diligente | Strict | Diferida]]*  
- Utilizar cuando la expresión lógica se evalúa como **false**. Expression2 debe ser una expresión MDX (Expresiones multidimensionales) válida.  
+ *Sugerencia expression2 [diligente | Strict | Diferida]]*  
+ Usa cuando la expresión lógica se evalúa como **false**. Expression2 debe ser una expresión MDX (Expresiones multidimensionales) válida.  
   
-## <a name="remarks"></a>Notas  
- La condición especificada por la expresión lógica se evalúa como **false** cuando el valor de esta expresión es cero. Cualquier otro valor se evalúa como **true**.  
+## <a name="remarks"></a>Comentarios  
+ La condición especificada por la expresión lógica se evalúa como **false** cuando el valor de esta expresión es cero. Se evalúa como cualquier otro valor **true**.  
   
  Cuando la condición es **true**, **IIf** función devuelve la primera expresión. De lo contrario, la función devuelve la segunda expresión.  
   
  Las expresiones especificadas pueden devolver valores u objetos MDX. Además, no es necesario que coincida el tipo de las expresiones especificadas.  
   
- El **IIf** función no se recomienda para crear un conjunto de miembros basado en criterios de búsqueda. En su lugar, use la [filtro](../mdx/filter-mdx.md) función para evaluar cada miembro de un conjunto especificado con una expresión lógica y devolver un subconjunto de miembros.  
+ El **IIf** función no se recomienda para la creación de un conjunto de miembros en función de criterios de búsqueda. En su lugar, use el [filtro](../mdx/filter-mdx.md) función para evaluar cada miembro de un conjunto especificado con una expresión lógica y devolver un subconjunto de miembros.  
   
 > [!NOTE]  
 >  Si una de las expresiones se evalúa en NULL, el conjunto de resultados será NULL cuando se cumpla esa condición.  
@@ -64,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER y STRICT son mutuamente exclusivos en la sugerencia; se pueden utilizar en el mismo IIF(,,) a través de expresiones diferentes.  
   
- Para obtener más información, consulte [sugerencias de consulta de función IIF en SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540) y [planes de ejecución y sugerencias de Plan para la función IIF de MDX y la instrucción CASE](http://go.microsoft.com/fwlink/?LinkId=269565).  
+ Para obtener más información, consulte [sugerencias de consulta de función IIF en SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) y [planes de ejecución y sugerencias de Plan para la función IIF de MDX y la instrucción CASE](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Ejemplos  
- La consulta siguiente muestra un uso simple de **IIF** dentro de una medida calculada para devolver uno de dos valores de cadena diferentes cuando la medida Internet Sales Amount es superior o inferior a 10.000 dólares:  
+ La consulta siguiente muestra un uso simple de **IIF** dentro de una medida calculada para devolver uno de dos valores de cadena distintos cuando la medida Internet Sales Amount es superior o inferior a 10.000 dólares:  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   

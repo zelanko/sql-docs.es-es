@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142095"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703683"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar los datos de uso de PowerShell (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ Hay muchas maneras diferentes que puede instalar paquetes en SQL Server. Por eje
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Este ejemplo utiliza la función grep de R para buscar el vector de rutas de acceso disponibles y buscar la ruta de acceso que incluye "Archivos de programa". Para obtener más información, consulte [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Este ejemplo utiliza la función grep de R para buscar el vector de rutas de acceso disponibles y buscar la ruta de acceso que incluye "Archivos de programa". Para obtener más información, consulte [ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep).
 
     - Si cree que ya están instalados los paquetes, compruebe la lista de paquetes instalados mediante la ejecución de `installed.packages()`.
 
@@ -173,7 +173,7 @@ Si tiene algún problema con el script de PowerShell, puede ejecutar todos o cua
 
 Para descargar manualmente los datos, haga clic con el botón derecho en el siguiente vínculo y seleccione **Guardar destino como**.
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 Tome nota de la ruta de acceso al archivo de datos descargados y el nombre de archivo donde se guardaron los datos. Necesita la ruta de acceso completa para cargar los datos a la tabla mediante **bcp**.
 
@@ -265,7 +265,7 @@ Al descargar los archivos del repositorio de GitHub, obtendrá lo siguiente:
 
 Los datos son una muestra representativa del conjunto de datos de taxis de Nueva York, que contiene los registros de más de 173 millones de carreras individuales en 2013, incluidas las tarifas y las propinas pagadas por cada carrera. Para que sea más fácil trabajar con los datos, el equipo de ciencia de datos de Microsoft redujo el tamaño del muestreo para obtener solo un 1 % de los datos.  Estos datos se han compartido en un contenedor de almacenamiento de blobs público en Azure, en formato .CSV. Los datos de origen están un archivo sin comprimir, justo debajo de 350 MB.
 
-+ Conjunto de datos público: [taxis de Nueva York y limusinas Comisión](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Conjunto de datos público: [taxis de Nueva York y limusinas Comisión](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Creación de modelos de aprendizaje automático de Azure en el conjunto de datos de taxis de Nueva York](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 

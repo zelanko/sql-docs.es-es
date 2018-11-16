@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3a190475a6feb48c3f8a4027e2ec1059d1d5d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623503"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600115"
 ---
 # <a name="namespaces"></a>Espacios de nombres
 El formato de persistencia de XML en ADO utiliza los siguientes espacios de nombres de cuatro.  
@@ -33,7 +33,7 @@ El formato de persistencia de XML en ADO utiliza los siguientes espacios de nomb
 |rs|Hace referencia al espacio de nombres que contienen elementos y atributos específicos de las propiedades del conjunto de registros ADO y atributos.|  
 |z|Hace referencia al esquema del conjunto de filas actual.|  
   
- Un cliente no debe agregar sus propias etiquetas a estos espacios de nombres, tal como se define mediante la especificación. Por ejemplo, un cliente no debe definir un espacio de nombres como "urn: schemas-microsoft-Rowset" y, a continuación, escribir algo como "rs: MiEtiqueta". Para obtener más información acerca de los espacios de nombres, vea el [W3C recomendación de Namespaces en XML](http://www.w3.org/TR/REC-xml-names/).  
+ Un cliente no debe agregar sus propias etiquetas a estos espacios de nombres, tal como se define mediante la especificación. Por ejemplo, un cliente no debe definir un espacio de nombres como "urn: schemas-microsoft-Rowset" y, a continuación, escribir algo como "rs: MiEtiqueta". Para obtener más información acerca de los espacios de nombres, vea el [W3C recomendación de Namespaces en XML](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  El identificador de la etiqueta de esquema debe ser "RowsetSchema" y el espacio de nombres utilizado para hacer referencia al esquema del conjunto de filas actual debe apuntar a "#RowsetSchema."  

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +13,19 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ac979fa1c9baab8de361709606af1c337bf848d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612460"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558622"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluciones de acceso a datos remotos
 ## <a name="the-issue"></a>El problema  
  ADO permite que la aplicación obtener acceso a directamente y modificar orígenes de datos (también conocidos como un sistema de dos niveles). Por ejemplo, si la conexión es el origen de datos que contiene los datos, es una conexión directa en un sistema de dos niveles.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Sin embargo, desea tener acceso a orígenes de datos indirectamente a través de un intermediario, como Microsoft® Internet Information Services (IIS). Esta disposición se denomina a veces un sistema de tres niveles. IIS es un sistema cliente/servidor que proporciona una manera eficaz para una aplicación local o de cliente invocar un programa de servidor, o remoto a través de Internet o una intranet. El programa de servidor obtiene acceso al origen de datos y, opcionalmente, procesa los datos obtenidos.  
   

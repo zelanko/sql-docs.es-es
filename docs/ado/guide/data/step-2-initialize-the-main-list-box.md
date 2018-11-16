@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735527"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600015"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Paso 2: Inicializar el cuadro de lista principal
 Para declarar objetos globales de registro y el conjunto de registros, inserte el código siguiente en el (General) (declaraciones) para el Form1:  
@@ -34,19 +34,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=http://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- Este código crea instancias de los objetos globales de registro y el conjunto de registros. El objeto de registro, `grec`, se abre con una dirección URL especificada como ActiveConnection. Si no existe la dirección URL, se abre; Si no existe, se crea. Tenga en cuenta que debe reemplazar "http://servername/foldername/" con una dirección URL válida de su entorno.  
+ Este código crea instancias de los objetos globales de registro y el conjunto de registros. El objeto de registro, `grec`, se abre con una dirección URL especificada como ActiveConnection. Si no existe la dirección URL, se abre; Si no existe, se crea. Tenga en cuenta que debe reemplazar "https://servername/foldername/" con una dirección URL válida de su entorno.  
   
  El objeto Recordset, `grs`, se abre en los elementos secundarios del registro, `grec`. A continuación, `lstMain` se rellena con los nombres de los recursos publicados en la dirección URL.  
   

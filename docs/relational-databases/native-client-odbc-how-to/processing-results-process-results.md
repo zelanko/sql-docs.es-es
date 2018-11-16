@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7a3400b8422232bae1ad8b137c3fedcee697690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cedb398c2cecaf65ba82bb834823edd6c237f50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707173"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670784"
 ---
 # <a name="processing-results---process-results"></a>Procesar resultados: procesar resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Procesar resultados en una aplicación ODBC implica primero determinar las carac
   
 3.  Por cada fila del conjunto de resultados:  
   
-    -   Llame a [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) para obtener la siguiente fila.  
+    -   Llame a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) para obtener la siguiente fila.  
   
     -   Si se utilizan columnas enlazadas, utilice los datos que están ahora disponibles en los búferes de columna enlazada.  
   
@@ -43,15 +43,15 @@ Procesar resultados en una aplicación ODBC implica primero determinar las carac
   
     -   Llame a **SQLGetData** varias veces para obtener datos de una columna de texto o de imagen.  
   
-4.  Cuando [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) señale el fin del conjunto de resultados devolviendo SQL_NO_DATA, llame a [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) para determinar si está disponible otro conjunto de resultados.  
+4.  Cuando [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) señale el fin del conjunto de resultados devolviendo SQL_NO_DATA, llame a [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) para determinar si está disponible otro conjunto de resultados.  
   
     -   Si devuelve SQL_SUCCESS, está disponible otro conjunto de resultados.  
   
     -   Si devuelve SQL_NO_DATA, no hay ningún otro conjunto de resultados disponible.  
   
-    -   Si devuelve SQL_SUCCESS_WITH_INFO o SQL_ERROR, llame a [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) para determinar si está disponible la salida de una instrucción PRINT o RAISERROR.  
+    -   Si devuelve SQL_SUCCESS_WITH_INFO o SQL_ERROR, llame a [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para determinar si está disponible la salida de una instrucción PRINT o RAISERROR.  
   
-         Si se utilizan parámetros de instrucción enlazados como parámetros de salida o como valor devuelto de un procedimiento almacenado, utilice los datos ahora disponibles en los búferes de parámetros enlazados. Asimismo, si se usan parámetros enlazados, cada llamada a [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) o [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) ejecutará la instrucción SQL *S* veces, donde *S* es el número de elementos en la matriz de parámetros enlazados. Esto significa que habrá *S* conjuntos de resultados para procesar, donde cada conjunto de resultados comprende todos los conjuntos de resultados, parámetros de salida y códigos de retorno devueltos normalmente por una ejecución única de la instrucción SQL.  
+         Si se utilizan parámetros de instrucción enlazados como parámetros de salida o como valor devuelto de un procedimiento almacenado, utilice los datos ahora disponibles en los búferes de parámetros enlazados. Asimismo, si se usan parámetros enlazados, cada llamada a [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) o [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) ejecutará la instrucción SQL *S* veces, donde *S* es el número de elementos en la matriz de parámetros enlazados. Esto significa que habrá *S* conjuntos de resultados para procesar, donde cada conjunto de resultados comprende todos los conjuntos de resultados, parámetros de salida y códigos de retorno devueltos normalmente por una ejecución única de la instrucción SQL.  
   
     > [!NOTE]  
     >  Cuando un conjunto de resultados contiene filas del cálculo, cada fila del cálculo está disponible como un conjunto de resultados independiente. Estos conjuntos de resultados de cálculo se intercalan entre las filas normales e interrumpen las filas normales en varios conjuntos de resultados.  
@@ -61,7 +61,7 @@ Procesar resultados en una aplicación ODBC implica primero determinar las carac
 6.  Si está disponible otro conjunto de resultados, vaya al paso 1.  
   
 > [!NOTE]  
->  Para cancelar el procesamiento de un conjunto de resultados antes de que [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) devuelva SQL_NO_DATA, llame a [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
+>  Para cancelar el procesamiento de un conjunto de resultados antes de que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) devuelva SQL_NO_DATA, llame a [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Recuperar información del conjunto de resultados &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   

@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 683df9d5116417ebf31eca7925db908dea9a3070
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73a6ae0a7209eaef4438aee865f8e887af4ed176
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831553"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656684"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLProcedureColumns** devuelve una fila que notifica los atributos de valor devuelto de todos los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimientos almacenados.  
+  **SQLProcedureColumns** devuelve una fila que notifica los atributos del valor devuelto de todos los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **SQLProcedureColumns** devuelve SQL_SUCCESS tanto si existen valores o no de los parámetros *CatalogName*, *SchemaName*, *ColumnName*o *ProcName* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
   
  **SQLProcedureColumns** se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar **SQLProcedureColumns** en un cursor actualizable (dinámico o controlado por conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
   
- En la tabla siguiente se enumera las columnas devueltas por el conjunto de resultados y cómo se han ampliado para controlar la **udt** y **xml** los tipos de datos a través de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client:  
+ En la tabla siguiente se muestran las columnas devueltas por el conjunto de resultados y cómo se han extendido para administrar los tipos de datos **xml** y **udt** a través del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
 |Nombre de columna|Descripción|  
 |-----------------|-----------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "47831553"
  Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns admite las características mejoradas de fecha y hora  
- Para los valores devueltos para los tipos de fecha y hora, vea [metadatos de catálogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
+ Para obtener los valores devueltos para los tipos de fecha y hora, vea [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
  Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47831553"
  **SQLProcedureColumns** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLProcedureColumns](http://go.microsoft.com/fwlink/?LinkId=59363)   
+ [Función SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

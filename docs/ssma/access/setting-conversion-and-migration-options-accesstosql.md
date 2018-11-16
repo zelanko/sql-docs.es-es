@@ -17,12 +17,12 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f6a49e494c856395364bfbcb38a3d59b19302b78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795533"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677294"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Conversión de la configuración y opciones de migración (AccessToSQL)
 Para cada proyecto SSMA, puede establecer las opciones de nivel de proyecto. Estas opciones especifican cómo se convierten los objetos, cómo migrar los datos y cómo se asignan los tipos de datos de origen a tipos de datos de destino. Antes de convertir los objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure o migrar los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -32,15 +32,15 @@ SSMA tiene cuatro conjuntos de opciones de configuración y los cuatro modos par
   
 La configuración se describe en la sección "Referencia de la interfaz de usuario" de esta documentación. Para obtener más información sobre la configuración y cómo se aplica la configuración en cada modo, consulte los temas siguientes:  
   
--   [Configuración del proyecto (conversión)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [Configuración del proyecto (conversión)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [Configuración del proyecto (migración)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [Configuración del proyecto (migración)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
--   [Configuración del proyecto (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Configuración del proyecto (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Configuración del proyecto (asignación de tipo)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [Configuración del proyecto (asignación de tipo)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
   
--   [Configuración del proyecto (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [Configuración del proyecto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## <a name="setting-project-options"></a>Configuración de opciones de proyecto  
 En SSMA, puede configurar la configuración predeterminada para todos los proyectos. Estos valores se guardan en el archivo de configuración de SSMA y se aplican a cualquier nuevo proyecto que cree.  

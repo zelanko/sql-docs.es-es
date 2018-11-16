@@ -10,12 +10,12 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 74ece76fcb02fe77825d0f08e76b262df195d7b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768915"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670524"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Conectar con DB2 (DB2ToSQL)
 Use la **conectar con DB2** cuadro de diálogo para conectarse a la base de datos de DB2 que se va a migrar.  
@@ -70,7 +70,7 @@ Si usa el modo de cadena de conexión, escriba la cadena de conexión completa p
   
 Las cadenas de conexión constan de pares de nombre y valor de parámetro.  
   
--   Para información de la cadena de conexión de OLE DB, consulte [proveedor Microsoft OLE DB para DB2](http://go.microsoft.com/fwlink/?LinkId=85640) artículo en MSDN Library.  
+-   Para información de la cadena de conexión de OLE DB, consulte [proveedor Microsoft OLE DB para DB2](https://go.microsoft.com/fwlink/?LinkId=85640) artículo en MSDN Library.  
   
 SSMA cadenas de conexión, siempre que incluya el parámetro de proveedor. Además, asegúrese de incluir el parámetro de puerto cuando se conecta a DB2.  
   

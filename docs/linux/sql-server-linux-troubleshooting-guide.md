@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677924"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solución de problemas de SQL Server en Linux
 
@@ -118,9 +118,9 @@ Busque los volcados de memoria en el directorio de registro en Linux. Compruebe 
 Para los volcados del núcleo 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-Para los volcados de memoria SQL 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ Hay muchos factores que afectan al rendimiento, incluidos el diseño de la base 
 
 2. ERROR: El nombre de host debe tener 15 caracteres o menos.
 
-   Se trata de un problema conocido que ocurre siempre que el nombre de la máquina que está intentando instalar el paquete de Debian en SQL Server tiene más de 15 caracteres. Actualmente no hay ningún soluciones alternativas que no sea de cambiar el nombre de la máquina. Es una manera de lograr esto, edite el archivo de nombre de host y reiniciar el equipo. La siguiente [Guía del sitio Web](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) Esto se explica en detalle.
+   Se trata de un problema conocido que ocurre siempre que el nombre de la máquina que está intentando instalar el paquete de Debian en SQL Server tiene más de 15 caracteres. Actualmente no hay ningún soluciones alternativas que no sea de cambiar el nombre de la máquina. Es una manera de lograr esto, edite el archivo de nombre de host y reiniciar el equipo. La siguiente [Guía del sitio Web](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) Esto se explica en detalle.
 
 3. Restablecer la contraseña de administración (SA) del sistema.
 
@@ -239,7 +239,7 @@ Hay muchos factores que afectan al rendimiento, incluidos el diseño de la base 
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Recursos: [caracteres especiales](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   Recursos: [caracteres especiales](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

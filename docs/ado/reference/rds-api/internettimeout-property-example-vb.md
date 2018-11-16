@@ -15,16 +15,16 @@ ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57c0c8e6a7a6bcab7ea5d096ee27ae510065daa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe7074c592c837d292257bcaa18f3eb0638a6515
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634803"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606725"
 ---
 # <a name="internettimeout-property-example-vb"></a>Ejemplo de la propiedad InternetTimeout (VB)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Este ejemplo se muestra el [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) propiedad, que existe en el [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) y [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objetos. Este ejemplo se usa el **DataControl** de objetos y el tiempo de espera se establece en 20 segundos.  
   
@@ -38,7 +38,7 @@ Public Sub Main()
     Dim rst As ADODB.Recordset  
     Set dc = New RDS.DataControl  
   
-    dc.Server = "http://MyServer"  
+    dc.Server = "https://MyServer"  
     dc.ExecuteOptions = 1  
     dc.FetchOptions = 1  
     dc.Connect = "Provider='sqloledb';Data Source='MySqlServer';" & _  

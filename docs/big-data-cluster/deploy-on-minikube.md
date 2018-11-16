@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221579"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702353"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configuración de Minikube para las implementaciones de clústeres de macrodatos de SQL Server 2019
 
@@ -39,7 +39,7 @@ En este artículo se describe cómo configurar **minikube** en una única máqui
 
 1. Si no dispone de un hipervisor instalado, instalar una ahora.
    - Para OS X, instalar [xhyve controlador](https://git.k8s.io/minikube/docs/drivers.md), [VirtualBox](https://www.virtualbox.org/wiki/Downloads), o [VMware Fusion](https://www.vmware.com/products/fusion).
-   - Para Linux, instale [VirtualBox](https://www.virtualbox.org/wiki/Downloads) o [KVM](http://www.linux-kvm.org/).
+   - Para Linux, instale [VirtualBox](https://www.virtualbox.org/wiki/Downloads) o [KVM](https://www.linux-kvm.org/).
    - Para Windows, instale [VirtualBox](https://www.virtualbox.org/wiki/Downloads) o [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). Si no tiene un conmutador externo configurado en hyper-v, a continuación, cree uno que tenga acceso a la red externa.  Vea cómo [crear conmutador externo de hyper-v para minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
 
 ## <a name="install-minikube"></a>Instalar Minikube

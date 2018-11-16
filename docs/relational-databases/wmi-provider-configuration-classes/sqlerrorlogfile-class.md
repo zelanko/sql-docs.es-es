@@ -11,12 +11,12 @@ ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 338b4b749d541535d5ecb6c4f0719dbb5f07984b
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2794e4f59b6c898b1fd956c0f9390ba9bbbd439e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215634"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668024"
 ---
 # <a name="sqlerrorlogfile-class"></a>Clase SqlErrorLogFile
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Next
   
      **\<Unidad >: \Program Files\Microsoft SQL Server\MSSQL11** **.\< NombreDeInstancia > \MSSQL\Log**  
   
- Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota comenzando con Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota comenzando con Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Vea también  
  [Clase SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   

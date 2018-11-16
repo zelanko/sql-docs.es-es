@@ -13,23 +13,23 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aacffa7cd65716969eae08488314eed08d4691e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b69ae2b59b3f82025404dd575f0602ea8c02a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821213"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668224"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migración de datos de Oracle a SQL Server (OracleToSQL)
 Después de haber sincronizado correctamente los objetos convertidos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede migrar datos desde Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
-> Si el motor que se va a usar motor de migración de datos de lado servidor, a continuación, antes de poder migrar datos, debe instalar SSMA para el paquete de extensiones de Oracle y los proveedores de Oracle en el equipo que ejecuta SSMA. También debe ejecutar el servicio Agente SQL Server. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de servidor (OracleToSQL)](http://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
+> Si el motor que se va a usar motor de migración de datos de lado servidor, a continuación, antes de poder migrar datos, debe instalar SSMA para el paquete de extensiones de Oracle y los proveedores de Oracle en el equipo que ejecuta SSMA. También debe ejecutar el servicio Agente SQL Server. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de servidor (OracleToSQL)](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
   
 ## <a name="setting-migration-options"></a>Establecer las opciones de migración  
 Antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo.  
   
--   Mediante este cuadro de diálogo puede establecer opciones como el tamaño del lote de migración, bloqueo de tablas, comprobación de restricciones, tratamiento de los valores null y control de valor de identidad. Para obtener más información acerca de la configuración de proyecto de migración, consulte [configuración del proyecto (migración) (OracleToSQL)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60).  
+-   Mediante este cuadro de diálogo puede establecer opciones como el tamaño del lote de migración, bloqueo de tablas, comprobación de restricciones, tratamiento de los valores null y control de valor de identidad. Para obtener más información acerca de la configuración de proyecto de migración, consulte [configuración del proyecto (migración) (OracleToSQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60).  
   
 -   El **migración motor** en el **configuración del proyecto** permite al usuario realizar el proceso de migración con dos tipos de motores de migración de datos de cuadro de diálogo:  
   
@@ -94,9 +94,9 @@ Para ver los mensajes de la migración, asegúrese de que está visible el panel
   
 5.  En el **conectar con Oracle** cuadro de diálogo, escriba las credenciales de conexión y, a continuación, haga clic en **Connect**. Para obtener más información sobre cómo conectarse a Oracle, vea [conectarse a Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    Para conectarse a la base de datos de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], escriba las credenciales de conexión en el **conectar con SQL Server** cuadro de diálogo y haga clic en **Connect**. Para obtener más información sobre cómo conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [conectar con SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    Para conectarse a la base de datos de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], escriba las credenciales de conexión en el **conectar con SQL Server** cuadro de diálogo y haga clic en **Connect**. Para obtener más información sobre cómo conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [conectar con SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    Los mensajes aparecerán en la **salida** panel. Una vez completada la migración, el **informe de migración de datos** aparece. Si no se ha migrado los datos, haga clic en la fila que contiene los errores y, a continuación, haga clic en **detalles**. Cuando haya terminado con el informe, haga clic en **cerrar**. Para obtener más información sobre el informe de migración de datos, vea [informe de migración de datos (SSMA comunes)](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    Los mensajes aparecerán en la **salida** panel. Una vez completada la migración, el **informe de migración de datos** aparece. Si no se ha migrado los datos, haga clic en la fila que contiene los errores y, a continuación, haga clic en **detalles**. Cuando haya terminado con el informe, haga clic en **cerrar**. Para obtener más información sobre el informe de migración de datos, vea [informe de migración de datos (SSMA comunes)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > Cuando se utiliza SQL Express edition como la base de datos de destino, se permite la migración de datos de lado a solo cliente y no se admite la migración de datos del lado servidor.  

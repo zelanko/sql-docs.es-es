@@ -16,24 +16,24 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749233"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603672"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica el tipo de esquema **Recordset** que la [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera del método.  
   
 ## <a name="remarks"></a>Comentarios  
- Información adicional acerca de la función y las columnas se devuelve para cada constante ADO puede encontrarse en los temas de [Apéndice B: Schema Rowsets](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de referencia de la base de datos del programador de OLE. El nombre de cada tema aparece entre paréntesis en la sección de descripción de la tabla siguiente.  
+ Información adicional acerca de la función y las columnas se devuelve para cada constante ADO puede encontrarse en los temas de [Apéndice B: Schema Rowsets](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de referencia de la base de datos del programador de OLE. El nombre de cada tema aparece entre paréntesis en la sección de descripción de la tabla siguiente.  
   
- Información adicional acerca de la función y las columnas se devuelve para cada constante ADO MD se puede encontrar en los temas de [OLE DB para los objetos OLAP y conjuntos de filas de esquema](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) en OLE DB para la documentación de procesamiento analítico en línea (OLAP). El nombre de cada tema aparece entre paréntesis en la columna de descripción de la tabla siguiente.  
+ Información adicional acerca de la función y las columnas se devuelve para cada constante ADO MD se puede encontrar en los temas de [OLE DB para los objetos OLAP y conjuntos de filas de esquema](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) en OLE DB para la documentación de procesamiento analítico en línea (OLAP). El nombre de cada tema aparece entre paréntesis en la columna de descripción de la tabla siguiente.  
   
  Puede convertir los tipos de datos de columnas en la documentación de OLE DB a tipos de datos ADO consultando la columna Descripción de la propiedad ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) tema. Por ejemplo, un tipo de datos OLE DB de **DBTYPE_WSTR** es equivalente a un tipo de datos de ADO de **adWChar**.  
   
- ADO genera resultados con el aspecto del esquema para las constantes, **adSchemaDBInfoKeywords** y **adSchemaDBInfoLiterals**. ADO crea un **Recordset**y, a continuación, rellena cada fila con los valores devueltos respectivamente por la **GetKeywords** y **IDBInfo:: GetLiteralInfo** métodos. Se puede encontrar información adicional acerca de estos métodos en el [IDBInfo](http://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) sección de referencia de la base de datos del programador de OLE.  
+ ADO genera resultados con el aspecto del esquema para las constantes, **adSchemaDBInfoKeywords** y **adSchemaDBInfoLiterals**. ADO crea un **Recordset**y, a continuación, rellena cada fila con los valores devueltos respectivamente por la **GetKeywords** y **IDBInfo:: GetLiteralInfo** métodos. Se puede encontrar información adicional acerca de estos métodos en el [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) sección de referencia de la base de datos del programador de OLE.  
   
 |Constante|Valor|Descripción|Columnas de restricción|  
 |--------------|-----------|-----------------|------------------------|  

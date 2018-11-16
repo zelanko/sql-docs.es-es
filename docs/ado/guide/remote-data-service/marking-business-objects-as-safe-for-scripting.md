@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a8c6e3b1d74cb122a94cc643a9eb94d5dbb6c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729daea7fe719f33ec8931424143c3fedc5ac86f
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772724"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558332"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marcado de objetos de negocios como seguros para scripting
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Para ayudar a garantizar un entorno seguro de Internet, debe marcar los objetos de negocios crea una instancia con el [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) del objeto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método como "seguros para scripting." Deberá asegurarse de que se marcan como tal en el área de licencia del registro del sistema antes de que pueden utilizarse en DCOM.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "47772724"
   
  Para marcar el objeto de negocios como seguros para scripting, cree un archivo de texto con la extensión .reg que contenga el texto siguiente. En este ejemplo, \< *MyActiveXGUID*> es el número GUID hexadecimal de un objeto comercial. Los siguientes dos números habilitan la característica de seguridad para el scripting:  
   
-```  
+```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
 Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}]  
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   

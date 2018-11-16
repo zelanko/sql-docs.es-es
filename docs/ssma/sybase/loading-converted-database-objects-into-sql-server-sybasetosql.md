@@ -12,12 +12,12 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f196050cfb3f32ba85f82dcdb6496483be8ff099
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d994b13d063c3a72e6273b95d47e320285cd2d16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750493"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667024"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Carga de objetos de base de datos convertidos en SQL Server (SybaseToSQL)
 Después de convertir los objetos de base de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, se pueden cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Se puede tener SSMA crear los objetos, o puede incluir los objetos y ejecutar las secuencias de comandos usted mismo. Además, SSMA permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o base de datos de SQL Azure.  
@@ -108,7 +108,7 @@ También puede ejecutar scripts desde la línea de comandos mediante la **sqlcmd
 Después de haber cargado los objetos de base de datos convertida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede otorgar y denegar permisos en esos objetos. Es una buena idea hacerlo antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información acerca de cómo ayudar a proteger objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Consideraciones para las bases de datos y base de datos de aplicaciones de seguridad" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [migrar datos de Sybase ASE a SQL Server / SQL Azure(SybaseToSQL)](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
+El siguiente paso del proceso de migración es [migrar datos de Sybase ASE a SQL Server / SQL Azure(SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Sybase ASE a SQL Server: base de datos SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

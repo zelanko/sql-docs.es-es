@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715463"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670824"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clúster RHEL para el grupo de disponibilidad de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este documento explica cómo crear un clúster de grupo de disponibilidad de tres nodos para SQL Server en Red Hat Enterprise Linux. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos, consulte [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El nivel de agrupación en clústeres se basa en Red Hat Enterprise Linux (RHEL) [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construidos sobre [Pacemaker](http://clusterlabs.org/). 
+Este documento explica cómo crear un clúster de grupo de disponibilidad de tres nodos para SQL Server en Red Hat Enterprise Linux. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos, consulte [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El nivel de agrupación en clústeres se basa en Red Hat Enterprise Linux (RHEL) [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construidos sobre [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > El acceso a la documentación completa de Red Hat requiere una suscripción válida. 
 
-Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y administración, visite [documentación de referencia RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server no está integrado estrechamente como con Pacemaker en Linux como sucede con la agrupación en clústeres de conmutación por error de Windows Server. Una instancia de SQL Server no es consciente del clúster. Pacemaker proporciona orquestación de recursos de clúster. Además, el nombre de red virtual es específico para la agrupación en clústeres de conmutación por error de Windows Server: no hay ningún equivalente en Pacemaker. Vistas de administración dinámica de grupo de disponibilidad (DMV) que consultar la información de clúster, devuelven filas vacías en clústeres de Pacemaker. Para crear un agente de escucha para la reconexión después de la conmutación por error transparente, registrar manualmente el nombre de agente de escucha en el DNS con la dirección IP usada para crear el recurso IP virtual. 
@@ -58,7 +58,7 @@ Para configurar alta disponibilidad para RHEL, habilitar la suscripción de alta
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>Habilitación de la suscripción de alta disponibilidad para RHEL
 
-Cada nodo del clúster debe tener una suscripción adecuada para RHEL y la alta disponibilidad agregar en. Revise los requisitos en [cómo instalar paquetes de clúster de alta disponibilidad en Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Siga estos pasos para configurar la suscripción y repositorios:
+Cada nodo del clúster debe tener una suscripción adecuada para RHEL y la alta disponibilidad agregar en. Revise los requisitos en [cómo instalar paquetes de clúster de alta disponibilidad en Red Hat Enterprise Linux](https://access.redhat.com/solutions/45930). Siga estos pasos para configurar la suscripción y repositorios:
 
 1. Registrar el sistema.
 
@@ -88,7 +88,7 @@ Cada nodo del clúster debe tener una suscripción adecuada para RHEL y la alta 
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Para obtener más información, consulte [del clúster de Pacemaker: el código abierto, alta disponibilidad](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Para obtener más información, consulte [del clúster de Pacemaker: el código abierto, alta disponibilidad](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 Después de haber configurado la suscripción, complete los pasos siguientes para configurar a Pacemaker:
 
@@ -110,9 +110,9 @@ Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos
 
 Para obtener información acerca de STONITH y vallado, consulte los artículos siguientes:
 
-* [Clústeres de pacemaker desde cero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [Vallado y STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Complemento de alta disponibilidad de Red Hat con Pacemaker: vallado](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Clústeres de pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Vallado y STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Complemento de alta disponibilidad de Red Hat con Pacemaker: vallado](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Dado que el nivel del nodo Configuración de vallado depende en gran medida en su entorno, deshabilitarla en este tutorial (se puede configurar más adelante). El script siguiente deshabilita la barrera de nivel de nodo:
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-Para obtener información sobre las propiedades de clúster de Pacemaker, vea [propiedades de clústeres de Pacemaker](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+Para obtener información sobre las propiedades de clúster de Pacemaker, vea [propiedades de clústeres de Pacemaker](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Crear un inicio de sesión de SQL Server para Pacemaker
 

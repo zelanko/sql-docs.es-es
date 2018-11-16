@@ -17,12 +17,12 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 237639f949b67d015cd37ccdf50a9e9a758a9210
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091073431b3ff349b8ae107fcb6a37bfab94e46e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702065"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602785"
 ---
 # <a name="open-method-ado-md"></a>Open (método) (ADO MD)
 Recupera los resultados de una consulta multidimensional y devuelve los resultados a un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -36,7 +36,7 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>Parámetros  
  *Source*  
- Opcional. Un **Variant** que se evalúa como una consulta multidimensional válida, por ejemplo, una consulta de expresiones multidimensionales (MDX). El *origen* argumento corresponde a la [origen](../../../ado/reference/ado-md-api/source-property-ado-md.md) propiedad. Para obtener más información acerca de MDX, vea el [OLE DB para OLAP Online Analytical Processing ()](http://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) documentación en el SDK de Microsoft Data Access Components.  
+ Opcional. Un **Variant** que se evalúa como una consulta multidimensional válida, por ejemplo, una consulta de expresiones multidimensionales (MDX). El *origen* argumento corresponde a la [origen](../../../ado/reference/ado-md-api/source-property-ado-md.md) propiedad. Para obtener más información acerca de MDX, vea el [OLE DB para OLAP Online Analytical Processing ()](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) documentación en el SDK de Microsoft Data Access Components.  
   
  *ActiveConnection*  
  Opcional. Un **Variant** que se evalúa como una cadena que especifica un ADO válido [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto nombre de variable o una definición de una conexión. El *ActiveConnection* argumento especifica la conexión en el que se va a abrir el [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto. Si se pasa una definición de conexión para este argumento, ADO abre una nueva conexión mediante los parámetros especificados. El *ActiveConnection* argumento corresponde a la [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propiedad.  

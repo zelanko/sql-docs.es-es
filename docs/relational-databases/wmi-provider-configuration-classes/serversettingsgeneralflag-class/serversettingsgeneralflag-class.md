@@ -18,12 +18,12 @@ ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c579d765b902f44e47126398b37dfdb9562f1826
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70b5aad65da0ad026d0a854cbc7bb46c4b7034a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670644"
 ---
 # <a name="serversettingsgeneralflag-class"></a>Clase ServerSettingsGeneralFlag
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47717141"
 -   Ver y modificar el valor de la marca.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

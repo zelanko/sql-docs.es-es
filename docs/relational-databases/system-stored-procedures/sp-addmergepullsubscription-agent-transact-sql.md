@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681373"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Es el nombre de un trabajo del agente existente. *job_name* es **sysname**, su valor predeterminado es null. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es un miembro de la **sysadmin** rol fijo de servidor, debe especificar *job_login* y *job_password* al especificar *job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- Es la ruta de acceso a la carpeta que los archivos de instantáneas se leerán desde si una instantánea de datos filtrados que se usará. *dynamic_snapshot_location* es **nvarchar (260)**, su valor predeterminado es null. Para más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Es la ruta de acceso a la carpeta que los archivos de instantáneas se leerán desde si una instantánea de datos filtrados que se usará. *dynamic_snapshot_location* es **nvarchar (260)**, su valor predeterminado es null. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  Indica que la sincronización web está habilitada. *use_web_sync* es **bit**, su valor predeterminado es 0. **1** especifica que se puede sincronizar la suscripción de extracción a través de internet mediante HTTP.  
   
  [  **@internet_url =** ] **'***internet_url***'**  
- Es la ubicación de la escucha de replicación (REPLISAPI.DLL) de la sincronización web. *internet_url* es **nvarchar (260)**, su valor predeterminado es null. *internet_url* es una dirección URL completa, en el formato `http://server.domain.com/directory/replisapi.dll`. Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `http://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
+ Es la ubicación de la escucha de replicación (REPLISAPI.DLL) de la sincronización web. *internet_url* es **nvarchar (260)**, su valor predeterminado es null. *internet_url* es una dirección URL completa, en el formato `https://server.domain.com/directory/replisapi.dll`. Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `https://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
   
  [  **@internet_login =** ] **'***internet_login***'**  
  Es el inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica HTTP. *internet_login* es **sysname**, su valor predeterminado es null.  

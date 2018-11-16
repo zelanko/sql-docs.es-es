@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d715fd65da1b89efd02368564d2f82cac278d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5d789812cb8dc3b6c880c4e2234aedbba3cc25bb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168495"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558512"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Crear y administrar roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los roles se definen para un proyecto de modelos mediante el cuadro de diálogo Administrador de roles de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Al implementar un modelo, los administradores de bases de datos pueden administrar los roles mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -65,9 +65,9 @@ ms.locfileid: "48168495"
 9. Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Roles &#40;Tabular de SSAS&#41;](roles-ssas-tabular.md)   
- [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
- [Analizar en Excel &#40;Tabular de SSAS&#41;](analyze-in-excel-ssas-tabular.md)   
+ [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)   
+ [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md)   
  [Función USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [Función CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

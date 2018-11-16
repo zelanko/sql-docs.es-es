@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41b7cb2839945837540ff90d09a58e051cff635d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 046017ed9e7a9f99f2fde48426888045b4a02890
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609183"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667175"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funciones usadas en nodos: namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      namespace-uri(/AWMI:root[1]/AWMI:Location[1])') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
@@ -76,16 +75,16 @@ WHERE ProductModelID=7
  El resultado es el siguiente:  
   
 ```  
-http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
+https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Usar namespace-uri() sin argumento en un predicado  
- La siguiente consulta se especifica para la columna xml con tipo CatalogDescription. La expresión devuelve todos los nodos de elementos cuyo URI del espacio de nombres es `http://www.adventure-works.com/schemas/OtherFeatures`. El espacio de nombres -**uri()** se especifica sin un argumento de función y usa el nodo de contexto.  
+ La siguiente consulta se especifica para la columna xml con tipo CatalogDescription. La expresión devuelve todos los nodos de elementos cuyo URI del espacio de nombres es `https://www.adventure-works.com/schemas/OtherFeatures`. El espacio de nombres -**uri()** se especifica sin un argumento de función y usa el nodo de contexto.  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-   /p1:ProductDescription//*[namespace-uri() = "http://www.adventure-works.com/schemas/OtherFeatures"]  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   /p1:ProductDescription//*[namespace-uri() = "https://www.adventure-works.com/schemas/OtherFeatures"]  
 ') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
@@ -94,13 +93,13 @@ WHERE ProductModelID=19
  Éste es el resultado parcial:  
   
 ```  
-<p1:wheel xmlns:p1="http://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
-<p2:saddle xmlns:p2="http://www.adventure-works.com/schemas/OtherFeatures">  
-  <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
+<p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
+<p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
+  <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
 …  
 ```  
   
- Puede cambiar el URI del espacio de nombres de la consulta anterior por `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. En este caso, recibirá todos los elementos secundarios del nodo del elemento <`ProductDescription`> cuya parte del URI del espacio de nombres del QName expandido es `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Puede cambiar el URI del espacio de nombres de la consulta anterior por `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. En este caso, recibirá todos los elementos secundarios del nodo del elemento <`ProductDescription`> cuya parte del URI del espacio de nombres del QName expandido es `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
   
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
@@ -108,7 +107,7 @@ WHERE ProductModelID=19
 -   El **espacio** función devuelve instancias de tipo xs: String en lugar de xs: anyURI.  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones usadas en nodos](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funciones usadas en nodos](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Función local-name &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

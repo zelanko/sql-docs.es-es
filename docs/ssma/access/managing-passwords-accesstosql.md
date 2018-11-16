@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: d0a0f167f14910f657f6c65b9778b0aadde65b10
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099856"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664214"
 ---
 # <a name="managing-passwords-accesstosql"></a>Administración de contraseñas (AccessToSQL)
 En esta sección es acerca de cómo proteger las contraseñas de la base de datos y el procedimiento para importar o exportar a ellos a través de servidores:  
@@ -122,5 +122,5 @@ La aplicación de consola de SSMA permite exportar las contraseñas de cifrado d
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (acceso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Ejecución de la consola SSMA (acceso)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 652afb0595634d7fb4474ed9042edda26f83a52a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147310"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701903"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -48,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones de obtención de detalles; consulte [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obtener más información.  
   
- Consulte [diario de la base de datos: funciones de conjunto MDX: la función ToggleDrillState()](http://go.microsoft.com/fwlink/?LinkId=517759) para escenarios y ejemplos que utilizan esta función.  
+ Consulte [diario de la base de datos: funciones de conjunto MDX: la función ToggleDrillState()](https://go.microsoft.com/fwlink/?LinkId=517759) para escenarios y ejemplos que utilizan esta función.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente aumenta el detalle del miembro Australia del primer conjunto y reduce el detalle del miembro United States del primer conjunto.  

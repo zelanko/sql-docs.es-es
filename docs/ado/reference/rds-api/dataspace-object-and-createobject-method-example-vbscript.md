@@ -16,16 +16,16 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d24d67f3c798c061fe10c932f36aa4e7f007f772
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753363"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602365"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace y el ejemplo del método CreateObject (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  El ejemplo siguiente muestra cómo usar el [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método de la [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) con el objeto de negocios de forma predeterminada, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Para probar este ejemplo, corte y pegue este código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documentos y asígnele el nombre **DataSpaceVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
   
@@ -107,7 +107,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
     Dim strCnxn  
     Dim strSQL  
   
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     strCnxn = "Provider='sqloledb';Data Source=" & _  
             "<%=Request.ServerVariables("SERVER_NAME")%>" & ";" & _  
             "Integrated Security='SSPI';Initial Catalog='Northwind';"  
@@ -140,7 +140,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
   
 ```  
 Sub Window_OnLoad()  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
    Set BO = ADS1.CreateObject("VbBusObj.VbBusObjCls", strServer)  
    txtConnect.Value = "dsn=Pubs;uid=MyUserID;pwd=MyPassword;"  
    txtGetRecordset.Value = "Select * From authors for Browse"  

@@ -1,5 +1,5 @@
 ---
-title: Introducción a la arquitectura lógica (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Información general de arquitectura lógica (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6c563dcbd00157f05115975c8e4e2da2ee64184
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 83e91607dfc46bfb60bbc4874fd06c6ae0fd23e9
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024522"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559405"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** es compatible con los modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, que se usa para cargar y consultar Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de datos dentro de un libro.  
+  Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** admite modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, se usa para cargar y consultar Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de datos dentro de un libro.  
   
- En este tema se explica la arquitectura básica de Analysis Services cuando se usa en modo Multidimensional y Minería de datos. Para obtener más información acerca de los otros modos, consulte [modelado Tabular ](../../../analysis-services/tabular-models/tabular-models-ssas.md) y [comparar tabulares y multidimensionales ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ En este tema se explica la arquitectura básica de Analysis Services cuando se usa en modo Multidimensional y Minería de datos. Para obtener más información acerca de los otros modos, consulte [de modelos tabulares ](../../../analysis-services/tabular-models/tabular-models-ssas.md) y [comparar tabulares y las soluciones multidimensionales ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Arquitectura básica  
- Una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] puede contener varias bases de datos y una base de datos puede tener al mismo tiempo objetos OLAP y objetos de minería de datos. Las aplicaciones conectan una instancia especificada de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y una base de datos especificada. Un equipo servidor puede hospedar varias instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se denominan "\<ServerName >\\< InstanceName\>". La ilustración siguiente muestra todas las relaciones indicadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.  
+ Una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] puede contener varias bases de datos y una base de datos puede tener al mismo tiempo objetos OLAP y objetos de minería de datos. Las aplicaciones conectan una instancia especificada de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y una base de datos especificada. Un equipo servidor puede hospedar varias instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Las instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se denominan "\<ServerName >\\< InstanceName\>". La ilustración siguiente muestra todas las relaciones indicadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.  
   
  ![Relaciones de objetos de ejecución de AMO](../../../analysis-services/multidimensional-models/olap-logical/media/amo-runningobjects.gif "relaciones de objetos de ejecución de AMO")  
   
@@ -43,11 +43,11 @@ ms.locfileid: "34024522"
  Cada objeto de base de datos contiene uno o más objetos de cubo. Un cubo se define por medio de sus medidas y dimensiones. Las medidas y dimensiones de un cubo se derivan de las tablas y vistas de la vista del origen de datos en la que se basa el cubo, o que se genera a partir de las definiciones de medidas y dimensiones.  
   
 ## <a name="object-inheritance"></a>Herencia de objetos  
- El modelo de objetos ASSL contiene varios grupos de elementos repetidos. Por ejemplo, el grupo de elementos, "**dimensiones** contienen **jerarquías**," define la jerarquía de dimensión de un elemento. Ambos **cubos** y **MeasureGroups** contienen el grupo de elementos "**dimensiones** contienen **jerarquías**."  
+ El modelo de objetos ASSL contiene varios grupos de elementos repetidos. Por ejemplo, el grupo de elementos "**dimensiones** contienen **jerarquías**," define la jerarquía de dimensión de un elemento. Ambos **cubos** y **MeasureGroups** contienen el grupo de elementos "**dimensiones** contienen **jerarquías**."  
   
  A menos que se invalide explícitamente, un elemento hereda los detalles de estos grupos de elementos repetidos del nivel superior. Por ejemplo, el **traducciones** para un **CubeDimension** son los mismos que los **traducciones** de su elemento antecesor, **cubo**.  
   
- Para invalidar explícitamente propiedades heredadas de un objeto de nivel superior, un objeto no necesita repetir explícitamente la estructura completa y las propiedades del objeto de nivel superior. Las únicas propiedades que un objeto necesita indicar explícitamente son las propiedades que el objeto desea invalidar. Por ejemplo, un **CubeDimension** puede incluir únicamente los **jerarquías** que se deben deshabilitar en el **cubo**, para lo que debe cambiarse la visibilidad o para que algunos **Nivel** no se han proporcionado detalles en el **dimensión** nivel.  
+ Para invalidar explícitamente propiedades heredadas de un objeto de nivel superior, un objeto no necesita repetir explícitamente la estructura completa y las propiedades del objeto de nivel superior. Las únicas propiedades que un objeto necesita indicar explícitamente son las propiedades que el objeto desea invalidar. Por ejemplo, un **CubeDimension** puede incluir únicamente los **jerarquías** que se deben deshabilitar en el **cubo**, para lo que debe cambiar la visibilidad, o para que algunos **Nivel** detalles no se ha proporcionado en el **dimensión** nivel.  
   
  Algunas propiedades especificadas en un objeto proporcionan valores predeterminados para la misma propiedad en un objeto secundario o descendiente. Por ejemplo, **Cube.StorageMode** proporciona el valor predeterminado de **Partition.StorageMode**. Para los valores predeterminados heredados, ASSL aplica estas reglas para los valores predeterminados heredados:  
   
@@ -58,18 +58,18 @@ ms.locfileid: "34024522"
 ## <a name="example"></a>Ejemplo  
  El cubo Imports contiene dos medidas, Packages y Last, y tres dimensiones relacionadas, Route, Source y Time.  
   
- ![Ejemplo de cubo 1](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro1.gif "ejemplo de cubo 1")  
+ ![Ejemplo de cubo 1](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro1.gif "ejemplo 1 de cubo")  
   
  Los valores alfanuméricos más pequeños que están alrededor del cubo son los miembros de las dimensiones. Los miembros de ejemplo son ground (miembro de la dimensión Route), Africa (miembro de la dimensión Source) y 1st quarter (miembro de la dimensión Time).  
   
-### <a name="measures"></a>Medidas  
- Los valores de las celdas del cubo representan las dos medidas, Packages y Last. La medida Packages representa el número de paquetes importados y **suma** función se utiliza para agregar los hechos. La medida Last representa la fecha de recepción y el **Max** función se utiliza para agregar los hechos.  
+### <a name="measures"></a>medidas  
+ Los valores de las celdas del cubo representan las dos medidas, Packages y Last. La medida Packages representa el número de paquetes importados y el **suma** función se utiliza para agregar los hechos. La medida Last representa la fecha de recepción y el **Max** función se utiliza para agregar los hechos.  
   
 ### <a name="dimensions"></a>Dimensions  
  La dimensión Route representa los medios por los que las importaciones llegan a su destino. Los miembros de esta dimensión son ground, nonground, air, sea, road o rail. La dimensión Source representa las ubicaciones en las que se producen las importaciones, caso de África o Asia. La dimensión Time representa los trimestres y semestres de un único año.  
   
 ### <a name="aggregates"></a>Agregados  
- Los usuarios corporativos de un cubo pueden determinar el valor de cualquier medida para los miembros de cada dimensión, con independencia del nivel del miembro de la dimensión, ya que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrega valores a los niveles superiores según sea necesario. Por ejemplo, los valores de las medidas de la ilustración anterior se pueden agregar según una jerarquía de calendario estándar mediante la jerarquía Calendar Time de la dimensión Time, tal como se muestra en el diagrama siguiente.  
+ Los usuarios corporativos de un cubo pueden determinar el valor de cualquier medida para los miembros de cada dimensión, con independencia del nivel del miembro de la dimensión, ya que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrega valores a los niveles superiores según sea necesario. Por ejemplo, los valores de medida en la ilustración anterior se pueden agregar según una jerarquía de calendario estándar mediante el uso de la jerarquía de tiempo de calendario en la dimensión de tiempo como se muestra en el diagrama siguiente.  
   
  ![Diagrama de medidas organizadas en una dimensión de tiempo](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro2.gif "diagrama de medidas organizadas en una dimensión de tiempo")  
   
@@ -78,13 +78,13 @@ ms.locfileid: "34024522"
 ||||.|||Último|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
+|All Time|||25110|6547|18563|DEC-29-99|DEC-22-99|DEC-29-99|  
 ||1st half||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
+||2nd half||13937|3570|10367|DEC-29-99|DEC-22-99|DEC-29-99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
+|||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
   
  Una vez definido un cubo, se pueden crear agregaciones o cambiar agregaciones existentes para establecer opciones, como que las agregaciones se precalculen durante el procesamiento o se calculen en el momento de la consulta. **Tema relacionado:**[agregaciones y diseños de agregaciones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
@@ -107,18 +107,18 @@ ms.locfileid: "34024522"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Último|  
-|3516987|1|6|1|15|10 de enero de 99|  
-|3554790|1|6|1|40|19 de enero de 99|  
+|3516987|1|6|1|15|Ene-10-99|  
+|3554790|1|6|1|40|19-Ene-99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  
 |3645541|1|6|1|20|Feb-09-99|  
 |3674906|1|6|1|36|Feb-17-99|  
   
- En la tabla anterior, cada fila tiene los mismos valores para la **RouteKey**, **SourceKey**, y **TimeKey** columnas, que indica que dichas filas contribuyen a la misma celda del cubo.  
+ En la tabla anterior, cada fila tiene los mismos valores para el **RouteKey**, **SourceKey**, y **TimeKey** columnas, que indica que dichas filas contribuyen a la misma celda del cubo.  
   
  En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:**[dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:**[las relaciones entre dimensiones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:**[relaciones de dimensión](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Bases de datos de modelo multidimensional ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

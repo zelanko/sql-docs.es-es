@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757401b45cb66267d80091783d1ec900346722f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7d18848c7cb1baa328210884fb4460628a12d9e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784673"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669044"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Consideraciones básicas de seguridad de SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A continuación se indican instrucciones de seguridad para utilizar SQLXML en el acceso a datos.  
   
--   El proveedor SQLXMLOLEDB expone una **StreamFlags** propiedad que le permite establecer marcas que indica qué funcionalidad SQLXML se debe habilitar o deshabilitar para cada instancia concreta. Puede utilizar esta propiedad para personalizar el uso de SQLXML y asegurarse de que solo se habilitan los componentes que desea. Para obtener más información, consulte [proveedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   El proveedor SQLXMLOLEDB expone una **StreamFlags** propiedad que le permite establecer marcas que indica qué funcionalidad SQLXML se debe habilitar o deshabilitar para cada instancia concreta. Puede utilizar esta propiedad para personalizar el uso de SQLXML y asegurarse de que solo se habilitan los componentes que desea. Para obtener más información, consulte [proveedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   
 -   Cuando se producen y se devuelven errores SQLXML, pueden incluir información sobre el esquema de la base de datos como nombres de tabla, nombres de columna o información de tipo. Debe tener cuidado al controlar estos errores para que los usuarios no puedan detectar fácilmente la información sobre la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde no esté previsto ni sea necesario.  
   

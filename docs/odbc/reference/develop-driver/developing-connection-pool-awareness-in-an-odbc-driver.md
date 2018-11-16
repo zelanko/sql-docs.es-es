@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820193"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661754"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC
 En este tema se trata los detalles del desarrollo de un controlador ODBC que contiene información sobre cómo el controlador debe proporcionar servicios de agrupación de conexiones.  
@@ -68,7 +68,7 @@ En este tema se trata los detalles del desarrollo de un controlador ODBC que con
 ## <a name="the-connection-rating"></a>La clasificación de conexión  
  En comparación con establecimiento de una conexión nueva, puede obtener un mejor rendimiento al restablecer la información de conexión (por ejemplo, la base de datos) en una conexión agrupada. Por lo tanto, es posible que no desea que el nombre de la base de datos en el conjunto de atributos de clave. En caso contrario, puede tener un grupo independiente para cada base de datos que no puedan ser buena en aplicaciones de niveles intermedio, donde los clientes usar distintas cadenas de conexión diferentes.  
   
- Cada vez que se reutiliza una conexión que tiene algún error de coincidencia de atributo, debe restablecer los atributos que no coincidentes en función de la nueva solicitud de aplicación, para que la conexión devuelta es idéntica a la solicitud de aplicación (vea la explicación del atributo SQL_ATTR _DBC_INFO_TOKEN en [función SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59368)). Sin embargo, al restablecer los atributos puede disminuir el rendimiento. Por ejemplo, el restablecimiento de una base de datos requiere una llamada de red al servidor. Volver a usar una conexión que coincide perfectamente, por lo tanto, si está disponible.  
+ Cada vez que se reutiliza una conexión que tiene algún error de coincidencia de atributo, debe restablecer los atributos que no coincidentes en función de la nueva solicitud de aplicación, para que la conexión devuelta es idéntica a la solicitud de aplicación (vea la explicación del atributo SQL_ATTR _DBC_INFO_TOKEN en [función SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). Sin embargo, al restablecer los atributos puede disminuir el rendimiento. Por ejemplo, el restablecimiento de una base de datos requiere una llamada de red al servidor. Volver a usar una conexión que coincide perfectamente, por lo tanto, si está disponible.  
   
  Una función de clasificación en el controlador puede evaluar una conexión existente con una nueva solicitud de conexión. Por ejemplo, puede determinar la función del controlador clasificación:  
   
@@ -109,7 +109,7 @@ En este tema se trata los detalles del desarrollo de un controlador ODBC que con
   
  El Administrador de controladores **SQLAllocHandle** y **SQLFreeHandle** no aceptará este nuevo tipo de identificador.  
   
- SQL_HANDLE_DBC_INFO_TOKEN puede contener información confidencial, como las credenciales. Por lo tanto, un controlador de forma segura debe borrar el búfer de memoria (con [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) que contiene la información confidencial antes de liberar este identificador con **SQLFreeHandle**. Cada vez que se cierra el identificador de entorno de la aplicación, se cerrará todos los grupos de conexión asociada.  
+ SQL_HANDLE_DBC_INFO_TOKEN puede contener información confidencial, como las credenciales. Por lo tanto, un controlador de forma segura debe borrar el búfer de memoria (con [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) que contiene la información confidencial antes de liberar este identificador con **SQLFreeHandle**. Cada vez que se cierra el identificador de entorno de la aplicación, se cerrará todos los grupos de conexión asociada.  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>Grupo de conexiones del Administrador de controladores algoritmo de clasificación  
  Esta sección describe el algoritmo de clasificación para la agrupación de conexiones de administrador de controladores. Los desarrolladores de controladores pueden implementar el mismo algoritmo para la compatibilidad con versiones anteriores. Este algoritmo es posible que no sea la mejor. Debe ajustar este algoritmo basa la implementación (en caso contrario, no hay ninguna razón para implementar esta característica).  

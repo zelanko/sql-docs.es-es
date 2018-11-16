@@ -15,16 +15,16 @@ ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b76b4bfc372c688101882a7250c54a4d4c0c536c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcfc53b0882702e5efbb53b8f88bdfb184f86df6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673557"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601645"
 ---
 # <a name="sql-property-example-vbscript"></a>Ejemplo de la propiedad SQL (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  El código siguiente muestra cómo establecer el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parámetro SQL en tiempo de diseño y enlazar a un control de datos con la base de datos denominada *Pubs*, que se incluye con Microsoft SQL Server. Para probar el ejemplo, copie el código siguiente en un documento ASP normal denominado **SQLDesignVBS.asp** en el servidor Web.  
   
@@ -71,7 +71,7 @@ body {
 <!-- RDS.DataControl -->  
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID=RDC HEIGHT=1 WIDTH=1>  
    <PARAM NAME="SQL" VALUE="Select FirstName, LastName from Employees">  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider='sqloledb';Initial Catalog='Northwind';Integrated Security='SSPI';">  
 </OBJECT>  
   
@@ -150,7 +150,7 @@ body {
 </TABLE>  
   
 <HR>  
-<Input Size=70 Name="txtServer" Value= "http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+<Input Size=70 Name="txtServer" Value= "https://<%=Request.ServerVariables("SERVER_NAME")%>">  
 <BR>  
 <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';">  
 <BR>  

@@ -13,12 +13,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164395"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639872"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
   Utilice la página **Particiones** del cuadro de diálogo **Restaurar base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar la ubicación en la que se restaurarán las particiones locales y si es necesario restaurar particiones remotas, así como los archivos de copia de seguridad remotos que se utilizarán al restaurar las particiones remotas.  
@@ -85,7 +85,7 @@ ms.locfileid: "48164395"
 |**...**|Haga clic en este botón para mostrar el cuadro de diálogo **Particiones remotas - Configuración avanzada** y modificar opciones avanzadas, como la cadena de conexión del origen de datos, para restaurar la partición remota. Para más información sobre el cuadro de diálogo **Particiones remotas - Configuración avanzada**, vea [Cuadro de diálogo Particiones remotas: configuración avanzada &#40;Analysis Services - Datos multidimensionales&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Restaurar la base de datos cuadro de diálogo &#40;Analysis Services - datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Cuadro de diálogo Restaurar base de datos &#40;Analysis Services - Datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [General &#40;restaurar la base de datos cuadro de diálogo&#41; &#40;Analysis Services - datos multidimensionales&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

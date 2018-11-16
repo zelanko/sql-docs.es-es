@@ -17,18 +17,18 @@ ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e5c207a6928c82adeb8d45e22ea342bc40f0322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798833"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600645"
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a uno o varios controles (por ejemplo, un cuadro de texto, control de cuadrícula o cuadro combinado) para mostrar el **Recordset** datos en una página Web.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordse
   
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
 </OBJECT>  
 ```  
@@ -78,7 +78,7 @@ Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordse
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
     ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
    <PARAM NAME="ExecuteOptions" VALUE="1">   <PARAM NAME="FetchOptions" VALUE="1">  
 </OBJECT>  

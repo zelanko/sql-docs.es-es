@@ -15,16 +15,16 @@ ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50263e587f3b8a3ce37e0169e23c02121051d990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 351f04af84419d8ee10a967a61c8b11dc179592a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749333"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601428"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Ejemplo del objeto DataControl (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  El código siguiente muestra cómo establecer el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parámetros en tiempo de diseño de tiempo y enlazarlos a un control de datos. Corte y pegue este código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documentos y asígnele el nombre **DataControlDesignVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
   
@@ -84,7 +84,7 @@ BODY {
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
    ID=RDS>  
    <PARAM NAME="SQL" VALUE="Select * from Employees for browse">  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'">  
 </OBJECT>  
   
@@ -154,7 +154,7 @@ body {
   
 <FORM name="frmInput">  
 <HR>  
-<Input Size="70" Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+<Input Size="70" Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 <Input Size="100" Name="txtConnect" Value="Provider='sqloledb';Data Source=<%=Request.ServerVariables("SERVER_NAME")%>;Initial Catalog='Pubs';Integrated Security='SSPI';">  
 <BR>  
 <Input Size="70" Name="txtSQL" Value="Select * from Authors">  

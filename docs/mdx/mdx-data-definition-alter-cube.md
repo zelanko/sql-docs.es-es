@@ -1,5 +1,5 @@
 ---
-title: ALTER CUBE (instrucción, MDX) | Documentos de Microsoft
+title: ALTER CUBE (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741574"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698303"
 ---
-# <a name="mdx-data-definition---alter-cube"></a>Definición de datos MDX - ALTER CUBE
+# <a name="mdx-data-definition---alter-cube"></a>Definición de datos de MDX: ALTER CUBE
 
 
-  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información acerca del uso de reescritura en una aplicación, consulte esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información sobre el uso de la escritura diferida en una aplicación, consulte esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Tenga en cuenta que las reescrituras en dimensiones simultáneas pueden producir un interbloqueo, donde la primera reescritura no se puede confirmar debido al bloqueo compartido que mantiene la segunda reescritura. En esta situación no se genera ningún error, pero ninguna de las operaciones puede progresar. Al final, ambas operaciones agotan el tiempo de espera y se revierten los cambios.  
   
@@ -92,7 +92,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Expresión de cadena válida que proporciona el nombre del nivel primario del nuevo miembro de dimensión, a menos que el miembro de dimensión se cree en la raíz.  
   
- *Nombre de usuario registrado*  
+ *MemberName*  
  Expresión de cadena válida que proporciona un nombre de miembro.  
   
  *Key_Value*  
@@ -108,17 +108,17 @@ CELL CALCULATION Calculation_Name
  Al quitar un miembro de dimensión de una dimensión habilitada para escritura se elimina dicho miembro y su fila correspondiente de la tabla de dimensiones subyacente.  
   
 ### <a name="arguments"></a>Argumentos  
- *Restricciones obligatorias Cube_Name*  
- Una expresión de cadena válida que proporciona un nombre de cubo.  
+ *Cube_Name*  
+ Expresión de cadena válida que proporciona un nombre de cubo.  
   
  *Member_Name*  
  Expresión de cadena válida que proporciona un nombre de miembro o una clave de miembro.  
   
-### <a name="remarks"></a>Notas  
+### <a name="remarks"></a>Comentarios  
  Si no se utiliza la cláusula WITH DESCENDANTS, los elementos secundarios de un miembro quitado se convierten en elementos secundarios del elemento primario del miembro quitado. Si se utiliza la cláusula WITH DESCENDANTS, también se quitan todos los descendientes y sus filas de la tabla de dimensiones.  
   
 > [!NOTE]  
->  Para obtener información acerca de cómo quitar miembros calculados, conjuntos con nombre, acciones y cálculos de celdas, vea [DROP MEMBER, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP instrucción SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instrucción de acción DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), y [DROP CELL CALCULATION instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Para obtener información acerca de cómo quitar miembros calculados, conjuntos con nombre, acciones y los cálculos de celda, vea [DROP MEMBER, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [establecer la instrucción DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), y [DROP CELL CALCULATION instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Actualizar el miembro de dimensión predeterminado  
  Esta cláusula actualiza el miembro predeterminado de un cubo y se utiliza en el script de cálculo MDX para definir un miembro predeterminado. El miembro predeterminado puede especificarse para la dimensión de base de datos, una dimensión de cubo o para un inicio de sesión de usuario. Además, se puede cambiar el miembro predeterminado durante una sesión.  
@@ -130,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Expresión MDX válida que devuelve un miembro único.  
   
-### <a name="remarks"></a>Notas  
+### <a name="remarks"></a>Comentarios  
  La expresión MDX especificada puede ser estática o dinámica.  
   
 ## <a name="moving-a-dimension-member"></a>Mover un miembro de dimensión  
@@ -140,10 +140,10 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Expresión de cadena válida que proporciona el nombre del nuevo elemento primario del miembro de dimensión que se está moviendo.  
   
- *Nombre de usuario registrado*  
+ *MemberName*  
  Expresión de cadena válida que proporciona un nombre de miembro.  
   
- Sin signo*entero*  
+ Unsigned_*entero*  
  Número válido que especifica el número de niveles que se omitirán.  
   
  Si se especifica la cláusula WITH DESCENDANTS, se mueve todo el árbol. Si no se especifica la cláusula WITH DESCENDANTS, los elementos secundarios de un elemento primario que se ha movido se convierten en los elementos secundarios del elemento primario del miembro que se ha movido. El efecto del movimiento es sencillamente actualizar los valores de la columna de clave primaria de la tabla de dimensiones subyacente.  
@@ -152,7 +152,7 @@ CELL CALCULATION Calculation_Name
  La cláusula UPDATE DIMENSION MEMBER permite modificar propiedades de un miembro, además de la fórmula de miembro personalizada asociada a un miembro.  
   
 ### <a name="arguments"></a>Argumentos  
- *Nombre de usuario registrado*  
+ *MemberName*  
  Expresión de cadena válida que proporciona un nombre de miembro.  
   
  *MDX_Expression*  

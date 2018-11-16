@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60f2d64fbb682cf3fcab866d1d76c7990f6b2341
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798743"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559982"
 ---
 # <a name="securing-rds-applications"></a>Protección de aplicaciones de RDS
 Este tema proporciona información de seguridad para RDS.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="microsoft-internet-explorer-security-issues"></a>Problemas de seguridad de Microsoft Internet Explorer  
  Con las nuevas mejoras de seguridad agregadas a Microsoft Internet Explorer, algunos objetos ADO y RDS están restringidos para ejecutarse solo en un entorno en modo "seguro". Esto requiere que sean conscientes de estos problemas, incluidas distintas zonas, niveles de seguridad, comportamiento restrictivo, operaciones no seguras y personalizar la configuración de seguridad.  

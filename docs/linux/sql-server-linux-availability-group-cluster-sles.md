@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383740"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670624"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para el grupo de disponibilidad de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Esta guía proporciona instrucciones para crear un clúster de tres nodos para SQL Server en SUSE Linux Enterprise Server (SLES) 12 SP2. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos, consulte [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El nivel de agrupación en clústeres se basa en SUSE [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability) construidos sobre [Pacemaker](http://clusterlabs.org/). 
+Esta guía proporciona instrucciones para crear un clúster de tres nodos para SQL Server en SUSE Linux Enterprise Server (SLES) 12 SP2. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos, consulte [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El nivel de agrupación en clústeres se basa en SUSE [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability) construidos sobre [Pacemaker](https://clusterlabs.org/). 
 
 Para obtener más información sobre la configuración del clúster, las opciones del agente de recursos, administración, procedimientos recomendados y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
@@ -79,7 +79,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. Par
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   Para obtener más información, consulte el [SLES Administration Guide - sección varios](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   Para obtener más información, consulte el [SLES Administration Guide - sección varios](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Crear un inicio de sesión de SQL Server para Pacemaker
@@ -104,7 +104,7 @@ En los servidores de Linux, configure el grupo de disponibilidad y luego configu
 
 ## <a name="set-up-the-first-node"></a>Configurar el primer nodo
 
-   Consulte [instrucciones de instalación de SLES](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Consulte [instrucciones de instalación de SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. Inicie sesión como `root` a la máquina física o virtual que desea utilizar como nodo de clúster.
 2. Iniciar la secuencia de arranque mediante la ejecución:
@@ -220,7 +220,7 @@ Vallado de nivel de recurso principalmente garantiza que no hay ningún daño de
 
 Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos. Para ello, al restablecer el nodo y su implementación Pacemaker se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Pacemaker es compatible con una gran variedad de dispositivos, como tarjetas de interfaz de una fuente de alimentación o de administración de alimentación ininterrumpida para servidores de barrera.
 
-Para obtener más información, consulte [clústeres de Pacemaker desde cero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [vallado y Stonith](http://clusterlabs.org/doc/crm_fencing.html) y [documentación de alta disponibilidad de SUSE: vallado y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) y [documentación de alta disponibilidad de SUSE: vallado y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 En tiempo de inicialización de clúster, STONITH está deshabilitada si no se detecta ninguna configuración. Se puede habilitar más tarde ejecutando el comando siguiente:
 

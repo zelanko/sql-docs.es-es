@@ -15,12 +15,12 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3673ee3d837179984c4221e1aa2509f67643dfb4
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cfa410f43d22541eee3749e523e98b8b8c45ceac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217103"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669954"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Proveedor WMI de clases y propiedades de eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51217103"
   
  Para saber qué propiedades se puede consultar desde un evento o grupo de eventos, consulte el esquema de eventos. De forma predeterminada, el esquema de eventos se instala en el directorio siguiente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- Como alternativa, puede hacer referencia al esquema de eventos publicado en [ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100).  
+ Como alternativa, puede hacer referencia al esquema de eventos publicado en [ https://schemas.microsoft.com/sqlserver ](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Por ejemplo, haciendo referencia al evento ALTER_DATABASE, sabrá que su evento primario es DDL_SERVER_LEVEL_EVENTS y sus propiedades son **TSQLCommand** y **DatabaseName**. El evento también hereda las propiedades **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, y **LoginName** . El evento no tiene ningún evento secundario.  
   

@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: d48493cb2075f8b6961ed29a0f898055eeff7794
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: b0b123fbf42c81dd4f755855a2c71b0bb799a2a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272613"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667014"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Imágenes de contenedor ejecución de SQL Server con Docker
 
@@ -96,7 +96,7 @@ any changes to one section should be duplicated in the other-->
 
    | Parámetro | Descripción |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](http://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
+   | **-e 'ACCEPT_EULA=Y'** |  Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](https://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
    | **-e "contraseña_sa =\<YourStrong! Passw0rd\>'** | Especifique una contraseña segura propia con al menos 8 caracteres y que cumpla los [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Configuración requerida para la imagen de SQL Server. |
    | **-p 1433:1433** | Asigne un puerto TCP en el entorno de host (el primer valor) a un puerto TCP en el contenedor (el segundo valor). En este ejemplo, SQL Server está escuchando en TCP 1433 en el contenedor y se expone al puerto 1433 en el host. |
    | **--name sql1** | Especifique un nombre personalizado para el contenedor en lugar de uno generado aleatoriamente. Si ejecuta más de un contenedor, no podrá usar el mismo nombre. |
@@ -178,7 +178,7 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
 
    | Parámetro | Descripción |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](http://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
+   | **-e 'ACCEPT_EULA=Y'** |  Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](https://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
    | **-e "contraseña_sa =\<YourStrong! Passw0rd\>'** | Especifique una contraseña segura propia con al menos 8 caracteres y que cumpla los [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Configuración requerida para la imagen de SQL Server. |
    | **-p 1433:1433** | Asigne un puerto TCP en el entorno de host (el primer valor) a un puerto TCP en el contenedor (el segundo valor). En este ejemplo, SQL Server está escuchando en TCP 1433 en el contenedor y se expone al puerto 1433 en el host. |
    | **--name sql1** | Especifique un nombre personalizado para el contenedor en lugar de uno generado aleatoriamente. Si ejecuta más de un contenedor, no podrá usar el mismo nombre. |

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f0eba32297d101ec5d1be18b8ea58c766310ac8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615213"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350599"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Proveedor Microsoft OLE DB para Microsoft Jet Introducción
 El proveedor OLE DB para Microsoft Jet permite ADO tener acceso a bases de datos Microsoft Jet.
@@ -28,7 +28,7 @@ El proveedor OLE DB para Microsoft Jet permite ADO tener acceso a bases de datos
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
  Para conectarse a este proveedor, establezca el *proveedor* argumento de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad al siguiente:
 
-```
+```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
@@ -37,7 +37,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="typical-connection-string"></a>Cadena de conexión típica
  Una cadena de conexión típica para este proveedor es:
 
-```
+```vb
 "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=databaseName;User ID=MyUserID;Password=MyPassword;"
 ```
 

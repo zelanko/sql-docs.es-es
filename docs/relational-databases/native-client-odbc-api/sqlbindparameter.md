@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c796bec63e2d90153af059543c694efd7c00b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63af1c6822f5646f37d7d391afa833206c9d65f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701943"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674202"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLBindParameter** puede eliminar la carga de conversión de datos cuando se usa para proporcionar datos para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, produciendo ganancias de rendimiento significativas para los componentes del cliente y el servidor de aplicaciones. Entre otras ventajas se incluyen la pérdida reducida de precisión al insertar o actualizar los tipos de datos numéricos aproximados.  
+  **SQLBindParameter** puede eliminar la carga de conversión de datos cuando se usa para proporcionar datos para el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, produciendo ganancias de rendimiento significativas para los componentes de servidor y cliente de las aplicaciones. Entre otras ventajas se incluyen la pérdida reducida de precisión al insertar o actualizar los tipos de datos numéricos aproximados.  
   
 > [!NOTE]  
 >  Al insertar los datos de tipo **char** y **wchar** en una columna de imagen, se usa el tamaño de los datos pasados, a diferencia del tamaño de los datos después de la conversión a un formato binario.  
@@ -35,7 +35,7 @@ ms.locfileid: "47701943"
   
  Al usar el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, especifique SQL_PARAM_INPUT al enlazar parámetros de entrada. Especifique únicamente SQL_PARAM_OUTPUT o SQL_PARAM_INPUT_OUTPUT al enlazar parámetros de procedimientos almacenados definidos con la palabra clave OUTPUT.  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) es confiable con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador de ODBC de Native Client si un elemento de matriz de una matriz de parámetros enlazados produce un error en la ejecución de la instrucción. El atributo de instrucción ODBC SQL_ATTR_PARAMS_PROCESSED_PTR notifica el número de filas procesadas antes de que se produzca el error. A continuación, la aplicación puede atravesar su matriz de estado de parámetro para detectar el número de instrucciones ejecutado correctamente, si es necesario.  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) no es confiable con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client si un elemento de matriz de parámetros enlazados produce un error en la ejecución de la instrucción. El atributo de instrucción ODBC SQL_ATTR_PARAMS_PROCESSED_PTR notifica el número de filas procesadas antes de que se produzca el error. A continuación, la aplicación puede atravesar su matriz de estado de parámetro para detectar el número de instrucciones ejecutado correctamente, si es necesario.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Enlazar parámetros para tipos de caracteres SQL  
  Si el tipo de datos SQL que se pasa es un tipo de caracteres, *ColumnSize* es el tamaño en caracteres (no en bytes). Si la longitud de la cadena de datos en bytes es mayor de 8000, *ColumnSize* debería establecerse en **SQL_SS_LENGTH_UNLIMITED**, lo que indica que no hay límite en el tamaño del tipo SQL.  
@@ -61,6 +61,6 @@ ms.locfileid: "47701943"
   
 ## <a name="see-also"></a>Vea también  
  [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [Función SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [Función SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

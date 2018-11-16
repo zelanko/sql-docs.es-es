@@ -16,12 +16,12 @@ ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78dba1568180e7e49ebe1c5cc7e6ee2ed61f9497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0db2028840491a448cb0bf3bd07cbb6dfe10fe8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811903"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601205"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord y MoveRecord métodos ejemplo (VB)
 En este ejemplo se muestra cómo copiar, mover, modificar y eliminar el contenido de un archivo de texto que se publican en una carpeta Web. Incluyen otras propiedades y métodos utilizados [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [origen](../../../ado/reference/ado-api/source-property-ado-record.md), y [vaciar](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -34,7 +34,7 @@ En este ejemplo se muestra cómo copiar, mover, modificar y eliminar el contenid
 ' use this sample you must:  
 '  
 ' 1. create folders named "test" and "test2"  
-'    in the root web folder of http://MyServer  
+'    in the root web folder of https://MyServer  
 '  
 ' 2. Create a text file named "test2.txt" in the  
 '    "test" folder.  
@@ -69,7 +69,7 @@ Public Sub Main()
   
      ' open a record on a text file  
     Set Cnxn = New ADODB.Connection  
-    strCnxn = "url=http://MyServer/"  
+    strCnxn = "url=https://MyServer/"  
     Cnxn.Open strCnxn  
     strFile = "test/test2.txt"  
     rcFile.Open strFile, Cnxn, adModeReadWrite, adOpenIfExists Or adCreateNonCollection  
@@ -101,7 +101,7 @@ Public Sub Main()
   
      ' copy the file to another folder  
     strDestFile = "test2/test1.txt"  
-    rcFile.CopyRecord "", "http://MyServer/" & strDestFile, "", "", adCopyOverWrite  
+    rcFile.CopyRecord "", "https://MyServer/" & strDestFile, "", "", adCopyOverWrite  
   
      ' delete the original file  
     rcFile.DeleteRecord  
@@ -121,7 +121,7 @@ Public Sub Main()
     rcDestFile.Open rsDestFolder, Cnxn  
   
      ' do the move  
-    rcDestFile.MoveRecord "", "http://MyServer/" & strFile, "", "", adMoveOverWrite  
+    rcDestFile.MoveRecord "", "https://MyServer/" & strFile, "", "", adMoveOverWrite  
   
     ' clean up  
     rsDestFolder.Close  

@@ -19,18 +19,18 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ab3ce18b1b79951c76b34be3f90b2d8782ba64e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773833"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666474"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Migración de datos de Access a SQL Server: Azure SQL DB (AccessToSQL)
 Después de haber creado correctamente los objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede migrar datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Establecer las opciones de migración  
-Antes de migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo. En este cuadro de diálogo, puede establecer el tamaño de lote de migración, bloqueo de tablas, la restricción de comprobación, el desencadenador de inserción desencadenar, identidad y el valor null de control y cómo administrar fechas que están fuera de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intervalo. Para obtener más información, consulte [configuración del proyecto (migración)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Antes de migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo. En este cuadro de diálogo, puede establecer el tamaño de lote de migración, bloqueo de tablas, la restricción de comprobación, el desencadenador de inserción desencadenar, identidad y el valor null de control y cómo administrar fechas que están fuera de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intervalo. Para obtener más información, consulte [configuración del proyecto (migración)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
 ## <a name="migrating-data"></a>Migración de datos  
 Migración de datos están una operación de carga masiva que mueve las filas de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure en las transacciones. El número de filas que se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure en cada transacción se configura en la configuración del proyecto.  

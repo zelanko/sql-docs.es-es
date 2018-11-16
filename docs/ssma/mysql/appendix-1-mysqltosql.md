@@ -10,12 +10,12 @@ ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: aa858ed572260ffa89baa5dabf735e838cf1b083
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 283fc57046e2c6e6acbdbe0504d44c6692afdc5e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099237"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672584"
 ---
 # <a name="appendix---1-mysqltosql"></a>Apéndice - 1 (MySQLToSQL)
 Vista rápida de las opciones de línea de comandos de la consola SSMA:  
@@ -32,5 +32,5 @@ Vista rápida de las opciones de línea de comandos de la consola SSMA:
 |8|-?|no|No aplicable|No aplicable|  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Ejecución de la consola SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

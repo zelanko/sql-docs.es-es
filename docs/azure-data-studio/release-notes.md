@@ -2,7 +2,7 @@
 title: Notas de la versión de Data Studio Azure | Microsoft Docs
 description: Notas de la versión de Data Studio Azure
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,41 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237071"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289925"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notas de la versión de Data Studio Azure
 
-**[Descargue la versión de octubre.](download.md)**
+**[Descargue la versión de noviembre.](download.md)**
+
+## <a name="november-2018-november-release"></a>Noviembre de 2018 (versión de noviembre)
+
+fecha de lanzamiento: 6 de noviembre de 2018  
+versión: 1.2.4
+
+- Actualizar a la [extensión de versión preliminar de SQL Server de 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Pegar la extensión del Plan de presentación
+- Introducción a la extensión de las consultas de color de alta densidad, incluido el tema del editor de SSMS
+- Correcciones en las extensiones de agente SQL Server Profiler e importación
+- .Net Core de corregir la causa del problema de Socket KeepAlive quita conexiones inactivas en macOS
+- Servicio de las herramientas de actualización de SQL a.Net Core 2,2 Preview 3 (para la compatibilidad con AAD eventual)
+
+### <a name="bug-fixes"></a>Correcciones de errores
+- Corregir [emitir 2933 #](https://github.com/Microsoft/azuredatastudio/issues/2933): se perdió la conexión a Azure SQL DB
+- Corregir [emitir 2914 #](https://github.com/Microsoft/azuredatastudio/issues/2914): excepción de "Argumento no válido" al expandir nodo de base de datos de OE
+- Corregir [emitir 2935 #](https://github.com/Microsoft/azuredatastudio/pull/2935): mensajes de varias líneas se muestran correctamente en los resultados de consulta
+- Corregir [emitir 2906 #](https://github.com/Microsoft/azuredatastudio/pull/2906): nombre del documento corregir editar datos al nombre de la tabla contiene caracteres especiales
+- Corregir [emitir #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): creado en la extensión de registro de cambios indica comprobar las notas de VSCode de cambios
+- Corregir [emitir #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): dobles/triples iconos de tema de contraste alto
+- Corregir [emitir 3047 #](https://github.com/Microsoft/azuredatastudio/pull/3047): agregar una interfaz de línea de comandos para conectarse a un servidor SQL Server
+- Corregir [emitir 3031 #](https://github.com/Microsoft/azuredatastudio/pull/3031): agregar compatibilidad de tema del plan de consulta
+- …
+
+Para obtener información detallada, consulte el [registro de cambios](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Octubre de 2018 (versión de octubre)
 
@@ -58,7 +83,7 @@ Versión de disponibilidad general de Azure Data Studio (anteriormente SQL Opera
     - Usar las bibliotecas de Acelerador de código de PROSE en el Bloc de notas para obtener información sobre los tipos de datos y formato de archivo para la preparación de datos rápida.
   - Explorador de recursos de Azure
     - La vista del explorador de recursos de Azure le permite examinar los puntos de conexión relacionados con los datos para las cuentas de Azure y crear conexiones en ellos en el Explorador de objetos. En esta versión se admiten servidores y bases de datos de SQL Azure.
-  - Asistente para la tabla externa de creación de SQL Server Polybase
+  - Asistente para la tabla externa de creación de SQL Server PolyBase
     - Crear una tabla externa y sus estructuras de metadatos compatibles con un asistente fácil de usar. En esta versión, se admiten servidores remotos de SQL Server y Oracle.
 - Rendimiento de la cuadrícula de resultados y las mejoras de la experiencia de usuario de gran número de conjuntos de resultados de consulta.
 - Actualizar código fuente de Visual Studio Code desde 1,23 a 1.26.1 con el diseño de cuadrícula y ha mejorado el Editor de configuración (versión preliminar).

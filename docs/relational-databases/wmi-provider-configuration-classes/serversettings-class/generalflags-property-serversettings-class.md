@@ -18,12 +18,12 @@ ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c03a6ffeb9b941ed940804dc669bf6c54db5b54c
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 5604ad8e59af9bd7cbcdec5fb2af5002ea00af47
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217683"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656775"
 ---
 # <a name="generalflags-property-serversettings-class"></a>Propiedad GeneralFlags (clase ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.GeneralFlags [= value]
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

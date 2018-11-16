@@ -22,12 +22,12 @@ ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56d6091be1fee645cf877e85ffee5604706c6e2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c59df39f3d4d0df423f48df092e49e53dba1861c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750663"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664981"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>Atributos personalizados de integración CLR para las rutinas CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,43 +36,43 @@ ms.locfileid: "47750663"
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Atributo SqlUserDefinedAggregate  
  El **SqlUserDefinedAggregate** atributo indica que el método debe registrarse como un agregado definido por el usuario. Los agregados definidos por el usuario deben anotarse con este atributo.  
   
- Para obtener más información, consulte [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
+ Para obtener más información, consulte [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## <a name="the-sqlfunction-attribute"></a>Atributo SqlFunction  
  El **SqlFunction** atributo indica que el método debe registrarse como una función con el conjunto de atributos de función correspondiente.  
   
- Para obtener más información, consulte [SqlFunctionAttribute](http://go.microsoft.com/fwlink/?LinkId=128019).  
+ Para obtener más información, consulte [SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019).  
   
 ## <a name="the-sqlfacet-attribute"></a>Atributo SqlFacet  
  El **SqlFacet** atributo se utiliza para devolver información sobre el tipo de valor devuelto de una expresión de tipo definido por el usuario (UDT).  
   
- Para obtener más información, consulte [SqlFacetAttribute](http://go.microsoft.com/fwlink/?LinkId=128020).  
+ Para obtener más información, consulte [SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020).  
   
 ## <a name="the-sqlprocedure-attribute"></a>Atributo SqlProcedure  
  El **SqlProcedure** atributo indica que el método debe registrarse como un procedimiento almacenado. Solamente Visual Studio usa este atributo para registrar automáticamente el método especificado como un procedimiento almacenado; [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no lo usa.  
   
- Para obtener más información, consulte [SqlProcedureAttribute](http://go.microsoft.com/fwlink/?LinkId=128021).  
+ Para obtener más información, consulte [SqlProcedureAttribute](https://go.microsoft.com/fwlink/?LinkId=128021).  
   
 ## <a name="the-sqltrigger-attribute"></a>Atributo SqlTrigger  
  El **SqlTrigger** atributo indica que el método debe registrarse como un desencadenador.  
   
- Para obtener más información, consulte [SqlTriggerContext](http://go.microsoft.com/fwlink/?LinkId=128022) y [SqlTriggerAttribute](http://go.microsoft.com/fwlink/?LinkId=203898).  
+ Para obtener más información, consulte [SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022) y [SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898).  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>Atributo SqlUserDefinedTypeAttribute  
  Puede aplicar el atributo SqlUserDefinedTypeAttribute a una definición de clase en el ensamblado. Esto hace que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cree un tipo definido por el usuario que se enlaza a la definición de clase que tiene este atributo personalizado.  
   
- Para obtener más información, consulte [SqlUserDefinedTypeAttribute](http://go.microsoft.com/fwlink/?LinkId=128024).  
+ Para obtener más información, consulte [SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024).  
   
 ## <a name="the-sqlmethod-attribute"></a>Atributo SqlMethod  
  El **SqlMethod** atributo se utiliza para indicar las propiedades de acceso a datos y determinismo de un método o una propiedad en un UDT.  
   
- Para obtener más información, consulte [SqlMethodAttribute](http://go.microsoft.com/fwlink/?LinkId=128025).  
+ Para obtener más información, consulte [SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025).  
   
 ## <a name="see-also"></a>Vea también  
  [Agregados definidos por el usuario CLR](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR User-Defined Functions](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  (Funciones definidas por el usuario CLR)  
  [Tipos definidos por el usuario CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
- [Procedimientos almacenados de CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [Desencadenadores CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Desencadenadores CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
   
   

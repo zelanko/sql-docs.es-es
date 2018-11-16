@@ -15,16 +15,16 @@ ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ccb6bd2b61350c71f44b1580b790ec66cdfff89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c457676daa5870e90964ea4d3d25d0397797cd2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599744"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604445"
 ---
 # <a name="server-property-example-vbscript"></a>Ejemplo de la propiedad de servidor (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  El código siguiente muestra cómo establecer el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parámetro en el diseño de tiempo y enlazarlo a un control de datos mediante el proveedor SQLOLEDB. Corte y pegue este código en un documento ASP normal y asígnele el nombre **ServerDesignVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
   
@@ -81,7 +81,7 @@ body {
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
    ID=RDS HEIGHT=1 WIDTH=1>  
    <PARAM NAME="SQL" VALUE="Select * from Employees">  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'">  
 </OBJECT>  
   

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638313"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350649"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Proveedor Microsoft OLE DB para ODBC Introducción
 Para un programador de ADO o RDS, un mundo ideal sería uno de los datos de cada origen expone una interfaz OLE DB, por lo que podría llamar ADO directamente en el origen de datos. Aunque cada vez más proveedores de base de datos están implementando las interfaces OLE DB, algunos orígenes de datos aún no están expuestos de este modo. Sin embargo, la mayoría de los sistemas DBMS en uso hoy en día puede obtenerse a través de ODBC.
@@ -184,7 +184,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|solo lectura|solo lectura|solo lectura|solo lectura|
-|[Filtro](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
  El proveedor Microsoft OLE DB para ODBC inserta varias propiedades dinámicas en la **propiedades** colección de los no abierto [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y [Comando](../../../ado/reference/ado-api/command-object-ado.md) objetos.
 
- Las tablas siguientes son un índice cruzado de los nombres de ADO y OLE DB para cada propiedad dinámica. Referencia de la base de datos del programador de OLE se refiere a un nombre de la propiedad ADO con el término, "Description". Puede encontrar más información acerca de estas propiedades en referencia del programador de OLE DB. Busque el nombre de propiedad de OLE DB en el índice o vea [Apéndice C: propiedades de OLE DB](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Las tablas siguientes son un índice cruzado de los nombres de ADO y OLE DB para cada propiedad dinámica. Referencia de la base de datos del programador de OLE se refiere a un nombre de la propiedad ADO con el término, "Description". Puede encontrar más información acerca de estas propiedades en referencia del programador de OLE DB. Busque el nombre de propiedad de OLE DB en el índice o vea [Apéndice C: propiedades de OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Propiedades dinámicas de conexión
  Las siguientes propiedades se agregan a la **conexión** del objeto **propiedades** colección.
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Posibilidad de actualización|DBPROP_UPDATABILITY|
 |Utilizar marcadores|DBPROP_BOOKMARKS|
 
- Para más información sobre la implementación específica funcional información sobre el proveedor Microsoft OLE DB para ODBC, vea el [referencia del programador de OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) o visite el sitio Web del Centro para desarrolladores de almacenamiento y de acceso a datos en MSDN.
+ Para más información sobre la implementación específica funcional información sobre el proveedor Microsoft OLE DB para ODBC, vea el [referencia del programador de OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) o visite el sitio Web del Centro para desarrolladores de almacenamiento y de acceso a datos en MSDN.
 
 ## <a name="see-also"></a>Vea también
  [Comando (ADO) del objeto](../../../ado/reference/ado-api/command-object-ado.md) [propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [el objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [ejecutar Método (Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Proveedor (propiedad, ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [el objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [admite (método)](../../../ado/reference/ado-api/supports-method.md)

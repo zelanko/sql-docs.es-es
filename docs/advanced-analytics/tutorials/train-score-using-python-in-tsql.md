@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 17b51d695a923b6db1661e6e15605a1f05d08178
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099876"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293161"
 ---
 # <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -155,15 +155,18 @@ Ahora que ha creado, entrenado y guardar un modelo, pasar al siguiente paso: cre
 
 En este ejercicio, ha aprendido a crear procedimientos almacenados dedicados para tareas diferentes, donde cada procedimiento almacenado usa el procedimiento almacenado del sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para iniciar un proceso de Python. Entradas para el proceso de Python se pasan al script sp_execute_external como parámetros. Tanto el propio script de Python y las variables de datos en una base de datos de SQL Server se pasan como entradas.
 
+Por lo general, sólo debe planear sobre el uso de SSMS con código Python pulido o código de Python simple que devuelve un resultado basado en filas. Como una herramienta de SSMS admite los lenguajes de consulta similar a Transact-SQL y devuelve los conjuntos de filas planas. Si el código genera visual parecido a un gráfico de dispersión o de histograma, necesita una aplicación de la herramienta o del usuario final que puede presentar la imagen.
+
 Para algunos desarrolladores de Python que sirven para escribir secuencias de comandos con todo incluido una variedad de operaciones de control, puede parecer innecesario organizar tareas en procedimientos independientes. Pero, de entrenamiento y puntuación tienen distintos casos de uso. Si los separa, puede colocar cada tarea en otra programación y los permisos de ámbito para la operación.
 
 Del mismo modo, también puede aprovechar los recursos de características de SQL Server, como el procesamiento paralelo, la regulación de recursos, o al escribir la secuencia de comandos para usar algoritmos en [revoscalepy](../python/what-is-revoscalepy.md) o [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) que compatibilidad con streaming y ejecución en paralelo. Mediante la separación de entrenamiento y puntuación, puede tener como destino las optimizaciones para cargas de trabajo específicas.
 
 Una ventaja final es que los procesos pueden modificarse mediante parámetros. En este ejercicio, el código de Python que se creó el modelo (denominado "Bayes Naive" en este ejemplo) se pasó como entrada a un segundo procedimiento almacenado que llamar al modelo en un proceso de puntuación. Este ejercicio solo usa un modelo, pero se puede imaginar cómo parametrizar el modelo en una tarea de puntuación haría que esa secuencia de comandos más útiles.
 
-
 ## <a name="next-steps"></a>Pasos siguientes
 
-Tutoriales anteriores se centran en la ejecución local. Sin embargo, también puede ejecutar código de Python desde una estación de trabajo cliente, usar SQL Server como el contexto de cálculo remoto. Para obtener más información acerca de cómo configurar una estación de trabajo cliente que se conecta a SQL Server, vea [configurar herramientas de cliente de Python](../python/setup-python-client-tools-sql.md).
+Si es desarrollador SQL familiarizado con Python, revise los pasos y herramientas para trabajar con código de Python de forma local, con la capacidad de desplazar la ejecución de las sesiones de locales a una instancia remota de SQL Server.
 
-+ [Crear un modelo de revoscalepy desde un cliente de Python](use-python-revoscalepy-to-create-model.md)
+> [!div class="nextstepaction"]
+> [Configurar una estación de trabajo del cliente de Python](../python/setup-python-client-tools-sql.md).
+

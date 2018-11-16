@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085491"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677684"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Esta guía proporciona instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. El nivel de agrupación en clústeres se basa en Red Hat Enterprise Linux (RHEL) [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construidos sobre [Pacemaker](http://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o la otra.
+Esta guía proporciona instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. El nivel de agrupación en clústeres se basa en Red Hat Enterprise Linux (RHEL) [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construidos sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o la otra.
 
 > [!NOTE] 
 > Acceso a Red Hat alta disponibilidad de complementos y documentación requiere una suscripción. 
@@ -30,7 +30,7 @@ Como se muestra en el siguiente diagrama, almacenamiento se presenta en dos serv
 
 ![Red Hat Enterprise Linux 7 compartidos de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y administración, visite [documentación de referencia RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
@@ -201,8 +201,8 @@ Siga estos pasos en todos los nodos del clúster.
 
 Para obtener más información sobre el uso de NFS, consulte los siguientes recursos:
 
-* [NFS servidores y firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [Montaje de un volumen NFS | Guía de administradores de red de Linux](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS servidores y firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Montaje de un volumen NFS | Guía de administradores de red de Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [Configuración del servidor NFS](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montar el directorio de archivos de base de datos para que apunte al almacenamiento compartido
@@ -389,7 +389,7 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [Desde el principio del clúster](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guía de Pacemaker
+* [Desde el principio del clúster](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guía de Pacemaker
 
 ## <a name="next-steps"></a>Pasos siguientes
 

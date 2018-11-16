@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31b8deab9778dc4618552314f2e4bf5a249f4cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7831531187f4e60ac521f074538733fd1a94c2e4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650213"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663634"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ HRESULT BCPWriteFmt(
 ## <a name="remarks"></a>Comentarios  
  El archivo de formato especifica el formato de los datos de un archivo de datos creado mediante copia masiva. Las llamadas a los métodos [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) definen el formato del archivo de datos. El método **BCPWriteFmt** guarda esta definición en el archivo al que se hace referencia en el argumento pwszFormatFile.  
   
- El método **BCPWriteFmt** puede guardar los archivos de formato en formato xml o de texto. Esto se debe indicar mediante la opción de control BCP_OPTION_XML con el método [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md).  
+ El método **BCPWriteFmt** puede guardar los archivos de formato en formato xml o de texto. Esto se debe indicar utilizando la opción de control BCP_OPTION_XML con el método [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) .  
   
- Para cargar un archivo de formato guardado, use el método [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md).  
+ Para cargar un archivo de formato guardado, utilice el método [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) .  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszFormatFile*[in]  
@@ -54,7 +54,7 @@ HRESULT BCPWriteFmt(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
+ Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_OUTOFMEMORY  
  Error de memoria insuficiente.  

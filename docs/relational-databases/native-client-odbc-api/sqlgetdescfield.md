@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb04046328e5967bd3407845bb53e4f48cea74d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 410aec64f1a10f8deaf7923fedda8b79c114eef3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849733"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669594"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client expone los campos descriptores específicos del controlador para la fila descriptor de implementación (IRD) solo. En IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] campos de descriptor que se hace referencia a través de los atributos de columna específicos del controlador. Para obtener información sobre una lista completa de campos de descriptor específicos del controlador disponibles, vea [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
+  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente expone campos de descriptor específicos del controlador para el descriptor de fila de implementación (IRD). En IRD, se hace referencia a los campos de descriptor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de atributos de columna específicos del controlador. Para obtener información sobre una lista completa de campos de descriptor específicos del controlador disponibles, vea [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   
- Los campos de descriptor que contienen cadenas de identificador de columna son a menudo cadenas de longitud cero. Todos los valores de campos de descriptor específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son de solo lectura.  
+ Los campos de descriptor que contienen cadenas de identificador de columna son a menudo cadenas de longitud cero. Todos los valores de campos de descriptor específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]son de solo lectura.  
   
  Al igual que los atributos se recuperan con SQLColAttribute, campos de descriptor que se notifican los atributos de nivel de fila de informe (como SQL_CA_SS_COMPUTE_ID) para todas las columnas del conjunto de resultados.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47849733"
  SQLGetDescField puede utilizarse para obtener los valores de atributos extendidos de parámetros con valores de tabla y las columnas de parámetros con valores de tabla. Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField admite las características mejoradas de fecha y hora  
- Para obtener información sobre los campos de descriptor disponibles con los tipos de fecha y hora nuevas, vea [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Para obtener información sobre los campos de descriptor disponibles con los nuevos tipos de fecha y hora, vea [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -156,7 +156,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLGetDescField](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [Función SQLGetDescField](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701463"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673484"
 ---
 # <a name="installation-and-configuration"></a>Instalación y configuración
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ Instrucciones de instalación y configuración de base de datos OLTP de Wide Wor
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (o posterior) o [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Para obtener la versión completa del ejemplo, utilice SQL Server Evaluation, Developer o Enterprise Edition.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o posterior) o [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Para obtener la versión completa del ejemplo, utilice SQL Server Evaluation, Developer o Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para obtener los mejores resultados, use la versión de junio de 2016 o posterior.
 
 ## <a name="download"></a>Descargar
 
 La versión más reciente del ejemplo:
 
-[Wide world importers versión](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world importers versión](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Descargar el ejemplo WideWorldImporters base de datos copia de seguridad/bacpac que corresponde a la edición de SQL Server o Azure SQL Database.
 
@@ -90,5 +90,5 @@ Se aplica a: base de datos SQL Azure
 
 Seguridad de nivel de fila no está habilitada de forma predeterminada en la descarga de bacpac de WideWorldImporters. Para habilitar la seguridad de nivel de fila en la base de datos, ejecute el siguiente procedimiento almacenado:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697043"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -56,7 +56,7 @@ Establecer las variables de entorno necesarias para implementar el clúster de m
 
 Antes de continuar, tenga en cuenta las siguientes directrices importantes:
 
-- En el [ventana de comandos](http://docs.microsoft.com/visualstudio/ide/reference/command-window), se incluyen entre comillas en las variables de entorno. Si utiliza comillas para encapsular una contraseña, se incluyen las comillas en la contraseña.
+- En el [ventana de comandos](https://docs.microsoft.com/visualstudio/ide/reference/command-window), se incluyen entre comillas en las variables de entorno. Si utiliza comillas para encapsular una contraseña, se incluyen las comillas en la contraseña.
 - En bash, no se incluyen entre comillas en la variable. Nuestros ejemplos utilizan comillas dobles `"`.
 - Puede establecer la contraseña de las variables de entorno que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&`, o `'` caracteres.
 - La versión de CTP 2.1, no cambie los puertos predeterminados.

@@ -1,5 +1,5 @@
 ---
-title: TopSum (DMX) | Documentos de Microsoft
+title: TopSum (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd8d762f3bdb9ac1dd74ddb72d456ea69eb52917
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: e94af73873414f1486908b63b508143093194508
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842688"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606595"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +29,18 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Una expresión que devuelve una tabla, como un \<referencia de columna de la tabla >, o una función que devuelve una tabla.  
+ Una expresión que devuelve una tabla, como un \<referencia de columna de tabla >, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  \<expresión de tabla >  
   
-## <a name="remarks"></a>Notas  
- El **TopSum** función devuelve las filas superiores en orden decreciente de rango en función del valor evaluado de la \<clasificar expresión > argumento para cada fila, tal que la suma de la \<clasificar expresión > valores sea al menos el total especificado por el \<suma > argumento. **TopSum** devuelve el número de elementos más pequeño posible que siga cumpliendo el valor de suma especificada.  
+## <a name="remarks"></a>Comentarios  
+ El **TopSum** función devuelve las filas superiores en orden decreciente de rango en función del valor evaluado de la \<rank expression > argumento para cada fila, tal que la suma de los \<rank expression > los valores sea al menos el total especificado por el \<suma > argumento. **TopSum** devuelve el número de elementos más pequeño posible que siga cumpliendo el valor de suma especificado.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se compila mediante la [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ En el ejemplo siguiente se crea una consulta de predicción en el modelo de asociación que se crea mediante el uso de la [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Para entender cómo funciona TopPercent, puede resultar útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
+ Para comprender el funcionamiento de TopPercent, puede resultar útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -68,7 +68,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- El **TopSum** función toma los resultados de esta consulta y devuelve las filas con los valores mayores que suman el número especificado.  
+ El **TopSum** función toma los resultados de esta consulta y devuelve las filas con los valores mayores que suman el recuento especificado.  
   
 ```  
 SELECT   
@@ -83,11 +83,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- El primer argumento para el **TopSum** función es el nombre de una columna de tabla. En este ejemplo, la tabla anidada se devuelve al llamar a la función de predicción y con el argumento INCLUDE_STATISTICS.  
+ El primer argumento para el **TopSum** función es el nombre de una columna de tabla. En este ejemplo, la tabla anidada se devuelve al llamar a la función Predict y con el argumento INCLUDE_STATISTICS.  
   
  El segundo argumento para el **TopSum** función es la columna de la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $PROBABILITY para devolver las filas que suman al menos una probabilidad del 50 por ciento.  
   
- El tercer argumento para el **TopSum** función especifica la suma de destino, como un tipo double. Para obtener las filas para los primeros productos que suman una probabilidad del 50 por ciento, escriba .5.  
+ El tercer argumento para el **TopSum** función especifica la suma de destino, como un valor double. Para obtener las filas para los primeros productos que suman una probabilidad del 50 por ciento, escriba .5.  
   
  Resultados del ejemplo:  
   

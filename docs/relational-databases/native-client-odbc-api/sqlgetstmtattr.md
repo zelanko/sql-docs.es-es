@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f502d9e362bbc19704c69235bca1567a0b7cfdc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a6960eb368564c43556b59033ac24a878dd10c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631973"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672354"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "47631973"
 
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client extiende SQLGetStmtAttr para exponer atributos de instrucción específicos del controlador.  
   
- [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) enumera los atributos de instrucción que ambos son de lectura y escritura. En este tema se enumeran los atributos de instrucción de solo lectura.  
+ [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) enumera los atributos de instrucción de lectura y escritura. En este tema se enumeran los atributos de instrucción de solo lectura.  
   
 ## <a name="sqlsoptsscurrentcommand"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  El atributo SQL_SOPT_SS_CURRENT_COMMAND expone el comando actual de un lote de comandos. El retorno es un entero que especifica la ubicación del comando en el lote. El valor de *ValuePtr* es de tipo SQLLEN.  
   
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica el valor actual de la NOCOUNT opción, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectadas por una instrucción cuando [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) se llama. El valor de *ValuePtr* es de tipo SQLLEN.  
+ El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica el valor actual de la opción NOCOUNT, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectados por una instrucción cuando se llama a [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) . El valor de *ValuePtr* es de tipo SQLLEN.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "47631973"
  Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLSetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [Función SQLSetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

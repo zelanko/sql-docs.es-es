@@ -13,12 +13,12 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789223"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600245"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Escenario de persistencia del conjunto de registros XML
 En este escenario, creará una aplicación de páginas Active Server (ASP) que guarda el contenido de un objeto de conjunto de registros directamente en el objeto de respuesta de ASP.  
@@ -111,7 +111,7 @@ En este escenario, creará una aplicación de páginas Active Server (ASP) que g
 </HTML>  
 ```  
   
- Cierre el archivo default.htm y guárdelo en la misma carpeta donde guardó XMLResponse.asp. Uso de Internet Explorer 4.0 o posterior, abra la dirección URL http://*sqlserver*/XMLPersist/default.htm y observe los resultados. Los datos se muestran en una tabla enlazada de DHTML. Ahora, abra la dirección URL http:// *sqlserver* /XMLPersist/XMLResponse.asp y observe los resultados. Se muestra el código XML.  
+ Cierre el archivo default.htm y guárdelo en la misma carpeta donde guardó XMLResponse.asp. Uso de Internet Explorer 4.0 o posterior, abra la dirección URL https://*sqlserver*/XMLPersist/default.htm y observe los resultados. Los datos se muestran en una tabla enlazada de DHTML. Ahora, abra la dirección URL https:// *sqlserver* /XMLPersist/XMLResponse.asp y observe los resultados. Se muestra el código XML.  
   
 ## <a name="see-also"></a>Vea también  
  [Save (método)](../../../ado/reference/ado-api/save-method.md)   

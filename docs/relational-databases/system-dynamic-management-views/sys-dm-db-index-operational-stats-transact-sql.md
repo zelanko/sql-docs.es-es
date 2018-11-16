@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8ddd123c60806826918f8b42412048aaa408776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8103e48da5c0059cfc977f862ebd8fc0839fb9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716503"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661064"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|Id. de la base de datos.|    
 |**object_id**|**int**|Identificador de la tabla o vista.|    
 |**index_id**|**int**|Identificador del índice o montón.<br /><br /> 0 = Montón|    
-|**hobt_id**|**bigint**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Id. del montón de datos o conjunto de filas de árbol B que realiza el seguimiento de los datos internos para un índice de almacén de columnas.<br /><br /> NULL: esto no es un conjunto de filas del almacén de columnas interno.<br /><br /> Para obtener más información, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Id. del montón de datos o conjunto de filas de árbol B que realiza el seguimiento de los datos internos para un índice de almacén de columnas.<br /><br /> NULL: esto no es un conjunto de filas del almacén de columnas interno.<br /><br /> Para obtener más información, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|    
 |**leaf_insert_count**|**bigint**|Recuento acumulado de inserciones en el nivel hoja.|    
 |**leaf_delete_count**|**bigint**|Recuento acumulado de eliminaciones en el nivel hoja. leaf_delete_count sólo se incrementa para los registros eliminados que no están marcados como fantasma en primer lugar. Para los registros eliminados se reflejó en primer lugar, **leaf_ghost_count** se incrementa en su lugar.|    
@@ -244,7 +244,7 @@ GO
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [Sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

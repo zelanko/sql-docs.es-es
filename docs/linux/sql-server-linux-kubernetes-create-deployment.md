@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bc5acc2ee6f81dbdf1ce16a98fb7f75bbf6f121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594563"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659094"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Crear script de implementación de SQL Server grupo de disponibilidad AlwaysOn
 
@@ -206,7 +206,7 @@ El ejemplo siguiente crea los manifiestos de un grupo de disponibilidad en el es
 python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```
 
-Una vez finalizada la secuencia de comandos, el operador de Kubernetes crea el almacenamiento, las instancias de SQL Server, los servicios de equilibrador de carga. Puede supervisar la implementación con [panel de Kubernetes](http://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+Una vez finalizada la secuencia de comandos, el operador de Kubernetes crea el almacenamiento, las instancias de SQL Server, los servicios de equilibrador de carga. Puede supervisar la implementación con [panel de Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-dashboard).
 
 Después de que Kubernetes crea los contenedores de SQL Server:
 

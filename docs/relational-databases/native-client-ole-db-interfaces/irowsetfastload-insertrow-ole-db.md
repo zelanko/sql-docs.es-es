@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01d3a12aa4dbdc830fa10867995ee2f6c24241fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a29b8f3dd01a39079f1eec86410ba5bc2ddcc738
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654303"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667855"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ HRESULT InsertRow(
  El identificador del descriptor de acceso que define los datos de fila para la copia masiva. El descriptor de acceso al que se hace referencia es un descriptor de acceso de fila, que enlaza la memoria propia del consumidor que contiene los valores de datos.  
   
  *pData*[in]  
- Puntero a la memoria propia del consumidor que contiene los valores de datos. Para obtener más información, vea [Estructuras DBBINDING](http://go.microsoft.com/fwlink/?LinkId=65955).  
+ Puntero a la memoria propia del consumidor que contiene los valores de datos. Para obtener más información, vea [Estructuras DBBINDING](https://go.microsoft.com/fwlink/?LinkId=65955).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  
@@ -60,7 +60,7 @@ HRESULT InsertRow(
  SQLNCLI11 no ha podido asignar la memoria suficiente para completar la solicitud.  
   
  E_UNEXPECTED  
- Se ha llamado al método en un conjunto de filas de copia masiva previamente invalidado por el método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
+ Se llamó al método en un conjunto de filas de copia masiva previamente invalidado por el método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
  DB_E_BADACCESSORHANDLE  
  El argumento *hAccessor* proporcionado por el consumidor no era válido.  
@@ -69,11 +69,11 @@ HRESULT InsertRow(
  El descriptor de acceso especificado no era un descriptor de acceso de fila o no especificaba la memoria propia del consumidor.  
   
 ## <a name="remarks"></a>Comentarios  
- Un error al convertir los datos del consumidor a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] E_FAIL devuelto desde hace que el tipo de datos para una columna de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB. Los datos se pueden transmitir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cualquier método **InsertRow** o solo en el método **Commit**. La aplicación de consumidor puede llamar al método **InsertRow** muchas veces con datos erróneos antes de recibir el aviso de que existe un error de conversión de tipo de datos. Dado que el método **Commit** asegura que el consumidor especifica correctamente todos los datos, este último puede utilizar el método **Commit** adecuadamente para validar los datos según sea necesario.  
+ Un error al convertir los datos del consumidor al tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una columna hace que el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client devuelva E_FAIL. Los datos se pueden transmitir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cualquier método **InsertRow** o solo en el método **Commit** . La aplicación de consumidor puede llamar al método **InsertRow** muchas veces con datos erróneos antes de recibir el aviso de que existe un error de conversión de tipo de datos. Dado que el método **Commit** asegura que el consumidor especifica correctamente todos los datos, este último puede utilizar el método **Commit** adecuadamente para validar los datos según sea necesario.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de filas copia masiva de proveedor de OLE DB de Native Client son de solo escritura. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no expone ningún método que permita al consumidor consultar del conjunto de filas. Para finalizar el procesamiento, el consumidor puede liberar su referencia en la interfaz [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) sin llamar al método **Commit**. No hay recursos para obtener acceso a una fila insertada por el consumidor en el conjunto de filas y cambiar sus valores o quitarla individualmente del conjunto de filas.  
+ Los conjuntos de filas de copia masiva del proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client son de solo escritura. El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no expone ningún método que permita al consumidor consultar el conjunto de filas. Para finalizar el procesamiento, el consumidor puede liberar su referencia en la interfaz [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) sin llamar al método **Commit**. No hay recursos para obtener acceso a una fila insertada por el consumidor en el conjunto de filas y cambiar sus valores o quitarla individualmente del conjunto de filas.  
   
- Se da formato a las filas de copia masiva en el servidor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las opciones que se hayan establecido para la conexión o sesión, como ANSI_PADDING, afectan al formato de fila. Esta opción está activada de forma predeterminada para las conexiones realizadas a través de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB.  
+ Se da formato a las filas de copia masiva en el servidor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las opciones que se hayan establecido para la conexión o sesión, como ANSI_PADDING, afectan al formato de fila. Esta opción está activada de forma predeterminada para las conexiones realizadas a través del proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vea también  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  

@@ -15,12 +15,12 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98de1a3a2e03a576b84543bf3578d87e7ad6c655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657983"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350479"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Proveedor Microsoft OLE DB para Introducción a SQL Server
 El proveedor Microsoft OLE DB para SQL Server, SQLOLEDB, permite que ADO tener acceso a Microsoft SQL Server.
@@ -30,7 +30,7 @@ El proveedor Microsoft OLE DB para SQL Server, SQLOLEDB, permite que ADO tener a
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
  Para conectarse a este proveedor, establezca el *proveedor* argumento para el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad:
 
-```
+```vb
 SQLOLEDB
 ```
 
@@ -39,7 +39,7 @@ SQLOLEDB
 ## <a name="typical-connection-string"></a>Cadena de conexión típica
  Una cadena de conexión típica para este proveedor es:
 
-```
+```vb
 "Provider=SQLOLEDB;Data Source=serverName;"
 Initial Catalog=databaseName;
 User ID=MyUserID;Password=MyPassword;"
@@ -76,14 +76,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="command-object-usage"></a>Uso del objeto Command
  SQLOLEDB acepta una amalgama de ODBC, ANSI y específicas de SQL Server Transact-SQL como sintaxis válida. Por ejemplo, la siguiente instrucción SQL utiliza una secuencia de escape de ODBC SQL para especificar la función de cadena LCASE:
 
-```
+```sql
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 
 ```
 
  LCASE devuelve una cadena de caracteres, convirtiendo todos los caracteres en mayúscula en sus equivalentes en minúscula. La función de cadena ANSI SQL LOWER realiza la misma operación, por lo que la siguiente instrucción SQL es un equivalente a la instrucción ODBC presentada anteriormente ANSI:
 
-```
+```sql
 SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ```
@@ -95,14 +95,14 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ## <a name="odbc-sql"></a>ODBC SQL
 
-```
+```vb
 {call SalesByCategory('Produce', '1995')}
 
 ```
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-```
+```sql
 EXECUTE SalesByCategory 'Produce', '1995'
 
 ```
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
  El proveedor Microsoft OLE DB para SQL Server inserta varias propiedades dinámicas en la **propiedades** colección de los no abierto [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y [ Comando](../../../ado/reference/ado-api/command-object-ado.md) objetos.
 
- Las tablas siguientes son un índice cruzado de los nombres de ADO y OLE DB para cada propiedad dinámica. Referencia de la base de datos del programador de OLE se refiere a un nombre de la propiedad ADO con el término "Description". Puede encontrar más información acerca de estas propiedades en referencia del programador de OLE DB. Busque el nombre de propiedad de OLE DB en el índice o vea [Apéndice C: propiedades de OLE DB](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Las tablas siguientes son un índice cruzado de los nombres de ADO y OLE DB para cada propiedad dinámica. Referencia de la base de datos del programador de OLE se refiere a un nombre de la propiedad ADO con el término "Description". Puede encontrar más información acerca de estas propiedades en referencia del programador de OLE DB. Busque el nombre de propiedad de OLE DB en el índice o vea [Apéndice C: propiedades de OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Propiedades dinámicas de conexión
  Las siguientes propiedades se agregan a la **propiedades** colección de la **conexión** objeto.
@@ -355,7 +355,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Raíz XML|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- Para detalles de implementación específicos y funcional sobre el proveedor OLE DB de Microsoft SQL Server, consulte el [proveedor de SQL Server](http://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
+ Para detalles de implementación específicos y funcional sobre el proveedor OLE DB de Microsoft SQL Server, consulte el [proveedor de SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
 ## <a name="see-also"></a>Vea también
  [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [proveedor (propiedad, ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [el objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

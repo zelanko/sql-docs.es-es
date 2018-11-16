@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695906"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512710"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695906"
 
 
 ## <a name="what-is-a-graph-database"></a>¿Qué es una base de datos de gráfico?  
-Una base de datos de gráfico es una colección de nodos (o vértices) y bordes (o relaciones). Un nodo representa una entidad (por ejemplo, una persona o una organización) y un borde representa una relación entre los dos nodos que se conecta (por ejemplo, "Me gusta" o amigos). Los nodos y bordes pueden tener propiedades asociadas a ellos. Estas son algunas características que hacen que una base de datos de gráfico únicos:  
+Una base de datos de gráficos es una colección de nodos (o vértices) y bordes (o relaciones). Un nodo representa una entidad (por ejemplo, una persona o una organización) y un borde representa una relación entre los dos nodos que conecta (por ejemplo, gustos o amigos). Los nodos y bordes pueden tener propiedades asociadas a ellos. Estas son algunas características que hacen que una base de datos de gráfico únicos:  
 -   Bordes o las relaciones son entidades de primera clases en una base de datos del gráfico y pueden atributos o propiedades asociados a ellas. 
 -   Un solo borde flexible puede conectar varios nodos en una base de datos del gráfico.
 -   Coincidencia de patrones y las consultas de navegación en saltos múltiples se pueden expresar fácilmente.
@@ -48,7 +47,7 @@ Hemos empezado a agregar extensiones graph a SQL Server, para que sea más fáci
 
 
 ### <a name="create-graph-objects"></a>Crear objetos de grafos
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] las extensiones le permitirá a los usuarios crear tablas de nodo o perimetral. Los nodos y bordes pueden tener propiedades asociadas a ellos. Puesto que los nodos y bordes se almacenan como tablas, se admiten todas las operaciones que se admiten en tablas relacionales en la tabla de nodo o perimetral. A continuación se muestra un ejemplo:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] las extensiones le permitirá a los usuarios crear tablas de nodo o perimetral. Los nodos y bordes pueden tener propiedades asociadas a ellos. Puesto que los nodos y bordes se almacenan como tablas, se admiten todas las operaciones que se admiten en tablas relacionales en la tabla de nodo o perimetral. A continuación, se muestra un ejemplo:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

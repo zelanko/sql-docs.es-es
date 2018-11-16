@@ -23,12 +23,12 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f8dd4dcfc08366e78f11fc8b10fa269f17bb09e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708443"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664124"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalación de SQL Server Migration Assistant para Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para el acceso se instala mediante un asistente basado en Windows Installer. Este tema proporciona información sobre los requisitos previos de instalación, un vínculo a la versión más reciente de SSMA e instrucciones para instalar, licencias, desinstalar y actualizar SSMA.  
@@ -46,12 +46,12 @@ Antes de instalar SSMA, asegúrese de que su sistema cumple los requisitos sigui
   
 -   Microsoft Data Access Object (DAO) versión 12.0 o 14.0 del proveedor. Puede instalar al proveedor de DAO de producto de Microsoft Office 2010 o 2007 o descargarlo desde el sitio web de Microsoft.  
   
--   El SQL Server Native Access Client (SNAC) versión 10.5 y posterior para la migración a SQL Azure. Puede obtener la última versión de SNAC desde [Feature Pack de Microsoft® SQL Server® 2008 R2](http://go.microsoft.com/fwlink/?LinkId=196940)  
+-   El SQL Server Native Access Client (SNAC) versión 10.5 y posterior para la migración a SQL Azure. Puede obtener la última versión de SNAC desde [Feature Pack de Microsoft® SQL Server® 2008 R2](https://go.microsoft.com/fwlink/?LinkId=196940)  
   
 -   4 GB de RAM (recomendado).  
   
 ## <a name="installing-ssma"></a>Instalación de SSMA  
-SSMA es una descarga Web. Para descargar la versión más reciente, consulte el [página de descarga de SQL Server Migration Assistant](http://aka.ms/ssmaforaccess).  
+SSMA es una descarga Web. Para descargar la versión más reciente, consulte el [página de descarga de SQL Server Migration Assistant](https://aka.ms/ssmaforaccess).  
   
 Después de descargar la versión más reciente, debe extraer los archivos de instalación desde antes de poder instalar SSMA.
 

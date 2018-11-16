@@ -10,12 +10,12 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 20e52c835d54ec1cac31e1821bfe49876683e324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3df0803e7c4d86126077b716a2a66ebab3379b9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631273"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657295"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Cargando convertido la base de datos objetos en SQL Server (DB2ToSQL)
 Después de convertir los esquemas de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede tener SSMA crear los objetos, o puede incluir los objetos y ejecutar las secuencias de comandos usted mismo. Además, SSMA permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
@@ -104,7 +104,7 @@ También puede ejecutar scripts desde la línea de comandos mediante la **sqlcmd
 Después de haber cargado los objetos de base de datos convertida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede otorgar y denegar permisos en esos objetos. Es una buena idea hacerlo antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información acerca de cómo ayudar a proteger objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Consideraciones para las bases de datos y base de datos de aplicaciones de seguridad" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [migrar datos de DB2 a SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
+El siguiente paso del proceso de migración es [migrar datos de DB2 a SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 ## <a name="see-also"></a>Vea también  
 [Migración de datos de DB2 en SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

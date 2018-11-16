@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095555"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606855"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (Administrador de configuración de SSRS)
+
   Reporting Services en modo nativo admite un modelo de implementación de ampliación horizontal que permite ejecutar varias instancias del servidor de informes que comparten una única base de datos del servidor de informes. Las implementaciones escaladas se utilizan para aumentar la escalabilidad de los servidores de informes para administrar más usuarios con acceso simultáneo y mayores cargas de ejecución de informes. También se pueden utilizar para dedicar servidores concretos en el procesamiento de informes interactivos o programados.  
   
  Los servidores de informes en modo de SharePoint utilizan la infraestructura de los Productos de SharePoint para la implementación escalada. La ampliación del modo de SharePoint se logra al agregar más servidores de informes en modo de SharePoint a la granja de servidores de SharePoint. Para más información sobre la implementación escalada en el modo de SharePoint, vea [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
@@ -67,7 +68,7 @@ ms.locfileid: "48095555"
   
 2.  Inicie la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configure la dirección URL del servicio web del servidor de informes, la dirección URL del Administrador de informes y la base de datos del servidor de informes. Para más información, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](../report-server/configure-a-report-server-reporting-services-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configure la dirección URL del servicio web del servidor de informes, la dirección URL del Administrador de informes y la base de datos del servidor de informes. Para obtener más información, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](../report-server/configure-a-report-server-reporting-services-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Compruebe que el servidor de informes está operativo. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -116,14 +117,14 @@ ms.locfileid: "48095555"
   
 4.  Ahora debería poder para comprobar que ambas instancias del servidor de informes están operativas. Para comprobar la segunda instancia, puede utilizar la herramienta Configuración de Reporting Services con el fin de conectarse al servidor de informes y hacer clic en la dirección URL del servicio web o en la dirección URL del Administrador de informes.  
   
- Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+ Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Administración de un servidor de informes en modo nativo de Reporting Services](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

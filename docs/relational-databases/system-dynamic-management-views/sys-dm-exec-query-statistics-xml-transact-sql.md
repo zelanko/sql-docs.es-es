@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9fdcbb6bec46043f030172d794cb5238d99a151e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784669"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675104"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>Sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Esta función del sistema que funciona en ambos **estándar** y **ligera** consu
   
 **Ligero** está disponible en las estadísticas de generación de perfiles de infraestructura [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y se puede habilitar:
   -  Globalmente mediante el uso de seguimiento marca 7412.
-  -  Mediante el [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) eventos extendidos.
+  -  Mediante el [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) eventos extendidos.
   
 > [!NOTE]
 > Una vez habilitada la marca de seguimiento 7412, generación de perfiles ligera se habilitará para cualquier consumidor de las estadísticas de ejecución de consulta generación de perfiles de infraestructura en lugar de una generación de perfiles estándar, como la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).

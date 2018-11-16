@@ -13,12 +13,12 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: df421edd33f0b578d41b356d6e8e7d1a9c41336d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: a172018d136df39c0eb27d8f19b17c783524fe0c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098594"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664204"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Creación de archivos de valor variable (SybaseToSQL)
 Archivo de valores de variable es un archivo XML que contiene los valores de parámetro de comandos, como el nombre del servidor de origen o destino que cambian con frecuencia de la migración de un servidor a otro. Cuando se produce un gran número de migraciones de base de datos, se creará varios archivos de variable para almacenar el valor de cada servidor de origen y se hace referencia en un archivo de script maestro con el **– v** cambiar en la línea de comandos. Esto ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  
@@ -94,5 +94,5 @@ El usuario puede validar fácilmente su archivo de valor de la variable en el ar
 El siguiente paso en el funcionamiento de la consola es [crear los archivos de conexión de servidor &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Creación de los archivos del servidor (Sybasetosql)](http://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
+[Creación de los archivos del servidor (Sybasetosql)](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
   

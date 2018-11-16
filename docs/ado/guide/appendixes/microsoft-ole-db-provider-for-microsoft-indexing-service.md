@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613283"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350359"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Proveedor Microsoft OLE DB para Microsoft Introducción al servicio de indización
 El proveedor Microsoft OLE DB para servicios de Index Server de Microsoft proporciona acceso mediante programación de solo lectura para el sistema de archivos y datos Web indizados por servicios de Index Server de Microsoft. Las aplicaciones ADO pueden emitir consultas SQL para recuperar información de la propiedad de contenido y archivos.
@@ -30,7 +30,7 @@ El proveedor Microsoft OLE DB para servicios de Index Server de Microsoft propor
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
  Para conectarse a este proveedor, establezca el **proveedor =** argumento para el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad:
 
-```
+```vb
 MSIDXS
 ```
 
@@ -39,7 +39,7 @@ MSIDXS
 ## <a name="typical-connection-string"></a>Cadena de conexión típica
  Una cadena de conexión típica para este proveedor es:
 
-```
+```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 
@@ -79,7 +79,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|
-|[Filtro](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|no disponible|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lectura/escritura|

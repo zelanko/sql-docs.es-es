@@ -14,12 +14,12 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633441"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601355"
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
 La forma de datos define las columnas de una forma **Recordset**, las relaciones entre las entidades representadas por las columnas y la forma en que el **Recordset** se rellena con datos.  
@@ -46,7 +46,7 @@ La forma de datos define las columnas de una forma **Recordset**, las relaciones
   
  Puede tener acceso a la **Recordset** componentes de la forma **Recordset** mediante programación o a través de un control visual adecuado.  
   
- Microsoft proporciona una herramienta visual que genera comandos shape (vea la [diseñador del entorno de datos](http://go.microsoft.com/fwlink/?LinkId=5689) en la documentación de Visual Basic 6) y otra que muestra cursores jerárquicos (vea "usar el Microsoft jerárquica FlexGrid Control"en la documentación de Visual Basic 6).  
+ Microsoft proporciona una herramienta visual que genera comandos shape (vea la [diseñador del entorno de datos](https://go.microsoft.com/fwlink/?LinkId=5689) en la documentación de Visual Basic 6) y otra que muestra cursores jerárquicos (vea "usar el Microsoft jerárquica FlexGrid Control"en la documentación de Visual Basic 6).  
   
  Para obtener información sobre la navegación jerárquica **Recordset**, consulte [obtener acceso a filas en un conjunto de registros jerárquicos](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

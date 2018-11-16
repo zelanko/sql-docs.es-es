@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909825"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696434"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Instalar los módulos de administración de SQL Server Operations Manager (SCOM) para Analytics Platform System
 Siga estos pasos para descargar e instalar los módulos de administración de System Center Operations Manager (SCOM) para PDW de SQL Server. Los módulos de administración necesarias para supervisar SQL Server PDW desde SCOM.  
@@ -25,13 +25,13 @@ Siga estos pasos para descargar e instalar los módulos de administración de Sy
 System Center Operations Manager debe estar instalado y ejecutándose. PDW de SQL Server 2012 requiere System Center Operations Manager 2007 R2, System Center Operations Manager 2012 o System Center Operations Manager 2012 service pack 1.  
   
 ## <a name="Step1"></a>Paso 1: Descargar los módulos de administración  
-Para la carga de trabajo de APS PDW, descargue el [System Center Management Pack para Microsoft Analytics Platform System](http://go.microsoft.com/fwlink/?LinkId=396857).  
+Para la carga de trabajo de APS PDW, descargue el [System Center Management Pack para Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-Para la administración de dispositivo, descargue el [Base Management Pack de SQL Server Appliance](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436).  
+Para la administración de dispositivo, descargue el [Base Management Pack de SQL Server Appliance](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436).  
   
-Para versiones anteriores de PDW sin APS, descargue el[módulo de supervisión de System Center para dispositivo de almacenamiento de Microsoft SQL Server 2012 paralelo datos](http://go.microsoft.com/fwlink/p/?LinkId=282661).  
+Para versiones anteriores de PDW sin APS, descargue el[módulo de supervisión de System Center para dispositivo de almacenamiento de Microsoft SQL Server 2012 paralelo datos](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
-<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>Paso 2: Instalar los módulos de administración  
   

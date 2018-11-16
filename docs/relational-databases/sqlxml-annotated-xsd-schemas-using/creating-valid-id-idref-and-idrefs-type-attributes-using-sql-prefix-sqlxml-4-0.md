@@ -24,12 +24,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a80a27633fab47cbac060169602ed6c7baa01e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3999ec952c2cb0d7ec58ba729241e87a4ad47db5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712033"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670274"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47712033"
  El **OrderIDList** atributo de  **\<cliente >** es un atributo de tipo IDREFS que hace referencia a la **OrderID** atributo de la  **\< Orden >** elemento.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

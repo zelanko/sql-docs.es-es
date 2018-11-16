@@ -14,18 +14,18 @@ ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33caf0d65825eb13365eedaa795e410d21c7f0cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7341f69d500274367c5c0a853d3fadf1261b9ee4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744893"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606455"
 ---
 # <a name="irdsservice-interface-rds"></a>Interfaz IRDSService (RDS)
 Expone el [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) método, que se usa para devolver un puntero a la interfaz solicitada en una versión con más capacidad del objeto.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos RDS](../../../ado/reference/rds-api/rds-objects.md)

@@ -18,18 +18,18 @@ ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ba03aa3be2b644dfbd554528824162a75bc30a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 822430c56070bb459e36ca3a3310d186258aea34
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691053"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601926"
 ---
 # <a name="refresh-method-rds"></a>Método Refresh (RDS)
 Vuelve a consultar el origen de datos especificado en el [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propiedad y las actualizaciones de los resultados de consulta.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   

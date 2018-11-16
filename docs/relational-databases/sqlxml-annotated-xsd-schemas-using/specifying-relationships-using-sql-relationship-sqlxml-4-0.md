@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7578df8d31dadba739bb2de58a8568f6ba55d7e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55741ddbf71eaff963e25c8e087c3cff31389409
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661963"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670503"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47661963"
  La  **\<relación >** elemento identifica la columna CustomerID de la tabla Sales.SalesOrderHeader como una clave externa que hace referencia a la clave principal CustomerID de la tabla Sales.Customer. Por lo tanto, los pedidos que pertenecen a un cliente aparecen como un elemento secundario de dicho  **\<cliente >** elemento.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -121,7 +121,7 @@ ms.locfileid: "47661963"
  Éste es el esquema revisado en el que se especifica una relación sin nombre:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Customer" sql:relation="Sales.Customer"  type="CustomerType" />  
@@ -206,7 +206,7 @@ ms.locfileid: "47661963"
  En el siguiente esquema, el **msdata: Relationship** anotación en el  **\<producto >** elemento especifica dos valores: OrderOD y ODProduct. Es importante el orden en que se especifican estos valores.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -244,7 +244,7 @@ ms.locfileid: "47661963"
  En lugar de especificar una relación con nombre, puede especificar una relación anónima. En este caso, todo el contenido de  **\<anotación >**...  **\</annotation >**, que describe las dos relaciones, aparecen como un elemento secundario de  **\<producto >**.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Order" msdata:relation="Sales.SalesOrderHeader"   
@@ -323,7 +323,7 @@ ms.locfileid: "47661963"
  El esquema de este ejemplo incluye una \<cliente > elemento con un \<IdCliente > elemento secundario y un atributo OrderIDList del tipo IDREFS. El \<cliente > elemento se asigna a la tabla Sales.Customer de la base de datos AdventureWorks. De forma predeterminada, el ámbito de esta asignación se aplica a todos los elementos secundarios o atributos, a menos que **SQL: relation** se especifica en el elemento secundario o un atributo, en cuyo caso, debe ser la adecuada relación primaria key/foreign key definido mediante el \<relación > elemento. Y el elemento secundario o el atributo que especifica la tabla diferente mediante el **relación** anotación, también debe especificar el **relación** anotación.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -392,7 +392,7 @@ ms.locfileid: "47661963"
  La  **\<orden >** elemento incluye el  **\<OrderDetail >** elemento secundario. **\<SQL: Relationship >** se especifica en  **\<OrderDetail >** elemento secundario, por lo que los detalles del pedido que pertenecen a un orden aparecen como elementos secundarios de los que **\<pedido >** elemento.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -496,7 +496,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
  La siguiente vista XML tiene el  **\<Emp1 >** y  **\<Emp2 >** elementos de las tablas de asignación al Sales.Emp1 y Sales.Emp2:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989861"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601745"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Tipo devuelto  
  \<expresión de tabla >  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor proporcionado por el \<rank expression > argumento determina el orden decreciente de rango para las filas que se proporcionan en el \<expresión de tabla > argumento y el número de filas de nivel superior que se especifica en el \<recuento > se devuelve el argumento.  
   
  La función TopCount se presentó originalmente para habilitar las predicciones asociativas y en general, genera los mismos resultados que una instrucción que incluye **SELECT TOP** y **ORDER BY** cláusulas. Obtendrá un mejor rendimiento para las predicciones asociativas si usa el **predecir (DMX)** función, que admite la especificación de un número de predicciones que devolver.  
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  Sin embargo, existen situaciones donde es posible que todavía deberá usar TopCount. Por ejemplo, DMX no admite la **superior** calificador en una instrucción Sub-select. El [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) función también no admite la adición de **superior**.  
   
 ## <a name="examples"></a>Ejemplos  
- Los siguientes ejemplos son consultas de predicción en el modelo de asociación que se crea mediante el uso de la [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero el primer ejemplo utiliza TopCount y el segundo ejemplo usa la función Predict.  
+ Los siguientes ejemplos son consultas de predicción en el modelo de asociación que se crea mediante el uso de la [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero el primer ejemplo utiliza TopCount y el segundo ejemplo usa la función Predict.  
   
  Para entender cómo funciona TopCount, puede ser útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
   

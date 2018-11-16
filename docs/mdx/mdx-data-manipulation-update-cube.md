@@ -1,5 +1,5 @@
 ---
-title: Instrucción UPDATE CUBE (MDX) | Documentos de Microsoft
+title: Instrucción UPDATE CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741884"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702373"
 ---
-# <a name="mdx-data-manipulation---update-cube"></a>Manipulación de datos MDX - UPDATE CUBE
+# <a name="mdx-data-manipulation---update-cube"></a>Manipulación de datos de MDX: UPDATE CUBE
 
 
-  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,20 +41,20 @@ UPDATE [ CUBE ] Cube_Name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Restricciones obligatorias Cube_Name*  
+ *Cube_Name*  
  Cadena válida que proporciona el nombre de un cubo.  
   
  *Tuple_Expression*  
  Expresión MDX válida que devuelve una tupla.  
   
  *Archivo_ini*  
- Expresión numérica válida.  
+ Una expresión numérica válida.  
   
  *Weight_Expression*  
  Expresión numérica MDX (Expresiones multidimensionales) válida que devuelve un valor decimal entre 0 y 1.  
   
-## <a name="remarks"></a>Notas  
- Puede actualizar el valor de una celda hoja o de una celda no hoja especificada de un cubo, asignando opcionalmente el valor de una celda no hoja especificada a través de las celdas hoja dependientes. La celda especificada por la expresión de tupla puede ser cualquier celda válida del espacio multidimensional (es decir, la celda no tiene que ser una celda hoja). Sin embargo, debe agregarse la celda con el [suma](../mdx/sum-mdx.md) función de agregado y no se debe incluir un miembro calculado en la tupla que se usa para identificar la celda.  
+## <a name="remarks"></a>Comentarios  
+ Puede actualizar el valor de una celda hoja o de una celda no hoja especificada de un cubo, asignando opcionalmente el valor de una celda no hoja especificada a través de las celdas hoja dependientes. La celda especificada por la expresión de tupla puede ser cualquier celda válida del espacio multidimensional (es decir, la celda no tiene que ser una celda hoja). Sin embargo, debe agregarse la celda con el [suma](../mdx/sum-mdx.md) función de agregado y no puede contener un miembro calculado en la tupla que se usa para identificar la celda.  
   
  Puede resultar útil pensar en el **UPDATE CUBE** instrucción como una subrutina que generará automáticamente una serie de operaciones de reescritura de celda individual a las celdas hoja y no hoja que se acumularán en la suma especificada.  
   
@@ -67,7 +67,7 @@ UPDATE [ CUBE ] Cube_Name
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:** cada celda hoja que contribuye a la celda actualizada se cambiará según la siguiente expresión.  
+ **USE_EQUAL_INCREMENT:** cada celda hoja que contribuye a la celda actualizada se cambiará de acuerdo con la siguiente expresión.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -81,14 +81,14 @@ Count(leaf cells contained in <tuple>)
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:** cada celda hoja que contribuye a la celda actualizada se cambiará según la siguiente expresión.  
+ **USE_WEIGHTED_INCREMENT:** cada celda hoja que contribuye a la celda actualizada se cambiará de acuerdo con la siguiente expresión.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- Si no se especifica una expresión de peso, la **UPDATE CUBE** instrucción utiliza la siguiente expresión de forma implícita.  
+ Si no se especifica una expresión de peso, el **UPDATE CUBE** instrucción usa implícitamente la expresión siguiente.  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633483"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663275"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633483"
 |percent_complete|**int**|Porcentaje de la operación que se ha completado. Los valores no son continuos y los valores válidos se enumeran a continuación. No es NULL.<br/><br/>0 = no ha iniciado la operación<br/>50 = la operación en curso<br/>100 = operación completada|  
 |error_code|**int**|Código que indica el error que se produjo durante una operación con errores. Si el valor es 0, indica que la operación se completó correctamente.|  
 |error_desc|**nvarchar(2048)**|Descripción del error que se produjo durante una operación con errores.|  
-|error_severity|**int**|Nivel de gravedad del error que se produjo durante una operación con errores. Para obtener más información sobre los niveles de gravedad de error, consulte [niveles de gravedad de Error de motor de base de datos](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Nivel de gravedad del error que se produjo durante una operación con errores. Para obtener más información sobre los niveles de gravedad de error, consulte [niveles de gravedad de Error de motor de base de datos](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Reservado para uso futuro. La compatibilidad con versiones posteriores no está garantizada.|  
 |start_time|**datetime**|Marca de tiempo del inicio de la operación.|  
 |last_modify_time|**datetime**|Marca de tiempo en la que se modificó el registro por última vez para una operación de ejecución prolongada. En el caso de operaciones completadas correctamente, este campo muestra la marca de tiempo en la que se completó la operación.|  

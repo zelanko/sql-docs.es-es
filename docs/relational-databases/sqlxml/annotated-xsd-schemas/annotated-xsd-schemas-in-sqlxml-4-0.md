@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c1012c3eb2bef913667052b00ff44fff95fade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821533"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662314"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Esquemas XSD anotados en SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "47821533"
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Primer, W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C recomendación ()https://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Estructuras, el W3C recomendación ()http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Estructuras, el W3C recomendación ()https://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2:Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2:Datatypes, W3C recomendación ()https://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) ()https://www.w3.org/TR/xpath)  
   
--   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
+-   (XSL Transformations (XSLT)https://www.w3.org/TR/xslt)  
   
   

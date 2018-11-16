@@ -16,12 +16,12 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a3128f207468fb0b9c5c4f4b4ee5ffbc51243bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44dea69fde76f34fea7a6a4f5c3319d1b1a1772a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768949"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675744"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Conceptos de programación en el ámbito de la integración de Common Language Runtime (CLR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47768949"
  El espacio de nombres Microsoft.SqlServer.Server incluye funcionalidad básica para la programación CLR en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, el espacio de nombres Microsoft.SqlServer.Server se documenta en el SDK de .NET Framework. Esta documentación no está incluida en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  De forma predeterminada, .NET Framework se instala con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no es así para .NET Framework SDK. Sin el SDK instalado en su equipo e incluido en la colección de Libros en pantalla, no funcionan los vínculos al contenido de SDK de esta sección. Instale .NET Framework SDK. Una vez instalado, agregue el SDK a la colección de libros en pantalla y la tabla de contenido siguiendo las instrucciones de [instalar el SDK de .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  De forma predeterminada, .NET Framework se instala con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no es así para .NET Framework SDK. Sin el SDK instalado en su equipo e incluido en la colección de Libros en pantalla, no funcionan los vínculos al contenido de SDK de esta sección. Instale .NET Framework SDK. Una vez instalado, agregue el SDK a la colección de libros en pantalla y la tabla de contenido siguiendo las instrucciones de [instalar el SDK de .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
 > [!NOTE]  
 >  Funcionalidad CLR, como las funciones de usuario CLR, son *no* compatibles con Azure SQL Database.  
@@ -64,11 +64,11 @@ ms.locfileid: "47768949"
  [Supervisar y solucionar problemas de objetos de base de datos administrados](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  Se proporciona información sobre las herramientas que se pueden utilizar para supervisar y solucionar problemas de los objetos de base de datos administrados y ensamblados que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  Describe escenarios de uso y ejemplos de código que usan objetos CLR.  
   
 ## <a name="see-also"></a>Vea también  
  [Los ensamblados &#40;motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Instalar el SDK de .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [Instalar el SDK de .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

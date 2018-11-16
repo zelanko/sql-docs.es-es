@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 61558536574750e7588124afb75cf26ee580b22a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701513"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668534"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculación de aplicaciones de acceso a SQL Server: Azure SQL DB (AccessToSQL)
 Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede vincular las tablas de Access originales a la que se migrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tablas de SQL Azure. Vinculación modifica la base de datos de acceso para que las páginas de acceso a las consultas, formularios, informes y datos usan los datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o base de datos de SQL Azure en lugar de los datos de la base de datos de Access.  
@@ -56,7 +56,7 @@ Al abrir una tabla en Access, los datos se recuperan mediante un cursor keyset. 
   
 > [!IMPORTANT]  
 > Para vincular las tablas de access con una base de datos de Azure, necesita Client(SNAC) nativo de SQL Server versión 10.5 o posterior.   
-> Puede obtener la última versión de SNAC desde [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> Puede obtener la última versión de SNAC desde [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
   
 ## <a name="unlinking-access-tables"></a>Desvinculando las tablas de Access  
 Al desvincular una tabla de Access desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabla de SQL Azure, SSMA restaura la tabla de acceso original y sus datos.  

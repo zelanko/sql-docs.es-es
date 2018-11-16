@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994477"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599936"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ IsTrainingCase()
 ## <a name="result-type"></a>Tipo de resultado  
  Devuelve **true** si el caso forma parte del conjunto de datos de entrenamiento; de lo contrario **false**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si utiliza el Asistente para minería de datos con el fin de crear una estructura de minería de datos y el modelo de minería de datos relacionado, de forma predeterminada, el 30 por ciento de los casos se reservan para utilizarse como conjunto de datos de prueba. Los casos restantes en el origen de datos que se especifica se utilizan para entrenar el modelo. Sin embargo, si se utiliza Extensiones de minería de Datos (DMX) para crear el modelo de minería de datos, de forma predeterminada, todos los datos se utilizan para entrenar el modelo y no se crea ningún conjunto de pruebas. Para habilitar la creación de un conjunto de datos de prueba, se deben establecer los parámetros de la cláusula WITH HOLDOUT.  
   
  Se puede determinar si los datos de una estructura de minería de datos determinada se han dividido en conjuntos de entrenamiento y de prueba observando el valor de las propiedades <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> y <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
@@ -42,7 +42,7 @@ IsTrainingCase()
  Para devolver casos que forman parte del conjunto de datos de prueba, use la función [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa el modelo de minería de datos agrupación en clústeres en el escenario de distribución de correo directo en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta solo devuelve los casos que se utilizaron para entrenar el modelo de minería de datos. Además, los casos de entrenamiento se restringen a los clientes menores de 40 años.  
+ En el ejemplo siguiente se usa el modelo de minería de datos agrupación en clústeres en el escenario de distribución de correo directo en el [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta solo devuelve los casos que se utilizaron para entrenar el modelo de minería de datos. Además, los casos de entrenamiento se restringen a los clientes menores de 40 años.  
   
 ```  
 SELECT *  

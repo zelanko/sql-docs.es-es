@@ -1,5 +1,5 @@
 ---
-title: Procesar particiones de modelos tabulares | Documentos de Microsoft
+title: Procesar particiones de modelos tabulares | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ceaf64d4d1ef04f410be306c622ca78b3671d526
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: dea6ad8d7ef5d183990734042177f8053bb5969b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039675"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640932"
 ---
 # <a name="process-tabular-model-partitions"></a>Procesar particiones de modelos tabulares 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "34039675"
   
 2.  En el cuadro de diálogo **Particiones** , en **Particiones**, haga clic en el botón Procesar.  
   
-3.  En el cuadro de diálogo **Procesar particiones** , en el cuadro de lista **Modo** , seleccione uno de los modos de procesamiento siguientes:  
+3.  En el **procesar particiones** cuadro de diálogo el **modo** cuadro de lista, seleccione uno de los modos de procesamiento siguientes:  
   
-    |Modo|Description|  
+    |Mode|Descripción|  
     |----------|-----------------|  
     |**Proceso predeterminado**|Detecta el estado de proceso de un objeto de partición y realiza el procesamiento necesario para devolver objetos de partición sin procesar o procesados parcialmente a un estado de procesamiento completo. Se cargan los datos de las tablas vacías y las particiones; se generan o se vuelven a generar las jerarquías, las columnas calculadas y las relaciones.|  
     |**Proceso completo**|Procesa un objeto de partición y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto.|  

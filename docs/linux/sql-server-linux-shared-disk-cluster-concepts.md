@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032672"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676534"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instancias de clúster de conmutación por error: SQL Server en Linux
 
@@ -35,7 +35,7 @@ Para crear una FCI de SQL Server en Linux, consulte [configurar FCI de SQL Serve
 
     Para obtener más información sobre la configuración del clúster, las opciones del agente de recursos, administración, procedimientos recomendados y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-El complemento de alta disponibilidad de RHEL y el HAE SUSE se basan en [Pacemaker](http://clusterlabs.org/).
+El complemento de alta disponibilidad de RHEL y el HAE SUSE se basan en [Pacemaker](https://clusterlabs.org/).
 
 Como se muestra en el siguiente diagrama, almacenamiento se presenta en dos servidores. Componentes de agrupación en clústeres, Corosync y Pacemaker, coordinan las comunicaciones y administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y el servidor SQL Server. Cuando Pacemaker detecta un error de los componentes de agrupación en clústeres administran mover los recursos a otro nodo.  
 

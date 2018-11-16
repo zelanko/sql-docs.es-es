@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824033"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350529"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>La interfaz IADORecordBinding
@@ -34,12 +34,12 @@ ms.locfileid: "47824033"
 ## <a name="binding-entries"></a>Entradas de enlace
  Las extensiones de Visual C++ para ADO asignan los campos de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto a las variables de C o C++. La definición de una asignación entre un campo y una variable se denomina un *enlace entrada*. Las macros proporcionan entradas de enlace de datos numéricos, de longitud fija y de longitud variable. Las entradas de enlace y las variables de C o C++ se declaran en una clase derivada de la clase de extensiones de Visual C++, **CADORecordBinding**. El **CADORecordBinding** clase definen internamente las macros de entrada de enlace.
 
- ADO asigna internamente los parámetros de estas macros para OLE DB **DBBINDING** estructurar y crea OLE DB **descriptor de acceso** objeto para administrar el movimiento y la conversión de datos entre los campos y variables. OLE DB define los datos como que consta de tres partes: un *búfer* donde se almacenan los datos; un *estado* que indica si un campo se almacenó correctamente en el búfer o cómo debe restaurarse la variable el campo. y el *longitud* de los datos. (Consulte [obtener y establecer los datos (OLE DB)](http://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)en referencia del programador de OLE DB, para obtener más información.)
+ ADO asigna internamente los parámetros de estas macros para OLE DB **DBBINDING** estructurar y crea OLE DB **descriptor de acceso** objeto para administrar el movimiento y la conversión de datos entre los campos y variables. OLE DB define los datos como que consta de tres partes: un *búfer* donde se almacenan los datos; un *estado* que indica si un campo se almacenó correctamente en el búfer o cómo debe restaurarse la variable el campo. y el *longitud* de los datos. (Consulte [obtener y establecer los datos (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)en referencia del programador de OLE DB, para obtener más información.)
 
 ## <a name="header-file"></a>Archivo de encabezado
  En la aplicación para poder usar las extensiones de Visual C++ para ADO, incluya el siguiente archivo:
 
-```
+```cpp
 #include <icrsint.h>
 ```
 
@@ -63,19 +63,19 @@ ms.locfileid: "47824033"
 ## <a name="syntax"></a>Sintaxis
  El **BindToRecordset** método asocia el **Recordset** campos con variables de C o C++.
 
-```
+```cpp
 BindToRecordset(CADORecordBinding *binding)
 ```
 
  El **AddNew** método invoca su homónimo, ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para agregar una nueva fila a la **Recordset**.
 
-```
+```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
  El **actualizar** método invoca su homónimo, ADO [actualizar](../../../ado/reference/ado-api/update-method.md) método para actualizar la **Recordset**.
 
-```
+```cpp
 Update(CADORecordBinding *binding)
 ```
 
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  Familias de macros se proporcionan para los datos de longitud fija, como **adDate** o **adBoolean**; numérico datos, como **excepto adVarNumeric**, **son también tipos**, o **longitud fija**; y datos de longitud variable, como **cada**, **parámetros** o **adVarBinary**. Todos los tipos numéricos, excepto para **adVarNumeric**, son también tipos de longitud fija. Cada familia tiene diferentes conjuntos de parámetros para que se puede excluir la información de enlace que no es de interés.
 
- Para obtener más información, consulte [Apéndice A: tipos de datos](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referencia de la base de datos del programador de OLE.
+ Para obtener más información, consulte [Apéndice A: tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referencia de la base de datos del programador de OLE.
 
 ### <a name="begin-binding-entries"></a>Empezar a entradas de enlace
  **BEGIN ADO Binding**(*clase*)
@@ -115,7 +115,7 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*Clase*|Clase en que se definen las entradas de enlace y las variables de C o C++.|
 |*Ordinal*|Número ordinal, a partir de 1, de la **Recordset** campo correspondiente a la variable de C o C++.|
-|*Tipo de datos*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
+|*DataType*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
 |*búfer*|Nombre de la variable de C o C++ donde el **Recordset** se almacenará el campo.|
 |*Tamaño*|Tamaño máximo en bytes de *búfer*. Si *búfer* contendrá una cadena de longitud variable, deje espacio para un cero de terminación.|
 |*Estado*|Nombre de una variable que indicará si el contenido de *búfer* son válidos y si la conversión del campo para *DataType* fue correcta.<br /><br /> Los dos valores más importantes de esta variable son **adFldOK**, lo que significa que la conversión fue correcta; y **adFldNull**, lo que significa que el valor del campo sería una variante de tipo VT_NULL y no solamente vacío.<br /><br /> Los valores posibles de *estado* aparecen en la tabla siguiente, "Valores de Status".|

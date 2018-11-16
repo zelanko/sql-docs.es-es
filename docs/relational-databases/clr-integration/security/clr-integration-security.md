@@ -15,12 +15,12 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4da058b6c4a36640ceb5273c18df5bf10feb602a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48f9935f26ac4ae17b15f4008dcdb0d8a0e69e5c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607213"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677724"
 ---
 # <a name="clr-integration-security"></a>Seguridad de la integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "47607213"
  [Atributos de protección del host y programación de la integración CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Ofrece información sobre los valores del atributo de protección de host (HPA) que no se permiten en los ensamblados SAFE y EXTERNAL_ACCESS.  
   
- [Vínculos en el ámbito de seguridad de la integración CLR](http://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Vínculos en el ámbito de seguridad de la integración CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
  Describe la forma en que los fragmentos de código del usuario pueden llamarse entre sí en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Suplantación y seguridad de la integración CLR](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Suplantación y seguridad de la integración CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Explica la forma en que el código administrado obtiene acceso a los recursos externos utilizando la suplantación.  
   
- [Permitir llamadores de confianza parcial](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Permitir llamadores de confianza parcial](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Indica los problemas que surgen cuando un método administrado invoca a un método en una clase incluida dentro de otro ensamblado.  
   
- [Dominios de aplicación y seguridad de la integración CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [Dominios de aplicación y seguridad de la integración CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  Describe la forma en que los ensamblados se cargan en los dominios de aplicación.  
   
 ## <a name="see-also"></a>Vea también  

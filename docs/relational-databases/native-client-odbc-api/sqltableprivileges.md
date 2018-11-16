@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99626265a59a5e31874610f7abbb3864c5e1fa79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5ab485199920932bd88ce8740a51b7e56152a0b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708740"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669434"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "47708740"
 
   **SQLTablePrivileges** se puede ejecutar en un cursor estático. Un intento de ejecutar **SQLTablePrivileges** en un cursor actualizable (dinámico o dinámico) devuelve SQL_SUCCESS_WITH_INFO para indicar que el tipo de cursor ha cambiado.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *nombre_servidor_vinculado.nombre_catálogo*.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el parámetro *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLTablePrivileges] (http://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [Función SQLTablePrivileges] (https://go.microsoft.com/fwlink/?LinkId=59373\)   
  [Detalles de implementación de la API de ODBC](~/relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

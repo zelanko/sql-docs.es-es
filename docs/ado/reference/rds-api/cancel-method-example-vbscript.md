@@ -15,16 +15,16 @@ ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37f4f2ee7f0e33504a1133a5927ca8232d952bef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f9d9e3d21d309d237bdcf376270e285da319919
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748903"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604165"
 ---
 # <a name="cancel-method-example-vbscript"></a>Ejemplo del método Cancel (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  El ejemplo siguiente muestra cómo leer el [cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método en tiempo de ejecución. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como CancelVBS.asp. Puede ver el resultado en cualquier explorador cliente.  
   
@@ -49,7 +49,7 @@ End Sub
 .  
    <PARAM NAME="SQL" VALUE="Select FirstName, LastName from Employees">  
    <PARAM NAME="CONNECT" VALUE="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'">  
-   <PARAM NAME="Server" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="Server" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
 .  
 </OBJECT>  
   

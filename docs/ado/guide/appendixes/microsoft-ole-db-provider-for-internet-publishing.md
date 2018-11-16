@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56e780efde72007d9ed4f1b701cde220a0f9be4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688123"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350039"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Proveedor Microsoft OLE DB para la publicación de información general en Internet
 El proveedor Microsoft OLE DB para la publicación en Internet permite ADO para acceder a recursos atendidos por FrontPage de Microsoft o Microsoft Internet Information Server. Los recursos incluyen archivos de código fuente de web, como archivos HTML o las carpetas web de Windows 2000.
@@ -28,7 +28,7 @@ El proveedor Microsoft OLE DB para la publicación en Internet permite ADO para 
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
  Para conectarse a este proveedor, establezca el *proveedor* argumento de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad:
 
-```
+```vb
 MSDAIPP.DSO
 ```
 
@@ -37,13 +37,13 @@ MSDAIPP.DSO
 ## <a name="typical-connection-string"></a>Cadena de conexión típica
  Una cadena de conexión típica para este proveedor es:
 
-```
+```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
  -o bien-
 
-```
+```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 

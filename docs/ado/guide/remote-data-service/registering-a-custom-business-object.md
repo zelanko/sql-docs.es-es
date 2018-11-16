@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,18 +15,18 @@ ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d5122b7484e35f16a357b590a843a4a6dd81d13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 283e623b045e635ef3165b51270c2a257d7856fd
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655463"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560002"
 ---
 # <a name="registering-a-custom-business-object"></a>Registro de un objeto de negocios personalizado
 Para iniciar correctamente un objeto de negocios personalizados (.dll o .exe) a través del servidor Web, ProgID del objeto comercial debe especificarse en el registro como se explica en este procedimiento. Esta característica RDS protege la seguridad del servidor Web al ejecutar sólo ejecutables autorizados.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!NOTE]
 >  Para MDAC 2.0 y versiones posterior y Windows DAC, el objeto de negocios de forma predeterminada, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), no se registra de forma predeterminada durante la instalación de Windows o MDAC DAC. Sin embargo, si **RDSServer.DataFactory** se registró como seguros para la ejecución en el equipo antes de la instalación, la entrada del registro se mantiene para la nueva instalación.  

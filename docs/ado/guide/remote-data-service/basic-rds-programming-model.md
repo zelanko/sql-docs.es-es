@@ -13,16 +13,16 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65dea5ebf2813267ef7e7bb83f2f37209ee2114f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720883"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558502"
 ---
 # <a name="basic-rds-programming-model"></a>Modelo básico de programación de RDS
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  RDS orienta a las aplicaciones que existen en el siguiente entorno: una aplicación cliente especifica un programa que se ejecutará en un servidor y los parámetros necesarios para devolver la información deseada. El programa invocado en el servidor obtiene acceso al origen de datos especificada, recupera la información, opcionalmente procesa los datos y, a continuación, devuelve la información resultante a la aplicación cliente en un formulario que puede utilizar fácilmente. RDS proporciona los medios para realizar la siguiente secuencia de acciones:  
   

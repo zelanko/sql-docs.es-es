@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7721018d887fdb4c24293c4076f384167f38a55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695083"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350280"
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajo con datos multidimensionales
 Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y normalmente sólo dos o tres. Un *eje* es una colección de miembros de una o varias dimensiones, que se usa para buscar o filtrar valores específicos de un cubo.  
@@ -64,7 +64,7 @@ Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta
   
  Cada coordenada se representa como una posición con dos miembros: uno de la dimensión vendedor y otro de la dimensión Geography:  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -72,7 +72,7 @@ Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta
   
  El eje y sólo tiene una dimensión, que contiene las ocho posiciones siguientes:  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   

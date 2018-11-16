@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d772ba3ad5c40437ca819ae7992a717057c066bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: f3a15d63b38ac92a6dcdba7363d1fa5ccd05534b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051037"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700733"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurar una base de datos en la instancia maestra del clúster de SQL Server datos de gran tamaño
 
@@ -25,7 +25,7 @@ En primer lugar, copia de seguridad de la base de datos de SQL Server existente 
 En este artículo se muestra cómo restaurar la base de datos de AdventureWorks, pero puede utilizar cualquier copia de seguridad de base de datos. 
 
 > [!TIP]
-> Puede descargar la copia de seguridad de AdventureWorks [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
+> Puede descargar la copia de seguridad de AdventureWorks [aquí](https://www.microsoft.com/download/details.aspx?id=49502).
 
 ## <a name="copy-the-backup-file"></a>Copie el archivo de copia de seguridad
 

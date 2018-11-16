@@ -12,12 +12,12 @@ ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2af7a385ff4b98025271948f7c8e89557c3f20b9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 0b5b534e4b6d9152642dacd4b294476b6b9e71c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100006"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663795"
 ---
 # <a name="appendix---1-sybasetosql"></a>Apéndice - 1 (SybaseToSQL)
 Vista rápida de las opciones de línea de comandos de la consola SSMA:  
@@ -34,5 +34,5 @@ Vista rápida de las opciones de línea de comandos de la consola SSMA:
 |8|-?|no|No aplicable|No aplicable|  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (Sybasetosql)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Ejecución de la consola SSMA (Sybasetosql)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

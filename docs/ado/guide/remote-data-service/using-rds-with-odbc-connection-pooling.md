@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40efbdd80f5c6ba814936d952cba03cc7ac5b8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812203"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559602"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Uso de RDS con la agrupación de conexiones de ODBC
 Si usa un origen de datos ODBC, puede usar la opción en Internet Information Services (IIS) de agrupación de conexiones para conseguir un procesamiento de alto rendimiento de carga del cliente. Agrupación de conexiones es un administrador de recursos para las conexiones, mantiene el estado abierto en conexiones que se utilizan con frecuencia.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Para habilitar la agrupación de conexiones, consulte la documentación de Internet Information Services.  
   

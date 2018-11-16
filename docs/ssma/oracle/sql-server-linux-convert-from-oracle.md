@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 28c0d7598baf5cff573716f4e7848852c42a9f8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606043"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659664"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Migración de un esquema de Oracle a SQL Server 2017 en Linux con SQL Server Migration Assistant
 
@@ -38,7 +38,7 @@ Este tutorial usa SQL Server Migration Assistant (SSMA) para Oracle en Windows p
 
 ## <a name="download-and-install-ssma-for-oracle"></a>Descarga e instalación de SSMA para Oracle
 
-Existen varias ediciones de SQL Server Migration Assistant, dependiendo de la base de datos de origen.  Descargue la versión actual de [SQL Server Migration Assistant para Oracle](http://aka.ms/ssmafororacle) e instalarlo mediante las instrucciones que encontrará en la página de descarga.
+Existen varias ediciones de SQL Server Migration Assistant, dependiendo de la base de datos de origen.  Descargue la versión actual de [SQL Server Migration Assistant para Oracle](https://aka.ms/ssmafororacle) e instalarlo mediante las instrucciones que encontrará en la página de descarga.
 
 > [!NOTE]
 > En este momento, el **SSMA para Oracle: paquete de extensión** no es compatible con Linux, pero no es necesario para este tutorial.

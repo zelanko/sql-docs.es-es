@@ -12,18 +12,18 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 024e6fb62da2038c19faad0919413e9f2c52fe0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189105"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559462"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
   En este tema se proporciona información sobre las propiedades de OLE DB y los conjuntos de propiedades asociados a los objetos de conjunto de filas de parámetro con valores de tabla.  
   
 ## <a name="properties"></a>Propiedades  
- A continuación, se muestra la lista de propiedades expuestas mediante el método IRowsetInfo::GetPropeties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, intenta establecer cualquiera de las propiedades mediante IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints métodos en sus valores no predeterminados se producirá un error y no se creará ningún objeto.  
+ La siguiente es la lista de propiedades expuestas a través del método IRowsetInfo:: GetProperties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, intenta establecer cualquiera de las propiedades mediante IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints métodos en sus valores no predeterminados se producirá un error y no se creará ningún objeto.  
   
  No se enumeran aquí las propiedades no implementadas en el objeto de conjunto de filas de parámetro con valores. Para obtener una lista completa de las propiedades, vea la documentación de OLE DB en Data Access Components para Windows.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48189105"
 |SSPROP_COL_COMPUTED|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descripción: cuando se establece en VARIANT_TRUE, indica que la columna es calculada. VARIANT_FALSE indica que no es una columna calculada.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Estas propiedades son leídas por el consumidor al detectar la información de tipo de parámetro con valores de tabla en las llamadas a ISSCommandWithParamters::GetParameterProperties y establecidas por el usuario al establecer las propiedades concretas sobre el parámetro con valores de tabla a través de isscommandwithparameters:: SetParameterProperties.  
+ Estas propiedades son leídas por el consumidor al detectar la información de tipo de parámetro con valores de tabla en las llamadas a isscommandwithparameters:: Getparameterproperties y establecidas por el usuario al establecer las propiedades concretas sobre el parámetro con valores de tabla a través de isscommandwithparameters:: SetParameterProperties.  
   
  En la tabla siguiente se proporcionan descripciones detalladas de estas propiedades.  
   

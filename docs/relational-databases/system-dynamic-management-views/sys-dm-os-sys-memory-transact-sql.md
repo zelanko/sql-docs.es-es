@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d20221d1f551b17483d977b98226066950ce8ce2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cea000b63948207626298c1f0c977ba22ec3865
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709623"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677314"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "47709623"
 |**system_cache_kb**|**bigint**|Cantidad total de la memoria caché del sistema, en KB.|  
 |**kernel_paged_pool_kb**|**bigint**|Cantidad total del bloque de kernel paginado, en KB.|  
 |**kernel_nonpaged_pool_kb**|**bigint**|Cantidad total del bloque de kernel no paginado, en KB.|  
-|**system_high_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria alta del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria alta. Para obtener más información, consulte [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) en MSDN library.|  
-|**system_low_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria baja del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria baja. Para obtener más información, consulte [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) en MSDN library.|  
+|**system_high_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria alta del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria alta. Para obtener más información, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN library.|  
+|**system_low_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria baja del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria baja. Para obtener más información, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Descripción del estado de la memoria. Vea la tabla siguiente.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   

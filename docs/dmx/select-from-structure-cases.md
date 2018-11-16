@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985267"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600065"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;estructura&gt;. CASOS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si la obtención de detalles está habilitada en la estructura y en el modelo de minería de datos, cualquier usuario que sea miembro de un rol que tenga los permisos de obtención de detalles en la estructura y en el modelo de minería de datos podrá devolver columnas de la estructura que no se incluyeron en el modelo, mediante la sintaxis siguiente:  
   
 ```  
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Por lo tanto, para proteger datos confidenciales o información personal, debería crear la vista del origen de datos para enmascarar los datos personales y conceder **AllowDrillthrough** permiso en una estructura de minería de datos o modelo de minería de datos solo cuando es necesario.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes se basan en la estructura de minería de datos Targeted Mailing, que se basa en el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] base de datos y los modelos de minería de datos asociados. Para obtener más información, consulte [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Los ejemplos siguientes se basan en la estructura de minería de datos Targeted Mailing, que se basa en el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] base de datos y los modelos de minería de datos asociados. Para obtener más información, consulte [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Ejemplo 1: obtener detalles de los casos de estructura  
  El ejemplo siguiente devuelve una lista de los 500 clientes más antiguos de la estructura de minería de datos Targeted Mailing. La consulta devuelve todas las columnas del modelo de minería de datos, pero restringe las filas a aquéllos que compraron una bicicleta y los ordena por edades. También puede editar la lista de expresiones para devolver únicamente las columnas que necesite.  

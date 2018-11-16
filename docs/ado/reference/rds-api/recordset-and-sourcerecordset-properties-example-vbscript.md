@@ -16,16 +16,16 @@ ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 325b6f9a6adb53752b8f0229a0333934f179042a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f57dba47697120e2632afebbd24ea6b16270d195
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737293"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599876"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Ejemplo de propiedades de SourceRecordset (VBScript) y el conjunto de registros
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  El ejemplo siguiente muestra cómo establecer los parámetros necesarios de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto de negocios de forma predeterminada en tiempo de ejecución.  
   
@@ -92,7 +92,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
    </TR>  
 </TABLE>  
 <HR>  
-<Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+<Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 <Input Size=70 Name="txtSQL" Value="SELECT FirstName, LastName FROM Employees">  
 <HR>  
@@ -103,7 +103,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
   
    Dim rdsDF  
    Dim strServer  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
   
    Sub Run_OnClick()  
   

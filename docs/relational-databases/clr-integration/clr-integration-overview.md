@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850986"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664935"
 ---
 # <a name="clr-integration---overview"></a>Integración CLR: información general
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "47850986"
  Se pueden crear procedimientos almacenados extendidos para llevar a cabo funcionalidades que no son posibles con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los procedimientos almacenados extendidos pueden, sin embargo, poner en peligro la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mientras que el código administrado, cuya seguridad de tipos se comprueba, no puede. Además, la administración de memoria, la programación de subprocesos y fibras y los servicios de sincronización se integran más plenamente entre el código administrado de CLR y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con la integración CLR, tiene una manera más segura que los procedimientos almacenados extendidos de escribir los procedimientos almacenados necesarios para realizar las tareas que no son posibles en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información sobre la integración de CLR y los procedimientos almacenados extendidos, vea [rendimiento de la integración CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Instalar .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Arquitectura de integración de CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Instalar .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Arquitectura de integración de CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Acceso a datos desde objetos de base de datos CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Introducción a la integración CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

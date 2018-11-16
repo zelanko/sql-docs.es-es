@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ced8796278ffab61b5f4e45b687e8059bb34255f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ec8095de6019316f60b8330d34c42559daf4863
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680203"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558582"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escritura de un controlador personalizado
 Es posible que desea escribir su propio controlador si es un administrador del servidor IIS que desea que el valor predeterminado admite RDS, pero un mayor control sobre las solicitudes de usuario y los derechos de acceso.  
@@ -27,7 +27,7 @@ Es posible que desea escribir su propio controlador si es un administrador del s
  MSDFMAP. Controlador implementa el **IDataFactoryHandler** interfaz.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="idatafactoryhandler-interface"></a>Interfaz IDataFactoryHandler  
  Esta interfaz tiene dos métodos, **GetRecordset** y **volver a conectar**. Ambos métodos requieren que el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad se establece en **adUseClient**.  
@@ -59,31 +59,31 @@ Es posible que desea escribir su propio controlador si es un administrador del s
 ## <a name="msdfhdlidl"></a>msdfhdl.idl  
  Se trata de la definición de interfaz **IDataFactoryHandler** que aparece en el **msdfhdl.idl** archivo.  
   
-```  
+```cpp
 [  
-  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
-  version(1.0)  
+  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
+  version(1.0)  
 ]  
 library MSDFHDL  
 {  
-    importlib("stdole32.tlb");  
-    importlib("stdole2.tlb");  
+    importlib("stdole32.tlb");  
+    importlib("stdole2.tlb");  
   
-    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
-    // {00000200-0000-0010-8000-00AA006D2EA4}  
-    #ifdef IMPLIB  
-    importlib("implib\\x86\\release\\ado\\msado15.dll");  
-    #else  
-    importlib("msado20.dll");  
-    #endif  
+    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
+    // {00000200-0000-0010-8000-00AA006D2EA4}  
+    #ifdef IMPLIB  
+    importlib("implib\\x86\\release\\ado\\msado15.dll");  
+    #else  
+    importlib("msado20.dll");  
+    #endif  
   
-    [  
-      odl,  
-      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
-      version(1.0)  
-    ]  
-    interface IDataFactoryHandler : IUnknown  
-    {  
+    [  
+      odl,  
+      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
+      version(1.0)  
+    ]  
+    interface IDataFactoryHandler : IUnknown  
+    {  
 HRESULT _stdcall GetRecordset(  
       [in] BSTR conn,  
       [in] BSTR args,  
@@ -96,7 +96,7 @@ HRESULT _stdcall GetRecordset(
       [in] BSTR conn,  
       [in] BSTR args,  
       [in] _Recordset *pRS);  
-    };  
+    };  
 };  
 ```  
   

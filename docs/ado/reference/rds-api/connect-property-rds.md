@@ -14,12 +14,12 @@ ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abf2b751f6f1e89cf51560ad7e0d38aa05da7b8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2612fdc52bde6b199080bcdd7b67a8e8401e6805
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851482"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604665"
 ---
 # <a name="connect-property-rds"></a>Propiedad Connect (RDS)
 Indica el nombre de la base de datos desde el que se ejecutan las operaciones de consulta y actualización.  
@@ -27,7 +27,7 @@ Indica el nombre de la base de datos desde el que se ejecutan las operaciones de
  Puede establecer el **Connect** propiedad en tiempo de diseño en el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) etiquetas de objeto del objeto, o en tiempo de ejecución de secuencias de comandos de código (por ejemplo, VBScript).  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   

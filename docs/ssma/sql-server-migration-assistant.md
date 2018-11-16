@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845799"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668411"
 ---
 # <a name="sql-server-migration-assistant"></a>Asistente para migración de SQL Server
 Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada para automatizar la migración de base de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y SAP ASE.  
@@ -49,11 +49,11 @@ Se admiten las siguientes versiones de destino para SSMA.
 ** Este destino solo es compatible con SSMA para Oracle.
  
 ## <a name="downloads"></a>Descargas
-- [SSMA para Access](http://aka.ms/ssmaforaccess)
-- [SSMA para DB2](http://aka.ms/ssmafordb2)
-- [SSMA para MySql](http://aka.ms/ssmaformysql)
-- [SSMA para Oracle](http://aka.ms/ssmafororacle)
-- [SSMA para SAP ASE](http://aka.ms/ssmaforsybase)
+- [SSMA para Access](https://aka.ms/ssmaforaccess)
+- [SSMA para DB2](https://aka.ms/ssmafordb2)
+- [SSMA para MySql](https://aka.ms/ssmaformysql)
+- [SSMA para Oracle](https://aka.ms/ssmafororacle)
+- [SSMA para SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Obtención de soporte SSMA  
 **Ayuda y soporte técnico de Microsoft SQL Server Migration Assistant (SSMA):**  
@@ -62,9 +62,9 @@ Se admiten las siguientes versiones de destino para SSMA.
   
 -   **Foros de la Comunidad de SQL Server** : formule una pregunta en la Comunidad de SQL Server  
   
-    -   [Comunidad de SQL Server](http://go.microsoft.com/fwlink/?LinkId=42455) -grupos de noticias y foros supervisados por la Comunidad de SQL Server. En este sitio también se muestran fuentes de información de comunidades como, por ejemplo, blogs y sitios web.  
+    -   [Comunidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455) -grupos de noticias y foros supervisados por la Comunidad de SQL Server. En este sitio también se muestran fuentes de información de comunidades como, por ejemplo, blogs y sitios web.  
   
-    -   [Comunidad de SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=42456) -grupos de noticias, foros y otros recursos de la Comunidad que son útiles para los desarrolladores de SQL Server  
+    -   [Comunidad de SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) -grupos de noticias, foros y otros recursos de la Comunidad que son útiles para los desarrolladores de SQL Server  
   
 -   Asistencia - ir a [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) y busque 'SQL Server Migration Assistant'.  Seleccione la versión y luego seleccione "iniciar solicitud".  Soporte técnico asistido se incluye con la herramienta de Ayudante de migración de SQL Server.  
   

@@ -14,18 +14,18 @@ ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ccb9aa7fe10fd9024e283a6134c581ea98c70c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebc5caa6ccdb3c14faf722f1ccc66c46befa6fbb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828293"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606475"
 ---
 # <a name="internettimeout-property-rds"></a>Propiedad InternetTimeout (RDS)
 Indica el número de milisegundos que transcurrirán antes de que una solicitud agota el tiempo.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **largo** valor que representa el número de milisegundos antes de la solicitud agota el tiempo.  

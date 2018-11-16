@@ -19,12 +19,12 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b164c253f9e1bc90f65e143ef3490a4cca9542ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681713"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657464"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47681713"
   
  Existen varios tipos de objetos de base de datos administrados de integración CLR. Para obtener información general acerca de estos objetos, consulte [crear objetos de base de datos con la integración de Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Cada vez que se ejecutan estos objetos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un **AppDomain** donde puede cargar y ejecutar el código necesario. El nivel de aislamiento para un **AppDomain** es uno **AppDomain** por base de datos por el propietario. Es decir, todos los objetos CLR que pertenecen a un usuario siempre se ejecutan en el mismo **AppDomain** por base de datos (si un usuario registra objetos de base de datos CLR en diferentes bases de datos, la base de datos CLR que se ejecutarán los objetos en distintos dominios de aplicación). Un **AppDomain** se destruye cuando finaliza la ejecución del código. sino que se almacena en la memoria caché de cara a futuras ejecuciones. Esto mejora el rendimiento.  
   
- Para obtener más información, consulte [dominios de aplicación](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Para obtener más información, consulte [dominios de aplicación](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "47681713"
 |**strong_refcount**|**int**|Número de referencias seguras a este **AppDomain**. Esto refleja el número de lotes en ejecución que utilicen esta **AppDomain**. Tenga en cuenta que la ejecución de esta vista creará un **recuento de referencias seguro**; incluso si ningún código que se está ejecutando actualmente, **strong_refcount** tendrá un valor de 1.|  
 |**weak_refcount**|**int**|Número de referencias débiles a este **AppDomain**. Esto indica cuántos objetos dentro de la **AppDomain** se almacenan en caché. Al ejecutar un objeto de base de datos administrado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena en caché en el interior del **AppDomain** para su reutilización futura. Esto mejora el rendimiento.|  
 |**Costo**|**int**|Costo de la **AppDomain**. Cuanto mayor sea el costo, más probable que esto **AppDomain** se descargue bajo presión de memoria. Costo suele depende de la cantidad de memoria es necesario para volver a crear esto **AppDomain**.|  
-|**Valor**|**int**|Valor de la **AppDomain**. Cuanto menor sea el valor, más probable que esto **AppDomain** se descargue bajo presión de memoria. Valor normalmente depende de cuántas conexiones o lotes que estén usando este **AppDomain**.|  
+|**value**|**int**|Valor de la **AppDomain**. Cuanto menor sea el valor, más probable que esto **AppDomain** se descargue bajo presión de memoria. Valor normalmente depende de cuántas conexiones o lotes que estén usando este **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Tiempo total del procesador, en milisegundos, consumido por todos los subprocesos durante la ejecución en el dominio de aplicación actual desde que se inició el proceso. Esto es equivalente a **System.AppDomain.MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Tamaño total, en kilobytes, de todas las asignaciones de memoria realizadas por el dominio de aplicación desde que se creó, sin restar memoria recopilada. Esto es equivalente a **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Número de kilobytes que sobrevivieron a la última colección de bloqueo completa a que debe hacer referencia el dominio de aplicación actual. Esto es equivalente a **System.AppDomain.MonitoringSurvivedMemorySize**.|  

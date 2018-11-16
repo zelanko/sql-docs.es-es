@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54c32287a977899838a091543fc776577d54e02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10e0b4a5206116d90340633b8904e78352f77882
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845203"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350339"
 ---
 # <a name="visual-c-extensions-example"></a>Ejemplo de extensiones de Visual C++
 Este programa muestra cómo se recuperan de los campos y se convierten en variables de C o C++ valores.  
@@ -30,30 +30,30 @@ Este programa muestra cómo se recuperan de los campos y se convierten en variab
   
  Sin punteros inteligentes, el código será:  
   
-```  
-IADORecordBinding   *picRs = NULL;  
+```cpp
+IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
-          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
+          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
 ...  
 if (picRs) picRs->Release();  
 ```  
   
  Con punteros inteligentes, se deriva el `IADORecordBindingPtr` escriba desde el `IADORecordBinding` interfaz con la siguiente instrucción:  
   
-```  
+```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
  Y crear una instancia del puntero como este:  
   
-```  
+```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
  Dado que las extensiones de Visual C++ implementa la **Recordset** (objeto), el constructor del puntero inteligente, `picRs`, toma el _`RecordsetPtr` puntero, `pRs`. El constructor llama a `QueryInterface` mediante `pRs` para encontrar el `IADORecordBinding` interfaz.  
   
-```  
+```cpp
 // Visual_Cpp_Extensions_Example.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

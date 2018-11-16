@@ -15,16 +15,16 @@ ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f20c372fbd98f0b14660e8c419e382a8a5c26c46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2d10136a9074be9ffa9f0465c0856bd9d669e24
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803013"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600005"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Ejemplo del método CancelUpdate (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Para probar este ejemplo, corte y pegue este código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documentos y asígnele el nombre **CancelUpdateVBS.asp**. Secuencia de comandos ASP identificará el servidor de internet. Deberá modificar el nombre del servidor para reflejar su propia configuración. Simplemente cambie el valor en la cadena de conexión de MyServer al nombre de la instalación de SQL Server.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47803013"
   
      'set RDS properties for control just created  
   
-    RDS.Server = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    RDS.Server = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     RDS.SQL = "Select * from Employees"  
     RDS.Connect = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     RDS.Refresh  

@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5473cca90d26056f82d79a5b3189998d0723269b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b0f28d79f44fd21828475c22748450d8f3628b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650713"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673774"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47650713"
  En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El  **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla Person.Contact en la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) de la  **\<Person.Contact >** elemento son de tipo simple y se asignan de forma predeterminada a las columnas con los mismos nombres en la tabla Person.Contact.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -97,7 +97,7 @@ ms.locfileid: "47650713"
  En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Person.Contact >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. Los elementos  **\<FirstName >** y  **\<LastName >** y **EmployeeID** atributo son de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y el ejemplo anterior es que los elementos se usan para asignar los campos de FirstName y LastName.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  
@@ -151,7 +151,7 @@ ms.locfileid: "47650713"
  En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Production.ProductModel >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El **ProductModelID** atributo es de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y los ejemplos anteriores es que el  **\<instrucciones >** elemento se asigna a una columna que usa el **xml** el tipo de datos mediante el **xsd: anyType** tipo.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  

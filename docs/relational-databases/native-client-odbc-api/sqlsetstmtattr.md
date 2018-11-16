@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852874"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667786"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47852874"
   
 |*ValuePtr* valor|Descripción|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Predeterminado: Después de llamar a [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), la preparación de instrucciones se difiere hasta que **SQLExecute** se llama o la operación de metapropiedad (**SQLDescribeCol** o **SQLDescribeParam**) se ejecuta.|  
+|SQL_DP_ON|Predeterminado: Después de llamar a [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), la preparación de instrucciones se difiere hasta que **SQLExecute** se llama o la operación de metapropiedad (**SQLDescribeCol** o **SQLDescribeParam**) se ejecuta.|  
 |SQL_DP_OFF|La instrucción se prepara en cuanto **SQLPrepare** se ejecuta.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -150,7 +150,7 @@ ms.locfileid: "47852874"
  Si un catálogo de otra función, a continuación, se llama a SQLTables, SQLColumns o SQLPrimaryKeys SQL_SOPT_SS_NAME_SCOPE tiene un valor distinto de SQL_SS_NAME_SCOPE_TABLE, se devuelve SQL_ERROR. Se genera un registro de diagnóstico con SQLSTATE HY010 y el mensaje "Error en la secuencia de función (SQL_SOPT_SS_NAME_SCOPE no está establecido en SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [Función SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

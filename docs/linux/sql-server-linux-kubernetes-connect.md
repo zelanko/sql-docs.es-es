@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356106"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672004"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Conectarse a un servidor SQL Server Always On Availability Group en Kubernetes
 
-Para conectarse a instancias de SQL Server en contenedores en un clúster de Kubernetes, cree un [servicio del equilibrador de carga](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). El equilibrador de carga es un punto de conexión. Contiene una dirección IP y reenvía las solicitudes para la dirección IP en el pod que ejecuta la instancia de SQL Server.
+Para conectarse a instancias de SQL Server en contenedores en un clúster de Kubernetes, cree un [servicio del equilibrador de carga](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). El equilibrador de carga es un punto de conexión. Contiene una dirección IP y reenvía las solicitudes para la dirección IP en el pod que ejecuta la instancia de SQL Server.
 
 Para conectarse a una réplica del grupo de disponibilidad, cree un servicio para los tipos de otra réplica. Puede ver ejemplos de servicios para diferentes tipos de réplicas en [sql-server-samples/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 

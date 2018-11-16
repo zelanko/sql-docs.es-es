@@ -14,12 +14,12 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 526c3ec119e2ccf397fee2217b696900a47ea621
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791633"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671994"
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitectura de integración CLR: rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47791633"
  El proceso de compilación produce un puntero a función al que se puede llamar durante la ejecución desde código nativo. En el caso de funciones definidas por el usuario con valores escalares, esta invocación de función se produce fila por fila. Para minimizar el costo de la transición entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y CLR, las instrucciones que contienen cualquier invocación administrada tienen un paso de inicio para identificar el dominio de la aplicación de destino. Este paso de identificación reduce el costo de la transición para cada fila.  
   
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento  
- A continuación se resumen las consideraciones de rendimiento específicas para la integración CLR en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede encontrar información más detallada en "[Using CLR Integration in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" en el sitio Web de MSDN. Información general sobre el rendimiento del código administrado puede encontrarse en "[Improving .NET Application Performance y escalabilidad](http://go.microsoft.com/fwlink/?LinkId=50333)" en el sitio Web de MSDN.  
+ A continuación se resumen las consideraciones de rendimiento específicas para la integración CLR en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede encontrar información más detallada en "[Using CLR Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" en el sitio Web de MSDN. Información general sobre el rendimiento del código administrado puede encontrarse en "[Improving .NET Application Performance y escalabilidad](https://go.microsoft.com/fwlink/?LinkId=50333)" en el sitio Web de MSDN.  
   
 ### <a name="user-defined-functions"></a>Funciones definidas por el usuario  
  Las funciones CLR se benefician de una ruta de invocación más rápida que la de las funciones definidas por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Además, el código administrado ofrece una gran ventaja de rendimiento con respecto a [!INCLUDE[tsql](../../includes/tsql-md.md)] en lo que se refiere al código de procedimiento, el cálculo y la manipulación de cadenas. Las funciones de CLR que requieren una gran cantidad de cálculo y que no proporcionan acceso a datos se escriben mejor en código administrado. En cambio, las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] sí proporcionan acceso a datos de forma más eficiente que la integración CLR.  

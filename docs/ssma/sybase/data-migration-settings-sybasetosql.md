@@ -10,19 +10,19 @@ ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c32d2f1bce255f9490bdb74d8f07a9ddbe7cc161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658139"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Configuración de la migración de datos (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>Configuración de la migración de datos  
 **Configuración de la migración de datos** permite al usuario escribir consultas personalizadas para la migración de datos.  
   
--   Esta pestaña está disponible cuando **opciones de migración de datos ampliado** está establecido en **mostrar** y se oculta cuando el valor se establece en **ocultar** en configuración del proyecto. Para obtener más información acerca de la configuración del proyecto de migración, consulte [configuración del proyecto (migración)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) .  
+-   Esta pestaña está disponible cuando **opciones de migración de datos ampliado** está establecido en **mostrar** y se oculta cuando el valor se establece en **ocultar** en configuración del proyecto. Para obtener más información acerca de la configuración del proyecto de migración, consulte [configuración del proyecto (migración)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) .  
   
 -   Análisis de instrucciones SQL personalizada que se implementará en **configuración de migración de datos** ficha del nodo de la tabla.  
   
@@ -53,5 +53,5 @@ Hay dos botones que presentes viz.:
 -   **Cancelar:** haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar datos de Sybase a SQL Server o SQL Azure](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
+[Migrar datos de Sybase a SQL Server o SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
   

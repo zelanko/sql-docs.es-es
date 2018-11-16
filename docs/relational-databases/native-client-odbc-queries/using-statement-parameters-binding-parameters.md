@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748703"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662494"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Usar parámetros de instrucciones: enlazar parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748703"
   
  Solo se admiten parámetros con nombre cuando se usa el [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** instrucción o la secuencia de escape ODBC CALL para ejecutar un procedimiento almacenado.  
   
- Si **SQL_DESC_NAME** está establecido para un parámetro de procedimiento almacenado, también deben establecer todos los parámetros de procedimiento almacenado en la consulta **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, que los parámetros tienen **SQL_DESC_NAME** establecido, los literales deben utilizar el formato *' nombre*=*valor*', donde *nombre* es el nombre de parámetro de procedimiento almacenado (por ejemplo, @p1). Para obtener más información, consulte [enlazar parámetros por nombre (parámetros con nombre)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si **SQL_DESC_NAME** está establecido para un parámetro de procedimiento almacenado, también deben establecer todos los parámetros de procedimiento almacenado en la consulta **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, que los parámetros tienen **SQL_DESC_NAME** establecido, los literales deben utilizar el formato *' nombre*=*valor*', donde *nombre* es el nombre de parámetro de procedimiento almacenado (por ejemplo, @p1). Para obtener más información, consulte [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Vea también  
  [Usar parámetros de instrucciones](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

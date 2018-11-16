@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad9fc68d7eca6790c1a80c38403a706e19ead737
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1505166f684d473e5f210e42c55ba6fcac5f13cb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845353"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673274"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Ejecutar procedimientos almacenados: procesar códigos de retorno y parámetros de salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,16 +28,16 @@ ms.locfileid: "47845353"
 
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite ejecutar los procedimientos almacenados como procedimientos almacenados remotos. La ejecución de un procedimiento almacenado como un procedimiento almacenado remoto permite al controlador y al servidor optimizar el rendimiento de la ejecución del procedimiento.  
   
-  Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y parámetros de salida se envían en el último paquete desde el servidor y no están disponibles para la aplicación hasta que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) devuelve SQL_NO_DATA. Si se devuelve un error desde un procedimiento almacenado, llame a SQLMoreResults para avanzar al próximo resultado hasta que se devuelva SQL_NO_DATA.  
+  Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y los parámetros de salida se envían en el último paquete del servidor y no están disponible para la aplicación hasta que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) devuelve SQL_NO_DATA. Si se devuelve un error desde un procedimiento almacenado, llame a SQLMoreResults para avanzar al próximo resultado hasta que se devuelva SQL_NO_DATA.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para procesar códigos de retorno y parámetros de salida  
   
 1.  Cree una instrucción SQL que utilice la secuencia de escape ODBC CALL. La instrucción debe usar marcadores de parámetros para cada parámetro de entrada, de entrada/salida y de salida, así como para el valor devuelto por el procedimiento (si existe).  
   
-2.  Llame a [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para cada entrada, entrada/salida y el parámetro de salida y para el procedimiento de valor devuelto (si existe).  
+2.  Llame a [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para cada parámetro de entrada, de entrada/salida y de salida, así como para el valor devuelto por el procedimiento (si existe).  
   
 3.  Ejecute la instrucción con **SQLExecDirect**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47845353"
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo se procesan un código de retorno y un parámetro de salida. Este ejemplo no es compatible con IA64. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   

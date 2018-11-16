@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 45ac371576eff08576354aed04e3d54ac0dc7696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740343"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658391"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar el clúster de Ubuntu y recursos del grupo de disponibilidad
 
@@ -134,7 +134,7 @@ El siguiente comando crea un clúster de tres nodos. Antes de ejecutar el script
 
 ## <a name="configure-fencing-stonith"></a>Configurar vallado (STONITH)
 
-Los proveedores de clúster de pacemaker requieren STONITH esté habilitado y un dispositivo de vallado configurado para una configuración de clúster compatibles. Cuando el Administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso en un nodo, vallado sirve para poner el clúster en un estado conocido de nuevo. Vallado de nivel de recurso principalmente garantiza que no hay ningún daño de datos en el caso de una interrupción del servicio mediante la configuración de un recurso. Puede usar la barrera de nivel de recurso, por ejemplo, con DRBD (distribuida replica bloque dispositivo) para marcar el disco en un nodo como obsoletos cuando el vínculo de comunicación deja de funcionar. Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos. Para ello, al restablecer el nodo y su implementación Pacemaker se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Pacemaker es compatible con una gran variedad de dispositivos de vallado, por ejemplo, una fuente de alimentación ininterrumpida o administración de tarjetas de interfaz de servidores. Para obtener más información, consulte [clústeres de Pacemaker desde cero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) y [vallado y Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+Los proveedores de clúster de pacemaker requieren STONITH esté habilitado y un dispositivo de vallado configurado para una configuración de clúster compatibles. Cuando el Administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso en un nodo, vallado sirve para poner el clúster en un estado conocido de nuevo. Vallado de nivel de recurso principalmente garantiza que no hay ningún daño de datos en el caso de una interrupción del servicio mediante la configuración de un recurso. Puede usar la barrera de nivel de recurso, por ejemplo, con DRBD (distribuida replica bloque dispositivo) para marcar el disco en un nodo como obsoletos cuando el vínculo de comunicación deja de funcionar. Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos. Para ello, al restablecer el nodo y su implementación Pacemaker se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Pacemaker es compatible con una gran variedad de dispositivos de vallado, por ejemplo, una fuente de alimentación ininterrumpida o administración de tarjetas de interfaz de servidores. Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) y [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
 Dado que el nivel del nodo Configuración de vallado depende en gran medida en su entorno, se deshabilita para este tutorial (se puede configurar en un momento posterior). Ejecute el siguiente script en el nodo principal: 
 

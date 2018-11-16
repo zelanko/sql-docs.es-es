@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 492980354eebb0da5a89a138abc2888499afd065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232df02a18bc69a612f9c5a7ea9cdd8da8c75320
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832003"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655504"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **ISSAsynchStatus** expone la compatibilidad para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operaciones asincrónicas. Ésta es una interfaz opcional que se hereda de la interfaz de OLE DB **IDBAsynchStatus**principal. Además de los métodos **Abort** y **GetStatus** heredados de **IDBAsynchStatus**, **ISSAsynchStatus** proporciona un nuevo método que se usa para esperar hasta que una operación asincrónica se ha completado o se agota el tiempo de espera.  
+  **ISSAsynchStatus** expone la compatibilidad para operaciones asincrónicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ésta es una interfaz opcional que se hereda de la interfaz de OLE DB **IDBAsynchStatus**principal. Además de los métodos **Abort** y **GetStatus** heredados de **IDBAsynchStatus**, **ISSAsynchStatus** proporciona un nuevo método que se usa para esperar hasta que una operación asincrónica se ha completado o se agota el tiempo de espera.  
   
 |Método|Descripción|  
 |------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "47832003"
 -   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>Vea también  
- [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [Realizar operaciones asincrónicas](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb00dc8525e4543df862bbe2bcd3eddfc1a04087
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2c1eb2b3e714d8b70b8d65a5f96a7dcee379e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733723"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673734"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47733723"
 |**is_db_chaining_on**|**bit**|1 = El encadenamiento de propiedad entre bases de datos es ON<br /> 0 = El encadenamiento de propiedad entre bases de datos es OFF|  
 |**is_parameterization_forced**|**bit**|1 = La parametrización es FORCED<br /> 0 = La parametrización es SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = La base de datos tiene una clave maestra cifrada<br /> 0 = La base de datos no tiene una clave maestra cifrada|  
-|**is_query_store_on**|**bit**|1 = la consulta de almacén está habilitado para esta base de datos. Comprobar [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) para ver el estado del almacén de consultas.<br /> 0 = la consulta de almacén no está habilitado<br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**is_query_store_on**|**bit**|1 = la consulta de almacén está habilitado para esta base de datos. Comprobar [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) para ver el estado del almacén de consultas.<br /> 0 = la consulta de almacén no está habilitado<br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
 |**is_published**|**bit**|1 = La base de datos es una base de datos de publicación en una topología de replicación transaccional o de instantáneas<br /> 0 = No es una base de datos de publicación|  
 |**is_subscribed**|**bit**|Esta columna no se utiliza. Devolverá siempre 0, cualquiera que sea el estado de suscriptor de la base de datos.|  
 |**is_merge_published**|**bit**|1 = La base de datos es una base de datos de publicación en una topología de replicación de mezcla<br /> 0 = No es una base de datos de publicación en una topología de replicación de mezcla|  

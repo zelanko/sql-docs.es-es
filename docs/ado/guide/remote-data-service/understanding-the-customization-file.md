@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,22 +13,22 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce87954d2cb6e436af9ab990eb93dc1e5a91e8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31d486f24d9c06926462be856d9102a9a457bb7b
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678473"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558722"
 ---
 # <a name="understanding-the-customization-file"></a>Descripción del archivo de personalización
 Cada encabezado de sección en el archivo de personalización consta de los corchetes (**[]**) que contiene un tipo y un parámetro. Los cuatro tipos de sección se indican mediante las cadenas literales **conectar**, **sql**, **userlist**, o **registros**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Por lo tanto, cada sección se marca con uno de los siguientes encabezados de sección:  
   
-```  
+```console
   
 [ connect default ] [ connect    
 identifier   
@@ -75,23 +75,4 @@ identifier
  [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Configuración de cliente requerida](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -21,12 +21,12 @@ ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b55828992f748579351120bebe4e2043d377b9ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3bd8688a2e9b66eab7187720d96d823f8d943c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699483"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668681"
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47699483"
   
 |Valor|Condición de error|  
 |-----------|-----------------------|  
-|1|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> <br /><br /> -El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio está inactivo.<br /><br /> -La concesión del grupo de disponibilidad para conectarse al clúster de conmutación por error de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para obtener más información, vea [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> <br /><br /> -El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio está inactivo.<br /><br /> -La concesión del grupo de disponibilidad para conectarse al clúster de conmutación por error de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para obtener más información, vea [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> <br /><br /> -La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se conecta al clúster y el especificado por el usuario **health_check_timeout** se superó el umbral del grupo de disponibilidad.<br /><br /> -La réplica de disponibilidad está en estado de error.|  
 |3|Especifica que se debe iniciar una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graves, como bloqueos por subproceso huérfanos, infracciones graves de acceso de escritura o un volcado excesivo.<br /><br /> Este es el valor predeterminado.|  
 |4|Especifica que se debe iniciar una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moderados, tales como una condición persistente de memoria insuficiente en el grupo de recursos de servidor interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

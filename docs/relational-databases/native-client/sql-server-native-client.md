@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627413"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677804"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,19 +45,19 @@ Para obtener más información sobre el controlador ODBC para SQL Server, vea [M
 
 ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite tres características que se agregaron a ODBC estándar en el SDK de Windows 7:  
 
--   Ejecución asincrónica en operaciones relacionadas con conexión. Para obtener más información, vea el tema que trata sobre [ejecución asincrónica](http://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Ejecución asincrónica en operaciones relacionadas con conexión. Para obtener más información, vea el tema que trata sobre [ejecución asincrónica](https://go.microsoft.com/fwlink/?LinkID=191493).  
 
--   Extensibilidad del tipo de datos C. Para obtener más información, vea el tema sobre [tipos de datos C en ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
+-   Extensibilidad del tipo de datos C. Para obtener más información, vea el tema sobre [tipos de datos C en ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
      Para admitir esta característica en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que puede devolver SQLGetDescField **SQL_C_SS_TIME2** (para **tiempo** tipos) o **SQL_C_SS_TIMESTAMPOFFSET** (para **datetimeoffset**) en lugar de **SQL_C_BINARY**, si su aplicación utiliza ODBC 3.8. Para obtener más información, consulte [compatibilidad con tipos de datos de ODBC mejoras de fecha y hora](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
--   Llamada varias veces a **SQLGetData** con un búfer pequeño para recuperar un valor de parámetro grande. Para obtener más información, vea el tema que trata sobre [recuperar parámetros de salida mediante SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Llamada varias veces a **SQLGetData** con un búfer pequeño para recuperar un valor de parámetro grande. Para obtener más información, vea el tema que trata sobre [recuperar parámetros de salida mediante SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 
  En los siguientes temas se describen los cambios de comportamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
--   Al llamar a **ICommandWithParameters::SetParameterInfo**, el valor pasado al parámetro *pwszName* debe ser un identificador válido. Para obtener más información, consulte [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md).  
+-   Al llamar a **ICommandWithParameters::SetParameterInfo**, el valor pasado al parámetro *pwszName* debe ser un identificador válido. Para obtener más información, vea [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md).  
 
--   **SQLDescribeParam** devolverá de forma coherente un valor que cumplen las especificaciones de especificación de ODBC. Para obtener más información, consulte [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md).  
+-   **SQLDescribeParam** devolverá de forma coherente un valor que cumplen las especificaciones de especificación de ODBC. Para obtener más información, vea [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md).  
 
 -   [Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 

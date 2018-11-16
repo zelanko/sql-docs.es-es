@@ -1,5 +1,5 @@
 ---
-title: Cómo crear MDX consultas en R utilizando olapR en el aprendizaje automático de SQL Server | Documentos de Microsoft
+title: Cómo crear MDX consultas en R con olapR en SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,30 +7,30 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76602c41fd6f8d300c240a6072f2a6decec18e3f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7fe2749e6f70522fbd010d5af78890dfe897426b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203597"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696934"
 ---
-# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Cómo crear consultas MDX en R mediante olapR
+# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Cómo crear consultas MDX en R con olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 El [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) paquete admite consultas MDX en cubos hospedadas en SQL Server Analysis Services. Puede crear una consulta en un cubo existente, explorar las dimensiones y otros objetos de cubo y pegar en las consultas MDX existentes para recuperar los datos.
 
-Este artículo describen los dos usos principales de la **olapR** paquete:
+En este artículo se describe los dos usos principales de la **olapR** paquete:
 
-+ [Crear una consulta MDX de R, utilizando los constructores que se proporciona en el paquete olapR](#buildMDX)
-+ [Ejecutar una consulta MDX existente, válida con olapR y un proveedor OLAP](#executeMDX)
++ [Crear una consulta MDX desde R, mediante los constructores proporcionadas en el paquete olapR](#buildMDX)
++ [Ejecutar una consulta MDX válida, existente mediante un proveedor OLAP y olapR](#executeMDX)
 
 No se admiten las siguientes operaciones:
 
 + Consultas DAX en un modelo tabular
 + Creación de nuevos objetos OLAP
-+ Reescritura en particiones, incluidas las medidas o sumas
++ Escritura diferida de las particiones, incluidas las medidas o sumas
 
-## <a name="buildMDX"></a> Crear una consulta MDX de R
+## <a name="buildMDX"></a> Crear una consulta MDX desde R
 
 1. Defina una cadena de conexión que especifique el origen de datos OLAP (instancia de SSAS) y el proveedor MSOLAP.
 
@@ -38,16 +38,16 @@ No se admiten las siguientes operaciones:
 
 3. Use el constructor `Query()` para crear instancias de un objeto de consulta.
 
-4. Use las siguientes funciones auxiliares para proporcionar más detalles sobre las dimensiones y las medidas que se deben incluir en la consulta MDX:
+4. Use las siguientes funciones del asistente para proporcionar más detalles sobre las dimensiones y las medidas que se deben incluir en la consulta MDX:
 
-     + `cube()` : especifique el nombre de la base de datos SSAS. Si se conecta a una instancia con nombre, proporcione el nombre del equipo y el nombre de la instancia. 
-     + `columns()` Proporcionar los nombres de las medidas deben utilizarse en el **ON columnas** argumento.
-     + `rows()` Proporcionar los nombres de las medidas deben utilizarse en el **ON filas** argumento.
+     + `cube()` : especifique el nombre de la base de datos SSAS. Si se conecta a una instancia con nombre, proporcione el nombre del equipo y el nombre de instancia. 
+     + `columns()` Proporcione los nombres de las medidas que se usarán en el **ON COLUMNS** argumento.
+     + `rows()` Proporcione los nombres de las medidas que se usarán en el **ON ROWS** argumento.
      + `slicers()` : especifique un campo o los miembros que se usarán como segmentación. Una segmentación se parece a un filtro que se aplica a todos los datos de consulta MDX.
      
      + `axis()` : especifique el nombre de un eje adicional para usarlo en la consulta. 
      
-         Un cubo OLAP puede contener hasta 128 ejes de consulta. Por lo general, los primeros cuatro ejes se conocen como **columnas**, **filas**, **páginas**, y **capítulos**. 
+         Un cubo OLAP puede contener hasta 128 ejes de consulta. Por lo general, los primeros cuatro ejes se denominan **columnas**, **filas**, **páginas**, y **capítulos**. 
          
          Si la consulta es relativamente sencilla, puede usar las funciones `columns`, `rows`, etc. para crear la consulta. También puede usar la función `axis()` con un valor de índice distinto de cero para crear una consulta MDX con varios calificadores o para agregar dimensiones adicionales como calificadores.
 
@@ -56,7 +56,7 @@ No se admiten las siguientes operaciones:
   + `executeMD` : devuelve una matriz multidimensional
   + `execute2D` : devuelve una trama de datos bidimensional (tabular)
 
-## <a name="executeMDX"></a> Ejecutar una consulta MDX válida de R
+## <a name="executeMDX"></a> Ejecutar una consulta MDX válida desde R
 
 1. Defina una cadena de conexión que especifique el origen de datos OLAP (instancia de SSAS) y el proveedor MSOLAP.
 
@@ -71,11 +71,11 @@ No se admiten las siguientes operaciones:
 
 ## <a name="examples"></a>Ejemplos
 
-Los ejemplos siguientes se basan en el proyecto de mart y el cubo de datos de AdventureWorks, porque ese proyecto está ampliamente disponible, en varias versiones, incluidos los archivos de copia de seguridad que se pueden restaurar fácilmente a Analysis Services. Si no dispone de un cubo existente, obtener un cubo de ejemplo que usa cualquiera de estas opciones:
+Los ejemplos siguientes se basan en el proyecto de mart y cubos de datos de AdventureWorks, porque ese proyecto está ampliamente disponible, en varias versiones, incluidos los archivos de copia de seguridad que se pueden restaurar fácilmente a Analysis Services. Si no tiene un cubo existente, obtenga un cubo de ejemplo mediante cualquiera de estas opciones:
 
-+ Crear el cubo que se usa en estos ejemplos, siga el tutorial de Analysis Services en la lección 4: [crear un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Crear el cubo que se usa en estos ejemplos, siga el tutorial de Analysis Services hasta lección 4: [crear un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ Descargar un cubo existente como una copia de seguridad y restaurarlo a una instancia de Analysis Services. Por ejemplo, este sitio proporciona un cubo de procesamiento completo en formato comprimido: [SQL de modelo Multidimensional de Adventure Works 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Extraiga el archivo y, a continuación, restaurarla en la instancia SSAS. Para obtener más información, consulte [copias de seguridad y restauración](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), o [Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
++ Descargar un cubo existente como una copia de seguridad y restaurarla en una instancia de Analysis Services. Por ejemplo, este sitio proporciona un cubo totalmente procesado en formato comprimido: [Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extraiga el archivo y, a continuación, restaurarla a su instancia de SSAS. Para obtener más información, consulte [copias de seguridad y restauración](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), o [Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. MDX básico con segmentación
 
@@ -90,8 +90,8 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + En las columnas puede especificar varias medidas como elementos de una cadena separada por comas.
 + El eje Fila usa todos los valores posibles (todos los MIEMBROS) de la dimensión "Product Line" (Línea de productos). 
-+ Esta consulta devuelve una tabla con tres columnas, que contiene un _acumulación_ resumen de ventas por Internet de todos los países.
-+ La cláusula WHERE especifica la _eje segmentador_. En este ejemplo, la segmentación de datos usa un miembro de la **SalesTerritory** dimensión que desea filtrar la consulta para que sólo las ventas de Australia utilizadas en los cálculos.
++ Esta consulta devolvería una tabla con tres columnas, que contiene un _acumulación_ resumen de ventas por Internet de todos los países.
++ La cláusula WHERE especifica la _eje segmentador_. En este ejemplo, la segmentación de datos usa un miembro de la **SalesTerritory** dimensiones para filtrar la consulta para que se usan sólo las ventas de Australia en los cálculos.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>Para crear esta consulta con las funciones proporcionadas en olapR
 
@@ -109,7 +109,7 @@ result1 <- executeMD(ocs, qry)
 
 ```
 
-Para una instancia con nombre, asegúrese de escape los caracteres que se podrían considerar caracteres de control en R.  Por ejemplo, la cadena de conexión siguiente hace referencia a una instancia OLAP01, en un servidor denominado ContosoHQ:
+Para una instancia con nombre, asegúrese de escape de caracteres que podrían considerarse como caracteres de control en R.  Por ejemplo, la cadena de conexión siguiente hace referencia a una instancia OLAP01, en un servidor denominado ContosoHQ:
 
 ```R
 cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
@@ -126,7 +126,7 @@ mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sal
 result2 <- execute2D(ocs, mdx)
 ```
 
-Si se define una consulta mediante el Generador MDX en SQL Server Management Studio y, a continuación, guardar la cadena de MDX, le número los ejes a partir de 0, tal y como se muestra a continuación: 
+Si se define una consulta mediante el Generador MDX en SQL Server Management Studio y, a continuación, guarde la cadena de MDX, numerará los ejes a partir de 0, como se muestra aquí: 
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amount]} ON AXIS(0), 
@@ -135,7 +135,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
    WHERE [Sales Territory].[Sales Territory Countr,y].[Australia]
 ```
 
-Aun así, puede ejecutar esta consulta como una cadena MDX predefinida, Sin embargo, para crear la misma consulta utilizando R el `axis()` función, deben cambiar el número de los ejes a partir de 1.
+Aun así, puede ejecutar esta consulta como una cadena MDX predefinida, Sin embargo, para crear la misma consulta R usando el `axis()` función, deben volver a numerar los ejes que empieza por 1.
 
 ### <a name="2-explore-cubes-and-their-fields-on-an-ssas-instance"></a>2. Explorar los cubos y sus campos en una instancia SSAS
 
@@ -201,4 +201,4 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 ## <a name="see-also"></a>Vea también
 
-[Utilizando los datos de los cubos OLAP en R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)
+[Uso de datos de cubos OLAP en R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

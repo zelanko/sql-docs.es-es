@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4b05826bd25c711a70914982daf701b15edb1c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629654"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676912"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados e instrucciones de configuración de SQL Server en Linux
 
@@ -36,7 +36,7 @@ Se recomienda realizar las siguientes tareas de configuración después de insta
 
 - **Configurar varios archivos de datos de tempdb**
 
-   Dado que un servidor SQL Server en la instalación de Linux no ofrece una opción para configurar varios archivos de tempdb, se recomienda que considere la posibilidad de crear tempdb varios archivos de datos después de la instalación. Para obtener más información, consulte las instrucciones en el artículo, [recomendaciones para reducir la contención de asignación en la base de datos de tempdb de SQL Server](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
+   Dado que un servidor SQL Server en la instalación de Linux no ofrece una opción para configurar varios archivos de tempdb, se recomienda que considere la posibilidad de crear tempdb varios archivos de datos después de la instalación. Para obtener más información, consulte las instrucciones en el artículo, [recomendaciones para reducir la contención de asignación en la base de datos de tempdb de SQL Server](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
 
 ### <a name="advanced-configuration"></a>Configuración avanzada
 

@@ -10,26 +10,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f402d6bb08878f1d6c131eab256b1bc5bc49576d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 196f8d762763fa6fd0062db23be9e4d955826e05
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683434"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677922"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seguimiento de acceso a datos y Native Client ([seguimiento de acceso a datos](http://go.microsoft.com/fwlink/?LinkId=125805)) se han actualizado para que sea más fácil obtener información de diagnóstico acerca de errores de conexión desde el anillo de conectividad información de rendimiento de búfer y aplicación del registro de eventos extendidos.  
+  A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seguimiento de acceso a datos y Native Client ([seguimiento de acceso a datos](https://go.microsoft.com/fwlink/?LinkId=125805)) se han actualizado para que sea más fácil obtener información de diagnóstico acerca de errores de conexión desde el anillo de conectividad información de rendimiento de búfer y aplicación del registro de eventos extendidos.  
   
- Para obtener información sobre la lectura del registro de eventos extendidos, vea [Ver datos de sesión de evento](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49).  
+ Para obtener información sobre la lectura del registro de eventos extendidos, vea [Ver datos de sesión de evento](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49).  
   
 > [!NOTE]  
 >  Esta función está dirigida únicamente a la solución de problemas y al diagnóstico, además es posible que no sea adecuada para fines de auditoría o seguridad.  
   
 ## <a name="remarks"></a>Comentarios  
- Para las operaciones de conexión, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](http://go.microsoft.com/fwlink/?LinkId=207752)) y buscar el campo **ClientConnectionID** para obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede buscar el identificador de conexión del cliente en el destino de salida de eventos extendidos si se agrega la acción **client_connection_id** a los eventos de una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso a datos, volver a ejecutar el comando de conexión y observar el campo **ClientConnectionID** en el seguimiento de acceso a datos de una operación que no se ha realizado correctamente si necesita asistencia adicional de diagnóstico.  
+ Para las operaciones de conexión, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://go.microsoft.com/fwlink/?LinkId=207752)) y buscar el campo **ClientConnectionID** para obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede buscar el identificador de conexión del cliente en el destino de salida de eventos extendidos si se agrega la acción **client_connection_id** a los eventos de una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso a datos, volver a ejecutar el comando de conexión y observar el campo **ClientConnectionID** en el seguimiento de acceso a datos de una operación que no se ha realizado correctamente si necesita asistencia adicional de diagnóstico.  
   
  Si está utilizando ODBC en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y una conexión se realiza correctamente, puede obtener el cliente de Id. de conexión mediante el uso de la **SQL_COPT_SS_CLIENT_CONNECTION_ID** con el atributo [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
   

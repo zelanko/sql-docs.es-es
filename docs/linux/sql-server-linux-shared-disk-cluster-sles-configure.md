@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 84c242d3c7c8e38642f1ee76f109f90a1ea9520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635823"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667994"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de SLES para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Esta guía proporciona instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en SUSE Linux Enterprise Server (SLES). El nivel de agrupación en clústeres se basa en SUSE [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability) construidos sobre [Pacemaker](http://clusterlabs.org/). 
+Esta guía proporciona instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en SUSE Linux Enterprise Server (SLES). El nivel de agrupación en clústeres se basa en SUSE [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability) construidos sobre [Pacemaker](https://clusterlabs.org/). 
 
 Para obtener más información sobre la configuración del clúster, las opciones del agente de recursos, administración, procedimientos recomendados y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 

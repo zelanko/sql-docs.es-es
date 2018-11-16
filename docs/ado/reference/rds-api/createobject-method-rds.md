@@ -14,25 +14,25 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d331bdf617e2b7b748039d69347f00f7fb4046a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761224"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599537"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él. El proxy paquetes y ordena los datos en el código auxiliar del lado servidor para las comunicaciones con el objeto de negocios enviar solicitudes y datos a través de Internet. Para los objetos del componente en proceso, se utiliza ningún proxy, se proporciona solo un puntero al objeto.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
  Servicio de datos remoto admite los siguientes protocolos: HTTP, HTTPS (HTTP sobre capa de sockets seguros), DCOM y en proceso.  
   
 |Protocolo|Sintaxis|  
 |--------------|------------|  
-|HTTP|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "http://awebsrvr")|  
+|HTTP|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
 |HTTPS|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
 |DCOM|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "computername")|  
 |En curso|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "")|  

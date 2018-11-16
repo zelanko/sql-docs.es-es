@@ -14,17 +14,17 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9ee58c367e83a61afef45d7df3358488dcb85a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821073"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661814"
 ---
 # <a name="unicode"></a>Unicode
 Unicode define la codificación de caracteres en varios idiomas.  
   
- Para obtener más información sobre el estándar Unicode, vea [The Unicode Consortium](http://www.unicode.org).  
+ Para obtener más información sobre el estándar Unicode, vea [The Unicode Consortium](https://www.unicode.org).  
   
  Unicode define un conjunto de caracteres universales. Una página de códigos ANSI de Windows define un juego de caracteres, que normalmente contiene caracteres para un idioma. Puede ser más difícil de escribir una aplicación que se requiere para usar páginas de códigos diferentes.  
   

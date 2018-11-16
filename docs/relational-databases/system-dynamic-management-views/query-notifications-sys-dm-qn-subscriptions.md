@@ -19,12 +19,12 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834713"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657254"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar las notificaciones - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47834713"
 |**SID**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
 |**object_id**|**int**|Id. de la tabla interna que almacena información acerca de los parámetros de suscripción.|  
 |**Creado**|**datetime**|Fecha y hora en que se creó la suscripción.|  
-|**Tiempo de espera**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: El tiempo de activación real puede ser mayor que el tiempo de espera especificado. No obstante, si tiene lugar un cambio que invalida la suscripción después el tiempo de espera especificado, pero antes de que se active la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que la activación tiene lugar en el momento en que se realiza el cambio.|  
+|**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: El tiempo de activación real puede ser mayor que el tiempo de espera especificado. No obstante, si tiene lugar un cambio que invalida la suscripción después el tiempo de espera especificado, pero antes de que se active la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que la activación tiene lugar en el momento en que se realiza el cambio.|  
 |**status**|**int**|Indica el estado de la suscripción. Vea la tabla bajo las notas para obtener la lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
@@ -133,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica relacionadas con notificaciones de consulta &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [Vistas de administración dinámica relacionadas con notificaciones de consulta &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

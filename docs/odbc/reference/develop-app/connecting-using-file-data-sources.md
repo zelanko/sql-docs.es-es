@@ -18,12 +18,12 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af24a0656f46f0256775f4ea1649ab806e207fdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856356"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677324"
 ---
 # <a name="connecting-using-file-data-sources"></a>Conectar con orígenes de datos de archivo
 La información de conexión para un origen de datos de archivo se almacena en un archivo DSN. Como resultado, la cadena de conexión se puede utilizar varias veces un único usuario o compartida entre varios usuarios si tienen instalado el controlador apropiado. El archivo contiene un nombre de controlador (u otro nombre de origen de datos en el caso de un origen de datos de archivo no se puede compartir) y si lo desea, una cadena de conexión que puede usarse por **SQLDriverConnect**. El Administrador de controladores se basa la cadena de conexión para la llamada a **SQLDriverConnect** en las palabras clave en el archivo DSN.  
@@ -55,4 +55,4 @@ DSN = MyDataSource
  La cadena de conexión utilizada para un origen de datos de archivo es la unión de las palabras clave especificadas en el archivo DSN y las palabras clave especificadas en la cadena de conexión en la llamada a **SQLDriverConnect**. Si cualquiera de las palabras clave en el archivo .dsn entran en conflicto con las palabras clave en la cadena de conexión, el Administrador de controladores decide qué valor de palabra clave debe usarse. Para obtener más información, consulte [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Vea también  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

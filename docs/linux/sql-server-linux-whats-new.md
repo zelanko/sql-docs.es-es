@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 36c2ce9cd3faabee34f4c68285ec94b8d8ad11ab
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419080"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659230"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Novedades de SQL Server en Linux
 
@@ -26,7 +26,7 @@ Este artículo describe las principales características y servicios disponibles
 Se ha publicado la versión preliminar de SQL Server 2019. Este artículo no trata las versiones preliminares de SQL Server 2019. Para obtener información acerca de la versión preliminar de SQL Server 2019, consulte [cuáles son las novedades en la versión preliminar de SQL Server de 2019 para Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
-> Además de estas funcionalidades en este artículo, se publican actualizaciones acumulativas a intervalos regulares después del lanzamiento de GA. Estas actualizaciones acumulativas proporcionan muchas mejoras y correcciones. Para obtener información acerca de la versión de la CU más reciente, consulte [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Para descargar los paquetes y los problemas conocidos, vea el [notas de la versión](sql-server-linux-release-notes.md).
+> Además de estas funcionalidades en este artículo, se publican actualizaciones acumulativas a intervalos regulares después del lanzamiento de GA. Estas actualizaciones acumulativas proporcionan muchas mejoras y correcciones. Para obtener información acerca de la versión de la CU más reciente, consulte [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Para descargar los paquetes y los problemas conocidos, vea el [notas de la versión](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Motor de base de datos de SQL Server
 

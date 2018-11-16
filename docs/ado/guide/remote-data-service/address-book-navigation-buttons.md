@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,25 +14,25 @@ ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be8020f5a9ce826fbe4f92864d8d580bbcb6ae5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60d3b2660f3a20883e9b9f2d3b4202526c15a943
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696944"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559782"
 ---
 # <a name="address-book-navigation-buttons"></a>Botones de navegación de la libreta de direcciones
 La aplicación de la libreta de direcciones muestra los botones de navegación en la parte inferior de la página Web. Puede usar los botones de navegación para navegar por los datos de la presentación de la cuadrícula HTML seleccionando la primera o última fila de datos o las filas adyacentes a la selección actual.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="navigation-sub-procedures"></a>Subprocedimientos de navegación  
  La aplicación de la libreta de direcciones contiene varios procedimientos que permiten a los usuarios hacer clic en el **primera**, **siguiente**, **anterior**, y **última** botones para desplazarse por los datos.  
   
  Por ejemplo, al hacer clic en el **primera** botón activa el procedimiento Sub First_OnClick de VBScript. El procedimiento se ejecuta un [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) método, lo que hace que la primera fila de datos de la selección actual. Al hacer clic en el **última** botón activa el procedimiento Sub Last_OnClick, que invoca la [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) método, que realiza la última fila de datos de la selección actual. Los botones de navegación restantes funcionan de manera similar.  
   
-```  
+```vb
 ' Move to the first record in the bound Recordset.  
 Sub First_OnClick  
    DC1.Recordset.MoveFirst  

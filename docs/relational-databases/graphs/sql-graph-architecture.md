@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830653"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512810"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura SQL Graph  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Obtenga información sobre cómo se ha diseñado como gráfico SQL. Conocer los 
 Los usuarios pueden crear un gráfico por cada base de datos. Un gráfico es una colección de tablas perimetrales y de nodo. Las tablas de nodo o perimetral pueden crearse en cualquier esquema de la base de datos, pero que pertenezcan a un gráfico de la lógico. Una tabla de nodo es la colección de un tipo similar de nodos. Por ejemplo, una tabla de nodo Person contiene todos los nodos de la persona que pertenecen a un gráfico. De forma similar, una tabla perimetral es una colección de un tipo similar de bordes. Por ejemplo, una tabla irregular de amigos contiene todos los bordes que se conectan a una persona a otra persona. Dado que los nodos y bordes se almacenan en tablas, admite la mayoría de las operaciones admitidas en las tablas normales en las tablas de nodo o perimetral. 
  
  
-![arquitectura de SQL graph](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitectura de base de datos de Sql graph")   
+![arquitectura de SQL graph](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitectura de base de datos de Sql graph")   
 
 Figura 1: Arquitectura de base de datos SQL Graph
  
@@ -57,7 +56,7 @@ Similar a la `$node_id` columna, se recomienda que los usuarios crear una restri
 
 Figura 2 se muestra cómo se almacenan las tablas perimetrales y de nodo en la base de datos. 
 
-![tablas de amigos de persona](../../relational-databases/graphs/media/person-friends-tables.png "nodo Person y amigos perimetral tablas")   
+![tablas de amigos de persona](../../relational-databases/graphs/media/person-friends-tables.png "nodo Person y amigos perimetral tablas")   
 
 La figura 2: Representación de tabla de nodo y borde
 
@@ -110,10 +109,10 @@ Columnas implícitas de una tabla irregular
 |graph_id_\<hex_string> |bigint |1  |interno `graph_id` columna  |
 |$edge_id_\<cadena_hex > |NVARCHAR   |0  |externo `edge_id` columna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno del nodo `object_id`  |
-|from_id_\<cadena_hex >  |bigint |1  |Interno del nodo `graph_id`  |
+|from_id_\<cadena_hex >  |bigint |1  |interno del nodo `graph_id`  |
 |$from_id_\<cadena_hex > |NVARCHAR   |0  |externo del nodo `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interno de nodo `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |Interno de nodo `graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |interno de nodo `graph_id`  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |externo al nodo `node_id`  |
  
 ### <a name="system-functions"></a>Funciones del sistema

@@ -15,12 +15,12 @@ ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8ab9486b431a623237f16cf9cc2c0017d7b1783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14a042da7bc757f0f00c0325efa6dd8087aee6b1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818473"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673504"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47818473"
   
  El método **Send** envía los datos directamente al cliente o autor de la llamada. Generalmente es el cliente el que consume los resultados del método **SqlPipe**, pero en el caso de procedimientos almacenados de CLR anidados, el consumidor de los resultados también puede ser un procedimiento almacenado. Por ejemplo, Procedure1 llama a SqlCommand.ExecuteReader() con el texto de comando "EXEC Procedure2". Procedure2 también es un procedimiento almacenado administrado. Si Procedure2 llama ahora a SqlPipe.Send( SqlDataRecord ), la fila se envía al lector de Procedure1, no al cliente.  
   
- El **enviar** método envía un mensaje de cadena que aparece en el cliente como un mensaje de información, equivalente a PRINT en [!INCLUDE[tsql](../../includes/tsql-md.md)]. También puede enviar un conjunto de resultados de fila única mediante **SqlDataRecord**o un conjunto de resultados de varias filas mediante **SqlDataReader**.  
+ La clase **Send** envía un mensaje de cadena que aparece en el cliente como un mensaje de información, equivalente a PRINT en [!INCLUDE[tsql](../../includes/tsql-md.md)]. También puede enviar un conjunto de resultados de fila única mediante **SqlDataRecord**o un conjunto de resultados de varias filas mediante **SqlDataReader**.  
   
  El objeto **SqlPipe** también incluye un método **ExecuteAndSend** . Este método se puede utilizar para ejecutar un comando (se pasa como objeto **SqlCommand** ) y devolver directamente los resultados al autor de la llamada. Si existen errores en el comando enviado, las excepciones se envían a la canalización, pero también se envía una copia al código administrado que realiza la llamada. Si el código de llamada no detecta la excepción, propaga la pila al código de [!INCLUDE[tsql](../../includes/tsql-md.md)] y aparece dos veces en el resultado. Si el código de llamada sí detecta la excepción, el consumidor de la canalización aún ve el error, pero no hay errores duplicados.  
   
@@ -142,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>Vea también  
  [SqlDataRecord, objeto](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [Procedimientos almacenados de CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: BottomCount (DMX) | Documentos de Microsoft
+title: BottomCount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b844f4337a0d09a9457da0658b44e8225f6c224
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 382cfe7e7ce77fec66d2b9e5b370f397abd14dce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843038"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602915"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Una expresión que devuelve una tabla, como un \<referencia de columna de la tabla >, o una función que devuelve una tabla.  
+ Una expresión que devuelve una tabla, como un \<referencia de columna de tabla >, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  \<expresión de tabla >  
   
-## <a name="remarks"></a>Notas  
- El valor proporcionado por el \<rank expression > argumento determina el orden creciente de rango para las filas que se proporcionan en el \<expresión de tabla > argumento y el número de filas de la parte más inferior que se especifica en el \<recuento > se devuelve el argumento.  
+## <a name="remarks"></a>Comentarios  
+ El valor proporcionado por el \<rank expression > argumento determina el orden creciente de rango para las filas que se proporcionan en el \<expresión de tabla > argumento y el número de filas inferiores que se especifica en el \<count > se devuelve el argumento.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se compila mediante la [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ En el ejemplo siguiente se crea una consulta de predicción en el modelo de asociación que se crea mediante el uso de la [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Para entender cómo funciona BottomCount, puede resultar útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
   
@@ -83,9 +83,9 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- El primer argumento a la función BottomCount es el nombre de una columna de tabla. En este ejemplo, la tabla anidada se devuelve al llamar a la función de predicción y con el argumento INCLUDE_STATISTICS.  
+ El primer argumento a la función BottomCount es el nombre de una columna de tabla. En este ejemplo, la tabla anidada se devuelve al llamar a la función Predict y con el argumento INCLUDE_STATISTICS.  
   
- El segundo argumento a la función BottomCount es la columna de la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $SUPPORT porque sus valores no son fraccionarios y, por consiguiente, son más fáciles de comprobar.  
+ El segundo argumento a la función BottomCount es la columna en la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $SUPPORT porque sus valores no son fraccionarios y, por consiguiente, son más fáciles de comprobar.  
   
  El tercer argumento a la función BottomCount especifica el número de filas. Para obtener las tres filas con una clasificación menor, ordenadas por $SUPPORT, se escribe 3.  
   

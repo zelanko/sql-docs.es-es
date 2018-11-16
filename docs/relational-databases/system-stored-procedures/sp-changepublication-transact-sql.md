@@ -17,12 +17,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c715b7af71fc98df34036daf9311f1ed32b1c772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689733"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670174"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**Sub reinit**|Para actualizar los suscriptores; si se produce un conflicto, la suscripción debe renicializarse. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas. No es compatible con publicadores de Oracle.|  
 ||**Sub wins**|Directiva de resolución de conflictos para actualizar suscriptores en los que el suscriptor gana el conflicto. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas. No es compatible con publicadores de Oracle.|  
 |**conflict_retention**||**int** que especifica el período de retención de conflictos, en días. El período de retención predeterminado es de 14 días. **0** significa que no es necesaria ninguna limpieza de conflictos. No es compatible con publicadores de Oracle.|  
-|**Descripción**||Entrada opcional en la que se describe la publicación.|  
+|**description**||Entrada opcional en la que se describe la publicación.|  
 |**enabled_for_het_sub**|**true**|Habilita la publicación para que admita suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** no se puede cambiar cuando hay suscripciones a la publicación. Es posible que deba ejecutar [procedimientos almacenados de replicación (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) para cumplir con los siguientes requisitos antes de establecer **enabled_for_het_sub** en true:<br /> - **allow_queued_tran** debe ser **false**.<br /> - **allow_sync_tran** debe ser **false**.<br /> Cambiar **enabled_for_het_sub** a **true** puede cambiar la configuración de publicación existente. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**False**|La publicación no admite suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|Se habilita la publicación para Internet y se puede utilizar el protocolo de transferencia de archivos (FTP) para transferir los archivos de instantáneas a un suscriptor. Los archivos de sincronización de la publicación se colocan en el directorio C:\Archivos de programa\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* no puede ser NULL. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -116,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**simultáneas**|Utiliza un programa de copia masiva en modo nativo de todas las tablas, pero no bloquea las tablas durante el proceso de generación de instantáneas. No es válido para la replicación de instantáneas.|  
 ||**concurrent_c**|Utiliza un programa de copia masiva en modo de carácter de todas las tablas, pero no bloquea las tablas durante el proceso de generación de instantáneas. No es válido para la replicación de instantáneas.|  
 |**TaskID**||Esta propiedad ha quedado desusada y ya no se admite.|  
-|**allow_drop**|**true**|Permite `DROP TABLE` admiten DLL para artículos que forman parte de la replicación transaccional. Versión mínima admitida: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o posterior y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 o posterior. Referencia adicional: [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Permite `DROP TABLE` admiten DLL para artículos que forman parte de la replicación transaccional. Versión mínima admitida: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o posterior y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 o posterior. Referencia adicional: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**False**|Deshabilita `DROP TABLE` DLL se admite para los artículos que forman parte de la replicación transaccional. Se trata de la **predeterminada** valor para esta propiedad.|
 |**NULL** (valor predeterminado)||Devuelve la lista de valores admitidos para *propiedad*.|  
   

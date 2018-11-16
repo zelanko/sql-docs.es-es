@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,17 +16,17 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd004d781f267fdc9872dbab32fefe4352558cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741293"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350389"
 ---
 # <a name="visual-c-extensions-header"></a>Encabezado de extensiones de Visual C++
 El siguiente encabezado, **icrsint.h**, detalles de la interfaz que permite a los clientes recuperar los campos de un **Recordset** en variables definidas en una clase derivada de **CADORecordBinding**. Debe especificar una macro de enlace de ADO para cada campo que pretenda obtener acceso.  
   
-```  
+```cpp
 #ifndef _ICRSINT_H_  
 #define _ICRSINT_H_  
   
@@ -58,16 +58,16 @@ enum ADOFieldStatusEnum
   
 typedef struct stADO_BINDING_ENTRY  
 {  
-   ULONG      ulOrdinal;  
-   WORD       wDataType;  
-   BYTE       bPrecision;  
-   BYTE       bScale;  
-   ULONG      ulSize;  
-   ULONG      ulBufferOffset;  
-   ULONG      ulStatusOffset;  
-   ULONG      ulLengthOffset;  
-   ULONG      ulADORecordBindingOffSet;  
-   BOOL       fModify;  
+   ULONG      ulOrdinal;  
+   WORD       wDataType;  
+   BYTE       bPrecision;  
+   BYTE       bScale;  
+   ULONG      ulSize;  
+   ULONG      ulBufferOffset;  
+   ULONG      ulStatusOffset;  
+   ULONG      ulLengthOffset;  
+   ULONG      ulADORecordBindingOffSet;  
+   BOOL       fModify;  
 } ADO_BINDING_ENTRY;  
   
 #define BEGIN_ADO_BINDING(cls) public: \  

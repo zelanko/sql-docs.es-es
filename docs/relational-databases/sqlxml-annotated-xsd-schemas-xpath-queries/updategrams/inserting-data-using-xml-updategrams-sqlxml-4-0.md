@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9101b79f393d8afd5bd98586cfc18ad5d366545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 319980e5ce6b2bb1671c57c9619b635fbf130bf8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832163"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671164"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "47832163"
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los nombres de tabla pueden incluir un espacio, como la tabla Order Details de la base de datos Northwind. Sin embargo, esto no es válido en los caracteres XML válidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores, pero no identificadores XML válidos pueden codificarse utilizando ' __xHHHH\_\_' como valor de codificación, donde HHHH representa el código UCS-2 hexadecimal de cuatro dígitos de el carácter en el orden de primero bit más significativo.  
   
 > [!NOTE]  
->  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante el uso de un script SQL disponible para su descarga desde esta [sitio Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
+>  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante el uso de un script SQL disponible para su descarga desde esta [sitio Web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=30196).  
   
  Además, el nombre del elemento debe incluirse entre corchetes ([]). Dado que los caracteres [y] no son válidos en XML, debe codificarlos como _x005B\_ y _x005D\_, respectivamente. (Si utiliza un esquema de asignación, puede especificar nombres de elemento que no contengan caracteres no válidos, como espacios en blanco. El esquema de asignación realiza la asignación necesaria; por lo tanto, no necesita codificar estos caracteres.)  
   
@@ -388,7 +388,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  El esquema siguiente (CustOrderSchema.xml) describe un  **\<CustOrder >** elemento que consta de los **OrderID** y **EmployeeID** atributos. Para hacer que el esquema más interesante, el valor predeterminado se asigna a la **EmployeeID** atributo. Un diagrama de actualización utiliza el valor predeterminado de un atributo solamente para las operaciones de inserción y solamente si el diagrama de actualización no especifica dicho atributo.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="CustOrder" >  
    <xsd:complexType>  
@@ -458,7 +458,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="Student" sql:relation="Students">  
   <xsd:complexType>  
@@ -489,7 +489,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
       xmlns:updg="urn:schemas-microsoft-com:xml-updategram"  
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   
 <updg:sync mapping-schema='StudentSchema.xml'>  
   <updg:before/>  
@@ -538,7 +538,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
   <updg:sync mapping-schema='XSD-ElementHavingNameSpace.xml'>  
     <updg:after>  
-       <x:Order  xmlns:x="http://server/xyz/schemas/"  
+       <x:Order  xmlns:x="https://server/xyz/schemas/"  
              updg:at-identity="SalesOrderID"   
              RevisionNumber="1"  
              OrderDate="2001-07-01 00:00:00.000"  
@@ -564,11 +564,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
  En el esquema siguiente (XSD-ElementHavingNamespace.xml) se indica cómo debe declararse el elemento y los atributos correspondientes.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
-     xmlns:x="http://server/xyz/schemas/"   
-     targetNamespace="http://server/xyz/schemas/" >  
+     xmlns:x="https://server/xyz/schemas/"   
+     targetNamespace="https://server/xyz/schemas/" >  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader" type="x:Order_type"/>  
   <xsd:complexType name="Order_type">  
     <xsd:attribute name="SalesOrderID"  type="xsd:ID"/>  
@@ -633,10 +633,10 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
-              xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
-              xmlns:html="http://www.w3.org/1999/xhtml"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+              xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
+              xmlns:html="https://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
      <html:p>Insert Example</html:p>  
@@ -687,9 +687,9 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

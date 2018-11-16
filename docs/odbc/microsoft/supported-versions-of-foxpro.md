@@ -17,12 +17,12 @@ ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e6ae3aa39d21ea59b169ffd1ed7a5d9f4cb056fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8935e36676e2016d5fbf72239130956d40a875e9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651953"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668904"
 ---
 # <a name="supported-versions-of-foxpro"></a>Versiones compatibles de FoxPro
 Puede usar el controlador ODBC de Microsoft® Visual FoxPro® para acceder a los datos almacenados en tablas de FoxPro. Se admiten las siguientes versiones de datos de FoxPro:  
@@ -39,4 +39,4 @@ Puede usar el controlador ODBC de Microsoft® Visual FoxPro® para acceder a los
   
  Para obtener más información acerca de cómo conectarse a un origen de datos, vea [agregar un origen de datos de Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
- Para descargar el controlador, consulte [el sitio de descarga de Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318).
+ Para descargar el controlador, consulte [el sitio de descarga de Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318).

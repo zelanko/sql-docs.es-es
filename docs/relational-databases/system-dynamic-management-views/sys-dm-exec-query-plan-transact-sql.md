@@ -19,19 +19,19 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797193"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671201"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el plan de presentación en formato XML para el lote especificado por el identificador del plan. Este plan especificado por el identificador del plan puede estar almacenado en caché o ejecutándose.  
   
- El esquema XML para el plan de presentación está publicada y disponible en [este sitio Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). También está disponible en el directorio de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El esquema XML para el plan de presentación está publicada y disponible en [este sitio Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). También está disponible en el directorio de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sys.dm_exec_query_plan ( plan_handle )
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
 |**objectid**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
-|**Número**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos para la **pedidos** aplicación podría llamarse **orderproc; 1**, **orderproc; 2**, y así sucesivamente. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
+|**number**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos para la **pedidos** aplicación podría llamarse **orderproc; 1**, **orderproc; 2**, y así sucesivamente. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**Cifrado**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**xml**|Contiene la representación de plan de presentación de tiempo de compilación del plan de ejecución de consulta que se especifica con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
   

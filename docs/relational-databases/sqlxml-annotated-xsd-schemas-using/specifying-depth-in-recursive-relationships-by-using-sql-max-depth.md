@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843753"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675145"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un  **\<Emp >** elemento de tipo EmployeeType, que consta de un  **\<Emp >** elemento secundario del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa un  **\<SQL: Relationship >** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en este  **\<SQL: Relationship >**, Emp es el elemento primario y la tabla secundaria.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Éste es el esquema revisado:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -249,7 +249,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-b"></a>Ejemplo B  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>Ejemplo C  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>Ejemplo D  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

@@ -16,12 +16,12 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add581048739a6ba12dc046d2f9362816b661687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680629"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600185"
 ---
 # <a name="server-property-rds"></a>Propiedad del servidor (RDS)
 Indica el protocolo de nombre y la comunicación de Internet Information Services (IIS).  
@@ -29,7 +29,7 @@ Indica el protocolo de nombre y la comunicación de Internet Information Service
  Puede establecer el **Server** propiedad en tiempo de diseño en las etiquetas de objeto de la[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de objeto o en tiempo de ejecución de código de secuencias de comandos.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
  **HTTP**  
@@ -49,7 +49,7 @@ Indica el protocolo de nombre y la comunicación de Internet Information Service
 ```  
   
 DataControl  
-.Server="http://  
+.Server="https://  
 awebsrvr:port  
 "  
   

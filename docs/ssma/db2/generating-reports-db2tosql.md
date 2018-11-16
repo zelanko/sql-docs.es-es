@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d4ff4fdcf07b84455b76994d23cc2c9b0f738106
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 491eec7c723681639308b05a78de2ab935bd81e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100106"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663865"
 ---
 # <a name="generating-reports-db2tosql"></a>Generación de informes (DB2ToSQL)
 Se generan los informes de ciertas actividades realizadas mediante comandos en la consola de SSMA en nivel de árbol de objetos.  
@@ -138,5 +138,5 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
 -   Error de script  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola de SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Ejecución de la consola de SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

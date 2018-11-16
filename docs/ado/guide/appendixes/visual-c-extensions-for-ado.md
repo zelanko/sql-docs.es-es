@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca21e976783a10a738488762e382982e4fd8fd8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747683"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350190"
 ---
-# <a name="visual-c-extensions"></a>Extensiones de Visual C++
+# <a name="visual-c-extensions-for-ado"></a>Extensiones de Visual C++ para ADO
 El método preferido de programación ADO con Visual C++ es usar el **#import** directiva, como se describe en [programación ADO en Microsoft Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md). Sin embargo, las versiones anteriores de ADO se incluye con un método alternativo de la programación con Visual C++: las extensiones de Visual C++. Esta sección documentan esta característica para aquellos que se debe mantener el código de extensiones de Visual C++, pero se debe escribir el nuevo código de ADO con #**importar**.
 
  Uno de lo más tediosas trabajos Visual C++ se enfrentan los programadores al recuperar datos con ADO es convertir los datos devueltos como un tipo de datos VARIANT en un tipo de datos de C++ y, a continuación, almacenar los datos convertidos en una clase o estructura. Además de ser molesto, recuperar datos de C++ a través de un tipo de datos VARIANT disminuye el rendimiento.

@@ -18,12 +18,12 @@ ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1c869c1482ab0731610325922f624d7b52b21f06
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 9f098e3d73e085ba3b03d42ebcbd7314b0325f6a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217003"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670004"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>Método SetFlag (clase ServerNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,6 @@ object.SetFlag(BoolValue)
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

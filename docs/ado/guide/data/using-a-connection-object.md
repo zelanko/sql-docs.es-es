@@ -13,12 +13,12 @@ ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 729d6d0713e70e2d628a08c2ce5008772d6a005d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710155"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606175"
 ---
 # <a name="using-a-connection-object"></a>Uso de un objeto de conexión
 Antes de abrir un **conexión** objeto, debe definir cierta información sobre el origen de datos y el tipo de conexión. La mayor parte de esta información se mantiene por el *ConnectionString* parámetro de la [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) en el **conexión** objeto, o mediante el [ConnectionString propiedad](../../../ado/reference/ado-api/connectionstring-property-ado.md) en el **conexión** objeto. Una cadena de conexión consta de una lista de pares de argumento y valor separados por punto y coma, con los valores entre comillas simples. Por ejemplo:  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  También puede especificar un nombre de origen de datos ODBC (DSN) o un archivo de Data Link (UDL) en una cadena de conexión. Para obtener más información acerca de los DSN, vea [administrar orígenes de datos](../../../odbc/admin/managing-data-sources.md) en referencia del programador de ODBC. Para obtener más información acerca de los UDL, vea [Introducción a la API de vínculo de datos](http://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) en referencia de la base de datos del programador de OLE.  
+>  También puede especificar un nombre de origen de datos ODBC (DSN) o un archivo de Data Link (UDL) en una cadena de conexión. Para obtener más información acerca de los DSN, vea [administrar orígenes de datos](../../../odbc/admin/managing-data-sources.md) en referencia del programador de ODBC. Para obtener más información acerca de los UDL, vea [Introducción a la API de vínculo de datos](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) en referencia de la base de datos del programador de OLE.  
   
  Por lo general, establecer una conexión mediante una llamada a la **Connection.Open** método con un adecuado un *cadena de conexión* como su parámetro. En el siguiente fragmento de código de Visual Basic se muestra un ejemplo:  
   

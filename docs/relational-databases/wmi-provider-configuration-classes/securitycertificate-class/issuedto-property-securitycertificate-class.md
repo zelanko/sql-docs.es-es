@@ -18,12 +18,12 @@ ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e4912330694932f74c0056fee21df87e39489666
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 629db42013df4fccfbd03c95cc3368d1538dbf6a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215043"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659394"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>Propiedad IssuedTo (clase SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.IssuedTo [= value]
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

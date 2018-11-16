@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b2fa1bdf96693a29f0e4e7b5d2d27b35a83c122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639313"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663054"
 ---
 # <a name="deploying-clr-database-objects"></a>Implementar objetos de base de datos de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47639313"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Para obtener más información sobre la creación de los distintos tipos de objetos de base de datos administrados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [Defined agregados](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimientos almacenados de CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), y [desencadenadores CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Para obtener más información sobre la creación de los distintos tipos de objetos de base de datos administrados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [Defined agregados](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), y [desencadenadores CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Implementar el ensamblado en servidores de producción  
  Una vez probados y comprobados los objetos de base de datos de CLR en el servidor de prueba, pueden distribuirse a los servidores de producción. Para obtener más información sobre cómo depurar objetos de base de datos administrados, consulte [depurar objetos de base de datos de CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  

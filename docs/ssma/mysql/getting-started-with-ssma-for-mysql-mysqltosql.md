@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679673"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677254"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introducción a SSMA para MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) para MySQL le permite convertir los esquemas de base de datos MySQL a esquemas de SQL Server o Azure SQL DB, cargar los esquemas resultantes en SQL Server o Azure SQL DB y migrar datos desde MySQL a SQL Server o Azure SQL DB rápidamente.  
@@ -73,7 +73,7 @@ SQL Server o el Explorador de metadatos de base de datos SQL de Azure muestra in
   
 Puede usar el Explorador de metadatos para seleccionar los objetos de base de datos MySQL convertidos y, a continuación, sincroniza esos objetos con la instancia de SQL Server o Azure SQL DB.  
   
-Para obtener más información, consulte [sincronización (MySQL a SQL Server / base de datos de SQL Azure)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Para obtener más información, consulte [sincronización (MySQL a SQL Server / base de datos de SQL Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadatos  
 A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de MySQL, nueve pestañas aparecerán: **tabla**, **SQL**, **Type Mapping**, **datos**,  **Configuración de**, **Charset asignación**, **modos SQL**, **propiedades**, y **informe**. El **informe** pestaña contiene información únicamente después de crear un informe que contiene el objeto seleccionado. Si selecciona una tabla en el Explorador de metadatos de SQL Server, aparecerán tres fichas: **tabla**, **SQL** y **datos**.  

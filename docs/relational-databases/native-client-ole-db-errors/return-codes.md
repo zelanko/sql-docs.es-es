@@ -24,12 +24,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d32ad11137b45cb4424de042abf6952db224e06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2cc6ca5be4fa3a5d05b1370a2d519bece0f0f15
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618143"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659914"
 ---
 # <a name="return-codes"></a>Códigos de retorno
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47618143"
 
   En el nivel más básico, una función miembro se ejecuta correctamente o genera un error. En un nivel algo más preciso, puede que una función se ejecute correctamente pero que el resultado no sea el que esperaba el programador de la aplicación.  
   
- Para obtener más información sobre los códigos de retorno OLE DB, vea [Códigos de retorno (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ Para obtener más información sobre los códigos de retorno OLE DB, vea [Códigos de retorno (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
  Cuando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] función miembro de proveedor OLE DB de Native Client devuelve S_OK, la función se realizó correctamente.  
   

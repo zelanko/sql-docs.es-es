@@ -11,17 +11,17 @@ ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787433"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659072"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Cómo: Abrir una prueba unitaria de SQL Server para editarla
 Después de crear una prueba unitaria de SQL Server, puede usar el **Diseñador de pruebas unitarias de SQL Server** para agregar condiciones de prueba e instrucciones Transact\-SQL. Las pruebas creadas con el diseñador generan código de Visual C# o Visual Basic. Este código es lo que se ejecuta para las series de pruebas.  
   
-Si está satisfecho con la prueba, puede ejecutarla tal cual está. Si desea agregar más funcionalidad a esta prueba unitaria, puede editar su código. Este código reside en un archivo .cs o .vb en el proyecto de prueba. Para más información, consulte [Archivos de pruebas unitarias de SQL Server](../ssdt/sql-server-unit-test-files.md). También puede personalizar las pruebas si crea nuevas condiciones de prueba. Para más información, consulte [How to: Create Test Conditions for the Database Unit Test Designer (Visual Studio 2010)](http://msdn.microsoft.com/library/aa833409(VS.100).aspx) (Creación de condiciones de prueba para el Diseñador de pruebas unitarias de base de datos [Visual Studio 2010]).  
+Si está satisfecho con la prueba, puede ejecutarla tal cual está. Si desea agregar más funcionalidad a esta prueba unitaria, puede editar su código. Este código reside en un archivo .cs o .vb en el proyecto de prueba. Para más información, consulte [Archivos de pruebas unitarias de SQL Server](../ssdt/sql-server-unit-test-files.md). También puede personalizar las pruebas si crea nuevas condiciones de prueba. Para más información, consulte [How to: Create Test Conditions for the Database Unit Test Designer (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx) (Creación de condiciones de prueba para el Diseñador de pruebas unitarias de base de datos [Visual Studio 2010]).  
   
 > [!NOTE]  
 > Si elimina un método de prueba editando el archivo .cs o .vb, el método de prueba seguirá apareciendo en el **Diseñador de pruebas unitarias de SQL Server**. Este escenario aparece porque el método InitializeComponent de la clase de prueba sigue conteniendo las variables miembro para la prueba. Aunque la prueba aparezca en el diseñador, no puede ejecutarla porque el código ya no está presente. Para regenerar el método de prueba para esta prueba, modifique Transact\-SQL en el editor y, a continuación, guarde el archivo de prueba .cs o .vb, o recompile el proyecto de prueba.  

@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f809f65be52e77e84e1391df0151cc183013624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d6fa7cf4e323004789dabb098df400f1ae6dce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656513"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663805"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Esta instrucción permite identificar el Id. de usuario del propietario de la tr
 Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que usar la instrucción [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Use esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos que no desea terminar. Para más información, consulte [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>Vea también  
-[Artículo de soporte técnico de KB: Un registro de transacciones crece de manera inesperada o se llena en SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Artículo de soporte técnico de KB: Un registro de transacciones crece de manera inesperada o se llena en SQL Server](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

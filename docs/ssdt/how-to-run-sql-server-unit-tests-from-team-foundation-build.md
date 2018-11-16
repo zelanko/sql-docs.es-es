@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797363"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669864"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Cómo: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
 Puede usar Team Foundation Build para ejecutar las pruebas unitarias de SQL Server como parte de una prueba de comprobación de la compilación (BVT). Puede configurar las pruebas unitarias para implementar la base de datos, generar datos de prueba y ejecutar las pruebas seleccionadas. Si no está familiarizado con Team Foundation Build, debe revisar la siguiente información antes de seguir los procedimientos de este tema:  
   
 -   [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Cómo: Configurar y ejecutar pruebas programadas después de compilar la aplicación](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Cómo: Configurar y ejecutar pruebas programadas después de compilar la aplicación](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [Crear una definición de compilación básica](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Crear una definición de compilación básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 Para usar estos procedimientos, primero debe configurar el entorno de trabajo realizando las siguientes tareas:  
   
@@ -215,22 +215,22 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
 1.  Conéctese a un equipo que ejecute Team Foundation Server.  
   
-    Para más información, consulte [Usar el Explorador de control de código fuente](http://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Para más información, consulte [Usar el Explorador de control de código fuente](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
   
 2.  Si la solución no está ya en control de código fuente, agréguela.  
   
-    Para más información, consulte [Agregar un proyecto o una solución al control de versiones](http://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Para más información, consulte [Agregar un proyecto o una solución al control de versiones](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
   
 3.  Haga clic en **Ver** y, a continuación, en **Protecciones pendientes**.  
   
 4.  Proteja todos los archivos de la solución.  
   
-    Para más información, consulte [Proteger cambios Pendientes](http://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Para más información, consulte [Proteger cambios Pendientes](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
   
     > [!NOTE]  
     > Puede tener un proceso específico del equipo que controle cómo se crean y se administran las pruebas automatizadas. Por ejemplo, el proceso puede requerir que compruebe localmente la compilación antes de proteger el código, así como las pruebas que se ejecutarán en él.  
   
-    En el **Explorador de soluciones** aparecerá un icono de candado junto a cada archivo para indicar que está protegido. Para más información, consulte [Ver archivo de control de versiones y propiedades de la carpeta](http://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    En el **Explorador de soluciones** aparecerá un icono de candado junto a cada archivo para indicar que está protegido. Para más información, consulte [Ver archivo de control de versiones y propiedades de la carpeta](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
   
     Las pruebas están disponibles en Team Foundation Build. A continuación puede crear una definición de compilación que contenga las pruebas que desee ejecutar.  
   
@@ -280,11 +280,11 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
 3.  Confirme que los valores de **Definición de compilación**, **Agente de compilación** y los campos de **Carpeta de entrega para esta compilación** son todos adecuados y haga clic en **Cola**.  
   
-    Aparecerá la pestaña **Puesta en cola** del **Explorador de compilaciones**. Para más información, consulte [Administrar y ver compilaciones completadas (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) o [Administrar compilaciones en el Explorador de compilaciones (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx).  
+    Aparecerá la pestaña **Puesta en cola** del **Explorador de compilaciones**. Para más información, consulte [Administrar y ver compilaciones completadas (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) o [Administrar compilaciones en el Explorador de compilaciones (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
 ## <a name="see-also"></a>Ver también  
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Crear una definición de compilación básica](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Poner en cola una compilación](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Supervisar el progreso de una compilación en ejecución](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[Crear una definición de compilación básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[Poner en cola una compilación](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[Supervisar el progreso de una compilación en ejecución](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

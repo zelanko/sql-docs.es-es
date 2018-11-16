@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -17,12 +16,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17e89b7093d9f28d87be58af881e3b71d836be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730243"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559202"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47730243"
   
      [Solucionar errores de recompilación](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se vuelven a generar las bases de datos maestra, modelo, msdb y tempdb del sistema, las bases de datos se quitan y se vuelven a crear en su ubicación original. Si se especifica una nueva intercalación en la instrucción para volver a generar las bases de datos del sistema, estas se crearán con esa configuración de intercalación. Se perderán las modificaciones que los usuarios hayan realizado en esas bases de datos. Por ejemplo, es posible que haya objetos definidos por los usuarios en la base de datos maestra, trabajos programados en msdb o cambios en la configuración predeterminada de la base de datos modelo.  

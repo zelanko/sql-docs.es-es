@@ -14,12 +14,12 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14abdd44fca86401238db0216febb5a6a002ffa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596793"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662344"
 ---
 # <a name="data-collection"></a>Recopilación de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47596793"
   
  El recopilador de datos permite ajustar el ámbito de recopilación de datos de acuerdo con cada entorno de producción y pruebas. El recopilador de datos también usa almacenamiento de datos, que es una base de datos relacional que permite administrar los datos recopilados estableciendo diferentes períodos de retención para los mismos.  
   
- El recopilador de datos admite la optimización dinámica para la recopilación de datos y es extensible a través de su API. Para más información, consulte [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ El recopilador de datos admite la optimización dinámica para la recopilación de datos y es extensible a través de su API. Para más información, consulte [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
   
  La ilustración siguiente muestra cómo encaja el recopilador de datos en la estrategia global para la recopilación y la administración de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47596793"
   
 -   Cuentas de proxy  
   
- Para obtener más información, vea [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ Para obtener más información, vea [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) se usa para ejecutar paquetes que recopilan datos de proveedores de datos individuales. Debe estar familiarizado con los siguientes conceptos y herramientas de [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   

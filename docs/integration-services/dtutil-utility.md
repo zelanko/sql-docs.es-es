@@ -26,12 +26,12 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf4fb0fb88ef90b234938252fa7cb48391d861
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681903"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642222"
 ---
 # <a name="dtutil-utility"></a>dtutil, utilidad
   La utilidad del símbolo del sistema **dtutil** se usa para administrar paquetes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . La utilidad puede copiar, mover, eliminar o comprobar la existencia de un paquete. Estas acciones se pueden realizar en cualquier paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] almacenado en una de estas tres ubicaciones: una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] y el sistema de archivos. Si la utilidad tiene acceso a un paquete almacenado en **msdb**, el símbolo del sistema puede requerir un nombre de usuario y una contraseña. Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el símbolo del sistema requiere un nombre de usuario y una contraseña. Si falta el nombre de usuario, **dtutil** intenta iniciar una sesión en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la Autenticación de Windows. El tipo de almacenamiento del paquete se identifica mediante las opciones **/SQL**, **/FILE**y **/DTS** .  
@@ -264,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  El hash utilizado en este ejemplo no es real.  
   
- Para obtener más información, vea la sección CertMgr en este artículo sobre [la firma y la comprobación de código con Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100).  
+ Para obtener más información, vea la sección CertMgr en este artículo sobre [la firma y la comprobación de código con Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100).  
   
 ### <a name="encrypt-examples"></a>Ejemplos de cifrado  
  El siguiente ejemplo cifra el archivo PackageToEncrypt.dtsx basado en un archivo en el archivo EncryptedPackage.dts basado en un archivo, utilizando el cifrado de todo el paquete con una contraseña. La contraseña que se utiliza para el cifrado es *EncPswd*.  

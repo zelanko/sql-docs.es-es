@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71f8cb6faeb5010cc39a05e2611753a04de812e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822433"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642251"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -108,9 +108,9 @@ ms.locfileid: "47822433"
   
 2.  Agregue tareas y contenedores al contenedor de bucles Foreach. Para más información, vea [Agregar o eliminar tareas o contenedores en un flujo de control](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Conecte tareas y contenedores en el contenedor de bucles Foreach mediante restricciones de precedencia. Para más información, vea [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
+3.  Conecte tareas y contenedores en el contenedor de bucles Foreach mediante restricciones de precedencia. Para más información, vea [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
   
-4.  Configure el contenedor de bucles Foreach. Para más información, vea [configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+4.  Configure el contenedor de bucles Foreach. Para más información, vea [configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
 
 ## <a name="configure-a-foreach-loop-container"></a>Configurar un contenedor de bucles Foreach
 Este procedimiento describe cómo configurar un contenedor de bucles Foreach, incluyendo expresiones de propiedad en los niveles de enumerador y contenedor.  
@@ -178,7 +178,7 @@ Este procedimiento describe cómo configurar un contenedor de bucles Foreach, in
 ## <a name="general-page---foreach-loop-editor"></a>Página General: Editor de bucles Para cada uno
 Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach** para asignar nombre y describir un contenedor de bucles Foreach que utiliza un enumerador especificado para repetir un flujo de trabajo para cada miembro de una colección.  
   
- Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  
@@ -193,7 +193,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 ## <a name="collection-page---foreach-loop-editor"></a>Página Colección: Editor de bucles Para cada uno
  Use la página **Colección** del cuadro de diálogo **Editor de bucles Para cada uno** para especificar el tipo de enumerador y configurarlo.  
   
- Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="static-options"></a>Opciones estáticas  
  **Enumerador**  
@@ -281,7 +281,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Columnas**  
  Haga clic para configurar el tipo de datos de las columnas del elemento.  
   
- **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Columnas Foreach Item](http://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Columnas Foreach Item](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Enumerador = Enumerador de ADO para Foreach  
  El enumerador de ADO para Foreach se utiliza para enumerar filas o tablas de un objeto ADO o ADO.NET que está almacenado en una variable. Por ejemplo, si el bucle Foreach incluye una tarea Script que escribe un conjunto de datos en una variable, puede utilizar el enumerador de ADO para Foreach para enumerar las filas del conjunto de datos. Si la variable contiene un conjunto de datos ADO.NET, el enumerador puede configurarse para enumerar filas en varias tablas o para enumerar tablas.  
@@ -292,7 +292,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 > [!NOTE]  
 >  La variable debe tener el tipo de datos Object o, de lo contrario, se producirán errores.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Filas en la primera tabla**  
  Seleccione esta opción si desea enumerar solo las filas de la primera tabla.  
@@ -320,7 +320,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Establecer restricciones**  
  Permite establecer las restricciones que se deben aplicar al esquema especificado.  
   
- **Temas relacionados:** [Restricciones de esquema, cuadro de diálogo](http://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **Temas relacionados:** [Restricciones de esquema, cuadro de diálogo](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerador = Enumerador de variable para Foreach  
  El enumerador de variable para Foreach se utiliza para enumerar los objetos enumerables incluidos en una variable especificada. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL que ejecuta una consulta y almacena el resultado en una variable, puede utilizar el enumerador de variable para Foreach para enumerar los resultados de la consulta.  
@@ -328,14 +328,14 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Variable**  
  Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerador = Enumerador de lista de nodos para Foreach  
  El enumerador de lista de nodos para Foreach se utiliza para enumerar el conjunto de nodos XML que resultan de aplicar una expresión XPath a un archivo XML. Por ejemplo, si el bucle Foreach incluye una tarea Script, puede utilizar el enumerador de lista de nodos para Foreach para pasar un valor que coincida con los criterios de la expresión XPath del archivo XML a la tarea Script.  
   
  La expresión XPath que se aplica al archivo XML es la operación XPath externa, almacenada en la propiedad OuterXPathString. Si el tipo de enumeración de XPath está establecido en **ElementCollection**, el enumerador de lista de nodos para Foreach puede aplicar una expresión XPath interna, almacenada en la propiedad InnerXPathString, a una colección de elementos.  
   
- Para obtener más información acerca de cómo trabajar con datos y documentos XML, vea el artículo sobre el[uso de XML en .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)en MSDN Library.  
+ Para obtener más información acerca de cómo trabajar con datos y documentos XML, vea el artículo sobre el[uso de XML en .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)en MSDN Library.  
   
  **DocumentSourceType**  
  Seleccione el tipo de origen del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
@@ -355,7 +355,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  Si **DocumentSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **EnumerationType**  
  Seleccione un tipo de enumeración de la lista. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
@@ -385,7 +385,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  Si **OuterXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **InnerElementType**  
  Si el valor de **EnumerationType** es **ElementCollection**, seleccione el tipo del elemento interno en la lista.  
@@ -408,7 +408,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  Si **InnerXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una nueva.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerador = Enumerador de SMO para Foreach  
  El enumerador de SMO para Foreach se utiliza para enumerar objetos de Objetos de administración de SQL Server (SMO). Por ejemplo, si el bucle Para cada uno incluye una tarea Ejecutar SQL, puede utilizar el enumerador de SMO para Para cada uno para enumerar las tablas de la base de datos **AdventureWorks** y ejecutar las consultas que realizan el recuento de filas de cada tabla.  
@@ -424,7 +424,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Examinar**  
  Seleccione la enumeración SMO.  
   
- **Temas relacionados:** [Seleccionar enumeración de SMO, cuadro de diálogo](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0).  
+ **Temas relacionados:** [Seleccionar enumeración de SMO, cuadro de diálogo](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0).  
   
 ####  <a name="ForeachHDFSFile"></a> Enumerador = Enumerador de archivos HDFS para Para cada uno  
  El **Enumerador de archivos HDFS para Foreach** habilita un paquete SSIS para enumerar los archivos HDFS en la ubicación especificada de HDFS. El nombre de un archivo HDFS se puede almacenar en una variable y usar en tareas en el Contenedor de bucles Foreach.  
@@ -453,7 +453,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 ####  <a name="ForeachAzureBlob"></a> Enumerador = Enumerador de blob de Azure para Para cada uno  
  El  **Enumerador de blob de Azure** habilita un paquete SSIS para enumerar los archivos de blob en la ubicación de blob especificada. Puede almacenar el nombre del archivo de blob enumerado en una variable y usarlo en tareas en el Contenedor de bucles Para cada uno.  
   
- El **Enumerador de blobs de Azure** es un componente de SQL Server Integration Services (SSIS) Feature Pack para Azure para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Descargue el Feature Pack [aquí](http://go.microsoft.com/fwlink/?LinkID=626967).  
+ El **Enumerador de blobs de Azure** es un componente de SQL Server Integration Services (SSIS) Feature Pack para Azure para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Descargue el Feature Pack [aquí](https://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Administrador de conexiones de almacenamiento de Azure**  
  Seleccione un administrador de conexiones de almacenamiento de Azure existente o cree uno que haga referencia a una cuenta de almacenamiento de Azure.  
@@ -490,7 +490,7 @@ Especifica si se debe buscar de forma recursiva en el directorio especificado.
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Página Asignaciones de variables: Editor de bucles Para cada uno
  Use la página **Asignaciones de variables** del cuadro de diálogo **Editor de bucles Foreach** para asignar variables al valor de la colección. El valor de la variable se actualiza con los valores de la colección en cada iteración del bucle.  
   
- Para obtener más información acerca de cómo utilizar el contenedor de bucles Para cada uno en un paquete de Integration Services, vea [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md). Para saber cómo se configura, vea [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Para obtener más información acerca de cómo utilizar el contenedor de bucles Para cada uno en un paquete de Integration Services, vea [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md). Para saber cómo se configura, vea [Configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  El tutorial de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , llamado Tutorial para crear un paquete ETL sencillo, incluye una lección que le enseña a agregar y configurar un bucle Foreach.  
   
@@ -501,7 +501,7 @@ Especifica si se debe buscar de forma recursiva en el directorio especificado.
 > [!NOTE]  
 >  Una vez asignada una variable, se agregará automáticamente una nueva fila a la lista **Variable**.  
   
- **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Index**  
  Si utiliza el enumerador de elementos para Foreach, especifique el índice de la columna en el valor de la colección para asignarlo a la variable. Si utiliza otros tipos de enumeradores, el índice será de solo lectura.  
@@ -522,7 +522,7 @@ Utilice el cuadro de diálogo **Restricciones de esquema** para establecer las r
  **Variable**  
  Utilice una variable para definir restricciones. Seleccione una variable de la lista o haga clic en **Nueva variable** para crear una nueva.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **Texto**  
  Proporciona el texto para definir restricciones.  

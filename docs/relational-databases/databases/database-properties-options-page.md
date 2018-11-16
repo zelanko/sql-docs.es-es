@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706563"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659374"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,10 +95,10 @@ ms.locfileid: "47706563"
  En SQL Server 2016 y en Base de datos SQL de Azure, hay una serie de propiedades de configuración cuyo ámbito puede alcanzar el nivel de base de datos. Para obtener más información relativa a todas estas configuraciones, vea [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Estimación de cardinalidad heredada**  
- Especifique el modelo de estimación de la cardinalidad del optimizador de consultas independiente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Especifique el modelo de estimación de la cardinalidad del optimizador de consultas independiente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 9481](https://support.microsoft.com/kb/2801413).  
   
  **Estimación de cardinalidad heredada del elemento secundario**  
- Especifique el modelo de estimación de la cardinalidad del optimizador de consultas para elementos secundarios, si procede, independiente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Especifique el modelo de estimación de la cardinalidad del optimizador de consultas para elementos secundarios, si procede, independiente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 9481](https://support.microsoft.com/kb/2801413).  
   
  **Max DOP**  
  Especifique el valor predeterminado [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) del elemento principal que hay que usar para las instrucciones.  
@@ -108,16 +107,16 @@ ms.locfileid: "47706563"
  Especifique el valor predeterminado [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) de los elementos secundarios, si procede, que hay que usar para las instrucciones.  
   
  **Examen de parámetros**  
- Habilita o deshabilita el examen de parámetros en el elemento principal. Es equivalente a la [Marca de seguimiento 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Habilita o deshabilita el examen de parámetros en el elemento principal. Es equivalente a la [Marca de seguimiento 4136](https://support.microsoft.com/kb/980653).  
   
  **Examen de parámetros del elemento secundario**  
- Habilita o deshabilita el examen de parámetros en los elementos secundarios, si procede. Es equivalente a la [Marca de seguimiento 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Habilita o deshabilita el examen de parámetros en los elementos secundarios, si procede. Es equivalente a la [Marca de seguimiento 4136](https://support.microsoft.com/kb/980653).  
   
  **Correcciones del optimizador de consultas**  
- Habilita o deshabilita las revisiones de optimización de consulta en el elemento principal, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Habilita o deshabilita las revisiones de optimización de consulta en el elemento principal, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/kb/974006).  
   
  **Correcciones del optimizador de consultas para secundaria**  
- Habilita o deshabilita las revisiones de optimización de consulta en los elementos secundarios, si procede, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Habilita o deshabilita las revisiones de optimización de consulta en los elementos secundarios, si procede, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/kb/974006).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nombre de directorio de FILESTREAM**  

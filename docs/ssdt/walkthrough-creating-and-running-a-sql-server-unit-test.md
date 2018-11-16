@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855293"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666524"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
 En este tutorial, se crea una prueba unitaria de SQL Server que comprueba el comportamiento de varios procedimientos almacenados. Las pruebas unitarias de SQL Server se crean para ayudar a identificar los defectos del código que podrían producir un comportamiento incorrecto de la aplicación. Las pruebas unitarias de SQL Server y las pruebas de aplicación se pueden ejecutar como parte de un conjunto de pruebas automatizado.  
@@ -40,7 +40,7 @@ En este tutorial, realizará las tareas siguientes:
 Cuando una de las pruebas unitarias detecta un error en un procedimiento almacenado, se corrige el error y se vuelve a ejecutar la prueba.  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Para completar este tutorial, debe poder conectarse a un servidor de bases de datos (o a una base de datos LocalDB) en el que tenga permisos para crear e implementar una base de datos. Para más información, consulte [Permisos necesarios para las características de base de datos de Visual Studio](http://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Para completar este tutorial, debe poder conectarse a un servidor de bases de datos (o a una base de datos LocalDB) en el que tenga permisos para crear e implementar una base de datos. Para más información, consulte [Permisos necesarios para las características de base de datos de Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
 ## <a name="CreateScript"></a>Crear un script que contiene un esquema de la base de datos  
   
@@ -968,7 +968,7 @@ Para crear y comprobar una prueba negativa, debe realizar las siguientes tareas:
     Especifique que se espera ver una excepción concreta. Opcionalmente, puede especificar un número de error concreto. Si no agrega este atributo, la prueba unitaria generará un error y aparecerá un mensaje en la ventana Resultados de pruebas  
   
     > [!IMPORTANT]  
-    > Actualmente, Visual Studio 2012 no admite el atributo ExpectedSqlException. Para obtener información sobre cómo solucionar este problema, vea [No se puede ejecutar la prueba unitaria de base de datos "Error esperado"](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Actualmente, Visual Studio 2012 no admite el atributo ExpectedSqlException. Para obtener información sobre cómo solucionar este problema, vea [No se puede ejecutar la prueba unitaria de base de datos "Error esperado"](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  En el menú Archivo, haga clic en Guardar SqlServerUnitTests1.cs.  
   

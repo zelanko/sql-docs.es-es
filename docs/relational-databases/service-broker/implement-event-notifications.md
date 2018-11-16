@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], target service
@@ -16,12 +15,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb36c8e5c92672132c07228bb265ad90d327b97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cc1e8e4405c6900860d8323d31d52e4a320639d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704530"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662244"
 ---
 # <a name="implement-event-notifications"></a>Implementar notificaciones de eventos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47704530"
  No es necesario que cree un servicio de inicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)]debido a que [!INCLUDE[ssSB](../../includes/sssb-md.md)] incluye el siguiente tipo de mensaje y contrato para notificaciones de eventos:  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  El servicio de destino que recibe notificaciones de eventos debe respetar este contrato preexistente.  
@@ -44,7 +43,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  Cree una cola para recibir mensajes.  
   
     > [!NOTE]  
-    >  La cola recibe el siguiente tipo de mensaje: `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  La cola recibe el siguiente tipo de mensaje: `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Cree un servicio en la cola que hace referencia al contrato de notificaciones de eventos.  
   
@@ -61,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

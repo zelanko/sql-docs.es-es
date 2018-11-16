@@ -13,15 +13,15 @@ ms.assetid: 6f8616cb-9119-42c3-a9b1-936e088763e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a847748b0f0025402da1feb794f5c441ea2a3f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe3172d876c7a74a0ad54f25b58e949646c0f74
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773573"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661764"
 ---
 # <a name="install-sql-server-data-tools"></a>Instalar SQL Server Data Tools
-En este tema se describe cómo instalar SQL Server Data Tools. Hay actualizaciones de SQL Server Data Tools disponibles en la página de descarga de SQL Server Data Tools ([Install Latest SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)) (Instalar la versión más reciente de SQL Server Data Tools).  
+En este tema se describe cómo instalar SQL Server Data Tools. Hay actualizaciones de SQL Server Data Tools disponibles en la página de descarga de SQL Server Data Tools ([Install Latest SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)) (Instalar la versión más reciente de SQL Server Data Tools).  
   
 Sin importar si usa Visual Studio 2012 o Visual Studio 2013, instale las últimas actualizaciones de SQL Server Data Tools para obtener las características más recientes.  
   
@@ -38,5 +38,5 @@ Si necesita instalar SQL Server Data Tools en varios equipos o en equipos sin ac
   
 Para crear un diseño de instalación, descargue SSDTSetup.EXE y ejecútelo con la opción `/layout`*location* para crear un diseño en *ubicación*. Los usuarios podrán entonces ejecutar SSDTSetup.Exe desde *ubicación*.  
   
-Para descargar SSDTSetup.exe, vaya a [Install Latest SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714), haga clic en el vínculo correspondiente a su versión de Visual Studio y, a continuación, descargue SSDTSetup.exe para su idioma.  
+Para descargar SSDTSetup.exe, vaya a [Install Latest SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714), haga clic en el vínculo correspondiente a su versión de Visual Studio y, a continuación, descargue SSDTSetup.exe para su idioma.  
   

@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fce1dd4e7f8773d4fb7e80619d9511cc9680c244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796913"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670566"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47796913"
 > [!IMPORTANT]  
 >  Cualquier usuario autenticado puede leer y escribir en el registro de eventos de aplicación Windows. El registro de eventos de aplicación requiere permisos más bajos que el registro de eventos de seguridad de Windows, por lo que es menos seguro que éste.  
   
- La escritura en el registro de seguridad de Windows requiere que se agregue la cuenta del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la directiva **Generar auditorías de seguridad** . De forma predeterminada, el sistema local, el servicio local y el servicio de red forman parte de esta directiva. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). Además, la directiva de seguridad **Auditar el acceso a objetos** debe estar habilitada tanto para **Correcto** como para **Error**. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). En [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, puede establecer la directiva **Aplicación generada** más específica desde la línea de comandos usando el programa de directiva de auditoría (**AuditPol.exe)**. Para obtener más información sobre los pasos necesarios para habilitar la escritura en el registro de seguridad de Windows, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Para obtener más información sobre el programa Auditpol.exe, vea el artículo 921469 de Knowledge Base que describe [cómo usar la directiva de grupo para configurar las opciones detalladas de auditoría de seguridad](http://support.microsoft.com/kb/921469/). Los registros de eventos de Windows son globales para el sistema operativo Windows. Para obtener más información sobre los registros de eventos de Windows, vea [Información general sobre el Visor de eventos](http://go.microsoft.com/fwlink/?LinkId=101455). Si necesita permisos más concretos en la auditoría, utilice el destino de archivo binario.  
+ La escritura en el registro de seguridad de Windows requiere que se agregue la cuenta del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la directiva **Generar auditorías de seguridad** . De forma predeterminada, el sistema local, el servicio local y el servicio de red forman parte de esta directiva. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). Además, la directiva de seguridad **Auditar el acceso a objetos** debe estar habilitada tanto para **Correcto** como para **Error**. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). En [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, puede establecer la directiva **Aplicación generada** más específica desde la línea de comandos usando el programa de directiva de auditoría (**AuditPol.exe)**. Para obtener más información sobre los pasos necesarios para habilitar la escritura en el registro de seguridad de Windows, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Para obtener más información sobre el programa Auditpol.exe, vea el artículo 921469 de Knowledge Base que describe [cómo usar la directiva de grupo para configurar las opciones detalladas de auditoría de seguridad](https://support.microsoft.com/kb/921469/). Los registros de eventos de Windows son globales para el sistema operativo Windows. Para obtener más información sobre los registros de eventos de Windows, vea [Información general sobre el Visor de eventos](https://go.microsoft.com/fwlink/?LinkId=101455). Si necesita permisos más concretos en la auditoría, utilice el destino de archivo binario.  
   
  Al guardar información de auditoría en un archivo, para tratar de impedir su alteración, puede restringir el acceso a la ubicación del archivo de las maneras siguientes:  
   
@@ -210,7 +210,7 @@ ms.locfileid: "47796913"
  [Desencadenadores DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Explica cómo puede usar los desencadenadores del Lenguaje de definición de datos (DDL) para realizar el seguimiento de los cambios en sus bases de datos.  
   
- [Microsoft TechNet: SQL Server TechCenter: Seguridad y protección de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: Seguridad y protección de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Proporciona información actualizada sobre la seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Ver también  

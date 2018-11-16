@@ -15,12 +15,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800743"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642412"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
   En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -230,8 +230,8 @@ ms.locfileid: "47800743"
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|No se pudo abrir el archivo ""%1"" para escribir en él. Puede ser que el archivo sea de solo lectura o que no tenga los permisos correctos.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|No hay ningún conjunto de filas de resultados asociado a la ejecución de esta consulta. El resultado no se ha especificado correctamente.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|No se generaron correctamente los archivos de volcado de depuración. El código de hresult es 0x%1!8.8X!.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|La dirección URL especificada no es válida. Esto puede suceder si la dirección URL del servidor o el proxy es null, o si el formato no es correcto. El formato de URL válido es http://ServerName:Port/ResourcePath o bien https://ServerName:Port/ResourcePath.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|La dirección URL %1 no es válida. Esto puede suceder si se especifica un esquema que no sea http o https, o si el formato de la dirección URL no es correcto. El formato de URL válido es http://ServerName:Port/ResourcePath o bien https://ServerName:Port/ResourcePath.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|La dirección URL especificada no es válida. Esto puede suceder si la dirección URL del servidor o el proxy es null, o si el formato no es correcto. El formato de URL válido es https://ServerName:Port/ResourcePath o bien https://ServerName:Port/ResourcePath.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|La dirección URL %1 no es válida. Esto puede suceder si se especifica un esquema que no sea http o https, o si el formato de la dirección URL no es correcto. El formato de URL válido es https://ServerName:Port/ResourcePath o bien https://ServerName:Port/ResourcePath.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|No se puede establecer una conexión con el servidor %1. Este error puede producirse si el servidor no existe o si la configuración de proxy no es correcta.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|Se ha restablecido la conexión con el servidor o ha finalizado. Vuelva a intentarlo más tarde.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Error en el intento de inicio de sesión de "%1". Este error se produce si las credenciales de inicio de sesión proporcionadas no son correctas. Compruebe las credenciales de inicio de sesión.|  
@@ -2013,7 +2013,7 @@ ms.locfileid: "47800743"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|Ha cambiado la información de tipo de datos del esquema XML para "%1" en el elemento "%2".  Reinicialice los metadatos para este componente y revise las asignaciones de columna.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 no se utiliza en combinación o copia. Elimine la columna no utilizada de la lista de columnas de salida.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Se produjo un error en la ordenación debido a un desbordamiento de la pila mientras se ordenaba un búfer de entrada.  Reduzca la propiedad DefaultBufferMaxRows en la tarea Flujo de datos.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere la posibilidad de cambiar el valor de PROVIDER en la cadena de conexión por %1 o visite http://www.microsoft.com/downloads para buscar e instalar compatibilidad para %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere la posibilidad de cambiar el valor de PROVIDER en la cadena de conexión por %1 o visite https://www.microsoft.com/downloads para buscar e instalar compatibilidad para %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Error al inicializar el objeto de la tarea "%1!s!", tipo "%2!s!" debido al error 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Error al crear el administrador de categorías del componente COM debido al error 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Componente %1!s! no se pudo inicializar debido al error 0x%2!8.8X! "%3!s!".|  

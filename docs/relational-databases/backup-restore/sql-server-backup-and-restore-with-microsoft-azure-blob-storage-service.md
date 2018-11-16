@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805463"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660126"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Copia de seguridad en un gráfico de blobs de Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Copia de seguridad en un gráfico de blobs de Azure")  
   
- En este tema se describen las copias de seguridad y la restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir del [servicio de Almacenamiento de blobs de Microsoft Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). También se proporciona un resumen de las ventajas de usar el servicio BLOB de Microsoft Azure para almacenar copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ En este tema se describen las copias de seguridad y la restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir del [servicio de Almacenamiento de blobs de Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). También se proporciona un resumen de las ventajas de usar el servicio BLOB de Microsoft Azure para almacenar copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  SQL Server permite almacenar las copias de seguridad del servicio de Almacenamiento de blobs de Microsoft Azure de las maneras siguientes:  
   
 -   **Administrar las copias de seguridad de Microsoft Azure:** con los mismos métodos usados para hacer una copia de seguridad en disco y cinta, ahora puede realizar la copia de seguridad en el Almacenamiento de Microsoft Azure especificando la dirección URL como destino de copia de seguridad. Puede utilizar esta característica para realizar la copia de seguridad manualmente o para configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones fuera de las instalaciones. Esta característica también se conoce como **Copia de seguridad en URL de SQL Server**. Para obtener más información, vea [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esta característica está disponible en SQL Server 2012 SP1 CU2 o posterior. Esta característica se ha mejorado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para proporcionar un mayor rendimiento y funcionalidad mediante el uso de blobs en bloques, firmas de acceso compartido y la creación de bandas.  
   
     > [!NOTE]  
-    >  En las versiones de SQL Server anteriores a SQL Server 2012 SP1 CU2, puede usar el complemento de la herramienta de Microsoft Azure Copia de seguridad de SQL Server para crear rápida y fácilmente copias de seguridad del Almacenamiento de Microsoft Azure. Para obtener más información, vea [centro de descarga](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  En las versiones de SQL Server anteriores a SQL Server 2012 SP1 CU2, puede usar el complemento de la herramienta de Microsoft Azure Copia de seguridad de SQL Server para crear rápida y fácilmente copias de seguridad del Almacenamiento de Microsoft Azure. Para obtener más información, vea [centro de descarga](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
 -   **Copias de seguridad de instantánea de archivos para archivos de base de datos en el Almacenamiento de blobs de Azure** Mediante el uso de instantáneas de Azure, las copias de seguridad de instantánea de archivo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrecen copias de seguridad y restauraciones casi instantáneas de archivos de base de datos almacenados mediante el servicio de Almacenamiento de blobs de Azure. Esta función permite simplificar las directivas de copia de seguridad y restauración y admite la restauración a un momento dado. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Esta característica está disponible en SQL Server 2016 o posterior.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805463"
 ##  <a name="Billing"></a> Consideraciones sobre la facturación de Microsoft Azure:  
  Entender los costos de Almacenamiento de Microsoft Azure permite prever el costo de crear y almacenar copias de seguridad en Microsoft Azure.  
   
- La [calculadora de precios de Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) puede ayudarle a calcular los costos.  
+ La [calculadora de precios de Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) puede ayudarle a calcular los costos.  
   
- **Almacenamiento** : los cargos se basan en el espacio usado y se calculan según una escala graduada y el nivel de redundancia. Para obtener más detalles e información actualizada, vea la sección **Administración de datos** del artículo [Detalles de precios](http://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Almacenamiento** : los cargos se basan en el espacio usado y se calculan según una escala graduada y el nivel de redundancia. Para obtener más detalles e información actualizada, vea la sección **Administración de datos** del artículo [Detalles de precios](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
- **Transferencias de datos** : las transferencias de datos de entrada a Microsoft Azure son gratuitas. Las transferencias salientes se cobran por el uso de ancho de banda y se calculan según una escala graduada específica de la región. Para obtener más detalles, vea la sección [Transferencias de datos](http://go.microsoft.com/fwlink/?LinkId=277061) del artículo Detalles de precios.  
+ **Transferencias de datos** : las transferencias de datos de entrada a Microsoft Azure son gratuitas. Las transferencias salientes se cobran por el uso de ancho de banda y se calculan según una escala graduada específica de la región. Para obtener más detalles, vea la sección [Transferencias de datos](https://go.microsoft.com/fwlink/?LinkId=277061) del artículo Detalles de precios.  
   
 ## <a name="see-also"></a>Ver también  
 

@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071759"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640702"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
   La tarea Control CDC se usa para controlar el ciclo de vida de los paquetes de captura de datos modificados (CDC). Controla la sincronización de paquetes CDC con el paquete de carga inicial, la administración de los intervalos de número de secuencia de registro (LSN) que se procesan en una ejecución de un paquete CDC. Además, la tarea Control CDC se ocupa de los escenarios de error y de la recuperación.  
@@ -78,11 +78,11 @@ ms.locfileid: "49071759"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico [Instalar la captura de datos modificados Microsoft SQL Server 2012 para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), en social.technet.microsoft.com.  
+-   Artículo técnico [Instalar la captura de datos modificados Microsoft SQL Server 2012 para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), en social.technet.microsoft.com.  
   
--   Artículo técnico [Solucionar problemas de configuración de la captura de datos modificados de Microsoft para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), en social.technet.microsoft.com.  
+-   Artículo técnico [Solucionar problemas de configuración de la captura de datos modificados de Microsoft para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), en social.technet.microsoft.com.  
   
--   Artículo técnico [Solucionar problemas de errores de instancias de CDC de la captura de datos modificados de Microsoft para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), en social.technet.microsoft.com.  
+-   Artículo técnico [Solucionar problemas de errores de instancias de CDC de la captura de datos modificados de Microsoft para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), en social.technet.microsoft.com.  
   
 ## <a name="cdc-control-task-editor"></a>Editor de la tarea Control de CDC
   Use el cuadro de diálogo **Editor de la tarea Control CDC** para configurar la tarea Control CDC. La configuración de la tarea Control CDC incluye la definición de una conexión a la base de datos CDC, la operación de tarea CDC y la información sobre la administración de estados.  

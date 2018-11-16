@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8e50674429bb332e750222c3b458b53cd339437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d46e82343f0f145536c38cf7ac457ad39b813d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719563"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672084"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "47719563"
 |Nombre de la directiva|Regla de práctica recomendada|  
 |-----------------|------------------------|  
 |Algoritmo de cifrado de claves asimétricas|[Intensidad del cifrado de claves asimétricas](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Ubicación de copia de seguridad y archivo de datos|[Los archivos de copia de seguridad deben estar en dispositivos independientes de los archivos de base de datos](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Ubicación de copia de seguridad y archivo de datos|[Los archivos de copia de seguridad deben estar en dispositivos independientes de los archivos de base de datos](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |Ubicación de datos y archivo de registro|[Colocar los datos y los archivos de registro en unidades independientes](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Cerrar automáticamente la base de datos|[Establecer en OFF la opción de base de datos AUTO_CLOSE](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Reducir automáticamente la base de datos|[Establecer la opción de base de datos AUTO_SHRINK en OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Intercalación de base de datos|[Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Intercalación de base de datos|[Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |Comprobación de página de la base de datos|[Establecer la opción de base de datos PAGE_VERIFY en CHECKSUM.](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Estado de la página de la base de datos|[Comprobar la integridad de una base de datos con páginas sospechosas](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Permisos de invitado|[Permisos de invitado en bases de datos de usuario](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  

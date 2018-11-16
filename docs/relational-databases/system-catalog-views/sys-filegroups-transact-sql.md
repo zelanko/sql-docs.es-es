@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: beda60ee7178bee59705a6450351a87e931aa2cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 479ba4e8eefadfe37cccb1ff08aed38ab8b629a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666384"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47696403"
 |**filegroup_guid**|**uniqueidentifier**|GUID del grupo de archivos.<br /><br /> NULL = Grupo de archivos PRIMARY|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el valor es NULL.|  
 |**is_read_only**|**bit**|1 = El grupo de archivos es de solo lectura.<br /><br /> 0 = El grupo de archivos es de lectura/escritura.|  
-|**is_autogrow_all_files**|**bit**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = cuando un archivo en el grupo de archivos se reúne aumentar el umbral de crecimiento automático, todos los archivos en el grupo de archivos.<br /><br /> 0 = cuando un archivo en el grupo de archivos se reúne aumenta el umbral de crecimiento automático, solo ese archivo. Ésta es la opción predeterminada.|  
+|**is_autogrow_all_files**|**bit**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = cuando un archivo en el grupo de archivos se reúne aumentar el umbral de crecimiento automático, todos los archivos en el grupo de archivos.<br /><br /> 0 = cuando un archivo en el grupo de archivos se reúne aumenta el umbral de crecimiento automático, solo ese archivo. Ésta es la opción predeterminada.|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

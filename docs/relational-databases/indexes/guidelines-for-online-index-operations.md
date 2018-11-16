@@ -19,12 +19,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d899c0626ed1ac49f70ce83b80741e626bd7252b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b648c1ec93ed3a1425b39055438735f70aed6a4a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906055"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668594"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Para más información, consulte [Disk Space Requirements for Index DDL Operatio
   
  Debido a que un bloqueo S o un bloqueo Sch-M se conservan en la fase final de la operación de índice, debe tener cuidado cuando ejecute una operación de índice en línea dentro de una transacción de usuario explícita, como el bloque BEGIN TRANSACTION...COMMIT. De esta manera el bloqueo se conserva hasta el final de la transacción y se impide la simultaneidad de usuarios.  
   
- La regeneración de índices en línea puede aumentar la fragmentación cuando se puede ejecutar con las opciones `MAX DOP > 1` y `ALLOW_PAGE_LOCKS = OFF` . Para obtener más información, vea el blog [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)(Cómo la regeneración de índices en línea puede provocar una fragmentación mayor).  
+ La regeneración de índices en línea puede aumentar la fragmentación cuando se puede ejecutar con las opciones `MAX DOP > 1` y `ALLOW_PAGE_LOCKS = OFF` . Para obtener más información, vea el blog [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)(Cómo la regeneración de índices en línea puede provocar una fragmentación mayor).  
   
 ## <a name="transaction-log-considerations"></a>Consideraciones del registro de transacciones  
  Las operaciones de índice a gran escala, realizadas sin conexión o en línea, pueden generar grandes cargas de datos que pueden hacer que el registro de transacciones se llene rápidamente. Para estar seguros de que la operación de índice se pueda revertir, el registro de transacciones no se puede truncar hasta que se haya completado la operación de índice; no obstante, se puede realizar una copia de seguridad del registro durante la operación de índice. Por lo tanto, el registro de transacciones debe tener suficiente espacio para almacenar las transacciones de la operación de índice y cualquier transacción de usuario simultánea durante la operación de índice. Para más información, consulte [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  

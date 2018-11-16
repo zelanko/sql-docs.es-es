@@ -15,12 +15,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: a43a9d8d3b5ecf3f9d28f46db0b354891b40b183
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906085"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641752"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarea de Azure Data Lake Analytics
 
@@ -58,7 +58,7 @@ La configuración de U-SQL tiene dos valores: **SourceType** y opciones dinámic
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Escriba la consulta U-SQL que se enviará directamente en el cuadro de opción o seleccione el botón Examinar (...) para escribir la consulta U-SQL en el cuadro de diálogo **Enter U-SQL Query** (Escribir consulta U-SQL).|  
 |**SourceType = FileConnection**|Seleccione un administrador de conexiones de archivos existente o seleccione <**Nueva conexión...**> para crear una nueva conexión de archivos. Para información relacionada, consulte [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) y [Editor del administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Seleccione una variable existente o seleccione \<**Nueva variable…**> para crear una. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = Variable**|Seleccione una variable existente o seleccione \<**Nueva variable…**> para crear una. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 
 
 ### <a name="job-configuration"></a>Configuración del trabajo

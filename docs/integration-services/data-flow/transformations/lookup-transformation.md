@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730933"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639662"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -131,15 +131,15 @@ ms.locfileid: "47730933"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
   
--   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](http://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
+-   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   
--   Entrada de blog, [Patrón de búsqueda: sin distinción de mayúsculas y minúsculas](http://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
+-   Entrada de blog, [Patrón de búsqueda: sin distinción de mayúsculas y minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
   
--   Ejemplo, [Transformación de búsqueda](http://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
+-   Ejemplo, [Transformación de búsqueda](https://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
   
-     Para obtener información acerca de cómo instalar muestras de producto y bases de datos de ejemplo de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Ejemplos del producto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Para obtener información acerca de cómo instalar muestras de producto y bases de datos de ejemplo de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Ejemplos del producto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Editor de transformación Búsqueda (página General)
   Utilice la página **General** del cuadro de diálogo Editor de transformación Búsqueda para seleccionar el modo de caché y el tipo de conexión, y especificar cómo administrar las filas sin entradas coincidentes.  
@@ -168,7 +168,7 @@ ms.locfileid: "47730933"
  Al seleccionar cualquier otra opción del cuadro de lista **Especifique cómo administrar las filas sin entradas coincidentes** , las filas se tratan como errores. La opción **Error** de la página **Salida de error** está disponible.  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada del blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
+ Entrada del blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Editor de transformación Búsqueda (página Conexión)
   Utilice la página **Conexión** del cuadro de diálogo **Editor de transformación Búsqueda** para seleccionar un administrador de conexiones. Si selecciona un administrador de conexiones OLE DB, también selecciona una consulta, tabla o vista para generar el conjunto de datos de referencia.  
@@ -215,7 +215,7 @@ ms.locfileid: "47730933"
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . Esta opción muestra hasta 200 filas.  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada del blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
+ Entrada del blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Editor de transformación Búsqueda (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Búsqueda** para especificar la combinación entre la tabla de origen y la tabla de referencia, y para seleccionar columnas de búsqueda de la tabla de referencia.  
@@ -272,7 +272,7 @@ ms.locfileid: "47730933"
  Asigne columnas de entrada a parámetros mediante el cuadro de diálogo **Establecer parámetros de consulta** .  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada del blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
+ Entrada del blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
   
 ## <a name="see-also"></a>Ver también  
  [Transformación Búsqueda aproximada](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

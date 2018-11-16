@@ -20,12 +20,12 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba81057640891eded10eb09cd9d22af9ff2dc8c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9a377c8ba73ed505db56c83704099aa0f7b9aac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779953"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670454"
 ---
 # <a name="create-instances-of-xml-data"></a>Crear instancias de datos XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa internamente XML en una representación binaria eficaz que usa la codificación UTF-16. La codificación proporcionada por el usuario no se mantiene, pero se tiene en cuenta durante el proceso de análisis.  
   
 ### <a name="type-casting-clr-user-defined-types"></a>Conversión de tipos definidos por el usuario CLR  
- Si un tipo definido por el usuario CLR tiene una serialización XML, las instancias de dicho tipo pueden convertirse explícitamente a un tipo de datos XML. Para obtener más información sobre la serialización XML de un tipo de datos definido por el usuario CLR, vea [Serialización XML de objetos de base de datos de CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
+ Si un tipo definido por el usuario CLR tiene una serialización XML, las instancias de dicho tipo pueden convertirse explícitamente a un tipo de datos XML. Para obtener más información sobre la serialización XML de un tipo de datos definido por el usuario CLR, vea [Serialización XML de objetos de base de datos de CLR](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
   
 ### <a name="white-space-handling-in-typed-xml"></a>Control de los espacios en blanco en XML con tipo  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los espacios en blanco en el contenido de los elementos se consideran no significativos si aparecen en una secuencia de datos de caracteres únicamente de espacios en blanco delimitados por caracteres de marcado, como etiquetas iniciales o finales, y no se crea una entidad para los mismos. Las secciones CDATA se omiten. Este control de los espacios en blanco es distinto de lo que se describe en la especificación XML 1.0 publicada por el World Wide Web Consortium (W3C). Esto se debe a que el analizador de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo reconoce un número limitado de subconjuntos de DTD, tal como se define en XML 1.0. Para obtener más información sobre los subconjuntos de DTD limitados que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  

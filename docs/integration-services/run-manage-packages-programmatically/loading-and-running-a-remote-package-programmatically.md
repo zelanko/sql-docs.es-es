@@ -15,12 +15,12 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47b3ca2abf53fe93a24eb23650c1b741a2445988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684403"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640038"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Cargar y ejecutar mediante programación un paquete remoto
   Para ejecutar los paquetes remotos desde un equipo local que no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], inicie los paquetes para que se ejecuten en el equipo remoto en el que está instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para ello, haga que el equipo local use el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un servicio web o un componente remoto para iniciar los paquetes en el equipo remoto. Si intenta iniciar los paquetes remotos directamente desde el equipo local, se cargarán y se intentará ejecutar los paquetes desde el equipo local. Si el equipo local no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se ejecutarán los paquetes.  
@@ -45,7 +45,7 @@ ms.locfileid: "47684403"
 > [!NOTE]  
 >  El valor devuelto del procedimiento almacenado **sp_start_job** indica si el procedimiento almacenado ha podido iniciar correctamente el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor devuelto no indica si el paquete se ha iniciado correctamente o no.  
   
- Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el artículo de Microsoft [El paquete de SSIS no se ejecuta cuando recibe una llamada de un paso de trabajo del Agente SQL Server](http://support.microsoft.com/kb/918760).  
+ Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el artículo de Microsoft [El paquete de SSIS no se ejecuta cuando recibe una llamada de un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760).  
   
 ### <a name="sample-code"></a>Código muestra  
   
@@ -176,7 +176,7 @@ Imports System.Web.Services.Protocols
 Imports Microsoft.SqlServer.Dts.Runtime  
 Imports System.IO  
   
-<WebService(Namespace:="http://dtsue/")> _  
+<WebService(Namespace:="https://dtsue/")> _  
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _  
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _  
 Public Class LaunchSSISPackageService  
@@ -252,7 +252,7 @@ using System.Web.Services.Protocols;
 using Microsoft.SqlServer.Dts.Runtime;  
 using System.IO;  
   
-[WebService(Namespace = "http://dtsue/")]  
+[WebService(Namespace = "https://dtsue/")]  
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]  
 public class LaunchSSISPackageServiceCS : System.Web.Services.WebService  
 {  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo: [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
+-   Vídeo: [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
   
 ## <a name="see-also"></a>Ver también  
  [Descripción de las diferencias entre la ejecución local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

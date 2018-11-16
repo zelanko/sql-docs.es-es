@@ -11,12 +11,12 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 601682511038665e3ea692c43eb45552ceccb69e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ce3f4e559e9ed708154b8c5b5710540c701b44e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702513"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638502"
 ---
 # <a name="lesson-4-1---copying-the-lesson-3-package"></a>Lección 4-1: Copiar el paquete de la lección 3
 En esta tarea, creará una copia del paquete que ha creado en la lección 3, denominado Lesson 3.dtsx. Por otra parte, si no ha completado la lección 3, puede agregar al proyecto el paquete completado de la lección 3 que se incluye con el tutorial y, a continuación, copiar dicho paquete para trabajar. Usará esta nueva copia en toda la lección 4.  
@@ -53,7 +53,7 @@ En esta tarea, creará una copia del paquete que ha creado en la lección 3, den
   
     Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **DOWNLOADS** .  
   

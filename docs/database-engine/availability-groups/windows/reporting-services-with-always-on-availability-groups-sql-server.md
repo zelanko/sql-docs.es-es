@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120292"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604955"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "49120292"
   
  Una ventaja clave del uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con los orígenes de datos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es aprovechar las réplicas secundarias legibles como un origen de datos de informes, al mismo tiempo que las réplicas secundarias proporcionan una base de datos principal.  
   
- Para obtener información general sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea las [preguntas más frecuentes sobre Always On en SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Para obtener información general sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea las [preguntas más frecuentes sobre Always On en SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
   
  **En este tema:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49120292"
   
  El mensaje tiene lugar cuando incluye una de las propiedades [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en la cadena de conexión [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , pero el servidor no reconoce la propiedad. El mensaje de error anotado se verá cuando haga clic en el botón ‘Probar conexión’ en las interfaces de usuario [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y cuando obtenga la vista previa del informe si los errores remotos se habilitan en los servidores de informes.  
   
- Para obtener más información sobre la revisión necesaria, vea el artículo de KB 2654347A sobre una [revisión que incorpora compatibilidad con las características de AlwaysOn de SQL Server 2012 en .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896).  
+ Para obtener más información sobre la revisión necesaria, vea el artículo de KB 2654347A sobre una [revisión que incorpora compatibilidad con las características de AlwaysOn de SQL Server 2012 en .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
  Para obtener más información sobre otros requisitos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49120292"
   
 -   ReportServerTempDB  
   
- El modo nativo no admite ni usa las bases de datos de alerta ni las características relacionadas. Los servidores de informes en modo nativo se configuran en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En el modo SharePoint, configure el nombre de base de datos de la aplicación de servicio para que sea el nombre del “punto de acceso de cliente” que creó como parte de la configuración de SharePoint. Para obtener más información sobre cómo configurar SharePoint con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)) (Configurar y administrar grupos de disponibilidad de SharePoint Server.  
+ El modo nativo no admite ni usa las bases de datos de alerta ni las características relacionadas. Los servidores de informes en modo nativo se configuran en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En el modo SharePoint, configure el nombre de base de datos de la aplicación de servicio para que sea el nombre del “punto de acceso de cliente” que creó como parte de la configuración de SharePoint. Para obtener más información sobre cómo configurar SharePoint con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)) (Configurar y administrar grupos de disponibilidad de SharePoint Server.  
   
 > [!NOTE]  
 >  Los servidores de informes de modo de SharePoint usan un proceso de sincronización entre las bases de datos de aplicación de servicio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las bases de datos de contenido de SharePoint. Es importante mantener juntas las bases de datos del servidor de informes y las bases de datos de contenido. Debe considerar configurarlas en los mismos grupos de disponibilidad para que conmuten por error y se recuperen como un conjunto. Considere el caso siguiente:  

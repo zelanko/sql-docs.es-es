@@ -34,12 +34,12 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfa0e49e09c0cde8283015215aab25ce13a0c50f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dac012727df032d45674add5016782de3ca6ad6a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718593"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669914"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47718593"
  Las instancias XML se almacenan en las columnas de tipo **xml** como objetos binarios grandes (BLOB). Estas instancias XML pueden ser grandes, y la representación binaria almacenada de instancias de datos de tipo **xml** puede tener un tamaño de hasta 2 GB. Sin ningún índice, estos objetos binarios grandes se dividen en tiempo de ejecución para evaluar una consulta. Este proceso de división puede resultar lento. Por ejemplo, considere la siguiente consulta:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -108,7 +108,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  Por ejemplo, la siguiente consulta devuelve información de resumen almacenada en la columna de `CatalogDescription` tipo **xml** de la tabla `ProductModel`. La consulta devuelve información perteneciente a <`Summary`> solo para modelos de producto cuya descripción de catálogo también almacena información sobre <`Features`>.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  En relación con el índice XML principal, en lugar de dividir cada instancia de BLOB XML en la tabla base, las filas del índice que corresponden a cada BLOB XML se examinan secuencialmente para determinar la expresión especificada en el método `exist()`. Si la ruta de acceso se encuentra en la columna Path del índice, el elemento <`Summary`> y sus subárboles se recuperan a partir del índice XML principal y se convierten en un BLOB XML como resultado del método `query()`.  
@@ -150,7 +150,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  La consulta siguiente muestra en qué lugar es útil el índice PATH:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -174,8 +174,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -192,7 +192,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Por ejemplo, para el modelo de producto `19`, la consulta siguiente recupera los valores de los atributos `ProductModelID` y `ProductModelName` mediante el método `value()` . En lugar de utilizar el índice XML principal o los otros índices XML secundarios, el índice PROPERTY puede ofrecer una ejecución más rápida.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

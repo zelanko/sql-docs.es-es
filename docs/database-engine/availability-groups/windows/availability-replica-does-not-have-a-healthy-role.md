@@ -14,12 +14,12 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 726dbfd9f3c16088af469de9745edfa454c6c00a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788803"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602825"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La réplica de disponibilidad no tiene un rol en buen estado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47788803"
  Esta directiva comprueba el estado del rol de la réplica de disponibilidad. La directiva está en mal estado cuando el rol de la réplica de disponibilidad no es principal ni secundario. De lo contrario, la directiva está en un estado correcto.  
   
 > [!NOTE]  
->  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La réplica de disponibilidad no tiene un rol en buen estado](http://go.microsoft.com/fwlink/p/?LinkId=220856) en TechNet Wiki.  
+>  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La réplica de disponibilidad no tiene un rol en buen estado](https://go.microsoft.com/fwlink/p/?LinkId=220856) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Posibles causas  
  El rol de esta réplica de disponibilidad está en mal estado. La réplica no tiene el rol principal o secundario.  

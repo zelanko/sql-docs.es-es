@@ -19,12 +19,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a7c93c43a35f528030035e300624bacb4e72431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a6d3345b1a6e8f7ffdebec05ae3f71d04cb8fe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690223"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639312"
 ---
 # <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -52,7 +52,7 @@ ms.locfileid: "47690223"
   
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47690223"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Tabla o vista|Recupera los datos de una hoja de cálculo o un rango con nombre del archivo Excel.|  
-|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada** [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada** [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Comando SQL|Recupera datos del archivo Excel mediante una consulta SQL. |  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   

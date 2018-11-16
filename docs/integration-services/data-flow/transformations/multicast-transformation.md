@@ -19,12 +19,12 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 795eacbaacc5fca1cc3d51908a365986019543c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab41c2219ecc43988af30ad071dbea17a5c4f63e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664973"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638148"
 ---
 # <a name="multicast-transformation"></a>Multidifusión, transformación
   La transformación Multidifusión distribuye su entrada en una o más salidas. Esta transformación es similar a la transformación División condicional. Ambas transformaciones dirigen una entrada a varias salidas. La diferencia entre las dos es que la transformación Multidifusión dirige cada fila a cada salida, mientras que la División condicional dirige una fila a una sola salida. Para más información, consulte [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "47664973"
 ## <a name="configuration-of-the-multicast-transformation"></a>Configuración de la transformación Multidifusión  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información acerca de las propiedades que puede establecer mediante programación, vea [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Para obtener información acerca de las propiedades que puede establecer mediante programación, vea [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  

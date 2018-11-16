@@ -13,19 +13,19 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d499c14c346983478fb2d7291ae5b334414edd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 644a789343b68e6808b5d1bf61f8c5768d01c70c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688373"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603955"
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Introducción a los grupos de disponibilidad de AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En este tema se describen los pasos para las instancias de configuración de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y crear, administrar, y supervisar la disponibilidad de grupo.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="RecommendedReading"></a> Lecturas recomendadas  
  Antes de crear el primer grupo de disponibilidad, recomendamos leer los siguientes temas:  
@@ -78,7 +78,7 @@ En este tema se describen los pasos para las instancias de configuración de [!I
   
 |Herramienta|Descripción breve|Vínculos|  
 |----------|-----------------------|-----------|  
-|Paquete de supervisión de System Center para SQL Server|El paquete de supervisión de SQL Server (SQLMP) es la solución recomendada para supervisar los grupos de disponibilidad y las bases de datos de disponibilidad y de replicación de disponibilidad para los administradores TIC. Entre las características de supervisión que son de particular importancia para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se incluyen las siguientes:<br /><br /> La detectabilidad automática de los grupos de disponibilidad, las réplicas de disponibilidad y la base de datos de disponibilidad entre cientos de equipos. Esto le permite realizar fácilmente el seguimiento del inventario de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .<br /><br /> Alertas y vales de System Center Operations Manager (SCOM). Estas características proporcionan un conocimiento detallado que permite una resolución más rápida de un problema.<br /><br /> Una extensión personalizada de la supervisión del estado de AlwaysOn mediante la administración basada en directivas (PBM).<br /><br /> El estado abarca desde las bases de datos de disponibilidad a las réplicas de disponibilidad.<br /><br /> Tareas personalizadas que administran [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] desde la consola de System Center Operations Manager.|Para descargar el módulo de supervisión (SQLServerMP.msi) y la *Guía del módulo de administración de SQL Server para System Center Operations Manager* (SQLServerMPGuide.doc), vea:<br /><br /> [Paquete de supervisión de System Center para SQL Server](http://www.microsoft.com/download/details.aspx?displaylang=en&id=10631)|  
+|Paquete de supervisión de System Center para SQL Server|El paquete de supervisión de SQL Server (SQLMP) es la solución recomendada para supervisar los grupos de disponibilidad y las bases de datos de disponibilidad y de replicación de disponibilidad para los administradores TIC. Entre las características de supervisión que son de particular importancia para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se incluyen las siguientes:<br /><br /> La detectabilidad automática de los grupos de disponibilidad, las réplicas de disponibilidad y la base de datos de disponibilidad entre cientos de equipos. Esto le permite realizar fácilmente el seguimiento del inventario de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .<br /><br /> Alertas y vales de System Center Operations Manager (SCOM). Estas características proporcionan un conocimiento detallado que permite una resolución más rápida de un problema.<br /><br /> Una extensión personalizada de la supervisión del estado de AlwaysOn mediante la administración basada en directivas (PBM).<br /><br /> El estado abarca desde las bases de datos de disponibilidad a las réplicas de disponibilidad.<br /><br /> Tareas personalizadas que administran [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] desde la consola de System Center Operations Manager.|Para descargar el módulo de supervisión (SQLServerMP.msi) y la *Guía del módulo de administración de SQL Server para System Center Operations Manager* (SQLServerMPGuide.doc), vea:<br /><br /> [Paquete de supervisión de System Center para SQL Server](https://www.microsoft.com/download/details.aspx?displaylang=en&id=10631)|  
 |[!INCLUDE[tsql](../../../includes/tsql-md.md)]|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporcionan una gran cantidad de información sobre los grupos de disponibilidad y las réplicas, bases de datos, escuchas y el entorno de clúster de WSFC.|[Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|El panel **Detalles del Explorador de objetos** muestra información básica acerca de los grupos de disponibilidad hospedados en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que está conectado.<br /><br /> Sugerencia: Utilice este panel para seleccionar varios grupos, réplicas o bases de datos de disponibilidad y para realizar tareas administrativas rutinarias en los objetos seleccionados; por ejemplo, quitar de un grupo de disponibilidad varias réplicas o bases de datos de disponibilidad.|[Detalles del Explorador de objetos para supervisar la disponibilidad de los grupos](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Los cuadros de diálogo**Propiedades** permiten ver las propiedades de los grupos de disponibilidad, las réplicas o los agentes de escucha y, en algunos casos, para cambiar la configuración.|[Propiedades del grupo de disponibilidad](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)<br /><br /> [Propiedades de una réplica de disponibilidad](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)<br /><br /> [Propiedades del agente de escucha del grupo de disponibilidad](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)|  
@@ -87,11 +87,11 @@ En este tema se describen los pasos para las instancias de configuración de [!I
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   **Vídeo de introducción a AlwaysOn:**  [Microsoft SQL Server Code-Named "Denali", AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+-   **Vídeo de introducción a AlwaysOn:**  [Microsoft SQL Server Code-Named "Denali", AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
--   **Vídeo de profundización en AlwaysOn:**  [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 2: Building a Mission-Critical High Availability Solution Using AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+-   **Vídeo de profundización en AlwaysOn:**  [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 2: Building a Mission-Critical High Availability Solution Using AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Notas del producto:**  [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **Notas del producto:**  [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   **Blogs:**  [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
   

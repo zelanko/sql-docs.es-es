@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 826e7ca671272f859cd0d5da7059b34cf4cfedba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847273"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637629"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
  En el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede establecer el nombre, el tipo de datos y las propiedades de tipo de datos de las columnas de las tablas y archivos de destino nuevos, pero no puede especificar conversiones personalizadas para los valores de columna. Como resultado, la asignación integrada de tipos de datos del origen al destino es muy importante.  
@@ -32,7 +32,7 @@ El asistente usa archivos de asignación que [!INCLUDE[ssNoVersion](../../includ
 Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar los archivos de asignación para cambiar las asignaciones que usa el asistente. Por ejemplo, si quiere que el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** se asigne al tipo de datos **GRAPHIC** de DB2 en lugar de al tipo de datos **VARGRAPHIC** de DB2 al transferir datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, puede cambiar la asignación de **de** en el archivo de asignación **SqlClientToIBMDB2.xml** para que se use **GRAPHIC** en lugar de **VARGRAPHIC**de  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Puede agregar un archivo de asignación nuevo
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala asignaciones entre numerosas combinaciones de origen y de destino de uso frecuente. También puede agregar nuevos archivos de asignación en el directorio **MappingFiles** para admitir orígenes y destinos adicionales. Los nuevos archivos de asignación deben ajustarse al esquema XSD publicado y asignar entre una combinación única de origen y destino. El esquema de los archivos de asignación, **DataTypeMapping.xsd**, está publicado [aquí](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala asignaciones entre numerosas combinaciones de origen y de destino de uso frecuente. También puede agregar nuevos archivos de asignación en el directorio **MappingFiles** para admitir orígenes y destinos adicionales. Los nuevos archivos de asignación deben ajustarse al esquema XSD publicado y asignar entre una combinación única de origen y destino. El esquema de los archivos de asignación, **DataTypeMapping.xsd**, está publicado [aquí](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
  
 ## <a name="sample-mapping-file"></a>Archivo de asignación de ejemplo
 A continuación se muestra una parte del archivo de asignación XML que asigna desde tipos de datos de SQL Server (o, más concretamente, de tipos de datos usados por el proveedor de datos de .NET Framework para SQL Server) a tipos de datos de Oracle. Por ejemplo, puede ver que un tipo de datos **int** de SQL Server se asigna a un tipo de datos **INTEGER** de Oracle.
@@ -40,8 +40,8 @@ A continuación se muestra una parte del archivo de asignación XML que asigna d
 ```xml  
   
 <dtm:DataTypeMappings  
-    xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

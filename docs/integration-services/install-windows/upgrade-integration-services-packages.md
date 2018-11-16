@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: ea235b42cb215a52c523832d4c1b4daffa975971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f88d384d602e5cca6872fe6e606694e227a7e29
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771633"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637962"
 ---
 # <a name="upgrade-integration-services-packages"></a>Actualizar paquetes de Integration Services
   Cuando se actualiza una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los paquetes de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] existentes no se actualizan automáticamente al formato de paquete que la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza. Tendrá que seleccionar un método de actualización y actualizar manualmente los paquetes.  
@@ -57,7 +57,7 @@ ms.locfileid: "47771633"
   
  Si quiere usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyan componentes personalizados de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], debe modificar el archivo devenv.exe.config que se encuentra en *<unidad\<*:\Archivos de programa\Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información sobre la redirección de la versión de ensamblado, vea [Elemento \<assemblyBinding> para \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información sobre la redirección de la versión de ensamblado, vea [Elemento \<assemblyBinding> para \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Buscar los ensamblados  
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una memoria caché global de ensamblados diferente para .NET 4, que se encuentra en *\<unidad>*:\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  

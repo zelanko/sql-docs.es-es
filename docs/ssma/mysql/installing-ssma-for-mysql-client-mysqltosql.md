@@ -12,12 +12,12 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a5b55065790b63c2fb63803f70bf00d56e704cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763983"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656595"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Instalación del cliente de SSMA para MySQL (MySQLToSQL)
 SSMA para MySQL cliente consta de los archivos de programa que realizan las siguientes tareas:  
@@ -43,7 +43,7 @@ Antes de instalar SSMA, asegúrese de que el equipo cumple los requisitos siguie
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 o una versión posterior.  
   
--   El [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.0 o una versión posterior. El [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.0 está disponible en el disco del producto de SQL Server. También puede obtener desde el [Centro para desarrolladores de .NET Framework](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   El [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.0 o una versión posterior. El [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.0 está disponible en el disco del producto de SQL Server. También puede obtener desde el [Centro para desarrolladores de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Controlador ODBC 5.1 de MySQL y la conectividad a las bases de datos MySQL que se van a migrar. Puede instalar MySQL desde el sitio MySQL Web. Para obtener información acerca de la conectividad, consulte [conectar con MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -54,7 +54,7 @@ Antes de instalar SSMA, asegúrese de que el equipo cumple los requisitos siguie
 -   4 GB de RAM recomendado.  
   
 ## <a name="installing-ssma-for-mysql-client"></a>Instalación de SSMA para el cliente de MySQL  
-SSMA es una descarga Web. Para descargar la versión más reciente, consulte el [página de descarga de SQL Server Migration Assistant](http://aka.ms/ssmaformysql).  
+SSMA es una descarga Web. Para descargar la versión más reciente, consulte el [página de descarga de SQL Server Migration Assistant](https://aka.ms/ssmaformysql).  
   
 Después de descargar la versión más reciente, debe extraer los archivos de instalación antes de poder instalar SSMA.  
   

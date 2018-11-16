@@ -1,7 +1,7 @@
 ---
 title: Datos estándar Stream protocolo | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,14 @@ ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 104adecc7e922ae4d7645a67e2d635523c8ae79a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a736f60b66756a8ef8e5cce2daf46550042f5695
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692249"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668734"
 ---
 # <a name="standard-data-stream-protocol"></a>Protocolo de flujo de datos estándar
-Un protocolo de transmisión de datos estándar es una manera de acceder a datos de DBMS heterogéneos. De hecho, ya existen protocolos de transmisión de datos estándar: el estándar ANSI/ISO el acceso de base de datos remotos (RDA) ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) y el IBM Distributed Database arquitectura relacionales (DRDA) ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Aunque ambos sistemas mostrar promesa, ninguna de ellas está ampliamente implementada.
+Un protocolo de transmisión de datos estándar es una manera de acceder a datos de DBMS heterogéneos. De hecho, ya existe un protocolo de transmisión de datos estándar:
+
+- El estándar ANSI/ISO el acceso de base de datos remotos (RDA): [9579:2000 ISO/IEC](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615). Aunque el sistema de ANSI/ISO muestra promesa, no está ampliamente implementado hoy en día.

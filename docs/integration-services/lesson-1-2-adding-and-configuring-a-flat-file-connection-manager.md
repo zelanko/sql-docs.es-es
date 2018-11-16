@@ -11,12 +11,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77563c8bcd8a2cd60ddcf87c2481057f139236e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8ed30954131f756401f054c35992d3339dfddb5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847353"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638422"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lección 1-2: Agregar y configurar un administrador de conexiones de archivos planos
 En esta tarea, agregará un administrador de conexiones de archivos planos al paquete que acaba de crear. Un administrador de conexiones de archivos planos permite a un paquete extraer datos de un archivo plano. Mediante el administrador de conexiones de archivos planos puede especificar el nombre y la ubicación del archivo, la configuración regional y la página de códigos, y el formato del archivo, incluyendo los delimitadores de columna, que deben aplicarse cuando el paquete extrae datos del archivo plano. Además, puede especificar de forma manual el tipo de datos para columnas individuales, o usar el cuadro de diálogo **Sugerir tipos de columna** para asignar de forma automática las columnas de datos extraídos a los tipos de datos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -43,7 +43,7 @@ El administrador de conexiones de archivos planos proporciona información de co
   
     Los datos de ejemplo se incluyen con los paquetes de lecciones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para descargar los datos de ejemplo y los paquetes de lecciones, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **DOWNLOADS** .  
   
@@ -86,10 +86,10 @@ El administrador de conexiones de archivos planos proporciona información de co
   
     |Columna de archivo plano|Tipo sugerido|Columna de destino|Tipo de destino|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency,CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
   
     El tipo de datos sugerido para la columna **CurrencyID** no es compatible con el tipo de datos del campo de la tabla de destino. Puesto que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar (3), **CurrencyID** debe cambiarse de la cadena [DT_STR] a la cadena Unicode [DT_WSTR]. Adicionalmente, el campo `DimDate.FullDateAlternateKey` está definido como tipo de datos de fecha; por consiguiente, **CurrencyDate** debe cambiarse del tipo fecha [DT_Date] al tipo fecha de base de datos [DT_DBDATE].  
   

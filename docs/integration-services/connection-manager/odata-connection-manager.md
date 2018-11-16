@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ec5760d6f62c045b1985aad534c7447f75f59c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667283"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641839"
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
  Conéctese a un origen de datos OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos OData y consumir datos del servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -74,7 +74,7 @@ Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, 
  Nombre del administrador de conexiones.  
   
  **Ubicación de documento de servicio**  
- Dirección URL del servicio OData. Por ejemplo: http://services.odata.org/V3/Northwind/Northwind.svc/.  
+ Dirección URL del servicio OData. Por ejemplo: https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Autenticación**  
 Seleccione una de las siguientes opciones:

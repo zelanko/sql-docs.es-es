@@ -34,18 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782233"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638822"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
   
 > [!NOTE]  
->  Para obtener información más detallada sobre la transformación Búsqueda aproximada, incluidas las limitaciones de rendimiento y memoria, vea las notas del producto [Búsqueda aproximada y Agrupación aproximada en SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Para obtener información más detallada sobre la transformación Búsqueda aproximada, incluidas las limitaciones de rendimiento y memoria, vea las notas del producto [Búsqueda aproximada y Agrupación aproximada en SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  La transformación Búsqueda aproximada difiere de la Búsqueda aproximada en su uso de coincidencia aproximada. La transformación Búsqueda utiliza una combinación de igualdad para localizar los registros que coinciden en la tabla de referencia. Devuelve los registros que tienen al menos un registro coincidente y devuelve registros que no tienen registros coincidentes. En cambio, la transformación Búsqueda aproximada emplea la coincidencia aproximada para devolver una o más coincidencias similares en la tabla de referencia.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47782233"
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propiedades comunes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47782233"
   
 ## <a name="see-also"></a>Ver también  
  [Transformación Búsqueda](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

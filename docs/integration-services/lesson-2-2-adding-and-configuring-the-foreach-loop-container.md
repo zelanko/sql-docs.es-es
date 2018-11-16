@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5de46e377b750c26b9a048d63ffec7ae83c6f11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648795"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642172"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lección 2-2: Agregar y configurar el contenedor de bucles Para cada uno
 En esta tarea, agregará la capacidad de buscar en una carpeta de archivos planos y aplicará la misma transformación de flujo de datos utilizada en la lección 1 a cada uno de dichos archivos planos. Para ello, agregará y configurará un contenedor de bucles Foreach para el flujo de control.  
@@ -62,11 +62,11 @@ Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, 
   
     Estos datos de ejemplo se incluyen con los paquetes de lecciones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para descargar los datos de ejemplo y los paquetes de lecciones, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027). 
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027). 
   
     2.  Haga clic en la pestaña **DOWNLOADS** .  
   
-    3.  Haga clic en vínculo del archivo [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031)  
+    3.  Haga clic en vínculo del archivo [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](https://msftisprodsamples.codeplex.com/downloads/get/596031)  
   
 6.  En el cuadro **Archivos**, escriba **Currency_\*.txt**.  
   
@@ -93,8 +93,8 @@ Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, 
 [Paso 3: Modificar el Administrador de conexiones de archivos planos](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Ver también  
-[configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-[Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+[configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+[Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
   

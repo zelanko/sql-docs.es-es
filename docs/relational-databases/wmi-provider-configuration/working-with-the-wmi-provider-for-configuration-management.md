@@ -20,12 +20,12 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eec4b7ac5c0bb6137c6fa16a357145568e557d67
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: f67666069df1a1465c12d64cd8074fa537fb87f3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215470"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674374"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabajar con el proveedor WMI para la administración de configuración
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51215470"
 ## <a name="binding"></a>Enlace  
  El proveedor WMI para la administración de configuración es un modelo de objetos COM y admite el enlace en tiempo de diseño y en tiempo de ejecución. Con el enlace en tiempo de ejecución puede utilizar lenguajes de script, como VBScript, para manipular mediante programación los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la configuración de red y los alias.  
   
- Para obtener más información sobre cómo programar implementaciones del proveedor de WMI mediante lenguajes de scripting, consulte el [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ Para obtener más información sobre cómo programar implementaciones del proveedor de WMI mediante lenguajes de scripting, consulte el [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="specifying-a-connection-string"></a>Especificar una cadena de conexión  
  Las aplicaciones dirigen el proveedor WMI para la administración de configuración a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión a un espacio de nombres WMI definido por el proveedor. El servicio WMI de Windows asigna este espacio de nombres a la DLL del proveedor DLL y lo carga en memoria. Todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se representan con un único espacio de nombres WMI. El valor predeterminado del espacio de nombres es  
@@ -45,7 +45,7 @@ ms.locfileid: "51215470"
   
  donde `instance_name` tiene como valor predeterminado `MSSQLSERVER` en una instalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Nota:** si se conecta a través de Firewall de Windows, deberá asegurarse de que los equipos están configurados correctamente. Consulte el artículo "Connecting Through Windows Firewall" en la documentación de Instrumental de administración de Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Nota:** si se conecta a través de Firewall de Windows, deberá asegurarse de que los equipos están configurados correctamente. Consulte el artículo "Connecting Through Windows Firewall" en la documentación de Instrumental de administración de Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Permisos y autenticación del servidor  
  Para tener acceso al proveedor WMI para la administración de configuración, el script de administración de WMI de cliente se debe ejecutar en el contexto de un administrador en el equipo de destino. Necesita ser miembro del grupo administradores de Windows local en el equipo que desea administrar.  

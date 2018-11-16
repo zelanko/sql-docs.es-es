@@ -10,12 +10,12 @@ ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8450ffcccf0daafbadd80e095873971a30c43029
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b5981c241e2b854f1885fcea3684497e76399542
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098797"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668114"
 ---
 # <a name="appendix---1-db2tosql"></a>Apéndice - 1 (DB2ToSQL)
 Vista rápida de las opciones de línea de comandos de la consola SSMA:  
@@ -32,5 +32,5 @@ Vista rápida de las opciones de línea de comandos de la consola SSMA:
 |8|-?|no|No aplicable|No aplicable|  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola de SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Ejecución de la consola de SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e242cbd5658b743ac813f4c0f03f1bfc74ad62ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812845"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674014"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,5 +76,5 @@ Este error no se puede reparar.  Si no puede restaurar la base de datos a partir
 No realice actualizaciones manuales de las tablas del sistema. SQL Server no admite los cambios manuales en las bases de datos del sistema. Si actualiza una tabla del sistema de una base de datos de SQL Server, se registran dos eventos (identificadores de evento 17659 y 3859). Para obtener más información, vea el artículo 2688307 de KB, "Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server".  
   
 ## <a name="see-also"></a>Ver también  
-[Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server](http://support.microsoft.com/kb/2688307/EN-US)  
+[Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   

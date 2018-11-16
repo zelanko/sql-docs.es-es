@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d1c6c05e196e1a845c073545c3f79f0f83a19b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622283"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656764"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   El ensamblado al que se llama o se hace referencia se creó en la misma base de datos.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Especificar la seguridad al crear ensamblados  
- Al crear un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puede especificar uno de los tres niveles distintos de seguridad en los que puede ejecutarse el código: **SAFE**, **EXTERNAL_ACCESS**o **UNSAFE**. Cuando se ejecuta la instrucción **CREATE ASSEMBLY** , se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ Al crear un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puede especificar uno de los tres niveles distintos de seguridad en los que puede ejecutarse el código: **SAFE**, **EXTERNAL_ACCESS**o **UNSAFE**. Cuando se ejecuta la instrucción **CREATE ASSEMBLY** , se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** es el conjunto de permisos predeterminado y funciona en la mayoría de los escenarios. Para especificar un nivel de seguridad determinado, debe modificar la sintaxis de la instrucción CREATE ASSEMBLY tal y como se indica a continuación:  
   
@@ -136,6 +136,6 @@ WITH PERMISSION_SET = UNSAFE;
  [Quitar un ensamblado](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [Seguridad de acceso del código de integración de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Propiedad de base de datos TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
- [Permitir llamadores de confianza parcial](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Permitir llamadores de confianza parcial](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

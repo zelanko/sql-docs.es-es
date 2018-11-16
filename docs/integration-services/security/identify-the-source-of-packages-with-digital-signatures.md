@@ -19,12 +19,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee92e9c8873a65dd6f35da970e2bb2223a4649e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798040"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639502"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar el origen de paquetes con firmas digitales
   Es posible firmar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con un certificado digital para identificar su origen. Una vez que el paquete está firmado con un certificado digital, se puede configurar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para que compruebe la firma digital antes de cargarlo. Para hacer que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] compruebe la firma, puede establecer una opción en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o en la utilidad **dtexec** (dtexec.exe), o bien establecer un valor opcional del Registro.  
@@ -67,7 +67,7 @@ ms.locfileid: "47798040"
 |3|Bloquear las firmas no válidas, las que no sean de confianza y los paquetes sin firmar.<br /><br /> Este valor también bloquea las firmas generadas automáticamente.|  
   
 > [!NOTE]  
->  El valor recomendado para **BlockedSignatureStates** es 3. Este valor proporciona la protección óptima frente a paquetes sin firmar o firmas que no son válidas o no son de confianza. No obstante, es posible que el valor recomendado no sea adecuado para todas las circunstancias. Para obtener más información sobre la firma de activos digitales, vea el tema de[introducción a la firma de código](http://go.microsoft.com/fwlink/?LinkId=51414)en MSDN Library.  
+>  El valor recomendado para **BlockedSignatureStates** es 3. Este valor proporciona la protección óptima frente a paquetes sin firmar o firmas que no son válidas o no son de confianza. No obstante, es posible que el valor recomendado no sea adecuado para todas las circunstancias. Para obtener más información sobre la firma de activos digitales, vea el tema de[introducción a la firma de código](https://go.microsoft.com/fwlink/?LinkId=51414)en MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar una directiva de firma para paquetes  
   
@@ -100,11 +100,11 @@ ms.locfileid: "47798040"
   
     -   Obtener un certificado de una entidad de certificación pública comercial que se dedique a emitirlos.  
   
-    -   Obtener un certificado de un servidor de certificados que permita a una organización emitir certificados internamente. Tiene que agregar el certificado raíz utilizado para firmar dicho certificado al almacén **Entidades de certificación raíz de confianza** . Para ello, puede utilizar el complemento Certificados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obtener más información, vea el tema "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)" en MSDN Library.  
+    -   Obtener un certificado de un servidor de certificados que permita a una organización emitir certificados internamente. Tiene que agregar el certificado raíz utilizado para firmar dicho certificado al almacén **Entidades de certificación raíz de confianza** . Para ello, puede utilizar el complemento Certificados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obtener más información, vea el tema "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)" en MSDN Library.  
   
-    -   Crear su propio certificado solo con fines de pruebas. La herramienta Creación de certificados (Makecert.exe) genera certificados X.509 solo a efectos de pruebas. Para obtener más información, vea el tema "[Herramienta Creación de certificados (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)" en MSDN Library.  
+    -   Crear su propio certificado solo con fines de pruebas. La herramienta Creación de certificados (Makecert.exe) genera certificados X.509 solo a efectos de pruebas. Para obtener más información, vea el tema "[Herramienta Creación de certificados (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)" en MSDN Library.  
   
-     Para obtener más información sobre los certificados, vea la Ayuda en pantalla para el complemento Certificados. Para obtener más información sobre cómo firmar activos digitales, vea el tema "[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)" en MSDN Library.  
+     Para obtener más información sobre los certificados, vea la Ayuda en pantalla para el complemento Certificados. Para obtener más información sobre cómo firmar activos digitales, vea el tema "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)" en MSDN Library.  
   
 -   Asegurarse de que el certificado se ha habilitado para la firma de código. Para determinar si un certificado está habilitado para la firma de código, revise las propiedades del certificado en el complemento Certificados.  
   

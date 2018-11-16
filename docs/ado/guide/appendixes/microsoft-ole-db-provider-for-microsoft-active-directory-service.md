@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758593"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350449"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
 El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO para conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio de Microsoft Windows NT 4.0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio Novell. ADSI se basa en un modelo de proveedor, por lo que si hay un nuevo proveedor proporcionar acceso a otro directorio, la aplicación ADO podrán acceder a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -29,7 +29,7 @@ El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO pa
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión  
  Para conectarse a este proveedor, establezca el **proveedor** argumento de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad al siguiente:  
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -38,7 +38,7 @@ ADSDSOObject
 ## <a name="typical-connection-string"></a>Cadena de conexión típica  
  Una cadena de conexión típica para este proveedor es como sigue:  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -56,26 +56,26 @@ ADSDSOObject
 ## <a name="command-text"></a>Texto de comando  
  Una cadena de texto de comando de cuatro partes es reconocida por el proveedor en la sintaxis siguiente:  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*Root*|Indica el **ADsPath** objeto desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
-|*Filtro*|Indica el filtro de búsqueda en el formato RFC 1960.|  
+|*Filter*|Indica el filtro de búsqueda en el formato RFC 1960.|  
 |*Atributos*|Indica una lista delimitada por comas de atributos que se va a devolver.|  
 |*Ámbito*|Opcional. Un **cadena** que especifica el ámbito de la búsqueda. Puede ser uno de los valores siguientes:<br /><br /> -Base: Busca sólo el objeto base (raíz de la búsqueda).<br />-OneLevel: Buscar un solo nivel.<br />-Subárbol, Busque en todo el subárbol.|  
   
  Por ejemplo:  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  El proveedor también admite la SELECT de SQL para el texto del comando. Por ejemplo:  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  
@@ -102,7 +102,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|  
-|[Filtro](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|no disponible|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lectura/escritura|  

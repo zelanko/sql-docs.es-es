@@ -1,5 +1,5 @@
 ---
-title: Instrucción CREATE ACTION (MDX) | Documentos de Microsoft
+title: Instrucción CREATE ACTION (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741294"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703093"
 ---
-# <a name="mdx-data-definition---create-action"></a>Definición de datos MDX - Crear acción
+# <a name="mdx-data-definition---create-action"></a>Definición de datos de MDX: CREATE ACTION
 
 
   Crea una acción que puede asociarse con un objeto subordinado, cubo, dimensión, o jerarquía.  
@@ -51,7 +51,7 @@ FOR
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Restricciones obligatorias Cube_Name*  
+ *Cube_Name*  
  Cadena válida que proporciona un nombre de cubo.  
   
  *Nombre de Action_*  
@@ -72,24 +72,24 @@ FOR
  *String_Expression*  
  Expresión de cadena válida.  
   
-## <a name="remarks"></a>Notas  
- Es posible que las aplicaciones cliente creen y ejecuten acciones que no son seguras; también es posible que las aplicaciones cliente utilicen funciones no seguras. Para evitar estas situaciones, utilice la **Safety Options** propiedad. Para obtener más información, vea el tema sobre la propiedad de opciones de seguridad.  
+## <a name="remarks"></a>Comentarios  
+ Es posible que las aplicaciones cliente creen y ejecuten acciones que no son seguras; también es posible que las aplicaciones cliente utilicen funciones no seguras. Para evitar estas situaciones, utilice el **Safety Options** propiedad. Para obtener más información, vea el tema sobre la propiedad de opciones de seguridad.  
   
 > [!NOTE]  
->  Esta instrucción se incluye por compatibilidad con versiones anteriores. Las acciones nuevas para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], como acciones de obtención de detalles o un informe, no se admiten.  
+>  Esta instrucción se incluye por compatibilidad con versiones anteriores. Las acciones nuevas para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], como las acciones de obtención de detalles o informe, no se admiten.  
   
 ## <a name="action-types"></a>Tipos de acción  
  La tabla siguiente describen los diferentes tipos de acciones disponibles en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Tipo de acción|Descripción|  
 |-----------------|-----------------|  
-|**Dirección URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `http://` o `https://`, la acción estará disponible para el explorador a menos que **SafetyOptions** está establecido en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**Dirección URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `https://` o `https://`, la acción no estará disponible en el explorador, a menos que **SafetyOptions** está establecido en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La cadena de acción que se devuelve es un script HTML. La cadena debe guardarse en un archivo y ese archivo debe representarse mediante un explorador de Internet. En este caso, un script completo debe ejecutarse como parte del HTML generado.|  
-|**INSTRUCCIÓN**|La cadena de acción que se devuelve es una instrucción que se debe ejecutar estableciendo la **SetText** método de un objeto de comando con la cadena y la llamada la **ICommand:: Execute**método. Si el comando no ha funcionado, se muestra un error.|  
-|**CONJUNTO DE DATOS**|La cadena de acción que se devuelve es una instrucción MDX que debe ejecutarse estableciendo la **SetText** método de un objeto de comando con la cadena y la llamada la **ICommand:: Execute** método. La interfaz solicitada debe ser el identificador (IID) **IDataset**. El comando tiene éxito si se ha creado un conjunto de datos. La aplicación cliente debe permitir al usuario explorar el conjunto de datos devuelto.|  
-|**CONJUNTO DE FILAS**|Similar a **conjunto de datos**, pero en lugar de solicitar un IID de **IDataset**, la aplicación cliente debe solicitar un IID de **IRowset**. El comando tiene éxito si se ha creado un conjunto de filas. La aplicación cliente debe permitir al usuario explorar el conjunto de filas devuelto.|  
+|**INSTRUCCIÓN**|La cadena de acción devuelta es una instrucción que se debe ejecutar estableciendo el **SetText** método de un objeto de comando a la cadena y llamar a la **ICommand:: Execute**método. Si el comando no ha funcionado, se muestra un error.|  
+|**CONJUNTO DE DATOS**|La cadena de acción devuelta es una instrucción MDX que debe ejecutarse estableciendo el **SetText** método de un objeto de comando a la cadena y llamar a la **ICommand:: Execute** método. La interfaz solicitada debe ser el identificador (IID) **IDataset**. El comando tiene éxito si se ha creado un conjunto de datos. La aplicación cliente debe permitir al usuario explorar el conjunto de datos devuelto.|  
+|**CONJUNTO DE FILAS**|Similar a **DATASET**, pero en lugar de solicitar un IID de **IDataset**, la aplicación cliente debe solicitar un IID de **IRowset**. El comando tiene éxito si se ha creado un conjunto de filas. La aplicación cliente debe permitir al usuario explorar el conjunto de filas devuelto.|  
 |**LÍNEA DE COMANDOS**|La aplicación cliente debe ejecutar la cadena de acción. La cadena es una línea de comandos.|  
-|**PROPIETARIO**|Una aplicación cliente no debe mostrar, ni ejecutar la acción a menos que la aplicación tenga un conocimiento personalizado y no genérico de la acción específica. Las acciones de propietario no se devuelven a la aplicación cliente a menos que la aplicación cliente lo solicite explícitamente mediante el establecimiento de la restricción adecuada en la **$application_name**.|  
+|**PROPIETARIO**|Una aplicación cliente no debe mostrar, ni ejecutar la acción a menos que la aplicación tenga un conocimiento personalizado y no genérico de la acción específica. Las acciones de propietario no se devuelven a la aplicación cliente a menos que la aplicación cliente lo solicite explícitamente mediante el establecimiento de la restricción adecuada en el **APPLICATION_NAME**.|  
   
 ## <a name="invocation-types"></a>Tipos de invocación  
  En la tabla siguiente se describen los distintos tipos de invocaciones disponibles en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La aplicación cliente solamente utiliza el tipo de invocación para ayudar a determinar cuando invocar la acción. El tipo de invocación no determina de hecho el comportamiento de invocación de la acción.  
@@ -119,7 +119,7 @@ FOR
  La acción solo se aplica a celdas específicas.  
   
  Ámbito de conjunto  
- La acción solo se aplica a un conjunto. El nombre, **ActionParameterSet**, está reservado para su uso por la aplicación dentro de la expresión de la acción.  
+ La acción solo se aplica a un conjunto. El nombre, **ActionParameterSet**, está reservada para su uso por parte de la aplicación dentro de la expresión de la acción.  
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 764e2f6481121bb7684c9c4db4b56af9dc9628f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602344"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672954"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ Devuelve una fila que muestra información de versión del sistema operativo.
 |**host_distribution** |**nvarchar(256)** |Descripción del sistema operativo. |
 |**host_release**|**nvarchar(256)**|Versión del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (número de versión). Para obtener una lista de valores y descripciones, consulte [versión del sistema operativo (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Para Linux, devuelve una cadena vacía. |  
 |**host_service_pack_level**|**nvarchar(256)**|Nivel de Service Pack del sistema operativo Windows. <br> Para Linux, devuelve una cadena vacía. |  
-|**host_sku**|**int**|Identificador de referencia de almacén (SKU) de Windows. Para obtener una lista de los identificadores de SKU y descripciones, consulte [función GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Acepta valores NULL. <br> Para Linux, devuelve NULL. |  
-|**os_language_version**|**int**|Identificador de configuración regional (LCID) del sistema operativo Windows. Para obtener una lista de valores LCID y las descripciones, consulte [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). No puede ser null.|  
+|**host_sku**|**int**|Identificador de referencia de almacén (SKU) de Windows. Para obtener una lista de los identificadores de SKU y descripciones, consulte [función GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Acepta valores NULL. <br> Para Linux, devuelve NULL. |  
+|**os_language_version**|**int**|Identificador de configuración regional (LCID) del sistema operativo Windows. Para obtener una lista de valores LCID y las descripciones, consulte [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). No puede ser null.|  
 
 ## <a name="remarks"></a>Comentarios  
 Esta vista es similar a [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), agregar columnas para diferenciar Windows y Linux.

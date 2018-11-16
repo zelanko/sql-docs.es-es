@@ -13,12 +13,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bdf93e2f4da62ffa7a1cfd6edac11955f3bd757f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853587"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642292"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché
   Puede configurar la transformación de búsqueda para utilizar el modo de caché completa y un Administrador de conexiones de caché. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -62,7 +62,7 @@ ms.locfileid: "47853587"
   
 -   [Contenedor de secuencias](../../integration-services/control-flow/sequence-container.md)  
   
- Para ver un vídeo donde se muestra cómo implementar una transformación de búsquedas en el modo de caché completa con el Administrador de conexiones de caché, visite [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131031).  
+ Para ver un vídeo donde se muestra cómo implementar una transformación de búsquedas en el modo de caché completa con el Administrador de conexiones de caché, visite [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Implementar una transformación Búsqueda en el modo de caché completa en un paquete utilizando el Administrador de conexiones de caché y un origen de datos del flujo de datos  
   
@@ -92,7 +92,7 @@ ms.locfileid: "47853587"
          Si escribe una ruta de acceso para un archivo que no existe, el sistema crea el archivo al ejecutar el paquete.  
   
     > [!NOTE]  
-    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
+    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
   
 7.  Configure la transformación de caché según sea necesario. Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47853587"
         >  La transformación Búsqueda asigna automáticamente las columnas que tienen el mismo nombre y el mismo tipo de datos.  
   
         > [!NOTE]  
-        >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+        >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "47853587"
         >  La transformación Búsqueda asigna automáticamente las columnas que tienen el mismo nombre y el mismo tipo de datos.  
   
         > [!NOTE]  
-        >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+        >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
@@ -270,7 +270,7 @@ ms.locfileid: "47853587"
         >  La transformación Búsqueda asigna automáticamente las columnas que tienen el mismo nombre y el mismo tipo de datos.  
   
         > [!NOTE]  
-        >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+        >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
@@ -281,7 +281,7 @@ ms.locfileid: "47853587"
 9. Ejecute el paquete.  
   
 ## <a name="see-also"></a>Ver también  
- [Implementación de una transformación Búsqueda en el modo Caché completa con el administrador de conexiones OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

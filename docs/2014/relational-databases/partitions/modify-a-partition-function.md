@@ -10,12 +10,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9371a82366f31c2d8221834a1bd29f9cfd9cc0d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049045"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640762"
 ---
 # <a name="modify-a-partition-function"></a>Modificar una función de partición
   Puede cambiar el modo en que se crean las particiones de una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al sumar o restar el número de particiones especificadas, en aumentos de 1, en la función de partición de la tabla o el índice con particiones mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lo que sucede al agregar una partición es que se "divide" una partición existente en dos particiones y se vuelven a definir los límites de las particiones nuevas. Al quitar una partición, se "mezclan" los límites de dos particiones en una sola. Lo que hace esta última acción es volver a llenar una partición y dejar la otra sin asignar.  
@@ -37,7 +37,7 @@ ms.locfileid: "48049045"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48049045"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona compatibilidad de replicación para modificar una función de partición. Si desea realizar cambios en una función de partición de una base de datos de publicación, deberá hacerlo manualmente en la base de datos de suscripciones.  
   
--   Todos los grupos de archivos que estén afectados por ALTER PARTITION FUNCTION deben estar en línea.  
+-   Todos los grupos de archivos que se ven afectados por ALTER PARTITION FUNCTION deben estar en línea.  
   
 ###  <a name="Security"></a> Seguridad  
   

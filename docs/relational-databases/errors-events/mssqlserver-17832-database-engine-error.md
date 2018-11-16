@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6431ccfaff9cf9b78a257db3908edc7134904a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bf4143ad0d446e526a72ad32b45d4397933827c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664263"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657215"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Al utilizar la autenticación de Windows en un entorno de Kerberos, un cliente r
   
 Si el token se creó incorrectamente o se dañó durante la transmisión, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede proporcionar información adicional sobre el problema.  
   
-Cuando el usuario es miembro de muchos grupos o tiene muchas directivas, el token puede crecer más de lo normal como para mostrarlo todo. Si el token aumenta de tamaño por encima del valor de **MaxTokenSize** del equipo servidor, el cliente no puede conectarse, emite un error general de red (GNE) y se puede producir el error 17832. Este problema puede afectar solo a algunos usuarios: los usuarios con muchos grupos o directivas. Cuando el problema es el valor **MaxTokenSize** del equipo servidor, el error 17832 del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estará acompañado de un error con el estado 9. Para obtener más información sobre Kerberos y **MaxTokenSize**, vea [KB327825](http://support.microsoft.com/kb/327825).  
+Cuando el usuario es miembro de muchos grupos o tiene muchas directivas, el token puede crecer más de lo normal como para mostrarlo todo. Si el token aumenta de tamaño por encima del valor de **MaxTokenSize** del equipo servidor, el cliente no puede conectarse, emite un error general de red (GNE) y se puede producir el error 17832. Este problema puede afectar solo a algunos usuarios: los usuarios con muchos grupos o directivas. Cuando el problema es el valor **MaxTokenSize** del equipo servidor, el error 17832 del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estará acompañado de un error con el estado 9. Para obtener más información sobre Kerberos y **MaxTokenSize**, vea [KB327825](https://support.microsoft.com/kb/327825).  
   
 ## <a name="user-action"></a>Acción del usuario  
 Para resolver este problema, aumente el valor de **MaxTokenSize** del equipo servidor a un tamaño lo suficientemente grande como para contener el token de mayor tamaño de cualquier usuario de la organización. Para averiguar el tamaño correcto del token para la organización, considere usar la aplicación **Tokensz**.  

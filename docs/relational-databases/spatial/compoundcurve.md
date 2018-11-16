@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cab23e9c1c0515cd0fd49b191928870aeb2184c7
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019040"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658924"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Una **CompoundCurve** es una recopilación de cero o más instancias de **CircularString** o **LineString** de tipos de geometría o de geografía.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de esta versión, incluido el subtipo **CompoundCurve** , descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de esta versión, incluido el subtipo **CompoundCurve** , descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Se puede crear una instancia vacía de **CompoundCurve** , pero para que una **CompoundCurve** sea válida debe cumplir los siguientes criterios:  
   

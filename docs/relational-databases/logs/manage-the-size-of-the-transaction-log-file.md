@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664753"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674854"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Supervise el uso del espacio del registro mediante [sys.dm_db_log_space_usage](.
 Para obtener información sobre el tamaño actual del archivo de registro, su tamaño máximo y la opción de crecimiento automático de este archivo, también puede usar las columnas **size**, **max_size** y **growth** de ese archivo de registro en [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 > [!IMPORTANT]
-> Evite la sobrecarga del disco del registro. Asegúrese de que el almacenamiento del registro puede soportar la [IOPS](http://wikipedia.org/wiki/IOPS) y los requisitos de latencia baja para la carga de transacciones. 
+> Evite la sobrecarga del disco del registro. Asegúrese de que el almacenamiento del registro puede soportar la [IOPS](https://wikipedia.org/wiki/IOPS) y los requisitos de latencia baja para la carga de transacciones. 
   
 ##  <a name="ShrinkSize"></a> Reducir el tamaño del archivo de registro  
  Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Esto es útil si sabe que un archivo de registro de transacciones contiene espacio que no se ha utilizado. Puede reducir un archivo de registro siempre que la base de datos esté en línea y haya al menos un [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) libre. En algunos casos, no será posible reducir el registro hasta el siguiente truncamiento del registro.  
@@ -101,9 +101,9 @@ Estas son algunas recomendaciones generales referentes a los archivos de registr
       |A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos: 1 MB. Archivos de registro: 10 %.|  
       |Antes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos: 10 %. Archivos de registro: 10 %.|  
 
--   Un aumento de crecimiento pequeño puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y puede reducir el rendimiento. Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   Un aumento de crecimiento pequeño puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y puede reducir el rendimiento. Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Un aumento de crecimiento grande puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y grandes, y también puede afectar al rendimiento. Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
+-   Un aumento de crecimiento grande puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y grandes, y también puede afectar al rendimiento. Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Incluso con el crecimiento automático habilitado, puede recibir un mensaje de que el registro de transacciones está lleno, si no puede crecer lo suficientemente rápido para satisfacer las necesidades de la consulta. Para obtener más información sobre cómo cambiar el aumento del crecimiento, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 

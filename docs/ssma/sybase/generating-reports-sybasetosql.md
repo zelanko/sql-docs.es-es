@@ -14,12 +14,12 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ce414e10afc316a478825441d41dc5601c043c3d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9ee167a46472f4abd4794f767ab4a8e992f4b12a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098931"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667914"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generación de informes (SybaseToSQL)
 Se generan los informes de ciertas actividades realizadas mediante comandos en la consola de SSMA en nivel de árbol de objetos.  
@@ -146,5 +146,5 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
 -   Error de script  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (Sybasetosql)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Ejecución de la consola SSMA (Sybasetosql)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

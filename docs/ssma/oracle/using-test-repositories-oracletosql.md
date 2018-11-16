@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f0390360aef76b15c9743780eff787dd0a2d275d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676503"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666174"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositorios de prueba (OracleToSQL)
 Los almacenes de repositorio de pruebas de SSMA SSMA evaluador casos de prueba y los resultados de pruebas para su uso posterior. Los datos del repositorio se guardan en las tablas de SQL Server **TestCaseRepository** y **RunTestCaseResultRepository** en el esquema **ssma_oracle_utilities** de **ssmatesterdb** base de datos.  
@@ -50,7 +50,7 @@ Los siguientes botones están disponibles en la página de casos de prueba:
   
 -   Haga clic en el **editar** botón para ejecutar el Asistente de caso de prueba y cambiar la prueba seleccionada.  
   
--   Haga clic en el **ejecutar** botón para abrir el [ejecutando casos de prueba (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) cuadro de diálogo y ejecutar la prueba seleccionada.  
+-   Haga clic en el **ejecutar** botón para abrir el [ejecutando casos de prueba (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) cuadro de diálogo y ejecutar la prueba seleccionada.  
   
 ## <a name="test-results-repository"></a>Repositorio de resultados de pruebas  
 Puede ver el repositorio de resultados de pruebas en el **los resultados de pruebas** página de la **repositorio de los casos de prueba** ventana. Haga clic en **los resultados de pruebas...** desde el **evaluador** menú.  

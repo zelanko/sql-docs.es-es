@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753592"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658817"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -148,7 +148,7 @@ El **telemetry.customerfeedback** cambios de configuración si SQL Server envía
    sudo systemctl restart mssql-server
    ```
 
-Para obtener más información, consulte [comentarios del cliente para SQL Server en Linux](sql-server-linux-customer-feedback.md) y [declaración de privacidad de SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).
+Para obtener más información, consulte [comentarios del cliente para SQL Server en Linux](sql-server-linux-customer-feedback.md) y [declaración de privacidad de SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Cambiar la ubicación del directorio de datos o de registro de forma predeterminada
 
@@ -506,7 +506,7 @@ El **network.rpcport** y **distributedtransaction.servertcpport** configuración
 
 Además de establecer estos valores, también debe configurar el enrutamiento y actualizar el firewall para el puerto 135. Para obtener más información sobre cómo hacerlo, consulte [cómo configurar MSDTC en Linux](sql-server-linux-configure-msdtc.md).
 
-Hay otras opciones para mssql-conf que puede usar para supervisar y solucionar problemas de MSDTC. La siguiente tabla describe brevemente estos valores. Para obtener más información sobre su uso, consulte los detalles en el artículo de soporte técnico de Windows, [cómo habilitar el seguimiento de diagnóstico de MS DTC](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+Hay otras opciones para mssql-conf que puede usar para supervisar y solucionar problemas de MSDTC. La siguiente tabla describe brevemente estos valores. Para obtener más información sobre su uso, consulte los detalles en el artículo de soporte técnico de Windows, [cómo habilitar el seguimiento de diagnóstico de MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
 | configuración de MSSQL-conf | Descripción |
 |---|---|

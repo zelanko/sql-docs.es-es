@@ -19,12 +19,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0c1658ce051aa3e0fa494ef5c1b40d2db8881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832532"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641762"
 ---
 # <a name="integration-services-data-types"></a>Tipos de datos de Integration Services
   Cuando los datos entran en un flujo de datos en un paquete, el origen que extrae los datos convierte los datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A los datos numéricos se les asigna un tipo de dato numérico, a los datos de cadena se les asigna un tipo de datos de caracteres y se asignan fechas a un tipo de datos de fecha. A otros datos, tales como GUID y bloques de objetos binarios grandes (BLOB), también se les asignan los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] correspondientes. Si los datos son de un tipo que no se puede convertir en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se produce un error.  
@@ -195,7 +195,7 @@ ms.locfileid: "47832532"
 |DT_DBTIME2|Quita el valor de fecha representado por el tipo de datos DT_DBTIMESTAMP2.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos de DT_DBTIME2 puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMP|Si un valor representado por el tipo de datos DT_DBTIMESTAMP2 desborda el intervalo del tipo de datos DT_DBTIMESTAMP, se devuelve el error DB_E_DATAOVERFLOW.<br /><br /> DT_DBTIMESTAMP2 asigna a un tipo de datos de SQL Server, datetime2, con un intervalo desde el 1 de enero del año 1 hasta el 31 de diciembre del año 9999. DT_DBTIMESTAMP se asigna a un tipo de datos de SQL Server, datetime, con un intervalo menor, del 1 de enero de 1.753 hasta el 31 de diciembre de 9.999.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMP puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos.<br /><br /> Para obtener más información sobre los errores, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMP2|Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos de destino DT_DBTIMESTAMP2 puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
-|DT_DBTIMESTAMPOFFSET|Establece en cero el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMPOFFSET puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
+|DT_DBTIMESTAMPOFFSET|Establece en cero el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMPOFFSET puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para obtener más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
   
 #### <a name="converting-from-dtdbtimestampoffset"></a>Convertir a partir de DT_DBTIMESTAMPOFFSET  
   
@@ -254,7 +254,7 @@ ms.locfileid: "47832532"
  Para obtener información sobre la asignación de tipos de datos en el flujo de datos, vea [Trabajar con tipos de datos del flujo de datos](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog, sobre la [comparación de rendimiento entre las técnicas de conversión de tipos de datos en SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), en blogs.msdn.com.  
+ Entrada de blog, sobre la [comparación de rendimiento entre las técnicas de conversión de tipos de datos en SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Ver también  
  [Datos de flujos de datos](../../integration-services/data-flow/data-in-data-flows.md)  

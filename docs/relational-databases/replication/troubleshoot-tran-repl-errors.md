@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675904"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: buscar errores con la replicación transaccional de SQL Server 
 La solución de problemas de errores de replicación puede resultar frustrante sin un conocimiento básico de cómo funciona la replicación transaccional. El primer paso para crear una publicación es hacer que el Agente de instantáneas cree la instantánea y la guarde en la carpeta de instantáneas. Después, el Agente de distribución aplica la instantánea al suscriptor. 
@@ -252,7 +252,7 @@ Puede usar el registro detallado para ver información más detallada sobre los 
     
 1. Para deshabilitar el registro detallado, siga los mismos pasos anteriores para quitar toda la línea `-Output` que agregó anteriormente. 
 
-Para obtener más información, vea [Cómo habilitar a los agentes de duplicación para el registro de archivos de salida en SQL Server](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
+Para obtener más información, vea [Cómo habilitar a los agentes de duplicación para el registro de archivos de salida en SQL Server](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 
 
 ## <a name="see-also"></a>Vea también

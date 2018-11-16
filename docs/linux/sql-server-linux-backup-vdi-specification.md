@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806183"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660145"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server en la especificación de SDK de cliente de Linux VDI
 
@@ -30,9 +30,9 @@ Este documento describe las interfaces proporcionadas por SQL Server en el SDK d
 - SQL Server en Linux no admite instancias con nombre, por lo que se han quitado las referencias al nombre de instancia. 
 - La biblioteca compartida se implementa en libsqlvdi.so instalado en /opt/mssql/lib/libsqlvdi.so
 
-Este documento es un anexo a **vbackup.chm** que detalla la especificación de VDI de Windows. Descargue el [Windows VDI especificación](http://www.microsoft.com/download/details.aspx?id=17282).
+Este documento es un anexo a **vbackup.chm** que detalla la especificación de VDI de Windows. Descargue el [Windows VDI especificación](https://www.microsoft.com/download/details.aspx?id=17282).
 
-Revise también la solución de copia de seguridad de VDI de ejemplo en el [repositorio de GitHub de ejemplos de SQL Server](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
+Revise también la solución de copia de seguridad de VDI de ejemplo en el [repositorio de GitHub de ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
 ## <a name="user-permissions-setup"></a>Configuración de permisos de usuario
 
@@ -106,7 +106,7 @@ Este capítulo contiene descripciones de cada una de las funciones de cliente. L
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| | **Tiempo de espera** | Este es el tiempo de espera en milisegundos. Usar infinito o un número entero negativo para evitar tiempo de espera.
+| | **timeout** | Este es el tiempo de espera en milisegundos. Usar infinito o un número entero negativo para evitar tiempo de espera.
 | | **cfg** | Después de ejecutarse correctamente, contiene la configuración seleccionada por el servidor. Para obtener más información, consulte "Configuración" más adelante en este documento.
 
 | Valores devueltos | Argumento | Explicación
@@ -161,7 +161,7 @@ Si esta función no se realiza correctamente, se devuelve un valor nulo a travé
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| |**Tiempo de espera** |Se trata de tiempo de espera en milisegundos. Use FINITA para esperar indefinidamente. Use 0 para sondear en busca de un comando. VD_E_TIMEOUT se devuelve si no hay ningún comando disponible actualmente. Si se produce el tiempo de espera, el cliente decide la acción siguiente.
+| |**timeout** |Se trata de tiempo de espera en milisegundos. Use FINITA para esperar indefinidamente. Use 0 para sondear en busca de un comando. VD_E_TIMEOUT se devuelve si no hay ningún comando disponible actualmente. Si se produce el tiempo de espera, el cliente decide la acción siguiente.
 | |**Timeout** |Se trata de tiempo de espera en milisegundos. Use FINITA o un valor negativo para esperar indefinidamente. Use 0 para sondear en busca de un comando. VD_E_TIMEOUT se devuelve si no hay ningún comando está disponible antes de que expire el tiempo de espera. Si se produce el tiempo de espera, el cliente decide la acción siguiente.
 | |**ppCmd** |Cuando un comando se devuelve correctamente, el parámetro devuelve la dirección de un comando para ejecutar. La memoria devuelta es de solo lectura. Cuando se completa el comando, este puntero se pasa a la rutina CompleteCommand. Para obtener más información acerca de cada comando, vea "Comandos" más adelante en este documento.
         
@@ -195,7 +195,7 @@ Cuando se debe bloquear esta rutina para esperar un comando, el subproceso se de
 | |**pCmd** |Se trata de la dirección de un comando que se devolvió previamente desde ClientVirtualDevice::GetCommand.
 | |**completionCode** |Se trata de un código de estado que indica el estado de finalización. Este parámetro debe devolverse para todos los comandos. El código devuelto debe ser adecuado para el comando que se va a realizar. ERROR_SUCCESS se utiliza en todos los casos para denotar un comando ejecutado correctamente. Para obtener la lista completa de posibles códigos, vea el archivo, vdierror.h. Aparece una lista de códigos de estado típico para cada comando en "Commands" más adelante en este documento.
 | |**bytesTransferred** |Este es el número de bytes transferidos correctamente. Se devuelve solo la transferencia de datos de comandos de lectura y escritura.
-| |**Posición** |Se trata de una respuesta al comando GetPosition solo.
+| |**position** |Se trata de una respuesta al comando GetPosition solo.
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |

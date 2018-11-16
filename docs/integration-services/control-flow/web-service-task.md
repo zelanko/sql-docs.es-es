@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757553"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642352"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
   La tarea Servicio web ejecuta un método de servicio web. Puede usar la tarea Servicio web para los siguientes objetivos:  
@@ -38,7 +38,7 @@ ms.locfileid: "47757553"
 > [!IMPORTANT]  
 >  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- El administrador de conexiones HTTP puede apuntar a un sitio web o a un archivo de Lenguaje de descripción de servicios web (WSDL). La dirección URL del administrador de conexiones HTTP que apunta a un archivo WSDL incluye el parámetro `?WSDL` ; por ejemplo, `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
+ El administrador de conexiones HTTP puede apuntar a un sitio web o a un archivo de Lenguaje de descripción de servicios web (WSDL). La dirección URL del administrador de conexiones HTTP que apunta a un archivo WSDL incluye el parámetro `?WSDL` ; por ejemplo, `https://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
  El archivo WSDL debe estar localmente disponible para configurar la tarea Servicio web mediante el cuadro de diálogo **Editor de la tarea Servicio web** que proporciona el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757553"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuración mediante programación de la tarea Servicio web  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en uno de los temas siguientes:  
@@ -178,7 +178,7 @@ ms.locfileid: "47757553"
  **Variable**  
  Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Vídeo [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(Cómo llamar a un servicio web usando la tarea Servicio web (vídeo de SQL Server)), en technet.microsoft.com.  
+ Vídeo [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642)(Cómo llamar a un servicio web usando la tarea Servicio web (vídeo de SQL Server)), en technet.microsoft.com.  

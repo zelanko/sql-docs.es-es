@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731563"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601335"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Grupos de disponibilidad Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "47731563"
 ## <a name="generate-cluster-log"></a>Generar el registro del clúster  
  Puede generar los registros del clúster de dos maneras:  
   
-1.  Ejecute el comando `cluster /log /g` en el símbolo del sistema. Este comando genera los registros del clúster en el directorio \windows\cluster\reports en cada nodo de WSFC. La ventaja de este método es que puede especificar el nivel de detalle en los registros generados mediante la opción `/level`. La desventaja es que no se puede especificar el directorio de destino para los registros de clúster generados. Para obtener más información, consulte [How to create the cluster.log in Windows Server 2008 Failover Clustering](http://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) (Cómo crear el archivo cluster.log en clústeres de conmutación por error de Windows Server 2008).  
+1.  Ejecute el comando `cluster /log /g` en el símbolo del sistema. Este comando genera los registros del clúster en el directorio \windows\cluster\reports en cada nodo de WSFC. La ventaja de este método es que puede especificar el nivel de detalle en los registros generados mediante la opción `/level`. La desventaja es que no se puede especificar el directorio de destino para los registros de clúster generados. Para obtener más información, consulte [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) (Cómo crear el archivo cluster.log en clústeres de conmutación por error de Windows Server 2008).  
   
-2.  Use el cmdlet [Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx) de PowerShell. La ventaja de este método es que le permite generar el registro de clúster desde todos los nodos a un directorio de destino en el nodo en que se ejecuta el cmdlet. La desventaja es que no le permite especificar el nivel de detalle en los registros generados.  
+2.  Use el cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) de PowerShell. La ventaja de este método es que le permite generar el registro de clúster desde todos los nodos a un directorio de destino en el nodo en que se ejecuta el cmdlet. La desventaja es que no le permite especificar el nivel de detalle en los registros generados.  
   
  Los siguientes comandos de PowerShell generan los registros de clúster desde todos los nodos del clúster de los últimos 15 minutos y los colocan en el directorio actual. Ejecute los comandos en una ventana de PowerShell con privilegios de administración.  
   
@@ -57,7 +57,7 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 8.  Vuelva a hacer clic con el botón derecho en el recurso del grupo de disponibilidad y haga clic en **Ponga este recurso en línea**.  
   
 ## <a name="availability-group-resource-events"></a>Eventos de recursos del grupo de disponibilidad  
- En la siguiente tabla se muestran los diferentes tipos de eventos que puede ver en CLUSTER.LOG y que pertenecen al recurso del grupo de disponibilidad. Para obtener más información sobre el Subsistema de hospedaje de recursos (RHS) y el Monitor de control de recursos (RCM) en WSFC, consulte [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](http://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) (Subsistema de hospedaje de recursos (RHS) en clústeres de conmutación por error de Windows Server 2008).  
+ En la siguiente tabla se muestran los diferentes tipos de eventos que puede ver en CLUSTER.LOG y que pertenecen al recurso del grupo de disponibilidad. Para obtener más información sobre el Subsistema de hospedaje de recursos (RHS) y el Monitor de control de recursos (RCM) en WSFC, consulte [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) (Subsistema de hospedaje de recursos (RHS) en clústeres de conmutación por error de Windows Server 2008).  
   
 |Identificador|Source|Ejemplo de CLUSTER.LOG|  
 |----------------|------------|------------------------------|  

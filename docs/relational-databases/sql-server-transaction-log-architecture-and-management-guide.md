@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631873"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658081"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ Se recomienda que los archivos de registro se definan con un valor *size* cercan
 Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `ALTER DATABASE`, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro VLF. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
   
@@ -143,12 +142,12 @@ Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `AL
  Antes de crear la primera copia de seguridad de registros, debe crear una copia de seguridad completa, como una copia de seguridad de la base de datos o la primera de un conjunto completo de copias de seguridad de archivos. La restauración de una base de datos utilizando únicamente copias de seguridad de archivos puede llegar a ser un proceso complejo. Por lo tanto, es recomendable que comience con una copia de seguridad de la base de datos completa si es posible. Posteriormente, será necesario realizar copias de seguridad del registro de transacciones con regularidad. De esta forma, no solo se minimiza el riesgo de pérdida de trabajo, sino que también se permite el truncamiento del registro de transacciones. Normalmente, el registro de transacciones se trunca tras cada copia de seguridad de registros convencional.  
   
 > [!IMPORTANT]
-> Es aconsejable realizar copias de seguridad de registros suficientemente regulares para ajustarse a los requisitos de su empresa, específicamente a la tolerancia a la pérdida de trabajo que un almacenamiento de registro dañada podría provocar. La frecuencia adecuada para realizar copias de seguridad de registros varía en función de la tolerancia al riesgo de pérdida de trabajo y, por otra parte, de la cantidad de copias de seguridad de registros que puede almacenar, administrar y, potencialmente, restaurar. Tenga en cuenta los [RTO](http://wikipedia.org/wiki/Recovery_time_objective) y [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de registros.
+> Es aconsejable realizar copias de seguridad de registros suficientemente regulares para ajustarse a los requisitos de su empresa, específicamente a la tolerancia a la pérdida de trabajo que un almacenamiento de registro dañada podría provocar. La frecuencia adecuada para realizar copias de seguridad de registros varía en función de la tolerancia al riesgo de pérdida de trabajo y, por otra parte, de la cantidad de copias de seguridad de registros que puede almacenar, administrar y, potencialmente, restaurar. Tenga en cuenta los [RTO](https://wikipedia.org/wiki/Recovery_time_objective) y [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de registros.
 > Una copia de seguridad de registros cada 15 ó 30 minutos puede ser suficiente. Si su empresa necesita minimizar el riesgo de pérdida de trabajo, piense en la posibilidad de realizar copias de seguridad de registros más frecuentemente. La existencia de copias de seguridad más frecuentes de los registros tiene la ventaja añadida de aumentar la frecuencia de truncamiento del registro, lo que genera archivos de registro menores.  
   
 > [!IMPORTANT]
 > Para limitar el número de copias de seguridad del registro que necesita restaurar, es esencial que realice una copia de seguridad de sus datos periódicamente. Por ejemplo, podría programar una copia de seguridad completa de la base de datos cada semana y copias de seguridad diferenciales de la base de datos a diario.  
-> Una vez más, tenga en cuenta los [RTO](http://wikipedia.org/wiki/Recovery_time_objective) y [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de base de datos completas y diferenciales.
+> Una vez más, tenga en cuenta los [RTO](https://wikipedia.org/wiki/Recovery_time_objective) y [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de base de datos completas y diferenciales.
 
 Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).
   
@@ -253,7 +252,7 @@ Se recomiendan los artículos y libros siguientes para obtener información adic
 [Establecer la opción de configuración del servidor Intervalo de recuperación](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Descripción del registro y la recuperación en SQL Server por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[Administración de registros de transacciones de SQL Server por Tony Davis y Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[Descripción del registro y la recuperación en SQL Server por Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Administración de registros de transacciones de SQL Server por Tony Davis y Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

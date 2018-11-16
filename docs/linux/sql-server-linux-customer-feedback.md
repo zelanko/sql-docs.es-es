@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 003fc3496a68f0437dc2c7d313179da1f37a9c7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623725"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669064"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Comentarios del cliente para SQL Server en Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47623725"
 
 De forma predeterminada, Microsoft SQL Server recopila información sobre cómo sus clientes usan la aplicación. En concreto, SQL Server recopila información sobre la experiencia de instalación, el uso y el rendimiento. Esta información ayuda a Microsoft a mejorar el producto para satisfacer mejor las necesidades del cliente. Por ejemplo, Microsoft recopila información sobre los tipos de códigos de error que encuentran los clientes para que podamos corregir errores relacionados, mejorar nuestra documentación sobre cómo usar SQL Server y determinar si deben agregarse características al producto para ofrecer un mejor servicio a los clientes.
 
-Este documento proporciona detalles acerca de qué tipos de información se recopilan y cómo configurar Microsoft SQL Server en Linux para enviar ese recopilados a Microsoft. SQL Server 2017 incluye una declaración de privacidad que explica qué información y no se recopilan de los usuarios. Para obtener más información, consulte el [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkID=868444).
+Este documento proporciona detalles acerca de qué tipos de información se recopilan y cómo configurar Microsoft SQL Server en Linux para enviar ese recopilados a Microsoft. SQL Server 2017 incluye una declaración de privacidad que explica qué información y no se recopilan de los usuarios. Para obtener más información, consulte el [declaración de privacidad](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 En concreto, Microsoft no envía ninguno de los tipos de información siguientes a través de este mecanismo:
 

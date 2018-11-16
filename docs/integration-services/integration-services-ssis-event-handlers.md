@@ -22,12 +22,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb2e06d17fcea51da160b9d5c8d4002c5b3fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aab1631f282ff05af8f7e2a1089d7234325ef1e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788703"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642112"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Controladores de eventos de Integration Services (SSIS)
   En el tiempo de ejecución, los ejecutables (paquetes y contenedores de bucles Foreach, bucles For, de secuencia y de host de tarea) producen eventos. Por ejemplo un evento OnError se produce cuando se genera un error. Puede crear controladores de eventos personalizados para estos eventos con el fin de ampliar la funcionalidad de paquetes y facilitar la administración de paquetes en el tiempo de ejecución. Los controladores de eventos pueden realizar tareas tales como las siguientes:  
@@ -84,7 +84,7 @@ ms.locfileid: "47788703"
 |**OnProgress**|El controlador de eventos para el evento **OnProgress** . Este evento es desencadenado por un ejecutable cuando el ejecutable realiza un progreso que se puede medir.|  
 |**OnQueryCancel**|El controlador de eventos para el evento **OnQueryCancel** . Este evento es desencadenado por un ejecutable para determinar si debe dejar de ejecutarse.|  
 |**OnTaskFailed**|El controlador de eventos para el evento **OnTaskFailed** . Este evento es desencadenado por una tarea cuando se produce un error.|  
-|**OnVariableValueChanged**|El controlador de eventos para el evento **OnVariableValueChanged** . Este evento es desencadenado por un ejecutable cuando se modifica el valor de una variable. El evento es desencadenado por el ejecutable en el que se define la variable. Este evento no se desencadena si establece la propiedad **RaiseChangeEvent** de la variable en **False**. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|El controlador de eventos para el evento **OnVariableValueChanged** . Este evento es desencadenado por un ejecutable cuando se modifica el valor de una variable. El evento es desencadenado por el ejecutable en el que se define la variable. Este evento no se desencadena si establece la propiedad **RaiseChangeEvent** de la variable en **False**. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).|  
 |**OnWarning**|El controlador de eventos para el evento **OnWarning** . Este evento es desencadenado por un ejecutable cuando se produce una advertencia.|  
 
 ## <a name="add-an-event-handler-to-a-package"></a>agregar un controlador de eventos a un paquete
@@ -96,7 +96,7 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
  Cuando la pestaña **Controladores de eventos** se encuentra activa, los nodos **Elementos de flujo de control** y **Tareas del plan de mantenimiento** del cuadro de herramientas en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] contienen la tarea y los contenedores para generar el flujo de control en el controlador de eventos. Los nodos **Orígenes de flujo de datos**, **Transformaciones**y **Destinos de flujo de datos** contienen los orígenes de datos, transformaciones y destinos para generar los flujos de datos en el controlador de eventos. Para obtener más información, consulte [Control Flow](../integration-services/control-flow/control-flow.md) y [Data Flow](../integration-services/data-flow/data-flow.md).  
   
- La pestaña **Controlador de eventos** también incluye el área de Administradores de **conexión** , donde se crean y modifican los administradores de conexión que usan los controladores de eventos para conectarse a los servidores y orígenes de datos. Para obtener más información, vea [Crear administradores de conexiones](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ La pestaña **Controlador de eventos** también incluye el área de Administradores de **conexión** , donde se crean y modifican los administradores de conexión que usan los controladores de eventos para conectarse a los servidores y orígenes de datos. Para obtener más información, vea [Crear administradores de conexiones](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Adición de un controlador de eventos en la pestaña Controladores de eventos  
   
@@ -118,18 +118,18 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
 7.  Agregue elementos del flujo de control al controlador de eventos y conecte elementos mediante una restricción de precedencia, arrastrando la restricción de un elemento del flujo de control a otro. Para más información, consulte [Control Flow](../integration-services/control-flow/control-flow.md).  
   
-8.  De forma opcional, puede agregar una tarea Flujo de datos y, en la superficie de diseño de la pestaña **Flujo de datos** , crear un flujo de datos para el controlador de eventos. Para obtener más información, consulte [Data Flow](../integration-services/data-flow/data-flow.md).  
+8.  De forma opcional, puede agregar una tarea Flujo de datos y, en la superficie de diseño de la pestaña **Flujo de datos** , crear un flujo de datos para el controlador de eventos. Para más información, consulte [Data Flow](../integration-services/data-flow/data-flow.md).  
   
 9. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el paquete.  
 
 ## <a name="set-the-properties-of-an-event-handler"></a>Establecimiento de las propiedades de un controlador de eventos  
  Puede establecer propiedades en la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o mediante programación.  
   
- Para obtener información sobre cómo establecer estas propiedades en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vea [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obtener información sobre cómo establecer estas propiedades en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Para obtener información sobre cómo establecer mediante programación estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obtener información sobre cómo agregar un controlador de eventos a un paquete, vea [agregar un controlador de eventos a un paquete](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Para obtener información sobre cómo agregar un controlador de eventos a un paquete, vea [agregar un controlador de eventos a un paquete](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6412da2497f7201016ddfbb4b81397d769de5032
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99eb1ed68d2af04dce3106b2642fcdb068a55ef5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698843"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641600"
 ---
 # <a name="integration-services-developer-documentation"></a>Documentación para desarrolladores de Integration Services
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye un modelo de objetos completamente reescrito, que se ha mejorado con muchas características que consiguen que la extensión y la programación de paquetes resulten más sencillas, flexibles y eficaces. Los desarrolladores pueden extender y programar prácticamente cualquier aspecto de los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -83,7 +83,7 @@ ms.locfileid: "47698843"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Ejemplos de CodePlex, en la página [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204)de www.codeplex.com/MSFTISProdSamples.  
+-   Ejemplos de CodePlex, en la página [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204)de www.codeplex.com/MSFTISProdSamples.  
   
 ## <a name="see-also"></a>Ver también  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  

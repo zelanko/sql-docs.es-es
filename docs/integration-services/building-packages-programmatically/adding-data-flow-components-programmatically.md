@@ -18,12 +18,12 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 852f6e8580b59df5203ce7115c080254b78a7156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee94fa73cbc7c148574c15ae136e9efaeea1e740
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734663"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639532"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Agregar componentes de flujo de datos mediante programación
   Cuando se genera un flujo de datos, se inicia agregando componentes. A continuación, se configuran esos componentes y se conectan juntos para establecer el flujo de datos en tiempo de ejecución. En esta sección se describe cómo agregar un componente a la tarea de flujo de datos, crear la instancia del componente en tiempo de diseño y, a continuación, configurar el componente. Para obtener más información acerca de cómo conectar componentes, vea [Conectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -281,7 +281,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada del blog sobre [EzAPI, actualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
+ Entrada del blog sobre [EzAPI, actualizado para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
 
 ## <a name="see-also"></a>Ver también  
  [Conectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

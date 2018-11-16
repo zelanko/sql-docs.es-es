@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018413"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668034"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** es un ti
 Las características simples de OGC para la especificación de SQL analizan los anillos externos e internos, pero esta distinción tiene poco sentido para el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** ; se puede tomar cualquier anillo de un polígono como anillo externo.  
 
 Para obtener más información acerca de las especificaciones de OGC, vea lo siguiente:  
--   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [Especificaciones de OGC; Acceso a características simples, Parte 2 - Opciones de SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [Especificaciones de OGC; Acceso a características simples, Parte 2 - Opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Segmentos de arco circular  
 Tres tipos instanciables pueden tomar segmentos de arco circular: **CircularString**, **CompoundCurve**y **CurvePolygon**.  Un segmento de arco circular se define mediante tres puntos en un plano bidimensional y el tercer punto no puede ser igual que el primero.  
@@ -173,7 +173,7 @@ Las instancias de**CurvePolygon** pueden usar las instancias de **CircularString
 ## <a name="see-also"></a>Ver también  
 - [Datos espaciales (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Referencia de los métodos del tipo de datos geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Referencia de los métodos del tipo de datos geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [Referencia de los métodos del tipo de datos geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

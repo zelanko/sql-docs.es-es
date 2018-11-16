@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6487a55cf1c6c336dc1c02c2fe4000dfc843ff82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773769"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670144"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usar MSDeploy con el proveedor de dbSqlPackage
 **DbSqlPackage** es un proveedor de **MSDeploy** que permite interactuar con bases de datos de SQL Server y SQL Azure. **DbSqlPackage** admite las siguientes acciones:  
@@ -29,10 +29,10 @@ ms.locfileid: "47773769"
   
 -   **Script**: crea un script Transact\-SQL equivalente al script ejecutado por la acción de publicación.  
   
-Para más información sobre DACFx, consulte la documentación sobre la API administrada de DACFx en [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) o [SqlPackage.exe](../tools/sqlpackage.md) (herramienta de línea de comandos de DACFx).  
+Para más información sobre DACFx, consulte la documentación sobre la API administrada de DACFx en [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) o [SqlPackage.exe](../tools/sqlpackage.md) (herramienta de línea de comandos de DACFx).  
   
 > [!IMPORTANT]  
-> La característica de proveedor dbSqlPackage se eliminará de la siguiente versión principal de Visual Studio. Para información acerca de cómo publicar bases de datos con Web Deploy, consulte [Proveedor dbDacFx para la publicación de bases de datos incrementales](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
+> La característica de proveedor dbSqlPackage se eliminará de la siguiente versión principal de Visual Studio. Para información acerca de cómo publicar bases de datos con Web Deploy, consulte [Proveedor dbDacFx para la publicación de bases de datos incrementales](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
   
 ## <a name="command-line-syntax"></a>Sintaxis de la línea de comandos  
 **MSDeploy** con el proveedor **dbSqlPackage** usa una línea de comandos de la forma siguiente:  

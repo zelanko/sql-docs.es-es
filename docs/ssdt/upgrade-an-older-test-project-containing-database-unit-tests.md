@@ -11,12 +11,12 @@ ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02978a329399612e22e952ff6c0be6201c48d32e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4c40f2173ac2ee907aa6999539e83cd4d8eba0a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715073"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661224"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Actualizar un proyecto de prueba anterior que contiene pruebas unitarias de base de datos
 Puede actualizar un proyecto de prueba anterior, que se creó en Visual Studio 2010 y que contiene pruebas unitarias de base de datos, para que use el nuevo entorno de ejecución y las nuevas herramientas de pruebas unitarias de base de datos de SQL Server Data Tools. Una vez actualizado un proyecto anterior, puede agregar pruebas unitarias de SQL Server al proyecto (consulte [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md) [Creación y definición de pruebas unitarias de SQL Server]) para más información.  
@@ -24,7 +24,7 @@ Puede actualizar un proyecto de prueba anterior, que se creó en Visual Studio 2
 > [!TIP]  
 > Si está usando Visual Studio 2010, después de agregar pruebas unitarias de SQL Server a un proyecto de prueba, no debe agregar pruebas unitarias mediante la plantilla anterior de prueba unitaria de base de datos. Si lo hace, necesitará volver a convertir el proyecto para que las pruebas se ejecuten correctamente.  
   
-Si tiene un proyecto de base de datos de prueba creado en una versión anterior a Visual Studio 2010, puede usar la información incluida en [Actualización de las pruebas unitarias de base de datos de versiones anteriores de Visual Studio](http://msdn.microsoft.com/library/dd193412(VS.100).aspx) para actualizar el proyecto de base de datos a Visual Studio 2010, antes de actualizar el proyecto a SQL Server Data Tools.  
+Si tiene un proyecto de base de datos de prueba creado en una versión anterior a Visual Studio 2010, puede usar la información incluida en [Actualización de las pruebas unitarias de base de datos de versiones anteriores de Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) para actualizar el proyecto de base de datos a Visual Studio 2010, antes de actualizar el proyecto a SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Iniciar una actualización  
   

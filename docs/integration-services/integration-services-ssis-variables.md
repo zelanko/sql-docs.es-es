@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d87ea7d4e61f2da561728ce66e797b32f2fd17b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785023"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642012"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -46,7 +46,7 @@ ms.locfileid: "47785023"
 ## <a name="system-and-user-defined-variables"></a>Variables del sistema y definidas por el usuario  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite dos tipos de variables: variables definidas por el usuario y variables del sistema. Las variables definidas por el usuario son definidas por los desarrolladores de paquetes y las variables del sistema son definidas por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Puede crear la cantidad de variables definidas por el usuario que requiera un paquete, pero no puede crear variables del sistema adicionales.  
   
- Todas las variables, del sistema y definidas por el usuario, se pueden utilizar en los enlaces de parámetros que utiliza la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para obtener más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Todas las variables, del sistema y definidas por el usuario, se pueden utilizar en los enlaces de parámetros que utiliza la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para obtener más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  Los nombres de variables definidas por el usuario y variables del sistema distinguen mayúsculas y minúsculas.  
@@ -75,7 +75,7 @@ ms.locfileid: "47785023"
   
  Hay disponible un conjunto diferente de variables del sistema para diferentes tipos de contenedor. Para obtener más información sobre las variables del sistema usadas por paquetes y sus elementos, vea [System Variables](../integration-services/system-variables.md).  
   
- Para obtener más información sobre escenarios de uso real para variables, vea [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Para obtener más información sobre escenarios de uso real para variables, vea [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="properties-of-variables"></a>Propiedades de las variables  
  Puede configurar variables definidas por el usuario estableciendo las siguientes propiedades en la ventana **Variables** o en la ventana **Propiedades** . Algunas propiedades solo están disponibles en la ventana Propiedades.  
@@ -151,15 +151,15 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
 ## <a name="scenarios-for-using-variables"></a>Escenarios de utilización de variables  
  Las variables se usan de muchas formas distintas en los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Es probable que observe que el desarrollo de un paquete no avanza mucho antes de que tenga que agregar al paquete una variable definida por el usuario para lograr la flexibilidad y facilidad de uso que requiere la solución. Según el escenario de que se trate, las variables del sistema también se usan a menudo.  
   
- **Expresiones de propiedad** Use variables para proporcionar valores en las expresiones de propiedad que definen las propiedades de los paquetes y los objetos de paquete. Por ejemplo, la expresión `SELECT * FROM @varTableName` contiene la variable `varTableName` , que actualiza la instrucción SQL ejecutada por la tarea Ejecutar SQL. La expresión `DATEPART("d", GETDATE()) == 1? @[User::varPackageFirst]:@[User::varPackageOther]`actualiza el paquete ejecutado por la tarea Ejecutar paquete, mediante la ejecución del paquete especificado en la variable `varPackageFirst` el primer día de cada mes y la ejecución del paquete especificado en la variable `varPackageOther` los demás días. Para obtener más información, vea [Usar expresiones de propiedad en paquetes](../integration-services/expressions/use-property-expressions-in-packages.md).  
+ **Expresiones de propiedad** Use variables para proporcionar valores en las expresiones de propiedad que definen las propiedades de los paquetes y los objetos de paquete. Por ejemplo, la expresión `SELECT * FROM @varTableName` contiene la variable `varTableName` , que actualiza la instrucción SQL ejecutada por la tarea Ejecutar SQL. La expresión `DATEPART("d", GETDATE()) == 1? @[User::varPackageFirst]:@[User::varPackageOther]`actualiza el paquete ejecutado por la tarea Ejecutar paquete, mediante la ejecución del paquete especificado en la variable `varPackageFirst` el primer día de cada mes y la ejecución del paquete especificado en la variable `varPackageOther` los demás días. Para más información, vea [Usar expresiones de propiedad en paquetes](../integration-services/expressions/use-property-expressions-in-packages.md).  
   
  **Expresiones de flujo de datos** Use variables para proporcionar los valores de las expresiones utilizadas por las transformaciones Columna derivada y División condicional para llenar columnas o dirigir filas de datos a distintas salidas de transformación. Por ejemplo, la expresión `@varSalutation + LastName`concatena el valor de la variable `VarSalutation` y el de la columna `LastName` . La expresión `Income < @HighIncome`dirige a un resultado las filas de datos cuyo valor de la columna `Income` es menor que el valor de la variable `HighIncome` . Para obtener más información, vea [Transformación Columna derivada](../integration-services/data-flow/transformations/derived-column-transformation.md), [Transformación División condicional](../integration-services/data-flow/transformations/conditional-split-transformation.md) y [Expresiones de Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Expresiones de restricción de precedencia** Se deben proporcionar valores para su uso en restricciones de precedencia para determinar si se ejecuta el ejecutable restringido. Las expresiones se pueden usar con un resultado de la ejecución (satisfactoria, errónea, terminada), o en lugar de un resultado de la ejecución. Por ejemplo, si la expresión `@varMax > @varMin`se evalúa como **true**, se ejecuta el ejecutable. Para obtener más información, vea [Agregar expresiones a las restricciones de precedencia](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+ **Expresiones de restricción de precedencia** Se deben proporcionar valores para su uso en restricciones de precedencia para determinar si se ejecuta el ejecutable restringido. Las expresiones se pueden usar con un resultado de la ejecución (satisfactoria, errónea, terminada), o en lugar de un resultado de la ejecución. Por ejemplo, si la expresión `@varMax > @varMin`se evalúa como **true**, se ejecuta el ejecutable. Para obtener más información, vea [Agregar expresiones a las restricciones de precedencia](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
- **Parámetros y códigos de retorno** Se deben proporcionar valores para los parámetros de entrada, o almacenar los valores de los parámetros de salida y los códigos de retorno. Para ello, se asignan las variables a los parámetros y códigos de retorno. Por ejemplo, si se establece la variable `varProductId` en 23 y se ejecuta la instrucción SQL `SELECT * from Production.Product WHERE ProductID = ?`, la consulta recupera el producto cuyo `ProductID` sea 23. Para obtener más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Parámetros y códigos de retorno** Se deben proporcionar valores para los parámetros de entrada, o almacenar los valores de los parámetros de salida y los códigos de retorno. Para ello, se asignan las variables a los parámetros y códigos de retorno. Por ejemplo, si se establece la variable `varProductId` en 23 y se ejecuta la instrucción SQL `SELECT * from Production.Product WHERE ProductID = ?`, la consulta recupera el producto cuyo `ProductID` sea 23. Para obtener más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
- **Expresiones del bucle For** Se deben proporcionar valores para su uso en las expresiones de inicialización, evaluación y asignación del bucle For. Por ejemplo, si la variable `varCount` es 2 y `varMaxCount` es 10, la expresión de inicialización es `@varCount`, la expresión de evaluación es  `@varCount < @varMaxCount`y la expresión de asignación es `@varCount =@varCount +1`, el bucle se repite 8 veces. Para más información, consulte [For Loop Container](../integration-services/control-flow/for-loop-container.md).  
+ **Expresiones del bucle For** Se deben proporcionar valores para su uso en las expresiones de inicialización, evaluación y asignación del bucle For. Por ejemplo, si la variable `varCount` es 2 y `varMaxCount` es 10, la expresión de inicialización es `@varCount`, la expresión de evaluación es  `@varCount < @varMaxCount`y la expresión de asignación es `@varCount =@varCount +1`, el bucle se repite 8 veces. Para más información, vea [Contenedor de bucles For](../integration-services/control-flow/for-loop-container.md).  
   
  **Configuraciones de variables de paquete primario** Los valores de los paquetes primarios se deben pasar a los paquetes secundarios. Los paquetes secundarios pueden tener acceso a las variables del paquete primario utilizando configuraciones de variables de paquete primario. Por ejemplo, si el paquete secundario debe usar los mismos datos que el paquete primario, el secundario puede definir una configuración de variables de paquete primario que especifique una variable establecida por la función GETDATE en el paquete primario. Para obtener más información, consulte [Execute Package Task](../integration-services/control-flow/execute-package-task.md) y [Package Configurations](../integration-services/packages/package-configurations.md).  
   
@@ -185,7 +185,7 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
   
 6.  Opcionalmente, haga clic en el icono **Opciones de cuadrícula** , seleccione las columnas adicionales que desee mostrar en el cuadro de diálogo **Opciones de cuadrícula de variables** y haga clic en **Aceptar**.  
   
-7.  O bien, establezca las propiedades de una variable. Para obtener más información, vea [Establecer las propiedades de una variable definida por el usuario](http://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  O bien, establezca las propiedades de una variable. Para obtener más información, vea [Establecer las propiedades de una variable definida por el usuario](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
   
 8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 

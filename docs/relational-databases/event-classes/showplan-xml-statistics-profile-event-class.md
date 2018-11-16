@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4be2b5d0c7d1beacd7c13c1fc6cf57e02fc0113
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf7d56b973c08f88bc785e5d5ef2d45ea0260ac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661523"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658754"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47661523"
   
  La clase de eventos Showplan XML Statistics Profile muestra datos completos de tiempo de compilación, por lo que los seguimientos que contienen esta clase de eventos pueden producir una importante sobrecarga en el rendimiento. Para minimizar la sobrecarga, limite el uso de esta clase de evento a los seguimientos que supervisen problemas específicos durante periodos breves.  
   
- Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740), o como parte de su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740), o como parte de su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan XML Statistics Profile  
   

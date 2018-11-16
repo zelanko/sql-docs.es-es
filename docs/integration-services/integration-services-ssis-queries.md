@@ -18,12 +18,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689523"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638742"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas de Integration Services (SSIS)
   La tarea Ejecutar SQL, el origen de OLE DB, el destino de OLE DB y la transformación Búsqueda pueden utilizar consultas de SQL. En la tarea Ejecutar SQL, las instrucciones SQL pueden crear, actualizar y eliminar datos y objetos de bases de datos, ejecutar procedimientos almacenados y ejecutar instrucciones SELECT. En el origen de OLE DB y la transformación Búsqueda, las instrucciones SQL son normalmente instrucciones SELECT o EXEC. Normalmente, éstas últimas ejecutan procedimientos almacenados que devuelven conjuntos de resultados.  
@@ -58,13 +58,13 @@ Puede proporcionar la instrucción SQL de las maneras siguientes:
   
  También puede proporcionar entradas directas escribiendo la consulta en el cuadro de diálogo de la tarea o del componente de flujo de datos, o bien en la ventana Propiedades.  
   
- Para más información, consulte [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ Para más información, consulte [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
   
 ## <a name="sql-in-files"></a>SQL en archivos  
  La instrucción SQL para la tarea Ejecutar SQL también puede residir en un archivo independiente. Por ejemplo, puede escribir una consulta utilizando herramientas como el Editor de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], guardarla en un archivo y después, leer la consulta del archivo al ejecutar un paquete. El archivo solo puede contener las instrucciones SQL que se van a ejecutar y comentarios. Para utilizar una instrucción SQL almacenada en un archivo, debe proporcionar una conexión de archivos que especifique el nombre y la ubicación del archivo. Para más información, consulte [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL en variables  
- Si el origen de la instrucción SQL en la tarea Ejecutar SQL es una variable, debe proporcionar el nombre de la variable que contiene la consulta. La propiedad Value de la variable contiene el texto de la consulta. La propiedad ValueType de la variable se establece en un tipo de datos de cadena y luego se escribe o se copia la instrucción SQL en la propiedad Value. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Si el origen de la instrucción SQL en la tarea Ejecutar SQL es una variable, debe proporcionar el nombre de la variable que contiene la consulta. La propiedad Value de la variable contiene el texto de la consulta. La propiedad ValueType de la variable se establece en un tipo de datos de cadena y luego se escribe o se copia la instrucción SQL en la propiedad Value. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
 
 ## <a name="query-builder-dialog-box"></a>Generador de consultas, cuadro de diálogo
 Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta para su uso en la tarea Ejecutar SQL, el origen de OLE DB y el destino de OLE DB, y la transformación de búsqueda.  
@@ -83,7 +83,7 @@ Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta
   
  Para obtener más información sobre el lenguaje Transact-SQL y su sintaxis, vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
- Asimismo, puede utilizar variables en una consulta para proporcionar valores a un parámetro de entrada, capturar valores de parámetros de salida y almacenar códigos de retorno. Para obtener más información sobre cómo usar variables en las consultas que usan los paquetes, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md), [Origen de OLE DB](../integration-services/data-flow/ole-db-source.md)y [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Para obtener más información sobre cómo usar variables en la tarea Ejecutar SQL, vea [Parámetros y códigos de retorno en la tarea Ejecutar SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) y [Conjuntos de resultados en la tarea Ejecutar SQL](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ Asimismo, puede utilizar variables en una consulta para proporcionar valores a un parámetro de entrada, capturar valores de parámetros de salida y almacenar códigos de retorno. Para obtener más información sobre cómo usar variables en las consultas que usan los paquetes, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md), [Origen de OLE DB](../integration-services/data-flow/ole-db-source.md)y [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Para obtener más información sobre cómo usar variables en la tarea Ejecutar SQL, vea [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) y [Conjuntos de resultados en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
   
  Las transformaciones de búsqueda Aproximada y Búsqueda también pueden utilizar variables con parámetros y códigos de retorno. Además, la información relativa al origen OLE DB se puede aplicar a estas dos transformaciones.  
   

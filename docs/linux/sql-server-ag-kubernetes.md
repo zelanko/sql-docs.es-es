@@ -10,35 +10,35 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658585"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Grupos de disponibilidad de Always On para los contenedores de SQL Server
 
-SQL Server 2019 admite grupos de disponibilidad en los contenedores de un Kubernetes. Para los grupos de disponibilidad, implemente el servidor SQL Server [Kubernetes operador](http://coreos.com/blog/introducing-operators.html) al clúster de Kubernetes. El operador ayuda a paquete, implementar y administrar el grupo de disponibilidad en un clúster.
+SQL Server 2019 admite grupos de disponibilidad en los contenedores de un Kubernetes. Para los grupos de disponibilidad, implemente el servidor SQL Server [Kubernetes operador](https://coreos.com/blog/introducing-operators.html) al clúster de Kubernetes. El operador ayuda a paquete, implementar y administrar el grupo de disponibilidad en un clúster.
 
 ![Grupo de disponibilidad en el contenedor de Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 En la imagen anterior, los clústeres de cuatro nodos kubernetes hospedan un grupo de disponibilidad con tres réplicas. La solución incluye los siguientes componentes:
 
-* Un Kubernetes [ *implementación*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). La implementación incluye el operador y un mapa de la configuración. Proporcionan la imagen de contenedor, software y las instrucciones necesarias para implementar instancias de SQL Server para el grupo de disponibilidad.
+* Un Kubernetes [ *implementación*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). La implementación incluye el operador y un mapa de la configuración. Proporcionan la imagen de contenedor, software y las instrucciones necesarias para implementar instancias de SQL Server para el grupo de disponibilidad.
 
-* Tres nodos, cada hospeda un [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Contiene el StatefulSet un [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Cada pod contiene:
+* Tres nodos, cada hospeda un [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Contiene el StatefulSet un [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Cada pod contiene:
   * Un contenedor de SQL Server ejecuta una instancia de SQL Server.
   * Un agente de grupo de disponibilidad. 
 
-* Dos [ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) relacionadas con el grupo de disponibilidad. El ConfigMaps proporcionan información acerca de:
+* Dos [ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) relacionadas con el grupo de disponibilidad. El ConfigMaps proporcionan información acerca de:
   * La implementación del operador.
   * Grupo de disponibilidad.
 
- * [*Volúmenes persistentes* ](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) son fragmentos de almacenamiento. Un *notificación de volumen persistente* (PVC) es una solicitud de almacenamiento por el usuario. Cada contenedor está afiliado a un circuito virtual permanente para el almacenamiento de datos y de registro. En Azure Kubernetes Service (AKS), [crear una notificación de volumen persistente](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) para aprovisionar automáticamente el almacenamiento basado en una clase de almacenamiento.
+ * [*Volúmenes persistentes* ](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) son fragmentos de almacenamiento. Un *notificación de volumen persistente* (PVC) es una solicitud de almacenamiento por el usuario. Cada contenedor está afiliado a un circuito virtual permanente para el almacenamiento de datos y de registro. En Azure Kubernetes Service (AKS), [crear una notificación de volumen persistente](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) para aprovisionar automáticamente el almacenamiento basado en una clase de almacenamiento.
 
 
-Además, el clúster almacena [ *secretos* ](http://kubernetes.io/docs/concepts/configuration/secret/) para las contraseñas, certificados, claves y otra información confidencial.
+Además, el clúster almacena [ *secretos* ](https://kubernetes.io/docs/concepts/configuration/secret/) para las contraseñas, certificados, claves y otra información confidencial.
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>Implementar el grupo de disponibilidad en Kubernetes
 
@@ -74,11 +74,11 @@ El código para el operador, el supervisor de alta disponibilidad y SQL Server s
 
 * `mssql-operator`
 
-    Este proceso se implementa como una implementación independiente de Kubernetes. Registra el [recurso personalizado de Kubernetes](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) llamado `SqlServer` (sqlservers.mssql.microsoft.com). A continuación, escucha estos recursos que se va a crear o actualizar en el clúster de Kubernetes. Para cada evento de este tipo, crea o actualiza los recursos de Kubernetes para la instancia correspondiente (por ejemplo el StatefulSet o `mssql-server-k8s-init-sql` trabajo).
+    Este proceso se implementa como una implementación independiente de Kubernetes. Registra el [recurso personalizado de Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) llamado `SqlServer` (sqlservers.mssql.microsoft.com). A continuación, escucha estos recursos que se va a crear o actualizar en el clúster de Kubernetes. Para cada evento de este tipo, crea o actualiza los recursos de Kubernetes para la instancia correspondiente (por ejemplo el StatefulSet o `mssql-server-k8s-init-sql` trabajo).
 
 * `mssql-server-k8s-health-agent`
 
-    Este servidor web sirve Kubernetes [garantizan sondeos](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) para determinar el estado de una instancia de SQL Server. Supervisa el estado de la instancia de SQL Server local mediante una llamada a `sp_server_diagnostics` y comparar los resultados con la directiva de supervisión.
+    Este servidor web sirve Kubernetes [garantizan sondeos](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) para determinar el estado de una instancia de SQL Server. Supervisa el estado de la instancia de SQL Server local mediante una llamada a `sp_server_diagnostics` y comparar los resultados con la directiva de supervisión.
 
 * `mssql-ha-supervisor`
 
@@ -92,7 +92,7 @@ El código para el operador, el supervisor de alta disponibilidad y SQL Server s
 
 * `mssql-server-k8s-init-sql`
   
-    Este Kubernetes [trabajo](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) se aplica una configuración de estado deseado para una instancia de SQL Server. Cada vez que se crea o actualiza un recurso de SQL Server, se crea el trabajo por el operador. Se asegura de que la instancia de SQL Server de destino correspondiente al recurso personalizado tiene la configuración deseada que se describe en el recurso.
+    Este Kubernetes [trabajo](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) se aplica una configuración de estado deseado para una instancia de SQL Server. Cada vez que se crea o actualiza un recurso de SQL Server, se crea el trabajo por el operador. Se asegura de que la instancia de SQL Server de destino correspondiente al recurso personalizado tiene la configuración deseada que se describe en el recurso.
 
     Por ejemplo, si cualquiera de los valores siguientes son necesario, se completa ellos:
   * Actualizar la contraseña de SA

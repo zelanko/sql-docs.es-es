@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47441759"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657084"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEF
 ##  <a name="NetApp"></a> Mediante una aplicación de .Net Framework  
  **Para exportar una DAC mediante el método Export() en una aplicación .Net Framework**  
   
- Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575).  
+ Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia que contiene la DAC que se va a exportar.  
   

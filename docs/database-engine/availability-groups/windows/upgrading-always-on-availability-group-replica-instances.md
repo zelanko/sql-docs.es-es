@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cff08e85cb8235567dd2ce7e8f8294f465892b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c3faf4bb4b9f2a180bc09c91591ce6f6a9c3f15
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838873"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605475"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "47838873"
 Si actualiza una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda un grupo de disponibilidad Always On (AG) a una nueva versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o bien si la instala en una nueva versión acumulativa o un nuevo Service Pack de Windows, podrá reducir el tiempo de inactividad de la réplica principal a solo una conmutación por error manual mediante una actualización gradual (o dos conmutaciones por error manuales en caso de efectuarla por recuperación en la base de datos principal original). Durante el proceso de actualización, no habrá una réplica secundaria disponible para la conmutación por error o para operaciones de solo lectura. Después de la actualización, puede pasar algún tiempo antes de que la réplica secundaria se ponga al día con el nodo de la réplica principal, según el volumen de actividad del nodo de la réplica principal, así que debe esperar un tráfico de red elevado. Además, debe tener en cuenta que, después de llevar a cabo la conmutación por error inicial en una réplica secundaria en la que se ejecuta una versión más reciente de SQL Server, las bases de datos de ese grupo de disponibilidad se ejecutarán en un proceso de actualización a la versión más reciente. Durante este proceso, no habrá disponible ninguna réplica legible para ninguna de estas bases de datos. El tiempo de inactividad después de la conmutación por error inicial dependerá del número de bases de datos que haya en el grupo de disponibilidad. Si tiene pensado efectuar la conmutación por recuperación en la base de datos principal original, este paso no se repetirá durante dicho proceso.
   
 >[!NOTE]  
->En este artículo nos limitamos a explicar el proceso de actualización de SQL Server. No trataremos la actualización del sistema operativo que contiene el clúster de conmutación por error de Windows Server (WSFC). No se puede actualizar el sistema operativo Windows que hospeda el clúster de conmutación por error en sistemas operativos anteriores a Windows Server 2012 R2. Para actualizar un nodo de clúster que se ejecute en Windows Server 2012 R2, consulte [Cluster Operating System Rolling Upgrade](http://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)(Actualización gradual del sistema operativo de clústeres).  
+>En este artículo nos limitamos a explicar el proceso de actualización de SQL Server. No trataremos la actualización del sistema operativo que contiene el clúster de conmutación por error de Windows Server (WSFC). No se puede actualizar el sistema operativo Windows que hospeda el clúster de conmutación por error en sistemas operativos anteriores a Windows Server 2012 R2. Para actualizar un nodo de clúster que se ejecute en Windows Server 2012 R2, consulte [Cluster Operating System Rolling Upgrade](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)(Actualización gradual del sistema operativo de clústeres).  
   
 ## <a name="prerequisites"></a>Prerequisites  
 Antes de empezar, revise la siguiente información importante:  
@@ -245,7 +245,7 @@ Dependiendo de la actualización que se aplique, es posible que sea necesario re
 
 1. Actualice la instancia que estaba originalmente en la réplica principal.
 
-Para obtener información general, consulte [CDC functionality may break after upgrading to the latest CU](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/) (Es posible que la funcionalidad CDC no funcione después de actualizar a la última CU).
+Para obtener información general, consulte [CDC functionality may break after upgrading to the latest CU](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/) (Es posible que la funcionalidad CDC no funcione después de actualizar a la última CU).
 
   
 ## <a name="see-also"></a>Ver también  

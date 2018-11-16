@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 helpviewer_keywords:
 - XQuery
@@ -18,19 +17,19 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119533"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672264"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Referencia del lenguaje XQuery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] admite un subconjunto del lenguaje XQuery que se usa para consultar el **xml** tipo de datos. Esta implementación de XQuery se basa en el borrador de trabajo de XQuery de julio de 2004. El lenguaje está siendo desarrollado por el World Wide Web Consortium (W3C), con la participación de los principales proveedores de bases de datos, incluido Microsoft. Dado que las especificaciones del W3C pueden someterse a futuras revisiones antes de convertirse en recomendaciones del W3C, esta implementación puede ser distinta de la recomendación final. En este tema se define de forma general la semántica y la sintaxis del subconjunto de XQuery admitido en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Para obtener más información, consulte el [especificación del lenguaje W3C XQuery 1.0](http://go.microsoft.com/fwlink/?LinkId=48846).  
+ Para obtener más información, consulte el [especificación del lenguaje W3C XQuery 1.0](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
  XQuery es un lenguaje que permite realizar consultas en datos XML estructurados o semiestructurados. Con el **xml** tipo de datos de soporte técnico proporcionado en el [!INCLUDE[ssDE](../includes/ssde-md.md)], documentos se pueden almacenar en una base de datos y, a continuación, consultarse mediante XQuery.  
   
@@ -47,7 +46,7 @@ SELECT @x.query('/ROOT/a')
  En el ejemplo siguiente, la consulta se especifica en la columna Instructions de **xml** tipo en la tabla ProductModel en la base de datos AdventureWorks.  
   
 ```sql
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   
 FROM  Production.ProductModel  
@@ -67,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  La organización de esta sección se basa en las especificaciones del borrador de trabajo de XQuery del World Wide Web Consortium (W3C). Algunos de los diagramas que se ofrecen en esta sección se han tomado de esas especificaciones. En esta sección, se compara la implementación de Microsoft XQuery con las especificaciones del W3C, se describe en qué se diferencia Microsoft XQuery del W3C y se indican las características del W3C que no se admiten. La especificación W3C está disponible en [ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846).  
+>  La organización de esta sección se basa en las especificaciones del borrador de trabajo de XQuery del World Wide Web Consortium (W3C). Algunos de los diagramas que se ofrecen en esta sección se han tomado de esas especificaciones. En esta sección, se compara la implementación de Microsoft XQuery con las especificaciones del W3C, se describe en qué se diferencia Microsoft XQuery del W3C y se indican las características del W3C que no se admiten. La especificación W3C está disponible en [ https://www.w3.org/TR/2004/WD-xquery-20040723 ](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
 ## <a name="in-this-section"></a>En esta sección  
   

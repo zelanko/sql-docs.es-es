@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7a00dbd30f8cee08cb1667627c4b20c64eaef79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799113"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641262"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -233,7 +233,7 @@ ms.locfileid: "47799113"
   
     -   Para el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], utilice un administrador de conexiones de archivos.  
   
-    -   Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice un administrador de conexiones OLE DB. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+    -   Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice un administrador de conexiones OLE DB. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
     -   Para el registro de eventos de Windows no haga nada. [!INCLUDE[ssIS](../../includes/ssis-md.md)] crea automáticamente el registro.  
   
@@ -679,4 +679,4 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 -   [Eventos registrados por un paquete de Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Herramienta DTLoggedExec para el registro completo y detallado (proyecto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Herramienta DTLoggedExec para el registro completo y detallado (proyecto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  

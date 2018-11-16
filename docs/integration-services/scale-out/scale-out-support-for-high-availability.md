@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53fc11dc3735f1a27401164044c452a038c9c0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594774"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638152"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -29,7 +29,7 @@ Como alternativa, la alta disponibilidad en el lado del servicio principal de es
 Para configurar la alta disponibilidad en el lado del servicio principal de escalabilidad horizontal con AlwaysOn para el catálogo de SSIS, haga lo siguiente:
 
 ## <a name="1-prerequisites"></a>1. Prerequisites
-Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
+Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Instalación del Servicio principal de escalabilidad horizontal en el nodo principal
 Instale los servicios de motor de base de datos de SQL Server, Integration Services y el Servicio principal de escalabilidad horizontal en el nodo principal del servicio. 

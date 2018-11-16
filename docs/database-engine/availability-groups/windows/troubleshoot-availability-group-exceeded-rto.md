@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724223"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606875"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solución de problemas: el grupo de disponibilidad superó el RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Después de una conmutación por error automática o manual planeada sin pérdida de datos en un grupo de disponibilidad, es posible que el tiempo de conmutación por error supere su objetivo de tiempo de recuperación (RTO). También puede ser que al estimar el tiempo de conmutación por error de una réplica secundaria de confirmación sincrónica (por ejemplo, un asociado de conmutación automática por error) usando el método que se describe en [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisión del rendimiento de grupos de disponibilidad Always On), descubra que supera el RTO.  
   
- Si la conmutación por error automática todavía no se ha completado, consulte [Solucionar problemas de conmutación por error automática en entornos de SQL Server 2012 Always On](http://support.microsoft.com/kb/2833707).  
+ Si la conmutación por error automática todavía no se ha completado, consulte [Solucionar problemas de conmutación por error automática en entornos de SQL Server 2012 Always On](https://support.microsoft.com/kb/2833707).  
   
  En las siguientes secciones se describen las causas más habituales de las conmutaciones por error de tiempo que superan el RTO.  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  Si realmente el subproceso de la fase de puesta al día se retrasa, debe investigar la causa principal de la degradación del rendimiento en la réplica secundaria. Si se produce una contención de E/S en la carga de trabajo de los informes, puede usar [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar, hasta cierto punto, los ciclos de CPU que usa la carga de trabajo de informes para controlar indirectamente los ciclos de E/S realizados. Por ejemplo, si la carga de trabajo de los informes está consumiendo un 10 % de la CPU, pero la carga de trabajo está enlazada a E/S, puede utilizar Resource Governor para limitar el uso de recursos de la CPU al 5 % y regular así la carga de trabajo de lectura. De esta forma, se reduce el impacto en la E/S.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

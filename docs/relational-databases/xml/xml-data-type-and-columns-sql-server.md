@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761959"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662511"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipo de datos XML y columnas (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761959"
   
 -   Almacenamiento nativo como tipo de datos **xml** .  
   
-     Los datos se almacenan en una representación interna que conserva el contenido XML de los mismos. Esta representación interna incluye información sobre la jerarquía de inclusión, el orden de los documentos y los valores de los elementos y los atributos. En concreto, se conserva el contenido InfoSet de los datos XML. Para obtener más información sobre InfoSet, visite [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). El contenido del InfoSet puede no ser una copia idéntica del texto XML, porque no se retiene la información siguiente: espacios en blanco no significativos, orden de los atributos, prefijos de los espacios de nombres y declaración XML.  
+     Los datos se almacenan en una representación interna que conserva el contenido XML de los mismos. Esta representación interna incluye información sobre la jerarquía de inclusión, el orden de los documentos y los valores de los elementos y los atributos. En concreto, se conserva el contenido InfoSet de los datos XML. Para obtener más información sobre InfoSet, visite [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). El contenido del InfoSet puede no ser una copia idéntica del texto XML, porque no se retiene la información siguiente: espacios en blanco no significativos, orden de los atributos, prefijos de los espacios de nombres y declaración XML.  
   
-     En el caso del tipo de datos **xml** con tipo, un tipo de datos **xml** enlazado a esquemas XML, el contenido InfoSet de validación de esquema posterior (PSVI) agrega información del tipo a InfoSet y se codifica en la representación interna. De este modo, se mejora considerablemente la velocidad de análisis. Para obtener más información, vea las especificaciones del esquema XML de W3C en [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) y [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     En el caso del tipo de datos **xml** con tipo, un tipo de datos **xml** enlazado a esquemas XML, el contenido InfoSet de validación de esquema posterior (PSVI) agrega información del tipo a InfoSet y se codifica en la representación interna. De este modo, se mejora considerablemente la velocidad de análisis. Para obtener más información, vea las especificaciones del esquema XML de W3C en [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) y [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Asignar entre almacenamiento XML y relacional  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761959"
   
 -   Desea efectuar una carga masiva de datos XML y distribuirlos en las tablas subyacentes mediante la vista XML.  
   
- Algunos ejemplos son datos relacionales expuestos como XML para el intercambio de datos y servicios web, y datos XML con esquema fijo. Para obtener más información, vea la biblioteca en línea [MSDN Library](http://go.microsoft.com/fwlink/?linkid=31174).  
+ Algunos ejemplos son datos relacionales expuestos como XML para el intercambio de datos y servicios web, y datos XML con esquema fijo. Para obtener más información, vea la biblioteca en línea [MSDN Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Ejemplo: modelar datos utilizando un esquema XML anotado (AXSD)  
  A modo de ilustración, suponga que tiene datos relacionales como clientes, pedidos y artículos de línea, que desea tratar como XML. Defina una vista XML utilizando AXSD sobre los datos relacionales. La vista XML permite efectuar una carga masiva de datos XML en las tablas así como consultar y actualizar los datos relacionales utilizando dicha vista. Este modelo es útil si hay que intercambiar datos que contienen marcado XML con otras aplicaciones, mientras las aplicaciones SQL se ejecutan ininterrumpidamente.  

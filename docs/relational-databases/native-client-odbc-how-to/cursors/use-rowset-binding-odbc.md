@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1277b565ccb60aaa7972f98ec731675b5a9bb7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b755c59a23a9b937c1de96236795cd1e01052842
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813483"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658587"
 ---
 # <a name="use-rowset-binding-odbc"></a>Usar enlace de conjuntos de filas (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47813483"
   
     -   De modo opcional, asigne una matriz de R (o más) búferes de columna para almacenar las longitudes de los datos.  
   
-    -   Llame a [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) para enlazar los valores de datos y matrices de longitud de datos de la columna a la columna del conjunto de filas.  
+    -   Llame a [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) para enlazar las matrices de valores de datos y de longitud de datos de columna a la columna del conjunto de filas.  
   
 2.  Llame a [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para establecer los atributos siguientes:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47813483"
   
 3.  Ejecute la instrucción.  
   
-4.  Cada llamada a [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) o [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera R filas y transfiere los datos a las columnas enlazadas.  
+4.  Cada llamada a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o a [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera R filas y transfiere los datos a las columnas enlazadas.  
   
 ### <a name="to-use-row-wise-binding"></a>Para utilizar el enlace de modo de fila  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47813483"
   
     -   Establezca SQL_ATTR_PARAMS_STATUS_PTR para que señale a una matriz[R] de variables SQLUSSMALLINT que incluya indicadores de estado de filas.  
   
-3.  Para cada columna del conjunto de resultados, llame a [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) para el valor de datos y puntero de longitud de datos de la columna señalen a sus variables en el primer elemento de la matriz de estructuras asignada en el paso 1.  
+3.  Para cada columna del conjunto de resultados, llame a [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) para que el valor de datos y puntero de longitud de datos de la columna señalen a sus variables en el primer elemento de la matriz de estructuras asignada en el paso 1.  
   
 4.  Ejecute la instrucción.  
   
-5.  Cada llamada a [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) o [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera R filas y transfiere los datos a las columnas enlazadas.  
+5.  Cada llamada a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o a [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) recupera R filas y transfiere los datos a las columnas enlazadas.  
   
 ## <a name="see-also"></a>Vea también  
  [Uso de temas de procedimientos de los cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   

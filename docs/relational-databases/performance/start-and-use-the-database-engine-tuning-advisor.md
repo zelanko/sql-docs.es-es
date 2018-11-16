@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846603"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661134"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ Para más información, vea [Optimización de la base de datos mediante carga de
 >  No se admite la detección del Asistente para la optimización de motor de base de datos. Si hace clic en el botón de la barra de herramientas **Iniciar análisis** después de hacer clic en el botón **Detener análisis** o **Detener análisis (con recomendaciones)** , el Asistente para la optimización de motor de base de datos inicia una sesión de optimización nueva.  
   
 ###  <a name="dta"></a> Usar la utilidad dta  
- La [utilidad dta](../../tools/dta/dta-utility.md) proporciona un archivo ejecutable en el símbolo del sistema que puede usar para optimizar bases de datos. Esto permite usar la funcionalidad del Asistente para la optimización de motor de base de datos en archivos por lotes y scripts. La utilidad **dta** usa las entradas de caché del plan, los archivos de seguimiento, las tablas de seguimiento y los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabajo. También usa la entrada XML que se ajusta al esquema XML del Asistente para la optimización de motor de base de datos, que está disponible en este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100).  
+ La [utilidad dta](../../tools/dta/dta-utility.md) proporciona un archivo ejecutable en el símbolo del sistema que puede usar para optimizar bases de datos. Esto permite usar la funcionalidad del Asistente para la optimización de motor de base de datos en archivos por lotes y scripts. La utilidad **dta** usa las entradas de caché del plan, los archivos de seguimiento, las tablas de seguimiento y los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabajo. También usa la entrada XML que se ajusta al esquema XML del Asistente para la optimización de motor de base de datos, que está disponible en este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Tenga en cuenta lo siguiente antes de optimizar una carga de trabajo con la utilidad **dta** :  
   
@@ -313,7 +313,7 @@ Para más información, vea [Optimización de la base de datos mediante carga de
   
  C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- El esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] también se encuentra disponible en línea en este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ El esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] también se encuentra disponible en línea en este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  Esta dirección URL le lleva a una página en la que encontrará muchos esquemas XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Desplácese por la página hasta que llegue a la fila del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

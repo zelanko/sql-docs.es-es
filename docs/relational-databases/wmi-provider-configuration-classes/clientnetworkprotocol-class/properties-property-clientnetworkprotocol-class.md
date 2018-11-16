@@ -18,16 +18,16 @@ ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6497305d0a0d9a303df0f46e74914b3467243cdf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: bdf4da36e3329ed5da4a820494ef16e999eed3d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217693"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672494"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Propiedad Properties (clase ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtiene las propiedades asociadas al protocolo de red del cliente actual especificado por [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx).  
+  Obtiene las propiedades asociadas al protocolo de red del cliente actual especificado por [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,6 +46,6 @@ object.Properties [= value]
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar bibliotecas de red y protocolos de red de cliente](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar bibliotecas de red y protocolos de red de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a99a67a8c6ff7a1d774ae5446e7b836908be8f43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611403"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639902"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tarea Consulta de minería de datos ejecuta consultas de predicción basadas en modelos de minería de datos integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La consulta de predicción crea una predicción para datos nuevos a partir de modelos de minería de datos. Por ejemplo, una consulta de predicción puede predecir cuántos barcos de vela es probable vender durante los meses de verano, así como generar una lista de clientes que podrían estar interesados en comprar uno.  
@@ -58,7 +58,7 @@ ms.locfileid: "47611403"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>Configuración mediante programación de la tarea Consulta de minería de datos  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en uno de los temas siguientes:  

@@ -18,12 +18,12 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 906d78e42c48443b26d5d600e168dff92a119bd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 977cf906b46ae792bc979c5b6b844dbf6368b40e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667883"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640512"
 ---
 # <a name="recordset-destination"></a>destino de conjunto de registros
   El destino de conjunto de registros crea y llena un conjunto de registros ADO almacenado en la memoria. La forma del conjunto de registros se define según la entrada al destino de conjunto de registros en el tiempo de diseño.  
@@ -39,7 +39,7 @@ ms.locfileid: "47667883"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propiedades comunes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del destino de conjunto de registros](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   

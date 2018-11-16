@@ -13,12 +13,12 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: faed832ea0ed4fa1dcc52232a36a22a6f848f5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6e2883714c538bff1e2ff2a93ace7b71fd5d02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789373"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604195"
 ---
 # <a name="server-properties---connections-page"></a>Propiedades del servidor (página Conexiones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47789373"
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
 ## <a name="see-also"></a>Ver también  
- [Opciones &#40;Ejecución de la consulta/SQL Server/página Avanzadas&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [Opciones &#40;Ejecución de la consulta/SQL Server/página Avanzadas&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

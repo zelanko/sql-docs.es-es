@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718273"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639072"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye herramientas y asistentes para facilitar la implementación de paquetes del equipo de desarrollo en el servidor de producción o en otros equipos.  
@@ -102,7 +102,7 @@ ms.locfileid: "47718273"
   
 -   No puede usar la opción **/ConfigFile** para cargar configuraciones que reemplacen las configuraciones que ha especificado en tiempo de diseño.  
   
- Para más información sobre estas opciones y cómo difiere el comportamiento de estas opciones entre [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] y las versiones anteriores, vea [Cambios del comportamiento en las características de Integration Services en SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+ Para más información sobre estas opciones y cómo difiere el comportamiento de estas opciones entre [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] y las versiones anteriores, vea [Cambios del comportamiento en las características de Integration Services en SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 ### <a name="package-configuration-types"></a>Tipos de configuraciones de paquetes  
  En la tabla siguiente se describen los tipos de configuraciones de paquetes.  
@@ -430,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  También puede pasar valores a un paquete secundario configurando la Tarea Ejecutar paquete para asignar variables o parámetros del paquete primario, o parámetros del proyecto, a parámetros del paquete secundario. Para más información, consulte [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
   
- No es necesario crear la variable en el paquete primario antes de crear la configuración de paquete en el paquete secundario. Puede agregar la variable al paquete primario en cualquier momento, pero debe utilizar el nombre exacto de la variable primaria en la configuración del paquete. Sin embargo, antes de que pueda crear una configuración de variable primaria, debe existir una variable en el paquete secundario que la configuración pueda actualizar. Para obtener más información sobre cómo agregar y configurar variables, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+ No es necesario crear la variable en el paquete primario antes de crear la configuración de paquete en el paquete secundario. Puede agregar la variable al paquete primario en cualquier momento, pero debe utilizar el nombre exacto de la variable primaria en la configuración del paquete. Sin embargo, antes de que pueda crear una configuración de variable primaria, debe existir una variable en el paquete secundario que la configuración pueda actualizar. Para obtener más información sobre cómo agregar y configurar variables, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
  El ámbito de la variable del paquete primario que se utiliza en una configuración de variable primaria se puede establecer en la tarea Ejecutar paquete, el contenedor que contiene la tarea o el paquete. Si se definen varias variables con el mismo nombre en un paquete, se utiliza la variable que está más próxima en ámbito de la tarea Ejecutar paquete. El ámbito más cercano a la tarea Ejecutar paquete es la tarea propiamente dicha.  
   

@@ -11,12 +11,12 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 321dc1a912dcc28719c8416be9fa917ab86c49bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7a901a99b8b8bcb485f4db25c98fc67abc8fee6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665255"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639272"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Propiedades personalizadas del destino SQL Server Compact Edition
   El destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
@@ -32,6 +32,6 @@ ms.locfileid: "47665255"
  Para obtener más información, vea [Destino de SQL Server Compact Edition](../../integration-services/data-flow/sql-server-compact-edition-destination.md).  
   
 ## <a name="see-also"></a>Ver también  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

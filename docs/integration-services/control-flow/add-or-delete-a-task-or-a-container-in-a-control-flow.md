@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765753"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640082"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Agregar o eliminar tareas o contenedores en un flujo de control
   Cuando se trabaja en el diseñador de flujo de control, el cuadro de herramientas del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] enumera las tareas que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para generar flujo de control en un paquete. Para obtener más información sobre el cuadro de herramientas, vea [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -96,9 +96,9 @@ Puede establecer la mayoría de las propiedades de tareas y contenedores utiliza
   
 4.  En la superficie de diseño de la pestaña **Flujo de control** , haga clic con el botón derecho en la tarea o en el contenedor y, después, haga clic en **Editar** para abrir el editor de tareas o contenedores correspondiente.  
   
-     Para más información sobre cómo configurar el contenedor de bucles For, vea [Configurar un contenedor de bucles For](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Para más información sobre cómo configurar el contenedor de bucles For, vea [Configurar un contenedor de bucles For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
   
-     Para más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Para más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
     > [!NOTE]  
     >  El contenedor de secuencias no dispone de ningún editor personalizado.  

@@ -17,12 +17,12 @@ ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ba3b3494329be9575ffe237fda309f4a867a8fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f31a1dd3c11fd708e160b84d84f5290d094eb7f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765447"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642032"
 ---
 # <a name="sql-server-compact-edition-destination"></a>Destino de SQL Server Compact Edition
   El destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact escribe datos en bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -43,7 +43,7 @@ ms.locfileid: "47765447"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del destino de SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   

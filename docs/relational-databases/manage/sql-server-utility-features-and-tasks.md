@@ -18,12 +18,12 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47a917fc622bd8be46dd798b9adc787ad6a51e34
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 60099ea8f029f8e1b6687a1d69e12cb76f520c61
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030977"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656565"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Características y tareas de la utilidad de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51030977"
 |Describe cómo cambiar la cuenta de proxy para el conjunto de recopilación de la utilidad en una instancia administrada de SQL Server.|[Cambiar la cuenta de proxy para el conjunto de recopilación de la utilidad en una instancia administrada de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Describe cómo mover un UCP desde una instancia de SQL Server a otra.|[Mover un UCP desde una instancia de SQL Server a otra &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Describe cómo quitar una instancia de UCP.|[Quitar un punto de control de la utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|Describe cómo solucionar problemas de la Utilidad de SQL Server.|[Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|Describe cómo solucionar problemas de la Utilidad de SQL Server.|[Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |Describe cómo solucionar problemas de mantenimiento de recursos de SQL Server.|[Solucionar problemas de estado de recursos de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Vínculos a temas de la Ayuda F1 del Explorador de la utilidad.|[Explorador de Utilidad (Ayuda F1)](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   

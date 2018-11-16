@@ -17,12 +17,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0fa7d262017938578162594257deee2a0e79694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c36cd11c60c3558e6b050de17a517d9feb968d32
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692933"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638633"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformación Limpieza de DQS
   La transformación Limpieza de DQS usa Data Quality Services (DQS) para corregir datos de un origen de datos conectado aplicando reglas aprobadas que se crearon para el origen de datos conectado o un origen de datos similar. Para obtener más información acerca de las reglas de corrección de datos, vea [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Para obtener más información acerca de DQS, vea [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -52,9 +52,9 @@ ms.locfileid: "47692933"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de datos](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de los datos](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
   
--   Artículo sobre la [limpieza de datos complejos con dominios compuestos](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx), en social.technet.microsoft.com.  
+-   Artículo sobre la [limpieza de datos complejos con dominios compuestos](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx), en social.technet.microsoft.com.  
   
 ## <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Cuadro de diálogo Editor de transformación Limpieza de DQS
   Use el cuadro de diálogo **Editor de transformación Limpieza de DQS** para corregir datos con Data Quality Services (DQS). Para más información, consulte [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  

@@ -11,18 +11,18 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b061b3e8c694e9c16c31462149819b8be632d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752103"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663464"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cuando se hace una copia de seguridad en Microsoft Azure Storage, o cuando se restaura del mismo, SQL Server adquiere una concesión infinita para bloquear el acceso exclusivo al blob. Cuando el proceso de copia de seguridad o de restauración se ha completado correctamente, se libera la concesión. Si una copia de seguridad o una restauración dan error, el proceso de copia de seguridad intenta limpiar los blobs no válidos. Sin embargo, si el error de la copia de seguridad se debe a un error de conectividad en la red mantenido o prolongado, es posible que el proceso de copia de seguridad no pueda obtener acceso al blob y este podría quedar huérfano. Esto significa que no se puede escribir en el blob o que el blob no se puede eliminar hasta que no se libera la concesión. En este tema, se describe cómo liberar (interrumpir) la concesión y eliminar el blob. 
   
- Para obtener más información sobre los tipos de concesiones, lea este [artículo](http://go.microsoft.com/fwlink/?LinkId=275664).  
+ Para obtener más información sobre los tipos de concesiones, lea este [artículo](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
  Si se produce un error en la operación de copia de seguridad, se puede obtener un archivo de copia de seguridad no válido. El archivo blob de copia de seguridad también podría tener una concesión activa, impidiendo su eliminación o sobrescritura. Para eliminar o sobrescribir estos blobs, primero se debe liberar (interrumpir) la concesión. Si hay errores de copia de seguridad, se recomienda que limpie las concesiones y elimine los blobs. Además, puede limpiar periódicamente las concesiones y eliminar los blobs como parte de las tareas de administración del almacenamiento.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47752103"
   
 1.  **Identificar blobs con concesiones**: si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los blobs.  También puede usar las propiedades LeaseStats y LeastState para identificar blobs con concesiones. Una vez identificados los blobs, revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
   
-2.  **Interrumpir la concesión**: una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](http://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
+2.  **Interrumpir la concesión**: una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
   
     > [!TIP]  
     >  SQL Server emite un identificador de concesión para establecer acceso exclusivo durante la operación de restauración. El identificador de concesión de restauración es BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  

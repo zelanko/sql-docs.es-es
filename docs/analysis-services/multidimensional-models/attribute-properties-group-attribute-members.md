@@ -1,5 +1,5 @@
 ---
-title: Agrupar miembros de atributos (discretización) | Documentos de Microsoft
+title: Agrupar miembros de atributo (discretización) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021762"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813718"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>Propiedades de atributo: agrupar miembros de atributo
+# <a name="attribute-properties---group-attribute-members"></a>Propiedades de atributos: Agrupar los miembros del atributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Un grupo de miembros es una colección de miembros de dimensión consecutivos generada por el sistema. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los miembros de un atributo pueden agruparse en varios grupos de miembros mediante un proceso denominado discretización. Un nivel de una jerarquía contiene miembros o grupos de miembro, pero no los dos. Cuando los usuarios corporativos examinan un nivel que contiene grupos de miembros, ven los nombres y valores de celdas de estos grupos. Los miembros que genera [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para admitir grupos de miembros se denominan miembros de agrupación y son similares a los miembros normales.  
   
  La propiedad **DiscretizationMethod** de un atributo controla cómo se agrupan los miembros.  
   
-|Configuración de**DiscretizationMethod** |Description|  
+|Configuración de**DiscretizationMethod** |Descripción|  
 |--------------------------------------|-----------------|  
 |**Ninguno**|Muestra los miembros.|  
-|**Automática**|Selecciona el método que mejor representa los datos: **EqualAreas** o **Clusters** .|  
+|**Automático**|Selecciona el método que mejor representa los datos: **EqualAreas** o **Clusters** .|  
 |**EqualAreas**|Intenta dividir los miembros del atributo en grupos que contengan el mismo número de miembros.|  
 |**Clusters**|Intenta dividir los miembros del atributo en grupos mediante el muestreo de los datos de entrenamiento, la inicialización en un número de puntos aleatorios y la ejecución de varias iteraciones del algoritmo de clústeres Expectation-Maximization (EM).<br /><br /> Este método resulta útil porque funciona en cualquier curva de distribución, pero requiere más tiempo de procesamiento.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34021762"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34021762"
   
  El parámetro `<Bucket name>` es una expresión de cadenas que puede incorporar un conjunto de variables para representar la información del miembro o grupo de miembro como parte del nombre del grupo de miembro:  
   
-|Variable|Description|  
+|Variable|Descripción|  
 |--------------|-----------------|  
 |%{First bucket member}|Nombre del primer miembro que se incluirá en el grupo de miembro actual.|  
 |%{Last bucket member}|Nombre del último miembro que se incluirá en el grupo de miembro actual.|  
@@ -98,6 +98,6 @@ ms.locfileid: "34021762"
 -   Si se actualiza la tabla de dimensión de una dimensión que contiene grupos de miembro y la dimensión se procesa después, se genera un nuevo grupo de miembro. Los nombres y elementos secundarios de los nuevos grupos de miembro pueden ser diferentes de los grupos de miembro anteriores.  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos y jerarquías de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Atributos y jerarquías de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

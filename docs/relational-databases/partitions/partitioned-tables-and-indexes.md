@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af39fd0a7a05bd66565ac94f112c63ac1158df86
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264895"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662434"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,11 +128,11 @@ De este modo, el optimizador de consultas puede procesar la combinación con may
   
 ## <a name="related-content"></a>Contenido relacionado  
  Puede encontrar las siguientes notas del producto en la tabla con particiones y estrategias e implementaciones de índices útiles.  
--   [Estrategias de la tabla con particiones e índices con SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
--   [Cómo implementar una ventana automática deslizante](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Carga masiva en una tabla con particiones](http://msdn.microsoft.com/library/cc966380.aspx)    
+-   [Estrategias de la tabla con particiones e índices con SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+-   [Cómo implementar una ventana automática deslizante](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
+-   [Carga masiva en una tabla con particiones](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Proyecto REAL: Ciclo de vida de datos -- La creación de particiones](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Mejoras de procesamiento de consultas en las tablas e índices con particiones](http://msdn.microsoft.com/library/ms345599.aspx)    
--   [Los 10 mejores procedimientos recomendados para compilar un almacén de datos relacionales a gran escala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [Mejoras de procesamiento de consultas en las tablas e índices con particiones](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Los 10 mejores procedimientos recomendados para compilar un almacén de datos relacionales a gran escala](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   
   

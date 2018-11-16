@@ -20,12 +20,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8be5561838f5a2072ad330c907d4fac49f8a96e5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795923"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638219"
 ---
 # <a name="merge-transformation"></a>Mezclar, transformación
   La transformación Mezclar combina dos conjuntos de datos ordenados en un solo conjunto de datos. Las filas de cada conjunto de datos se insertan en la salida en función de los valores de sus columnas de clave.  
@@ -60,7 +60,7 @@ ms.locfileid: "47795923"
   
  Para obtener más información acerca de las propiedades que puede establecer mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47795923"
   
 ## <a name="see-also"></a>Ver también  
  [Transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

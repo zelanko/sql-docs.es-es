@@ -16,12 +16,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b7e61e278efe9040ad070452ce57535f33b26d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199029eee15d44e3aba5b65c894de58b1ca2129c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847063"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639712"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Crear paquetes en herramientas de datos de SQL Server
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede crear un paquete nuevo utilizando uno de los métodos siguientes:  
@@ -44,9 +44,9 @@ ms.locfileid: "47847063"
   
      El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un paquete completo para una importación o exportación simples. Este asistente configura las conexiones, el origen y el destino, y agrega las transformaciones de datos que se necesiten para poder ejecutar la importación o exportación inmediatamente. Si lo desea, puede guardar el paquete para ejecutarlo de nuevo posteriormente o refinarlo y mejorarlo en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Sin embargo, si lo guarda, debe agregar el paquete a un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] existente para poder cambiar o ejecutar el paquete en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Los paquetes que creó en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] se guardan en el sistema de archivos. Para guardar un paquete en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en el almacén de paquetes, necesita guardar una copia del paquete. Para más información, vea [Guardar una copia de un paquete](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
+ Los paquetes que creó en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] se guardan en el sistema de archivos. Para guardar un paquete en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en el almacén de paquetes, necesita guardar una copia del paquete. Para más información, vea [Guardar una copia de un paquete](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
 
- Para ver un vídeo donde se muestra cómo crear un paquete básico con la plantilla de paquete predeterminada, visite [Crear un paquete básico (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023).  
+ Para ver un vídeo donde se muestra cómo crear un paquete básico con la plantilla de paquete predeterminada, visite [Crear un paquete básico (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## <a name="get-sql-server-data-tools"></a>Obtener SQL Server Data Tools
 Para instalar SQL Server Data Tools (SSDT), vea [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).

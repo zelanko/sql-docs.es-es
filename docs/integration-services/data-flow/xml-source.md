@@ -20,12 +20,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 977a4c0b0406a3da51d7f36210e797fc2024d77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854993"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640462"
 ---
 # <a name="xml-source"></a>Origen XML
   El origen XML lee un archivo de datos XML y rellena las columnas de la salida de origen con los datos.  
@@ -58,13 +58,13 @@ ms.locfileid: "47854993"
   
  Si el archivo de datos XML contiene elementos que no están en el XSD, estos elementos se omitirán y no se generará ninguna salida para ellos. Por otra parte, si en el archivo de datos XML falta algún elemento representado en el XSD, la salida contendrá columnas con valores NULL.  
   
- Cuando se extraen los datos del archivo de datos XML, se convierten a un tipo de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pero el código del origen XML no puede convertir los datos XML en los tipos de datos DT_TIME2 o DT_DBTIMESTAMP2, ya que el origen no los admite. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Cuando se extraen los datos del archivo de datos XML, se convierten a un tipo de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pero el código del origen XML no puede convertir los datos XML en los tipos de datos DT_TIME2 o DT_DBTIMESTAMP2, ya que el origen no los admite. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Aunque el XSD o esquema insertado puede especificar el tipo de datos de los elementos, si no lo hace, el cuadro de diálogo **Editor de origen de XML** asignará el tipo de datos String Unicode (DT_WSTR) a la columna de la salida que contiene el elemento y establecerá la longitud de la columna en 255 caracteres.  
   
  Si el esquema especifica la longitud máxima de un elemento, la longitud de la columna de salida se establece en este valor. Si la longitud máxima es mayor que la longitud admitida por el tipo de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al que se convierte el elemento, los datos se truncan en la longitud máxima del tipo de datos. Por ejemplo, si una cadena tiene una longitud de 5000, se trunca en 4000 caracteres porque la longitud máxima del tipo de datos DT_WSTR es 4000 caracteres; de igual modo, los datos BYTE se truncan en 8000 caracteres, la longitud máxima del tipo de datos DT_BYTES. Si el esquema no especifica la longitud máxima, la longitud predeterminada de las columnas con cualquiera de los tipos de datos se establece en 255. El truncamiento de datos en el origen de XML se controla de la misma manera que el truncamiento en otros componentes de flujo de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
   
- Puede modificar el tipo de datos y la longitud de columna. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Puede modificar el tipo de datos y la longitud de columna. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="configuration-of-the-xml-source"></a>Configuración del origen XML  
  El origen XML admite tres modos de acceso a datos distintos. Puede especificar la ubicación del archivo de datos XML, la variable que contiene la ubicación del archivo o la variable que contiene los datos XML.  
@@ -79,7 +79,7 @@ ms.locfileid: "47854993"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del origen XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47854993"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Ubicación del archivo XML|Recupera datos de un archivo XML.|  
-|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Datos XML de variable|Recupera datos XML de una variable.|  
   
  **Utilizar esquema insertado**  

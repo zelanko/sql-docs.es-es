@@ -15,12 +15,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09b7d5894f46bca7b493601d9a7df40ed4c0935a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d71093c81f002611c857bf16c2f4cd1a6ca83d2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668083"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697705"
 ---
 # <a name="transactions-master-data-services"></a>Transacciones (Master Data Services)
 
@@ -95,7 +95,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 |Deshacer una acción invirtiendo una transacción (solo administradores).|[Invertir una transacción &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Transactions, Validation Issue and Staging table cleanup](http://go.microsoft.com/fwlink/p/?LinkId=615374)(Limpieza de la tabla de transacciones, de problemas de validación y de almacenamiento provisional), en msdn.com.  
+ Entrada de blog, [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374)(Limpieza de la tabla de transacciones, de problemas de validación y de almacenamiento provisional), en msdn.com.  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

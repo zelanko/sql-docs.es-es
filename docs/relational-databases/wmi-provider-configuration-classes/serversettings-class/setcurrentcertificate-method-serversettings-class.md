@@ -18,12 +18,12 @@ ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 58efa416c1832e3405cc27b72113819787ebbe0b
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 6d3cb9ed5696351f1c2c66a035c920940615ecfe
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214754"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663704"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Método SetCurrentCertificate (clase ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,6 @@ object.SetCurrentCertificate(SHA)
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

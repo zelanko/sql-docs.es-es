@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738013"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697893"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738013"
   
  Para obtener más información sobre la instalación remota, vea [Actualizaciones de ediciones y versiones admitidas](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Para obtener más información acerca de cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un clúster de conmutación por error de Windows, vea [Organizar en clúster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Para obtener más información acerca de cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un clúster de conmutación por error de Windows, vea [Organizar en clúster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de empezar, revise los siguientes temas de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -167,9 +167,9 @@ ms.locfileid: "47738013"
   
 16. El flujo de trabajo para el resto del tema depende de las características que haya especificado para la instalación. Dependiendo de las selecciones ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]), es posible que no vea todas las páginas.  
   
-17. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
+17. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
   
-     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar la misma cuenta de inicio de sesión para todas las cuentas de servicio en esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las credenciales se proporcionan en los campos de la parte inferior de la página.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47738013"
      Si desea especificar un directorio personalizado para los componentes compartidos, use el campo situado en la parte inferior de esta página. Para cambiar la ruta de instalación de los componentes compartidos, actualícela en el campo que se proporciona en la parte inferior del cuadro de diálogo o haga clic en el botón de puntos suspensivos para desplazarse a un directorio de instalación. La ruta de instalación predeterminada es C:\Archivos de programa\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
   
     > [!NOTE]  
-    >  Si selecciona la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , se seleccionan automáticamente la replicación y la búsqueda de texto completo. Si anula la selección de cualquiera de estas subcaracterísticas, también se anula la selección de la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
+    >  Si selecciona la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , se seleccionan automáticamente la replicación y la búsqueda de texto completo. Si anula la selección de cualquiera de estas subcaracterísticas, también se anula la selección de la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 11. En la página Configuración de instancia, especifique si desea instalar una instancia predeterminada o una instancia con nombre.
   
@@ -343,7 +343,7 @@ ms.locfileid: "47738013"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ejecuta uno o varios conjuntos de reglas que se basan en las características que seleccionó para validar la configuración.  
   
-8.  Use la página Grupo de recursos de clúster para especificar el nombre del grupo de recursos de clúster donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para especificar el nombre del grupo de recursos de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Tiene dos opciones:  
+8.  Use la página Grupo de recursos de clúster para especificar el nombre del grupo de recursos de clúster donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para especificar el nombre del grupo de recursos de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Tiene dos opciones:  
   
     -   Usar la lista para especificar un grupo existente.  
   

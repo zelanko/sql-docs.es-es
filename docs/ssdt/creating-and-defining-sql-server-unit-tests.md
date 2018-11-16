@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688593"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681283"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Crear y definir pruebas unitarias de SQL Server
 Puede ejecutar pruebas unitarias de SQL Server para comprobar si los cambios en uno o varios objetos de base de datos en un esquema han interrumpido la funcionalidad existente en una aplicación de base de datos. Estas pruebas complementan las pruebas unitarias creadas por los desarrolladores de software. Debe ejecutar ambos tipos de pruebas para comprobar el comportamiento de la aplicación.  
@@ -46,7 +46,7 @@ En la siguiente tabla, puede buscar las descripciones de tareas comunes que admi
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Después de crear las pruebas unitarias de SQL Server, puede ejecutarlas desde la ventana Vista de pruebas, el Diseñador de pruebas unitarias de SQL Server o mediante Team Foundation Build.  
   
-[Escenario: Definir condiciones de prueba personalizadas para pruebas unitarias de base de datos](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Escenario: Definir condiciones de prueba personalizadas para pruebas unitarias de base de datos](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 Puede crear una condición de prueba personalizada para probar un comportamiento que las condiciones de prueba predeterminadas no pueden comprobar.  
   
 ## <a name="see-also"></a>Ver también  

@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733423"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669094"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|Indica el nombre del contenedor de FILESTREAM|  
 |*num_collected_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que el recolector de elementos eliminados ha eliminado en este contenedor.|  
 |*num_marked_for_collection_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que se han marcado para la recolección de elementos no utilizados en este contenedor. Estos elementos que no se ha eliminado, pero pueden ser elegibles para la eliminación después de la fase de recolección de elementos no utilizados.|  
-|*num_unprocessed_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que se podían haber eliminado y no se procesaron para la recolección de elementos no utilizados en este contenedor de FILESTREAM. Los elementos pueden no haberse procesado por diversas razones, por ejemplo:<br /><br /> Archivos que se tienen que anclar porque no se ha tomado la copia de seguridad de registros o CHECKPOINT.<br /><br /> Archivos del modelo de recuperación FULL o BULK_LOGGED.<br /><br /> Hay una transacción activa de ejecución prolongada.<br /><br /> No se ha ejecutado el trabajo del lector de registro de replicación. Vea las notas [almacenamiento de FILESTREAM en SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) para obtener más información.|  
+|*num_unprocessed_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que se podían haber eliminado y no se procesaron para la recolección de elementos no utilizados en este contenedor de FILESTREAM. Los elementos pueden no haberse procesado por diversas razones, por ejemplo:<br /><br /> Archivos que se tienen que anclar porque no se ha tomado la copia de seguridad de registros o CHECKPOINT.<br /><br /> Archivos del modelo de recuperación FULL o BULK_LOGGED.<br /><br /> Hay una transacción activa de ejecución prolongada.<br /><br /> No se ha ejecutado el trabajo del lector de registro de replicación. Vea las notas [almacenamiento de FILESTREAM en SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) para obtener más información.|  
 |*last_collected_xact_seqno*|Devuelve el último número de secuencia de registro (LSN) correspondiente hasta el que el recolector de elementos no utilizados ha recolectado archivos del contenedor de FILESTREAM especificado.|  
   
 ## <a name="remarks"></a>Comentarios  

@@ -17,12 +17,12 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8207f406ff99b59aabbccc182c2074a88a8370b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 296055ef99184d1ea38bf4811bc9ec8b9fb6c690
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607803"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640242"
 ---
 # <a name="maintenance-cleanup-task"></a>tarea, Limpieza de mantenimiento
   La tarea Limpieza de mantenimiento quita archivos relacionados con planes de mantenimiento, entre los que se incluyen archivos de copia de seguridad de la base de datos e informes creados a partir de planes de mantenimiento. Para obtener más información, vea [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md) y [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "47607803"
 -   [Tarea Limpieza de mantenimiento &#40;Plan de mantenimiento&#41;](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="see-also"></a>Ver también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

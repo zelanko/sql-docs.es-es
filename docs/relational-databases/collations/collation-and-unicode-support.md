@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636484"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661724"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Una intercalación especifica los patrones de bits que representan a cada carác
     
 Los resultados de las instrucciones de[!INCLUDE[tsql](../../includes/tsql-md.md)] pueden variar cuando se ejecutan en el contexto de bases de datos distintas que tengan una configuración de intercalación diferente. Si es posible, utilice una intercalación normalizada para su organización. De esta manera no tiene que especificar explícitamente la intercalación en cada carácter o expresión Unicode. Si debe trabajar con objetos que tienen configuraciones de intercalación y de página de códigos diferentes, conviene codificar las consultas para tener en cuenta las reglas de prioridad de intercalación. Para obtener más información, vea [Prioridad de intercalación (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho y la distinción de selector de variación. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta una opción adicional para la codificación [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` es una intercalación con distinción entre mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana, distinción de ancho y con codificación UTF-8. Otro ejemplo: la intercalación `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` no distingue entre mayúsculas y minúsculas y acentos, distingue los tipos de kana, el ancho, el selector de variación y usa codificación distinta de Unicode. En la tabla siguiente se describe el comportamiento asociado a estas diversas opciones.    
+Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho y la distinción de selector de variación. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta una opción adicional para la codificación [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` es una intercalación con distinción entre mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana, distinción de ancho y con codificación UTF-8. Otro ejemplo: la intercalación `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` no distingue entre mayúsculas y minúsculas y acentos, distingue los tipos de kana, el ancho, el selector de variación y usa codificación distinta de Unicode. En la tabla siguiente se describe el comportamiento asociado a estas diversas opciones.    
     
 |Opción|Descripción|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ Las opciones asociadas con una intercalación son la distinción de mayúsculas 
 |Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a' no es igual a 'ấ'. Si esta opción no está seleccionada, la intercalación no distinguirá acentos. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera las versiones acentuadas y no acentuadas de las letras como letras idénticas a efectos de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|    
 |Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres Kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales a efectos de ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|    
 |Distinguir ancho (_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se activa esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas para la ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|    
-|Distinguir selector de variación (_VSS) | Distingue distintos selectores de variación ideográfica en las intercalaciones del japonés Japanese_Bushu_Kakusu_140 y Japanese_XJIS_140, introducidas por primera vez en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona la opción _VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, SQL Server considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Consulte también  [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)(Base de datos de variaciones ideográficas de Unicode). <br/><br/> Las intercalaciones que distinguen selectores de variación (_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (_AS), que distinguen kana (_KS) y que distinguen ancho (_WS). Los motores XML y CLR de SQL Server no admiten selectores de variación (_VSS).
+|Distinguir selector de variación (_VSS) | Distingue distintos selectores de variación ideográfica en las intercalaciones del japonés Japanese_Bushu_Kakusu_140 y Japanese_XJIS_140, introducidas por primera vez en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona la opción _VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, SQL Server considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Consulte también  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(Base de datos de variaciones ideográficas de Unicode). <br/><br/> Las intercalaciones que distinguen selectores de variación (_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (_AS), que distinguen kana (_KS) y que distinguen ancho (_WS). Los motores XML y CLR de SQL Server no admiten selectores de variación (_VSS).
 |UTF-8 (_UTF8)|Permite que los datos con codificación UTF-8 se almacenen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el formato de codificación distinto de Unicode de forma predeterminada para los tipos de datos aplicables.| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes conjuntos de intercalación:    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> Configuración regional    
-Una configuración regional es un conjunto de información que está asociado a una ubicación o cultura. Puede incluir el nombre e identificador del idioma hablado, la escritura que se usa para escribir el idioma y las convenciones culturales. Las intercalaciones pueden estar asociadas a una o varias configuraciones regionales. Para obtener más información, vea [Id. de configuración regional asignados por Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
+Una configuración regional es un conjunto de información que está asociado a una ubicación o cultura. Puede incluir el nombre e identificador del idioma hablado, la escritura que se usa para escribir el idioma y las convenciones culturales. Las intercalaciones pueden estar asociadas a una o varias configuraciones regionales. Para obtener más información, vea [Id. de configuración regional asignados por Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Una página de códigos es un juego ordenado de caracteres en un script determinado en el que un índice numérico, o un valor de punto de código, está asociado con cada carácter. Una página de códigos de Windows se denomina normalmente *juego de caracteres* o *charset*. Las páginas de códigos se usan para ofrecer compatibilidad con los juegos de caracteres y las distribuciones de teclado que se usan en distintas configuraciones regionales del sistema Windows.     
@@ -258,10 +258,10 @@ Estas intercalaciones se admiten en los índices de Motor de base de datos, las 
 |Describe cómo cambiar el idioma de la sesión permite cambiar el idioma de los mensajes de error y las preferencias acerca de cómo usar y mostrar los datos de fecha, hora y divisa.|[Establecer un idioma de la sesión](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Contenido relacionado    
-[Prácticas recomendadas para cambiar las intercalaciones en SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[Prácticas recomendadas para cambiar las intercalaciones en SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Usar el formato de caracteres Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-["Migración de las prácticas recomendadas de SQL Server a Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890) - Ya no se mantiene   
-[Sitio web de Unicode Consortium](http://go.microsoft.com/fwlink/?LinkId=48619)    
+["Migración de las prácticas recomendadas de SQL Server a Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - Ya no se mantiene   
+[Sitio web de Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>Consulte también    
 [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)     

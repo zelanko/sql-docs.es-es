@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826143"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677584"
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 Agrupación de conexiones permite a una aplicación usar una conexión de un grupo de conexiones que no es necesario volver a establecerse para cada usuario. Una vez creada y colocada en un grupo de una conexión, una aplicación puede reutilizar esa conexión sin necesidad de realizar el proceso de conexión completa.  
@@ -59,11 +59,11 @@ Agrupación de conexiones permite a una aplicación usar una conexión de un gru
     > [!NOTE]  
     >  Cómo se compara una conexión solicitada con una conexión agrupada viene determinada por el atributo de entorno SQL_ATTR_CP_MATCH. Para obtener más información, consulte [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     Deben llamar las aplicaciones ODBC con la agrupación de conexiones [CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307) durante la inicialización de la aplicación y [CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310) cuando se cierra la aplicación.  
+     Deben llamar las aplicaciones ODBC con la agrupación de conexiones [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) durante la inicialización de la aplicación y [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) cuando se cierra la aplicación.  
   
 5.  Las llamadas **SQLDisconnect** cuando haya terminado con la conexión. La conexión se devuelve al grupo de conexiones y está disponible para su reutilización.  
   
- Para obtener información detallada, consulte [agrupación en el Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776).  
+ Para obtener información detallada, consulte [agrupación en el Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776).  
   
 ## <a name="connection-pooling-considerations"></a>Consideraciones sobre la agrupación de conexiones  
  Llevar a cabo cualquier de las siguientes acciones mediante un comando SQL (en lugar de a través de la API de ODBC) puede afectar al estado de la conexión y provocar problemas inesperados cuando la agrupación de conexiones está activa:  
@@ -85,4 +85,4 @@ Agrupación de conexiones permite a una aplicación usar una conexión de un gru
 ## <a name="see-also"></a>Vea también  
  [Conectarse a datos de un origen o el controlador](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Agrupación en Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Agrupación en Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776)

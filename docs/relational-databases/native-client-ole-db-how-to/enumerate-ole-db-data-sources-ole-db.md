@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8b396984a03a816d325c6b97cd8cf291b56b6fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddf90bb571be757645b1d20b45fc9d9dd879d22a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758247"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673235"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerar orígenes de datos OLE DB (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,16 +27,16 @@ ms.locfileid: "47758247"
 
   En este ejemplo se indica cómo utilizar el objeto enumerador para mostrar los orígenes de datos disponibles.  
   
- Para enumerar los orígenes de datos visibles para el enumerador SQLOLEDB, el consumidor llama al método [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) . Este método devuelve un conjunto de filas de información sobre los orígenes de datos actualmente visibles.  
+ Para enumerar los orígenes de datos visibles para el enumerador SQLOLEDB, el consumidor llama al método [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Este método devuelve un conjunto de filas de información sobre los orígenes de datos actualmente visibles.  
   
  Dependiendo de la biblioteca de redes utilizada, se buscan en el dominio adecuado los orígenes de datos. Para las canalizaciones con nombre, es el dominio en el que el cliente ha iniciado sesión. Para AppleTalk, es la zona predeterminada. Para SPX/IPX, es la lista de instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se encuentran en el enlace. Para Banyan VINES, se trata de las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se encuentran en la red local. No se admite multiprotocolo ni sockets TCP/IP.  
   
  Cuando se activa o desactiva el servidor, puede llevar unos minutos actualizarse la información de estos dominios.  
   
- Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
+ Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Para enumerar los orígenes de datos OLE DB  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47758247"
 6.  Recupere los datos de la copia de la fila del conjunto de filas llamando a **IRowset::GetData**y procéselos.  
   
 ## <a name="example"></a>Ejemplo  
- Compile con ole32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

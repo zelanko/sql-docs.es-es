@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720873"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665684"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Aspectos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 
@@ -77,7 +77,7 @@ Samba, que es la variante de Linux del bloque de mensajes del servidor (SMB), ta
 
 También se pueden usar recursos compartidos de SMB basado en Windows; No es necesario estar basado en Linux, siempre que la parte cliente de Samba está configurada correctamente en el servidor Linux que hospeda recursos compartidos de SMB [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y el recurso compartido tiene el derecho de acceso. Para los miembros de un entorno mixto, esto sería una manera de aprovechar la infraestructura existente para basado en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implementaciones.
 
-Algo que es importante es que la versión de Samba implementado debe ser compatible de SMB 3.0. Cuando se agregó compatibilidad con SMB en [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], es necesario que todos los recursos compartidos para admitir SMB 3.0. Si usas Samba para el recurso compartido y no a Windows Server, debe usar el recurso compartido de Samba Samba 4.0 o posterior y lo ideal es que 4.3 o posterior, que es compatible con SMB 3.1.1. Es una buena fuente de información sobre SMB y Linux [SMB3 en Samba](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Algo que es importante es que la versión de Samba implementado debe ser compatible de SMB 3.0. Cuando se agregó compatibilidad con SMB en [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], es necesario que todos los recursos compartidos para admitir SMB 3.0. Si usas Samba para el recurso compartido y no a Windows Server, debe usar el recurso compartido de Samba Samba 4.0 o posterior y lo ideal es que 4.3 o posterior, que es compatible con SMB 3.1.1. Es una buena fuente de información sobre SMB y Linux [SMB3 en Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Por último, el uso de un recurso compartido de red archivos system (NFS) es una opción. Uso de NFS no es una opción en implementaciones basadas en Windows de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]y solo se puede usar para las implementaciones basadas en Linux.
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentación del firewall:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] paquetes para disponibilidad
@@ -156,7 +156,7 @@ Para obtener documentación completa en Pacemaker, que incluye una explicación 
 
 Ubuntu no tiene una guía para la disponibilidad.
 
-Para obtener más información acerca de la pila completa, consulte también el sitio oficial [página de documentación de Pacemaker](http://clusterlabs.org/doc/) en el sitio Clusterlabs.
+Para obtener más información acerca de la pila completa, consulte también el sitio oficial [página de documentación de Pacemaker](https://clusterlabs.org/doc/) en el sitio Clusterlabs.
 
 ### <a name="pacemaker-concepts-and-terminology"></a>Terminología y conceptos de pacemaker
 Esta sección describe los conceptos y terminología para una implementación de Pacemaker comunes.
@@ -208,13 +208,13 @@ Para cambiar la ubicación del registro de forma predeterminada, modifique `coro
 En esta sección se describe los puntos de planeación importantes para un clúster de Pacemaker.
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Los clústeres de virtualización de Pacemaker en Linux para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Uso de máquinas virtuales para implementar basado en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones de grupos de disponibilidad y fci está cubierto por las mismas reglas que sus equivalentes basados en Windows. Hay un conjunto básico de reglas para la compatibilidad de virtualizado [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implementaciones proporcionadas por Microsoft en [956893 de KB del soporte técnico de Microsoft](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Los hipervisores diferentes, como Microsoft Hyper-V y VMware ESXi pueden tienen varianzas diferentes sobre eso, debido a diferencias en las plataformas a sí mismos.
+Uso de máquinas virtuales para implementar basado en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones de grupos de disponibilidad y fci está cubierto por las mismas reglas que sus equivalentes basados en Windows. Hay un conjunto básico de reglas para la compatibilidad de virtualizado [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implementaciones proporcionadas por Microsoft en [956893 de KB del soporte técnico de Microsoft](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Los hipervisores diferentes, como Microsoft Hyper-V y VMware ESXi pueden tienen varianzas diferentes sobre eso, debido a diferencias en las plataformas a sí mismos.
 
 Cuando se trata de grupos de disponibilidad y fci bajo virtualización, asegúrese de que antiafinidad se establece para los nodos de un clúster de Pacemaker determinado. Cuando se configura para alta disponibilidad en una configuración de grupo de disponibilidad o FCI, las máquinas virtuales que hospedan [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca debe ejecutarse en el mismo host del hipervisor. Por ejemplo, si se implementa una FCI de dos nodos, debería ser *al menos* tres hosts de hipervisor en el modo que haya en algún lugar de una de las máquinas virtuales de un nodo de hospedaje para ir si se produce un error de host, especialmente si usa características como Live Migración o vMotion.
 
 Para obtener más detalles, consulte:
 -   Documentación de Hyper-V – [usar clústeres invitados para alta disponibilidad](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   Notas del producto (escrito para las implementaciones basadas en Windows, pero la mayoría de los conceptos que todavía se aplican –) [planear alta disponibilidad, SQL Server implementaciones críticas con VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Notas del producto (escrito para las implementaciones basadas en Windows, pero la mayoría de los conceptos que todavía se aplican –) [planear alta disponibilidad, SQL Server implementaciones críticas con VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL con un clúster de Pacemaker con STONITH no es compatible aún con Hyper-V. Hasta que se admite para obtener más información y actualizaciones, consulte [directivas de soporte técnico para los clústeres de alta disponibilidad RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).

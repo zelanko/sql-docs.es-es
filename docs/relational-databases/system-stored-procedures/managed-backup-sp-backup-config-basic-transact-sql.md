@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838803"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662854"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  El nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica.  
   
  @container_url  
- Una dirección URL que indica la ubicación de la copia de seguridad. Cuando @credential_name es NULL, esta dirección URL es una dirección URL de una firma de acceso compartido a un contenedor de blobs de Azure Storage y las copias de seguridad utilizan la nueva copia de seguridad a la funcionalidad de blob de bloque. Para obtener más información, consulte [descripción SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Cuando @credential_name se especifica, se trata de una dirección URL de cuenta de almacenamiento y las copias de seguridad utilizan la copia de seguridad en desuso a la funcionalidad de blob de página.  
+ Una dirección URL que indica la ubicación de la copia de seguridad. Cuando @credential_name es NULL, esta dirección URL es una dirección URL de una firma de acceso compartido a un contenedor de blobs de Azure Storage y las copias de seguridad utilizan la nueva copia de seguridad a la funcionalidad de blob de bloque. Para obtener más información, consulte [descripción SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Cuando @credential_name se especifica, se trata de una dirección URL de cuenta de almacenamiento y las copias de seguridad utilizan la copia de seguridad en desuso a la funcionalidad de blob de página.  
   
 > [!NOTE]  
 >  En este momento, sólo una dirección URL de SAS se admite para este parámetro.  

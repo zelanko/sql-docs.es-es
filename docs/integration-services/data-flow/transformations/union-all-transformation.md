@@ -19,12 +19,12 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fb378c8ec2021e856c654f57844de1d36a67746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b4d6dc76ba333681e14a9437c6931b21035bda0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710143"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639752"
 ---
 # <a name="union-all-transformation"></a>Unión de todo, transformación
   La transformación Unión de todo combina varias entradas en una salida. Por ejemplo, las salidas de cinco orígenes de archivos planos distintos pueden ser entradas de la transformación Unión de todo y combinarse en una salida.  
@@ -43,7 +43,7 @@ ms.locfileid: "47710143"
 ## <a name="configuration-of-the-union-all-transformation"></a>Configuración de la transformación Unión de todo  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer mediante programación, vea [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Para obtener más información acerca de las propiedades que puede establecer mediante programación, vea [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   

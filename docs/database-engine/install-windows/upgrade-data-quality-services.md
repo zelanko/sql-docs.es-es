@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ecedd313044770cd3e8af42c915dc208fa5097cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629059"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601936"
 ---
 # <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
 
@@ -27,7 +27,7 @@ En este artículo encontrará información sobre cómo actualizar la instalació
 > [!IMPORTANT]  
 >  -   Debe hacer una copia de seguridad de las bases de datos de DQS antes de actualizar DQS para impedir la pérdida accidental de datos durante la actualización del esquema. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Puede conectarse a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server a través de la versión actual o una versión anterior de Data Quality Client o la [transformación Limpieza de DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) de Integration Services para realizar tareas de calidad de datos.  
-> -   Después de actualizar Data Quality Services y Master Data Services, ya no funcionará ninguna versión anterior del complemento Master Data Services para Excel. Puede descargar la versión [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del complemento Master Data Services para Excel [aquí](http://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   Después de actualizar Data Quality Services y Master Data Services, ya no funcionará ninguna versión anterior del complemento Master Data Services para Excel. Puede descargar la versión [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del complemento Master Data Services para Excel [aquí](https://go.microsoft.com/fwlink/?LinkID=506665).  
   
 ##  <a name="Prerequisites"></a> Requisitos previos  
   

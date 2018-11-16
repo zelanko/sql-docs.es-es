@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 3c40ef7b0115dea0c0167729676e2203f62d2ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633913"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676344"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - iSCSI: SQL Server en Linux
 
@@ -38,8 +38,8 @@ Es lo más importante para asegurarse de completado en el destino es que los dis
 Esta sección explica cómo configurar un iniciador iSCSI en los servidores que servirán como nodos en la FCI. Las instrucciones deberían funcionar tal cual en Ubuntu y RHEL.
 
 Para obtener más información sobre el iniciador iSCSI para las distribuciones admitidas, consulte los siguientes vínculos:
-- [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
-- [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
+- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
 1.  Elija uno de los servidores que participarán en la configuración de FCI. No importa cuál de ellos. iSCSI debe estar en una red dedicada, por lo que configure iSCSI para reconocer y usar esa red. Ejecute `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` donde `<iSCSIIfaceName>` es el nombre descriptivo único para la red. En el ejemplo siguiente se usa `iSCSINIC`:

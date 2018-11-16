@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771583"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638612"
 ---
 # <a name="data-streaming-destination"></a>Destino de streaming de datos
   El **Destino de streaming de datos** es un componente de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) que permite que el **proveedor OLE DB para SSIS** consuma la salida de un paquete SSIS como un conjunto de resultados tabular. Para crear un servidor vinculado que utilice el proveedor OLE DB para SSIS y, después, ejecutar una consulta SQL en el servidor vinculado para mostrar los datos devueltos por el paquete SSIS.  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  El Centro de administración permite publicar vistas en una base de datos de SQL Server. Como consecuencia, puede utilizar el Asistente para publicación de paquetes SSIS a fin de publicar un paquete SSIS como una vista SQL. Después, puede seleccionar la vista que se incluirá en la fuente de OData en el Centro de administración de Power BI. Un administrador de datos puede consumir la fuente desde el paquete SSIS mediante el complemento Power Query para Excel.  
   
- Para ver un tutorial detallado, consulte [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367)(Publicación de paquetes SSIS como orígenes de fuentes de OData).  
+ Para ver un tutorial detallado, consulte [Publish SSIS Packages as OData Feed Sources](https://go.microsoft.com/fwlink/?LinkID=317367)(Publicación de paquetes SSIS como orígenes de fuentes de OData).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  Al igual que ocurre con la pestaña Columnas de entrada, puede cambiar los nombres de las columnas de salida en esta pestaña. En la vista de árbol de la izquierda, expanda **Data Streaming Destination Input** (Entrada de destino de streaming de datos) y luego expanda **Columnas de entrada**. Haga clic en el nombre de la columna de entrada y cambie el nombre de la columna de salida en el panel derecho.  
   
 ## <a name="see-also"></a>Ver también  
- [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [Publish SSIS Packages as OData Feed Sources](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

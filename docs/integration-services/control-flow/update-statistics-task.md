@@ -16,12 +16,12 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 096b8cdc93f09056dbd52d792a93884008cc3525
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ccaac651915cb79814999c1e3ffd0e37aeb715
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739437"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641942"
 ---
 # <a name="update-statistics-task"></a>Tarea Actualizar estadísticas
   La tarea Actualizar estadísticas actualiza información sobre la distribución de valores clave para uno o varios grupos de estadísticas (colecciones) de la tabla o vista indizada especificada. Para obtener más información, vea [Statistics](../../relational-databases/statistics/statistics.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "47739437"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>Ver también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

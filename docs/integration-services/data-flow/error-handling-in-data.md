@@ -23,12 +23,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb3e092e9ea185be0de966c73a5005072b8a70c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612215"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641842"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
   Cuando un componente de flujo de datos aplica una transformación a los datos de columna, extrae datos de orígenes o carga datos en destinos, pueden producirse errores. Los errores con frecuencia se producen debido a valores de datos inesperados. Por ejemplo, una conversión de datos genera un error porque una columna contiene una cadena en lugar de un número, una inserción en una base de datos genera un error porque los datos corresponden a una fecha y la columna tiene un tipo de datos numéricos, o una expresión genera un error al evaluarse porque el valor de la columna es cero, lo que da como resultado una operación matemática no válida.  
@@ -147,8 +147,8 @@ Use el cuadro de diálogo **Configurar la salida de errores** para configurar la
 
 ## <a name="see-also"></a>Ver también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)   
- [Transformación de datos con transformaciones](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [Conectar componentes con rutas de acceso](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Transformar datos con transformaciones](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [Conectar componentes con rutas de acceso](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Tarea Flujo de datos](../../integration-services/control-flow/data-flow-task.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a323cf19e495707ee5a1ab847e97ef3b1e7392e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58155e7529eb8bb94064fd4d7a9fd48df213f0f4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651057"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638872"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Propiedades personalizadas del destino SQL Server
   El destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
@@ -45,6 +45,6 @@ ms.locfileid: "47651057"
  Para más información, consulte [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md).  
   
 ## <a name="see-also"></a>Ver también  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

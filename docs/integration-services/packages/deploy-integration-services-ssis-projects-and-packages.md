@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0912f9404f59f57e4a0a09ae2346049bbb01c97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638521"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642272"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes heredados. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -109,7 +109,7 @@ Para obtener más información sobre el error descrito en esta sección y los pe
     -   Si creó el proyecto en la versión anterior de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], después de abrir el archivo de proyecto en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], deberá convertir el proyecto al modelo de implementación de proyectos.  
   
         > [!NOTE]  
-        >  Si el proyecto contiene uno o más orígenes de datos, se quitan los orígenes de datos cuando se completa la conversión del proyecto. Para crear una conexión a un origen de datos que los paquetes del proyecto puedan compartir, agregue un administrador de conexiones en el nivel de proyecto. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  Si el proyecto contiene uno o más orígenes de datos, se quitan los orígenes de datos cuando se completa la conversión del proyecto. Para crear una conexión a un origen de datos que los paquetes del proyecto puedan compartir, agregue un administrador de conexiones en el nivel de proyecto. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
          Dependiendo de si ejecuta el **Asistente para la conversión de proyectos de Integration Services** desde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el asistente realiza tareas de conversión diferentes.  
   
@@ -513,7 +513,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   El **Asistente para conversión de proyectos de Integration Services** convierte un proyecto al modelo de implementación de proyectos.  
   
 > [!NOTE]  
->  Si el proyecto contiene uno o más orígenes de datos, se quitan los orígenes de datos cuando se completa la conversión del proyecto. Para crear una conexión a un origen de datos que se pueden compartir los paquetes en el proyecto, agregue un administrador de conexiones en el nivel de proyecto. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  Si el proyecto contiene uno o más orígenes de datos, se quitan los orígenes de datos cuando se completa la conversión del proyecto. Para crear una conexión a un origen de datos que se pueden compartir los paquetes en el proyecto, agregue un administrador de conexiones en el nivel de proyecto. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
  **¿Qué desea hacer?**  
   

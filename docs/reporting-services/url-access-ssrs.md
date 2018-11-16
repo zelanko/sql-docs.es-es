@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1fc511cdfd383979ba3bcecd782ed4b481d6260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83ec1aecfa57651ce206881fb66f3cae6a226603
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817413"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813818"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
   El acceso URL del servidor de informes de SQL Server Reporting Services (SSRS) permite enviar comandos a un servidor de informes a través de una solicitud URL. Por ejemplo, puede personalizar la representación de un informe en una biblioteca de SharePoint o un servidor de informes en modo nativo. Es posible que haya visto el informe usando un conjunto específico de valores de parámetro de informe o tal vez haya consultado una determina página de su interés. Puede encapsular esta información en la dirección URL usando los parámetros de acceso URL predefinidos. Puede personalizar más el modo en el que el servidor de informes procesa el informe incorporando parámetros sobre los formatos de representación o sobre la apariencia del visor de informes. Puede pegar esta dirección URL directamente en un mensaje de correo electrónico o una página web para permitir que otras personas tengan acceso al informe del mismo modo en el explorador.  
@@ -59,18 +59,18 @@ reportpath
  Dirección URL del servicio web del servidor de informes. Para el modo nativo, es la dirección URL del servicio web de la instancia del servidor de informes configurada en el Administrador de configuración de Reporting Services (vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por ejemplo:  
   
 ```  
-http://myrshost/reportserver  
+https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
  En el modo integrado de SharePoint, es la dirección URL del proxy de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por ejemplo:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver  
+https://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
->  Es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El proxy agrega algún contexto a la solicitud HTTP, contexto que es necesario para garantizar la correcta ejecución del informe para los servidores de informes de modo de SharePoint.  
+>  Es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. El proxy agrega algún contexto a la solicitud HTTP, contexto que es necesario para garantizar la correcta ejecución del informe para los servidores de informes de modo de SharePoint.  
   
  *pathinfo*  
  Nombre de la ruta de acceso relativa del elemento en la base de datos del servidor de informes en modo nativo o dirección URL completa del elemento en un catálogo de SharePoint.  
@@ -84,7 +84,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  En el modo integrado de SharePoint, es la dirección URL completa del elemento de la biblioteca de SharePoint, incluida la extensión del elemento. Por ejemplo:  
   
 ```  
-http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
 ```  
   
  **&**  

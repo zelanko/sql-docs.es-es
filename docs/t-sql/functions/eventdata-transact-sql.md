@@ -25,12 +25,12 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f6303d4854e8a46715182bd40e274e8ccf12b30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953a4d79d128d2295b5365653f0f7b62647f6069
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734573"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701333"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Las contraseñas no se muestran cuando se ejecutan las instrucciones `CREATE LOG
 ## <a name="schemas-returned"></a>Esquemas devueltos  
 EVENTDATA devuelve un valor de tipo de datos **xml**. De manera predeterminada, la definición de esquema para todos los eventos se instala en este directorio: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
-La página web [Esquemas XML de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=31850) también tiene el esquema de eventos.  
+La página web [Esquemas XML de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) también tiene el esquema de eventos.  
   
 Para extraer el esquema de un evento concreto, busque el esquema del tipo complejo `EVENT_INSTANCE_<event_type>`. Por ejemplo, para extraer el esquema del evento `DROP_TABLE`, busque el esquema de `EVENT_INSTANCE_DROP_TABLE`.  
   

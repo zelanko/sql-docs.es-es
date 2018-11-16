@@ -11,12 +11,12 @@ ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c19314bea6e961c8f4d12dc295b3cc2ea089c7e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4eb84aad1f334d6fc564f07847eb5590201e2077
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646823"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696263"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Conexiones (complemento MDS para Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47646823"
 
   Para descargar datos en [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], primero debe crear una conexión. Una conexión es la forma en que el servicio web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] sabe a qué base de datos de MDS se debe conectar.  
   
- La cadena de conexión suele ser la dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]; por ejemplo, `http://contoso/mds`.  
+ La cadena de conexión suele ser la dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]; por ejemplo, `https://contoso/mds`.  
   
  Cada vez que inicia Excel, debe conectarse a un repositorio MDS. La única excepción es cuando la hoja de cálculo activa ya contiene datos administrados por MDS. En este caso, la conexión se realiza automáticamente cada vez que se actualizan o publican datos en la hoja.  
   

@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f27df5372436759fb719ddcafcf028b8d918205d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018400"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669614"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "51018400"
   
 4.  En el cuadro de diálogo **Índices espaciales** , haga clic en **Agregar**.  
   
-5.  Seleccione el nuevo índice en la lista **Índice espacial seleccionado** y configure las propiedades del índice espacial en la cuadrícula de la derecha. Para obtener información sobre las propiedades, vea [Cuadro de diálogo Índices espaciales &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
+5.  Seleccione el nuevo índice en la lista **Índice espacial seleccionado** y configure las propiedades del índice espacial en la cuadrícula de la derecha. Para obtener información sobre las propiedades, vea [Cuadro de diálogo Índices espaciales &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
 ###  <a name="alter"></a> Para modificar un índice espacial  

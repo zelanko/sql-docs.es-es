@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674337"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813248"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de la biblioteca de SharePoint en Reporting Services
   Un servidor de informes que se configura para la integración de SharePoint incluye una extensión de entrega que usted puede utilizar para enviar un informe a una biblioteca de SharePoint.  
@@ -72,7 +72,7 @@ ms.locfileid: "47674337"
  Especifica una propiedad **Title** opcional para el informe en la biblioteca de destino. Es una propiedad estándar para todos los elementos almacenados en una biblioteca. Los usuarios pueden especificar si se va a mostrar u ocultar esta propiedad al ver el contenido de la biblioteca en un sitio de SharePoint.  
   
  Ruta de acceso  
- Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: `http://mySharePointWeb/MySite/MyDocLib`, donde `http://mySharePointWeb` indica la aplicación web, "MySite" es el sitio de SharePoint y "MyDocLib" es la biblioteca de SharePoint en la que se entrega el informe.  
+ Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: `https://mySharePointWeb/MySite/MyDocLib`, donde `https://mySharePointWeb` indica la aplicación web, "MySite" es el sitio de SharePoint y "MyDocLib" es la biblioteca de SharePoint en la que se entrega el informe.  
   
  No puede especificar una página, un sitio o una lista. El contenedor de destino debe ser una biblioteca en el mismo sitio o conjunto de servidores.  
   

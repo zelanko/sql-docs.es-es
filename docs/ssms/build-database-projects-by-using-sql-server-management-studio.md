@@ -16,12 +16,12 @@ ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99773e3327831cdb622382483bc9c128b9ffef82
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: f1243a0979148b8c5a4a0f98b28cc7e1c7ad677f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100136"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700391"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Generar proyectos de bases de datos mediante SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ Una solución consta de uno o más proyectos de script. Un proyecto está formad
   
 ## <a name="see-also"></a>Ver también  
 [Usar SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Escribir, analizar y editar consultas con SQL Server Management Studio](http://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
+[Escribir, analizar y editar consultas con SQL Server Management Studio](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [Soluciones &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   

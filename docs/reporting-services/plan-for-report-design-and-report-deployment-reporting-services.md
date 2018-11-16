@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55eff13b6c766d5c10270e79b8b8d986d1a08f5e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029144"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814238"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes paginados. Sepa cómo planear un entorno de servidor de informes y creación de informes que operen en conjunto.
@@ -27,11 +27,11 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
 |Abreviatura|Versión de esquema|  
 |------------------|--------------------|  
-|RDL 2016|`http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`|
-|RDL 2010|`http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`|  
-|RDL 2008|`http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition`|  
-|RDL 2005<br /><br /> RDLC 2005|`http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition`|  
-|RDL 2000|`http://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition`|  
+|RDL 2016|`https://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`|
+|RDL 2010|`https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`|  
+|RDL 2008|`https://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition`|  
+|RDL 2005<br /><br /> RDLC 2005|`https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition`|  
+|RDL 2000|`https://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition`|  
   
  Para obtener más información acerca de RDL y los esquemas RDL, vea lo siguiente:  
   

@@ -15,12 +15,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4efd1769b95a43b6718eaa635273458bc241f282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776618"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701783"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
 
@@ -32,7 +32,7 @@ ms.locfileid: "47776618"
   
  Después de crear un dominio compuesto, puede cambiar las propiedades del mismo, adjuntar un servicio de datos de referencia al dominio, crear reglas entre dominios o crear relaciones de valor. Para ello, seleccione el dominio compuesto en la lista **Dominio** de la página **Administración de dominios** y seleccione la pestaña adecuada.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio compuesto, debe haber creado y abierto una base de conocimiento, y debe haber creado al menos dos dominios individuales para agregarlos al dominio compuesto.  
@@ -92,7 +92,7 @@ ms.locfileid: "47776618"
   
 5.  Si selecciona **Delimitadores** como método de análisis, también puede seleccionar **Usar el análisis de bases de conocimiento**. Para obtener más información, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear un dominio compuesto  
  Una vez creado el dominio compuesto, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  

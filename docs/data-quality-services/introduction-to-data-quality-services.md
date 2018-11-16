@@ -14,12 +14,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b235ea1151b99870623dbbea89f83e02150235e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640860"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700283"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introducción a Data Quality Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "47640860"
   
 -   **Coincidencia:** identificación de duplicados semánticos en un proceso basado en reglas que le permite determinar lo que constituye una coincidencia y realizar la eliminación de los datos duplicados. Para obtener más información, consulte [Data Matching](../data-quality-services/data-matching.md).  
   
--   **Reference Data Services:** comprobación de la calidad de los datos mediante servicios de un proveedor de datos de referencia. Puede usar los servicios de datos de referencia de [Microsoft Azure Marketplace](http://azure.microsoft.com/marketplace/) para limpiar, validar, buscar coincidencias y enriquecer datos con facilidad. Para obtener más información, consulte [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+-   **Reference Data Services:** comprobación de la calidad de los datos mediante servicios de un proveedor de datos de referencia. Puede usar los servicios de datos de referencia de [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/) para limpiar, validar, buscar coincidencias y enriquecer datos con facilidad. Para obtener más información, consulte [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Generación de perfiles:** análisis de un origen de datos para proporcionar una visión general de la calidad de los datos en cada etapa de la detección del conocimiento, administración de dominios, búsqueda de coincidencias y procesos de limpieza de datos. La generación de perfiles es una herramienta muy útil en una solución de calidad de datos DQS. Puede crear una solución de calidad de datos en la que la generación de perfiles sea tan importante como la administración del conocimiento, la búsqueda de coincidencias y la limpieza de datos. Para obtener más información, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

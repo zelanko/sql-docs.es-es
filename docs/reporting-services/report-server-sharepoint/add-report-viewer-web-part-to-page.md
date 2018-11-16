@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030424"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813028"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint
 
@@ -46,7 +46,7 @@ Muestre un informe, en SQL Server Reporting Services o en Power BI Report Server
 
     ![Agregue el elemento web Visor de informes.](media/sharepoint-report-viewer-web-part.png)
 
-    Es posible que al principio aparezca con un error. El error se debe a que la dirección URL predeterminada del servidor de informes está establecida en *http://localhost* y puede que no esté disponible en esa ubicación.
+    Es posible que al principio aparezca con un error. El error se debe a que la dirección URL predeterminada del servidor de informes está establecida en *https://localhost* y puede que no esté disponible en esa ubicación.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Configurar el elemento web Visor de informes
 
@@ -56,7 +56,7 @@ Para configurar el elemento web para que señale a un informe específico, haga 
 
     ![Edite la página web desde el desplegable del elemento web.](media/sharepoint-edit-web-part.png)
 
-2. Escriba la **dirección URL del servidor de informes** que hospeda el informe. Esto debe tener un aspecto parecido a *http://myrsserver/reportserver*.
+2. Escriba la **dirección URL del servidor de informes** que hospeda el informe. Esto debe tener un aspecto parecido a *https://myrsserver/reportserver*.
 
 3. Escriba la ruta de acceso y el nombre del informe que quiere mostrar en el elemento web. Será algo similar a */AdventureWorks Sample Reports/Company Sales*. En este ejemplo, el informe *Company Sales* (Ventas de la empresa) se encuentra en una carpeta denominada *AdventureWorks Sample Reports* (Informes de muestra de AdventureWorks).
 

@@ -19,19 +19,19 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6255d6aa17b55a73b6ccb6d119e1e377effa4977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e38185e537747c951ad7fb236a3b06837240617a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608583"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698390"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Crea una instancia de **geography** dada una representación en el subconjunto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del lenguaje de marcado de geografía (GML).
   
-Para obtener más información sobre GML, vea las siguientes especificaciones de Open Geospatial Consortium: [Especificaciones de OGC, Lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)
+Para obtener más información sobre GML, vea las siguientes especificaciones de Open Geospatial Consortium: [Especificaciones de OGC, Lenguaje de marcado de geografía](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.
   
@@ -65,7 +65,7 @@ GeomFromGml ( GML_input, SRID )
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
+SET @x = '<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  
@@ -75,7 +75,7 @@ SELECT @g.ToString();
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<FullGlobe xmlns="http://schemas.microsoft.com/sqlserver/2011/geography" />';  
+SET @x = '<FullGlobe xmlns="https://schemas.microsoft.com/sqlserver/2011/geography" />';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  

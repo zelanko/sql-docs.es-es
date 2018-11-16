@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713183"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701923"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planear una instalación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713183"
   
  Con independencia del método de instalación, es necesario confirmar la aceptación de los términos de la licencia de software como usuario individual o en nombre de una entidad, a menos que el uso del software en su caso se rija por un acuerdo independiente, como un acuerdo de licencia por volumen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un acuerdo suscrito con un ISV u OEM.  
   
- Los términos de la licencia se muestran para revisarlos y aceptarlos en la interfaz de usuario del programa de instalación. Las instalaciones desatendidas (las que usen los parámetros `/Q` o `/QS`) deben incluir el parámetro `/IAcceptSQLServerLicenseTerms`. Descargue y revise los términos de licencia por separado en [Información y términos de licencia de Microsoft SQL Server](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Para los términos de las licencias por volumen, consulte [Términos y documentación de licencias](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Para versiones anteriores de SQL Server, consulte [Términos de licencia del software de Microsoft](http://go.microsoft.com/fwlink/?LinkID=148209).  
+ Los términos de la licencia se muestran para revisarlos y aceptarlos en la interfaz de usuario del programa de instalación. Las instalaciones desatendidas (las que usen los parámetros `/Q` o `/QS`) deben incluir el parámetro `/IAcceptSQLServerLicenseTerms`. Descargue y revise los términos de licencia por separado en [Información y términos de licencia de Microsoft SQL Server](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Para los términos de las licencias por volumen, consulte [Términos y documentación de licencias](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Para versiones anteriores de SQL Server, consulte [Términos de licencia del software de Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  En función de cómo haya recibido el software (por ejemplo, a través de un contrato de licencias por volumen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), su uso del software puede estar sujeto a términos y condiciones adicionales.  

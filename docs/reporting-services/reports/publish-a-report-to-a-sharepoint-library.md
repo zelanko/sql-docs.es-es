@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e363e401bfa37afa31216edcb7817021415779e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b482f472d682a8cc1b78e106e1d9d1c289d9fbb4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595548"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814288"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar un informe en una biblioteca de SharePoint
   Para publicar un informe en un sitio de SharePoint configurado para la integración de SharePoint, debe establecer las propiedades del proyecto en el Diseñador de informes. En las propiedades de proyecto, todas las referencias a servidores, informes y orígenes de datos compartidos deben ser direcciones URL completas. En la definición de informe, todas las referencias a subinformes, informes detallados y recursos, como imágenes basadas en web, deben ser direcciones URL completas.  
@@ -34,13 +34,13 @@ ms.locfileid: "47595548"
   
 4.  Si desea publicar los orígenes de datos compartidos del proyecto y sobrescribir los publicados anteriormente, establezca **OverwriteDataSources** en **True**.  
   
-5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o una carpeta de biblioteca (por ejemplo, `http://TestServer/TestSite/Documents/DataSources`).  
+5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o una carpeta de biblioteca (por ejemplo, `https://TestServer/TestSite/Documents/DataSources`).  
   
      Si no se especifica ningún valor, se usa el valor **TargetReportFolder** .  
   
-6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o una carpeta de biblioteca (por ejemplo, `http://TestServer/TestSite/Documents/Reports`).  
+6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o una carpeta de biblioteca (por ejemplo, `https://TestServer/TestSite/Documents/Reports`).  
   
-7.  Para **TargetServerURL**, escriba una dirección URL a un sitio de nivel superior o a un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de primer nivel predeterminado (por ejemplo, `http://servername`, `http://servername/site`o `http://servername/site/subsite`).  
+7.  Para **TargetServerURL**, escriba una dirección URL a un sitio de nivel superior o a un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de primer nivel predeterminado (por ejemplo, `https://servername`, `https://servername/site`o `https://servername/site/subsite`).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

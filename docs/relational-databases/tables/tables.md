@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ae4b7f0804b9cab8ac9c364be2337f6b7438025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647513"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664924"
 ---
 # <a name="tables"></a>Tablas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47647513"
  Las tablas temporales se almacenan en **tempdb**. Hay dos tipos de tablas temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Las tablas temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles para el usuario de la conexión actual y se eliminan cuando el usuario se desconecta de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las tablas temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan cuando todos los usuarios que hacen referencia a la tabla se desconectan de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tablas del sistema  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
  Tablas anchas  
  Las tablas anchas usan las [columnas dispersas](../../relational-databases/tables/use-sparse-columns.md) para aumentar hasta 30 000 el número total de columnas permitidas. Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Una tabla ancha ha definido un [conjunto de columnas](../../relational-databases/tables/use-column-sets.md), que es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. El número de índices y estadísticas también se aumenta hasta 1.000 y 30.000, respectivamente. El tamaño máximo de una fila de una tabla ancha es de 8.019 bytes. Por consiguiente, la mayoría de los datos de cualquier fila deben ser NULL. El número máximo de columnas no dispersas más las columnas calculadas de una tabla ancha sigue siendo 1.024.  

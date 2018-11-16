@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d7ac19ce57b32c550c73b3a5de8d8f7f016afa69
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5ed1c90d0516761b209382321e160ffb0e83237e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419510"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701388"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 representa un paso importante hacia convertir SQL Server en una plataforma que proporciona opciones de lenguajes de desarrollo, tipos de datos, ya sean locales o en la nube, y sistemas operativos con la eficacia de SQL Server en Linux, contenedores de Docker basados en Linux y Windows. En este tema se resumen las novedades de determinadas áreas de características y se incluyen vínculos a información adicional. Para más información relacionada con SQL Server en Linux, vea [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) (Documentación de SQL Server en Linux).
 
-[![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Pruébela:** [descargue la versión SQL Server 2017 de octubre de 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Descargar desde el Centro de evaluación](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Pruébela:** [descargue la versión SQL Server 2017 de octubre de 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
-> Además de los cambios siguientes, se publican actualizaciones acumulativas a intervalos regulares después del lanzamiento de GA. Estas actualizaciones acumulativas proporcionan muchas mejoras y correcciones. Para más información sobre la versión de la última actualización acumulativa (CU), vea [Actualizaciones acumulativas de SQL Server 2017](http://aka.ms/sql2017cu).
+> Además de los cambios siguientes, se publican actualizaciones acumulativas a intervalos regulares después del lanzamiento de GA. Estas actualizaciones acumulativas proporcionan muchas mejoras y correcciones. Para más información sobre la versión de la última actualización acumulativa (CU), vea [Actualizaciones acumulativas de SQL Server 2017](https://aka.ms/sql2017cu).
 
 ## <a name="sql-server-2017-database-engine"></a>Motor de base de datos de SQL Server 2017
 

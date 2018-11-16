@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100526"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701053"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  Especifica la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, se asigna a la base de datos la intercalación predeterminada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No se puede especificar un nombre de intercalación en una instantánea de base de datos.  
   
- No se puede especificar un nombre de intercalación con las cláusulas FOR ATTACH o FOR ATTACH_REBUILD_LOG. Para obtener información acerca de cómo cambiar la intercalación de una base de datos adjuntada, visite este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ No se puede especificar un nombre de intercalación con las cláusulas FOR ATTACH o FOR ATTACH_REBUILD_LOG. Para obtener información acerca de cómo cambiar la intercalación de una base de datos adjuntada, visite este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
  Para obtener más información sobre los nombres de intercalación de Windows y SQL, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -509,7 +509,7 @@ Algunas características de la base de datos dependen de características o capa
  A menos que se especifique FOR ATTACH, todas las bases de datos nuevas heredan los valores de las opciones de la base de datos model. Por ejemplo, la opción de base de datos de reducción automática se establece en **true** en la base de datos model y en cualquier base de datos nueva que se cree. Si se cambian las opciones de la base de datos model, los nuevos valores de estas opciones se utilizarán en las nuevas bases de datos que se creen. Las operaciones de modificación de la base de datos model no afectan a las bases de datos existentes. Si se especifica FOR ATTACH en la instrucción CREATE DATABASE, la nueva base de datos hereda los valores de las opciones de la base de datos original.  
   
 ## <a name="viewing-database-information"></a>Ver la información de la base de datos  
- Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-El nombre de la nueva base de datos. Este nombre debe ser único en el servidor SQL Server y debe cumplir las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los identificadores. Para obtener más información, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+El nombre de la nueva base de datos. Este nombre debe ser único en el servidor SQL Server y debe cumplir las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los identificadores. Para obtener más información, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Especifica la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, a la base de datos se le asigna la intercalación predeterminada, que es SQL_Latin1_General_CP1_CI_AS.  
   
-Para obtener más información sobre los nombres de intercalación de Windows y de SQL, consulte [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obtener más información sobre los nombres de intercalación de Windows y de SQL, consulte [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ Se aplican las siguientes reglas semánticas y de sintaxis al uso del argumento 
   
 - El nombre del servidor de origen y el nombre del servidor del destino de la copia pueden ser iguales o diferentes. Si son iguales, este parámetro es opcional y se usa el contexto de servidor de la sesión actual de forma predeterminada.  
   
-- Los nombres de las bases de datos de origen y de destino deben especificarse, ser únicos y ajustarse a las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los identificadores. Para obtener más información, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+- Los nombres de las bases de datos de origen y de destino deben especificarse, ser únicos y ajustarse a las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los identificadores. Para obtener más información, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 - La instrucción `CREATE DATABASE` debe ejecutarse dentro del contexto de la base de datos maestra del servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] donde se creará la nueva base de datos. 
 - Una vez finalizada la copia, la base de datos de destino debe administrarse como una base de datos independiente. Puede ejecutar las instrucciones `ALTER DATABASE` y `DROP DATABASE` en la nueva base de datos de forma independiente de la base de datos de origen. También puede copiar la nueva base de datos en otra base de datos nueva.  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-El nombre de la nueva base de datos. Este nombre debe ser único en el servidor SQL Server y debe cumplir las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los identificadores. Para obtener más información, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+El nombre de la nueva base de datos. Este nombre debe ser único en el servidor SQL Server y debe cumplir las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los identificadores. Para obtener más información, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Especifica la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, a la base de datos se le asigna la intercalación predeterminada, que es SQL_Latin1_General_CP1_CI_AS.  
   
-Para obtener más información sobre los nombres de intercalación de Windows y de SQL, consulte [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obtener más información sobre los nombres de intercalación de Windows y de SQL, consulte [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## <a name="remarks"></a>Notas
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>Argumentos  
 *database_name*  
-El nombre de la nueva base de datos. Este nombre debe ser único en el servidor SQL, que puede hospedar tanto bases de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], y cumplir con las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obtener más información, consulte [Identificadores](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+El nombre de la nueva base de datos. Este nombre debe ser único en el servidor SQL, que puede hospedar tanto bases de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], y cumplir con las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obtener más información, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
 Especifica la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, a la base de datos se le asigna la intercalación predeterminada, que es SQL_Latin1_General_CP1_CI_AS.  
   
-Para obtener más información sobre los nombres de intercalación de Windows y SQL, consulte [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Para obtener más información sobre los nombres de intercalación de Windows y SQL, consulte [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Especifica el nivel de servicio de la base de datos. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use "datawarehouse".  

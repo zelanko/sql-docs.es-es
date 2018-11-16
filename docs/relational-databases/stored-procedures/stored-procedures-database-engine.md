@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d05481a9946a411d9fc83156e81e0abcc232561
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7165b90db10cab6060d674ad8ae4779af843173
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709163"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671584"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimientos almacenados (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
+  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
   
 -   Aceptar parámetros de entrada y devolver varios valores en forma de parámetros de salida al programa que realiza la llamada.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "47709163"
 |Describe cómo se usan los parámetros en un procedimiento almacenado.|[Parámetros](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Procedimientos almacenados de CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

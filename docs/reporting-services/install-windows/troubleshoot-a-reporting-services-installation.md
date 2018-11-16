@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020329"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814028"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solución de problemas en una instalación de Reporting Services
 
   Si no puede instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debido a los errores que se producen durante la instalación, siga las instrucciones de este artículo para abordar las condiciones que probablemente ocasionen esos errores.  
   
- Para obtener información sobre otros errores y problemas relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vea [Troubleshoot SSRS issues and errors.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx) (Solución de problemas y errores de SSRS)  
+ Para obtener información sobre otros errores y problemas relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vea [Troubleshoot SSRS issues and errors.](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx) (Solución de problemas y errores de SSRS)  
   
  Examine las [notas de la versión en línea](https://go.microsoft.com/fwlink/?linkid=236893) en caso de que el problema que tiene se describa en las notas de la versión.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "50020329"
   
 -   Revise el artículo de SharePoint sobre los entornos de desarrollo. [Configurar un entorno de desarrollo general para SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
--   Revisar la exposición en el foro: [Administración central devuelve una página en blanco después de la instalación en Windows 7](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Revisar la exposición en el foro: [Administración central devuelve una página en blanco después de la instalación en Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   La cuenta de servicio que usa para los servicios de SharePoint, como el Servicio de Administración central de SharePoint 2013/2016, debería tener los privilegios de administrador en el sistema operativo local.  
   
@@ -267,9 +267,9 @@ ms.locfileid: "50020329"
 ##  <a name="bkmk_additional"></a> Recursos adicionales  
  A continuación se indican recursos adicionales que puede consultar a modo de ayuda para solucionar problemas:  
   
--   Wiki de TechNet: [Solución de problemas de SQL Server Reporting Services (SSRS) en el modo integrado de SharePoint 2010](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   Wiki de TechNet: [Solución de problemas de SQL Server Reporting Services (SSRS) en el modo integrado de SharePoint 2010](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Foro de SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Foro de SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
 -   ¿Tiene algún comentario o más preguntas? Visite [UserVoice de Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d32ba5273572c8f67729025e63580fa3355ec958
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636493"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700943"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -319,7 +319,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 ## <a name="next-steps"></a>Pasos siguientes
 - [Completar la actualización motor de base de datos](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [Aprovechamiento de las nuevas características de SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [Aprovechamiento de las nuevas características de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
 - [Actualizar una instancia del clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
 - [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Agregar características a una instancia de SQL Server 2016 (programa de instalación)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

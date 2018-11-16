@@ -53,17 +53,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18e99c028fb00bc7c0365885c9a42af1668ed3ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643303"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702683"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funciones escalares de ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Puede usar [funciones escalares ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta estas instrucciones. Se pueden utilizar en procedimientos almacenados y funciones definidas por el usuario. Entre estas últimas se incluyen funciones de cadena, de número, de hora, de fecha, de intervalo y de sistema.  
+  Puede usar [funciones escalares ODBC](https://go.microsoft.com/fwlink/?LinkID=88579) en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta estas instrucciones. Se pueden utilizar en procedimientos almacenados y funciones definidas por el usuario. Entre estas últimas se incluyen funciones de cadena, de número, de hora, de fecha, de intervalo y de sistema.  
   
 ## <a name="usage"></a>Uso  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

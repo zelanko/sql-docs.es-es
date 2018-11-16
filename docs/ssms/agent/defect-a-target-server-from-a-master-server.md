@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 74c1c980e2e8eea07f54c95273fd8ce7a0620160
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d539e6a6446fc17ae935a372e9c8562d84b71c35
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626883"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703533"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Dar de baja un servidor de destino desde un servidor maestro
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Para ejecutar este procedimiento almacenado, un usuario debe ser miembro del rol
 sp_msx_defect ;  
 ```  
   
-Para más información, consulte [sp_msx_defect (Transact-SQL)](http://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
+Para más información, consulte [sp_msx_defect (Transact-SQL)](https://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
   
 ## <a name="PowerShellProcedure"></a>Usar Objetos de administración de SQL Server (SMO)  
 Utilice el método **MsxDefect**.  

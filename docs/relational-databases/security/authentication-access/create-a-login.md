@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630363"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675434"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "47630363"
   
     2.  En **Desde esta ubicación**, haga clic en **Ubicaciones** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
   
-    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, escriba el usuario o el nombre de grupo que quiere buscar. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo)](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, escriba el usuario o el nombre de grupo que quiere buscar. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo)](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Haga clic en **Avanzadas** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo): página Opciones avanzadas](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Haga clic en **Avanzadas** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo): página Opciones avanzadas](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Haga clic en **Aceptar**.  
   

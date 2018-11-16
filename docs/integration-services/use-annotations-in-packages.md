@@ -15,19 +15,19 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8222a9d4ccf71b012c41a7a5059a46ea3b42e060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90788ae0c29e293db84f3b6f60fd93af41b99d8b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645843"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637707"
 ---
 # <a name="use-annotations-in-packages"></a>Usar anotaciones en paquetes
   El Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] proporciona anotaciones, que puede usar para que los paquetes se autodocumenten y sean más fáciles de entender y mantener. Puede agregar anotaciones a las superficies de diseño de flujo de control, flujo de datos y controlador de eventos del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Las anotaciones pueden contener cualquier tipo de texto y resultan útiles para agregar etiquetas, comentarios y demás información descriptiva a un paquete. Las anotaciones únicamente son una característica de tiempo de diseño. Por ejemplo, no se escriben en los registros.  
   
  Cuando se presiona ENTRAR, el texto se ajusta a la línea siguiente. El cuadro de anotación aumenta de tamaño automáticamente a medida que agrega líneas de texto adicionales. Las anotaciones de paquetes se guardan como texto sin cifrar en la sección CDATA del archivo de paquete.  
   
- Para obtener más información sobre los cambios en el formato del archivo de paquete, vea [Formato de paquetes SSIS](http://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ Para obtener más información sobre los cambios en el formato del archivo de paquete, vea [Formato de paquetes SSIS](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
   
  Cuando se guarda un paquete, el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] guarda las anotaciones en el paquete.  
   

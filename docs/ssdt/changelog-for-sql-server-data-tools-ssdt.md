@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216813"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677904"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -534,11 +534,11 @@ Número de compilación: 14.0.61704.140
 - Tabular: diversas mejoras y correcciones de rendimiento para el análisis DAX y la barra de fórmulas.
 - Tabular: el Explorador de modelos tabulares ya no será visible si no hay abierto ningún proyecto tabular de SSAS.
 - Multidimensional: se ha corregido un problema que hacía que el cuadro de diálogo de procesamiento no se pudiese usar en máquinas con valores altos de PPP.
-- Tabular: se ha corregido un problema que producía un error en SSDT al abrir cualquier proyecto de BI cuando SSMS ya estaba abierto. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- Tabular: se ha corregido un problema que hacía que las jerarquías no se guardasen correctamente en el archivo .bim en un modelo 1103. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Tabular: se ha corregido un problema que producía un error en SSDT al abrir cualquier proyecto de BI cuando SSMS ya estaba abierto. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: se ha corregido un problema que hacía que las jerarquías no se guardasen correctamente en el archivo .bim en un modelo 1103. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabular: se ha corregido un problema que permitía el modo de área de trabajo integrada en máquinas de 32 bits aunque no fuese compatible.
 - Tabular: se ha corregido un problema que podía causar bloqueos al hacer clic en cualquier elemento en el modo de selección parcial (por ejemplo, escribir una expresión DAX pero hacer clic en una medida).
-- Tabular: se ha corregido un problema que hacía que el Asistente para implementación volviese a establecer la propiedad .Name del modelo en "Model". [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabular: se ha corregido un problema que hacía que el Asistente para implementación volviese a establecer la propiedad .Name del modelo en "Model". [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Tabular: se ha corregido un problema que hacía que al seleccionar una jerarquía en TME se mostrasen las propiedades incluso si no estaba seleccionada la vista de diagrama.
 - Tabular: se ha corregido un problema que hacía que al pegar desde determinadas aplicaciones en la barra de fórmulas DAX se pegasen imágenes u otro contenido en lugar de texto.
 - Tabular: se ha corregido un problema que hacía que no se pudiesen abrir algunos modelos antiguos en la versión 1103 debido a la presencia de medidas con una definición específica.
@@ -569,8 +569,8 @@ Número de compilación: 14.0.61704.140
 - Se corrigió un problema en el diseño de informes en SSDT en que la vista de árbol de los parámetros, los orígenes de datos y los conjuntos de datos se podría contraer cuando se hacen la mayoría de los datos 
 - Se ha corregido un problema que hacía que la opción Guardar guardase la versión de RDL, no la versión más reciente.
 - Se ha corregido un problema que hacía que RS de SSDT hiciese una copia de seguridad de los archivos cuando la copia de seguridad estaba desactivada y causase otros problemas.
-- Se ha corregido un problema en el Generador de informes que hacía que se mostrase un error al hacer clic en "Dividir celdas". [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- Se ha corregido un problema que podía hacer que el almacenamiento en caché generase datos incorrectos en un informe. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- Se ha corregido un problema en el Generador de informes que hacía que se mostrase un error al hacer clic en "Dividir celdas". [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Se ha corregido un problema que podía hacer que el almacenamiento en caché generase datos incorrectos en un informe. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **Proyectos de IS:**
 - Se ha corregido un problema que hacía que la configuración de run64bitruntime no se conservase.
@@ -582,7 +582,7 @@ Número de compilación: 14.0.61704.140
 
 **Proyectos de base de datos:**
 - Configuración de incorporación e implementación de SSDT DACPAC para IgnoreColumnOrder [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
-- SSDT no se puede compilar si se usa STRING_SPLIT [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- SSDT no se puede compilar si se usa STRING_SPLIT [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - Se corrige problema en que la propiedad DeploymentContributors tiene acceso al modelo público pero no se ha inicializado el esquema de respaldo [Problema de Github](https://github.com/Microsoft/DACExtensions/issues/8)
 - Corrección temporal de DacFx para la ubicación de FILEGROUP
 - Corrección del error "Referencia sin resolver" para sinónimos externos. 
@@ -743,7 +743,7 @@ Número de compilación: 14.0.60812.0
     - **SSDT:**
         - Error de Connect 1898001: [se ha corregido un problema de descripción de columna con una limitación de 128 caracteres](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters).
         - Se ha corregido un problema por el que, al publicar una base de datos de VS, no se aplicaba la propiedad DatabaseServiceObjective en el xml de perfil de publicación.
-        - Error de Connect 2900167: [se ha corregido un problema con las pruebas unitarias que dejaban incorrectamente archivos temporales](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
+        - Error de Connect 2900167: [se ha corregido un problema con las pruebas unitarias que dejaban incorrectamente archivos temporales](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
         - Se ha corregido un problema por el que se truncaba el cuadro combinado Período de retención en Configuración de la base de datos.
         - Se ha corregido un problema de ausencia de verificación de contraseñas antiguas vacías en las propiedades del proyecto CLR de SQL al cambiar la contraseña.
     - **DACFx:**

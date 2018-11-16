@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 307471c65910c702a7777796e153a599a6a4e59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c4320a3e571c6680800fac18f9be75674f61ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825923"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664994"
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework - License Terms (Marco de trabajo de la aplicación de capa de datos: Términos de la licencia)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
     -   transferir el software o este contrato a ningún tercero, o  
     -   usar el software para prestar servicios de hospedaje de software comercial.  
       
-4.  **NOTIFICACIONES DE TERCEROS.** El software podría incluir código de terceros para el que Microsoft, y no dicho tercero, le otorga licencia en virtud de los términos establecidos previamente en este contrato. Las notificaciones relativas al código de terceros, si las hubiera, se incluyen únicamente para su información. Además, los propietarios de los scripts de terceros que están vinculados, se invocan o se hacen referencia en este software, y no Microsoft, le otorgan licencia para este código. Vea los términos de uso de la red CDN de ASP.NET Ajax: http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **NOTIFICACIONES DE TERCEROS.** El software podría incluir código de terceros para el que Microsoft, y no dicho tercero, le otorga licencia en virtud de los términos establecidos previamente en este contrato. Las notificaciones relativas al código de terceros, si las hubiera, se incluyen únicamente para su información. Además, los propietarios de los scripts de terceros que están vinculados, se invocan o se hacen referencia en este software, y no Microsoft, le otorgan licencia para este código. Vea los términos de uso de la red CDN de ASP.NET Ajax: https://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **COPIA DE SEGURIDAD.** Puede realizar una única copia de seguridad del software. Solo podrá utilizarla para volver a instalar el software.  
   

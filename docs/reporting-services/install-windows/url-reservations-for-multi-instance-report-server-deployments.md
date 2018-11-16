@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741263"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814068"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias
   Si instala varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el mismo equipo, debe tener en cuenta cómo va a definir las reservas de direcciones URL para cada instancia. En cada instancia, el servicio web del servidor de informes y el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] deben tener al menos una reserva de direcciones URL cada uno. El conjunto completo de reservas debe ser único en HTTP.SYS.  
@@ -26,8 +26,8 @@ ms.locfileid: "47741263"
   
 |Instancia de SQL Server|Reserva de direcciones URL predeterminada|  
 |-------------------------|-----------------------------|  
-|Predeterminada (MSSQLServer)|`http://+:80/reportserver`|  
-|Con nombre (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
+|Predeterminada (MSSQLServer)|`https://+:80/reportserver`|  
+|Con nombre (MynamedInstance)|`https://+:80/reportserver_MyNamedInstance`|  
   
  Para la instancia con nombre, el directorio virtual incluye el nombre de la instancia. Tanto la instancia predeterminada como la instancia con nombre escuchan en el mismo puerto, pero los nombres de directorios virtuales únicos determinan qué servidor de informes obtiene la solicitud.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741263"
   
 |Instancia predeterminada del servidor de informes (MSSQLSERVER)|ReportServer_MyNamedInstance|Unicidad|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|Cada instancia escucha en un puerto diferente.|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Cada instancia responde a nombres de servidor diferentes (nombre de dominio completo y nombre de equipo).|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|Cada instancia escucha en un puerto diferente.|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|Cada instancia responde a nombres de servidor diferentes (nombre de dominio completo y nombre de equipo).|  
   
 ## <a name="uniqueness-requirements"></a>Requisitos de unicidad  
  Las tecnologías subyacentes utilizadas por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imponen los requisitos relativos a nombres únicos. HTTP.SYS requiere que todas las direcciones URL de su repositorio sean únicas. Puede cambiar el puerto, el nombre de host o el nombre de directorio virtual para crear una dirección URL única. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiere que las identidades de aplicaciones sean únicas en el mismo proceso. Este requisito afecta a los nombres de directorio virtuales. Especifica que no se puede duplicar un nombre de directorio virtual en la misma instancia del servidor de informes.  

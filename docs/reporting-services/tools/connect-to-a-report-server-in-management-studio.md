@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c580efe78572b757fc92f591ba4569d595fb4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f08bb5994803652ff264335d0a6ea723b5d1918d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737303"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813235"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar con un servidor de informes en Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] proporciona el Explorador de objetos, que permite conectarse a cualquier servidor de la familia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y examinar su contenido de forma gráfica. Para Reporting Services, puede usar el Explorador de objetos para hacer lo siguiente:  
@@ -62,7 +62,7 @@ ms.locfileid: "47737303"
   
 2.  Haga clic en Conectar para ver la lista de tipos de servidor y, a continuación, seleccione **Reporting Services**.  
   
-3.  En el cuadro de diálogo **Conectar al servidor** , escriba una dirección URL para un sitio de SharePoint. En el ejemplo siguiente se ilustra la sintaxis: `http://<web server>/sites/<site>`.  
+3.  En el cuadro de diálogo **Conectar al servidor** , escriba una dirección URL para un sitio de SharePoint. En el ejemplo siguiente se ilustra la sintaxis: `https://<web server>/sites/<site>`.  
   
 4.  Seleccione el tipo de autenticación. Si está usando la autenticación de Windows, debe conectarse usando sus credenciales. Si selecciona la autenticación básica o la autenticación de formularios, escriba la cuenta y la contraseña.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47737303"
   
     -   Para un servidor de informes en modo nativo, escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si instaló el servidor de informes como una instancia con nombre, use esta sintaxis para especificar el servidor: *\<nombreDeServidor>[\\<nombreDeInstancia\>]*.  
   
-    -   Para un servidor de informes que se ejecuta en el modo integrado con SharePoint, el servidor al que se va a conectar es el sitio de SharePoint con el que el servidor de informes está conectado. La conexión al sitio de SharePoint es necesaria para poder ver los niveles de permiso que controlan el acceso a las operaciones y el contenido del servidor de informes. Puede especificar cualquier sitio de la colección de sitios. En el ejemplo siguiente se ilustra la sintaxis: `http://mysharepointsite`.  
+    -   Para un servidor de informes que se ejecuta en el modo integrado con SharePoint, el servidor al que se va a conectar es el sitio de SharePoint con el que el servidor de informes está conectado. La conexión al sitio de SharePoint es necesaria para poder ver los niveles de permiso que controlan el acceso a las operaciones y el contenido del servidor de informes. Puede especificar cualquier sitio de la colección de sitios. En el ejemplo siguiente se ilustra la sintaxis: `https://mysharepointsite`.  
   
 5.  En **Autenticación**, seleccione qué modo de autenticación desea utilizar para obtener acceso al servidor web. Debe elegir el modo de autenticación que el servidor de informes ya está utilizando.  
   
@@ -106,8 +106,8 @@ ms.locfileid: "47737303"
 |Conectar a|Tareas|Permisos|  
 |----------------|-----------|-----------------|  
 |Servidor de informes en modo nativo, conectado como la instancia con nombre o predeterminada:<br /><br /> \<nombreDeServidor>\<_instancia<br /><br /> La conexión al servidor de informes se realiza a través del proveedor WMI del servidor de informes.|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas.<br /><br /> Crear, modificar o eliminar definiciones de roles.|Se asigna al rol Administrador del sistema.|  
-|Servidor de informes en modo nativo, conectado como la instancia con nombre o predeterminada, a través del extremo al servicio web del servidor de informes:<br /><br /> `http://<servername>/reportserver`<br /><br /> La especificación de una dirección URL al servidor de informes ofrece una manera alternativa de conectarse al servidor de informes.|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas.<br /><br /> Crear, modificar o eliminar definiciones de roles.|Se asigna al rol Administrador del sistema.|  
-|Servidor de informes en el modo integrado con SharePoint, conectado a través del sitio de SharePoint:<br /><br /> `http://<webserver>/<SharePointSite>`|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas definidas para el sitio al que está conectado.<br /><br /> Ver los niveles de permisos definidos para el sitio al que está conectado.|Nivel de permiso de Control total en el sitio de SharePoint al que está conectado.|  
+|Servidor de informes en modo nativo, conectado como la instancia con nombre o predeterminada, a través del extremo al servicio web del servidor de informes:<br /><br /> `https://<servername>/reportserver`<br /><br /> La especificación de una dirección URL al servidor de informes ofrece una manera alternativa de conectarse al servidor de informes.|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas.<br /><br /> Crear, modificar o eliminar definiciones de roles.|Se asigna al rol Administrador del sistema.|  
+|Servidor de informes en el modo integrado con SharePoint, conectado a través del sitio de SharePoint:<br /><br /> `https://<webserver>/<SharePointSite>`|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas definidas para el sitio al que está conectado.<br /><br /> Ver los niveles de permisos definidos para el sitio al que está conectado.|Nivel de permiso de Control total en el sitio de SharePoint al que está conectado.|  
 |Servidor de informes en el modo con SharePoint, conectado a través del nombre de la instancia del servidor de informes:<br /><br /> \<nombreDeServidor>\<_instancia|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.|El nivel de permiso Control total en el sitio de SharePoint que está integrado con el servidor de informes.<br /><br /> Tenga en cuenta que, cuando se conecta al servidor de informes en lugar del sitio de SharePoint, se reduce significativamente el número de tareas que puede realizar. Esto se debe a que el servidor de informes solamente puede devolver datos de aplicación almacenadas o administradas en la base de datos del servidor de informes, y no en la configuración de SharePoint y en las bases de datos de contenido.|  
   
 ## <a name="see-also"></a>Ver también  

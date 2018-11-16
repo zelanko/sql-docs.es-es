@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf21f49e7160c641404122fa36a104d6d49f0e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86dd39734b2f2d4fd82f6845f60be588cac2c95b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758533"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812838"
 ---
 # <a name="accessing-the-soap-api"></a>Acceso a la API SOAP
   El servicio web del servidor de informes utiliza el Protocolo simple de acceso a objetos (SOAP) sobre HTTP y actúa como interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web proporciona dos extremos, uno para la ejecución y otro para la administración de informes, y está compuesto de métodos y de un conjunto de objetos de tipo complejo que puede utilizar para tener acceso a la funcionalidad completa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para llamar al servicio, debe hacer referencia al Lenguaje de descripción de servicios web (WSDL) de Reporting Services.  
@@ -44,7 +44,7 @@ ms.locfileid: "47758533"
  En el siguiente ejemplo se muestra el formato de la dirección URL del archivo WSDL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ```  
-http://server/reportserver/ReportService2010.asmx?wsdl  
+https://server/reportserver/ReportService2010.asmx?wsdl  
 ```  
   
  En la tabla siguiente se describe cada elemento de la dirección URL.  
@@ -55,7 +55,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |*servidorDeInformes*|Nombre de la carpeta que contiene el servicio web XML. Se configura durante la instalación.|  
 |*\<nombreDelPuntoDeConexión>.asmx*|Nombre del extremo de servicios web.|  
   
- Para más información acerca del formato de WSDL, consulte la especificación de WSDL del World Wide Web Consortium (W3C) en http://www.w3.org/TR/wsdl.  
+ Para más información acerca del formato de WSDL, consulte la especificación de WSDL del World Wide Web Consortium (W3C) en https://www.w3.org/TR/wsdl.  
   
 ## <a name="see-also"></a>Ver también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

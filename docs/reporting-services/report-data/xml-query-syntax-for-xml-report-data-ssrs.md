@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0c2b65f24b76f875b8fa11896cc70f62bb0902b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60488eef28194d8ffdd88dd37897011a9e6422b4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668763"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812678"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un elemento XML **Query** empieza con una etiqueta **\<Consulta>** e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -54,23 +54,23 @@ ms.locfileid: "47668763"
   
 |Origen de datos XML|Ejemplo de consulta|  
 |---------------------|-------------------|  
-|Datos XML del servicio web obtenidos a través del método <xref:ReportService2010.ReportingService2010.ListChildren%2A> .|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
-|Datos XML del servicio web obtenidos a través de SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
-|Documento XML o datos XML incrustados que usan espacios de nombres.<br /><br /> Elemento de consulta que especifica los espacios de nombres de una ruta de acceso de elemento.|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
+|Datos XML del servicio web obtenidos a través del método <xref:ReportService2010.ReportingService2010.ListChildren%2A> .|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Datos XML del servicio web obtenidos a través de SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>https://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
+|Documento XML o datos XML incrustados que usan espacios de nombres.<br /><br /> Elemento de consulta que especifica los espacios de nombres de una ruta de acceso de elemento.|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Documento XML incrustado.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |Documento XML que usa los valores predeterminados.|*No query*.<br /><br /> La ruta de acceso de elemento se deriva del propio documento XML y es independiente del espacio de nombres.|  
   
 > [!NOTE]  
->  El primer ejemplo de servicio web muestra el contenido del servidor de informes que usa el método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para ejecutar esta consulta, es necesario crear un nuevo origen de datos y establecer la cadena de conexión en `http://localhost/reportserver/reportservice2006.asmx`. El método <xref:ReportService2006.ReportingService2006.ListChildren%2A> toma dos parámetros: **Item** y **Recursive**. Establezca el valor predeterminado de **Item** en **/** y de **Recursive** en **1**.  
+>  El primer ejemplo de servicio web muestra el contenido del servidor de informes que usa el método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para ejecutar esta consulta, es necesario crear un nuevo origen de datos y establecer la cadena de conexión en `https://localhost/reportserver/reportservice2006.asmx`. El método <xref:ReportService2006.ReportingService2006.ListChildren%2A> toma dos parámetros: **Item** y **Recursive**. Establezca el valor predeterminado de **Item** en **/** y de **Recursive** en **1**.  
   
 ## <a name="specifying-namespaces"></a>Especificar espacios de nombres  
  Use el elemento XML **Query** para especificar los espacios de nombres que se usan en los datos XML del origen de datos. En la siguiente consulta XML se utiliza el espacio de nombres **sales**. Los nodos de elemento XML **ElementPath** para `sales:LineItems` y `sales:LineItem` usan el espacio de nombres **sales**.  
   
 ```  
 <Query xmlns:sales=  
-"http://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
+"https://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
    <SoapAction>  
-      http://schemas.microsoft.com/SalesWebService/ListOrders   
+      https://schemas.microsoft.com/SalesWebService/ListOrders   
    </SoapAction>  
    <ElementPath>  
       Customers/Customer/Orders/Order/sales:LineItems/sales:LineItem  
@@ -85,14 +85,14 @@ ms.locfileid: "47668763"
   
 |Elemento de consulta XML|Campos resultantes en el conjunto de datos|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Valor A: `http://schemas.microsoft.com/...`<br /><br /> Valor B: `http://schemas.microsoft.com/...`<br /><br /> Valor C: `http://schemas.microsoft.com/...`|  
-|`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
+|\<Query/>|Valor A: `https://schemas.microsoft.com/...`<br /><br /> Valor B: `https://schemas.microsoft.com/...`<br /><br /> Valor C: `https://schemas.microsoft.com/...`|  
+|`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
- Puede copiar este documento XML y guardarlo en una dirección URL disponible para el Diseñador de informes con objeto de poder usarlo como origen de datos XML, por ejemplo, http://localhost/DPNamespace.xml.  
+ Puede copiar este documento XML y guardarlo en una dirección URL disponible para el Diseñador de informes con objeto de poder usarlo como origen de datos XML, por ejemplo, https://localhost/DPNamespace.xml.  
   
 ```  
-<Root xmlns:ns="http://schemas.microsoft.com/...">  
+<Root xmlns:ns="https://schemas.microsoft.com/...">  
    <ns:Element1>  
       <Node>Value A</Node>  
       <Node>Value B</Node>  

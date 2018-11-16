@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92e732924f3e5c6d4604ea194330605b2ec86d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531a20353b294d24bee8318da863eec6d05522d9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814053"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675294"
 ---
 # <a name="extensible-key-management-ekm"></a>Administración extensible de claves (EKM)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47814053"
   
  La Administración extensible de claves de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los fabricantes de EKM/HSM registrar sus módulos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cuando se registra, los usuarios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden utilizar las claves de cifrado almacenadas en los módulos EKM. Esto permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtener acceso a las características de cifrado avanzadas que admiten estos módulos, como el cifrado y descifrado masivo, o las funciones de administración de claves, como el vencimiento o la rotación de claves.  
   
- Al ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una máquina virtual de Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden usar claves almacenadas en el [almacén de claves de Azure](http://go.microsoft.com/fwlink/?LinkId=521401). Para obtener más información, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
+ Al ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una máquina virtual de Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden usar claves almacenadas en el [almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521401). Para obtener más información, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
   
 ## <a name="ekm-configuration"></a>Configuración de EKM  
  La Administración extensible de claves no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

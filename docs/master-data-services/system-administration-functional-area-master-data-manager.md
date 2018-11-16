@@ -12,12 +12,12 @@ ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0e472d25292413e6fcbd9e3a9be60b587955010d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5c0111b59f0c6ff03fc8daaf3c3f1da13c2f3a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622163"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697486"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Área funcional de Administración del sistema (Master Data Manager)
 
@@ -52,7 +52,7 @@ ms.locfileid: "47622163"
   
  [Crear un paquete de implementación de modelo mediante el asistente](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Solucionar problemas de la implementación de modelos (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Solucionar problemas de la implementación de modelos (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>Reglas de negocios  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

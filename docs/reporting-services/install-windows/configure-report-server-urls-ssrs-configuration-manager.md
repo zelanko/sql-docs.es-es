@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609703"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813348"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], las direcciones URL se usan para obtener acceso al servicio web del servidor de informes y al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Para poder usar cualquier aplicación, debe configurar al menos una dirección URL para el servicio web y otra para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] indica valores predeterminados para ambas direcciones URL de la aplicación que mejor funcionan en la mayoría de los escenarios de implementación, incluso en las implementaciones en paralelo con otros servicios web y aplicaciones.  
@@ -38,9 +38,9 @@ ms.locfileid: "47609703"
 ## <a name="default-urls"></a>Direcciones URL predeterminadas  
  Al obtener acceso a un servidor de informes o al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] a través de su dirección URL, esta debería incluir el nombre de host y no la dirección IP. En una red TCP/IP, la dirección IP se resolverá como un nombre de host (o el nombre de red del equipo). Si usó los valores predeterminados para configurar las direcciones URL, debería poder tener acceso al servicio web del servidor de informes mediante direcciones URL que especifiquen el nombre de equipo u host local como el nombre de host:  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  La configuración que hace que estas direcciones URL estén disponibles aparece en la tabla siguiente. En esta tabla se muestran los valores predeterminados que habilitan una conexión del servidor de informes a través de direcciones URL que incluyan un nombre de host:  
   

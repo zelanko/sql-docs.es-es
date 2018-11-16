@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021099"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814098"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021099"
   
  En los temas siguientes se proporciona información adicional sobre cómo configurar las opciones de Word y Office.  
   
--   En Word, cambie el idioma de edición en **Preferencias de idioma de Microsoft Office** o en el cuadro de diálogo **Opciones de Word** . Para obtener más información, vea [Habilitar el uso de otros idiomas en los programas de Office](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   En Word, cambie el idioma de edición en **Preferencias de idioma de Microsoft Office** o en el cuadro de diálogo **Opciones de Word** . Para obtener más información, vea [Habilitar el uso de otros idiomas en los programas de Office](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Agregue paquetes de idioma de Office y, después, cambie el idioma de revisión. Para más información, vea [Agregar un idioma o establecer preferencias de idioma en Office 2010 y versiones posteriores](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) y [Opciones de idioma de Office](http://office.microsoft.com/language/).  
+-   Agregue paquetes de idioma de Office y, después, cambie el idioma de revisión. Para más información, vea [Agregar un idioma o establecer preferencias de idioma en Office 2010 y versiones posteriores](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) y [Opciones de idioma de Office](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  Al cambiar el idioma de edición en **Preferencias de idioma de Microsoft Office** o en el cuadro de diálogo **Opciones de Word** en Word, el cambio se aplicará en todos los programas de Office.  

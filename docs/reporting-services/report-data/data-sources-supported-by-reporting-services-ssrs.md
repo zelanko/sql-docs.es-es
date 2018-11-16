@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7348463fe7fb9f3871ecba06a2be8e768f8e3d51
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029174"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813868"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 ó 64 bits).  
@@ -175,7 +175,7 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  La extensión de procesamiento de datos de OLE DB requiere la selección de una capa de proveedor de datos adicional basada en la versión del origen de datos que desee usar en el informe. Si no selecciona un proveedor de datos específico, se proporciona un proveedor predeterminado. Elija un proveedor de datos específico mediante el cuadro de diálogo **Propiedades de conexión**, al que se tiene acceso con el botón **Editar** de los cuadros de diálogo Origen de datos u Origen de datos compartido.  
   
- Para obtener más información sobre el Diseñador de consultas asociado de OLE DB, vea [Interfaz de usuario del diseñador gráfico de consultas](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Para obtener más información acerca de la compatibilidad específica con los proveedores OLE DB, vea [La herramienta de diseñador de Visual Studio .NET es compatible con proveedores OLE DB específicos](http://support.microsoft.com/default.aspx/kb/811241) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ Para obtener más información sobre el Diseñador de consultas asociado de OLE DB, vea [Interfaz de usuario del diseñador gráfico de consultas](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Para obtener más información acerca de la compatibilidad específica con los proveedores OLE DB, vea [La herramienta de diseñador de Visual Studio .NET es compatible con proveedores OLE DB específicos](https://support.microsoft.com/default.aspx/kb/811241) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
@@ -196,7 +196,7 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
   
  Se admiten los parámetros sin nombre dependientes de la posición. Esta extensión no admite los parámetros con nombre. Para usar parámetros con nombre, use la extensión de procesamiento de datos de [Oracle](#OracleClient) .  
   
- Para obtener más información acerca de la configuración de Oracle como un origen de datos, vea [Cómo utilizar Reporting Services para configurar y obtener acceso a orígenes de datos de Oracle](http://support.microsoft.com/kb/834305). Para obtener más información acerca de la configuración de permisos adicionales, vea la página en que se describe [cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](http://support.microsoft.com/kb/870668) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ Para obtener más información acerca de la configuración de Oracle como un origen de datos, vea [Cómo utilizar Reporting Services para configurar y obtener acceso a orígenes de datos de Oracle](https://support.microsoft.com/kb/834305). Para obtener más información acerca de la configuración de permisos adicionales, vea la página en que se describe [cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](https://support.microsoft.com/kb/870668) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
@@ -229,11 +229,11 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
  
 Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
  
-1.  Ir al [sitio de descarga de Oracle](http://www.oracle.com/us/products/tools/index-090165.html)
+1.  Ir al [sitio de descarga de Oracle](https://www.oracle.com/us/products/tools/index-090165.html)
 2.  Descargar ODAC 12c versión 4 (12.1.0.2.4) para Windows (64 bits para el servidor, 32 bits para las herramientas)
 3.  Instalar el proveedor de datos para .NET 4
   
- Esta extensión admite los parámetros con nombre. En Oracle versión 11g o posterior, se admiten los parámetros de varios valores. En el caso de los parámetros sin nombre dependientes de la posición, use la extensión de procesamiento de datos OLE DB con el proveedor de datos Proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Oracle. Para obtener más información acerca de la configuración de Oracle como un origen de datos, vea [Cómo utilizar Reporting Services para configurar y obtener acceso a orígenes de datos de Oracle](http://support.microsoft.com/kb/834305). Para obtener más información acerca de la configuración de permisos adicionales, vea la página en que se describe [cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](http://support.microsoft.com/kb/870668) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ Esta extensión admite los parámetros con nombre. En Oracle versión 11g o posterior, se admiten los parámetros de varios valores. En el caso de los parámetros sin nombre dependientes de la posición, use la extensión de procesamiento de datos OLE DB con el proveedor de datos Proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Oracle. Para obtener más información acerca de la configuración de Oracle como un origen de datos, vea [Cómo utilizar Reporting Services para configurar y obtener acceso a orígenes de datos de Oracle](https://support.microsoft.com/kb/834305). Para obtener más información acerca de la configuración de permisos adicionales, vea la página en que se describe [cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](https://support.microsoft.com/kb/870668) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  Puede recuperar datos de procedimientos almacenados con varios parámetros de entrada, pero el procedimiento almacenado debe devolver solo un cursor de salida. Para obtener más información, vea la sección de Oracle en [Recuperar datos mediante DataReader](https://go.microsoft.com/fwlink/?LinkId=81758).  
   
@@ -270,7 +270,7 @@ Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
   
  Para más información, vea [Tipo de conexión de Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
- También se pueden crear modelos basados en una base de datos de Teradata. Para obtener más información, vea las notas del producto siguientes en el sitio de Teradata: [Microsoft SQL Server 2012 Reporting Services y Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
+ También se pueden crear modelos basados en una base de datos de Teradata. Para obtener más información, vea las notas del producto siguientes en el sitio de Teradata: [Microsoft SQL Server 2012 Reporting Services y Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   

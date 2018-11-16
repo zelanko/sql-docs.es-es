@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46a154647b09f0a785773ff1fc85ba13aea12e09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1280641e4788a2ed1724c27fdf4abc7dd3b96f30
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792933"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678034"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "47792933"
 ## <a name="see-also"></a>Ver también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Tablas de eventos extendidos de SQL Server &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
+ [Tablas de eventos extendidos de SQL Server &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
  [Usar la sesión system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Usar el proveedor de PowerShell para eventos extendidos](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   

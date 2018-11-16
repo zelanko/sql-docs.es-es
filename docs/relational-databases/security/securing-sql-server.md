@@ -19,18 +19,18 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c526b7c991f3df5eb33042e2d25f7152ae80887a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760803"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663304"
 ---
 # <a name="securing-sql-server"></a>Proteger SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La protección de la seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conlleva una serie de pasos que afectan a cuatro áreas: la plataforma, la autenticación, los objetos (incluidos los datos) y las aplicaciones que tienen acceso al sistema. Los siguientes temas le guiarán durante el proceso de creación e implementación de un plan de seguridad eficaz.  
   
- Puede buscar más información sobre la seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el sitio web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . En él encontrará una guía de prácticas recomendadas y una lista de comprobación de seguridad. Este sitio también incluye las últimas descargas e información sobre los Service Packs.  
+ Puede buscar más información sobre la seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el sitio web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . En él encontrará una guía de prácticas recomendadas y una lista de comprobación de seguridad. Este sitio también incluye las últimas descargas e información sobre los Service Packs.  
   
 ## <a name="platform-and-network-security"></a>Seguridad de la plataforma y de la red  
  La plataforma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye el hardware físico y los sistemas de redes que conectan los clientes con los servidores de bases de datos, así como los archivos binarios que se utilizan para procesar solicitudes de base de datos.  
@@ -78,7 +78,7 @@ ms.locfileid: "47760803"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Archivos de programa|[Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan una seguridad mejorada. Para determinar el último Service Pack disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el sitio web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan una seguridad mejorada. Para determinar el último Service Pack disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el sitio web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  Puede usar el siguiente script para determinar el Service Pack instalado en el sistema:  
   
@@ -125,7 +125,7 @@ GO
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Conectarse, configurar y controlar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Usar SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|Conectarse, configurar y controlar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Usar SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |Conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutar consultas en el símbolo del sistema|[sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)|  
 |Control y configuración de red para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Habilitar y deshabilitar características con Administración basada en directiva|[Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -143,7 +143,7 @@ GO
 ## <a name="related-content"></a>Contenido relacionado  
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[Procedimientos recomendados de seguridad de SQL Server 2012: tareas operativas y administrativas](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[Procedimientos recomendados de seguridad de SQL Server 2012: tareas operativas y administrativas](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [Blog de seguridad de SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Notas del producto de procedimientos recomendados de seguridad y seguridad de etiquetas](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
 [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   

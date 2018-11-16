@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659143"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672624"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Almacenamiento de datos de índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Aislamiento de instantánea y aislamientos de instantánea de lectura confirmada  
- Use el aislamiento de instantánea (SI) para garantizar la coherencia transaccional y los aislamientos de instantánea de lectura confirmada (RCSI) para garantizar la coherencia de nivel de instrucción de las consultas en índices de almacén de columnas. Esto permite que las consultas se ejecuten sin bloquear escrituras de datos. Este comportamiento de no bloqueo también reduce notablemente la probabilidad de que se produzcan interbloqueos en las transacciones complejas. Para obtener más información, consulte [Aislamiento de instantáneas en SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) en MSDN.  
+ Use el aislamiento de instantánea (SI) para garantizar la coherencia transaccional y los aislamientos de instantánea de lectura confirmada (RCSI) para garantizar la coherencia de nivel de instrucción de las consultas en índices de almacén de columnas. Esto permite que las consultas se ejecuten sin bloquear escrituras de datos. Este comportamiento de no bloqueo también reduce notablemente la probabilidad de que se produzcan interbloqueos en las transacciones complejas. Para obtener más información, consulte [Aislamiento de instantáneas en SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) en MSDN.  
   
 ## <a name="see-also"></a>Ver también  
  [Guía de diseño de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

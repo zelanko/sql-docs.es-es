@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031874"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814328"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
 Las expresiones se usan con frecuencia en los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar el contenido y la apariencia del informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -475,7 +475,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
 -   La expresión siguiente, cuando se usa como acción en un cuadro de texto, genera una dirección URL personalizada que especifica el campo `EmployeeID` del conjunto de datos como parámetro de URL.  
   
     ```  
-    ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
+    ="https://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
      Para más información, vea [Agregar un hipervínculo a una dirección URL &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
@@ -483,7 +483,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
 -   La expresión siguiente controla de forma condicional si debe agregarse una dirección URL a un cuadro de texto. Esta expresión depende de un parámetro denominado `IncludeURLs` que permite a un usuario decidir si deben incluirse direcciones URL activas en un informe. Esta expresión se establece como acción en un cuadro de texto. Si se establece el parámetro en FALSE y, a continuación, se visualiza el informe, puede exportar el informe a Microsoft Excel sin hipervínculos.  
   
     ```  
-    =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
+    =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
 ##  <a name="ReportData"></a> Datos de informe  

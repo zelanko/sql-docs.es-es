@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120452"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665624"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120452"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para SQL Server. Para obtener recomendaciones generales de hardware para OLTP en memoria, consulte la siguiente publicación del blog:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para SQL Server. Para obtener recomendaciones generales de hardware para OLTP en memoria, consulte la siguiente publicación del blog:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalar el ejemplo de In-Memory OLTP basado en AdventureWorks  
  Siga estos pasos para instalar el ejemplo:  
@@ -183,7 +183,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  Se pueden usar índices hash para optimizar aún más la carga de trabajo. Están optimizados especialmente para las búsquedas de puntos y las inserciones de filas. Sin embargo, hay que tener en cuenta que no admiten recorridos de intervalo, exámenes ordenados ni búsquedas en columnas de clave de índice iniciales. Por tanto, hay que tener cuidado cuando se usen estos índices. Además, es necesario especificar el bucket_count en el momento de la creación. Normalmente se debe establecer entre una y dos veces el número de valores de clave de índice, pero la sobrestimación no suele suponer ningún problema.  
   
- Vea los Libros en pantalla para obtener más información sobre las [directrices para usar índices](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) y las directrices para [elegir el número correcto de depósitos](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+ Vea los Libros en pantalla para obtener más información sobre las [directrices para usar índices](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) y las directrices para [elegir el número correcto de depósitos](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
   
  Los índices de las tablas migradas se han optimizado para la carga de trabajo de procesamiento de pedidos de venta de demostración. La carga de trabajo usa inserciones y búsquedas de puntos en las tablas Sales.SalesOrderHeader_inmem y Sales.SalesOrderDetail_inmem, y también usa búsquedas de puntos en las columnas de clave principal en las tablas Production.Product_inmem y Sales.SpecialOffer_inmem.  
   
@@ -271,7 +271,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
     -   Actualice la información de envío para un pedido de venta determinado. Esto también actualizará la información de envío de todos los artículos del pedido de venta.  
   
-    -   Se trata de un procedimiento contenedor para los procedimientos almacenados compilados de forma nativa Sales.usp_UpdateSalesOrderShipInfo_native con lógica de reintento para abordar posibles conflictos (inesperados) con las transacciones simultáneas que actualizan el mismo pedido. Para obtener más información acerca de la lógica de reintento, vea [este tema](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)en los Libros en pantalla.  
+    -   Se trata de un procedimiento contenedor para los procedimientos almacenados compilados de forma nativa Sales.usp_UpdateSalesOrderShipInfo_native con lógica de reintento para abordar posibles conflictos (inesperados) con las transacciones simultáneas que actualizan el mismo pedido. Para obtener más información acerca de la lógica de reintento, vea [este tema](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)en los Libros en pantalla.  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  Pasos para la instalación:  
   
-1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  Si aparece un cuadro de diálogo que indica que algunos archivos están en uso, haga clic en 'Continue'.  
   

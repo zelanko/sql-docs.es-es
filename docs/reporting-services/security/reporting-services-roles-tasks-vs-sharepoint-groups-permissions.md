@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee3a8e9576b38ee49dc5b562384d51c45f58c3fd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020259"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813311"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Roles y tareas de Reporting Services frente a grupos y permisos de SharePoint
   En este tema se comparan las características de autorización basadas en roles y tareas en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con las características de seguridad de los productos de SharePoint. En este tema se comparan la terminología y las características de los roles, las tareas, los grupos de SharePoint, los niveles de permiso y los permisos.  
@@ -51,7 +51,7 @@ ms.locfileid: "50020259"
 |---|**Grupo de nivel de permisos** : por ejemplo, "Solo ver" para el grupo "Visores".|  
 |**Tareas** : por ejemplo, "Administrar informes".|**Permisos** : por ejemplo, dentro del grupo "Solo ver" hay permisos de lista relacionados de ver elementos, ver versiones y ver páginas de aplicación.|  
   
- Para obtener más información sobre los permisos de SharePoint, vea [Niveles de permisos y permisos](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) y [Determinar grupos y niveles de permisos en SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ Para obtener más información sobre los permisos de SharePoint, vea [Niveles de permisos y permisos](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) y [Determinar grupos y niveles de permisos en SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Comparación de los roles de modo nativo y los grupos de SharePoint  
  En la tabla siguiente se comparan las definiciones de roles predefinidas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo con las de los grupos de SharePoint estándar. Si los grupos de SharePoint no coinciden con el rol específico que desea, puede crear un grupo personalizado y asignar niveles de permiso en SharePoint.  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fd029f997770dd78269f58bed5daddc60699fb8a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021319"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813410"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrar una instalación de Reporting Services (modo de SharePoint)
 
@@ -48,9 +48,9 @@ ms.locfileid: "50021319"
 ###  <a name="bkmk_content_only_migration"></a> Migrar solo contenido  
  **Migración solo de contenido de Reporting Services** : si desea copiar el contenido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nueva granja, necesita usar herramientas como **rs.exe** para copiar el contenido a la nueva instalación de SharePoint. Para obtener más información acerca de las migraciones solo de contenido, vea lo siguiente:  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :** los scripts pueden migrar contenido y recursos entre servidores de informes en modo nativo y en modo de SharePoint. Para obtener más información, vea [Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) y [Reporting Services RS.exe script migrates content](http://azuresql.codeplex.com/releases/view/115207)(Script RS.exe de Reporting Services que migra contenido).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :** los scripts pueden migrar contenido y recursos entre servidores de informes en modo nativo y en modo de SharePoint. Para obtener más información, vea [Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) y [Reporting Services RS.exe script migrates content](https://azuresql.codeplex.com/releases/view/115207)(Script RS.exe de Reporting Services que migra contenido).  
   
--   **Herramienta de migración de Reporting Services:** esta heramienta puede copiar elementos de informe de un servidor en modo nativo a un servidor en modo de SharePoint. Para más información, consulte la página de la [herramienta de migración de Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+-   **Herramienta de migración de Reporting Services:** esta heramienta puede copiar elementos de informe de un servidor en modo nativo a un servidor en modo de SharePoint. Para más información, consulte la página de la [herramienta de migración de Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Migración completa  
  **Migración completa** : si va a migrar bases de datos de contenido de SharePoint junto con las bases de datos del catálogo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nueva granja, puede seguir una serie de opciones de copia de seguridad y restauración que se resumen en este tema. En algunos casos necesitará emplear otra herramienta diferente para la fase de restauración que la que usó para la fase de copia de seguridad. Por ejemplo, puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para hacer una copia de seguridad de las claves de cifrado de una versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], pero necesita usar Administración central de SharePoint o PowerShell para restaurar las claves de cifrado a una instalación en modo de SharePoint de SQL Server 2016 Reporting Services.  

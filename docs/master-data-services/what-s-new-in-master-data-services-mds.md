@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855233"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696844"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novedades de Master Data Services (MDS)
 
@@ -33,7 +33,7 @@ ms.locfileid: "47855233"
   
  **Descargar**  
   
--   Para descargar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   Para descargar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
 -   ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ya instalado.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855233"
   
     ```  
   
-     Para obtener más información, consulte [URL Compression](http://www.iis.net/configreference/system.webserver/urlcompression)(Compresión de URL).  
+     Para obtener más información, consulte [URL Compression](https://www.iis.net/configreference/system.webserver/urlcompression)(Compresión de URL).  
   
 -   Los siguientes trabajos nuevos del Agente SQL Server indexan y registran el mantenimiento.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855233"
   
  Se vuelve a generar en línea un índice con más de un 30 % de fragmentación. Durante la regeneración, el rendimiento se ve afectado en la operación CRUD en la misma tabla. Si la degradación del rendimiento es un problema, se recomienda que ejecute el procedimiento almacenado fuera del horario laboral. Para obtener más información acerca de la fragmentación de índices, vea [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Para obtener más información, consulte esta publicación en el blog de Master Data Services, [Performance and Scale Improvement in SQL Server 2016](http://go.microsoft.com/fwlink/p/?LinkId=615375)(Mejora del rendimiento y la escala en SQL Server 2016).  
+ Para obtener más información, consulte esta publicación en el blog de Master Data Services, [Performance and Scale Improvement in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375)(Mejora del rendimiento y la escala en SQL Server 2016).  
   
 ##  <a name="improved-security"></a>Seguridad mejorada  
   

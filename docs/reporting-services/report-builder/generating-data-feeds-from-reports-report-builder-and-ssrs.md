@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7bd94456b3e26aa8f8cae5728a3a9af3c3324254
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eeb22433523d9fef88ab5a32f429ce94aca5cbd0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028654"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813758"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS)
 
@@ -67,7 +67,7 @@ ms.locfileid: "50028654"
 ### <a name="header-section"></a>Sección de encabezado  
  El siguiente código XML muestra la sección de encabezado de una fuente de distribución de datos.  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="https://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50028654"
   
  Las filas de datos de las regiones de datos anidadas suelen ser anchas, sobre todo si las tablas anidadas y las matrices incluyen grupos y totales. Podría encontrar de utilidad exportar el informe a una fuente de distribución de datos y ver esta para comprobar que los datos generados son lo que esperaba.  
   
- Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para la fuente de distribución de datos y el identificador se usa en la dirección URL para ver el contenido de la misma. El documento de servicio de Atom de ejemplo, mostrado anteriormente, incluye la dirección URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. La dirección URL identifica el informe (resumen de ventas de producto), el formato de representación de Atom (ATOM) y el nombre de la fuente de distribución de datos (xAx0x1).  
+ Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para la fuente de distribución de datos y el identificador se usa en la dirección URL para ver el contenido de la misma. El documento de servicio de Atom de ejemplo, mostrado anteriormente, incluye la dirección URL `https://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. La dirección URL identifica el informe (resumen de ventas de producto), el formato de representación de Atom (ATOM) y el nombre de la fuente de distribución de datos (xAx0x1).  
   
  Los nombres de los elementos de informe tienen como valor predeterminado los nombres de los elementos de lenguaje RDL (Report Definition Language) de los elementos de informe y, a menudo, no son intuitivos ni fáciles recordar. Por ejemplo, el nombre predeterminado de la primera matriz colocada en un informe es Tablix 1. Las fuentes de distribución de datos usan estos nombres.  
   

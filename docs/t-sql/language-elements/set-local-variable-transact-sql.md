@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759703"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697334"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Se puede utilizar el operador de asignación compuesta en cualquier lugar donde haya una asignación con una expresión en el lado derecho del operador, incluso las variables, y un SET en una instrucción UPDATE, SELECT y RECEIVE.  
   
- No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no se garantiza que todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecuten exactamente una vez por cada fila de salida. Para más información, vea [este artículo de KB](http://support.microsoft.com/kb/287515).  
+ No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no se garantiza que todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecuten exactamente una vez por cada fila de salida. Para más información, vea [este artículo de KB](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public. Todos los usuarios pueden usar SET **@***local_variable*.  

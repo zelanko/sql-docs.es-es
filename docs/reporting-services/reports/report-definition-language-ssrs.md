@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028544"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813518"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  
@@ -43,7 +43,7 @@ ms.locfileid: "50028544"
   
  Por ejemplo, el esquema incluye el elemento RDL **ReportParameters**que es del tipo complejo **ReportParametersType**. Por convención, un tipo complejo para un elemento es el nombre del elemento seguido de la palabra **Type**. Un elemento **ReportParameters** puede estar contenido en un elemento **Report** (un tipo complejo) y puede contener elementos **ReportParameter** . Un **ReportParameterType** es un tipo simple que solo puede tener uno de los siguientes valores: **Boolean**, **DateTime**, **Integer**, **Float**o **String**. Para obtener más información sobre los tipos de datos de esquema XML, vea [Parte 2 del esquema XML: tipos de datos Segunda edición](https://go.microsoft.com/fwlink/?linkid=4871).  
   
- El XSD de RDL está disponible en el archivo ReportDefinition.xsd, que se encuentra en la carpeta Extras del CD-ROM del producto. También está disponible en el servidor de informes a través de la siguiente dirección URL: `http://servername/reportserver/reportdefinition.xsd`.  
+ El XSD de RDL está disponible en el archivo ReportDefinition.xsd, que se encuentra en la carpeta Extras del CD-ROM del producto. También está disponible en el servidor de informes a través de la siguiente dirección URL: `https://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Crear RDL  
  Debido a la naturaleza abierta y extensible de RDL, se pueden compilar diversas herramientas y aplicaciones que generan RDL basándose en su esquema XML.  

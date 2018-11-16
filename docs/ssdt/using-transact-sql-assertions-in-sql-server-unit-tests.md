@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fceef986a2d0cd3bf6d127cf449d99185ebca7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716753"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671254"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server
 En una prueba unitaria de SQL Server, el script de prueba Transact\-SQL se ejecuta y devuelve un resultado. En ocasiones, los resultados se devuelven como un conjunto de resultados. Puede validar los resultados mediante condiciones de prueba. Por ejemplo, puede usar una condición de prueba para comprobar cuántas filas se devuelven en un conjunto de resultados determinado o comprobar cuánto tiempo tardó en ejecutarse una prueba determinada. Para más información sobre las condiciones de prueba, consulte [Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -79,7 +79,7 @@ donde:
   
 @ErrorState es un entero arbitrario de 1 a 127. Puede usar este entero para distinguir entre las repeticiones de un solo error que se genera en ubicaciones diferentes en el código.  
   
-Para más información, consulte [RAISERROR (Transact-SQL)](http://msdn.microsoft.com/library/ms178592.aspx). En el tema [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md) se proporciona un ejemplo de cómo usar RAISERROR en una prueba unitaria de SQL Server.  
+Para más información, consulte [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). En el tema [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md) se proporciona un ejemplo de cómo usar RAISERROR en una prueba unitaria de SQL Server.  
   
 ## <a name="see-also"></a>Ver también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

@@ -19,12 +19,12 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74287e364736b4a1d09711b20817a9a0b0c694c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd1197eff97d7e195e66841021c915aafb820342
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839543"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698523"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. Obtener el número de filas de cada partición no vacía de una tabla o un índice con particiones  
  En el siguiente ejemplo se devuelve el número de filas de cada partición de la tabla `TransactionHistory` que contiene datos. La tabla `TransactionHistory` utiliza la función de partición `TransactionRangePF1`. Además, se crean particiones en la columna `TransactionDate`.  
   
- Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para más información, vea [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+ Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para más información, vea [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 USE AdventureWorks2012;  
@@ -92,7 +92,7 @@ GO
  En el siguiente ejemplo se devuelven todas las filas que se encuentran en la partición `5` de la tabla `TransactionHistory`.  
   
 > [!NOTE]  
->  Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para más información, vea [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+>  Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para más información, vea [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

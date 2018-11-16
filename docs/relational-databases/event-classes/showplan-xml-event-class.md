@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd2770b0509050c105c83cb353451a0b6a6f022c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d35d9986226c300538af79612601628444459e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603163"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665065"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML [clase de eventos]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47603163"
   
  Si se incluye la clase de eventos Showplan XML en un seguimiento, la carga hará disminuir significativamente el rendimiento. Showplan XML almacena un plan de consulta creado al optimizar la consulta. Para minimizar la carga, limite el uso de esta clase de evento a seguimientos que supervisan problemas específicos durante períodos de tiempo breves.  
   
- Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740), o como parte de su instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740), o como parte de su instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan XML  
   

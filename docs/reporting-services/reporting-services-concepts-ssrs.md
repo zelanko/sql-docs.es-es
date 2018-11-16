@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031900"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814308"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceptos de Reporting Services (SSRS)
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "50031900"
  Entre los elementos del servidor de informes se incluyen informes paginados y móviles, indicadores clave de rendimiento, orígenes de datos compartidos, conjuntos de datos compartidos y otros elementos que se pueden publicar, cargar o guardar en un servidor de informes. Organice los elementos en la estructura jerárquica de carpetas del servidor de informes en un servidor de informes nativo o en bibliotecas de contenido de SharePoint en un sitio de SharePoint. Para más información, vea [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>Carpetas
- En un servidor de informes nativo, las carpetas proporcionan la estructura jerárquica de navegación y las rutas de acceso de todos los elementos direccionables almacenados en un servidor de informes. Use la jerarquía de carpetas y los permisos de sitio y carpeta para ayudar a controlar el acceso a los elementos del servidor de informes, lo que se denomina *seguridad de nivel de elemento*. De forma predeterminada, las asignaciones de roles que define para carpetas específicas la heredan las carpetas secundarias de la jerarquía de carpetas. Si asigna determinados roles a una carpeta, las reglas de herencia ya no se aplican. La estructura de carpetas consta de un nodo raíz denominado **Inicio**y de carpetas reservadas compatibles con la característica opcional **Mis informes** . En un explorador, el nodo raíz es el nombre del directorio virtual del servidor de informes, por ejemplo, `http://myreportserver/reports`. Para obtener más información, vea [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
+ En un servidor de informes nativo, las carpetas proporcionan la estructura jerárquica de navegación y las rutas de acceso de todos los elementos direccionables almacenados en un servidor de informes. Use la jerarquía de carpetas y los permisos de sitio y carpeta para ayudar a controlar el acceso a los elementos del servidor de informes, lo que se denomina *seguridad de nivel de elemento*. De forma predeterminada, las asignaciones de roles que define para carpetas específicas la heredan las carpetas secundarias de la jerarquía de carpetas. Si asigna determinados roles a una carpeta, las reglas de herencia ya no se aplican. La estructura de carpetas consta de un nodo raíz denominado **Inicio**y de carpetas reservadas compatibles con la característica opcional **Mis informes** . En un explorador, el nodo raíz es el nombre del directorio virtual del servidor de informes, por ejemplo, `https://myreportserver/reports`. Para obtener más información, vea [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
   
  En un sitio de SharePoint, use carpetas de SharePoint en bibliotecas de documentos y bibliotecas de contenido para organizar los elementos.  
   

@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9550a136d1720c5f7ee6ef9d5bd8eb2e39b5a246
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702623"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813118"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración)
   En la página **Configuración de suscripción** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , configure una cuenta de recurso compartido de archivos para servidores de informes en modo nativo y suscripciones de recurso compartido de archivos. La cuenta de recurso compartido de archivos permite usar un único conjunto de credenciales en varias suscripciones que entregan informes a un recurso compartido de archivos. Cuando sea el momento de cambiar las credenciales, solamente deberá configurar el cambio en la cuenta de recurso compartido de archivos, con lo que no será necesario actualizar cada una de las suscripciones.  
@@ -73,7 +73,7 @@ filter script:extensionSettingFilter
     }  
 }  
   
-$rs2010 = New-WebServiceProxy -Uri "http:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
   
 Write-Host "----- File share subscriptions using the default file share account ----";  
@@ -96,6 +96,6 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a>Ver también  
  [Entrega a recursos compartidos de archivos en Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Creación y administración de suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   

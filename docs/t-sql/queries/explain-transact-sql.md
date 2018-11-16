@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ff1df22bd00680aeb0574624a3a7b55a688b3a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cef2b01c9b9d5147583cc4419fd105bd3e91503f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632663"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701423"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|Muestra *SQL_statement*.|  
 |\<params>|Esta etiqueta no se usa actualmente.|  
 |\<dsql_operations>|Resume y contiene los pasos de consulta, e incluye información del costo de la consulta. También contiene todos los bloques `<dsql_operation>`. Esta etiqueta contiene información de recuento para toda la consulta:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *costo_total* es el tiempo total estimado para que se ejecute la consulta, en milisegundos.<br /><br /> *número_total_de_operaciones* es el número total de operaciones para la consulta. Una operación que se va a ejecutar en paralelo y en varios nodos se cuenta como una única operación.|  
-|\<dsql_operation>|Describe una única operación dentro del plan de consulta. La etiqueta \<dsql_operation> contiene el tipo de operación como un atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *tipo_de_operación* es uno de los valores encontrados en [Consulta de datos (PDW de SQL Server)](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> El contenido del bloque `\<dsql_operation>` depende del tipo de operación.<br /><br /> Vea la tabla siguiente.|  
+|\<dsql_operation>|Describe una única operación dentro del plan de consulta. La etiqueta \<dsql_operation> contiene el tipo de operación como un atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *tipo_de_operación* es uno de los valores encontrados en [Consulta de datos (PDW de SQL Server)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> El contenido del bloque `\<dsql_operation>` depende del tipo de operación.<br /><br /> Vea la tabla siguiente.|  
   
 |Tipo de operación|Contenido|Ejemplo|  
 |--------------------|-------------|-------------|  

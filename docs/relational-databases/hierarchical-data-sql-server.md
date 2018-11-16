@@ -5,8 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -20,12 +19,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91c2bd0e6e2793c1690adf6bcc9be1c8542eabba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790053"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659491"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47790053"
   
 -   Un gráfico de vínculos entre páginas web  
   
- Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) como tipo de datos para crear tablas con una estructura jerárquica o para describir la estructura jerárquica de datos almacenados en otra ubicación. Use las [funciones hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) de [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar y administrar los datos jerárquicos.  
+ Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) como tipo de datos para crear tablas con una estructura jerárquica o para describir la estructura jerárquica de datos almacenados en otra ubicación. Use las [funciones hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) de [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar y administrar los datos jerárquicos.  
   
 ##  <a name="keyprops"></a> Propiedades principales de hierarchyid  
  Un valor del tipo de datos **hierarchyid** representa una posición en una jerarquía de árbol. Los valores de **hierarchyid** tienen las siguientes propiedades.  
@@ -528,7 +527,7 @@ GO
   
   
 ## <a name="see-also"></a>Ver también  
- [Referencia de los métodos del tipo de datos hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   

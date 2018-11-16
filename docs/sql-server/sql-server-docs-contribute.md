@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146060"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697693"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Cómo colaborar en la documentación de SQL Server
 
@@ -33,7 +33,7 @@ Hay dos flujos de trabajo principales que se pueden aplicar para colaborar:
 
 Puede realizar modificaciones sencillas en el contenido de SQL Server en el explorador y, después, enviarlas a Microsoft. El proceso completo está documentado en el artículo [Guía para colaboradores de Microsoft Docs: información general](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). En el vídeo siguiente se muestra el proceso completo para enviar los cambios en el explorador:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
 > Tenga en cuenta que la ubicación del botón **Editar** es ligeramente diferente a la que se muestra en el vídeo, pero el proceso es el mismo.

@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 642427e5291fecdcbe64bca3c66d0606ac8b2523
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671419"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  
@@ -107,7 +107,7 @@ La comprobación extendida de Transact-SQL es una característica dentro del sis
 ### <a name="transact-sql-compiler-service"></a>Servicio Compilador de Transact-SQL  
 Transact-SQL Compiler Service es un componente basado en el Motor de base de datos de Microsoft SQL Server 2012. Este servicio puede validar la sintaxis y la semántica de las instrucciones DDL con la misma fidelidad que un motor de base de datos de Microsoft SQL Server 2012. Esto, de modo inherente, significa que el Servicio compilador no admite la sintaxis ni las características que hayan dejado de usarse en Microsoft SQL Server 2012. Para obtener más información sobre las características en desuso, vea [Funcionalidad del motor de base de datos no incluida en SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
-Para validar el proyecto de base de datos, el Servicio Compilador crea una base de datos parcialmente independiente y simula la ejecución de instrucciones DDL con dicha base de datos. Para obtener más información, vea [Bases de datos parcialmente independientes](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Para validar el proyecto de base de datos, el Servicio Compilador crea una base de datos parcialmente independiente y simula la ejecución de instrucciones DDL con dicha base de datos. Para obtener más información, vea [Bases de datos parcialmente independientes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 El Servicio Compilador tiene dos categorías de limitaciones.  
   
@@ -132,7 +132,7 @@ Las características que no se admiten para la validación en este momento, como
 -   Intercalación de metadatos de SQL Azure (el Servicio Compilador usa la intercalación de metadatos Base de datos parcialmente independiente de SQL Server 2012: Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Habilitar o deshabilitar la comprobación extendida de Transact-SQL  
-La comprobación extendida de Transact-SQL se habilita de forma predeterminada en un proyecto de base de datos que se crea directamente desde un proyecto o una base de datos de SQL Azure cuya plataforma de destino se establece en SQL Azure. Se recomienda que la comprobación extendida se use en el desarrollo con SQL Azure o de una base de datos de ámbito de aplicación destinada a SQL Server 2012. Para obtener más información acerca de las bases de datos de ámbito de aplicación, vea [Bases de datos parcialmente independientes](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+La comprobación extendida de Transact-SQL se habilita de forma predeterminada en un proyecto de base de datos que se crea directamente desde un proyecto o una base de datos de SQL Azure cuya plataforma de destino se establece en SQL Azure. Se recomienda que la comprobación extendida se use en el desarrollo con SQL Azure o de una base de datos de ámbito de aplicación destinada a SQL Server 2012. Para obtener más información acerca de las bases de datos de ámbito de aplicación, vea [Bases de datos parcialmente independientes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 La característica de comprobación extendida puede usarse también al desarrollar una base de datos de ámbito de aplicación para SQL Server 2008/R2 a fin de lograr la compatibilidad con Microsoft SQL Server 2012 y SQL Azure.  
   
@@ -154,23 +154,23 @@ La característica de comprobación extendida puede usarse también al desarroll
 ![Propiedades de archivo](../ssdt/media/ssdt-evf.gif "Propiedades de archivo")  
   
 ### <a name="special-considerations-for-collations"></a>Consideraciones especiales para las intercalaciones  
-Para obtener más información acerca de las intercalaciones en las bases de datos parcialmente independientes, vea [Intercalaciones en bases de datos independientes](http://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
+Para obtener más información acerca de las intercalaciones en las bases de datos parcialmente independientes, vea [Intercalaciones en bases de datos independientes](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
 ## <a name="bkmk_sqlclr"></a>SQLCLR  
-Para obtener información sobre las opciones de Ensamblado, vea [Cuadro de diálogo Información del ensamblado](http://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
+Para obtener información sobre las opciones de Ensamblado, vea [Cuadro de diálogo Información del ensamblado](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
-Para obtener más información sobre la firma, vea la sección **Firma de ensamblados** del tema [Página Firma, Diseñador de proyectos](http://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
+Para obtener más información sobre la firma, vea la sección **Firma de ensamblados** del tema [Página Firma, Diseñador de proyectos](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR y Compilación de SQLCLR  
 Las páginas de propiedades **SQLCLR** y **Compilación de SQLCLR** contienen muchas configuraciones para usar objetos CLR de SQL en el proyecto. En concreto, la página de propiedades **SQLCLR** tiene una configuración de nivel de permisos para establecer permisos en el ensamblado SQLCLR. También tiene una configuración “Generar DDL” para controlar si se genera el archivo DDL para los objetos SQLCLR que se han agregado al proyecto. La página de propiedades **Compilación de SQLCLR** contiene todas las opciones de compilador que puede establecer para configurar la compilación de código SQLCLR en el proyecto.  
   
 La página de propiedades **Compilación de SQLCLR** contiene configuraciones de compilación avanzadas para compilar objetos CLR de SQL. Se ofrecen distintas opciones según el lenguaje (VB o C#) que se vaya a utilizar para codificar los objetos CLR de SQL.  
   
-1.  Si el objeto se ha escrito en C#, puede tener acceso a las opciones si hace clic en el botón **Avanzadas** en la página de propiedades **Compilación de SQLCLR**. Podrá encontrar descripciones de las opciones de C# en el [Cuadro de diálogo Configuración de compilación avanzada (C#)](http://msdn.microsoft.com/library/s4wcexbc.aspx).  
+1.  Si el objeto se ha escrito en C#, puede tener acceso a las opciones si hace clic en el botón **Avanzadas** en la página de propiedades **Compilación de SQLCLR**. Podrá encontrar descripciones de las opciones de C# en el [Cuadro de diálogo Configuración de compilación avanzada (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx).  
   
-2.  Si el objeto se ha escrito en VB, puede elegir VB en primer lugar en la lista desplegable **Lenguaje** y, a continuación, hacer clic en el botón **Avanzadas** . Podrá encontrar descripciones de las opciones de VB en [Configuración de compilador avanzada (Cuadro de diálogo, Visual Basic)](http://msdn.microsoft.com/library/07bysfz2.aspx)  
+2.  Si el objeto se ha escrito en VB, puede elegir VB en primer lugar en la lista desplegable **Lenguaje** y, a continuación, hacer clic en el botón **Avanzadas** . Podrá encontrar descripciones de las opciones de VB en [Configuración de compilador avanzada (Cuadro de diálogo, Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
-Para más información, consulte [Crear las propiedades de configuración](http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
+Para más información, consulte [Crear las propiedades de configuración](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
   
 ## <a name="bkmk_build"></a>Compilación  
 Puede elegir una configuración de compilación para cada proyecto de base de datos de la solución. De forma predeterminada, existe una sola configuración, pero puede agregar configuraciones personalizadas. Puede optar por esta opción si desea, por ejemplo, una configuración personalizada en la que siempre elimina y vuelve a crear la base de datos. En soluciones que contienen distintos tipos de proyecto, puede crear una configuración de solución personalizada que contenga una configuración de compilación determinada para cada proyecto.  
@@ -229,10 +229,10 @@ Puede utilizar esta configuración para controlar la depuración del proyecto de
 |Avanzadas…|no|Botón de comando que permite especificar opciones que controlan eventos y el comportamiento de la implementación.|  
   
 ## <a name="bkmk_ref_paths"></a>Rutas de acceso de referencia  
-Puede utilizar esta página para definir el servidor y las variables de la base de datos asociadas a referencias de bases de datos cruzadas. Además, puede especificar los valores de esas variables. Para obtener más información, consulte [Uso de referencias en proyectos de base de datos](http://msdn.microsoft.com/library/bb386242.aspx).  
+Puede utilizar esta página para definir el servidor y las variables de la base de datos asociadas a referencias de bases de datos cruzadas. Además, puede especificar los valores de esas variables. Para obtener más información, consulte [Uso de referencias en proyectos de base de datos](https://msdn.microsoft.com/library/bb386242.aspx).  
   
 ## <a name="bkmk_code_analysis"></a>Análisis de código  
 Puede usar Análisis de código para detectar posibles problemas en los scripts, como problemas de diseño, nomenclatura y rendimiento. Las reglas para los proyectos de base de datos están organizadas en conjuntos de reglas predefinidos dirigidos a determinadas áreas y puede habilitar o deshabilitar cualquier regla en la pestaña **Análisis de código** de la página **Propiedades del proyecto** . En la misma pestaña, puede especificar que el análisis de código se ejecute automáticamente cada vez que se compile un proyecto o si las advertencias deben tratarse como errores.  
   
-Para usar Análisis de código manualmente, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Ejecutar análisis de código**. Las advertencias de análisis de código se mostrarán en la ventana **Lista de errores** . Puede hacer doble clic en una advertencia para navegar hasta el código fuente que contiene el problema, y puede ver información adicional y posibles correcciones de una advertencia usando el menú contextual **Ayuda para Mostrar mensaje**. Para obtener más información sobre Análisis de código, vea [Analizar el código de base de datos para mejorar la calidad del código](http://msdn.microsoft.com/library/dd172133.aspx).  
+Para usar Análisis de código manualmente, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Ejecutar análisis de código**. Las advertencias de análisis de código se mostrarán en la ventana **Lista de errores** . Puede hacer doble clic en una advertencia para navegar hasta el código fuente que contiene el problema, y puede ver información adicional y posibles correcciones de una advertencia usando el menú contextual **Ayuda para Mostrar mensaje**. Para obtener más información sobre Análisis de código, vea [Analizar el código de base de datos para mejorar la calidad del código](https://msdn.microsoft.com/library/dd172133.aspx).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e679b6c4a7b61e136ba1dcb864ab5bb6a05beb0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028494"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813638"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexión de Hyperion Essbase (SSRS)
   Para incluir los datos de un origen de datos externo de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] en su informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar los datos multidimensionales de un origen de datos externo de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -24,7 +24,7 @@ ms.locfileid: "50028494"
  En el siguiente ejemplo de cadena de conexión se especifica un origen de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] en un servidor que usa el puerto 13080 y XML para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) en Internet con el protocolo SOAP y una conexión a un catálogo de ejemplo:  
   
 ```  
-Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
+Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
  Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  

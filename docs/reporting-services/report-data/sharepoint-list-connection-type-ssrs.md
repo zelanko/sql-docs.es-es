@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 935749fe3bd88171892874b2643c6803a59fde92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029824"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813578"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -24,7 +24,7 @@ Para incluir los datos de una lista de Microsoft SharePoint en el informe, debe 
 Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
 ##  <a name="Connection"></a> Cadena de conexión  
- La cadena de conexión a una lista de SharePoint es la dirección URL al sitio o subsitio de SharePoint; por ejemplo, `http://MySharePointWeb/MySharePointSite` o `http://MySharePointWeb/MySharePointSite/Subsite`.  
+ La cadena de conexión a una lista de SharePoint es la dirección URL al sitio o subsitio de SharePoint; por ejemplo, `https://MySharePointWeb/MySharePointSite` o `https://MySharePointWeb/MySharePointSite/Subsite`.  
   
  El diseñador de consultas muestra automáticamente las listas de SharePoint para las que el usuario tiene los permisos necesarios para obtener acceso.  
   
@@ -69,7 +69,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
  **No se necesitan credenciales (No usar credenciales):**  
  Para usar esta opción, la cuenta de ejecución desatendida debe estar configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Para obtener más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   

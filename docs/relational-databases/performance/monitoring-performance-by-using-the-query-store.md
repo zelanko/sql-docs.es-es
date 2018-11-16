@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359352"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673334"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49359352"
  Para más información sobre el funcionamiento del Almacén de consultas de Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea [Funcionamiento del almacén de consultas de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
  
 > [!IMPORTANT]
-> Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](http://support.microsoft.com/help/4340759) lo antes posible. 
+> Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible. 
   
 ##  <a name="Enabling"></a> Habilitar el Almacén de consultas  
  El Almacén de consultas no está activo para nuevas bases de datos de manera predeterminada.  

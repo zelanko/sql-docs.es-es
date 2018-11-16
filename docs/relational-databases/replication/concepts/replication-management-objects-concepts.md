@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749673"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672634"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "47749673"
 >  Aunque la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> permite declarar las transacciones explícitas al establecer las propiedades, tales transacciones pueden interferir con las transacciones de replicación internas, producir resultados imprevistos y no se deberían utilizar con RMO.  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Habilitación de la compatibilidad de TLS 1.2 con componentes RMO 
- La compatibilidad de TLS 1.2 con componentes RMO en Windows 2012 e inferior puede habilitarse mediante la instalación de la actualización [KB 3140245](http://support.microsoft.com/help/3140245) y la creación de las claves del Registro, como se ha mencionado en el artículo. En Windows 2012 R2 y versiones posteriores, solo es necesario crear las claves del Registro, como se ha mencionado en el artículo anterior.
+ La compatibilidad de TLS 1.2 con componentes RMO en Windows 2012 e inferior puede habilitarse mediante la instalación de la actualización [KB 3140245](https://support.microsoft.com/help/3140245) y la creación de las claves del Registro, como se ha mencionado en el artículo. En Windows 2012 R2 y versiones posteriores, solo es necesario crear las claves del Registro, como se ha mencionado en el artículo anterior.
  
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra el almacenamiento en memoria caché de los cambios de las propiedades. Los cambios realizados en los atributos de una publicación transaccional se almacenan en memoria caché hasta que se envían explícitamente al servidor.  

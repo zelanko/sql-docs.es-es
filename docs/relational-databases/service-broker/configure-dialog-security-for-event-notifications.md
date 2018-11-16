@@ -5,21 +5,20 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 894ba222854e21a5d02811ca457ffa47184c4431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2bbf04ef2132f0bf1250cd6bd5c097a5a7760b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702583"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669374"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "47702583"
 |Servidor de origen|Servidor de destino|  
 |-------------------|-------------------|  
 |[Cree un certificado](../../t-sql/statements/create-certificate-transact-sql.md) a partir de la copia de seguridad del certificado de destino, especificando que el usuario de la base de datos de destino es el propietario.|Cree un certificado a partir del archivo de copia de seguridad del certificado de origen, especificando que el usuario de la base de datos de origen es el propietario.|  
-|[Conceda permiso](../../t-sql/statements/grant-transact-sql.md) para crear la notificación de eventos al usuario de la base de datos de origen. Para obtener más información sobre este permiso, vea [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Conceda el permiso REFERENCES al usuario de la base de datos de destino en un contrato de notificaciones de eventos existente de [!INCLUDE[ssSB](../../includes/sssb-md.md)] : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Conceda permiso](../../t-sql/statements/grant-transact-sql.md) para crear la notificación de eventos al usuario de la base de datos de origen. Para obtener más información sobre este permiso, vea [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Conceda el permiso REFERENCES al usuario de la base de datos de destino en un contrato de notificaciones de eventos existente de [!INCLUDE[ssSB](../../includes/sssb-md.md)] : `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Cree un enlace de servicio remoto](../../t-sql/statements/create-remote-service-binding-transact-sql.md) con el servicio de destino y especifique las credenciales del usuario de la base de datos de destino. El enlace de servicio remoto garantiza que la clave pública del certificado propiedad del usuario de la base de datos de origen autenticará los mensajes que se envíen al servidor de destino.|[Conceda](../../t-sql/statements/grant-transact-sql.md) permisos CREATE QUEUE, CREATE SERVICE y CREATE SCHEMA al usuario de la base de datos de destino.|  
 ||Si todavía no lo ha hecho, conéctese ahora con la base de datos como usuario de la base de datos de destino.|  
 ||[Cree una cola](../../t-sql/statements/create-queue-transact-sql.md) para recibir los mensajes de notificación de eventos y [cree un servicio](../../t-sql/statements/create-service-transact-sql.md) para entregar los mensajes.|  
@@ -68,7 +67,7 @@ ms.locfileid: "47702583"
   
 |Servidor de origen|Servidor de destino|  
 |-------------------|-------------------|  
-|[Cree una ruta](../../t-sql/statements/create-route-transact-sql.md) al servicio de destino y especifique el identificador de Service Broker de la base de datos de destino y el número de puerto TCP acordado.|Cree una ruta al servicio de origen y especifique el identificador de Service Broker de la base de datos de origen y el número de puerto TCP acordado. Utilice el siguiente servicio suministrado para especificar el servicio de origen: `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
+|[Cree una ruta](../../t-sql/statements/create-route-transact-sql.md) al servicio de destino y especifique el identificador de Service Broker de la base de datos de destino y el número de puerto TCP acordado.|Cree una ruta al servicio de origen y especifique el identificador de Service Broker de la base de datos de origen y el número de puerto TCP acordado. Utilice el siguiente servicio suministrado para especificar el servicio de origen: `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
 |Cambie a la base de datos **maestra** para configurar la autenticación en el servidor.|Cambie a la base de datos **maestra** para configurar la autenticación en el servidor.|  
 |Si no existe una clave maestra para la base de datos **master** , [cree una clave maestra](../../t-sql/statements/create-master-key-transact-sql.md).|Si no existe una clave maestra para la base de datos **master** , cree una clave maestra.|  
 |[Cree un certificado](../../t-sql/statements/create-certificate-transact-sql.md) para autenticar la base de datos.|Cree un certificado para autenticar la base de datos.|  

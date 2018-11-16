@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653043"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811778"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solucionar problemas con la publicación o la visualización de un informe en un servidor de informes en modo nativo
   
@@ -29,7 +29,7 @@ No se especifica correctamente el nombre del servidor de informes
   
 Al implementar el informe en un servidor de informes en modo nativo, un error común es especificar el nombre de la carpeta de informes en lugar del correspondiente al servidor de informes.   
   
-Compruebe que la dirección URL del servidor de informes es adecuada (por ejemplo, `http://localhost/reportserver`) y no la dirección del directorio virtual del Administrador de informes (por ejemplo, `http://localhost/reports`). Si especificó un número de puerto para el servidor de informes que sea diferente del número de puerto predeterminado 80, debe especificarlo en la dirección del servidor de informes (por ejemplo, `http://localhost:81/reportserver`).   
+Compruebe que la dirección URL del servidor de informes es adecuada (por ejemplo, `https://localhost/reportserver`) y no la dirección del directorio virtual del Administrador de informes (por ejemplo, `https://localhost/reports`). Si especificó un número de puerto para el servidor de informes que sea diferente del número de puerto predeterminado 80, debe especificarlo en la dirección del servidor de informes (por ejemplo, `https://localhost:81/reportserver`).   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>No ocurre nada cuando activo o desactivo elementos en el informe publicado.  
   Al ver un informe en la vista previa local, puede alternar los elementos en el informe y mostrarlos u ocultarlos. Al ver el mismo informe una vez publicado en el servidor de informes, ya no se puede alternar entre los elementos.   

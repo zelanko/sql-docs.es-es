@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b46658c52cbd40b1775103e07e7dbe7ca2e3f90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 884474e5fd76700805125bbf0cf2f8c8238c0878
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703230"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ DROP DATABASE database_name [;]
   
 ## <a name="arguments"></a>Argumentos  
  *IF EXISTS*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Quita la base de datos condicionalmente solo si ya existe.  
   
@@ -76,7 +76,7 @@ DROP DATABASE database_name [;]
  Al quitar una base de datos, se elimina la base de datos de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como los archivos de disco físico que usa. Si la base de datos o alguno de sus archivos están sin conexión cuando se quita, no se eliminan los archivos de disco. Estos archivos se pueden eliminar manualmente en el Explorador de Windows. Para quitar una base de datos del servidor actual sin eliminar los archivos del sistema de archivos, use [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 > [!WARNING]  
->  La acción de quitar una base de datos que tenga asociadas copias de seguridad de FILE_SNAPSHOT se llevará a cabo correctamente, pero no se eliminarán los archivos de base de datos que tengan instantáneas asociadas para evitar que se invaliden las copias de seguridad que hagan referencia a dichos archivos de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+>  La acción de quitar una base de datos que tenga asociadas copias de seguridad de FILE_SNAPSHOT se llevará a cabo correctamente, pero no se eliminarán los archivos de base de datos que tengan instantáneas asociadas para evitar que se invaliden las copias de seguridad que hagan referencia a dichos archivos de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Cuando se quita una instantánea de base de datos, se elimina la instantánea de base de datos de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como los archivos físicos dispersos del sistema de archivos NTFS que emplea. Para obtener más información sobre cómo las instantáneas de base de datos usan archivos dispersos, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). Al quitar una instantánea de la base de datos se borra la caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la memoria caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché '%s' (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.  

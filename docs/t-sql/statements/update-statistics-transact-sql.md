@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2461cbf6c5ee2622112f7841eb44059dd83661a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674753"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701763"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +112,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el muestreo de da
   
  Para la mayoría de las cargas de trabajo, no es necesario hacer un examen completo, sino tan solo un muestreo predeterminado.  
 Pero para ciertas cargas de trabajo que son sensibles a distribuciones de datos muy diferentes, puede que sea necesario un tamaño de muestreo mayor o incluso un examen completo.  
-Para más información, vea el blog [CSS SQL Server Engineers](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx) (Ingenieros de CSS SQL Server).  
+Para más información, vea el blog [CSS SQL Server Engineers](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx) (Ingenieros de CSS SQL Server).  
   
  RESAMPLE  
  Se actualiza cada estadística utilizando su velocidad de muestra más reciente.  

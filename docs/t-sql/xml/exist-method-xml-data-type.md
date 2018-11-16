@@ -16,12 +16,12 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d6ec55cea6a48d179f79d1fe6d5e3fa8f96909f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83b029554b8a85f11c477063a818bd90a4019740
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763483"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698553"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() (método del tipo de datos xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=67;  
 --SELECT @x  
 DECLARE @f int;  
-SET @f = @x.exist(' declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /AWMI:root/AWMI:Location[@LocationID=50]  
 ');  
 SELECT @f;  
@@ -117,14 +117,14 @@ SELECT @f;
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
         />  
 ') AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('  
-    declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /pd:ProductDescription[not(pd:Specifications)]'  
     ) = 1;  
 ```  
@@ -142,7 +142,7 @@ WHERE CatalogDescription.exist('
  La consulta especifica los métodos **query()** y **exist()** del tipo de datos xml, y ambos métodos declaran los mismos espacios de nombres en el prólogo de la consulta. En este caso, puede utilizar WITH XMLNAMESPACES para declarar el prefijo y utilizarlo en la consulta.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   

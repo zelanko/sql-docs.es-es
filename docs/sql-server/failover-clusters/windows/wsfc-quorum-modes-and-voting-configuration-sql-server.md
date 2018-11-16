@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb85a4e0f209fd5589c55e0392393c61a57e6fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835933"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703593"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuración de los votos y modos de quórum WSFC (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47835933"
 > [!IMPORTANT]  
 >  Para usar la configuración de NodeWeight, se debe aplicar la siguiente revisión a todos los servidores del clúster de WSFC:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): hay disponible una revisión para permitir configurar un nodo de clúster que no tiene votos de quórum en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): hay disponible una revisión para permitir configurar un nodo de clúster que no tiene votos de quórum en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Ajustes recomendados para la votación de quórum  
  Al habilitar o deshabilitar el voto de un nodo determinado de WSFC, siga estas instrucciones:  
@@ -110,7 +110,7 @@ ms.locfileid: "47835933"
 >   
 >  -   El nodo de clúster que hospeda la réplica principal no tiene un voto  
 > -   Una réplica secundaria está configurada para la conmutación automática por error y su nodo de clúster no tiene un voto.  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) no está instalado en todos los nodos de clúster que hospedan las réplicas de disponibilidad. Esta revisión es necesaria para agregar o quitar los votos de nodos de clúster en las implementaciones de varios sitios. Sin embargo, no suele ser necesaria en las implementaciones de un solo sitio y la advertencia puede omitirse de forma segura.  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) no está instalado en todos los nodos de clúster que hospedan las réplicas de disponibilidad. Esta revisión es necesaria para agregar o quitar los votos de nodos de clúster en las implementaciones de varios sitios. Sin embargo, no suele ser necesaria en las implementaciones de un solo sitio y la advertencia puede omitirse de forma segura.  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expone varias vistas de administración dinámica (DMV) del sistema que pueden ayudarle a administrar la configuración de clúster WSFC relacionada y la votación del cuórum de los nodos.  
@@ -125,13 +125,13 @@ ms.locfileid: "47835933"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Comprobación de la configuración del voto de cuórum en los asistentes de los grupos de disponibilidad AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Tecnologías de Windows Server: clústeres de conmutación por error](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologías de Windows Server: clústeres de conmutación por error](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Guía paso a paso para configurar el quórum en un clúster de conmutación por error](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Guía paso a paso para configurar el quórum en un clúster de conmutación por error](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Ver también  
  [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

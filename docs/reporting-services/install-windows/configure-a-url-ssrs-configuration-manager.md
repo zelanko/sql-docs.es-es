@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645153"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813358"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  
@@ -31,7 +31,7 @@ ms.locfileid: "47645153"
   
 -   Establecer propiedades avanzadas de las direcciones URL para definir más direcciones URL.  
   
- Para más información sobre cómo se almacenan y mantienen las direcciones URL, o sobre problemas de interoperabilidad, vea [Acerca de las reservas y el registro de direcciones URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
+ Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL, o sobre problemas de interoperabilidad, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
@@ -78,7 +78,7 @@ ms.locfileid: "47645153"
   
          `netstat –anp tcp`  
   
-    -   Revise el artículo de soporte técnico de Microsoft, [Información acerca de las asignaciones de puertos TCP/IP](http://support.microsoft.com/kb/174904), para leer sobre las asignaciones de puertos TCP y las diferencias entre los puertos conocidos (0 a 1023), los puertos registrados (1024 a 49151) y los puertos dinámicos o los privados (49152 a 65535).  
+    -   Revise el artículo de soporte técnico de Microsoft, [Información acerca de las asignaciones de puertos TCP/IP](https://support.microsoft.com/kb/174904), para leer sobre las asignaciones de puertos TCP y las diferencias entre los puertos conocidos (0 a 1023), los puertos registrados (1024 a 49151) y los puertos dinámicos o los privados (49152 a 65535).  
   
     -   Si usa Firewall de Windows, debe abierto el puerto. Para obtener instrucciones, consulte [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47645153"
   
 9. Haga clic en **Aplicar** para crear la dirección URL.  
   
-10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para obtener más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]  
 >  Si tiene enlaces SSL y reservas de direcciones URL existentes y desea cambiar el enlace SSL para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  
@@ -124,9 +124,9 @@ ms.locfileid: "47645153"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Establecer las propiedades avanzadas para especificar direcciones URL adicionales  
  Puede reservar varias direcciones URL para el servicio web del servidor de informes o el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] al especificar puertos diferentes o nombres de host (una dirección IP o un nombre de encabezado de host que un servidor de nombres de dominio pueda resolver como una dirección IP asignada al equipo). Si se crean varias direcciones URL, puede establecer rutas de acceso diferentes a la misma instancia del servidor de informes. Por ejemplo, para permitir el acceso desde la intranet y la extranet a un servidor de informes, podría utilizar la dirección URL predeterminada para el acceso a través de la intranet y un nombre de host completo adicional para el acceso desde la extranet:  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  No puede establecer varios nombres de directorios virtuales para la misma instancia de aplicación. A cada instancia de aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se le asigna un único nombre de directorio virtual. Si tiene varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el mismo equipo, el nombre del directorio virtual para una aplicación debería incluir el nombre de instancia para asegurarse de que cada solicitud llega a su destino pretendido.  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645153"
   
 2.  Haga clic en **Agregar**.  
   
-3.  Haga clic en la dirección IP o en el nombre de encabezado de host. Si especifica un encabezado de host, asegúrese de especificar un nombre que el servicio DNS pueda resolver. Si está especificando el nombre de dominio disponible públicamente, incluya la dirección URL completa, incluido `http://www`.  
+3.  Haga clic en la dirección IP o en el nombre de encabezado de host. Si especifica un encabezado de host, asegúrese de especificar un nombre que el servicio DNS pueda resolver. Si está especificando el nombre de dominio disponible públicamente, incluya la dirección URL completa, incluido `https://www`.  
   
 4.  Especifique el puerto. Si especifica un puerto personalizado, la dirección URL de la aplicación siempre debe incluir el número de puerto.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645153"
 ##  <a name="URLExamples"></a> Ejemplos de configuraciones de direcciones URL  
  En la lista siguiente se muestran algunos ejemplos de la apariencia que puede tener una dirección URL del servidor de informes:  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645153"
   
  Las direcciones URL que se usan para obtener acceso al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] comparten un formato similar y suelen crearse en el mismo sitio web que hospeda al servidor de informes. La única diferencia es el nombre del directorio virtual (en este caso es **reports** , pero se puede configurar para que se use el nombre que se prefiera):  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

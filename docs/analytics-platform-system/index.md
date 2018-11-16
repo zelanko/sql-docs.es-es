@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909746"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702453"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS), una plataforma de datos diseñada para almacenamiento de datos y análisis de macrodatos, ofrece integración profunda de datos, procesamiento de consultas de alta velocidad, almacenamiento altamente escalable y mantenimiento sencillo de las soluciones de inteligencia empresarial de un extremo a otro.  
@@ -51,6 +51,6 @@ Además de conseguir un rendimiento avanzado en lo que respecta a las consultas,
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre las ventajas de PDW, consulte las notas del producto [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](http://msdn.microsoft.com/library/dn520808.aspx) (Una plataforma avanzada para el almacenamiento de datos de próxima generación y las soluciones de macrodatos) en MSDN.  
+Para obtener más información sobre las ventajas de PDW, consulte las notas del producto [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://msdn.microsoft.com/library/dn520808.aspx) (Una plataforma avanzada para el almacenamiento de datos de próxima generación y las soluciones de macrodatos) en MSDN.  
   
 

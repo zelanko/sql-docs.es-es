@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82537145f6604ea89589278084107a79012d85c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812531"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673674"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Importe un archivo de exportación de la aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una nueva instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Importe un archivo de exportación de la aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una nueva instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
  El proceso de importación compila una nueva DAC en dos fases.  
@@ -144,7 +144,7 @@ ms.locfileid: "43812531"
  Haga clic en **Cerrar** para cerrar el asistente.  
   
 ## <a name="see-also"></a>Ver también  
-[Importación de un archivo BACPAC para crear una Azure SQL Database nueva](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
+[Importación de un archivo BACPAC para crear una Azure SQL Database nueva](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

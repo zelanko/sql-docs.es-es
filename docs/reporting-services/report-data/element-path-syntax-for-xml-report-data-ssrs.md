@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688353"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813808"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
   En el Diseñador de informes, se define una ruta de acceso de elemento que distingue mayúsculas de minúsculas para especificar los datos que se van a utilizar en un informe desde un origen de datos XML. Una ruta de acceso de elemento indica cómo se deben recorrer los nodos jerárquicos XML y sus atributos en el origen de datos XML. Para utilizar la ruta de acceso de elemento predeterminada, mantenga vacía la consulta del conjunto de datos o el elemento XML **ElementPath** del elemento XML **Query** . Cuando se recuperan datos del origen de datos XML, los nodos de elemento que tienen valores de texto y atributos de nodo de elemento se convierten en columnas en el conjunto de resultados. Los valores de los nodos y atributos pasan a ser datos de fila al ejecutar la consulta. Las columnas aparecen como la colección de campos del conjunto de datos en el panel Datos de informe. En este tema se describe la sintaxis de la ruta de acceso de elemento.  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |Pedido de|Qty|Id.|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
   
  **Ejemplo 2**: `Customers {}/Customer`  
   
@@ -134,11 +134,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### <a name="xml-document-customersxml"></a>Documento XML: Customers.xml  
- Para probar los ejemplos de ruta de acceso de elemento de la sección anterior, puede copiar este XML, guardarlo en una dirección URL a la que tenga acceso el Diseñador de informes y, a continuación, usar el documento XML como origen de datos XML: por ejemplo, `http://localhost/Customers.xml`.  
+ Para probar los ejemplos de ruta de acceso de elemento de la sección anterior, puede copiar este XML, guardarlo en una dirección URL a la que tenga acceso el Diseñador de informes y, a continuación, usar el documento XML como origen de datos XML: por ejemplo, `https://localhost/Customers.xml`.  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  

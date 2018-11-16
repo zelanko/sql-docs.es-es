@@ -14,12 +14,12 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 703131ee76d1e48a64adc326ce3e34d04802f5cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685483"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699733"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperación ante desastres del clúster WSFC mediante quórum forzado (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47685483"
 > [!WARNING]  
 >  El usuario debe conocer perfectamente los conceptos y las interacciones de los clústeres de conmutación por error de Windows Server, los modelos de quórum de WSFC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y la configuración de implementación específica del entorno.  
 >   
->  Para obtener más información, vea:  [Clústeres de conmutación por error de Windows Server (WSFC) con SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Configuración de los votos y modos de cuórum WSFC (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Para obtener más información, vea:  [Clústeres de conmutación por error de Windows Server (WSFC) con SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Configuración de los votos y modos de cuórum WSFC (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Seguridad  
  El usuario debe ser una cuenta de dominio que sea miembro del grupo Administradores en cada nodo del clúster de WSFC.  
@@ -66,7 +66,7 @@ ms.locfileid: "47685483"
   
      En este nodo, fuerce manualmente el clúster para ponerlo en línea mediante el procedimiento de quórum forzado.  Para minimizar posibles pérdida de datos, seleccione un nodo que sea el último hospedaje de una réplica principal del grupo de disponibilidad.  
   
-     Para obtener más información, vea:  [Forzar el inicio de un clúster WSFC sin un quórum](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Para obtener más información, vea:  [Forzar el inicio de un clúster WSFC sin un quórum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  El valor del quórum forzado tiene un efecto de todo el clúster que bloquea las comprobaciones de quórum hasta que el clúster WSFC lógico logra una mayoría de votos y, de forma automática, cambia a un modo de funcionamiento normal de quórum.  
@@ -118,9 +118,9 @@ ms.locfileid: "47685483"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Ver eventos y registros para un clúster de conmutación por error](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Cmdlet de clúster de conmutación por error Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Ver también  
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726274"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641912"
 ---
 # <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
@@ -105,6 +105,6 @@ ms.locfileid: "47726274"
  Esta regla se aplica también a las variables definidas por el usuario. No obstante, si bien los tipos de datos de las variables del sistema no se pueden cambiar y usted debe adaptar el uso de estas variables para que se ajusten a los tipos de datos, las variables definidas por el usuario son más flexibles. Las variables definidas por el usuario que se utilizan en enlaces de parámetros generalmente se definen con tipos de datos que son compatibles con los tipos de datos de parámetros a los que se asignan.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

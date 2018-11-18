@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b167ab02b982688442ef0a580fab344d112f9e75
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031014"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657844"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ La marca de seguimiento 7745 evitará el comportamiento predeterminado en el que
 La marca de seguimiento 7752 habilita la carga asincrónica del Almacén de consultas y también permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecute consultas antes de que el Almacén de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
 
 > [!IMPORTANT]
-> Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](http://support.microsoft.com/help/4340759) lo antes posible. 
+> Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible. 
 
 ## <a name="see-also"></a>Ver también  
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

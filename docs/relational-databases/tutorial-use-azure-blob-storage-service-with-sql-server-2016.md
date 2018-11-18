@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -18,12 +17,12 @@ caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79f10ad7eee25932e3ef5753c021d1d6ea3974f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d6cba97149bde173d7cac233f3bc5742b710ce5d
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877958"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571384"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ Para completar este tutorial, debe estar familiarizado con los conceptos de copi
 - Aprovisione una [máquina virtual de Azure que ejecute SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/).
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Descargue las [bases de datos de ejemplo de AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
-- Asigne a la cuenta de usuario el rol de [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda el permiso [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+- Asigne la cuenta de usuario al rol [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda permisos [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1. Crear una directiva de acceso almacenada y un almacenamiento de acceso compartido
 En esta sección, usará un script de [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) para crear una firma de acceso compartido en un contenedor de blobs de Azure mediante una directiva de acceso almacenada.  

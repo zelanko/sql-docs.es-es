@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 936cc6417a1af8b38b548b321486d233fa086363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf79a9f1c6790abfb1a2435e533aa0847abbd3b6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800033"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813988"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integración de Reporting Services con el acceso URL: aplicación web
   El acceso URL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está diseñado específicamente para habilitar el acceso a informes individuales a través de una red. Este tipo de acceso es mejor para integrar la visualización y navegación por los informes en una aplicación web personalizada. Para utilizar el acceso URL en las aplicaciones web, puede:  
@@ -35,7 +35,7 @@ ms.locfileid: "47800033"
  En el ejemplo siguiente, el hipervínculo se destina a un marco denominado "main", que podría ser diferente del que incluye el hipervínculo. El hipervínculo podría formar parte del portal web.  
   
 ```  
-<a href="http://server/reportserver?/SampleReports/Territory Sales   
+<a href="https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >  
    Click here for the Territory Sales Drilldown sample report  
 </a>  
@@ -60,7 +60,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  El siguiente ejemplo HTML demuestra el uso de un formulario que puede utilizar para llegar a un servidor de informes con una dirección URL concreta y pasar parámetros de cadena de la consulta como parte de los campos de entrada del formulario.  
   
 ```  
-<FORM id="frmRender" action="http://server/reportserver?/SampleReports/  
+<FORM id="frmRender" action="https://server/reportserver?/SampleReports/  
    Territory Sales Drilldown" method="post" target="_self">  
    <INPUT type="hidden" name="rs:Command" value="Render">   
    <INPUT type="hidden" name="rc:LinkTarget" value="main">  
@@ -72,7 +72,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  En el ejemplo anterior, si un usuario hace clic en el botón en el formulario, el servidor de informes devuelve el informe objetivo representado por HTML en el marco actual. Una cadena de acceso URL comparable podría ser similar a la siguiente:  
   
 ```  
-http://server/reportserver?/SampleReports/Territory Sales   
+https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   

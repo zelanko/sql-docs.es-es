@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794613"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662264"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794613"
  También puede usar la GUI para ver la salida de optimización generada por la utilidad de línea de comandos **dta** .  
   
 > [!NOTE]  
->  Si usa la utilidad de línea de comandos **dta** y especifica que la salida se escriba en un archivo XML con el argumento **-ox** , puede abrir y ver el archivo de salida XML si hace clic en **Abrir archivo** en el menú **Archivo** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Para obtener información sobre la utilidad de línea de comandos **dta** , vea [dta (utilidad)](../../tools/dta/dta-utility.md).  
+>  Si usa la utilidad de línea de comandos **dta** y especifica que la salida se escriba en un archivo XML con el argumento **-ox** , puede abrir y ver el archivo de salida XML si hace clic en **Abrir archivo** en el menú **Archivo** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Para obtener información sobre la utilidad de línea de comandos **dta** , vea [dta (utilidad)](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para ver recomendaciones de optimización con la GUI del Asistente para la optimización de motor de base de datos  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794613"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     El esquema XML del Asistente para la optimización de motor de base de datos también se encuentra disponible en línea en [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     El esquema XML del Asistente para la optimización de motor de base de datos también se encuentra disponible en línea en [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
 6.  Tras crear una carga de trabajo y un archivo de entrada XML, está preparado para enviar el archivo de entrada a la utilidad de línea de comandos **dta** para el análisis. Asegúrese de especificar un nombre de archivo de salida XML para el argumento de la utilidad **-ox** . Así se crea un archivo de salida XML con la configuración recomendada especificada en el elemento **Configuration** . Si desea ejecutar de nuevo el Asistente para la optimización de motor de base de datos para comprobar otra configuración hipotética basada en la salida, puede copiar y pegar el contenido del elemento **Configuration** del archivo de salida en un archivo de entrada XML nuevo o el ya existente. Para obtener información acerca del uso del archivo de entrada XML con la utilidad **dta** , vea la sección "Optimizar una base de datos mediante la utilidad dta" en [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

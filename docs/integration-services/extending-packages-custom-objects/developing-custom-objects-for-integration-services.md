@@ -14,12 +14,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 031cf6907a2723db2cf9f5b5394ecdca13308577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8413b1386d60ded8d9257e3a58a7e682355824f6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737373"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640212"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desarrollar objetos personalizados para Integration Services
   Cuando los objetos de flujo de datos y flujo de control que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no cumplen completamente los requisitos, puede desarrollar muchos tipos de objetos personalizados, entre los que se incluyen:  
@@ -109,7 +109,7 @@ ms.locfileid: "47737373"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](http://go.microsoft.com/fwlink/?LinkId=215662) en blogs.msdn.com.  
+-   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](https://go.microsoft.com/fwlink/?LinkId=215662) en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Ver también  
  [Conservar objetos personalizados](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   

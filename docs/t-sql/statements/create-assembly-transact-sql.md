@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5e2d991d6473908400085148da73c242c749c306
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b81e8cb39a9520697af41624dfda2609bdbbef9f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621394"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697154"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -143,7 +143,7 @@ Cuando se intenta obtener acceso al ensamblado especificado en \<especificador_d
   
  Además de las comprobaciones previas realizadas al ejecutar CREATE ASSEMBLY, existen comprobaciones adicionales que se realizan en el tiempo de ejecución del código en el ensamblado:  
   
--   Se puede producir un error en la llamada a determinadas API de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que requieren un permiso de acceso a código específico si el conjunto de permisos del ensamblado no incluye ese permiso.  
+-   Si se llama a determinadas API de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que requieren un permiso de acceso a código específico, puede dar error si el conjunto de permisos del ensamblado no incluye tal permiso.  
   
 -   En el caso de ensamblados SAFE y EXTERNAL_ACCESS, cualquier intento de llamada a las API [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] anotadas con HostProtectionAttributes dará error.  
   
@@ -172,7 +172,7 @@ Los siguientes permisos son necesarios para crear un ensamblado CLR cuando la op
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- En el ejemplo siguiente se asume que los ejemplos del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se han instalado en la ubicación predeterminada del equipo local y que la aplicación de ejemplo HelloWorld.csproj se ha compilado. Para más información, vea [Ejemplo de Hola a todos](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
+ En el ejemplo siguiente se asume que los ejemplos del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se han instalado en la ubicación predeterminada del equipo local y que la aplicación de ejemplo HelloWorld.csproj se ha compilado. Para más información, vea [Ejemplo de Hola a todos](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
 ```  
 CREATE ASSEMBLY HelloWorld   
@@ -204,6 +204,6 @@ WITH PERMISSION_SET = SAFE;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   
   

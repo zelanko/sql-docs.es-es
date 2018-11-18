@@ -14,12 +14,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d39af6af5eb04c9e8e8c340a71f0e8b1cb179fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffd79ef6abe6bd0e143d2ec84d72ebcc7476f3df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790999"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675884"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar y configurar la búsqueda semántica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ GO
   
         1.  Busque el paquete de Windows installer denominado **SemanticLanguageDatabase.msi** en el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-        2.  Descargue el paquete del instalador de la página [Estadísticas de semántica de lenguaje de Microsoft® SQL Server® 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52681) en el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+        2.  Descargue el paquete del instalador de la página [Estadísticas de semántica de lenguaje de Microsoft® SQL Server® 2016](https://www.microsoft.com/download/details.aspx?id=52681) en el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 2.  Ejecute el paquete de Windows Installer **SemanticLanguageDatabase.msi** para extraer la base de datos y el archivo de registro.  
   
@@ -146,6 +146,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Instalar compatibilidad opcional para nuevos tipos de documento  
   
 ###  <a name="office"></a> Instalar los filtros más recientes para Microsoft Office y otros tipos de documento de Microsoft  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los separadores de palabras y analizadores lingüísticos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] más recientes, pero no instala los últimos filtros para los documentos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ni otros tipos de documento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Estos filtros son necesarios para indizar documentos creados con versiones recientes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office y otras aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para descargar los filtros más recientes, vea [Paquetes de filtros de Microsoft Office 2010](http://go.microsoft.com/fwlink/?LinkId=218293). (Parece que no hay una versión de Filter Pack para Office 2013 ni Office 2016).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los separadores de palabras y analizadores lingüísticos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] más recientes, pero no instala los últimos filtros para los documentos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ni otros tipos de documento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Estos filtros son necesarios para indizar documentos creados con versiones recientes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office y otras aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para descargar los filtros más recientes, vea [Paquetes de filtros de Microsoft Office 2010](https://go.microsoft.com/fwlink/?LinkId=218293). (Parece que no hay una versión de Filter Pack para Office 2013 ni Office 2016).
   
   

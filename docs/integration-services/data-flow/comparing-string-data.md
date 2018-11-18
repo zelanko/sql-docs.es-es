@@ -17,12 +17,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd726cfefd1a1e80ba5b96f651e3a1b13057c174
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b63ddac2aa39095703b1428deab61232837ed9e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821630"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638402"
 ---
 # <a name="comparing-string-data"></a>comparar datos de cadena
   Las comparaciones de cadenas son una parte importante de muchas de las transformaciones realizadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y las comparaciones de cadenas también se utilizan en la evaluación de expresiones en variables y expresiones de propiedades. Por ejemplo, la transformación Ordenar compara valores en un conjunto de datos para ordenar datos en orden ascendente o descendente.  
@@ -83,7 +83,7 @@ ms.locfileid: "47821630"
   
 ## <a name="see-also"></a>Ver también  
  [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
- [Análisis rápido](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [Análisis estándar](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Análisis rápido](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Análisis estándar](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

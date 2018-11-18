@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52829a433526e10b3170610a1f9281bfbd9a5796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840483"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699074"
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ Los pasos de trabajo son acciones que el trabajo realiza en una base de datos o 
   
 Todos los pasos de trabajo se ejecutan en un contexto de seguridad determinado. Si en el paso de trabajo se especifica un proxy, se ejecuta en el contexto de seguridad de la credencial del proxy. Si en el paso de trabajo no se especifica un proxy, se ejecuta en el contexto de la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Solo los miembros del rol fijo de servidor sysadmin pueden crear trabajos en los que no se especifique un proxy de forma explícita.  
   
-Puesto que los pasos de trabajo se ejecutan en el contexto de un usuario específico de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, dicho usuario debe disponer de los permisos y la configuración necesarios para que se ejecute el paso de trabajo. Por ejemplo, si crea un trabajo que requiere una letra de unidad o una ruta de acceso UNC (Convención de nomenclatura universal), los pasos de trabajo se pueden ejecutar con la cuenta de usuario de Windows durante la comprobación de las tareas. Sin embargo, el usuario de Windows para el paso de trabajo debe tener también los permisos y configuraciones de letra de unidad necesarios, o acceso a la unidad requerida. De lo contrario, se producirá un error en el paso de trabajo. Para evitar este problema, asegúrese de que el proxy para cada paso de trabajo dispone de los permisos necesarios para la tarea que realiza dicho paso. Para más información, consulte [Seguridad y protección (motor de base de datos)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
+Puesto que los pasos de trabajo se ejecutan en el contexto de un usuario específico de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, dicho usuario debe disponer de los permisos y la configuración necesarios para que se ejecute el paso de trabajo. Por ejemplo, si crea un trabajo que requiere una letra de unidad o una ruta de acceso UNC (Convención de nomenclatura universal), los pasos de trabajo se pueden ejecutar con la cuenta de usuario de Windows durante la comprobación de las tareas. Sin embargo, el usuario de Windows para el paso de trabajo debe tener también los permisos y configuraciones de letra de unidad necesarios, o acceso a la unidad requerida. De lo contrario, se producirá un error en el paso de trabajo. Para evitar este problema, asegúrese de que el proxy para cada paso de trabajo dispone de los permisos necesarios para la tarea que realiza dicho paso. Para más información, consulte [Seguridad y protección (motor de base de datos)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
   
 ## <a name="job-step-logs"></a>Registros de pasos de trabajo  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente puede escribir el resultado de algunos pasos de trabajo en un archivo del sistema operativo o en la tabla sysjobstepslogs de la base de datos msdb. Los siguientes tipos de pasos de trabajo pueden escribir la salida en los siguientes destinos:  
   
 -   Programas ejecutables y comandos del sistema operativo.  
   
--   Instrucciones[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tareas.  
   
@@ -96,7 +96,7 @@ Al crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] , deb
   
 Opcionalmente, puede abrir un archivo [!INCLUDE[tsql](../../includes/tsql-md.md)] existente que actúe como comando para el paso de trabajo.  
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] los pasos de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no usan cuentas de proxy del Agente. En lugar de ello, el paso de trabajo se ejecuta como el propietario del paso de trabajo, o como la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el propietario del paso de trabajo es miembro del rol fijo de servidor sysadmin. Los miembros del rol fijo de servidor sysadmin también pueden especificar que los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuten en el contexto de otro usuario mediante el parámetro *database_user_name* del procedimiento almacenado sp_add_jobstep. Para más información, consulte [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] los pasos de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no usan cuentas de proxy del Agente. En lugar de ello, el paso de trabajo se ejecuta como el propietario del paso de trabajo, o como la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el propietario del paso de trabajo es miembro del rol fijo de servidor sysadmin. Los miembros del rol fijo de servidor sysadmin también pueden especificar que los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuten en el contexto de otro usuario mediante el parámetro *database_user_name* del procedimiento almacenado sp_add_jobstep. Para más información, consulte [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 > [!NOTE]  
 > Un solo paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] puede contener varios lotes. [!INCLUDE[tsql](../../includes/tsql-md.md)] los pasos de trabajo pueden contener comandos GO incrustados.  
@@ -108,7 +108,7 @@ Al crear un paso de trabajo de script de PowerShell, es preciso especificar una 
   
 -   El archivo de script de PowerShell que se desea abrir.  
   
-El subsistema PowerShell del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abre una sesión PowerShell y carga los complementos PowerShell de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El script de PowerShell usado como comando del paso de trabajo puede hacer referencia los cmdlets y al proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+El subsistema PowerShell del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abre una sesión PowerShell y carga los complementos PowerShell de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El script de PowerShell usado como comando del paso de trabajo puede hacer referencia los cmdlets y al proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="activex-scripting-job-steps"></a>Pasos de trabajo de scripts ActiveX  
   
@@ -172,7 +172,7 @@ Al crear un paso de trabajo de consulta de [!INCLUDE[ssASnoversion](../../includ
   
 -   Escribir la instrucción que se debe ejecutar. La instrucción debe ser una consulta de expresiones multidimensionales (MDX).  
   
-Para más información sobre MDX, consulte [Aspectos básicos de la instrucción MDX](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
+Para más información sobre MDX, consulte [Aspectos básicos de la instrucción MDX](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ## <a name="integration-services-packages"></a>Paquetes de Integration Services  
 Al crear un paso de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , debe realizar las operaciones siguientes:  
@@ -217,7 +217,7 @@ Para más información sobre cómo crear pasos de trabajo que ejecutan paquetes 
 |Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Ver también  
-[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Crear trabajos](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+[sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   

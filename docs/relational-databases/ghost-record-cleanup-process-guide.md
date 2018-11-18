@@ -5,8 +5,7 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - ghost cleanup
@@ -15,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74bb9ad241c4f7d778cd85741c64464d592641fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b01e6cc26d2dfbcf897a49e971d429961144321f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780893"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669324"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Guía de procesos de limpieza de registros fantasma
 
@@ -58,7 +57,7 @@ Una vez que se deshabilita el proceso de limpieza de registros fantasma, es nece
 
 
 ## <a name="next-steps"></a>Pasos siguientes  
-[Deshabilitar el proceso de limpieza de registros fantasma](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
+[Deshabilitar el proceso de limpieza de registros fantasma](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
 <br>[Quitar los registros fantasma de un único archivo de base de datos](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
 <br>[Quitar los registros fantasma de todos los archivos de datos de la base de datos](system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
 

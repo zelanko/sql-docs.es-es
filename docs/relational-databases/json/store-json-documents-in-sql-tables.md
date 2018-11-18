@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 55b8f8482af66b714ae7842c267930479a4c8586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661223"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663614"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Almacenamiento de documentos JSON en SQL Server o SQL Database
 SQL Server y Azure SQL Database tienen funciones JSON nativas que permiten analizar documentos JSON con el lenguaje SQL estándar. Ahora puede almacenar documentos JSON en SQL Server o SQL Database, y consultar datos JSON como en una base de datos NoSQL. En este artículo se describen las opciones para almacenar documentos JSON en SQL Server o SQL Database.
@@ -162,7 +162,7 @@ Las funciones JSON nativas en SQL Server y SQL Database le permiten procesar doc
   
 ### <a name="microsoft-blog-posts"></a>Entrada de blog de Microsoft  
   
-Para obtener soluciones específicas, casos de uso y recomendaciones, consulte estas [entradas de blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre la compatibilidad integrada de JSON en SQL Server y Azure SQL Database.  
+Para obtener soluciones específicas, casos de uso y recomendaciones, consulte estas [entradas de blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre la compatibilidad integrada de JSON en SQL Server y Azure SQL Database.  
 
 ### <a name="microsoft-videos"></a>Vídeos de Microsoft
 

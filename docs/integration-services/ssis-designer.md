@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820113"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642132"
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] es una herramienta gráfica que se puede usar para crear y mantener paquetes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -77,7 +77,7 @@ ms.locfileid: "47820113"
 ### <a name="data-flow-tab"></a>Pestaña Flujo de datos  
  Si un paquete contiene una tarea de flujo de datos, puede agregar flujos de datos al paquete. Los flujos de datos de un paquete se generan en la superficie de diseño de la pestaña **Flujo de datos** . Arrastre elementos desde el **cuadro de herramientas** a la superficie de diseño y conéctelos con un flujo de datos haciendo clic en el icono correspondiente al elemento y arrastrando la flecha desde un elemento a otro.  
   
- Para obtener más información, consulte [Data Flow](../integration-services/data-flow/data-flow.md).  
+ Para más información, consulte [Data Flow](../integration-services/data-flow/data-flow.md).  
   
 ### <a name="parameters-tab"></a>Pestaña Parámetros  
  Los parámetros de Integration Services (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear parámetros de proyecto en el nivel de proyecto y parámetros de paquete en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo. Esta pestaña permite administrar parámetros del paquete.  
@@ -89,7 +89,7 @@ ms.locfileid: "47820113"
 ### <a name="event-handlers-tab"></a>Pestaña Controladores de eventos  
  Los eventos de un paquete se generan en la superficie de diseño de la pestaña **Controladores de eventos** . En la pestaña **Controladores de eventos** , se selecciona el paquete u objeto de paquete para el cual desea crear un controlador de eventos y después se selecciona el evento que se debe asociar con el controlador de eventos. Un controlador de eventos tiene un flujo de control y flujos de datos opcionales.  
   
- Para obtener más información, consulte [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Para obtener más información, consulte [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### <a name="package-explorer-tab"></a>Pestaña Explorador de paquetes  
  Los paquetes pueden ser complejos e incluir muchas tareas, administradores de conexión, variables y otros elementos. La vista de explorador del paquete le permite ver una lista completa de elementos de paquete.  
@@ -104,7 +104,7 @@ ms.locfileid: "47820113"
 #### <a name="connection-managers-area"></a>Área de administradores de conexión  
  Los administradores de conexión utilizados por un paquete se agregan y modifican en el área **Administradores de conexión** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye administradores de conexión para conectarse a una serie de orígenes de datos, como archivos de texto, bases de datos OLE DB y proveedores .NET.  
   
- Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) y [Crear administradores de conexiones](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) y [Crear administradores de conexiones](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## <a name="control-flow-tab"></a>Pestaña Flujo de control
 Utilice la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para genera el flujo de control en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605845"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642382"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -135,7 +135,7 @@ ms.locfileid: "47605845"
  Si tiene que crear varias agregaciones en un flujo de datos, considere la posibilidad de crear varias agregaciones que utilicen una sola transformación Agregado, en lugar de crear varias transformaciones. Esto mejora el rendimiento cuando una agregación es un subconjunto de otra agregación, ya que la transformación puede optimizar el almacenamiento interno y examinar los datos entrantes una sola vez. Por ejemplo, si una agregación utiliza una cláusula GROUP BY y una agregación AVG, puede mejorar el rendimiento combinándolas en una transformación. No obstante, al realizar varias agregaciones dentro de una transformación Agregado se serializan las operaciones de agregación y, por consiguiente, el rendimiento podría no mejorar cuando haya que calcular varias agregaciones por separado.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformaciones Búsqueda aproximada y Agrupación aproximada  
- Para obtener información sobre cómo optimizar el rendimiento de las transformaciones Agrupación aproximada y Búsqueda aproximada, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+ Para obtener información sobre cómo optimizar el rendimiento de las transformaciones Agrupación aproximada y Búsqueda aproximada, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
 #### <a name="lookup-transformation"></a>Transformación de búsqueda  
  Puede minimizar el tamaño de los datos de referencia en memoria si escribe una instrucción SELECT que busque solo las columnas necesarias. Esta opción presenta un rendimiento mejor que seleccionar una tabla o una vista completa, lo que devuelve una gran cantidad de datos innecesarios.  
@@ -148,7 +148,7 @@ ms.locfileid: "47605845"
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
   
- Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección "Unique dimension scenario" en las notas del producto [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
+ Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección "Unique dimension scenario" en las notas del producto [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinos  
  Para lograr un mejor rendimiento con los destinos, considere la posibilidad de utilizar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de probar el rendimiento del destino.  
@@ -171,38 +171,38 @@ ms.locfileid: "47605845"
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
   
--   Artículo técnico con una [estrategia para el rendimiento en SQL Server 2005 Integration Services](http://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
+-   Artículo técnico con una [estrategia para el rendimiento en SQL Server 2005 Integration Services](https://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
   
--   Artículo técnico con [técnicas de ajuste del rendimiento en SQL Server 2005 Integration Services](http://go.microsoft.com/fwlink/?LinkId=98900), en technet.microsoft.com  
+-   Artículo técnico con [técnicas de ajuste del rendimiento en SQL Server 2005 Integration Services](https://go.microsoft.com/fwlink/?LinkId=98900), en technet.microsoft.com  
   
--   Artículo técnico sobre cómo [incrementar el rendimiento en las canalizaciones dividiendo las transformaciones sincrónicas en varias tareas](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), en sqlcat.com  
+-   Artículo técnico sobre cómo [incrementar el rendimiento en las canalizaciones dividiendo las transformaciones sincrónicas en varias tareas](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), en sqlcat.com  
   
--   Artículo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=220816), en msdn.microsoft.com.  
+-   Artículo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=220816), en msdn.microsoft.com.  
   
--   Artículo técnico, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](http://go.microsoft.com/fwlink/?LinkId=220817), en msdn.microsoft.com.  
+-   Artículo técnico, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](https://go.microsoft.com/fwlink/?LinkId=220817), en msdn.microsoft.com.  
   
--   Artículo técnico, [Top 10 SQL Server Integration Services Best Practices](http://go.microsoft.com/fwlink/?LinkId=220818), en sqlcat.com.  
+-   Artículo técnico, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), en sqlcat.com.  
   
--   Artículo técnico y ejemplo, [The “Balanced Data Distributor” for SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), en sqlcat.com.  
+-   Artículo técnico y ejemplo, [The “Balanced Data Distributor” for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), en sqlcat.com.  
   
--   Publicación de blog acerca sobre [la solución de problemas de rendimiento de los paquetes SSIS](http://go.microsoft.com/fwlink/?LinkId=238156), en blogs.msdn.com  
+-   Publicación de blog acerca sobre [la solución de problemas de rendimiento de los paquetes SSIS](https://go.microsoft.com/fwlink/?LinkId=238156), en blogs.msdn.com  
   
  **Vídeos**  
   
--   Serie de vídeos sobre [el diseño y el ajuste del rendimiento de los paquetes de SSIS en la empresa (serie de vídeos de SQL)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Serie de vídeos sobre [el diseño y el ajuste del rendimiento de los paquetes de SSIS en la empresa (serie de vídeos de SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Vídeo sobre [el ajuste del flujo de datos de paquetes de SSIS en la empresa (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686901.aspx), en technet.microsoft.com  
+-   Vídeo sobre [el ajuste del flujo de datos de paquetes de SSIS en la empresa (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), en technet.microsoft.com  
   
--   Vídeo de [descripción de los búferes de flujo de datos de SSIS (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686905.aspx), en technet.microsoft.com  
+-   Vídeo de [descripción de los búferes de flujo de datos de SSIS (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), en technet.microsoft.com  
   
--   Vídeo sobre [los patrones de diseño de rendimiento de Microsoft SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), en channel9.msdn.com.  
+-   Vídeo sobre [los patrones de diseño de rendimiento de Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), en channel9.msdn.com.  
   
--   Presentación acerca de [cómo Microsoft TI aprovecha las mejoras en el motor de flujo de datos de SQL Server 2008 SSIS](http://go.microsoft.com/fwlink/?LinkId=217660), en sqlcat.com.  
+-   Presentación acerca de [cómo Microsoft TI aprovecha las mejoras en el motor de flujo de datos de SQL Server 2008 SSIS](https://go.microsoft.com/fwlink/?LinkId=217660), en sqlcat.com.  
   
--   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
+-   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
 ## <a name="see-also"></a>Ver también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas de la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

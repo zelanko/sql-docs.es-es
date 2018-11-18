@@ -13,12 +13,12 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e58ab2c2b59e1440eaf1d38ba16e7a7293a38d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc9c1ba540e17baddcd1437a9b46d278aecddacf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698963"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640553"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformación Balanced Data Distributor
   La transformación Balanced Data Distributor (BDD) aprovecha la capacidad de procesamiento simultáneo de las CPU actuales. Distribuye uniformemente los búferes de filas entrantes entre las salidas de subprocesos independientes. Al usar subprocesos independientes para cada ruta de acceso de los resultados, el componente BDD mejora el rendimiento de un paquete de SSIS en equipos con varios núcleos o varios procesadores.  
@@ -38,6 +38,6 @@ ms.locfileid: "47698963"
  Tenga en cuenta que si el cuello de botella en un paquete de SSIS se debe a la velocidad a la que se pueden leer los datos del origen, el componente BDD no ayuda a mejorar el rendimiento. Si el cuello de botella en un paquete de SSIS se debe a que el destino no admite paralelismo, el BDD no es útil; sin embargo, puede realizar todas las transformaciones en paralelo y usar la transformación Unión de todo para combinar los datos de salida que salen de las diferentes rutas de acceso de los resultados de la transformación BDD antes de enviar los datos al destino.  
   
 > [!IMPORTANT]  
->  En el [vídeo sobre el Distribuidor de datos equilibrado](http://go.microsoft.com/fwlink/?LinkID=226278) de la biblioteca de TechNet puede ver una presentación con una demostración del uso de la transformación.  
+>  En el [vídeo sobre el Distribuidor de datos equilibrado](https://go.microsoft.com/fwlink/?LinkID=226278) de la biblioteca de TechNet puede ver una presentación con una demostración del uso de la transformación.  
   
   

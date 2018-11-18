@@ -15,12 +15,12 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6573534c2117192efcb3a40c848e72e0a39d0426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610773"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640262"
 ---
 # <a name="transform-data-with-transformations"></a>Transformar datos con transformaciones
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos.  
@@ -45,7 +45,7 @@ ms.locfileid: "47610773"
   
  También puede escribir transformaciones personalizadas. Para más información, vea [Desarrollar un componente de flujo de datos personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) y [Desarrollar tipos específicos de componentes de flujo de datos](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- Después de agregar la transformación al diseñador de flujo de datos, pero antes de configurar la transformación, debe conectar la transformación al flujo de datos conectando la salida de otra transformación u origen del flujo de datos a la entrada de esta transformación. El conector entre dos componentes de flujo de datos se denomina ruta. Para más información sobre la conexión de componentes y el trabajo con rutas, vea [Conectar componentes con rutas de acceso](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Después de agregar la transformación al diseñador de flujo de datos, pero antes de configurar la transformación, debe conectar la transformación al flujo de datos conectando la salida de otra transformación u origen del flujo de datos a la entrada de esta transformación. El conector entre dos componentes de flujo de datos se denomina ruta. Para más información sobre la conexión de componentes y el trabajo con rutas, vea [Conectar componentes con rutas de acceso](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>Para agregar una transformación a un flujo de datos  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47610773"
 ## <a name="see-also"></a>Ver también  
  [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
- [Conectar componentes con rutas de acceso](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Conectar componentes con rutas de acceso](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Control de errores en los datos](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)  
   

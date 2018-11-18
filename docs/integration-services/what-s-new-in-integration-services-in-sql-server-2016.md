@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5896643e84782c6b0a36fd4ef6da3e487acdab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691790"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640202"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novedades de Integration Services en SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -185,9 +185,9 @@ La característica Implementación incremental de paquetes le permite implementa
 ####  <a name="encrypted"></a> Compatibilidad con Always Encrypted en el catálogo de SSIS  
  SSIS ya es compatible con la característica Always Encrypted en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea las entradas de blog siguientes.  
   
--   [SSIS con Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS con Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
--   [Transformación de búsqueda con Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Transformación de búsqueda con Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
 
 ### <a name="better-debugging"></a>Depuración más fácil
 
@@ -213,7 +213,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
 -   En el Componente de script o en un componente de flujo de datos personalizado, llame al nuevo método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> de la interfaz IDTSComponentMetadata100.  
   
- Para más info sobre esta mejora, vea el siguiente blog publicado por el desarrollador de SSIS Bo Fan: [Error Column Improvements for SSIS Data Flow](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Mejoras de la columna de error para el flujo de datos de SSIS).  
+ Para más info sobre esta mejora, vea el siguiente blog publicado por el desarrollador de SSIS Bo Fan: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Mejoras de la columna de error para el flujo de datos de SSIS).  
   
 > [!NOTE]  
 >  (Esta compatibilidad se amplió en versiones posteriores. Para obtener más información, vea [Compatibilidad ampliada con nombres de columna de error](#getidstring) y [Nueva interfaz IDTSComponentMetaData130 de la API](#CMD130)).  
@@ -223,7 +223,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
  El método GetIdentificationStringByLineageID ha cambiado a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Para obtener más información, vea [Nombres de columna para errores del flujo de datos](#ErrorColumn).  
   
- Para obtener más información sobre este cambio y la mejora de la columna de error, vea la siguiente entrada de blog actualizada. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) [Mejoras de la columna de error para el flujo de datos SSIS (actualizada para CTP3.3)]](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Para obtener más información sobre este cambio y la mejora de la columna de error, vea la siguiente entrada de blog actualizada. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) [Mejoras de la columna de error para el flujo de datos SSIS (actualizada para CTP3.3)]](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (En RC0, este método se ha movido a la nueva interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Para obtener más información, vea [Nueva interfaz IDTSComponentMetaData130 de la API](#CMD130)).  
@@ -285,7 +285,7 @@ La característica Implementación incremental de paquetes le permite implementa
  El Administrador de conexiones con Excel, el Origen de Excel y el Destino de Excel ofrecen ahora compatibilidad explícita con orígenes de datos de Excel 2016.  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW para SQL Server 2016 publicado  
- Microsoft® Connector for SAP BW para Microsoft SQL Server® 2016 se publica como parte del Feature Pack de SQL Server 2016. Para descargar los componentes del Feature Pack, vea [Feature Pack de Microsoft® SQL Server® 2016](http://go.microsoft.com/fwlink/?LinkID=746297).
+ Microsoft® Connector for SAP BW para Microsoft SQL Server® 2016 se publica como parte del Feature Pack de SQL Server 2016. Para descargar los componentes del Feature Pack, vea [Feature Pack de Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Conectores v4.0 para Oracle y Teradata publicados
 Se han publicado conectores v4.0 de Microsoft para Oracle y Teradata. Para descargar los conectores, vea [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)(Conectores v4.0 de Microsoft para Oracle y Teradata).
@@ -346,7 +346,7 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
  El Asistente para importación y exportación de SQL Server puede ahora importar datos del Almacenamiento de blobs de Azure y guardar datos en él. Para obtener más información, vea [Elegir un origen de datos &#40;Asistente para importación y exportación de SQL Server&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) y [Elegir un destino &#40;Asistente para importación y exportación de SQL Server&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Diseñador y servicio de captura de datos modificados para Oracle para Microsoft SQL Server 2016 publicado  
- El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server® 2016 se publican como parte del Feature Pack de SQL Server 2016.  Estos componentes admiten ahora Oracle 12c en la instalación clásica. (No se admite la instalación multiinquilino) Para descargar los componentes del Feature Pack, vea [Feature Pack de Microsoft® SQL Server® 2016](http://go.microsoft.com/fwlink/?LinkID=746297).  
+ El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server® 2016 se publican como parte del Feature Pack de SQL Server 2016.  Estos componentes admiten ahora Oracle 12c en la instalación clásica. (No se admite la instalación multiinquilino) Para descargar los componentes del Feature Pack, vea [Feature Pack de Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).  
   
 ####  <a name="cdc2016"></a> Componentes de CDC actualizados para SQL Server 2016  
  Los componentes Tarea Control, Origen y Transformación Divisor de CDC (Captura de datos modificados) se actualizan para ofrecer compatibilidad completa con SQL Server 2016. No hay ninguna funcionalidad nueva ni ningún cambio de comportamiento.  
@@ -360,7 +360,7 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
  El destino de procesamiento de dimensiones no funciona con modelos tabulares con el nivel de compatibilidad de SQL 2016.  La tarea de procesamiento de Analysis Services y el destino de procesamiento de particiones son todo lo que necesita para su procesamiento tabular. 
 
 ####  <a name="builtinR"></a> Compatibilidad con R Services integrado  
- SSIS ya es compatible con R Services integrado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Puede usar SSIS no solo para extraer datos y cargar la salida del análisis, sino para generar, ejecutar y periódicamente volver a entrenar modelos de R. Para obtener más información, vea la entrada de blog siguiente. [Incorporación de operatividad a su proyecto de aprendizaje automático mediante SQL Server 2016 SSIS y R Services](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
+ SSIS ya es compatible con R Services integrado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Puede usar SSIS no solo para extraer datos y cargar la salida del análisis, sino para generar, ejecutar y periódicamente volver a entrenar modelos de R. Para obtener más información, vea la entrada de blog siguiente. [Incorporación de operatividad a su proyecto de aprendizaje automático mediante SQL Server 2016 SSIS y R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
 
 ####  <a name="ValidateXML"></a> Salida enriquecida de validación de XML en la tarea XML  
  Valide documentos XML y obtenga una salida de error enriquecida habilitando la propiedad **ValidationDetails** de la tarea XML. Antes de que la propiedad **ValidationDetails** estuviera disponible, la validación de XML efectuada mediante la tarea XML solo devolvía un resultado true o false, sin información sobre errores o sus ubicaciones. Ahora, al establecer **ValidationDetails** como true, el archivo de salida contiene información detallada sobre cada uno de los errores, incluido el número de línea y su posición. Puede usar esta información para comprender, buscar y corregir errores en documentos XML. Para obtener más información, vea [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  

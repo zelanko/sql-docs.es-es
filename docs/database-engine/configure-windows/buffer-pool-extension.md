@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658203"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606895"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658203"
  Los siguientes términos son aplicables a la característica de extensión del grupo de búferes.  
   
  Unidad de estado sólido (SSD)  
- Las unidades de estado sólido almacenan los datos en memoria (RAM) de forma persistente. Para obtener más información, vea [esta definición](http://en.wikipedia.org/wiki/Solid-state_drive).  
+ Las unidades de estado sólido almacenan los datos en memoria (RAM) de forma persistente. Para obtener más información, vea [esta definición](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
  Búfer  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un búfer es una página de 8 kB en memoria (el mismo tamaño que una página de índice o de datos). Por tanto, la memoria caché del búfer está dividida en páginas de 8 kB. Una página permanece en la memoria caché del búfer hasta que el administrador de búfer necesita el área del búfer para leer en ella más datos. Los datos solo vuelven a escribirse en el disco si se han modificado. Estas páginas modificadas en memoria se conocen como páginas desfasadas. Una página está limpia cuando es equivalente a su imagen de la base de datos en el disco. Los datos de la memoria caché del búfer se pueden modificar varias veces antes de que se vuelvan a escribir en el disco.  

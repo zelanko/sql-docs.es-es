@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1367695210017990a780835c92cdae68500f9b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 727ad77d1e757014f723d1ca1a10b9c5502cad50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770063"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681263"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ GO
   
 3.  Seleccione **Nuevo catálogo de texto completo**.  
   
-4.  En el cuadro de diálogo **Nuevo catálogo de texto completo**, especifique la información del catálogo que va a volver a crear. Para obtener más información, vea [Búsqueda de texto completo](http://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91).  
+4.  En el cuadro de diálogo **Nuevo catálogo de texto completo**, especifique la información del catálogo que va a volver a crear. Para obtener más información, vea [Búsqueda de texto completo](https://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91).  
   
     > [!NOTE]  
     >  Los identificadores de los catálogos de texto completo comienzan por 00005 y se incrementan en uno con cada nuevo catálogo que se crea.  

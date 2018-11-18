@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec30904cc7c434d5450de025feb0cb7698a2e128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836963"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813938"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtener datos de conjuntos de datos compartidos en informes móviles de Reporting Services
 Además de [cargar datos de archivos de Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), el Publicador de informes móviles de Microsoft SQL Server también puede obtener acceso a los datos de prácticamente cualquier origen. El acceso a los datos requiere un origen de datos compartido, configurado en un portal web de Reporting Services. Más información sobre la [creación de orígenes de datos compartidos](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) y la [creación de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md).  
@@ -41,7 +41,7 @@ Después de conectarse a un servidor de [!INCLUDE[PRODUCT_NAME](../../includes/s
   
 Después de haber importado el conjunto de datos, puede diseñar el informe móvil tal como haría con datos simulados o datos locales de un archivo de Excel.  
   
-De forma predeterminada, el conjunto de datos compartido está siempre actualizado con los datos más recientes, porque cada vez que alguien ve un informe móvil basado en ese conjunto de datos, SQL Server ejecuta la consulta subyacente y devuelve los datos más recientes. Es obvio que si muchas personas ven su informe móvil, esta no será la mejor situación, así que puede configurar el almacenamiento en caché para ejecutar la consulta periódicamente y almacenar en caché el conjunto de datos resultante. En esta entrada de blog se explica [cómo funciona el almacenamiento en caché y la actualización de datos en el portal web](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/).  
+De forma predeterminada, el conjunto de datos compartido está siempre actualizado con los datos más recientes, porque cada vez que alguien ve un informe móvil basado en ese conjunto de datos, SQL Server ejecuta la consulta subyacente y devuelve los datos más recientes. Es obvio que si muchas personas ven su informe móvil, esta no será la mejor situación, así que puede configurar el almacenamiento en caché para ejecutar la consulta periódicamente y almacenar en caché el conjunto de datos resultante. En esta entrada de blog se explica [cómo funciona el almacenamiento en caché y la actualización de datos en el portal web](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/).  
   
 ## <a name="add-edit-or-remove-a-report-server"></a>Agregar, editar o quitar un servidor de informes  
   
@@ -60,8 +60,8 @@ Si ya ha establecido una conexión a un servidor de informes, al seleccionar **A
 ### <a name="see-also"></a>Vea también  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [Portal web (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
--  Ver [informes móviles y KPI de SQL Server en la aplicación de iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
--  Ver [informes móviles y KPI de SQL Server en la aplicación de iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  
+-  Ver [informes móviles y KPI de SQL Server en la aplicación de iPad](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
+-  Ver [informes móviles y KPI de SQL Server en la aplicación de iPhone](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  
   
   
   

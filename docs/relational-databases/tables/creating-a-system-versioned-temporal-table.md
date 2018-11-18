@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639423"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665525"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   Si el esquema especificado no existe, la instrucción **CREATE TABLE** generará un error.  
   
--   Si la tabla que especifica el parámetro **HISTORY_TABLE** ya existe, se validará con la tabla temporal recién creada en lo que respecta a la [coherencia del esquema y de los datos temporales](http://msdn.microsoft.com/library/dn935015.aspx). Si especifica una tabla de historial no válida, la instrucción **CREATE TABLE** generará un error.  
+-   Si la tabla que especifica el parámetro **HISTORY_TABLE** ya existe, se validará con la tabla temporal recién creada en lo que respecta a la [coherencia del esquema y de los datos temporales](https://msdn.microsoft.com/library/dn935015.aspx). Si especifica una tabla de historial no válida, la instrucción **CREATE TABLE** generará un error.  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Creación de una tabla temporal con una tabla de historial definida por el usuario  
  Esta modalidad resulta práctica en casos en los que el usuario quiere especificar una tabla de historial con opciones de almacenamiento específicas e índices adicionales. En el ejemplo siguiente, se crea una tabla de historial definida por el usuario con un esquema acorde con el de la tabla temporal que va a generar. Para esta tabla de historial definida por el usuario, se crea un índice de almacén de columnas agrupado y un índice de almacén de filas (árbol B) no agrupado adicional orientados a las búsquedas puntuales. Después de crear esta tabla de historial definida por el usuario, se genera la tabla temporal con control de versiones del sistema, en la que se especifica la tabla de historial definida por el usuario como la predeterminada.  

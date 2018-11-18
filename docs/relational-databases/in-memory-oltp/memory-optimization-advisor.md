@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724893"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671421"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724893"
   
 -   Migrar una tabla y los datos a una tabla optimizada para memoria (si no hay ninguna característica no admitida).  
     
- Para obtener información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Para obtener información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Tutorial del uso del Asistente de optimización de memoria  
  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que quiere convertir y seleccione **Asistente de optimización de memoria**. Se mostrará la página de bienvenida del **Asistente de optimización de memoria de tablas**.  
@@ -99,7 +99,7 @@ ms.locfileid: "47724893"
   
  Si no existe una clave principal y la tabla se está migrando a una tabla no perdurable, esta pantalla no aparecerá.  
   
- Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar**y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla optimizada para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
+ Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar**y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla optimizada para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
   
  Puede configurar los parámetros siguientes para la clave principal:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724893"
   
 -   Un índice NONCLUSTERED. Este tipo de índice es mejor para los índices con muchas consultas por rango. Puede configurar el criterio de ordenación para cada columna en la lista **Columna de ordenación y orden** .  
   
- Para conocer cuál es el tipo de índice más adecuado para cada clave principal, vea [Índices hash](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Para conocer cuál es el tipo de índice más adecuado para cada clave principal, vea [Índices hash](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Haga clic en **Siguiente** cuando seleccione las opciones de la clave principal.  
   

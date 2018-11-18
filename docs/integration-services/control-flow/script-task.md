@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c484ce29354bc21b1aaa0d5d9b708beb10cc5944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614803"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641970"
 ---
 # <a name="script-task"></a>Tarea Script
   La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
@@ -83,7 +83,7 @@ ms.locfileid: "47614803"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Configurar la tarea Script mediante programación  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, vea el tema siguiente:  
@@ -143,6 +143,6 @@ ms.locfileid: "47614803"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](http://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
+-   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](https://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
   
   

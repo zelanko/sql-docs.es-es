@@ -1,22 +1,20 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272623"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703913"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de SQL Server 2019
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272623"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos. En este artículo se resumen las novedades de SQL Server 2019. Para obtener más información y problemas conocidos, consulte [Notas de la versión de SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Pruebe SQL Server 2019.**
-- [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Descargar SQL Server 2019 para instalar en Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Descargar SQL Server 2019 para instalar en Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Instalar en Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) y [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 - [Ejecutar SQL Server 2019 en Docker](../linux/quickstart-install-connect-docker.md)
 
@@ -178,7 +176,7 @@ Esta característica puede proporcionar ahorros significativos de almacenamiento
 
   En el caso de que se produzca un error de creación de índices, sin esta característica, debe ejecutarse de nuevo una operación de creación de índices en línea y reiniciarla desde el principio.
 
-Con esta versión, se amplía la funcionalidad reanudable agregando esta característica a las [recompilaciones de índices en línea reanudables](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+Con esta versión, se amplía la funcionalidad reanudable agregando esta característica a las [recompilaciones de índices en línea reanudables](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 Además, esta característica se puede establecer como predeterminada en una base de datos específica mediante la [configuración predeterminada de ámbito de base de datos para operaciones DDL en línea y reanudables](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -264,7 +262,7 @@ Para invalidar la configuración predeterminada, incluya la opción ONLINE o RES
 
 Sin esta característica, hay que especificar las opciones en línea y reanudables directamente en la instrucción DDL de índice, como la recompilación y la creación de índices.
 
-Más información: para obtener más información sobre las opciones reanudables de índices, consulte [Característica Resumable online index create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+Más información: para obtener más información sobre las opciones reanudables de índices, consulte [Característica Resumable online index create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Grupos de disponibilidad Always On: más réplicas sincrónicas (CTP 2.0)
 
@@ -331,7 +329,7 @@ Para obtener más información, consulte [Novedades de SQL Server Machine Learni
 
 La infraestructura de generación de perfiles ligera de consultas (LWP) proporciona datos de rendimiento de consulta de forma más eficaz que con las tecnologías de generación de perfiles estándar. La generación de perfiles ligera ahora está habilitada de forma predeterminada. Se presentó en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. La generación de perfiles ligera ofrece un mecanismo de recopilación de estadísticas de ejecución de consultas con una sobrecarga esperada del 2 % de CPU, en comparación con una sobrecarga de hasta un 75 % de CPU con el mecanismo de generación de perfiles de consultas estándar. En versiones anteriores, estaba desactivada de forma predeterminada. Los administradores de base de datos pueden habilitarla con la función [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Para obtener más información sobre la generación de perfiles ligera, consulte [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar).
+Para obtener más información sobre la generación de perfiles ligera, consulte [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar).
 
 ### <a id="polybase"></a>Nuevos conectores de PolyBase
 

@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc38600559c931e1ce3cd59708b47e581de2557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a28d59165f7c1a7e733807cb4b86d334604da289
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706573"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672774"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Al tener acceso a una tabla optimizada para memoria desde una transacción expl�
   
 - Establecer la opción de base de datos [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) en ON.  
   
-No es necesaria una sugerencia de tabla de nivel de aislamiento para las tablas optimizadas para memoria a las que acceden las consultas que se ejecutan en [modo de confirmación automática](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
+No es necesaria una sugerencia de tabla de nivel de aislamiento para las tablas optimizadas para memoria a las que acceden las consultas que se ejecutan en [modo de confirmación automática](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
   
 ## <a name="see-also"></a>Ver también
 

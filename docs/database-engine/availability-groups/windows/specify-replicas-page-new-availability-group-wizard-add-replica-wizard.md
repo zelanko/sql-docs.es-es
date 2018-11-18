@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b2d68a048a1d2767bdbaf5931dd59f9a928e50a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623573"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605445"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Especificar la página de réplicas (Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47623573"
  **Instancia del servidor**  
  Muestra el nombre de la instancia del servidor que hospedará la réplica de disponibilidad.  
   
- Si una instancia de servidor que tiene previsto usar para hospedar una réplica secundaria no aparece en la cuadrícula **Réplicas de disponibilidad**, haga clic en el botón **Agregar réplica**. Si configura un grupo de disponibilidad en un entorno de tecnologías de la información híbrida (consulte [Alta disponibilidad y recuperación ante desastres para SQL Server en máquinas virtuales de Azure](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), puede hacer clic en el botón **Agregar réplica de Microsoft Azure** para crear máquinas virtuales con las réplicas secundarias de Windows Azure.  
+ Si una instancia de servidor que tiene previsto usar para hospedar una réplica secundaria no aparece en la cuadrícula **Réplicas de disponibilidad**, haga clic en el botón **Agregar réplica**. Si configura un grupo de disponibilidad en un entorno de tecnologías de la información híbrida (consulte [Alta disponibilidad y recuperación ante desastres para SQL Server en máquinas virtuales de Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), puede hacer clic en el botón **Agregar réplica de Microsoft Azure** para crear máquinas virtuales con las réplicas secundarias de Windows Azure.  
   
  **Rol inicial**  
  Indica el rol que la nueva réplica realizará inicialmente: **Principal** o **Secundario**.  
@@ -67,7 +67,7 @@ ms.locfileid: "47623573"
  Haga clic para agregar una réplica secundaria al grupo de disponibilidad.  
   
  **Agregar réplica de Microsoft Azure**  
- Haga clic para crear una máquina virtual de Windows Azure que ejecute una réplica secundaria en el grupo de disponibilidad. Esta opción solo se aplica a un grupo de disponibilidad en tecnologías de la información híbridas que contienen réplicas locales. Para obtener más información, vea [Alta disponibilidad y recuperación ante desastres para SQL Server en máquinas virtuales de Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Haga clic para crear una máquina virtual de Windows Azure que ejecute una réplica secundaria en el grupo de disponibilidad. Esta opción solo se aplica a un grupo de disponibilidad en tecnologías de la información híbridas que contienen réplicas locales. Para obtener más información, vea [Alta disponibilidad y recuperación ante desastres para SQL Server en máquinas virtuales de Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Quitar réplica**  
  Haga clic para quitar la réplica secundaria seleccionada del grupo de disponibilidad.  

@@ -14,15 +14,15 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b98b9cd1b4c99ba6fec20d8fe4912013aba1ea6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2ec789b32bb23fbdc2ac48278b16a02588d2580
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664299"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638588"
 ---
 # <a name="parsing-data"></a>Analizar datos
-  Los flujos de datos de paquetes extraen y cargan datos entre almacenes de datos heterogéneos, que pueden usar diversos tipos de datos estándar y personalizados. En un flujo de datos, los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] realizan el trabajo de extraer datos, analizar datos de cadenas y convertir datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las transformaciones posteriores pueden analizar datos para convertirlos en un tipo de datos diferentes, o bien crear copias de columnas con diferentes tipos de datos. Las expresiones usadas en los componentes también pueden convertir argumentos y operandos en diferentes tipos de datos. Finalmente, cuando se cargan los datos en un almacén de datos, el destino puede analizar los datos para convertirlos en un tipo de datos que usa el destino. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+  Los flujos de datos de paquetes extraen y cargan datos entre almacenes de datos heterogéneos, que pueden usar diversos tipos de datos estándar y personalizados. En un flujo de datos, los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] realizan el trabajo de extraer datos, analizar datos de cadenas y convertir datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las transformaciones posteriores pueden analizar datos para convertirlos en un tipo de datos diferentes, o bien crear copias de columnas con diferentes tipos de datos. Las expresiones usadas en los componentes también pueden convertir argumentos y operandos en diferentes tipos de datos. Finalmente, cuando se cargan los datos en un almacén de datos, el destino puede analizar los datos para convertirlos en un tipo de datos que usa el destino. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="two-types-of-parsing"></a>Dos tipos de análisis  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos tipos de análisis para convertir los datos: el análisis rápido y el análisis estándar.  
@@ -49,7 +49,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
 El análisis rápido ofrece un conjunto rápido y simple de rutinas, que no distinguen la configuración regional, para analizar datos. El análisis rápido admite solo un conjunto limitado de formatos para tipos de datos enteros.  
   
 ### <a name="integer-data-type"></a>Tipo de datos Integer
- Los tipos de datos enteros que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] son DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 y DT_UI8. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Los tipos de datos enteros que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] son DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 y DT_UI8. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  El análisis rápido admite los siguientes formatos para tipos de datos enteros:  
   
@@ -107,7 +107,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
  El análisis rápido genera los datos como DT_DBDATE. Los valores de fechas en formatos truncados se rellenan. Por ejemplo, YYYY pasa a ser YYYY0101.  
   
- Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ### <a name="time-data-type"></a>Tipo de datos de hora
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de hora:  
@@ -135,7 +135,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
     |-HH|Formato truncado que indica el número de horas que se restan a la UTC para obtener la hora local.|  
     |Z|Un valor de 0 que indica que la hora se representa en UTC.|  
   
-     Los formatos para todos los datos de fecha/hora pueden incluir un elemento de zona horaria. Sin embargo, el sistema omite el valor de zona horaria, excepto cuando los datos son del tipo DT_DBTIMESTAMPOFFSET. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+     Los formatos para todos los datos de fecha/hora pueden incluir un elemento de zona horaria. Sin embargo, el sistema omite el valor de zona horaria, excepto cuando los datos son del tipo DT_DBTIMESTAMPOFFSET. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
      En formatos que incluyen un elemento de zona horaria, no hay ningún espacio entre el elemento de tiempo y el elemento de zona horaria, como se muestra en el ejemplo siguiente:  
   
@@ -162,7 +162,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
  El análisis rápido genera cadenas como DT_DBTIME y DT_DBTIME2. Los valores de horas en formatos truncados se rellenan. Por ejemplo, HH:MI pasa a ser HH:MM:00.000.  
   
- Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ### <a name="datetime-data-type"></a>Tipo de datos de fecha/hora  
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de fecha/hora:  
@@ -183,7 +183,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
 |Day|Agregar 01 para el día del mes.|  
 |Month|Agregar 01 para el mes del año.|  
   
- Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="enable-fast-parse"></a>Habilitar el análisis rápido
 La propiedad de análisis rápido debe configurarse para cada columna del origen o la transformación que utilice el análisis rápido. Para configurar la propiedad, utilice el Editor avanzado del origen de archivo plano y la transformación Conversión de datos.  
@@ -201,5 +201,5 @@ La propiedad de análisis rápido debe configurarse para cada columna del origen
 ## <a name="standard-parse"></a>Standard Parse
 El análisis estándar es un conjunto de rutinas de análisis dependientes de la configuración regional y que admiten todas las conversiones de tipo de datos proporcionadas por las API de conversión de tipo de datos de automatización disponibles en Oleaut32.dll y Ole2dsip.dll. El análisis estándar es equivalente a las API de análisis de OLE DB.  
   
- El análisis estándar proporciona conversión de tipo de datos internacionales y se debe usar si el análisis rápido no admite el formato de datos. Para obtener más información sobre la conversión API de los tipos de automatización de datos, vea "Los tipos de conversión de datos API" en la [biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkId=79427). 
+ El análisis estándar proporciona conversión de tipo de datos internacionales y se debe usar si el análisis rápido no admite el formato de datos. Para obtener más información sobre la conversión API de los tipos de automatización de datos, vea "Los tipos de conversión de datos API" en la [biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkId=79427). 
  

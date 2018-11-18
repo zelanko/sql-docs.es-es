@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100196"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696783"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  También se puede heredar un permiso implícito de un permiso principal o inclusivo. Por ejemplo, el permiso **UPDATE** en una tabla puede heredarse si se tiene el permiso **UPDATE** en el esquema que contiene la tabla o si se tiene el permiso **CONTROL** en la tabla.  
   
 ### <a name="ownership-chaining"></a>Encadenamiento de propiedad  
- Cuando varios objetos de base de datos obtienen acceso unos a otros de forma secuencial, la secuencia se denomina *cadena*. Aunque estas cadenas no existen de manera independiente, cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorre los eslabones de una cadena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evalúa los permisos de los objetos que la componen de manera distinta a si se estuviese obteniendo acceso a los objetos por separado. El encadenamiento de propiedad tiene implicaciones importantes en lo que respecta a la administración de la seguridad. Para más información sobre las cadenas de propiedad, vea [Cadenas de propiedad](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) y [Tutorial: Cadenas de propiedad y cambio de contexto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Cuando varios objetos de base de datos obtienen acceso unos a otros de forma secuencial, la secuencia se denomina *cadena*. Aunque estas cadenas no existen de manera independiente, cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorre los eslabones de una cadena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evalúa los permisos de los objetos que la componen de manera distinta a si se estuviese obteniendo acceso a los objetos por separado. El encadenamiento de propiedad tiene implicaciones importantes en lo que respecta a la administración de la seguridad. Para más información sobre las cadenas de propiedad, vea [Cadenas de propiedad](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) y [Tutorial: Cadenas de propiedad y cambio de contexto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Lista de permisos  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFERENCES  
   
- Para una definición de cada tipo de permiso, vea [Permisos (motor de base de datos)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ Para una definición de cada tipo de permiso, vea [Permisos (motor de base de datos)](https://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### <a name="chart-of-permissions"></a>Gráfico de permisos  
  En este póster se representan gráficamente todos los permisos. Es la manera más fácil de ver la jerarquía anidada de permisos. Por ejemplo, el permiso **ALTER LOGIN ON** se puede conceder por sí mismo, pero también se incluye si se concede a un inicio de sesión el permiso **CONTROL** en ese inicio de sesión, o si se concede el permiso **ALTER ANY LOGIN** a un inicio de sesión.  
   
  ![Póster de permisos de seguridad de APS](../../t-sql/statements/media/aps-security-perms-poster.png "Póster de permisos de seguridad de APS")  
   
- Para descargar una versión a tamaño completo de este póster, vea [Permisos de PDW de SQL Server](http://go.microsoft.com/fwlink/?LinkId=244249) en la sección de archivos del sitio de Yammer de APS (o solicítelo por correo electrónico a **apsdoc@microsoft.com**).  
+ Para descargar una versión a tamaño completo de este póster, vea [Permisos de PDW de SQL Server](https://go.microsoft.com/fwlink/?LinkId=244249) en la sección de archivos del sitio de Yammer de APS (o solicítelo por correo electrónico a **apsdoc@microsoft.com**).  
   
 ## <a name="default-permissions"></a>Permisos predeterminados  
  En la lista siguiente se describen los permisos predeterminados:  

@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827356"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675134"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ Requisitos de la herramienta
 
 - SQL Server Management Studio puede descifrar los resultados recuperados de columnas cifradas si se conecta con *column encryption setting=enabled* en la pestaña **Propiedades adicionales** del cuadro de diálogo **Conectar con el servidor** . Requiere al menos SQL Server Management Studio versión 17 para insertar, actualizar o filtrar columnas cifradas.
 
-- Las conexiones cifradas de `sqlcmd` requieren al menos la versión 13.1, que está disponible en el [Centro de descarga](http://go.microsoft.com/fwlink/?LinkID=825643).
+- Las conexiones cifradas de `sqlcmd` requieren al menos la versión 13.1, que está disponible en el [Centro de descarga](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## <a name="database-permissions"></a>Permisos para la base de datos  

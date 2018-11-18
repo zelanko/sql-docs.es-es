@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db06e014e735e9174cde6364f30ee3870977941d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742093"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696804"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|Quita el evento identificado por *\<event_specifier>*. \<event_specifier> debe ser válido en la sesión de eventos.|  
 |ADD TARGET \<event_target_specifier>|Asocia el destino identificado por \<event_target_specifier> con la sesión de eventos.|
 |[*event_module_guid*].*event_package_name*.*target_name*|El nombre de un destino en la sesión de eventos, donde:<br /><br /> -   *event_module_guid* es el GUID del módulo que contiene el evento.<br />-   *event_package_name* es el paquete que contiene el objeto de la acción.<br />-   *target_name* es la acción. Las acciones aparecen en la vista sys.dm_xe_objects como object_type 'target'.|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|Establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type 'customizable' y object_name = *target_name*.<br /><br /> **NOTA** Si usa el destino de búfer en anillo, le recomendamos que establezca el parámetro de destino max_memory en 2048 kilobytes (KB) para intentar evitar el truncamiento de los datos en la salida XML. Para más información sobre cuándo usar los diferentes tipos de destino, vea [Destinos para eventos extendidos en SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|Establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type 'customizable' y object_name = *target_name*.<br /><br /> **NOTA** Si usa el destino de búfer en anillo, le recomendamos que establezca el parámetro de destino max_memory en 2048 kilobytes (KB) para intentar evitar el truncamiento de los datos en la salida XML. Para más información sobre cuándo usar los diferentes tipos de destino, vea [Destinos para eventos extendidos en SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Quita el destino identificado por \<event_target_specifier>. \<event_target_specifier> debe ser válido en la sesión de eventos.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Especifica el modo de retención de eventos usado para controlar las pérdidas de eventos.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Puede perderse un evento de la sesión. Se elimina un único evento solo cuando todos los búferes de eventos están llenos. La pérdida de un único evento cuando los búferes de eventos están llenos permite un rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceptable, al mismo tiempo que minimiza las pérdidas de datos en el flujo de eventos procesado.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> En la sesión pueden perderse búferes completos de eventos que contienen varios eventos. El número de eventos perdidos depende del tamaño de la memoria asignada a la sesión, del particionamiento de la memoria y del tamaño de los eventos del búfer. Esta opción minimiza el impacto en el rendimiento del servidor si los búferes de eventos se llenan rápidamente, pero se puede perder un gran número de eventos de la sesión.<br /><br /> NO_EVENT_LOSS<br /> No se permite ninguna pérdida de eventos. Esta opción asegura que se van a retener todos los eventos que aparezcan. Al utilizar esta opción, se obliga a todas las tareas que activan eventos a esperar hasta que haya espacio disponible en un búfer de eventos. Esto puede producir problemas detectables de rendimiento mientras la sesión de eventos está activa. Las conexiones de usuario pueden detenerse a la espera de que se quiten eventos del búfer.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Especifica el tiempo que los eventos se almacenan en memoria antes de enviarse a los destinos de la sesión de eventos. El valor de latencia mínimo es de 1 segundo. Sin embargo, puede usarse el valor 0 para especificar la latencia INFINITE. De forma predeterminada, este valor está establecido en 30 segundos.<br /><br /> *seconds* SECONDS<br /> Tiempo, en segundos, que hay que esperar antes de que empiecen a vaciarse los búferes en los destinos. *seconds* es un número entero.<br /><br /> **INFINITE**<br /> Los búferes se vacían en los destinos solo si están llenos o cuando se cierra la sesión de eventos.<br /><br /> **NOTA** MAX_DISPATCH_LATENCY = 0 SECONDS es equivalente a MAX_DISPATCH_LATENCY = INFINITE.|  
@@ -173,7 +173,7 @@ GO
 ## <a name="see-also"></a>Ver también  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [Destinos de SQL Server Extended Events](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Destinos de SQL Server Extended Events](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

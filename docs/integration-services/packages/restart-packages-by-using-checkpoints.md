@@ -15,12 +15,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703203"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637742"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede reiniciar los paquetes con errores desde el punto del error, en lugar de volver a ejecutar todo el paquete. Si se configura un paquete para que utilice puntos de comprobación, la información relacionada con la ejecución del paquete se escribirá en un archivo de punto de comprobación. Cuando se vuelve a ejecutar el paquete con error, se utiliza el archivo de punto de comprobación para reiniciar el paquete desde el punto del error. Si el paquete se ejecuta correctamente, el archivo de punto de comprobación se elimina y se vuelve a crear la siguiente vez que se ejecuta el paquete.  
@@ -43,7 +43,7 @@ ms.locfileid: "47703203"
 > [!NOTE]  
 >  Utilizar puntos de comprobación y transacciones en el mismo paquete podría producir resultados inesperados. Por ejemplo, cuando un paquete genera un error y se reinicia desde un punto de comprobación, podría repetir una transacción que ya se ha confirmado correctamente.  
   
- Los datos de punto de comprobación no se guardan para los contenedores de bucles For y Foreach. Cuando se reinicia un paquete, se vuelven a ejecutar el contenedor de bucles For y Foreach y sus contenedores secundarios. Si un contenedor secundario en el bucle se ejecuta correctamente, no se graba en el archivo de punto de comprobación sino que se vuelve a ejecutar. Para obtener más información y solucionar este problema, vea [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Los datos de punto de comprobación no se guardan para los contenedores de bucles For y Foreach. Cuando se reinicia un paquete, se vuelven a ejecutar el contenedor de bucles For y Foreach y sus contenedores secundarios. Si un contenedor secundario en el bucle se ejecuta correctamente, no se graba en el archivo de punto de comprobación sino que se vuelve a ejecutar. Para obtener más información y solucionar este problema, vea [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  Si se reinicia el paquete, las configuraciones de paquetes no se vuelven a cargar sino que se utiliza la información de configuración escrita en el archivo de punto de comprobación. Esto asegura que, el paquete utilice las mismas configuraciones cuando se vuelva a ejecutar que cuando sufrió el error.  
   
@@ -113,6 +113,6 @@ ms.locfileid: "47703203"
     
 ## <a name="external-resources"></a>Recursos externos  
   
--   El artículo técnico sobre el [reinicio automático de paquetes SSIS tras una conmutación por error o un error](http://go.microsoft.com/fwlink/?LinkId=200407), en social.technet.microsoft.com.  
+-   El artículo técnico sobre el [reinicio automático de paquetes SSIS tras una conmutación por error o un error](https://go.microsoft.com/fwlink/?LinkId=200407), en social.technet.microsoft.com.  
   
--   El artículo de soporte técnico, [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), en support.microsoft.com.  
+-   El artículo de soporte técnico, [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](https://go.microsoft.com/fwlink/?LinkId=241633), en support.microsoft.com.  

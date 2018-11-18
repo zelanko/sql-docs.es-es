@@ -21,12 +21,12 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a57146619406891b7f503b8cc20c41f70ecd7e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c2be8fa97ad5aaf61aa67e73f52559ffee3859
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849743"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642202"
 ---
 # <a name="integration-services-programming-overview"></a>Información general sobre la programación de Integration Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tiene una arquitectura que separa el movimiento y la transformación de datos del flujo de control y la administración de paquetes. Existen dos motores distintos que definen esta arquitectura y que se pueden automatizar y extender al programar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. El motor en tiempo de ejecución implementa la infraestructura de administración de flujo de control y paquetes que permite a los programadores controlar el flujo de ejecución y establecer opciones de para registro, controladores de eventos y variables. El motor de flujo de datos es un motor especializado de alto rendimiento que se dedica exclusivamente a extraer, transformar y cargar datos. Al programar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], estará programando en estos dos motores.  
@@ -51,7 +51,7 @@ ms.locfileid: "47849743"
  Puede programar paquetes, tareas personalizadas y componentes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o en otro editor de código o de texto. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ofrece al desarrollador muchas herramientas y características para simplificar y acelerar los ciclos iterativos de codificación, depuración y prueba. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] también simplifica la implementación. Sin embargo, no necesita [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para compilar y generar proyectos de código de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK incluye los compiladores [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] y [!INCLUDE[csprcs](../includes/csprcs-md.md)] y herramientas relacionadas.  
   
 > [!IMPORTANT]  
->  De forma predeterminada, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] se instala con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a diferencia de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Los vínculos al contenido de SDK de esta sección solo funcionarán si el SDK está instalado en el equipo y su documentación está incluida en la colección de Libros en pantalla. Después de instalar el SDK de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], puede agregar la documentación del SDK a la colección y la tabla de contenido de Libros en pantalla si sigue las instrucciones de [Agregar o quitar la documentación del producto para SQL Server](http://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
+>  De forma predeterminada, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] se instala con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a diferencia de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Los vínculos al contenido de SDK de esta sección solo funcionarán si el SDK está instalado en el equipo y su documentación está incluida en la colección de Libros en pantalla. Después de instalar el SDK de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], puede agregar la documentación del SDK a la colección y la tabla de contenido de Libros en pantalla si sigue las instrucciones de [Agregar o quitar la documentación del producto para SQL Server](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
   
  Tanto la tarea Script como el componente de script de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usan [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) como entorno de scripting incrustado. VSTA es compatible con [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic y [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

@@ -17,12 +17,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bfba6fe9611a6f24e0f84b523424c3d49bdf170d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250b61577f651ddadd7529b172f5bed04d26f896
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621803"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656161"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47621803"
    
  El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] actúa como puente entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el Almacén de claves de Azure, por lo que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede aprovechar la escalabilidad, alto rendimiento y alta disponibilidad del servicio del Almacén de claves de Azure. En la imagen siguiente se representa cómo funciona la jerarquía de claves de la arquitectura del proveedor EKM con el Almacén de claves de Azure y el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-  El Almacén de claves de Azure se puede usar con instalaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en máquinas virtuales de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure y para servidores locales. El servicio Almacén de claves también permite usar módulos de seguridad de hardware (HSM) supervisados y controlados estrechamente. Así, se obtiene un mayor grado de protección para las claves de cifrado asimétricas. Para obtener más información sobre el Almacén de claves, consulte el tema sobre el [Almacén de claves de Azure](http://go.microsoft.com/fwlink/?LinkId=521401).  
+  El Almacén de claves de Azure se puede usar con instalaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en máquinas virtuales de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure y para servidores locales. El servicio Almacén de claves también permite usar módulos de seguridad de hardware (HSM) supervisados y controlados estrechamente. Así, se obtiene un mayor grado de protección para las claves de cifrado asimétricas. Para obtener más información sobre el Almacén de claves, consulte el tema sobre el [Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
   
  En la siguiente imagen se resume el flujo de procesos de EKM usando el almacén de claves. (Los números de pasos del proceso de la imagen no se ofrecen con el fin de que coincidan con los números de los pasos de configuración que siguen a la imagen).  
   

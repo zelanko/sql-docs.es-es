@@ -20,12 +20,12 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef097b772aca991ed7b61b79572a1eff2d837108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bd68665c9b84771f32d54102616795efdde225f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838883"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639433"
 ---
 # <a name="partition-processing-destination"></a>Destino de procesamiento de particiones
   El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "47838883"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del destino de procesamiento de particiones](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   

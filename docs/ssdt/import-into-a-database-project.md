@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716053"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667104"
 ---
 # <a name="import-into-a-database-project"></a>Importar en un proyecto de base de datos
 Puede usar Importar para rellenar un proyecto con nuevos objetos a partir de una base de datos activa o un .dacpac, o para actualizar los objetos existentes en el proyecto con una nueva definición a partir de un script. Hay algunas diferencias de comportamiento que hay que destacar entre estas tres rutas, que se describen a continuación.  
@@ -59,7 +59,7 @@ Todos los objetos del origen de importación que *no* existan ya en el proyecto 
   
 El proceso Importar a partir del script no comprenderá scripts previos o posteriores a la implementación, variables SQLCMD ni archivos RefactorLog. Estas y cualquier otra construcción no admitida que se detecte en la importación se colocará en un archivo **ScriptsIgnoredOnImport.sql** de una carpeta **Scripts** del proyecto.  
   
-Para más información, consulte el foro del equipo de SSDT en [http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
+Para más información, consulte el foro del equipo de SSDT en [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
   
 ## <a name="bkmk_import_encrypted"></a>Importar objetos cifrados  
 Al importar los objetos cifrados en un proyecto de base de datos, el cuerpo total de la definición de objeto no siempre puede recuperarse del servidor. Por tanto, el comportamiento de la importación puede ser diferente al tratar con esta clase de objetos.  

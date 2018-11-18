@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721773"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641836"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -66,7 +66,7 @@ ms.locfileid: "47721773"
 >  Es posible que la tarea Ejecutar SQL no pueda analizar correctamente instrucciones SQL válidas escritas fuera de dicha tarea.  
   
 > [!NOTE]  
->  La tarea Ejecutar SQL usa el valor de enumeración de ParseMode **RecognizeAll** . Para obtener más información, vea [Espacio de nombres ManagedBatchParser](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  La tarea Ejecutar SQL usa el valor de enumeración de ParseMode **RecognizeAll** . Para obtener más información, vea [Espacio de nombres ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Enviar varias instrucciones en un lote  
  Si incluye varias instrucciones en una tarea Ejecutar SQL, puede agruparlas y ejecutarlas como un lote. Para indicar el final de un lote, utilice el comando GO. Todas las instrucciones SQL entre dos comandos GO se envían en un lote al proveedor OLE DB para que se ejecuten. El comando SQL puede incluir varios lotes separados por comandos GO.  
@@ -183,7 +183,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
  **SQLStatement**  
  Escriba la instrucción SQL que quiere ejecutar en el cuadro de opción (o haga clic en el botón Examinar […] para escribir la instrucción SQL en el cuadro de diálogo **Escribir consulta SQL** ), o bien haga clic en **Generar consulta** para escribir la instrucción en el cuadro de diálogo **Generador de consultas** .  
   
- **Temas relacionados:** [Generador de consultas](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Temas relacionados:** [Generador de consultas](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexión de archivos  
  **FileConnection**  
@@ -195,7 +195,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
  **SourceVariable**  
  Seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Página Asignación de parámetros: Editor de la tarea Ejecutar SQL
 Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar variables a los parámetros de la instrucción SQL.  
@@ -286,7 +286,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usar parámetros con administradores de conexiones ADO.NET y ADO  
  Los administradores de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y ADO tienen requisitos concretos para los comandos SQL que utilizan parámetros:  
   
--   Los administradores de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requieren que el comando SQL utilice nombres de parámetros como marcadores de parámetros. Esto significa que las variables se pueden asignar directamente a los parámetros. Por ejemplo, la variable `@varName` se asigna al parámetro denominado `@parName` y proporciona un valor al parámetro `@parName`.  
+-   Los administradores de conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requieren que el comando SQL utilice nombres de parámetros como marcadores de parámetros. Esto significa que las variables se pueden asignar directamente a los parámetros. Por ejemplo, la variable `@varName` se asigna al parámetro denominado `@parName` y proporciona un valor al parámetro `@parName`.  
   
 -   Los administradores de conexiones ADO requieren que el comando SQL utilice signos de interrogación (?) como marcadores de parámetros. Sin embargo, puede utilizar cualquier nombre definido por el usuario, salvo valores enteros, como nombres de parámetro.  
   
@@ -307,7 +307,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
 ###  <a name="Date_and_time_data_types"></a> Usar parámetros con tipos de datos de fecha y hora  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parámetros de fecha y hora con administradores de conexiones ADO y ADO.NET  
- Al leer datos de los tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**time** y **datetimeoffset**), una tarea Ejecutar SQL que usa el Administrador de conexiones ADO o [!INCLUDE[vstecado](../../includes/vstecado-md.md)] tiene los requisitos adicionales siguientes:  
+ Al leer datos de los tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( **time** y **datetimeoffset**), una tarea Ejecutar SQL que usa el Administrador de conexiones ADO o [!INCLUDE[vstecado](../../includes/vstecado-md.md)] tiene los requisitos adicionales siguientes:  
   
 -   Para los datos de **time**, un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que estos datos se almacenen en un parámetro cuyo tipo sea **Input** o **Output**, y cuyo tipo de datos sea **string**.  
   
@@ -322,7 +322,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
  Para más información sobre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cómo se asignan a los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) y [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Usar parámetros de fecha y hora con administradores de conexiones OLE DB  
- Al usar el administrador de conexiones OLE DB, una tarea Ejecutar SQL tiene requisitos de almacenamiento específicos para los datos de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **date**, **time**, **datetime**, **datetime2** y **datetimeoffset**. Debe almacenar estos datos en uno de los tipos de parámetros siguientes:  
+ Al usar el administrador de conexiones OLE DB, una tarea Ejecutar SQL tiene requisitos de almacenamiento específicos para los datos de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **date**, **time**, **datetime**, **datetime2**y **datetimeoffset**. Debe almacenar estos datos en uno de los tipos de parámetros siguientes:  
   
 -   Un parámetro de entrada del tipo de datos NVARCHAR.  
   
@@ -338,7 +338,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
  Si los datos no están almacenados en el parámetro de entrada o de salida adecuado, se produce un error en el paquete.  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Usar parámetros de fecha y hora con administradores de conexiones ODBC  
- Al usar el administrador de conexiones ODBC, una tarea Ejecutar SQL tiene requisitos de almacenamiento específicos para los datos de uno de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **date**, **time**, **datetime**, **datetime2** o **datetimeoffset**. Debe almacenar estos datos en uno de los tipos de parámetros siguientes:  
+ Al usar el administrador de conexiones ODBC, una tarea Ejecutar SQL tiene requisitos de almacenamiento específicos para los datos de uno de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **date**, **time**, **datetime**, **datetime2**o **datetimeoffset**. Debe almacenar estos datos en uno de los tipos de parámetros siguientes:  
   
 -   Un parámetro de **entrada** del tipo de datos SQL_WVARCHAR  
   
@@ -382,7 +382,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
 |Tipo de conexión|Sintaxis de EXEC|  
 |---------------------|-----------------|  
 |EXCEL y OLE DB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](http://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](https://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
 |ADO|Si IsQueryStoredProcedure se establece en **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Si IsQueryStoredProcedure se establece en **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Si IsQueryStoredProcedure se establece en **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Si IsQueryStoredProcedure se establece en **True**, `uspGetBillOfMaterials`|  
   
@@ -445,7 +445,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
     |ODBC|1, 2, 3, …|  
     |EXCEL y OLE DB|0, 1, 2, 3, …|  
   
-10. En la lista **Nombre de variable** , seleccione una variable. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. En la lista **Nombre de variable** , seleccione una variable. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 11. En la lista **Dirección** , especifique si el parámetro es una entrada, una salida o un valor devuelto.  
   
@@ -471,7 +471,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
 |Tipo de conexión|Sintaxis de EXEC|  
 |---------------------|-----------------|  
 |EXCEL y OLE DB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](http://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](https://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
 |ADO|Si IsQueryStoreProcedure se establece en **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Si IsQueryStoreProcedure se establece en **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Establecer IsQueryStoreProcedure en **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -516,7 +516,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
   
  Un conjunto de resultados XML solamente se puede asignar a una variable con el tipo de datos **String** o **Object** . Si la variable tiene el tipo de datos **String** , la tarea Ejecutar SQL devuelve una cadena y el origen XML puede consumir los datos XML. Si la variable tiene el tipo de datos **Object** , la tarea Ejecutar SQL devuelve un objeto del modelo de objetos de documento (DOM).  
   
- Un **Conjunto de resultados completo** se debe asignar a una variable del tipo de datos **Object** . El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](http://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
+ Un **Conjunto de resultados completo** se debe asignar a una variable del tipo de datos **Object** . El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](https://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
   
  En la tabla siguiente se resumen los tipos de datos de variables que se pueden asignar a conjuntos de resultados.  
   
@@ -554,7 +554,7 @@ En esta sección se describe cómo crear una asignación entre un conjunto de re
   
 8.  Para agregar una asignación de conjunto de resultados, haga clic en **Agregar**.  
   
-9. En la lista **Nombre de variable** , seleccione una variable o cree una variable nueva. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. En la lista **Nombre de variable** , seleccione una variable o cree una variable nueva. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 10. En la lista **Nombre del resultado** , opcionalmente, modifique el nombre del conjunto de resultados.  
   

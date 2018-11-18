@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8df74aceaf08bd030fe092d4c18cd38fc0559cb7
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e6c62dc8a596de4d0ddbcbe53b59a0f684d25544
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970834"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605915"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar PolyBase para acceder a datos externos en Azure Blob Storage
 
@@ -103,7 +103,7 @@ Para consultar los datos en el origen de datos de Hadoop, debe definir una tabla
          [YearMeasured] int NOT NULL  
    )  
    WITH (LOCATION='/Demo/',
-         DATA_SOURCE = MyHadoopCluster,  
+         DATA_SOURCE = AzureStorage,  
          FILE_FORMAT = TextFileFormat  
    );  
    ```

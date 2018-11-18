@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717893"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641572"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
   En este tutorial se explica detalladamente cómo publicar un paquete SSIS como una vista SQL en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  El valor de Timeout indica el número de segundos que el proveedor OLE DB para SSIS puede esperar antes de que lleguen datos nuevos procedentes del paquete SSIS. El valor predeterminado es 60 segundos. Se puede especificar un valor entero de tiempo de espera de entre 20 y 32 000.  
   
- Los parámetros contienen el valor tanto de los parámetros de paquete como de los parámetros del proyecto. Las reglas de los parámetros son las mismas que las de los parámetros de [DTExec](http://msdn.microsoft.com/library/hh231187.aspx).  
+ Los parámetros contienen el valor tanto de los parámetros de paquete como de los parámetros del proyecto. Las reglas de los parámetros son las mismas que las de los parámetros de [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
   
  En la siguiente lista se especifican los caracteres especiales que se pueden usar en la cláusula de consulta:  
   

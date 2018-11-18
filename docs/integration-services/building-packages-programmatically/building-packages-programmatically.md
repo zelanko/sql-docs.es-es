@@ -11,12 +11,12 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af4c525e2ce481b8053804d49f194449ed6cf58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95c26215be0cb55c916d7162896ec7651132f13f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728263"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640972"
 ---
 # <a name="building-packages-programmatically"></a>Generar paquetes mediante programación
   Si necesita crear paquetes de forma dinámica o administrar y ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fuera del entorno de desarrollo, puede manipular paquetes mediante programación. En este enfoque, tiene un intervalo de opciones continuo:  
@@ -92,9 +92,9 @@ ms.locfileid: "47728263"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Ejemplos de CodePlex, en la página [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204)de www.codeplex.com/MSFTISProdSamples.  
+-   Ejemplos de CodePlex, en la página [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204)de www.codeplex.com/MSFTISProdSamples.  
   
--   Entrada de blog, [Generar perfiles de rendimiento de las extensiones personalizadas](http://go.microsoft.com/fwlink/?LinkId=238831), en blogs.msdn.com.  
+-   Entrada de blog, [Generar perfiles de rendimiento de las extensiones personalizadas](https://go.microsoft.com/fwlink/?LinkId=238831), en blogs.msdn.com.  
 
 ## <a name="see-also"></a>Ver también  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

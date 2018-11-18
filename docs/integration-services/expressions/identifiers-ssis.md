@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651583"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638792"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   En las expresiones, los identificadores son columnas y variables que están disponibles para la operación. Puede utilizar en las expresiones identificadores regulares y calificados.  
@@ -102,7 +102,7 @@ ms.locfileid: "47651583"
 ## <a name="unique-variable-names"></a>Nombres de variable únicos  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite variables personalizadas y proporciona un conjunto de variables del sistema. De manera predeterminada, las variables personalizadas pertenecen al espacio de nombres **User** y las variables del sistema pertenecen al espacio de nombres **System** . Puede crear espacios de nombres adicionales para variables personalizadas y actualizar los nombres de los espacios de nombres según las necesidades de la aplicación. El generador de expresiones muestra las variables del ámbito en todos los espacios de nombres.  
   
- Todas las variables tienen un ámbito y pertenecen a un espacio de nombres. Una variable tiene ámbito de paquete o ámbito de un contenedor o una tarea del paquete. El generador de expresiones del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] muestra únicamente las variables que estén dentro del ámbito. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Todas las variables tienen un ámbito y pertenecen a un espacio de nombres. Una variable tiene ámbito de paquete o ámbito de un contenedor o una tarea del paquete. El generador de expresiones del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] muestra únicamente las variables que estén dentro del ámbito. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
  Las variables usadas en expresiones deben tener nombres únicos para que el evaluador de expresiones evalúe la expresión correctamente. Si un paquete usa varias variables con el mismo nombre, sus espacios de nombres deben ser diferentes. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un operador de resolución de espacio de nombres, formado por dos signos de dos puntos (::), para calificar una variable con su espacio de nombres. Por ejemplo, la siguiente expresión utiliza dos variables denominadas **Count**; una pertenece al espacio de nombres **User** y la otra al espacio de nombres **MyNamespace** .  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651583"
 ```  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](http://go.microsoft.com/fwlink/?LinkId=746575), en pragmaticworks.com  
+ Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://go.microsoft.com/fwlink/?LinkId=746575), en pragmaticworks.com  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e25793ba20a442b92feef901684290892604a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609276"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601005"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "47609276"
   
  Cuando se definen alertas de eventos de la creación de reflejo de la base de datos, se recomienda definir umbrales de advertencia y alertas en las instancias de los servidores asociados. Los eventos individuales se generan en el servidor principal o reflejado, pero cada asociado puede realizar cualquiera de los roles en cualquier momento. Para asegurarse de que una alerta continúa en funcionamiento después de una conmutación por error, la alerta se debe definir en ambos asociados.  
   
- Para obtener más información, consulte las notas del producto sobre alertas de eventos de la creación de reflejo de la base de datos en este [sitio web de SQL Server](http://go.microsoft.com/fwlink/?linkid=62373). Estas notas del producto contienen información acerca de la configuración de alertas mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los eventos WMI de la creación de reflejo y scripts de ejemplo.  
+ Para obtener más información, consulte las notas del producto sobre alertas de eventos de la creación de reflejo de la base de datos en este [sitio web de SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). Estas notas del producto contienen información acerca de la configuración de alertas mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los eventos WMI de la creación de reflejo y scripts de ejemplo.  
   
 > [!IMPORTANT]  
 >  En todas las sesiones de creación de reflejo, se recomienda encarecidamente configurar la base de datos para que envíe una alerta de cualquier evento de cambio de estado. Significará que se ha producido algo que puede poner en riesgo los datos, a menos que un cambio de estado se espere como resultado de un cambio de configuración manual. Identificar y solucionar la causa de un cambio de estado inesperado le ayudará a proteger los datos.  

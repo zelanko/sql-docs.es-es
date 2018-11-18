@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500281b84c84e84507660e3961b3d512b939e582
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597657"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668605"
 ---
 # <a name="database-engine-developer-documentation"></a>Documentación para desarrolladores de motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "47597657"
  [Programación de procedimientos almacenados extendidos de motor de base de datos](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  Describe cómo utilizar los procedimientos almacenados extendidos para crear sus propias rutinas externas en un lenguaje de programación como C.  
   
- [Programar el recopilador de datos](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
+ [Programar el recopilador de datos](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  Describe el modelo de objetos del recopilador de datos.  
   
- [Programación de cuadros de mensajes de excepción](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
+ [Programación de cuadros de mensajes de excepción](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Describe cómo puede utilizar la interfaz de programación del cuadro de mensajes de excepción en sus aplicaciones para proporcionar más control sobre la experiencia de mensajería, dar a los usuarios la opción de guardar el contenido de los mensajes de error para consultarlos posteriormente y obtener ayuda con los mensajes.  
   
 ## <a name="see-also"></a>Ver también  

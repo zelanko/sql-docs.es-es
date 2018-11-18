@@ -11,12 +11,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e6dee6bea3a3d4c0c6cd5c2f7bb3f6ac51abe88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88e5780ffb31d3f917245e423e8d88ad4033e3e9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656703"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638312"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Ejecutar y administrar paquetes mediante programación
   Si tiene que administrar y ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fuera del entorno de desarrollo, puede manipular los paquetes mediante programación. En este enfoque cuenta con varias opciones:  
@@ -29,14 +29,14 @@ ms.locfileid: "47656703"
   
  Puede cargar y ejecutar un paquete existente desde una aplicación cliente con solo escribir unas cuantas líneas de código.  
   
- En esta sección se describe y se muestra cómo ejecutar un paquete existente mediante programación y cómo obtener acceso a la salida del flujo de datos desde otras aplicaciones. Como opción de programación avanzada, puede crear un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] línea por línea mediante programación como se describe en el tema [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) (Generar paquetes mediante programación).  
+ En esta sección se describe y se muestra cómo ejecutar un paquete existente mediante programación y cómo obtener acceso a la salida del flujo de datos desde otras aplicaciones. Como opción de programación avanzada, puede crear un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] línea por línea mediante programación como se describe en el tema [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
  En esta sección también se tratan otras tareas administrativas que puede realizar mediante programación para administrar paquetes almacenados, paquetes en ejecución y roles de paquete.  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>Ejecutar paquetes en el Servidor de Integration Services  
  Cuando implemente paquetes en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede ejecutar paquetes utilizando el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices>. El ensamblado de Microsoft.SqlServer.Management.IntegrationServices se compila con .NET Framework 3.5. Si está generando una aplicación.NET Framework 4.0, puede que tenga que agregar la referencia de ensamblado directamente al archivo de proyecto.  
   
- También puede utilizar el espacio de nombres para implementar y administrar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obtener información general de espacio de nombres y los fragmentos de código, vea la entrada del blog sobre [el modelo de objetos administrados de catálogo SSIS](http://go.microsoft.com/fwlink/?LinkId=253122), en blogs.msdn.com.  
+ También puede utilizar el espacio de nombres para implementar y administrar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener información general de espacio de nombres y los fragmentos de código, vea la entrada del blog sobre [el modelo de objetos administrados de catálogo SSIS](https://go.microsoft.com/fwlink/?LinkId=253122), en blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Descripción de las diferencias entre la ejecución local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "47656703"
  Describe cómo ejecutar un paquete en el equipo local y cargar la salida del flujo de datos en una aplicación cliente mediante el destino de DataReader y el espacio de nombres DtsClient.  
   
  [Enumerar los paquetes disponibles mediante programación](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
- Describe cómo detectar los paquetes disponibles administrados por el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Describe cómo detectar los paquetes disponibles administrados por el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [Administrar paquetes y carpetas mediante programación](../../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
  Describe cómo crear, cambiar de nombre y eliminar paquetes y carpetas.  

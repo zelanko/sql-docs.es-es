@@ -17,12 +17,12 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26e5ab994e84a46a2a61b3fb57f98df4f9ea2959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfea8989d573ef107d6c8b493e213c6ea5050b0f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653033"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640099"
 ---
 # <a name="shrink-database-task"></a>Reducir base de datos, tarea
   La tarea Reducir base de datos reduce el tamaño de los datos y los archivos de registro de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -54,6 +54,6 @@ ms.locfileid: "47653033"
   
  Para obtener más información sobre cómo configurar estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
--   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

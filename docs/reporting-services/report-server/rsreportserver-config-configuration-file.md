@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020349"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813898"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Archivo de configuración RSReportServer.config
 El archivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** almacena valores que utiliza el servicio web del servidor de informes y los procesamientos en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
@@ -429,7 +429,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>ReportServer</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -440,7 +440,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>Reports</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -770,7 +770,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>ReportServer</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -783,7 +783,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>Reports</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  

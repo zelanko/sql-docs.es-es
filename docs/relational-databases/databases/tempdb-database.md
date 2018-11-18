@@ -5,8 +5,7 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -19,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031272"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658634"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ Las operaciones de **tempdb** se registran de forma mínima, por lo que las tran
  \* El número de archivos depende del número de procesadores (lógicos) del equipo. Como regla general, si el número de procesadores lógicos es inferior o igual a ocho, use el mismo número de archivos de datos que procesadores lógicos. Si el número de procesadores lógicos es superior a ocho, use ocho archivos de datos y, después, si se mantiene la contención, aumente el número de archivos de datos en múltiplos de 4 hasta que la contención se reduzca a niveles aceptables, o bien modifique el código o la carga de trabajo.
 
 > [!NOTE]
-> El valor predeterminado para el número de archivos de datos se basa en las directrices [KB 2154845](http://support.microsoft.com/kb/2154845/).  
+> El valor predeterminado para el número de archivos de datos se basa en las directrices [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Mover los archivos de datos y registro de tempdb en SQL Server  
  Para mover los archivos de registro y de datos de **tempdb** , vea [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
@@ -278,4 +277,4 @@ Para obtener más información sobre la mejora del rendimiento en tempdb, consul
   
 ## <a name="see-also"></a>Ver también  
  [Trabajar con tempdb en SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
- [Troubleshooting Insufficient Disk Space in tempdb](http://msdn.microsoft.com/library/ms176029.aspx) (Solucionar problemas de espacio en disco insuficiente en tempdb) 
+ [Troubleshooting Insufficient Disk Space in tempdb](https://msdn.microsoft.com/library/ms176029.aspx) (Solucionar problemas de espacio en disco insuficiente en tempdb) 

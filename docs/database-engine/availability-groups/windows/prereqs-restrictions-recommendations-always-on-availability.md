@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852030"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600955"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852030"
   
 ||Característica dependiente|Revisión|Vínculo|  
 |------|-----------------------|------------|----------|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .Net 3.5 SP1 incorpora compatibilidad con las características cliente SQL para AlwaysOn de intención de lectura, de solo lectura y de conmutación por error de múltiples subredes. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Revisión para .Net 3.5 SP1 para agregar compatibilidad con las características AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .Net 3.5 SP1 incorpora compatibilidad con las características cliente SQL para AlwaysOn de intención de lectura, de solo lectura y de conmutación por error de múltiples subredes. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Revisión para .Net 3.5 SP1 para agregar compatibilidad con las características AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Lista de comprobación: requisitos (sistema de Windows)  
@@ -67,7 +67,7 @@ ms.locfileid: "48852030"
 ###  <a name="PermissionsWindows"></a> Permisos (sistema de Windows)  
  Para administrar un WSFC, el usuario debe ser administrador del sistema en cada nodo de clúster.  
   
- Para obtener más información sobre la cuenta para la administración del clúster, vea [Apéndice A: requisitos para un clúster de conmutación por error](http://technet.microsoft.com/library/dd197454.aspx).  
+ Para obtener más información sobre la cuenta para la administración del clúster, vea [Apéndice A: requisitos para un clúster de conmutación por error](https://technet.microsoft.com/library/dd197454.aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Tareas relacionadas (sistema de Windows)  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852030"
   
 ##### <a name="related-content-powershell"></a>Contenido relacionado (PowerShell)  
   
--   [Clustering and High-Availability (Clústeres y alta disponibilidad)](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (blog del equipo de Agrupacion de clústeres de conmutación por error y equilibrio de carga de red)  
+-   [Clustering and High-Availability (Clústeres y alta disponibilidad)](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (blog del equipo de Agrupacion de clústeres de conmutación por error y equilibrio de carga de red)  
   
--   [Introducción a Windows PowerShell en un clúster de conmutación por error](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Introducción a Windows PowerShell en un clúster de conmutación por error](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> Contenido relacionado (sistema Windows)  
   
--   [Configurar los valores de DNS en un clúster de conmutación por error de varios sitios](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [Configurar los valores de DNS en un clúster de conmutación por error de varios sitios](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [Registro DNS con el recurso de nombre de red](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [Registro DNS con el recurso de nombre de red](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> Requisitos previos y restricciones de las instancias de SQL Server  
@@ -167,7 +167,7 @@ ms.locfileid: "48852030"
   
     -   Una copia de seguridad en una réplica secundaria contiene un subproceso en la réplica principal mientras dura la operación de copia de seguridad.  
   
- Para obtener más información, vea el blog de los ingenieros de [de CSS](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Series de aprendizaje de AlwaysON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Para obtener más información, vea el blog de los ingenieros de [de CSS](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Series de aprendizaje de AlwaysON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ###  <a name="PermissionsSI"></a> Permisos (instancia del servidor)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852030"
   
 ###  <a name="RelatedContentSI"></a> Contenido relacionado (instancia del servidor)  
   
--   [de CSS](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [de CSS](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Recomendaciones de conectividad de red  
  Se recomienda usar los mismos vínculos de red para las comunicaciones entre los nodos de WSFC y las comunicaciones entre las réplicas de disponibilidad.  El uso de vínculos de red independientes puede provocar comportamientos inesperados si alguno de los vínculos da error (incluso de forma intermitente).  
@@ -210,7 +210,7 @@ ms.locfileid: "48852030"
 ###  <a name="RestrictionsFCI"></a> Restricciones (FCI)  
   
 > [!NOTE]  
-> Las instancias del clúster de conmutación por error admiten volúmenes compartidos en clúster (CSV). Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](http://technet.microsoft.com/library/dd759255.aspx).  
+> Las instancias del clúster de conmutación por error admiten volúmenes compartidos en clúster (CSV). Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](https://technet.microsoft.com/library/dd759255.aspx).  
   
 -   **Los nodos de clúster de una FCI solo pueden hospedar una réplica de un grupo de disponibilidad determinado:** si agrega una réplica de disponibilidad en una FCI, los nodos de WSFC que sean posibles propietarios de FCI no pueden hospedar otra réplica del mismo grupo de disponibilidad.  Para evitar posibles conflictos, se recomienda configurar los posibles propietarios de la instancia de clúster de conmutación por error. Con esto se evitará que un único WSFC intente hospedar dos réplicas de disponibilidad para el mismo grupo de disponibilidad.
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852030"
   
 -   [Clústeres de conmutación por error y grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guía de la arquitectura de AlwaysOn: generar una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guía de la arquitectura de AlwaysOn: generar una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Requisitos previos y restricciones de los grupos de disponibilidad  
  **En esta sección:**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852030"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [de CSS](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [de CSS](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

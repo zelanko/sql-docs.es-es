@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383830"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601965"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, detener, pausar, reanudar o reiniciar los servicios de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "49383830"
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permissions  
- De forma predeterminada, solo los miembros del grupo local de administradores pueden iniciar, detener, pausar, reanudar o reiniciar un servicio. Para conceder la capacidad de administrar servicios a usuarios que no son administradores, vea [CÓMO: Conceder a los usuarios derechos para administrar servicios en la familia Windows Server 2003](http://support.microsoft.com/kb/325349). El proceso es similar en las demás versiones de Windows.  
+ De forma predeterminada, solo los miembros del grupo local de administradores pueden iniciar, detener, pausar, reanudar o reiniciar un servicio. Para conceder la capacidad de administrar servicios a usuarios que no son administradores, vea [CÓMO: Conceder a los usuarios derechos para administrar servicios en la familia Windows Server 2003](https://support.microsoft.com/kb/325349). El proceso es similar en las demás versiones de Windows.  
   
  La detención de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante el comando [!INCLUDE[tsql](../../includes/tsql-md.md)]**SHUTDOWN** requiere la pertenencia a los roles fijos de servidor **sysadmin** o **serveradmin** , y no es transferible.  
   
@@ -355,7 +355,7 @@ ms.locfileid: "49383830"
     ```  
   
 ## <a name="see-also"></a>Ver también  
- [Información general de la documentación de instalación de SQL Server](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
+ [Información general de la documentación de instalación de SQL Server](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Iniciar SQL Server con la configuración mínima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   

@@ -25,12 +25,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c57bd5d7ace7d19857d2bae2992621a301e0cbac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba7afec0dc420d89a940db9aa4efbbd89043992f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668503"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675089"
 ---
 # <a name="replication-agents-overview"></a>Información general sobre los agentes de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47668503"
  El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hospeda y programa los agentes utilizados en la replicación, y proporciona una manera sencilla de ejecutar los agentes de replicación. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también controla y supervisa las operaciones fuera de la replicación. Para obtener más información, consulte [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 > [!IMPORTANT]  
->  De manera predeterminada, el servicio del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está deshabilitado cuando se instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a menos que se elija explícitamente iniciar el servicio automáticamente durante la instalación. Para obtener más información sobre cómo iniciar el servicio del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vea [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
+>  De manera predeterminada, el servicio del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está deshabilitado cuando se instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a menos que se elija explícitamente iniciar el servicio automáticamente durante la instalación. Para obtener más información sobre cómo iniciar el servicio del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vea [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
   
 ## <a name="snapshot-agent"></a>Agente de instantáneas  
  Por lo general, el Agente de instantáneas se utiliza con todos los tipos de replicación. Prepara esquemas y archivos de datos iniciales de tablas publicadas y otros objetos, almacena los archivos de instantáneas y registra la información acerca del estado de sincronización en la base de datos de distribución. El Agente de instantáneas se ejecuta en el distribuidor. Para más información, consulte [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  

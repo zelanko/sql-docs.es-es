@@ -10,12 +10,12 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d25f54c29937ba4289308e07bb2013a4c671dbbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e199f1f548ae8a978cd13ad3ba99db8c1182c96
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767893"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606955"
 ---
 # <a name="always-on-availability-groups-policies"></a>Directivas de grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "47767893"
 3.  Para consultar todas las directivas de sistema delos grupos de disponibilidad, en el panel **Seleccionar una página**, haga clic en **Selección de directiva**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Modelo de mantenimiento de Always On, parte 2: extender el modelo de mantenimiento)  
+ [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Modelo de mantenimiento de Always On, parte 2: extender el modelo de mantenimiento)  
   
   

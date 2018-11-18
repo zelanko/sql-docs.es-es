@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eecf2a1f9ce383e6fe79f3736aa571d0f49eabef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 314c2379994655f985ce31adf9c427ece9377bb1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735243"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269948"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SERVERPROPERTY ( 'propertyname' )
 |IsHadrEnabled|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitado en esta instancia del servidor.<br /><br /> 0 = La característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está deshabilitada.<br /><br /> 1 = La característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitada.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**<br /><br /> Para que las réplicas de disponibilidad se creen y se ejecuten en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] debe estar habilitado en la instancia del servidor. Para más información, vea [Habilitar y deshabilitar grupos de disponibilidad de AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Nota:** La propiedad IsHadrEnabled pertenece solamente a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Otras características de alta disponibilidad o de recuperación ante desastres, como la creación de reflejo de la base de datos o el trasvase de registros, no se ven afectadas por esta propiedad de servidor.|  
 |IsIntegratedSecurityOnly|El servidor está en modo de seguridad integrada.<br /><br /> 1= Seguridad integrada (Autenticación de Windows)<br /><br /> 0 = Seguridad no integrada. (Tanto la autenticación de Windows como la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |IsLocalDB|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El servidor es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.|  
-|IsPolybaseInstalled|**Se aplica a**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Devuelve un valor que indica si la instancia del servidor tiene instalada la característica PolyBase.<br /><br /> 0 = PolyBase no está instalada.<br /><br /> 1 = PolyBase está instalada.<br /><br /> Tipo de datos base: **int**|  
+|IsPolyBaseInstalled|**Se aplica a**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Devuelve un valor que indica si la instancia del servidor tiene instalada la característica PolyBase.<br /><br /> 0 = PolyBase no está instalada.<br /><br /> 1 = PolyBase está instalada.<br /><br /> Tipo de datos base: **int**|  
 |IsSingleUser|El servidor está en modo de usuario único.<br /><br /> 1 = Usuario único.<br /><br /> 0 = Usuario no único.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |IsXTPSupported|**Se aplica a**: SQL Server (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> El servidor admite OLTP en memoria.<br /><br /> 1= El servidor admite OLTP en memoria.<br /><br /> 0= El servidor no admite OLTP en memoria.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |LCID|Identificador de configuración regional (LCID) de Windows de la intercalación.<br /><br /> Tipo de datos base: **int**|  

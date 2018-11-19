@@ -3,14 +3,14 @@ items:
   href: index.md
 - name: Extensiones de aprendizaje automático (R, Python)
   items:
-  - name: Machine Learning Services (R, Python)
+  - name: What's New
+    href: what-s-new-in-sql-server-machine-learning-services.md
+  - name: ML Services de SQL (R, Python)
     href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md
   - name: Servidor independiente
     href: r/r-server-standalone.md
-  - name: What's New
-    href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Extensión de Java
   items:
   - name: Ejecución de código de Java en SQL
@@ -25,13 +25,13 @@ items:
   items:
   - name: Diferencias en SQL Server de 2019
     href: install/sql-machine-learning-services-ver15.md
-  - name: Machine Learning Services (R, Python)
+  - name: Instalación de ML Services (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
-  - name: R Services
+  - name: Instalación de R Services
     href: install/sql-r-services-windows-install.md
-  - name: Servidor independiente (R, Python)
+  - name: Instalación del servidor independiente (R, Python)
     href: install/sql-machine-learning-standalone-windows-install.md
-  - name: Modelos entrenados previamente
+  - name: Instalación de modelos previamente entrenados
     href: install/sql-pretrained-models-install.md
   - name: Instalación sin conexión (sin Internet)
     href: install/sql-ml-component-install-without-internet-access.md
@@ -42,9 +42,9 @@ items:
     href: install/sql-ml-component-commandline-install.md
   - name: Actualización R y Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-  - name: Configuración de las herramientas de R
+  - name: Configuración de un cliente de R
     href: r/set-up-a-data-science-client.md
-  - name: Configuración de las herramientas de Python
+  - name: Configuración de un cliente de Python
     href: python/setup-python-client-tools-sql.md
   - name: Configuración de un servidor virtual
     href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
@@ -324,10 +324,10 @@ items:
     - name: SQL Server
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
-      href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 38a11ee71e6c69c0305258b8f307ac5c6beb3481
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
+ms.openlocfilehash: d2cf2947c60d3ac3550dfeeba3acbf46bd0e48bd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030103"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697903"

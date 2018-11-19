@@ -33,7 +33,7 @@ ms.locfileid: "49461020"
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Nuevos separadores de palabras y lematizadores instalados  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] actualiza todos los separadores de palabras y lematizadores que se utilizan en la búsqueda de texto completo y en la búsqueda semántica. Para que haya coherencia entre el contenido de los índices y los resultados de las consultas, se recomienda que vuelva a rellenar los índices de texto completo existentes.  
   
-1.  Existen nuevos separadores de palabras para inglés. Si tiene que conservar el comportamiento anterior, vea [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+1.  Existen nuevos separadores de palabras para inglés. Si tiene que conservar el comportamiento anterior, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 2.  Se han reemplazado los separadores de palabras de terceros para danés, polaco y turco que se incluían en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con componentes de [!INCLUDE[msCoName](../includes/msconame-md.md)] . Los componentes nuevos están habilitados de forma predeterminada.  
   

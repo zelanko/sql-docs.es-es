@@ -32,7 +32,7 @@ ms.locfileid: "49461037"
 ## <a name="selecting-the-type-of-component-to-create"></a>Seleccionar el tipo de componente que se va a crear  
  Al agregar un componente de script al panel Flujo de datos del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], aparece el cuadro de diálogo **Seleccionar el tipo de componente de script**. En él preconfigura el componente como un origen, transformación o destino. Después de realizar esta selección inicial, puede continuar configurando el componente en el **Editor de transformación Script**.  
   
- Para establecer el lenguaje de script predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** de la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea [General Page](../../general-page-of-integration-services-designers-options.md).  
+ Para establecer el lenguaje de script predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** de la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea[página General](../../general-page-of-integration-services-designers-options.md).  
   
 ## <a name="understanding-the-two-design-time-modes"></a>Descripción de los dos modos en tiempo de diseño  
  En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], el componente Script tiene dos modos: modo de diseño de metadatos y modo de diseño de código.  

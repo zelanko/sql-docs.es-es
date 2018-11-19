@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02cd5a093d0af3d325437c77dc07846ee8f6db23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601273"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639183"
 ---
 # <a name="dtexec-utility"></a>dtexec (utilidad)
   La utilidad del símbolo del sistema **dtexec** se usa para configurar y ejecutar paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad **dtexec** otorga acceso a todas las características de configuración y ejecución de paquetes, como parámetros, conexiones, propiedades, variables, registro e indicadores de progreso. La utilidad **dtexec** permite cargar paquetes desde estos orígenes: el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un archivo de proyecto .ispac, una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -172,7 +172,7 @@ dtexec /option [value] [/option [value]]...
   
      Esta opción necesita que se especifiquen los dos parámetros: es necesario especificar el nombre del administrador de conexiones o el GUID en el argumento *id_or_name*, así como especificar una cadena de conexión válida en el argumento *connection_string*. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     En tiempo de ejecución, puede usar la opción **/Connection** para cargar configuraciones de paquete desde una ubicación distinta de la que haya especificado en tiempo de diseño. A continuación, los valores de estas configuraciones reemplazan a los que se especificaron originalmente. Pero solo se puede usar la opción **/Connection** para las configuraciones que usen un administrador de conexiones, como las de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre cómo se aplican las configuraciones de paquetes, vea [Configuraciones de paquetes](../../integration-services/packages/package-configurations.md) y [Compatibilidad con versiones anteriores de Integration Services](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     En tiempo de ejecución, puede usar la opción **/Connection** para cargar configuraciones de paquete desde una ubicación distinta de la que haya especificado en tiempo de diseño. A continuación, los valores de estas configuraciones reemplazan a los que se especificaron originalmente. Pero solo se puede usar la opción **/Connection** para las configuraciones que usen un administrador de conexiones, como las de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre cómo se aplican las configuraciones de paquetes, vea [Configuraciones de paquetes](../../integration-services/packages/package-configurations.md) y [Compatibilidad con versiones anteriores de Integration Services](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (opcional). Muestra las entradas de registro especificadas en la consola durante la ejecución del paquete. Si se omite esta opción, no se muestran entradas de registro en la consola. Si se especifica la opción sin parámetros que limiten la visualización, se muestran todas las entradas del registro. Para limitar las entradas que se muestran en la consola, puede especificar las columnas que se mostrarán con el parámetro *displayoptions* y limitar los tipos de entrada de registro con el parámetro *list_options* .  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     Puede usar la opción **/Set** para cambiar la ubicación desde donde se cargan las configuraciones de paquete. Pero no se puede usar la opción **/Set** para invalidar un valor que se haya especificado en una configuración en tiempo de diseño. Para más información sobre cómo se aplican las configuraciones de paquetes, vea [Configuraciones de paquetes](../../integration-services/packages/package-configurations.md) y [Compatibilidad con versiones anteriores de Integration Services](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     Puede usar la opción **/Set** para cambiar la ubicación desde donde se cargan las configuraciones de paquete. Pero no se puede usar la opción **/Set** para invalidar un valor que se haya especificado en una configuración en tiempo de diseño. Para más información sobre cómo se aplican las configuraciones de paquetes, vea [Configuraciones de paquetes](../../integration-services/packages/package-configurations.md) y [Compatibilidad con versiones anteriores de Integration Services](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Ser[ver]** *server*: (opcional). Cuando se usa **/SQL** o **/DTS** , esta opción especifica el nombre del servidor del que se tiene que recuperar el paquete. Si se omite la opción **/Server** y se especifica **/SQL** o **/DTS** , se intentará ejecutar el paquete en un servidor local. El valor de *server_instance* se puede escribir entre comillas.  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog [Códigos de salida, catálogo de DTEXEC y SSIS](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), en www.mattmasson.com.  
+ Entrada de blog [Códigos de salida, catálogo de DTEXEC y SSIS](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), en www.mattmasson.com.  
   
   

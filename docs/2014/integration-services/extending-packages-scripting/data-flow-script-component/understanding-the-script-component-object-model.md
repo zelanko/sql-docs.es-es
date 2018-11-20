@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   Invalide **\<inputbuffer>_ProcessInputRow** para procesar los datos de cada fila de entrada cuando el código pase por ellos.  
   
--   Invalide **\<inputbuffer>_ProcessInput** solamente si es necesaria alguna acción adicional mientras se recorren en bucle las filas de entrada. (Por ejemplo, si tiene que comprobar `EndOfRowset` para realizar alguna otra acción una vez procesadas todas las filas.) Llame a \<** inputbuffer>_ProcessInputRow para realizar el procesamiento de filas.  
+-   Invalide **\<inputbuffer>_ProcessInput** solamente si es necesaria alguna acción adicional mientras se recorren en bucle las filas de entrada. (Por ejemplo, si tiene que comprobar `EndOfRowset` para realizar alguna otra acción una vez procesadas todas las filas.) Llame a **\<inputbuffer>_ProcessInputRow** para realizar el procesamiento de filas.  
   
 -   Invalide `FinishOutputs` si es necesaria alguna acción adicional en las salidas antes de cerrarlas.  
   

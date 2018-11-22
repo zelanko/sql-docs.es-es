@@ -15,12 +15,12 @@ ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a4adf80de645d9f29082141a249d08cc9365e88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cac987ae75a35223bd0fc61c1848edbbe0ca71
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834253"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701391"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Tabla de ensayo de miembros consolidados (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47834253"
 |**Code**<br /><br /> Obligatorio, excepto cuando los códigos se generan de forma automática para **ImportType1** o **2**; consulte [Creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md) para obtener más información|Código único del miembro.|  
 |**Nombre**<br /><br /> Opcional|Nombre del miembro.|  
 |**NewCode**|Úselo solo si va a cambiar el código de miembro.|  
-|\<nombre_atributo>|Existe una columna para cada atributo de la entidad. Úsela con un **ImportType** de **0** o **2**. Para los atributos de forma libre, especifique el nuevo texto o valor de cadena para el atributo. Para los atributos basados en dominio, especifique el código del miembro que será el atributo. Para los atributos de enlace, la dirección URL debe comenzar con **http://**.<br /><br /> <br /><br /> Nota: No puede almacenar de forma provisional los atributos de archivo.|  
+|\<nombre_atributo>|Existe una columna para cada atributo de la entidad. Úsela con un **ImportType** de **0** o **2**. Para los atributos de forma libre, especifique el nuevo texto o valor de cadena para el atributo. Para los atributos basados en dominio, especifique el código del miembro que será el atributo. Para los atributos de vínculo, la dirección URL debe comenzar con **https://**.<br /><br /> <br /><br /> Nota: No puede almacenar de forma provisional los atributos de archivo.|  
   
 ## <a name="see-also"></a>Ver también  
  [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

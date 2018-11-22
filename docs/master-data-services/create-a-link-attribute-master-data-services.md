@@ -15,21 +15,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eca5b1b66d296ccee49377d436b3be4c66a8cd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719283"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703163"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Crear un atributo de vínculo (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de vínculo cuando quiera que los usuarios escriban un hipervínculo como valor de atributo, como http://www.contoso.com.  
+  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de vínculo cuando quiera que los usuarios escriban un hipervínculo como valor de atributo, como https://www.contoso.com.  
   
 > [!NOTE]  
->  Cuando los usuarios escriban un valor para un atributo de vínculo, la cadena debe comenzar por **http://** o se mostrará un error.  
+>  Cuando los usuarios escriban un valor para un atributo de vínculo, la cadena debe comenzar por **https://** o se mostrará un error.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  

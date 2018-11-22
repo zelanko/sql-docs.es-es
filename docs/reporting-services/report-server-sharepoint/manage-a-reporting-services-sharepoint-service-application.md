@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5edf3a09bb12f39541413e52ba5afcabe20fd5c8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021679"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814008"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint de Reporting Services
 
@@ -92,7 +92,7 @@ ms.locfileid: "50021679"
 |Configuración|Comentarios|  
 |-------------|--------------|  
 |Habilitar la descarga del Generador de informes|El valor predeterminado es TRUE.<br /><br /> Especifica si los clientes pueden ver el botón para descargar la aplicación del Generador de informes.|  
-|URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el Generador de informes 3.0 como aplicación ClickOnce, especifique el valor siguiente: http://\<nombreDeEquipo>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el Generador de informes 3.0 como aplicación ClickOnce, escriba el valor siguiente: https://\<nombreDeEquipo>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Habilitar la impresión de cliente|El valor predeterminado es TRUE.<br /><br /> Especifica si los usuarios pueden descargar el control del lado cliente, que proporciona opciones de impresión.|  
 |Tiempo de espera de sesión de edición|El valor predeterminado es 7200 segundos.|  
 |Límite de caché de sesión de edición|El valor predeterminado es 5.|  

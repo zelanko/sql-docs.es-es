@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021179"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813768"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.
@@ -37,7 +37,7 @@ Para poder continuar, necesita estos productos:
 *  O BIEN: Base de datos de ejemplo de World Wide Importers, disponible en la página [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para ver el resultado: 
   *   [Suscríbase al servicio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) y
-  *  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil: dispositivo iOS, teléfono Android o dispositivo Windows 10.  
+  *  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil: dispositivo iOS, teléfono Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Crear un origen de datos compartido  
@@ -76,7 +76,7 @@ Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnov
    
 4. En el campo de nombre, escriba el nombre del servidor donde guardó el origen de datos, con el formato siguiente:   
    
-   Nombre: http://*localhost*/ReportServer  
+   Nombre: https://*localhost*/ReportServer  
    Elementos de tipo: orígenes de datos (*.rsds)  
    
 5. Haga clic en **Abrir**y desplácese hasta el origen de datos que creó en ese servidor.  
@@ -260,7 +260,7 @@ Puede guardar localmente el informe o en un portal web de [!INCLUDE[PRODUCT_NAME
 Para ver el informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe hacer lo siguiente:
 
 *  [Suscríbase en el servicio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879), si todavía no tiene una cuenta.
-*  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil.  
+*  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil.  
 
 ### <a name="view-your-mobile-report"></a>Ver el informe móvil
   

@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8764d1e8b8ae4facebf49fa746740f69fb8148e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752763"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571394"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Es el nombre registrado como PROGID del proveedor OLE DB utilizado para obtener acceso al origen de datos. *provider_name* es un tipo de datos **char** que carece de valor predeterminado.  
   
  *init_string*  
- Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de cadena del proveedor se basa en pares de palabra clave y valor separados por puntos y coma, como: **'**_keyword1_=_value_**;***keyword2*=* value***'**.  
+ Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de cadena del proveedor se basa en pares de palabra clave y valor separados por puntos y coma, como: **"**_palabra clave 1_=_valor_ **;** _palabra clave 2_=_valor_**"**.  
   
  Para conocer los pares de palabra clave y valor admitidos, vea [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. En esta documentación se define la sintaxis básica. En la siguiente tabla se muestran las palabras clave más utilizadas en el argumento *init_string*.  
   

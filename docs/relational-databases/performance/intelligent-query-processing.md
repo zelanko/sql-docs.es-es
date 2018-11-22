@@ -2,7 +2,7 @@
 title: Procesamiento de consultas inteligente en bases de datos de Microsoft SQL | Microsoft Docs
 description: Características de procesamiento de consultas inteligente para mejorar el rendimiento de las consultas en SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030942"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660957"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La familia de características de **procesamiento de consultas inteligente** incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo.
 
-![Características de procesamiento de consultas inteligentes](./media/2_IQPFeatureFamily.png)
+![Características de procesamiento de consultas inteligentes](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Procesamiento de consultas adaptable
 La familia de características de procesamiento de consultas adaptable incluye mejoras en el procesamiento de consultas que adaptan las estrategias de optimización a las condiciones de tiempo de ejecución de la carga de trabajo de la aplicación. Estas mejoras incluyen combinaciones adaptables del modo de proceso por lotes, comentarios de concesión de memoria y la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones.
@@ -54,6 +54,14 @@ La compilación diferida de variables de tabla mejora la calidad del plan y el r
 Con la compilación aplazada variable de tabla, la compilación de una instrucción que hace referencia a una variable de tabla se aplaza hasta que la primera ejecución real de la instrucción. El comportamiento de esta compilación diferida es idéntico al comportamiento de las tablas temporales y este cambio genera el uso de la cardinalidad real en lugar de la estimación de una fila original. Para habilitar la versión preliminar pública de la compilación diferida de variables de tabla en Azure SQL Database, habilite el nivel 150 de compatibilidad de la base de datos para la base de datos a la que se conecta cuando ejecuta la consulta.
 
 Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
+
+## <a name="scalar-udf-inlining"></a>Inserción de UDF escalar
+> [!NOTE]
+> Inserción de UDF escalar es una característica de versión preliminar pública.  
+
+La inserción de UDF escalar transforma automáticamente funciones definidas por el usuario (UDF) escalares en expresiones relacionales y las inserta en la consulta SQL de llamada, lo que mejora el rendimiento de las cargas de trabajo que aprovechan las UDF escalares. La inserción de UDF escalar facilita la optimización basada en costos de las operaciones dentro de las UDF, y da como resultado planes eficaces paralelos y orientados a conjuntos en lugar de planes de ejecución ineficaces, iterativos y en serie. Esta característica está habilitada de forma predeterminada en el nivel de compatibilidad de base de datos 150.
+
+Para obtener más información, vea [Scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions) (Inserción de UDF escalar).
 
 ## <a name="approximate-query-processing"></a>Procesamiento de consultas aproximado
 > [!NOTE]

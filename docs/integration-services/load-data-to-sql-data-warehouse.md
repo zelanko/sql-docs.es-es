@@ -12,12 +12,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 3d3b048b5aa0c2a2cfd0eaf89e03d49f37152497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b229fb722c1a6de85e4c26179c776ba605909441
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610943"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269938"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Cargar datos en Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
 
@@ -96,7 +96,7 @@ Para obtener más control, puede crear manualmente un paquete que emule el traba
 
 1. Use la tarea de carga en el blob de Azure para cargar los datos en Azure Blob Storage. Para obtener la tarea de carga en el blob de Azure, descargue [el Feature pack de Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Luego use la tarea Ejecutar SQL de SSIS para iniciar un script de Polybase que cargue los datos en SQL Data Warehouse. Para obtener un ejemplo que cargue datos desde Azure Blob Storage en SQL Data Warehouse (pero no con SSIS), vea [Tutorial: Carga de datos en Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. Después, use la tarea Ejecutar SQL de SSIS para iniciar un script de PolyBase que cargue los datos en SQL Data Warehouse. Para obtener un ejemplo que cargue datos desde Azure Blob Storage en SQL Data Warehouse (pero no con SSIS), vea [Tutorial: Carga de datos en Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Opción 2: usar un origen y un destino
 

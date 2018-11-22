@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f09dd10c77c7e4d87e769748d9053f18fc6d0fe9
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678613"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811998"
 ---
 # <a name="set-default-options-for-report-builder"></a>Establecimiento de opciones predeterminadas para el Generador de informes
   En Generador de informes, puede establecer un número de valores predeterminados útiles para que la creación de informes resulte más sencilla y más rápida.  Por ejemplo, si puede establecer o cambiar el servidor de informes predeterminado, Generador de informes guarda los informes en el mismo servidor de informes automáticamente, a menos que se especifique lo contrario.  
@@ -24,7 +24,7 @@ ms.locfileid: "47678613"
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Usar este servidor de informes o sitio de SharePoint de forma predeterminada**  
- Puede que su administrador lo haya configurado. El valor puede ser una dirección URL bien formada con http:// o https://. Este valor determina qué conexiones de origen de datos aparecen de forma predeterminada en los Asistentes para tabla/matriz y para gráfico. Además, sus informes se procesarán en este servidor y puede hacer referencia a los recursos que contiene.  
+ Puede que su administrador lo haya configurado. El valor puede ser una dirección URL bien formada con https:// o https://. Este valor determina qué conexiones de origen de datos aparecen de forma predeterminada en los Asistentes para tabla/matriz y para gráfico. Además, sus informes se procesarán en este servidor y puede hacer referencia a los recursos que contiene.  
   
  Si selecciona un servidor de informes diferente, puede que deba reiniciar el Generador de informes para que este cambio surta efecto.  
   

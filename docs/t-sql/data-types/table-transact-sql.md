@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 7e4844a9bf0e265f52db634400383452cc99a5d9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100466"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703843"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "49100466"
 Es un tipo de datos especial que se puede utilizar para almacenar un conjunto de resultados para procesar en otro momento. **table** se usa sobre todo para el almacenamiento temporal de un conjunto de filas devueltas como el conjunto de resultados de una función con valores de tabla. Las funciones y las variables se pueden declarar como de tipo **table**. Las variables **table** se pueden usar en funciones, procedimientos almacenados y lotes. Para declarar variables de tipo **table**, use [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -116,7 +116,7 @@ Las variables de tabla no se pueden modificar una vez creadas.
 La **compilación diferida de variables de tabla** mejora la calidad del plan y el rendimiento general de las consultas que hacen referencia a las variables de tabla. Durante la optimización y la compilación del plan inicial, esta característica propagará las estimaciones de cardinalidad que se basan en los recuentos de filas de variables de tabla reales. Esta información precisa del recuento de filas se usará para optimizar las operaciones del plan de bajada.
 
 > [!NOTE]
-> La compilación diferida de variables de tabla es una característica en vista previa (GB) pública de Azure SQL Database.  
+> La compilación diferida de variables de tabla es una característica en versión preliminar pública en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 Con la compilación aplazada variable de tabla, la compilación de una instrucción que hace referencia a una variable de tabla se aplaza hasta que la primera ejecución real de la instrucción. El comportamiento de esta compilación diferida es idéntico al comportamiento de las tablas temporales y este cambio genera el uso de la cardinalidad real en lugar de la estimación de una fila original. 
 
@@ -231,7 +231,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>Vea también
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

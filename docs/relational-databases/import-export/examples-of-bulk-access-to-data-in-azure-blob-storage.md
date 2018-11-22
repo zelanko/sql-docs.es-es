@@ -5,8 +5,7 @@ ms.date: 01/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], from Azure blob storage
@@ -18,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941c3348f487c501650b903d1413c540c6a9eb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791753"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560412"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Ejemplos de acceso masivo a datos en Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +30,11 @@ ms.locfileid: "47791753"
 Las instrucciones `BULK INSERT` y `OPENROWSET` pueden obtener acceso directamente a un archivo en Azure Blob Storage. En los ejemplos siguientes se usan datos de un archivo CSV (valores separados por comas) (denominado `inv-2017-01-19.csv`), almacenado en un contenedor (denominado `Week3`), almacenado en una cuenta de almacenamiento (denominada `newinvoices`). Se puede usar la ruta de acceso al archivo de formato, pero no se incluye en estos ejemplos. 
 
 El acceso masivo a Azure Blob Storage desde SQL Server, necesita al menos [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+
+>  [!IMPORTANT]
+>  Todas las rutas de acceso al contenedor y a los archivos de blob son `CASE SENSITIVE`. Si no es correcto, es posible que se devuelva el error "No se puede realizar la carga masiva. El archivo "file.csv" no existe o no tiene derechos de acceso al archivo."
+"
+
 
 ## <a name="create-the-credential"></a>Crear la credencial   
    

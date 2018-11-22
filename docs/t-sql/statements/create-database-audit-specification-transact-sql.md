@@ -23,12 +23,12 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c7f8c07725d702eb09cf538dc688136f230659c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2612f61d9a64d8b7d7cf156a1bd03d32d29dc1c9
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812723"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289885"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  Es la tabla, vista u otro objeto protegible de la base de datos al que se debe aplicar la acción de auditoría o el grupo de acciones de auditoría. Para más información, consulte [Securables](../../relational-databases/security/securables.md).  
   
  *principal*  
- Es el nombre de la entidad de seguridad de base de datos a la que se debe aplicar la acción de auditoría o el grupo de acciones de auditoría. Para más información, vea [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
+ Es el nombre de la entidad de seguridad de base de datos a la que se debe aplicar la acción de auditoría o el grupo de acciones de auditoría. Para auditar todas las entidades de seguridad de base de datos use la entidad de seguridad de base de datos `public`. Para más información, vea [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
  WITH ( STATE = { ON | OFF } )  
  Habilita o deshabilita la recopilación de registros por parte de la auditoría para esta especificación de auditoría.  
@@ -91,8 +91,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
  Una vez creada una especificación de auditoría de base de datos, podrán verla las entidades de seguridad que cuenten con los permisos `CONTROL SERVER` y `ALTER ANY DATABASE AUDIT` o la cuenta `sysadmin`.  
   
-## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se crea una auditoría de servidor denominada `Payrole_Security_Audit` y una especificación de auditoría de base de datos denominada `Payrole_Security_Audit` que audita las instrucciones `SELECT` y `INSERT` por el usuario `dbo`, para la tabla `HumanResources.EmployeePayHistory` de la base de datos `AdventureWorks2012`.  
+## <a name="examples"></a>Ejemplos
+
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. Operaciones SELECT e INSERT de auditoría en una tabla para cualquier entidad de seguridad de base de datos 
+ En el ejemplo siguiente se crea una auditoría de servidor denominada `Payrole_Security_Audit` y una especificación de auditoría de base de datos denominada `Payrole_Security_Audit` que audita las instrucciones `SELECT` y `INSERT` por cualquier usuario (`public`), para la tabla `HumanResources.EmployeePayHistory` de la base de datos `AdventureWorks2012`.  
   
 ```  
 USE master ;  
@@ -116,8 +118,39 @@ ADD (SELECT , INSERT
      ON HumanResources.EmployeePayHistory BY dbo )  
 WITH (STATE = ON) ;  
 GO  
-```  
+``` 
+
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. Auditoría de cualquier DML (INSERT, UPDATE o DELETE) en _todos_ los objetos del esquema _sales_ para un rol de base de datos específico  
+ En el ejemplo siguiente se crea una auditoría de servidor denominada `DataModification_Security_Audit` y después una especificación de auditoría de base de datos denominada `Audit_Data_Modification_On_All_Sales_Tables` que audita las instrucciones `INSERT`, `UPDATE` y `DELETE` por los usuarios en un nuevo rol de base de datos `SalesUK`, para todos los objetos del esquema `Sales` de la base de datos `AdventureWorks2012`.  
   
+```  
+USE master ;  
+GO  
+-- Create the server audit.
+-- Change the path to a path that the SQLServer Service has access to. 
+CREATE SERVER AUDIT DataModification_Security_Audit  
+    TO FILE ( FILEPATH = 
+'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ; 
+GO  
+-- Enable the server audit.  
+ALTER SERVER AUDIT DataModification_Security_Audit   
+WITH (STATE = ON) ;  
+GO  
+-- Move to the target database.  
+USE AdventureWorks2012 ;  
+GO  
+CREATE ROLE SalesUK
+GO
+-- Create the database audit specification.  
+CREATE DATABASE AUDIT SPECIFICATION Audit_Data_Modification_On_All_Sales_Tables  
+FOR SERVER AUDIT DataModification_Security_Audit  
+ADD ( INSERT, UPDATE, DELETE  
+     ON Schema::Sales BY SalesUK )  
+WITH (STATE = ON) ;    
+GO  
+```  
+
+
 ## <a name="see-also"></a>Ver también  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

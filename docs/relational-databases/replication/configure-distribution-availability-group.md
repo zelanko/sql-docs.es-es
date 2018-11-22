@@ -1,7 +1,7 @@
 ---
 title: Configurar la base de datos de distribución de SQL Server en un grupo de disponibilidad | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818003"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602635"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar la base de datos de distribución de replicación en un grupo de disponibilidad AlwaysOn
 
@@ -48,6 +48,7 @@ Después de configurar una base de datos de distribución en el AG según los pa
 - Agregación o eliminación de nodos de un AG de base de datos de distribución existente.
 - Un distribuidor puede tener varias bases de datos de distribución. Cada base de datos de distribución puede estar en su propio AG y puede no estar en ninguno. Varias bases de datos de distribución pueden compartir un AG.
 - El publicador y el distribuidor deben estar en instancias separadas de SQL Server.
+- Si el agente de escucha del grupo de disponibilidad que hospeda la base de datos de distribución está configurado para usar un puerto no predeterminado, es necesario configurar un alias para el agente de escucha y el puerto no predeterminado.
 
 ## <a name="limitations-or-exclusions"></a>Limitaciones o exclusiones
 
@@ -63,6 +64,7 @@ Después de configurar una base de datos de distribución en el AG según los pa
 - El AG de la base de datos de distribución debe tener configurado un agente de escucha.
 - Las réplicas secundarias de un AG de base de datos de distribución pueden ser sincrónicas o asincrónicas. Se recomienda y es preferible el modo sincrónico.
 - No se admite la replicación transaccional bidireccional.
+- SSMS no muestra la base de datos de distribución como en proceso de sincronización o sincronizada, cuando se agrega a un grupo de disponibilidad.
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>Ver también  

@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252142"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571474"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -143,6 +143,9 @@ Reemplaza el nombre de la base de datos por el nombre especificado como *new_dat
   
 COLLATE *collation_name*  
 Especifica la intercalación de la base de datos. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, se asigna a la base de datos la intercalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!NOTE]
+> No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 Al crear bases de datos con una intercalación diferente de la predeterminada, los datos de la base de datos siempre respetan la intercalación especificada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al crear una base de datos independiente, la información de catálogo interno se mantiene mediante la intercalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Latin1_General_100_CI_AS_WS_KS_SC**.  
   

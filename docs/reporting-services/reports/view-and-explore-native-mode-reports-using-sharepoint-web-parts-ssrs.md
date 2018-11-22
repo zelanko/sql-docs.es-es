@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cef5578bc23c7ac49dceedaac6dfb18049600ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032144"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813425"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
 
@@ -140,7 +140,7 @@ ms.locfileid: "50032144"
   
 6.  Mientras la página está en el modo de edición, haga clic en **Editar elemento web** en el elemento web Visor de informes.  
   
-7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De manera predeterminada, la dirección URL del Administrador de informes tiene la siguiente sintaxis: **http://\<nombreDeServidor>/informes**.  
+7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De manera predeterminada, la dirección URL del Administrador de informes tiene la sintaxis siguiente: **https://\<nombreDeServidor>/informes**.  
   
 8.  En **Ruta de acceso del informe**, especifique una barra diagonal, seguida de la ruta de acceso a la carpeta y el nombre del informe. **No** incluya el nombre del servidor ni el directorio virtual del Administrador de informes. Por ejemplo, para abrir el informe "Company Sales" de la carpeta Adventure Works, especifique **/Adventure Works/Company Sales**. Aquí se proporciona otro ejemplo en el que el informe "Products" está en la carpeta raíz del servidor de informes **/Products**.  
   

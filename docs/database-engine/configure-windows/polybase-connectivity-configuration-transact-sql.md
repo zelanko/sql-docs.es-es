@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4e70d30aaaef2d256f2dcff38b1d5989e1f6e5f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b877040c532a0ccb7911e4770d33f9e5f7a709c5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784813"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602455"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuración de conectividad de PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +75,7 @@ RECONFIGURE
   
 -   Opción 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 y 5.13 en Linux  
   
--   Opción 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 y 2.6 en Linux  
+-   Opción 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 en Linux  
   
 -   Opción 7: Hortonworks 2.1, 2.2 y 2.3 en Windows Server  
   

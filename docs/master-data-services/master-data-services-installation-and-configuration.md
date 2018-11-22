@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 7016e66ba91972f6f9ef365b7c60fa320b0bdbcf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072259"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697363"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -36,7 +36,7 @@ Para obtener información general sobre cómo organizar los datos en [!INCLUDE[s
 Para obtener vínculos a los vídeos y a otros recursos de aprendizaje de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Información sobre SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Descargar**  
->-   Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+>-   Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
 >-   ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para poner en marcha una máquina virtual con SQL Server ya instalado.  
  
 > **¿No puede crear un sitio web de MDS?**
@@ -194,7 +194,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Haga clic en **Aplicar**. Aparecerá el cuadro de mensaje **Configuración completada**. Haga clic en **Aceptar** en el cuadro de mensaje para iniciar la aplicación web. La dirección del sitio web es http://*nombre del servidor*/*aplicación web*/. 
+15. Haga clic en **Aplicar**. Aparecerá el cuadro de mensaje **Configuración completada**. Haga clic en **Aceptar** en el cuadro de mensaje para iniciar la aplicación web. La dirección del sitio web es https://*nombre del servidor*/*aplicación web*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -272,7 +272,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
     1.  Vaya al sitio web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que ha configurado. Consulte la sección [Configurar la base de datos y el sitio web](#SetUpWeb) .  
   
-         La dirección del sitio web es http://*nombre del servidor*/*aplicación web*/.  
+         La dirección del sitio web es https://*nombre del servidor*/*aplicación web*/.  
   
     2.  Seleccione un modelo del cuadro de lista **Modelo** y haga clic en **Explorador**.  
   

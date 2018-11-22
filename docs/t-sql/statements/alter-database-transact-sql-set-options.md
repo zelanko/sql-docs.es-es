@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252202"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814358"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL) 
 
@@ -668,7 +668,7 @@ Consulte [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transac
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } controla si la base de datos puede crear páginas iniciales con una extensión mixta para las primeras ocho páginas de una tabla o un índice.  
  
@@ -682,7 +682,7 @@ Esta opción es ON para todas las bases de datos del sistema. **tempdb** es la �
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Controla la opción de parametrización.  
+Controla la opción de parametrización. Para obtener más información sobre la parametrización, vea la [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ La configuración actual de esta opción se puede determinar mediante el examen 
 **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Controla si el almacén de consultas está habilitado en esta base de datos y también controla la eliminación del contenido del almacén de consultas.  
+Controla si el almacén de consultas está habilitado en esta base de datos y también controla la eliminación del contenido del almacén de consultas. Para obtener más información, vea [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Habilita el almacén de consultas.  
   
 OFF  
-Deshabilita el almacén de consultas.  Este es el valor predeterminado.   
+Deshabilita el almacén de consultas. Este es el valor predeterminado.   
   
 CLEAR  
 Quita el contenido del almacén de consultas.  
@@ -809,7 +809,7 @@ Si se detecta un error de suma de comprobación o de página rasgada, puede real
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a intentar cualquier lectura que genere un error con una suma de comprobación, una página rasgada u otros errores de E/S, en cuatro ocasiones. Si la lectura se desarrolla correctamente en uno de los reintentos, se escribe un mensaje en el registro de errores y el comando que ha desencadenado la lectura continúa. Si los reintentos no se realizan correctamente, el comando genera el mensaje de error 824.  
   
-Para más información sobre los mensajes de error 823, 824 y 825, vea [Cómo solucionar un error 823 Msg en SQL Server](http://support.microsoft.com/help/2015755), [Cómo solucionar problemas de 824 Msg en SQL Server](http://support.microsoft.com/help/2015756) y [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757) (Cómo solucionar un error 825 (reintento de lectura) en SQL Server).
+Para más información sobre los mensajes de error 823, 824 y 825, vea [Cómo solucionar un error 823 Msg en SQL Server](https://support.microsoft.com/help/2015755), [Cómo solucionar problemas de 824 Msg en SQL Server](https://support.microsoft.com/help/2015756) y [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](https://support.microsoft.com/help/2015757) (Cómo solucionar un error 825 (reintento de lectura) en SQL Server).
   
 La configuración actual de esta opción se puede determinar mediante el examen de la columna *page_verify_option* de la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la propiedad *IsTornPageDetectionEnabled* de la función [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -866,7 +866,7 @@ NEW_BROKER
 Especifica que la base de datos debe recibir un identificador de agente nuevo. Dado que la base de datos se considera como un Service Broker nuevo, todas las conversaciones existentes en la base de datos se quitan inmediatamente sin generar mensajes de finalización de diálogo. Cualquier ruta que haga referencia al identificador de [!INCLUDE[ssSB](../../includes/sssb-md.md)] anterior se debe volver a crear con el nuevo identificador.  
   
 ERROR_BROKER_CONVERSATIONS  
-Especifica que la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Esto conserva el identificador de [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente para la base de datos. [!INCLUDE[ssSB](../../includes/sssb-md.md)] finaliza todas las conversaciones de la base de datos con un error. Esto permite que las aplicaciones realicen una limpieza regular de las conversaciones existentes.  
+Especifica que la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Esto conserva el identificador [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente de la base de datos. [!INCLUDE[ssSB](../../includes/sssb-md.md)] finaliza todas las conversaciones de la base de datos con un error. Esto permite que las aplicaciones realicen una limpieza regular de las conversaciones existentes.  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1159,7 +1159,7 @@ Al borrar la memoria caché de planes, se provoca una nueva compilación de todo
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-setting-options-on-a-database"></a>A. Configurar opciones en una base de datos  
-En el siguiente ejemplo se establece el modelo de recuperación y las opciones de comprobación de páginas de datos para la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+En el siguiente ejemplo se establece el modelo de recuperación y las opciones de comprobación de páginas de datos para la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE master;  
@@ -1193,7 +1193,7 @@ GO
 ```  
   
 ### <a name="c-enabling-snapshot-isolation-on-a-database"></a>C. Habilitar el aislamiento de instantánea en una base de datos  
-En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1982,7 +1982,7 @@ GO
 ```  
   
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitar el aislamiento de instantánea en una base de datos  
-En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -2023,7 +2023,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -2684,7 +2684,7 @@ GO
 ```  
   
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitar el aislamiento de instantánea en una base de datos  
-En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -2725,7 +2725,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

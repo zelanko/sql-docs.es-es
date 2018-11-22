@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030624"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813178"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint
 
@@ -79,7 +79,7 @@ En esta sección se muestra cómo implementar el paquete de solución en la gran
 
     ![Configuración del sitio desde el icono de engranaje.](media/sharepoint-site-settings.png)
 
-    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que normalmente puede acceder a un sitio de SharePoint si escribe *http://<computer name>* para abrir la colección de sitios raíz.
+    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que normalmente se puede acceder a un sitio de SharePoint si se escribe *https://<computer name>* para abrir la colección de sitios raíz.
 
 3. En **Administración de la colección de sitios**, seleccione **Características de la colección de sitios**.
 
@@ -119,7 +119,7 @@ Al retirar la solución no se quita el elemento web Visor de informes de la list
 
     ![Configuración del sitio desde el icono de engranaje.](media/sharepoint-site-settings.png)
 
-    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que normalmente puede acceder a un sitio de SharePoint si escribe *http://<computer name>* para abrir la colección de sitios raíz.
+    De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que normalmente se puede acceder a un sitio de SharePoint si se escribe *https://<computer name>* para abrir la colección de sitios raíz.
 
 2. En **Galerías del diseñador web**, seleccione **elementos web**.
 

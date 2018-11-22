@@ -11,15 +11,15 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b26f7b7a36d024ec18de617b08fdefe2d352083
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed4b198ab8f0582f3e01cfaca957af4f72e343e2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686203"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641222"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lección 2: Agregar bucles con SSIS
-En la [Lección 1: Crear el proyecto y el paquete básico](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extraía datos de un solo origen de archivo plano, transformó los datos mediante transformaciones de búsqueda y, por último, cargó los datos en la tabla de hechos **FactCurrency** de la base de datos de ejemplo **AdventureWorksDW2012** .  
+En la [Lección 1: Crear un proyecto y un paquete básico con SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extraía datos de un solo origen de archivo plano, transformó los datos mediante transformaciones de búsqueda y, por último, cargó los datos en una copia de la tabla de hechos **FactCurrencyRate** de la base de datos de ejemplo **AdventureWorksDW2012**.  
   
 No obstante, no es muy habitual utilizar un solo archivo plano para el proceso de extracción, transformación y carga (ETL). Un proceso ETL típico utilizaría datos extraídos de varios orígenes de archivos planos. Para extraer datos de varios orígenes, se requiere un flujo de control iterativo. Una de las características más esperadas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es la capacidad de agregar fácilmente una iteración o un bucle a los paquetes.  
   
@@ -48,7 +48,7 @@ En esta lección, modificará el paquete ETL simple creado en la lección 1 para
 En esta lección, no modificará el flujo de datos, solamente modificará el flujo de control.  
   
 > [!IMPORTANT]  
-> Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre cómo instalar e implementar **AdventureWorksDW2012**, vea [Ejemplos de productos de Reporting Services en CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre cómo instalar e implementar **AdventureWorksDW2012**, consulte [Ejemplos de productos de Reporting Services en CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  

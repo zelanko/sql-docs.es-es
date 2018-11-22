@@ -11,12 +11,12 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31c66aaacdcebfeabf43cc6466659e25d47d4d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606943"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269748"
 ---
 # <a name="the-memory-optimized-filegroup"></a>El grupo de archivos con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47606943"
   
 Las limitaciones siguientes se aplican al grupo de archivos optimizados para memoria:  
   
--   Una vez que crea un grupo de archivos optimizados para memoria, solo puede quitarlo si quita la base de datos. En un entorno de producción, no es probable que necesite quitar el grupo de archivos optimizados para memoria.  
+-   Una vez que use un grupo de archivos optimizados para memoria, solo puede quitarlo si quita la base de datos. En un entorno de producción, no es probable que necesite quitar el grupo de archivos optimizados para memoria.  
   
 -   No puede quitar un contenedor que no esté vacío ni mover pares de archivos de datos y delta a otro contenedor en el grupo de archivos optimizados para memoria.  
   

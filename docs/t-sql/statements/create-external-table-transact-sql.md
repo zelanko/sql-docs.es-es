@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100296"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703963"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,7 +142,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  Nombre de entre una y tres partes de la tabla que se va a crear. En una tabla externa, solo los metadatos de tabla se almacenan en SQL junto con estadísticas básicas sobre el archivo o carpeta a los que se hace referencia en Hadoop o Azure Blob Storage. Ningún dato real se mueve o se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE permite una o varias definiciones de columna. CREATE EXTERNAL TABLE y CREATE TABLE usan la misma sintaxis para definir una columna. La excepción es que no se puede usar DEFAULT CONSTRAINT en tablas externas. Para obtener los detalles completos sobre las definiciones de columna y sus tipos de datos, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [CREATE TABLE en Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE permite una o varias definiciones de columna. CREATE EXTERNAL TABLE y CREATE TABLE usan la misma sintaxis para definir una columna. La excepción es que no se puede usar DEFAULT CONSTRAINT en tablas externas. Para obtener los detalles completos sobre las definiciones de columna y sus tipos de datos, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [CREATE TABLE en Azure SQL Database](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Las definiciones de columna, incluidos los tipos de datos y el número de columnas, deben coincidir con los datos de los archivos externos. Si hay alguna no coincidencia, se rechazan las filas de archivo al consultar los datos reales.  
   
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Especifica la ruta de acceso y el nombre de la carpeta o el archivo de los datos reales en Hadoop o Azure Blob Storage. La ubicación se inicia desde la carpeta raíz; la carpeta raíz es la ubicación de datos especificada en el origen de datos externo.  
 
 
-En SQL Server, la instrucción CREATE EXTERNAL TABLE crea la ruta de acceso y la carpeta si aún no existen. Luego puede usar INSERT INTO para exportar datos de una tabla de SQL Server local al origen de datos externo. Para más información, vea [Polybase Queries](/sql/relational-databases/polybase/polybase-queries) (Consultas de Polybase). 
+En SQL Server, la instrucción CREATE EXTERNAL TABLE crea la ruta de acceso y la carpeta si aún no existen. Luego puede usar INSERT INTO para exportar datos de una tabla de SQL Server local al origen de datos externo. Para obtener más información, vea [Escenarios de consulta de PolyBase](/sql/relational-databases/polybase/polybase-queries). 
 
 En SQL Data Warehouse y Analytics Platform System, la instrucción [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) crea la ruta de acceso y la carpeta si no existen. En estos dos productos, CREATE EXTERNAL TABLE no crea la ruta de acceso ni la carpeta.
 
@@ -161,7 +161,7 @@ En SQL Data Warehouse y Analytics Platform System, la instrucción [CREATE EXTER
   
  ![Datos recursivos para tablas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")  
   
- Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
+ Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
  DATA_SOURCE = *external_data_source_name*  
  Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación es Hadoop o Azure Blob Storage. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
@@ -265,7 +265,7 @@ Los archivos reason y los archivos de datos tienen el identificador de consulta 
 ## <a name="general-remarks"></a>Notas generales  
  En escenarios de consulta "ad-hoc", es decir, SELECT FROM EXTERNAL TABLE, PolyBase almacena las filas recuperadas del origen de datos externo en una tabla temporal. Una vez finalizada la consulta, PolyBase quita y elimina la tabla temporal. En las tablas SQL no se almacenan datos permanentes.  
   
- En cambio, en el escenario de importación, es decir, SELECT INTO FROM EXTERNAL TABLE, PolyBase almacena las filas recuperadas del origen de datos externo como datos permanentes en la tabla SQL. La nueva tabla se crea durante la ejecución de la consulta cuando Polybase recupera los datos externos.  
+ En cambio, en el escenario de importación, es decir, SELECT INTO FROM EXTERNAL TABLE, PolyBase almacena las filas recuperadas del origen de datos externo como datos permanentes en la tabla SQL. La tabla se crea durante la ejecución de la consulta cuando PolyBase recupera los datos externos.  
   
  PolyBase puede insertar algunos de los cálculos de la consulta en Hadoop para mejorar el rendimiento. Esto se denomina "aplicación de predicado". Para habilitarlo, especifique la opción de ubicación del administrador de recursos de Hadoop en [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>Ver también  
- [Ejemplos de consultas de metadatos comunes (SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [Ejemplos de consultas de metadatos comunes (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

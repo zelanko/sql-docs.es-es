@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614783"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813688"
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
 En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato HTML.  
@@ -44,7 +44,7 @@ En la tabla siguiente se muestra la configuración de la información de los dis
 |**ReplacementRoot(\*)**|La cadena que se agrega como prefijo a todos los vínculos de obtención de detalles, alternancia y marcador del informe cuando la representación se realice fuera del control ReportViewer. Se usa, por ejemplo, para redirigir el clic de un usuario a una página personalizada.|  
 |**ResourceStreamRoot(\*)**|La cadena que se antepone a la dirección URL para todos los recursos de imagen, por ejemplo, las imágenes que se van a alternar u ordenar.|  
 |**Sección**|Número de página del informe que representar. El valor **0** indica que se representan todas las secciones del informe. El valor predeterminado es **1**.|  
-|**StreamRoot (\*)**|Ruta de acceso que se usa como prefijo para el valor del atributo **src** del elemento IMG en el informe HTML que devuelve el servidor de informes. De forma predeterminada, el servidor de informes proporciona la ruta de acceso. Puede usar este valor para especificar una ruta de acceso raíz para las imágenes de un informe (por ejemplo, **http://\<nombreDeServidor>/resources/companyimages**).|  
+|**StreamRoot (\*)**|Ruta de acceso que se usa como prefijo para el valor del atributo **src** del elemento IMG en el informe HTML que devuelve el servidor de informes. De forma predeterminada, el servidor de informes proporciona la ruta de acceso. Puede usar este valor para especificar una ruta de acceso raíz para las imágenes de un informe (por ejemplo, **https://\<nombreDeServidor>/resources/companyimages**).|  
 |**StyleStream**|Indica si los estilos y scripts se crean como un flujo independiente en lugar de en el documento. El valor predeterminado es **false**.|  
 |**Barra de herramientas**|Indica si mostrar u ocultar la barra de herramientas. El valor predeterminado de este parámetro es **true**. Si el valor de este parámetro es **false**, se omiten todas las opciones restantes (excepto el mapa del documento). Si omite este parámetro, la barra de herramientas se muestra automáticamente para los formatos de representación que lo admiten.<br /><br /> Al usar el acceso URL para representar un informe, se representa la barra de herramientas del Visor de informes. La barra de herramientas no se representa a través de la API SOAP. Sin embargo, la configuración de la información de dispositivos **Toolbar** afecta a la manera en que el informe se muestra al usar el método de SOAP **Render** . Si el valor de este parámetro es **true** al utilizar SOAP para representar en HTML, solo se representa la primera sección del informe. Si el valor es **false**, el informe HTML completo se representa como una página HTML única.|  
 |**UserAgent**|Cadena **user-agent** del explorador que está realizando la solicitud; esta cadena se encuentra en la solicitud HTTP.|  

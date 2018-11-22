@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 15b4e8094c5d45c5001002edfcf4e2202c09576f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030614"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814268"
 ---
 # <a name="start-report-builder"></a>Iniciar el Generador de informes
 
@@ -36,7 +36,7 @@ ms.locfileid: "50030614"
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Para iniciar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  En el explorador web, escriba la dirección URL del servidor de informes en la barra de direcciones. De forma predeterminada, la dirección URL es http://\<*nombreDeServidor*>/reports.  
+1.  En el explorador web, escriba la dirección URL del servidor de informes en la barra de direcciones. De forma predeterminada, la dirección URL es https://\<*nombreDeServidor*>/reports.  
   
 2.  En la barra superior del portal web, seleccione **Nuevo** > **Informe paginado**.  
   

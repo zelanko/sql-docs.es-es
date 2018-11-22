@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461090"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704143"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -144,7 +144,7 @@ Especifica el nombre de una clave asimétrica a la que asociar este inicio de se
 >  CHECK_EXPIRATION y CHECK_POLICY solo se aplican en Windows Server 2003 y versiones posteriores. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md). 
   
 - Los inicios de sesión creados con certificados o claves asimétricas solo se usan para la firma del código. No se pueden usar para conectarse a SQL Server. Solo puede crear un inicio de sesión desde un certificado o clave asimétrica cuando este certificado o clave asimétrica ya exista en la base de datos maestra. 
-- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Al crear un inicio de sesión automáticamente se habilita el nuevo inicio de sesión y se concede al mismo el permiso de **CONNECT SQL** de nivel servidor. 
 - El [modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md) del servidor debe coincidir con el tipo de inicio de sesión para permitir el acceso.
 - Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -294,7 +294,7 @@ Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de ses
   
 ## <a name="remarks"></a>Notas  
 - En las contraseñas se distingue entre mayúsculas y minúsculas.
-- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Al crear un inicio de sesión automáticamente se habilita el nuevo inicio de sesión y se concede al mismo el permiso de **CONNECT SQL** de nivel servidor. 
 - El [modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md) del servidor debe coincidir con el tipo de inicio de sesión para permitir el acceso.
     - Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -326,8 +326,8 @@ Solo pueden crear inicios de sesión el inicio de sesión de entidad de segurida
 Después de crear un inicio de sesión, el inicio de sesión se puede conectar a SQL Database, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes. 
   
 - Para conectarse a una base de datos, cree un usuario de base de datos para el inicio de sesión en esa base de datos. Para obtener más información, vea [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar el uso a uno de los roles de base de datos integrado o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obtener más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
-- Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar el uso a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obtener más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
+- Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar al usuario a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Use la instrucción de **GRANT**, para conceder permisos de servidor al nuevo inicio de sesión o un rol que contiene el inicio de sesión. Para obtener más información, vea [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
@@ -412,7 +412,7 @@ Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de ses
   
 ## <a name="remarks"></a>Notas  
 - En las contraseñas se distingue entre mayúsculas y minúsculas.
-- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Al crear un inicio de sesión automáticamente se habilita el nuevo inicio de sesión y se concede al mismo el permiso de **CONNECT SQL** de nivel servidor. 
 - El [modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md) del servidor debe coincidir con el tipo de inicio de sesión para permitir el acceso.
     - Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -444,8 +444,8 @@ Solo pueden crear inicios de sesión el inicio de sesión de entidad de segurida
 Después de crear un inicio de sesión, el inicio de sesión se puede conectar a SQL Database, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes. 
   
 - Para conectarse a una base de datos, cree un usuario de base de datos para el inicio de sesión en esa base de datos. Para obtener más información, vea [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar el uso a uno de los roles de base de datos integrado o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obtener más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
-- Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar el uso a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para obtener más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
+- Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar al usuario a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Use la instrucción de **GRANT**, para conceder permisos de servidor al nuevo inicio de sesión o un rol que contiene el inicio de sesión. Para obtener más información, vea [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
@@ -530,7 +530,7 @@ En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñ
   
 ## <a name="remarks"></a>Notas  
 - En las contraseñas se distingue entre mayúsculas y minúsculas.
-- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Al crear un inicio de sesión automáticamente se habilita el nuevo inicio de sesión y se concede al mismo el permiso de **CONNECT SQL** de nivel servidor. 
 - El [modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md) del servidor debe coincidir con el tipo de inicio de sesión para permitir el acceso.
     - Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -557,8 +557,8 @@ Solo pueden crear inicios de sesión el inicio de sesión de entidad de segurida
 Después de crear un inicio de sesión, el inicio de sesión se puede conectar a SQL Data Warehouse, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes. 
   
 - Para conectarse a una base de datos, cree una para el inicio de sesión. Para obtener más información, vea [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar el uso a uno de los roles de base de datos integrado o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](grant-transact-sql.md). Para obtener más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
-- Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar el uso a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](grant-transact-sql.md). Para obtener más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
+- Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar al usuario a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Use la instrucción de **GRANT**, para conceder permisos de servidor al nuevo inicio de sesión o un rol que contiene el inicio de sesión. Para obtener más información, vea [GRANT](../../t-sql/statements/grant-transact-sql.md). 
   
@@ -667,7 +667,7 @@ Especifica que el inicio de sesión se asigna a un inicio de sesión de Windows.
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION y CHECK_POLICY solo se aplican en Windows Server 2003 y versiones posteriores. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md). 
   
-- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Al crear un inicio de sesión automáticamente se habilita el nuevo inicio de sesión y se concede al mismo el permiso de **CONNECT SQL** de nivel servidor. 
 - Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 

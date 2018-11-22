@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021189"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812282"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activar las características de integración del servidor de informes y Power View en SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021189"
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
- Si instala el complemento de Reporting Services para productos de SharePoint 2010 después de instalar el producto de SharePoint, las características de integración del servidor de informes y de Power View se activarán únicamente para colecciones de sitios raíz. Para las demás colecciones de sitios, debe activar manualmente las características. Por ejemplo, si tiene una colección de sitios de **http://[nombre de mi servidor]/sites/[nombre de la colección de sitios]** debe activar manualmente las características de la colección de sitios de Reporting Services.  
+ Si instala el complemento de Reporting Services para productos de SharePoint 2010 después de instalar el producto de SharePoint, las características de integración del servidor de informes y de Power View se activarán únicamente para colecciones de sitios raíz. Para las demás colecciones de sitios, debe activar manualmente las características. Por ejemplo, si tiene una colección de sitios de **https://[nombre de mi servidor]/sitios/[nombre de la colección de sitios]** debe activar manualmente las características de la colección de sitios de Reporting Services.  
   
  Cuando no hay colecciones de sitios raíz, el complemento de Reporting Services registrará un mensaje similar al siguiente.  
   

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4b53d5804668a46ade48d0beb41eae8fb7650374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794393"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601689"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Auditoría local para colección de comentarios sobre el uso de SQL Server
 
@@ -27,7 +27,7 @@ ms.locfileid: "47794393"
 
 ## <a name="introduction"></a>Introducción
 
-Microsoft SQL Server contiene características habilitadas para Internet que pueden recopilar y enviar información sobre el equipo o dispositivo. Esto se denomina *información estándar del equipo*. El componente de Auditoría local de [colección de comentarios sobre el uso de SQL Server](http://support.microsoft.com/kb/3153756) escribe los datos que recopila el servicio en una carpeta designada y que representa los datos (registros) que se enviarán a Microsoft. El propósito de la Auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.  
+Microsoft SQL Server contiene características habilitadas para Internet que pueden recopilar y enviar información sobre el equipo o dispositivo. Esto se denomina *información estándar del equipo*. El componente de Auditoría local de [colección de comentarios sobre el uso de SQL Server](https://support.microsoft.com/kb/3153756) escribe los datos que recopila el servicio en una carpeta designada y que representa los datos (registros) que se enviarán a Microsoft. El propósito de la Auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.  
 
 A partir de SQL Server 2016 CU2, Auditoría local se puede configurar al nivel de instancia para Motor de base de datos de SQL Server y Analysis Services (SSAS). En SQL Server 2016 CU4 y SQL Server 2016 SP1, la auditoría local también está habilitada para SQL Server Integration Services (SSIS). Otros componentes de SQL Server que se instalan durante la configuración y herramientas de SQL Server que se descargan o instalan después de la configuración no cuentan con la funcionalidad de Auditoría local para la colección de comentarios sobre el uso. 
 
@@ -37,7 +37,7 @@ A continuación, aparecen los requisitos previos para habilitar Auditoría local
 
 1. La instancia aplica una revisión a SQL Server 2016 RTM CU2 o a una versión posterior. En el caso de Integration Services, la revisión de la instancia se aplica a SQL 2016 RTM CU4 o a SQL 2016 SP1
 
-1. El usuario debe ser un administrador del sistema o debe tener un rol con acceso para agregar y modificar una clave del Registro, crear carpetas, administrar la seguridad de las carpetas y detener e iniciar un servicio de Windows.  
+1. El usuario debe ser un administrador del sistema o debe tener un rol con acceso para agregar y modificar una clave del Registro, crear carpetas, administrar la seguridad de las carpetas y detener e iniciar un servicio de Windows.  
 
 ## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>Pasos de configuración previa antes de activar la Auditoría local 
 
@@ -66,7 +66,7 @@ Complete los pasos siguientes para obtener la cuenta de inicio de sesión del se
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurar una carpeta nueva para los archivos de Auditoría local.    
 
-Cree una carpeta nueva (directorio de Auditoría local) donde Auditoría local escribirá los registros. Por ejemplo, la ruta de acceso completa al directorio de Auditoría local para una instancia predeterminada del motor de la base de datos sería la siguiente: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Cree una carpeta nueva (directorio de Auditoría local) donde Auditoría local escribirá los registros. Por ejemplo, la ruta de acceso completa al directorio de Auditoría local para una instancia predeterminada del motor de la base de datos sería la siguiente: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
   >[!NOTE] 
   >Configure la ruta de acceso al directorio para Auditoría local fuera de la ruta de instalación de SQL Server para evitar que el hecho de permitir la funcionalidad de auditoría y de aplicar revisiones provoque problemas potenciales con SQL Server.
@@ -127,7 +127,7 @@ Cree una carpeta nueva (directorio de Auditoría local) donde Auditoría local e
 
 Una vez que haya seguido los pasos de configuración previa, puede activar Auditoría local. Para ello, use una cuenta de Administrador del sistema o un rol similar con acceso para modificar las claves del Registro a fin de activar o desactivar Auditoría local con los pasos siguientes. 
 
-1. Inicie **regedit**.  
+1. Inicie **regedit**.  
 
 1. Vaya a la [ruta](#create-a-registry-key-setting-to-configure-local-audit-target-directory) de CPE correspondiente. 
 
@@ -162,9 +162,9 @@ Auditoría local generará un archivo de registro al día. Los archivos de regis
 
 ## <a name="maintenance"></a>Mantenimiento 
 
-1. Para limitar el uso del espacio en disco que ocupan los archivos que escribe Auditoría local, configure una directiva o un trabajo periódico para limpiar el directorio de Auditoría local y quitar los archivos antiguos e innecesarios.  
+1. Para limitar el uso del espacio en disco que ocupan los archivos que escribe Auditoría local, configure una directiva o un trabajo periódico para limpiar el directorio de Auditoría local y quitar los archivos antiguos e innecesarios.  
 
-2. Proteja la ruta de acceso al directorio de Auditoría local para que solo las personas adecuadas puedan tener acceso a él. Tenga en cuenta que los archivos de registro contienen información según lo descrito en [Cómo configurar SQL Server 2016 para enviar comentarios a Microsoft](http://support.microsoft.com/kb/3153756). El acceso a este archivo debe evitar que la mayoría de los miembros de su organización pueda leerlo.  
+2. Proteja la ruta de acceso al directorio de Auditoría local para que solo las personas adecuadas puedan tener acceso a él. Tenga en cuenta que los archivos de registro contienen información según lo descrito en [Cómo configurar SQL Server 2016 para enviar comentarios a Microsoft](https://support.microsoft.com/kb/3153756). El acceso a este archivo debe evitar que la mayoría de los miembros de su organización pueda leerlo.  
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>Diccionario de datos de estructura de datos de salida de Auditoría local 
 
@@ -177,9 +177,9 @@ Auditoría local generará un archivo de registro al día. Los archivos de regis
 - Los valores**data** contienen la salida de la ejecución de consulta correspondiente, que usó **queryTimeInTicks**.
 - Los valores**queryIdentifiers** para consultas T-SQL tienen la definición de consulta T-SQL almacenada en la consulta.
 
-| Jerarquía de información de Auditoría local lógica | Columnas relacionadas |
+| Jerarquía de información de Auditoría local lógica | Columnas relacionadas |
 | ------ | -------|
-| Encabezado | emitTime, schemaVersion 
+| Encabezado | emitTime, schemaVersion 
 | Máquina | operatingSystem 
 | Instancia | instanceUniqueID, correlationID y clientVersion 
 | Session | sessionID, traceName 
@@ -188,12 +188,12 @@ Auditoría local generará un archivo de registro al día. Los archivos de regis
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definición y ejemplos de pares nombre-valor 
 
-Las columnas siguientes representan el orden de la salida de archivo de Auditoría local. Se usa un hash unidireccional con SHA 256 para anonimizar los valores para varias de las columnas siguientes.  
+Las columnas siguientes representan el orden de la salida de archivo de Auditoría local. Se usa un hash unidireccional con SHA 256 para anonimizar los valores para varias de las columnas siguientes.  
 
 | Nombre | Descripción | Valores de ejemplo
 |-------|--------| ----------|
 |instanceUniqueID| Identificador de instancia anonimizada | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|schemaVersion| La versión del esquema de SQLCEIP |  3 
+|schemaVersion| La versión del esquema de SQLCEIP |  3 
 |emitTime |Hora de emisión del punto de datos en hora UTC | 2016-09-08T17:20:22.1124269Z 
 |sessionID | El identificador de la sesión del servicio SQLCEIP | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 |correlationId | El marcador de posición para un identificador adicional | 0 
@@ -204,8 +204,8 @@ Las columnas siguientes representan el orden de la salida de archivo de Auditor�
 |traceName | Categorías de seguimientos: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Un identificador de la consulta | SQLServerProperties.002 
 |datos   | El resultado de la información recopilada en queryIdentifier como salida de la consulta T-SQL, la sesión de XE o la aplicación |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Query| Si corresponde, la definición de consulta T-SQL relacionada con el identificador queryIdentifier que genera los datos.        El servicio CEIP de SQL Server no carga este componente. Solo se incluye en Auditoría local como referencia para los clientes.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | La duración necesaria para que se ejecute la consulta con la siguiente categoría de seguimiento: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|Query| Si corresponde, la definición de consulta T-SQL relacionada con el identificador queryIdentifier que genera los datos.        El servicio CEIP de SQL Server no carga este componente. Solo se incluye en Auditoría local como referencia para los clientes.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | La duración necesaria para que se ejecute la consulta con la siguiente categoría de seguimiento: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Categorías de seguimiento 
 Actualmente recopilamos las siguientes categorías de seguimiento: 
@@ -263,7 +263,7 @@ A continuación, aparece un fragmento de una salida de archivo JSON de Auditorí
         "Version": "Microsoft SQL Server 2017 (RTM-CU6) (KB4101464) - 14.0.3025.34 (X64) \n\tApr  9 2018 18:00:41 \n\tCopyright (C) 2017 Microsoft Corporation\n\tEnterprise Edition: Core-based Licensing (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 16299: )\n"
       }
     ],
-    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolybaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolybaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
+    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolyBaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolyBaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
     "queryTimeInTicks": 0
   },
   {
@@ -322,7 +322,7 @@ Los administradores de bases de datos deberán administrar automáticamente la l
 
 **¿Existe algún cliente o herramienta que se pueda usar para leer esta salida JSON?**
 Es posible leer la entrada con el Bloc de notas, Visual Studio o cualquier lector de JSON de su preferencia.
-De manera alternativa, puede leer el archivo JSON y analizar los datos de una instancia de SQL Server 2016 como se muestra a continuación. Para más detalles sobre cómo leer un archivo JSON en SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importación de archivos JSON a SQL Server con OPENROWSET [BULK] y OPENJSON [Transact-SQL]).
+De manera alternativa, puede leer el archivo JSON y analizar los datos de una instancia de SQL Server 2016 como se muestra a continuación. Para más detalles sobre cómo leer un archivo JSON en SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importación de archivos JSON a SQL Server con OPENROWSET [BULK] y OPENJSON [Transact-SQL]).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

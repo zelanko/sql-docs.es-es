@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806725"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606565"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
@@ -35,11 +35,9 @@ En el artículo se explica cómo usar PolyBase en una instancia de SQL Server pa
 
 - PolyBase es compatible con dos proveedores de Hadoop: Hortonworks Data Platform (HDP) y Cloudera Distributed Hadoop (CDH). Hadoop sigue el patrón “Principal.Secundaria.Versión” para sus revisiones nuevas y se admiten todas las versiones dentro de una revisión principal y secundaria compatible. Se admiten los siguientes proveedores de Hadoop:
 
-  - Hortonworks HDP 1.3 en Linux y Windows Server  
-  - Hortonworks HDP 2.1 - 2.6 en Linux
-  - Hortonworks HDP 2.1 - 2.3 en Windows Server  
-  - Cloudera CDH 4.3 en Linux  
-  - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 en Linux
+  - Hortonworks HDP 1.3, 2.1-2.6, 3.0 en Linux
+  - Hortonworks HDP 1.3, 2.1-2.3 en Window Server
+  - Cloudera CDH 4.3, 5.1 – 5.5, 5.9 - 5.13 en Linux
 
 > [!NOTE]
 > PolyBase admite las zonas de cifrado de Hadoop a partir de SQL Server 2016 SP1 CU7 y SQL Server 2017 CU3. Si se utilizan [grupos de escalabilidad horizontal PolyBase](polybase-scale-out-groups.md), todos los nodos de proceso deben estar también en una compilación que incluya compatibilidad con las zonas de cifrado de Haddop.
@@ -75,7 +73,7 @@ Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicac
 1. Busque el archivo **yarn-site.xml** en la ruta de acceso de instalación de SQL Server. Normalmente, la ruta de acceso es:  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. En el equipo de Hadoop, busque el archivo análogo en el directorio de configuración de Hadoop. En el archivo, busque y copie el valor de la clave de configuración yarn.application.classpath.  

@@ -13,12 +13,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
 ms.date: 03/07/2017
-ms.openlocfilehash: 204e8d3e85c76edac6ccc56e8fd3a5b51975bd28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63cee227f67a6e4c07974a296e3c512318d83fe2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681463"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813208"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "47681463"
   
 10. En el cuadro de texto **TargetServerURL** , escriba la dirección URL del servidor de informes de destino. Antes de publicar un informe, establezca esta propiedad en la dirección URL de un servidor de informes válido. Al publicar en un servidor de informes que se ejecute en modo nativo, use la dirección URL del directorio virtual del servidor de informes (por ejemplo, http:*//servidor/servidorDeInformes* o https:*//servidor/servidorDeInformes)*. Se trata del directorio virtual del servidor de informes, y no del Administrador de informes.  
   
-     Al publicar en un servidor de informes que se ejecute en el modo integrado de SharePoint, use una dirección URL a un sitio de nivel superior o un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, http://*nombreDeServidor*, http://*nombreDeServidor*/*sitio* o http://*nombreDeServidor*/*sitio*/*subsitio*).  
+     Al publicar en un servidor de informes que se ejecute en el modo integrado de SharePoint, use una dirección URL a un sitio de nivel superior o un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, https://*nombreDeServidor*, https://*nombreDeServidor*/*sitio* o https://*nombreDeServidor*/*sitio*/*subsitio*).  
   
 ### <a name="to-set-configuration-manager-properties"></a>Para establecer las propiedades del Administrador de configuración  
   

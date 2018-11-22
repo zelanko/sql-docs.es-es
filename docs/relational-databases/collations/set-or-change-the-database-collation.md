@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b9a1a8be87c54858c760f4b53d30a83799ec84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62ac97c76f3b08a7dc13258fe2d45e88c9f5500a
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767083"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571334"
 ---
 # <a name="set-or-change-the-database-collation"></a>Establecer o cambiar la intercalación de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En este tema se describe cómo establecer y cambiar la intercalación de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si no se especifica ninguna intercalación, se utiliza la del servidor.  
  
 > [!NOTE]
-> No se puede cambiar la intercalación de una base de datos de Azure SQL Database después de crearla.
+> No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
  **En este tema**  
   
@@ -44,13 +44,15 @@ ms.locfileid: "47767083"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Las intercalaciones exclusivas de Unicode de Windows solo se pueden usar con la cláusula COLLATE para aplicar intercalaciones a los tipos de datos **nchar**, **nvarchar**y **ntext** de nivel de columna y de nivel de datos de expresión. No se pueden utilizar con la cláusula COLLATE para cambiar la intercalación de una instancia de la base de datos o del servidor.  
   
 -   Si la intercalación especificada o la intercalación usada por el objeto al que se hace referencia utiliza una página de códigos no admitida por Windows, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra un error.  
+
+-   No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   

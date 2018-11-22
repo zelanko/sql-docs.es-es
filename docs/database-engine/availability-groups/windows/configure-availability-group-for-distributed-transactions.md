@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411775"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639132"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurar un grupo de disponibilidad para las transacciones distribuidas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50411775"
 A fin de garantizar que las transacciones distribuidas sucedan, el grupo de disponibilidad debe estar configurado para registrar las bases de datos como administradores de recursos de transacción distribuida.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. En las versiones de [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] no presenta esta limitación. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. En las versiones de [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] no presenta esta limitación. 
 >
 >En [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], los pasos de configuración son los mismos que en [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -45,7 +45,7 @@ Antes de configurar un grupo de disponibilidad que admita transacciones distribu
 
 * Todas las instancias de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] que participan en la transacción distribuida deben pertenecer a la versión [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] o posterior.
 
-* Los grupos de disponibilidad deben ejecutarse en Windows Server 2016 o Windows Server 2012 R2. Para Windows Server 2012 R2, debe instalar la actualización de KB3090973 disponible en [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+* Los grupos de disponibilidad deben ejecutarse en Windows Server 2016 o Windows Server 2012 R2. Para Windows Server 2012 R2, debe instalar la actualización de KB3090973 disponible en [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Crear un grupo de disponibilidad que admita transacciones distribuidas
 
@@ -180,16 +180,16 @@ Después de confirmar o revertir la transacción, puede usar `ALTER DATABASE` pa
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-Para más información sobre cómo resolver transacciones dudosas, vea [Resolve Transactions Manually](http://technet.microsoft.com/library/cc754134.aspx) (Resolver transacciones manualmente).
+Para más información sobre cómo resolver transacciones dudosas, vea [Resolve Transactions Manually](https://technet.microsoft.com/library/cc754134.aspx) (Resolver transacciones manualmente).
 
 ## <a name="next-steps"></a>Next Steps  
 
-[Transacciones distribuidas](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[Transacciones distribuidas](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transactions - Always On Availability Groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md) (Transacciones: grupos de disponibilidad AlwaysOn y creación de reflejo de la base de datos)  
 
-[Supporting XA Transactions](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Compatibilidad con las transacciones XA)
+[Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Compatibilidad con las transacciones XA)
 
-[How It Works: Session/SPID (–2) for DTC Transactions](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [–2] en las transacciones de DTC)
+[How It Works: Session/SPID (–2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [–2] en las transacciones de DTC)

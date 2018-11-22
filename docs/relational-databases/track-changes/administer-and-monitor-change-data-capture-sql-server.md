@@ -1,12 +1,10 @@
 ---
 title: Administrar y supervisar la captura de datos modificados (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -16,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d12ba58b2257425356b01c38c8fddeb41f6336a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780033"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560522"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +76,7 @@ ms.locfileid: "47780033"
  Cuando se realiza una limpieza, la marca de límite inferior para todas las instancias de captura se actualiza inicialmente en una única transacción. A continuación, intenta quitar las entradas obsoletas de las tablas de cambios y de la tabla cdc.lsn_time_mapping. El valor de umbral configurable limita el número de entradas que se eliminan en una única instrucción. El que no se pueda realizar la eliminación en alguna tabla individual no impide que la operación se intente en las tablas restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personalización del trabajo de limpieza  
- La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Dado que los procedimientos de limpieza subyacentes se basan en **lsn** en lugar de en el tiempo, se puede utilizar la cantidad de estrategias que se desee para determinar el **lsn** más bajo que se ha de conservar en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo **lsn** para limpiar las tablas de cambios de todas las bases de datos, también se puede llamar al procedimiento de limpieza subyacente para limpiar en el nivel de la instancia de captura.  
+ La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Como los procedimientos de limpieza subyacentes se basan en **lsn** en lugar de en el tiempo, se puede usar cualquier número de estrategias para determinar el **lsn** más bajo que se va a conservar en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo **lsn** para limpiar las tablas de cambios de todas las bases de datos, también se puede llamar al procedimiento de limpieza subyacente para limpiar en el nivel de la instancia de captura.  
   
 ##  <a name="Monitor"></a> Supervisar el proceso de captura de datos modificados  
  Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos vistas de administración dinámica para ayudar a supervisar la captura de datos modificados: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) y [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
@@ -86,18 +84,24 @@ ms.locfileid: "47780033"
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identificar las sesiones con conjuntos de resultados vacíos  
  Cada fila de sys.dm_cdc_log_scan_sessions representa una sesión de examen del registro (excepto la fila con el identificador 0). Una sesión de examen del registro es equivalente a una ejecución de [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). Durante una sesión, el examen puede devolver los cambios o un resultado vacío. Si el conjunto de resultados está vacío, la columna empty_scan_count de sys.dm_cdc_log_scan_sessions se establece en 1. Si hay conjuntos de resultados vacíos consecutivos, por ejemplo si el trabajo de captura se está ejecutando continuamente, el valor empty_scan_count de la última fila existente se incrementa. Por ejemplo, si sys.dm_cdc_log_scan_sessions ya contiene 10 filas para los exámenes que devolvieron los cambios y hay seguidos cinco resultados vacíos, la vista contiene 11 filas. La última fila tiene el valor 5 en la columna empty_scan_count. Para determinar las sesiones que tenían un examen vacío, ejecute la consulta siguiente:  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### <a name="determine-latency"></a>Determinar la latencia  
  La vista de administración sys.dm_cdc_log_scan_sessions incluye una columna que registra la latencia de cada sesión de captura. La latencia se define como el tiempo transcurrido entre que una transacción se confirma en una tabla de origen y la confirmación en la tabla de cambios de la última transacción capturada. La columna de latencia solo se rellena para las sesiones activas. Para las sesiones con un valor mayor que 0 en la columna empty_scan_count, la columna de latencia se establece en 0. La consulta siguiente devuelve la latencia promedio para las sesiones más recientes:  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  Puede utilizar los datos de la latencia para determinar la rapidez o lentitud con que el proceso de captura procesa las transacciones. Estos datos son muy útiles cuando el proceso de captura se está ejecutando continuamente. Si el proceso de captura se ejecuta según una programación, la latencia puede ser alta debido a la diferencia temporal entre las transacciones que se confirman en la tabla de origen y el proceso de captura que se ejecuta en su momento programado.  
   
  Otra medida importante de la eficacia del proceso de captura es el rendimiento. Se trata del número promedio de comandos por segundo que se procesan durante cada sesión. Para determinar el rendimiento de una sesión, divida el valor de la columna command_count por el valor de la columna de duración. La consulta siguiente devuelve el rendimiento promedio para las sesiones más recientes:  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>Usar el recopilador de datos para recopilar datos de muestreo  
  El recopilador de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite reunir instantáneas de datos de cualquier tabla o vista de administración dinámica y generar un almacenamiento de datos de rendimiento. Cuando la captura de datos modificados está habilitada en una base de datos, es útil tomar instantáneas de las vistas sys.dm_cdc_log_scan_sessions y sys.dm_cdc_errors a intervalos regulares para analizarlas posteriormente. El procedimiento siguiente configura un recopilador de datos para reunir datos de muestra de la vista de administración sys.dm_cdc_log_scan_sessions.  
@@ -130,10 +134,10 @@ ms.locfileid: "47780033"
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -146,7 +150,7 @@ ms.locfileid: "47780033"
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

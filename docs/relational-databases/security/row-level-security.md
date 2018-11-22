@@ -1,7 +1,7 @@
 ---
 title: Seguridad de nivel de fila | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2017
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,29 +17,31 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d75e4dd2499261fc28f97796d865fa71709bc663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13e2f3c63a9712ffa04bf7842815a51ba5a420c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814683"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672424"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   ![Gráfico de seguridad de nivel de fila](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de seguridad de nivel de fila")  
   
- La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos según las características del usuario que ejecuta una consulta (por ejemplo, pertenencia a grupos o contexto de ejecución).  
+ La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos según las características del usuario que ejecuta una consulta (por ejemplo, la pertenencia a grupos o el contexto de ejecución).  
   
- La seguridad de nivel de fila (RLS) simplifica el diseño y la codificación de la seguridad de la aplicación. RLS permite implementar restricciones en el acceso a las filas de datos. Por ejemplo, garantizar que los trabajadores puedan acceder solo a las filas de datos pertinentes para su departamento o restringir el acceso a los datos de un cliente solo a los datos relevantes para su empresa.  
+ La seguridad de nivel de fila (RLS) simplifica el diseño y la codificación de la seguridad de la aplicación. RLS permite implementar restricciones en el acceso a las filas de datos. Por ejemplo, puede garantizar que los trabajadores solo accedan a las filas de datos pertinentes para su departamento, o bien restringir el acceso a los datos de un cliente solo a los datos relevantes para su empresa.  
   
  La lógica de la restricción de acceso está ubicada en el nivel de base de datos en lugar de estar alejado de los datos en otro nivel de aplicación. El sistema de base de datos aplica las restricciones de acceso cada vez que se intenta acceder a los datos desde cualquier nivel. Esto hace que el sistema de seguridad sea más sólido y confiable ya que reduce la superficie del sistema de seguridad.  
   
- Implementar RLS con la instrucción de [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] y los predicados creados como [funciones Inline con valores de tabla](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+ Implemente RLS mediante la instrucción [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] y los predicados creados como [funciones con valores de tabla insertadas](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerla](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerlo](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
+> [!NOTE]
+> Azure SQL Data Warehouse solo admite los predicados de filtro. En la actualidad, los predicados de bloqueo no se admiten en Azure SQL Data Warehouse.
 
 ##  <a name="Description"></a> Descripción  
  RLS admite dos tipos de predicados de seguridad.  
@@ -48,9 +50,9 @@ ms.locfileid: "47814683"
   
 -   Los predicados de bloqueo bloquean explícitamente las operaciones de escritura (AFTER INSERT, AFTER UPDATE, BEFORE UPDATE, BEFORE DELETE) que infringen el predicado.  
   
- El acceso a los datos de nivel de fila de una tabla está restringido por un predicado de seguridad que se define como una función con valores de tabla insertada. Luego, la función se invoca y una directiva de seguridad la aplica. En el caso de los predicados de filtro, no hay ninguna indicación para la aplicación de que se han filtrado filas del conjunto de resultados; si se filtran todas las filas, se devolverá un conjunto nulo. En el caso de los predicados de bloqueo, las operaciones que infrinjan el predicado generarán un error.  
+ El acceso a los datos de nivel de fila de una tabla está restringido por un predicado de seguridad que se define como una función con valores de tabla insertada. Luego, la función se invoca y una directiva de seguridad la aplica. En el caso de los predicados de filtro, la aplicación desconoce las filas que se han filtrado del conjunto de resultados; si se filtran todas, se devolverá un conjunto nulo. En el caso de los predicados de bloqueo, las operaciones que infrinjan el predicado generarán un error.  
   
- Los predicados de filtro se aplican al leer los datos de la tabla base y afectan a todas las operaciones get: **SELECT**, **DELETE** (por ejemplo, el usuario no puede eliminar las filas filtradas) y **UPDATE** (por ejemplo, el usuario no puede actualizar las filas filtradas, aunque es posible actualizar las filas de modo que se filtren posteriormente). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
+ Los predicados de filtro se aplican al leer los datos de la tabla base y afectan a todas las operaciones get: **SELECT**, **DELETE** (el usuario no puede eliminar las filas filtradas) y **UPDATE** (el usuario no puede actualizar las filas filtradas, aunque es posible actualizar las filas de modo que se filtren después). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
   
 -   Los predicados AFTER INSERT y AFTER UPDATE pueden impedir que los usuarios actualicen las filas con valores que infrinjan el predicado.  
   
@@ -62,7 +64,7 @@ ms.locfileid: "47814683"
   
 -   Puede definir una función de predicado que se combine con otra tabla o invoque una función. Si la directiva de seguridad se crea con `SCHEMABINDING = ON`, entonces se puede acceder a la función o combinación desde la consulta y funciona como se espera sin comprobaciones de permisos adicionales. Si la directiva de seguridad se crea con `SCHEMABINDING = OFF`, entonces los usuarios necesitarán los permisos **SELECT** o **EXECUTE** en estas funciones y tablas adicionales para consultar la tabla de destino.
   
--   Puede emitir una consulta a una tabla que tenga un predicado de seguridad definido pero deshabilitado. Todas las filas que se habrían filtrado o bloqueado no se ven afectadas.  
+-   Puede emitir una consulta a una tabla que tenga un predicado de seguridad definido pero deshabilitado. Todas las filas que se han filtrado o bloqueado no se ven afectadas.  
   
 -   Si el usuario dbo, un miembro del rol **db_owner** o las consultas del propietario de la tabla en una tabla que tiene una directiva de seguridad definida y habilitada, las filas se filtran o bloquean según indique la directiva de seguridad.  
   
@@ -76,13 +78,13 @@ ms.locfileid: "47814683"
   
  Los predicados de filtro tienen el siguiente comportamiento:  
   
--   Definir una directiva de seguridad que filtre las filas de una tabla. La aplicación no es consciente de que las filas se han filtrado para las operaciones **SELECT**, **UPDATE**y **DELETE** , incluidas las situaciones en las que se han filtrado todas las filas. La aplicación puede **INSERT** cualquier fila, independientemente de si se filtrarán o no durante cualquier otra operación.  
+-   Definir una directiva de seguridad que filtre las filas de una tabla. La aplicación no es consciente de las filas que se han filtrado para las operaciones **SELECT**, **UPDATE** y **DELETE**, incluidas las situaciones en las que se han filtrado todas las filas. La aplicación puede aplicar **INSERT** a cualquier fila, con independencia de que se filtren o no durante cualquier otra operación.  
   
  Los predicados de bloqueo tienen el siguiente comportamiento:  
   
 -   Los predicados de bloqueo para UPDATE se dividen en operaciones independientes para BEFORE y AFTER. En consecuencia no puede, por ejemplo, bloquear a los usuarios para que no actualicen una fila con un valor mayor que el actual. Si se requiere este tipo de lógica, debe usar desencadenadores con las tablas intermedias DELETED e INSERTED para hacer referencia a los valores antiguos y nuevos juntos.  
   
--   El optimizador no comprobará un predicado de bloqueo AFTER UPDATE si no se ha cambiado ninguna de las columnas usadas por la función de predicado. Por ejemplo: Alice no debería poder cambiar un salario para que sea superior a 100 000, pero debería poder cambiar la dirección de un empleado cuyo salario ya sea superior a 100 000 (y, por tanto, ya infringe el predicado).  
+-   El optimizador no comprobará un predicado de bloqueo AFTER UPDATE si no se ha cambiado ninguna de las columnas usadas por la función de predicado. Por ejemplo: Alice no debería poder cambiar un salario para que sea superior a 100 000, pero debería poder cambiar la dirección de un empleado cuyo salario ya es superior a 100 000 (porque ya infringe el predicado).  
   
 -   No se han realizado cambios en las API masivas, incluida BULK INSERT. Esto significa que los predicados de bloqueo AFTER INSERT se aplicarán a las operaciones de inserción masivas como si fueran operaciones de inserción normales.  
   
@@ -94,11 +96,11 @@ ms.locfileid: "47814683"
   
 -   Un banco puede crear una directiva para restringir el acceso a las filas de datos financieros según la división de negocio del empleado, o según el rol del empleado dentro de la empresa.  
   
--   Una aplicación multiinquilino puede crear una directiva para aplicar una separación lógica de cada fila de datos del inquilino de las filas de otros inquilinos. Las eficiencias se obtienen con el almacenamiento de datos para varios inquilinos en una sola tabla. Por supuesto, cada inquilino solo puede ver sus filas de datos.  
+-   Una aplicación multiinquilino puede crear una directiva para aplicar una separación lógica de cada fila de datos del inquilino de las filas de otros inquilinos. Las eficiencias se obtienen con el almacenamiento de datos para varios inquilinos en una sola tabla. Cada inquilino solo puede ver sus filas de datos.  
   
  Los predicados de filtro RLS son funcionalmente equivalentes a anexar una cláusula **WHERE** . El predicado puede ser tan sofisticado como dictan las prácticas empresariales o la cláusula puede ser tan simple como `WHERE TenantId = 42`.  
   
- En términos más formales, RLS presenta control de acceso basado en predicado. Ofrece una evaluación flexible, centralizada y basada en predicados que puede tener en cuenta metadatos o cualquier otro criterio que el administrador determine como apropiado. El predicado se usa como un criterio para determinar si el usuario tiene o no el acceso adecuado a los datos según los atributos del usuario. El control de acceso basado en etiquetas se puede implementar con el control de acceso basado en predicados.  
+ En términos más formales, RLS presenta control de acceso basado en predicado. Ofrece una evaluación flexible, centralizada y basada en predicados que puede tener en cuenta metadatos o cualquier otro criterio que el administrador determine como apropiado. El predicado se usa como un criterio para determinar si el usuario tiene el acceso adecuado a los datos según los atributos del usuario. El control de acceso basado en etiquetas se puede implementar con el control de acceso basado en predicados.  
   
   
 ##  <a name="Permissions"></a> Permissions  
@@ -121,11 +123,11 @@ ms.locfileid: "47814683"
   
 -   Se recomienda crear un esquema independiente para los objetos RLS (directiva de seguridad y función de predicado).  
   
--   El permiso **ALTER ANY SECURITY POLICY** está destinado a los usuarios con privilegios elevados (como un administrador de directivas de seguridad). El administrador de directivas de seguridad necesita el permiso **SELECT** en las tablas que protege.  
+-   El permiso **ALTER ANY SECURITY POLICY** está destinado a los usuarios con privilegios elevados (como un administrador de directivas de seguridad). El administrador de directivas de seguridad no necesita el permiso **SELECT** en las tablas que protege.  
   
 -   Evite las conversiones de tipos en funciones de predicado para evitar posibles errores en tiempo de ejecución.  
   
--   Evite la recursividad en funciones de predicado siempre que sea posible para evitar la degradación del rendimiento. El optimizador de consultas intentará detectar las recursividades directas pero no garantiza encontrar recursividad indirecta (es decir, donde una segunda función llame a la función de predicado).  
+-   Evite la recursividad en funciones de predicado siempre que sea posible para evitar la degradación del rendimiento. El optimizador de consultas intentará detectar las recursiones directas, pero no se garantiza que se encuentren recursiones indirectas (es decir, donde una segunda función llame a la función de predicado).  
   
 -   Evite el uso de combinaciones de tablas de forma excesiva en funciones de predicado para maximizar el rendimiento.  
   
@@ -141,7 +143,7 @@ ms.locfileid: "47814683"
    
   
 ##  <a name="SecNote"></a> Nota de seguridad: ataques del lado de canal  
- **Administrador de directivas de seguridad malintencionado:** es importante observar que un administrador de directivas de seguridad malintencionado, con suficientes permisos para crear una directiva de seguridad en una columna confidencial, y con permisos para crear o modificar funciones con valores de tabla insertadas, puede conspirar con otro usuario que tenga permisos SELECT en una tabla para exfiltrar datos creando malintencionadamente funciones con valores de tabla insertadas diseñadas para usar ataques del lado de canal para inferir los datos. Estos ataques necesitarían una confabulación (o excesivos permisos concedidos a un usuario malintencionado) y es probable que necesiten varias iteraciones de modificación de la directiva (que necesite permisos para quitar el predicado para romper el enlace de esquema), modificación de las funciones con valores de tabla insertada y ejecución repetida de instrucciones SELECT en la tabla de destino. Se recomienda limitar los permisos según sea necesario y supervisar cualquier actividad sospechosa, como cambiar constantemente las directivas y las funciones con valores de tabla insertada relacionadas con la seguridad de nivel de fila.  
+ **Administrador de directivas de seguridad malintencionado:** es importante observar que un administrador de directivas de seguridad malintencionado, con permisos suficientes para crear una directiva de seguridad en una columna confidencial, y con permisos para crear o modificar funciones con valores de tabla insertadas, puede conspirar con otro usuario que tenga permisos SELECT en una tabla para exfiltrar datos creando malintencionadamente funciones con valores de tabla insertadas diseñadas para usar ataques del lado de canal para inferir los datos. Estos ataques necesitarían una confabulación (o excesivos permisos concedidos a un usuario malintencionado) y es probable que necesiten varios cambios de la directiva (con permisos para quitar el predicado con el fin de romper el enlace de esquema), modificación de las funciones con valores de tabla insertadas y ejecución repetida de instrucciones SELECT en la tabla de destino. Se recomienda limitar los permisos según sea necesario y supervisar cualquier actividad sospechosa, como el cambio constante de las directivas y las funciones con valores de tabla insertadas relacionadas con la seguridad de nivel de fila.  
   
  **Consultas cuidadosamente diseñadas:** es posible perder información mediante el uso de consultas cuidadosamente diseñadas. Por ejemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiría que un usuario malintencionado sepa que el salario de Juan García es 100.000 $. Aunque hay un predicado de seguridad para impedir que un usuario malintencionado consulte directamente el salario de otras personas, el usuario puede determinar el momento en que la consulta devuelve una excepción de división por cero.  
    
@@ -149,23 +151,23 @@ ms.locfileid: "47814683"
 ##  <a name="Limitations"></a> Compatibilidad entre características  
  En general, la seguridad de nivel de fila funcionará como se espera en todas las características. Sin embargo, hay algunas excepciones. En esta sección se describen varias notas y advertencias sobre el uso de la seguridad de nivel de fila con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **DBCC SHOW_STATISTICS** informa de las estadísticas en datos sin filtrar y, por lo tanto, puede perder información si no lo protege una directiva de seguridad. Por esta razón, para ver el objeto de estadísticas de una tabla con una directiva de seguridad de nivel de fila, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor sysadmin, del rol fijo de base de datos db_owner o del rol fijo de base de datos db_ddladmin.  
+-   **DBCC SHOW_STATISTICS** informa de las estadísticas en datos sin filtrar y puede filtrar información que no esté protegida con una directiva de seguridad. Por esta razón, para ver el objeto de estadísticas de una tabla con una directiva de seguridad de nivel de fila, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor sysadmin, del rol fijo de base de datos db_owner o del rol fijo de base de datos db_ddladmin.  
   
 -   **Filestream:** RLS no es compatible con Filestream.  
   
--   **Polybase:** RLS no es compatible con Polybase.  
+-   **PolyBase:** RLS no es compatible con PolyBase.  
   
 -   **tablas optimizadas para memoria**la función con valores de tabla insertados que se usa como predicado de seguridad en una tabla optimizada para memoria debe definirse mediante la opción `WITH NATIVE_COMPILATION` . Con esta opción, se prohibirán las características del lenguaje incompatibles con las tablas optimizadas para memoria y se emitirá el error adecuado en tiempo de creación. Para obtener más información, vea la sección **Seguridad de nivel de fila en tablas con optimización para memoria** en [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Vistas indizadas:** en general, se pueden crear directivas de seguridad sobre las vistas y se pueden crear vistas sobre las tablas que están enlazadas mediante directivas de seguridad. Sin embargo, no se pueden crear vistas indexadas sobre las tablas que tienen una directiva de seguridad, ya que las búsquedas de filas mediante el índice podrían omitir la directiva.  
   
--   **Captura de datos modificados** la captura de datos modificados puede perder filas enteras que se deben filtrar a miembros de **db_owner** o a usuarios que son miembros del rol de "acceso" especificado cuando se habilita CDC para una tabla (Nota: Puede establecerlo explícitamente en **NULL** para permitir que todos los usuarios tengan acceso a los datos modificados). De hecho, **db_owner** y los miembros de este rol de acceso pueden ver todos los cambios en los datos de una tabla, incluso si hay una directiva de seguridad en la tabla.  
+-   **Captura de datos modificados** La captura de datos modificados puede filtrar filas enteras que se deben filtrar a miembros de **db_owner** o a usuarios que son miembros del rol de "acceso" especificado cuando se habilita CDC para una tabla (Nota: Esta función se puede establecer de forma explícita en **NULL** para permitir que todos los usuarios tengan acceso a los datos modificados). De hecho, **db_owner** y los miembros de este rol de acceso pueden ver todos los cambios en los datos de una tabla, incluso si hay una directiva de seguridad en la tabla.  
   
 -   **Seguimiento de cambios:** el seguimiento de cambios puede perder la clave principal de las filas que se deben filtrar a los usuarios con permisos **SELECT** y **VIEW CHANGE TRACKING** . No se pierden los valores de datos reales; solo el hecho de que la columna A se actualizó, se insertó o se eliminó de la fila con la clave principal B. Esto es problemático si la clave principal contiene un elemento confidencial, como un número del seguro social. Sin embargo, en la práctica, **CHANGETABLE** casi siempre se combina con la tabla original para obtener los datos más recientes.  
   
 -   **Búsqueda de texto completo** se espera una disminución del rendimiento en las consultas que usan las siguientes funciones de búsqueda de texto completo y búsqueda semántica, debido a una combinación adicional que se ha introducido para aplicar seguridad de nivel de fila y evitar la pérdida de las claves principales de las filas que se deben filtrar: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
--   **Índices de almacén de columnas** RLS no es compatible con los índices de almacén de columnas en clúster y no clúster. Sin embargo, dado que la seguridad de nivel de fila aplica una función, es posible que el optimizador pueda modificar el plan de consulta para que no use el modo por lotes.  
+-   **Índices de almacén de columnas** RLS no es compatible con los índices de almacén de columnas en clúster y no clúster. Pero como la seguridad de nivel de fila aplica una función, es posible que el optimizador pueda modificar el plan de consulta para que no use el modo por lotes.  
   
 -   **Vistas con particiones:** no se pueden definir predicados de bloqueo en vistas con particiones, y no se pueden crear vistas con particiones sobre tablas que usan predicados de bloqueo. Los predicados de filtro son compatibles con vistas con particiones.  
   
@@ -175,10 +177,13 @@ ms.locfileid: "47814683"
 ##  <a name="CodeExamples"></a> Ejemplos  
   
 ###  <a name="Typical"></a> A. Escenario para los usuarios que se autentican en la base de datos  
- Este pequeño ejemplo crea tres usuarios, crea y llena una tabla con seis filas, y crea una función de valores de tabla insertada y una directiva de seguridad de la tabla. El ejemplo muestra cómo seleccionar instrucciones filtradas para los distintos usuarios.  
+ En este pequeño ejemplo se crean tres usuarios, se crea y se llena una tabla con seis filas, y después se crea una función con valores de tabla insertada y una directiva de seguridad para la tabla. El ejemplo muestra cómo seleccionar instrucciones filtradas para los distintos usuarios.  
   
  Cree tres cuentas de usuario que mostrarán las distintas capacidades de acceso.  
-  
+
+> [!NOTE]
+> Azure SQL Data Warehouse no admite EXECUTE AS USER, por lo que debe crear el inicio de sesión para cada usuario con antelación. Más adelante, iniciará la sesión como el usuario apropiado para probar este comportamiento.
+
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
@@ -219,7 +224,7 @@ GRANT SELECT ON Sales TO Sales1;
 GRANT SELECT ON Sales TO Sales2;  
 ```  
   
- Cree un nuevo esquema y una función de valores de tabla insertada. La función devuelve 1 cuando una fila de la columna SalesRep es la misma que el usuario que ejecuta la consulta (`@SalesRep = USER_NAME()`) o si el usuario que ejecuta la consulta es el usuario administrador (`USER_NAME() = 'Manager'`).  
+ Cree un esquema y una función con valores de tabla insertada. La función devuelve 1 cuando una fila de la columna SalesRep es la misma que el usuario que ejecuta la consulta (`@SalesRep = USER_NAME()`) o si el usuario que ejecuta la consulta es el usuario administrador (`USER_NAME() = 'Manager'`).  
   
 ```  
 CREATE SCHEMA Security;  
@@ -233,6 +238,9 @@ AS
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
 ```  
   
+> [!NOTE]
+> Azure SQL Data Warehouse no admite USER_NAME(), por lo que se debe usar SYSTEM_USER en su lugar.
+
  Cree una directiva de seguridad agregando la función como un predicado de filtro. El estado se debe configurar en ON para habilitar la directiva.  
   
 ```  
@@ -257,8 +265,10 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;   
 REVERT;  
 ```  
-  
- El administrador debe ver las 6 filas. Los usuarios Sales1 y Sales2 solo deben ver sus propias ventas.  
+> [!NOTE]
+> Azure SQL Data Warehouse no admite EXECUTE AS USER, de modo que inicie sesión como el usuario apropiado para probar el comportamiento anterior.
+
+ El administrador debe ver las seis filas. Los usuarios Sales1 y Sales2 solo deben ver sus propias ventas.  
   
  Modifique la directiva de seguridad para deshabilitar la directiva.  
   
@@ -267,11 +277,14 @@ ALTER SECURITY POLICY SalesFilter
 WITH (STATE = OFF);  
 ```  
   
- Ahora los usuarios Sales1 y Sales2 pueden ver las 6 filas.  
+ Ahora los usuarios Sales1 y Sales2 pueden ver las seis filas.  
   
   
 ###  <a name="MidTier"></a> B. Escenario para los usuarios que se conectan a la base de datos a través de una aplicación de nivel intermedio  
- Este ejemplo muestra cómo una aplicación de nivel intermedio puede implementar el filtrado de conexiones, donde los usuarios de la aplicación (o inquilinos) comparten el mismo usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la aplicación). La aplicación configura el identificador de usuario de la aplicación actual en [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) después de conectarse a la base de datos y, luego, las directivas de seguridad filtran de forma transparente las filas que no deberían ser visibles para este identificador e impiden también que el usuario inserte filas para el identificador de usuario incorrecto. No es necesario ningún otro cambio en la aplicación.  
+> [!NOTE]
+> Este ejemplo no es aplicable a Azure SQL Data Warehouse, ya que en la actualidad no se admiten SESSION_CONTEXT ni los predicados de bloqueo.
+
+Este ejemplo muestra cómo una aplicación de nivel intermedio puede implementar el filtrado de conexiones, donde los usuarios de la aplicación (o inquilinos) comparten el mismo usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la aplicación). La aplicación configura el identificador de usuario de la aplicación actual en [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) después de conectarse a la base de datos y, luego, las directivas de seguridad filtran de forma transparente las filas que no deberían ser visibles para este identificador e impiden también que el usuario inserte filas para el identificador de usuario incorrecto. No es necesario ningún otro cambio en la aplicación.  
   
  Cree una tabla sencilla para almacenar los datos.  
   
@@ -284,7 +297,7 @@ CREATE TABLE Sales (
 );  
 ```  
   
- Rellene la tabla con seis filas de datos que muestren tres pedidos para cada usuario de la aplicación.  
+ Rellene la tabla con seis filas de datos en las que se muestren tres pedidos para cada usuario de la aplicación.  
   
 ```  
 INSERT Sales VALUES   
@@ -307,8 +320,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- Cree un esquema y una función de predicado nuevos, que usarán el identificador de usuario de la aplicación almacenado en **SESSION_CONTEXT** para filtrar las filas.  
-  
+ Cree un esquema y una función de predicado nuevos, que usarán el identificador de usuario de la aplicación almacenado en **SESSION_CONTEXT** para filtrar las filas.
+
 ```  
 CREATE SCHEMA Security;  
 GO  

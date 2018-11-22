@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237121"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605992"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "50237121"
   
  - **Motor de SQL Server PolyBase**: proporciona funciones de consulta distribuida a orígenes de datos externos.
  
- - **Servicio de movimiento de datos de SQL Server PolyBase**: permite mover datos entre SQL Server y los orígenes de datos externos, así como entre los nodos SQL en los grupos de escalabilidad horizontal de PolyBase.
+ - **Servicio de movimiento de datos de SQL Server PolyBase**: permite mover datos entre SQL Server y orígenes de datos externos, así como entre los nodos SQL en los grupos de escalabilidad horizontal de PolyBase.
   
 ##  <a name="Serv_Prop"></a> Propiedades de servicio y configuración
 
@@ -180,9 +180,9 @@ Las cuentas de servicio administradas, las cuentas de servicio administradas de 
   
      Una cuenta de servicio administrada de grupo es una MSA para varios servidores. Windows administra una cuenta de servicio para los servicios que se ejecutan en un grupo de servidores. Active Directory actualiza automáticamente la contraseña de la cuenta de servicio administrada de grupo sin necesidad de reiniciar los servicios. Puede configurar servicios de SQL Server para usar una entidad de seguridad de cuenta de servicio administrada de grupo. A partir de SQL Server 2014, SQL Server admite cuentas de servicio administradas de grupo para instancias independientes, y SQL Server 2016 y versiones posteriores para instancias de clúster de conmutación por error y grupos de disponibilidad.  
   
-    Para usar una cuenta de servicio administrada de grupo para SQL Server 2014 o posterior, el sistema operativo debe ser Windows Server 2012 R2 o posterior. Los servidores con Windows Server 2012 R2 necesitan que [KB 2998082](http://support.microsoft.com/kb/2998082) esté aplicado para que los servicios puedan iniciar sesión sin interrumpirse inmediatamente después de un cambio de contraseña.  
+    Para usar una cuenta de servicio administrada de grupo para SQL Server 2014 o posterior, el sistema operativo debe ser Windows Server 2012 R2 o posterior. Los servidores con Windows Server 2012 R2 necesitan que [KB 2998082](https://support.microsoft.com/kb/2998082) esté aplicado para que los servicios puedan iniciar sesión sin interrumpirse inmediatamente después de un cambio de contraseña.  
   
-    Para más información, vea [Cuentas de servicio administradas de grupo](http://technet.microsoft.com/library/hh831782.aspx).  
+    Para más información, vea [Cuentas de servicio administradas de grupo](https://technet.microsoft.com/library/hh831782.aspx).  
       
     > [!NOTE]  
     >  El administrador de dominio debe crear la cuenta de servicio administrada de grupo en Active Directory para que la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda usarla para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -203,7 +203,7 @@ Las cuentas de servicio administradas, las cuentas de servicio administradas de 
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- Para obtener más información sobre las cuentas de servicio administradas y las cuentas virtuales, vea la sección **Managed service account and virtual account concepts (Conceptos de cuentas de servicio administradas y cuentas virtuales)** de [Service Accounts Step-by-Step Guide (Guía paso a paso de cuentas de servicio)](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) y [Managed Service Accounts Frequently Asked Questions (FAQ) (P+F sobre cuentas de servicio administradas)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
+ Para obtener más información sobre las cuentas de servicio administradas y las cuentas virtuales, vea la sección **Managed service account and virtual account concepts (Conceptos de cuentas de servicio administradas y cuentas virtuales)** de [Service Accounts Step-by-Step Guide (Guía paso a paso de cuentas de servicio)](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) y [Managed Service Accounts Frequently Asked Questions (FAQ) (P+F sobre cuentas de servicio administradas)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
   
  **Nota de seguridad:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use una [MSA](#MSA) o los servicios del Agente [virtual account](#VA_Desc) cuando sea posible. Cuando no se puedan usar MSA ni cuentas virtuales, emplee una cuenta de usuario específica con privilegios bajos o la cuenta de dominio en lugar de una cuenta compartida para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilice cuentas independientes para los diferentes servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No otorgue permisos adicionales a la cuenta de servicio ni a los grupos de servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos se concederán a través de la pertenencia a un grupo o se concederán directamente a un SID por servicio, siempre que se admita su uso.  
   
@@ -283,7 +283,7 @@ En esta sección se describen los permisos que el programa de instalación de [!
  En función de la configuración del servicio, la cuenta de servicio o el SID por servicio se agregará como miembro del grupo de servicios durante el proceso de instalación o actualización.
   
 ###  <a name="Windows"></a> Derechos y privilegios de Windows  
- La cuenta asignada para iniciar un servicio necesita el **permiso de inicio, detener y pausar** para el servicio. El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna esto automáticamente.  Primera instalación de las Herramientas de administración remota del servidor (RSAT). Vea las [Herramientas de administración remota del servidor para Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
+ La cuenta asignada para iniciar un servicio necesita el **permiso de inicio, detener y pausar** para el servicio. El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna esto automáticamente.  Primera instalación de las Herramientas de administración remota del servidor (RSAT). Vea las [Herramientas de administración remota del servidor para Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
  En la tabla siguiente se muestran los permisos que el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicita para las SID por servicio o los grupos locales de Windows que usan los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   

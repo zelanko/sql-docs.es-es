@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b279c177a7e5b627c8ead3103cb2bd8ad6a58d78
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b44b5afff54cf0630e3bde1d5668862d1d969133
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031444"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813738"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes
 
@@ -104,7 +104,7 @@ El script se puede usar para copiar contenido entre servidores de informes del m
   
  En el ejemplo siguiente se migra contenido del **Sourceserver** en modo nativo a **Targetserver**en modo nativo.  
   
- `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
+ `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
  **Notas de uso:**  
   
@@ -187,13 +187,13 @@ El script se puede usar para copiar contenido entre servidores de informes del m
   
 -   SOURCE_URL y TARGET_URL deben ser direcciones URL de servidor de informes válidas que señalen el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de origen y de destino. En modo nativo, la dirección URL de un servidor de informes se parece a la siguiente:  
   
-    -   `http://servername/reportserver`  
+    -   `https://servername/reportserver`  
   
      En modo de SharePoint, la dirección URL se parece a la siguiente:  
   
-    -   `http://servername/_vti_bin/reportserver`  
+    -   `https://servername/_vti_bin/reportserver`  
   
--   La estructura de carpetas virtuales que se muestra al usuario en SharePoint puede ser diferente que la base. Abra `http://servername/_vti_bin/reportserver` o `http://servername/sites/site_name/_vti_bin/reportserver` en un explorador para ver la estructura de carpetas no virtuales. Esto es útil para establecer la carpeta de origen y la carpeta de destino en algo distinto de "/" para un servidor en modo de SharePoint.  
+-   La estructura de carpetas virtuales que se muestra al usuario en SharePoint puede ser diferente que la base. Abra `https://servername/_vti_bin/reportserver` o `https://servername/sites/site_name/_vti_bin/reportserver` en un explorador para ver la estructura de carpetas no virtuales. Esto es útil para establecer la carpeta de origen y la carpeta de destino en algo distinto de "/" para un servidor en modo de SharePoint.  
   
 -   Las contraseñas no se migran y se deben volver a especificar (por ejemplo, orígenes de datos con credenciales almacenadas).  
   
@@ -217,13 +217,13 @@ El script se puede usar para copiar contenido entre servidores de informes del m
  En el ejemplo siguiente se migra contenido del **Sourceserver** en modo nativo a **Targetserver**en modo nativo.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
 ```  
   
  El ejemplo siguiente agrega el modificador de seguridad:  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Modo nativo a modo de SharePoint: sitio raíz  
@@ -232,14 +232,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_with_site"></a> Modo nativo a modo de SharePoint: colección de sitios 'bi'  
  En el ejemplo siguiente se migra contenido de un servidor en modo nativo a un servidor de SharePoint que contiene una colección de sitios de "sites/bi" y una biblioteca de documentos compartida. El script crea carpetas en la biblioteca de documentos de destino. Por ejemplo, el script creará las carpetas "Reports" y "Data Sources" en la biblioteca de documentos de destino.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_sharepoint_2_sharepoint"></a> Modo de SharePoint a modo de SharePoint: colección de sitios 'bi'  
@@ -250,7 +250,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 -   A un servidor de SharePoint **TargetServer** que contiene una colección de sitios de "sites/bi" y una biblioteca de documentos compartida.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_to_native_Azure_vm"></a> Modo nativo a modo nativo: Máquina virtual de Windows Azure  
@@ -261,7 +261,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
 -   A un servidor de informes en modo nativo **TargetServer** que se ejecuta en una máquina virtual de Windows Azure. **TargetServer** no está unido al dominio de **SourceServer** y **User2** es un administrador de la máquina virtual de Windows Azure **TargetServer**.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
@@ -275,7 +275,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 -   A un servidor de informes en modo nativo **TargetServer** que se ejecuta en una máquina virtual de Windows Azure. **TargetServer** no está unido al dominio de **SourceServer** y **User2** es un administrador de la máquina virtual de Windows Azure **TargetServer**.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
 ##  <a name="bkmk_verification"></a> Comprobación  
@@ -310,11 +310,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> Solucionar problemas  
  Use la marca de seguimiento **– t** para recibir más información. Por ejemplo, si ejecuta el script y ve un mensaje similar al siguiente  
   
--   No se pudo conectar con el servidor: http://\<servername>/ReportServer/ReportService2010.asmx  
+-   No se pudo conectar con el servidor: https://\<nombre_de_servidor>/ReportServer/ReportService2010.asmx  
   
  Vuelva a ejecutar el script con la marca **– t**; verá un mensaje parecido al siguiente:  
   
--   Excepción del sistema: No se pudo conectar con el servidor: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Error en la solicitud con el estado HTTP 401: No autorizado**.   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (mensaje pasa clase SoapClientMessage, respuesta de WebResponse, responseStream de flujo, booleano asyncCall) en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, parámetros de objeto []) en Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() en Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (dirección url de cadena, cadena nombre de usuario, contraseña de cadena El dominio de cadena, el tiempo de espera de Int32) en Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fin del seguimiento de la pila de la excepción interna---  
+-   System.Exception: No se pudo conectar con el servidor: https://\<nombre_de_servidor>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Error en la solicitud con el estado HTTP 401: No autorizado**.   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (mensaje pasa clase SoapClientMessage, respuesta de WebResponse, responseStream de flujo, booleano asyncCall) en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, parámetros de objeto []) en Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() en Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (dirección url de cadena, cadena nombre de usuario, contraseña de cadena El dominio de cadena, el tiempo de espera de Int32) en Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fin del seguimiento de la pila de la excepción interna---  
   
 ## <a name="see-also"></a>Ver también  
  [Utilidad RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

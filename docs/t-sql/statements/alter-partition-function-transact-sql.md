@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709743"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637872"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  Debe existir un grupo de archivos en línea y estar marcado por el esquema de partición que utiliza la función de partición como NEXT USED para contener la nueva partición. Los grupos de archivos se asignan a particiones de una instrucción CREATE PARTITION SCHEME. Si la instrucción CREATE PARTITION SCHEME asigna más grupos de archivos de los necesarios (se crean menos particiones en la instrucción CREATE PARTITION FUNCTION que grupos de archivos para contenerlos), habrá entonces grupos de archivos sin asignar y el esquema de partición marcará uno de ellos como NEXT USED. Este grupo de archivos contendrá la partición nueva. Si no hay grupos de archivos marcados como NEXT USED por el esquema de partición, debe usar ALTER PARTITION SCHEME para agregar un grupo de archivos o designar uno existente a fin de que contenga la partición nueva. Se puede designar a un grupo de archivos que ya contenga particiones para contener particiones adicionales. Puesto que una función de partición puede participar en más de un esquema de partición, todos los esquemas de partición que utilizan la función de partición a la que esté agregando particiones deben tener un grupo de archivos NEXT USED. De lo contrario, ALTER PARTITION FUNCTION produce un error que muestra el esquema o esquemas de partición a los que les falta un grupo de archivos NEXT USED.  
   
- Si crea todas las particiones en el mismo grupo de archivos, ese grupo se asigna inicialmente para que sea el grupo de archivos NEXT USED automáticamente. Sin embargo, después de realizarse una operación de división ya no hay ningún grupo de archivos NEXT USED designado. Debe asignar explícitamente el grupo de archivos para que sea el grupo de archivos NEXT USED usando ALTER PARTITION SCHEME; de lo contrario, una operación de división posterior producirá errores.  
+ Si crea todas las particiones en el mismo grupo de archivos, ese grupo se asigna inicialmente para que sea el grupo de archivos NEXT USED automáticamente. Sin embargo, después de realizarse una operación de división ya no hay ningún grupo de archivos NEXT USED designado. Debe asignar explícitamente el grupo de archivos para que sea el grupo de archivos NEXT USED mediante ALTER PARTITION SCHEME; de lo contrario, una operación de división posterior producirá errores.  
   
 > [!NOTE]  
 >  Limitaciones con el índice de almacén de columnas: solo las particiones vacías se pueden dividir cuando existe un índice de almacén de columnas en la tabla. Tendrá que quitar o deshabilitar el índice de almacén de columnas antes de realizar esta operación.  

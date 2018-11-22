@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226387"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701483"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] elige, además del plan de ejecución con el costo de recursos mínimo, el plan que devuelve resultados al usuario con un costo razonable de recursos y con la mayor brevedad posible. Por ejemplo, el procesamiento de una consulta en paralelo suele utilizar más recursos que el procesamiento en serie, pero completa la consulta más rápidamente. El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará un plan de ejecución en paralelo para devolver resultados si esto no afecta negativamente a la carga del servidor.
 
-El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] confía en las estadísticas de distribución cuando calcula los costos de recursos de métodos diferentes para extraer información de una tabla o un índice. Las estadísticas de distribución se mantienen para las columnas y los índices. Indican la posibilidad de seleccionar los valores de un índice o de una columna determinados. Por ejemplo, en una tabla que representa automóviles, muchos automóviles tienen el mismo fabricante, pero cada uno dispone de un único número de identificación de vehículo (NIV). Un índice del NIV es más selectivo que un índice del fabricante. Si las estadísticas de los índices no están actualizadas, puede que el optimizador de consultas no realice la mejor elección para el estado actual de la tabla. Para obtener más información sobre cómo mantener actualizadas las estadísticas de los índices, vea [Estadísticas](../relational-databases/statistics/statistics.md). 
+El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] confía en las estadísticas de distribución cuando calcula los costos de recursos de métodos diferentes para extraer información de una tabla o un índice. Se mantienen estadísticas de distribución para las columnas y los índices, y se conserva información sobre la densidad<sup>1</sup> de los datos subyacentes. Esto se usa para indicar la selectividad de los valores de una columna o un índice determinado. Por ejemplo, en una tabla que representa automóviles, muchos automóviles tienen el mismo fabricante, pero cada uno dispone de un único número de identificación de vehículo (NIV). Un índice del NIV es más selectivo que un índice del fabricante, porque NIV tiene una densidad inferior a la del fabricante. Si las estadísticas de los índices no están actualizadas, puede que el optimizador de consultas no realice la mejor elección para el estado actual de la tabla. Para obtener más información sobre las densidades, vea [Estadísticas](../relational-databases/statistics/statistics.md#density). 
+
+<sup>1</sup> La densidad define la distribución de valores únicos que existen en los datos, o bien el promedio de valores duplicados para una columna determinada. A medida que disminuye la densidad, aumenta la selectividad de un valor.
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es importante porque permite que el servidor de la base de datos se ajuste dinámicamente a las condiciones cambiantes de la base de datos, sin necesitar la entrada de un programador o de un administrador de base de datos. Esto permite a los programadores centrarse en la descripción del resultado final de la consulta. Pueden estar seguros de que el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creará un plan de ejecución eficaz para el estado de la base de datos cada vez que se ejecuta la instrucción.
 
@@ -138,11 +139,11 @@ Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ut
 
 Los pasos básicos descritos para procesar una instrucción `SELECT` se aplican a otras instrucciones SQL como `INSERT`, `UPDATE`y `DELETE`. Las instrucciones`UPDATE` y `DELETE` deben identificar el conjunto de filas que se van a modificar o eliminar. El proceso de identificación de estas filas es el mismo que se utiliza para identificar las filas de origen que contribuyen al conjunto de resultados de una instrucción `SELECT` . Las instrucciones `UPDATE` e `INSERT` pueden contener instrucciones 'SELECT' incrustadas que proporcionan los valores de los datos que se van a actualizar o insertar.
 
-Incluso las instrucciones del lenguaje de definición de datos (DDL), como `CREATE PROCEDURE` o `ALTER TABL`E, se resuelven al final en un conjunto de operaciones relacionales en las tablas de catálogo del sistema y, a veces (como `ALTER TABLE ADD COLUMN`) en las tablas de datos.
+Incluso las instrucciones del lenguaje de definición de datos (DDL), como `CREATE PROCEDURE` o `ALTER TABLE`, se resuelven en última instancia en un conjunto de operaciones relacionales en las tablas de catálogo del sistema y, a veces (como `ALTER TABLE ADD COLUMN`) en las tablas de datos.
 
 ### <a name="worktables"></a>Tablas de trabajo
 
-El motor relacional puede necesitar generar una tabla de trabajo para realizar una operación lógica que se especifica en una instrucción SQL. Las tablas de trabajo son tablas internas que se utilizan para almacenar resultados intermedios. Se generan para determinadas consultas `GROUP BY`, `ORDER BY`o `UNION` . Por ejemplo, si una cláusula `ORDER BY` hace referencia a columnas que no están cubiertas por índices, el motor relacional puede necesitar generar una tabla de trabajo para ordenar el conjunto de resultados en el orden solicitado. Las tablas de trabajo también se utilizan en ocasiones a modo de colas que contienen temporalmente el resultado de ejecutar parte de un plan de consulta. Las tablas de trabajo se generan en `tempdb` y se eliminan automáticamente cuando ya no se necesitan.
+El motor relacional puede necesitar generar una tabla de trabajo para realizar una operación lógica que se especifica en una instrucción SQL. Las tablas de trabajo son tablas internas que se utilizan para almacenar resultados intermedios. Se generan para determinadas consultas `GROUP BY`, `ORDER BY`o `UNION` . Por ejemplo, si una cláusula `ORDER BY` hace referencia a columnas que no están cubiertas por índices, el motor relacional puede necesitar generar una tabla de trabajo para ordenar el conjunto de resultados en el orden solicitado. Las tablas de trabajo también se utilizan en ocasiones a modo de colas que contienen temporalmente el resultado de ejecutar parte de un plan de consulta. Las tablas de trabajo se generan en tempdb y se eliminan de forma automática cuando ya no se necesitan.
 
 ### <a name="view-resolution"></a>Resolución de vistas
 
@@ -698,7 +699,7 @@ Puede usar la opción de configuración del servidor [grado máximo de paralelis
 
 Al establecer la opción de grado máximo de paralelismo en 0 (valor predeterminado), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede usar todos los procesadores disponibles, hasta un máximo de 64, en una ejecución de planes paralelos. Aunque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] establece un destino en tiempo de ejecución de 64 procesadores lógicos cuando la opción MAXDOP se establece en 0, si es necesario se puede configurar manualmente un valor diferente. Si se establece MAXDOP en 0 para consultas o índices, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede usar todos los procesadores disponibles, hasta un máximo de 64, para las consultas o los índices especificados en una ejecución de planes paralelos. MAXDOP no es un valor forzado para todas las consultas en paralelo, sino un destino provisional para todas las consultas aptas para el paralelismo. Esto significa que, si no hay suficientes subprocesos de trabajo disponibles en tiempo de ejecución, se puede ejecutar una consulta con un grado de paralelismo inferior al de la opción MAXDOP de configuración del servidor.
 
-Vea este [artículo de Soporte técnico de Microsoft](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para obtener información sobre los procedimientos recomendados para la configuración de MAXDOP.
+Vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para obtener información sobre los procedimientos recomendados para la configuración de MAXDOP.
 
 ### <a name="parallel-query-example"></a>Ejemplo de consulta en paralelo
 
@@ -1019,7 +1020,7 @@ Para mejorar el rendimiento de las consultas que tienen acceso a una cantidad gr
 * Utilice un servidor con procesadores rápidos y tantos núcleos de procesador como pueda permitirse, con el fin de sacar partido de la capacidad de procesamiento de las consultas en paralelo.
 * Asegúrese de que el servidor dispone de un ancho banda de controlador de E/S suficiente. 
 * Cree un índice clúster en cada tabla grande con particiones para sacar partido de las optimizaciones de examen de los árboles B.
-* Siga los procedimientos recomendados de las notas del producto, en [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx) (Guía sobre el rendimiento de carga de datos), cuando cargue grandes volúmenes de datos en tablas con particiones.
+* Siga los procedimientos recomendados de las notas del producto, en [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx) (Guía sobre el rendimiento de carga de datos), cuando cargue grandes volúmenes de datos en tablas con particiones.
 
 ### <a name="example"></a>Ejemplo
 

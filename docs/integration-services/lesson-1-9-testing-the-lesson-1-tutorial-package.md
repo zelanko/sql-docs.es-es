@@ -11,12 +11,12 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c1c48583a37a959a0922dc12ac72ef064e51c91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769503"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629548"
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Lección 1-9: Probar el paquete del tutorial de la lección 1
 En esta lección, ha llevado a cabo las tareas siguientes:  
@@ -44,7 +44,7 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 1.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
   
-    El paquete se ejecutará, dando lugar a la correcta inclusión de 1097 filas en la tabla de hechos **FactCurrency** de **AdventureWorksDW2012**.  
+    El paquete se ejecutará, dando lugar a la inclusión correcta de 1097 filas en la tabla de hechos **NewFactCurrencyRate** de **AdventureWorksDW2012**.  
   
 2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
   
@@ -52,7 +52,7 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
 [Lección 2: Agregar bucles con SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Ver también  
-[Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes) 
+[Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md) 
   
   
   

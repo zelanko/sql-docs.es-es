@@ -10,34 +10,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 706615794b7f3e88cc5228f56de1e388501494b5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 5a33053220184dfc58b0e0f6ccfb9526b5cb3ea5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904926"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697123"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Instalación de versiones de idioma de SQL Server Management Studio (SSMS) distintas del inglés 
 
-[SSMS está disponible en varios idiomas](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview), pero el programa de instalación de SSMS bloquea la instalación en equipos en los que la configuración regional del sistema no coincide con el idioma de SSMS. 
+[SSMS está disponible en varios idiomas](download-sql-server-management-studio-ssms.md#available-languages-ssms-179), pero el programa de instalación de SSMS bloquea la instalación en equipos en los que la configuración regional del sistema no coincide con el idioma de SSMS. 
 
 Las instrucciones siguientes varían según la versión de Windows. Estas son para Windows 10.
 
 ## <a name="install-non-english-ssms-on-a-computer-running-an-english-operating-system-os"></a>Instalación de SSMS en un idioma distinto del inglés en un equipo que ejecuta un sistema operativo (SO) en inglés
 
-1. Instale el paquete de idioma de Windows correspondiente al idioma que quiere que se use en SSMS: 
+1. Instale el paquete de idioma de Windows correspondiente al idioma que quiere que se use en SSMS: 
    - **Configuración** > **Hora e idioma** > **Región y idioma** > **Agregar un idioma** 
 2. A continuación, establezca la configuración regional para usar el paquete de idioma instalado en el paso anterior; para ello, haga clic en el idioma que acaba de instalar y seleccione **Establecer como predeterminado**. (Después de instalar SSMS, puede devolver la configuración regional a inglés).
-3. Una vez que el sistema operativo se ejecuta en el idioma deseado, [instale la versión de SSMS de ese mismo idioma](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview). La primera vez que instale un nuevo idioma de SSMS, use el paquete completo. En las posteriores instalaciones, puede usar el paquete de actualización.
+3. Una vez que el sistema operativo se ejecuta en el idioma deseado, [SSMS está disponible en varios idiomas](download-sql-server-management-studio-ssms.md#available-languages-ssms-179). La primera vez que instale un nuevo idioma de SSMS, use el paquete completo. En las posteriores instalaciones, puede usar el paquete de actualización.
 4. Ejecute SSMS. Debería mostrarse en el idioma instalado en el paso anterior.
 5. Devuelva otra vez la configuración regional del equipo a inglés.
 
 ## <a name="install-ssms-in-a-language-other-than-the-language-of-the-installed-os"></a>Instalación de SSMS en un idioma distinto al del sistema operativo instalado
 
-1. Instale el paquete de idioma de Windows correspondiente al idioma que quiere que se use en SSMS: 
+1. Instale el paquete de idioma de Windows correspondiente al idioma que quiere que se use en SSMS: 
    - **Configuración** > **Hora e idioma** > **Región y idioma** > **Agregar un idioma** 
 2. A continuación, establezca la configuración regional para usar el paquete de idioma instalado en el paso anterior; para ello, haga clic en el idioma que acaba de instalar y seleccione **Establecer como predeterminado**. 
-3. Una vez que el sistema operativo se ejecuta en el idioma deseado, [instale la versión de SSMS de ese mismo idioma](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview). La primera vez que instale un nuevo idioma de SSMS, use el paquete completo. En las posteriores instalaciones, puede usar el paquete de actualización.
+3. Una vez que el sistema operativo se ejecuta en el idioma deseado, [SSMS está disponible en varios idiomas](download-sql-server-management-studio-ssms.md#available-languages-ssms-179). La primera vez que instale un nuevo idioma de SSMS, use el paquete completo. En las posteriores instalaciones, puede usar el paquete de actualización.
 4. Para cada idioma que desee instalar que no coincida con el idioma de la primera versión de SSMS que se ha instalado, instale el paquete de idioma correspondiente de Visual Studio 2015 Shell (aislado):
    - Vaya a [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (es posible que tenga que iniciar sesión y completar el proceso *Registro en Connect*).
    - Descargue el paquete de idioma deseado de Visual Studio 2015 Shell (aislado) e instálelo.

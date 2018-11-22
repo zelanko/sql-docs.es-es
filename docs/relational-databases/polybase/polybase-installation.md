@@ -11,93 +11,94 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806755"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674234"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Para instalar una versión de prueba de SQL Server, vaya a [SQL Server Evaluaciones](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
+Para instalar una versión de evaluación de SQL Server, vaya a [SQL Server Evaluaciones](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
 ## <a name="prerequisites"></a>Prerequisites  
    
-- Edición de evaluación de SQL Server (64 bits).  
+- Edición SQL Server Evaluation (64 bits).  
    
 - Microsoft .NET Framework 4.5.  
 
-- Oracle Java SE Runtime Environment (JRE). Se admiten las versiones 7 (a partir de la 7.51) y 8 (tanto [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) como [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funcionarán). Vaya a la página de [descargas de Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). El programa de instalación generará un error si JRE no está presente. No se admiten JRE9 ni JRE10.
+- Oracle Java SE Runtime Environment (JRE). Se admiten las versiones 7 (a partir de la 7.51) y 8. Tanto [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) como [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funcionan. Vaya a la página de [descargas de Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html). Si JRE no está presente, se produce un error del instalador. No se admiten JRE9 ni JRE10.
 
-- Memoria mínima: 4 GB.  
+- Memoria mínima: 4 GB. 
    
-- Espacio disponible en disco duro mínimo: 2 GB.  
-- **Recomendado:** Memoria RAM mínima de 16 GB
-   
-- TCP/IP debe estar habilitado para que Polybase funcione correctamente. TCP/IP está habilitado de manera predeterminada en todas las ediciones de SQL Server, excepto en las ediciones Developer y Express de SQL Server. Para que Polybase funcione correctamente en las ediciones Developer y Express debe habilitar la conectividad TCP/IP (consulte [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
-
-- MSVC++ 2012 
-
-**Nota**  
-
-PolyBase solo se puede instalar en una instancia de SQL Server por máquina.
-
-> **Importante**
->
-> Si va a usar la funcionalidad de aplicación de cálculos en Hadoop, debe asegurarse de que el clúster de Hadoop de destino tiene componentes principales de HDFS, Yarn/MapReduce con el servidor de JobHistory habilitado. PolyBase envía la consulta de la aplicación a través de MapReduce y extrae el estado desde el servidor JobHistory. Sin alguno de los componentes, se producirá un error en la consulta.
+- Espacio mínimo disponible en disco duro: 2 GB.
   
-## <a name="single-node-or-polybase-scaleout-group"></a>Nodo único o grupo de escalado horizontal de PolyBase
+- Recomendado: memoria RAM mínima de 16 GB.
+   
+- TCP/IP debe estar habilitado para que PolyBase funcione correctamente. TCP/IP está habilitado de manera predeterminada en todas las ediciones de SQL Server, excepto en las ediciones Developer y Express de SQL Server. Para que PolyBase funcione correctamente en las ediciones Developer y Express, debe habilitar la conectividad TCP/IP. Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-Antes de iniciar la instalación de PolyBase en las instancias de SQL Server, se recomienda decidir si quiere una instalación de nodo único o un [grupo de escalado horizontal de PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).
+- MSVC++ 2012. 
 
-Para un grupo de escalado horizontal de PolyBase, debe asegurarse de lo siguiente:
+> [!NOTE]  
 
-- Todas las máquinas están en el mismo dominio.
+> PolyBase solo se puede instalar en una instancia de SQL Server por máquina.
+
+> [!IMPORTANT]
+>
+> Para usar la funcionalidad de aplicación de cálculos en Hadoop, el clúster de Hadoop de destino debe tener los componentes principales de HDFS, YARN y MapReduce con el servidor de historial de trabajos habilitado. PolyBase envía la consulta de aplicación a través de MapReduce y extrae el estado del servidor de historial de trabajos. Si falta algún componente, se produce un error en la consulta.
+  
+## <a name="single-node-or-polybase-scale-out-group"></a>Nodo único o grupo de escalado horizontal de PolyBase
+
+Antes de instalar PolyBase en las instancias de SQL Server, decida si quiere una instalación de nodo único o un [grupo de escalado horizontal de PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).
+
+En el caso de un grupo de escalado horizontal de PolyBase, asegúrese de que:
+
+- Todos los equipos estén en el mismo dominio.
 - Use la misma cuenta y contraseña de servicio durante la instalación de PolyBase.
-- Las instancias de SQL Server pueden comunicarse entre sí a través de la red.
-- Las instancias de SQL Server tienen todas la misma versión que SQL Server.
+- Las instancias de SQL Server puedan comunicarse entre sí a través de la red.
+- Las instancias de SQL Server tengan todas la misma versión de SQL Server.
 
-Una vez que haya instalado PolyBase como un grupo de escalado horizontal o de forma independiente, no podrá cambiarlo. Tendrá que desinstalar y volver a instalar la característica para cambiar esta configuración.
+Después de instalar PolyBase de forma independiente o en un grupo de escalado horizontal, esto no se puede cambiar. Para cambiar este valor, tiene que desinstalar y volver a instalar la característica.
 
-## <a name="install-using-the-installation-wizard"></a>Instalación con el Asistente para instalación  
+## <a name="use-the-installation-wizard"></a>Usar el Asistente para instalación
    
 1. Ejecute el archivo setup.exe de SQL Server.   
    
-2. Haga clic en **Instalación**y, después, en **New Standalone SQL Server installation or add features**(Nueva instalación independiente de SQL Server o adición de características).  
+2. Seleccione **Instalación** y luego **New standalone SQL Server installation or add features** (Nueva instalación independiente de SQL Server o adición de características).  
    
-3. En la página Selección de características, elija **PolyBase Query Service for External Data**(Servicio de consultas PolyBase para datos externos).  
+3. En la página Selección de características, elija **PolyBase Query Service for External Data** (Servicio de consultas PolyBase para datos externos).  
 
- ![Servicios PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servicios PolyBase")  
+   ![Servicios PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servicios PolyBase")  
    
-4. En la página Configuración del servidor, configure el **servicio Motor de SQL Server PolyBase** y el servicio Movimiento de datos de SQL Server PolyBase para que se ejecuten en la misma cuenta de dominio.  
+4. En la página Configuración del servidor, configure el **servicio Motor de SQL Server PolyBase** y el **servicio Movimiento de datos de SQL Server PolyBase** para que se ejecuten en la misma cuenta de dominio.  
    
- > **IMPORTANTE:** 
->
->En un grupo de escalado horizontal de PolyBase, el servicio de movimiento de datos de PolyBase y el motor de PolyBase de todos los nodos debe ejecutarse en la misma cuenta de dominio. Vea [Grupos de escalado horizontal de PolyBase](#Enable)
+   > [!IMPORTANT] 
+   >
+   >En un grupo de escalado horizontal de PolyBase, los servicios Movimiento de datos de PolyBase y Motor de PolyBase de todos los nodos deben ejecutarse en la misma cuenta de dominio. Vea [Grupos de escalado horizontal de PolyBase](#Enable).
    
-5. En la página **PolyBase Configuration**(Configuración de PolyBase), seleccione una de las dos opciones. Consulte [PolyBase scale-out groups (Grupos de escalado horizontal de PolyBase)](../../relational-databases/polybase/polybase-scale-out-groups.md) para obtener más información.  
+5. En la página Configuración de PolyBase, seleccione una de las dos opciones. Para obtener más información, vea [Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
    - Use la instancia de SQL Server como una instancia independiente habilitada para PolyBase.  
    
      Elija esta opción para usar la instancia de SQL Server como nodo principal independiente.  
    
-   - Utilice la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase.  Si selecciona esta opción, se abre el firewall para permitir las conexiones entrantes al Motor de base de datos de SQL Server, al Motor de SQL Server PolyBase, al servicio Movimiento de datos de SQL Server PolyBase y a SQL Browser. Se abrirá el firewall para permitir las conexiones entrantes desde otros nodos de un grupo de escalado horizontal de PolyBase.  
+   - Utilice la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase. Esta opción abre el firewall para permitir las conexiones entrantes. Se permiten las conexiones al Motor de base de datos de SQL Server, al Motor de SQL Server PolyBase, al servicio Movimiento de datos de SQL Server PolyBase y a SQL Browser. El firewall además permite las conexiones entrantes desde otros nodos de un grupo de escalado horizontal de PolyBase.  
    
-     Al seleccionar esta opción, también se habilitarán las conexiones de firewall de Microsoft DTC (Coordinador de transacciones distribuidas) y se modificará la configuración del registro de Microsoft DTC.  
+     Esta opción también habilita las conexiones de firewall de Microsoft DTC (Coordinador de transacciones distribuidas) y modifica la configuración del registro de Microsoft DTC.  
    
-6. En la página **PolyBase Configuration**(Configuración de PolyBase), especifique un intervalo de puertos con al menos seis puertos. El programa de instalación de SQL Server asignará los seis primeros puertos disponibles del intervalo.  
+6. En la página Configuración de PolyBase, especifique un intervalo de puertos con al menos seis puertos. El programa de instalación de SQL Server asigna los seis primeros puertos disponibles del intervalo.  
 
-  > **IMPORTANTE:**
-  >
-  > Después de la instalación, debe [habilitar la característica PolyBase](#enable).
+   > [!IMPORTANT]
+   >
+   > Después de la instalación, debe [habilitar la característica PolyBase](#enable).
 
 
-##  <a name="installing"></a> Instalación mediante un símbolo del sistema  
+##  <a name="installing"></a> Usar un símbolo del sistema
 
-Use los valores de esta tabla para crear scripts de instalación. Los dos servicios, el de **motor de SQL Server PolyBase** y el de **movimiento de datos de SQL Server PolyBase** , deben ejecutarse en la misma cuenta. En un grupo de escalado horizontal de PolyBase, se deben ejecutar con la misma cuenta de dominio los servicios de PolyBase en todos los nodos.  
+Use los valores de esta tabla para crear scripts de instalación. Los servicios Motor de SQL Server PolyBase y Movimiento de datos de SQL Server PolyBase deben ejecutarse en la misma cuenta. En un grupo de escalado horizontal de PolyBase, se deben ejecutar con la misma cuenta de dominio los servicios de PolyBase en todos los nodos.  
    
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017"
@@ -107,12 +108,12 @@ Use los valores de esta tabla para crear scripts de instalación. Los dos servic
 |Control del programa de instalación de SQL Server|**Necesario**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
 |motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
-|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
-|movimiento de datos de SQL Server PolyBase|**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio de movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
-|Servicio de movimiento de datos de SQL Server PolyBase|**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
-|Servicio de movimiento de datos de SQL Server PolyBase|**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
-|PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se utilizará como parte del grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: **True**, **False**.|  
-|PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de 6 puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio del Motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio Movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio del servicio Movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
+|PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se usa como parte de un grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: True, False.|  
+|PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de seis puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 <!--SQL Server 2019-->
@@ -120,15 +121,15 @@ Use los valores de esta tabla para crear scripts de instalación. Los dos servic
 
 |Componente de SQL Server|Parámetro y valores|Descripción|  
 |--------------------------|--------------------------|-----------------|  
-|Control del programa de instalación de SQL Server|**Obligatorio**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | **PolyBaseCore** instala compatibilidad con todas las características de PolyBase, excepto la conectividad de Hadoop. **PolyBaseJava** habilita la conectividad de Hadoop. **PolyBase** instala ambas opciones. |  
+|Control del programa de instalación de SQL Server|**Obligatorio**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore habilita la compatibilidad con todas las características de PolyBase, excepto la conectividad de Hadoop. PolyBaseJava habilita la conectividad de Hadoop. PolyBase habilita ambas. |  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
-|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
-|movimiento de datos de SQL Server PolyBase|**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio de movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
-|Servicio de movimiento de datos de SQL Server PolyBase|**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
-|Servicio de movimiento de datos de SQL Server PolyBase|**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
-|PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se utilizará como parte del grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: **True**, **False**.|  
-|PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de 6 puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio del Motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio de movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio del servicio Movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
+|PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se usa como parte de un grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: True, False.|  
+|PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de seis puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 
@@ -138,11 +139,11 @@ Después de la instalación, debe [habilitar la característica PolyBase](#enabl
 
 **Ejemplo**
 
-Muestra un script de instalación de ejemplo.  
+En este ejemplo se muestra un script de instalación de ejemplo.  
 
 ```cmd
    
-Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,Polybase   
+Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,PolyBase   
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="\<fabric-domain>\Administrator"   
 /INSTANCEDIR="C:\Program Files\Microsoft SQL Server" /PBSCALEOUT=TRUE   
 /PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<StrongPassword>"   
@@ -153,53 +154,53 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> Habilitar PolyBase
 
-Cuando haya terminado con la instalación, se debe habilitar Polybase para tener acceso a sus características. Para conectarse a SQL Server 2019 CTP 2.0, debe habilitar PolyBase después de la instalación mediante este comando de Transact-SQL:
+Tras la instalación, se debe habilitar PolyBase para acceder a sus características. Para conectarse a SQL Server 2019 CTP 2.0, debe habilitar PolyBase tras la instalación. Use el siguiente comando de Transact-SQL.
 
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
 RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
-Después es necesario **reiniciar** la instancia. 
+Luego se debe reiniciar la instancia.
 
 
 ## <a name="post-installation-notes"></a>Notas posteriores a la instalación  
 
-PolyBase instala tres bases de datos de usuario: DWConfiguration, DWDiagnostics y DWQueue.   Son para uso de PolyBase y no se deben modificar ni eliminar.  
+PolyBase instala tres bases de datos de usuario: DWConfiguration, DWDiagnostics y DWQueue. Estas bases de datos son para uso de PolyBase. No las modifique ni las elimine.  
    
 ### <a id="confirminstall"></a> Cómo confirmar la instalación  
 
-Ejecute el siguiente comando: Si PolyBase está instalado, devuelve 1; en caso contrario, 0.  
+Ejecute el siguiente comando: Si PolyBase está instalado, el valor devuelto es 1. De lo contrario, es 0.  
 
 ```sql  
-SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
+SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;  
 ```  
 
 ### <a name="firewall-rules"></a>Reglas de firewall  
 
-El programa de instalación de SQL Server PolyBase crea las siguientes reglas de firewall en la máquina.  
+El programa de instalación de SQL Server PolyBase crea las siguientes reglas de firewall en el equipo:  
    
 - SQL Server PolyBase - Motor de base de datos - \<nombreDeInstanciaDeSQLServer> (TCP de entrada)  
    
 - SQL Server PolyBase -> Servicios de PolyBase - \<nombreDeInstanciaDeSQLServer> (TCP de entrada)  
 
-- SQL Server PolyBase -> SQL Browser -> (UDP de entrada)  
+- SQL Server PolyBase - SQL Browser - (UDP-In)  
    
-Durante la instalación, si decide usar la instancia de SQL Server como parte de un grupo de escalabilidad horizontal de PolyBase, estas reglas se habilitan y se abre el firewall para permitir conexiones entrantes al Motor de base de datos de SQL Server, al Motor de SQL Server PolyBase, al servicio Movimiento de datos de SQL Server PolyBase y a SQL Browser. Pero si no se está ejecutando el servicio de firewall en el equipo durante la instalación, el programa de instalación de SQL Server no puede habilitar estas reglas. En ese caso, debe iniciar el servicio del firewall en la máquina y habilitar reglas después de la instalación.  
+Durante la instalación, si usa la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase, estas reglas están habilitadas. El firewall se abre para permitir conexiones entrantes. Se permiten al Motor de base de datos de SQL Server, al Motor de SQL Server PolyBase, al servicio Movimiento de datos de SQL Server PolyBase y a SQL Browser. Si el servicio de firewall del equipo no se está ejecutando durante la instalación, el programa de instalación de SQL Server no habilita estas reglas. En ese caso, inicie el servicio de firewall del equipo y habilite estas reglas después de la instalación.  
    
 #### <a name="to-enable-the-firewall-rules"></a>Para habilitar las reglas de firewall, siga estos pasos:  
 
-- Abra el **Panel de control**.  
+1. Abra el **Panel de control**.  
 
-- Haga clic en **Sistema y seguridad**y, después, en **Firewall de Windows**.  
+2. Seleccione **Sistema y seguridad** y luego **Firewall de Windows**.  
    
-- Haga clic en **Configuración avanzada**y, después, en **Reglas de entrada**.  
+3. Seleccione **Configuración avanzada** y luego **Reglas de entrada**.  
    
-- Haga clic con el botón derecho en la regla deshabilitada y, luego, haga clic en **Habilitar regla**.  
+4. Haga clic con el botón derecho en la regla deshabilitada y luego seleccione **Habilitar regla**.  
    
 ### <a name="polybase-service-accounts"></a>Cuentas de servicio de PolyBase
 
-Para cambiar las cuentas de servicio del motor de PolyBase y de los servicios de movimiento de datos de PolyBase, desinstale y vuelva a instalar la característica PolyBase.
+Para cambiar las cuentas de servicio de los servicios Motor de PolyBase y Movimiento de datos de PolyBase, desinstale y vuelva a instalar la característica PolyBase.
 
 ## <a name="next-steps"></a>Pasos siguientes  
 

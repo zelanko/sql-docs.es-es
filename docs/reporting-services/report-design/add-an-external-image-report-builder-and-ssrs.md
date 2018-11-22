@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7f83a95102716547e14b7bea10d5f05a9277ec4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c42c413e235abd758d51a76b1726e0c35e3ff758
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031194"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812298"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Agregar una imagen externa (Generador de informes y SSRS)
   Las imágenes externas pueden estar en un servidor de informes en modo nativo o en modo integrado de SharePoint, o en cualquier otro sitio web. Cuando se incluyen imágenes externas en un informe, se debe comprobar que existen y que el lector del informe dispone de los permisos necesarios para tener acceso a ella. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "50031194"
   
      Para una imagen en un servidor de informes en modo nativo, escriba la ruta de acceso relativa de la imagen en el cuadro **Usar esta imagen** (por ejemplo, ../images/image1.jpg).  
   
-     Para una imagen en un servidor de informes en modo integrado de SharePoint (o cualquier otro sitio web), escriba la dirección URL completa de la imagen en el cuadro **Usar esta imagen** (por ejemplo, http://\<nombreServidorSharePoint/\<sitio>/Documents/images/image1.jpg).  
+     Para una imagen en un servidor de informes en modo integrado de SharePoint (o cualquier otro sitio web) escriba una dirección URL completa a la imagen en el cuadro **Usar esta imagen** (por ejemplo, https://\<nombreServidorSharePoint/\<sitio>/Documents/images/image1.jpg.  
   
      Para más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

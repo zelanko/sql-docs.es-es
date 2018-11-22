@@ -16,12 +16,12 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692133"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638663"
 ---
 # <a name="odata-source"></a>Origen OData
 Use el componente de origen OData en un paquete SSIS para consumir datos de un servicio de Open Data Protocol (OData).
@@ -38,13 +38,13 @@ El componente admite los protocolos OData v3 y v4.
 
 El origen OData incluye compatibilidad con los orígenes de datos siguientes:
 -   Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online
--   Listas de SharePoint. Para ver todas las listas en un servidor de SharePoint, use la dirección URL siguiente: http://\<servidor>/_vti_bin/ListData.svc. Para obtener más información sobre las convenciones de direcciones URL de SharePoint, vea [Interfaz de REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+-   Listas de SharePoint. Para ver todas las listas en un servidor de SharePoint, use la dirección URL siguiente: https://\<servidor>/_vti_bin/ListData.svc. Para obtener más información sobre las convenciones de direcciones URL de SharePoint, vea [Interfaz de REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Tipos de datos admitidos
 
 El origen OData admite los siguientes tipos de datos simples: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string y TimeSpan.
 
-Para detectar los tipos de datos de las columnas del origen de datos, vea la página `http://<OData feed endpoint>/$metadata`.
+Para detectar los tipos de datos de las columnas del origen de datos, vea la página `https://<OData feed endpoint>/$metadata`.
 
 > [!IMPORTANT]
 > El componente de origen de OData no admite tipos complejos, como los elementos de opción múltiple, en las listas de SharePoint.

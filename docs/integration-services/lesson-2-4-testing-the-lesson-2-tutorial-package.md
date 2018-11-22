@@ -11,12 +11,12 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 314e79b0cf5a35a27d93fc3a6906bdb9fbe01abc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745733"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629518"
 ---
 # <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lección 2-4: Probar el paquete del tutorial de la lección 2
 Con el contenedor de bucles Foreach y el administrador de conexiones de archivo plano que ha configurado, el paquete de la lección 2 puede iterarse a través de la colección de 14 archivos planos de la carpeta Datos de ejemplo. Cada vez que se encuentra un archivo que coincide con los criterios de nombre de archivo especificados, el contenedor de bucles Foreach rellena la variable definida por el usuario con el nombre de archivo. Esta variable, a su vez, actualiza la propiedad ConnectionString del administrador de conexiones de archivos planos, y se establece una conexión con el archivo plano nuevo. A continuación, el contenedor de bucles Foreach ejecuta la tarea de flujo de datos sin modificar en los datos del nuevo archivo plano antes de establecer conexión con el siguiente archivo de la carpeta.  
@@ -24,7 +24,7 @@ Con el contenedor de bucles Foreach y el administrador de conexiones de archivo 
 Utilice el procedimiento siguiente para probar la nueva función del bucle que ha agregado al paquete.  
   
 > [!NOTE]  
-> Si ejecutó el paquete desde la lección 1, necesitará eliminar los registros de dbo.FactCurrency en AdventureWorksDW2012 antes de ejecutar el paquete desde esta lección; de lo contrario, el paquete producirá errores que indican la infracción de una restricción de clave principal. Recibirá los mismos errores si ejecuta el paquete seleccionando Depurar/Iniciar la depuración (o presiona F5) porque se ejecutarán las lecciones 1 y 2. La lección 2 intentará insertar registros que ya se insertaron en la lección 1.  
+> Si ejecutó el paquete desde la lección 1, tendrá que eliminar los registros de dbo.NewFactCurrencyRate en AdventureWorksDW2012 antes de ejecutar el paquete desde esta lección; de lo contrario, el paquete producirá errores que indican una infracción de la restricción de clave principal. Recibirá los mismos errores si ejecuta el paquete seleccionando Depurar/Iniciar la depuración (o presiona F5) porque se ejecutarán las lecciones 1 y 2. La lección 2 intentará insertar registros que ya se insertaron en la lección 1.  
   
 ## <a name="checking-the-package-layout"></a>Comprobar el diseño del paquete  
 Antes de probar el paquete, debe comprobar que los flujos de datos y de control de la lección 2 contienen los objetos mostrados en los diagramas siguientes. El flujo de datos debe ser idéntico al flujo de datos de la lección 1.  

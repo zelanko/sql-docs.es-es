@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905139"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672944"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Mejora de los grupos de escalado horizontal de PolyBase en Windows
 
@@ -52,7 +52,7 @@ En este tutorial se muestran los pasos necesarios para configurar un grupo de Po
   
    - PQTH4A-CMP02  
   
-2. Cuenta de dominio: *PQTH4A\PolybaseUse*r  
+2. Cuenta de dominio: *PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Instalación de SQL Server con PolyBase en todas las máquinas
 
@@ -60,7 +60,7 @@ En este tutorial se muestran los pasos necesarios para configurar un grupo de Po
   
 2. En la página Selección de características, elija **PolyBase Query Service for External Data** (Servicio de consultas PolyBase para datos externos).
   
-3. En la página Configuración del servidor, use la **cuenta de dominio** PQTH4A\PolybaseUser para el motor y el servicio de movimiento de datos de SQL Server PolyBase.
+3. En la página Configuración del servidor, use la **cuenta de dominio** PQTH4A\PolyBaseUser para el motor y el servicio de movimiento de datos de SQL Server PolyBase.
   
 4. En la página PolyBase Configuration (Configuración de PolyBase), seleccione la opción **Use the SQL Server instance as part of a PolyBase scale-out group**(Usar la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase). Se abrirá el firewall para permitir las conexiones entrantes a los servicios de PolyBase.
   
@@ -106,6 +106,6 @@ Una vez completada la instalación, las dos máquinas pueden funcionar como nodo
   
 ## <a name="next-steps"></a>Pasos siguientes  
 
-Para solucionar problemas, consulte [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+Para solucionar problemas, consulte [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
   
 Para obtener más información sobre PolyBase, consulte la [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).

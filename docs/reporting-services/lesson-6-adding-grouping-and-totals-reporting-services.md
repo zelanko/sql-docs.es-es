@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051018"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813678"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar y resumir los datos.  
@@ -115,7 +115,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
 3.  En **TargetServerURL** , escriba el nombre del servidor de informes, por ejemplo   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` funciona si está diseñando el informe en el servidor de informes.  
+    - `https://localhost/reportserver` funciona si está diseñando el informe en el servidor de informes.  
   
   
 4. Tenga en cuenta que TargetReportFolder es el tutorial, el nombre del proyecto.  Este es el nombre de la carpeta que en la que se implementará el informe en los pasos siguientes.  
@@ -129,7 +129,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
     > Omitiendo 'Sales Orders.rdl'. El elemento está actualizado.  
     > Generación completa -- 0 errores, 0 advertencias  
     > ------ Operación Implementar iniciada: proyecto: tutorial, configuración: depurar ------  
-    > Implementando en http://[nombre del servidor]/reportserver  
+    > Implementando en https://[nombre del servidor]/servidor_de_informes  
     > Implementando el informe '/tutorial/Sales Orders'.  
     > Implementación completa -- 0 errores, 0 advertencias  
     > ========== Compilar: 1 correctos o actualizados, 0 incorrectos, 0 omitidos==========  
@@ -143,8 +143,8 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
     Vaya a la dirección URL del portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Nota:** La dirección URL del *portal* es "Reports", no la dirección URL del *servidor* de informes de "Reportserver".  Por ejemplo:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports` funciona si está diseñando el informe en el servidor de informes.  
+    `https://<server name>/reports`.  
+    `https://localhost/reports` funciona si está diseñando el informe en el servidor de informes.  
   
 8.  Vaya a la carpeta que contiene el informe. El nombre predeterminado es *tutorial*, el nombre del proyecto o el nombre que ha escrito en el campo TargetReportFolder en las propiedades del proyecto.   
 Haga clic en el nombre del informe **Sales Orders** para verlo representado en el explorador.  

@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252212"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699343"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -257,7 +257,7 @@ Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Mic
 > El dispositivo de disco NUL descartará toda la información que se le envíe y solo se debe usar para realizar pruebas. No se debe usar en entornos de producción.
   
 > [!IMPORTANT]  
-> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cuando se hagan copias de seguridad en URL, solo se podrán hacer en un único dispositivo. Para hacer una copia de seguridad en varios dispositivos cuando se hagan copias de seguridad en URL, hay que usar las versiones [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y, asimismo, usar tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
+> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cuando se hagan copias de seguridad en URL, solo se podrán hacer en un único dispositivo. Para hacer una copia de seguridad en varios dispositivos cuando se hagan copias de seguridad en URL, hay que usar las versiones [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y, asimismo, usar tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
   
 **URL se aplica a**: de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -279,7 +279,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] Especifica un conjunto de hasta tres 
 Esta opción solo está disponible en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Para MIRROR TO = DISK, BACKUP determina automáticamente el tamaño de bloque apropiado de los dispositivos de disco. Para obtener más información acerca del tamaño de bloque, vea "BLOCKSIZE" más adelante en esta tabla.  
+> Para MIRROR TO = DISK, BACKUP determina automáticamente el tamaño de bloque apropiado de los dispositivos de disco en función del tamaño de sector del disco. Si al disco MIRROR TO se le aplica formato con un tamaño de sector diferente al del disco especificado como dispositivo de copia de seguridad principal, se producirá un error en el comando de copia de seguridad.  Con el fin de reflejar las copias de seguridad en los dispositivos que tienen otros tamaños de sector, se debe especificar el parámetro BLOCKSIZE y se debe establecer en el tamaño de sector mayor de todos los dispositivos de destino.  Para obtener más información sobre el tamaño de bloque, vea "BLOCKSIZE" más adelante en este tema.  
   
 \<backup_device> Vea "\<backup_device>" más arriba en esta sección.
   
@@ -470,7 +470,7 @@ Especifica el número total de búferes de E/S que se van a utilizar para la ope
 El espacio total usado por los búferes viene determinado por: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).  
+> Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
 
@@ -726,7 +726,7 @@ La instrucción BACKUP no se permite en una transacción explícita o implícita
 Se pueden realizar operaciones de copia de seguridad entre plataformas, incluso entre diferentes tipos de procesador, siempre que el sistema operativo admita la intercalación de la base de datos.  
  
 Cuando se usa la compresión de copia de seguridad con bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, se recomienda usar un valor de `MAXTRANSFERSIZE` **mayor que 65536 (64 KB)**.   
-Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], esto habilita un algoritmo de compresión optimizada para bases de datos con cifrado TDE que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
+Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], esto habilita un algoritmo de compresión optimizada para bases de datos con cifrado TDE que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
 
 > [!NOTE]  
 > Hay algunos casos en los que el `MAXTRANSFERSIZE` predeterminado es mayor que 64 KB:
@@ -1003,7 +1003,7 @@ TO URL
 Especifica la dirección URL que se usará para la operación de copia de seguridad. El formato de las direcciones URL solo se usa para crear copias de seguridad en el servicio de almacenamiento Microsoft Azure. 
 
 > [!IMPORTANT]  
-> Para hacer una copia de seguridad en varios dispositivos cuando se hagan copias de seguridad en URL, debe usar tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
+> Para hacer una copia de seguridad en varios dispositivos cuando se hagan copias de seguridad en URL, debe usar tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
   
 *n*  
 Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas.  
@@ -1068,7 +1068,7 @@ Especifica el número total de búferes de E/S que se van a utilizar para la ope
 El espacio total usado por los búferes viene determinado por: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).  
+> Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
 

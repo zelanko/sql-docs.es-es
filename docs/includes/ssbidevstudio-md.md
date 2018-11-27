@@ -1,1 +1,1 @@
- Herramientas de datos de SQL Server 
+ SQL Server Data Tools

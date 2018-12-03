@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050857"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413755"
 ---
 # <a name="sqlpackage-release-notes"></a>notas de la versión de Sqlpackage
 
@@ -76,20 +76,22 @@ La versión incluye las siguientes correcciones:
 - Se agregó /DiagnosticsFile:"C:\Temp\sqlpackage.log" parámetro de línea de comandos para especificar una ruta de acceso de archivo para guardar la información de diagnóstico.
 - Se ha agregado el parámetro de línea de comandos del /Diagnostics para registrar información de diagnóstico en la consola.
 
-## <a name="sqlpackage-on-macos-and-linux-001-preview"></a>Sqlpackage en macOS y Linux 0.0.1 (versión preliminar)
+## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>Sqlpackage en macOS y Linux .NET Core (versión preliminar)
 
-Fecha de publicación: 9 de mayo de 2018  
-Compilación: 15.0.4057.1
+Fecha de publicación: 15 de noviembre de 2018  
+Compilación
 
-Esta versión contiene la compilación de versión preliminar de multiplataforma de sqlpackage que tenga como destino .NET Core 2.0 y puede ejecutar en Mac OS y Linux. 
+Esta versión contiene la compilación de versión preliminar de multiplataforma de sqlpackage que tenga como destino .NET Core 2.1 y puede ejecutar en Mac OS y Linux. 
+
+La versión incluye las siguientes correcciones:
+
+- Mover a .NET Core 2.1 
+- Compatibilidad con tipos UDT de CLR, incluidos los tipos UDT de CLR de SQL: SqlHierarchyId, SqlGeometry y SqlGeography.
 
 Esta versión es una versión preliminar con los siguientes problemas conocidos:
 
 - El parámetro /p:CommandTimeout está codificado en 120.
 - No se admiten los colaboradores de compilación e implementación.
-  - Se corregirá después de mover a donde se admite System.ComponentModel.Composition.dll .NET Core 2.1.
-  - Es necesario controlar las rutas de acceso distingue mayúsculas de minúsculas.
-- No se admiten tipos UDT de CLR de SQL, incluidos los tipos UDT de CLR de SQL Server: SqlHierarchyId, SqlGeometry y SqlGeography.
 - No se admiten archivos de dacpac y bacpac antiguos que utilizan la serialización de datos de json.
 - No se puede solucionar .dacpacs que se hace referencia (por ejemplo master.dacpac) debido a problemas con los sistemas de archivos distingue mayúsculas de minúsculas.
   - Una solución consiste en poner en mayúsculas del nombre del archivo de referencia (por ejemplo maestra. BACPAC).

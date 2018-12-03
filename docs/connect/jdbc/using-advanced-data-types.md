@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510501"
 ---
 # <a name="using-advanced-data-types"></a>Usar tipos de datos avanzados
 
@@ -26,7 +26,7 @@ ms.locfileid: "47750113"
   
 ## <a name="remarks"></a>Notas
 
-En la siguiente tabla se muestran las asignaciones predeterminadas entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avanzados, JDBC y del lenguaje de programación Java.  
+La siguiente tabla muestra las asignaciones predeterminadas entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avanzados, JDBC y del lenguaje de programación Java.  
   
 |Tipos de SQL Server|Tipos de JDBC (Tipos de java.sql.)|Tipos del lenguaje Java|  
 |----------------------|-----------------------------------|-------------------------|  
@@ -162,7 +162,7 @@ Para más información sobre los tipos de datos **xml**, vea "Tipos de datos XML
   
 ## <a name="user-defined-data-type"></a>Tipos de datos definidos por el usuario  
 
-La introducción de tipos definidos por el usuario (UDT) en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] amplía el sistema de tipos de SQL al permitirle almacenar estructuras de datos personalizados y objetos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT pueden contener varios tipos de datos y pueden presentar distintos comportamientos, lo que los diferencia de los tipos de datos de alias tradicionales que constan de un único tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT se definen con cualquiera de los lenguajes compatibles con Microsoft .NET Common Language Runtime (CLR) que producen código comprobable. Esto incluye Microsoft Visual C# y Visual Basic .NET. Los datos se exponen como campos y propiedades de una clase o una estructura basada en .NET Framework, y los comportamientos se definen con métodos de la clase o la estructura.  
+La introducción de tipos definidos por el usuario (UDT) en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] amplia el sistema de tipos de SQL al permitirle almacenar estructuras de datos y objetos personalizados en una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT pueden contener varios tipos de datos y pueden presentar distintos comportamientos, lo que los diferencia de los tipos de datos de alias tradicionales que constan de un único tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT se definen con cualquiera de los lenguajes compatibles con Microsoft .NET Common Language Runtime (CLR) que producen código comprobable. Esto incluye Microsoft Visual C# y Visual Basic .NET. Los datos se exponen como campos y propiedades de una clase o una estructura basada en .NET Framework, y los comportamientos se definen con métodos de la clase o la estructura.  
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se pueden usar los UDT como definiciones de columnas de una tabla, como una variable de un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] o como un argumento de una función o un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

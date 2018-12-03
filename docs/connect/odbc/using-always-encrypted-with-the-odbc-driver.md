@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506829"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,7 +365,7 @@ El Almacén de claves de Azure es una opción adecuada para almacenar y administ
 
 El controlador admite la autenticación en Azure Key Vault mediante los siguientes tipos de credencial:
 
-- Nombre de usuario y contraseña: con este método, las credenciales son el nombre de un usuario de Azure Active Directory y su contraseña.
+- Nombre de usuario/contraseña - con este método, las credenciales son el nombre de un usuario de Azure Active Directory y su contraseña.
 
 - Id. de cliente/secreto: con este método, las credenciales son un identificador de cliente de aplicación y un secreto de aplicación.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 322a9ce1992bb2b4d0215cfefa747ea56e68472f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e6585c78b26199c7ae5194e37d152db91aab1224
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050927"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396323"
 ---
 # <a name="download-and-install-sqlpackage"></a>Descargue e instale sqlpackage
 
@@ -26,8 +26,8 @@ Descargue e instale la versión más reciente de .NET Framework y macOS y Linux 
 |Plataforma|Descargar|Fecha de la versión|Versión|Compilar
 |:---|:---|:---|:---|:---|
 |Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2033947)|24 de octubre de 2018|18.0|15.0.4200.1|
-|macOS (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=873927)|9 de mayo de 2018 |0.0.1|15.0.4057.1|
-|Linux (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=873926)|9 de mayo de 2018 |0.0.1|15.0.4057.1|
+|macOS (versión preliminar) de .NET Core|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2044514)|15 de noviembre de 2018 | - |15.0.4240.1|
+|.NET Core (versión preliminar) de Linux|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2044263)|15 de noviembre de 2018 | - |15.0.4240.1|
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](sqlpackage-release-notes.md).
 
@@ -42,7 +42,7 @@ Esta versión de sqlpackage incluye una experiencia de instalador de Windows est
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Obtener sqlpackage (versión preliminar) para macOS
 
-1. Descargar [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=873927).
+1. Descargar [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=2044514).
 2. Para extraer el archivo e inicia sqlpackage, abra una nueva ventana de Terminal y escriba los siguientes comandos:
 
    **Instalación del archivo .zip:**
@@ -57,7 +57,7 @@ Esta versión de sqlpackage incluye una experiencia de instalador de Windows est
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Obtener sqlpackage (versión preliminar) para Linux
 
-1. Descargar [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=873926) mediante uno de los instaladores o el archivo tar.gz:
+1. Descargar [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=2044263) mediante uno de los instaladores o el archivo tar.gz:
 2. Para extraer el archivo e inicia sqlpackage, abra una nueva ventana de Terminal y escriba los siguientes comandos:
 
    **Instalación del archivo .zip:**

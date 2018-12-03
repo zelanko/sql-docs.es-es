@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695683"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403430"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso de Always Encrypted con los controladores PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 Los ejemplos siguientes muestran datos filtrados según valores cifrados y la recuperación de datos de texto simple de las columnas cifradas con los controladores de SQLSRV y PDO_SQLSRV. Tenga en cuenta lo siguiente:
  -   El valor que se ha usado en la cláusula WHERE para filtrar por la columna SSN necesita pasarse mediante el parámetro bind, de forma que el controlador pueda cifrarlo de manera transparente antes de enviarlo al servidor.
  -   Al ejecutar una consulta con parámetros enlazados, los controladores PHP determina automáticamente el tipo SQL para el usuario a menos que el usuario especifica explícitamente el tipo SQL al usar el controlador SQLSRV.
- -   Todos los valores impresos por el programa están en texto sin formato, ya que el controlador descifra de forma transparente los datos recuperados de las columnas SSN y BirthDate.
+ -   Todos los valores impresos por el programa estarán en texto sin formato, ya que el controlador descifrará los datos que se han recuperado de las columnas SSN y BirthDate de manera transparente.
  
 Nota: Las consultas pueden realizar comparaciones de igualdad en las columnas cifradas solo si el cifrado es determinista. Para obtener más información, vea la sección [Selección del cifrado determinista o aleatorio](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 

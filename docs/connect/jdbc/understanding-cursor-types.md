@@ -11,12 +11,12 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 295d4b7867c8ed51822080d03489643d69f68f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735464"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396339"
 ---
 # <a name="understanding-cursor-types"></a>Descripción de los tipos de cursor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47735464"
 -   Aceptan diferentes grados de visibilidad para los cambios que realizan otros usuarios en la información de la base de datos que se presenta en el conjunto de resultados.  
   
 > [!NOTE]  
->  Para obtener una descripción completa de los tipos de cursor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el tema "Cursor Types (Database Engine)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Para obtener una descripción completa de los tipos de cursor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el tema "Cursor Types (Database Engine)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  La especificación JDBC proporciona compatibilidad con los cursores de solo avance y los cursores desplazables que son sensibles o no a los cambios que realizan otros trabajos, y pueden ser de solo lectura o actualizables. La clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona esta funcionalidad.  
   

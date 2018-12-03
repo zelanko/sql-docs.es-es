@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9a8fa77ed1819d22eb90ea4fb0a7308122f708e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522955"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -123,7 +123,7 @@ En ODBC Driver 13 y 13.1, cuando los caracteres multibyte UTF-8 o UTF-16 suplent
 1.  Puede realizar una conexión de administrador dedicada (DAC) con la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y **host,port**. Un miembro de la función Sysadmin debe detectar primero el puerto DAC. Consulte [conexión de diagnóstico para administradores de base de datos](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) para descubrir cómo. Por ejemplo, si el puerto DAC fuera 33000, podría conectarse a él con `sqlcmd` de la siguiente forma:  
 
     ```
-    sqlcmd –U <user> -P <pwd> -S <host>,33000
+    sqlcmd -U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  

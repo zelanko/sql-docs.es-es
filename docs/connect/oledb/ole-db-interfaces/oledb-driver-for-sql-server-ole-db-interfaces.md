@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d0086ada5f1399de191670dc415fca2e1ca00bce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5bf463a531bad6c7d03a4b7d6439a71539fe9df8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521470"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Interfaces del controlador OLE DB para SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

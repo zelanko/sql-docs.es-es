@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527102"
 ---
 # <a name="idle-connection-resiliency"></a>Resistencia de conexión inactiva
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

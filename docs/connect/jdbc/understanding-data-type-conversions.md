@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762413"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520200"
 ---
 # <a name="understanding-data-type-conversions"></a>Descripción de las conversiones de tipos de datos
 

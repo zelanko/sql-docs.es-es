@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741763"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534692"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Uso de la copia masiva con el controlador JDBC
 
@@ -583,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. Seleccione **Escribir una consulta para especificar los datos que se van a transferir** y haga clic en **Siguiente**.  Escriba la **instrucción SQL** SELECT ProductID, Name, ProductNumber FROM Production.Product y después haga clic en **Siguiente**.  
   
-6. Compruebe la configuración: puede dejar el delimitador de filas como {CR}{LF} y el delimitador de columnas como coma {,}.  Haga clic en **Editar asignaciones**... y compruebe que el **Tipo** de datos es correcto para cada columna (por ejemplo, entero para ProductID y cadena Unicode para las demás).  
+6. Compruebe la configuración: puede dejar el delimitador de filas como {CR}{LF} y el delimitador de columnas como coma {,}.  y compruebe que el **Tipo** de datos es correcto para cada columna (por ejemplo, entero para ProductID y cadena Unicode para las demás).  
   
 7. Vaya directamente a **Finalizar** y ejecute la exportación.  
 

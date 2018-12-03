@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600865"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545287"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resistencia de conexión en el controlador Windows ODBC
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51600865"
   
 -   Intervalo de reintentos de conexión.  
   
-     La opción de intervalo de reintentos de conexión especifica el número de segundos entre cada reintento de conexión. Los valores válidos oscilan entre 1 y 60. El tiempo total para volver a realizar la reconexión no puede superar el de espera de conexión (SQL_ATTR_QUERY_TIMEOUT en SQLSetStmtAttr). El valor predeterminado es 10 segundos.  
+     La opción de intervalo de reintentos de conexión especifica el número de segundos entre cada reintento de conexión. Los valores válidos son: El tiempo total para volver a realizar la reconexión no puede superar el de espera de conexión (SQL_ATTR_QUERY_TIMEOUT en SQLSetStmtAttr). El valor predeterminado es 10 segundos.  
   
      Puede modificar el intervalo de reintentos de conexión:  
   

@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66a576c33b805fb350b465ea47d2588e0dae7036
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541320"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ssbdiagnose
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -U login_id [ -P password ] } ]  
+    [ -E | { -U login_id [ -P password ] } ]  
   [ -S server_name[\instance_name] ]  
   [ -d database_name ]  
   [ -l login_timeout ]  
@@ -207,7 +207,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions >**  
  Especifica la información de conexión para las bases de datos que contienen los servicios asociados a los elementos de conversación que se están supervisando. Si todos los servicios se encuentran en la misma base de datos, solo es necesario especificar una cláusula **CONNECT TO** . Por el contrario, si los servicios se encuentran en bases de datos independientes, será necesario especificar una cláusula **CONNECT TO** para cada base de datos. Si **runtimeconnectionoptions** no se especifica, **ssbdiagnose** usa la información de conexión de **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Abre una conexión con autenticación de Windows para una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y usa la cuenta de Windows actual como identificador de inicio de sesión. El usuario debe ser miembro del rol fijo de servidor **sysadmin** .  
   
  La opción -E omite la configuración de usuario y de contraseña de las variables de entorno SQLCMDUSER y SQLCMDPASSWORD.  

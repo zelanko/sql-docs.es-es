@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677304"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711596"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
 |7|DATABASE_SNAPSHOT_CREATION|Se está creando una instantánea de base de datos. (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual, por lo general breve, para retrasar el truncamiento del registro.|  
 |8|LOG_SCAN|Se está realizando un examen de registro. (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual, por lo general breve, para retrasar el truncamiento del registro.|  
 |9|AVAILABILITY_REPLICA|Una réplica secundaria de un grupo de disponibilidad está aplicando entradas del registro de transacciones de esta base de datos a una base de datos secundaria correspondiente. (Modelo de recuperación completa)<br /><br /> Para obtener más información, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Exclusivamente para uso interno.|  
-|11|—|Exclusivamente para uso interno.|  
-|12|—|Exclusivamente para uso interno.|  
+|10|-|Exclusivamente para uso interno.|  
+|11|-|Exclusivamente para uso interno.|  
+|12|-|Exclusivamente para uso interno.|  
 |13|OLDEST_PAGE|Si una base de datos está configurada para usar puntos de comprobación indirectos, la página más antigua de la base de datos podría ser anterior al [número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del punto de comprobación. En este caso, la página más antigua puede retrasar el truncamiento del registro. (Todos los modelos de recuperación)<br /><br /> Para obtener más información sobre los puntos de comprobación indirectos, vea [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|No se utiliza este valor actualmente.|  
   
@@ -158,17 +158,17 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
     -   Regeneración del nuevo montón [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (si procede). La desasignación de páginas de índice durante una operación `DROP INDEX` **siempre** se registra completamente.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **Administrar el registro de transacciones**  
+**Administrar el registro de transacciones**  
   
 -   [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Realizar copia de seguridad de un registro de transacciones (modelo de recuperación completa)**  
+**Realizar copia de seguridad de un registro de transacciones (modelo de recuperación completa)**  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Restaurar el registro de transacciones (modelo de recuperación completa)**  
+**Restaurar el registro de transacciones (modelo de recuperación completa)**  
   
 -   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

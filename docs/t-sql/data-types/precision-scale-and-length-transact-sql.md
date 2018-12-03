@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e28639c3e0f167c61f63c4d63eadf703609b54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507263"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisión, escala y longitud (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ Las expresiones de operando se denotan como expresión e1, con precisión p1 y e
   
 \* La precisión del resultado y la escala tienen un máximo absoluto igual a 38. Cuando la precisión de un resultado es mayor que 38, se reduce a 38, y la escala correspondiente se reduce para intentar evitar que la parte entera del resultado se trunque. En algunos casos, como en la multiplicación o la división, el factor de escala no se reduce para conservar la precisión decimal, aunque se pueda generar un error por desbordamiento.
 
-Además de las operaciones de suma y resta, necesitamos que los sitios `max(p1 – s1, p2 – s2)` almacenen las partes enteras de los números decimales. Si no hay suficiente espacio para almacenarlas, por ejemplo, `max(p1 – s1, p2 – s2) < min(38, precision) – scale`, la escala se reduce para proporcionar suficiente espacio para integrar la parte entera. La escala resultante es `MIN(precision, 38) - max(p1 – s1, p2 – s2)`, con lo que la parte fraccionaria se puede redondear para que entre en la escala resultante.
+Además de las operaciones de suma y resta, necesitamos que los sitios `max(p1 - s1, p2 - s2)` almacenen las partes enteras de los números decimales. Si no hay suficiente espacio para almacenarlas, por ejemplo, `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, la escala se reduce para proporcionar suficiente espacio para integrar la parte entera. La escala resultante es `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, con lo que la parte fraccionaria se puede redondear para que entre en la escala resultante.
 
 En las operaciones de multiplicación y división necesitamos que los sitios `precision - scale` almacenen la parte entera del resultado. La escala se puede reducir utilizando las reglas siguientes:
-1.  La escala resultante se reduce a `min(scale, 38 – (precision-scale))` si la parte entera es menor que 32, porque no puede ser mayor que `38 – (precision-scale)`. En este caso, el resultado se puede redondear.
+1.  La escala resultante se reduce a `min(scale, 38 - (precision-scale))` si la parte entera es menor que 32, porque no puede ser mayor que `38 - (precision-scale)`. En este caso, el resultado se puede redondear.
 1. La escala no cambia si es inferior a 6 y si la parte entera es mayor que 32. En este caso, se puede producir un error de desbordamiento porque no cabe en el decimal (38, escala). 
 1. La escala se establece en 6 si es mayor que 6 y si la parte entera es mayor que 32. En este caso, se reducen tanto la parte entera como la escala y el tipo resultante es decimal (38,6). El resultado se tiene que redondear hasta 6 puntos decimales o se producirá un error si la parte entera no cabe en 32 dígitos.
 
@@ -76,7 +76,7 @@ La siguiente expresión devuelve resultados `0.00000090000000000` sin redondear,
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 En este caso, la precisión es 61 y la escala es 40.
-La parte entera (escala de precisión = 21) es menor que 32, por lo que este es el caso (1) de las reglas de multiplicación y la escala se calcula como `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`. El tipo de resultado es `decimal(38,17)`.
+La parte entera (escala de precisión = 21) es menor que 32, por lo que este es el caso (1) de las reglas de multiplicación y la escala se calcula como `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`. El tipo de resultado es `decimal(38,17)`.
 
 La siguiente expresión devuelve resultados `0.000001` que caben en `decimal(38,6)`:
 ```sql

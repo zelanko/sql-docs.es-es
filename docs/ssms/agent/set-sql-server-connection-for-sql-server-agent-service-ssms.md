@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b2857e00a9892922d69a41a293382e77d3d2c49f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a794cdf7990f5b4a1ca2325d7d2d4433030b08a9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634783"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545770"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
   
 2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server***nombre_de_servidor*, en **Seleccionar una página**, haga clic en **Conexión**.  
+3.  En el cuadro de diálogo **Propiedades de Agente SQL Server**_nombre_servidor_ , en **Seleccionar una página**, haga clic en **Conexión**.  
   
 4.  En **Conexión de SQL Server**, seleccione **Usar autenticación de Windows** para que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecte a una instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] mediante la autenticación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. Las conexiones a las bases de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores requieren la autenticación de Windows.  
   

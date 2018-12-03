@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503651"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ La alteración de columna en línea permite a las estadísticas automáticas y a
   
 -   La opción `WAIT_AT_LOW_PRIORITY` no puede utilizarse con alteración de columna en línea.  
   
--   `ALTER COLUMN … ADD/DROP PERSISTED` no se admite para la alteración de columna en línea.  
+-   `ALTER COLUMN ... ADD/DROP PERSISTED` no se admite para la alteración de columna en línea.  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` no se ve afectado por la alteración de columna en línea.  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` no se ve afectado por la alteración de columna en línea.  
   
 -   La alteración de columna en línea no admite la modificación de una tabla con el seguimiento de cambios habilitado que sea un publicador de replicación de mezcla.  
   
@@ -627,7 +627,7 @@ Si no desea volver a comprobar las restricciones CHECK o FOREIGN KEY nuevas con 
 
 ALTER INDEX *index_name* especifica que es necesario cambiar o modificar el número de cubos para *index_name*.
   
-La sintaxis ALTER TABLE... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.    
+La sintaxis ALTER TABLE ... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.    
 
 > [!IMPORTANT]
 > Si no se usa una instrucción ALTER TABLE, las instrucciones [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) y [PAD_INDEX](alter-table-index-option-transact-sql.md) no son compatibles con los índices de las tablas optimizadas para memoria.
@@ -660,7 +660,7 @@ Una restricción PRIMARY KEY no puede quitarse si existe un índice XML en la ta
 KEY INDEX *nombre_de_índice*    
 Especifica que *nombre_de_índice* se ha quitado de la tabla.
   
-La sintaxis ALTER TABLE... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.    
+La sintaxis ALTER TABLE ... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.    
 
 > [!IMPORTANT]
 > Si no se usa una instrucción ALTER TABLE, las instrucciones [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) y [PAD_INDEX](alter-table-index-option-transact-sql.md) no son compatibles con los índices de las tablas optimizadas para memoria.
@@ -1008,7 +1008,7 @@ Quita condicionalmente la columna o restricción solo si ya existe.
  Puede cambiar la longitud, precisión o escala de una columna especificando un nuevo tamaño para el tipo de datos de columna en la cláusula ALTER COLUMN. Si hay datos en la columna, el nuevo tamaño no puede ser menor que el tamaño máximo de los datos. Asimismo, la columna se puede definir en un índice, a menos que sea de un tipo de datos **varchar**, **nvarchar** o **varbinary**, y el índice no sea el resultado de una restricción KEY PRIMARY. Vea el ejemplo P.  
   
 ## <a name="locks-and-alter-table"></a>Bloqueos y ALTER TABLE  
- Los cambios especificados en ALTER TABLE se ejecutan inmediatamente. Si los cambios requieren modificaciones de las filas de la tabla, ALTER TABLE actualiza las filas. ALTER TABLE adquiere un bloqueo de modificación del esquema (SCH-M) sobre la tabla para asegurar que ninguna otra conexión haga referencia ni a los metadatos de la tabla durante el cambio, excepto las operaciones de indización en línea que precisen un breve bloqueo SCH-M al final. En una operación `ALTER TABLE…SWITCH`, el bloqueo se adquiere tanto en las tablas de origen como en las de destino. Las modificaciones realizadas en la tabla se registran y son completamente recuperables. Los cambios que afectan a todas las filas de tablas muy grandes, como quitar una columna o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], agregar una columna NOT NULL con un valor predeterminado, pueden tardar mucho tiempo en completarse y generan muchos registros. Estas instrucciones ALTER TABLE deben ejecutarse con el mismo cuidado que cualquier instrucción INSERT, UPDATE o DELETE que afecte a un gran número de filas.  
+ Los cambios especificados en ALTER TABLE se ejecutan inmediatamente. Si los cambios requieren modificaciones de las filas de la tabla, ALTER TABLE actualiza las filas. ALTER TABLE adquiere un bloqueo de modificación del esquema (SCH-M) sobre la tabla para asegurar que ninguna otra conexión haga referencia ni a los metadatos de la tabla durante el cambio, excepto las operaciones de indización en línea que precisen un breve bloqueo SCH-M al final. En una operación `ALTER TABLE...SWITCH`, el bloqueo se adquiere tanto en las tablas de origen como en las de destino. Las modificaciones realizadas en la tabla se registran y son completamente recuperables. Los cambios que afectan a todas las filas de tablas muy grandes, como quitar una columna o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], agregar una columna NOT NULL con un valor predeterminado, pueden tardar mucho tiempo en completarse y generan muchos registros. Estas instrucciones ALTER TABLE deben ejecutarse con el mismo cuidado que cualquier instrucción INSERT, UPDATE o DELETE que afecte a un gran número de filas.  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>Agregar columnas NOT NULL como una operación en línea  
  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, agregar una columna NOT NULL con un valor predeterminado es una operación en línea cuando el valor predeterminado es una *constante de tiempo de ejecución*. Esto significa que la operación se ha completado de forma casi instantánea, independientemente del número de filas de la tabla. Esto se debe a que las filas existentes en la tabla no se actualizan durante la operación; en su lugar, el valor predeterminado se almacena únicamente en los metadatos de la tabla y el valor se busca según sea necesario en las consultas que tienen acceso a estas filas. Este comportamiento es automático; no se requiere sintaxis adicional alguna para implementar la operación en línea aparte de la sintaxis de COLUMN ADD. Una constante de tiempo de ejecución es una expresión que genera el mismo valor en tiempo de ejecución para cada fila de la tabla independientemente de su determinismo. Por ejemplo, la expresión constante “mis datos temporales” o la función del sistema GETUTCDATETIME() son constantes de tiempo de ejecución. En cambio, las funciones `NEWID()` o `NEWSEQUENTIALID()` no son constantes de tiempo de ejecución porque se genera un valor único para cada fila de la tabla. Cuando se agrega una columna NOT NULL con un valor predeterminado que no es una constante de tiempo de ejecución, se realiza siempre sin conexión y se adquiere un bloqueo exclusivo (SCH-M) mientras dura la operación.  

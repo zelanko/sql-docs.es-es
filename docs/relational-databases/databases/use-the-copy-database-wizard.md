@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560512"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403250"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Independientemente de si elige **Mover** o **Copiar**, **Separar y adjuntar** o 
      > **NOTA** Puede iniciar el Asistente para copiar bases de datos desde cualquier base de datos.  Puede usar al Asistente para copiar bases de datos desde el servidor de origen o de destino.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Mover bases de datos mediante el método de separar y adjuntar a una instancia en un servidor físico diferente.  También se moverá un inicio de sesión y el trabajo del Agente SQL Server.**  
-En el siguiente ejemplo se moverá la base de datos `Sales` , un inicio de sesión de Windows denominado `contoso\Jennie` y un trabajo del Agente SQL Server denominado `Jennie’s Report` de una instancia de SQL Server 2008 en `Server1` a una instancia de SQL Server 2016 en `Server2`.  `Jennie’s Report` usa la base de datos `Sales` .  `Sales` no existe todavía en el servidor de destino, `Server2`.  `Server1` se volverá a asignar a un equipo diferente después del traslado de la base de datos.
+En el siguiente ejemplo se moverá la base de datos `Sales` , un inicio de sesión de Windows denominado `contoso\Jennie` y un trabajo del Agente SQL Server denominado `Jennie's Report` de una instancia de SQL Server 2008 en `Server1` a una instancia de SQL Server 2016 en `Server2`.  `Jennie's Report` usa la base de datos `Sales` .  `Sales` no existe todavía en el servidor de destino, `Server2`.  `Server1` se volverá a asignar a un equipo diferente después del traslado de la base de datos.
   
 6.  Como se ha indicado anteriormente en [Limitaciones y restricciones](#Restrictions), una base de datos de shell necesitará crearse en el servidor de destino al transferir un trabajo del Agente SQL Server que haga referencia a una base de datos que todavía no exista en el servidor de destino.  Cree una base de datos de shell denominada `Sales` en el servidor de destino. 
 
@@ -322,7 +322,7 @@ En el siguiente ejemplo se moverá la base de datos `Sales` , un inicio de sesi�
   
 9.  Página**Configurar base de datos de destino** : el **Asistente** ha identificado que `Sales` ya existe en el servidor de destino, tal y como se ha creado en el **paso 6** anterior, y ha anexado `_new` al nombre de la **base de datos de destino** .  Elimine `_new` del cuadro de texto **Base de datos de destino** .  Si quiere, puede cambiar el **nombre de archivo**y la **carpeta de destino**.  Seleccione **Quitar cualquier base de datos del servidor de destino que tenga el mismo nombre y continuar con la transferencia (sobrescribiendo los archivos de base de datos existentes)**.  Haga clic en **Siguiente**.
   
-10. Página**Seleccionar objetos de servidor** : en el panel **Objetos relacionados seleccionados:** , haga clic en el botón de puntos suspensivos de **Object name Logins (Inicios de sesión del nombre de objeto)**.  En **Opciones de copia** , seleccione **Copiar solo los inicios de sesión seleccionados:**.  Active el cuadro de **Mostrar todos los inicios de sesión del servidor**.  Active el cuadro de **Inicio de sesión** para `contoso\Jennie`.  Haga clic en **Aceptar**.  En el panel **Objetos relacionados disponibles:** , seleccione **Trabajos del Agente SQL Server** y, después, haga clic en el botón **>** .  En el panel **Objetos relacionados seleccionados:** , haga clic en el botón de puntos suspensivos de **Trabajos del Agente SQL Server**.  En **Opciones de copia** , seleccione **Copiar solo los trabajos seleccionados:**.  Active el cuadro de `Jennie’s Report`.  Haga clic en **Aceptar**.  Haga clic en **Siguiente**.  
+10. Página**Seleccionar objetos de servidor** : en el panel **Objetos relacionados seleccionados:** , haga clic en el botón de puntos suspensivos de **Object name Logins (Inicios de sesión del nombre de objeto)**.  En **Opciones de copia** , seleccione **Copiar solo los inicios de sesión seleccionados:**.  Active el cuadro de **Mostrar todos los inicios de sesión del servidor**.  Active el cuadro de **Inicio de sesión** para `contoso\Jennie`.  Haga clic en **Aceptar**.  En el panel **Objetos relacionados disponibles:** , seleccione **Trabajos del Agente SQL Server** y, después, haga clic en el botón **>** .  En el panel **Objetos relacionados seleccionados:** , haga clic en el botón de puntos suspensivos de **Trabajos del Agente SQL Server**.  En **Opciones de copia** , seleccione **Copiar solo los trabajos seleccionados:**.  Active el cuadro de `Jennie's Report`.  Haga clic en **Aceptar**.  Haga clic en **Siguiente**.  
   
 11. Página**Ubicación de los archivos de base de datos de origen** : haga clic en el botón de puntos suspensivos de **Recurso compartido de archivos en el servidor de origen** y vaya a la ubicación de la ubicación de la carpeta especificada.  Por ejemplo, la ubicación de la carpeta `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` usa `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` para **Recurso compartido de archivos en el servidor de origen**.  Haga clic en **Siguiente**.
   
@@ -354,7 +354,7 @@ En el siguiente ejemplo se moverá la base de datos `Sales` , un inicio de sesi�
 Como `Server1` se moverá a un equipo diferente y la operación **Mover** no se repetirá, considere la posibilidad de ejecutar los siguientes pasos:
      -    Eliminar el paquete SSIS `SalesFromServer1toServer2_Move` en `Server2`.
      -    Eliminar el trabajo del Agente SQL Server `SalesFromServer1toServer2_Move` en `Server2`.
-     -    Eliminar el trabajo del Agente SQL Server `Jennie’s Report` en `Server1`.
+     -    Eliminar el trabajo del Agente SQL Server `Jennie's Report` en `Server1`.
      -    Quitar el inicio de sesión `contoso\Jennie` en `Server1`.
 
 

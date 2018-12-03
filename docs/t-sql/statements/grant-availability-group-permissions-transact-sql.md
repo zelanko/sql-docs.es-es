@@ -18,12 +18,12 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 70e5a017926a627370dcbe7cd01a011f51454435
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e42e9f220c270b3e014eead20380167dde4b0dae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643623"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514223"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Especifica un permiso que se puede conceder en un grupo de disponibilidad. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Especifica el grupo de disponibilidad en el que se va a conceder el permiso. El calificador de ámbito (**::**) es obligatorio.  
   
  TO \<server_principal>  

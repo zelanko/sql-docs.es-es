@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bce46bab220ddda57d18cea6588c35475becd372
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533338"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar SQL Server en Server Core
 
@@ -55,7 +55,7 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
 |SDK de las herramientas de cliente|no||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Libros en pantalla|no||  
 |Herramientas de administración: básicas|Solo remoto|No se admite la instalación de estas características en Server Core. Estos componentes se pueden instalar en otro servidor que no sea Server Core y conectarse a los servicios de [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados en Server Core.|  
-|Herramientas de administración: completas|Solo remoto|No se admite la instalación de estas características en Server Core. Estos componentes se pueden instalar en otro servidor que no sea Server Core y conectarse a los servicios de [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados en Server Core.|  
+|Herramientas de administración - Completa|Solo remoto|No se admite la instalación de estas características en Server Core. Estos componentes se pueden instalar en otro servidor que no sea Server Core y conectarse a los servicios de [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados en Server Core.|  
 |Distributed Replay Controller|no||  
 |Distributed Replay Client|Solo remoto|No se admite la instalación de estas características en Server Core. Estos componentes se pueden instalar en otro servidor que no sea Server Core y conectarse a los servicios de [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados en Server Core.|  
 |SDK de conectividad de cliente SQL|Sí||  

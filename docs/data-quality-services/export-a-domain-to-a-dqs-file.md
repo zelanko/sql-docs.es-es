@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d69789fffac05796b241d741d818ecda40bbe2ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead5310adef140651057ab02089a9fe6f71fbde
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803563"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617015"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar un dominio a un archivo .dqs
 
@@ -31,7 +30,7 @@ ms.locfileid: "47803563"
   
  El archivo de datos .dqs creado por el proceso de exportación se cifra, por lo que no se puede ver el contenido.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para exportar un dominio a un archivo de datos .dqs, debe haber creado y seleccionado un dominio individual o un dominio compuesto que contenga varios dominios individuales. No es necesario que disponga de un archivo .dqs; se creará uno automáticamente.  

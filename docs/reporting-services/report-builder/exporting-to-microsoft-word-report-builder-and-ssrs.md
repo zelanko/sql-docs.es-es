@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814098"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393344"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
@@ -179,7 +179,7 @@ ms.locfileid: "51814098"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- La extensión WORDOPENXML define el representador de Word para los archivos .docx de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] . La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica que el representador de Word 2003 está oculto. Para más información, vea [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) y [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ La extensión WORDOPENXML define el representador de Word para los archivos .docx de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] . La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` indica que el representador de Word 2003 está oculto. Para más información, vea [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) y [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Diferencias entre los representadores de Word y Word 2003  
  Los informes representados mediante el representador de Word o Word 2003 no se suelen distinguir visualmente. Sin embargo, puede observar pequeñas diferencias entre los dos formatos de Word o Word 2003.  

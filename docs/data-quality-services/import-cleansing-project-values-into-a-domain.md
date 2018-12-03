@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
@@ -14,12 +13,12 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a79a860b30a94c5514c91922354a9a82c30e4148
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5f87200afad4a7026f763cdf5eecf34160082ce
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647723"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617375"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de un proyecto de limpieza en un dominio
 
@@ -27,7 +26,7 @@ ms.locfileid: "47647723"
 
   En [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), puede importar el conocimiento de calidad de los datos durante el proceso de limpieza en un proyecto de limpieza de calidad de datos o un paquete de Integration Services que contenga el componente Limpieza de DQS en un dominio. De este modo, se garantiza la conservación del conocimiento de confianza y la continua mejora de la base de conocimiento.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   

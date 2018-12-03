@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b37ab52355d00e96471a2bb440ad6b76a1bc31da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c88e875c659a2677329711248257e56084453e78
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691833"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616782"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Actualizar ensamblados de SQLCLR después de actualizar .NET Framework
 
@@ -28,7 +27,7 @@ ms.locfileid: "47691833"
  Si la actualización de .NET Framework requiere reiniciar el equipo [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , los ensamblados SQLCLR afectados se actualizan automáticamente para corregir el problema de discrepancia de MVID en el reinicio del equipo [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Sin embargo, para las actualizaciones de .NET Framework que no necesitan reiniciar el equipo con [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , se produce un error debido a una discrepancia en los MVID de los ensamblados al intentar conectarse a un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mediante un [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]:  
   
 ```  
-A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe –upgradedlls.  
+A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe -upgradedlls.  
 ```  
   
  Para corregir este problema, deben actualizarse los ensamblados SQLCLR afectados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Puede hacerlo ejecutando el archivo DQSInstaller.exe con el parámetro de línea de comandos **upgradedlls** para omitir la reconstrucción de las bases de datos de DQS y actualizar solo los ensamblados afectados. Esto garantiza que se conserven las bases de conocimiento, los proyectos de calidad de datos y otros datos de DQS.  
@@ -59,6 +58,6 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 ## <a name="see-also"></a>Ver también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Actualizar el esquema de las bases de datos DQS después de instalar la actualización de SQL Server](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
+ [Actualizar el esquema de las bases de datos DQS tras instalar la actualización de SQL Server](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   
   

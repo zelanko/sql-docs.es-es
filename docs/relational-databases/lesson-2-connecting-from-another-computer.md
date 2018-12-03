@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520519"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,10 +124,10 @@ Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-
   
 2.  En el cuadro de diálogo **Conectar al servidor** , confirme **Motor de base de datos** en el cuadro **Tipo de servidor** .  
   
-3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:***<nombre_equipo>*. En nuestro ejemplo de una instancia con nombre, escriba **tcp:***<nombre_equipo>***,49172**.  
+3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:**_<nombre_equipo>_. En nuestro ejemplo de una instancia con nombre, escriba **tcp:**_<nombre_equipo>_**,49172**.  
   
     > [!NOTE]  
-    > Si omite **tcp:** en el cuadro **Nombre del servidor** , el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
+    > Si omite **tcp:** en el cuadro **Nombre del servidor**, el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
   
 4.  En el cuadro **Autenticación** , confirme **Autenticación de Windows**y luego haga clic en **Conectar**.  
   

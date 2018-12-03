@@ -18,12 +18,12 @@ ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 447fe67a9fa97fbb475f9d6daaed181347cabe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd121ddef59e59da76bbf7b4ee3303833863b23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656013"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514622"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (permisos de certificado de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Especifica un permiso que se puede conceder para un certificado. Se muestra a continuación.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  Especifica el certificado en el que se va a conceder el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  

@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635443"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537600"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635443"
   
 -   En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ejecute la consulta siguiente:  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635443"
     -   La columna de Seguimiento de SQL se asigna a uno de los campos de datos asociado al evento de eventos extendidos.  
   
         > [!NOTE]  
-        >  Cada evento de eventos extendidos tiene un conjunto predeterminado de campos de datos que se incluyen automáticamente en el conjunto de resultados.  
+        > Cada evento de eventos extendidos tiene un conjunto predeterminado de campos de datos que se incluyen automáticamente en el conjunto de resultados.  
   
     -   La columna de acción no tiene un equivalente significativo de eventos extendidos. Un ejemplo de esto es la columna EventClass de Seguimiento de SQL. Esta columna no es necesaria en eventos extendidos porque el nombre del evento sirve para el mismo fin.  
   

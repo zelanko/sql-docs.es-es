@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694783"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540297"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar a un número de secuencia de registro (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694783"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxis de Transact-SQL para restaurar hasta un LSN  
  Con la instrucción [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , puede detenerse en el LSN o inmediatamente antes, como se indica a continuación:  
   
--   Use la cláusula WITH STOPATMARK **='** lsn:*<número_de_Isn>***'**, donde lsn:*\<número_de_Isn>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
+-   Use la cláusula WITH STOPATMARK **='** lsn:_<númeroDeIsn>_**'**, donde lsn:*\<númeroDeIsn>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
   
      STOPATMARK realiza una puesta al día hasta el LSN e incluye esa entrada de registro en la puesta al día.  
   
--   Use la cláusula WITH STOPBEFOREMARK **='** lsn:*<número_de_Isn>***'**, donde lsn:*\<número_de_Isn>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la entrada que contiene el número LSN especificado es el punto de recuperación.  
+-   Use la cláusula WITH STOPBEFOREMARK **='** lsn:_<númeroDeIsn>_**'**, donde lsn:*\<númeroDeIsn>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la entrada que contiene el número LSN especificado es el punto de recuperación.  
   
      STOPBEFOREMARK realiza una puesta al día al LSN y excluye esa entrada de registro de la puesta al día.  
   

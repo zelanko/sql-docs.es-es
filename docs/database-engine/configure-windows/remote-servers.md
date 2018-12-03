@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612464"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537924"
 ---
 # <a name="remote-servers"></a>Servidores remotos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612464"
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
 ### <a name="remote-server-security-example"></a>Ejemplo de seguridad para servidores remotos  
- Considere las instalaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguientes: **serverSend** and **serverReceive**. **serverReceive** está configurado para asignar un inicio de sesión entrante de **serverSend**, denominado **Sales_Mary**, a un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticado de **serverReceive**, llamado **Alice**. Otro inicio de sesión entrante de **serverSend**, llamado **Joe**, está asignado a un inicio de sesión autenticado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **serverReceive***,* llamado **Joe**.  
+ Considere las instalaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguientes: **serverSend** and **serverReceive**. **serverReceive** está configurado para asignar un inicio de sesión entrante de **serverSend**, denominado **Sales_Mary**, a un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticado de **serverReceive**, llamado **Alice**. Otro inicio de sesión entrante de **serverSend**, llamado **Joe**, está asignado a un inicio de sesión autenticado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **serverReceive**_,_ llamado **Joe**.  
   
  En el siguiente ejemplo de código de Transact-SQL se configura `serverSend` para realizar llamadas RPC en `serverReceive`.  
   

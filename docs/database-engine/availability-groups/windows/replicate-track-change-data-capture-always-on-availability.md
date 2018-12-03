@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc5770d8390c7a7014eec86e7b576d1c64deec23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596094"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512108"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
   
 |||||  
 |-|-|-|-|  
-||**publicador**|**Distribuidor***\*|**Suscriptor**|  
+||**publicador**|**Distribuidor**|**Suscriptor**|  
 |**Transaccional**|Sí<br /><br /> Nota: No incluye compatibilidad con la replicación transaccional bidireccional y recíproca.|Sí|Sí| 
 |**P2P**|no|no|no|  
 |**Mezcla**|Sí|no|no|  

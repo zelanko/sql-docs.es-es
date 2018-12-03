@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506978"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB
   Puede configurar la transformación Búsqueda para que use el modo de caché completa y un administrador de conexiones OLE DB. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -46,17 +46,17 @@ ms.locfileid: "47616047"
   
 7.  En la lista **Especificar cómo tratar las filas sin entradas coincidentes** , seleccione una opción de control de errores para las filas sin entradas coincidentes.  
   
-8.  En la página Conexión, seleccione un administrador de conexiones en la lista **Administrador de conexiones OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  En la página Conexión, seleccione un administrador de conexiones en la lista **Administrador de conexiones OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Realice una de las tareas siguientes:  
   
     -   Haga clic en **Usar una tabla o una vista**y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
   
-         O bien  
+         -O bien-  
   
     -   Haga clic en **Usar los resultados de una consulta SQL**y después genere una consulta en la ventana **Comando SQL** , o haga clic en **Generar consulta** para generar una consulta mediante las herramientas gráficas que proporciona el **Generador de consultas** .  
   
-         O bien  
+         -O bien-  
   
     -   Haga clic en **Examinar** para importar una instrucción SQL de un archivo.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47616047"
     >  La transformación Búsqueda asigna automáticamente las columnas que tienen el mismo nombre y el mismo tipo de datos.  
   
     > [!NOTE]  
-    >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 11. Incluya las columnas de búsqueda en el resultado realizando las tareas siguientes:  
   
@@ -83,8 +83,8 @@ ms.locfileid: "47616047"
 13. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
 ## <a name="see-also"></a>Ver también  
- [Implementación de una transformación Búsqueda en el modo de caché completa con el Administrador de conexiones de caché](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implementar una búsqueda en modo No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

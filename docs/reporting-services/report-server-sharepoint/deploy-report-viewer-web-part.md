@@ -1,22 +1,22 @@
 ---
 title: Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint | Microsoft Docs
-ms.date: 10/05/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502817"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 El elemento web Visor de informes es un elemento web personalizado que se puede usar para ver informes de SQL Server Reporting Services (modo nativo) en el sitio de SharePoint. Puede usar el elemento web para ver, explorar, imprimir y exportar informes en un servidor de informes. El elemento web Visor de informes está asociado a archivos de definición de informe (.rdl) que procesa un servidor de informes de SQL Server Reporting Services o Power BI Report Server. Este elemento web Visor de informes no puede usarse con informes de Power BI hospedados en Power BI Report Server.
 
@@ -54,7 +54,7 @@ En esta sección se muestra cómo implementar el paquete de solución en la gran
 2. Ejecute [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) para agregar la solución de granja de servidores.
 
     ```
-    Add-SPSolution –LiteralPath "{path to file}\ReportViewerWebPart.wsp"
+    Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
     ```
 
     El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implementará la solución.
@@ -64,13 +64,13 @@ En esta sección se muestra cómo implementar el paquete de solución en la gran
     **SharePoint 2013**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
     **SharePoint 2016**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
 
 ## <a name="activate-feature"></a>Activar característica

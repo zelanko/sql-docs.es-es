@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a36049bcbd2d5c043320f3e10d06005bf2f70b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504053"
 ---
 # <a name="secure-the-subscriber"></a>Proteger el suscriptor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47671223"
  Para más información, vea [Create an Updatable Subscription to a Transactional Publication](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) (Create an Updatable Subscription to a Transactional Publication) y [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) (Ver y modificar la configuración de seguridad de la replicación).  
   
 > [!IMPORTANT]  
->  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_***\<NúmeroHexadecimal>* a la cuenta de configuró en cada suscriptor.  
+>  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_**_\<númeroHexadecimal>_ a la cuenta de configuró en cada suscriptor.  
   
 ## <a name="queued-updating-subscriptions"></a>Suscriptores de actualización en cola  
  Al configurar suscripciones de actualización en cola, hay dos áreas relacionadas con la seguridad que debe tener en cuenta:  

@@ -16,12 +16,12 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5d1a7e6361fad5d7e37ca624b98c7220e622d398
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714013"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616945"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servicio SQL Server Browser (motor de base de datos y SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,5 +131,5 @@ ms.locfileid: "47714013"
   
 ## <a name="see-also"></a>Ver también  
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)  
-  
+ [Ocultar una instancia del motor de base de datos de SQL Server](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

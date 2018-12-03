@@ -16,12 +16,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0225c5cf3e2b8109ac9d85e00133e9a1b8b79367
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5eb84d88bf2f20a688b09f8c1951045793234f38
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602575"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413762"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurar el acceso de solo lectura en una réplica de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
  Si tiene desencadenadores y trabajos que darán error al ejecutarse en una base de datos secundarias no legible o en una base de datos secundaria legible, tiene que escribir los desencadenadores y los trabajos para controlar una réplica dad y determinar si la base de datos es una base de datos principal o si es una base de datos secundaria legible. Para obtener esta información, use la función [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) para devolver la propiedad **Updateability** de la base de datos. Para identificar una base de datos de solo lectura, especifique READ_ONLY como el valor, según se indica a continuación:  
   
 ```  
-DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'  
 ```  
   
  Para identificar una base de datos de solo escritura, especifique READ_WRITE como el valor.  

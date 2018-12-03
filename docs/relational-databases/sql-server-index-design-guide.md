@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669604"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712706"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -638,7 +638,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas. Para obtener más información, consulte [Introducción a los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-Para obtener información sobre la versión, consulte [Novedades de los índices de almacén de columnas](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
+Para obtener información sobre la versión, consulte [Novedades de los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-what-s-new.md).
 
 ### <a name="columnstore-index-architecture"></a>Arquitectura de los índices de almacén de columnas
 

@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0f3b600c6598ed7400249376fe0a44670ea20339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627823"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512617"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "47627823"
   
  Para más información sobre cómo volver al contexto anterior, vea [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@***varbinary_variable*  
- Especifica que el contexto de ejecución solo se puede revertir al contexto anterior si la llamada a la instrucción REVERT WITH COOKIE contiene el valor de **@***varbinary_variable* correcto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a *@***varbinary_variable*. La opción **COOKIE INTO** solo se puede usar en el nivel ad hoc.  
+ COOKIE INTO **@**_varbinary_variable_  
+ Especifica que el contexto de ejecución solo se puede revertir al contexto anterior si la llamada a la instrucción REVERT WITH COOKIE contiene el valor de **@**_varbinary_variable_ correcto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a **@**_varbinary_variable_. La opción **COOKIE INTO** solo se puede usar en el nivel ad hoc.  
   
  **@** *varbinary_variable* es **varbinary(8000)**.  
   

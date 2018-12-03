@@ -24,12 +24,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8135737f7abe250bfcd29b080b6875efad6286db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676760"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534116"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47676760"
   
  Un conjunto de medios se crea en el medio de copia de seguridad durante una operación de copia de seguridad al dar formato a un medio de copia de seguridad. Para obtener más información, vea [Crear un conjunto de medios](#CreatingMediaSet), más adelante en este tema. Después de dar formato, cada archivo o cinta contiene un encabezado de medios para el conjunto de medios y está listo para recibir el contenido de la copia de seguridad. Con el encabezado adecuado, la operación de copia de seguridad empieza a realizar la copia de seguridad de los datos especificados en los medios de copia de seguridad en todos los dispositivos de copia de seguridad especificados para la operación.  
   
-> **NOTA:** Los conjuntos de medios pueden reflejarse como medida de protección ante posibles daños en el volumen de medios (una cinta o un archivo de disco). Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+> **NOTA:** Los conjuntos de medios pueden reflejarse como medida de protección ante posibles daños en el volumen de medios (una cinta o un archivo de disco). Para obtener más información, vea [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
  En un mismo conjunto de medios no pueden almacenarse copias de seguridad comprimidas y sin comprimir al mismo tiempo. Cualquier edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores puede leer copias de seguridad comprimidas. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
@@ -140,7 +140,7 @@ WITH
   
  ![El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios")  
   
- Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=***número_de_archivo_de_conjunto_de_copias_de_seguridad* al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.  
+ Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=**_backup_set_file_number_ al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

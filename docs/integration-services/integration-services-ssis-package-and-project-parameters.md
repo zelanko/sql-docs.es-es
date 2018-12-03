@@ -9,17 +9,17 @@ ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
-- sql13.dts.designer.paramterwindow.f1
+- sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4404b2af9114da376e007bf91533f9e083dbff10
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639882"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858705"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paquete de Integration Services (SSIS) y parámetros del proyecto
   Los parámetros de[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  

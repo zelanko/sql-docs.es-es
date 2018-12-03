@@ -14,12 +14,12 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5b77195b24c4b60b2ad11fc19e8557aec220d1e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 466786158509916d8f71f00eb9809d4753ee3dd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658534"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543840"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- La consulta `SELECT … FOR XML` interna devuelve un resultado de tipo **xml** al que la instrucción `SELECT` externa aplica el método `query()` al tipo **xml**. Observe la directiva `TYPE` especificada.  
+ La consulta `SELECT ... FOR XML` interna devuelve un resultado de tipo **xml** al que la instrucción `SELECT` externa aplica el método `query()` al tipo **xml**. Observe la directiva `TYPE` especificada.  
   
  El resultado es el siguiente:  
   
@@ -105,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- En la consulta siguiente, el método `value()` del tipo de datos **xml** se usa para recuperar un valor del resultado XML devuelto por la consulta `SELECT…FOR XML`. Para obtener más información, vea [value&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ En la consulta siguiente, el método `value()` del tipo de datos **xml** se usa para recuperar un valor del resultado XML devuelto por la consulta `SELECT...FOR XML`. Para obtener más información, vea [value&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

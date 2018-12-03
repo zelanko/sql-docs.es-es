@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d762aba3ebb5e0f31dbeccb452b92c8eadb44c64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c316614bff8740e3ae45908776b671f1d7a5ea9f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523561"
 ---
 # <a name="delete-an-index"></a>Eliminar un índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47598223"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Los índices creados como resultado de una restricción PRIMARY KEY o UNIQUE no se pueden eliminar con este método. En su lugar, se debe eliminar la restricción. Para quitar la restricción y el índice correspondiente, use [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) con la cláusula DROP CONSTRAINT en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información, consulte [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "47598223"
   
 7.  Haga clic en **Cerrar**.  
   
-8.  En el menú **Archivo** , seleccione **Guardar***nombre_de_tabla*.  
+8.  En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

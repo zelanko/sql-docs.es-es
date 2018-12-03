@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402120"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración)
   En la página **Configuración de suscripción** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , configure una cuenta de recurso compartido de archivos para servidores de informes en modo nativo y suscripciones de recurso compartido de archivos. La cuenta de recurso compartido de archivos permite usar un único conjunto de credenciales en varias suscripciones que entregan informes a un recurso compartido de archivos. Cuando sea el momento de cambiar las credenciales, solamente deberá configurar el cambio en la cuenta de recurso compartido de archivos, con lo que no será necesario actualizar cada una de las suscripciones.  
@@ -43,7 +43,7 @@ ms.locfileid: "51813118"
 > [!IMPORTANT]
 > La cuenta de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] controla la entrega de suscripciones e interactúa con la cuenta utilizada para las suscripciones del recurso compartido de archivos. Las características de seguridad de Windows restringen combinaciones de (1) la cuenta de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y (2) la cuenta usada para las cuentas de los recursos compartidos de archivos. Por ejemplo, si se usa una cuenta integrada de sistema operativo para la cuenta de recursos compartidos de archivos, la cuenta de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe ser otra cuenta de servicio que cuente con permisos de suplantación. Si se configuran de forma explícita una cuenta y una contraseña del recurso compartido de archivos, dicha cuenta requiere el derecho de iniciar sesión en el equipo que ejecuta el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si la cuenta de recurso compartido de archivos no tiene los permisos necesarios, en las suscripciones que usan la cuenta de recurso compartido de archivos se producirá un error similar al siguiente:  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>Ejemplo de PowerShell para auditar el uso de la cuenta de recurso compartido de archivos  
  Ejecute el siguiente script de Windows PowerShell para mostrar una lista con todas las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que están configuradas para usar la **cuenta de recurso compartido de archivos**. Actualice `SERVERNAME` a un valor apropiado para su servidor de informes.  

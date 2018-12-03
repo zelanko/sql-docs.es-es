@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac987ef327b021665ae797aa3f14aad6446fcc4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b899bc08ebdff746792cd8070ca966ca6f6edb84
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807723"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947649"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +97,7 @@ GRANT permission [ ,...n ]
  Especifica un rol de aplicación.  
   
  *Database_user_mapped_to_Windows_User*  
- Especifica un usuario de la base de datos asignado a un usuario de Windows.  
+ Especifica un usuario de base de datos asignado a un usuario de Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
   

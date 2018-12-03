@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 157d883bf9b648704452783ccee730cd5a399d88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d187de9f11995762599bf8c7b95eb1813c811e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517403"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Agregar un filtro (Generador de informes y SSRS)
   Agregue un filtro a un conjunto de datos, una región de datos o un grupo cuando desee incluir o excluir valores específicos para la realización de cálculos o la visualización. Los filtros se aplican en tiempo de ejecución y en este orden: primero en el conjunto de datos, a continuación, en la región de datos y, por último, en el grupo; en las jerarquías de grupo, se aplican en orden descendente. En una tabla, matriz o lista, los filtros de los grupos de filas, los grupos de columnas y los grupos adyacentes se aplican de forma independiente. En un gráfico, también se aplican de forma independiente los filtros de los grupos de categorías y los grupos de series.  
@@ -31,7 +31,7 @@ ms.locfileid: "47731473"
   
 1.  Abra un informe en la vista **Diseño** .  
   
-2.  En la superficie de diseño, seleccione la región de datos y, después, haga clic con el botón derecho en *\<Propiedades de **<región de datos>**. Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. Se abre el cuadro de diálogo *\<***Propiedades de región de datos**.  
+2.  En la superficie de diseño, seleccione la región de datos y, después, haga clic con el botón derecho en _\<Propiedades de_ **<región de datos>**. Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. Se abre el cuadro de diálogo _\<Propiedades de_ **región de datos>**.  
   
     > [!NOTE]  
     >  En una región de datos Tablix, haga clic con el botón derecho en la celda de la esquina o en un identificador de fila o columna y, después, haga clic en **Propiedades de Tablix**.  

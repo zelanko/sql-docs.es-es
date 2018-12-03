@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c1600d29743d9a1c477d2d7b707eafc6839a5fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525354"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig (utilidad) (SSRS)
   La utilidad **rsconfig.exe** cifra y almacena valores de cuenta y conexión en el archivo RSReportServer.config. Los valores cifrados incluyen la información de conexión de la base de datos del servidor de informes y los valores de cuenta utilizados para el procesamiento de informes desatendido.  
@@ -29,13 +29,13 @@ ms.locfileid: "47733593"
 ```  
   
 rsconfig {-?}  
-{–cconnection}  
-{–eunattendedaccount}  
-{–mcomputername}  
-{–iinstancename}  
-{–sservername}  
-{–ddatabasename}  
-{–aauthmethod}  
+{-cconnection}  
+{-eunattendedaccount}  
+{-mcomputername}  
+{-iinstancename}  
+{-sservername}  
+{-ddatabasename}  
+{-aauthmethod}  
 {-uusername}  
 {-ppassword}  
 {-ttrace}  

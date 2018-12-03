@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f962317b7695d705d64652d6a5fa43db774802d2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6851ae0f1ff4f5e65ce74db7f351deb3127a1a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515215"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ELSE
  Para más ejemplos, vea [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se usa `IF…ELSE` para determinar cuál de las dos respuestas se muestra al usuario, en función del peso de un elemento en la tabla `DimProduct`.  
+ En el ejemplo siguiente se usa `IF...ELSE` para determinar cuál de las dos respuestas se muestra al usuario, en función del peso de un elemento en la tabla `DimProduct`.  
   
 ```  
 -- Uses AdventureWorksDW  

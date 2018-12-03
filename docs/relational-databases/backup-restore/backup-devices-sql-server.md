@@ -26,12 +26,12 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dee6642a83eb56445d9c951e695d960e0358e9df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e70357c54b30d657eb773913abf19d7fbe78385
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777413"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533035"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47777413"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***nombre_de_dispositivo_de_copia_de_seguridad_física***'** | **@***variable_de_nombre_de_dispositivo_de_copia_de_seguridad_física* }  
+ TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Por ejemplo:  
   
@@ -81,7 +81,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'***nombre_de_dispositivo_de_copia_de_seguridad_física***'** | **@***variable_de_nombre_de_dispositivo_de_copia_de_seguridad_física* }  
+ FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Por ejemplo,  
   
@@ -98,7 +98,7 @@ RESTORE DATABASE AdventureWorks2012
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
-   TO DISK = ’AdventureWorks2012.bak’;  
+   TO DISK = 'AdventureWorks2012.bak';  
 GO  
 ```  
   
@@ -117,7 +117,7 @@ GO
     > **IMPORTANTE:** Debido a que la realización de copias de seguridad de datos a través de una red está expuesta a errores, se recomienda que, cuando se utiliza un disco remoto, compruebe la operación de copia de seguridad una vez finalizada. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Especificar un nombre UNC (Convención de nomenclatura universal)  
- Para especificar un recurso compartido de red en un comando de copia de seguridad o restauración, use el nombre UNC (convención de nomenclatura universal) completo del archivo para el dispositivo de copia de seguridad. Un nombre UNC tiene el formato **\\\\***NombreDeSistema***\\***NombDereRecursoCompartido***\\***RutaDeAcceso***\\***NombreDeArchivo*.  
+ Para especificar un recurso compartido de red en un comando de copia de seguridad o restauración, use el nombre UNC (convención de nomenclatura universal) completo del archivo para el dispositivo de copia de seguridad. Un nombre UNC tiene el formato **\\\\**_Systemname_**\\**_ShareName_**\\**_Path_**\\**_FileName_.  
   
  Por ejemplo:  
   
@@ -147,7 +147,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'***nombre_de_dispositivo_de_copia_seguridad_física***'** | **@***variable_de_nombre_de_dispositivo_de_copia_seguridad_física* }  
+ TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Por ejemplo:  
   
@@ -161,7 +161,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'***nombre_de_dispositivo_de_copia_de_seguridad_física***'** | **@***nombre_de_dispositivo_de_copia_de_seguridad_física* }  
+ FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> Opciones BACKUP y RESTORE específicas de cinta (Transact-SQL)  
  Para facilitar la administración de cintas, la instrucción BACKUP proporciona las siguientes opciones específicas:  
@@ -179,7 +179,7 @@ GO
 ###  <a name="OpenTapes"></a> Administración de cintas abiertas  
  Para ver una lista de los dispositivos de cinta abiertos y el estado de las solicitudes de montaje, vea la vista de administración dinámica [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . En esta vista se muestran todas las cintas abiertas. Se incluyen las cintas en uso que se encuentran temporalmente inactivas mientras esperan a la siguiente operación BACKUP o RESTORE.  
   
- Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE**=***nombre_de_dispositivo_de_copia_de_seguridad*. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Uso del servicio Blob Storage de Microsoft Azure  
@@ -223,7 +223,7 @@ GO
  Otro método común de archivado consiste en escribir las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un disco local de copia de seguridad, archivarlas en cinta y guardar estas cintas fuera de las instalaciones.  
 
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Para especificar un dispositivo de disco (SQL Server Management Studio)**  
   
 -   [Especificar un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  

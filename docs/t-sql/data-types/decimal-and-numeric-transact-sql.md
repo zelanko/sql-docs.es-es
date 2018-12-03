@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c56435e2b0b576ae33ddb00f631fde8dee608ff7
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 0e487b66d13b4dcaba83219cc1fa6edf8eadc37d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970459"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530016"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal y numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "50970459"
 Tipos de datos numéricos que tienen precisión y escala fijas. Los tipos decimal y numeric son sinónimos y se pueden usar indistintamente.
   
 ## <a name="arguments"></a>Argumentos  
-**decimal**[ **(***p*[ **,***s*] **)**] y **numeric**[ **(***p*[ **,***s*] **)**]  
-Números de precisión y escala fijas. Cuando se utiliza la precisión máxima, los valores válidos se sitúan entre - 10^38 +1 y 10^38 - 1. Los sinónimos ISO para **decimal** son **dec** y **dec(***p*, *s***)**. **numeric** equivale desde el punto de vista funcional a **decimal**.
+**decimal**[ **(**_p_[ **,**_s_] **)**] y **numeric**[ **(**_p_[ **,**_s_] **)**]  
+Números de precisión y escala fijas. Cuando se utiliza la precisión máxima, los valores válidos se sitúan entre - 10^38 +1 y 10^38 - 1. Los sinónimos ISO para **decimal** son **dec** y **dec(**_p_, _s_**)**. **numeric** equivale desde el punto de vista funcional a **decimal**.
   
 p (precisión)  
 El número total máximo de dígitos decimales que almacenará, tanto a la izquierda como a la derecha del separador decimal. La precisión debe ser un valor comprendido entre 1 y la precisión máxima de 38. La precisión predeterminada es 18.

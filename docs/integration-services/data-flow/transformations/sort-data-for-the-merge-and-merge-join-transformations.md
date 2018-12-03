@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d71d22599d95cb55f1d7ca6f916987c6a462cda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5826cdd783e7dd50a80d3e3a495dfffd16144f53
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641643"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503241"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordenar datos para las transformaciones Mezclar y Combinación de mezcla
   En [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], las transformaciones Mezclar y Combinación de mezcla requieren datos ordenados en sus entradas. Los datos de entrada deben estar ordenados físicamente, y se deben establecer opciones de ordenación en las salidas y en las columnas de salida del origen o en la transformación de nivel superior. Si las opciones de ordenación indican que los datos están ordenados, pero en realidad no lo están, los resultados de la operación de mezcla o combinación de mezcla son impredecibles.  
@@ -39,7 +39,7 @@ ms.locfileid: "47641643"
   
      La transformación Ordenar utiliza la intercalación de Windows para ordenar los valores de cadena.  
   
-     O bien  
+     -O bien-  
   
 -   Use el operador CAST de Transact-SQL para convertir primero los valores **varchar** en valores **nvarchar** y, después, use la cláusula ORDER BY de Transact-SQL para ordenar los datos.  
   

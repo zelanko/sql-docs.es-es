@@ -1,32 +1,119 @@
 items:
 - name: Centro de rendimiento para el motor de base de datos de SQL Server y Base de datos SQL de Azure
   href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
-  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
 - name: Ajuste automático
   href: ../automatic-tuning/automatic-tuning.md
-- name: Estimación de cardinalidad
-  href: cardinality-estimation-sql-server.md
+- name: Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
+  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
+- name: Planes de ejecución
+  href: execution-plans.md
+  items:
+  - name: Infraestructura de generación de perfiles de consultas
+    href: query-profiling-infrastructure.md
+  - name: Mostrar y guardar planes de ejecución
+    href: display-and-save-execution-plans.md
+    items:
+    - name: Mostrar el plan de ejecución estimado
+      href: display-the-estimated-execution-plan.md
+    - name: Mostrar un plan de ejecución real
+      href: display-an-actual-execution-plan.md
+    - name: Guardar un plan de ejecución en formato XML
+      href: save-an-execution-plan-in-xml-format.md
+  - name: Comparación y análisis de los planes de ejecución
+    href: compare-and-analyze-execution-plans.md
+    items:
+    - name: Comparación de los planes de ejecución
+      href: compare-execution-plans.md
+    - name: Análisis de un plan de ejecución real
+      href: analyze-an-actual-execution-plan.md
+  - name: Guías de plan
+    href: plan-guides.md
+    items:
+    - name: Crear una nueva guía de plan
+      href: create-a-new-plan-guide.md
+    - name: Crear una guía de plan para consultas parametrizadas
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Especificar el comportamiento de parametrización de consultas por medio de guías de plan
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Aplicar un plan de consulta fijo a una guía de plan
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Asociar sugerencias de consulta a una guía de plan
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Ver propiedades de la guía de plan
+      href: view-plan-guide-properties.md
+    - name: Usar SQL Server Profiler para crear y probar guías de plan
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Validar guías de planes tras una actualización
+      href: validate-plan-guides-after-upgrade.md
+    - name: Eliminar una guía de plan
+      href: delete-a-plan-guide.md
+    - name: Habilitar o deshabilitar una guía de plan
+      href: enable-or-disable-a-plan-guide.md
 - name: Procesamiento de consultas inteligentes
   href: intelligent-query-processing.md
   items:
   - name: Procesamiento de consultas adaptable
     href: adaptive-query-processing.md
+  - name: Inserción de funciones definidas por el usuario escalares
+    href: ../user-defined-functions/scalar-udf-inlining.md
 - name: Supervisión y optimización del rendimiento
   href: monitor-and-tune-for-performance.md
   items:
   - name: Supervisar los componentes de SQL Server
     href: monitor-sql-server-components.md
+    items:
+    - name: Monitor de actividad
+      href: ../performance-monitor/activity-monitor.md
+    - name: Funciones y vistas de administración dinámica
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
+    - name: Eventos extendidos
+      href: ../extended-events/extended-events.md
+    - name: SQL Server Profiler
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
+    - name: Seguimiento de SQL
+      href: ../sql-trace/sql-trace.md
   - name: Herramientas de supervisión y optimización del rendimiento
     href: performance-monitoring-and-tuning-tools.md
+    items:
+    - name: Estadísticas de consulta activa
+      href: live-query-statistics.md
+    - name: Asistente para la optimización de bases de datos
+      href: database-engine-tuning-advisor.md
+      items:
+      - name: Iniciar y utilizar el Asistente para la optimización de motor de base de datos
+        href: start-and-use-the-database-engine-tuning-advisor.md
+      - name: Reducir la carga de optimización del servidor de producción
+        href: reduce-the-production-server-tuning-load.md
+        items:
+        - name: Consideraciones acerca del uso de servidores de prueba
+          href: considerations-for-using-test-servers.md
+      - name: Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
+        href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+      - name: Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)
+        href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+      - name: Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
+        href: tuning-database-using-workload-from-query-store.md
+      - name: Mejoras de rendimiento mediante las recomendaciones del Asistente para la optimización de motor de base de datos (DTA)
+        href: performance-improvements-using-dta-recommendations.md
+  - name: Actualización de bases de datos mediante el Asistente para la optimización de consultas
+    href: upgrade-dbcompat-using-qta.md
+  - name: Supervisión del rendimiento mediante el almacén de consultas
+    href: monitoring-performance-by-using-the-query-store.md
+    items:
+    - name: Uso del almacén de consultas con OLTP en memoria
+      href: using-the-query-store-with-in-memory-oltp.md
+    - name: Procedimiento recomendado con el Almacén de consultas
+      href: best-practice-with-the-query-store.md
+    - name: Escenarios de uso del Almacén de consultas
+      href: query-store-usage-scenarios.md
+    - name: Introducción a la recopilación de datos del almacén de consultas
+      href: how-query-store-collects-data.md
   - name: Establecer una línea base del rendimiento
     href: establish-a-performance-baseline.md
   - name: Aislar problemas de rendimiento
     href: isolate-performance-problems.md
   - name: Identificar los cuellos de botella
     href: identify-bottlenecks.md
-  - name: Inserción de funciones definidas por el usuario escalares
-    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: Usar DMV para determinar el uso y el rendimiento de las vistas
     href: use-dmvs-determine-usage-performance-views.md
   - name: Supervisión de la actividad y rendimiento del servidor
@@ -48,77 +135,47 @@ items:
       href: save-showplan-xml-events-separately-sql-server-profiler.md
     - name: Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler)
       href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
-  - name: Mostrar y guardar planes de ejecución
-    href: display-and-save-execution-plans.md
-    items:
-    - name: Mostrar el plan de ejecución estimado
-      href: display-the-estimated-execution-plan.md
-    - name: Mostrar un plan de ejecución real
-      href: display-an-actual-execution-plan.md
-    - name: Guardar un plan de ejecución en formato XML
-      href: save-an-execution-plan-in-xml-format.md
-  - name: Estadísticas de consulta activa
-    href: live-query-statistics.md
-  - name: Supervisar el rendimiento mediante el almacén de consultas
-    href: monitoring-performance-by-using-the-query-store.md
-  - name: Uso del almacén de consultas con OLTP en memoria
-    href: using-the-query-store-with-in-memory-oltp.md
-  - name: Procedimiento recomendado con el Almacén de consultas
-    href: best-practice-with-the-query-store.md
-  - name: Escenarios de uso del Almacén de consultas
-    href: query-store-usage-scenarios.md
-  - name: Introducción a la recopilación de datos del almacén de consultas
-    href: how-query-store-collects-data.md
-- name: Asistente para la optimización de bases de datos
-  href: database-engine-tuning-advisor.md
+    - name: Usar la sesión system_health
+      href: ../extended-events/use-the-system-health-session.md
+  - name: Supervisar el uso de recursos (Monitor de sistema)
+    href: ../performance-monitor/monitor-resource-usage-system-monitor.md
+- name: Elementos internos y arquitectura
+  href: ../sql-server-guides.md
   items:
-  - name: Iniciar y utilizar el Asistente para la optimización de motor de base de datos
-    href: start-and-use-the-database-engine-tuning-advisor.md
-  - name: Reducir la carga de optimización del servidor de producción
-    href: reduce-the-production-server-tuning-load.md
+  - name: Estimación de cardinalidad
+    href: cardinality-estimation-sql-server.md
+  - name: Cursores
+    href: ../cursors.md
+  - name: Proceso de limpieza de registros fantasma
+    href: ../ghost-record-cleanup-process-guide.md
+  - name: Arquitectura y diseño de los índices
+    href: ../sql-server-index-design-guide.md
+  - name: Combinaciones
+    href: joins.md
+  - name: Arquitectura de administración de memoria
+    href: ../memory-management-architecture-guide.md
     items:
-    - name: Consideraciones acerca del uso de servidores de prueba
-      href: considerations-for-using-test-servers.md
-  - name: Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
-    href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-  - name: Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)
-    href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-  - name: Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
-    href: tuning-database-using-workload-from-query-store.md
-  - name: Mejoras de rendimiento mediante las recomendaciones del Asistente para la optimización de motor de base de datos (DTA)
-    href: performance-improvements-using-dta-recommendations.md
-- name: Guías de plan
-  href: plan-guides.md
-  items:
-  - name: Crear una nueva guía de plan
-    href: create-a-new-plan-guide.md
-  - name: Crear una guía de plan para consultas parametrizadas
-    href: create-a-plan-guide-for-parameterized-queries.md
-  - name: Especificar el comportamiento de parametrización de consultas por medio de guías de plan
-    href: specify-query-parameterization-behavior-by-using-plan-guides.md
-  - name: Aplicar un plan de consulta fijo a una guía de plan
-    href: apply-a-fixed-query-plan-to-a-plan-guide.md
-  - name: Asociar sugerencias de consulta a una guía de plan
-    href: attach-query-hints-to-a-plan-guide.md
-  - name: Ver propiedades de la guía de plan
-    href: view-plan-guide-properties.md
-  - name: Usar SQL Server Profiler para crear y probar guías de plan
-    href: use-sql-server-profiler-to-create-and-test-plan-guides.md
-  - name: Validar guías de planes tras una actualización
-    href: validate-plan-guides-after-upgrade.md
-  - name: Eliminar una guía de plan
-    href: delete-a-plan-guide.md
-  - name: Habilitar o deshabilitar una guía de plan
-    href: enable-or-disable-a-plan-guide.md
-- name: Supervisar el uso de recursos (Monitor de sistema)
-  href: ../performance-monitor/monitor-resource-usage-system-monitor.md
-- name: Combinaciones
-  href: joins.md
-- name: Subconsultas
-  href: subqueries.md
-ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+    - name: Leer páginas
+      href: ../reading-pages.md
+    - name: Escribir páginas
+      href: ../writing-pages.md
+  - name: Arquitectura de páginas y extensiones
+    href: ../pages-and-extents-architecture-guide.md
+  - name: Arquitectura de procesamiento de consultas
+    href: ../query-processing-architecture-guide.md
+  - name: Referencia de operadores lógicos y físicos del plan de presentación
+    href: ../showplan-logical-and-physical-operators-reference.md
+  - name: Subconsultas
+    href: subqueries.md
+  - name: Arquitectura de subprocesos y tareas
+    href: ../thread-and-task-architecture-guide.md
+  - name: Arquitectura y administración de registros de transacciones
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Versiones de fila y bloqueo de transacciones
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md
+ms.openlocfilehash: 2bf87948dbeb01794c7af547586e1204613994be
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221531"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586228"

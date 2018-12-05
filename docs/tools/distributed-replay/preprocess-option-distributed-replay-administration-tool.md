@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65a214e1280dd47609bbef326f082dbf87357cf9
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292991"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502708"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opción de preprocesamiento (herramienta de administración Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ dreplay preprocess [-m controller] -i input_trace_file
  **-i** *input_trace_file*  
  Especifica la ruta de acceso completa del archivo de seguimiento de entrada en el controlador, por ejemplo, `D:\Mytrace.trc`. El parámetro **-i** es obligatorio.  
   
- Si hay archivos de sustitución incremental en el mismo directorio, se cargarán y usarán automáticamente. Los archivos deben seguir la convención de nomenclatura de sustitución incremental de archivos, por ejemplo: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, etc. `Mytrace_n.trc`.  
+ Si hay archivos de sustitución incremental en el mismo directorio, se cargarán y usarán automáticamente. Los archivos deben seguir la convención de nomenclatura de sustitución incremental de archivos, por ejemplo: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`... `Mytrace_n.trc`.  
   
 > [!NOTE]  
 >  Si está usando la herramienta de administración en un equipo que no es el controlador, tendrá que copiar los archivos de seguimiento de entrada en el controlador de forma que se pueda usar una ruta de acceso local para este parámetro.  
@@ -77,13 +77,13 @@ dreplay preprocess [-m controller] -i input_trace_file
  En este ejemplo, la copia intermedia del preprocesamiento se inicia con toda la configuración predeterminada. El valor `localhost` indica que el servicio del controlador se está ejecutando en el mismo equipo que la herramienta de administración. El parámetro *input_trace_file* especifica la ubicación de los datos de seguimiento de entrada, `c:\mytrace.trc`. Dado que no se usa ningún filtrado de archivos de seguimiento, no es necesario especificar el parámetro **-c** .  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  En este ejemplo, se inicia la fase de preprocesamiento y se especifica un archivo de configuración del preprocesamiento modificado. A diferencia del ejemplo anterior, el parámetro **-c** se usa para indicar el archivo de configuración modificado, si se ha almacenado en otra ubicación. Por ejemplo:  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  En el archivo de configuración del preprocesamiento modificado, se agrega una condición de filtro que deja fuera las sesiones del sistema durante la reproducción distribuida. El filtro se agrega modificando el elemento `<PreprocessModifiers>` del archivo de configuración del preprocesamiento, `DReplay.exe.preprocess.config`.  

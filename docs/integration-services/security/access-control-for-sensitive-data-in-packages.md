@@ -133,7 +133,7 @@ ms.locfileid: "51642392"
   
          Si utiliza un comando similar en un archivo por lotes, escriba el marcador de posición del archivo, "% f", como "%% f" en el archivo por lotes.  
 
-## <a name="protection_dialog">Cuadro de diálogo Package Project Protection Level</a> (Nivel de protección del proyecto de paquetes)
+## <a name="protection_dialog"></a> Cuadro de diálogo Package Project Protection Level (Nivel de protección del proyecto de paquetes)
   Utilice el cuadro de diálogo **Nivel de protección de paquetes** para actualizar el nivel de protección de un paquete. El nivel de protección determina el método de protección, la contraseña o la clave de usuario, así como el ámbito de protección de paquetes. La protección puede incluir todos los datos o solo los datos confidenciales.  
   
  Para entender los requisitos y las opciones de la seguridad de paquetes, puede resultar útil ver el tema [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) (Información general sobre seguridad &#40;Integration Services&#41;).  

@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d9d4b29c8f7c58cfb40597752e97f47be3de1ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600235"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536642"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Características de Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -36,9 +36,9 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con
   
 Esta versión de ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene las siguientes características nuevas:  
   
-### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opción – l de bcp.exe para especificar un tiempo de espera de inicio de sesión
+### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>opción -l de bcp.exe para especificar un tiempo de espera de inicio de sesión
  
-La opción –l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de `bcp.exe` en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp.exe` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito. Un tiempo de espera de inicio de sesión de menos de 10 segundos (aproximadamente) no resulta confiable.  
+La opción -l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de `bcp.exe` en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp.exe` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito. Un tiempo de espera de inicio de sesión de menos de 10 segundos (aproximadamente) no resulta confiable.  
   
 ### <a name="driver-aware-connection-pooling"></a>Agrupación de conexiones dependientes del controlador  
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obtener más información, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
@@ -53,7 +53,7 @@ Para garantizar que las aplicaciones permanecen conectadas a una base de datos S
 
 En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, el `-y0` opción `sqlcmd.exe` hace que la salida se trunque en 1 MB si el ancho de pantalla era 0.
   
-A partir de la versión ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], no existe ningún límite en la cantidad de datos que se pueden recuperar en una sola columna al especificar `–y0`. `sqlcmd.exe` ahora transmite columnas de hasta 2 GB (tamaño máximo del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+A partir de la versión ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], no existe ningún límite en la cantidad de datos que se pueden recuperar en una sola columna al especificar `-y0`. `sqlcmd.exe` ahora transmite columnas de hasta 2 GB (tamaño máximo del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Otra diferencia es que si se especifica tanto `-h` y `-y0` ahora produce un error que informa de que las opciones son incompatibles. `-h`, que especifica el número de filas que se van a imprimir entre los encabezados de columna y que nunca ha sido compatible con `-y0`, se omitía, aunque no se imprimiera ningún encabezado.
   

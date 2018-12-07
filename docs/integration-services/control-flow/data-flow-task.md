@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518472"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
   La tarea Flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y permite al usuario transformar, limpiar y modificar datos a medida que se mueven. Agregar una tarea Flujo de datos a un flujo de control de paquetes permite que el paquete extraiga, transforme y cargue datos.  
@@ -56,7 +56,7 @@ ms.locfileid: "51639101"
 |**OnPipelinePrePrimeOutput**|Indica que el componente está a punto de recibir su última llamada del método **PrimeOutput** . En función del flujo de datos, es posible que se escriban varias entradas.|  
 |**OnPipelineRowsSent**|Informa del número de filas que se proporciona a una entrada de componentes a través de una llamada al método **ProcessInput** . La entrada del registro incluye el nombre del componente.|  
 |**PipelineBufferLeak**|Proporciona información sobre cualquier componente que mantuvo la conexión de los búferes después de que desapareciera el administrador de búferes. Si se mantiene la conexión de un búfer, no se liberan los recursos de los búferes y podrían ocasionarse pérdidas de memoria. La entrada del registro proporciona el nombre del componente y el Id. del búfer.|  
-|**PipelineComponentTime**|Notifica la cantidad de tiempo (en milisegundos) que el componente consumió en cada uno de sus cinco pasos de procesamiento principales, (PreExecute, PostExecute, ProcessInput y ProcessOutput.|  
+|**PipelineComponentTime**|Indica la cantidad de tiempo (en milisegundos) que el componente ha usado en cada uno de los cinco pasos de procesamiento principales: Validate, PreExecute, PostExecute, ProcessInput y ProcessOutput.|  
 |**PipelineExecutionPlan**|Informa del plan de ejecución del flujo de datos. El plan de ejecución proporciona información sobre cómo se van a enviar los búferes a los componentes. Esta información, junto con la entrada del registro PipelineExecutionTrees, describe lo que ocurre en la tarea Flujo de datos.|  
 |**PipelineExecutionTrees**|Informa sobre los árboles de ejecución del diseño del flujo de datos. El programador del motor de flujo de datos utiliza los árboles para generar el plan de ejecución del flujo de datos.|  
 |**PipelineInitialization**|Proporciona información de inicialización sobre la tarea. Esta información incluye los directorios que se utilizan para el almacenamiento temporal de datos BLOB, el tamaño predeterminado del búfer y la cantidad de filas de un búfer. En función de la configuración de la tarea Flujo de datos, es posible que se escriban varias entradas.|  

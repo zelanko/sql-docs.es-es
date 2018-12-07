@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642252"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525262"
 ---
 # <a name="set-package-properties"></a>Establecer las propiedades de paquetes
   Cuando se crea un paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante la interfaz gráfica proporcionada por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se configuran las propiedades del objeto de paquete en la ventana Propiedades.  
@@ -118,8 +118,8 @@ ms.locfileid: "51642252"
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|**Configuraciones**|Colección de las configuraciones que usa el paquete. Haga clic en el botón para examinar **(…)** para ver y configurar las configuraciones de paquetes.|  
-|**Expresiones**|Haga clic en el botón para examinar **(…)** para crear expresiones para las propiedades de paquete.<br /><br /> Observe que puede crear expresiones de propiedad para todas las propiedades de paquete que incluye el modelo de objeto, y no solo para las propiedades enumeradas en la ventana Propiedades.<br /><br /> Para obtener más información, vea [Usar expresiones de propiedad en paquetes](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Para ver expresiones de propiedad existentes, expanda **Expressions**. Haga clic en el botón para examinar **(…)** en un cuadro de texto de expresión para modificar y evaluar una expresión.|  
+|**Configuraciones**|Colección de las configuraciones que usa el paquete. Haga clic en el botón Examinar **(…)** para ver y configurar las configuraciones de paquetes.|  
+|**Expresiones**|Haga clic en el botón Examinar **(…)** para crear expresiones para las propiedades del paquete.<br /><br /> Observe que puede crear expresiones de propiedad para todas las propiedades de paquete que incluye el modelo de objeto, y no solo para las propiedades enumeradas en la ventana Propiedades.<br /><br /> Para obtener más información, vea [Usar expresiones de propiedad en paquetes](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Para ver expresiones de propiedad existentes, expanda **Expressions**. Haga clic en el botón Examinar **(…)** en un cuadro de texto de expresión para modificar y evaluar una expresión.|  
 |**ForceExecutionResult**|El resultado de la ejecución del paquete. Los valores son **None**, **Success**, **Failure**y **Completion**. El valor predeterminado de esta propiedad es **None**. Para obtener más información, vea T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |**LocaleId**|Una configuración regional de Microsoft Win32. El valor predeterminado de esta propiedad es la configuración regional del sistema operativo del equipo local.|  
 |**LoggingMode**|Valor que especifica el comportamiento de registro del paquete. Los valores son **Disabled**, **Enabled**y **UseParentSetting**. El valor predeterminado de esta propiedad es **UseParentSetting**. Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

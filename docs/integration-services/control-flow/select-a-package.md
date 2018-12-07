@@ -15,12 +15,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 170b40c086e3fe2c9d3ec7fbf3278a5ceeabe080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d269e2e18c7c098e5f4149f4083d81a228b89da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783993"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527931"
 ---
 # <a name="select-a-package"></a>Seleccionar un paquete
   Utilice el cuadro de diálogo **Seleccionar un paquete** para especificar el paquete desde el que la tarea Cola de mensajes puede recibir mensajes.  
@@ -57,7 +57,7 @@ ms.locfileid: "47783993"
   
 ### <a name="location--dtsx-file"></a>Ubicación = archivo DTSX  
  **Nombre de archivo**  
- Proporcione la ruta de acceso a un paquete o haga clic en el botón Examinar **(…)** y busque el paquete.  
+ Proporcione la ruta de acceso a un paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete.  
   
 ## <a name="see-also"></a>Ver también  
  [Tarea Cola de mensajes](../../integration-services/control-flow/message-queue-task.md)  

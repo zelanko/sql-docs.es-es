@@ -18,12 +18,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57e2b48eef389d244a866eba9a0c27bdcacc9419
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 60ddc7dd6b9afc953017ed076fc9a57a713bc818
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527642"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarea Monitor de eventos WMI
   La tarea Monitor de eventos WMI supervisa un evento de Instrumental de administración de Windows (WMI) mediante una consulta de evento de Lenguaje de consulta de Instrumental de administración (WQL) para especificar los eventos de interés. Puede usar la tarea Monitor de eventos WMI para los siguientes fines:  
@@ -127,7 +127,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 ### <a name="static-options"></a>Opciones estáticas  
  **WMIConnectionName**  
- Seleccione un administrador de conexiones WMI de la lista o haga clic en \<**Nueva conexión WMI…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones WMI de la lista, o bien haga clic en \<**Nueva conexión WMI…**> para crear un administrador de conexiones.  
   
  **Temas relacionados** [Administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor del administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -162,7 +162,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = Entrada directa  
  **WQLQuerySource**  
- Proporcione una consulta o haga clic en el botón de puntos suspensivos (…) y escriba una consulta mediante el cuadro de diálogo **Consulta WQL** .  
+ Proporcione una consulta, o bien haga clic en el botón de puntos suspensivos (…) y escriba una consulta con el cuadro de diálogo **Consulta WQL**.  
   
 #### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Conexión de archivos  
  **WQLQuerySource**  

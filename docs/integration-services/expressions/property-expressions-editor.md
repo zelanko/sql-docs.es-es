@@ -15,12 +15,12 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca50777271309b338940abc2bfde8c8d6ae679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793573"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532154"
 ---
 # <a name="property-expressions-editor"></a>Editor de expresiones de propiedad
   Utilice el cuadro de diálogo **Editor de expresiones de propiedad** para crear, editar o eliminar las expresiones de propiedad que actualizan valores de propiedad.  

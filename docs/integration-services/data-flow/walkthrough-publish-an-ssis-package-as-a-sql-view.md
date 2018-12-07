@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641572"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521227"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
   En este tutorial se explica detalladamente cómo publicar un paquete SSIS como una vista SQL en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -243,7 +243,7 @@ GO
  La sintaxis de la función OPENQUERY es:  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Los parámetros de carpeta, proyecto y paquete son obligatorios, mientras que los de Use32BitRuntime y Timeout son opcionales.  
@@ -256,15 +256,15 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  En la siguiente lista se especifican los caracteres especiales que se pueden usar en la cláusula de consulta:  
   
--   Comilla simple (‘): se puede usar en el estándar OPENQUERY. En caso de que quiera usar comillas simples en la cláusula de consulta, emplee dos comillas simples (‘’).  
+-   Comilla simple ('): se puede usar en el estándar OPENQUERY. En caso de que quiera usar comillas simples en la cláusula de consulta, use dos comillas simples (").  
   
--   Comillas dobles (“): los parámetros que forman parte de la consulta se insertan entre comillas dobles. Si el valor de parámetro en sí ya contiene comillas dobles, use el carácter de escape. Por ejemplo: \”.  
+-   Comillas dobles ("): los parámetros que forman parte de la consulta se insertan entre comillas dobles. Si el valor de parámetro en sí ya contiene comillas dobles, use el carácter de escape. Por ejemplo: \".  
   
--   Corchetes de apertura y cierre ([ y ]): estos caracteres sirven para indicar espacios iniciales o finales. Por ejemplo, “[ algunos espacios ]” representa la cadena “ algunos espacios ” con un espacios inicial y un espacio final. Si estos caracteres se usan en la cláusula de consulta, deben ir acompañados de un carácter de escape. Por ejemplo, \\[ y \\].  
+-   Corchetes de apertura y cierre ([ y ]): estos caracteres sirven para indicar espacios iniciales o finales. Por ejemplo, “[ algunos espacios ]” representa la cadena “ algunos espacios ” con un espacio inicial y un espacio final. Si estos caracteres se usan en la cláusula de consulta, deben ir acompañados de un carácter de escape. Por ejemplo, \\[ y \\].  
   
--   Barra diagonal (\\): cada \ usada en la cláusula de consulta debe ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
+-   Barra diagonal (\\): cada \ usada en la cláusula de consulta tiene que ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
   
- Barra diagonal (\\): cada \ usada en la cláusula de consulta debe ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
+ Barra diagonal (\\): cada \ usada en la cláusula de consulta tiene que ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
   
 ## <a name="see-also"></a>Ver también  
  [Destino de streaming de datos](../../integration-services/data-flow/data-streaming-destination.md)   

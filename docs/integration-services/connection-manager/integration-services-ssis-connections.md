@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639142"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514125"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan conexiones para realizar diferentes tareas y para implementar características de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -159,7 +159,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
     -   Haga clic en el tipo de administrador de conexiones que desee agregar al paquete.  
   
-         O bien  
+         -O bien-  
   
     -   Si no aparece el tipo que desea agregar, haga clic en **Nueva conexión** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione un tipo de administrador de conexiones y haga clic en **Aceptar**.  
   
@@ -226,7 +226,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
 4.  Si quiere, haga clic con el botón derecho en el administrador de conexiones de la ventana **Explorador de soluciones** en el nodo **Administradores de conexiones** o en la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS** , haga clic en **Cambiar nombre**y, después, modifique el nombre predeterminado del administrador de conexiones.  
   
     > [!NOTE]  
-    >  En la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS** , no podrá sobrescribir el prefijo **(proyecto)** del nombre del administrador de conexiones. es así por diseño.  
+    >  En la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS**, no podrá sobrescribir el prefijo **(proyecto)** del nombre del administrador de conexiones. es así por diseño.  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>Cuadro de diálogo Agregar administrador de conexiones SSIS
 Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para seleccionar el tipo de conexión que se va a agregar a un paquete.  

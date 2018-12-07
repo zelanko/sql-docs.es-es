@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719263"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517707"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -190,7 +190,7 @@ Notas sobre la tabla:
 |SmallDateTime|DATE_FORMAT =  'aaaa-MM-dd HH:mm'|Además de año, mes y día, este formato de fecha incluye 00-23 horas, 00-59 minutos.|  
 |SmallDateTime|DATE_FORMAT =  'aaaa-MM-dd hh:mmtt'|Además de año, mes y día, este formato de fecha incluye 00-11 horas, 00-59 minutos, sin segundos y a.m. o p.m.|  
 |date|DATE_FORMAT =  'aaaa-MM-dd'|Año, mes y día. No se incluye ningún elemento de hora.|  
-|date|DATE_FORMAT = 'aaaa-MMM-dd'|Año, mes y día. Cuando se especifica el mes con 3 M, el valor de entrada es uno o las cadenas Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov o Dic.|  
+|date|DATE_FORMAT = 'aaaa-MMM-dd'|Año, mes y día. Cuando se especifica el mes con tres emes, el valor de entrada es una de las cadenas siguientes: ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov o dic.|  
 |datetime2|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff'|Además de año, mes y día, este formato de fecha incluye 00-23 horas, 00-59 minutos, 00-59 segundos y 7 dígitos para los milisegundos.|  
 |datetime2|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt'|Además de año, mes y día, este formato de fecha incluye 00-11 horas, 00-59 minutos, 00-59 segundos, 7 dígitos para los milisegundos y a.m. o p.m.|  
 |DateTimeOffset|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff zzz'|Además de año, mes y día, este formato de fecha incluye 00-23 horas, 00-59 minutos, 00-59 segundos y 7 dígitos para los milisegundos, además del desfase de zona horaria incluido en el archivo de entrada como `{+&#124;-}HH:ss`. Por ejemplo, puesto que la hora de Los Ángeles sin horario de verano aplicado es 8 horas por delante de la hora UTC, un valor de -08:00 en el archivo de entrada especifica la zona horaria de Los Ángeles.|  
@@ -216,7 +216,7 @@ Notas sobre la tabla:
   
  Detalles:  
   
--   Para separar los valores de mes, día y año, puede usar '–', '/' o '.'. Para simplificar, en la tabla solo se usa el separador ' – '.
+-   Para separar los valores de mes, día y año, puede usar “-”, “/” o “.”. Para simplificar, en la tabla solo se usa el separador “-”.
   
 -   Para especificar el mes como texto, use tres o más caracteres. Los meses con uno o dos caracteres se interpretan como un número.
   
@@ -284,7 +284,7 @@ Notas sobre la tabla:
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
   
- El delimitador de filas de los archivos de texto delimitado debe ser compatible con LineRecordReader de Hadoop. Es decir, debe ser '\r', '\n' o '\r\n'. El usuario no puede configurar estos delimitadores.
+ El delimitador de filas de los archivos de texto delimitado tiene que ser compatible con LineRecordReader de Hadoop. Es decir, debe ser '\r', '\n' o '\r\n'. El usuario no puede configurar estos delimitadores.
   
  Las combinaciones de métodos SerDe compatibles con RCFiles y los métodos de compresión de datos admitidos se han enumerado anteriormente en este artículo. No se admiten todas las combinaciones.
   

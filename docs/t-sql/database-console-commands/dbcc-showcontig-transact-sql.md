@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1937d8b4da1b824b0a1b46808b5e03f9bbdc77d9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510717"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ Cuando un índice está muy fragmentado, existen dos opciones para reducir la fr
 -   Quite y vuelva a crear un índice clúster.  
      La reconstrucción de un índice clúster reorganiza los datos y hace que las páginas de datos se llenen. El grado de llenado puede configurarse con la opción FILLFACTOR de CREATE INDEX. El inconveniente de este método es que el índice está sin conexión durante el proceso de eliminación y nueva creación, y que la operación es atómica. Si se interrumpe la creación del índice, no vuelve a crearse.  
 -   Reordene las páginas de nivel hoja del índice en un orden lógico.  
-     Utilice ALTER INDEX…REORGANIZE para reordenar las páginas de nivel hoja del índice en un orden lógico. Dado que esta operación se realiza en línea, el índice está disponible mientras se ejecuta la instrucción. También es posible interrumpir la operación sin perder todo el trabajo. El inconveniente de este método es que no es una forma tan buena de reorganizar los datos como la operación de quitar y volver a crear el índice clúster.  
+     Use ALTER INDEX…REORGANIZE para cambiar el orden de las páginas de nivel hoja del índice en un orden lógico. Dado que esta operación se realiza en línea, el índice está disponible mientras se ejecuta la instrucción. También es posible interrumpir la operación sin perder todo el trabajo. El inconveniente de este método es que no es una forma tan buena de reorganizar los datos como la operación de quitar y volver a crear el índice clúster.  
 -   Vuelva a generar el índice.  
      Para volver a generar el índice, utilice ALTER INDEX con REBUILD. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

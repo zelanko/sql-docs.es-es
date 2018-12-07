@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638332"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414542"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  
@@ -69,7 +69,7 @@ ms.locfileid: "51638332"
 |------------|-----------------|----------------------------|  
 |**Salida de actualizaciones de atributos variables**|El registro de la tabla de búsqueda se actualiza. Esta salida se usa para filas de atributos variables.|Una transformación Comando de OLE DB actualiza el registro mediante una instrucción UPDATE.|  
 |**Salida de atributo fijo**|Los valores en las filas que no deben cambiar no coinciden con los valores de la tabla de búsqueda. Esta salida se usa para filas de atributos fijos.|No se crea un flujo de datos predeterminado. Si la transformación se configura para continuar después de encontrar cambios en columnas de atributos fijos, debe crear un flujo de datos que capture estas filas.|  
-|**Salida de inserciones de atributos históricos**|La tabla de búsqueda contiene como mínimo una fila coincidente. La fila marcada como "actual" se debe marcar ahora como "expirada". Esta salida se usa para filas de atributos históricos.|Las transformaciones de Columna derivada crean columnas para la fila expirada y los indicadores de fila actual. Una transformación Comando de OLE DB actualiza el valor que se debe marcar como "expirado". La fila con los nuevos valores de columna se dirige a Nueva salida, en la que la fila se inserta y marca como "actual".|  
+|**Salida de inserciones de atributos históricos**|La tabla de búsqueda contiene como mínimo una fila coincidente. La fila marcada como “actual” se tiene que marcar ahora como “expirada”. Esta salida se usa para filas de atributos históricos.|Las transformaciones de Columna derivada crean columnas para la fila expirada y los indicadores de fila actual. Una transformación Comando de OLE DB actualiza el valor que se debe marcar como "expirado". La fila con los nuevos valores de columna se dirige a Nueva salida, en la que la fila se inserta y marca como "actual".|  
 |**Salida de actualizaciones de miembros deducidos**|Se insertan filas para miembros de dimensión deducidos. Esta salida se usa para filas de miembros deducidos.|Una transformación Comando de OLE DB actualiza el registro mediante una instrucción SQL UPDATE.|  
 |**Nueva salida**|La tabla de búsqueda no contiene filas coincidentes. La fila se agrega a la tabla de dimensiones. Esta salida se usa para nuevas filas y cambios en las filas de atributos históricos.|Una transformación Columna derivada establece el indicador de fila actual, y un destino de OLE DB inserta la fila.|  
 |**Salida sin cambios**|Los valores de la tabla de búsqueda coinciden con los valores de la fila. Esta salida se usa para filas sin cambios.|No se crea un flujo de datos predeterminado porque la transformación Dimensión de variación lenta no realiza ningún trabajo. Si desea capturar estas filas, debe crear un flujo de datos para esta salida.|  

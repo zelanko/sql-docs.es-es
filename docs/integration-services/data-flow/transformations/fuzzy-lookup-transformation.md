@@ -34,12 +34,12 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540894"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
@@ -123,7 +123,7 @@ ms.locfileid: "51638822"
 ## <a name="temporary-tables-and-indexes"></a>Tablas e índices temporales  
  En tiempo de ejecución, la transformación Búsqueda aproximada crea objetos temporales, como tablas e índices, en la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se conecta la transformación. El tamaño de estas tablas e índices temporales es proporcional al número de filas y tokens de la tabla de referencia y al número de tokens que crea la transformación Búsqueda aproximada; por lo tanto, podría consumir una cantidad importante de espacio en disco. La transformación también consulta estas tablas temporales. Por lo tanto, debe considerar la posibilidad de conectar la transformación Búsqueda aproximada a una instancia de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no sea de producción, en especial si el servidor de producción tiene un espacio en disco disponible limitado.  
   
- El rendimiento de esta transformación puede mejorar si las tablas e índices que utiliza están ubicados en el equipo local. Si la tabla de referencia que utiliza la transformación Búsqueda aproximada está en el servidor de producción, debe plantearse copiar la tabla a un servidor que no sea de producción y configurar la transformación Búsqueda aproximada para que tenga acceso a la copia. Haciendo esto, puede evitar que las consultas de búsqueda consuman recursos del servidor de producción. Además, si MatchIndexOptions está establecida en **GenerateAndMaintainNewIndex**, la transformación Búsqueda aproximada mantiene el índice de coincidencias y puede bloquear la tabla de referencia durante la operación de limpieza de datos, evitando que otros usuarios y aplicaciones accedan a ella.  
+ El rendimiento de esta transformación puede mejorar si las tablas e índices que utiliza están ubicados en el equipo local. Si la tabla de referencia que utiliza la transformación Búsqueda aproximada está en el servidor de producción, debe plantearse copiar la tabla a un servidor que no sea de producción y configurar la transformación Búsqueda aproximada para que tenga acceso a la copia. Haciendo esto, puede evitar que las consultas de búsqueda consuman recursos del servidor de producción. Además, si la transformación “Búsqueda aproximada” mantiene el índice de coincidencia (es decir, si MatchIndexOptionsis se establece en **GenerateAndMaintainNewIndex**), la transformación puede bloquear la tabla de referencia durante la operación de limpieza de datos, lo que evitaría que otros usuarios y aplicaciones accedan a ella.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurar la transformación Búsqueda aproximada  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  

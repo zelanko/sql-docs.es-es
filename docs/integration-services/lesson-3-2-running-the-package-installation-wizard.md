@@ -11,12 +11,12 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a884d0faf7f3f688e00ed83e2c7eeab770791f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527139"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lección 3-2: Ejecutar el Asistente para instalar paquetes
 En esta tarea, ejecutará el Asistente para la instalación de paquetes para implementar los paquetes del proyecto Deployment Tutorial en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Solamente los paquetes se pueden instalar en la tabla sysssispackages de la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , los archivos compatibles que incluya el paquete de implementación se implementarán en el sistema de archivos.  
@@ -29,7 +29,7 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
   
 1.  En el equipo de destino, busque el paquete de implementación.  
   
-    Si ha usado el valor predeterminado, bin\Deployment, como ubicación de la utilidad de implementación, el paquete de implementación está en la carpeta Bin\Deployment dentro del proyecto Deployment Tutorial.  
+    Si ha usado el valor predeterminado (bin\Deployment) como ubicación de la utilidad de implementación, el paquete de implementación está en la carpeta Deployment dentro del proyecto Deployment Tutorial.  
   
 2.  En la carpeta Deployment, haga doble clic en el archivo de manifiesto, Deployment Tutorial.SSISDeploymentManifest.  
   

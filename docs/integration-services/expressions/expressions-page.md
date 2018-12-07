@@ -15,12 +15,12 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8cc09f10e9bad8e5e1d6aebba6fb18736616e85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27acd1fcf2cd79ce7d681f9491ee77ffc7ad9d71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503917"
 ---
 # <a name="expressions-page"></a>Página Expresiones
   Utilice la página **Expresiones** para editar expresiones de propiedad y obtener acceso a los cuadros de diálogo **Editor de expresiones de propiedad** y **Generador de expresiones** .  
@@ -30,7 +30,7 @@ ms.locfileid: "47665629"
  Para obtener más información sobre cómo se escriben las expresiones y cómo se usan las expresiones de propiedad, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) y [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="options"></a>Opciones  
- **Expresiones (...)**  
+ **Expresiones (…)**  
  Haga clic en los puntos suspensivos para abrir el cuadro de diálogo **Editor de expresiones de propiedad** . Para más información, consulte [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md).  
   
  **\<property name>**  

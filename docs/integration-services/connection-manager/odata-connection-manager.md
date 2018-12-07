@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511263"
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
  Conéctese a un origen de datos OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos OData y consumir datos del servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "51641839"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Agregar un administrador de conexiones ODATA a un paquete SSIS  
  Hay tres formas de agregar un nuevo administrador de conexiones OData a un paquete SSIS:  
   
--   Haga clic en el botón **Nuevo...** en el **Editor de origen OData**  
+-   Haga clic en el botón **Nuevo…** en el **Editor de origen de OData**.  
   
 -   Haga clic con el botón derecho en la carpeta **Administradores de conexiones** en el **Explorador de soluciones**y, después, haga clic en **Nuevo administrador de conexiones**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
   

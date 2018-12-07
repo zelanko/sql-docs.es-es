@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505756"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lección 5-2: Habilitar y configurar las configuraciones de paquetes
 En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Usará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad **Directory** del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
@@ -40,11 +40,11 @@ En esta tarea, convertirá el proyecto al modelo de implementación de paquetes 
   
 7.  Vuelva a la pestaña **Flujo de control** y haga doble clic en el contenedor **Foreach File in Folder** .  
   
-8.  En la página **Colección** del **Editor de bucles Foreach**, haga clic en **Expresiones**y, después, haga clic en el botón de puntos suspensivos **(…)**.  
+8.  En la página **Colección** del **Editor de bucles Foreach**, haga clic en **Expresiones** y, después, haga clic en el botón de puntos suspensivos **(…)**.  
   
 9. En el **Editor de expresiones de propiedad**, haga clic en la lista **Propiedad** y seleccione **Directorio**.  
   
-10. En el cuadro **Expresión** , haga clic en el botón de puntos suspensivos **(…)**.  
+10. En el cuadro **Expresión**, haga clic en el botón de puntos suspensivos **(…)**.  
   
 11. En el **Generador de expresiones**, expanda la carpeta Variables y arrastre la variable **User:varFolderName** al cuadro **Expresión** .  
   
@@ -88,7 +88,7 @@ En esta tarea, convertirá el proyecto al modelo de implementación de paquetes 
   
 16. Haga clic en **Cerrar**.  
   
-17. El asistente crea un archivo de configuración, denominado SSISTutorial.dtsConfig, que contiene parámetros de configuración para el**valor** de la variable que, a su vez, establece la propiedad **Directory** del enumerador.  
+17. El asistente crea un archivo de configuración, denominado SSISTutorial.dtsConfig, que contiene parámetros de configuración para el **Valor** de la variable que, a su vez, establece la propiedad **Directory** del enumerador.  
   
     > [!NOTE]  
     > Generalmente, un archivo de configuración contiene información compleja sobre las propiedades de un paquete, pero en este tutorial la única información de configuración debería ser  

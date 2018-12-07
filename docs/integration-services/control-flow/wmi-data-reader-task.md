@@ -18,12 +18,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2945ebadf1a9637018a2e6cbbda7379efa6ef58
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: dbe9e655bff91e514c8157a1afb74504b9dc6717
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638212"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502723"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
   La tarea Lector de datos WMI ejecuta consultas mediante el Lenguaje de consulta del Instrumental de administración de Windows (WMI), que devuelve información de WMI sobre un sistema informático. Puede usar la tarea Lector de datos WMI para los siguientes fines:  
@@ -120,7 +120,7 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>Opciones estáticas  
  **WMIConnectionName**  
- Seleccione un administrador de conexiones WMI de la lista o haga clic en \<**Nueva conexión WMI…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones WMI de la lista, o bien haga clic en \<**Nueva conexión WMI…**> para crear un administrador de conexiones.  
   
  **Temas relacionados** [Administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor del administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -151,7 +151,7 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Entrada directa  
  **WQLQuerySource**  
- Proporcione una consulta o haga clic en los puntos suspensivos (…) y escriba una consulta mediante el cuadro de diálogo **Consulta WQL** .  
+ Proporcione una consulta, o bien haga clic en los puntos suspensivos (…) y escriba una consulta con el cuadro de diálogo **Consulta WQL**.  
   
 #### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Conexión de archivos  
  **WQLQuerySource**  

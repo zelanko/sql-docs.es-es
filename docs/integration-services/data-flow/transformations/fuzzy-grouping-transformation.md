@@ -29,12 +29,12 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638910"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540883"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
@@ -44,7 +44,7 @@ ms.locfileid: "51638910"
   
  La transformación de Búsqueda aproximada requiere una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para crear las tablas temporales de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que necesita el algoritmo de la transformación para realizar su trabajo. La conexión debe establecerla un usuario que tenga permiso para crear tablas en la base de datos.  
   
- Para configurar la transformación, debe seleccionar las columnas de entrada que desee utilizar para identificar duplicados y el tipo de coincidencia, aproximada o exacta, para cada columna. Una coincidencia exacta garantiza que solo se agruparán las filas de la columna que tengan valores idénticos. La coincidencia exacta se puede aplicar a columnas con cualquier tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , excepto DT_TEXT, DT_NTEXT y DT_IMAGE. Una coincidencia aproximada agrupa filas que tienen aproximadamente el mismo valor. El método para la coincidencia aproximada de los datos se basa en la puntuación de similitud especificada por el usuario. Para la coincidencia aproximada, solo se pueden utilizar columnas con tipos de datos DT_WSTR y DT_STR. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Para configurar la transformación, tiene que seleccionar las columnas de entrada que quiera usar para identificar duplicados y el tipo de coincidencia, aproximada o exacta, para cada columna. Una coincidencia exacta garantiza que solo se agruparán las filas de la columna que tengan valores idénticos. La coincidencia exacta se puede aplicar a columnas con cualquier tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , excepto DT_TEXT, DT_NTEXT y DT_IMAGE. Una coincidencia aproximada agrupa filas que tienen aproximadamente el mismo valor. El método para la coincidencia aproximada de los datos se basa en la puntuación de similitud especificada por el usuario. Para la coincidencia aproximada, solo se pueden utilizar columnas con tipos de datos DT_WSTR y DT_STR. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  La salida de transformación incluye todas las columnas de entrada, una o más columnas con datos normalizados, y una columna que contiene la puntuación de similitud. La puntuación es un valor decimal entre 0 y 1. La fila canónica tiene una puntuación de 1. Las otras filas de la agrupación aproximada tienen puntuaciones que indican su nivel de coincidencia con la fila canónica. Cuanto más se acerque el resultado a 1, mayor será la coincidencia entre la fila y la fila canónica. Si la agrupación aproximada contiene filas que son duplicados exactos de la fila canónica, dichas filas también tienen una puntuación de 1. La transformación no quita las filas duplicadas. Se agrupan creando una clave que relaciona la fila canónica con las filas similares.  
   

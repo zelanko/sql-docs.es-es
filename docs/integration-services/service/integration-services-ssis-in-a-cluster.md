@@ -11,12 +11,12 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbb13ae1c48166df820375ff42be24fab19df579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717333"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407352"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) en un clúster
   No se recomienda la agrupación en clústeres de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] porque el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no es un servicio en clúster o que reconozca clústeres, y no admite la conmutación por error de un nodo de clúster a otro. Por consiguiente, en un entorno en clúster, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se debería instalar e iniciar como un servicio independiente en cada nodo del clúster.  
@@ -99,7 +99,7 @@ Para los clientes que decidan que las ventajas de configurar el servicio [!INCLU
   
 4.  En el menú **Archivo** , seleccione **Nuevo**y, a continuación, haga clic en **Recurso**.  
   
-5.  En la página **Nuevo recurso** del **Resource Wizard** (Asistente para recursos), escriba un nombre y elija **Servicio genérico**como tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Siguiente**.  
+5.  En la página **Nuevo recurso** del **Asistente para recursos**, escriba un nombre y seleccione **“Servicio genérico”** como el tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Siguiente**.  
   
 6.  En la página **Possible Owners** (Posibles propietarios), agregue o quite los nodos del clúster como posibles propietarios del recurso. Haga clic en **Siguiente**.  
   

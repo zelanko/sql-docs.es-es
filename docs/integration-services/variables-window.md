@@ -16,17 +16,17 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3417b53ba41027b5d629069676818b8f54f13d0b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640872"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420516"
 ---
 # <a name="variables-window"></a>Ventana Variables
   Use la ventana **Variables** para crear y modificar variables definidas por el usuario y ver variables del sistema.  
   
- De forma predeterminada, la ventana **variables** se encuentra debajo del área **Administradores de conexiones** en el Diseñador SSIS, en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Si no ve la ventana **variables** , haga clic en **variables** en el menú **SSIS** para mostrar la ventana.  
+ De forma predeterminada, la ventana **variables** se encuentra debajo del área **Administradores de conexiones** en el Diseñador SSIS, en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Si no ve la ventana **variables**, haga clic en **Variables** en el menú **SSIS** para mostrar la ventana.  
   
  También puede ver la ventana **Variables** si asigna el comando View.Variables a una combinación de teclas que desee en la página **Teclado** del cuadro de diálogo **Opciones** .  
   

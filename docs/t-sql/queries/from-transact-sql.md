@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966043"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408812"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -710,7 +710,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- También podría usarse una cláusula `WHERE` con esta consulta para limitar los resultados. Este ejemplo limita los resultados a los valores `SalesOrderNumber` superiores a "SO5000":  
+ También podría usarse una cláusula `WHERE` con esta consulta para limitar los resultados. Este ejemplo limita los resultados a los valores `SalesOrderNumber` superiores a “SO5000”:  
   
 ```sql
 -- Uses AdventureWorks  
@@ -810,7 +810,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="r-using-a-derived-table"></a>R. Usar una tabla derivada  
- En el ejemplo siguiente se usa una tabla derivada (una instrucción `SELECT` después de la cláusula `FROM`) para devolver las columnas `CustomerKey` y `LastName` de todos los clientes de la tabla `DimCustomer` con valores `BirthDate` posteriores al 1 de enero de 1970 y el apellido "Smith".  
+ En el ejemplo siguiente, se usa una tabla derivada (una instrucción `SELECT` después de la cláusula `FROM`) para devolver las columnas `CustomerKey` y `LastName` de todos los clientes de la tabla `DimCustomer` con valores `BirthDate` posteriores al 1 de enero de 1970 y el apellido “Smith”.  
   
 ```sql
 -- Uses AdventureWorks  

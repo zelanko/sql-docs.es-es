@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e5dcf629121edc7d4502b0cedbf9825e74813587
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530645"
 ---
 # <a name="xml-task"></a>Tarea XML
   La tarea XML se usa para trabajar con datos XML. Mediante esta tarea, un paquete puede recuperar documentos XML, aplicar operaciones a los documentos mediante las hojas de estilos Extensible Stylesheet Language Transformations (XSLT) y expresiones XPath, combinar varios documentos, o bien validar, comparar y guardar los documentos actualizados en archivos y variables.  
@@ -165,7 +165,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **Source**  
- Si **Source** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y luego proporcione el XML en el cuadro de diálogo **Editor de origen del documento**.  
+ Si **Source** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** para escribir el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
  Si **Source** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y proporcione el XML en el cuadro de diálogo **Editor de origen**.  
+ Si **SecondOperandType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y escriba el código XML mediante el cuadro de diálogo **Editor de origen**.  
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y proporcione el XML en el cuadro de diálogo **Editor de origen**.  
+ Si **SecondOperandType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y escriba el código XML mediante el cuadro de diálogo **Editor de origen**.  
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y proporcione el XML en el cuadro de diálogo **Editor de origen**.  
+ Si **SecondOperandType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y escriba el código XML mediante el cuadro de diálogo **Editor de origen**.  
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
@@ -353,7 +353,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **XPathStringSource**  
- Si **XPathStringSourceType** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y proporcione el XML en el cuadro de diálogo **Editor de origen del documento**.  
+ Si **XPathStringSourceType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y escriba el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
  Si **XPathStringSourceType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
@@ -398,7 +398,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y proporcione el XML en el cuadro de diálogo **Editor de origen del documento** .  
+ Si **SecondOperandType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y escriba el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
@@ -473,7 +473,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y proporcione el XML en el cuadro de diálogo **Editor de origen del documento** .  
+ Si **SecondOperandType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y escriba el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "51639682"
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** está establecido en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y proporcione el XML en el cuadro de diálogo **Editor de origen del documento** .  
+ Si **SecondOperandType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** y escriba el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   

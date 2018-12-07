@@ -42,12 +42,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640742"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507706"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
   Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -82,16 +82,16 @@ ms.locfileid: "51640742"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|Valor comprendido entre 1 y 100 que especifica el porcentaje en el que se puede ampliar la memoria durante la agregación. El valor predeterminado de esta propiedad es **25**.|  
 |CountDistinctKeys|Integer|Valor que especifica el número exacto de recuentos distintos que la agregación puede escribir. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene precedencia.|  
-|CountDistinctScale|Integer (enumeración)|Valor que describe el número aproximado de valores distintos en una columna que la agregación puede contar. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale. El uso de la opción **No especificado** (0) puede afectar al rendimiento en conjuntos de datos grandes.|  
+|CountDistinctScale|Integer (enumeración)|Valor que describe el número aproximado de valores distintos en una columna que la agregación puede contar. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale. El uso de la opción **No especificado** (0) puede afectar al rendimiento en conjuntos de datos grandes.|  
 |Claves|Integer|Valor que especifica el número exacto de claves Group By que la agregación escribe. Si se especifica un valor de KeyScale, el valor de Keys tiene precedencia.|  
-|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
+|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de la salida de transformación Agregado. Todas las propiedades son de lectura y escritura.  
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Claves|Integer|Valor que especifica el número exacto de las claves Group By que la agregación puede escribir. Si se especifica un valor de KeyScale, el valor de Keys tiene precedencia.|  
-|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
+|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Agregado. Todas las propiedades son de lectura y escritura.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51640742"
 |AggregationComparisonFlags|Integer|Valor que especifica cómo compara la transformación Agregado los datos de cadena de una columna. Para más información, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |AggregationType|Integer (enumeración)|Valor que especifica la operación de la agregación que se va a realizar en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Agrupar por** (0)<br /><br /> **Recuento** (1)<br /><br /> **Contar todos** (2)<br /><br /> **CountDistinct** (3)<br /><br /> **Suma** (4)<br /><br /> **Promedio** (5)<br /><br /> **Máximo** (7)<br /><br /> **Mínimo** (6)|  
 |CountDistinctKeys|Integer|Cuando el tipo de agregación es **Count distinct**, valor que especifica el número exacto de claves que la agregación puede escribir. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene precedencia.|  
-|CountDistinctScale|Integer (enumeración)|Cuando el tipo de agregación es **Count distinct**, un valor que describe aproximadamente cuántos valores de clave puede escribir la agregación. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale.|  
+|CountDistinctScale|Integer (enumeración)|Cuando el tipo de agregación es **Count distinct**, un valor que describe aproximadamente cuántos valores de clave puede escribir la agregación. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale.|  
 |IsBig|Boolean|Valor que indica si la columna contiene un valor mayor que cuatro mil millones o un valor con más precisión que un valor de coma flotante de precisión doble. El valor puede ser 0 o 1. 0 indica que IsBig es **False** y la columna no contiene un valor grande o preciso. El valor predeterminado de esta propiedad es 1.|  
   
  La entrada y las columnas de entrada de la transformación Agregado no tienen ninguna propiedad personalizada.  

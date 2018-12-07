@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638752"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521544"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -40,7 +40,7 @@ ms.locfileid: "51638752"
   
  Un visor de datos puede mostrar los datos en una cuadrícula. Con una cuadrícula, se seleccionan las columnas que se muestran. Los valores de las columnas seleccionadas se muestran en formato tabular.  
   
- También puede incluir varios visores de datos en una ruta. Puede mostrar los mismos datos en diferentes formatos (por ejemplo, crear una vista de gráfico y una vista de cuadrícula de los datos) o crear diferentes visores de datos para diferentes columnas de datos.  
+ También puede incluir varios visores de datos en una ruta. Puede mostrar los mismos datos en distintos formatos (por ejemplo, crear una vista de gráfico y una vista de cuadrícula de los datos), o bien puede crear varios visores de datos para diferentes columnas de datos.  
   
  Cuando se agrega un visor de datos a una ruta, el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] agrega un icono de visor de datos a la superficie de diseño de la pestaña **Flujo de datos** , junto a la ruta. Las transformaciones que pueden tener varias salidas, como la transformación División condicional, pueden incluir un visor de datos en cada ruta.  
   
@@ -89,9 +89,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** : suma de todas las filas enviadas por el componente.  
   
--   **wall_clock_time_ms** : tiempo de ejecución total transcurrido, en milisegundos, para cada componente.  
+-   **wall_clock_time_ms**: tiempo de ejecución total transcurrido, en milisegundos, para cada componente.  
   
--   **num_rows_per_millisecond** : número de filas por milisegundo enviadas por cada componente.  
+-   **num_rows_per_millisecond**: número de filas por milisegundo enviadas por cada componente.  
   
  La cláusula **HAVING** se usa para evitar un error de división por cero en los cálculos.  
   

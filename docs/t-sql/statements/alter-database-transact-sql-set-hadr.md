@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696213"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533354"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER DATABASE database_name
  SET HADR  
  Ejecuta el comando de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] especificado en la base de datos indicada.  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  Une o quita la base de datos de disponibilidad del grupo de disponibilidad especificado, de la manera siguiente:  
   
  *group_name*  

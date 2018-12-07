@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07852484de0956b21d73fab26ffb0caff13825dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834973"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532748"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,7 +118,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>D. Utilizar instrucciones IF...ELSE anidadas  
- El ejemplo siguiente muestra cómo anidar la instrucción IF ... ELSE dentro de otra. Establezca la variable `@Number` en `5`, `50` y `500` para probar cada instrucción.  
+ En el ejemplo siguiente, se muestra cómo anidar una instrucción IF… ELSE dentro de otra. Establezca la variable `@Number` en `5`, `50` y `500` para probar cada instrucción.  
   
 ```  
 DECLARE @Number int;  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. Usar una consulta como parte de una expresión booleana  
- En el ejemplo siguiente se usa `IF…ELSE` para determinar cuál de las dos respuestas se muestra al usuario, en función del peso de un elemento en la tabla `DimProduct`.  
+ En el ejemplo siguiente se usa `IF...ELSE` para determinar cuál de las dos respuestas se muestra al usuario, en función del peso de un elemento en la tabla `DimProduct`.  
   
 ```  
 -- Uses AdventureWorks  

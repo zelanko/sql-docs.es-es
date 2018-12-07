@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cea3308f6d070a0cd1b7b902f1b76306ae1930a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503573"
 ---
 # <a name="data-flow"></a>Flujo de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos. Los orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las transformaciones modifican, resumen y limpian datos. Los destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  
@@ -190,7 +190,7 @@ ms.locfileid: "51641682"
  Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
   
 ### <a name="columns"></a>Columnas  
- Las entradas, salidas y salidas de error son colecciones de columnas. Cada columna es configurable y, según el tipo de columna (de entrada, de salida o externa),[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona diferentes propiedades para la columna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres formas diferentes de establecer las propiedades de las columnas: mediante programación, mediante cuadros de diálogo específicos del componente o mediante el cuadro de diálogo **Editor avanzado**.  
+ Las entradas, salidas y salidas de error son colecciones de columnas. Cada columna es configurable y, según el tipo de columna (de entrada, de salida o externa), [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona propiedades distintas para la columna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres formas diferentes de establecer las propiedades de las columnas: mediante programación, mediante cuadros de diálogo específicos del componente o mediante el cuadro de diálogo **Editor avanzado**.  
   
 ## <a name="paths"></a>Rutas  
  Las rutas conectan componentes de flujo de datos. En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede ver y modificar las propiedades de ruta, ver los metadatos de salida para el punto de inicio de la ruta y adjuntar visores de datos a una ruta.  

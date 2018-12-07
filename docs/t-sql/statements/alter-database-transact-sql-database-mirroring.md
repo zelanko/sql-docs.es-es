@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5fcda605644c29f21b6fd9f71578a4d860f59619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530499"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Creación de reflejo de la base de datos ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,11 +92,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *partner_server* **'**  
  Especifica la dirección de red del servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actuar como un asociado de conmutación por error en la nueva sesión de creación de reflejo de la base de datos. Cada sesión requiere dos asociados: uno empieza como servidor principal y el otro como servidor reflejado. Se recomienda que estos asociados residan en equipos distintos.  
   
- Esta opción se especifica una vez por sesión en cada asociado. El inicio de la creación de reflejo de la base de datos requiere dos instrucciones ALTER DATABASE *database* SET PARTNER **='***partner_server***'**. El orden es relevante. En primer lugar, conéctese al servidor reflejado y especifique la instancia del servidor principal como *partner_server* (SET PARTNER **='***principal_server***'**). Después, establezca la conexión con el servidor principal y especifique la instancia del servidor reflejado como *partner_server* (SET PARTNER **='***mirror_server***'**); de este modo se inicia una sesión de creación de reflejo de la base de datos entre estos dos asociados. Para obtener más información, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Esta opción se especifica una vez por sesión en cada asociado. Para iniciar una sesión de creación de reflejo de la base de datos, se necesitan dos instrucciones ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. El orden es relevante. Primero, conéctese al servidor reflejado y especifique la instancia del servidor principal como *partner_server* (SET PARTNER **='**_principal_server_**'**). Después, establezca la conexión con el servidor principal y especifique la instancia del servidor reflejado como *partner_server* (SET PARTNER **='**_mirror_server_**'**); de este modo, se inicia una sesión de creación de reflejo de la base de datos entre estos dos asociados. Para obtener más información, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  El valor de *partner_server* es una dirección de red de servidor. Tiene la siguiente sintaxis:  
   
- TCP**://***\<dirección-del-sistema>***:***\<puerto>*  
+ TCP **://**_\<dirección del sistema>_**:**_\<puerto>_  
   
  donde  
   
@@ -106,7 +106,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
- En el siguiente ejemplo se muestra la cláusula SET PARTNER **='***partner_server***'**:  
+ En el ejemplo siguiente, se muestra la cláusula SET PARTNER **='**_partner_server_**'**:  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -154,7 +154,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
 -   Si la seguridad se establece en FULL y el testigo en OFF, dicha sesión se ejecuta en el modo de alta seguridad sin conmutación automática por error. Si la instancia del servidor reflejado se bloquea, la instancia del servidor principal no se ve afectada. Si la instancia del servidor principal se bloquea, se puede forzar el servicio (con una posible pérdida de datos) en la instancia del servidor reflejado.  
   
- Si SAFETY se establece en OFF, la sesión se ejecuta en el modo de alto rendimiento y no se admite la conmutación automática o manual por error. Sin embargo, los problemas del servidor reflejado no afectan al servidor principal y, si la instancia de este se bloquea, puede forzar el servicio si es necesario (con una posible pérdida de datos) en la instancia del servidor reflejado, siempre que WITNESS esté establecido en OFF o el testigo esté conectado actualmente al reflejo. Para obtener más información acerca de cómo forzar la aplicación del servicio, vea "FORCE_SERVICE_ALLOW_DATA_LOSS" en un apartado anterior de esta sección.  
+ Si SAFETY se establece en OFF, la sesión se ejecuta en el modo de alto rendimiento y no se admite la conmutación automática o manual por error. Pero los problemas del servidor reflejado no afectan al servidor principal y, si la instancia del servidor principal se bloquea, puede forzar el servicio si es necesario (con una posible pérdida de datos) en la instancia del servidor reflejado, siempre que WITNESS se establezca en OFF o el testigo esté conectado actualmente al reflejo. Para obtener más información acerca de cómo forzar la aplicación del servicio, vea "FORCE_SERVICE_ALLOW_DATA_LOSS" en un apartado anterior de esta sección.  
   
 > [!IMPORTANT]  
 >  El modo de alto rendimiento no se ha diseñado para que use un testigo. Sin embargo, siempre que se establece SAFETY en OFF, es muy recomendable asegurarse de que WITNESS está establecido en OFF.  
@@ -198,7 +198,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *witness_server* **'**  
  Especifica una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que actúe como el servidor testigo para una sesión de creación de reflejo de la base de datos. Solo puede especificar instrucciones SET WITNESS en el servidor principal.  
   
- En una instrucción SET WITNESS **='***witness_server***'**, *witness_server* equivale a la sintaxis de *partner_server*.  
+ En una instrucción SET WITNESS **='**_witness_server_**'**, la sintaxis de *witness_server* equivale a la sintaxis de *partner_server*.  
   
  OFF  
  Quita el testigo de la sesión de creación de reflejo de la base de datos. Si se establece el testigo en OFF, se deshabilita la conmutación automática por error. Si la base de datos se establece en FULL SAFETY y el testigo se establece en OFF, un error del servidor reflejado hace que el servidor principal anule la disponibilidad de la base de datos.  

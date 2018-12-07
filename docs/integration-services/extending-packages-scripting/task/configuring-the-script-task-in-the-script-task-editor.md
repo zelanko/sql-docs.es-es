@@ -17,12 +17,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c6ae53c34ab0c960efc1a5347c6ff01c74f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542046"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurar la tarea Script en el editor de la tarea Script
   Antes de escribir código personalizado en la tarea Script, debe configurar sus propiedades principales en las tres páginas del **Editor de la tarea Script**. Puede configurar propiedades de tarea adicionales que no son únicas de la tarea Script mediante la ventana Propiedades.  
@@ -52,7 +52,7 @@ ms.locfileid: "47805523"
 > [!NOTE]  
 >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
- Para seleccionar las variables, haga clic en el botón de puntos suspensivos (**…**) situado junto al campo de propiedades. Para más información, consulte [Página Seleccionar variables](../../../integration-services/control-flow/select-variables-page.md).  
+ Para seleccionar las variables, haga clic en el botón de puntos suspensivos (**…**) junto al campo de propiedades. Para más información, consulte [Página Seleccionar variables](../../../integration-services/control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Botón Editar script  
  El botón **Editar script** inicia el entorno de desarrollo VSTA donde escribe el script personalizado. Para obtener más información, vea [Programar y depurar la tarea Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md).  

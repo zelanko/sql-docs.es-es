@@ -13,12 +13,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca9cfa8f04e5c3c506e1c4ba6d0226c26db4711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650224"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418036"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
   Después de completar el flujo de control para un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tarea siguiente es crear una función con valores de tabla que recupere los datos modificados. Solo tiene que crear esta función una vez antes de la primera carga incremental.  
@@ -133,9 +133,9 @@ deallocate #hfunctions
   
 -   Todas las columnas de datos modificados solicitadas.  
   
--   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son los siguientes: ‘I’ para insertar, ‘D’ para eliminar, ‘UO’ para actualizar valores antiguos y ‘UN’ para actualizar valores nuevos.  
+-   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son los siguientes: “I” para insertar, “D” para eliminar, “UO” para actualizar valores antiguos y “UN” para actualizar valores nuevos.  
   
--   Marcas de actualización, si las pide, que aparecen como columnas de bits después del código de operación y en el orden especificado en el parámetro *@update_flag_list* . El nombre de estas columnas se obtiene anexando ‘_uflag’ al nombre de columna asociado.  
+-   Marcas de actualización, si las pide, que aparecen como columnas de bits después del código de operación y en el orden especificado en el parámetro *@update_flag_list* . El nombre de estas columnas se obtiene anexando “_uflag” al nombre de columna asociado.  
   
  Si el paquete llama a una función de contenedor que consulta todos los cambios, dicha función también devolverá las columnas __CDC_STARTLSN y \__CDC_SEQVAL. Estas dos columnas se convierten en la primera y en la segunda columna, respectivamente, del conjunto de resultados. La función de contenedor también ordena el conjunto de resultados basándose en estas dos columnas.  
   

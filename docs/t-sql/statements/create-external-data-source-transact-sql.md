@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e864e1a5d3eb605fc7db462b1a685ce2e44e4ea5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506408"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -88,25 +88,25 @@ WITH
 GO
 
 
-
-
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
         TYPE = HADOOP, 
         LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, JOB_TRACKER_LOCATION = 'JobTracker_URI[:port]' ]
+        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
+        [, CREDENTIAL = credential_name]
     )
 [;]
 
--- PolyBase only: Azure Storage Blob as data source 
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = BLOB_STORAGE,
+-- PolyBase only: Azure Storage Blob as data source   
+-- (on Parallel Data Warehouse)  
+CREATE EXTERNAL DATA SOURCE data_source_name  
+    WITH (   
+        TYPE = HADOOP,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-    )
+        [, CREDENTIAL = credential_name ]
+    )  
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
@@ -229,11 +229,11 @@ Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Especifica la ubicación del administrador de recursos de Hadoop. Cuando se especifica, el optimizador de consultas puede adoptar una decisión basada en el costo para realizar el procesamiento previo de los datos de una consulta de PolyBase mediante el uso de las funciones de cálculo de Hadoop con MapReduce. Esta técnica, denominada aplicación de predicado, puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL y, por tanto, mejorar el rendimiento de las consultas.  
+ Especifica la ubicación del administrador de recursos de Hadoop. Cuando se especifica, el optimizador de consultas puede adoptar una decisión basada en costos para preprocesar los datos de una consulta de PolyBase mediante el uso de las funciones de cálculo de Hadoop con MapReduce. Esta técnica, denominada aplicación de predicado, puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL y, por tanto, mejorar el rendimiento de las consultas.  
   
  Cuando no se especifica, se deshabilita la inserción de cálculo en Hadoop para las consultas de PolyBase.  
  
-Si no se especifica el puerto, el valor predeterminado se determina con el valor actual de la configuración de "conectividad de Hadoop".
+Si no se especifica el puerto, el valor predeterminado se determina con el valor actual de la configuración “hadoop connectivity”.
 
 |Conectividad de Hadoop|Puerto predeterminado del administrador de recursos|
 |-------------------|-----------------------------|
@@ -498,7 +498,7 @@ Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT](
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (

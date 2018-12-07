@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526617"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes heredados. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -100,7 +100,7 @@ Para obtener más información sobre el error descrito en esta sección y los pe
   
  Para implementar un proyecto en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , debe completar las tareas siguientes:  
   
-1.  Crear un catálogo de SSISDB, si no lo tiene todavía. Para obtener más información, vea [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md) (Catálogo de SSIS).  
+1.  Crear un catálogo de SSISDB, si aún no lo ha hecho. Para obtener más información, vea [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md) (Catálogo de SSIS).  
   
 2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para obtener más información, vea las instrucciones siguientes: [Para convertir un proyecto al modelo de implementación de proyectos](#convert)  
   
@@ -293,7 +293,7 @@ Inicie el asistente de una de estas dos formas:
 
 **OR**
 
- - Busque el archivo ejecutable **ISDeploymentWizard.exe** en la carpeta de instalación de SQL Server; por ejemplo: "C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTS\Binn". 
+ - Busque el archivo ejecutable **ISDeploymentWizard.exe** en la carpeta de instalación de SQL Server; por ejemplo: “C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTS\Binn”. 
  
  > **NOTA:** Si ve la página **Introducción** , haga clic en **Siguiente** para cambiar a la página **Seleccionar origen** . 
  
@@ -318,7 +318,7 @@ Inicie el asistente de una de estas dos formas:
 #### <a name="select-source"></a>Seleccionar origen  
  La página **Seleccionar origen** del **Asistente para implementación de Integration Services** muestra la configuración específica del modelo de implementación de paquetes cuando selecciona la opción **lmplementación del paquete** del **modelo de implementación**.  
   
- Para seleccionar los paquetes de origen, haga clic en el botón **Examinar** para seleccionar la **carpeta** that contains the packages or type the carpeta path in the **Packages carpeta path** (Ruta de acceso de la carpeta de paquetes) y haga clic en la opción **Actualizar** situada en la parte inferior de la página. Ahora, debería ver todos los paquetes en la carpeta especificada en el cuadro de lista. De forma predeterminada, se seleccionan todos los paquetes. Haga clic en la **casilla** de la primera columna para elegir los paquetes que desea implementar en el servidor.  
+ Para seleccionar los paquetes de origen, haga clic en el botón **Examinar…** para seleccionar la **carpeta** que contiene los paquetes, o bien escriba la ruta de la carpeta en el cuadro de texto **Ruta de acceso de la carpeta de paquetes** y haga clic en la opción **Actualizar** situada en la parte inferior de la página. Ahora, debería ver todos los paquetes en la carpeta especificada en el cuadro de lista. De forma predeterminada, se seleccionan todos los paquetes. Haga clic en la **casilla** de la primera columna para elegir los paquetes que desea implementar en el servidor.  
   
  Consulte las columnas **Estado** y **Mensaje** para comprobar el estado del paquete. Si el estado es **Listo** o **Advertencia**, el Asistente para la implementación no bloquearía el proceso de implementación. Mientras que, si el estado es **Error**, el asistente no implementará los paquetes seleccionados. Para ver los mensajes de advertencia o error detallados, haga clic en el vínculo de la columna **Mensaje** .  
   
@@ -327,7 +327,7 @@ Inicie el asistente de una de estas dos formas:
  Si el estado de todos los paquetes seleccionados no es **Error**, el botón **Siguiente** se habilitará para que pueda continuar con el proceso de implementación de paquetes.  
   
 #### <a name="select-destination"></a>Seleccionar destino  
- Después de seleccionar los orígenes de paquetes, haga clic en el botón **Siguiente** para cambiar a la página **Seleccionar destino** . Los paquetes deben implementarse en un proyecto del catálogo de SSIS (SSISDB). Por lo tanto, antes de implementar paquetes, asegúrese de que el proyecto de destino ya exista en el catálogo de SSIS. De lo contrario, cree un proyecto vacío. En la página **Seleccionar destino** , escriba el nombre del servidor en el cuadro de texto **Nombre del servidor** o haga clic en el botón **Examinar** para seleccionar una instancia de servidor. Después, haga clic en el botón **Examinar** situado junto al cuadro de texto **Ruta** para especificar el proyecto de destino. Si el proyecto no existe, haga clic en **Nuevo proyecto** para crear un proyecto vacío como proyecto de destino. El proyecto **DEBE** crearse en una carpeta.  
+ Después de seleccionar los orígenes de paquetes, haga clic en el botón **Siguiente** para cambiar a la página **Seleccionar destino** . Los paquetes deben implementarse en un proyecto del catálogo de SSIS (SSISDB). Por lo tanto, antes de implementar paquetes, asegúrese de que el proyecto de destino ya exista en el catálogo de SSIS. De lo contrario, cree un proyecto vacío. En la página **Seleccionar destino**, escriba el nombre del servidor en el cuadro de texto **Nombre del servidor**, o bien haga clic en el botón **Examinar…** para seleccionar una instancia de servidor. Después, haga clic en el botón **Examinar…** junto al cuadro de texto **Ruta** para especificar el proyecto de destino. Si el proyecto no existe, haga clic en **Nuevo proyecto…** para crear un proyecto vacío como proyecto de destino. El proyecto **DEBE** crearse en una carpeta.  
   
 #### <a name="review-and-deploy"></a>Revisión e implementación  
  Haga clic en la opción **Siguiente** de la página **Seleccionar destino** para cambiar a la página **Revisión** del **Asistente para implementación de Integration Services**. En esta página, revise el informe de resumen sobre la acción de implementación. Después de la comprobación, haga clic en el botón **Implementar** para realizar la acción de implementación.  
@@ -336,7 +336,7 @@ Inicie el asistente de una de estas dos formas:
  Una vez completada la implementación, debería ver la página **Resultados** . En la página **Resultados** , revise los resultados de cada paso del proceso de implementación. En la página **Resultados** , haga clic en **Guardar informe** para guardar el informe de implementación o **Cerrar** para cerrar el asistente.  
 
 ## <a name="create-and-map-a-server-environment"></a>Crear y asignar un entorno de servidor
-  Los entornos de servidor se crean al objeto de especificar valores en tiempo de ejecución para los paquetes contenidos en un proyecto que ha implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Después puede asignar las variables de entorno a parámetros para un paquete concreto, para los paquetes de punto de entrada o para todos los paquetes de un proyecto determinado. Un paquete de punto de entrada suele ser un paquete primario que ejecuta un paquete secundario.  
+  Los entornos de servidor se crean con el fin de especificar valores en tiempo de ejecución para los paquetes contenidos en un proyecto implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Después puede asignar las variables de entorno a parámetros para un paquete concreto, para los paquetes de punto de entrada o para todos los paquetes de un proyecto determinado. Un paquete de punto de entrada suele ser un paquete primario que ejecuta un paquete secundario.  
   
 > [!IMPORTANT]  
 >  Para una ejecución determinada, un paquete solo puede ejecutarse con los valores contenidos en un único entorno de servidor.  
@@ -380,7 +380,7 @@ Inicie el asistente de una de estas dos formas:
 7.  Para incluir el entorno en el script, haga clic en **Script**. De forma predeterminada, el script aparece en una nueva ventana del Editor de consultas.  
   
     > [!TIP]  
-    >  Debe hacer clic en **Script** después de realizar cambios en las propiedades del entorno, como agregar una variable, y antes de hacer clic en **Aceptar** en el cuadro de diálogo **Propiedades del entorno** . De lo contrario, no se generará un script.  
+    >  Tiene que hacer clic en **Script** después de realizar cambios en las propiedades del entorno (como agregar una variable) y antes de hacer clic en **Aceptar** en el cuadro de diálogo **Propiedades del entorno**. De lo contrario, no se generará un script.  
   
 8.  Haga clic en **Aceptar** para guardar los cambios realizados en las propiedades de entorno.  
   
@@ -676,7 +676,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Quite las configuraciones de todos los paquetes después de la conversión**  
  Es recomendable que quite todas las configuraciones del proyecto seleccionando esta opción.  
   
- Si no selecciona esta opción, solo se quitan las configuraciones que eligió reemplazar con parámetros.  
+ Si no selecciona esta opción, solo se quitan las configuraciones que haya elegido reemplazar por parámetros.  
   
 ###  <a name="createParameters"></a> Establecer las opciones de la página Crear parámetros  
  Seleccione el nombre y el ámbito de parámetro para cada propiedad de configuración.  
@@ -711,7 +711,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="review"></a> Establecer las opciones en la página Revisar  
  Use la página **Revisar** para confirmar las opciones que ha seleccionado para la conversión del proyecto.  
   
- **Previous**  
+ **Anterior**  
  Haga clic aquí para cambiar una opción.  
   
  **Convertir**  

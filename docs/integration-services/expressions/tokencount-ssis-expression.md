@@ -11,12 +11,12 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508f752b04307e8930b19f0175608667c5ef1d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788543"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411492"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expresión de SSIS)
   Devuelve el número de tokens en una cadena que contiene los tokens separados por los delimitadores especificados.  
@@ -32,7 +32,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  Cadena que contiene los tokens separados por delimitadores.  
   
  *delimiter_string*  
- Cadena que contiene caracteres delimitadores. Por ejemplo, "; ,” contiene tres caracteres delimitadores punto y coma, un espacio en blanco y una coma.  
+ Cadena que contiene caracteres delimitadores. Por ejemplo, “; ,” contiene tres caracteres delimitadores: punto y coma, un espacio en blanco y una coma.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
@@ -51,13 +51,13 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Puede usar variables y columnas como argumentos de esta expresión.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
- En el ejemplo siguiente, la función de TOKENCOUNT devuelve 3 porque la cadena contiene tres tokens: "01", "12", "2011".  
+ En el ejemplo siguiente, la función TOKENCOUNT devuelve 3 porque la cadena contiene tres tokens: “01”, “12”, “2011”.  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- En el ejemplo siguiente, la función de TOKENCOUNT devuelve 4 porque hay cuatro tokens ("a", "little", "white", "dog").  
+ En el ejemplo siguiente, la función TOKENCOUNT devuelve 4 porque hay cuatro tokens (“a”, “little”, “white”, “dog”).  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -69,7 +69,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- En el ejemplo siguiente, la función TOKENCOUNT devuelve 4. La cadena delimitadora en este ejemplo contiene 5 delimitadores. La cadena de entrada contiene 4 tokens: "a", "little", "white", "dog".  
+ En el ejemplo siguiente, la función TOKENCOUNT devuelve 4. La cadena delimitadora en este ejemplo contiene 5 delimitadores. La cadena de entrada contiene 4 tokens: “a”, “little”, “white”, “dog”.  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  

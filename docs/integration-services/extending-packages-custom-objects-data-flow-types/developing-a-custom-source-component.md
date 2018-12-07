@@ -22,12 +22,12 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79e015043fe256037e808d68a4188e1091780797
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629193"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528775"
 ---
 # <a name="developing-a-custom-source-component"></a>Desarrollar un componente de origen personalizado
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que los desarrolladores escriban componentes de origen que se puedan conectar a los orígenes de datos personalizados y proporcionar datos de estos orígenes a otros componentes en una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
@@ -40,7 +40,7 @@ ms.locfileid: "47629193"
  La implementación de la funcionalidad en tiempo de diseño de un componente de origen implica especificar una conexión a un origen de datos externo, agregar y configurar columnas de salida que reflejen el origen de datos y validar que el componente esté listo para ejecutarse. Por definición, un componente de origen no tiene ninguna entrada y una o más salidas asincrónicas.  
   
 ### <a name="creating-the-component"></a>Crear el componente  
- Los componentes de origen se conectan a los orígenes de datos externos utilizando objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definidos en un paquete. Indican su requisito de un administrador de conexiones agregando un elemento a la colección <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Esta colección sirve a dos fines: incluir referencias a administradores de conexión del paquete que utiliza el componente y anunciar la necesidad de un administrador de conexiones al diseñador. Cuando se agrega <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a la colección, el **Editor avanzado** muestra la pestaña **Propiedades de conexión**, que permite a los usuarios seleccionar o crear una conexión en el paquete.  
+ Los componentes de origen se conectan a los orígenes de datos externos utilizando objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> definidos en un paquete. Indican su requisito de un administrador de conexiones agregando un elemento a la colección <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Esta colección tiene dos finalidades: incluir referencias a administradores de conexiones del paquete que usa el componente y anunciar la necesidad de un administrador de conexiones al diseñador. Cuando se agrega <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a la colección, el **Editor avanzado** muestra la pestaña **Propiedades de conexión**, que permite a los usuarios seleccionar o crear una conexión en el paquete.  
   
  En el ejemplo de código siguiente se muestra una implementación de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> que agrega una salida y agrega un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   

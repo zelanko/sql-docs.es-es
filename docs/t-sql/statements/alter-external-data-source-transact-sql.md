@@ -19,12 +19,12 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3654e06666c4b8d9639cf3d6ce792cdf80e4cdd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667253"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396819"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
   
  LOCATION = 'server_name_or_IP' especifica el nombre del servidor o una dirección IP.
   
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' especifica la ubicación del Administrador de recursos de Hadoop. Cuando se especifica, el optimizador de consultas podría decidir preprocesar los datos de una consulta de PolyBase mediante el uso de las capacidades de cálculo de Hadoop. Esta es una decisión basada en el costo. Esta técnica, denominada aplicación de predicado, puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL y, por tanto, mejorar el rendimiento de las consultas.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' especifica la ubicación del Administrador de recursos de Hadoop. Cuando se especifica, el optimizador de consultas podría preprocesar los datos de una consulta de PolyBase mediante el uso de las funciones de cálculo de Hadoop. Esta es una decisión basada en el costo. Esta técnica, denominada aplicación de predicado, puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL y, por tanto, mejorar el rendimiento de las consultas.
   
  CREDENTIAL = Credential_Name especifica la credencial con nombre. Vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 

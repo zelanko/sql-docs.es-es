@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336294"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529872"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -215,7 +215,7 @@ DELETE Sales.ShoppingCartItem
 ## <a name="parallelism"></a>Parallelism
  Una cláusula OUTPUT que devuelve resultados al cliente siempre usará un plan en serie.
 
-En el contexto de una base de datos configurada en el nivel de compatibilidad 130 o posterior, si en una operación INSERT...SELECT se usa una sugerencia WITH (TABLOCK) para la instrucción SELECT y también OUTPUT…INTO para insertar en una tabla temporal o de usuario, la tabla de destino para la instrucción INSERT…SELECT será apta para el paralelismo en función del costo de subárbol.  La tabla de destino a la que se hace referencia en la cláusula OUTPUT INTO no será apta para el paralelismo. 
+En el contexto de una base de datos configurada en el nivel de compatibilidad 130 o superior, si en una operación INSERT…SELECT se usa una sugerencia WITH (TABLOCK) para la instrucción SELECT y también OUTPUT…INTO para insertar en una tabla temporal o de usuario, la tabla de destino para la instrucción INSERT…SELECT será apta para el paralelismo según el costo de subárbol.  La tabla de destino a la que se hace referencia en la cláusula OUTPUT INTO no será apta para el paralelismo. 
  
 ## <a name="triggers"></a>Desencadenadores  
  Las columnas devueltas de OUTPUT reflejan los datos tal como estaban después de completarse la instrucción INSERT, UPDATE o DELETE, pero antes de ejecutarse los desencadenadores.  

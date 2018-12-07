@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502607"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
   La tarea Servicio web ejecuta un método de servicio web. Puede usar la tarea Servicio web para los siguientes objetivos:  
@@ -84,7 +84,7 @@ ms.locfileid: "51642352"
   
 ### <a name="options"></a>Opciones  
  **HTTPConnection**  
- Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…**> para crear uno nuevo.  
+ Seleccione un administrador de conexiones de la lista, o bien haga clic en \<**Nueva conexión…**> para crear uno.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
@@ -92,7 +92,7 @@ ms.locfileid: "51642352"
  **Temas relacionados**: [Administrador de conexiones HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md).  
   
  **WSDLFile**  
- Escriba la ruta de acceso completa de un archivo WSDL que sea local en el equipo o haga clic en el botón de exploración **(…)** y busque este archivo.  
+ Escriba la ruta de acceso completa de un archivo WSDL local del equipo, o bien haga clic en el botón Examinar **(…)** y busque el archivo.  
   
  Si ya ha descargado manualmente el archivo WSDL en el equipo, seleccione este archivo. Sin embargo, si el archivo WSDL todavía no se ha descargado, siga estos pasos:  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642352"
  Seleccione en la lista un método web para la tarea que se va a ejecutar.  
   
  **Documentación del método web**  
- Escriba una descripción del método web o haga clic en el botón Examinar **(…)** y escriba una descripción en el cuadro de diálogo **Documentación del método web** .  
+ Escriba una descripción del método web, o bien haga clic en el botón Examinar **(…)** y escriba una descripción en el cuadro de diálogo **Documentación del método web**.  
   
  **Nombre**  
  Muestra los nombres de las entradas del método web.  
@@ -176,7 +176,7 @@ ms.locfileid: "51642352"
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variable**  
- Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

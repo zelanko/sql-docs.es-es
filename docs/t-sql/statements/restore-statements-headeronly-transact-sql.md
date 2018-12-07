@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: af6208fa360a646e68a814a6e0509f1130055424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716953"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413792"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instrucciones RESTORE: HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -108,7 +108,7 @@ FROM <backup_device>
 |**FirstLSN**|**numeric(25,0)**|Número de secuencia de registro de la primera entrada del registro del conjunto de copia de seguridad.|  
 |**LastLSN**|**numeric(25,0)**|Número de secuencia de registro de la siguiente entrada del registro después del conjunto de copia de seguridad.|  
 |**CheckpointLSN**|**numeric(25,0)**|Número de flujo de registro del punto de comprobación más reciente en el momento en que se creó la copia de seguridad.|  
-|**DatabaseBackupLSN**|**numeric(25,0)**|Número de secuencia de registro de la copia de seguridad completa más reciente de la base de datos.<br /><br /> **DatabaseBackupLSN** es el "inicio del punto de comprobación" que se desencadena cuando empieza la copia de seguridad. Este LSN coincide con **FirstLSN** si la copia de seguridad se realiza cuando la base de datos está inactiva y no está configurada la replicación.|  
+|**DatabaseBackupLSN**|**numeric(25,0)**|Número de secuencia de registro de la copia de seguridad completa más reciente de la base de datos.<br /><br /> **DatabaseBackupLSN** es el “inicio del punto de control” que se desencadena cuando se inicia la copia de seguridad. Este LSN coincide con **FirstLSN** si la copia de seguridad se realiza cuando la base de datos está inactiva y no está configurada la replicación.|  
 |**BackupStartDate**|**datetime**|Fecha y hora en que comenzó la operación de copia de seguridad.|  
 |**BackupFinishDate**|**datetime**|Fecha y hora en que terminó la operación de copia de seguridad.|  
 |**SortOrder**|**smallint**|Criterio de ordenación del servidor. Esta columna solo es válida para copias de seguridad de bases de datos. Se proporciona para mantener la compatibilidad con versiones anteriores.|  

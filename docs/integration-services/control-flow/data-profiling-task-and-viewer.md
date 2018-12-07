@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641382"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517211"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Visor y tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos proporciona la funcionalidad para generar perfiles de datos dentro del proceso de extracción, transformación y carga de datos. El uso de esta tarea le permitirá:  
@@ -49,7 +49,7 @@ ms.locfileid: "51641382"
   
 -   La distribución de los valores en la columna Ciudad.  
   
--   La solidez de la dependencia funcional entre la columna Estado y la columna Código postal; es decir, el estado siempre debería ser el mismo para un valor de código postal determinado.  
+-   La intensidad de la dependencia funcional entre la columna Estado y la columna Código postal; es decir, el estado siempre tendría que ser el mismo para un valor de código postal determinado.  
   
  Las estadísticas proporcionadas por un perfil de datos le ofrecen la información que necesita para minimizar de forma eficaz los problemas de calidad derivados del uso de los datos de origen.  
   

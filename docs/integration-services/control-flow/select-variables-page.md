@@ -16,17 +16,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6083c77a8bb3474507b8a555dbeaf6e627cf3cb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808133"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528211"
 ---
 # <a name="select-variables-page"></a>Página Seleccionar variables
   Utilice el cuadro de diálogo **Seleccionar variables** para seleccionar una o más variables para las propiedades **ReadOnlyVariables** y **ReadWriteVariables** al configurar una tarea Script o un componente de script.  
   
- Para abrir el cuadro de diálogo **Seleccionar variables** , en la página **Script** del cuadro de diálogo **Editor de transformación Script** , en **Propiedades personalizadas**, localice la propiedad **ReadOnlyVariables** o **ReadWriteVariables** y, después, haga clic en el botón de puntos suspensivos (...) asociado a esa propiedad.  
+ Para abrir el cuadro de diálogo **Seleccionar variables**, en la página **Script** del cuadro de diálogo **Editor de transformación Script**, en **Propiedades personalizadas**, busque la propiedad **ReadOnlyVariables** o **ReadWriteVariables** y, después, haga clic en el botón de puntos suspensivos (…) asociado a esa propiedad.  
   
 ## <a name="options"></a>Opciones  
  Seleccionar cuadro  

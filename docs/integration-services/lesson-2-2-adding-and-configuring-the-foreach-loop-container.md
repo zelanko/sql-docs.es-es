@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642172"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527130"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lección 2-2: Agregar y configurar el contenedor de bucles Para cada uno
 En esta tarea, agregará la capacidad de buscar en una carpeta de archivos planos y aplicará la misma transformación de flujo de datos utilizada en la lección 1 a cada uno de dichos archivos planos. Para ello, agregará y configurará un contenedor de bucles Foreach para el flujo de control.  
@@ -74,7 +74,7 @@ Una vez realizadas estas modificaciones en el paquete, cuando éste se ejecute, 
   
 1.  Haga clic en **Asignaciones de variables**.  
   
-2.  En la página **Asignaciones de variables**, en la columna **Variable**, haga clic en la celda vacía y seleccione **\<Nueva variable...>**.  
+2.  En la página **Asignaciones de variables**, en la columna **Variable**, haga clic en la celda vacía y seleccione **\<Nueva variable…>**.  
   
 3.  En el cuadro de diálogo **Agregar variable** , en **Nombre**, escriba **varFileName**.  
   

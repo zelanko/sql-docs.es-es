@@ -1,7 +1,7 @@
 ---
 title: Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database | Microsoft Docs
 ms.custom: ''
-ms.date: 04/08/2016
+ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,15 +20,15 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd4ba3f1606c1d62a0cd85760213552770f6e94e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6211647a58035ef4ef9ca38ed6ca5c51ce5d419c
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665594"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302862"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro de rendimiento para el motor de base de datos de SQL Server y Base de datos SQL de Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Esta página proporciona los vínculos para ayudarle a buscar la información que necesita sobre rendimiento en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Leyenda**  
@@ -47,7 +47,12 @@ ms.locfileid: "51665594"
 |**Opciones de optimización de configuración de base de datos**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Compresión de datos](../../relational-databases/data-compression/data-compression.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |**Optimización de configuración de tabla**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|  
 |**Rendimiento del motor de base de datos en una máquina virtual de Azure**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Lista de comprobación rápida](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Consideraciones sobre las cuentas de almacenamiento y el tamaño de máquina virtual](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Consideraciones de los discos y el rendimiento](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Consideraciones sobre el rendimiento de E/S](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Consideraciones sobre el rendimiento de características específicas](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)|  
-  
+
+> [!IMPORTANT]
+> Encontrará consideraciones adicionales en:    
+> -  [Opciones de configuración y actualizaciones recomendadas para SQL Server 2012 y SQL Server 2014 con cargas de trabajo de alto rendimiento](https://support.microsoft.com/help/2964518)
+> -  [Opciones de configuración y actualizaciones recomendadas para SQL Server 2017 y 2016 con cargas de trabajo de alto rendimiento](https://support.microsoft.com/help/4465518)
+
 ## <a name="query-performance-options"></a>Opciones de rendimiento de consultas  
   
 |||  
@@ -57,11 +62,12 @@ ms.locfileid: "51665594"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Combinaciones](../../relational-databases/performance/joins.md)**|[Aspectos básicos de las combinaciones](../../relational-databases/performance/joins.md#fundamentals)<br />[Combinación de bucles anidados](../../relational-databases/performance/joins.md#nested_loops)<br />[Combinación de mezcla](../../relational-databases/performance/joins.md#merge)<br />[Combinación hash](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Subconsultas](../../relational-databases/performance/subqueries.md)**|[Aspectos básicos de las subconsultas](../../relational-databases/performance/subqueries.md#fundamentals)<br />[Subconsultas correlacionadas](../../relational-databases/performance/subqueries.md#correlated)<br />[Tipos de subconsulta](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Procedimientos almacenados](../stored-procedures/stored-procedures-database-engine.md)**|[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Funciones definidas por el usuario](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Funciones definidas por el usuario](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)<br />[Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimización del paralelismo**|[Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimización del optimizador de consultas**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimización del optimizador de consultas**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Estadísticas](../../relational-databases/statistics/statistics.md)**|[Cuándo actualizar las estadísticas](../statistics/statistics.md)<br />[Actualizar estadísticas](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Crear y obtener acceso a tablas de TempDB desde procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Solucionar problemas habituales de rendimiento con los índices hash con optimización para memoria](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Demostración: mejora de rendimiento de OLTP en memoria](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Crear y obtener acceso a tablas de TempDB desde procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Solucionar problemas habituales de rendimiento con los índices hash con optimización para memoria](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Demostración: mejora de rendimiento de OLTP en memoria](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Procesamiento de consultas inteligentes](../../relational-databases\performance\intelligent-query-processing.md)**|[Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md)|
   
 ## <a name="see-also"></a>Ver también  
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

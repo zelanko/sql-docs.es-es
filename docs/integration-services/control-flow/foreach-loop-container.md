@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642251"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505926"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -155,7 +155,7 @@ Este procedimiento describe cómo configurar un contenedor de bucles Foreach, in
   
     -   Para usar el Enumerador de SMO para Foreach, seleccione una conexión ADO.NET existente o haga clic en **Nueva conexión** en la lista **Conexión** y luego escriba la cadena que se debe usar o haga clic en **Examinar**. Si hace clic en **Examinar**, en el cuadro de diálogo **Seleccionar enumeración de SMO** , seleccione el tipo de objeto que se debe enumerar y el tipo de enumeración, y haga clic en **Aceptar**.  
   
-6.  De manera opcional, haga clic en el botón Examinar ( **…** ) en el cuadro de texto **Expresiones** de la página **Colección** para crear expresiones que actualicen valores de propiedades. Para más información, vea [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  También puede hacer clic en el botón Examinar (**…**) en el cuadro de texto **Expresiones** de la página **Colección** para crear expresiones que actualicen valores de propiedades. Para más información, vea [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Las propiedades de la lista **Propiedad** varían según el enumerador.  
@@ -213,7 +213,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 |**Enumerador de archivos de ADLS para Para cada uno**|Enumerar archivos en el directorio de Data Lake Store especificado. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de archivos ADLS para Para cada uno**.|
   
  **Expresiones**  
- Haga clic en **Expresiones** o expándalo para ver la lista de expresiones de propiedad existentes. Haga clic en el botón de puntos suspensivos **(…)** para agregar una expresión de propiedad para una propiedad de enumerador o para editar y evaluar una expresión de propiedad existente.  
+ Haga clic en **Expresiones** o expándalo para ver la lista de expresiones de propiedad existentes. Haga clic en el botón de puntos suspensivos **(…)** para agregar una expresión de propiedad para una propiedad de enumerador, o bien para editar y evaluar una expresión de propiedad existente.  
   
  **Temas relacionados:** [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor de expresiones de propiedad](../../integration-services/expressions/property-expressions-editor.md), [Generador de expresiones](../../integration-services/expressions/expression-builder.md).  
   
@@ -240,11 +240,11 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  Permite especificar los archivos que se van a enumerar.  
   
 > [!NOTE]  
->  Use caracteres comodín (*) para especificar los archivos que desea incluir en la colección. Por ejemplo, para incluir los archivos con nombres que contienen "abc", use el filtro siguiente: \*abc\*.  
+>  Use caracteres comodín (*) para especificar los archivos que desea incluir en la colección. Por ejemplo, para incluir los archivos con nombres que contienen “abc”, use el filtro siguiente: \*abc\*.  
 >   
 >  Cuando se especifica una extensión de nombre de archivo, el enumerador también devuelve archivos que tienen la misma extensión con caracteres adicionales anexados. (Este comportamiento es el mismo que el del comando **dir** en el sistema operativo, que también compara nombres de archivo con formato 8.3 para mantener la compatibilidad con versiones anteriores). Este comportamiento del enumerador podría producir resultados inesperados. Por ejemplo, suponga que desea enumerar solo archivos de Excel 2003 y especifica "* .xls". Sin embargo, el enumerador también devuelve archivos de Excel 2007 porque esos archivos tienen la extensión ".xlsx".  
 >   
->  Puede usar una expresión para especificar los archivos que quiere incluir en una colección. Para ello, expanda **Expresiones** en la página **Colección** , seleccione la propiedad **FileSpec** y, después, haga clic en el botón de puntos suspensivos (…) para agregar la expresión de propiedad.  
+>  Puede usar una expresión para especificar los archivos que quiera incluir en una colección. Para ello, expanda **Expresiones** en la página **Colección**, seleccione la propiedad **FileSpec** y, después, haga clic en el botón de puntos suspensivos (…) para agregar la expresión de propiedad.  
   
  **Completo**  
  Seleccione esta opción si desea recuperar la ruta completa de los nombres de archivo. Si se especifican caracteres comodín en la opción Archivos, las rutas completas devueltas coinciden con el filtro.  
@@ -347,7 +347,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
  **DocumentSource**  
- Si el valor de **DocumentSourceType** es **Entrada directa**, proporcione el código XML o haga clic en el botón de puntos suspensivos (…) para proporcionarlo a través del cuadro de diálogo **Editor de origen del documento**.  
+ Si **DocumentSourceType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos (…) para escribir el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
  Si **DocumentSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…**> para crear uno.  
   

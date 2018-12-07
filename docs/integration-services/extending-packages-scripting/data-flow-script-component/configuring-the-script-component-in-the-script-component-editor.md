@@ -18,15 +18,15 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1633811117b65b397f3f961898895b785cb86d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5d13e7ee8fa8bcf058abfada37583c7d69cfa72
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527430"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurar el componente de script en el editor de componentes de script
-  Antes de escribir código personalizado en el componente de script, debe seleccionar el tipo de componente de flujo de datos que desea crear (origen, transformación o destino) y, a continuación, configurar los metadatos y las propiedades del componente en el **Editor de transformación Script**.  
+  Antes de escribir código personalizado en el componente de script, tiene que seleccionar el tipo de componente de flujo de datos que quiere crear (origen, transformación o destino) y, después, configurar los metadatos y las propiedades del componente en el **Editor de transformación Script**.  
   
 ## <a name="selecting-the-type-of-component-to-create"></a>Seleccionar el tipo de componente que se va a crear  
  Al agregar un componente de script al panel Flujo de datos del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], aparece el cuadro de diálogo **Seleccionar el tipo de componente de script**. En él preconfigura el componente como un origen, transformación o destino. Después de realizar esta selección inicial, puede continuar configurando el componente en el **Editor de transformación Script**.  
@@ -85,9 +85,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  Cuando el **Editor de transformación Script** crea la primera salida, el editor establece la propiedad **SynchronousInputID** de la salida en el valor **ID** de la entrada del componente. Sin embargo, cuando el editor crea las salidas subsiguientes, el editor establece las propiedades **SynchronousInputID** de estas salidas en cero.  
 >   
->  Si crea un componente con salidas sincrónicas, la propiedad **SynchronousInputID** de cada salida debe estar establecida en el valor **ID** de la entrada del componente. Por tanto, en cada salida que el editor crea después de la primera salida, su valor **SynchronousInputID** debe cambiar de cero al valor **ID** de la entrada del componente.  
+>  Si crea un componente con salidas sincrónicas, la propiedad **SynchronousInputID** de cada salida tiene que establecerse en el valor **ID** de la entrada del componente. Por tanto, en cada salida que el editor crea después de la primera salida, su valor **SynchronousInputID** debe cambiar de cero al valor **ID** de la entrada del componente.  
 >   
->  Si crea un componente con salidas asincrónicas, la propiedad **SynchronousInputID** de cada salida debe estar establecida en cero. Por tanto, en la primera salida, su valor **SynchronousInputID** debe cambiar del valor de **ID** de la entrada del componente a cero.  
+>  Si crea un componente con salidas asincrónicas, la propiedad **SynchronousInputID** de cada salida debe estar establecida en cero. Por tanto, en la primera salida, su valor **SynchronousInputID** tiene que cambiar del valor de **ID** de la entrada del componente a cero.  
   
  Para obtener un ejemplo de dirección de filas a una de las dos salidas sincrónicas del componente de script, consulte [Crear una transformación sincrónica con el componente de script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   

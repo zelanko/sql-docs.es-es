@@ -11,17 +11,17 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808673"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405653"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Establece el valor de un parámetro para una instancia de ejecución en el catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Establece el valor de un parámetro para una instancia de ejecución en el catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  No se puede cambiar un valor de parámetro después de que se haya iniciado una instancia de ejecución.  
   
@@ -83,25 +83,25 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |4|Linaje en tiempo de ejecución<br /><br /> Recopila los datos necesarios para realizar un seguimiento del linaje en el flujo de datos.|  
 |100|Nivel de registro personalizado<br /><br /> Especifique la configuración en el parámetro CUSTOMIZED_LOGGING_LEVEL. Para obtener más información acerca de los valores que se pueden especificar, vea [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Para obtener más información acerca de los niveles de registro personalizados, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
- Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzca algún error durante la ejecución del paquete, establezca los valores de los parámetros siguientes para una instancia de ejecución que no se haya ejecutado.  
+ Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzca algún error durante la ejecución del paquete, establezca los siguientes valores de parámetro para una instancia de ejecución que no se haya ejecutado.  
   
 |Parámetro|Valor|  
 |---------------|-----------|  
 |*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
- Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzcan eventos durante la ejecución del paquete, establezca los valores de los parámetros siguientes para una instancia de ejecución que no se haya ejecutado.  
+ Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzcan eventos durante la ejecución del paquete, establezca los siguientes valores de parámetro para una instancia de ejecución que no se haya ejecutado.  
   
 |Parámetro|Valor|  
 |---------------|-----------|  
 |*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
- Para especificar los eventos durante la ejecución del paquete que hacen que el servidor de Integration Services genere archivos de volcado, establezca los valores de los parámetros siguientes para una instancia de ejecución que no se haya ejecutado. Separe los diversos códigos de evento mediante un punto y coma.  
+ Para especificar los eventos durante la ejecución del paquete que causan que el servidor de Integration Services genere archivos de volcado, establezca los siguientes valores de parámetro para una instancia de ejecución que no se haya ejecutado. Separe los diversos códigos de evento mediante un punto y coma.  
   
 |Parámetro|Valor|  
 |---------------|-----------|  

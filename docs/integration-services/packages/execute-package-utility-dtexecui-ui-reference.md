@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169115"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506236"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilidad de ejecución de paquetes (dtexecui)
   Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
@@ -99,11 +99,11 @@ ms.locfileid: "49169115"
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
  **Paquete**  
- Escriba el nombre del paquete o haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS** .  
+ Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS**.  
   
 #### <a name="package-source--file-system"></a>Origen del paquete = Sistema de archivos  
  **Paquete**  
- Escriba el nombre del paquete o haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo Abrir. De forma predeterminada, el cuadro de diálogo solamente muestra archivos con la extensión .dtsx.  
+ Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo Abrir. De forma predeterminada, el cuadro de diálogo solamente muestra archivos con la extensión .dtsx.  
   
 #### <a name="package-source--ssis-package-store"></a>Origen del paquete = Almacén de paquetes SSIS  
  **Server**  
@@ -119,7 +119,7 @@ ms.locfileid: "49169115"
  Esta opción no está disponible si ejecuta un paquete almacenado en el **Almacén de paquetes SSIS**.  
   
  **Paquete**  
- Escriba el nombre del paquete o haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS** .  
+ Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS**.  
   
 ## <a name="configurations-page"></a>Página Configuraciones  
  Use la página **Configuraciones** del cuadro de diálogo **Utilidad de ejecución de paquetes** para seleccionar los archivos de configuración que se van a cargar en tiempo de ejecución y especificar el orden de carga.  
@@ -207,7 +207,7 @@ ms.locfileid: "49169115"
  Indique el archivo de punto de comprobación que utiliza el paquete si se han habilitado los puntos de comprobación de los paquetes.  
   
  **Examinar**  
- Haga clic en el botón Examinar **(…)** para localizar el archivo de punto de comprobación mediante el cuadro de diálogo **Abrir** si ha habilitado los puntos de comprobación de los paquetes. Si ya se ha especificado un punto de comprobación, se sustituye por el archivo seleccionado.  
+ Haga clic en el botón Examinar **(…)** para buscar el archivo de punto de control mediante el cuadro de diálogo **Abrir** si ha habilitado los puntos de control de los paquetes. Si ya se ha especificado un punto de comprobación, se sustituye por el archivo seleccionado.  
   
  **Omitir opciones de reinicio**  
  Indique si deben reemplazarse las opciones de reinicio si se habilitan los puntos de comprobación de los paquetes.  

@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b52f9aa0131639bdfe68222bba42eae774d2b18f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f3b97043a2f9c348da76b8d0c15a448bf8106011
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698334"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510790"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ CREATE AVAILABILITY GROUP group_name
    FOR [ DATABASE database_name [ ,...n ] ]  
    REPLICA ON <add_replica_spec> [ ,...n ]  
    AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+   [ LISTENER 'dns_name' ( <listener_option> ) ]  
 [ ; ]  
   
 <with_option_spec>::=   
@@ -83,8 +83,8 @@ CREATE AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -104,12 +104,12 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 ```  
@@ -201,7 +201,7 @@ CREATE AVAILABILITY GROUP group_name
 >  Más adelante, podrá agregar las bases de datos que reúnan los requisitos en la instancia del servidor que hospede la réplica principal actual para un grupo de disponibilidad. También puede quitar una base de datos secundaria de un grupo de disponibilidad. Para obtener más información, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
  REPLICA ON  
- Especifica de una a cinco instancias de SQL Server para que hospeden réplicas de disponibilidad en el nuevo grupo de disponibilidad.  Cada réplica se especifica mediante la dirección de su instancia de servidor seguida de una cláusula WITH (…). Como mínimo, debe especificar la instancia de servidor local, que se convierte en la réplica principal inicial. Opcionalmente, puede especificar también hasta cuatro réplicas secundarias.  
+ Especifica de una a cinco instancias de SQL Server para que hospeden réplicas de disponibilidad en el nuevo grupo de disponibilidad.  Cada réplica se especifica mediante la dirección de la instancia de servidor seguida de una cláusula WITH (…). Como mínimo, debe especificar la instancia de servidor local, que se convierte en la réplica principal inicial. Opcionalmente, puede especificar también hasta cuatro réplicas secundarias.  
   
  Debe unir cada réplica secundaria al grupo de disponibilidad. Para obtener más información, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
@@ -297,7 +297,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
- SECONDARY_ROLE **(** … **)**  
+ SECONDARY_ROLE **(** ... **)**  
  Especifica la configuración específica de rol que se aplica si esta réplica de disponibilidad posee actualmente el rol secundario (es decir, siempre que es una réplica secundaria). Dentro de los paréntesis, especifique una o ambas de las opciones de rol secundario. Si se especifican ambas, utilice una lista separada por comas.  
   
  Las opciones de rol secundario son las siguientes:  
@@ -326,7 +326,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  En el caso de una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se debe configurar el agente de escucha de Transact-SQL para que use un puerto específico. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- PRIMARY_ROLE **(** … **)**  
+ PRIMARY_ROLE **(** ... **)**  
  Especifica la configuración específica de rol que se aplica si esta réplica de disponibilidad posee actualmente el rol principal (es decir, siempre que es la réplica principal). Dentro de los paréntesis, especifique una o ambas de las opciones de rol primarias. Si se especifican ambas, utilice una lista separada por comas.  
   
  El rol principal de las opciones es el siguiente:  
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Se permiten todas las conexiones con las bases de datos de la réplica principal. Éste es el comportamiento predeterminado.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Especifica una lista separada por comas de instancias de servidor que hospedan réplicas de disponibilidad de este grupo de disponibilidad y que cumplen los requisitos siguientes al ejecutarse en el rol secundario:  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE } Especifica una lista separada por comas de instancias de servidor que hospedan réplicas de disponibilidad de este grupo de disponibilidad y que cumplen los requisitos siguientes al ejecutarse en el rol secundario:  
   
 -   Está configurado para permitir todas las conexiones o las conexiones de solo lectura (vea el argumento ALLOW_CONNECTIONS de la opción SECONDARY_ROLE de más arriba).  
   
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Especifica la propagación manual (valor predeterminado). Este método requiere la creación de una copia de seguridad de la base de datos en la réplica principal y su restauración manual en las réplicas del grupo de disponibilidad secundario.  
   
- LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** Define un nuevo agente de escucha del grupo de disponibilidad para este grupo de disponibilidad. LISTENER es un argumento opcional.  
+ LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** Define un nuevo agente de escucha del grupo de disponibilidad para este grupo de disponibilidad. LISTENER es un argumento opcional.  
   
 > [!IMPORTANT]  
 >  Antes de crear el primer agente de escucha, se recomienda encarecidamente leer [Crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -436,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER toma una de las siguientes opciones \<listener_option>: 
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  Especifica que el agente de escucha del grupo de disponibilidad usa el protocolo DHCP (Protocolo de configuración dinámica de host).  Opcionalmente, use la cláusula ON para identificar la red en la que se ha creado este agente de escucha. DHCP está limitado a una sola subred que se usa para cada instancia de servidor que hospeda una réplica en el grupo de disponibilidad.  
   
 > [!IMPORTANT]  
@@ -446,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Especifica que, en lugar de usar DHCP, el agente de escucha del grupo de disponibilidad usa una o más direcciones IP estáticas. Para crear un grupo de disponibilidad a través de varias subredes, cada subred requiere una dirección IP estática en la configuración de la escucha. Para una subred determinada, la dirección IP estática puede ser una dirección IPv4 o una dirección IPv6. Póngase en contacto con el administrador de red para obtener una dirección IP estática para cada subred que hospeda una réplica del nuevo grupo de disponibilidad.  
   
  Por ejemplo:  
@@ -463,7 +463,7 @@ CREATE AVAILABILITY GROUP group_name
  Especifica una dirección IPv6 para el agente de escucha de un grupo de disponibilidad. Por ejemplo, `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
  PORT **=** *listener_port*  
- Especifica el número de puerto (*listener_port*) que va a usar el agente de escucha de un grupo de disponibilidad especificado por una cláusula WITH IP. PORT es opcional.  
+ Especifica el número de puerto (*listener_port*) que va a usar el agente de escucha del grupo de disponibilidad especificado por una cláusula WITH IP. PORT es opcional.  
   
  Se admite el número de puerto predeterminado, 1433. Sin embargo, si le preocupa la seguridad, le recomendamos que use otro número de puerto.  
   
@@ -555,7 +555,7 @@ CREATE AVAILABILITY GROUP MyAg
          );
 GO  
 ALTER AVAILABILITY GROUP [MyAg]
-  ADD LISTENER ‘MyAgListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+  ADD LISTENER 'MyAgListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
 GO  
 ```  
   

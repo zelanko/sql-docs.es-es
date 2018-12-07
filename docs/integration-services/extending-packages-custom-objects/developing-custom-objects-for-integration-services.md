@@ -14,12 +14,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8413b1386d60ded8d9257e3a58a7e682355824f6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2a69f590c6ee1cdc95fc13b3a07fa17fb04feeab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640212"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528911"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desarrollar objetos personalizados para Integration Services
   Cuando los objetos de flujo de datos y flujo de control que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no cumplen completamente los requisitos, puede desarrollar muchos tipos de objetos personalizados, entre los que se incluyen:  
@@ -92,7 +92,7 @@ ms.locfileid: "51640212"
 ## <a name="providing-a-custom-user-interface"></a>Proporcionar una interfaz de usuario personalizada  
  Para permitir a los usuarios de su objeto personalizado configurar sus propiedades, puede que tenga que desarrollar también una interfaz de usuario personalizada. En aquellos casos donde no se requiere una interfaz de usuario personalizada de forma estricta, puede que decida crear una para proporcionar una interfaz más fácil de comprender que el editor predeterminado.  
   
- En un proyecto o ensamblado personalizado de la interfaz de usuario, generalmente tiene dos clases: una clase que implementa una interfaz [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para las interfaces de usuario para el tipo específico de objeto personalizado y el formulario Windows Forms que se muestra para recopilar información del usuario. Las interfaces que implementa tienen solo unos cuantos métodos y una interfaz de usuario personalizada que no es difícil de desarrollar.  
+ Un proyecto o ensamblado personalizado de la interfaz de usuario suele tener dos clases: una clase que implementa una interfaz [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para las interfaces de usuario para el tipo específico de objeto personalizado y el formulario de Windows Forms que se muestra para recopilar información del usuario. Las interfaces que implementa tienen solo unos cuantos métodos y una interfaz de usuario personalizada que no es difícil de desarrollar.  
   
 > [!NOTE]  
 >  Muchos proveedores de registro de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tienen una interfaz de usuario personalizada que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> y reemplaza el cuadro de texto **Configuración** con una lista desplegable que filtra los administradores de conexión disponibles. Sin embargo, las interfaces de usuario personalizadas para los proveedores de registro personalizados no se implementan en esta versión de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Especificar un valor para la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> no tiene ningún efecto.  

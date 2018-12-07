@@ -11,12 +11,12 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae60895da9a461b7bcf7fb8fa034833e39c68e1a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 992e258fad0d69542942d2ead4df8cf08b36c391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637792"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536786"
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lección 3-1: Copiar el paquete de la lección 2
 En esta tarea, creará una copia del paquete que ha creado en la lección 2, denominado Lesson 2.dtsx. También puede agregar al proyecto el paquete completado de la lección 2 que se incluye con el tutorial y, después, copiar dicho paquete. Usará esta nueva copia en toda la lección 3.  
@@ -49,7 +49,7 @@ En esta tarea, creará una copia del paquete que ha creado en la lección 2, den
   
 3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
   
-4.  Haga clic en el botón de búsqueda **(…)** , vaya a **Lesson 2.dtsx** en el equipo y, después, haga clic en **Abrir**.  
+4.  Haga clic en el botón Examinar **(…)**, busque **Lesson 2.dtsx** en el equipo y, después, haga clic en **Abrir**.  
   
     Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   

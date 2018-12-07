@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 61d4d29b0dfc7fe67097c6cb61547c1c65dd79f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119982"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411882"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Conexión a orígenes de datos y a recursos compartidos de archivos con la autenticación de Windows de paquetes SSIS en Azure
 Puede usar la autenticación de Windows para conectarse a orígenes de datos y recursos compartidos de archivos que están en la misma red virtual que Azure SSIS Integration Runtime (IR), tanto en máquinas virtuales locales o de Azure como en Azure Files. Hay tres métodos para conectarse a orígenes de datos y recursos compartidos de archivos con la autenticación de Windows de paquetes SSIS que se ejecutan en Azure-SSIS IR:
@@ -24,7 +24,7 @@ Puede usar la autenticación de Windows para conectarse a orígenes de datos y r
 | Método de conexión | Ámbito efectivo | Paso de configuración | Método de acceso en paquetes | Número de conjuntos de credenciales y recursos conectados | Tipo de recursos conectados | 
 |---|---|---|---|---|---|
 | Credenciales persistentes a través del comando `cmdkey` | Por Azure-SSIS IR | Ejecute el comando `cmdkey` en un script de instalación personalizada (`main.cmd`) al aprovisionar o volver a configurar Azure-SSIS IR, por ejemplo, `cmdkey /add:fileshareserver /user:xxx /pass:yyy`.<br/><br/> Para obtener más información, consulte [Instalación personalizada del entorno de ejecución para la integración de SSIS en Azure](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup). | Acceda a los recursos directamente en los paquetes a través de la ruta de acceso UNC, por ejemplo, `\\fileshareserver\folder` | Compatibilidad con varios conjuntos de credenciales para los distintos recursos conectados | - Recursos compartidos de archivos en las máquinas virtuales de Azure o locales<br/><br/> - Azure Files, consulte [Montaje de un recurso compartido de archivos de Azure y acceso al recurso compartido en Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server con autenticación de Windows<br/><br/> - Otros recursos con autenticación de Windows |
-| Configuración de un contexto de ejecución a nivel de catálogo | Por Azure-SSIS IR | Ejecute el procedimiento almacenado `catalog.set_execution_credential` de SSISDB para establecer un contexto de "ejecución como".<br/><br/> Para obtener más información, vea el resto de este artículo a continuación. | Acceso a los recursos directamente en paquetes | Compatibilidad con solo un conjunto de credenciales para todos los recursos conectados | - Recursos compartidos de archivos en las máquinas virtuales de Azure o locales<br/><br/> - Azure Files, consulte [Montaje de un recurso compartido de archivos de Azure y acceso al recurso compartido en Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server con autenticación de Windows<br/><br/> - Otros recursos con autenticación de Windows | 
+| Configuración de un contexto de ejecución a nivel de catálogo | Por Azure-SSIS IR | Ejecute el procedimiento almacenado `catalog.set_execution_credential` de SSISDB para configurar un contexto de “ejecución como”.<br/><br/> Para obtener más información, vea el resto de este artículo a continuación. | Acceso a los recursos directamente en paquetes | Compatibilidad con solo un conjunto de credenciales para todos los recursos conectados | - Recursos compartidos de archivos en las máquinas virtuales de Azure o locales<br/><br/> - Azure Files, consulte [Montaje de un recurso compartido de archivos de Azure y acceso al recurso compartido en Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server con autenticación de Windows<br/><br/> - Otros recursos con autenticación de Windows | 
 | Montaje de unidades en tiempo de ejecución del paquete (no persistencia) | Por paquete | Execute el comando `net use` en la tarea Ejecutar proceso que se agrega al principio del flujo de control en los paquetes, por ejemplo, `net use D: \\fileshareserver\sharename` | Acceso a recursos compartidos de archivos a través de las unidades asignadas | Compatibilidad con varias unidades para diferentes recursos compartidos de archivos | - Recursos compartidos de archivos en las máquinas virtuales de Azure o locales<br/><br/> - Azure Files, consulte [Montaje de un recurso compartido de archivos de Azure y acceso al recurso compartido en Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) |
 |||||||
 

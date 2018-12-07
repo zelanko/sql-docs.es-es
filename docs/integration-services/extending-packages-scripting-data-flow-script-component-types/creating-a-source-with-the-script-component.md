@@ -17,12 +17,12 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73ae0b025ff20bd7b269329b8045816de97d6888
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3ed1838c956a6870b277c9e71a6df17e474229f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504533"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
   Los componentes de origen del flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se usan para cargar datos de un origen de datos y pasarlos a transformaciones y destinos de nivel inferior. Normalmente la conexión al origen de datos se realiza a través de un administrador de conexiones existente.  
@@ -72,7 +72,7 @@ ms.locfileid: "47651363"
 ### <a name="adding-variables"></a>Agregar variables  
  Si hay variables existentes cuyos valores quiere usar en el script, puede agregarlas en los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** de la página **Script** del **Editor de transformación Script**.  
   
- Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. Para introducir varias variables, también puede hacer clic en el botón de puntos suspensivos (**…**) situado junto a los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** y, a continuación, seleccionar variables en el cuadro de diálogo **Seleccionar variables**.  
+ Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. Para escribir varias variables, también puede hacer clic en el botón de puntos suspensivos (**…**) junto a los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** y, después, seleccionar variables en el cuadro de diálogo **Seleccionar variables**.  
   
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).  
   

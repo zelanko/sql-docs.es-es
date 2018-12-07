@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638012"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393978"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE en paquetes de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la instrucción SQL de una tarea Ejecutar SQL puede contener una instrucción MERGE. Esta instrucción MERGE permite llevar a cabo varias operaciones INSERT, UPDATE y DELETE en una única instrucción.  
@@ -56,7 +56,7 @@ ms.locfileid: "51638012"
  Todas las semanas, la base de datos genera una tabla denominada WeeklyChanges que contiene los cambios de precio para la semana y los libros que se han agregado durante la misma. Una única instrucción MERGE permitirá aplicar los cambios de la tabla WeeklyChanges a la tabla DimBook. Esta instrucción MERGE inserta nuevas filas para las nuevas adquisiciones de libros, y actualiza la columna IsCurrent a 0 en las filas de libros existentes cuyos precios han cambiado. Dicha instrucción también inserta nuevas filas para los libros cuyos precios han cambiado, y establece el valor de la columna IsCurrent en 1 para estas filas.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Combinar una tabla que tiene nuevos datos con la tabla antigua  
- La base de datos modela las propiedades de un objeto mediante un “esquema abierto”, es decir, una tabla que contiene pares de nombre-valor para cada propiedad. La tabla Properties tiene tres columnas: EntityID, PropertyID y Value. La tabla NewProperties, que es una versión más reciente de dicha tabla, se debe sincronizar con la tabla Properties. Para sincronizar ambas tablas, puede utilizar una única instrucción MERGE que realice las operaciones siguientes:  
+ La base de datos modela las propiedades de un objeto mediante un “esquema abierto” (es decir, una tabla que contiene pares de nombre-valor para cada propiedad). La tabla Properties tiene tres columnas: EntityID, PropertyID y Value. La tabla NewProperties, que es una versión más reciente de dicha tabla, se debe sincronizar con la tabla Properties. Para sincronizar ambas tablas, puede utilizar una única instrucción MERGE que realice las operaciones siguientes:  
   
 -   Eliminar las propiedades de la tabla Properties que no aparezcan en la tabla NewProperties.  
   

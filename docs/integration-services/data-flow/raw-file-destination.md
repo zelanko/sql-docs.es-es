@@ -21,12 +21,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d9632936ad839e0dbc1d425f0d554847f657dfd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393618"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  
@@ -91,7 +91,7 @@ ms.locfileid: "51639799"
   
 -   1300, productE  
   
- Los datos nuevos se anexan al final del archivo sin formato y las claves ordenadas (PK) no se incluyen en el orden. Además, la operación de anexar no cambió los metadatos del archivo (información sobre el orden). Si lee el archivo con el origen de archivo sin formato, el componente indica que el archivo todavía está ordenado según PK aunque los datos del archivo ya no estén en el orden correcto.  
+ Los datos nuevos se anexan al final del archivo sin formato y las claves ordenadas (PK) no se incluyen en el orden. Además, la operación de anexar no ha cambiado los metadatos del archivo (información sobre el orden). Si lee el archivo con el origen de archivo sin formato, el componente indica que el archivo todavía está ordenado según PK aunque los datos del archivo ya no estén en el orden correcto.  
   
  Para mantener las claves ordenadas en el orden correcto mientras se anexan datos, puede diseñar el flujo de datos del paquete como sigue:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "51639799"
   
 5.  Escriba en RawFile2 mediante el destino de archivo sin formato.  
   
-     RawFile1 está bloqueado porque se está leyendo, en el flujo de datos.  
+     RawFile1 está bloqueado porque se está leyendo en el flujo de datos.  
   
 6.  Reemplace RawFile1 con RawFile2.  
   

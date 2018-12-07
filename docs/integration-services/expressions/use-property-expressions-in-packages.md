@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641392"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531611"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.  
@@ -70,7 +70,7 @@ ms.locfileid: "51641392"
   
  ![Interfaz de usuario para las expresiones de propiedad](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
- En la ventana **Propiedades** y en la página **Expresiones** , haga clic en el botón Examinar **(…)** en el nivel de la colección de **Expresiones** para abrir el cuadro de diálogo **Editor de expresiones de propiedad** . El Editor de expresiones de propiedad le permite asignar una propiedad a una expresión y escribir una expresión de propiedad. Si quiere usar las herramientas gráficas de expresiones para crear y validar la expresión, haga clic en el botón Examinar **(…)** en el nivel de expresión para abrir el cuadro de diálogo **Generador de expresiones** y, después, cree o modifique la expresión (y, de manera opcional, valídela).  
+ En la ventana **Propiedades** y en la página **Expresiones**, haga clic en el botón Examinar **(…)** en el nivel de la colección de **Expresiones** para abrir el cuadro de diálogo **Editor de expresiones de propiedad**. El Editor de expresiones de propiedad le permite asignar una propiedad a una expresión y escribir una expresión de propiedad. Si quiere usar las herramientas gráficas de expresiones para crear y validar la expresión, haga clic en el botón Examinar **(…)** en el nivel de expresión para abrir el cuadro de diálogo **Generador de expresiones** y, después, cree o modifique la expresión (y, de manera opcional, valídela).  
   
  También puede abrir el cuadro de diálogo **Generador de expresiones** desde el cuadro de diálogo **Editor de expresiones de propiedad** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51641392"
   
  Por lo tanto, no verá los valores actualizados de las propiedades de los objetos de paquete que utilizan expresiones de propiedad en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] hasta que guarde el paquete, lo ejecute o lo vuelva a abrir después de agregarle las expresiones de propiedad.  
   
- Las expresiones de propiedad asociadas con los diferentes tipos de objetos (administradores de conexión, proveedores de registro y enumeradores) también se cargan cuando se llama a métodos específicos para ese tipo de objeto. Por ejemplo, las propiedades de administradores de conexión se cargan antes de que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una instancia de la conexión.  
+ Las expresiones de propiedad asociadas a los diferentes tipos de objetos (administradores de conexiones, proveedores de registro y enumeradores) también se cargan cuando se llama a métodos específicos para ese tipo de objeto. Por ejemplo, las propiedades de administradores de conexión se cargan antes de que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una instancia de la conexión.  
   
  Las expresiones de propiedad se cargan una vez que se han cargado las configuraciones de paquete. Por ejemplo, las variables se actualizan primero con sus configuraciones, y luego se evalúan y cargan las expresiones de propiedad que utilizan las variables. Esto significa que las expresiones de propiedad siempre utilizan los valores de variables establecidas con configuraciones.  
   

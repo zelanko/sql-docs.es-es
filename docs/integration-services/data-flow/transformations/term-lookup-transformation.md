@@ -24,12 +24,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b3f90acc0f7fefea0ffd142c4b0acd6a8e59549
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9d3d52a5a1f63933bc383601a650bf8e044d22dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640162"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522714"
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -58,7 +58,7 @@ ms.locfileid: "51640162"
   
 -   Si el texto de la columna de entrada es una frase lematizada, solo la última palabra en la frase se ve afectada por la normalización. Por ejemplo, la versión lematizada de *citas con los médicos* es *cita con los médicos*.  
   
- Cuando un elemento de la búsqueda contiene términos que se superponen en el conjunto de referencia (es decir, un subtérmino se encuentra en más de un registro de referencia) la transformación Búsqueda de términos solo devuelve un resultado de búsqueda. En el siguiente ejemplo se muestra el resultado cuando un elemento de la búsqueda contiene un subtérmino que se superpone. El subtérmino que se superpone en este caso es *Windows*, que se encuentra en dos términos de referencia. Sin embargo, la transformación no devuelve dos resultados, sino únicamente un solo término de referencia, *Windows*. No se devuelve el segundo término de referencia, *Windows 7 Professional*.  
+ Cuando un elemento de búsqueda contiene términos que se superponen en el conjunto de referencia (es decir, un subtérmino se encuentra en más de un registro de referencia), la transformación Búsqueda de términos solo devuelve un resultado de búsqueda. En el siguiente ejemplo se muestra el resultado cuando un elemento de la búsqueda contiene un subtérmino que se superpone. El subtérmino que se superpone en este caso es *Windows*, que se encuentra en dos términos de referencia. Sin embargo, la transformación no devuelve dos resultados, sino únicamente un solo término de referencia, *Windows*. No se devuelve el segundo término de referencia, *Windows 7 Professional*.  
   
 |Elemento|Valor|  
 |----------|-----------|  
@@ -66,7 +66,7 @@ ms.locfileid: "51640162"
 |Términos de referencia|Windows, Windows 7 Professional|  
 |Salida|Windows|  
   
- La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ y ‘.  
+ La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " y '.  
   
 ## <a name="data-types"></a>Tipos de datos  
  La transformación Búsqueda de términos solo puede usar una columna que tenga el tipo de datos DT_WSTR o DT_NTEXT. Si una columna contiene texto, pero no tiene uno de estos tipos de datos, la transformación Conversión de datos puede agregar una columna con el tipo de datos DT_WSTR o DT_NTEXT al flujo de datos y copiar los valores de columnas en la nueva columna. La salida de transformación Conversión de datos posteriormente se puede usar como la entrada para la transformación Búsqueda de términos. Para más información, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  

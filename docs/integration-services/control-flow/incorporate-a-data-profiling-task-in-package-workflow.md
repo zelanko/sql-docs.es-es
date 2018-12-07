@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545793"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -264,7 +264,7 @@ ms.locfileid: "51638804"
   
 8.  Cierre el entorno de desarrollo de script y, a continuación, el Editor de la tarea Script.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo: leer los resultados del perfil desde una variable  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Código alternativo: leer los resultados del perfil desde una variable  
  El procedimiento anterior muestra cómo se carga el resultado de la tarea de generación de perfiles de datos desde un archivo. Sin embargo, un método alternativo consistiría en cargar dicho resultado desde una variable de paquete. Para cargar el resultado desde una variable, debe realizar los cambios siguientes en el código de ejemplo:  
   
 -   Llame al método **LoadXml** de la clase **XmlDocument** en lugar de llamar al método **Load** .  

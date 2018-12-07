@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c651f7a719a30ad4781c4d1af8bf3703bfc6d7c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eff1de488818894b39796430e23804066f266f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595091"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417366"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -172,7 +172,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- Este ejemplo devuelve solo las filas de `DimEmployee` que tengan un valor de `EndDate` que no sea NULL y un valor de `MaritalStatus` de 'M' (que corresponde a casado).  
+ En este ejemplo, solo se devuelven las filas de `DimEmployee` que tengan un valor de `EndDate` distinto de NULL y un valor de `MaritalStatus` de “M” (que se corresponde con “casado”).  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

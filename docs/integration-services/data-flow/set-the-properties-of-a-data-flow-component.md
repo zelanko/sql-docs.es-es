@@ -13,12 +13,12 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 988675dd00135599fa053acb5cb96d58e81d9e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddbb902789cfc4cbef5135d024ba8f6e2e1c7e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530272"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Establecer las propiedades de un componente de flujo de datos
   Para establecer las propiedades de los componentes de flujo de datos, que incluyen orígenes, destinos y transformaciones, utilice una de las características siguientes:  
@@ -27,7 +27,7 @@ ms.locfileid: "47628583"
   
 -   La ventana **Propiedades** enumera las propiedades personalizadas de nivel de componente de cada elemento, al igual que las propiedades que son comunes a todos los elementos de flujo de datos.  
   
--   El cuadro de diálogo **Editor avanzado** proporciona acceso a las propiedades personalizadas de cada componente. El cuadro de diálogo **Editor avanzado** también permite el acceso a las propiedades comunes a todos los componentes de flujo de datos: propiedades de entradas, salidas, salidas de errores, columnas y columnas externas.  
+-   El cuadro de diálogo **Editor avanzado** proporciona acceso a las propiedades personalizadas de cada componente. El cuadro de diálogo **Editor avanzado** también permite acceder a las propiedades comunes de todos los componentes de flujo de datos (propiedades de entradas, salidas, salidas de error, columnas y columnas externas).  
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Establecer las propiedades de un componente de flujo de datos con un editor de componentes  
   
@@ -249,7 +249,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Especifica la página de códigos para cadenas en un formato que no es Unicode.|  
-|DataType|Integer (enumeración)|Tipo de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de la columna. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|DataType|Integer (enumeración)|Tipo de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de la columna. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |Longitud|Integer|Longitud de una columna en caracteres.|  
 |Precisión|Integer|Precisión de una columna numérica.|  
 |Escala|Integer|Escala de una columna numérica.|  

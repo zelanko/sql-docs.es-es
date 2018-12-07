@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526924"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Opciones de diseñadores de página general de la integración de servicios
   Utilice la página **General** de la página **Diseñadores de Integration Services** en el cuadro de diálogo **Opciones** con el fin de especificar las opciones para cargar, mostrar y actualizar los paquetes.  
@@ -37,7 +37,7 @@ ms.locfileid: "47649043"
  Seleccione esta opción para mostrar una advertencia cuando se carga un paquete que está sin firmar.  
   
  **Mostrar etiquetas de restricción de precedencia**  
- Seleccione qué etiqueta (Correcto, Error o Conclusión) mostrar en restricciones de precedencia al mostrar los paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Seleccione la etiqueta que quiere que se muestre (Correcto, Error o Conclusión) en restricciones de precedencia al visualizar paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Lenguaje de scripting**  
  Seleccione el lenguaje de scripting predeterminado para las nuevas tareas Script y los componentes Script.  

@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ea622a882d0c9ff45680c0ee5b975a08c780ce9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511622"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>Valor del resultado  
- SOME o ANY devuelven **TRUE** cuando la comparación especificada es TRUE para todos los pares (*scalar_expression ***,*** x*), donde *x* es un valor del conjunto de una sola columna; en caso contrario, devuelve **FALSE**.  
+ SOME o ANY devuelven **TRUE** cuando la comparación especificada es TRUE para todos los pares (_scalar_expression_**,**_x_), donde *x* es un valor del conjunto de una sola columna; en caso contrario, devuelve **FALSE**.  
   
 ## <a name="remarks"></a>Notas  
  SOME requiere que la *scalar_expression* se compare de forma positiva con al menos un valor devuelto por la subconsulta. Para ver instrucciones que requieren que *scalar_expression* se compare de forma positiva con solo un valor devuelto por la subconsulta, vea [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por ejemplo, si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = SOME (subconsulta) se evaluaría como TRUE para una *scalar_expression* de 2. Si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = ALL (subconsulta) se evaluaría como FALSE, porque algunos de los valores de la subconsulta (el valor 3) no cumplirían los criterios de la expresión.  

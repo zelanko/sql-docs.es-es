@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 91099edbdbd2f1b25fd77dc1f076acd5b4647708
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642132"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397398"
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] es una herramienta gráfica que se puede usar para crear y mantener paquetes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -58,7 +58,7 @@ ms.locfileid: "51642132"
 ## <a name="undo-and-redo"></a>Deshacer y rehacer  
  Puede deshacer y rehacer hasta 20 acciones en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para un paquete, la acción de deshacer o rehacer está disponible en las pestañas **Flujo de control**, **Flujo de datos**, **Controladores de eventos**y **Parámetros** , y en la ventana **Variables** . Para un proyecto, la acción de deshacer o rehacer está disponible en la ventana **Parámetros del proyecto** .  
   
- No se pueden deshacer ni rehacer los cambios en el **Cuadro de herramientas de SSIS**nuevo.  
+ No se pueden deshacer ni rehacer los cambios en el nuevo **Cuadro de herramientas de SSIS**.  
   
  Cuando se realizan cambios en un componente mediante el editor de componentes, los cambios se deshacen y rehacen en conjunto, en lugar de deshacer y rehacer cambios individuales. El conjunto de cambios aparece como una sola acción en la lista desplegable de deshacer y rehacer.  
   

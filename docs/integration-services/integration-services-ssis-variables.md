@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512899"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -46,7 +46,7 @@ ms.locfileid: "51642012"
 ## <a name="system-and-user-defined-variables"></a>Variables del sistema y definidas por el usuario  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite dos tipos de variables: variables definidas por el usuario y variables del sistema. Las variables definidas por el usuario son definidas por los desarrolladores de paquetes y las variables del sistema son definidas por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Puede crear la cantidad de variables definidas por el usuario que requiera un paquete, pero no puede crear variables del sistema adicionales.  
   
- Todas las variables, del sistema y definidas por el usuario, se pueden utilizar en los enlaces de parámetros que utiliza la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para obtener más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Todas las variables (del sistema y definidas por el usuario) se pueden usar en los enlaces de parámetros que usa la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  Los nombres de variables definidas por el usuario y variables del sistema distinguen mayúsculas y minúsculas.  

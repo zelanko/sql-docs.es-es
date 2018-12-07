@@ -11,12 +11,12 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599453"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398008"
 ---
 # <a name="user-roles"></a>Roles de usuario
   En esta sección se describen los roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity. Los roles descritos son roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , roles de Windows o roles de base de datos de Oracle.  
@@ -129,7 +129,7 @@ ms.locfileid: "47599453"
   
  El administrador de bases de datos de Oracle puede obtener scripts SQL de Oracle que hay que ejecutar para que se puedan evaluar antes de ejecutarlos. El administrador de base de datos de Oracle también puede ejecutar directamente scripts SQL de Oracle desde la Consola del diseñador CDC de Oracle.  
   
- Si el administrador de base de datos de Oracle elige usar la Consola del diseñador CDC de Oracle, las credenciales del administrador no se conservan, a excepción del contexto (diálogo) en el que se usaron.  
+ Si el administrador de base de datos de Oracle elige usar la Consola del diseñador CDC de Oracle, las credenciales del administrador no se conservan, a excepción del contexto (cuadro de diálogo) en el que se hayan usado.  
   
  El administrador de base de datos de Oracle trabaja en coordinación con el administrador del servicio CDC de Oracle en la configuración de las instancias CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

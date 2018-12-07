@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a7f9c78dc06da0cbb12e34483d3bdd7b469a8f78
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699413"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398058"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -246,7 +246,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ```
 
 ##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   Especifica un límite inferior para el tiempo que una fila debe permanecer en el grupo de filas delta antes de que se pueda migrar a un grupo de filas comprimido. Por ejemplo, un cliente puede indicar que si una fila no se ha modificado durante 120 minutos, se pueda comprimir en formato de almacenamiento en columnas. En el índice de almacén de columnas de las tablas basadas en disco no se realiza seguimiento del tiempo de inserción o actualización de una fila, sino que en su lugar se usa el tiempo de cierre del grupo de filas delta como proxy de la fila. La duración predeterminada es 0 minutos. Una fila se migra al almacenamiento en columnas una vez que en el grupo de filas delta se han acumulado 1 millón de filas y se ha marcado como cerrado.  
+   Especifica un límite inferior para el tiempo que una fila debe permanecer en el grupo de filas delta antes de que se pueda migrar a un grupo de filas comprimido. Por ejemplo, un cliente puede indicar que si una fila no se ha modificado durante 120 minutos, se pueda comprimir en formato de almacenamiento en columnas. En el índice de almacén de columnas de las tablas basadas en disco, no se realiza el seguimiento del tiempo de inserción o actualización de una fila; en su lugar, se usa el tiempo de cierre del grupo de filas de diferencial como elemento intermedio de la fila. La duración predeterminada es 0 minutos. Una fila se migra al almacenamiento en columnas una vez que en el grupo de filas delta se han acumulado 1 millón de filas y se ha marcado como cerrado.  
   
 ###### <a name="datacompression"></a>DATA_COMPRESSION  
    Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificados. Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. Las opciones son las siguientes:
@@ -514,7 +514,7 @@ GO
     ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
-    --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
+    --Clustered rowstore indexes always use the DEFAULT name 'ClusteredIndex_<GUID>'.  
     SELECT i.name   
     FROM sys.indexes i   
     JOIN sys.tables t  

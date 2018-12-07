@@ -16,15 +16,15 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5951daccc88e8593c27365254d208c4b2ee84118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753793"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542637"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control
-  Guarde un contenedor o una tarea de flujo de control que use con frecuencia en un archivo de elemento independiente —un archivo “.dtsxp”— y reutilícelos varias veces en uno o varios paquetes mediante elementos del paquete de flujo de control. Esta reusabilidad facilita el diseño y el mantenimiento de paquetes SSIS.  
+  Guarde un contenedor o una tarea de flujo de control que use con frecuencia en un archivo de elemento independiente (un archivo “.dtsxp”) y reutilícelos varias veces en uno o varios paquetes mediante elementos del paquete de flujo de control. Esta reusabilidad facilita el diseño y el mantenimiento de paquetes SSIS.  
   
 ## <a name="create-a-new-control-flow-package-part"></a>Creación de un nuevo elemento del paquete de flujo de control  
  Para crear un nuevo elemento del paquete de flujo de control, en el Explorador de soluciones, expanda la carpeta **Package Parts** . Haga clic con el botón derecho en **Flujo de control** y seleccione **Nuevo elemento de paquete de flujo de control**.  
@@ -143,11 +143,11 @@ ms.locfileid: "47753793"
   
 -   El diseñador guarda las instancias del elemento del paquete con sus propiedades configuradas en un archivo “.dtsx.designer”.  
   
--   Cuando el diseñador guarda dicho archivo, también extrae el contenido de los elementos a los que se hace referencia en este archivo y reemplaza las instancias del elemento del paquete con el contenido de los elementos.  
+-   Cuando el diseñador guarda el archivo “.dtsx.designer”, también extrae el contenido de los elementos a los que se hace referencia en este archivo y reemplaza las instancias del elemento del paquete con el contenido de los elementos.  
   
--   Por último, todo el contenido, que ya no incluye información del elemento, se vuelve a guardar el archivo de paquete “.dtsx”. Este es el archivo que ejecuta el runtime de SSIS.  
+-   Por último, todo el contenido (que ya no incluye la información del elemento) se vuelve a guardar en el archivo de paquete “.dtsx”. Este es el archivo que ejecuta el runtime de SSIS.  
   
- En el siguiente diagrama se muestra la relación entre los elementos (archivos “.dtsx”), el Diseñador de SSIS y el runtime de SSIS.  
+ En el diagrama siguiente, se muestra la relación entre los elementos (archivos “.dtsxp”), el Diseñador SSIS y el entorno de ejecución de SSIS.  
   
  ![Archivos y flujo de plantillas de flujo de control](../integration-services/media/control-flow-templates-intro.png "Archivos y flujo de plantillas de flujo de control")  
   

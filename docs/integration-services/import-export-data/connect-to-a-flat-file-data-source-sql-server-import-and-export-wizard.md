@@ -11,19 +11,19 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c893a38541d6e79380b25f0e8e5414a6ee0d2b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853373"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393719"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos de **archivo plano** (archivo de texto) desde la página **Seleccionar un origen de datos** o **Seleccionar un destino** del Asistente para importación y exportación de SQL Server. Para los archivos planos, estas dos páginas del Asistente presentan diferentes conjuntos de opciones, por lo que en este tema se describen el origen y el destino del archivo plano por separado.
 
 ## <a name="an-alternative-for-simple-text-import"></a>Una alternativa para la importación de texto simple
 Si tiene que importar un archivo de texto en SQL Server y no necesita todas las opciones de configuración disponibles en el Asistente para importación y exportación, considere la posibilidad de usar el **Asistente para importación de archivos planos** en SQL Server Management Studio (SSMS). Para obtener más información, vea los artículos siguientes:
-- [What’s new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novedades en SQL Server Management Studio 17.3)
+- [What's new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novedades en SQL Server Management Studio 17.3)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introducción al nuevo Asistente para importación de archivos planos en SSMS 17.3)
 
 ## <a name="connect-to-a-flat-file-source"></a>Conexión a un origen de archivo plano
@@ -210,7 +210,7 @@ En la captura de pantalla, tenga en cuenta que la columna **id**, que contiene n
 |**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor es un recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|
 |**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos.|
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales.|
-|**DataType**|Seleccione los tipos de datos disponibles en la lista.<br/>Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
+|**DataType**|Seleccione los tipos de datos disponibles en la lista.<br/>Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano. En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
 |**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: se califican los datos de texto del archivo plano. False: no se califican los datos de texto del archivo plano.|  
   

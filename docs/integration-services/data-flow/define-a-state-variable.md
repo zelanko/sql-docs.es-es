@@ -11,12 +11,12 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 637993cecd7b5a7c750956042b245f670d9aa0f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cbccb0ba6fa66cba9b8e57e628bef4710414cf7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533392"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
   Este procedimiento describe cómo definir una variable de paquete donde se almacena el estado CDC.  
@@ -33,7 +33,7 @@ ms.locfileid: "47628633"
 |**CS**|Esto marca el punto inicial del intervalo de procesamiento actual (inicio actual).|  
 |**\<cs-lsn>**|Este es el último LSN (número de secuencia de registro) procesado en la anterior ejecución de CDC.|  
 |**CE**|Esto marca el punto final del intervalo de procesamiento actual (final actual). La presencia del componente CE en el estado CDC indica que, o bien se está procesando actualmente un paquete CDC, o un paquete CDC generó un error antes de procesar completamente su intervalo de procesamiento de CDC.|  
-|**\<ce-lsn>**|Este es el último LSN que se va a procesar en la ejecución de CDC actual. Se da siempre por supuesto que el último número de secuencia que se va a procesar en el máximo (0xFFF…).|  
+|**\<ce-lsn>**|Este es el último LSN que se va a procesar en la ejecución de CDC actual. Se da siempre por supuesto que el último número de secuencia que se va a procesar es el máximo (0xFFF…).|  
 |**IR**|Esto marca el intervalo de procesamiento inicial.|  
 |**\<ir-start>**|Este es un LSN de un cambio justo antes de que comenzara la carga inicial.|  
 |**\<ir-end>**|Este es un LSN de un cambio justo después de que finalizara la carga inicial.|  
@@ -87,6 +87,6 @@ ms.locfileid: "47628633"
   
 ## <a name="see-also"></a>Ver también  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor de la tarea Control CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

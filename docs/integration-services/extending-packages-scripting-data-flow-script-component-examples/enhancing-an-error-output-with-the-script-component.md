@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2c710d2177f47c1c866a62b04ae320dfe0f7d46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68973d2d0464372b070667a5d59dcc4327b211bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527951"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Mejorar una salida de errores con el componente de script
   De forma predeterminada, las dos columnas adicionales en una salida de errores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode y ErrorColumn, solo contienen códigos numéricos que representan un número de error y el id. de la columna en la que se produjo el error. Estos valores numéricos pueden tener un uso limitado sin la descripción del error y el nombre de columna correspondientes.  
@@ -38,7 +38,7 @@ ms.locfileid: "47730843"
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
-1.  Antes de crear el nuevo componente de script, configure un componente de nivel superior en el flujo de datos para redirigir las filas a su salida de error cuando se produce un error o truncamiento. Con fines de comprobación, puede que desee configurar un componente de manera que garantice que se van a producir errores; por ejemplo mediante la configuración de una transformación de búsqueda entre dos tablas donde se producirá un error en la búsqueda.  
+1.  Antes de crear el nuevo componente de script, configure un componente de nivel superior en el flujo de datos para redirigir las filas a su salida de error cuando se produce un error o truncamiento. Con fines de prueba, puede que quiera configurar un componente de manera que garantice que se van a producir errores (por ejemplo, mediante la configuración de una transformación Búsqueda entre dos tablas donde se producirá un error en la búsqueda).  
   
 2.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como una transformación.  
   

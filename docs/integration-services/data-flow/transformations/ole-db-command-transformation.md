@@ -16,12 +16,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799883"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506563"
 ---
 # <a name="ole-db-command-transformation"></a>transformación Comando de OLE DB
   La transformación Comando de OLE DB ejecuta una instrucción SQL para cada fila en un flujo de datos. Por ejemplo, puede ejecutar una instrucción SQL que inserte, actualice o elimine filas en una tabla de base de datos.  
@@ -61,13 +61,13 @@ ms.locfileid: "47799883"
   
 3.  Haga clic en la pestaña **Flujo de datos** y, a continuación, desde el **cuadro de herramientas**, arrastre la transformación Comando de OLE DB a la superficie de diseño.  
   
-4.  Conecte la transformación Comando de OLE DB al flujo de datos arrastrando el conector (la flecha verde o roja) desde un origen de datos o una transformación anterior a la transformación Comando de OLE DB.  
+4.  Conecte la transformación Comando de OLE DB al flujo de datos; para hacerlo, arrastre el conector (la flecha verde o roja) desde un origen de datos o una transformación anterior a la transformación Comando de OLE DB.  
   
 5.  Haga clic con el botón derecho en el componente y seleccione Editar o Mostrar el **Editor avanzado**.  
   
 6.  En la pestaña **Administradores de conexión** , seleccione un administrador de conexiones OLE DB en la lista **Administrador de conexiones** . Para más información, consulte [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-7.  Haga clic en la pestaña **Propiedades de componente** y haga clic en el botón de puntos suspensivos **(…)** en el cuadro **Comando SQL** .  
+7.  Haga clic en la pestaña **Propiedades de componente** y haga clic en el botón de puntos suspensivos **(…)** del cuadro **SqlCommand**.  
   
 8.  En el **Editor de valores de cadena**, escriba la instrucción SQL con parámetros mediante un signo de pregunta (?) como marcador de parámetro para cada parámetro.  
   

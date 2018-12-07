@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505979"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
   Puede crear expresiones de propiedad para paquetes, tareas, contenedores de bucles ForEach, contenedores de bucles For, contenedores de secuencias, controladores de eventos, administradores de conexión de paquetes y proyectos, y proveedores de registro.  
@@ -44,7 +44,7 @@ ms.locfileid: "47754363"
   
     -   Escriba o cambie directamente la expresión de propiedad en la columna **Expresión** y, a continuación, haga clic en **Aceptar**.  
   
-         O bien  
+         -O bien-  
   
     -   Haga clic en los puntos suspensivos (…) en la fila de expresión de la propiedad para abrir el **Generador de expresiones**.  
   

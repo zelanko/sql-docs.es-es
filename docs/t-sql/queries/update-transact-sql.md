@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5118700c017167664b0e33867f43ec6dbd46813d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704063"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520852"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -459,7 +459,7 @@ ID     Value
  Una instrucción UPDATE siempre adquiere un bloqueo exclusivo (X) en la tabla que modifica y retiene ese bloqueo hasta que se completa la transacción. Con un bloqueo exclusivo, ninguna otra transacción puede modificar los datos. Puede especificar sugerencias de tabla para invalidar este comportamiento predeterminado durante la ejecución de la instrucción UPDATE especificando otro método de bloqueo, sin embargo se recomienda que solo los desarrolladores y administradores de bases de datos experimentados usen las sugerencias y únicamente como último recurso. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportamiento del registro  
- La instrucción UPDATE se registra, pero las actualizaciones parciales de tipos de datos de valores grandes mediante la cláusula **.** WRITE se registran mínimamente. Para obtener más información, vea "Actualizar tipos de datos de valores grandes" en la sección anterior "Tipos de datos".  
+ La instrucción UPDATE se registra, pero las actualizaciones parciales de tipos de datos de valores grandes mediante la cláusula **.** WRITE se registran mínimamente. Para obtener más información, vea “Actualizar tipos de datos de valores grandes” en la sección anterior “Tipos de datos”.  
   
 ## <a name="security"></a>Seguridad  
   
@@ -1034,7 +1034,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ```  
   
 #### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Usar UPDATE en un bloque TRY…CATCH  
- En el siguiente ejemplo se usa una instrucción UPDATE en un bloque TRY…CATCH para administrar los errores de ejecución que se puedan producir durante la operación de actualización.  
+ En el ejemplo siguiente, se usa una instrucción UPDATE en un bloque TRY…CATCH para administrar los errores de ejecución que se puedan producir durante la operación de actualización.  
   
 ```sql  
 USE AdventureWorks2012;  

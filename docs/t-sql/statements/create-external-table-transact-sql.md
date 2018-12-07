@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703963"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402820"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -170,7 +170,7 @@ En SQL Data Warehouse y Analytics Platform System, la instrucción [CREATE EXTER
  Especifica el nombre del objeto de formato de archivo externo que almacena el tipo de archivo y el método de compresión de los datos externos. Para crear un formato de archivo externo, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  Opciones de Reject  
- Puede especificar parámetros de Reject que determinen cómo va a administrar PolyBase los registros *desfasados* que recupera del origen de datos externo. Un registro de datos se considera "desfasado" si los tipos de datos reales o el número de columnas no coinciden con las definiciones de columna de la tabla externa.  
+ Puede especificar parámetros de Reject que determinen cómo va a administrar PolyBase los registros *desfasados* que recupera del origen de datos externo. Un registro de datos se considera “con modificaciones” si los tipos de datos reales o el número de columnas no coinciden con las definiciones de columna de la tabla externa.  
   
  Si no se especifican ni se cambian los valores Reject, PolyBase usa los valores predeterminados. Esta información sobre los parámetros de Reject se almacena como metadatos adicionales al crear una tabla externa con la instrucción CREATE EXTERNAL TABLE.   Cuando una futura instrucción SELECT o SELECT INTO SELECT selecciona datos de la tabla externa, PolyBase usa las opciones de Reject para determinar el número o porcentaje de filas que se pueden rechazar antes de que se produzca un error en la consulta real. . La consulta devuelve resultados (parciales) hasta que se supera el umbral de Reject; después se produce un error con el mensaje de error correspondiente.  
   
@@ -220,7 +220,7 @@ Ejemplo:
 REJECTED_ROW_LOCATION = *Ubicación del directorio*
   
   Especifica el directorio del origen de datos externo en el que se deben escribir las filas rechazadas y el archivo de errores correspondiente.
-Si la ruta de acceso especificada no existe, PolyBase creará una en su nombre. Se crea un directorio secundario con el nombre "_rejectedrows". El carácter "_" garantiza que el directorio tenga un escape para otro procesamiento de datos a menos que se mencione explícitamente en el parámetro de ubicación. En este directorio hay una carpeta que se crea según la hora de envío de la carga con el formato AñoMesDía-HoraMinutoSegundo (por ejemplo, 20180330-173205). En esta carpeta se escriben dos tipos de archivos: el archivo _reason y el archivo de datos. 
+Si la ruta de acceso especificada no existe, PolyBase creará una en su nombre. Se crea un directorio secundario con el nombre “_rejectedrows”. El carácter “_” garantiza que se escape el directorio para otro procesamiento de datos, a menos que se mencione explícitamente en el parámetro de ubicación. En este directorio hay una carpeta que se crea según la hora de envío de la carga con el formato AñoMesDía-HoraMinutoSegundo (por ejemplo, 20180330-173205). En esta carpeta se escriben dos tipos de archivos: el archivo _reason y el archivo de datos. 
 
 Los archivos reason y los archivos de datos tienen el identificador de consulta asociado a la instrucción CTAS. Dado que los datos y reason están en archivos independientes, los archivos correspondientes tienen un sufijo coincidente. 
   

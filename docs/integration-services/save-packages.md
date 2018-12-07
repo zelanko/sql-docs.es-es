@@ -19,12 +19,12 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48a90afb091382446900cd1875533f8976810f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693403"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542022"
 ---
 # <a name="save-packages"></a>Guardar paquetes
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , se generan los paquetes con el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y se guardan en el sistema de archivos como archivos XML (archivos .dtsx). También puede guardar copias del archivo XML de paquete en la base de datos msdb, en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o en el almacén de paquetes. El almacén de paquetes representa las carpetas en la ubicación del sistema de archivos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra.  
@@ -68,7 +68,7 @@ ms.locfileid: "47693403"
   
 5.  Si se guarda en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], especifique el tipo de autenticación y, si se usa la Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-6.  Para especificar la ruta de acceso del paquete, escríbala o haga clic en el botón **(…)** para especificar la ubicación del paquete. El nombre predeterminado del paquete es Paquete. Opcionalmente, cambie el nombre del paquete a uno que satisfaga sus necesidades.  
+6.  Para especificar la ruta de acceso del paquete, escríbala o haga clic en el botón Examinar **(…)** para especificar la ubicación del paquete. El nombre predeterminado del paquete es Paquete. Opcionalmente, cambie el nombre del paquete a uno que satisfaga sus necesidades.  
   
      Si selecciona **SQL Server** como opción de **Ruta de acceso del paquete** , la ruta de acceso del paquete consta de carpetas lógicas de **msdb** y el nombre del paquete. Por ejemplo, si el paquete DownloadMonthlyData está asociado con la carpeta Finance dentro de la carpeta MSDB (nombre predeterminado de la carpeta lógica raíz de **msdb**), la ruta del paquete DownloadMonthlyData es MSDB/Finance/DownloadMonthlyData.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47693403"
   
 7.  Revise el nivel de protección del paquete.  
   
-8.  Opcionalmente, haga clic en el botón para examinar **(…)** junto al cuadro **Nivel de protección** para cambiar el nivel de protección.  
+8.  También puede hacer clic en el botón Examinar **(…)** junto al cuadro **Nivel de protección** para cambiar el nivel de protección.  
   
     -   En el cuadro de diálogo **Nivel de protección de paquetes** , seleccione un nivel de protección diferente.  
   

@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7fa7bf2f5d315bda158ed45f3965fbc2a952fb00
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700303"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641506"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -111,7 +111,7 @@ Este valor solo es válido en las bases de datos secundarias mientras la base de
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
-Habilita o deshabilita el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). El valor predeterminado es ON. El establecimiento de PARAMETER_SNIFFING en ON equivale a habilitar la [marca de seguimiento 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Habilita o deshabilita el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). El valor predeterminado es ON. Establecer PARAMETER_SNIFFING en OFF equivale a habilitar la [marca de seguimiento 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > Para realizar esta acción en el nivel de consulta, vea la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
@@ -121,7 +121,7 @@ PRIMARY
 
 Este valor solo es válido en las bases de datos secundarias mientras la base de datos se encuentra en la principal y especifica que el valor de esta configuración en todas las bases de datos secundarias será el valor establecido para la principal. Si cambia la configuración de la principal para usar el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing), el valor en las secundarias cambiará en consecuencia sin necesidad de establecer explícitamente el valor de las secundarias. PRIMARY es la configuración predeterminada para las secundarias.
 
-QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 Habilita o deshabilita las revisiones de optimización de consulta independientemente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que deshabilita las revisiones de optimización de consulta que se publicaron después de que se introdujo el máximo nivel de compatibilidad disponible para una versión específica (posterior a RTM). Establecer este valor en **ON** es equivalente a habilitar la [marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -259,7 +259,7 @@ La configuración granular puede invalidar las globales y Resource Governor pued
 
   - Si la sugerencia de consulta no es 0, se limita por la configuración de Resource Governor.
 
-- La configuración con ámbito de base de datos (a menos que sea 0) invalida el valor de sp_configure a menos que haya una sugerencia de consulta y esté limitada por la configuración de Resource Governor.
+- La configuración con ámbito de base de datos (a menos que sea 0) reemplaza el valor de sp_configure, a menos que haya una sugerencia de consulta y esté limitada por la configuración de Resource Governor.
 
 - La configuración de Resource Governor reemplaza el valor de sp_configure.
 

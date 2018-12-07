@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532082"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
   La administración de paquetes incluye la supervisión, administración, importación y exportación de paquetes.  
@@ -127,7 +127,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más...>** y busque el servidor que va a usar.  
+    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
@@ -139,19 +139,19 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   Para importar desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione la opción **SQL Server** y luego especifique el servidor y seleccione el modo de autenticación. Si selecciona Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-         Haga clic en el botón de búsqueda **(…)**, seleccione el paquete que importar y haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
     -   Para importar desde el sistema de archivos, seleccione la opción **Sistema de archivos** .  
   
-         Haga clic en el botón de búsqueda **(…)**, seleccione el paquete que importar y haga clic en **Abrir**.  
+         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Abrir**.  
   
     -   Para importar desde el almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón de búsqueda **(…)**, seleccione el paquete que importar y haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
 7.  Si lo desea, actualice el nombre del paquete.  
   
-8.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y elija un nivel de protección diferente usando el cuadro de diálogo **Nivel de protección de paquetes** . Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
+8.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y seleccione otro nivel de protección con el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
   
 9. Haga clic en **Aceptar** para completar la importación.  
   
@@ -163,7 +163,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más...>** y busque el servidor que va a usar.  
+    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
@@ -175,17 +175,17 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   Para exportar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione la opción **SQL Server** y luego especifique el servidor y seleccione el modo de autenticación. Si selecciona Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-         Haga clic en el botón Examinar **(…)** y expanda la carpeta **Paquetes SSIS** para buscar la carpeta en la que quiere guardar el paquete. Opcionalmente, actualice el nombre predeterminado del paquete y luego haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)** y expanda la carpeta **Paquetes SSIS** para buscar la carpeta donde quiera guardar el paquete. Opcionalmente, actualice el nombre predeterminado del paquete y luego haga clic en **Aceptar**.  
   
     -   Para exportar al sistema de archivos, seleccione la opción **Sistema de archivos** .  
   
-         Haga clic en el botón Examinar **(…)** para buscar la carpeta a la que quiere exportar el paquete, escriba el nombre del archivo de paquete y haga clic en **Guardar**.  
+         Haga clic en el botón Examinar **(…)** para buscar la carpeta donde quiera exportar el paquete, escriba el nombre del archivo de paquete y, después, haga clic en **Guardar**.  
   
     -   Para exportar al almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón Examinar **(…)**, expanda la carpeta **Paquetes SSIS** y seleccione la carpeta en la que quiere guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Haga clic en el botón Examinar **(…)**, expanda la carpeta **Paquetes SSIS** y seleccione la carpeta donde quiera guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y elija un nivel de protección diferente usando el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
+7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y seleccione otro nivel de protección con el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
   
 8.  Haga clic en **Aceptar** para completar la exportación.  
 
@@ -227,7 +227,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
  También puede cambiar el nombre del paquete si lo desea. El nombre predeterminado es el nombre del paquete que se importará.  
   
  **Nivel de protección**  
- Haga clic en el botón Examinar **(…)** y, en el cuadro de diálogo **Nivel de protección de paquetes** , actualice el nivel de protección. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Haga clic en el botón Examinar **(…)** y, en el cuadro de diálogo **Nivel de protección de paquetes**, actualice el nivel de protección. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete
   Utilice el cuadro de diálogo **Exportar paquete** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para exportar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a una ubicación diferente y, opcionalmente, modificar el nivel de protección del paquete.  
@@ -261,10 +261,10 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
  **Ruta de acceso del paquete**  
- Escriba la ruta de acceso del paquete o haga clic en el botón Examinar **(…)** y busque la carpeta en la que quiera almacenar el paquete.  
+ Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque la carpeta donde quiera guardar el paquete.  
   
  **Nivel de protección**  
- Haga clic en el botón Examinar **(…)** y actualice el nivel de protección del cuadro de diálogo **Nivel de protección de paquetes** . Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Haga clic en el botón Examinar **(…)** y actualice el nivel de protección en el cuadro de diálogo **Nivel de protección de paquetes**. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="back-up-and-restore-packages"></a>Copia de seguridad y restauración de paquetes
   

@@ -13,12 +13,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b67c3deaa58efe3b9a180f51d812ee0cec96f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826533"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502882"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Generar, implementar y depurar objetos personalizados
   Después de haber escrito el código para un objeto personalizado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], debe generar, implementar e integrar el ensamblado en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para que esté disponible para su uso en paquetes, y probarlo y depurarlo.  
@@ -62,7 +62,7 @@ ms.locfileid: "47826533"
 ##  <a name="building"></a> Generar el ensamblado  
  Después de firmar el proyecto, debe generar o volver a generar el proyecto o la solución utilizando los comandos disponibles en el menú **Generar** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La solución puede contener un proyecto independiente para una interfaz de usuario personalizada, que también se debe firmar con un nombre seguro y se puede generar al mismo tiempo.  
   
- El método más cómodo para realizar los dos pasos siguientes, desplegar el ensamblado e instalarlo en la memoria caché de ensamblados global, es crear script de estos pasos como un evento posterior a la generación en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Los eventos de compilación están disponibles en la página **Compilar** de Propiedades del proyecto para un proyecto de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y en la página **Eventos de compilación** para un proyecto de C#. Es necesaria la ruta de acceso completa para las utilidades de símbolo del sistema como **gacutil.exe**. Son necesarias comillas alrededor de las rutas de acceso que contienen espacios en blanco y alrededor de macros como $(TargetPath) que se expanden a rutas de acceso que contienen espacios en blanco.  
+ El método más sencillo para realizar los dos pasos siguientes (implementar el ensamblado e instalarlo en la memoria caché de ensamblados global) es crear un script con estos pasos como un evento posterior a la compilación en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Los eventos de compilación están disponibles en la página **Compilar** de Propiedades del proyecto para un proyecto de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y en la página **Eventos de compilación** para un proyecto de C#. Es necesaria la ruta de acceso completa para las utilidades de símbolo del sistema como **gacutil.exe**. Son necesarias comillas alrededor de las rutas de acceso que contienen espacios en blanco y alrededor de macros como $(TargetPath) que se expanden a rutas de acceso que contienen espacios en blanco.  
   
  A continuación figura un ejemplo de una línea de comandos del evento posterior a la generación para un proveedor de registro personalizado:  
   

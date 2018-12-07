@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a07686a0aefb9b5d41e8c6f231c57214b75f687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a7a09c5653fe89528c49ade19e044066acfb34cd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702763"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403710"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51702763"
  *distance*  
  Es un valor de tipo **float** (**double** en .NET Framework) que especifica la distancia desde la instancia de **geography** en torno a la cual se puede calcular el búfer.  
   
- La distancia máxima del búfer no puede superar 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferencia terráquea) o todo el globo terráqueo.  
+ La distancia máxima del búfer no puede ser superior a 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferencia terráquea) o todo el globo terráqueo.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  

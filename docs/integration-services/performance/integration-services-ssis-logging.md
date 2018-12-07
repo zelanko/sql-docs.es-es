@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542912"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -209,7 +209,7 @@ ms.locfileid: "51641262"
   
 -   La transformación de la columna derivada, denominada "Calculate LineItemTotalCost" empleó 356 ms en realizar los cálculos de las filas entrantes.  
   
--   La transformación Agregado que se denomina "Sum Quantity and LineItemTotalCost" empleó un tiempo combinado de 220 ms (141 ms en PrimeOutput y 79 ms en ProcessInput) en las operaciones de realizar cálculos y pasar los datos a la transformación siguiente.  
+-   La transformación Agregado denominada “Sum Quantity and LineItemTotalCost” ha usado un tiempo combinado de 220 ms (141 ms en PrimeOutput y 79 ms en ProcessInput) en las operaciones de realizar cálculos y pasar los datos a la transformación siguiente.  
 
 ## <a name="ssdt"></a> Habilitar el registro de paquetes en SQL Server Data Tools
   Este procedimiento describe cómo agregar registros a un paquete, configurar el registro en el nivel de paquete y guardar la configuración de registro en un archivo XML. Solo puede agregar registros en el nivel de paquete, pero el paquete no tiene que realizar registros para habilitar el registro en los contenedores que incluye.  

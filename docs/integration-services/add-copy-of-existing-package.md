@@ -15,12 +15,12 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e44ac5f9f5c1eee8af10dd48fa8577b3056cd70
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8df0a074741f135d9c445a65c31b796f02bb5782
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641142"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523515"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -42,7 +42,7 @@ ms.locfileid: "51641142"
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
  **Ruta de acceso del paquete**  
- Escriba la ruta de acceso del paquete o haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
+ Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
   
 ## <a name="see-also"></a>Ver también  
  [Guardar copia del paquete](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   

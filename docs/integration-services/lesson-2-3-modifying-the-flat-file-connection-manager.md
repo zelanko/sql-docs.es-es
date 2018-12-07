@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 80ddd9fb25dcd9246da0b9cb9ac86e8872888e7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79c6f65a6ceba8eef0a61f27512fa09b6fb3f474
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785882"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531801"
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Lección 2-3: Modificar el Administrador de conexiones de archivos planos
 En esta tarea, modificará el administrador de conexiones de archivos planos que creó y configuró en la lección 1. Cuando se creó inicialmente, el administrador de conexiones de archivos planos se configuró para cargar de forma estática un único archivo. Para permitir que el Administrador de conexiones de archivos planos cargue archivos de forma iterativa, debe modificar la propiedad ConnectionString del administrador de conexiones de modo que acepte la variable `User:varFileName`, definida por el usuario, que contiene la ruta de acceso del archivo que se cargará en tiempo de ejecución.  
@@ -27,11 +27,11 @@ Al modificar el administrador de conexiones para que use la variable definida po
   
 1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data**y, después, seleccione **Propiedades**.  
   
-2.  En la ventana Propiedades, para **Expresiones**, haga clic en la celda vacía y,después, haga clic en el botón de puntos suspensivos **(…)**.  
+2.  En la ventana Propiedades, para **Expresiones**, haga clic en la celda vacía y, después, haga clic en el botón de puntos suspensivos **(…)**.  
   
 3.  En el cuadro de diálogo **Editor de expresiones de propiedad** , en la columna **Propiedad** , escriba o seleccione **ConnectionString**.  
   
-4.  En la columna **Expresión** , haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones** .  
+4.  En la columna **Expresión**, haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones**.  
   
 5.  En el cuadro de diálogo **Generador de expresiones** , expanda el nodo **Variables** .  
   

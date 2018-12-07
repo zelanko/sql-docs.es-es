@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525325"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -161,7 +161,7 @@ ms.locfileid: "51640145"
 > [!NOTE]  
 >  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>Modo de acceso a datos = Carga rápida de tabla o vista  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>Modo de acceso a datos = Carga rápida de tabla o vista  
  **Nombre de la tabla o la vista**  
  Seleccione una tabla o una vista de la base de datos con esta lista, o bien haga clic en **Nuevo**para crear una tabla.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51640145"
  **Nombre de variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Modo de acceso a datos = Carga rápida de variable de nombre de tabla o nombre de vista  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Modo de acceso a datos = Carga rápida de variable de nombre de tabla o nombre de vista  
  **Nombre de variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   

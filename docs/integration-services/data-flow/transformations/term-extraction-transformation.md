@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638952"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507472"
 ---
 # <a name="term-extraction-transformation"></a>Extracción de términos, transformación
   La transformación Extracción de términos extrae términos del texto en una columna de entrada de transformación y luego escribe los términos en una columna de salida de transformación. La transformación funciona solo con texto en inglés y utiliza únicamente su propio diccionario en inglés e información lingüística sobre el idioma inglés.  
@@ -57,7 +57,7 @@ ms.locfileid: "51638952"
 ## <a name="exclusion-terms"></a>Términos de exclusión  
  Opcionalmente, la transformación Extracción de términos puede hacer referencia a una columna en una tabla que contiene términos de exclusión, lo que significa términos que la transformación debe omitir cuando extrae términos de un conjunto de datos. Esto resulta útil cuando un conjunto de términos ya ha sido identificado como insignificante en una actividad o un segmento en concreto, normalmente porque el término aparece con tanta frecuencia que resulta una palabra vacía. Por ejemplo, al extraer términos de un conjunto de datos que contiene información de asistencia al cliente sobre una marca de automóviles concreta, el nombre de la marca se puede excluir porque se menciona con demasiada frecuencia como para que resulte significativo. Por tanto, los valores en la lista de exclusión deben ser personalizados para el conjunto de datos con el que está trabajando.  
   
- Cuando se agrega un término a la lista de exclusión, se excluyen también todos los términos (palabras o frases) que contienen el término. Por ejemplo, si la lista de exclusión incluye la palabra única *data*(datos), también se excluyen todos los términos que contienen esta palabra, como *data*(datos), *data mining*(minería de datos), *data integrity*(integridad de datos) y *data validation* (validación de datos). Si solamente desea excluir los términos compuestos que contienen la palabra *data*(datos), debe agregar explícitamente estos términos compuestos a la lista de exclusión. Por ejemplo, si desea extraer incidencias de *data*(datos), pero excluir *data validation*(validación de datos), debe agregar *data validation* a la lista de exclusión y asegurarse de que *data* (datos) se ha quitado de la lista de exclusión.  
+ Al agregar un término a la lista de exclusión, se excluyen también todos los términos (palabras o frases) que contienen el término. Por ejemplo, si la lista de exclusión incluye la palabra única *data*(datos), también se excluyen todos los términos que contienen esta palabra, como *data*(datos), *data mining*(minería de datos), *data integrity*(integridad de datos) y *data validation* (validación de datos). Si solamente desea excluir los términos compuestos que contienen la palabra *data*(datos), debe agregar explícitamente estos términos compuestos a la lista de exclusión. Por ejemplo, si desea extraer incidencias de *data*(datos), pero excluir *data validation*(validación de datos), debe agregar *data validation* a la lista de exclusión y asegurarse de que *data* (datos) se ha quitado de la lista de exclusión.  
   
  La tabla de referencia debe ser una tabla en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Access. La transformación Extracción de términos usa una conexión OLE DB independiente para conectarse a la tabla de referencia. Para más información, consulte [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51638952"
   
 -   Caracteres de salto de línea ASCII 0x0d (retorno de carro) y 0x0a (avance de línea). Para usar este carácter como límite de oración, debe haber dos o más caracteres de salto de línea en una fila.  
   
--   Guiones (–). Para usar este carácter como límite de oración, el carácter situado a la izquierda o a la derecha del guión no puede ser una letra.  
+-   Guiones (-). Para usar este carácter como límite de oración, el carácter situado a la izquierda o a la derecha del guión no puede ser una letra.  
   
 -   Carácter de subrayado (_). Para usar este carácter como límite de oración, el carácter situado a la izquierda o a la derecha del guión no puede ser una letra.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "51638952"
   
 -   Combinaciones de números, signos de puntuación y caracteres alfabéticos. Por ejemplo, *A23B#99* devuelve el término *A23B*.  
   
--   Los caracteres, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ y ‘.  
+-   Los caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " y '.  
   
     > [!NOTE]  
     >  Las siglas que incluyen uno o más puntos (.) no se separan en varias oraciones.  

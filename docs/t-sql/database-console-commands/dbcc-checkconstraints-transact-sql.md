@@ -24,12 +24,12 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e93d0f71ab7c59a7bd0c43ea6badbc95bd8ee80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759650"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525343"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,11 +91,11 @@ DBCC CHECKCONSTRAINTS comprueba la integridad de las restricciones FOREIGN KEY y
   
 **Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Si se especifica *table_name* o *table_id* y está habilitado para el control de versiones del sistema, DBCC CHECKCONSTRAINTS también realiza comprobaciones de coherencia de datos temporales en la tabla especificada. Si no se especifica *NO_INFOMSGS*, este comando devolverá cada infracción de coherencia en la salida en una línea independiente. El formato de la salida será ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<problema del registro de la tabla temporal>.
+Si se especifica *table_name* o *table_id* y está habilitado para el control de versiones del sistema, DBCC CHECKCONSTRAINTS también realiza comprobaciones de coherencia de datos temporales en la tabla especificada. Si no se especifica *NO_INFOMSGS*, este comando devolverá cada infracción de coherencia en la salida en una línea independiente. Este será el formato del resultado: ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<problema con el registro de tabla temporal>.
   
 |Comprobación|Información adicional en la salida si se ha producido un error en la comprobación|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (actual)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (actual)| [sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (actual, historial)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
 |PeriodStartColumn < current_utc_time (actual)|[sys_start] = '{0}' AND SYSUTCTIME|  
 |PeriodEndColumn < current_utc_time (historial)|[sys_end] = '{0}' AND SYSUTCTIME|  

@@ -16,12 +16,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d74b4642fc3a8b9ad08796a4ff032088310acbe
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a3f537581dca2880d31efc10e0e3a5ac339f6622
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639452"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526161"
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de paquete
   Este tema describe el modo de copiar elementos de flujo de control, elementos de flujo de datos y administradores de conexión dentro de un paquete o entre paquetes.  
@@ -37,7 +37,7 @@ ms.locfileid: "51639452"
 4.  Seleccione los elementos del flujo de control o del flujo de datos que desee copiar. Puede seleccionar elementos de a uno por vez presionando la tecla Mayús y haciendo clic en el elemento, o puede seleccionar un grupo de elementos arrastrando el puntero a través de los elementos que desea seleccionar.  
   
     > [!IMPORTANT]  
-    >  Las restricciones de precedencia y rutas de acceso que conectan elementos no se seleccionan automáticamente cuando selecciona los dos elementos que conectan. Para copiar un flujo de datos ordenado (un segmento del flujo de control o del flujo de datos), asegúrese también de copiar las restricciones de precedencia y las rutas de acceso.  
+    >  Las restricciones de precedencia y rutas de acceso que conectan elementos no se seleccionan automáticamente cuando selecciona los dos elementos que conectan. Para copiar un flujo de trabajo ordenado (un segmento del flujo de control o de flujo de datos), asegúrese también de copiar las restricciones de precedencia y las rutas de acceso.  
   
 5.  Haga clic con el botón derecho en un elemento seleccionado y, después, haga clic en **Copiar**.  
   

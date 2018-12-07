@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639892"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503991"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
@@ -153,17 +153,17 @@ ms.locfileid: "51639892"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
  **DataFileMessage**  
- Escriba la ruta de acceso del archivo de datos o haga clic en el botón de puntos suspensivos **(…)** para ubicar el archivo.  
+ Escriba la ruta de acceso del archivo de datos, o bien haga clic en el botón de puntos suspensivos **(…)** y busque el archivo.  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
  **VariableMessage**  
- Escriba los nombres de las variables o haga clic en el botón de puntos suspensivos **(…)** para seleccionar las variables. Las variables se separan con comas.  
+ Escriba los nombres de variable, o bien haga clic en el botón de puntos suspensivos **(…)** y seleccione las variables. Las variables se separan con comas.  
   
  **Temas relacionados:** Seleccionar variables  
   
 #### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
  **StringMessage**  
- Escriba el mensaje de cadena o haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena** .  
+ Escriba el mensaje de cadena, o bien haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena**.  
   
 ## <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -192,7 +192,7 @@ ms.locfileid: "51639892"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
  **SaveFileAs**  
- Escriba la ruta del archivo que quiere usar o haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
+ Escriba la ruta del archivo que quiere usar, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
   
  **Sobrescribir**  
  Indique si desea sobrescribir los datos de un archivo existente al guardar el contenido del mensaje de archivo de datos. El valor predeterminado es **False**.  
@@ -212,8 +212,8 @@ ms.locfileid: "51639892"
  Esta opción es de solo lectura. Podría estar en blanco o contener el GUID de un paquete si se ha establecido anteriormente la propiedad Filtro.  
   
 ##### <a name="filter--from-package"></a>Filtro = De paquete  
- **Identifier**  
- Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
+ **Identificador**  
+ Si decide aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, especifique el paquete.  
   
  **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md)  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51639892"
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de la variable o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -238,8 +238,8 @@ ms.locfileid: "51639892"
  Esta opción está en blanco.  
   
 ##### <a name="filter--from-package"></a>Filtro = De paquete  
- **Identifier**  
- Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
+ **Identificador**  
+ Si decide aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, especifique el paquete.  
   
  **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639892"
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para retener el mensaje recibido o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable para retener el mensaje recibido, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

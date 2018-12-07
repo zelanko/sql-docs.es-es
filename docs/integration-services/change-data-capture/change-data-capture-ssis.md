@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641152"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534381"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la captura de datos modificados ofrece una solución efectiva al desafío de realizar eficazmente las cargas incrementales de las tablas de origen a los data mart y a los almacenamientos de datos.  
@@ -119,6 +119,6 @@ ms.locfileid: "51641152"
 -   [Realizar una carga incremental de varias tablas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog, sobre el [patrón de diseño de SSIS y la carga incremental](https://go.microsoft.com/fwlink/?LinkId=217679), en sqlblog.com  
+ Entrada de blog sobre el [modelo de diseño de SSIS y la carga incremental](https://go.microsoft.com/fwlink/?LinkId=217679) en sqlblog.com.  
   
   

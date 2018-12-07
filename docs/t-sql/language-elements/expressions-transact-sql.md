@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3cec2923a408a857c5cdd6440e022c9314f1b5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658783"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511917"
 ---
 # <a name="expressions-transact-sql"></a>Expresiones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47658783"
 }  
 [ COLLATE Windows_collation_name ]  
   
--- Scalar Expression in a DECLARE, SET, IF…ELSE, or WHILE statement  
+-- Scalar Expression in a DECLARE, SET, IF...ELSE, or WHILE statement  
 <scalar_expression> ::=  
 {  
     constant   
@@ -86,7 +86,7 @@ ms.locfileid: "47658783"
 |----------|----------------|  
 |*constant*|Es un símbolo que representa un único valor de datos específico. Para más información, vea [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Es una unidad de sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] que proporciona un servicio específico y devuelve un valor único. *scalar_function* puede incluir funciones escalares integradas, como las funciones SUM, GETDATE o CAST, o funciones escalares definidas por el usuario.|  
-|[ *table_name***.** ]|Es el nombre o alias de una tabla.|  
+|[ _table_name_**.** ]|Es el nombre o alias de una tabla.|  
 |*column*|Es el nombre de una columna. En una expresión solo se admite el nombre de la columna.|  
 |*variable*|Es el nombre de una variable o un parámetro. Para obtener más información, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** *expression*  **)**|Es cualquier expresión válida tal como se define en este tema. Los paréntesis son operadores de agrupación que garantizan que todos los operadores de la expresión escritos entre paréntesis se evalúen antes de que la expresión resultante se combine con otra.|  

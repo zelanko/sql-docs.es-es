@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535702"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
   La tarea Ejecutar paquete amplía las capacidades empresariales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ya que permite que los paquetes ejecuten otros paquetes como parte de un flujo de trabajo.  
@@ -103,7 +103,7 @@ ms.locfileid: "51640682"
  Para más información, vea [Usar los valores de variables y parámetros en un paquete secundario](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### <a name="accessing-parent-package-variables"></a>Obtener acceso a variables de paquetes primarios  
- Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable de paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario.  
+ Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable del paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurar la tarea Ejecutar paquete  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
@@ -158,7 +158,7 @@ ms.locfileid: "51640682"
 >  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación de proyectos. [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Contraseña**  
- Si el paquete secundario está protegido con contraseña, debe proporcionar esta contraseña o hacer clic en el botón de puntos suspensivos (...) y crear una nueva contraseña.  
+ Si el paquete secundario está protegido con contraseña, tiene que proporcionar esta contraseña o hacer clic en el botón de puntos suspensivos (…) y crear una contraseña.  
   
  **ExecuteOutOfProcess**  
  Especifique si el paquete secundario se ejecuta en el proceso del paquete primario o en un proceso independiente. De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en **False**y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en **true**, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en **true**, no podrá depurar el paquete si ha realizado una instalación de solo herramientas (tendrá que instalar el producto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ). Para más información, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md).  
@@ -193,7 +193,7 @@ ms.locfileid: "51640682"
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
- Escriba el nombre del paquete secundario o haga clic en los puntos suspensivos (...) y después busque el paquete.  
+ Escriba el nombre del paquete secundario, o bien haga clic en los puntos suspensivos (…) y, después, busque el paquete.  
   
 ##### <a name="location--file-system"></a>Ubicación = Sistema de archivos  
  **Conexión**  

@@ -11,12 +11,12 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1563485139b438580afc14da1262eff61b74be4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fe0017d3797f260aede9e712cbf1cecfe6a45a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642153"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420576"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
 En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
@@ -72,7 +72,7 @@ Ahora puede desarrollar proyectos y paquetes de SSIS para las versiones de SQL S
 
 -   Ahora puede usar el parámetro **Use32BitRuntime** cuando desencadena la ejecución en Escalabilidad horizontal.
 -   Se mejoró el rendimiento de inicio de sesión en SSISDB para ejecuciones de paquetes en Escalabilidad horizontal. Ahora, los registros de mensaje del evento y de contexto del mensaje se escriben en SSISDB por lotes en lugar de uno a uno. A continuación se muestran algunas notas adicionales sobre esta mejora:        
-    - Actualmente, algunos informes de la versión actual de SQL Server Management Studio (SSMS) no muestran estos registros para las ejecuciones en Escalabilidad horizontal. Prevemos que se admitirán en la próxima versión de SSMS. Los informes afectados incluyen el informe *Todas las conexiones*, el informe *Contexto de error* y la sección *Información de conexión* en el Panel Servicio de integración.
+    - Actualmente, en algunos informes de la versión actual de SQL Server Management Studio (SSMS) no se muestran estos registros para las ejecuciones en Escalabilidad horizontal. Prevemos que se admitirán en la próxima versión de SSMS. Los informes afectados incluyen el informe *Todas las conexiones*, el informe *Contexto de error* y la sección *Información de conexión* en el Panel Servicio de integración.
     - Se agregó la nueva columna **event_message_guid**. Utilice esta columna para combinar las vistas [catalog].[event_message_context] y [catalog].[event_messages] en lugar de usar **event_message_id** al consultar estos registros de ejecuciones en Escalabilidad horizontal.
 -   Para obtener la aplicación de administración para Escalabilidad horizontal de SSIS, [descargue SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 o una versión posterior.
 

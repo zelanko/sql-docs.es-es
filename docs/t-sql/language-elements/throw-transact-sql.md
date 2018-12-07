@@ -19,17 +19,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803263"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505908"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Produce una excepción y transfiere la ejecución a un bloque CATCH de una construcción TRY...CATCH en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Genera una excepción y transfiere la ejecución a un bloque CATCH de una construcción TRY…CATCH en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="remarks"></a>Notas  
  La instrucción anterior a la instrucción THROW debe ir seguida del terminador de instrucción punto y coma (;).  
   
- Si una construcción TRY...CATCH no está disponible, el lote de instrucciones se finaliza. Se establecen el número de línea y el procedimiento donde se produce la excepción. La gravedad se establece en 16.  
+ Si una construcción TRY…CATCH no está disponible, el lote de instrucciones se finaliza. Se establecen el número de línea y el procedimiento donde se produce la excepción. La gravedad se establece en 16.  
   
  Si la instrucción THROW se especifica sin parámetros, debe aparecer dentro de un bloque CATCH. Esto hace que se produzca la excepción detectada. Cualquier error que se produzca en una instrucción THROW hace que el lote de instrucciones se finalice.  
   

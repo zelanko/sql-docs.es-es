@@ -15,12 +15,12 @@ ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd0ce9e79503649f602eb59b5c9e5370ab20a6ec
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a826fd2e2a2be92b71a74e3a59945bd167277ea6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695433"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513687"
 ---
 # <a name="static-aggregate-geometry-methods"></a>Métodos de agregado de geometría estáticos
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51695433"
   
  [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [Especificaciones de OGC; Acceso a características simples, Parte 2 - Opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [Especificaciones de OGC, acceso a características simples, parte 2: opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
  [Especificaciones de OGC, Lenguaje de marcado de geografía](https://go.microsoft.com/fwlink/?LinkId=93629)  
   

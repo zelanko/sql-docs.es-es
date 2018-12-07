@@ -15,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680313"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525721"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +35,16 @@ ms.locfileid: "47680313"
   
  La ventaja de una implementación controlada por DAC en un ejercicio controlado por script es que la herramienta ayuda al DBA identificar y validar los comportamientos de bases de datos de origen y destino diferentes. Durante las actualizaciones, la herramienta advierte al DBA cuando la actualización puede provocar una pérdida de datos y también proporciona un plan de actualización. El DBA puede evaluar el plan y utilizar luego la herramienta para continuar con la actualización.  
   
- Los DAC también admiten las versiones para ayudar al desarrollador y al DBA a mantener y administrar el linaje de las bases de datos durante su ciclo de vida.  
+ Las DAC también admiten el control de versiones para ayudar al desarrollador y al DBA a mantener y administrar el linaje de las bases de datos durante su ciclo de vida.  
   
 ## <a name="dac-concepts"></a>Conceptos de DAC  
  Una DAC simplifica el desarrollo, la implementación y la administración de elementos de capa de datos que admiten una aplicación:  
   
--   Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de SQL Server tales como tablas, vistas y objetos de instancia, asociados a una base de datos de usuario. Es una unidad independiente de implementación de bases de datos de SQL Server que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de SQL Server en un artefacto portátil denominado paquete DAC o archivo .dacpac.  
+-   Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de SQL Server como tablas, vistas y objetos de instancia, asociados a una base de datos de usuario. Es una unidad independiente de implementación de bases de datos de SQL Server que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de SQL Server en un artefacto portátil denominado paquete DAC o archivo .dacpac.  
   
--   Para que una base de datos de SQL Server sea tratada como una DAC, debe estar registrada, ya sea explícitamente mediante una operación de usuario o implícitamente mediante una de las operaciones DAC. Cuando se registra una base de datos, la versión de DAC y otras propiedades se registran como parte de los metadatos de la base de datos. A la inversa, también es posible no registrar una base de datos que esté sin sus propiedades de DAC.  
+-   Para que una base de datos de SQL Server sea tratada como una DAC, debe estar registrada, ya sea de forma explícita mediante una operación de usuario, o bien de forma implícita mediante una de las operaciones de DAC. Cuando se registra una base de datos, la versión de DAC y otras propiedades se registran como parte de los metadatos de la base de datos. A la inversa, también es posible no registrar una base de datos que esté sin sus propiedades de DAC.  
   
--   En general, las herramientas de DAC pueden leer archivos de DACPAC generados por herramientas de DAC en versiones anteriores de SQL Server y también pueden implementar DACPAC en versiones anteriores de SQL Server. Sin embargo, las herramientas de DAC de versiones anteriores no pueden leer archivos de DACPAC generados por herramientas de DAC en versiones posteriores. Concretamente:  
+-   En general, las herramientas de DAC pueden leer archivos DACPAC generados por herramientas de DAC en versiones anteriores de SQL Server y también pueden implementar DACPAC en versiones anteriores de SQL Server. Sin embargo, las herramientas de DAC de versiones anteriores no pueden leer archivos de DACPAC generados por herramientas de DAC en versiones posteriores. Concretamente:  
   
     -   Las operaciones DAC se introdujeron en SQL Server 2008 R2. Además de las bases de datos de SQL Server 2008 R2, las herramientas admiten la generación de archivos de DACPAC de bases de datos de SQL Server 2008, SQL Server 2005 y SQL Server 2000.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "47680313"
 ## <a name="dac-operations"></a>Operaciones DAC  
  Un DAC admite las siguientes operaciones:  
   
--   **EXTRACT** : el usuario puede extraer una base de datos en un DACPAC.  
+-   **EXTRACT**: el usuario puede extraer una base de datos en un DACPAC.  
   
--   **DEPLOY** : el usuario puede implementar un DACPAC en un servidor de host. Cuando la implementación se realiza con una herramienta de administración como SQL Server Management Studio o el portal de administración de SQL Azure, la base de datos resultante en el servidor de host se registra implícitamente como una aplicación de capa de datos.  
+-   **DEPLOY**: el usuario puede implementar un DACPAC en un servidor de host. Cuando la implementación se realiza con una herramienta de administración como SQL Server Management Studio o el portal de administración de SQL Azure, la base de datos resultante en el servidor de host se registra implícitamente como una aplicación de capa de datos.  
   
--   **REGISTER:** el usuario puede registrar una base de datos como una aplicación de capa de datos.  
+-   **REGISTER**: el usuario puede registrar una base de datos como una aplicación de capa de datos.  
   
--   **UNREGISTER** : se puede anular del registro una base de datos registrada anteriormente como DAC.  
+-   **UNREGISTER**: se puede anular del registro una base de datos registrada anteriormente como DAC.  
   
--   **UPGRADE** : se puede actualizar una base de datos utilizando un DACPAC. La actualización se admite incluso en las bases de datos no registradas previamente como aplicaciones de capa de datos, pero como resultado de la actualización, la base de datos se registrará implícitamente.  
+-   **UPGRADE**: se puede actualizar una base de datos mediante un DACPAC. La actualización se admite incluso en las bases de datos no registradas previamente como aplicaciones de capa de datos, pero como resultado de la actualización, la base de datos se registrará implícitamente.  
   
 ## <a name="bacpac"></a>BACPAC  
  Un BACPAC es un archivo de Windows con una extensión .bacpac que encapsula el esquema y los datos de una base de datos. El caso de uso principal de un BACPAC es mover una base de datos de un servidor a otro (o [migrar una base de datos de un servidor local a la nube](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)) y almacenar una base de datos existente en un formato abierto.  
@@ -107,7 +107,7 @@ ms.locfileid: "47680313"
   
 -   **EXPORT**: el usuario puede exportar el esquema y los datos de una base de datos a un BACPAC.  
   
--   **IMPORT** : el usuario puede importar el esquema y los datos de una base de datos nueva en el servidor de host.  
+-   **IMPORT**: el usuario puede importar el esquema y los datos a una base de datos nueva en el servidor de host.  
   
  Ambas funciones son compatibles con las herramientas de administración de bases de datos: SQL Server Management Studio, el Portal de Azure y la API de DACFx.  
   

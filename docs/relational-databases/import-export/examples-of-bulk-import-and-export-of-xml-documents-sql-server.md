@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670604"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530554"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de forma masiva documentos XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Para obtener más información, vea los siguientes temas.
 -  [E. Exportar en bloque datos XML](#bulk_export_xml_data)  
   
 ## <a name="binary_byte_stream"></a>Importar de forma masiva datos XML como un flujo de bytes binario  
- Cuando importa datos de forma masiva de un archivo que contiene una declaración de codificación que desea aplicar, especifique la opción SINGLE_BLOB en la cláusula OPENROWSET(BULK…). La opción SINGLE_BLOB garantiza que el analizador de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa los datos según el esquema de codificación especificado en la declaración XML.  
+ Cuando importa datos XML de forma masiva de un archivo que contiene una declaración de codificación que quiere aplicar, especifique la opción SINGLE_BLOB en la cláusula OPENROWSET(BULK...). La opción SINGLE_BLOB garantiza que el analizador de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa los datos según el esquema de codificación especificado en la declaración XML.  
   
 #### <a name="sample-table"></a>Tabla de ejemplo  
  Para probar el ejemplo A de aquí, debe crear una tabla de ejemplo `T`.  
@@ -158,7 +158,7 @@ GO
   
  Para solucionar este problema, puede importar datos XML de un archivo de datos que contenga una DTD mediante la función `OPENROWSET(BULK...)` y especificando posteriormente la opción `CONVERT` en la cláusula `SELECT` del comando. La sintaxis básica para el comando es la siguiente:  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>Archivo de datos de ejemplo  
  Para probar este ejemplo de importación en bloque, cree un archivo (`C:\temp\Dtdfile.xml`) que contenga la siguiente instancia de ejemplo:  

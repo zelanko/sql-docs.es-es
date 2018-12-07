@@ -13,18 +13,18 @@ ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 620152bc083e5847f09161cd8209ba201ad1baca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e6c5641983c3528114120feb17c4f93948e926
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775853"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403020"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  
-  Las cargas de trabajo de análisis y el almacenamiento de datos pueden beneficiarse en gran medida de los [índices de almacén de columnas](../../t-sql/statements/create-columnstore-index-transact-sql.md), así como los índices de almacén de filas tradicionales. La elección de los índices de almacén de columnas y de filas que se generará es dependiente de la carga de trabajo de la aplicación. En SQL Server 2016, el [Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) puede analizar la carga de trabajo y recomienda una combinación adecuada de índices de almacén y de columnas para crear la base de datos. 
+  Las cargas de trabajo de análisis y el almacenamiento de datos pueden beneficiarse en gran medida de los [índices de almacén de columnas](../../t-sql/statements/create-columnstore-index-transact-sql.md), así como los índices de almacén de filas tradicionales. La elección de los índices de almacén de columnas y de filas que se van a generar para la base de datos depende de la carga de trabajo de la aplicación. En SQL Server 2016, el [Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) puede analizar la carga de trabajo y recomienda una combinación adecuada de índices de almacén y de columnas para crear la base de datos. 
   
  Esta característica está disponible con SQL Server Management Studio versión **16.4** o superior. 
   

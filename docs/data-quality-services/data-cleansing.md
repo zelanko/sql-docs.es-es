@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17a0c27fa6ae4ed3c8cb609a41c44ad0342adae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653273"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617615"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -92,7 +91,7 @@ ms.locfileid: "47653273"
  ![Limpieza de datos en Data Quality Client](../data-quality-services/media/dqs-cleansingindqsclient.gif "Limpieza de datos en Data Quality Client")  
   
 ##  <a name="Leading"></a> Corregir el valor inicial  
- La corrección del valor inicial se aplica a los valores de dominio que tienen sinónimos y donde el usuario quiere usar uno de los valores de sinónimos como valor inicial en lugar de otros con el fin de proporcionar una representación coherente del valor. Por ejemplo, “Nueva York”, “NYC” y “gran manzana” son sinónimos, y el usuario desea utilizar “Nueva York” como valor inicial en lugar de “NYC” y “gran manzana”. DQS admite la corrección de valores principales durante el proceso de limpieza al objeto de ayudarle a normalizar los datos. La corrección del valor inicial se realiza únicamente si el dominio se habilitó para la misma cuando se creó. De forma predeterminada, todos los dominios se habilitan para la corrección del valor inicial salvo que se haya desactivado la casilla **Usar valores iniciales** mientras se creaba un dominio. Para obtener más información sobre esta casilla, vea [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ La corrección del valor inicial se aplica a los valores de dominio que tienen sinónimos y donde el usuario quiere usar uno de los valores de sinónimos como valor inicial en lugar de otros con el fin de proporcionar una representación coherente del valor. Por ejemplo, "Nueva York", "NYC" y "Gran manzana" son sinónimos, y el usuario quiere usar "Nueva York" como valor inicial en lugar de "NYC" y "Gran manzana". DQS admite la corrección de valores principales durante el proceso de limpieza al objeto de ayudarle a normalizar los datos. La corrección del valor inicial se realiza únicamente si el dominio se habilitó para la misma cuando se creó. De forma predeterminada, todos los dominios se habilitan para la corrección del valor inicial salvo que se haya desactivado la casilla **Usar valores iniciales** mientras se creaba un dominio. Para obtener más información sobre esta casilla, vea [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Estandarizar datos limpios  
  Puede elegir si desea exportar los datos limpios en el formato normalizado según el formato de salida que se haya definido para los dominios. Al crear un dominio, puede seleccionar el formato que se aplicará cuando los valores de datos del dominio se generen. Para obtener más información acerca de cómo especificar formatos de salida para un dominio, vea la lista **Dar formato a la salida para** en [Set Domain Properties](../data-quality-services/set-domain-properties.md).  

@@ -2,7 +2,7 @@
 title: Procesamiento de consultas adaptable en bases de datos de Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Características de procesamiento de consultas adaptable para mejorar el rendimiento de las consultas en SQL Server (2017 y versiones posteriores) y Azure SQL Database.
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,25 +14,27 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031202"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503413"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 En este artículo se presentan las características de procesamiento de consultas adaptables que se pueden usar para aumentar el rendimiento de las consultas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
-- Comentarios de concesión de memoria de modo de proceso por lotes.
-- Combinación adaptable de modo de proceso por lotes.
-- Ejecución intercalada. 
+- Comentarios de concesión de memoria de modo de proceso por lotes
+- Combinación adaptable de modo de proceso por lotes
+- Ejecución intercalada
 
-En general, SQL Server ejecuta una consulta del modo siguiente:
+En un nivel general, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una consulta del modo siguiente:
 1. El proceso de optimización de consultas genera un conjunto de planes de ejecución factibles para una consulta concreta. Durante este tiempo se calcula el costo de las opciones del plan y se usa el plan con el menor costo estimado.
 1. El proceso de ejecución de consultas toma el plan elegido por el optimizador de consultas y lo usa para la ejecución.
-    
+
+Para obtener más información sobre el procesamiento de consultas y los modos de ejecución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md).
+
 A veces, el plan elegido por el optimizador de consultas no es óptimo por una serie de motivos. Por ejemplo, el número estimado de filas que pasan por el plan de consulta puede ser incorrecto. Los costos estimados ayudan a determinar el plan que se selecciona para la ejecución. Si las estimaciones de cardinalidad son incorrectas, se sigue usando el plan original a pesar de los deficientes supuestos originales.
 
 ![Características de procesamiento de consultas adaptable](./media/1_AQPFeatures.png)
@@ -88,7 +90,7 @@ Los comentarios de concesión de memoria se pueden deshabilitar en el ámbito de
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Cuando se habilita, esta opción aparecerá como habilitada en sys.database_scoped_configurations.
+Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 
 Para volver a habilitar los comentarios de concesión de memoria en modo por lotes para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
@@ -96,7 +98,7 @@ Para volver a habilitar los comentarios de concesión de memoria en modo por lot
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-También puede deshabilitar los comentarios de concesión de memoria en modo por lotes para una consulta específica designando DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK como sugerencia de consulta USE HINT.  Por ejemplo:
+También puede deshabilitar los comentarios de concesión de memoria en modo por lotes para una consulta específica si designa `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` como [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -107,23 +109,23 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
 
 ## <a name="row-mode-memory-grant-feedback"></a>Comentarios de concesión de memoria del modo de fila
-**Se aplica a:** SQL Database como una característica de versión preliminar pública
+**Se aplica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como característica de versión preliminar pública.
 
 > [!NOTE]
 > Los comentarios de concesión de memoria del modo de fila es una característica en vista previa (GB) pública.  
 
 Los comentarios de concesión de memoria del modo de fila se expanden en la característica de comentarios de concesión de memoria de modo de proceso por lotes al ajustar los tamaños de concesión de memoria tanto para los operadores del modo de proceso por lotes como del modo de fila.  
 
-Para habilitar la versión preliminar pública de los comentarios de concesión de memoria del modo de fila en Azure SQL Database, habilite el nivel 150 de compatibilidad de la base de datos para la base de datos a la que se conecta cuando ejecuta la consulta.
+Para habilitar la versión preliminar pública de los comentarios de concesión de memoria del modo de fila en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], habilite el nivel 150 de compatibilidad de la base de datos para la base de datos a la que se conecta cuando ejecuta la consulta.
 
 La actividad de comentarios de concesión de memoria del modo de fila será visible a través del evento extendido **memory_grant_updated_by_feedback**. 
 
-A partir de los comentarios de concesión de memoria del modo de fila, se mostrarán dos atributos de plan de consulta nuevos para planes reales posteriores a la ejecución: **IsMemoryGrantFeedbackAdjusted** y **LastRequestedMemory**, que se agregan al elemento XML del plan de consulta MemoryGrantInfo. 
+A partir de los comentarios de concesión de memoria del modo de fila, se mostrarán dos atributos de plan de consulta nuevos para planes reales posteriores a la ejecución: ***IsMemoryGrantFeedbackAdjusted*** y ***LastRequestedMemory***, que se agregan al elemento XML del plan de consulta *MemoryGrantInfo*. 
 
-LastRequestedMemory muestra la memoria concedida en Kilobytes (KB) desde la ejecución de consulta anterior. El atributo IsMemoryGrantFeedbackAdjusted permite comprobar el estado de los comentarios de concesión de memoria para la instrucción dentro de un plan de ejecución de consulta real. Los valores que se exponen en este atributo son los siguientes:
+*LastRequestedMemory* muestra la memoria concedida en Kilobytes (KB) desde la ejecución de consulta anterior. El atributo *IsMemoryGrantFeedbackAdjusted* permite comprobar el estado de los comentarios de concesión de memoria para la instrucción dentro de un plan de ejecución de consulta real. Los valores que se exponen en este atributo son los siguientes:
 
 | Valor IsMemoryGrantFeedbackAdjusted | Descripción |
-|--- |--- |
+|---|---|
 | No: First Execution | Los comentarios de concesión de memoria no ajustan la memoria para la primera compilación y la ejecución asociada.  |
 | No: Accurate Grant | Si no hay ningún desbordamiento al disco y la instrucción usa al menos 50 % de la memoria concedida, no se desencadenan los comentarios de concesión de memoria. |
 | No: Feedback disabled | Si los comentarios de concesión de memoria se desencadenan de manera continúa y fluctúan entre operaciones de aumento de memoria y operaciones de disminución de memoria, se deshabilitarán los comentarios de concesión de memoria para la instrucción. |
@@ -131,7 +133,7 @@ LastRequestedMemory muestra la memoria concedida en Kilobytes (KB) desde la ejec
 | Yes: Stable | Se aplicaron los comentarios de concesión de memoria y ahora la memoria concedida es estable, lo que significa que lo último que se concedió para la ejecución anterior es lo que se concedió para la ejecución actual. |
 
 > [!NOTE]
-> Los atributos del plan de comentarios de concesión de memoria del modo de fila en versión preliminar pública son visibles en los planes de ejecución de consultas gráficas de SQL Server Management Studio en las versiones 17.9 y superiores. 
+> Los atributos del plan de comentarios de concesión de memoria del modo de fila en versión preliminar pública son visibles en los planes de ejecución de consultas gráficas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en las versiones 17.9 y superiores. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deshabilitar los comentarios de concesión de memoria en modo de fila sin cambiar el nivel de compatibilidad
 Los comentarios de concesión de memoria en modo de fila se pueden deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 150 o posterior. Para deshabilitar los comentarios de concesión de memoria en modo de fila para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
@@ -146,7 +148,7 @@ Para volver a habilitar los comentarios de concesión de memoria en modo de fila
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-También puede deshabilitar los comentarios de concesión de memoria en modo de fila para una consulta específica designando DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK como sugerencia de consulta USE HINT.  Por ejemplo:
+También puede deshabilitar los comentarios de concesión de memoria en modo de fila para una consulta específica si designa `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` como [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -166,28 +168,26 @@ Funcionamiento:
 La siguiente consulta se usa para mostrar un ejemplo de combinación adaptable:
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-La consulta devuelve 336 filas. Al habilitar las [estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.MD) se ve el siguiente plan:
+La consulta devuelve 336 filas. Al habilitar las [estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md) se ve el siguiente plan:
 
 ![La consulta da lugar a 336 filas](./media/4_AQPStats336Rows.png)
 
 En el plan se ve lo siguiente:
 1. Hay una exploración de índice de almacén de columnas que se usa para proporcionar filas para la fase de compilación de combinación hash.
 1. Hay un nuevo operador de combinación adaptable. Este operador define un umbral que se usa para decidir cuándo cambiar a un plan de bucle anidado. En el ejemplo, el umbral es 78 filas. Todo lo que tenga &gt; = 78 filas usará una combinación hash. Si es inferior al umbral, se usará una combinación de bucle anidado.
-1. Puesto que se devuelven 336 filas, se supera el umbral y la segunda rama representa la fase de sondeo de una operación de combinación hash estándar. Observe que las estadísticas de consultas activas muestran las filas que pasan por los operadores: en este caso "672 de 672".
+1. Puesto que se devuelven 336 filas, se supera el umbral y la segunda rama representa la fase de sondeo de una operación de combinación hash estándar. Observe que las estadísticas de consultas dinámicas muestran las filas que pasan por los operadores, en este caso "672 de 672".
 1. La última rama es la búsqueda en índice clúster que usa la combinación de bucle anidado si no se ha superado el umbral. Observe que se ve "0 de 336" filas mostradas (la rama no se usa).
  Ahora vamos a comparar el plan con la misma consulta, pero esta vez para un valor *Cantidad* que solo tiene una fila en la tabla:
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
@@ -249,14 +249,14 @@ Para deshabilitar las combinaciones adaptables para todas las ejecuciones de con
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-Cuando se habilita, esta opción aparecerá como habilitada en sys.database_scoped_configurations.
+Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Para volver a habilitar las combinaciones adaptables para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-También puede deshabilitar las combinaciones adaptables para una consulta específica designando DISABLE_BATCH_MODE_ADAPTIVE_JOINS como una sugerencia de consulta USE HINT.  Por ejemplo:
+También puede deshabilitar las combinaciones adaptables para una consulta específica si designa `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` como una [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:
 
 ```sql
 SELECT s.CustomerID,
@@ -264,18 +264,19 @@ SELECT s.CustomerID,
        sc.CustomerCategoryName
 FROM Sales.Customers AS s
 LEFT OUTER JOIN Sales.CustomerCategories AS sc
-ON s.CustomerCategoryID = sc.CustomerCategoryID
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
 OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
 ```
 
 Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones
-La ejecución intercalada cambia el límite unidireccional entre las fases de optimización y ejecución de una ejecución de una sola consulta y permite que los planes se adapten en función de las estimaciones de cardinalidad revisadas. Durante la optimización, si se detecta un candidato para la ejecución intercalada, que son actualmente las **funciones con valores de tabla de múltiples instrucciones (MSTVF)**, se detiene la optimización, se ejecuta el subárbol aplicable, se capturan las estimaciones de cardinalidad precisas y luego se reanuda la optimización de las operaciones de nivel inferior.
-Las MSTVF tienen una estimación de cardinalidad fija de "100" en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], y de "1" en versiones anteriores. La ejecución intercalada ayuda con los problemas de rendimiento de cargas de trabajo debidos a estas estimaciones de cardinalidad fijas asociadas a las funciones con valores de tabla de múltiples instrucciones.
+La ejecución intercalada cambia el límite unidireccional entre las fases de optimización y ejecución de una ejecución de una sola consulta y permite que los planes se adapten en función de las estimaciones de cardinalidad revisadas. Durante la optimización, si se detecta un candidato para la ejecución intercalada, que son actualmente las **funciones con valores de tabla de múltiples instrucciones (MSTVF)**, se detiene la optimización, se ejecuta el subárbol aplicable, se capturan las estimaciones de cardinalidad precisas y luego se reanuda la optimización de las operaciones de nivel inferior.   
 
-En la siguiente imagen se muestran los resultados estadísticos de una consulta activa, un subconjunto de un plan de ejecución global que refleja el impacto de las estimaciones de cardinalidad fijas de MSTVF. Puede ver el flujo de filas real frente a las filas estimadas. Hay tres áreas reseñables del plan (el flujo va de derecha a izquierda):
-1. El recorrido de tabla de MSTVF tiene una estimación fija de 100 filas. Pero en este ejemplo hay 527.597 filas que pasan por este recorrido de tabla de MSTVF, como se muestra en las estadísticas de consultas activas a través de *527597 de 100* reales de estimados, por lo que la estimación fija está considerablemente desviada.
+Las MSTVF tienen una estimación de cardinalidad fija de 100 a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], y de 1 en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La ejecución intercalada ayuda con los problemas de rendimiento de las cargas de trabajo debidos a estas estimaciones de cardinalidad fijas asociadas a las MSTVF. Para obtener más información sobre las MSTVF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+En la imagen siguiente se muestran los resultados de [estadísticas de consultas dinámicas](../../relational-databases/performance/live-query-statistics.md), un subconjunto de un plan de ejecución global que refleja el impacto de las estimaciones de cardinalidad fijas de las MSTVF. Puede ver el flujo de filas real frente a las filas estimadas. Hay tres áreas reseñables del plan (el flujo va de derecha a izquierda):
+1. El recorrido de tabla de MSTVF tiene una estimación fija de 100 filas. Pero en este ejemplo hay 527.597 filas que pasan por este recorrido de tabla de MSTVF, como se muestra en las estadísticas de consultas dinámicas a través de *527597 de 100* reales de estimados, por lo que la estimación fija está considerablemente desviada.
 1. En el caso de la operación de bucles anidados, se supone que el lado externo de la combinación solo devuelve 100 filas. Dado el gran número de filas que las MSTVF devuelven en realidad, es probable que lo mejor sea un algoritmo de combinación totalmente diferente.
 1. En el caso de la operación de coincidencia de hash, observe el pequeño símbolo de advertencia, que en este caso indica un desbordamiento en el disco.
 
@@ -287,7 +288,7 @@ Compare el plan anterior con el plan real generado con la ejecución intercalada
 
 1. Observe que el recorrido de tabla de MSTVF ahora refleja una estimación de cardinalidad precisa. Observe también la reordenación de este recorrido de tabla y las demás operaciones.
 1. Con respecto a los algoritmos de combinación, se ha pasado de una operación de bucle anidado a una operación de coincidencia de hash, que es más adecuada dado el gran número de filas implicadas.
-1. Observe también que ya no hay advertencias de desbordamiento, ya que se ha concedido más memoria en función del recuento real de filas que pasan desde el recorrido de tabla de MSTVF.
+1. Observe también que ya no hay advertencias de desbordamiento, dado que se ha concedido más memoria en función del recuento real de filas que pasan desde el recorrido de tabla de MSTVF.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Instrucciones aptas de ejecución intercalada
 Las instrucciones que hacen referencia a las MSTVF en la ejecución intercalada de momento deben ser de solo lectura y no formar parte de ninguna operación de modificación de datos. Además, las MSTVF no son aptas para la ejecución intercalada si no usan constantes en tiempo de ejecución.
@@ -297,7 +298,7 @@ En general, cuanta mayor sea la distorsión entre el número de filas real y el 
 En general, la ejecución intercalada beneficia a las consultas donde:
 1. Hay una gran distorsión entre el número real de filas y el estimado del conjunto de resultados intermedio (en este caso, las MSTVF).
 1. Y la consulta global es sensible a un cambio en el tamaño del resultado intermedio. Esto suele suceder cuando hay un árbol complejo por encima de ese subárbol en el plan de consulta.
-Un simple "SELECT *" de una MSTVF no se beneficiará de la ejecución intercalada.
+Un simple instrucción `SELECT *` de una MSTVF no se beneficiará de la ejecución intercalada.
 
 ### <a name="interleaved-execution-overhead"></a>Sobrecarga de la ejecución intercalada
 La sobrecarga debe ser de mínima a ninguna. Las MSTVF ya se estaban materializando antes de la introducción de la ejecución intercalada; la diferencia es que ahora se permite la optimización diferida y luego se aprovecha la estimación de cardinalidad del conjunto de filas materializado.
@@ -339,18 +340,18 @@ La ejecución intercalada se puede deshabilitar en el ámbito de base de datos o
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-Cuando se habilita, esta opción aparecerá como habilitada en sys.database_scoped_configurations.
+Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Para volver a habilitar la ejecución intercalada para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-También puede deshabilitar la ejecución intercalada para una consulta específica designando DISABLE_INTERLEAVED_EXECUTION_TVF como una sugerencia de consulta USE HINT.  Por ejemplo:
+También puede deshabilitar la ejecución intercalada para una consulta específica si designa `DISABLE_INTERLEAVED_EXECUTION_TVF` como una [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:
 
 ```sql
-SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM    [Fact].[Order] AS [fo]
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
                             '1-01-2013',
                             '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
@@ -371,5 +372,6 @@ Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de 
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)   (Guía de arquitectura de procesamiento de consultas)  
 [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Combinaciones](../../relational-databases/performance/joins.md)    
-[Demostración del procesamiento de consultas adaptable](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)          
-
+[Demostración del procesamiento de consultas adaptable](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)    
+[Sugerencias de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[Crear funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

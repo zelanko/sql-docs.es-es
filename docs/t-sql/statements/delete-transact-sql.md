@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700323"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532167"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Use la función @@ROWCOUNT para devolver el número de filas eliminadas a la aplicación cliente. Para más información, vea [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
- Puede implementar el control de errores de la instrucción DELETE especificando la instrucción en una construcción TRY…CATCH.  
+ Puede implementar el control de errores de la instrucción DELETE especificando la instrucción en una construcción TRY...CATCH.  
   
  La instrucción DELETE puede tener un error si infringe un desencadenador o intenta quitar una fila a la que hacen referencia datos de otra tabla con una restricción FOREIGN KEY. Si la instrucción DELETE quita varias filas y cualquiera de las filas eliminadas infringe un desencadenador o restricción, se cancela la instrucción, se devuelve un error y no se elimina ninguna fila.  
   

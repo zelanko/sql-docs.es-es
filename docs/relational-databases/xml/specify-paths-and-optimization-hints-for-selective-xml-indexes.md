@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505882"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- El modo de asignación especificada por el usuario permite especificar un tipo y la cardinalidad del nodo para obtener un rendimiento mejor. Sin embargo, este rendimiento mejorado se obtiene a costa de la seguridad (porque una conversión puede producir un error) y la generalidad (porque solo se compara el tipo especificado con el índice XML selectivo).  
+ El modo de asignación especificada por el usuario permite especificar un tipo y la cardinalidad del nodo para obtener un rendimiento mejor. Pero este rendimiento mejorado se obtiene a costa de la seguridad (porque una conversión puede producir un error) y la generalidad (porque solo se compara el tipo especificado con el índice XML selectivo).  
   
  Los tipos XQuery admitidos para XML sin tipo son los siguientes:  
   
@@ -103,8 +103,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537350"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabajar con informes paginados (portal web)
 
@@ -40,9 +40,9 @@ Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:
 Para administrar un informe paginado existente, puede hacer lo siguiente.  
   
 > [!NOTE]
-> Si no ve informes paginados en la carpeta, asegúrese de que está viendo informes paginados. Puede seleccionar **Ver** en la barra de menús de la esquina superior derecha del portal web. Procure que **Informes paginados** esté activado.  
+> Si no ve informes paginados en la carpeta, asegúrese de que está viendo los informes paginados. Puede seleccionar **Ver** en la barra de menús de la esquina superior derecha del portal web. Procure que **Informes paginados** esté activado.  
   
-1.  Haga clic en los **puntos suspensivos (…)** del conjunto de datos que quiere administrar.  
+1.  Haga clic en los **puntos suspensivos (...)** del conjunto de datos que quiera administrar.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   

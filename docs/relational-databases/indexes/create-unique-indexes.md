@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515082"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47680493"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Benefits"></a> Ventajas de un índice único  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47680493"
   
 7.  En la cuadrícula principal, en **(General)**, seleccione **Tipo** y luego **Índice** en la lista.  
   
-8.  Seleccione **Columnas**y luego haga clic en el botón de puntos suspensivos **(…)**.  
+8.  Seleccione **Columnas** y luego haga clic en el botón de puntos suspensivos **(...)**.  
   
 9. En el cuadro de diálogo **Columnas de índice** , debajo de **Nombre de columna**, seleccione las columnas que desea indizar. Puede seleccionar hasta 16 columnas. Para obtener un rendimiento óptimo, no seleccione más de una o dos columnas por cada índice. Para cada columna que seleccione, puede indicar si el índice organiza los valores de esta columna en orden ascendente o descendente.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "47680493"
   
 3.  Expanda la tabla en la que desea crear un índice único.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices** , seleccione **Nuevo índice**y luego **Índice no agrupado…**  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
 6.  Active la casilla **Único** .  
   
-7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
+7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
 8.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active las casillas de las columnas de tabla que se van a agregar al índice único.  
   

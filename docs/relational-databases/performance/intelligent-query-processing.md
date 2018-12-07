@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660957"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403930"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ La familia de características de **procesamiento de consultas inteligente** inc
 ![Características de procesamiento de consultas inteligentes](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Procesamiento de consultas adaptable
-La familia de características de procesamiento de consultas adaptable incluye mejoras en el procesamiento de consultas que adaptan las estrategias de optimización a las condiciones de tiempo de ejecución de la carga de trabajo de la aplicación. Estas mejoras incluyen combinaciones adaptables del modo de proceso por lotes, comentarios de concesión de memoria y la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones.
+La familia de características de procesamiento de consultas adaptable incluye mejoras en el procesamiento de consultas que adaptan las estrategias de optimización a las condiciones de tiempo de ejecución de la carga de trabajo de la aplicación. Estas mejoras incluyen: 
+-  Combinaciones adaptables de modo de proceso por lotes
+-  Comentarios de concesión de memoria
+-  Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones (MSTVF)
 
 ### <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables de modo de proceso por lotes
 Esta característica permite cambiar su plan de forma dinámica a una mejor estrategia de combinación durante la ejecución mediante un único plan almacenado en caché.
+
+Para obtener más información sobre las combinaciones adaptables de modo de proceso por lotes, vea [Procesamiento de consultas adaptable en bases de datos SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>Comentarios de concesión de memoria del modo de fila y el modo de proceso por lotes
 > [!NOTE]
@@ -40,10 +45,12 @@ Esta característica permite cambiar su plan de forma dinámica a una mejor estr
 
 Esta característica recalcula la memoria real necesaria para una consulta y actualiza el valor de la concesión del plan almacenado en caché, con lo que se reducen las concesiones de memoria excesivas que afectan a la simultaneidad y se corrigen concesiones de memoria subestimadas que provocan desbordamientos costosos en el disco.
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones (MSTVF)
-Con la ejecución intercalada se usan los recuentos de filas reales de la función para tomar decisiones fundamentadas sobre los planes de consulta descendentes. 
+Para obtener más información sobre los comentarios de concesión de memoria, vea [Procesamiento de consultas adaptable en bases de datos SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
-Para más información, consulte [Procesamiento de consultas adaptable en bases de datos SQL](../../relational-databases/performance/adaptive-query-processing.md).
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones (MSTVF)
+Con la ejecución intercalada se usan los recuentos de filas reales de la función para tomar decisiones fundamentadas sobre los planes de consulta descendentes. Para obtener más información sobre las funciones con valores de tabla de múltiples instrucciones, vea [ Funciones con valores de tabla](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+Para obtener más información sobre la ejecución intercalada, vea [Procesamiento de consultas adaptable en bases de datos SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ## <a name="table-variable-deferred-compilation"></a>Compilación diferida de variables de tabla
 > [!NOTE]
@@ -59,7 +66,7 @@ Para obtener más información, consulte [Compilación diferida de variables de 
 > [!NOTE]
 > Inserción de UDF escalar es una característica de versión preliminar pública.  
 
-La inserción de UDF escalar transforma automáticamente funciones definidas por el usuario (UDF) escalares en expresiones relacionales y las inserta en la consulta SQL de llamada, lo que mejora el rendimiento de las cargas de trabajo que aprovechan las UDF escalares. La inserción de UDF escalar facilita la optimización basada en costos de las operaciones dentro de las UDF, y da como resultado planes eficaces paralelos y orientados a conjuntos en lugar de planes de ejecución ineficaces, iterativos y en serie. Esta característica está habilitada de forma predeterminada en el nivel de compatibilidad de base de datos 150.
+La inserción de UDF escalar transforma automáticamente [funciones definidas por el usuario (UDF) escalares](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) en expresiones relacionales y las inserta en la consulta SQL de llamada, lo que mejora el rendimiento de las cargas de trabajo que aprovechan las UDF escalares. La inserción de UDF escalar facilita la optimización basada en costos de las operaciones dentro de las UDF, y da como resultado planes eficaces paralelos y orientados a conjuntos en lugar de planes de ejecución ineficaces, iterativos y en serie. Esta característica está habilitada de forma predeterminada en el nivel de compatibilidad de base de datos 150.
 
 Para obtener más información, vea [Scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions) (Inserción de UDF escalar).
 
@@ -76,9 +83,9 @@ Para más información, consulte [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-
 > El modo de proceso por lotes en el almacén de filas es una característica en vista previa pública.  
 
 ### <a name="background"></a>Información previa
-SQL Server 2012 introdujo una nueva característica para acelerar las cargas de trabajo de análisis: los índices de almacén de columnas. Hemos ampliado los casos de uso y mejorado el rendimiento de los índices de almacén de columnas en las versiones posteriores. Hasta ahora, hemos mostrado y documentado todas estas funciones como una sola característica: el usuario crea índices de almacén de columnas en las tablas y la carga de trabajo analítica "simplemente va más rápido". En segundo plano, sin embargo, hay dos conjuntos diferentes de tecnologías, aunque guardan relación:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introdujo una nueva característica para acelerar las cargas de trabajo de análisis: los índices de almacén de columnas. Hemos ampliado los casos de uso y mejorado el rendimiento de los índices de almacén de columnas en las versiones posteriores. Hasta ahora, hemos mostrado y documentado todas estas funciones como una sola característica: el usuario crea índices de almacén de columnas en las tablas y la carga de trabajo analítica "simplemente va más rápido". En segundo plano, sin embargo, hay dos conjuntos diferentes de tecnologías, aunque guardan relación:
 - Los índices de **almacén de columnas** permiten a las consultas analíticas tener acceso solo a los datos de las columnas que necesitan. El formato de almacén de columnas también hace posible una compresión mucho más eficaz que la que se obtiene con la compresión de página en los índices de "almacén de filas" tradicionales. 
-- El proceso en **modo por lotes** permite a los operadores de consulta procesar los datos más eficazmente al trabajar con todo un lote de filas a la vez, en lugar de con las filas de una en una. Hay más mejoras de escalabilidad relacionadas con el proceso en modo por lotes.
+- El proceso en **modo por lotes** permite a los operadores de consulta procesar los datos más eficazmente al trabajar con todo un lote de filas a la vez, en lugar de con las filas de una en una. Hay más mejoras de escalabilidad relacionadas con el proceso en modo por lotes. Para obtener más información sobre el modo por lotes, vea [Modos de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 Los dos conjuntos de características funcionan conjuntamente para mejorar la utilización de E/S y CPU:
 - Gracias a los índices de almacén de columnas caben más datos en la memoria y, por tanto, se requiere menos E/S.
@@ -106,7 +113,7 @@ Incluso si una consulta no implica ninguna tabla con un índice de almacén de c
 1.  Una comprobación inicial de tamaños de tablas, operadores utilizados y cardinalidades estimadas en la consulta de entrada.
 2.  Puntos de control adicionales, a medida que el optimizador detecta planes nuevos y más baratos para la consulta. Si estos planes alternativos no hacen un uso considerable del modo de proceso por lotes, el optimizador dejará explorar alternativas al modo por lotes.
 
-Si se usa el modo de proceso por lotes en el almacén de filas, en el plan de ejecución de la consulta verá el modo de ejecución real como el "modo por lotes" utilizado por el operador de exploración para montones en disco e índices de árbol B.  Esta exploración del modo por lotes puede evaluar los filtros de mapa de bits del modo por lotes.  También es posible que vea otros operadores de modo por lotes en el plan, como las combinaciones hash, los agregados basados en hash, ordenaciones, agregados de ventana, filtros, concatenaciones y operadores Compute Scalar.
+Si se usa el modo de proceso por lotes en el almacén de filas, en el plan de ejecución de la consulta verá el modo de ejecución real como el “modo por lotes” utilizado por el operador de exploración para montones en disco e índices de árbol B.  Esta exploración del modo por lotes puede evaluar los filtros de mapa de bits del modo por lotes.  También es posible que vea otros operadores de modo por lotes en el plan, como las combinaciones hash, los agregados basados en hash, ordenaciones, agregados de ventana, filtros, concatenaciones y operadores Compute Scalar.
 
 ### <a name="remarks"></a>Notas
 1.  No existe ninguna garantía de que los planes de consulta usen el modo por lotes. El optimizador de consultas puede decidir que el modo por lotes no es beneficioso para la consulta. 
@@ -117,6 +124,7 @@ Si se usa el modo de proceso por lotes en el almacén de filas, en el plan de ej
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>Configuración del modo de proceso por lotes en el almacén de filas
 La configuración de la base de datos de ámbito BATCH_MODE_ON_ROWSTORE está activada de forma predeterminada y puede usarse para deshabilitar el modo por lotes en el almacén de filas sin necesidad de un cambio en el nivel de compatibilidad de base de datos:
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 Puede deshabilitar el modo por lotes en el almacén de filas a través de la configuración de ámbito de base de datos, pero seguirá invalidando la configuración en el nivel de consulta mediante la sugerencia de consulta ALLOW_BATCH_MODE. El ejemplo siguiente habilita el modo por lotes en el almacén de filas incluso con la característica deshabilitada a través de la configuración de ámbito de base de datos:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 También puede deshabilitar el modo por lotes en el almacén de filas para una consulta específica mediante el uso de la sugerencia de consulta DISALLOW_BATCH_MODE. Por ejemplo:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

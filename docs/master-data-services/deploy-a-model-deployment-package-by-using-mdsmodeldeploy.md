@@ -12,12 +12,12 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d20108ae2fd1c8060627ae09b150e2b1bab9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398219"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implementar un paquete de implementación de modelo mediante MDSModelDeploy
 
@@ -43,7 +43,7 @@ ms.locfileid: "47656773"
   
 -   Debe ser administrador en el entorno donde va a implementar el modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Si va a actualizar un modelo con datos, la versión que vaya a implementar no puede tener los valores **Bloqueado** o **Confirmado**.  
+-   Si va a actualizar un modelo con datos, la versión que se va a implementar no puede tener los valores **Bloqueado** o **Confirmado**.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>Para implementar un paquete de implementación de modelos  
   
@@ -94,7 +94,7 @@ ms.locfileid: "47656773"
   
      Donde *PackageName* es el nombre del archivo de paquete (.pkg), *ModelName* es el nombre del nuevo modelo, *VersionName* es el nombre de la versión y *ServiceName* es el nombre del servicio devuelto en el paso anterior. Asegúrese de que los nombres del modelo y de la versión se correspondan exactamente con los nombres con distinción de mayúsculas y minúsculas.  
   
-6.  Cuando el paquete se implementa correctamente, se muestra un mensaje que indica que “la operación de MDSModelDeploy se completó correctamente”.  
+6.  Cuando el paquete se implementa correctamente, se muestra un mensaje que indica que "la operación de MDSModelDeploy se completó correctamente".  
   
  **Notas:**  
   

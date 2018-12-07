@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ed4c6eb7a61f28b22a349f2ef2511cba382a3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94dba56cee823d5e8df68244b4d8d44fee5c98a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730863"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529769"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Resaltar datos en el gráfico agregando franjas (Generador de informes y SSRS)
   Las franjas son intervalos horizontales o verticales que sombrean el fondo del gráfico a intervalos regulares o personalizados. Puede usar las franjas para:  
@@ -47,7 +47,7 @@ ms.locfileid: "47730863"
   
      En la ventana de propiedades se muestran las propiedades del eje.  
   
-2.  En la sección **Apariencia** del panel de propiedades, para la propiedad StripLines, haga clic en el botón para editar colecciones (…) con el objeto de abrir el **Editor de la colección ChartStripLine**.  
+2.  En la sección **Apariencia** del panel de propiedades, para la propiedad StripLines, haga clic en el botón para editar colecciones (...) con el fin de abrir el **Editor de la colección ChartStripLine**.  
   
 3.  Haga clic en **Agregar** para agregar una nueva franja a la colección.  
   

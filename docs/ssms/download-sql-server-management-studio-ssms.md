@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d36dd71c7b67b079f2a87ca2875412a38f14aa93
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: efc8c7ec6408e2f6c5fe7fb2262d581e82c4b1b9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699452"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712086"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,29 @@ Use SQL Server Management Studio (SSMS) para consultar, diseñar y administrar b
 
 **SSMS es gratuito.**
 
-**[SSMS 18.0 versión preliminar pública 5 ya está disponible](#ssms-180-preview-5) y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].**
+**[SSMS 18.0 versión preliminar pública 5 ya está disponible](#ssms-180-preview-5), y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ssms-179-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 es la versión actual de disponibilidad General (GA) de SSMS
+## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 es la versión actual de disponibilidad General (GA) de SSMS
 
-**[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
-<br>**[![descargar](../ssdt/media/download.png) Descargar el paquete de actualización de SQL Server Management Studio 17.9 (actualización de la versión 17.x a la 17.9)](https://go.microsoft.com/fwlink/?linkid=2014215)**
+**[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)**
+<br>**[![descargar](../ssdt/media/download.png) Descargar el paquete de actualización de SQL Server Management Studio 17.9.1 (actualización de la versión 17.x a la 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)**
 
-### <a name="available-languages-ssms-179"></a>Idiomas disponibles (SSMS 17.9)
+**Información de versión**
 
-[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+- Número de versión: 17.9.1<br>
+- Número de compilación: 14.0.17289.0<br>
+- Fecha de publicación: 21 de noviembre de 2018
 
-Para más información sobre SSMS 17.9, vea el [registro de cambios de SSMS 17.9](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
+### <a name="available-languages-ssms-1791"></a>Idiomas disponibles (SSMS 17.9.1)
 
-## <a name="ssms-installation-tips-and-issues-ssms-179"></a>Problemas y sugerencias de instalación de SSMS (SSMS 17.9)
+> [!NOTE]
+> Las versiones localizadas de SSMS 17.x en idiomas diferentes al inglés requieren el [paquete de actualización de seguridad KB 2862966](https://support.microsoft.com/kb/2862966) cuando se instalan en: Windows 8, Windows 7, Windows Server 2012 y Windows Server 2008 R2.
+
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+Para obtener más información sobre SSMS 17.9.1, vea el [registro de cambios de SSMS 17.9.1](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release).
+
+## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>Problemas y sugerencias de instalación de SSMS (SSMS 17.9.1)
 
 ### <a name="minimize-installation-reboots"></a>Minimizar los reinicios de instalación
 
@@ -69,7 +78,7 @@ Para más información sobre SSMS 17.9, vea el [registro de cambios de SSMS 17.9
 
 ## <a name="ssms-180-preview-5"></a>SSMS 18.0 (versión preliminar 5)
 
-**SSMS 18.0 versión preliminar pública 5 ya está disponible y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].**
+**SSMS 18.0 versión preliminar pública 5 ya está disponible y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 **[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 18.0 (versión preliminar 5)](https://go.microsoft.com/fwlink/?linkid=2041155)**
 
@@ -111,7 +120,7 @@ Para más detalles sobre las novedades de esta versión, vea el [registro de cam
 
 ## <a name="supported-sql-offerings-ssms-180-preview-5"></a>Ofertas de SQL admitidas (SSMS 18.0 versión preliminar 5)
 
-* Esta versión de SSMS funciona con todas las [versiones compatibles de SQL Server 2008 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) y proporciona el mayor nivel de compatibilidad para trabajar con las últimas características de nube en Azure SQL Database y en Azure SQL Data Warehouse.
+* Esta versión de SSMS funciona con todas las [versiones compatibles de SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) y proporciona el mayor nivel de compatibilidad para trabajar con las últimas características de nube en Azure SQL Database y en Azure SQL Data Warehouse.
 * Además, SSMS 18.x puede instalarse en paralelo con SSMS 17.x, SSMS 16.x o SQL Server 2014 SSMS y versiones anteriores.
 * SQL Server Integration Services (SSIS) - SSMS versión 17.x o versiones posteriores no admite la conexión con el servicio heredado de SQL Server Integration Services. Para conectarse a una versión anterior del servicio heredado de Integration Services, use la versión de SSMS alineada con la versión de SQL Server. Por ejemplo, use SSMS 16.x para conectar con el servicio heredado de SQL Server 2016 Integration Services. SSMS 17.x y SSMS 16.x pueden instalarse en paralelo en el mismo equipo. Desde el lanzamiento de SQL Server 2012, la base de datos del catálogo de SSIS (SSISDB) es la manera recomendada de almacenar, administrar, ejecutar y supervisar los paquetes de Integration Services. Para más información, vea [Catálogo de SSIS](../integration-services/catalog/ssis-catalog.md).
 

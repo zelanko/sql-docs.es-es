@@ -11,12 +11,12 @@ ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732833"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526064"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Cómo: Esquematizar y agregar fragmentos de código a script Transact-SQL
 SQL Server Data Tools incluye una biblioteca de código formada por fragmentos de código que están listos para insertarse en la aplicación. Cada fragmento de código realiza una tarea de script completa como la creación de una función, tabla, desencadenador, índice, vista, tipo de datos definido por el usuario, etc. Bastan unos pocos clics del mouse para insertar un fragmento de código en el código fuente. Estos fragmentos de código aumentan la productividad al reducir el tiempo dedicado a escribir.  
@@ -42,7 +42,7 @@ De forma predeterminada, todo el texto se muestra en el Editor de Transact\-SQL,
   
 ### <a name="to-outline-code"></a>Para esquematizar código  
   
-1.  Observe el signo **–** situado junto a la instrucción CREATE TABLE. Haga clic en el signo **-** situado junto a una sección del script para ocultarla.  
+1.  Observe el signo **-** situado junto a la instrucción CREATE TABLE. Haga clic en el signo **-** situado junto a una sección del script para ocultarla.  
   
 2.  Haga clic con el botón secundario en el Editor de Transact\-SQL y seleccione **Esquematización**; después, seleccione **Detener esquematización** para quitar la información de esquema sin afectar al código subyacente del editor.  
   

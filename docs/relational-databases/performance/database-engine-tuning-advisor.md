@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085261"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302698"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085261"
 -   Administrar el espacio de almacenamiento  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>Ventajas del Asistente para la optimización de motor de base de datos  
- La optimización del rendimiento de las consultas puede ser difícil sin un conocimiento completo de la estructura de la base de datos y de las consultas que se ejecutan en ella. El Asistente para la optimización de motor de base de datos puede facilitar esta tarea mediante el análisis de la memoria caché de plan de consulta actual o de la carga de trabajo de las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que crea, y con la recomendación de un diseño físico adecuado. Para administradores de bases de datos más avanzadas, DTA expone un mecanismo eficaz para realizar análisis condicionales de exploración de diferentes alternativas de diseño físico. DTA puede proporcionar la siguiente información.  
+ La optimización del rendimiento de las consultas puede ser difícil sin un conocimiento completo de la estructura de la base de datos y de las consultas que se ejecutan en ella. El **Asistente para la optimización de motor de base de datos (DTA)** puede facilitar esta tarea mediante el análisis de la caché del plan de consulta actual o de la carga de trabajo de las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que crea, y con la recomendación de un diseño físico adecuado. Para administradores de bases de datos más avanzadas, DTA expone un mecanismo eficaz para realizar análisis condicionales de exploración de diferentes alternativas de diseño físico. DTA puede proporcionar la siguiente información.  
   
 -   Recomendar la mejor combinación de índices de [almacén de filas](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) y de columnas para las bases de datos mediante el uso del optimizador de consultas para analizar las consultas de una carga de trabajo.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085261"
 
 -   Considerar alternativas en las que se ofrezcan posibles opciones de diseño en forma de configuraciones hipotéticas para que el Asistente para la optimización de motor de base de datos pueda evaluarlas.
 
--  Ajuste las cargas de trabajo de una variedad de orígenes como Almacén de consultas de SQL Server, Caché del plan, archivos o tablas de Archivos de seguimiento de SQL Server o un archivo .SQL.
+-   Ajuste las cargas de trabajo de una variedad de orígenes como Almacén de consultas de SQL Server, Caché del plan, archivos o tablas de Archivos de seguimiento de SQL Server o un archivo .SQL.
 
   
- El Asistente para la optimización de motor de base de datos está diseñado para controlar los siguientes tipos de cargas de trabajo de consulta.  
+El Asistente para la optimización de motor de base de datos está diseñado para controlar los siguientes tipos de cargas de trabajo de consulta:  
   
 -   Solo consultas de proceso de transacciones en línea (OLTP)  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085261"
 -   Cargas de trabajo con muchas actualizaciones (más modificaciones de datos que consultas)  
   
 ## <a name="dta-components-and-concepts"></a>Componentes y conceptos de DTA  
- Interfaz gráfica de usuario del Asistente para la optimización de motor de base de datos  
+ **Interfaz gráfica de usuario del Asistente para la optimización de motor de base de datos**  
  Una interfaz fácil de usar en la que puede especificar la carga de trabajo y seleccionar otras opciones de optimización.  
   
  **dta** (utilidad)  
  Versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
   
- carga de trabajo  
+ **carga de trabajo**  
  Archivo de script Transact-SQL, archivo de seguimiento o tabla de seguimiento que contenga una carga de trabajo representativa para las bases de datos que desea optimizar. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede especificar la memoria caché del plan como carga de trabajo.  A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede [especificar el Almacén de datos de consultas como carga de trabajo](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
- Archivo de entrada XML  
- Archivo con formato XML que el Asistente para la optimización de motor de base de datos puede usar para optimizar las cargas de trabajo. El archivo de entrada XML admite las opciones avanzadas de optimización que no están disponibles en la GUI ni en la utilidad **dta** .  
+ **Archivo de entrada XML**  
+ Un archivo con formato XML que el Asistente para la optimización de motor de base de datos puede usar para optimizar las cargas de trabajo. El archivo de entrada XML admite las opciones avanzadas de optimización que no están disponibles en la GUI ni en la utilidad **dta** .  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  El Asistente para la optimización de motor de base de datos tiene las siguientes limitaciones y restricciones.  
   
--   No puede agregar o quitar índices únicos o índices que aplican restricciones PRIMARY KEY o UNIQUE.  
+-   No puede agregar o quitar índices únicos o índices que aplican restricciones `PRIMARY KEY` o `UNIQUE`.  
   
 -   No puede analizar una base de datos que esté configurada en modo de usuario único.  
   

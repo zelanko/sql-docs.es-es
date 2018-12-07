@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbterms.f1
@@ -17,12 +16,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 500508952a99d773b0349bb930dc04e5abfb8701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07db48d0c1dbac3d071dc1574295c9c471cfabb4
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738033"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617835"
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
 
@@ -32,7 +31,7 @@ ms.locfileid: "47738033"
   
  La detección de conocimiento es un proceso asistido por PC que consta de tres pasos que deben completarse obligatoriamente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Es necesario tener instalado Microsoft Excel en el equipo de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si los datos de origen en los que se ejecuta la detección están en un archivo de Excel. De lo contrario, no podrá seleccionar dicho archivo en la fase de asignación. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Si se utiliza la versión de 64 bits de Excel, solo se admitirán los archivos de Excel 2003 (.xls); los archivos de Excel 2007 o 2010 (.xlsx) no son compatibles. Si utiliza la versión de 64 bits de Excel 2007 o 2010, guarde el archivo como un archivo .xls o .csv, o instale una versión de 32 bits de Excel en su lugar.  
@@ -153,15 +152,15 @@ ms.locfileid: "47738033"
   
 2.  Busque las correcciones que haya propuesto Data Quality Services; para ello, establezca **Filtro** en **Error**. Compruebe que el valor es realmente erróneo y que el valor de la columna **Corregir a** es el apropiado.  
   
-3.  Establezca **Filtro** en **Todos los valores** y compruebe que el estado de los valores es el adecuado. Para cambiar el estado de un valor, seleccione este y haga clic en el botón **Establecer como corregidos los valores de dominio seleccionados** (marca de comprobación), **Establecer como errores los valores de dominio seleccionados** (cruz) o **Establecer como no válidos los valores de dominio seleccionados** (triángulo).  
+3.  Establezca **Filtro** en **Todos los valores** y compruebe que el estado de los valores es el adecuado. Para cambiar el estado de un valor, selecciónelo y haga clic en el botón **Establecer como corregidos los valores de dominio seleccionados** (marca de comprobación), **Establecer como errores los valores de dominio seleccionados** (cruz) o **Establecer como no válidos los valores de dominio seleccionados** (triángulo).  
   
-4.  Para cambiar el estado de un valor, haga lo siguiente:  
+4.  Para cambiar el estado de un valor, siga estos pasos:  
   
-    1.  **Establecer como corregidos los valores de dominio seleccionados**: para cambiar el estado de un valor de Error o No válido a Correcto, seleccione el valor y, a continuación, haga clic en el icono **Establecer como corregidos los valores de dominio seleccionados** (marca de comprobación) en la flecha hacia abajo de la barra de iconos o en la lista desplegable Tipo. Si el valor erróneo o no válido está agrupado con un valor correcto, elimine ese valor después de la operación.  
+    1.  **Establecer como corregidos los valores de dominio seleccionados**: para cambiar el estado de un valor de Error o No válido a Correcto, seleccione el valor y, después, haga clic en el icono **Establecer como corregidos los valores de dominio seleccionados** (marca de comprobación) desde la flecha hacia abajo de la barra de iconos o en la lista desplegable Tipo. Si el valor erróneo o no válido está agrupado con un valor correcto, elimine ese valor después de la operación.  
   
-    2.  **Establecer como errores los valores de dominio seleccionados**: para cambiar el estado de un valor de Correcto o No válido a Error, seleccione el valor y, a continuación, haga clic en el icono **Establecer como errores los valores de dominio seleccionados** (cruz) en la flecha hacia abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
+    2.  **Establecer como errores los valores de dominio seleccionados**: para cambiar el estado de un valor de Correcto o No válido a Error, seleccione el valor y, después, haga clic en el icono **Establecer como errores los valores de dominio seleccionados** (cruz) desde la flecha hacia abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
   
-    3.  **Establecer como no válidos los valores de dominio seleccionados**: para cambiar el estado de un valor de Correcto o Error a No válido, seleccione el valor y, a continuación, haga clic en el icono **Establecer como no válidos los valores de dominio seleccionados** (triángulo) en la flecha hacia abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
+    3.  **Establecer como no válidos los valores de dominio seleccionados**: para cambiar el estado de un valor de Correcto o Error a No válido, seleccione el valor y, después, haga clic en el icono **Establecer como no válidos los valores de dominio seleccionados** (triángulo) en la flecha hacia abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
   
     4.  **Corregir a**: después de establecer un valor como erróneo o no válido, escriba un nuevo valor en la columna **Corregir a** . DQS agregará una nueva fila para el valor de reemplazo, lo designará como correcto y, a continuación, agrupará los dos valores. El nuevo valor se mostrará como el valor inicial, con el valor inicial en negrita y el valor erróneo o no válido con una sangría aplicada.  
   
@@ -201,7 +200,7 @@ ms.locfileid: "47738033"
   
     -   **Cancelar** para terminar la actividad Detección de conocimiento, perder los cambios realizados y volver a la página de inicio de DQS.  
   
-    -   **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. La base de conocimiento se bloqueará, y su estado en la tabla de bases de conocimiento de la pantalla **Abrir base de conocimiento** será **Detección – Administración de valores**.  
+    -   **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. La base de conocimiento se bloqueará, y su estado en la tabla de bases de conocimiento de la pantalla **Abrir base de conocimiento** será **Detección - Administración de valores**.  
   
     -   Haga clic en **Atrás** para volver a la página **Detectar** . Para realizar la actividad Administración de dominios, después de hacer clic en **Cerrar**, tendría que hacer clic en **Detección de conocimiento** en la pantalla **Abrir base de conocimiento** , continuar en la pantalla **Administración de la base de conocimiento: administrar términos del dominio** , hacer clic en **Finalizar**y, por último, hacer clic en **Sí** para publicar la base de conocimiento o en **No** para guardar el trabajo en la base de conocimiento y salir.  
   
@@ -211,11 +210,11 @@ ms.locfileid: "47738033"
 ##  <a name="Meaning"></a> El significado de los valores Correcto, Error y No válido  
  A cada valor de la tabla **Valor** de la página **Valores del dominio** se le asigna un **Tipo** : **Correcto**, **Error**o **No válido**. La actividad de detección de conocimiento es la que genera inicialmente el tipo del valor, y puede cambiarlo de acuerdo con sus necesidades. La actividad de limpieza es la que genera el tipo final, en función de los cambios interactivos y de detección. Estos valores tienen los significados siguientes:  
   
--   **Correcto:** es un valor que pertenece al dominio y no tiene ningún error de sintaxis. Por ejemplo, “Chicago” en un dominio City es un valor correcto.  
+-   **Correcto:** es un valor que pertenece al dominio y no tiene ningún error de sintaxis. Por ejemplo, "Chicago" en un dominio City es un valor correcto.  
   
--   **Error:** es un valor que pertenece al dominio, pero es incorrecto. Por ejemplo, “Shicago” en lugar de “Chicago” en un dominio City es un valor erróneo. DQS designa un valor como erróneo si detecta un error de sintaxis y una corrección asociada en el proceso de detección. Los errores de sintaxis incluyen los errores de ortografía.  
+-   **Error:** es un valor que pertenece al dominio, pero es incorrecto. Por ejemplo, "Shicago" en lugar de "Chicago" en un dominio City es un valor erróneo. DQS designa un valor como erróneo si detecta un error de sintaxis y una corrección asociada en el proceso de detección. Los errores de sintaxis incluyen los errores de ortografía.  
   
--   **No válido:** es un valor que no pertenece al dominio y que no tiene una corrección. Por ejemplo, el valor “12345" en un dominio City es un valor no válido. DQS designa un valor como no válido cuando no cumple una regla de dominio.  
+-   **No válido:** es un valor que no pertenece al dominio y que no tiene una corrección. Por ejemplo, el valor "12345" en un dominio City es un valor no válido. DQS designa un valor como no válido cuando no cumple una regla de dominio.  
   
  Puede cambiar manualmente el tipo de un valor a cualquiera de los otros dos valores. DQS no aplica la semántica de errores y de validez en las operaciones manuales. Puede especificar una corrección para un valor no válido sin cambiar su estado. Puede designar un valor como no válido aunque haya cumplido las reglas de dominio. Puede designar un valor como erróneo aunque el proceso de detección no haya indicado que tiene un error de sintaxis. También puede quitar una corrección de un valor de error, que está marcado como correcto, sin cambiar su estado.  
   

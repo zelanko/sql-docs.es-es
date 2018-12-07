@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703483"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302565"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
@@ -32,14 +32,17 @@ En esta lección se supone que completó la lección 1 y la lección 2, y que el
   
 ## <a name="define-a-description"></a>Definir una descripción  
 1.  Escriba **Entrega de pedido de ventas** en la descripción.
+
 ## <a name="type"></a>Escriba
 1.  Haga clic en **Suscripción controlada por datos**.  
+
 ## <a name="schedule"></a>Programación
 1. En la sección de programación, haga clic en **Programación específica del informe**.
 2. Haga clic en **Editar programación**.
 3.  En **Detalles de programación**, haga clic en **Una vez**.  
 4.  Especifique una hora de inicio que sea unos cuantos minutos después de la hora actual.  
 5.  Haga clic en **Aplicar**.
+
 ## <a name="destination"></a>Destino  
 1.  En la sección Destino, seleccione **Recurso compartido de archivos de Windows** para el método de entrega.  
 
@@ -53,22 +56,24 @@ En esta lección se supone que completó la lección 1 y la lección 2, y que el
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>Credenciales
- 1. Seleccione **Usar las siguientes credenciales**.
- 2. Seleccione **Nombre de usuario y contraseña de Windows**.
- 3.  En **Nombre de usuario** y **Contraseña**, escriba el nombre de usuario y la contraseña del dominio. Incluya tanto el dominio como la cuenta de usuario al especificar **Nombre de usuario**.
-     > [!NOTE]  
+## <a name="credentials"></a>Credenciales
+1. Seleccione **Usar las siguientes credenciales**.
+2. Seleccione **Nombre de usuario y contraseña de Windows**.
+3.  En **Nombre de usuario** y **Contraseña**, escriba el nombre de usuario y la contraseña del dominio. Incluya tanto el dominio como la cuenta de usuario al especificar **Nombre de usuario**.
+    > [!NOTE]  
     > Las credenciales usadas para conectarse a un origen de datos de suscriptor no se devuelven a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Si modifica la suscripción más adelante, deberá volver a escribir la contraseña utilizada para conectarse al origen de datos.
+
 ## <a name="query"></a>Consulta      
 1.  En el cuadro de consultas, escriba la consulta siguiente:  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  Especifique un tiempo de espera de 30 segundos.  
   
 3.  Haga clic en **Validar consulta**y luego en **Aplicar**.
+
 ## <a name="delivery-options"></a>Opciones de entrega
 Rellene los siguientes valores:
 

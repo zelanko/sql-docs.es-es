@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522925"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps (Pasos de instalación de Administración extensible de claves de SQL Server TDE mediante Azure Key Vault)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
 4.  **Conceder permiso para que la entidad de servicio de Azure Active Directory acceda al Almacén de claves**  
   
      Puede autorizar a otros usuarios y aplicaciones a usar el Almacén de claves.   
-    En este caso, vamos a usar la entidad de servicio de Azure Active Directory que creó en la Parte I para autorizar la instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    En este caso, se va a usar la entidad de servicio de Azure Active Directory que se creó en la Parte I para autorizar la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     > [!IMPORTANT]  
     >  La entidad de servicio de Azure Active Directory debe tener al menos los permisos `get`, `wrapKey` y `unwrapKey` para el almacén de claves.  
@@ -160,7 +160,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Llame al cmdlet `Get-AzureRmKeyVault` para confirmar los permisos. En el resultado de la instrucción en "Directivas de acceso", debería aparecer el nombre de la aplicación de AAD como otro inquilino con acceso a este Almacén de claves.  
+     Llame al cmdlet `Get-AzureRmKeyVault` para confirmar los permisos. En el resultado de la instrucción en "Directivas de acceso", debería aparecer el nombre de la aplicación de AAD como otro inquilino con acceso a este almacén de claves.  
   
        
 5.  **Generar una clave asimétrica en el Almacén de claves**  
@@ -190,16 +190,16 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
     -   **Protegida por HSM:** creada y protegida por un módulo de seguridad de hardware (HSM) para disponer de seguridad adicional. El precio es de aproximadamente 1 USD por versión de clave.  
   
         > [!IMPORTANT]  
-        >  El Conector de SQL Server requiere que el nombre de clave solo use los caracteres “a-z”, “A-Z”, “0-9” y “-“, con un límite de 26 caracteres.   
-        > No funcionará el uso de diferentes versiones de claves bajo el mismo nombre de clave en el Almacén de claves de Azure con el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para sustituir una clave del Almacén de claves de Azure que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]usa, vea los pasos para sustituir una clave descritos en [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)(Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;).  
+        >  El Conector de SQL Server requiere que en el nombre de clave solo se usen los caracteres "a-z", "A-Z", "0-9" y "-", con un límite de 26 caracteres.   
+        > No funcionará el uso de diferentes versiones de claves bajo el mismo nombre de clave en el Almacén de claves de Azure con el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para sustituir una clave de Azure Key Vault que usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea los pasos de la sección Sustitución incremental de claves en [Mantenimiento y solución de problemas del conector de SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### <a name="import-an-existing-key"></a>Importar una clave existente   
   
     Si dispone de una clave protegida mediante software RSA de 2048 bits existente, puede cargar la clave a Azure Key Vault. Por ejemplo, si guardó un archivo .PFX en la unidad `C:\\` en un archivo denominado `softkey.pfx` que desea cargar a Azure Key Vault, escriba lo siguiente para establecer la variable `securepfxpwd` para una contraseña de `12987553` para el archivo .PFX:  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     Después puede escribir lo siguiente para importar la clave desde el archivo .PFX, que protege la clave mediante software en el servicio de Key Vault (opción recomendada):  
@@ -215,7 +215,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
 
     ### <a name="create-a-new-key"></a>Crear una clave nueva
     #### <a name="example"></a>Ejemplo:  
-    Como alternativa, puede crear una clave de cifrado directamente en Azure Key Vault y protegerla por software o por HSM.  En este ejemplo crearemos una clave protegida por software con `Add-AzureKeyVaultKey cmdlet`:  
+    Como alternativa, puede crear una clave de cifrado directamente en Azure Key Vault y protegerla por software o por HSM.  En este ejemplo se va a crear una clave protegida por software mediante `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -242,7 +242,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
  Descargue el conector de SQL Server desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700). (Esto debe hacerlo el administrador del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
 
 > [!NOTE]  
->  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) .
+>  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).
 
 > [!NOTE]  
 > Hay un cambio importante en la versión 1.0.5.0, relacionado con el algoritmo de huella digital. Puede experimentar un error de restauración de base de datos después de actualizar a la versión 1.0.5.0. Consulte el artículo de KB [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).

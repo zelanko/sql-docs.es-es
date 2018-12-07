@@ -5,19 +5,18 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 704af229a0d61238ebd4bae9c306fec17c35816a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655373"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616696"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizar el corrector ortográfico de DQS
 
@@ -33,7 +32,7 @@ ms.locfileid: "47655373"
   
  El corrector ortográfico solo funciona en dominios individuales con un tipo de datos de cadena. Todos los valores de un dominio individual del tipo de datos de cadena se envían al corrector ortográfico para su validación. El corrector ortográfico no funciona en los dominios compuestos, ni tampoco en aquellos con tipos distintos al de cadena, ni con valores mixtos (como letras y números sin espacio), numerales romanos, caracteres individuales y valores que constan únicamente de letras mayúsculas.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para ejecutar el corrector ortográfico, es necesario tener una base de conocimiento y un dominio abiertos en la actividad Detección de conocimiento o Administración de dominios; además, es necesario habilitar el corrector en el dominio y en la página donde se va a ejecutar, así como especificar la propiedad de idioma para el dominio.  
@@ -73,7 +72,7 @@ ms.locfileid: "47655373"
  Una vez ejecutado el corrector ortográfico, complete la actividad en la que se encuentra el dominio para usar las correcciones sugeridas por dicho corrector. Si se encuentra en la actividad Detección de conocimiento, Administración de dominios o Directiva de coincidencia, publique la base de conocimiento para que los resultados del análisis del corrector ortográfico estén disponibles para su uso en ella. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Cómo funciona el corrector ortográfico  
- El corrector ortográfico de DQS marca los posibles errores de valor de cadena con un carácter de subrayado rojo que se muestra en todo el valor. Por ejemplo, si “New York” está escrito incorrectamente como “Neu York”, el corrector ortográfico mostrará un carácter de subrayado rojo debajo de “Neu York”, no solo de “Neu”. Si hace clic con el botón secundario en el valor, verá las correcciones sugeridas para el valor completo. También puede hacer clic en **Más sugerencias** si hay más de cinco sugerencias. Puede elegir una de las sugerencias o agregar un valor al diccionario (en el nivel de cuenta de usuario) que se mostrará para el valor original. Los valores agregados al diccionario se aplican a todos los dominios. La corrección se realizará en el dominio únicamente si se designa explícitamente una sugerencia. Al seleccionar una sugerencia en el menú contextual del corrector ortográfico, el tipo de valor pasará a ser (o permanecerá como) erróneo. La sugerencia seleccionada se agregará a la columna de corrección. Tenga en cuenta que el **Tipo** de un valor puede ser **Correcto** y aun así estar marcado como posible error por el corrector ortográfico.  
+ El corrector ortográfico de DQS marca los posibles errores de valor de cadena con un carácter de subrayado rojo que se muestra en todo el valor. Por ejemplo, si "New York" está escrito incorrectamente como "Neu York", el corrector ortográfico mostrará un subrayado de color rojo debajo de "Neu York", no solo de "Neu". Si hace clic con el botón secundario en el valor, verá las correcciones sugeridas para el valor completo. También puede hacer clic en **Más sugerencias** si hay más de cinco sugerencias. Puede elegir una de las sugerencias o agregar un valor al diccionario (en el nivel de cuenta de usuario) que se mostrará para el valor original. Los valores agregados al diccionario se aplican a todos los dominios. La corrección se realizará en el dominio únicamente si se designa explícitamente una sugerencia. Al seleccionar una sugerencia en el menú contextual del corrector ortográfico, el tipo de valor pasará a ser (o permanecerá como) erróneo. La sugerencia seleccionada se agregará a la columna de corrección. Tenga en cuenta que el **Tipo** de un valor puede ser **Correcto** y aun así estar marcado como posible error por el corrector ortográfico.  
   
  DQS proporcionará las sugerencias para los valores de las columnas **Valor** y **Corregir a** de la tabla **Valor** . Al seleccionar una sugerencia en la columna **Valor** , el tipo de valor se establece en **Error**y la sugerencia se copia en la columna **Corregir a** , como si se hubiera insertado manualmente. Si hubiera una corrección existente, se convertiría en una sugerencia. En la página **Administrar y ver resultados** de la actividad **Limpieza** , al seleccionar una sugerencia en la columna **Corregir a** , DQS reemplazará el valor seleccionado actualmente por la selección, y dicho valor se convertirá en una sugerencia. En la página **Administrar y ver resultados** de la actividad **Limpieza** , no se realizan sugerencias en el nivel de registro (la cuadrícula inferior).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529739"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de informes de Reporting Services (modo de SharePoint)
 
@@ -80,11 +80,11 @@ ms.locfileid: "50029804"
   
 -   La personalización de SharePoint tampoco se admite en las páginas de Reporting Services. La integración del servidor de informes no se admite si la aplicación web de SharePoint está habilitada para el acceso anónimo.  
   
--   SQL Server Reporting Services **no** admite el control de versiones de la biblioteca de documentos de SharePoint. Si guarda los elementos de informe en una biblioteca de documentos configurada con el “Historial de versiones del documento” habilitado, las características de Reporting Services no funcionarán correctamente y generarán errores en el registro de ULS. A continuación se presenta un ejemplo de un error en el registro de ULS:  
+-   SQL Server Reporting Services **no** admite el control de versiones de la biblioteca de documentos de SharePoint. Si guarda los elementos de informe en una biblioteca de documentos configurada con el "Historial de versiones del documento" habilitado, las características de Reporting Services no funcionarán correctamente y generarán errores en el registro de ULS. A continuación se presenta un ejemplo de un error en el registro de ULS:  
   
-    -   “…Se ha deshabilitado un origen de datos asociado al informe”.  
+    -   "... Se ha deshabilitado un origen de datos asociado al informe".  
   
-     El historial de versiones de la biblioteca de documentos se configura en la página “Configuración de versiones” de “Configuración de biblioteca”.  
+     El historial de versiones de la biblioteca de documentos se configura en la página "Configuración de versiones" de "Configuración de biblioteca".  
   
 ## <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a>Combinaciones admitidas del complemento de SharePoint y el servidor de informes
 

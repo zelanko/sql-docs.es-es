@@ -13,12 +13,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e46ce182bbd81ce28939ac9250306fe7ff7cb57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512330"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Agregar una réplica secundaria a un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47615343"
   
 1.  Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal.  
   
-2.  Agregue la nueva réplica secundaria al grupo de disponibilidad utilizando la cláusula de la instrucción ALTER AVAILABILITY GROUP. Las opciones ENDPOINT_URL, AVAILABILITY_MODE y FAILOVER_MODE son necesarias en una cláusula ADD REPLICA ON. Las demás opciones, BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE y SESSION_TIMEOUT, son opcionales. Para obtener más información, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
+2.  Agregue la nueva réplica secundaria al grupo de disponibilidad utilizando la cláusula de la instrucción ALTER AVAILABILITY GROUP. Las opciones ENDPOINT_URL, AVAILABILITY_MODE y FAILOVER_MODE son necesarias en una cláusula ADD REPLICA ON. Las demás opciones (BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE y SESSION_TIMEOUT) son opcionales. Para obtener más información, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
      Por ejemplo, la siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] crea una nueva réplica para un grupo de disponibilidad denominado `MyAG` en la instancia de servidor predeterminada hospedada por `COMPUTER04`, cuya dirección URL del extremo es `TCP://COMPUTER04.Adventure-Works.com:5022'`. Esta réplica admite la conmutación por error manual y el modo de disponibilidad de confirmación asincrónica.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "47615343"
   
 1.  Conéctese a la instancia del servidor que va a hospedar la nueva réplica secundaria.  
   
-2.  Una la nueva réplica secundaria al grupo de disponibilidad. Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+2.  Una la nueva réplica secundaria al grupo de disponibilidad. Para obtener más información, vea [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 3.  Para cada base de datos del grupo de disponibilidad debe crear una base de datos secundaria en la instancia del servidor que hospeda la réplica secundaria. Para obtener más información, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   

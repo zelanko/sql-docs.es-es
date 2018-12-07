@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264905"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393988"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Mecanismos y directrices de los tiempos de espera de concesión, clúster y comprobación de estado 
 
@@ -39,13 +39,13 @@ Si la detección de estado no informa de una actualización a la DLL de recursos
 
 ## <a name="lease-mechanism"></a>Mecanismo de concesión  
 
-A diferencia de otros mecanismos de conmutación por error, la instancia de SQL Server desempeña un rol activo en el mecanismo de concesión. Al volver a poner el grupo de disponibilidad en línea como la réplica principal, la instancia de SQL Server genera un subproceso de trabajo de concesión dedicado para el grupo de disponibilidad. El trabajo de concesión comparte una pequeña región de memoria con el host de recursos que contiene los eventos de renovación de concesión y de detención de concesión. El trabajo de concesión y el host de recursos funcionan de manera circular: primero señalan sus respectivos eventos de renovación de concesión y luego se ponen en espera, aguardando a que la otra parte indique su propio evento de renovación de concesión o evento de detención. Tanto el host de recursos como el subproceso de concesión de SQL Server mantienen un valor de período de vida, que se actualiza cada vez que el subproceso se activa después de ser señalado por el otro subproceso. Si se completa el período de vida mientras se espera la señal, la concesión expira y la réplica cambia al estado de resolución para ese grupo de disponibilidad específico. Si se señala el evento de detención de concesión, la réplica cambia a un rol de resolución. 
+A diferencia de otros mecanismos de conmutación por error, la instancia de SQL Server desempeña un rol activo en el mecanismo de concesión. El mecanismo de concesión se utiliza como una validación “Looks-Alive” entre el host del recurso de clúster y el proceso de SQL Server. El mecanismo se usa para garantizar que los dos lados (el Servicio de clúster y el servicio de SQL Server) están en contacto con frecuencia, comprobando el estado del otro y evitando en última instancia un escenario de cerebro dividido.  Al volver a poner el grupo de disponibilidad en línea como la réplica principal, la instancia de SQL Server genera un subproceso de trabajo de concesión dedicado para el grupo de disponibilidad. El trabajo de concesión comparte una pequeña región de memoria con el host de recursos que contiene los eventos de renovación de concesión y de detención de concesión. El trabajo de concesión y el host de recursos funcionan de manera circular: primero señalan sus respectivos eventos de renovación de concesión y luego se ponen en espera, aguardando a que la otra parte indique su propio evento de renovación de concesión o evento de detención. Tanto el host de recursos como el subproceso de concesión de SQL Server mantienen un valor de período de vida, que se actualiza cada vez que el subproceso se activa después de ser señalado por el otro subproceso. Si se completa el período de vida mientras se espera la señal, la concesión expira y la réplica cambia al estado de resolución para ese grupo de disponibilidad específico. Si se señala el evento de detención de concesión, la réplica cambia a un rol de resolución. 
 
 ![imagen](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 El mecanismo de concesión exige la sincronización entre SQL Server y el clúster de conmutación por error de Windows Server. Cuando se emite un comando de conmutación por error, el servicio de clúster realiza una llamada sin conexión a la DLL de recursos de la réplica principal actual. La DLL de recursos primero intenta tomar el grupo de disponibilidad sin conexión mediante un procedimiento almacenado. Si este procedimiento almacenado produce un error o agota el tiempo de espera, el error se notifica al servicio de clúster, que luego emite un comando de finalización. La finalización intenta volver a ejecutar el mismo procedimiento almacenado, pero esta vez el clúster no espera a que la DLL de recursos notifique el estado correcto o de error antes de poner el grupo de disponibilidad en línea en una nueva réplica. Si se produce un error en esta segunda llamada de procedimiento, el host de recursos tendrá que confiar en este mecanismo de concesión para poner la instancia sin conexión. Cuando se llama a la DLL de recursos para poner el grupo de disponibilidad sin conexión, la DLL de recursos señala el evento de detención de concesión y reactiva el subproceso de trabajo de concesión de SQL Server para poner el grupo de disponibilidad sin conexión. Incluso si no se señala a este evento de detención, la concesión expirará y la réplica cambiará al estado de resolución. 
 
-La concesión es principalmente un mecanismo de sincronización entre la instancia principal y el clúster, pero también puede crear condiciones de error donde no había ninguna necesidad de conmutación por error. Por ejemplo, una elevada presión de la CPU o de tempdb puede privar al subproceso de trabajo de concesión, impidiendo así la renovación de concesión a partir de la instancia de SQL y provocando una conmutación por error. 
+La concesión es principalmente un mecanismo de sincronización entre la instancia principal y el clúster, pero también puede crear condiciones de error donde no había ninguna necesidad de conmutación por error. Por ejemplo, elevado uso de CPU, condiciones de memoria insuficiente, el proceso de SQL no responde al generar un volcado de memoria, todo el sistema se bloquea o la presión tempdb puede agotar el subproceso de trabajo de concesión, impidiendo la renovación de concesión de la instancia de SQL y causando una conmutación por error. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Directrices para valores de tiempo de espera del clúster 
 

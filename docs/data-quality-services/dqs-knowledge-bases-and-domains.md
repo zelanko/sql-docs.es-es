@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1bb4a6f9013f9b8bf4f6334489f1799fe4e0cbb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81dba339c76674e2f8d1268c40a7762d15d7786d
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619343"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617475"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de conocimiento y dominios de DQS
 
@@ -61,7 +60,7 @@ ms.locfileid: "47619343"
 ##  <a name="Discovery"></a> Detección de conocimiento  
  La creación de la base de conocimiento es un proceso inicialmente asistido por PC. La actividad de detección de conocimiento genera la base de conocimiento; para ello, analiza una muestra de datos para ver si cumplen los criterios de calidad de los datos, buscando incoherencias y errores de sintaxis en los datos, aplicando reglas de dominio y proponiendo cambios en los datos. Este análisis se basa en los algoritmos integrados en DQS.  
   
- El administrador de datos prepara el proceso vinculando una base de conocimiento a una tabla o vista de base de datos de SQL Server que contiene datos de ejemplo similares a los datos que la base de conocimiento utilizará para el análisis. A continuación, el administrador de datos asigna un dominio de la base de conocimiento a cada columna de los datos de ejemplo que se van a analizar. Un dominio puede tratarse de un solo dominio que se asigna a un único campo o puede ser un dominio compuesto formado de varios dominios únicos donde cada uno de ellos se asigna a parte de los datos en un solo campo (vea el tema"Dominios compuestos" de más abajo). Cuando se ejecute la detección de conocimiento, DQS extraerá información sobre la calidad de datos de los datos de ejemplo y la situará en los dominios de la base de conocimiento. Cuando haya ejecutado el análisis de detección del conocimiento, tendrá una base de conocimiento con la que puede corregir datos.  
+ El administrador de datos prepara el proceso vinculando una base de conocimiento a una tabla o vista de base de datos de SQL Server que contiene datos de ejemplo similares a los datos que la base de conocimiento utilizará para el análisis. A continuación, el administrador de datos asigna un dominio de la base de conocimiento a cada columna de los datos de ejemplo que se van a analizar. Un dominio puede tratarse de un solo dominio que se asigna a un único campo o puede ser un dominio compuesto formado de varios dominios únicos donde cada uno de ellos se asigna a parte de los datos en un solo campo (vea el tema"Dominios compuestos" a continuación). Cuando se ejecute la detección de conocimiento, DQS extraerá información sobre la calidad de datos de los datos de ejemplo y la situará en los dominios de la base de conocimiento. Cuando haya ejecutado el análisis de detección del conocimiento, tendrá una base de conocimiento con la que puede corregir datos.  
   
  La base de conocimiento de DQS es extensible. Desde la actividad de detección del conocimiento, puede agregar de forma interactiva conocimiento a la base de conocimiento después del análisis de detección del conocimiento asistido por PC. Puede agregar manualmente cambios e importar valores de dominio desde un archivo de Excel. Por otra parte, puede volver a ejecutar el proceso de detección del conocimiento más adelante si los datos de la muestra han cambiado. Puede aplicar más conocimiento desde la actividad de administración de dominios y desde la actividad de búsqueda de coincidencias de datos (se explica más adelante).  
   
@@ -131,7 +130,7 @@ ms.locfileid: "47619343"
   
 -   El análisis de distintos dominios únicos que componen un dominio compuesto puede ser una forma más eficaz de evaluar la calidad de los datos.  
   
--   Cuando se utiliza un dominio compuesto, también se pueden crear reglas para todos los dominios con el fin comprobar que la relación entre los datos de varios dominios es adecuada. Por ejemplo, puede comprobar que la cadena “Londres” en un dominio de ciudad se corresponde con la cadena “Inglaterra” en un dominio de país. Observe que las reglas para varios dominios se tienen en cuenta después de las reglas de dominio.  
+-   Cuando se utiliza un dominio compuesto, también se pueden crear reglas para todos los dominios con el fin comprobar que la relación entre los datos de varios dominios es adecuada. Por ejemplo, puede comprobar que la cadena "Londres" en un dominio de ciudad se corresponde con la cadena "Inglaterra" en un dominio de país. Observe que las reglas para varios dominios se tienen en cuenta después de las reglas de dominio.  
   
 -   Los datos en dominios compuestos se pueden adjuntar a un origen de datos de referencia, en cuyo caso el dominio compuesto se enviará al proveedor de datos de referencia. Esto se suele hacer con datos de direcciones.  
   

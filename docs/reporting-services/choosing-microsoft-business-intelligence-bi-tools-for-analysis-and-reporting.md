@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e4f359f5ba8a1a55452985375e3c6f0754e5f6b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 95806dd597798b5a8a629d8b49d8502fff4de9ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031664"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399178"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Elección de herramientas de Microsoft Business Intelligence (BI) para análisis e informes
 Elegir la herramienta de inteligencia empresarial adecuada puede ser abrumador. Conozca las distintas ofertas de Microsoft y encuentre la que mejor se adapte a sus necesidades.
 
 En la tabla siguiente se asignan las cargas de trabajo para el análisis de datos y los informes a las herramientas de Microsoft BI más adecuadas para esas cargas de trabajo. Para obtener más información acerca de un producto, haga clic en el vínculo del producto en la tabla.  
   
- Si está buscando una breve introducción a estas herramientas para ayudarle a decidir cuáles son las adecuadas en su caso, vea [Introducing Microsoft Business Intelligence (BI) Tools (Introducción a las herramientas de Microsoft Business Intelligence (BI))](https://msdn.microsoft.com/library/dn655131.aspx).  
+ Si está buscando una breve introducción a estas herramientas para ayudarle a decidir cuáles son las adecuadas en su caso, vea [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx) [Introducción a las herramientas de Microsoft Business Intelligence (BI)].  
   
 |Cargas de trabajo|Usuario|||Herramientas de BI|||  
 |---------------|----------|-|-|--------------|-|-|  

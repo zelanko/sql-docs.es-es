@@ -18,12 +18,12 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c86460fa6e06a6bc0ab25edfb2787547583092f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de4b1ac25cfefe1df9e8e3a0db8d8019d63763bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673422"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404440"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ SESSION_CONTEXT(N'key')
  Cualquier usuario puede leer el contexto de la sesión.  
   
 ## <a name="remarks"></a>Notas  
- El comportamiento de MARS en SESSION_CONTEXT es similar al de CONTEXT_INFO. Si un lote MARS establece un par clave-valor, el nuevo valor no se devolverá en otros lotes MARS en la misma conexión, a menos que dichos lotes se inicien después de que el lote que estableció el nuevo valor se haya completado. Si hay varios lotes MARS activos en una conexión, los valores no se pueden establecer en "read_only". Esto evita que se produzcan condiciones de carrera y no determinismo sobre qué valor "gana".  
+ El comportamiento de MARS en SESSION_CONTEXT es similar al de CONTEXT_INFO. Si un lote MARS establece un par clave-valor, el nuevo valor no se devolverá en otros lotes MARS en la misma conexión, a menos que dichos lotes se inicien después de que el lote que estableció el nuevo valor se haya completado. Si hay varios lotes MARS activos en una conexión, los valores no se pueden establecer en “read_only”. Esto evita que se produzcan condiciones de carrera y no determinismo sobre qué valor “gana”.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo, el valor de contexto de la sesión de la clave `user_id` se establece en 4 y, después, se usa la función **SESSION_CONTEXT** para recuperarlo.  

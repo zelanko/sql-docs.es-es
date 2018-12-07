@@ -13,12 +13,12 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fe2c25b769e6f7d26897915df04518478505a71a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 162b0f18759253ac5c842a88eb0027926a4c458b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521193"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Ver las facetas de administración basada en directivas en un objeto de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51512680"
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], objeto de instancia, base de datos u objeto de base de datos y, después, haga clic en **Facetas**.  
   
-2.  En el cuadro de diálogo **Ver facetas –***nombre_de_objeto*, en la lista **Faceta**, seleccione una faceta para ver sus propiedades. Para obtener más información acerca de las opciones disponibles en este cuadro de diálogo, vea [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
+2.  En el cuadro de diálogo **Ver facetas -***nombre_de_objeto*, en la lista **Faceta**, seleccione una faceta para ver sus propiedades. Para obtener más información acerca de las opciones disponibles en este cuadro de diálogo, vea [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
   
 3.  Cuando termine, haga clic en **Aceptar**.  
   

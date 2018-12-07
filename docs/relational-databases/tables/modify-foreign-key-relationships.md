@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db55a3bdbe795b027d7f46a6eff541d0a49060c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812083"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517077"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47812083"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  La nueva columna de clave externa debe tener el mismo tipo de datos y el mismo tamaño que la columna de clave principal con la que está relacionada, con las siguientes excepciones:  
@@ -86,7 +86,7 @@ ms.locfileid: "47812083"
      Comprueba con la restricción todos los datos que había en la tabla antes de crear o habilitar de nuevo la restricción.  
   
      **Especificación de tablas y columnas (Categoría)**  
-     Se expande para mostrar qué columnas actúan como clave externa y principal (o única) en la relación y a qué tablas pertenecen. Para editar o definir estos valores, haga clic en el botón de puntos suspensivos (**…**) situado a la derecha del campo de propiedad.  
+     Se expande para mostrar qué columnas actúan como clave externa y principal (o única) en la relación y a qué tablas pertenecen. Para editar o definir estos valores, haga clic en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad.  
   
      **Tabla base de clave externa**  
      Muestra la tabla que contiene la columna que actúa como clave externa en la relación seleccionada.  

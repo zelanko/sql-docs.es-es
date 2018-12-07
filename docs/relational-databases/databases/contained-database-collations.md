@@ -13,12 +13,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a529efc45194a701376fc347d6a3f115db19430
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c62934d6ffe221acd483d316461e0b2c72cc0c46
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558772"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413422"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ JOIN #T2
   
 -   La referencia puede encontrar varias coincidencias que eran distintas originalmente. Esto también producirá un error.  
   
- Mostraremos esto con unos ejemplos. Para ello, suponemos que hay una base de datos independiente parcialmente denominada `MyCDB` con su intercalación de la base de datos establecida en la intercalación predeterminada, **Latin1_General_100_CI_AS_WS_KS_SC**. Se supone que la intercalación de la instancia es **Latin1_General_100_CS_AS_WS_KS_SC**. Las dos intercalaciones solo difieren en la distinción de mayúsculas y minúsculas.  
+ Mostraremos esto con varios ejemplos. Para ello, suponemos que hay una base de datos independiente parcialmente denominada `MyCDB` con su intercalación de la base de datos establecida en la intercalación predeterminada, **Latin1_General_100_CI_AS_WS_KS_SC**. Se supone que la intercalación de la instancia es **Latin1_General_100_CS_AS_WS_KS_SC**. Las dos intercalaciones solo difieren en la distinción de mayúsculas y minúsculas.  
   
 ### <a name="example-1"></a>Ejemplo 1  
  El siguiente ejemplo ilustra el caso en el que la referencia encuentra exactamente una coincidencia.  

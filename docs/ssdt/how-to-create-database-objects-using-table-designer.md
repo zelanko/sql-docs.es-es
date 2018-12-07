@@ -14,12 +14,12 @@ ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7001819d4603c392b034d54fffaee7b901400c20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779283"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396148"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Cómo: Crear objetos de base de datos usando el Diseñador de tablas
 El nuevo nodo **SQL Server** del **Explorador de objetos de SQL Server** no solo es muy similar a SSMS visualmente, sino que puede crear nuevos objetos usando menús contextuales que funcionan de manera similar a sus homólogos de SSMS.  

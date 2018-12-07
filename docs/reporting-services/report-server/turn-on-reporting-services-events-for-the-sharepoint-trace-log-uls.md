@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814178"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409542"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
 
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **Producto: SQL Server Reporting Services.**  
   
-2.  **Categoría:** los eventos relacionados con el servidor tendrán los caracteres “Servidor de informes” en el nombre. Por ejemplo, “Tiempo de ejecución de alertas del servidor de informes”. Estos eventos se registran también en los archivos de registro del servidor de informes.  
+2.  **Categoría:** los eventos relacionados con el servidor tendrán los caracteres "Servidor de informes" en el nombre. Por ejemplo, "Tiempo de ejecución de alertas del servidor de informes". Estos eventos se registran también en los archivos de registro del servidor de informes.  
   
-3.  **Categoría** : los eventos relacionados o comunicados desde un componente front-end web no contendrán “Servidor de informes”. Por ejemplo, “Proxy de aplicación de servicio”. Las entradas de WFE contienen un CorrelationID pero no así las entradas del servidor.  
+3.  **Categoría**: los eventos relacionados o comunicados desde un componente front-end web no contendrán "Servidor de informes". Por ejemplo, "Proxy de aplicación de servicio - Tiempo de ejecución de alertas del servidor de informes". Las entradas de WFE contienen un CorrelationID pero no así las entradas del servidor.  
   
 ##  <a name="bkmk_list"></a> Lista de eventos de SQL Server Reporting Services  
  La tabla siguiente contiene una lista de eventos de la categoría SQL Server Reporting Services:  
@@ -100,7 +100,7 @@ Get-SPDiagnosticConfig
 |Representación de modo local||  
 |Proxy de cliente SOAP||  
 |Páginas de la interfaz de usuario||  
-|Power View|Entradas del registro escritas en la API de **LogClientTraceEvents** . Estas entradas se obtienen de aplicaciones cliente, incluyendo Power View, una característica del complemento de SQL Server Reporting Services.<br /><br /> Todas las entradas del registro desde la API de LogClientTraceEvents se registran en **Categoría** de “SQL Server Reporting Services” y **Área** de “Vista avanzada”.<br /><br /> El contenido de las entradas registradas con el área de “Vista avanzada” viene determinado por la aplicación cliente.|  
+|Power View|Entradas del registro escritas en la API de **LogClientTraceEvents** . Estas entradas se obtienen de aplicaciones cliente, incluyendo Power View, una característica del complemento de SQL Server Reporting Services.<br /><br /> Todas las entradas de la API LogClientTraceEvents se registrarán en la **Categoría** de "SQL Server Reporting Services" y el **Área** de "Vista avanzada".<br /><br /> El contenido de las entradas registradas con el área de "Vista avanzada" viene determinado por la aplicación cliente.|  
 |Tiempo de ejecución de alertas del servidor de informes||  
 |Administrador de dominios de aplicación del servidor de informes||  
 |Respuesta en búfer del servidor de informes||  
@@ -138,10 +138,10 @@ Get-SPDiagnosticConfig
 |Servicio compartido|Entradas de ejemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acceso de MediumGranting a las bases de datos de contenido.<br /><br /> Instancias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Cambio de la cuenta de servicio de MediumProcessing para ReportingWebServiceApplication<br /><br /> Permisos de base de datos de MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Ver un archivo de registro con PowerShell  
- ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")Puede usar PowerShell para devolver una lista de los eventos relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene “**sql server reporting services**”:  
+ ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")Puede usar PowerShell para devolver una lista de los eventos relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene "**sql server reporting services**":  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  También hay herramientas que puede descargar para leer registros ULS. Por ejemplo, [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), disponible en GitHub. 

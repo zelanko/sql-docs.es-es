@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021589"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712496"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021589"
 
 Un indicador clave de rendimiento (KPI) es una indicación visual que transmite la cantidad de progreso realizado hacia la consecución de un objetivo.  Los indicadores clave de rendimiento sirven para que los equipos, los administradores y las empresas evalúen rápidamente el progreso realizado frente a objetivos cuantificables.   
   
-Si utiliza KPI en SQL Server 2016, podrá visualizar rápidamente las respuestas a las siguientes preguntas:  
+Si usa KPI en SQL Server Reporting Services, podrá visualizar rápidamente las respuestas a las preguntas siguientes:  
   
 -   ¿Voy adelantado o atrasado?  
   
@@ -68,7 +68,7 @@ Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguie
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Seleccione **…** (los puntos suspensivos) en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
+2.  Haga clic en los **puntos suspensivos (...)** en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -90,7 +90,7 @@ Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguie
   
 Para quitar un KPI, puede hacer lo siguiente.  
   
-1.  Seleccione **...** (los puntos suspensivos) del KPI que quiere quitar. Seleccione **Administrar**.  
+1.  Haga clic en los **puntos suspensivos (...)** del KPI que quiera quitar. Seleccione **Administrar**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   

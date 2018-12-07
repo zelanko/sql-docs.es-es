@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9b7d2b24b2687de6e5736e6ef2ca523c2ade6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635963"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533020"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,10 +80,10 @@ En las tablas siguientes se muestran los formatos de literales de cadena válido
   
 |Formato W3C XML|Descripción|  
 |--------------------|-----------------|  
-|aaaa-mm-ddTZD|Específicamente admitido para uso de XML/SOAP.<br /><br /> DZH es el designador de zona horaria (Z o + hh: mm o -hh:mm).<br /><br /> -   hh:mm representa el desplazamiento de zona horaria. hh es una cifra de dos dígitos, de 0 a 14, que representa el número de horas del ajuste de zona horaria.<br />-   MM es una cifra de dos dígitos, de 0 a 59, que representa el número de minutos adicionales en el desplazamiento de zona horaria.<br />-   + (más) o – (menos) es el signo que se usa obligatoriamente para indicar el desplazamiento de zona horaria. Indica si el ajuste de zona horaria se suma o resta de la hora universal coordinada (UTC) para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.|  
+|aaaa-mm-ddTZD|Específicamente admitido para uso de XML/SOAP.<br /><br /> DZH es el designador de zona horaria (Z o + hh: mm o -hh:mm).<br /><br /> -   hh:mm representa el desplazamiento de zona horaria. hh es una cifra de dos dígitos, de 0 a 14, que representa el número de horas del ajuste de zona horaria.<br />-   MM es una cifra de dos dígitos, de 0 a 59, que representa el número de minutos adicionales en el desplazamiento de zona horaria.<br />-   + (más) o - (menos) es el signo que se usa obligatoriamente para indicar el desplazamiento de zona horaria. Indica si el ajuste de zona horaria se suma o resta de la hora universal coordinada (UTC) para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Compatibilidad con ANSI e ISO 8601  
-**date** cumple la definición del estándar ANSI SQL para el calendario gregoriano: "NOTA 85 - Los tipos de datos datetime permitirán que las fechas con formato gregoriano se almacenen en el intervalo de fechas comprendido entre 0001.01.01 E. C. y 9999-12-31 E. C.".
+**date** cumple la definición del estándar ANSI SQL para el calendario gregoriano: “NOTA 85: Los tipos de datos datetime permitirán que las fechas con formato gregoriano se almacenen en el intervalo de fechas comprendido entre 0001-01-01 E. C. y 9999-12-31 E. C.”.
   
 El formato predeterminado del literal de cadena (que se usa para clientes de nivel inferior) cumple con el formato del estándar SQL, que se define como AAAA-MM-DD. Este formato es igual que la definición de ISO 8601 para DATE.
   

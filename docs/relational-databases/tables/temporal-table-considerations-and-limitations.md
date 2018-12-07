@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a238d92b6fbb9e025f304f0c5e957ff2d15a6975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770463"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410092"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47770463"
   
 -   No se permite la modificación directa de los datos en una tabla de historial.  
   
--   **ON DELETE CASCADE** y **ON UPDATE CASCADE** no se permiten en la tabla actual. Es decir, cuando la tabla temporal hace referencia a la tabla de la relación de clave externa (correspondiente a *parent_object_id* en sys.foreign_keys), no se permiten las opciones CASCADE. Para abordar esta limitación, use la lógica de aplicación o los desencadenadores AFTER para mantener la coherencia de eliminación en la tabla de clave principal (correspondiente a  *referenced_object_id* en sys.foreign_keys). Si la tabla de clave principal es temporal y de referencia no lo es, significa que no hay ninguna limitación de este tipo. 
+-   **ON DELETE CASCADE** y **ON UPDATE CASCADE** no se permiten en la tabla actual. Es decir, cuando la tabla temporal hace referencia a la tabla de la relación de clave externa (correspondiente a *parent_object_id* en sys.foreign_keys), no se permiten las opciones CASCADE. Para abordar esta limitación, use la lógica de aplicación o los desencadenadores AFTER para mantener la coherencia de eliminación en la tabla de clave principal (correspondiente a  *referenced_object_id* en sys.foreign_keys). Si la tabla de clave principal es temporal y la de referencia no lo es, significa que no hay ninguna limitación de este tipo. 
 
     **Nota:** Esta limitación solo se aplica a SQL Server 2016. Se admiten opciones CASCADE en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y a partir de la versión CTP 2.0 de SQL Server 2017.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47770463"
   
     -   **Captura de datos y seguimiento de datos modificados** : solo es compatible con la tabla actual.  
   
-    -   **Replicación transaccional y de instantáneas**: solo es compatible con un publicador único sin la función de temporalidad habilitada, y con un suscriptor que tenga dicha función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor se emplea para la descarga de informes (incluidas las consultas "AS OF").    
+    -   **Replicación transaccional y de instantáneas**: solo es compatible con un publicador único sin la función de temporalidad habilitada, y con un suscriptor que tenga dicha función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF").    
         No se admite el uso de varios suscriptores, puesto que este escenario puede provocar que los datos temporales sean incoherentes (cada uno de ellos dependería del reloj del sistema local).  
   
     -   **Replicación de mezcla:** no es compatible con las tablas temporales.  

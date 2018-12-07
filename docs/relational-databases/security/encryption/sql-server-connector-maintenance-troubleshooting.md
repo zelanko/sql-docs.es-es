@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649513"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520690"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Mantenimiento y solución de problemas del conector de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47649513"
   
 > [!IMPORTANT]  
 >  El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que el nombre de clave solo use los caracteres "a-z", "A-Z", "0-9" y "-", con un límite de 26 caracteres.   
-> No funcionará el uso de diferentes versiones de claves bajo el mismo nombre de clave en el Almacén de claves de Azure con el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar una clave de Almacén de claves de Azure que está usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe crearse una nueva clave con un nuevo nombre de clave.  
+> No funcionará el uso de diferentes versiones de claves bajo el mismo nombre de clave en el Almacén de claves de Azure con el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar una clave de Azure Key Vault que está usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se debe crear una clave con un nombre de clave nuevo.  
   
  Normalmente se necesita crear versiones de las claves asimétricas de servidor para cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cada 1 o 2 años. Es importante tener en cuenta que aunque el Almacén de claves permite versiones de clave, los clientes no deben usar esta característica para implementar el control de versiones. El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se puede ocupar de los cambios en la versión de clave del Almacén de claves. Para implementar el control de versiones de claves, el cliente debe crear una nueva clave en el Almacén de claves y volver a cifrar la clave de cifrado de datos en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649513"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -119,7 +119,7 @@ Si actualmente usa la versión 1.0.0.440 o anterior, siga estos pasos para actua
   
 3.  Desinstalar el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la característica Programas y características de Windows.  
   
-     (Como alternativa, puede cambiar el nombre de la carpeta en la que se encuentra el archivo DLL). El nombre predeterminado de la carpeta es "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el Almacén de claves de Microsoft Azure".  
+     (Como alternativa, puede cambiar el nombre de la carpeta en la que se encuentra el archivo DLL). El nombre predeterminado de la carpeta es "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para Microsoft Azure Key Vault".  
   
 4.  Instale la versión más reciente del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde el Centro de descargas de Microsoft.  
   
@@ -148,7 +148,7 @@ En resumen, estos son los pasos:
   
 * Realice una copia de seguridad de la clave del almacén (con el cmdlet de Powershell Backup-AzureKeyVaultKey).  
 * En caso de error del almacén, cree un nuevo almacén en la misma región geográfica*. El usuario que crea esto debería estar en el mismo directorio predeterminado que el programa de instalación de la entidad de servicio para SQL Server.  
-* Restaure la clave en el nuevo almacén (mediante el cmdlet de Powershell Restore-AzureKeyVaultKey; esto restaura la clave usando el mismo nombre que antes). Si ya existe una clave con el mismo nombre, se producirá un error en la restauración.  
+* Restaure la clave en el nuevo almacén (mediante el cmdlet Restore-AzureKeyVaultKey de Powershell; esto restaura la clave con el mismo nombre que antes). Si ya existe una clave con el mismo nombre, se producirá un error en la restauración.  
 * Conceda permisos a la entidad de servicio de SQL Server para que use este nuevo almacén.  
 * Modifique la credencial de SQL Server que usa el motor de base de datos para reflejar el nuevo nombre de almacén (si es necesario).  
   
@@ -159,7 +159,7 @@ Se pueden restaurar las copias de seguridad de claves en regiones de Azure, siem
 ### <a name="on-azure-key-vault"></a>En el Almacén de claves de Azure  
   
 **¿Cómo funcionan las operaciones de clave con el Almacén de claves de Azure?**  
- La clave asimétrica en el Almacén de claves se usa para proteger las claves de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La parte pública de la clave asimétrica es la única que sale del almacén: el almacén no exporta nunca la parte privada. Todas las operaciones de cifrado en las que se usa la clave asimétrica se realizan en el servicio de Almacén de claves de Azure y se protegen con la seguridad del servicio.  
+ La clave asimétrica en el Almacén de claves se usa para proteger las claves de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La parte pública de la clave asimétrica es la única que sale del almacén: el almacén no exporta nunca la parte privada. Todas las operaciones de cifrado en las que se usa la clave asimétrica se realizan en el servicio Azure Key Vault y se protegen con la seguridad del servicio.  
   
  **¿Qué es un URI de clave?**  
  Todas las claves del Almacén de claves de Azure tienen un identificador uniforme de recursos, (URI), que se puede usar para hacer referencia a la clave en la aplicación. Use el formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` para obtener la versión actual y el formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` para obtener una versión específica.  
@@ -242,13 +242,13 @@ Código de error  |Símbolo  |Descripción
   
 Si no ve el código de error en esta tabla, estas son algunas razones más por las que se puede estar produciendo el error:   
   
--   No dispone de acceso a Internet y no puede acceder a su Almacén de claves de Azure. Compruebe su conexión a Internet.  
+-   No dispone de acceso a Internet y no puede acceder a la instancia de Azure Key Vault. Compruebe la conexión a Internet.  
   
 -   Es posible que el servicio del Almacén de claves de Azure esté fuera de servicio. Vuelva a intentarlo en otro momento.  
   
 -   Es posible que haya quitado la clave asimétrica del Almacén de datos de Azure o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Restaure la clave.  
   
--   Si recibe un error de "No se puede cargar la biblioteca", asegúrese de tener la versión adecuada de Visual Studio C++ redistribuible instalada basándose en la versión de SQL Server que está ejecutando. En la tabla siguiente se especifica qué versión instalar desde el Centro de descarga de Microsoft.   
+-   Si recibe un error de "No se puede cargar la biblioteca", asegúrese de tener la versión adecuada de Visual Studio C++ Redistribuible instalada en función de la versión de SQL Server que se esté ejecutando. En la tabla siguiente se especifica qué versión instalar desde el Centro de descarga de Microsoft.   
   
 Versión de SQL Server  |Vínculo de instalación redistribuible    
 ---------|--------- 

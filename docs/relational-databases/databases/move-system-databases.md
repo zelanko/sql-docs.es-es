@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1de19a956656b744b5f3e21e3efc21c971c6857
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531483"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,11 +151,11 @@ ms.locfileid: "51558822"
   
 3.  En el cuadro de diálogo **Propiedades de (***nombre_de_instancia***) de SQL Server**, haga clic en la pestaña **Parámetros de inicio**.  
   
-4.  En el cuadro **Parámetros existentes** , seleccione el parámetro –d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
+4.  En el cuadro **Parámetros existentes**, seleccione el parámetro -d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
   
      En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   
-5.  En el cuadro **Parámetros existentes** , seleccione el parámetro –l para mover el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
+5.  En el cuadro **Parámetros existentes**, seleccione el parámetro -l para mover el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
   
      En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   

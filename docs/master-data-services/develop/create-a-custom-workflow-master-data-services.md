@@ -11,12 +11,12 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 374971541d49ebd55449c500b3d61a6ed1296ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766093"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420666"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
 
@@ -62,9 +62,9 @@ ms.locfileid: "47766093"
   
 2.  Agregue una referencia a Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Este ensamblado se encuentra en \<Carpeta de instalación>\Master Data Services\WebApplication\bin.  
   
-3.  Agregue ‘using Microsoft.MasterDataServices.Core.Workflow;’ al archivo de código C#.  
+3.  Agregue "using Microsoft.MasterDataServices.Core.Workflow;" al archivo de código de C#.  
   
-4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: ‘public class WorkflowTester : IWorkflowTypeExtender’.  
+4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: "public class WorkflowTester : IWorkflowTypeExtender".  
   
 5.  Implemente la interfaz <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. El servicio de integración de flujos de trabajo MDS de SQL Server llama al método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> para iniciar el flujo de trabajo.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47766093"
   
 1.  Busque Microsoft.MasterDataServices.Workflow.exe.config en \<Carpeta de instalación>\Master Data Services\WebApplication\bin.  
   
-2.  Agregue la información de conexión de la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] al valor “ConnectionString”. Si su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la intercalación con distinción de mayúsculas y minúsculas, el nombre de la base de datos debe especificarse con el mismo uso de mayúsculas y minúsculas que el de la base de datos. Por ejemplo, la etiqueta de configuración completa debe ser similar a la siguiente:  
+2.  Agregue la información de conexión de la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] al valor "ConnectionString". Si su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la intercalación con distinción de mayúsculas y minúsculas, el nombre de la base de datos debe especificarse con el mismo uso de mayúsculas y minúsculas que el de la base de datos. Por ejemplo, la etiqueta de configuración completa debe ser similar a la siguiente:  
   
     ```xml  
     <setting name="ConnectionString" serializeAs="String">  
@@ -83,7 +83,7 @@ ms.locfileid: "47766093"
     </setting>  
     ```  
   
-3.  Debajo del valor “ConnectionString” agregue un valor “WorkflowTypeExtenders” para asociar un nombre de etiqueta al ensamblado controlador del flujo de trabajo. Por ejemplo:  
+3.  Debajo del valor "ConnectionString" agregue un valor "WorkflowTypeExtenders" para asociar un nombre de etiqueta al ensamblado controlador del flujo de trabajo. Por ejemplo:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -94,7 +94,7 @@ ms.locfileid: "47766093"
      El texto interno de la etiqueta \<value> tiene el formato \<Etiqueta del flujo de trabajo>=\<nombre del tipo de flujo de trabajo calificado del ensamblado>. \<Etiqueta del flujo de trabajo> es el nombre que se usa para identificar el ensamblado controlador del flujo de trabajo al crear una regla de negocio en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<nombre del tipo de flujo de trabajo calificado del ensamblado> es el nombre de la clase de flujo de trabajo calificado para el espacio de nombres, seguido de una coma y del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias etiquetas \<setting> si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
   
 > [!NOTE]  
->  Dependiendo de la configuración del servidor, puede que aparezca un error "Acceso denegado" al intentar guardar el archivo Microsoft.MasterDataServices.Workflow.exe.config. En tal caso, deshabilite temporalmente Control de cuentas de usuario (UAC) en el servidor. Para ello, abra el Panel de control y haga clic en **Sistema y seguridad**. En **Centro de actividades**, haga clic en **Cambiar configuración de Control de cuentas de usuario**. En el cuadro de diálogo **Configuración del Control de cuentas de usuario**, desplace la barra hasta abajo para no recibir nunca ninguna notificación. Reinicie su equipo y repita el procedimiento anterior para editar el archivo de configuración. Después de guardar el archivo, restaure la configuración de UAC al nivel predeterminado.  
+>  En función de la configuración del servidor, puede que aparezca un error "Acceso denegado" al intentar guardar el archivo Microsoft.MasterDataServices.Workflow.exe.config. En tal caso, deshabilite temporalmente Control de cuentas de usuario (UAC) en el servidor. Para ello, abra el Panel de control y haga clic en **Sistema y seguridad**. En **Centro de actividades**, haga clic en **Cambiar configuración de Control de cuentas de usuario**. En el cuadro de diálogo **Configuración del Control de cuentas de usuario**, desplace la barra hasta abajo para no recibir nunca ninguna notificación. Reinicie su equipo y repita el procedimiento anterior para editar el archivo de configuración. Después de guardar el archivo, restaure la configuración de UAC al nivel predeterminado.  
   
 ### <a name="start-sql-server-mds-workflow-integration-service"></a>Iniciar el servicio de integración de flujos de trabajo MDS de SQL Server  
  De manera predeterminada, el servicio de integración de flujos de trabajo MDS de SQL Server no se instala. Debe instalar el servicio para poder usarlo. Para mayor seguridad, cree un usuario local para el servicio y conceda a este usuario sólo los permisos necesarios para realizar operaciones de flujo de trabajo. Para crear un usuario, instalar el servicio e iniciarlo, siga estos pasos:  
@@ -118,7 +118,7 @@ ms.locfileid: "47766093"
 6.  Inicie el servicio de integración de flujos de trabajo MDS de SQL Server mediante el complemento Servicios. Para ello, busque el servicio de integración de flujos de trabajo MDS de SQL Server en el complemento Servicios, selecciónelo y haga clic en el vínculo **Iniciar**.  
   
 ### <a name="create-a-workflow-business-rule"></a>Crear una regla de negocio del flujo de trabajo  
- Utilice [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para crear y publicar una regla de negocio que inicie el flujo de trabajo cuando corresponda. Debe asegurarse de que la regla de negocio contiene las acciones que cambian los valores de atributo, de modo que la regla se evalúe como false una vez aplicada. Por ejemplo, la regla de negocio puede evaluarse como true cuando un valor del atributo Precio sea superior a 500 y el valor del atributo Aprobado esté en blanco. La regla puede incluir dos acciones: una para establecer el valor del atributo Aprobado en Pendiente y otra para iniciar el flujo de trabajo. También puede crear una regla que use la condición "ha cambiado" y agregar atributos a los grupos de seguimiento de cambios. Para más información sobre las reglas de negocios, vea [Reglas de negocios &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
+ Utilice [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para crear y publicar una regla de negocio que inicie el flujo de trabajo cuando corresponda. Debe asegurarse de que la regla de negocio contiene las acciones que cambian los valores de atributo, de modo que la regla se evalúe como false una vez aplicada. Por ejemplo, la regla de negocio puede evaluarse como true cuando un valor del atributo Precio sea superior a 500 y el valor del atributo Aprobado esté en blanco. La regla puede incluir dos acciones: una para establecer el valor del atributo Aprobado en Pendiente y otra para iniciar el flujo de trabajo. También puede crear una regla que use la condición "ha cambiado" y agregar los atributos a los grupos de seguimiento de cambios. Para más información sobre las reglas de negocios, vea [Reglas de negocios &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
   
  Cree una regla de negocio que inicie un flujo de trabajo personalizado en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] siguiendo estos pasos:  
   

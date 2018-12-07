@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808763"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414103"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  
@@ -26,7 +26,7 @@ ms.locfileid: "47808763"
 ##  <a name="bkmk_top"></a> Ver la información del registro  
  La ejecución del servidor de informes registra datos sobre la ejecución de informes en una tabla interna de la base de datos. La información de la tabla está disponible en las vistas de SQL Server.  
   
- El registro de la ejecución de informes se almacena en la base de datos del servidor de informes que se denomina **ReportServer**de forma predeterminada. Las vistas de SQL proporcionan la información del registro de la ejecución. Las vistas '2' y '3' se agregaron en versiones más recientes y contienen campos o contienen campos nuevos o campos con nombres más descriptivos que las versiones anteriores. Permanece en el producto las vistas antiguas para que no se vean afectadas las aplicaciones personalizadas que dependen de ellas. Si no tiene una dependencia en una vista anterior, por ejemplo ExecutionLog, se recomienda utilizar la vista más reciente, ExecutionLog**3**.  
+ El registro de la ejecución de informes se almacena en la base de datos del servidor de informes que se denomina **ReportServer**de forma predeterminada. Las vistas de SQL proporcionan la información del registro de la ejecución. Las vistas "2" y "3" se agregaron en versiones más recientes y contienen campos nuevos o campos con nombres más descriptivos que las versiones anteriores. Permanece en el producto las vistas antiguas para que no se vean afectadas las aplicaciones personalizadas que dependen de ellas. Si no tiene una dependencia en una vista anterior, por ejemplo ExecutionLog, se recomienda utilizar la vista más reciente, ExecutionLog**3**.  
   
  En este tema:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47808763"
   
  **Para habilitar el registro de la ejecución:**  
   
-1.  Inicie SQL Server Management Studio con privilegios de administrador. Por ejemplo haga clic con el botón secundario en el icono Management Studio y haga clic en 'Ejecutar como administrador'.  
+1.  Inicie SQL Server Management Studio con privilegios de administrador. Por ejemplo, haga clic con el botón derecho en el icono de Management Studio y seleccione "Ejecutar como administrador".  
   
 2.  Conéctese al servidor de informes que desee.  
   
@@ -324,7 +324,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |columna|Descripción|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
-|ReportPath|La estructura de ruta de acceso al informe.  Por ejemplo un informe denominado 'test' que está en la carpeta raíz en el Administrador de informes, tendría un ReportPath de '/test'.<br /><br /> Un informe denominado 'test' guardado en la carpeta 'samples' en el Administrador de informes, tendrá un ReportPath de '/Samples/test/'|  
+|ReportPath|La estructura de ruta de acceso al informe.  Por ejemplo, un informe denominado "test" que está en la carpeta raíz en el Administrador de informes, tendría un ReportPath de "/test".<br /><br /> Un informe denominado "test" guardado en la carpeta "samples" en el Administrador de informes, tendrá un ReportPath de "/Samples/test/".|  
 |UserName|Identificador del usuario.|  
 |ExecutionID||  
 |RequestType|Tipo de solicitud (de usuario o del sistema).|  

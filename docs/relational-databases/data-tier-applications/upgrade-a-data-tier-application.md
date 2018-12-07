@@ -23,12 +23,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c20a95bcdb8c91059c63590c333c71a10542473a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514039"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "43814051"
   
 -   **Para actualizar una DAC con:**  [Asistente Actualizar aplicación de capa de datos](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Una actualización de DAC es un proceso en contexto que modifica el esquema de la base de datos existente para coincidir con el esquema definido en una nueva versión de la DAC. La nueva versión de la DAC se proporciona en un archivo de paquete DAC. Para obtener más información sobre cómo crear un paquete DAC, vea [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md).  
   
 ###  <a name="ChoseDACUpgOptions"></a> Elegir opciones de actualización de DAC  
  Hay cuatro opciones de actualización para una actualización en contexto:  
   
--   **Ignorar la pérdida de datos** : si es **True**, la actualización continuará incluso si alguna de las operaciones provocan la pérdida de datos. Si es **False**, estas operaciones terminarán la actualización. Por ejemplo, si no hay una tabla de la base de datos actual en el esquema de la nueva DAC, la tabla se quitará si se especifica **True** . El valor predeterminado es **True**.  
+-   **Ignorar la pérdida de datos**: si es **True**, la actualización continuará incluso si alguna de las operaciones provocan la pérdida de datos. Si es **False**, estas operaciones terminarán la actualización. Por ejemplo, si no hay una tabla de la base de datos actual en el esquema de la nueva DAC, la tabla se quitará si se especifica **True** . El valor predeterminado es **True**.  
   
--   **Bloquear si hay cambios** : si es **True**, la actualización se termina si el esquema de la base de datos es diferente al definido en la DAC anterior. Si es **False**, la actualización continúa incluso si se detectan cambios. El valor predeterminado es **False**.  
+-   **Bloquear si hay cambios**: si es **True**, la actualización se termina si el esquema de la base de datos es diferente al definido en la DAC anterior. Si es **False**, la actualización continúa incluso si se detectan cambios. El valor predeterminado es **False**.  
   
--   **Revertir si hay error** : si es **True**, la actualización se incluye en una transacción y, si se encuentran errores, se intenta revertir. Si es **False**, se confirman todos los cambios a medida que se efectúan y, si se producen errores, puede que tenga que restaurar una copia de seguridad anterior de la base de datos. El valor predeterminado es **False**.  
+-   **Revertir si hay error**: si es **True**, la actualización se incluye en una transacción y, si se encuentran errores, se intenta revertir. Si es **False**, se confirman todos los cambios a medida que se efectúan y, si se producen errores, puede que tenga que restaurar una copia de seguridad anterior de la base de datos. El valor predeterminado es **False**.  
   
--   **Omitir validación de directiva** : si es **True**, la directiva de selección del servidor DAC no se evalúa. Si es **False**, se evalúa la directiva y la actualización se termina si se produce un error en la validación. El valor predeterminado es **False**.  
+-   **Omitir validación de directiva**: si es **True**, la directiva de selección del servidor DAC no se evalúa. Si es **False**, se evalúa la directiva y la actualización se termina si se produce un error en la validación. El valor predeterminado es **False**.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Las actualizaciones de DAC solo se pueden realizar en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior.  
@@ -83,7 +83,7 @@ ms.locfileid: "43814051"
   
 2.  Expanda el nodo **Administración** y, después, expanda el nodo **Aplicaciones de capa de datos** .  
   
-3.  Haga clic con el botón derecho en el nodo de la DAC que se actualizará y, luego, seleccione **Actualizar aplicación de capa de datos…**.  
+3.  Haga clic con el botón derecho en el nodo de la DAC que se va a actualizar y, luego, seleccione **Actualizar aplicación de capa de datos...**  
   
 4.  Complete los cuadros de diálogo del asistente:  
   
@@ -178,7 +178,7 @@ ms.locfileid: "43814051"
 ## <a name="options-page"></a>Página Opciones  
  Use esta página para seleccionar la reversión en la opción de error para la actualización.  
   
- **Reversión en caso de error** : seleccione esta opción para agregar la actualización en una transacción que el asistente puede intentar revertir si se producen errores. Para obtener más información acerca de la opción, vea [Elegir opciones de actualización de DAC](#ChoseDACUpgOptions).  
+ **Reversión en caso de error**: seleccione esta opción para agregar la actualización en una transacción que el asistente puede intentar revertir si se producen errores. Para obtener más información acerca de la opción, vea [Elegir opciones de actualización de DAC](#ChoseDACUpgOptions).  
   
  **Restaurar valores predeterminados:** devuelve la opción a su valor predeterminado de false.  
   
@@ -193,13 +193,13 @@ ms.locfileid: "43814051"
   
  **Se usarán las acciones siguientes para actualizar la DAC.** - Compruebe la información que se muestra para asegurarse de que las acciones emprenda serán las correctas. La columna **Acción** muestra las acciones, como instrucciones Transact-SQL, que se ejecutarán para realizar la actualización. La columna **Pérdida de datos** contendrá una advertencia si la acción asociada puede eliminar datos.  
   
- **Actualizar** : actualiza la lista de acciones.  
+ **Actualizar**: actualiza la lista de acciones.  
   
- **Guardar informe de acciones** : guarda el contenido de la ventana de acción en un archivo HTML.  
+ **Guardar informe de acciones**: guarda el contenido de la ventana de acción en un archivo HTML.  
   
  **Continuar a pesar de la posible pérdida de los cambios:** indica que entiende que algunos de los objetos o datos en la base de datos actual no estarán presentes en la base de datos nueva y que quiere continuar con la actualización. Seleccione este botón solamente si ha analizado el informe de cambios y entiende los pasos que debe seguir para transferir manualmente cualquier objeto o datos que sean necesarios en la nueva base de datos. Si no está seguro, haga clic en el botón **Guardar informe de acciones** para guardar el informe de cambios y en el botón **Guardar scripts** para guardar el script Transact-SQL; luego, haga clic en **Cancelar**. Analice el informe y el script, planee cómo transferir los objetos y datos necesarios una vez que se haya completado la actualización y, a continuación, reinicie el asistente.  
   
- **Guardar scripts:** guarda en un archivo de texto las instrucciones Transact-SQL que se usarán para realizar la actualización.  
+ **Guardar scripts**: guarda en un archivo de texto las instrucciones Transact-SQL que se van a usar para realizar la actualización.  
   
  **Restaurar valores predeterminados:** devuelve la opción a su valor predeterminado de false.  
   

@@ -1,7 +1,7 @@
 ---
 title: Escenarios de uso del Almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673834"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711206"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   El Almacén de consultas se puede usar en un gran número de escenarios en los que es fundamental controlar y procurar un rendimiento de carga de trabajo de predicción. Estos son algunos ejemplos que se pueden tener en cuenta:  
   
 -   Localizar y solucionar consultas con regresiones de elección del plan  
-  
 -   Identificar y ajustar las consultas que consumen más recursos  
-  
 -   Realizar pruebas A/B  
-  
 -   Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
 -   Identificar y mejorar las cargas de trabajo ad hoc  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Localizar y solucionar consultas con regresiones de elección del plan  
- Durante su ejecución de consultas normal, el optimizador de consultas puede decidir adoptar un plan diferente porque las entradas importantes ahora son distintas, ya sea porque la cardinalidad de los datos ha cambiado, porque se han creado, modificado o eliminado índices, porque se han actualizado estadísticas, etc. En gran parte, el nuevo plan será mejor o aproximadamente igual que el que se usó anteriormente. Sin embargo, hay casos en los que el nuevo plan es considerablemente peor. Esta situación es conocida como "regresión de cambio de elección de plan". Antes de que existiera el Almacén de consultas, este era un problema muy difícil de identificar y corregir, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporcionaba un almacén de datos integrado donde los usuarios pudieran buscar los planes de ejecución usados a lo largo del tiempo.  
+ Durante su ejecución de consultas normal, el optimizador de consultas puede decidir adoptar un plan diferente porque las entradas importantes ahora son distintas, ya sea porque la cardinalidad de los datos ha cambiado, porque se han creado, modificado o eliminado índices, porque se han actualizado estadísticas, etc. En gran parte, el nuevo plan será mejor o aproximadamente igual que el que se usó anteriormente. Sin embargo, hay casos en los que el nuevo plan es considerablemente peor. Esta situación es conocida como "regresión de cambio de elección de plan". Antes de que existiera el Almacén de consultas, este era un problema difícil de identificar y corregir, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporcionaba un almacén de datos integrado donde los usuarios pudieran buscar los planes de ejecución usados a lo largo del tiempo.  
   
  Con el Almacén de consultas puede hacer lo siguiente rápidamente:  
   
 -   Identificar todas las consultas cuyas métricas de ejecución se hayan degradado en el período especificado (última hora, día, semana, etc.). Use la opción **Consultas devueltas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para acelerar el análisis.  
   
--   Entre las consultas devueltas, es muy fácil distinguir las que tenían varios planes y que se degradaron debido a una mala elección del plan. Use el panel **Resumen del plan** en **Consultas devueltas** para visualizar todos los planes de una consulta devuelta y su rendimiento de consulta en el tiempo.  
+-   Entre las consultas devueltas, es fácil distinguir las que tenían varios planes y que se degradaron debido a una mala elección del plan. Use el panel **Resumen del plan** en **Consultas devueltas** para visualizar todos los planes de una consulta devuelta y su rendimiento de consulta en el tiempo.  
   
 -   Forzar el plan anterior del historial, si está confirmado que es mejor. Use el botón **Forzar plan** de **Consultas con regresión** para aplicar el plan seleccionado para la consulta.  
   
@@ -81,7 +77,7 @@ Cuando identifique una consulta con un rendimiento deficiente, la acción depend
   
 -   Crear índices que faltan en las tablas a las que hacen referencia las consultas costosas.  
   
--   Aplicar una directiva de filtrado para la seguridad de nivel de fila. Para obtener más información, consulte [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Optimizar la seguridad de nivel de fila con el Almacén de consultas).  
+-   Aplicar una directiva de filtrado para la seguridad de nivel de fila. Para obtener más información, vea [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Optimización de la seguridad de nivel de fila con el Almacén de consultas).  
   
 -   Agregar versiones de sistema temporales a tablas que las aplicaciones de OLTP modifican con frecuencia.  
   
@@ -105,7 +101,7 @@ En la siguiente ilustración se muestra el análisis del Almacén de consultas (
   
 ![consultaDeAlmacénDeUso3](../../relational-databases/performance/media/query-store-usage-3.png "consultaDeAlmacénDeUso3")  
   
-También puede comparar los planes anterior y posterior a la creación del índice poniéndolos uno al lado del otro (con la opción de barra de herramientas "Comparar los planes de la consulta seleccionada en una ventana independiente" que está marcada con un cuadrado rojo en la barra de herramientas).  
+También puede comparar los planes anterior y posterior a la creación del índice poniéndolos uno al lado del otro (con la opción de barra de herramientas "Comparar los planes de la consulta seleccionada en una ventana independiente" que está marcada con un cuadrado de color rojo en la barra de herramientas).  
   
 ![consultaDeAlmacénDeUso4](../../relational-databases/performance/media/query-store-usage-4.png "consultaDeAlmacénDeUso4")  
   
@@ -145,10 +141,10 @@ Algunas cargas de trabajo no tienen consultas dominantes que se pueden ajustar p
   
 Use la métrica **Recuento de ejecuciones** para analizar si las consultas principales son ad hoc (para ello, debe ejecutar el almacén de consultas con `QUERY_CAPTURE_MODE = ALL`). En el diagrama anterior, puede ver que el 90 % de las **Consultas que más recursos consumen** se ejecuta solo una vez.  
   
-Opcionalmente, puede ejecutar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] para obtener el número total de textos de consulta, consultas y planes en el sistema, y conocer sus diferencias comparando sus query_hash y plan_hash:  
+Opcionalmente, puede ejecutar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] para obtener el número total de textos de consulta, consultas y planes en el sistema, y conocer sus diferencias comparando los valores query_hash y plan_hash:  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ Si tiene el control del código de la aplicación, sopese la posibilidad de volv
 El método de las plantillas de consulta individuales requiere crear una guía de plan:  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ Una solución con guías de plan es más precisa, pero requiere más trabajo.
 Si todas las consultas (o la mayoría de ellas) son aptas para la parametrización automática, cambiar `FORCED PARAMETERIZATION` para toda la base de datos puede ser una mejor opción:  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 
@@ -204,7 +200,7 @@ Después de aplicar cualquiera de estos pasos, **Principales consultas que consu
   
 En algunos casos, la aplicación puede generar una gran cantidad de consultas diferentes que no son aptas para la parametrización automática. En ese caso, verá un gran número de consultas en el sistema, pero la relación entre las consultas únicas y los `query_hash` únicos estará bastante próxima a 1.  
   
-En consecuencia, es posible que desee habilitar la opción del servidor [**Optimizar para cargas de trabajo ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) para no desperdiciar memoria caché con consultas que probablemente no vuelvan a ejecutarse. Para evitar que se capturen esas consultas en el Almacén de consultas, establezca `QUERY_CAPTURE_MODE` en `AUTO`.  
+En ese caso, es posible que quiera habilitar la opción del servidor [**Optimizar para cargas de trabajo ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) para no desperdiciar memoria caché con consultas que probablemente no vuelvan a ejecutarse. Para evitar que se capturen esas consultas en el Almacén de consultas, establezca `QUERY_CAPTURE_MODE` en `AUTO`.  
   
 ```sql  
 EXEC sys.sp_configure N'show advanced options', N'1' RECONFIGURE WITH OVERRIDE

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665525"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409622"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665525"
 -   Tabla temporal con una tabla de historial definida por el usuario y creada con antelación: cree una tabla de historial que se mejor adapte a sus necesidades y, después, haga referencia a ella durante la creación de la tabla temporal.  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Creación de una tabla temporal con una tabla de historial anónima  
- Esta opción resulta práctica para la generación rápida de objetos, especialmente en entornos de prueba y prototipos. También constituye la manera más sencilla de crear una tabla temporal, ya que no requiere ningún parámetro en la cláusula **SYSTEM_VERSIONING** . En el ejemplo siguiente, se crea una nueva tabla con el control de versiones del sistema habilitado sin definir el nombre de la tabla de historial.  
+ Esta opción resulta práctica para la generación rápida de objetos, especialmente en entornos de prueba y prototipos. También constituye la manera más sencilla de crear una tabla temporal, ya que no requiere ningún parámetro en la cláusula **SYSTEM_VERSIONING**. En el ejemplo siguiente, se crea una nueva tabla con el control de versiones del sistema habilitado sin definir el nombre de la tabla de historial.  
   
 ```  
 CREATE TABLE Department   

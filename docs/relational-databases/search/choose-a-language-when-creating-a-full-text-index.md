@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad984721f43f478f35adc53b68c3d207fb2a2527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2aa416e1913925c095e75888a624021f7eb3543f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541264"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
 
@@ -108,7 +108,7 @@ ms.locfileid: "47696614"
 ##  <a name="type"></a> Efecto del tipo de columna en la búsqueda de texto completo  
  Otra consideración en la elección del idioma se refiere al modo en que se representan los datos. En los datos que no se almacenan en la columna **varbinary(max)** , no se realiza ningún proceso de filtro especial. sino que el texto suele pasarse por el componente separador de palabras tal y como es.  
   
- Además, los separadores de palabras se han diseñado principalmente para procesar el texto escrito. Por ello, si el texto contiene algún tipo de marcado (por ejemplo, HTML), es posible que los procesos de indización y búsqueda no se realicen con gran precisión lingüística. En tal caso, tiene dos opciones: el método preferido es almacenar simplemente los datos de texto en la columna **varbinary(max)** , o indicar su tipo de documento para poder filtrarlo. o utilizar el separador de palabras neutral y, si es posible, agregar datos de marcado (como 'br' en HTML) a las listas de palabras irrelevantes.  
+ Además, los separadores de palabras se han diseñado principalmente para procesar el texto escrito. Por ello, si el texto contiene algún tipo de marcado (por ejemplo, HTML), es posible que los procesos de indización y búsqueda no se realicen con gran precisión lingüística. En ese caso, tiene dos opciones: el método preferido es almacenar simplemente los datos de texto en la columna **varbinary(max)**, o bien indicar su tipo de documento para poder filtrarlo. o utilizar el separador de palabras neutral y, si es posible, agregar datos de marcado (como 'br' en HTML) a las listas de palabras irrelevantes.  
   
 > [!NOTE]  
 >  La lematización basada en el idioma no interviene cuando se especifica el idioma neutral.  

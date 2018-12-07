@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840233"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530785"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Cómo: Crear una instantánea de un proyecto
 Un archivo de **Aplicación de capa de datos** ofrece una representación de solo lectura del esquema de la base de datos en el momento de su creación. Básicamente se considera un esquema de la base de datos desde el que puede volver a importar los objetos de esquema en un proyecto. También puede compararla con el esquema de una base de datos o de un proyecto y actualizar la base de datos o el proyecto para reflejar el esquema definido en la instantánea.  
@@ -35,7 +35,7 @@ En caso de que se produzca un error de usuario en un proyecto de base de datos d
   
 2.  SSDT intentará compilar el proyecto primero. Si no hay ningún error de compilación, se creará una carpeta **Instantánea** en el **Explorador de soluciones**. Dentro de esta carpeta, SSDT crea un archivo .dacpac usando el formato "<Project Name>_AAAAMMDD_HH-MM-SS.dacpac".  
   
-3.  Haga clic con el botón derecho en el archivo .dacpac y seleccione **Cambiar nombre**. Cambie el nombre de archivo predeterminado a “TradeDev1.dacpac”.  
+3.  Haga clic con el botón derecho en el archivo .dacpac y seleccione **Cambiar nombre**. Cambie el nombre de archivo predeterminado a "TradeDev1.dacpac".  
   
 4.  Haga clic con el botón derecho en la función **GetProductsBySupplier** en el **Explorador de soluciones** y seleccione **Eliminar** para quitarla del proyecto.  
   
@@ -43,7 +43,7 @@ En caso de que se produzca un error de usuario en un proyecto de base de datos d
   
 ### <a name="to-import-a-snapshot"></a>Para importar una instantánea  
   
-1.  Haga clic con el botón derecho en el proyecto **TradeDev** en el **Explorador de soluciones**, seleccione **Importar** y, luego **Aplicación de capa de datos (\*.dacpac)…** en los menús contextuales.  
+1.  Haga clic con el botón secundario en el proyecto **TradeDev** en el **Explorador de soluciones**, seleccione **Importar** y después haga clic en **Aplicación de capa de datos (\*.dacpac)…** en los menús contextuales.  
   
 2.  En el cuadro de diálogo **Importar aplicación de capa de datos**, haga clic en **Examinar** para seleccionar que el archivo **TradeDev1.dacpac** se usará como origen de la importación.  
   

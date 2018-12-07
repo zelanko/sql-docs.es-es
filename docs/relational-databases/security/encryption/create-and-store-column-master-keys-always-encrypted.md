@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fca24650ef1d7b26dc9fac93c0ab5d714bf7d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841933"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534760"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Crear y almacenar claves maestras de columna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
 $azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
@@ -139,7 +139,7 @@ Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encry
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Hacer que las claves del Almacén de claves de Azure estén disponibles para aplicaciones y usuarios
 
-Al usar una clave del Almacén de claves de Azure como una clave maestra de columna, la aplicación necesita autenticarse en Azure y la identidad de la aplicación necesita tener los siguientes permisos en el almacén de claves: *get*, *unwrapKey*y *verify*. 
+Al usar una clave de Azure Key Vault como una clave maestra de columna, la aplicación necesita autenticarse en Azure y la identidad de la aplicación necesita tener los siguientes permisos en el almacén de claves: *get*, *unwrapKey* y *verify*. 
 
 Para aprovisionar claves de cifrado de columnas que se protegen con una clave maestra de columna almacenada en el Almacén de claves de Azure, necesita los permisos *get*, *unwrapKey*, *wrapKey*, *sign*y *verify* . Además, para crear una clave nueva en un Almacén de claves de Azure necesita el permiso *create* ; para enumerar los contenidos del almacén de claves necesita el permiso *list* .
 
@@ -165,7 +165,7 @@ Una clave maestra de columna para Always Encrypted puede almacenarse en un almac
 
 Para que un HSM esté disponible para las aplicaciones de un equipo determinado, debe instalarse y configurarse un proveedor de almacenamiento de claves (KSP), que implementa CNG, en el equipo. Un controlador cliente de Always Encrypted (un proveedor de almacenamiento de claves maestras de columna dentro del controlador) usa el KSP para cifrar y descifrar claves de cifrado de columnas, protegidas con una clave maestra de columna almacenada en el almacén de claves.
 
-Windows incluye el proveedor de almacenamiento de claves de software de Microsoft; un KSP basado en software que puede usarse con fines de pruebas. Vea [CNG Key Storage Providers (Proveedores de almacenamiento de claves CNG)](/windows/desktop/SecCertEnroll/cng-key-storage-providers)
+Windows incluye el proveedor de almacenamiento de claves de software de Microsoft; un KSP basado en software que se puede usar con fines de pruebas. Vea [CNG Key Storage Providers (Proveedores de almacenamiento de claves CNG)](/windows/desktop/SecCertEnroll/cng-key-storage-providers)
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>Crear claves maestras de columna en un almacén de claves mediante CNG o KSP
 
@@ -237,7 +237,7 @@ Consulte la documentación de HSM y CSP sobre cómo configurar el CSP en un equi
   
 ## <a name="additional-resources"></a>Recursos adicionales  
 
-- [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server (Desarrollar aplicaciones mediante Always Encrypted con el proveedor de datos .NET Framework para SQL Server)](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Always Encrypted Blog (Blog de Always Encrypted)](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525202"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configuración de SQL Server para enviar comentarios a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ En concreto, Microsoft no envía ninguno de los tipos de información siguientes
 
 En el escenario de ejemplo siguiente se incluye información de uso de características que ayuda a mejorar el producto.
 
-SQL Server 2017 admite índices de almacén de columnas para habilitar escenarios de análisis rápido. Los índices de almacén de columnas combinan una estructura de los índices “árbol B” tradicional para datos recién insertados con una estructura comprimida orientada a columnas especial para comprimir datos y acelerar la ejecución de consultas. El producto contiene heurística para migrar datos desde la estructura de árbol B hasta la estructura comprimida en el fondo, lo que acelera, por tanto, los resultados de la consulta futuros.
+SQL Server 2017 admite índices de almacén de columnas para habilitar escenarios de análisis rápido. Los índices de almacén de columnas combinan una estructura de índices de "árbol B" tradicional para los datos recién insertados con una estructura comprimida orientada a columnas especial para comprimir los datos y acelerar la ejecución de las consultas. El producto contiene heurística para migrar datos desde la estructura de árbol B hasta la estructura comprimida en el fondo, lo que acelera, por tanto, los resultados de la consulta futuros.
 
 Si la operación en segundo plano no va al compás de la velocidad de inserción de los datos, el rendimiento de las consultas puede ser más lento de lo esperado. Para mejorar el producto, Microsoft recopila información sobre lo bien que SQL Server sigue el ritmo del proceso de compresión de datos automático. El equipo del producto usa esta información para ajustar la frecuencia y el paralelismo del código que realiza la compresión. Esta consulta se ejecuta de forma ocasional para recopilar esta información a fin de que nosotros, Microsoft, podamos evaluar la velocidad de movimiento de los datos. Esto nos ayuda a optimizar la heurística del producto.  
 
@@ -63,9 +63,9 @@ Tras la instalación, la configuración de recopilación de datos de uso para co
 
 Para iniciar Informes de uso y errores de SQL Server, haga clic o pulse **Iniciar** y, a continuación, busque en "Error" en el cuadro de búsqueda. Se mostrará el elemento Informes de uso y errores de SQL Server. Tras iniciar la herramienta, puede administrar comentarios de uso y errores graves que se recopilan para instancias y componentes instalados en ese equipo.
 
-Para las versiones de pago, use las casillas “Informes de uso” para administrar el envío de comentarios de uso a Microsoft.
+Para las versiones de pago, use las casillas "Informes de uso" para administrar el envío de comentarios de uso a Microsoft.
 
-Para las versiones de pago o gratuitas, use las casillas “Informes de error” para administrar el envío de comentarios sobre errores graves y volcados de memoria a Microsoft.
+Para las versiones de pago o gratuitas, use las casillas "Informes de error" para administrar el envío de comentarios sobre errores graves y volcados de memoria a Microsoft.
 
 ## <a name="set-registry-subkeys-on-the-server"></a>Establecer subclaves del Registro en el servidor
 
@@ -94,7 +94,7 @@ Los clientes empresariales pueden establecer la configuración de directiva de g
     Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
 
 > [!NOTE]
-> {Major Version} hace referencia a la versión de SQL Server (por ejemplo, 140 para SQL Server 2017).
+> {Versión principal} hace referencia a la versión de SQL Server, por ejemplo 140 para SQL Server 2017.
 
 - Para SQL Server Management Studio:
   

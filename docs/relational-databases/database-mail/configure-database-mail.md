@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505145"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ ms.locfileid: "51678024"
 ###  <a name="Welcome"></a> Página Asistente  
  En esta página se describen los pasos para configurar Correo electrónico de base de datos.  
   
- **No volver a mostrar esta página** : active esta opción para evitar que la página de bienvenida se muestre en el futuro.  
+ **No volver a mostrar esta página**: active esta opción para evitar que la página de bienvenida se muestre en el futuro.  
   
  **Siguiente** : continúa con la página **Seleccionar una tarea de configuración** .  
   
- **Cancelar** : termina el asistente sin configurar Correo electrónico de base de datos.  
+ **Cancelar**: finaliza el asistente sin configurar Correo electrónico de base de datos.  
   
  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard)  
   

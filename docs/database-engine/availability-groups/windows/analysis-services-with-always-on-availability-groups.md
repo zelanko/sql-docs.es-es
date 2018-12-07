@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635023"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395458"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
 
@@ -120,11 +120,11 @@ ms.locfileid: "47635023"
   
 3.  Modifique el script, reemplazando los marcadores de posición con valores válidos para su implementación:  
   
-    -   Reemplace “Computer01” con el nombre de la instancia de servidor que hospeda la replicación primaria.  
+    -   Reemplace "Computer01" con el nombre de la instancia de servidor que hospeda la replicación primaria.  
   
-    -   Reemplace “Computer02” con el nombre de la instancia de servidor que hospeda la replicación secundaria.  
+    -   Reemplace "Computer02" con el nombre de la instancia de servidor que hospeda la replicación secundaria.  
   
-    -   Reemplace “contoso.com” con el nombre del dominio u omítalo del script si todos los equipos están en el mismo dominio. Mantenga el número de puerto si el agente de escucha utiliza el puerto predeterminado. El puerto que utiliza realmente el agente de escucha en la página de propiedades de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Reemplace "contoso.com" con el nombre del dominio u omítalo del script si todos los equipos están en el mismo dominio. Mantenga el número de puerto si el agente de escucha utiliza el puerto predeterminado. El puerto que utiliza realmente el agente de escucha en la página de propiedades de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Ejecute el script.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "47635023"
 9. Repita el comando de procesamiento o de consulta en la solución Analysis Services y después observe los seguimientos en SQL Server Profiler. Debe ver la prueba del procesamiento en la otra instancia, que ahora es la nueva réplica secundaria.  
   
 ##  <a name="bkmk_whathappens"></a> Qué ocurre después de una conmutación por error  
- Durante una conmutación por error, una réplica secundaria realiza la transición al rol principal y la réplica principal anterior realiza la transición al rol secundario. Todas las conexiones de cliente se terminan, la propiedad del agente de grupo de disponibilidad pasa con el rol de réplica principal a una nueva instancia de SQL Server y el extremo de agente de escucha se enlaza a los puertos TCP y las direcciones IP virtuales de la nueva instancia. Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+ Durante una conmutación por error, una réplica secundaria realiza la transición al rol principal y la réplica principal anterior realiza la transición al rol secundario. Todas las conexiones de cliente se terminan, la propiedad del agente de grupo de disponibilidad pasa con el rol de réplica principal a una nueva instancia de SQL Server y el punto de conexión del agente de escucha se enlaza a los puertos TCP y las direcciones IP virtuales de la nueva instancia. Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Si la conmutación por error se produce durante el procesamiento, aparece el siguiente error en Analysis Services en el archivo de registro o la ventana de resultados: “Error de OLE DB: OLE DB o error de ODBC: Error de vínculo de comunicación; 08S01; proveedor de TPC: el host remoto cerró a la fuerza una conexión existente. ; 08S01.”  
+ Si la conmutación por error se produce durante el procesamiento, aparece el siguiente error en Analysis Services en el archivo de registro o la ventana de resultados: "Error de OLE DB: OLE DB o error de ODBC: Error de vínculo de comunicación; 08S01; proveedor de TPC: el host remoto cerró a la fuerza una conexión existente. ; 08S01".  
   
  Este error se debe resolver si espera un minuto y vuelve a intentarlo. Si el grupo de disponibilidad se configura correctamente para la réplica secundaria legible, el procesamiento se reanudará en la nueva réplica secundaria cuando se reintente el procesamiento.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "47635023"
   
 ## <a name="see-also"></a>Ver también  
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Habilitar reescritura en la dimensión](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

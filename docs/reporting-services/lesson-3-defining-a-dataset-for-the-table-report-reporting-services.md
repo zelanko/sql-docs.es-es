@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5ee5a106bf8b412f4096c06255be2e16f90a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516979"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
 Después de definir el origen de datos, necesita definir un conjunto de datos. En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, así como campos y variables calculados.  
@@ -22,7 +22,7 @@ Use el diseñador de consultas del Diseñador de informes para diseñar el conju
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir una consulta de Transact-SQL para los datos de informe  
   
-1.  En el panel **Datos de informe** , haga clic en **Nuevo**y, después, haga clic en **Conjunto de datos...**. Se abre el cuadro de diálogo **Propiedades del conjunto de datos** .  
+1.  En el panel **Datos de informe**, haga clic en **Nuevo** y después en **Conjunto de datos...**. Se abre el cuadro de diálogo **Propiedades del conjunto de datos** .  
   
 2.  En el cuadro **Nombre** , escriba **AdventureWorksDataset**.  
   

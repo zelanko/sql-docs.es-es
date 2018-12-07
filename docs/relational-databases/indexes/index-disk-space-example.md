@@ -18,12 +18,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 294e4230ac932deb2f86aadb45ffd9eda98f72e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c7abfc8f9ae7837ad1a89214c2e956ed5ff63a7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726193"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520920"
 ---
 # <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "47726193"
   
      Índice clúster: 1 millón * 200 bytes / 80% ~ 250 MB  
   
-     Índice no clúster A: 1 millón * (50 – 8 + 24) bytes / 80% ~ 83 MB  
+     Índice no agrupado A: 1 millón * (50 - 8 + 24) bytes / 80 % ~ 83 MB  
   
-     Índice no clúster B: 1 millón * (80 – 8 + 24) bytes / 80% ~ 120 MB  
+     Índice no agrupado B: 1 millón * (80 - 8 + 24) bytes / 80 % ~ 120 MB  
   
      Tamaño total de las nuevas estructuras: 453 MB  
   

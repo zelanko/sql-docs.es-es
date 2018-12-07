@@ -15,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33490ce81c66d12d0309b56112b0a843d99fc969
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560266"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405240"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51560266"
  En las secciones siguientes se describen los escenarios comunes de consulta de los datos modificados de las capturas mediante las funciones de consulta cdc.fn_cdc_get_all_changes_<capture_instance> y cdc.fn_cdc_get_net_changes_<capture_instance>.  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>Consultar todos los cambios del intervalo de validez de la instancia de captura  
- La solicitud más sencilla de los datos modificados es aquella que devuelve todo los datos modificados actuales comprendidos en un intervalo de validez de una instancia de captura. Para realizar esta solicitud, primero debe determinarse el límite inferior y el límite superior de LSN del intervalo de validez. Después, use estos valores para identificar los parámetros @from_lsn y @to_lsn pasados a la función de consulta cdc.fn_cdc_get_all_changes_<capture_instance> o cdc.fn_cdc_get_net_changes_<capture_instance>. Use la función [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) para obtener el límite inferior y la función [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) para obtener el límite superior. Vea la plantilla para enumerar todos los cambios del rango válido, que contiene un ejemplo de código sobre una consulta de todos los cambios válidos actuales con la función de consulta cdc.fn_cdc_get_all_changes_<capture_instance>. Vea la plantilla para enumerar cambios netos del rango válido, que contiene un ejemplo similar sobre el uso de la función cdc.fn_cdc_get_net_changes_<capture_instance>.  
+ La solicitud más sencilla de los datos modificados es la que devuelve todo los datos modificados actuales comprendidos en un intervalo de validez de una instancia de captura. Para realizar esta solicitud, primero debe determinarse el límite inferior y el límite superior de LSN del intervalo de validez. Después, use estos valores para identificar los parámetros @from_lsn y @to_lsn pasados a la función de consulta cdc.fn_cdc_get_all_changes_<capture_instance> o cdc.fn_cdc_get_net_changes_<capture_instance>. Use la función [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) para obtener el límite inferior y la función [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) para obtener el límite superior. Vea la plantilla para enumerar todos los cambios del rango válido, que contiene un ejemplo de código sobre una consulta de todos los cambios válidos actuales con la función de consulta cdc.fn_cdc_get_all_changes_<capture_instance>. Vea la plantilla para enumerar cambios netos del rango válido, que contiene un ejemplo similar sobre el uso de la función cdc.fn_cdc_get_net_changes_<capture_instance>.  
   
 ### <a name="querying-for-all-new-changes-since-the-last-set-of-changes"></a>Consultar todos los cambios nuevos desde el último conjunto de cambios  
  En las aplicaciones típicas, la consulta de los datos modificados constituye un proceso continuo en el que se realizan solicitudes periódicas de todos los cambios acaecidos desde la última solicitud. En este tipo de consultas, puede usar la función [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) para derivar el límite inferior de la consulta actual del límite superior de la consulta anterior. Con este método se asegura de que ninguna fila se repite, porque el intervalo de búsqueda se trata siempre como un intervalo cerrado en el que se incluyen los dos extremos. Luego, use la función [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) para obtener el extremo superior del nuevo intervalo de la solicitud. Vea la plantilla para enumerar todos los cambios desde la solicitud anterior, que contiene un ejemplo de código en el que la ventana de consulta se mueve sistemáticamente para obtener todos los cambios desde la última solicitud.  

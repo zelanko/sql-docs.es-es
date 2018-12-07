@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965973"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617605"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complemento Master Data Services para Microsoft Excel
 
@@ -29,14 +29,14 @@ ms.locfileid: "50965973"
  En [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede usar Data Quality Services (DQS) para comparar los datos antes de cargarlos en MDS. Esto ayuda a evitar datos duplicados en MDS.  
 
 ## <a name="downloads"></a>Descargas 
->*  Descargue el complemento de Master Data Services para Excel para SQL Server 2016 SP1 en [esta página del Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=836866). 
+>*  Descargue el complemento de Master Data Services para Excel para SQL Server 2016 SP2 en [esta página del Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Descargue [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para SQL Server 2017 en [esta página del Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=836867).
  
   
 ## <a name="terms"></a>Términos  
  Al trabajar con el complemento, puede encontrar los siguientes términos. Para obtener más información sobre estos conceptos, consulte [Introducción a Master Data Services &#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md).  
   
--   El *MDS repository* es donde se almacenan todos los datos maestros. Es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada para almacenar datos de MDS. Para trabajar con datos del repositorio, estos se cargan en Excel; cuando haya terminado, puede volver a publicar los cambios en el repositorio. Los administradores pueden agregar nuevas entidades y atributos al repositorio.  
+-   El *MDS repository* es donde se almacenan todos los datos maestros. Es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada para almacenar datos de MDS. Para trabajar con datos del repositorio, los datos se cargan en Excel; cuando haya terminado, puede volver a publicar los cambios en el repositorio. Los administradores pueden agregar nuevas entidades y atributos al repositorio.  
   
 -   Los*datos administrados con MDS* son aquellos datos que se almacenan en el repositorio MDS y se cargan en Excel, donde se muestran como filas resaltadas. Puede agregar datos no administrados por MDS a una hoja de cálculo, y esto no les afecta al actualizar los datos administrados por MDS.  
   

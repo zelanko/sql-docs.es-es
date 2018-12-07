@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660374"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533407"
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ El repositorio de ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
  
 #### <a name="customer-case-studies"></a>Casos prácticos de clientes
 
-- [Quorum duplica la carga de trabajo de la base de datos clave mientras disminuye el uso en 70% con el uso de OLTP en memoria en Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- [Quorum duplica la carga de trabajo de la base de datos clave mientras disminuye el uso en 70 % con el uso de OLTP en memoria en Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet ha aumentado el rendimiento de la carga de datos por lote y ha eliminado la necesidad de mantener una caché de nivel intermedio gracias a OLTP en memoria en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Una empresa de servicios de datos obtiene acceso en tiempo real a los datos de productos con la tecnología en memoria](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
 - Beth Israel Deaconess Medical Center ha podido aumentar considerablemente la tasa de ingesta de datos desde los controladores de dominio y manejar los picos en la carga de trabajo con OLTP en memoria en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 

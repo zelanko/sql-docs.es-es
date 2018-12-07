@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664634"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512611"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un DeploymentPlanModifier o un DeploymentPlanExecutor. Utilice un DeploymentPlanModifier para cambiar el plan antes de ejecutarlo y un DeploymentPlanExecutor para realizar operaciones mientras se ejecuta el plan. En este tutorial, se crea un DeploymentPlanExecutor denominado DeploymentUpdateReportContributor que crea un informe sobre las acciones que se realizan al implementar un proyecto de base de datos. Dado que este colaborador de compilación acepta un parámetro para controlar si el informe se genera, debe efectuar un paso necesario adicional.  
@@ -92,7 +92,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
     ```  
   
-    En este caso el primer parámetro del atributo debe ser un identificador único – éste se utilizará para identificar su colaborador en archivos de proyecto. Una práctica recomendada consiste en combinar el espacio de nombres de la biblioteca (en este tutorial, MyDeploymentContributor) con el nombre de clase (en este tutorial, DeploymentUpdateReportContributor) para generar el identificador.  
+    En este caso el primer parámetro del atributo debe ser un identificador único que se utilizará para identificar su colaborador en archivos de proyecto. Una práctica recomendada consiste en combinar el espacio de nombres de la biblioteca (en este tutorial, MyDeploymentContributor) con el nombre de clase (en este tutorial, DeploymentUpdateReportContributor) para generar el identificador.  
   
 3.  A continuación, agregue el miembro siguiente que utilizará para habilitar a este proveedor a fin de que acepte un parámetro de línea de comandos:  
   
@@ -526,7 +526,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
     |-----------------|--------------------|  
     |Miembros de clase|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Método WriteReport|XmlWriter y XmlWriterSettings|  
-    |Método ReportPlanOperations|Entre los tipos de interés se encuentran: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Hay otros pasos – vea la documentación de la API para obtener una lista completa de pasos.|  
+    |Método ReportPlanOperations|Entre los tipos de interés se encuentran: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Hay otros pasos, en la documentación de la API podrá obtener una lista completa de pasos.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -588,7 +588,7 @@ El segundo método es crear un archivo de destino que contenga los argumentos de
   
 2.  Cree una carpeta nueva “MyContributors” donde se almacenarán los archivos de destino.  
   
-3.  Cree un nuevo archivo “MyContributors.targets” en este directorio, agréguele el siguiente texto y guarde el archivo:  
+3.  Cree un archivo nuevo “MyContributors.targets” en este directorio, agréguele el siguiente texto y guarde el archivo:  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -610,16 +610,16 @@ El segundo método es crear un archivo de destino que contenga los argumentos de
 Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin de pasar los parámetros para compilaciones de línea de comandos.  
   
 > [!NOTE]  
-> Debe actualizar siempre la propiedad “DeploymentContributors” para especificar el identificador de colaborador. Es el mismo identificador utilizado en el atributo “ExportDeploymentPlanExecutor” en el archivo de origen del colaborador. Sin él su colaborador no se ejecutará al compilar el proyecto. Únicamente es necesario actualizar la propiedad "ContributorArguments" si tiene argumentos necesarios para ejecutar su colaborador.  
+> Debe actualizar siempre la propiedad “DeploymentContributors” para especificar el identificador de colaborador. Es el mismo identificador utilizado en el atributo “ExportDeploymentPlanExecutor” en el archivo de origen del colaborador. Sin él su colaborador no se ejecutará al compilar el proyecto. Únicamente es necesario actualizar la propiedad “ContributorArguments” si tiene argumentos necesarios para ejecutar su colaborador.  
   
 ### <a name="deploy-the-database-project"></a>Implementar el proyecto de base de datos  
-El proyecto se puede publicar o implementar de manera habitual en Visual Studio. No tiene más que abrir una solución que contenga el proyecto SQL y elegir la opción "Publicar..." en el menú contextual del proyecto, o usar F5 para una implementación de depuración en LocalDB. En este ejemplo, usaremos el cuadro de diálogo "Publicar..." para generar un script de implementación.  
+El proyecto se puede publicar o implementar de manera habitual en Visual Studio. Abra simplemente una solución que contenga el proyecto de SQL y elija la opción del menú contextual del botón derecho “Publicar…” para el proyecto, o utilice F5 para una implementación de depuración en LocalDB. En este ejemplo utilizaremos el diálogo “Publicar…” para generar un script de implementación.  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Para implementar el proyecto de SQL y generar un informe de implementación  
   
 1.  Abra Visual Studio y abra la solución que contiene el proyecto de SQL.  
   
-2.  Seleccione el proyecto y pulse “F5” para realizar una implementación de depuración. Nota: como el elemento ContributorArguments está configurado para ser incluido solo si la configuración es "Debug" por ahora el informe de implementación solo se genera para las implementaciones de depuración. Para cambiar esto, elimine la instrucción Condition="'$(Configuration)' == 'Debug'" de la definición de ContributorArguments.  
+2.  Seleccione el proyecto y pulse “F5” para realizar una implementación de depuración. Nota: Como el elemento ContributorArguments está configurado para ser incluido solo si la configuración es “Debug” por ahora el informe de implementación solo se genera para las implementaciones de depuración. Para cambiar esto, elimine la instrucción Condition="'$(Configuration)' == 'Debug'" de la definición de ContributorArguments.  
   
 3.  Un resultado como el siguiente debería encontrarse en la ventana de resultados:  
   

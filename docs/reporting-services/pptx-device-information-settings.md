@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16a9ad6bc26b304be0ad3308c2e5afe2084a3a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732303"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394858"
 ---
 # <a name="pptx-device-information-settings"></a>Configuración de la información del dispositivo PPTX
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para representar informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en formato PPTX.  
@@ -37,7 +37,7 @@ ms.locfileid: "47732303"
 |**PageHeight**|El alto de la página, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, **11in**). Este valor invalida la configuración original del informe.|  
 |**PageWidth**|El ancho de la página, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, **8,5in**). Este valor invalida la configuración original del informe.|  
 |**StartPage**|Primera página del informe que se va a representar. El valor **0** indica que se representan todas las páginas. El valor predeterminado es **1**.|  
-|**UseReportPageSize**|Si UseReportPageSize =**false** , el tamaño de diapositiva predeterminado es el valor predeterminado de PowerPoint de 13,333" x 7,5" (relación de aspecto 16:9). Si UseReportPageSize =true, el tamaño de diapositiva predeterminado es el tamaño de la página de definición del informe.<br /><br /> El valor predeterminado es **False**.<br /><br /> Nota: La configuración de PageWidth y de PageHeight invalida el ancho y alto predeterminados.|  
+|**UseReportPageSize**|Si UseReportPageSize =**false**, el tamaño de diapositiva predeterminado es el valor predeterminado de PowerPoint de 13,333" x 7,5" (relación de aspecto 16:9). Si UseReportPageSize =true, el tamaño de diapositiva predeterminado es el tamaño de la página de definición del informe.<br /><br /> El valor predeterminado es **False**.<br /><br /> Nota: La configuración de PageWidth y de PageHeight invalida el ancho y alto predeterminados.|  
   
 ## <a name="see-also"></a>Ver también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

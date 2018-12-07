@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813218"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415412"
 ---
 # <a name="configure-the-web-portal"></a>Configurar el portal web
 
@@ -27,7 +27,7 @@ Para usar el portal web, debe cumplir los requisitos previos siguientes:
 
 - Tener un servidor de informes configurado mínimamente. Para más información sobre la configuración mínima de un servidor de informes, vea [Configurar un servidor de informes](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
 
-- El servidor de informes se debe ejecutar en modo nativo. No puede usar el portal web con un servidor de informes configurado para el modo integrado de SharePoint. En SQL Server 2012, no se puede cambiar un servidor de informes de un modo a otro. Si desea cambiar el tipo de servidor de informes que usa su entorno, debe instalar el modo deseado del servidor de informes y, a continuación, copiar o mover los elementos de informe al nuevo servidor de informes. Este proceso se conoce normalmente como 'migración'. Los pasos necesarios para la migración dependen del modo al que se realice la migración y la versión desde la que se migre. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- El servidor de informes se debe ejecutar en modo nativo. No puede usar el portal web con un servidor de informes configurado para el modo integrado de SharePoint. En SQL Server 2012, no se puede cambiar un servidor de informes de un modo a otro. Si desea cambiar el tipo de servidor de informes que usa su entorno, debe instalar el modo deseado del servidor de informes y, a continuación, copiar o mover los elementos de informe al nuevo servidor de informes. Este proceso se conoce normalmente como "migración". Los pasos necesarios para la migración dependen del modo al que se realice la migración y la versión desde la que se migre. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 - También debe tener Internet Explorer 11 o posterior con scripting habilitado. Para obtener más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 

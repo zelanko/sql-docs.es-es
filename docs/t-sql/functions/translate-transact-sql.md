@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 125ce02e483cc927cf5b6a1d37f4209dcc3dcb22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836663"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617445"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Devuelve la cadena proporcionada como primer argumento después de que algunos caracteres especificados en el segundo argumento se hayan convertido en un conjunto de destino de caracteres.
+Devuelve la cadena proporcionada como primer argumento después de que algunos caracteres especificados en el segundo argumento se hayan convertido en un conjunto de destino de caracteres especificado en el tercer argumento.
 
 ## <a name="syntax"></a>Sintaxis   
 ```
@@ -36,23 +36,23 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>Argumentos   
 
-inputString   
-Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de carácter (nvarchar, varchar, nchar, char).
+ *inputString*   
+ Es la [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena que se va a buscar. *inputString* puede ser cualquier tipo de datos de carácter (nvarchar, varchar, nchar, char).
 
-caracteres   
-Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de carácter que contenga caracteres que se deben reemplazar.
+ *characters*   
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena que contiene caracteres que se deben reemplazar. *characters* puede ser cualquier tipo de datos de caracteres.
 
-traducciones   
-Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de caracteres que coincide con el segundo argumento según el tipo y longitud.
+*translations*   
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena que contiene los caracteres de sustitución. *translations* debe tener el mismo tipo de datos y la misma longitud que *characters*.
 
 ## <a name="return-types"></a>Tipos devueltos   
-Devuelve una expresión de caracteres del mismo tipo que `inputString`, donde se reemplazan los caracteres del segundo argumento con los caracteres coincidentes del tercer argumento.
+Devuelve una expresión de caracteres del mismo tipo de datos que `inputString`, donde se reemplazan los caracteres del segundo argumento con los caracteres coincidentes del tercer argumento.
 
 ## <a name="remarks"></a>Notas   
 
-La función `TRANSLATE` devolverá un error si los caracteres y las traducciones tienen longitudes diferentes. La función `TRANSLATE` debe devolver la entrada sin cambios si los valores null se proporcionan como argumentos de reemplazo o caracteres. El comportamiento de la función `TRANSLATE` debe ser idéntico a la función [REPLACE](../../t-sql/functions/replace-transact-sql.md).   
+La función `TRANSLATE` devolverá un error si las expresiones *characters* y *translations* tienen longitudes diferentes. `TRANSLATE` devolverá NULL si alguno de los argumentos es NULL.  
 
-El comportamiento de la función `TRANSLATE` es equivalente a usar varias funciones `REPLACE`.
+El comportamiento de la función `TRANSLATE` es equivalente a usar varias funciones [REPLACE](../../t-sql/functions/replace-transact-sql.md).
 
 `TRANSLATE` siempre reconoce la intercalación de SC.
 
@@ -68,9 +68,34 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 2*(3+4)/(7-2)
 ```
 
->  [!NOTE]
->  La función `TRANSLATE` de este ejemplo equivale, aunque es mucho más sencilla, a la siguiente instrucción mediante `REPLACE`: `SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+#### <a name="equivalent-calls-to-replace"></a>Llamadas equivalentes a REPLACE
 
+En la siguiente instrucción SELECT, hay un grupo de cuatro llamadas anidadas a la función REPLACE. Este grupo es equivalente a la llamada realizada a la función TRANSLATE de la instrucción SELECT anterior:
+
+```sql
+SELECT
+REPLACE
+(
+      REPLACE
+      (
+            REPLACE
+            (
+                  REPLACE
+                  (
+                        '2*[3+4]/{7-2}',
+                        '[',
+                        '('
+                  ),
+                  ']',
+                  ')'
+            ),
+            '{',
+            '('
+      ),
+      '}',
+      ')'
+);
+```
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. Convertir puntos GeoJSON en WKT    
 GeoJSON es un formato para codificar una variedad de estructuras de datos geográficos. Con la función `TRANSLATE`, los desarrolladores pueden convertir fácilmente los puntos GeoJSON a formato WKT y viceversa. En esta consulta se reemplazan corchetes y llaves en la entrada con llaves normales:   

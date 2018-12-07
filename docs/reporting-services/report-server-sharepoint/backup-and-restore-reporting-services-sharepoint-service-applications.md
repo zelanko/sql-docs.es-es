@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 35273d3b60abf328f916907a0a6cfeb8b6a206c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021249"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405723"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint de Reporting Services
 
@@ -53,7 +53,7 @@ En este tema se explica cómo hacer una copia de seguridad y restaurar una aplic
 
 ### <a name="back-up-the-encryption-keys-using-sharepoint-central-administration"></a>Copia de seguridad de las claves de cifrado mediante Administración central de SharePoint
 
-Para más información sobre cómo realizar copias de seguridad de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+Para obtener más información sobre cómo realizar copias de seguridad de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 
 ### <a name="back-up-the-service-application-using-sharepoint-central-administration"></a>Copia de seguridad de la aplicación de servicio mediante Administración central de SharePoint
 
@@ -131,7 +131,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>Restauración de las claves de cifrado mediante Administración central de SharePoint
 
- Para más información sobre la restauración de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+ Para obtener más información sobre la restauración de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configuración de la cuenta de ejecución y la autenticación de base de datos
 

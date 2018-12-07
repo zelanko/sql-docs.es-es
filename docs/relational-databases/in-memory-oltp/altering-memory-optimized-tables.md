@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bcf4ff6daa7a6d5e5fe710a51d78a8730a56cfeb
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 698272ee29fe7828f9298d534476db7948b2bde7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636474"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641276"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
 
@@ -26,7 +26,7 @@ ms.locfileid: "49636474"
 Los cambios de esquema y de índice en las tablas optimizadas para memoria pueden realizarse mediante la instrucción ALTER TABLE. En SQL Server 2016 y Azure SQL Database, las operaciones ALTER TABLE en tablas optimizadas para memoria son sin conexión, lo que significa que la tabla no está disponible para realizar consultas mientras la operación está en curso. La aplicación de base de datos puede seguir ejecutándose, y cualquier operación que tenga acceso a la tabla se bloqueará hasta que se complete el proceso de modificación. Es posible combinar varias operaciones ADD, DROP o ALTER en una sola instrucción ALTER TABLE.
 
 > [!IMPORTANT]
-> La Instancia administrada de Azure SQL Database no admite tablas optimizadas para memoria.
+> La Instancia administrada de Azure SQL Database no admite tablas optimizadas para memoria en el nivel de servicio de uso general.
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ec49399b46b39217a41ee1c18f0475bf2f64ffd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602645"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537740"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Características desusadas del motor de base de datos de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Categoría|Característica desusada|Sustituta|Nombre de característica|Id. de característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Niveles de compatibilidad|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
+|Niveles de compatibilidad|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Niveles de compatibilidad|Nivel de compatibilidad de la base de datos 110 Y 120.|Planee actualizar la base de datos y la aplicación en una versión futura. Pero seguiremos dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos compatible, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 110<br /><br /> Nivel de compatibilidad de la base de datos 120||  
 |XML|Generación de esquemas XDR insertados|La directiva XMLDATA para la opción FOR XML ha quedado desusada. Utilice la XSD generación en los modos RAW y AUTO. No hay sustitución para la directiva XMLDATA en modo EXPLICIT.|XMLDATA|181|  
 |Copias de seguridad y restauración|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
@@ -102,7 +102,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Opciones de índice|Sintaxis de CREATE TABLE, ALTER TABLE o CREATE INDEX sin paréntesis alrededor de las opciones.|Reescriba la instrucción para utilizar la sintaxis actual.|INDEX_OPTION|33|  
 |Opciones de instancia|sp_configure option 'allow updates'|Las tablas del sistema ya no son actualizables. La configuración no tiene ningún efecto.|sp_configure 'allow updates'|173|  
 |Opciones de instancia|Opciones de sp_configure:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|Ahora se configura automáticamente. La configuración no tiene ningún efecto.|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|Opciones de instancia|opción “priority boost” de sp_configure|Las tablas del sistema ya no son actualizables. La configuración no tiene ningún efecto. Use en su lugar la opción start/high … program.exe de Windows.|sp_configure 'priority boost'|199|  
+|Opciones de instancia|opción “priority boost” de sp_configure|Las tablas del sistema ya no son actualizables. La configuración no tiene ningún efecto. En su lugar, use la opción start /high ... program.exe de Windows.|sp_configure 'priority boost'|199|  
 |Opciones de instancia|sp_configure option 'remote proc trans'|Las tablas del sistema ya no son actualizables. La configuración no tiene ningún efecto.|sp_configure 'remote proc trans'|37|  
 |Servidores vinculados|Especificar el proveedor SQLOLEDB para los servidores vinculados.|SQL Server Native Client (SQLNCLI)|SQLOLEDDB para servidores vinculados|19|  
 |Bloqueo|sp_lock|sys.dm_tran_locks|sp_lock|99|  

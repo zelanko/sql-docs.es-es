@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788483"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586288"
 ---
 # <a name="update-statistics"></a>Actualizar estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47788483"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -60,11 +60,11 @@ ms.locfileid: "47788483"
   
 5.  Haga clic con el botón derecho en el objeto de estadísticas que quiere actualizar y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas –**_nombre\_estadísticas_, active la casilla **Actualizar estadísticas de estas columnas** y haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas -**_nombre\_estadísticas_, active la casilla **Actualizar estadísticas de estas columnas** y haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### <a name="to-update-a-specific-statistics-object"></a>Para actualizar un objeto concreto de estadísticas  
+### <a name="to-update-a-specific-statistics-object"></a>Para actualizar un objeto concreto de estadísticas  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47788483"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>Para actualizar todas las estadísticas en una tabla  
+### <a name="to-update-all-statistics-in-a-table"></a>Para actualizar todas las estadísticas en una tabla  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,9 +96,9 @@ ms.locfileid: "47788483"
     GO  
     ```  
   
- Para obtener más información, vea [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
+Para obtener más información, vea [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>Para actualizar todas las estadísticas de una base de datos  
+### <a name="to-update-all-statistics-in-a-database"></a>Para actualizar todas las estadísticas de una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -112,7 +112,9 @@ ms.locfileid: "47788483"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- Para obtener más información, vea [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
-  
-  
+
+Para obtener más información, vea [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).   
+
+### <a name="automatic-index-and-statistics-management"></a>Administración automática de índice y estadísticas
+Aproveche soluciones como la [desfragmentación de índice adaptable](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para administrar automáticamente las actualizaciones de estadísticas y la desfragmentación de índices para una o varias bases de datos. Este procedimiento elige automáticamente si se debe volver a generar o reorganizar un índice según su nivel de fragmentación, entre otros parámetros y actualiza las estadísticas con un umbral lineal.
+

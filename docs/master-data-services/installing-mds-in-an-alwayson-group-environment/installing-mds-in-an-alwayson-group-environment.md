@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692193"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395692"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
@@ -92,7 +92,7 @@ En esta sección se tratan las siguientes tareas.
 
 Como se muestra en la figura 1 de la sección anterior, la solución descrita en este artículo incluye el Clúster de conmutación por error de Windows Server (WSFC). Es necesario configurar WSFC porque SQL AlwaysOn depende de WFSC para la conmutación por error y la detección de errores.
 
-WSFC es una característica que sirve para mejorar la alta disponibilidad de aplicaciones y servicios. Consta de un grupo de instancias independientes de Windows Server, donde se ejecuta el Servicio de clúster de conmutación por error de Microsoft. Las instancias de Windows Server (o, como se denominan a veces, "nodos") están conectadas para que se puedan comunicar entre ellas y se puedan detectar errores. WSFC ofrece funcionalidades de detección de errores y de conmutación por error. Si se produce un error en un nodo o servicio del clúster, se detectará el error y otro nodo empezará a proporcionar de forma automática o manual los servicios hospedados en el nodo erróneo. Por lo tanto, los usuarios solo experimentarán una interrupción mínima en los servicios y se mejorará la disponibilidad de estos.  
+WSFC es una característica que sirve para mejorar la alta disponibilidad de aplicaciones y servicios. Consta de un grupo de instancias independientes de Windows Server, donde se ejecuta el Servicio de clúster de conmutación por error de Microsoft. Las instancias de Windows Server (o, como se denominan a veces, "nodos") están conectadas para que se puedan comunicar entre ellas y se puedan detectar errores. WSFC ofrece funcionalidades de detección de errores y de conmutación por error. Si se produce un error en un nodo o servicio del clúster, se detectará el error y otro nodo empezará a proporcionar de forma automática o manual los servicios hospedados en el nodo erróneo. Por lo tanto, los usuarios solo experimentarán una interrupción mínima en los servicios y se mejorará la disponibilidad de estos.  
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -155,9 +155,9 @@ Cuando haya instalado la característica WSFC en todas las instancias, podrá co
 
 7.  En la página **Resumen**, busque posibles mensajes de advertencia o de error.
 
-    Los errores se deben corregir, pero las advertencias puede que no supongan ningún problema. Un mensaje de advertencia indica que el elemento probado podría cumplir el requisito, pero hay algo que se debe revisar. Por ejemplo, en la figura 7 se muestra el mensaje de advertencia "Validar latencia de acceso a disco", que puede deberse a que el disco está ocupado temporalmente con otras tareas, y puede ignorarlo. Debe consultar la documentación en línea de cada mensaje de advertencia y de error para obtener más detalles. Vea la figura 7.
- 
-    ![Asistente para validar una configuración, página Validando](media/Fig6_ValidationTests.png)
+    Los errores se deben corregir, pero las advertencias puede que no supongan ningún problema. Un mensaje de advertencia indica que "el elemento probado podría cumplir el requisito, pero hay algo que se debe revisar". Por ejemplo, en la figura 7 se muestra el mensaje de advertencia "Validar latencia de acceso a disco", que puede deberse a que el disco está ocupado temporalmente con otras tareas, y puede ignorarlo. Debe consultar la documentación en línea de cada mensaje de advertencia y de error para obtener más detalles. Vea la figura 7.
+ 
+![Asistente para validar una configuración, página Validando](media/Fig6_ValidationTests.png)
 
     Figura 6
 
@@ -326,7 +326,7 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
     d.  Escriba DHCP en el cuadro de texto **Modo de red** y haga clic en **Siguiente** para continuar.
 
     >[!NOTE] 
-    >Si quiere, puede elegir "Dirección IP estática" como **modo de red** y escribir una dirección IP estática. También puede especificar un puerto que no sea el puerto 1433. 
+    >Si quiere, puede elegir "Dirección IP estática" como **modo de red** y escribir una dirección IP estática. También puede especificar un puerto que no sea el puerto 1433. 
 
     ![Configurar el agente de escucha](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
 
     ![Configurar la sincronización de datos](media/Fig19_AvailabilityGroupDataSync.png)
 
-    Figura 19 
+    Figura 19 
 
 10. En la página **Validación**, asegúrese de que todas las validaciones se efectúen correctamente y corrija los posibles errores. Para continuar, haga clic en **Siguiente** .
 
@@ -354,11 +354,11 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
 
     ![Ver el panel](media/Fig20_ShowDashboard.png)
 
-    Figura 20 
+    Figura 20 
 
 3.  Haga clic en **Conmutación por error** para efectuar una conmutación por error a una réplica sincrónica y a una réplica asincrónica. Esto sirve para comprobar que la conmutación por error se efectúa correctamente sin ningún problema.
 
- La configuración de AlwaysOn ha finalizado.
+ La configuración de AlwaysOn ha finalizado.
 
 Para más información sobre los grupos de disponibilidad AlwaysOn, vea [Grupos de disponibilidad AlwaysOn (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

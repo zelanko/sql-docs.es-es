@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0b06b45e9d3f2cfd06fba04a0d24547ec4689ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699793"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398664"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Directiva de conmutación por error para instancias de clústeres de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,9 +98,9 @@ ms.locfileid: "51699793"
 |0|No hay conmutación automática por error ni reinicio|Indica que no se activará la conmutación por error ni el reinicio automáticamente si se dan condiciones de error. Este nivel solo tiene como finalidad el mantenimiento del sistema.|  
 |1|Conmutación por error o reinicio si el servidor tiene error|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce la siguiente condición:<br /><br /> El servicio SQL Server se apaga.|  
 |2|Conmutación por error o  reinicio si el servidor no responde|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce alguna de las condiciones siguientes:<br /><br /> El servicio SQL Server se apaga.<br /><br /> La instancia de SQL Server no responde (la DLL de recursos no puede recibir datos de sp_server_diagnostics en el intervalo establecido por la configuración de HealthCheckTimeout).|  
-|3*|Conmutación por error o reinicio si hay errores de servidor críticos|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce alguna de las condiciones siguientes:<br /><br /> El servicio SQL Server se apaga.<br /><br /> La instancia de SQL Server no responde (la DLL de recursos no puede recibir datos de sp_server_diagnostics en el intervalo establecido por la configuración de HealthCheckTimeout).<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve 'error del sistema'.|  
-|4|Conmutación por error o reinicio si hay errores de servidor moderados|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce alguna de las condiciones siguientes:<br /><br /> El servicio SQL Server se apaga.<br /><br /> La instancia de SQL Server no responde (la DLL de recursos no puede recibir datos de sp_server_diagnostics en el intervalo establecido por la configuración de HealthCheckTimeout).<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve 'error del sistema'.<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve 'error de recurso'.|  
-|5|Conmutación por error o reinicio si se produce cualquier condición de error calificada|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce alguna de las condiciones siguientes:<br /><br /> El servicio SQL Server se apaga.<br /><br /> La instancia de SQL Server no responde (la DLL de recursos no puede recibir datos de sp_server_diagnostics en el intervalo establecido por la configuración de HealthCheckTimeout).<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve 'error del sistema'.<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve 'error de recurso'.<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve “error de query_processing”.|  
+|3*|Conmutación por error o reinicio si hay errores de servidor críticos|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce alguna de las condiciones siguientes:<br /><br /> El servicio SQL Server se apaga.<br /><br /> La instancia de SQL Server no responde (la DLL de recursos no puede recibir datos de sp_server_diagnostics en el intervalo establecido por la configuración de HealthCheckTimeout).<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve "error del sistema".|  
+|4|Conmutación por error o reinicio si hay errores de servidor moderados|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce alguna de las condiciones siguientes:<br /><br /> El servicio SQL Server se apaga.<br /><br /> La instancia de SQL Server no responde (la DLL de recursos no puede recibir datos de sp_server_diagnostics en el intervalo establecido por la configuración de HealthCheckTimeout).<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve "error del sistema".<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve "error de recurso".|  
+|5|Conmutación por error o reinicio si se produce cualquier condición de error calificada|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce alguna de las condiciones siguientes:<br /><br /> El servicio SQL Server se apaga.<br /><br /> La instancia de SQL Server no responde (la DLL de recursos no puede recibir datos de sp_server_diagnostics en el intervalo establecido por la configuración de HealthCheckTimeout).<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve "error del sistema".<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve "error de recurso".<br /><br /> El procedimiento almacenado del sistema sp_server_diagnostics devuelve "error de query_processing".|  
   
  *Valor predeterminado  
   

@@ -1,26 +1,26 @@
 ---
 title: Personalizar el elemento web Visor de informes | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021529"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411642"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar el elemento web Visor de informes
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Puede usar el elemento web Visor de informes para ver informes que se ejecutan en un servidor de informes configurado para la integración de SharePoint. Entre los informes que puede mostrar se incluyen archivos de definición de informe (.rdl) e informes del Generador de informes. Los informes se abren automáticamente en el elemento web Visor de informes en una página nueva, aunque también puede agregar un elemento web Visor de informes a una página o un sitio web existentes si quiere que un informe concreto esté siempre visible en la página.
+Puede usar el elemento web Visor de informes para ver informes que se ejecutan en un servidor de informes configurado para la integración de SharePoint. Entre los informes que puede mostrar se incluyen archivos de definición de informe (.rdl) e informes del Generador de informes. Los informes se abren de forma automática en el elemento web Visor de informes en una página nueva. También puede agregar un elemento web Visor de informes a una página web o sitio existente si quiere que un informe concreto siempre sea visible en la página.
 
 > [!NOTE]
 > Aunque tienen nombres idénticos, el elemento web Visor de informes instalado con el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] difiere del incluido en el archivo RSWebParts.cab. Las instrucciones de este tema son específicas para el elemento web Visor de informes que se instala con el complemento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
@@ -41,7 +41,7 @@ Puede usar el elemento web Visor de informes para ver informes que se ejecutan e
   
 ### <a name="change-default-properties"></a>Cambiar las propiedades predeterminadas
 
- El elemento web Visor de informes tiene propiedades predeterminadas que se adaptan perfectamente para abrir informes a petición desde una biblioteca o una carpeta. De forma predeterminada, todos los controles disponibles se muestran en la barra de herramientas, y se establece el alto y el ancho para que se use todo el espacio disponible en la página web. Si quiere modificar las propiedades predeterminadas, puede personalizar el elemento web mediante **Configuración del sitio**.  
+ El elemento web Visor de informes tiene propiedades predeterminadas que se adaptan perfectamente para abrir informes a petición desde una biblioteca o una carpeta. De forma predeterminada, todos los controles disponibles se muestran en la barra de herramientas. Se establecen el alto y el ancho para usar todo el espacio disponible en la página web. Si quiere modificar las propiedades predeterminadas, puede personalizar el elemento web mediante **Configuración del sitio**.  
   
 1.  En el menú **Acciones del sitio** , haga clic en **Configuración del sitio**.  
   
@@ -53,7 +53,7 @@ Puede usar el elemento web Visor de informes para ver informes que se ejecutan e
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>Personalizar un Visor de informes incrustado en una página web
 
- Puede establecer las propiedades para adaptar el Visor de informes a una página web. El Visor de informes puede usar el mismo estilo y los mismos colores que la página que lo contiene. Puede ocultar de forma total o parcial la barra de herramientas, el mapa del documento y el área de parámetros para maximizar el área de visualización de informes en el espacio asignado. El informe siempre usa los estilos definidos en el momento de su creación y no puede personalizar la apariencia del informe una vez publicado en una biblioteca de SharePoint.  
+ Puede establecer las propiedades para adaptar el Visor de informes a una página web. El Visor de informes puede usar el mismo estilo y los mismos colores que la página que lo contiene. Puede ocultar de forma total o parcial la barra de herramientas, el mapa del documento y el área de parámetros para maximizar el área de visualización de informes en el espacio asignado. El informe siempre usa los estilos definidos para él cuando se creó. No se puede personalizar el aspecto del informe después de publicarlo en una biblioteca de SharePoint.  
   
  Si va a incrustar el elemento web Visor de informes en una página web, debe establecer la propiedad **Dirección URL de informe** para un informe específico. En caso contrario, el Visor de informes muestra instrucciones para crear un vínculo con un informe. No puede personalizar o quitar estas instrucciones.  
   

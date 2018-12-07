@@ -14,12 +14,12 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42fe1ede76c7be079601ea6701466d80e19ddf3e
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: fc50c8392232f96d1a64af124d2d5a773daf1d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264875"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525399"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "48264875"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48264875"
     ```  
   
     > [!IMPORTANT]  
-    >  Si recupera esta base de datos, habrá dos bases de datos divergentes en línea con el mismo nombre. Por consiguiente, debe garantizar que los clientes tengan acceso solamente a una de ellas, generalmente la base de datos principal más reciente.  
+    >  Si recupera esta base de datos, habrá dos bases de datos divergentes en línea con el mismo nombre. Por tanto, debe garantizar que los clientes solo puedan acceder a una de ellas, generalmente la base de datos principal más reciente.  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   

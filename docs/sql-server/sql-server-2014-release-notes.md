@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503494"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SQL Server 2014 SP2 contiene acumulaciones de las revisiones publicadas de SQL S
 |Clonación de bases de datos|Puede usar el nuevo comando DBCC para solucionar problemas de bases de datos de producción existentes clonando el esquema, los metadatos y las estadísticas, pero sin los datos. Las bases de datos clonadas no están diseñadas para usarse en entornos de producción.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |Adiciones de DMF|La nueva DMF sys.dm_db_incremental_stats_properties expone información por cada partición para las estadísticas incrementales.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
 |DMF para recuperar el búfer de entrada en SQL Server|Ahora está disponible una nueva DMF para recuperar el búfer de entrada de una sesión o solicitud (sys.dm_exec_input_buffer). Es funcionalmente equivalente a DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
-|Compatibilidad con DROP DDL para la replicación|Permite quitar de la base de datos y de la publicación una tabla que se incluye como artículo en una publicación de replicación transaccional.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
+|Compatibilidad con DROP DDL para la replicación|Permite quitar de la base de datos y de la publicación una tabla que se incluye como un artículo en una publicación de replicación transaccional.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |Privilegio de IFI en la cuenta de servicio de SQL|Determina si la inicialización instantánea de archivos (IFI) está en vigor al iniciar el servicio SQL Server.|[Inicialización de archivos de base de datos](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |Concesiones de memoria: gestión de problemas|Puede aprovechar las sugerencias de diagnóstico durante la ejecución de consultas restringiendo sus concesiones de memoria para evitar la contención de la memoria.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
 |Generación de perfiles ligera por cada operador en la ejecución de consultas |Optimiza la recopilación de estadísticas de ejecución de consultas por cada operador (por ejemplo, el número real de filas).|[Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
@@ -167,7 +167,7 @@ SQL Server 2014 Standard incluye los cambios siguientes:
 3.  Vuelva a agregar las restricciones DEFAULT al script de migración.    
 4.  Ejecute el script de migración.  
   
-#### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>El mensaje informativo “acceso a archivo denegado” se notifica incorrectamente como un error en el registro de errores de SQL Server 2014  
+#### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>El mensaje informativo "acceso a archivo denegado" se ha notificado incorrectamente como un error en el registro de errores de SQL Server 2014  
 **Problema** : al reiniciar un servidor que tiene bases de datos que contienen tablas optimizadas para memoria, puede ver el siguiente tipo de mensajes de error en el registro de errores de SQL Server 2014:  
   
 ```  

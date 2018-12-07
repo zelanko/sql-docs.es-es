@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535539"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -394,7 +394,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] incluye la base de datos de SSISDB. En la base de datos de SSISDB, se consultan vistas para inspeccionar objetos, valores y los datos operativos que se almacenan en el catálogo de **SSISDB** , consultando las vistas de la base de datos de SSISDB. Este tema proporciona instrucciones para hacer una copia de seguridad de la base de datos y restaurarla.  
   
- El catálogo de **SSISDB** almacena los paquetes que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información sobre el catálogo, vea [Catálogo de SSIS](../../integration-services/catalog/ssis-catalog.md).  
+ El catálogo de **SSISDB** almacena los paquetes que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información sobre el catálogo, vea [Catálogo de SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 ###  <a name="backup"></a> Para realizar una copia de seguridad de la base de datos de SSIS  
   
@@ -627,7 +627,7 @@ Escriba la contraseña que especificó al crear el catálogo de SSIS en la pági
 > [!WARNING]  
 >  No se admite la conmutación por error automática de la base de datos SSISDB hasta que habilite la compatibilidad con SSIS para AlwaysOn.  
   
- Las réplicas secundarias recién agregadas desde el grupo de disponibilidad AlwaysOn se mostrarán en la tabla. Haga clic en **Conectar** de cada réplica de la lista y escriba las credenciales de autenticación para conectarse a ella. La cuenta de usuario debe ser miembro del grupo sysadmin en cada réplica para habilitar la compatibilidad con SSIS para AlwaysOn. Después de conectarse correctamente a cada réplica, haga clic en **Aceptar** a fin de habilitar la compatibilidad con SSIS para AlwaysOn.  
+ Las réplicas secundarias recién agregadas desde el grupo de disponibilidad AlwaysOn se mostrarán en la tabla. Haga clic en el botón **Conectar...** de cada réplica de la lista y escriba las credenciales de autenticación para conectarse a ella. La cuenta de usuario debe ser miembro del grupo sysadmin en cada réplica para habilitar la compatibilidad con SSIS para AlwaysOn. Después de conectarse correctamente a cada réplica, haga clic en **Aceptar** a fin de habilitar la compatibilidad con SSIS para AlwaysOn.  
  
 Si la opción **Habilitar compatibilidad con AlwaysOn** del menú contextual parece estar desactivada después de haber completado los requisitos previos, pruebe lo siguiente:
 1.  Actualice el menú contextual; para ello, haga clic en la opción **Actualizar**.
@@ -635,13 +635,13 @@ Si la opción **Habilitar compatibilidad con AlwaysOn** del menú contextual par
 3.  Asegúrese de que la versión de SQL Server es 13.0 o posterior. SSIS solo admite AlwaysOn en SQL Server 2016 y versiones posteriores.
 
 ###  <a name="Upgrade"></a> Actualización de SSISDB en un grupo de disponibilidad  
- Si va a actualizar SQL Server desde una versión anterior y SSISDB se encuentra en un grupo de disponibilidad AlwaysOn, la regla "Comprobación de SSISDB en grupo de disponibilidad AlwaysOn" podría bloquear la actualización. Este bloqueo se produce porque la actualización se ejecuta en modo de usuario único, mientras que una base de datos de disponibilidad debe ser multiusuario. Por lo tanto, durante la actualización o la aplicación de una revisión, todas las bases de datos disponibilidad, incluida SSISDB, se desconectan y no se actualizan ni se les aplica la revisión. Para permitir que la actualización continúe, quite SSISDB primero del grupo de disponibilidad; después, actualice cada nodo o aplíquele una revisión y, por último, vuelva a agregar SSISDB al grupo de disponibilidad.  
+ Si va a actualizar SQL Server desde una versión anterior y SSISDB se encuentra en un grupo de disponibilidad AlwaysOn, la regla “Comprobación de SSISDB en grupo de disponibilidad AlwaysOn” podría bloquear la actualización. Este bloqueo se produce porque la actualización se ejecuta en modo de usuario único, mientras que una base de datos de disponibilidad debe ser multiusuario. Por lo tanto, durante la actualización o la aplicación de una revisión, todas las bases de datos disponibilidad, incluida SSISDB, se desconectan y no se actualizan ni se les aplica la revisión. Para permitir que la actualización continúe, quite SSISDB primero del grupo de disponibilidad; después, actualice cada nodo o aplíquele una revisión y, por último, vuelva a agregar SSISDB al grupo de disponibilidad.  
   
- Si la regla "Comprobación de SSISDB en grupo de disponibilidad AlwaysOn" está causando un bloqueo, siga estos pasos para actualizar SQL Server.  
+ Si la regla “Comprobación de SSISDB en grupo de disponibilidad AlwaysOn” está causando un bloqueo, siga estos pasos para actualizar SQL Server.  
   
 1.  Quite la base de datos SSISDB del grupo de disponibilidad. Para obtener más información, vea [Quitar una base de datos secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) y [Quitar una base de datos principal de un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
-2.  Haga clic en **Volver a ejecutar** en el Asistente para actualización. Se aplicará la regla "Comprobación de SSISDB en grupo de disponibilidad AlwaysOn".  
+2.  Haga clic en **Volver a ejecutar** en el Asistente para actualización. Se aplicará la regla “Comprobación de SSISDB en grupo de disponibilidad AlwaysOn”.  
   
 3.  Haga clic en **Siguiente** para continuar con la actualización.  
   

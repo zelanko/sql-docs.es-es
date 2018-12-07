@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66f33552c8ccd615cfb2894da0ef3ba337a43cc7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681333"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545545"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configurar la replicación (de mezcla) entre un servidor y clientes móviles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -205,7 +205,7 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
 
    ![Selecciones para agregar una base de datos al suscriptor](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. En la página **Seguridad del agente de mezcla**, seleccione el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Suscriptor*>**\repl_merge** en el cuadro **Cuenta de proceso** y especifique la contraseña para esta cuenta. Seleccione **Aceptar**, **Siguiente** y, después, elija otra vez **Siguiente**.  
+8. En la página **Seguridad del agente de mezcla**, haga clic en el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Suscriptor*>**\repl_merge** en el cuadro **Cuenta de proceso** y especifique la contraseña para esta cuenta. Seleccione **Aceptar**, **Siguiente** y, después, elija otra vez **Siguiente**.  
 
    ![Selecciones para la seguridad del Agente de mezcla](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 

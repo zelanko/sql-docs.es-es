@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506340"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ Algunos ejemplos de predicados que no son SARGable:
 3. Motivo de la utilidad de las siguientes construcciones:
   -   Funciones que se usan como predicados;
   -   Búsquedas con caracteres comodín;
-  -   Expresiones complejas en función de los datos en columnas (evalúe la necesidad de crear columnas calculadas persistentes, que se pueden indexar).
+  -   Expresiones complejas en función de los datos en columnas: evalúe la necesidad de crear columnas calculadas persistentes, que se pueden indexar;
 
 > [!NOTE] 
 > Todo lo anterior puede realizarse mediante programación.

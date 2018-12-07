@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bce4439473aa19790435fc89dff3e4107311bb7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f6bb16f3e6b7c2cd7c2e2a01a40132f7df6e585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661091"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503053"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "51661091"
 ### <a name="indexing-of-registered-properties"></a>Indización de propiedades registradas  
  Una vez que el índice de texto completo se asocia con una lista de propiedades de búsqueda, el índice debe volver a llenarse para incluir los términos de búsqueda específicos de la propiedad. Durante la indización de texto completo, el contenido de todas las propiedades se almacena en el índice de texto completo junto con otro contenido. Sin embargo, al indizar un término de búsqueda encontrado en una propiedad registrada, el indizador de texto completo almacena también junto con el término el identificador de propiedad interno correspondiente. Por el contrario, si una propiedad no está registrada, se almacena en el índice de texto completo como si formara parte del cuerpo del documento y tiene el valor cero para el identificador de propiedad interno.  
   
- En la ilustración siguiente se muestra una vista lógica de cómo aparecen los términos de búsqueda en un índice de texto completo que está asociado con la lista de propiedades de búsqueda mostrada en la ilustración anterior. Un documento de muestra, Documento 1, contiene tres propiedades, Title, Author y Keyword, así como el cuerpo del documento. En el caso de las propiedades Title y Keywords, que se han especificado en la lista de propiedades de búsqueda, los términos de búsqueda se asocian con sus identificadores de propiedad internos correspondientes en el índice de texto completo. Por el contrario, el contenido de la propiedad Author se indiza como si formara parte del cuerpo del documento. Esto significa que al registrar una propiedad, se incrementa en cierta medida el tamaño del índice de texto completo en función del volumen de contenido almacenado en la propiedad.  
+ En la ilustración siguiente se muestra una vista lógica de cómo aparecen los términos de búsqueda en un índice de texto completo que está asociado con la lista de propiedades de búsqueda mostrada en la ilustración anterior. Un documento de muestra, Documento 1, contiene tres propiedades (Title, Author y Keyword) y el cuerpo del documento. En el caso de las propiedades Title y Keywords, que se han especificado en la lista de propiedades de búsqueda, los términos de búsqueda se asocian con sus identificadores de propiedad internos correspondientes en el índice de texto completo. Por el contrario, el contenido de la propiedad Author se indiza como si formara parte del cuerpo del documento. Esto significa que al registrar una propiedad, se incrementa en cierta medida el tamaño del índice de texto completo en función del volumen de contenido almacenado en la propiedad.  
   
  ![Índice de texto completo que usa una lista de propiedades de búsqueda](../../relational-databases/search/media/ifts-spl-and-fti.gif "Índice de texto completo que usa una lista de propiedades de búsqueda")  
   
- Los términos de búsqueda de la propiedad Title, "Favorite," "Biking," y "Trails", se asocian con el identificador de propiedad interno asignado a Title para este índice, 1. Los términos de búsqueda de la propiedad Keywords, "biking" y "mountain", se asocian con el identificador de propiedad interno asignado a Tags para este índice, 2. En el caso de los términos de búsqueda de la propiedad Author, "Jane" y "Doe", y los términos de búsqueda del cuerpo del documento, el identificador de propiedad interno es 0. El término "biking" tiene lugar en la propiedad Title, en la propiedad Keywords (Tags) y en el cuerpo del documento. Si se realizara una búsqueda de propiedades con el término "biking" en la propiedad Title o Keywords (Tags), en los resultados se devolvería este documento. Una consulta de texto completo genérica con el término "biking", devolvería también este documento, exactamente igual que si el índice no estuviera configurado para la búsqueda de propiedades. Una búsqueda de propiedades con el término "biking" en la propiedad Author no devolvería este documento.  
+ Los términos de búsqueda de la propiedad Title ("Favorite," "Biking" y "Trails") se asocian con el identificador de propiedad interno asignado a Title para este índice, 1. Los términos de búsqueda de la propiedad Keywords ("biking" y "mountain") se asocian con el identificador de propiedad interno asignado a Tags para este índice, 2. En el caso de los términos de búsqueda de la propiedad Author ("Jane" y "Doe") y los términos de búsqueda del cuerpo del documento, el identificador de propiedad interno es 0. El término "biking" tiene lugar en la propiedad Title, en la propiedad Keywords (Tags) y en el cuerpo del documento. Si se realizara una búsqueda de propiedades con el término "biking" en la propiedad Title o Keywords (Tags), en los resultados se devolvería este documento. Una consulta de texto completo genérica con el término "biking", devolvería también este documento, exactamente igual que si el índice no estuviera configurado para la búsqueda de propiedades. Una búsqueda de propiedades con el término "biking" en la propiedad Author no devolvería este documento.  
   
  Las consultas de texto completo referentes a propiedades usan los identificadores de propiedad internos registrados en la lista actual de propiedades de búsqueda del índice de texto completo.  
   

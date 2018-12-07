@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf3376c13ef02699913d5d494d5752d35f13006
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539927"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
 
@@ -190,7 +190,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   
@@ -291,11 +291,11 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
 -   **Aprovisionar suscripciones y alertas de datos** , en donde puede saber si Reporting Services puede usar el Agente SQL Server para las alertas de datos y descargar scripts que permitan acceder al Agente SQL Server. Para más información, vea [Aprovisionar suscripciones y alertas para aplicaciones de servicio SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Globalización de las alertas de datos  
- Algunos tipos de escritura, como el árabe y el hebreo, son de derecha a izquierda. Las alertas de datos admiten la escritura de derecha a izquierda y de izquierda a derecha. Las alertas de datos detectan la configuración regional, y modifican la apariencia y el comportamiento de la interfaz de usuario y del diseño de los mensajes de alertas de datos según corresponda. La configuración regional se obtiene del sistema operativo del equipo del usuario. Se guarda cada vez que se actualiza y después se vuelve a guardar la definición de alerta de datos.  
+ Algunos tipos de escritura, como el árabe y el hebreo, son de derecha a izquierda. Las alertas de datos admiten la escritura de derecha a izquierda y de izquierda a derecha. Las alertas de datos detectan la configuración regional, y modifican la apariencia y el comportamiento de la interfaz de usuario y del diseño de los mensajes de alertas de datos según corresponda. La referencia cultural se obtiene de la configuración regional del sistema operativo del equipo del usuario. Se guarda cada vez que se actualiza y después se vuelve a guardar la definición de alerta de datos.  
   
  La configuración regional de la definición de alerta puede afectar a si los datos satisfacen las reglas de la definición de alerta. Las reglas específicas de la configuración regional afectan sobre todo a las comparaciones de cadenas.  
   
- Saber si los datos del informe satisfacen o no las reglas de la definición de alerta puede resultar afectado por la configuración regional de la definición de alerta. Esto ocurre sobre todo con las cadenas. Por ejemplo, en una definición de alerta con la configuración regional alemana, no se satisfaría una regla que comparara la letra inglesa “o” con la letra alemana “ö”. En la misma definición de alerta, se satisfaría la regla con la configuración regional inglesa.  
+ Saber si los datos del informe satisfacen o no las reglas de la definición de alerta puede resultar afectado por la configuración regional de la definición de alerta. Esto ocurre sobre todo con las cadenas. Por ejemplo, en una definición de alerta con la referencia cultural alemana, no se satisfaría una regla que comparara la letra inglesa "o" con la letra alemana "ö". En la misma definición de alerta, se satisfaría la regla con la configuración regional inglesa.  
   
  El formato de los datos también se basa en la configuración regional de la definición de alerta. Por ejemplo, si la configuración regional utiliza un punto como símbolo decimal, el valor se muestra como 45.67, mientras que si se utiliza una coma como símbolo decimal, se muestra como 45,67.  
   

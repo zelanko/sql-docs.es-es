@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b7df0f9ab315adddb3714846601210e54aa987e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030196"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529513"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contadores de rendimiento de objetos de rendimiento de modo de SharePoint MSRS 2011
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento **Modo de SharePoint del servicio web de MSRS 2011** y **Modo de SharePoint del servicio Windows de MSRS 2011** que forman parte de una implementación en modo de SharePoint de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -80,12 +80,12 @@ ms.locfileid: "50030196"
 |**Sesiones activas**|Número de sesiones activas almacenadas en la base de datos del servidor de informes. Este contador proporciona un recuento acumulativo de todas las sesiones del explorador que se pueden utilizar generadas a partir de suscripciones de informes, independientemente de si todavía están o no activas.|  
 |**Alertas: longitud de la cola de eventos**||  
 |**Alertas: eventos procesados - CreateSchedule**||  
-|**Alerta: eventos procesados - DeleteSchedule**||  
-|**Alerta: eventos procesados - DeliverAlert**||  
-|**Alerta: eventos procesados - FireAlert**||  
-|**Alerta: eventos procesados - FireSchedule**||  
-|**Alerta: eventos procesados - GenerateAlert**||  
-|**Alerta: eventos procesados - UpdateSchedule**||  
+|**Alertas: eventos procesados - DeleteSchedule**||  
+|**Alertas: eventos procesados - DeliverAlert**||  
+|**Alertas: eventos procesados - FireAlert**||  
+|**Alertas: eventos procesados - FireSchedule**||  
+|**Alertas: eventos procesados - GenerateAlert**||  
+|**Alertas: eventos procesados - UpdateSchedule**||  
 |**Vaciados de caché por segundo**|Número de vaciados de memoria caché por segundo.|  
 |**Aciertos de caché por segundo**|Número de solicitudes por segundo para informes en memoria caché. Se trata de solicitudes para informes que se vuelven a representar, no de solicitudes para informes procesados directamente desde la memoria caché. (Vea **Total de aciertos de caché** más adelante en este tema).|  
 |**Aciertos de caché por segundo (modelos semánticos)**|Número de solicitudes por segundo para los modelos en memoria caché.|  
@@ -118,7 +118,7 @@ ms.locfileid: "50030196"
 |**Total de actualizaciones de instantánea**|Número total de actualizaciones de instantánea de ejecución de informes.|  
   
 ##  <a name="bkmk_powershell"></a> Usar cmdlets de PowerShell para devolver listas  
- ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")El siguiente script de Windows PowerShell devolverá los conjuntos de contadores en los que CounterSetName comienza con "msr"  
+ ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")El script de Windows PowerShell siguiente devolverá los conjuntos de contadores en los que CounterSetName comienza con "msr".  
   
 ```  
 get-counter -listset msr*  
@@ -127,7 +127,7 @@ CounterSetName     : MSRS 2011 Windows Service SharePoint Mode
 CounterSetName     : MSRS 2011 Web Service SharePoint Mode  
 ```  
   
- El siguiente script de Windows PowerShell devolverá la lista de contadores de rendimiento para CounterSetName "Modo SharePoint de MSRS 2011 Windows Service".  
+ El script de Windows PowerShell siguiente devolverá la lista de contadores de rendimiento para CounterSetName "Modo SharePoint de MSRS 2011 Windows Service".  
   
 ```  
 (get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  

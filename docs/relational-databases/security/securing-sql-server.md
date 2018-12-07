@@ -19,12 +19,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c5694fc4fbf2464030eb5fe3104117cfee71eb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663304"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398368"
 ---
 # <a name="securing-sql-server"></a>Proteger SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ GO
 ```  
   
 ## <a name="principals-and-database-object-security"></a>Entidades de seguridad y seguridad de objetos de base de datos  
- Las entidades de seguridad son los individuos, grupos y procesos que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los “elementos protegibles” son el servidor, la base de datos y los objetos incluidos en la base de datos. Cada uno de estos elementos dispone de un conjunto de permisos que pueden configurarse para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la tabla siguiente se incluye información sobre las entidades de seguridad y los elementos protegibles.  
+ Las entidades de seguridad son los individuos, grupos y procesos que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los "elementos protegibles" son el servidor, la base de datos y los objetos incluidos en la base de datos. Cada uno de estos elementos dispone de un conjunto de permisos que pueden configurarse para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la tabla siguiente se incluye información sobre las entidades de seguridad y los elementos protegibles.  
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  

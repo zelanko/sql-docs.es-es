@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559458"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512118"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -498,7 +498,7 @@ GO
 |[Sintaxis básica](#BasicSyntax)|CREATE PROCEDURE|  
 |[Pasar parámetros](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = predeterminado <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • Tipo de parámetro con valores de tabla <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Modificar datos mediante un procedimiento almacenado](#Modify)|UPDATE|  
-|[Tratamiento de errores](#Error)|TRY…CATCH|  
+|[Tratamiento de errores](#Error)|TRY...CATCH|  
 |[Ofuscar la definición del procedimiento](#Encrypt)|WITH ENCRYPTION|  
 |[Forzar la recompilación del procedimiento](#Recompile)|WITH RECOMPILE|  
 |[Establecer el contexto de seguridad](#Security)|EXECUTE AS|  
@@ -797,7 +797,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Tratamiento de errores  
  En los ejemplos de esta sección se muestran métodos de controlar errores que pueden producirse cuando se ejecuta el procedimiento almacenado.  
   
-#### <a name="j-using-trycatch"></a>J. Usar TRY…CATCH  
+#### <a name="j-using-trycatch"></a>J. Usar TRY... CATCH  
  En el ejemplo siguiente se usa la construcción TRY…CATCH para devolver información de error capturada durante la ejecución de un procedimiento almacenado.  
   
 ```sql  

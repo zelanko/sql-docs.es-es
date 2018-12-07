@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809643"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413312"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **Usar bcp y el formato de caracteres Unicode para importar datos con un archivo de formato no XML**<a name="bcp_widechar_import_fmt"></a>
-Modificadores **-w** y **-f** switches y **IN** commy.  Se deberá aplicar una solución alternativa, puesto que este ejemplo implica bcp, un archivo de formato, un carácter Unicode y el primer campo de datos del archivo de datos es un campo sin caracteres.  Consulte la sección [Consideraciones especiales sobre el uso del formato de caracteres Unicode, bcp y un archivo de formato](#special_considerations), que aparece más arriba.  El archivo de datos `myWidechar.bcp` se alterará mediante la adición de un registro adicional como registro "ficticio", que se omitirá con el modificador `-F 2` .
+Modificadores **-w** y **-f** switches y **IN** commy.  Se deberá aplicar una solución alternativa, puesto que este ejemplo implica bcp, un archivo de formato, un carácter Unicode y el primer campo de datos del archivo de datos es un campo sin caracteres.  Consulte la sección [Consideraciones especiales sobre el uso del formato de caracteres Unicode, bcp y un archivo de formato](#special_considerations), que aparece más arriba.  El archivo de datos `myWidechar.bcp` se alterará mediante la adición de un registro adicional como registro "ficticio", que se omitirá con el modificador `-F 2`.
 
 En un símbolo del sistema, escriba los siguientes comandos y siga los pasos de modificación:
 ```

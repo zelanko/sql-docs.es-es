@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677134"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538085"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ El siguiente archivo de formato de ejemplo para una tabla con 5 columnas incluye
   
 ```  
   
- Si intenta importar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `bcp in –c –C65001 –f format_file` …” o “`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …”, la información sobre la intercalación o página de códigos tendrá prioridad sobre la opción 65001.  
+ Si intenta importar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante `bcp in -c -C65001 -f format_file` ..." o "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...", la información sobre la intercalación o página de códigos tendrá prioridad sobre la opción 65001.  
 Por lo tanto, si genera un archivo de formato, debe eliminar manualmente la información de intercalación del archivo de formato generado antes de comenzar a importar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 El siguiente es un ejemplo del archivo de formato sin la información de intercalación.  
   
@@ -203,7 +203,7 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  El archivo de formato generado, `Department-c.xml`, contiene los elementos XML siguientes:  

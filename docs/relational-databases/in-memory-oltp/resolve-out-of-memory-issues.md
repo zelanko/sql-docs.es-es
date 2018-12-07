@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671694"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518607"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "51671694"
   
 |Tema|Información general|  
 |-----------|--------------|  
-|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos '*\<nombreDeBaseDeDatos>*' debido a memoria insuficiente en el grupo de recursos de servidor '*\<nombreDeGrupoDeRecursos>*'".|  
+|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos "*\<nombreDeBaseDeDatos>*" debido a memoria insuficiente en el grupo de recursos de servidor "*\<nombreDeGrupoDeRecursos>*"".|  
 |[Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo](#bkmk_recoverFromOOM)|Se describe lo que hay que hacer si percibe que las condiciones de memoria insuficiente están afectando negativamente al rendimiento.|  
-|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos '*\<nombreDeBaseDeDatos>*' debido a memoria insuficiente en el grupo de recursos '*\<nombreDeGrupoDeRecursos>*'". …" cuando hay suficiente memoria disponible para la operación.|
+|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos "*\<nombreDeBaseDeDatos>*" debido a memoria insuficiente en el grupo de recursos "*\<nombreDeGrupoDeRecursos>*". ..." cuando hay suficiente memoria disponible para la operación.|
 |[Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs)|Qué debe tener en cuenta al usar OLTP en memoria en un entorno virtualizado.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Cuando intente restaurar una base de datos, es posible que obtenga el mensaje de error: "Error en la operación de restauración para la base de datos '*\<NombreBasedeDatos>*' debido a que la memoria es insuficiente en el grupo de recursos '*\<NombreGrupoRecursos>*'". Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
+ Cuando intente restaurar una base de datos, es posible que obtenga el mensaje de error: "Error en la operación de restauración para la base de datos "*\<NombreBasedeDatos>*" debido a que la memoria es insuficiente en el grupo de recursos "*\<NombreGrupoRecursos>*"". Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
    
 El servidor en el que restaura una base de datos debe tener suficiente memoria disponible para las tablas optimizadas para memoria en la copia de seguridad de la base de datos; de lo contrario, la base de datos no se conectará y se marcará como sospechosa.  
   
@@ -79,7 +79,7 @@ Si el servidor tiene suficiente memoria física, pero todavía aparece este erro
 2.  [Tomar una acción correctora](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Abrir una DAC (conexión de administrador dedicada)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de administrador dedicada (DAC). La DAC permite a los administradores obtener acceso a una instancia en ejecución del motor de base de datos de SQL Server para solucionar problemas en el servidor, aunque el servidor no responda a otras conexiones de cliente. DAC está disponible a través de la utilidad `sqlcmd` y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de administrador dedicada (DAC). La DAC permite a los administradores acceder a una instancia en ejecución del motor de base de datos de SQL Server para solucionar problemas en el servidor, aunque el servidor no responda a otras conexiones de cliente. DAC está disponible a través de la utilidad `sqlcmd` y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Para obtener instrucciones sobre el uso de DAC a través de SSMS o `sqlcmd`, consulte [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
@@ -89,7 +89,7 @@ Si el servidor tiene suficiente memoria física, pero todavía aparece este erro
 #### <a name="free-up-existing-memory"></a>Libere memoria existente  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>Elimine las filas que no sean esenciales de la tabla con optimización para memoria y espere a la recolección de elementos no utilizados  
- Puede quitar filas no esenciales de una tabla con optimización para memoria. El recolector de elementos no utilizados devuelve la memoria que usaban estas filas a la memoria disponible. El motor de OLTP en memoria recopila filas de elementos no utilizados de forma intensa. Sin embargo, una transacción de ejecución prolongada puede impedir la recolección de elementos no utilizados. Por ejemplo, si hay una transacción que se ejecuta durante 5 minutos, no se pueden recopilar las versiones de filas creadas con las operaciones de actualización o eliminación mientras la transacción estaba activa.  
+ Puede quitar filas no esenciales de una tabla con optimización para memoria. El recolector de elementos no utilizados devuelve la memoria que usaban estas filas a la memoria disponible. El motor de OLTP en memoria recopila filas de elementos no utilizados de forma intensa. Sin embargo, una transacción de ejecución prolongada puede impedir la recolección de elementos no utilizados. Por ejemplo, si hay una transacción que se ejecuta durante cinco minutos, no se pueden recopilar las versiones de filas no utilizadas creadas con las operaciones de actualización o eliminación mientras la transacción estaba activa.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Mover una o varias filas a una tabla basada en disco  
  Los siguientes artículos de TechNet proporcionan instrucciones para mover filas de una tabla optimizada para memoria a una tabla basada en disco.  
@@ -130,7 +130,7 @@ GO
  Para obtener información sobre los valores máximos para MAX_MEMORY_PERCENT, vea la sección del tema [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 ##### <a name="install-additional-memory"></a>Instale memoria adicional  
- En última instancia, si es posible, la mejor solución es instalar memoria física adicional. Si lo hace, recuerde que seguramente podrá aumentar también el valor de MAX_MEMORY_PERCENT (vea el subtema [Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)), ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] probablemente no necesitará más memoria, lo cual le permitirá asignar toda o gran parte de la memoria nueva instalada al grupo de recursos de servidor.  
+ En última instancia, si es posible, la mejor solución es instalar memoria física adicional. Si lo hace, recuerde que seguramente también podrá aumentar el valor de MAX_MEMORY_PERCENT (vea el subtema [Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)), ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] probablemente no necesitará más memoria, lo que permitirá asignar toda o gran parte de la memoria nueva instalada al grupo de recursos de servidor.  
   
 > [!IMPORTANT]  
 >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
@@ -153,7 +153,7 @@ Es necesario modificar algunas prácticas recomendadas para virtualizar y admini
 -  Si se utiliza memoria de servidor mínima, es mejor asignar únicamente la cantidad de memoria que se necesita para que haya memoria suficiente para otros procesos (evitando de esta forma la paginación).
 -  No establecer un valor demasiado alto de asignación previa de memoria. De lo contrario, puede que otros procesos no obtengan memoria suficiente cuando la necesiten, y esto puede producir paginación de memoria.
 
-Si sigue los procedimientos anteriores para una base de datos con tablas optimizadas para memoria, el intento de restaurar y recuperar una base de datos podría dar lugar a que esta pasara a un estado "Pendiente de recuperación", aun cuando haya suficiente memoria para recuperarla. El motivo es que, al iniciarse, OLTP en memoria pone los datos en memoria de forma mucho más dinámica que la forma en que la asignación de memoria dinámica asigna la memoria necesaria a la base de datos.
+Si sigue los procedimientos anteriores para una base de datos con tablas optimizadas para memoria, el intento de restaurar y recuperar una base de datos podría dar lugar a que esta pasara a un estado "Pendiente de recuperación", incluso si hay memoria suficiente para recuperarla. El motivo es que, al iniciarse, OLTP en memoria pone los datos en memoria de forma mucho más dinámica que la forma en que la asignación de memoria dinámica asigna la memoria necesaria a la base de datos.
 
 ### <a name="resolution"></a>Solución
 Para mitigar este problema, asigne previamente memoria suficiente a la base de datos para recuperar o reiniciar la base de datos; no especifique un valor mínimo confiando en que la memoria dinámica proporcionará memoria adicional cuando sea necesario.

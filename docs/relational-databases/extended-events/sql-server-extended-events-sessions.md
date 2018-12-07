@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 913088e4dd3f132704642dba698ecfbe46e84754
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 51124deb3e2c5d9acc6de2108b3345d50f062427
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120088"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398828"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "49120088"
   
  **Seguimiento de causalidad**  
   
- El seguimiento de causalidad proporciona la capacidad de realizar el seguimiento de trabajo por varias tareas. Cuando el seguimiento de causalidad está habilitado, cada evento que se activa tiene un Id. de actividad único en todo el sistema. El Id. de actividad es la combinación de un valor GUID constante en todos los eventos de una tarea y un número de secuencia que se incrementa cada vez que se activa un evento. Cuando una tarea produce trabajo que se debe realizar en otra, el identificador de actividad del elemento principal se envía a la tarea secundaria. La tarea secundaria genera el Id. de actividad del elemento principal la primera vez que se activa un evento.  
+ El seguimiento de causalidad proporciona la capacidad de realizar el seguimiento de trabajo por varias tareas. Cuando el seguimiento de causalidad está habilitado, cada evento que se activa tiene un Id. de actividad único en todo el sistema. El Id. de actividad es la combinación de un valor GUID constante en todos los eventos de una tarea y un número de secuencia que se incrementa cada vez que se activa un evento. Cuando una tarea produce trabajo que se debe realizar en otra, el identificador de actividad del elemento principal se envía a la tarea secundaria. La tarea secundaria genera el identificador de actividad del elemento principal la primera vez que se activa un evento.  
   
  La arquitectura de Extended Events constituye un sistema flexible que permite utilizar diversos objetos conjuntamente para resolver problemas concretos.  
   

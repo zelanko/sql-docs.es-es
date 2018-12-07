@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura de procesamiento de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542518"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ Los planes de ejecución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-Cuando se ejecuta una instrucción SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el motor relacional busca primero en la caché de planes para comprobar la existencia de un plan de ejecución para la misma instrucción SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vuelve a usar cualquier plan existente que encuentra, de forma que se ahorra la sobrecarga de volver a compilar la instrucción SQL. Si no existe ningún plan de ejecución, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera uno nuevo para la consulta.
+Cuando se ejecuta una instrucción SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el motor relacional busca primero en la caché de planes para comprobar la existencia de un plan de ejecución para la misma instrucción SQL. La instrucción SQL se considera existente si coincide literalmente con una instrucción SQL ejecutada anteriormente con un plan en caché, carácter a carácter. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vuelve a usar cualquier plan existente que encuentra, de forma que se ahorra la sobrecarga de volver a compilar la instrucción SQL. Si no existe ningún plan de ejecución, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera uno nuevo para la consulta.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un algoritmo eficiente que permite encontrar cualquier plan de ejecución existente para una determinada instrucción SQL. En la mayor parte de los sistemas, los recursos mínimos que utiliza este recorrido son menos que los recursos que se ahorran al poder utilizar de nuevo los planes existentes en lugar de compilar cada instrucción SQL.
 
-Los algoritmos que hacen coincidir las instrucciones SQL nuevas con los planes de ejecución existentes no utilizados de la caché requieren que todas las referencias a objetos estén completas. Por ejemplo, la primera de estas instrucciones `SELECT` no coincide con un plan existente, pero la segunda sí:
+Los algoritmos que hacen coincidir las instrucciones SQL nuevas con los planes de ejecución existentes no utilizados de la caché requieren que todas las referencias a objetos estén completas. Por ejemplo, supongamos que `Person` es el esquema predeterminado para el usuario que ejecuta las instrucciones `SELECT` siguientes. Aunque en este ejemplo no es necesario que la tabla `Person` tenga un nombre completo para ejecutarse, significa que la segunda instrucción no se corresponde con un plan existente, pero se hace coincidir con la tercera:
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>Quitar los planes de ejecución de la caché de planes
@@ -637,7 +640,6 @@ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el modelo de preparac
 * La aplicación puede controlar cuándo se crea el plan de ejecución y cuándo se vuelve a utilizar.
 * El modelo de preparación y ejecución se puede transportar a otras bases de datos, incluidas las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
- 
 ### <a name="ParamSniffing"></a> Examen de parámetros
 Con la expresión "examen de parámetros" se hace referencia a un proceso mediante el cual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "examina" los valores de parámetros actuales durante la compilación o la recompilación y los pasa al Optimizador de consultas para que se puedan usar para generar planes de ejecución de consultas potencialmente más eficaces.
 
@@ -655,6 +657,24 @@ Los valores de parámetros se examinan durante la compilación o la recompilaci�
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona consultas en paralelo para optimizar la ejecución de consultas y las operaciones con índices en equipos que disponen de más de un microprocesador (CPU). Debido a que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar una operación de consulta o índice en paralelo mediante varios subprocesos de trabajo del sistema operativo, la operación se puede completar de forma rápida y eficaz.
 
 Durante la optimización de una consulta, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] busca operaciones de consulta o índice que podrían beneficiarse de la ejecución en paralelo. Para estas consultas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inserta operadores de intercambio en el plan de ejecución de consultas para preparar su ejecución en paralelo. Un operador de intercambio es un operador de un plan de ejecución de consultas que proporciona administración de procesos, redistribución de datos y control del flujo. El operador de intercambio incluye los operadores lógicos `Distribute Streams`, `Repartition Streams`y `Gather Streams` como subtipos; uno o varios de estos operadores pueden aparecer en la salida del Plan de presentación de un plan de consulta para una consulta en paralelo. 
+
+> [!IMPORTANT]
+> Determinadas construcciones impiden la capacidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de aprovechar el paralelismo en el plan de ejecución completo o en partes de este.
+
+Entre las construcciones que impiden el paralelismo se incluyen las siguientes:
+>
+> - **UDF escalares**    
+>   Para obtener más información sobre las funciones escalares definidas por el usuario, vea [Crear funciones definidas por el usuario](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tiene la capacidad de insertar estas funciones y desbloquear el uso del paralelismo durante el procesamiento de consultas. Para obtener más información sobre la inserción de UDF escalares, vea [Procesamiento de consultas inteligente en bases de datos SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+> - **Remote Query**    
+>   Para obtener más información sobre Remote Query, vea [Referencia de operadores lógicos y físicos del plan de presentación](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+> - **Cursores dinámicos**    
+>   Para obtener más información sobre los cursores, vea [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+> - **Consultas recursivas**    
+>   Para obtener más información sobre la recursión, vea [Instrucciones para definir y usar expresiones de tabla comunes recursivas](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) y [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (La recursión en T-SQL).
+> - **Funciones con valores de tabla (TVF)**    
+>   Para obtener más información sobre las TVF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+> - **Palabra clave TOP**    
+>   Para obtener más información, vea [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 Tras la inserción de operadores de intercambio, el resultado es un plan de ejecución de consultas en paralelo. Un plan de ejecución de consultas en paralelo puede usar más de un subproceso de trabajo. Un plan de ejecución en serie, usado por una consulta no paralela, solo usa un subproceso de trabajo para su ejecución. El número real de subprocesos de trabajo que usa una consulta en paralelo se determina en la inicialización de la ejecución del plan de consulta y viene determinado por la complejidad del plan y el grado de paralelismo. El grado de paralelismo determina el número máximo de CPU que se están usando; no significa el número de subprocesos de trabajo que se están usando. El valor del grado de paralelismo se establece en el servidor y se puede modificar mediante el procedimiento almacenado del sistema sp_configure. Puede reemplazar este valor para instrucciones individuales de consulta o índice especificando la sugerencia de consulta `MAXDOP` o la opción de índice `MAXDOP` . 
 
@@ -1098,4 +1118,6 @@ GO
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimación de cardinalidad](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Procesamiento de consultas adaptable](../relational-databases/performance/adaptive-query-processing.md)   
- [Prioridad de los operadores](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [Prioridad de los operadores](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [Planes de ejecución](../relational-databases/performance/execution-plans.md)    
+ [Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

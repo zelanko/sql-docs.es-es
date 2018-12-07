@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021869"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712186"
 ---
 # <a name="project-property-pages-dialog-box"></a>Páginas de propiedades del proyecto (cuadro de diálogo)
 
-  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **Proyecto**, haga clic en \<Propiedades**de**Nombre del proyecto de informe>.  
+  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **Proyecto**, haga clic en _\<Nombre del proyecto de informe>_**Propiedades**.  
   
  Después de definir las propiedades de configuración, puede seleccionar una configuración en la lista desplegable **Configuraciones de soluciones** de la barra de herramientas.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "50021869"
  Seleccione **True** para sobrescribir el origen de datos del servidor con el origen de datos del proyecto cuando se publiquen los informes. Seleccione **False** para dejar el origen de datos existente en el servidor.  
   
  **TargetServerVersion**  
- Seleccione la versión adecuada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o bien seleccione **Detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la propiedad **TargetServer URL** . El valor predeterminado es **SQL Server 2016**.  
+ Seleccione la versión adecuada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o bien seleccione **Detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la propiedad **TargetServer URL** . El valor predeterminado es **SQL Server 2017**.  
   
  **TargetDataSourceFolder**  
  Nombre de la carpeta donde se almacenarán los orígenes de datos publicados. Si no especifica una carpeta, el origen de datos se publica en la misma carpeta que el informe. Si la carpeta no existe en el servidor de informes, el Diseñador de informes la crea cuando los informes se publiquen.  

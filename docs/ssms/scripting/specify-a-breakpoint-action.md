@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cb85fe53517bcbed16ff86be801578c6d80d21d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4c69b0ebfe9750d904e46ee3e6bdc7665ef5d0b7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643895"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398838"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51643895"
   
  Los mensajes de impresión se especifican en la opción **Imprimir un mensaje** como una cadena de texto que incluye expresiones con información de la instancia de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está depurando. Estas expresiones pueden ser:  
   
--   Una expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] escrita entre llaves ({}). Las expresiones pueden incluir variables, parámetros y funciones integradas de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Algunos ejemplos son {@MyVariable}, {@NameParameter}, {@@SPID} o {SERVERPROPERTY(‘ProcessID’)}.  
+-   Una expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] escrita entre llaves ({}). Las expresiones pueden incluir variables, parámetros y funciones integradas de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Algunos ejemplos son {@MyVariable}, {@NameParameter}, {@@SPID} o {SERVERPROPERTY('ProcessID')}.  
   
 -   Una de las siguientes palabras clave:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51643895"
   
     4.  $FUNCTION devuelve el nombre del procedimiento almacenado o la función definida por el usuario donde se ha establecido el punto de interrupción. Si el punto de interrupción está establecido en la ventana del editor, $FUNCTION devuelve en nombre del archivo de script que se está editando.  
   
-    5.  $PID y $PNAME devuelven el identificador y el nombre del proceso del sistema operativo que está ejecutando la instancia del motor de base de datos en la que se está ejecutando [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID devuelve el mismo identificador que SERVERPROPERTY(‘ProcessID’), salvo porque $PID es un valor hexadecimal mientras que SERVERPROPERTY(‘ProcessID’) es un valor decimal.  
+    5.  $PID y $PNAME devuelven el identificador y el nombre del proceso del sistema operativo que está ejecutando la instancia del motor de base de datos en la que se está ejecutando [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID devuelve el mismo identificador que SERVERPROPERTY('ProcessID'), salvo porque $PID es un valor hexadecimal mientras que SERVERPROPERTY('ProcessID') es un valor decimal.  
   
     6.  $TID y $TNAME devuelven el identificador y el nombre del subproceso del sistema operativo en el que se está ejecutando el lote [!INCLUDE[tsql](../../includes/tsql-md.md)] . El subproceso está asociado al proceso que ejecuta la instancia del motor de base de datos. $TID devuelve el mismo valor que SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, salvo que $TID es un valor hexadecimal y kpid es un valor decimal.  
   

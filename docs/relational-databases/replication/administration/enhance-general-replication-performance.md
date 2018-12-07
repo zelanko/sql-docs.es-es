@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c57fd45ac2633e8027e916055b2850033bf69e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539189"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,11 +154,11 @@ ms.locfileid: "47665043"
   
 -   Reduzca el nivel de detalle de los agentes de replicación, excepto durante la prueba inicial, la supervisión o la depuración.  
   
-     Reduzca los parámetros **–HistoryVerboseLevel** y **–OutputVerboseLevel** de los agente de distribución o agentes de mezcla. Esto reducirá número de nuevas filas insertadas para realizar el seguimiento de la salida y el historial del agente. En su lugar, los mensajes anteriores del historial con el mismo estado se actualizarán a la nueva información del historial. Aumente los niveles de detalle de la prueba, la supervisión y la depuración para tener toda la información que sea posible sobre la actividad del agente.  
+     Reduzca los parámetros **-HistoryVerboseLevel** y **-OutputVerboseLevel** de los agentes de distribución o de mezcla. Esto reducirá número de nuevas filas insertadas para realizar el seguimiento de la salida y el historial del agente. En su lugar, los mensajes anteriores del historial con el mismo estado se actualizarán a la nueva información del historial. Aumente los niveles de detalle de la prueba, la supervisión y la depuración para tener toda la información que sea posible sobre la actividad del agente.  
   
--   Use el parámetro **–MaxBCPThreads** del Agente de instantáneas, del Agente de mezcla y del Agente de distribución (el número de subprocesos especificados no debe superar el número de procesadores del equipo). Este parámetro especifica el número de operaciones de copia masiva que se pueden realizar en paralelo cuando se crea y aplica la instantánea.  
+-   Use el parámetro **-MaxBCPThreads** del Agente de instantáneas, del Agente de mezcla y del Agente de distribución (el número de subprocesos especificados no debe superar el número de procesadores del equipo). Este parámetro especifica el número de operaciones de copia masiva que se pueden realizar en paralelo cuando se crea y aplica la instantánea.  
   
--   Utilice el parámetro **–UseInprocLoader** del Agente de distribución y del Agente de mezcla (este parámetro no se puede utilizar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
+-   Use el parámetro **-UseInprocLoader** del Agente de distribución y del Agente de mezcla (este parámetro no se puede usar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
   
  Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
   

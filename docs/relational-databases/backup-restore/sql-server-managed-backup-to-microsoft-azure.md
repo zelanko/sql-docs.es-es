@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677864"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397058"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "51677864"
  Puede especificar una programación de copia de seguridad personalizada con el procedimiento almacenado del sistema [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Si no especifica una programación personalizada, el tipo de copias de seguridad programadas y la frecuencia de copia de seguridad se determinarán en función de la carga de trabajo de la base de datos. La configuración del período de retención se utiliza para determinar el tiempo que un archivo de copia de seguridad debe conservarse en el almacenamiento y la capacidad de recuperar la base de datos hasta un momento dado dentro del período de retención.  
   
 ### <a name="backup-file-naming-conventions"></a>Convenciones de nomenclatura de los archivos de copia de seguridad  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa el contenedor que especifique, por lo que es el usuario quien se encarga de controlar el nombre del contenedor. Para los archivos de copia de seguridad, las bases de datos que no son de disponibilidad se denominan con la siguiente convención: el nombre se crea con los primeros 40 caracteres del nombre de la base de datos, el GUID de la base de datos sin "-" y, finalmente, la marca de tiempo. El carácter de subrayado se inserta entre los segmentos como separadores. La extensión de archivo **.bak** se usa en el caso de que la copia de seguridad sea completa y **.log** se usa para las copias de seguridad de registros. En las bases de datos del grupo de disponibilidad, además de la convención de nomenclatura de archivos descrita anteriormente, se agrega el GUID de la base de datos del grupo de disponibilidad después de los 40 caracteres del nombre de la base de datos. El GUID de la base de datos del grupo de disponibilidad es el valor de group_database_id de sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa el contenedor que especifique, por lo que es el usuario quien se encarga de controlar el nombre del contenedor. Para los archivos de copia de seguridad, las bases de datos que no son de disponibilidad se denominan con la convención siguiente: el nombre se crea con los primeros 40 caracteres del nombre de la base de datos, el GUID de la base de datos sin "-" y la marca de tiempo. El carácter de subrayado se inserta entre los segmentos como separadores. La extensión de archivo **.bak** se usa en el caso de que la copia de seguridad sea completa y **.log** se usa para las copias de seguridad de registros. En las bases de datos del grupo de disponibilidad, además de la convención de nomenclatura de archivos descrita anteriormente, se agrega el GUID de la base de datos del grupo de disponibilidad después de los 40 caracteres del nombre de la base de datos. El GUID de la base de datos del grupo de disponibilidad es el valor de group_database_id de sys.databases.  
   
 ### <a name="full-database-backup"></a>Copia de seguridad completa de base de datos  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa una copia de seguridad completa de la base de datos si se cumple alguna de las siguientes condiciones.  

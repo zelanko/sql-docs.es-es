@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730823"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617087"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730823"
 > [!WARNING]  
 >  El dominio compuesto adjunto a un servicio de datos de referencia está disponible en la lista desplegable de dominios al asignar dominios a las columnas del esquema del servicio de datos de referencia. No asigne el dominio compuesto a una columna del esquema del servicio de datos de referencia; solo debe asignar dominios individuales dentro de un dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia. De lo contrario, se producirá un error.  
   
- Un esquema del servicio de datos de referencia puede tener una columna obligatoria que se debe asignar al dominio apropiado si decide usar el servicio de datos de referencia. La columna obligatoria de un esquema de datos de referencia se identifica mediante "(M)" en el nombre de columna. Por ejemplo, **AddressLine** es la columna de esquema obligatoria en **Melissa Data – Address Data** y **CompanyName** es la columna de esquema obligatoria en **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
+ Un esquema del servicio de datos de referencia puede tener una columna obligatoria que se debe asignar al dominio apropiado si decide usar el servicio de datos de referencia. La columna obligatoria de un esquema de datos de referencia se identifica mediante "(M)" en el nombre de columna. Por ejemplo, **AddressLine** es la columna de esquema obligatoria en **Melissa Data - Address Data** y **CompanyName** es la columna de esquema obligatoria en **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- En este tema, crearemos cuatro dominios: **Address line**, **City**, **State**y **Zip**, bajo un dominio compuesto, **Address Verification**, adjuntaremos el dominio compuesto al servicio de datos de referencia **Melissa Data – Address Check** y después asignaremos los dominios individuales dentro del dominio compuestas a las columnas adecuadas del esquema del servicio de datos de referencia.  
+ En este tema, se crearán cuatro dominios: **Address Line**, **City**, **State** y **Zip**, bajo un dominio compuesto, **Address Verification**, se adjuntará el dominio compuesto al servicio de datos de referencia **Melissa Data - Address Check** y después se asignarán los dominios individuales dentro del dominio compuestas a las columnas adecuadas del esquema del servicio de datos de referencia.  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47730823"
   
 8.  En el cuadro de diálogo **Catálogo de proveedores de datos de referencia en línea** :  
   
-    1.  En **DataMarket Data Quality Services**, seleccione el cuadro **Melissa Data – Address Check** .  
+    1.  En **DataMarket Data Quality Services**, active la casilla **Melissa Data - Address Check**.  
   
-    2.  Asigne las columnas del servicio de datos de referencia Melissa Data – Address Check a los dominios adecuados (Address Line, City, State y Zip). Para asignar las columnas, seleccione una columna del servicio de datos de referencia en la columna **Esquema RDS** y, a continuación, seleccione el dominio adecuado en la columna **Dominio** . Para agregar más filas a la tabla, haga clic en el icono **Agregar entrada de esquema** .  
+    2.  Asigne las columnas del servicio de datos de referencia Melissa Data - Address Check a los dominios adecuados (Address Line, City, State y Zip). Para asignar las columnas, seleccione una columna del servicio de datos de referencia en la columna **Esquema RDS** y, a continuación, seleccione el dominio adecuado en la columna **Dominio** . Para agregar más filas a la tabla, haga clic en el icono **Agregar entrada de esquema** .  
   
     3.  Haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo **Catálogo de proveedores de datos de referencia en línea** .  
   

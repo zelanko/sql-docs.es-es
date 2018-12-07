@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
@@ -14,20 +13,20 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1d46bc9edd1c907c1d8b13fb5677f1bec5f7c2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700873"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617275"
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  En este tema se describe cómo crear relaciones basadas en términos para un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relación basada en términos (TBR) permite corregir términos que forman parte de los valores de un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, podría configurar una relación basada en términos que cambiara el término “Inc.” por “Incorporated”. El término “Inc.” se cambiará cada vez que aparezca en el dominio. Las instancias de “Contoso, Inc.” se cambiarán por “Contoso, Incorporated”, y ambos valores se considerarán sinónimos exactos.  
+  En este tema se describe cómo crear relaciones basadas en términos para un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relación basada en términos (TBR) permite corregir términos que forman parte de los valores de un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, podría configurar una relación basada en términos que cambiara el término "Inc." por "Incorporated". El término "Inc." se cambiará cada vez que aparezca en el dominio. Las instancias de "Contoso, Inc." se cambiarán por "Contoso, Incorporated", y ambos valores se considerarán sinónimos exactos.  
   
- Para utilizar relaciones basadas en términos, es necesario crear una lista de pares formados por un valor y una corrección, como “Inc.” e “Incorporated” o “Sénior” y “Sr.”. Una relación basada en términos permite cambiar un término en todo el dominio sin necesidad de establecer manualmente como sinónimo cada valor del dominio. Puede indicar que se corrija un valor aunque el proceso de detección de conocimiento no lo haya detectado previamente. Si la transformación de una relación basada en términos hace que dos valores sean idénticos, DQS creará entre ellos una relación de sinónimos (en la detección del conocimiento), una relación de corrección (en la corrección de datos) o una coincidencia exacta (en la coincidencia).  
+ Para usar relaciones basadas en términos, es necesario crear una lista de pares formados por un valor y una corrección, como "Inc." e "Incorporated", o "Sénior" y "Sr.". Una relación basada en términos permite cambiar un término en todo el dominio sin necesidad de establecer manualmente como sinónimo cada valor del dominio. Puede indicar que se corrija un valor aunque el proceso de detección de conocimiento no lo haya detectado previamente. Si la transformación de una relación basada en términos hace que dos valores sean idénticos, DQS creará entre ellos una relación de sinónimos (en la detección del conocimiento), una relación de corrección (en la corrección de datos) o una coincidencia exacta (en la coincidencia).  
   
  Tanto la transformación de relaciones basadas en términos como la transformación de símbolos (en la que los caracteres especiales se sustituyen por espacios o valores NULL) se realizan en una fase previa al procesamiento, antes de análisis final. Si se solicita el análisis inicial de un dominio compuesto, este se realizará antes de las dos transformaciones, ya que el análisis inicial de delimitadores requiere el uso de símbolos. Otras operaciones, como los cambios en las reglas y en los valores del dominio, se llevan a cabo después de las transformaciones. En la coincidencia, las relaciones basadas en los términos se aplican a los datos de origen antes de la actividad de coincidencia independientemente de si se ejecuta una limpieza.  
   

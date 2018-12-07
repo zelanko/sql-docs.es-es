@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33955a8d77403209c74a7de39cf4af17694cf80c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666784"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395178"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,11 +100,11 @@ Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro de
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Para comprobar la fragmentación de un índice  
   
-1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que desea comprobar la fragmentación de un índice.  
+1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que quiera comprobar la fragmentación de un índice.  
   
 2.  Expanda la carpeta **Tablas** .  
   
-3.  Expanda la tabla en la que desea comprobar la fragmentación de un índice.  
+3.  Expanda la tabla en la que quiera comprobar la fragmentación de un índice.  
   
 4.  Expanda la carpeta **Índices** .  
   

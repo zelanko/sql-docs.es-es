@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
@@ -15,12 +14,12 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e330306aac704bc2cb94885777449731e9648230
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 865c5a9430f7c17f120e96b015ffe2818a68801f
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699184"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617645"
 ---
 # <a name="create-a-domain-rule"></a>Cree una regla de dominio
 
@@ -55,7 +54,7 @@ ms.locfileid: "51699184"
   
 6.  Active la casilla **Activa** para especificar que la regla se debe ejecutar (el valor predeterminado) o anule dicha selección para impedir su ejecución.  
   
-7.  En el panel **Generar una regla** , seleccione una condición en la lista desplegable del cuadro de cláusulas de la regla.  
+7.  En el panel **Generar una regla**, seleccione una condición en la lista desplegable del cuadro de cláusulas de la regla.  
   
 8.  Si la condición requiere un valor, escríbalo en el cuadro de texto asociado.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "51699184"
   
 3.  Haga clic en el icono **Probar la regla de dominio en todos los términos** .  
   
-4.  Compruebe la validez de cada uno de los términos. Una marca de comprobación significa “correcto”, una cruz significa “error” y un triángulo significa “no válido”.  
+4.  Compruebe la validez de cada uno de los términos. Una marca de comprobación significa "correcto", una cruz significa "error" y un triángulo significa "no válido".  
   
 5.  Haga clic en **Cerrar** cuando haya terminado con el cuadro de diálogo de prueba.  
   
@@ -110,9 +109,9 @@ ms.locfileid: "51699184"
   
  Cuando se aplica una regla de dominio y un valor de dominio no la cumple, este valor se designa como no válido. Un valor designado como No válido se cambiará a Correcto si se elimina la regla que le llevó a ese estado, o se modifica dicha regla para que el valor la cumpla. Si ha designado un valor como No válido manualmente (en la pestaña Valores del dominio de la actividad Administración de dominios), y se elimina, desactiva o modifica una regla que el valor no cumple, el valor seguirá designándose como No válido, de acuerdo con la designación manual.  
   
- Una regla de dominio que tenga una condición definitiva aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas son El valor es igual al, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que tiene la regla de dominio siguiente: “For ‘City’, El valor es igual a ‘Los Angeles’”. Si “Los Ángeles” y “LA” son sinónimos, ambos serán correctos. Por otro lado, si la regla no contenía una condición definitiva, por ejemplo “For City, El valor termina por “s”, entonces “Los Angeles” sería correcto, pero no así su sinónimo “LA”.  
+ Una regla de dominio que tenga una condición definitiva aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas son El valor es igual al, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que tiene la regla de dominio siguiente: "Para "City", el valor es igual a "Los Angeles"". Si "Los Angeles" y "LA" son sinónimos, ambos serán correctos. Por otro lado, si la regla no contenía una condición definitiva, por ejemplo "Para City, el valor termina por "s", entonces "Los Angeles" sería correcto, pero no así su sinónimo "LA".  
   
- Puede elegir entre distintas alternativas al crear una regla de dominio. Por ejemplo, para validar si los valores comienzan por la letra A, B o C, podría crear una regla simple con una condición compleja (como una expresión regular con caracteres de barra vertical), o una regla compleja que contenga varias condiciones simples. Un ejemplo de la primera regla sería “El valor coincide con la expresión regular (^A|^B|^C)”. Un ejemplo de la segunda regla sería “’El valor comienza por A’ OR ‘El valor comienza por B’ OR ‘El valor comienza por C’”.  
+ Puede elegir entre distintas alternativas al crear una regla de dominio. Por ejemplo, para validar si los valores comienzan por la letra A, B o C, podría crear una regla simple con una condición compleja (como una expresión regular con caracteres de barra vertical), o una regla compleja que contenga varias condiciones simples. Un ejemplo de la primera regla sería "El valor coincide con la expresión regular (^A|^B|^C)". Un ejemplo de la segunda regla sería ""El valor comienza por A" OR "El valor comienza por B" OR "El valor comienza por C"".  
   
 |Condición|Descripción|Ejemplo|  
 |---------------|-----------------|-------------|  
@@ -127,13 +126,13 @@ ms.locfileid: "51699184"
 |El valor termina por|Solo serán válidos los valores que terminan por los caracteres del operando.|Operando de ejemplo: AA<br /><br /> Valores válidos: 1AA<br /><br /> Valor no válido: 1AAB|  
 |El valor es numérico|Solo serán válidos los valores con un tipo de datos numérico de SQL Server. Esto incluye los tipos int, decimal, float, etc.|Operando de ejemplo: N/D<br /><br /> Valores válidos: -1, 25 y 345,1234.<br /><br /> Valores no válidos: 2b, bcdef|  
 |El valor es fecha u hora|Solo serán válidos los valores con un tipo de datos de fecha y hora de SQL Server. Esto incluye los tipos datetime, time, date, etc.|Operando de ejemplo: N/D<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; 21 de marzo de 2001; 5/18/2011; 18:24:24<br /><br /> Valores no válidos: marzo 213, 2006|  
-|El valor está en|Solo serán válidos los valores que están en el conjunto del operando.<br /><br /> Para especificar los valores del conjunto, haga clic en el cuadro de texto del operando, escriba el primer valor, presione Entrar, escriba el segundo valor, repita este procedimiento con tantos valores como desee incluir en el conjunto y, a continuación, haga clic de nuevo en el cuadro de texto del operando. DQS insertará una coma entre los valores del conjunto. Si especifica una única cadena con comas y sin un retorno de carro (por ejemplo, “A1, B1"), DQS considerará dicha cadena como un valor único del conjunto.|Operando de ejemplo: [A1, B1]<br /><br /> Valores válidos: A1, B1<br /><br /> Valores no válidos: AA, 11|  
+|El valor está en|Solo serán válidos los valores que están en el conjunto del operando.<br /><br /> Para especificar los valores del conjunto, haga clic en el cuadro de texto del operando, escriba el primer valor, presione Entrar, escriba el segundo valor, repita este procedimiento con tantos valores como desee incluir en el conjunto y, a continuación, haga clic de nuevo en el cuadro de texto del operando. DQS insertará una coma entre los valores del conjunto. Si especifica una única cadena con comas y sin un retorno de carro (por ejemplo, "A1, B1"), DQS considerará esa cadena como un valor único del conjunto.|Operando de ejemplo: [A1, B1]<br /><br /> Valores válidos: A1, B1<br /><br /> Valores no válidos: AA, 11|  
 |El valor no está en|Solo serán válidos los valores que no están en el conjunto del operando.|Operando de ejemplo: [A1, B1]<br /><br /> Valores válidos: AA, 11<br /><br /> Valores no válidos: A1, B1|  
-|El valor coincide con el modelo|Solo serán válidos los valores que coincidan con el modelo de caracteres, dígitos o caracteres especiales del operando.<br /><br /> Se puede usar cualquier letra (A…Z) como patrón para cualquier letra; no se distinguen mayúsculas de minúsculas. Se puede usar cualquier dígito (0…9) como patrón para cualquier dígito. Se puede usar cualquier carácter especial, excepto una letra o un dígito, como patrón de sí mismo. Los corchetes, [], definen una coincidencia opcional.|Operando de ejemplo: AA:000 (un patrón de *cualesquiera* dos caracteres seguidos de un signo de dos puntos (:), que a su vez va seguido de *cualesquiera* tres dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores no válidos: abc:123, FJ-369<br /><br /> Para obtener más información sobre las reglas de patrón en DQS y ejemplos, vea [Coincidencias de patrón en reglas de dominio de DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|El valor coincide con el modelo|Solo serán válidos los valores que coincidan con el modelo de caracteres, dígitos o caracteres especiales del operando.<br /><br /> Se puede usar cualquier letra (A...Z) como patrón para cualquier letra; no se distinguen mayúsculas de minúsculas. Se puede usar cualquier dígito (0...9) como patrón para cualquier dígito. Se puede usar cualquier carácter especial, excepto una letra o un dígito, como patrón de sí mismo. Los corchetes, [], definen una coincidencia opcional.|Operando de ejemplo: AA:000 (un patrón de *cualesquiera* dos caracteres seguidos de un signo de dos puntos (:), que a su vez va seguido de *cualesquiera* tres dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores no válidos: abc:123, FJ-369<br /><br /> Para obtener más información sobre las reglas de patrón en DQS y ejemplos, vea [Coincidencias de patrón en reglas de dominio de DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
 |El valor no coincide con el modelo|Solo serán válidos los valores que no coincidan con el modelo de caracteres, dígitos o caracteres especiales del operando.|Operando de ejemplo: A1 (el valor no debe coincidir con un patrón de *cualquier* carácter seguido de *cualquier* dígito).<br /><br /> Valores válidos: AB1, A, A:5<br /><br /> Valores no válidos: B7, c9|  
 |El valor contiene el modelo|Solo serán válidos los valores que contengan el modelo de caracteres, dígitos o caracteres especiales del operando.|Operando de ejemplo: AA-12 (el valor contiene un modelo de *cualesquiera* dos caracteres seguidos de un guion (-), que a su vez va seguido de *cualesquiera* dos dígitos).<br /><br /> Valores válidos: AAA-01, ab-975<br /><br /> Valores no válidos: A7, AA-6, C-45, aa;98|  
 |El valor no contiene el modelo|Solo serán válidos los valores que no contengan el modelo de caracteres del operando.|Operando de ejemplo: AB-12 (el valor no debe contener un modelo de *cualesquiera* dos caracteres seguidos de un guion (-), que a su vez va seguido de *cualesquiera* dos dígitos).<br /><br /> Valores válidos: A7, AA-6, C-45, aa;98<br /><br /> Valores no válidos: AAA-01, ab-975|  
-|El valor coincide con la expresión regular|Solo se considerarán válidos los valores que coincidan con la expresión regular del operando.<br /><br /> No incluya los delimitadores “^” ni “$” en la expresión regular, ya que DQS los agrega automáticamente a las cláusulas que contienen esta condición. (De forma alternativa, incluya entre paréntesis la expresión regular que contenga dichos delimitadores). Para obtener más información acerca de las expresiones regulares, vea [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando de ejemplo: [1-5] + (cada carácter debe ser un dígito numérico comprendido entre 1 y 5, apareciendo al menos una vez)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores no válidos: 456, ABC|  
+|El valor coincide con la expresión regular|Solo se considerarán válidos los valores que coincidan con la expresión regular del operando.<br /><br /> No incluya los delimitadores "^" ni "$" en la expresión regular, ya que DQS los agrega de forma automática a las cláusulas que contienen esta condición. (De forma alternativa, incluya entre paréntesis la expresión regular que contenga los delimitadores "^" y "$"). Para obtener más información acerca de las expresiones regulares, vea [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando de ejemplo: [1-5] + (cada carácter debe ser un dígito numérico comprendido entre 1 y 5, apareciendo al menos una vez)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores no válidos: 456, ABC|  
 |El valor no coincide con una expresión regular|Solo se considerarán válidos los valores que no coincidan con la expresión regular del operando.|Operando de ejemplo: [1-5] + (la cadena no debe esta formada únicamente por dígitos numéricos comprendidos entre 1 y 5)<br /><br /> Valores válidos: 456, ABC<br /><br /> Valores no válidos: 123, 123456, 14352|  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Supervisión de la actividad y rendimiento del servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,12 +20,12 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 579601ec5a7a3a9890c38d8f4883779d07e2a135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747263"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513666"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Supervisión de la actividad y rendimiento del servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,30 +33,50 @@ ms.locfileid: "47747263"
   
  La sección siguiente contiene temas que describen cómo utilizar las herramientas de supervisión de la actividad y el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Windows. Incluye los temas siguientes:  
   
-## <a name="in-this-section"></a>En esta sección  
- **Para realizar tareas de supervisión con herramientas de Windows**  
+## <a name="to-perform-monitoring-tasks-with-windows-tools"></a>Para realizar tareas de supervisión con herramientas de Windows 
   
 -   [Iniciar el Monitor de sistema &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
 -   [Ver el registro de aplicación de Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
- **Para crear alertas de bases de datos de SQL Server con herramientas de Windows**  
+## <a name="to-create-sql-server-database-alerts-with-windows-tools"></a>Para crear alertas de bases de datos de SQL Server con herramientas de Windows  
   
 -   [Configurar una alerta de base de datos de SQL Server &#40;Windows&#41;](../../relational-databases/performance/set-up-a-sql-server-database-alert-windows.md)  
 
- **Para realizar tareas de supervisión con eventos extendidos**  
+## <a name="to-perform-monitoring-tasks-with-extended-events"></a>Para realizar tareas de supervisión con eventos extendidos  
  
  -   [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)
  
-  -   [Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Inicio rápido: eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ 
+ -   [Administrar sesiones de eventos en el Explorador de objetos](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+ 
+ -   [Modificar una sesión de eventos extendidos](../../relational-databases/extended-events/alter-an-extended-events-session.md)
+ 
+ -   [Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)
+ 
+ -   [Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
    
- **Para realizar tareas de supervisión con SQL Server Management Studio**  
+## <a name="to-perform-monitoring-tasks-with-sql-server-management-studio"></a>Para realizar tareas de supervisión con SQL Server Management Studio  
   
 -   [Ver el registro de errores de SQL Server &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
 -   [Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
-  
- **Para realizar tareas de supervisión con Seguimiento de SQL mediante procedimientos almacenados de Transact-SQL**  
+
+-   [Supervisión del rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+
+## <a name="to-perform-monitoring-tasks-with-sql-trace-and-sql-server-profiler"></a>Para realizar tareas de supervisión con Seguimiento de SQL y SQL Server Profiler
+
+> [!IMPORTANT]
+> En las secciones siguientes se describen los métodos de uso de Seguimiento de SQL y [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+> Seguimiento de SQL y [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] están en desuso. El espacio de nombres *Microsoft.SqlServer.Management.Trace* que contiene los objetos Trace y Replay de Microsoft SQL Server también están en desuso.   
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> Use eventos extendidos en su lugar. Para obtener más información sobre [Eventos extendidos ](../../relational-databases/extended-events/extended-events.md), vea [Inicio rápido: Eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) y [Uso de XEvent Profiler de SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
+> [!NOTE] 
+> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para las cargas de trabajo de Analysis Services NO está en desuso y seguirá siendo compatible.
+
+### <a name="to-perform-monitoring-tasks-with-sql-trace-by-using-transact-sql-stored-procedures"></a>Para realizar tareas de supervisión con Seguimiento de SQL mediante procedimientos almacenados de Transact-SQL  
   
 -   [Crear un seguimiento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
@@ -70,7 +90,7 @@ ms.locfileid: "47747263"
   
 -   [Eliminar un seguimiento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)  
   
- **Para crear y modificar seguimientos mediante SQL Server Profiler**  
+### <a name="to-create-and-modify-traces-by-using-sql-server-profiler"></a>Para crear y modificar seguimientos mediante SQL Server Profiler  
   
 -   [Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -102,7 +122,7 @@ ms.locfileid: "47747263"
   
 -   [Organizar las columnas mostradas en un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
- **Para iniciar, pausar y detener seguimientos mediante SQL Server Profiler**  
+### <a name="to-start-pause-and-stop-traces-by-using-sql-server-profiler"></a>Para iniciar, pausar y detener seguimientos mediante SQL Server Profiler  
   
 -   [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
@@ -112,7 +132,7 @@ ms.locfileid: "47747263"
   
 -   [Ejecutar un seguimiento después de haberlo pausado o detenido &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
- **Para abrir seguimientos y configurar cómo se visualizan los seguimientos mediante SQL Server Profiler**  
+### <a name="to-open-traces-and-configure-how-traces-are-displayed-by-using-sql-server-profiler"></a>Para abrir seguimientos y configurar cómo se visualizan los seguimientos mediante SQL Server Profiler  
   
 -   [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -126,7 +146,7 @@ ms.locfileid: "47747263"
   
 -   [Establecer los valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
- **Para reproducir seguimientos mediante SQL Server Profiler**  
+### <a name="to-replay-traces-by-using-sql-server-profiler"></a>Para reproducir seguimientos mediante SQL Server Profiler  
   
 -   [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
@@ -140,7 +160,7 @@ ms.locfileid: "47747263"
   
 -   [Reproducir un script Transact-SQL &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
- **Para crear, modificar y utilizar plantillas de seguimientos mediante SQL Server Profiler**  
+### <a name="to-create-modify-and-use-trace-templates-by-using-sql-server-profiler"></a>Para crear, modificar y utilizar plantillas de seguimientos mediante SQL Server Profiler  
   
 -   [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -154,7 +174,7 @@ ms.locfileid: "47747263"
   
 -   [Importar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
- **Para utilizar seguimientos de SQL Server Profiler para recopilar y supervisar el rendimiento del servidor**  
+### <a name="to-use-sql-server-profiler-traces-to-collect-and-monitor-server-performance"></a>Para utilizar seguimientos de SQL Server Profiler para recopilar y supervisar el rendimiento del servidor  
   
 -   [Buscar un valor o una columna de datos durante la ejecución de un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   

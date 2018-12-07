@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 959b778d613376197774a01de8efb6fa031cee14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bb5b57845613a408a0e374fd26dd67ebad7cd82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621863"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617175"
 ---
 # <a name="managing-a-composite-domain"></a>Administrar un dominio compuesto
 
@@ -27,7 +26,7 @@ ms.locfileid: "47621863"
   
  Los dominios individuales de un dominio compuesto deben tener un área común de conocimiento. Un ejemplo es un campo de dirección que incluye datos sobre la calle, la ciudad, el estado, el país y el código postal. Los distintos términos de este campo podrían tener tipos de datos diferentes. Para ocuparse de esto, es necesario asignar dichos términos a dominios individuales diferentes. Otro ejemplo es un campo de nombre completo que contiene el nombre, las iniciales y los apellidos. Para utilizar un dominio compuesto, es necesario analizar los datos del campo en distintos dominios individuales, creando un dominio compuesto para el campo y un dominio individual para cada parte del campo.  
   
- Los dominios compuestos no tienen las mismas capacidades que los dominios individuales. No es posible cambiar los valores en el dominio compuesto; esta operación debe hacerse en un dominio individual. Es posible utilizar reglas entre dominios para probar los valores de los dominios individuales del dominio compuesto. También se pueden ver las combinaciones de valores encontradas en los dominios compuestos.  
+ Los dominios compuestos no tienen las mismas capacidades que los dominios individuales. No es posible cambiar los valores en el dominio compuesto; esta operación se debe realizar en un dominio individual. Es posible utilizar reglas entre dominios para probar los valores de los dominios individuales del dominio compuesto. También se pueden ver las combinaciones de valores encontradas en los dominios compuestos.  
   
 ## <a name="in-this-section"></a>En esta sección  
  El uso de un dominio compuesto le permite hacer lo siguiente:  

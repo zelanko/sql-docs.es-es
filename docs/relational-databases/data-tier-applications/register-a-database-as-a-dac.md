@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513233"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar una base de datos como una DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51813998"
   
 2.  Expanda el nodo **Bases de datos** .  
   
-3.  Haga clic con el botón derecho en la base de datos que se registrará, seleccione **Tareas**y **Registrar como aplicación de capa de datos…**  
+3.  Haga clic con el botón derecho en la base de datos que se va a registrar, seleccione **Tareas** y después **Registrar como aplicación de capa de datos...**  
   
 4.  Complete los cuadros de diálogo del asistente:  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51813998"
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validar objetos  
- **Comprobando**  *nombreDeEsquema* **.** *nombreDeObjeto* **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. *SchemaName ***.*** ObjectName* identifica el objeto que se está comprobando.  
+ **Comprobando**  *nombreDeEsquema* **.** *nombreDeObjeto* **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. _SchemaName_**.**_ObjectName_ identifican el objeto que se está comprobando.  
   
  **< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
   

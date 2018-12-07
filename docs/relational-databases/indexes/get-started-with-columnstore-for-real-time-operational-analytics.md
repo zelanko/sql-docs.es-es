@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e547f591debaf4bfd3497a2a4c2d1d5580bca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739743"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531544"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47739743"
 >  Un índice de almacén de columnas no agrupado filtrado solo se puede usar en tablas basadas en disco. No se admite en tablas optimizadas para memoria.  
   
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Ejemplo A: acceso a datos activos del índice de árbol b y a datos semiactivos del índice de almacén de columnas  
- En este ejemplo se usa una condición filtrada (accountkey > 0) para establecer qué filas se van a incluir en el índice de almacén de columnas. El objetivo es diseñar la condición de filtrado y las consultas posteriores para tener acceso a los datos “activos” del índice de árbol b que cambian con frecuencia, así como para tener acceso a los datos “semiactivos” del índice de almacén de columnas, que son más estables.  
+ En este ejemplo se usa una condición filtrada (accountkey > 0) para establecer qué filas se van a incluir en el índice de almacén de columnas. El objetivo es diseñar la condición de filtrado y las consultas posteriores para acceder a los datos "activos" del índice de árbol b que cambian con frecuencia, así como para acceder a los datos "semiactivos" del índice de almacén de columnas, que son más estables.  
   
  ![Índices combinados para datos activos y semiactivos](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para datos activos y semiactivos")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47739743"
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -203,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Carga de trabajo de inserción/consulta:** si la carga de trabajo consiste principalmente en insertar datos y realizar consultas sobre estos, la opción recomendada para COMPRESSION_DELAY es 0. Las filas recién insertadas se comprimirán cuando se haya insertado 1 millón de filas en un solo grupo de filas delta.  
     Algunos ejemplos de este tipo de carga de trabajo son: (a) carga de trabajo de DW tradicional o (b) análisis de secuencia de clics cuando hay que analizar el patrón de clics en una aplicación web.  
   
--   **Carga de trabajo OLTP:** si la carga de trabajo hace un uso profuso de DML (es decir, un uso combinado intensivo de actualizaciones, eliminaciones e inserciones), puede ver la fragmentación de índices de almacén de columnas examinando el sys de DMV. dm_db_column_store_row_group_physical_stats. Si ve que más de un 10 % de las filas se marcan como eliminadas en los grupos de filas comprimidos recientemente, puede usar la opción COMPRESSION_DELAY para agregar un retraso cuando las filas sean aptas para la compresión. Por ejemplo, si en la carga de trabajo las filas recién insertadas se mantienen como ‘activas’ (es decir, se actualizan varias veces) durante, digamos, 60 minutos, conviene establecer la opción COMPRESSION_DELAY en 60.  
+-   **Carga de trabajo OLTP:** si la carga de trabajo hace un uso profuso de DML (es decir, un uso combinado intensivo de actualizaciones, eliminaciones e inserciones), puede ver la fragmentación de índices de almacén de columnas examinando el sys de DMV. dm_db_column_store_row_group_physical_stats. Si ve que más de un 10 % de las filas se marcan como eliminadas en los grupos de filas comprimidos recientemente, puede usar la opción COMPRESSION_DELAY para agregar un retraso cuando las filas sean aptas para la compresión. Por ejemplo, si en la carga de trabajo las filas recién insertadas se mantienen como "activas" (es decir, se actualizan varias veces) durante, digamos, 60 minutos, conviene establecer la opción COMPRESSION_DELAY en 60.  
   
  Es de esperar que la mayoría de los clientes no tenga que hacer nada. El valor predeterminado de la opción COMPRESSION_DELAY debería valerles.  
 En el caso de los usuarios avanzados, se recomienda ejecutar la siguiente consulta y recopilar un porcentaje de las filas eliminadas en los últimos 7 días.  
@@ -218,7 +218,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- Si el número de filas eliminadas en los grupos de filas comprimidas es mayor del 20 %, teniendo un nivel predefinido de los grupos de filas más antiguos con una variación de menos del 5 % (denominados grupos de filas inactivos), establezca COMPRESSION_DELAY = (youngest_rowgroup_created_time – current_time). Tenga en cuenta que este método funciona mejor en cargas de trabajo estables y relativamente homogéneas.  
+ Si el número de filas eliminadas en los grupos de filas comprimidas es mayor del 20 %, teniendo un nivel predefinido de los grupos de filas más antiguos con una variación inferior a 5 % (denominados grupos de filas inactivos), establezca COMPRESSION_DELAY = (youngest_rowgroup_created_time -  current_time). Tenga en cuenta que este método funciona mejor en cargas de trabajo estables y relativamente homogéneas.  
   
 ## <a name="see-also"></a>Ver también  
  [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)   

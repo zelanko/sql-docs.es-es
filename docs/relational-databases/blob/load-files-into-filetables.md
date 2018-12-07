@@ -15,12 +15,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 894570fc0f262c499bcadffc5c8d6d4bf6549b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674963"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526709"
 ---
 # <a name="load-files-into-filetables"></a>Cargar archivos en FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT con la cláusula CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) sin la cláusula IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) sin la cláusula IGNORE_CONSTRAINTS.  
   
 -   Las operaciones de carga masiva que no aplican restricciones no se ejecutarán correctamente a menos que se deshabiliten las restricciones definidas por el sistema para la FileTable. Esta categoría incluye las siguientes operaciones:  
   
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT sin la cláusula CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) con la cláusula IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) con la cláusula IGNORE_CONSTRAINTS.  
   
 ###  <a name="HowToBulkLoad"></a> Realizar la carga masiva de archivos en una FileTable  
  Puede usar varios métodos para cargar de forma masiva archivos en una FileTable:  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   Se deshabilita el espacio de nombres de FileTable y se llama sin la cláusula **CHECK_CONSTRAINTS** . A continuación, se vuelve a habilitar el espacio de nombres de la FileTable.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Se llama con la cláusula **IGNORE_CONSTRAINTS** .  
   

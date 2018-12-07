@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696983"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507283"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
 
@@ -61,7 +61,7 @@ ms.locfileid: "51696983"
 |**Número de filas por lote**|**RowsPerBatch**|El número de registros que se van a recuperar en cada lote del servicio web. El valor predeterminado es **50**.|  
 ||**ApplicationName**|El texto que se muestra en los registros de eventos. El valor predeterminado es **MDM**.|  
 ||**SiteTitle**|El texto que se muestra en la barra de título del explorador web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . El valor predeterminado es **Administrador de datos maestros**.|  
-|**Retención de registro en días**|**LogRentionDays**|El número de días tras el cual se eliminarán los registros. El valor predeterminado es -1 e indica que las tablas de registro no se limpiarán.<br /><br /> Si el valor es 0, las tablas de registro conservan solo los datos de hoy en día. Los registros de datos de los días anteriores se truncan.<br /><br /> Si el valor es mayor que 0, los datos de registro se conservan durante el número de días especificado con el valor.|  
+|**Retención de registro en días**|**LogRentionDays**|El número de días tras el cual se eliminarán los registros. El valor predeterminado es -1 e indica que las tablas de registro no se limpiarán.<br /><br /> Si el valor es 0, las tablas de registro conservan solo los datos de hoy. Los registros de datos de los días anteriores se truncan.<br /><br /> Si el valor es mayor que 0, los datos de registro se conservan durante el número de días especificado con el valor.|  
   
 ##  <a name="Versions"></a> Configuración de la administración de versiones  
   
@@ -84,7 +84,7 @@ ms.locfileid: "51696983"
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...** . Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
+|**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional del **Explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], el número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...**. Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
 |**Mostrar nombres en jerarquía de manera predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
 |**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nivel de similitud que se usa cuando se utiliza el criterio de filtro **Coincide** . El valor predeterminado es **0.3**. Establezca el valor más próximo a **1** para devolver una coincidencia que se aproxime más al criterio de búsqueda. Establezca el valor en **1** para obtener una coincidencia exacta.|  

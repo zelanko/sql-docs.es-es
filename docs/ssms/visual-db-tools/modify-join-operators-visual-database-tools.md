@@ -15,12 +15,12 @@ ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0862cc4baffd68b42723ff4037e48613170d488d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22d55490c9149a857d74b7719d88fd7b25ea9a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768213"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504620"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de combinación (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual
   
 1.  En el [panel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), haga clic con el botón derecho en la línea de combinación que desee modificar y, a continuación, elija **Propiedades** en el menú contextual.  
   
-2.  En el ventana Propiedad, haga clic en **Condición y tipo de combinación** y después haga clic en los **puntos suspensivos (...)** que aparecen a la derecha de la propiedad.  
+2.  En el ventana Propiedad, haga clic en **Condición y tipo de combinación** y después haga clic en los **puntos suspensivos (...)** situados a la derecha de la propiedad.  
   
 3.  En el cuadro de diálogo **Combinación** , seleccione un nuevo operador.  
   

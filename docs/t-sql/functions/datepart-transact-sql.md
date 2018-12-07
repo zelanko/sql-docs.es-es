@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c8a1a6571f72237b19c05dbf15d9ff70f9f7f3
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521221"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,12 +162,12 @@ Es posible que los sistemas de numeración que se usan en otros países o region
   
 |Primer día de la semana|La primera semana del año contiene|Semanas asignadas dos veces|Usado por/en|  
 |---|---|---|---|
-|Domingo|1 de enero,<br /><br /> El primer sábado,<br /><br /> 1–7 días del año|Sí|United States|  
-|Lunes|1 de enero,<br /><br /> El primer domingo,<br /><br /> 1–7 días del año|Sí|La mayoría de los países europeos y Reino Unido|  
-|Lunes|4 de enero,<br /><br /> El primer jueves,<br /><br /> 4–7 días del año|no|ISO 8601, Noruega y Suecia|  
+|Domingo|1 de enero,<br /><br /> El primer sábado,<br /><br /> 1-7 días del año|Sí|United States|  
+|Lunes|1 de enero,<br /><br /> El primer domingo,<br /><br /> 1-7 días del año|Sí|La mayoría de los países europeos y Reino Unido|  
+|Lunes|4 de enero,<br /><br /> El primer jueves,<br /><br /> 4-7 días del año|no|ISO 8601, Noruega y Suecia|  
 |Lunes|7 de enero,<br /><br /> El primer lunes,<br /><br /> 7 días del año|no||  
-|Miércoles|1 de enero,<br /><br /> El primer martes,<br /><br /> 1–7 días del año|Sí||  
-|Sábado|1 de enero,<br /><br /> El primer viernes,<br /><br /> 1–7 días del año|Sí||  
+|Miércoles|1 de enero,<br /><br /> El primer martes,<br /><br /> 1-7 días del año|Sí||  
+|Sábado|1 de enero,<br /><br /> El primer viernes,<br /><br /> 1-7 días del año|Sí||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` devuelve el valor **TZoffset** (**tz**) como el número de minutos (con signo). Esta instrucción devuelve un desplazamiento de zona horaria de 310 minutos:

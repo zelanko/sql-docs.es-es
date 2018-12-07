@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657084"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513816"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51657084"
 ## <a name="before-you-begin"></a>Antes de comenzar  
  El proceso de exportación compila un archivo de exportación DAC en dos fases.  
   
-1.  La exportación genera una definición de DAC en el archivo de exportación, archivo BACPAC, de la misma forma que un extracto de DAC genera una definición de DAC en un archivo de paquete DAC. La definición de DAC exportada incluye todos los objetos de la base de datos actual. Si el proceso de exportación se ejecuta en una base de datos que se implementó originalmente a partir de una DAC y se realizaron cambios directamente en la base de datos tras la implementación, la definición exportada coincide con el objeto establecido en la base de datos, no con lo definido en la DAC original.  
+1.  La exportación genera una definición de DAC en el archivo de exportación (archivo BACPAC) de la misma forma que una extracción de DAC genera una definición de DAC en un archivo de paquete DAC. La definición de DAC exportada incluye todos los objetos de la base de datos actual. Si el proceso de exportación se ejecuta en una base de datos que se implementó originalmente a partir de una DAC y se realizaron cambios directamente en la base de datos tras la implementación, la definición exportada coincide con el objeto establecido en la base de datos, no con lo definido en la DAC original.  
   
 2.  La exportación masiva copia los datos de todas las tablas de la base de datos y los incorpora en el archivo de exportación.  
   
@@ -65,7 +65,7 @@ En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEF
   
 3.  Haga clic con el botón secundario en el nombre de la base de datos.  
   
-4.  Haga clic en **Tareas** y seleccione **Exportar aplicación de capa de datos**.  
+4.  Haga clic en **Tareas** y después seleccione **Exportar aplicación de capa de datos...**.  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -90,12 +90,12 @@ En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEF
   
  **Siguiente** : avanza a la página **Seleccionar paquete DAC** .  
   
- **Cancelar** ; cancela la operación y cierra el asistente.  
+ **Cancelar**: cancela la operación y cierra el asistente.  
   
 ##  <a name="Export_settings"></a> Página Exportar configuraciones  
  En esta página se puede especificar la ubicación donde se desea crear el archivo BACPAC.  
   
--   **Guardar en disco local** : crea un archivo BACPAC en un directorio del equipo local. Haga clic en **Examinar…** para navegar por el equipo local, o especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
+-   **Guardar en disco local** : crea un archivo BACPAC en un directorio del equipo local. Haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
   
 -   **Guardar en Windows Azure** : crea un archivo BACPAC en un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. Tenga en cuenta que el archivo temporal se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
   

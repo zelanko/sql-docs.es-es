@@ -15,12 +15,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afedc37f2ee6b2b6b1eb87b7e3a024e51697a724
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd175d4d66cfea79f1449ae7da9d06d5c9f247c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603902"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542284"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Crear autocombinaciones manualmente (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Haga clic con el botón derecho y elija **Propiedades** en el menú contextual.  
   
-4.  En la ventana Propiedades, haga clic en **Condición y tipo de combinación** y después en los **puntos suspensivos (...)** que aparecen a la derecha de la propiedad.  
+4.  En la ventana Propiedades, haga clic en **Condición y tipo de combinación** y después en los **puntos suspensivos (...)** situados a la derecha de la propiedad.  
   
 5.  En el [cuadro de diálogo Combinar](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) , cambie el operador de comparación entre las claves principales según corresponda. Por ejemplo, puede cambiar el operador a menor que (<).  
   

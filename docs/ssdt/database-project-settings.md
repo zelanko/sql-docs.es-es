@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671419"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516019"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  
@@ -92,7 +92,7 @@ Los valores de configuración de la siguiente tabla se aplican a todas las confi
 |Aplicación de capa de datos (archivo .dacpac)|Habilitado y bloqueado. El resultado de la compilación de un proyecto de base de datos siempre produce un paquete .dacpac cuando se compila el proyecto.|Si va a usar la versión de SQL Server Data Tools (SSDT) que tiene la opción "Crear archivo .dacpac adicional de bajo nivel (v2.0)", actívela si desea que el paquete sea compatible con SQL Server Management Studio o con el Portal de administración de SQL Azure. Puede implementar un paquete .dacpac directamente desde (SSDT), pero solo se puede implementar un archivo de .dacpac versión 2.0 a través de SQL Server Management Studio en el momento en que SQL Server Data Tools se libera.|  
 |Script de creación (archivo .sql)||Especifica si se generará un script CREATE .sql completo para todos los objetos del proyecto y se colocará en la carpeta bin\debug cuando se compile el proyecto. Puede crear un script de actualización incremental mediante el comando **Publicar proyecto** o mediante la utilidad de comparación de SQL.|  
 |Genérico|||  
-|Esquema predeterminado|dbo|Especifica el esquema predeterminado en el que se crean tanto los objetos SQLCLR como los objetos Transact\-SQL. Si desea invalidar este valor, especifique el esquema directamente en los objetos.|  
+|Esquema predeterminado|dbo|Especifica el esquema predeterminado en el que se crean tanto los objetos SQLCLR como los objetos Transact\-SQL. Si desea invalidar este valor, especifique el esquema directamente en los objetos."|  
 |Incluir nombre de esquema en nombre de archivo|no|Especifica si los nombres de archivo incluyen el esquema como prefijo (por ejemplo, dbo.Products.table.sql). Si se desactiva esta casilla, los nombres de archivo para los objetos adoptan el formato nombreDeObjeto.tipoDeObjeto.sql (por ejemplo, Products.table.sql).|  
 |Validar el uso de mayúsculas y minúsculas en identificadores|sí|Especifica si se validará el uso de mayúsculas y minúsculas en identificadores en los objetos SQL del proyecto durante la compilación del proyecto. Esta opción se aplica a los proyectos de base de datos que especifican una intercalación de la base de datos que distingue mayúsculas de minúsculas.|  
 |Configuración de base de datos|Configuración predeterminada basada en la configuración estándar para una base de datos|Entre las configuraciones que se pueden especificar se incluye el método de intercalación y el nivel de una base de datos de SQL Server.|  
@@ -226,7 +226,7 @@ Puede utilizar esta configuración para controlar la depuración del proyecto de
 |Bloquear implementación incremental si puede dar lugar a pérdida de datos|sí|Especifica si la implementación debe detenerse si una actualización puede producir pérdida de datos. Si esta casilla está activada, los cambios que provocarían la pérdida de datos detendrían la implementación con un error, lo que impediría que se perdiesen los datos. Por ejemplo, la implementación se detendría si una columna `varchar(50)` se hubiera cambiado a `varchar(30)`.<br /><br />**NOTA:** La implementación solo se bloquea si las tablas en las que puede producirse pérdida de datos contienen datos. La implementación continúa si no se pierde ningún dato.|  
 |Objetos DROP en destino pero no en proyecto|no|Especifica si los objetos que están en la base de datos de destino pero no en el proyecto de base de datos se deben eliminar del script de implementación. Esto permite excluir algunos archivos del proyecto y quitarlos temporalmente del script de compilación. Sin embargo, es posible que le interese mantener las versiones existentes de estos objetos en la base de datos de destino. Esta casilla de verificación no tiene ningún efecto si la casilla de verificación **Volver a crear siempre la base de datos** está seleccionada, porque se quitará la base de datos.|  
 |No usar instrucciones ALTER ASSEMBLY para actualizar tipos CLR|no|Especifica si deben usarse instrucciones ALTER ASSEMBLY para actualizar tipos CLR (Common Language Runtime) o si el objeto que crea la instancia del tipo CLR se va a quitar y volver a generar al implementar los cambios.|  
-|Avanzadas…|no|Botón de comando que permite especificar opciones que controlan eventos y el comportamiento de la implementación.|  
+|Avanzadas...|no|Botón de comando que permite especificar opciones que controlan eventos y el comportamiento de la implementación.|  
   
 ## <a name="bkmk_ref_paths"></a>Rutas de acceso de referencia  
 Puede utilizar esta página para definir el servidor y las variables de la base de datos asociadas a referencias de bases de datos cruzadas. Además, puede especificar los valores de esas variables. Para obtener más información, consulte [Uso de referencias en proyectos de base de datos](https://msdn.microsoft.com/library/bb386242.aspx).  

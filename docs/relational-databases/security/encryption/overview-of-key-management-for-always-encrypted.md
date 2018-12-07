@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535387"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ El proceso de administración de claves se puede dividir en las siguientes tarea
 
 - **Aprovisionamiento de claves** : creación de las claves físicas en un almacén de claves de confianza (por ejemplo, el Almacén de certificados de Windows, el Almacén de claves de Azure o un módulo de seguridad de hardware), cifrado de las claves de cifrado de columnas con claves maestras de columna y creación de metadatos para ambos tipos de claves en la base de datos.
 
-- **Rotación de claves** : reemplazo periódico de una clave existente por una clave nueva. Puede que necesite rotar una clave si está en peligro o para cumplir las directivas o los reglamentos de la organización que exigen que las claves de cifrado roten. 
+- **Rotación de claves** : reemplazo periódico de una clave existente por una clave nueva. Puede que necesite rotar una clave si está en peligro, o bien para cumplir las directivas o los reglamentos de la organización que exigen que se roten las claves criptográficas. 
 
 
 ## <a name="KeyManagementRoles"></a> Roles de administración de claves
@@ -52,7 +52,7 @@ El proceso de administración de claves se puede dividir en las siguientes tarea
 Hay dos roles de usuarios que administran las claves de Always Encrypted, los administradores de seguridad y los administradores de bases de datos (DBA):
 
 - **Administrador de seguridad** : genera claves de cifrado de columnas y claves maestras de columna y administra los almacenes de claves que contienen las claves maestras de columna. Para realizar estas tareas, el administrador de seguridad debe tener acceso a las claves y al almacén de claves, pero no necesita tener acceso a la base de datos.
-- **DBA** : administra los metadatos de las claves en la base de datos. Para realizar tareas de administración de claves, el DBA debe poder administrar los metadatos de clave en la base de datos, pero no necesita tener acceso a las claves o al almacén de claves que contiene las claves maestras de columna.
+- **DBA**: administra los metadatos de las claves en la base de datos. Para realizar tareas de administración de claves, el DBA debe poder administrar los metadatos de clave en la base de datos, pero no necesita tener acceso a las claves o al almacén de claves que contiene las claves maestras de columna.
 
 Teniendo en cuenta los roles anteriores, hay dos maneras de realizar tareas de administración de claves para Always Encrypted: *con separación de roles*y *sin separación de roles*. Según las necesidades de la organización, puede seleccionar el proceso de administración de claves que mejor se adapte a sus requisitos.
 
@@ -70,14 +70,14 @@ Cuando las claves de Always Encrypted se administran sin separación de roles, u
 
 Las claves de Always Encrypted se pueden administrar mediante [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) y [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)** : proporciona cuadros de diálogo y asistentes que combinan tareas relacionadas con el acceso al almacén de claves y el acceso a la base de datos, por lo que SSMS no admite la separación de roles, pero facilita la configuración de las claves. Para obtener más información sobre la administración de claves con SSMS, vea:
+- **SQL Server Management Studio (SSMS)**: proporciona cuadros de diálogo y asistentes que combinan tareas relacionadas con el acceso al almacén de claves y a la base de datos, por lo que SSMS no admite la separación de roles, pero facilita la configuración de las claves. Para obtener más información sobre la administración de claves con SSMS, vea:
     - [Aprovisionamiento de claves maestras de columna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [Aprovisionamiento de claves de cifrado de columnas](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [Rotación de claves maestras de columna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
     - [Rotación de claves de cifrado de columnas](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** : incluye cmdlets para administrar las claves de Always Encrypted con y sin separación de roles. Para obtener más información, vea:
+- **SQL Server PowerShell**: incluye cmdlets para administrar las claves de Always Encrypted con y sin separación de roles. Para obtener más información, vea:
     - [Configure Always Encrypted Keys using PowerShell (Configurar claves de Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -93,7 +93,7 @@ El objetivo principal de Always Encrypted es garantizar la seguridad de la infor
 
 Para asegurarse de que Always Encrypted impida eficazmente estos ataques, el proceso de administración de claves debe garantizar que nunca se revelen a un posible atacante las claves maestras de columna y las claves de cifrado de columnas, así como las credenciales de un almacén de claves que contiene las claves maestras de columna. Estas son algunas instrucciones que debe seguir:
 
-- No genere nunca claves maestras de columna ni claves de cifrado de columnas en un equipo que hospede la base de datos. En su lugar, genere las claves en un equipo independiente que sea exclusivo para la administración de claves o en un equipo que hospede las aplicaciones que necesitarán tener acceso a las claves. Esto significa que **nunca debe ejecutar las herramientas usadas para generar las claves en el equipo que hospeda la base de datos** , porque si un atacante obtiene acceso a un equipo usado para aprovisionar o mantener las claves de Always Encrypted podrá obtener sus claves, incluso si estas solo aparecen brevemente en la memoria de la herramienta.
+- No genere nunca claves maestras de columna ni claves de cifrado de columnas en un equipo que hospede la base de datos. En su lugar, genere las claves en un equipo independiente que sea exclusivo para la administración de claves o en un equipo que hospede las aplicaciones que necesitarán tener acceso a las claves. Esto significa que **nunca debe ejecutar las herramientas usadas para generar las claves en el equipo en el que se hospeda la base de datos**, porque si un atacante accede a un equipo que se usa para aprovisionar o mantener las claves de Always Encrypted podrá obtener las claves, incluso si estas solo aparecen brevemente en la memoria de la herramienta.
 - Para asegurarse de que el proceso de administración de claves no revele accidentalmente las claves maestras de columna o las claves de cifrado de columnas, es fundamental que identifique los posibles adversarios y las amenazas de seguridad antes de definir e implementar un proceso de administración de claves. Por ejemplo, si su objetivo es garantizar que los DBA no tengan acceso a información confidencial, el responsable de generar las claves no puede ser un DBA. Pero un DBA *puede* administrar los metadatos de clave de la base de datos, ya que los metadatos no contienen las claves de texto no cifrado.
 
 ## <a name="next-steps"></a>Next Steps

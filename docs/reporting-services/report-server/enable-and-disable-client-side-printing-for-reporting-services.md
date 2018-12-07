@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030174"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711947"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar y deshabilitar la impresión del lado cliente para Reporting Services
 
   El botón de impresión de la barra de herramientas del Visor de informes usa el formato Portable Document Format (PDF) en las impresiones del lado cliente de los informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] visualizados en un explorador. En la nueva experiencia de impresión remota se usa la extensión de representación de PDF incluida en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]para representar el informe en formato PDF. Puede descargar un formulario en .PDF del informe o, si tiene una aplicación instalada para ver archivos .PDF, el botón de impresión abrirá un cuadro de diálogo de impresión con los elementos de configuración comunes de página, como el tamaño y la orientación de página y una vista previa del archivo .PDF. Aunque la impresión del lado cliente está habilitada de manera predeterminada, puede deshabilitar esta característica para impedir que sea utilizada.  
   
- En las versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se usaba un control ActiveX que requería la descarga en el equipo cliente desde el servidor de informes. Si actualiza el servidor de informes a SQL Server 2016, el control de impresión no se quita de los equipos cliente ni del servidor de informes.  
+ En las versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se usaba un control ActiveX que requería la descarga en el equipo cliente desde el servidor de informes. Si actualiza el servidor de informes a SQL Server 2016 o una versión posterior, el control de impresión no se quita de los equipos cliente ni del servidor de informes.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> La experiencia de impresión  
  Cuando se hace clic en el botón de impresión ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") de la barra de herramientas del Visor de informes, la experiencia varía en función de qué aplicaciones de visualización de .PDF haya instaladas en el equipo cliente y de qué explorador se use.   Dependiendo del equipo cliente, puede descargar el archivo PDF o configurar las opciones de impresión en un cuadro de diálogo (o ambos).  
@@ -98,7 +98,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

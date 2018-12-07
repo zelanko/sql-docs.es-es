@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39b9349d1ae4a9bb986808f6af2c6fbb7e96f9f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518671"
 ---
 # <a name="validate-a-dac-package"></a>Validar un paquete de DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "43810111"
   
  **Ver una DAC en SQL Server Developer Tools**  
   
-1.  Abra el menú **Archivo** , seleccione **Nuevo**y, a continuación, **Proyecto...**  
+1.  Abra el menú **Archivo**, seleccione **Nuevo** y, después, **Proyecto...**.  
   
 2.  Seleccione la plantilla de proyecto de **SQL Server** y especifique los valores de **Nombre**, **Ubicación**y **Nombre de solución**.  
   
-3.  En el **Explorador de soluciones**, haga clic con el botón secundario en el nodo y seleccione **Propiedades...**  
+3.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo y seleccione **Propiedades...**.  
   
 4.  En la pestaña **Configuración de proyecto** , en la sección **Tipos de salida** , active la casilla **Aplicación de capa de datos (archivo .dacpac)** y, después, cierre el cuadro de diálogo de propiedades.  
   
-5.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo de proyecto y seleccione **Importar aplicación de capa de datos…**.  
+5.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo de proyecto y seleccione **Importar aplicación de capa de datos...**.  
   
 6.  Use el **Explorador de soluciones** para abrir todos los archivos de la DAC, como la directiva de selección de servidor y los scripts previos y posteriores a la implementación.  
   

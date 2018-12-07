@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4be4d925cb90cf02161e71c4797a22e2149b03dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807093"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524317"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. Revocar una cláusula WITH GRANT OPTION previamente concedida  
- Si un permiso se concede mediante WITH GRANT OPTION, use REVOKE GRANT OPTION FOR … para quitar WITH GRANT OPTION. El siguiente ejemplo concede el permiso y después quita la parte WITH GRANT del mismo.  
+ Si un permiso se concede mediante WITH GRANT OPTION, use REVOKE GRANT OPTION FOR… para quitar WITH GRANT OPTION. El siguiente ejemplo concede el permiso y después quita la parte WITH GRANT del mismo.  
   
 ```  
 USE master;  

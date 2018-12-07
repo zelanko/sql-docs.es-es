@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98a4d2d4bcc7faeb18352360b51b5fe4dcf722c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030834"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711147"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
 
@@ -220,12 +220,12 @@ Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y l
   
     Tenga en cuenta que las barras de los minigráficos no están alineadas entre sí. Solo hay cuatro barras en la segunda fila de datos, por lo que las barras son más anchas que las de la primera fila, que tiene seis. No puede comparar los valores para cada producto por día. Deben alinearse.  
   
-    Además, para cada fila, la barra más alta es el alto de la fila. Esto también induce a error porque los valores mayores de cada fila no son iguales: el valor mayor para Budget Movie-Maker es 10 400 $, pero para Slim Digital es 26 576 $: más del doble. Además, las barras más grandes de esas dos filas tienen aproximadamente el mismo alto. Todos los minigráficos necesitan usar la misma escala.  
+    Además, para cada fila, la barra más alta es el alto de la fila. Esto también induce a error porque los valores mayores de cada fila no son iguales: el valor mayor para Budget Movie-Maker es 10 400 $, pero para Slim Digital es 26 576 $, más del doble. Además, las barras más grandes de esas dos filas tienen aproximadamente el mismo alto. Todos los minigráficos necesitan usar la misma escala.  
   
      ![generador-de-informes-minigráfico-desalineados](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="AlignSparklines"></a>4. Alinear los minigráficos vertical y horizontalmente  
-Los minigráficos son difíciles de leer cuando no usan todos las mismas medidas. Los ejes horizontal y vertical de cada uno tienen que coincidir con el resto.  
+Los minigráficos son difíciles de leer cuando todos no usan las mismas medidas. Los ejes horizontal y vertical de cada uno tienen que coincidir con el resto.  
    
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
@@ -319,6 +319,6 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 Esto concluye el tutorial para crear un informe de tabla con minigráficos. Para obtener más información sobre los minigráficos, vea [Minigráficos y barras de datos](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Tutoriales (Generador de informes)](../reporting-services/report-builder-tutorials.md) 
-[Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Generador de informes en SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

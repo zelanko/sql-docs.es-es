@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 238461d1d191c9e62fa713e46c7483c09df51f38
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031734"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711606"
 ---
 # <a name="report-builder-tutorials"></a>Tutoriales del Generador de informes
 
@@ -71,7 +71,7 @@ Siga los pasos de este tutorial para aprender a usar expresiones que le permitan
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Vista de diseño de informe](../reporting-services/report-builder/report-design-view-report-builder.md)  
-[Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Generador de informes en SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Tutorial: crear un informe de gráfico rápido sin conexión](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

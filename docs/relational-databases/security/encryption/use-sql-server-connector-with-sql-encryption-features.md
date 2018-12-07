@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653803"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401088"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47653803"
  Complete las partes de I a IV del tema [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)(Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure) antes de seguir los pasos de este tema.  
  
 > [!NOTE]  
->  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) .  
+>  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure  
  Después de completar las partes I a IV del tema Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure), use la clave del Almacén de claves de Azure para cifrar la clave de cifrado de la base de datos con TDE.  
@@ -173,7 +173,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
      Cree un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vaya a usar [!INCLUDE[ssDE](../../../includes/ssde-md.md)]para las copias de seguridad de cifrado y agréguele la credencial del Paso 1. En este ejemplo de [!INCLUDE[tsql](../../../includes/tsql-md.md)] se usa la misma clave que se importó anteriormente.  
   
     > [!IMPORTANT]  
-    >  No puede usar la misma clave asimétrica para el cifrado de copias de seguridad si ya ha usado esa clave para TDE (ejemplo anterior) o el cifrado de columna (ejemplo siguiente).  
+    >  No puede usar la misma clave asimétrica para el cifrado de copias de seguridad si ya ha usado esa clave para TDE (ejemplo anterior) o el cifrado de nivel de columna (ejemplo siguiente).  
   
      En este ejemplo se usa la clave asimétrica `CONTOSO_KEY_BACKUP` almacenada en el Almacén de claves, que se puede importar o crear anteriormente para la base de datos maestra, como se describe en la Parte IV, Paso 5, más arriba.  
   
@@ -282,6 +282,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Mantenimiento y solución de problemas del conector de SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

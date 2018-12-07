@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504008"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Restricción CHECK (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ Se expande para mostrar las propiedades de **Nombre** y **Descripción**.
 Muestra el nombre de la restricción CHECK seleccionada. Para cambiar el nombre de esta restricción, escriba el texto directamente en el campo de propiedad.  
   
 **Descripción**  
-Descripción de esta restricción CHECK. Puede editar la descripción escribiendo en el campo de la propiedad o puede hacer clic en los puntos suspensivos (**...**) que aparecen a la derecha del campo de propiedad y editar la descripción en el cuadro de diálogo **Propiedad Description** .  
+Descripción de esta restricción CHECK. Puede editar la descripción si escribe en el campo de la propiedad o puede hacer clic en el botón de puntos suspensivos (**...**) que aparece a la derecha del campo de propiedad y editar la descripción en el cuadro de diálogo **Propiedad Description**.  
   
 **Categoría Diseñador de tablas**  
 Se expande para mostrar las propiedades de **Comprobar datos existentes al crear o al habilitar de nuevo**y **Exigir para INSERTs y UPDATEs**y **Exigir para replicación**.  

@@ -13,17 +13,17 @@ ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7e305cc2ceb178b0adb812d8215022f981d2c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d24c998c17e9fb265defa252b37b955e451bda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763913"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414672"
 ---
 # <a name="sql-server-data-tools"></a>Herramientas de datos de SQL Server
 SQL Server Data Tools (SSDT) transforma el desarrollo de bases de datos al presentar un modelo ubicuo y declarativo que abarca todas las fases del desarrollo en Visual Studio. Las funcionalidades de diseño de Transact\-SQL de SSDT se pueden usar para compilar, depurar, mantener y refactorizar bases de datos. Puede trabajar con un proyecto de base de datos o directamente con una instancia de una base de datos conectada ubicada dentro o fuera de las instalaciones locales.  
   
-Los desarrolladores pueden usar las conocidas herramientas de Visual Studio para el desarrollo de bases de datos. Herramientas como navegación por el código, IntelliSense, compatibilidad con lenguajes similar al disponible para C# y Visual Basic, validación específica de la plataforma, depuración y edición declarativa en el editor de Transact\-SQL. SSDT también proporciona un Diseñador de tablas visual para crear y editar tablas en proyectos de base de datos o en instancias de bases de datos conectadas. Mientras se trabaja en proyectos de base de datos en un entorno en equipo, se puede usar el control de versiones para todos los archivos. Cuando se trata de publicar el proyecto, se puede publicar en todas las plataformas SQL compatibles, incluidas Base de datos SQL y SQL Server. La capacidad de validación de la plataforma de SSDT garantiza que los scripts funcionan en el destino que especifique.  
+Los desarrolladores pueden usar las conocidas herramientas de Visual Studio para el desarrollo de bases de datos. Herramientas como navegación por el código, IntelliSense, compatibilidad con lenguajes similar al disponible para C# y Visual Basic, validación específica de la plataforma, depuración y edición declarativa en el editor de Transact\-SQL. SSDT también proporciona un Diseñador de tablas visual para crear y editar tablas en proyectos de base de datos o en instancias de bases de datos conectadas. Mientras se trabaja en proyectos de base de datos en un entorno en equipo, se puede usar el control de versiones para todos los archivos. Cuando se trata de publicar el proyecto, se puede publicar en todas las plataformas SQL compatibles, incluidas SQL Database y SQL Server. La capacidad de validación de la plataforma de SSDT garantiza que los scripts funcionan en el destino que especifique.  
   
 El Explorador de objetos de SQL Server de Visual Studio ofrece una vista de los objetos de su base de datos similares a SQL Server Management Studio. El Explorador de objetos de SQL Server permite realizar trabajo liviano de administración y diseño de base de datos. Es fácil crear, editar, cambiar el nombre y eliminar tablas, procedimientos almacenados, tipos y funciones. También puede editar datos de tablas, comparar esquemas o ejecutar consultas usando menús contextuales dentro del Explorador de objetos de SQL Server.  
   

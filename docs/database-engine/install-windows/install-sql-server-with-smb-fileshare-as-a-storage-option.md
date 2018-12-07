@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d81475de98512e01be65b4c8c23c40809eec73fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b7e44d2a4e9d5e368b9232706ab53e1fd8ad6eac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603635"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416516"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar SQL Server con el almacenamiento de recursos compartidos de archivos SMB
 
@@ -63,7 +63,7 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de dato
   
 ### <a name="installation-options"></a>Opción de instalación  
   
--   En la página "Configuración del Motor de base de datos" de la interfaz de usuario de la instalación, en la pestaña "Directorios de datos", establezca el parámetro "Directorio raíz de datos" como "\\\fileserver1\share1\".  
+-   En la página "Configuración del Motor de base de datos" de la interfaz de usuario de la instalación, en la pestaña "Directorios de datos", establezca el parámetro "Directorio raíz de datos" como \\\fileserver1\share1\".  
   
 -   En la instalación desde el símbolo del sistema, especifique "/INSTALLSQLDATADIR" como "\\\fileserver1\share1\".  
   
@@ -87,7 +87,7 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de dato
 |Sistema operativo|Versión del protocolo SMB2|Ventajas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2,0|Rendimiento mejorado con respecto a las versiones anteriores de SMB.<br /><br /> Durabilidad, que ayuda a recuperarse de problemas temporales de red.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluido Server Core|2.1|Compatibilidad con MTU grande, lo que beneficia a las transferencias de datos grandes, como operaciones de copia de seguridad y restauración de SQL. Esta capacidad la debe habilitar el usuario. Para obtener más detalles sobre cómo habilitar esta capacidad, vea [Novedades de SMB](https://go.microsoft.com/fwlink/?LinkID=237319) https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Mejoras significativas en el rendimiento, concretamente para las cargas de trabajo de estilo OLTP de SQL. Estas mejoras de rendimiento necesitan la aplicación de una revisión. Para obtener más información sobre la revisión, vea [esto](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320).|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluido Server Core|2.1|Compatibilidad con MTU grande, lo que beneficia a las transferencias de datos grandes, como operaciones de copia de seguridad y restauración de SQL. Esta capacidad la debe habilitar el usuario. Para obtener más detalles sobre cómo habilitar esta función, vea [Novedades de SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Mejoras significativas en el rendimiento, concretamente para las cargas de trabajo de estilo OLTP de SQL. Estas mejoras de rendimiento necesitan la aplicación de una revisión. Para obtener más información sobre la revisión, vea [esto](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320).|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluido Server Core|3.0|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluido Server Core|3.2|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red, con SMB multicanal.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA con SMB Direct.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.<br /><br /> Optimizado para E/S pequeñas de lectura/escritura aleatoria comunes para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Se activa la Unidad de transmisión máxima (MTU) de forma predeterminada, lo que mejora significativamente el rendimiento en las transferencias secuenciales grandes como el almacenamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la copia de seguridad o restauración de la base de datos.|  
   

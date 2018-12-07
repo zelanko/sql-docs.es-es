@@ -18,12 +18,12 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8e1433d9157aed6a933d5117417be1a4fcc1c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083a4ccb00c834fba4f250aa1a2063b76ad9bd86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605603"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407632"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47605603"
   
 -   Rechazar los datos  
   
-     Esto resulta útil para aplicaciones que no desean propagar los datos a un suscriptor o de un suscriptor determinado. Por ejemplo, un administrador puede filtrar las inserciones que no pertenezcan a la partición del suscriptor o rechazar las eliminaciones realizadas en un suscriptor. O bien, una aplicación podría rechazar un pedido realizado en un suscriptor debido a que el inventario ya no está disponible.  
+     Esto resulta útil para aplicaciones que no desean propagar los datos a un suscriptor o de un suscriptor determinado. Por ejemplo, un administrador puede filtrar las inserciones que no pertenezcan a la partición del suscriptor, o bien rechazar las eliminaciones realizadas en un suscriptor. O bien, una aplicación podría rechazar un pedido realizado en un suscriptor debido a que el inventario ya no está disponible.  
   
 -   Aceptar los datos  
   

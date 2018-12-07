@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510582"
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ ms.locfileid: "51657036"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permite crear o quitar un alias, cambiar el orden en el que se utilizan los protocolos o ver las propiedades de un alias de servidor, incluyendo:  
   
--   Alias de servidor: alias de servidor utilizado por el equipo al que se está conectando el cliente.  
+-   Alias de servidor: alias de servidor que usa el equipo al que se está conectando el cliente.  
   
--   Protocolo: protocolo de red utilizado para la entrada de configuración.  
+-   Protocolo: protocolo de red que se usa para la entrada de configuración.  
   
--   Parámetros de conexión: parámetros que se asocian a la dirección de conexión para la configuración del protocolo de red.  
+-   Parámetros de conexión: parámetros asociados a la dirección de conexión para la configuración del protocolo de red.  
   
  El Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también permite ver información sobre las instancias del clúster de conmutación por error, aunque se debe utilizar el Administrador de clústeres para algunas acciones como el inicio y la detención de los servicios.  
   

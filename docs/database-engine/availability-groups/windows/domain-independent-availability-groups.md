@@ -12,12 +12,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f17ff228c8cf71cc766c6f6fe43a6917577fe983
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788523"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415082"
 ---
 # <a name="domain-independent-availability-groups"></a>Grupos de disponibilidad independientes del dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ La implementación de un grupo de disponibilidad independiente del dominio prese
 
 ## <a name="set-and-verify-the-dns-suffix-on-all-replica-servers"></a>Establecer y comprobar el sufijo DNS en todos los servidores de réplicas
 
-Un clúster de grupo de trabajo de un grupo de disponibilidad independiente del dominio precisa de un sufijo DNS común. Haga lo siguiente para establecer y comprobar el sufijo DNS en cada Windows Server que vaya a hospedar una réplica del grupo de disponibilidad:
+Se necesita un sufijo DNS común para un clúster de grupo de trabajo de un grupo de disponibilidad independiente del dominio. Haga lo siguiente para establecer y comprobar el sufijo DNS en cada Windows Server que vaya a hospedar una réplica del grupo de disponibilidad:
 
 1. Con la combinación tecla Windows+X, seleccione Sistema.
 2. Si el nombre de equipo y el nombre completo de equipo son el mismo, quiere decir que el sufijo DNS no se ha establecido. Por ejemplo, si el nombre de equipo es ALLAN, el valor de nombre completo de equipo no debe ser simplemente ALLAN, sino algo parecido a ALLAN.SQLHA.LAB. SQLHA.LAB es el sufijo DNS. El valor de grupo de trabajo debe reflejar WORKGROUP. Si es necesario establecer el sufijo DNS, seleccione Cambiar configuración.

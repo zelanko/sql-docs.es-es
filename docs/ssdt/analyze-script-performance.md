@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed6f127b8f1a692f1cd71839570cd38d21213482
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675061"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396927"
 ---
 # <a name="analyze-script-performance"></a>Analizar el rendimiento de los scripts
 Puede usar las herramientas proporcionadas por SQL Server Data Tools para determinar si puede mejorar el rendimiento de la consulta, los procedimientos almacenados o los scripts. Por ejemplo, supervisando estadísticas de cliente como los tiempos de respuesta a las consultas usadas con frecuencia, puede determinar si es necesario cambiar la consulta o los índices de las tablas. Esas estadísticas pueden incluir el tiempo de ejecución del cliente, el perfil de consulta y los paquetes/bytes enviados y recibidos.  
@@ -32,7 +32,7 @@ Para alternar la recopilación de estadísticas de cliente, cuando el Editor de 
   
 Si activó las estadísticas de cliente, aparecerá la pestaña **Estadísticas** junto a la pestaña **Mensaje** cuando se ejecute la consulta. Si ha desactivado las estadísticas de cliente, la pestaña **Estadísticas** no aparecerá. Las estadísticas de ejecuciones de consultas sucesivas se muestran junto con los valores promedio.  
   
-Para más información sobre las estadísticas recopiladas, consulte [Consultar el panel de estadísticas de ventana](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) y la sección ["Pestaña Estadísticas de cliente” de este tema](https://msdn.microsoft.com/library/aa833205.aspx).  
+Para obtener más información sobre las estadísticas recopiladas, vea [Consultar el panel de estadísticas de ventana](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) y la sección ["Pestaña Estadísticas de cliente" de este tema](https://msdn.microsoft.com/library/aa833205.aspx).  
   
 ## <a name="using-execution-plans"></a>Usar planes de ejecución  
 Los planes de ejecución muestran cómo el motor de base de datos navega por tablas y usa índices para obtener acceso a datos o procesarlos para una consulta u otra instrucción DML, como una actualización. Este enfoque gráfico resulta muy útil para comprender las características de rendimiento de una consulta.  

@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703213"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539021"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47703213"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Implementations"></a> Implementaciones típicas  
  Los clúster se implementan de las formas siguientes:  
@@ -84,11 +84,11 @@ ms.locfileid: "47703213"
   
 1.  En el Explorador de objetos, expanda la tabla en la que desea crear un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Índices** , seleccione **Nuevo índice**y, luego, **Índice no agrupado…**.  
+2.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
   
 3.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
-4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
+4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
 5.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47703213"
   
 1.  En el Explorador de objetos, expanda la base de datos en la que desea crear una tabla con un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla**.  
+2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla...**.  
   
 3.  Cree una tabla nueva como lo haría normalmente. Para obtener más información, vea [Crear tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   

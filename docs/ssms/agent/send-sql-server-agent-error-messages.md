@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3decb6d23f7194876e8723c299472beca1d85d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b061aa89ef6c10789511f05c4ca0763bd54a860d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793115"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524959"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
   
 2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server –**_nombre\_servidor_, en **Registro de errores** en la página **General**, escriba el nombre de usuario o del equipo al que quiere enviar mensajes de error en el cuadro **Destinatario de NET SEND**.  
+3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -**_nombre\_servidor_, en **Registro de errores** en la página **General**, escriba el nombre de usuario o del equipo al que quiere enviar mensajes de error en el cuadro **Destinatario de NET SEND**.  
   
 4.  Haga clic en **Aceptar**.  
   

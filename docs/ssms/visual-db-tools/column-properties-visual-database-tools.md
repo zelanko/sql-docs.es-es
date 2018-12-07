@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6914306472ae5eb438c8d7384f2a5e0d9128c17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698783"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527080"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ Muestra el número máximo de dígitos que pueden aparecer a la derecha del sepa
 Se expande para mostrar las propiedades restantes.  
   
 **Intercalación**  
-Muestra la configuración de intercalación para la columna seleccionada. Para cambiar esta configuración, haga clic en **Intercalación** y, a continuación, haga clic en los puntos suspensivos **(…)** que hay a la derecha del valor.  
+Muestra la configuración de intercalación para la columna seleccionada. Para cambiar esta configuración, haga clic en **Intercalación** y, después, haga clic en los puntos suspensivos **(...)** situados a la derecha del valor.  
   
 **Categoría Especificación de columna calculada**  
 Esta opción se expande para mostrar propiedades para **Fórmula** y **Persistente**. Si la columna está calculada, también aparecerá la fórmula. Para editar la fórmula, amplíe esta categoría y edítela en la propiedad **Fórmula** .  
@@ -128,7 +128,7 @@ Le permite guardar la columna calculada con el origen de datos. Una columna calc
 Muestra información sobre el tipo de datos del campo con el mismo formato que la instrucción SQL CREATE TABLE. Por ejemplo, un campo que contiene una cadena de longitud variable con una longitud máxima de 20 caracteres se representa como "varchar(20)". Para cambiar esta propiedad, escriba el valor directamente.  
   
 **Descripción**  
-Muestra la descripción de la columna. Para ver la descripción completa o para editarla, haga clic en Descripción y, a continuación, haga clic en los puntos suspensivos **(…)** a la derecha de la propiedad.  
+Muestra la descripción de la columna. Para ver la descripción completa o para editarla, haga clic en Descripción y, después, haga clic en los puntos suspensivos **(...)** situados a la derecha de la propiedad.  
   
 **Categoría Especificación de texto completo**  
 Se expande para mostrar propiedades específicas para columnas de texto completo.  

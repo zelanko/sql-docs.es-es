@@ -27,12 +27,12 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81fd7b18058430b3132471f67a8b94e4444873e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609613"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393048"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -156,10 +156,10 @@ En las tablas de abajo se recopilan los nombres de proveedores del sistema:
      La dirección URL de la clave en Azure Key Vault.
 
 ENCLAVE_COMPUTATIONS  
-Especifica que la clave maestra de columna está habilitado para enclaves, lo que significa que todas las claves de cifrado de columna cifradas con esta clave maestra de columna pueden compartirse con un enclave seguro del lado servidor y usarse para realizar cálculos dentro el enclave. Para obtener más información, vea [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Especifica que la clave maestra de columna está habilitado para enclaves, lo que significa que todas las claves de cifrado de columna cifradas con esta clave maestra de columna pueden compartirse con un enclave seguro del lado servidor y usarse para realizar cálculos dentro el enclave. Para más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
  *signature*  
-Un literal binario que se genera por firmar digitalmente la *ruta de acceso clave* y la configuración de ENCLAVE_COMPUTATIONS con la clave maestra de columna (la firma refleja si ENCLAVE_COMPUTATIONS se ha especificado o no). La firma evita que los usuarios no autorizados modifiquen los valores firmados. Un controlador cliente habilitado para Always Encrypted puede comprobar la firma y devolver un error a la aplicación si la firma no es válida. La firma debe haberse generada utilizando herramientas de cliente. Para obtener más información, vea [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Un literal binario que se genera por firmar digitalmente la *ruta de acceso clave* y la configuración de ENCLAVE_COMPUTATIONS con la clave maestra de columna (la firma refleja si ENCLAVE_COMPUTATIONS se ha especificado o no). La firma evita que los usuarios no autorizados modifiquen los valores firmados. Un controlador cliente habilitado para Always Encrypted puede comprobar la firma y devolver un error a la aplicación si la firma no es válida. La firma debe haberse generada utilizando herramientas de cliente. Para más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
 ## <a name="remarks"></a>Notas  

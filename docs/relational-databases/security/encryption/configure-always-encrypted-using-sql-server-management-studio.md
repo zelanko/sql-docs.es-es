@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ee365b25b272d0a442632d23cbd407bb21090a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535361"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ Para deshabilitar Always Encrypted para una conexión de base de datos, especifi
 >  [!TIP] 
 >  Para alternar entre Always Encrypted habilitado y deshabilitado para una ventana existente del Editor de consultas, haga lo siguiente:   
 >  1.   Haga clic con el botón derecho en cualquier parte de la ventana del Editor de consultas.
->  2.   Seleccione **Conexión** > **Cambiar conexión...** 
+>  2.   Seleccione **Conexión** > **Cambiar conexión ...**, 
 >  3.   Haga clic en **Opciones** >>
 >  4.   Seleccione la pestaña **Propiedades adicionales** y escriba `Column Encryption Setting=Enabled` (para habilitar el comportamiento de Always Encrypted) o quite el valor (para deshabilitar el comportamiento de Always Encrypted).   
 >  5.   Haga clic en **Conectar**.   
@@ -121,14 +121,14 @@ Parametrización de Always Encrypted está deshabilitada de manera predeterminad
 
 Para habilitar/deshabilitar parametrización de Always Encrypted para la ventana actual del Editor de consultas, haga lo siguiente:   
 1.  Seleccione **Consulta** en el menú principal.   
-2.  Seleccione **Opciones de consulta…**.   
+2.  Seleccione **Opciones de consulta...**.   
 3.  Vaya a **Ejecución** > **Avanzadas**.   
 4.  Seleccione o anule la selección de **Habilitar parametrización de Always Encrypted**.   
 5.  Haga clic en **Aceptar**.   
 
 Para habilitar/deshabilitar parametrización de Always Encrypted para ventanas futuras del Editor de consultas, haga lo siguiente:   
 1.  Seleccione **Herramientas** en el menú principal.   
-2.  Seleccione **Opciones…**.   
+2.  Seleccione **Opciones...**.   
 3.  Vaya a **Ejecución de consulta** > **SQL Server** > **Avanzadas**.   
 4.  Seleccione o anule la selección de **Habilitar parametrización de Always Encrypted**.   
 5.  Haga clic en **Aceptar**.   
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 
 Para ejecutar cualquier consulta contra las columnas cifradas, incluidas las consultas que recuperan datos en texto cifrado, necesita los permisos `VIEW ANY COLUMN MASTER KEY DEFINITION` y `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` pen la base de datos.   
 Además de los permisos anteriores, para descifrar cualquier resultado de consulta o para cifrar cualquier parámetro de consulta (generados por la parametrización de las variables Transact-SQL), también debe tener acceso a la clave maestra de columna que protege las columnas de destino:   
-- **Almacén de certificados: equipo local** : debe tener acceso de `Read` al certificado que se usa en una clave maestra de columna o puede ser el administrador del equipo.   
+- **Almacén de certificados: equipo local**: debe tener acceso `Read` al certificado que se usa en una clave maestra de columna, o bien puede ser el administrador del equipo.   
 - **Azure Key Vault** : necesita los permisos de `get`, `unwrapKey`y comprobación en el almacén que contiene la clave maestra de columna.   
 - **Proveedor del almacén de claves (CNG)** : el permiso y las credenciales requeridos que se le podrían solicitar al usar una clave o un almacén de claves dependen de la configuración del almacén o del proveedor de almacenamiento de claves (KSP).   
 - **Proveedor de servicios criptográficos (CAPI)** : el permiso y las credenciales que se le podrían solicitar al usar una clave o un almacén de claves dependen del almacén y de la configuración del proveedor de servicios criptográficos (CSP).   
@@ -223,13 +223,13 @@ Para obtener más información, vea [Create and Store Column Master Keys (Always
 El cuadro de diálogo **Nueva clave maestra de columna** permite generar una clave maestra de columna o elegir una clave existente en un almacén de claves y crear metadatos de clave maestra de columna para la clave creada o seleccionada en la base de datos.
 
 1.  En el **Explorador de objetos**, vaya a la carpeta **Security > Always Encrypted Keys** de la base de datos.
-2.  Haga clic con el botón derecho en la carpeta **Column Master Keys** y seleccione **Nueva clave maestra de columna…**. 
+2.  Haga clic con el botón derecho en la carpeta **Claves maestras de columna** y seleccione **Nueva clave maestra de columna...**. 
 3.  En el cuadro de diálogo **Nueva clave maestra de columna** , escriba el nombre del objeto de metadatos de la clave maestra de columna.
 4.  Seleccione un almacén de claves:
-    - **Almacén de certificados, usuario actual** : indica la ubicación del almacén de certificados del usuario actual en el Almacén de certificados de Windows, que es el almacén personal. 
-    - **Almacén de certificados, equipo local** : indica la ubicación del almacén de certificados del equipo local en el Almacén de certificados de Windows. 
-    - **Almacén de claves de Azure** : deberá iniciar sesión en Azure (haga clic en **Iniciar sesión**). Una vez que haya iniciado sesión, podrá elegir una de las suscripciones de Azure y un almacén de claves.
-    - **Proveedor de almacén de claves (CNG)** : indica un almacén de claves accesible a través de un proveedor de almacén de claves (KSP) que implementa la API Cryptography Next Generation (CNG). Normalmente, este tipo de almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un KSP. De forma predeterminada está seleccionado el**proveedor de almacén de claves de software de Microsoft** . Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un KSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
+    - **Almacén de certificados: usuario actual**: indica la ubicación del almacén de certificados del usuario actual en el Almacén de certificados de Windows, que es el almacén personal. 
+    - **Almacén de certificados: equipo local**: indica la ubicación del almacén de certificados del equipo local en el Almacén de certificados de Windows. 
+    - **Azure Key Vault**: deberá iniciar sesión en Azure (haga clic en **Iniciar sesión**). Una vez que haya iniciado sesión, podrá elegir una de las suscripciones de Azure y un almacén de claves.
+    - **Proveedor de almacén de claves (CNG)**: indica un almacén de claves accesible a través de un proveedor de almacén de claves (KSP) que implementa la API Cryptography Next Generation (CNG). Normalmente, este tipo de almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un KSP. De forma predeterminada está seleccionado el**proveedor de almacén de claves de software de Microsoft** . Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un KSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
     -   **Proveedor de servicios criptográficos (CAPI)** : almacén de claves accesible a través de un proveedor de servicios criptográficos (CSP) que implementa Cryptography API (CAPI). Normalmente, este almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un CSP.  Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un CSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
     
     >   [!NOTE]
@@ -249,7 +249,7 @@ SQL Server Management Studio creará los metadatos para la clave maestra de colu
 El cuadro de diálogo **Nueva clave de cifrado de columnas** permite generar una clave de cifrado de columnas, cifrarla con una clave maestra de columna y crear los metadatos de clave de cifrado de columnas en la base de datos.
 
 1.  En el **Explorador de objetos**, vaya a la carpeta **Security &gt; Always Encrypted Keys** de la base de datos.
-2.  Haga clic con el botón derecho en la carpeta **Column Encryption Keys** y seleccione **Nueva clave de cifrado de columnas…**. 
+2.  Haga clic con el botón derecho en la carpeta **Claves de cifrado de columna** y seleccione **Nueva clave de cifrado de columnas...**. 
 3.  En el cuadro de diálogo **Nueva clave de cifrado de columnas** , escriba el nombre del objeto de metadatos de la clave de cifrado de columnas.
 4.  Seleccione un objeto de metadatos que represente la clave maestra de columna de la base de datos.
 5.  Haga clic en **Aceptar**. 
@@ -261,17 +261,17 @@ SQL Server Management Studio generará una clave de cifrado de columnas y luego 
 
 Necesita tener los permisos de base de datos *ALTER ANY ENCRYPTION MASTER KEY* y *VIEW ANY COLUMN MASTER KEY DEFINITION* en la base de datos para que el cuadro de diálogo cree los metadatos de la clave de cifrado de columnas y tenga acceso a los metadatos de la clave maestra de columna.
 Para tener acceso a un almacén de claves y usar la clave maestra de columna, es posible que necesite permisos en el almacén de claves o en la clave:
-- **Almacén de certificados, equipo local** : debe tener acceso de lectura al certificado que se usa como una clave maestra de columna o ser el administrador del equipo.
-- **Almacén de claves de Azure** : necesita los permisos *get*, *unwrapKey*, *wrapKey*, *sign*y *verify*  en el almacén que contiene la clave maestra de columna.
-- **Proveedor de almacén de claves (CNG)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
-- **Proveedor de servicios criptográficos (CAPI)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
+- **Almacén de certificados: equipo local**: debe tener acceso de lectura al certificado que se usa como una clave maestra de columna, o bien ser el administrador del equipo.
+- **Azure Key Vault**: necesita los permisos *get*, *unwrapKey*, *wrapKey*, *sign* y *verify* en el almacén que contiene la clave maestra de columna.
+- **Proveedor de almacén de claves (CNG)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
+- **Proveedor de servicios criptográficos (CAPI)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
 
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 <a name="rotatecmk"></a>
 ## <a name="rotating-column-master-keys"></a>Rotación de claves maestras de columna
 
-La rotación de una clave maestra de columna es el proceso por el cual se reemplaza una clave maestra de columna existente por otra nueva. Puede que necesite rotar una clave si está en peligro o para cumplir con las directivas o los reglamentos de la organización que exigen que las claves de cifrado roten de forma regular. La rotación de claves maestras de columna implica descifrar las claves de cifrado de columnas que están protegidas con la clave maestra de columna actual, volver a cifrarlas con la nueva clave maestra de columna y actualizar los metadatos de clave. Para obtener más información, vea [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+La rotación de una clave maestra de columna es el proceso por el cual se reemplaza una clave maestra de columna existente por otra nueva. Puede que necesite rotar una clave si está en peligro, o bien para cumplir las directivas o los reglamentos de la organización que exigen que se roten las claves criptográficas de forma regular. La rotación de claves maestras de columna implica descifrar las claves de cifrado de columnas que están protegidas con la clave maestra de columna actual, volver a cifrarlas con la nueva clave maestra de columna y actualizar los metadatos de clave. Para obtener más información, vea [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
 **Paso 1: aprovisionamiento de una nueva clave maestra de columna**
 
@@ -297,8 +297,8 @@ SQL Server Management Studio obtendrá los metadatos de las claves de cifrado de
 
 En este paso, debe garantizar que todas sus aplicaciones cliente que realicen consultas a las columnas de la base de datos protegidas con la clave maestra de columna y que vaya a rotar puedan acceder a la nueva clave maestra de columna (es decir, las columnas de la base de datos cifradas con una clave de cifrado de columnas que, a su vez, está cifrada con la clave maestra de columna, la cual se va a rotar). Este paso depende del tipo de almacén de claves en el que se encuentre la nueva clave maestra de columna. Por ejemplo:
 - Si la nueva clave maestra de columna es un certificado guardado en el Almacén de certificados de Windows, tendrá que implementarlo en la misma ubicación del almacén de certificados (*Usuario actual* o *Equipo local*) que la especificada en la ruta de acceso de la clave de su clave maestra de columna en la base de datos. La aplicación debe poder acceder al certificado:
-    - Si el certificado se guarda en la ubicación del almacén de certificados *Usuario actual* , se tendrá que importar en el almacén Usuario actual de la identidad de Windows (el usuario) de la aplicación.
-    - En cambio, si el certificado se guarda en la ubicación del almacén de certificados *Equipo local* , la identidad de Windows de la aplicación deberá tener permiso para tener acceso al certificado.
+    - Si el certificado se guarda en la ubicación del almacén de certificados *Usuario actual*, será necesario importarlo en el almacén Usuario actual de la identidad de Windows (el usuario) de la aplicación.
+    - Si el certificado se guarda en la ubicación del almacén de certificados *Equipo local*, la identidad de Windows de la aplicación deberá tener permiso para acceder al certificado.
 - Si la nueva clave maestra de columna se guarda en el Almacén de claves de Microsoft Azure, la aplicación se debe implementar de forma que se pueda autenticar en Azure y tenga permiso para obtener acceso a la clave.
 
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
@@ -336,16 +336,16 @@ Si decide quitar la definición de la clave maestra de columna antigua de la bas
 
 La rotación de una clave maestra de columna requiere los siguientes permisos de base de datos:
 
-- **ALTER ANY COLUMN MASTER KEY** : es necesario para crear los metadatos de la nueva clave maestra de columna y eliminar los metadatos de la clave maestra de columna antigua.
-- **ALTER ANY COLUMN ENCRYPTION KEY** : es necesario para modificar los metadatos de la clave de cifrado de columnas (agregar nuevos valores cifrados).
+- **ALTER ANY COLUMN MASTER KEY**: es necesario para crear los metadatos de la nueva clave maestra de columna y eliminar los metadatos de la clave maestra de columna antigua.
+- **ALTER ANY COLUMN ENCRYPTION KEY**: es necesario para modificar los metadatos de la clave de cifrado de columnas (agregar nuevos valores cifrados).
 - **VIEW ANY COLUMN MASTER KEY DEFINITION** : es necesario para tener acceso a los metadatos de las claves maestras de columna y poder leerlos.
 - **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : es necesario para tener acceso a los metadatos de las claves de cifrado de columnas y poder leerlos. 
 
 También debe tener acceso a las claves maestras de columna antigua y nueva en sus almacenes de claves. Para tener acceso a un almacén de claves y usar una clave maestra de columna, es posible que necesite permisos en el almacén de claves o en la clave:
-- **Almacén de certificados, equipo local** : debe tener acceso de lectura al certificado que se usa como clave maestra de columna o ser el administrador del equipo.
-- **Almacén de claves de Azure** : necesita los permisos *create*, *get*, *unwrapKey*, *wrapKey*, *sign*y *verify* en el almacén que contiene las claves maestras de columna.
-- **Proveedor de almacén de claves (CNG)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
-- **Proveedor de servicios criptográficos (CAPI)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
+- **Almacén de certificados: equipo local**: debe tener acceso de lectura al certificado que se usa como clave maestra de columna, o bien ser el administrador del equipo.
+- **Azure Key Vault**: necesita los permisos *create*, *get*, *unwrapKey*, *wrapKey*, *sign* y *verify* en el almacén que contiene las claves maestras de columna.
+- **Proveedor de almacén de claves (CNG)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
+- **Proveedor de servicios criptográficos (CAPI)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
 
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -361,7 +361,7 @@ Para realizar la rotación de una clave de cifrado de columnas, use el Asistente
 1.  Para abrir el asistente para la base de datos, haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, después, haga clic en **Cifrar columnas**.
 2.  Revise la página **Introduction** y haga clic en **Next**.
 3.  En la página **Selección de columna** , expanda las tablas y busque todas las columnas que quiera reemplazar que actualmente estén cifradas con la clave de cifrado de columnas antigua.
-4.  Para cada columna cifrada con la clave de cifrado de columnas antigua, establezca la **Clave de cifrado** en una nueva clave generada automáticamente. **Nota:** También puede crear una clave de cifrado de columnas antes de ejecutar el asistente. Consulte la sección anterior *Aprovisionamiento de claves de cifrado de columnas* .
+4.  Para cada columna cifrada con la clave de cifrado de columnas antigua, establezca la **Clave de cifrado** en una nueva clave generada automáticamente. **Nota:** También puede crear una clave de cifrado de columnas antes de ejecutar el asistente. Vea la sección anterior *Aprovisionamiento de claves de cifrado de columnas*.
 5.  En la página **Configuración de la clave maestra** , seleccione una ubicación para almacenar la clave nueva y seleccione un origen de clave maestra. Después, haga clic en **Siguiente**. **Nota:** Si usa una clave de cifrado de columnas existente (no una clave generada automáticamente), no debe realizar ninguna acción en esta página.
 6.  En la página **Validación**, elija si quiere ejecutar inmediatamente el script o crear un script de PowerShell y, después, haga clic en **Siguiente**.
 7.  En la página **Resumen** , revise las opciones que ha seleccionado, haga clic en **Finalizar** y cierre el asistente cuando finalice.
@@ -369,22 +369,22 @@ Para realizar la rotación de una clave de cifrado de columnas, use el Asistente
 
 ### <a name="permissions"></a>Permisos
 
-La rotación de una clave de cifrado de columnas requiere los siguientes permisos de base de datos: **ALTER ANY COLUMN MASTER KEY** : es obligatorio si se usa una nueva clave de cifrado de columnas generada automáticamente (también se generarán una nueva clave maestra de columna y sus metadatos nuevos).
-**ALTER ANY COLUMN ENCRYPTION KEY** : es necesario para agregar metadatos a la nueva clave de cifrado de columnas.
+La rotación de una clave de cifrado de columnas requiere los siguientes permisos de base de datos: **ALTER ANY COLUMN MASTER KEY**: es obligatorio si se usa una nueva clave de cifrado de columnas generada de forma automática (también se generará una nueva clave maestra de columna y sus metadatos nuevos).
+**ALTER ANY COLUMN ENCRYPTION KEY**: es necesario para agregar metadatos a la nueva clave de cifrado de columnas.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** : es necesario para tener acceso a los metadatos de las claves maestras de columna y poder leerlos.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : es necesario para tener acceso a los metadatos de las claves de cifrado de columnas y poder leerlos.
 
 También debe tener acceso a las claves maestras de columna de las claves de cifrado de columnas antigua y nueva. Para tener acceso a un almacén de claves y usar una clave maestra de columna, es posible que necesite permisos en el almacén de claves o en la clave:
-- **Almacén de certificados, equipo local** : debe tener acceso de lectura al certificado que se usa como clave maestra de columna o ser el administrador del equipo.
-- **Almacén de claves de Azure** : necesita los permisos get, unwrapKey y verify en el almacén que contiene la clave maestra de columna.
-- **Proveedor de almacén de claves (CNG)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
-- **Proveedor de servicios criptográficos (CAPI)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
+- **Almacén de certificados, equipo local**: debe tener acceso de lectura al certificado que se usa como clave maestra de columna o ser el administrador del equipo.
+- **Azure Key Vault**: necesita los permisos get, unwrapKey y verify en el almacén que contiene la clave maestra de columna.
+- **Proveedor de almacén de claves (CNG)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
+- **Proveedor de servicios criptográficos (CAPI)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
 
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>Realización de operaciones de actualización de DAC cuando la base de datos o DACPAC usan Always Encrypted
 
-Se admiten[operaciones DAC](../../data-tier-applications/data-tier-applications.md) en bases de datos y archivos DACPAC con esquemas que contienen columnas cifradas. Se aplica una serie de consideraciones especiales a la operación de actualización de DAC. Consulte [Actualizar una aplicación de capa de datos](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) para obtener información sobre cómo realizar una operación de actualización de DAC en diversas herramientas, incluido SSMS. 
+Se admiten[operaciones DAC](../../data-tier-applications/data-tier-applications.md) en bases de datos y archivos DACPAC con esquemas que contienen columnas cifradas. Se aplican consideraciones especiales a la operación de actualización de DAC. Vea [Actualización de una aplicación de capa de datos](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) para obtener información sobre cómo realizar una operación de actualización de DAC en diversas herramientas, incluido SSMS. 
 
 Cuando se actualiza una base de datos mediante un DACPAC y el DACPAC o la base de datos de destino tienen columnas cifradas, la operación de actualización desencadenará una operación de cifrado de datos si se cumplen todas las condiciones que se indican a continuación:
 - La base de datos contiene una columna con datos.
@@ -407,10 +407,10 @@ Para realizar una operación de actualización de DAC si Always Encrypted está 
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
 Si la operación de actualización desencadena una operación de cifrado de datos, también debe tener acceso a las claves maestras de columna configuradas para las columnas afectadas:
-- **Almacén de certificados, equipo local** : debe tener acceso de lectura al certificado que se usa como clave maestra de columna o ser el administrador del equipo.
-- **Almacén de claves de Azure** : necesita los permisos *create*, *get*, *unwrapKey*, *wrapKey*, *sign*y *verify* en el almacén que contiene la clave maestra de columna.
-- **Proveedor de almacén de claves (CNG)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
-- **Proveedor de servicios criptográficos (CAPI)** : se le podrían solicitar el permiso y las credenciales al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
+- **Almacén de certificados: equipo local**: debe tener acceso de lectura al certificado que se usa como clave maestra de columna, o bien ser el administrador del equipo.
+- **Azure Key Vault**: necesita los permisos *create*, *get*, *unwrapKey*, *wrapKey*, *sign* y *verify* en el almacén que contiene la clave maestra de columna.
+- **Proveedor de almacén de claves (CNG)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
+- **Proveedor de servicios criptográficos (CAPI)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
 
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -451,10 +451,10 @@ En la tabla siguiente se enumeran los posibles escenarios de migración y su rel
 Para **cifrar** o **descifrar** datos almacenados en el origen de datos, necesita tener los permisos *VIEW ANY COLUMN MASTER KEY DEFINITION* y *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* en la base de datos de origen.
 
 También necesita tener acceso a las claves maestras de columna configuradas para las columnas, donde se almacenan los datos que se cifran o se descifran:
-- **Almacén de certificados, equipo local** : debe tener acceso de lectura al certificado que se usa como clave maestra de columna o ser el administrador del equipo.
-- **Almacén de claves de Azure** : necesita los permisos get, unwrapKey, wrapKey, sign y verify en el almacén que contiene la clave maestra de columna.
-- **Proveedor de almacén de claves (CNG)** : el permiso y las credenciales que se le podrían solicitar al usar una clave o un almacén de claves dependen del almacén y de la configuración del proveedor de almacén de claves (KSP).
-- **Proveedor de servicios criptográficos (CAPI)** : el permiso y las credenciales que se le podrían solicitar al usar una clave o un almacén de claves dependen del almacén y de la configuración del proveedor de servicios criptográficos (CSP).
+- **Almacén de certificados, equipo local**: debe tener acceso de lectura al certificado que se usa como clave maestra de columna o ser el administrador del equipo.
+- **Azure Key Vault**: necesita los permisos get, unwrapKey, wrapKey, sign y verify en el almacén que contiene la clave maestra de columna.
+- **Proveedor del almacén de claves (CNG)**: el permiso y las credenciales necesarios que se le podrían solicitar al usar una clave o un almacén de claves dependen de la configuración del almacén o del proveedor de almacenamiento de claves (KSP).
+- **Proveedor de servicios criptográficos (CAPI)**: el permiso y las credenciales necesarios que se le podrían solicitar al usar una clave o un almacén de claves dependen del almacén y de la configuración del proveedor de servicios criptográficos (CSP).
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## <a name="see-also"></a>Ver también

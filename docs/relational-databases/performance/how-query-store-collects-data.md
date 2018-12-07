@@ -1,7 +1,7 @@
 ---
 title: Cómo recopila datos el almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775063"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711077"
 ---
 # <a name="how-query-store-collects-data"></a>Introducción a la recopilación de datos del almacén de consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   El almacén de consultas funciona como una **caja negra de datos** que recopila en todo momento información de compilación y runtime relacionada con las consultas y los planes. Los datos relacionados con las consultas se guardan en las tablas internas y se presentan a los usuarios a través de un conjunto de vistas.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "47775063"
  En el diagrama siguiente se muestran las vistas del almacén de consultas y sus relaciones lógicas (la información de tiempo de compilación se presenta como entidades de color azul):  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **Descripciones de las vistas**  
+**Descripciones de las vistas**  
   
 |Ver|Descripción|  
 |----------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "47775063"
 |**sys.query_store_runtime_stats_interval**|El almacén de consultas divide el tiempo en periodos (intervalos) generados de forma automática y almacena estadísticas agregadas en ese intervalo para cada plan ejecutado. El tamaño del intervalo se controla mediante la opción de configuración Intervalo de recopilación de estadísticas (en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` con [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Estadísticas agregadas del runtime para los planes ejecutados. Todas las métricas capturadas se expresan como cuatro funciones estadísticas: Promedio, Mínimo, Máximo y Desviación estándar.|  
   
- Para obtener más detalles sobre las vistas del almacén de consultas, consulte la sección **Related Views, Functions, and Procedures** (Vistas relacionadas, funciones y procedimientos) de [Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)(Supervisión del rendimiento mediante el almacén de consultas).  
+ Para obtener más información sobre las vistas del almacén de consultas, vea la sección **Vistas, funciones y procedimientos relacionados** de [Supervisión del rendimiento mediante el almacén de consultas](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Procesamiento de consultas  
  El almacén de consultas interactúa con la canalización de procesamiento de consultas en los siguientes puntos clave:  
@@ -63,10 +62,10 @@ ms.locfileid: "47775063"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- En caso de producirse un bloqueo del sistema, el almacén de consultas puede perder datos del runtime hasta la cantidad definida con `DATA_FLUSH_INTERVAL_SECONDS`. El valor predeterminado de 900 segundos (15 minutos) ofrece un equilibrio óptimo entre el rendimiento de la captura de consultas y la disponibilidad de los datos.  
-En caso de presión de memoria, es posible vaciar las estadísticas del runtime en el disco antes de lo definido con `DATA_FLUSH_INTERVAL_SECONDS`.  
+ Si el sistema se bloquea, el almacén de consultas puede perder datos del runtime hasta la cantidad definida con `DATA_FLUSH_INTERVAL_SECONDS`. El valor predeterminado de 900 segundos (15 minutos) ofrece un equilibrio óptimo entre el rendimiento de la captura de consultas y la disponibilidad de los datos.  
+Si el sistema está bajo presión de memoria, es posible vaciar las estadísticas del runtime en el disco antes de lo definido con `DATA_FLUSH_INTERVAL_SECONDS`.  
 Durante la lectura del almacén de consultas, los datos en memoria y en disco se unifican de manera transparente.
-No se registrarán las estadísticas de consultas en caso de terminación de la sesión o de reinicio o bloqueo de la aplicación cliente.  
+Si se termina una sesión o la aplicación cliente se reinicia o bloquea, las estadísticas de consulta no se registrarán.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

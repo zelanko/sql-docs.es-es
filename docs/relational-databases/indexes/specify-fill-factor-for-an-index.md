@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2ff2cff49acefb568a0d052b00e4ec8d7e838f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630414"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401630"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar el factor de relleno para un índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47630414"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Performance"></a> Consideraciones de rendimiento  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47630414"
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Para especificar un factor de relleno con el Diseñador de tablas  
   
-1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea especificar el factor de relleno de un índice.  
+1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que quiera especificar el factor de relleno de un índice.  
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
@@ -87,11 +87,11 @@ ms.locfileid: "47630414"
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Para especificar un factor de relleno en un índice mediante el Explorador de objetos  
   
-1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea especificar el factor de relleno de un índice.  
+1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que quiera especificar el factor de relleno de un índice.  
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
-3.  Haga clic en el signo más para expandir la tabla en la que desea especificar el factor de relleno de un índice.  
+3.  Haga clic en el signo más para expandir la tabla en la que quiere especificar el factor de relleno de un índice.  
   
 4.  Haga clic en el signo más para expandir la carpeta **Índices** .  
   

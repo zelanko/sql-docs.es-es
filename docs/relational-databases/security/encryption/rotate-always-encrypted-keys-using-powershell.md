@@ -12,23 +12,23 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dca46f2aa08235e69c93efb4a9538ef5004b71b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652993"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617845"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 En este artículo se proporcionan los pasos necesarios para rotar claves de Always Encrypted con el módulo SqlServer PowerShell. Para obtener información sobre el uso del módulo SqlServer PowerShell para Always Encrypted, vea [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-La rotación de claves de Always Encrypted es el proceso de sustitución de una clave existente por una nueva. Puede que necesite rotar una clave si está en peligro o para cumplir con las directivas o los reglamentos de la organización que exigen que las claves de cifrado roten de forma regular. 
+La rotación de claves de Always Encrypted es el proceso de sustitución de una clave existente por una nueva. Puede que necesite rotar una clave si está en peligro, o bien para cumplir las directivas o los reglamentos de la organización que exigen que se roten las claves criptográficas de forma regular. 
 
 Always Encrypted emplea dos tipos de claves, por lo que hay dos flujos de trabajo de rotación de claves de alto nivel: rotación de claves maestras de columna y rotación de claves de cifrado de columna.
 
-* **Rotación de claves de cifrado de columna** : implica descifrar los datos cifrados con la clave actual y volver a cifrarlos con la nueva clave de cifrado de columna. Dado que la rotación de una clave de cifrado de columna exige el acceso a las claves y a la base de datos, la rotación de claves de cifrado de columna solo se puede realizar sin separación de roles.
+* **Rotación de claves de cifrado de columna** : implica descifrar los datos cifrados con la clave actual y volver a cifrarlos con la nueva clave de cifrado de columna. Como la rotación de una clave de cifrado de columna exige el acceso a las claves y a la base de datos, la rotación de claves de cifrado de columna solo se puede realizar sin separación de roles.
 * **Rotación de claves maestras de columna** : implica descifrar las claves de cifrado de columna que están protegidas con la clave maestra de columna actual, volver a cifrarlas con la nueva clave maestra de columna y actualizar los metadatos de ambos tipos de claves. La rotación de claves maestras de columna se puede realizar con o sin separación de roles (cuando se usa el módulo SqlServer PowerShell).
 
 

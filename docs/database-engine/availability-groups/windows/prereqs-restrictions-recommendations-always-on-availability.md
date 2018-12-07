@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516458"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "51600955"
   
 3.  Use el cmdlet **Get-ClusterResource** para encontrar el recurso Nombre de red y, después, use el cmdlet **Set-ClusterParameter** para establecer el valor **HostRecordTTL** de la siguiente manera:  
   
-     Get-ClusterResource “*\<nombreRecursoRed>*” | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
+     Get-ClusterResource "*\<nombreRecursoRed>*" | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
   
      En el siguiente ejemplo de PowerShell se establece el HostRecordTTL en 300 segundos en un recurso de nombre de red denominado `SQL Network Name (SQL35)`.  
   

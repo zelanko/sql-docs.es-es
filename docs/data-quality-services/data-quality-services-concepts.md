@@ -5,19 +5,18 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738463"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617124"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
 
@@ -30,7 +29,7 @@ ms.locfileid: "47738463"
   
  **Detección de conocimiento**  
   
- La detección de conocimiento es un proceso asistido por equipo que analiza las muestras de los datos de su organización para compilar el conocimiento acerca de los datos. Una vez que se tienen los resultados del análisis, se puede validar y mejorar el conocimiento; tras ello, se aplica para llevar a cabo la limpieza, coincidencia y generación de perfiles de los datos. Para obtener más información, consulte [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ La detección de conocimiento es un proceso asistido por ordenador que analiza muestras de los datos de la organización para compilar el conocimiento sobre los datos. Una vez que se tienen los resultados del análisis, se puede validar y mejorar el conocimiento; tras ello, se aplica para llevar a cabo la limpieza, coincidencia y generación de perfiles de los datos. Para obtener más información, consulte [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Administración de dominios**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "47738463"
   
  **Coincidencia de datos**  
   
- El proceso de búsqueda de coincidencias permite al administrador de datos comparar los datos a fin de que los datos similares, pero ligeramente distintos, se puedan alinear mediante un proceso de eliminación de datos duplicados. DQS realiza la eliminación de datos duplicados basándose en reglas de coincidencia que están incluidas en la base de conocimiento. El administrador de datos especifica los parámetros para el proceso de búsqueda de coincidencias desde un proyecto de calidad de datos. Para obtener más información, consulte [Coincidencia de datos](../data-quality-services/data-matching.md).  
+ El proceso de búsqueda de coincidencias permite al administrador de datos comparar los datos a fin de que los datos similares, pero ligeramente distintos, se puedan alinear mediante un proceso de eliminación de datos duplicados. DQS realiza la eliminación de datos duplicados basándose en reglas de coincidencia que están incluidas en la base de conocimiento. El administrador de datos especifica los parámetros para el proceso de búsqueda de coincidencias desde un proyecto de calidad de datos. Para más información, consulte [Data Matching](../data-quality-services/data-matching.md).  
   
  **Generación de perfiles y notificaciones**  
   

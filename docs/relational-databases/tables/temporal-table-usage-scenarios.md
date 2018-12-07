@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747443"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532743"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Escenarios de uso de tablas temporales
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  Las condiciones de filtrado especificadas en cláusulas temporales con FOR SYSTEM_TIME son SARGABLE (es decir, SQL Server puede usar un índice agrupado subyacente para llevar a cabo una búsqueda en lugar de una operación de análisis.   
-> Si consulta la tabla de historial directamente, asegúrese de que la condición de filtrado también sea SARGABLE especificando los filtros en forma de \<columna de período>  {< | > | =, …} condición_fecha AT TIME ZONE 'UTC'.  
+> Si consulta directamente la tabla de historial, asegúrese de que la condición de filtrado también sea SARGABLE especificando los filtros en forma de \<columna de período>  {< | > | =, ...} condición_fecha AT TIME ZONE "UTC".  
 > Si aplica AT TIME ZONE a columnas de período, SQL Server realizará un examen de tabla o índice, lo cual puede resultar muy caro. Evite este tipo de condición en las consultas:  
-> \<columna de periodo>  AT TIME ZONE "\<su zona horaria>"  >  {< | > | =, …} condición_fecha.  
+> \<columna de periodo>  AT TIME ZONE "\<su zona horaria>"  >  {< | > | =, ...} condición_fecha.  
   
  Vea también: [Querying Data in a System-Versioned Temporal Table (Consulta de los datos de una tabla temporal con control de versiones del sistema)](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
@@ -147,7 +147,7 @@ FROM Employee
   
 -   Tendencias de los indicadores importantes en los datos históricos y actuales  
   
--   Instantánea exacta de todos los datos “a partir de” cualquier momento dado del pasado (ayer, hace un mes, etc..)  
+-   Instantánea exacta de todos los datos "a partir de" cualquier momento dado del pasado (ayer, hace un mes, etc.)  
   
 -   Diferencias entre dos momentos dados de interés (hace un mes frente a hace tres meses, por ejemplo)  
   
@@ -368,7 +368,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
 Puede utilizar tablas temporales con versión del sistema para detectar anomalías que se producen periódica o irregularmente como puede usar consultas temporales para encontrar rápidamente patrones específicos.  
 De qué anomalías se trata depende del tipo de datos que se recopilan y de la lógica de negocios.  
   
- En el ejemplo siguiente se muestra una lógica simplificada para detectar “picos” en las cifras de ventas. Supongamos que trabaja con una tabla temporal que recopila el historial de los productos comprados:  
+ En el ejemplo siguiente se muestra una lógica simplificada para detectar "picos" en las cifras de ventas. Supongamos que trabaja con una tabla temporal que recopila el historial de los productos comprados:  
   
 ```  
 CREATE TABLE [dbo].[Product]  
@@ -446,7 +446,7 @@ FROM CTE
  En el ejemplo siguiente se ilustra el proceso y se supone que la tabla de dimensiones DimLocation ya tiene ValidFrom y ValidTo como columnas que no admiten valores NULL datetime2 y que el proceso ETL rellena:  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

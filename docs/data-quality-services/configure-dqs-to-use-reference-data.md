@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.administration.rdsconfiguration.f1
@@ -16,12 +15,12 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23a2f4a8b3c9af1918e0d4e34f2525204846a7ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd0987cfe98f8cb72531bf807494af1867646dcf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701443"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617241"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para utilizar datos de referencia
 
@@ -74,7 +73,7 @@ ms.locfileid: "51701443"
   
     4.  En el cuadro Esquema, especifique el esquema que define la cadena de los campos (nombres de columna) que se van a utilizar del proveedor de servicios directos de datos de referencia. Los nombres de campo no pueden incluir espacios, y los campos deben ir separados con comas. Por ejemplo: `FirstName, LastName, City, State`.  
   
-    5.  En el cuadro **URI** , escriba el URI del proveedor de servicios directos de datos de referencia. Solo se permiten URI seguros (aquellos cuya dirección empieza por “https://") en DQS.  
+    5.  En el cuadro **URI** , escriba el URI del proveedor de servicios directos de datos de referencia. Solo se permiten URI seguros (aquellos cuya dirección empieza por "https://") en DQS.  
   
     6.  En el cuadro **Tamaño máximo de lote** , escriba el número máximo de registros por lote que se enviarán al proveedor de servicios de datos de referencia para la limpieza. Se puede especificar un máximo de 100 registros por lote para la actividad de limpieza.  
   

@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701067"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535732"
 ---
 # <a name="installation-wizard-help"></a>Ayuda del Asistente para instalación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -451,6 +451,6 @@ Utilice la página **Instancia de usuario** para generar una instancia independi
   
  Asegúrese de que en el campo **Usuario para aprovisionar** aparezca el nombreDeDominio\nombreDeUsuario del usuario cuyos permisos se deben actualizar. Seleccione el rol que se debe actualizar en la lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del panel **Privilegios disponibles** y, a continuación, haga clic en la flecha que señala a la derecha. Para agregar el usuario a todos los roles disponibles para todas las instancias disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los roles disponibles, haga clic en la flecha doble que señala a la derecha.  
   
- Para implementar los cambios una vez completadas las selecciones, [!INCLUDE[clickOK](../../includes/clickok-md.md)]. Para cerrar la herramienta sin realizar cambios, haga clic en **Cancelar**.  
+ Para implementar los cambios cuando han finalizado las selecciones [!INCLUDE[clickOK](../../includes/clickok-md.md)] Para cerrar la herramienta sin realizar cambios, haga clic en **Cancelar**.  
   
   

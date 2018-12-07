@@ -14,12 +14,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff61f3f69b5ce5c73a96d6f9c06141e5bd17f75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523570"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar con Almacenamiento de Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ Especifique la siguiente información sobre su cuenta de Windows Azure y, a cont
 
 2.  **Clave de cuenta** : especifique la clave de cuenta para la cuenta de almacenamiento especificada.  
   
-3.  **Usar puntos de conexión seguros (HTTPS)** : esta opción usa la comunicación cifrada y el identificador seguro de un servidor web de la red.  
+3.  **Usar puntos de conexión seguros (HTTPS)**: esta opción usa la comunicación cifrada y el identificador seguro de un servidor web de la red.  
   
 4.  **Guardar clave de cuenta** : esta opción guarda su contraseña en un archivo cifrado.  
   

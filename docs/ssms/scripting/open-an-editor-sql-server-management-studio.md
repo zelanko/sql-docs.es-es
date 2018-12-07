@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c123c562a9f0d6c581fb6a69fcc52d0126302a6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508729"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "51643756"
 ### <a name="using-the-filenew-menu"></a>Mediante el menú Archivo/Nuevo  
  En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, seleccione una de las opciones del editor de consultas:  
   
--   **Consulta con conexión actual** : abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, usa **Consulta con conexión actual**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
+-   **Consulta con conexión actual**: abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, usa **Consulta con conexión actual**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
   
--   **Consulta de motor de base de datos** : abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Consulta de motor de base de datos**: abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Consulta MDX de Analysis Services** : abre un nuevo editor de consultas MDX de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -55,9 +55,9 @@ ms.locfileid: "51643756"
 ### <a name="using-the-toolbar"></a>Usar la barra de herramientas  
  En la barra de herramientas de **Estándar** , haga clic en uno de los siguientes botones:  
   
--   **Nueva consulta** : abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, haga clic en el botón **Nueva consulta** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
+-   **Nueva consulta**: abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, haga clic en el botón **Nueva consulta** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
   
--   **Consulta de motor de base de datos** : abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Consulta de motor de base de datos**: abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Consulta MDX de Analysis Services** : abre un nuevo editor de consultas MDX de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

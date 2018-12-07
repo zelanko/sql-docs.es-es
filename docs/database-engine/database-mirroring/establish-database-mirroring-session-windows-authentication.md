@@ -13,12 +13,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522320"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Establecer una sesión de creación de reflejo de la base de datos - Autenticación de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "47838943"
   
  Para establecer una sesión de creación de reflejo de la base de datos y modificar las propiedades de la creación de reflejo de la base de datos de una base de datos, utilice la página **Creación de reflejo** del cuadro de diálogo de **Propiedades de la base de datos** . Antes de utilizar la página **Creación de reflejo** para configurar la creación de reflejo de la base de datos, asegúrese de que se hayan cumplido los siguientes requisitos:  
   
--   Las instancias del servidor reflejado y principal se deben ejecutar en la misma edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea Standard Edition o Enterprise Edition. Asimismo, se recomienda encarecidamente que se ejecuten en sistemas comparables que puedan administrar cargas de trabajo idénticas.  
+-   Las instancias del servidor reflejado y principal se deben ejecutar en la misma edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea Standard o Enterprise. Asimismo, se recomienda encarecidamente que se ejecuten en sistemas comparables que puedan administrar cargas de trabajo idénticas.  
   
     > [!NOTE]  
     >  Una instancia de servidor testigo no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Debe existir la base de datos reflejada y estar vigente.  
   
-     Crear una base de datos reflejada requiere una copia de seguridad reciente de la base de datos principal (mediante WITH NORECOVERY) en la instancia del servidor reflejado. También se necesita realizar una o más copias de seguridad del registro después de la copia de seguridad completa, y restaurarlos en secuencia en la base de datos reflejada (mediante WITH NORECOVERY). Para obtener más información, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Crear una base de datos reflejada requiere una copia de seguridad reciente de la base de datos principal (mediante WITH NORECOVERY) en la instancia del servidor reflejado. También se necesita realizar una o más copias de seguridad del registro después de la copia de seguridad completa, y restaurarlos en secuencia en la base de datos reflejada (mediante WITH NORECOVERY). Para obtener más información, vea [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Si las instancias del servidor se ejecutan con distintas cuentas de usuario de dominio, cada una requiere un inicio de sesión en la base de datos **master** de las demás. Si el inicio de sesión no existe, deberá crearlo antes de configurar la creación de reflejo. Para obtener más información, vea [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   

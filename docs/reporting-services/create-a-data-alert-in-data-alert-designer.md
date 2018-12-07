@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504108"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
 
@@ -75,15 +75,15 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
 10. Escriba el valor de comparación.  
   
-11. De manera opcional, vuelva a hacer clic en el signo de puntos suspensivos **(…)** .  
+11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)**.  
   
-     Los puntos suspensivos **(…)** aparecen en la línea que contiene la primera cláusula.  
+     Los puntos suspensivos **(...)** aparecen en la línea que contiene la primera cláusula.  
   
      La cláusula OR se agrega debajo y dentro de la regla AND.  
   
 12. De manera opcional, haga clic en la flecha abajo, seleccione **Modo de selección de campos**y, después, seleccione una columna de la lista.  
   
-     Observará que el signo de puntos suspensivos **(…)** en los que se hace clic para agregar cláusulas OR ha desaparecido.  
+     Observará que el signo de puntos suspensivos **(...)** en los que se hace clic para agregar cláusulas OR ha desaparecido.  
   
 13. Si lo desea, haga clic en **Agregar regla** de nuevo para agregar más reglas.  
   

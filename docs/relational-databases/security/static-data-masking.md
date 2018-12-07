@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539115"
 ---
 # <a name="static-data-masking"></a>Enmascaramiento estático de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ A continuación se muestra una guía paso a paso para ejecutar el enmascaramient
  
  ![Lista desplegable de funciones de enmascaramiento](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- Nota: La mayoría de estas funciones de enmascaramiento tienen parámetros de configuración adicionales. Para el enmascaramiento de orden aleatorio, Enmascaramiento estático de datos proporciona un parámetro predeterminado. Para el enmascaramiento de tipo Orden aleatorio de grupo, Valor único y Composición de cadena, el usuario debe proporcionar parámetros de configuración. Para cambiar o proporcionar parámetros de configuración, haga clic en la opción **Configurar...** y especifique un valor (alternativo) para el parámetro en el cuadro de diálogo que aparece. En [Funciones de enmascaramiento](#masking-functions) se proporcionan descripciones detalladas de cada función de enmascaramiento.
+ Nota: La mayoría de estas funciones de enmascaramiento tienen parámetros de configuración adicionales. Para el enmascaramiento de orden aleatorio, Enmascaramiento estático de datos proporciona un parámetro predeterminado. Para el enmascaramiento de tipo Orden aleatorio de grupo, Valor único y Composición de cadena, el usuario debe proporcionar parámetros de configuración. Para cambiar o proporcionar parámetros de configuración, haga clic en la opción **Configurar...**  y especifique un valor (alternativo) para el parámetro en el cuadro de diálogo que aparece. En [Funciones de enmascaramiento](#masking-functions) se proporcionan descripciones detalladas de cada función de enmascaramiento.
  
  ![Botón de configuración de las funciones de enmascaramiento](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -135,7 +135,7 @@ El enmascaramiento NULL reemplaza todos los valores de la columna con el valor N
 
 ### <a name="single-value-masking"></a>Enmascaramiento de un solo valor
 
-El enmascaramiento de un solo valor reemplaza todos los valores de la columna con un único valor fijo, especificado por el usuario. El formato de la entrada debe ser convertible al tipo que tenga la columna seleccionada. Para especificar el valor, haga clic en **Configurar...**, proporcione un valor y, después, haga clic en **Aceptar**. 
+El enmascaramiento de un solo valor reemplaza todos los valores de la columna con un único valor fijo, especificado por el usuario. El formato de la entrada debe ser convertible al tipo que tenga la columna seleccionada. Para especificar el valor, haga clic en **Configurar...**, proporcione un valor y después haga clic en **Aceptar**. 
 
 ![Parámetro de enmascaramiento de un solo valor](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

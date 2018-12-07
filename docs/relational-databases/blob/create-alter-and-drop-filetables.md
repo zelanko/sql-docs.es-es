@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686563"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542370"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   Una FileTable requiere un grupo de archivos FILESTREAM válido, ya que una FileTable contiene una columna FILESTREAM. Opcionalmente, puede especificar un grupo de archivos FILESTREAM válido como parte del comando **CREATE TABLE** para crear una FileTable. Si no especifica ningún grupo de archivos, la FileTable usa el grupo de archivos FILESTREAM predeterminado para la base de datos. Si la base de datos no tiene ningún grupo de archivos FILESTREAM, se produce un error.  
   
--   No puede crear ninguna restricción de tabla como parte de una instrucción **CREATE TABLE…AS FILETABLE** . No obstante, puede agregar la restricción más tarde con una instrucción **ALTER TABLE** .  
+-   No puede crear ninguna restricción de tabla como parte de una instrucción **CREATE TABLE...AS FILETABLE**. No obstante, puede agregar la restricción más tarde con una instrucción **ALTER TABLE** .  
   
 -   No puede crear ninguna FileTable en la base de datos **tempdb** ni en ninguna de la demás bases de datos del sistema.  
   
@@ -141,7 +141,7 @@ GO
   
 -   El directorio y los subdirectorios de la FileTable que contiene desaparecen de la jerarquía de archivos y directorios de FILESTREAM de la base de datos.  
   
- Se produce un error en el comando DROP TABLE si hay identificadores de archivo abiertos en el espacio de nombres de archivo de la FileTable. Para obtener información sobre cómo cerrar identificadores abiertos, vea [Administrar FileTables](../../relational-databases/blob/manage-filetables.md).  
+ Se produce un error en el comando DROP TABLE si hay identificadores de archivo abiertos en el espacio de nombres de archivo de FileTable. Para obtener información sobre cómo cerrar identificadores abiertos, vea [Administrar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Se crean otros objetos de base de datos cuando se crea una FileTable  
  Cuando cree una nueva FileTable, también se crean algunas restricciones y algunos índices definidos por el sistema. No puede modificar ni quitar estos objetos; desaparecen solo cuando se quita el propio objeto FileTable. Para ver la lista de estos objetos, consulte la vista de catálogo [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  

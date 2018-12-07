@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a03177d0b78a6347c4438b8fe1f67a7d00c057ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522359"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
@@ -37,7 +37,7 @@ En el artículo se explica cómo usar PolyBase en una instancia de SQL Server pa
 
   - Hortonworks HDP 1.3, 2.1-2.6, 3.0 en Linux
   - Hortonworks HDP 1.3, 2.1-2.3 en Window Server
-  - Cloudera CDH 4.3, 5.1 – 5.5, 5.9 - 5.13 en Linux
+  - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 en Linux
 
 > [!NOTE]
 > PolyBase admite las zonas de cifrado de Hadoop a partir de SQL Server 2016 SP1 CU7 y SQL Server 2017 CU3. Si se utilizan [grupos de escalabilidad horizontal PolyBase](polybase-scale-out-groups.md), todos los nodos de proceso deben estar también en una compilación que incluya compatibilidad con las zonas de cifrado de Haddop.
@@ -198,7 +198,7 @@ La consulta siguiente exporta datos de SQL Server a Hadoop. Para ello, primero d
 
 ```sql
 -- Enable INSERT into external table  
-sp_configure ‘allow polybase export’, 1;  
+sp_configure 'allow polybase export', 1;  
 reconfigure  
   
 -- Create an external table.

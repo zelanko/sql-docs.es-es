@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699833"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526399"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT: cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Limita aún más las filas de la partición especificando los puntos inicial y final. Para ello, se especifica un rango de filas con respecto a la fila actual mediante asociación lógica o asociación física. La asociación física se realiza mediante la cláusula ROWS.  
   
- La cláusula ROWS restringe las filas dentro de una partición especificando un número fijo de filas delante y detrás de la fila actual. La cláusula RANGE también puede restringir lógicamente las filas de una partición especificando un rango de valores con respecto al valor de la fila actual. Las filas precedentes y siguientes se definen en función de la ordenación de la cláusula ORDER BY. El marco de ventana “RANGE … CURRENT ROW …” incluye todas las filas que tienen los mismos valores en la expresión ORDER BY que la fila actual. Por ejemplo, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW indica que la ventana de filas en la que opera la función tiene un tamaño de tres filas, con dos filas delante hasta e inclusive la fila actual.  
+ La cláusula ROWS restringe las filas dentro de una partición especificando un número fijo de filas delante y detrás de la fila actual. La cláusula RANGE también puede restringir lógicamente las filas de una partición especificando un rango de valores con respecto al valor de la fila actual. Las filas precedentes y siguientes se definen en función de la ordenación de la cláusula ORDER BY. El marco de ventana “RANGE ... CURRENT ROW ...” incluye todas las filas que tienen los mismos valores en la expresión ORDER BY que la fila actual. Por ejemplo, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW indica que la ventana de filas en la que opera la función tiene un tamaño de tres filas, con dos filas delante hasta e inclusive la fila actual.  
   
 > [!NOTE]  
 >  ROWS o RANGE requieren que se especifique la cláusula ORDER BY. Si ORDER BY contiene varias expresiones de orden, CURRENT ROW FOR RANGE considera todas las columnas de la lista ORDER BY al determinar la fila actual.  

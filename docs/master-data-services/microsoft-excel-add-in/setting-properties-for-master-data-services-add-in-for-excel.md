@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4ca842edd22eb0b4eadd7a44ededcd30530654f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d00e95ad228d38b3984cb38a3ef5f976a2dad6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644483"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414122"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Establecer propiedades para el complemento Master Data Services para Excel
 
@@ -42,7 +42,7 @@ ms.locfileid: "47644483"
 |Datos: Filtros|Número máximo de filas|Seleccione el umbral para el número de filas que se cargarán, superado el cual se mostrará una advertencia de filtro.|  
 |Datos: Filtros|Máximo de columnas|Seleccione el umbral para el número de columnas que se cargarán, superado el cual se mostrará una advertencia de filtro.|  
 |Datos: Formato de celda|Cambiar el color de la celda cuando: Cambio de valores de atributo|Haga clic en esta opción si desea que el color de una celda cambie si cambia el valor de atributo de dicha celda al actualizar la tabla del complemento de Excel con nuevos datos procedentes del repositorio de MDS.|  
-|Datos: Formato de celda|Cambiar el color de la celda cuando: Los miembros se agregan|Haga clic en esta opción si desea que el color de las celdas de una fila cambie si se agrega un nuevo miembro a la fila al actualizar la tabla del complemento de Excel con nuevos datos procedentes del repositorio de MDS.|  
+|Datos: Formato de celda|Cambiar el color de la celda cuando: Los miembros se agregan|Haga clic para especificar que el color de las celdas de una fila cambie si se agrega un nuevo miembro a la fila al actualizar la tabla del complemento de Excel con nuevos datos procedentes del repositorio de MDS.|  
 |Datos: Formato de celda|Formato de presentación|Seleccione el formato preferido para mostrar los valores de atributos basados en dominio. Las opciones son Código {Name}, Código y Nombre {Code}.|  
   
   

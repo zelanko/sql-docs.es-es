@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c78f6e02a2aef893aa3e8702158a5f3c63cea76a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813425"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417286"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
 
@@ -90,7 +90,7 @@ ms.locfileid: "51813425"
     Install-SPWebPartPack -LiteralPath "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -GlobalInstall  
     ```  
   
-4.  Debería ver un mensaje similar al siguiente, que indica que el elemento web se implementó.  
+4.  Debería ver un mensaje similar al siguiente, que indica que el elemento web se ha implementado.  
   
     > Nombre               Id. solución                                             Implementado  
   
@@ -114,7 +114,7 @@ ms.locfileid: "51813425"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  Debería recibir un mensaje que indique que la operación se completó correctamente.  
+4.  Debería recibir un mensaje que indique que la "operación se ha completado correctamente".  
   
      Al especificar `-globalinstall` , se agregan los elementos web a la caché de ensamblados global (GAC). Este paso es necesario si desea conectar los elementos web.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51813425"
   
 7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De manera predeterminada, la dirección URL del Administrador de informes tiene la sintaxis siguiente: **https://\<nombreDeServidor>/informes**.  
   
-8.  En **Ruta de acceso del informe**, especifique una barra diagonal, seguida de la ruta de acceso a la carpeta y el nombre del informe. **No** incluya el nombre del servidor ni el directorio virtual del Administrador de informes. Por ejemplo, para abrir el informe "Company Sales" de la carpeta Adventure Works, especifique **/Adventure Works/Company Sales**. Aquí se proporciona otro ejemplo en el que el informe "Products" está en la carpeta raíz del servidor de informes **/Products**.  
+8.  En **Ruta de acceso del informe**, especifique una barra diagonal, seguida de la ruta de acceso a la carpeta y el nombre del informe. **No** incluya el nombre del servidor ni el directorio virtual del Administrador de informes. Por ejemplo, para abrir el informe "Company Sales" de la carpeta Adventure Works, especifique **/Adventure Works/Company Sales**. Este es otro ejemplo en el que el informe "Products" está en la carpeta raíz del servidor de informes **/Products**.  
   
 9. Haga clic en **Aceptar**.  
   

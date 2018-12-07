@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9b49921f564d3b6eca8dc305ee4d5090f2ebb7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722703"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516759"
 ---
 # <a name="page-compression-implementation"></a>Implementación de la compresión de página
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47722703"
   
 3.  Compresión de diccionario  
   
- Al utilizar la compresión de página, las páginas que no están en el nivel hoja de los índices se comprimen usando únicamente la compresión de fila. Para obtener más información acerca de la compresión de fila, vea [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
+ Al usar la compresión de página, las páginas que no están en el nivel hoja de los índices se comprimen usando únicamente la compresión de fila. Para obtener más información acerca de la compresión de fila, vea [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
   
 ## <a name="prefix-compression"></a>Compresión de prefijo  
  Para cada página que se comprime, la compresión de prefijo utiliza los pasos siguientes:  

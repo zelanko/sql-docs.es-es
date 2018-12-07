@@ -18,12 +18,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 405c8ed92f76c2b08baf8c4fd7b7e29a366344f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534090"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47720633"
  El tiempo de la conmutación por error para la base de datos depende de la rapidez con la que el servidor reflejado pueda poner al día el registro en la cola rehecha, que, a su vez, se determina principalmente por el hardware del sistema y la carga de trabajo actual. Potencialmente, una base de datos principal puede estar tan ocupada que el servidor principal envía los registros al servidor reflejado mucho más rápidamente de lo que puede confirmarlos. En esta situación, la conmutación por error puede tardar mucho tiempo mientras el servidor reflejado pone al día el registro en la cola rehecha. Para conocer el tamaño actual de la cola rehecha, utilice el contador **Cola rehecha** en el objeto de rendimiento de creación de reflejo de la base de datos. Para más información, consulte [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
   
 ### <a name="estimating-the-failover-redo-rate"></a>Calcular la tasa de puesta al día de la conmutación por error  
- Puede medir la cantidad de tiempo que se necesita para poner al día las entradas de registro ( *tasa de puesta al día*) utilizando una copia de prueba de la base de datos de producción.  
+ Puede medir la cantidad de tiempo que se necesita para poner al día las entradas de registro (*tasa de puesta al día*) mediante una copia de prueba de la base de datos de producción.  
   
  El método para calcular el tiempo de confirmación durante la conmutación por error depende del número de subprocesos que el servidor reflejado utiliza durante la fase de puesta al día. El número de subprocesos depende de lo siguiente:  
   

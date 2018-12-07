@@ -15,16 +15,16 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8fc0698d476b89ded113e0485a50c2c485880ff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd5f44a6e9c4907aa320a42ce89d5fdcf80e457
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511834"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Agregar tablas a las consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Cuando crea una consulta, va a recuperar datos de una tabla u otros objetos con estructura de tabla (vistas y determinadas funciones definidas por el usuario). Para trabajar con cualquiera de estos objetos en la consulta, deberá agregarlos al **panel Diagrama**.  
+Cuando crea una consulta, recupera datos de una tabla u otros objetos con estructura de tabla (vistas y determinadas funciones definidas por el usuario). Para trabajar con cualquiera de estos objetos en la consulta, deberá agregarlos al **panel Diagrama**.  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>Para agregar una tabla u objeto con valor de tabla a una consulta  
   
@@ -50,7 +50,7 @@ El Diseñador de consultas y vistas no mostrará las columnas de datos de una ta
   
 3.  Abra el Diseñador de consultas para la consulta existente. (Ahora tiene dos Diseñadores de consultas abiertos.)  
   
-4.  Muestre el **panel SQL** para la consulta interna (la consulta existente que va a incluir en la nueva consulta externa).  
+4.  Muestre el **panel SQL** para la consulta interna (la consulta existente que se va a incluir en la nueva consulta externa).  
   
 5.  Seleccione todo el texto del **panel SQL**y cópielo en el Portapapeles.  
   

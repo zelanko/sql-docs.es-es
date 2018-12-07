@@ -11,12 +11,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0faaa704bb7a160d4a17d80a97efd2bae85b629
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0cf5f24bc4c330c40323ee18189cc10b0aed080e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671253"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398738"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Hacer copia de seguridad de una base de datos con tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51671253"
 > [!NOTE]  
 >  Durante una copia de seguridad, si detecta un error de SUMA DE COMPROBACIÓN en uno o varios archivos de un grupo de archivos optimizados para memoria, se producirá un error en la operación de copia de seguridad. En esa situación, debe restaurar la base de datos a partir de la última copia de seguridad buena conocida.  
 >   
->  Si no tiene una copia de seguridad, puede exportar los datos de las tablas optimizadas para memoria y las tablas basadas en disco y recargarlos después de quitar y volver a crear la base de datos.  
+>  Si no tiene una copia de seguridad, puede exportar los datos de las tablas optimizadas para memoria y las tablas basadas en disco, y recargarlos después de quitar y volver a crear la base de datos.  
   
  Una copia de seguridad completa de una base de datos con una o más tablas optimizadas para memoria consta del almacenamiento asignado para las tablas basadas en disco (si existen), el registro de transacciones activo, y los pares de archivos de datos y delta (también conocidos como pares de archivos de punto de comprobación) para las tablas optimizadas para memoria. Pero como se describe en [Durabilidad de las tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md), el almacenamiento que usan las tablas optimizadas para memoria puede ser mucho mayor que el tamaño de la memoria y eso afecta al tamaño de la copia de seguridad de la base de datos.  
   

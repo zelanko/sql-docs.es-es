@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966b2acdeff68d445935b55ea1bf8ab24f2ad74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ab6c88467b20299574003c17fd96ac563dbc25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684703"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502577"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ En esta tabla se enumeran los formatos de literales de cadena ISO 8601 admitidos
 El desplazamiento de zona horaria especifica el desplazamiento de zona a partir de Hora UTC para un valor **time** o **datetime**. El ajuste de zona horaria se puede representar como [+ | -] hh:mm:
 -   hh es una cifra de dos dígitos comprendidos entre 00 a 14 y representa el número de horas en el ajuste de zona horaria.  
 -   mm es una cifra de dos dígitos comprendidos entre 00 a 59 y representa el número minutos adicionales en el ajuste de zona horaria.  
--   \+ (más) o – (menos) es el signo que se usa obligatoriamente para indicar un ajuste de zona horaria. Esto indica si el ajuste de zona horaria se agrega o resta de la hora UTC para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.  
+-   \+ (más) o - (menos) es el signo que se usa obligatoriamente para indicar un ajuste de zona horaria. Esto indica si el ajuste de zona horaria se agrega o resta de la hora UTC para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.  
   
 El intervalo del ajuste de zona horaria sigue la norma de W3C XML para la definición del esquema XSD y es ligeramente diferente de la definición estándar de SQL 2003, de 12:59 a +14: 00.
   

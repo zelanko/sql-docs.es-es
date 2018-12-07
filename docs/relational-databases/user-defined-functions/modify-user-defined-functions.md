@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 492bce94e029f432a7a36b7e60d81435b6b1e0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613743"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535581"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funciones definidas por el usuario
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47613743"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  ALTER FUNCTION no se puede utilizar para realizar ninguna de estas acciones:  
@@ -73,7 +73,7 @@ ms.locfileid: "47613743"
   
 5.  En la ventana de consulta, realice los cambios necesarios en la instrucción ALTER FUNCTION.  
   
-6.  En el menú **Archivo**, haga clic en **Save***function_name*.  
+6.  En el menú **Archivo** , haga clic en **Guardar**_nombre_de_función_.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

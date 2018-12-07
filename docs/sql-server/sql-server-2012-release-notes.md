@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540563"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ Antes de instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tenga en c
 **Solución alternativa:** puede examinar el informe de comprobación de la configuración del sistema para obtener más información sobre estas reglas de instalación. La comprobación de la configuración del sistema genera un informe que contiene una descripción breve de cada regla ejecutada y el estado de ejecución. El informe de comprobación de la configuración del sistema se encuentra en %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 Al agregar una cuenta de usuario local para el servicio del controlador de Distributed Replay, la instalación puede finalizar inesperadamente  
-**Problema:** en la página **Distributed Replay Controller** del programa de instalación de SQL Server, al intentar agregar una cuenta de usuario local para el servicio Distributed Replay Controller, la instalación puede finalizar inesperadamente con el mensaje de error “Error del programa de instalación de SQL Server”.  
+**Problema:** en la página **Distributed Replay Controller** del programa de instalación de SQL Server, al intentar agregar una cuenta de usuario local para el servicio Distributed Replay Controller, la instalación puede finalizar de forma inesperada con el mensaje de error "Error del programa de instalación de SQL Server".  
   
-**Solución alternativa:** durante la instalación de SQL, no agregue cuentas de usuario local mediante “Agregar usuario actual” o “Agregar…”. Después de la instalación, agregue una cuenta de usuario local manualmente siguiendo estos pasos:  
+**Solución alternativa:** durante la instalación de SQL, no agregue cuentas de usuario local mediante "Agregar usuario actual" o "Agregar...". Después de la instalación, agregue una cuenta de usuario local manualmente siguiendo estos pasos:  
   
 1.  Detenga el servicio SQL Server Distributed Replay Controller  
   
@@ -308,7 +308,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
   
 **Solución alternativa**: para evitar este problema, habilite IPv4 o siga estos pasos para agregar una entrada del Registro y crear una ACL para habilitar el visor de Ayuda para IPv6:  
   
-1.  Cree una clave del Registro con el nombre 'IPv6' y el valor '1 (DWORD (32 bits))' en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
+1.  Cree una clave del Registro con el nombre "IPv6" y el valor "1 (DWORD (32 bits))" en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
 2.  Establezca las ACL de seguridad del puerto para IPv6; para ello, ejecute el siguiente comando en una ventana CMD de administrador:  
   
@@ -341,7 +341,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
 **Solución alternativa:** para evitar esto, publique el trabajo que necesite conservar en la base de conocimiento antes de comenzar una nueva actividad.  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 Los controles no se adaptan correctamente en los tamaños de fuente grandes  
-**Problema:** si cambia el tamaño del texto a “Más grande: 150%” (en Windows Server 2008 o Windows 7), o bien cambia el valor de Configuración de ppp personalizada a 200% (en Windows 7), los botones **Cancelar** y **Crear** de la página **Nueva base de conocimiento** no están accesibles.  
+**Problema:** si cambia el tamaño del texto a "Más grande: 150 %" (en Windows Server 2008 o Windows 7), o bien cambia el valor de Configuración de ppp personalizada a 200 % (en Windows 7), los botones **Cancelar** y **Crear** de la página **Nueva base de conocimiento** no son accesibles.  
   
 **Solución alternativa:** para resolver el problema, establezca la fuente en un tamaño menor.  
   
@@ -403,7 +403,7 @@ Problema: puede recibir el siguiente error si abre una base de conocimiento en l
   
 Esto ocurre porque DQS compara de distinto modo las cadenas en la base de datos de SQL Server y en C#. La comparación de cadenas en la base de datos de SQL Server no distingue mayúsculas de minúsculas, mientras que en C# sí se distingue entre mayúsculas y minúsculas.  
   
-Vamos a ilustrarlo con un ejemplo. Imagine un usuario, Dominio\usuario1. El usuario inicia sesión en el equipo con Data Quality Client usando la cuenta “usuario1” y trabaja en una base de conocimiento. DQS almacena la base de conocimiento reciente para cada usuario como un registro en la tabla A_CONFIGURATION de la base de datos DQS_MAIN. En este caso, el registro se almacenará con el nombre siguiente: RecentList:KB:Dominio\usuario1. Más tarde, el usuario inicia sesión en el equipo con Data Quality Client como “Usuario1” (observe que la U está en mayúsculas) e intenta abrir la base de conocimiento en la lista **Base de conocimiento reciente** para la actividad Administración de dominios. El código subyacente de DQS comparará las dos cadenas, RecentList:KB:DOMINIO\usuario1 y DOMINIO\Usuario1, y teniendo en cuenta la comparación de cadenas con distinción de mayúsculas y minúsculas de C#, las cadenas no coincidirán y por tanto DQS intentará insertar un registro nuevo para el usuario (Usuario1) en la tabla A_CONFIGURATION de la base de datos DQS_MAIN. Sin embargo, debido a la comparación de cadenas sin distinción entre mayúsculas y minúsculas de la base de datos de SQL, la cadena ya existe en la tabla A_CONFIGURATION de la base de datos DQS_MAIN y se producirá un error en la operación de inserción.  
+Vamos a ilustrarlo con un ejemplo. Imagine un usuario, Dominio\usuario1. El usuario inicia sesión en el equipo con Data Quality Client mediante la cuenta "usuario1" y trabaja en una base de conocimiento. DQS almacena la base de conocimiento reciente para cada usuario como un registro en la tabla A_CONFIGURATION de la base de datos DQS_MAIN. En este caso, el registro se almacenará con el nombre siguiente: RecentList:KB:Dominio\usuario1. Más tarde, el usuario inicia sesión en el equipo con Data Quality Client como "Usuario1" (observe que la U está en mayúsculas) e intenta abrir la base de conocimiento en la lista **Base de conocimiento reciente** para la actividad de administración de dominios. El código subyacente de DQS comparará las dos cadenas, RecentList:KB:DOMINIO\usuario1 y DOMINIO\Usuario1, y teniendo en cuenta la comparación de cadenas con distinción de mayúsculas y minúsculas de C#, las cadenas no coincidirán y por tanto DQS intentará insertar un registro nuevo para el usuario (Usuario1) en la tabla A_CONFIGURATION de la base de datos DQS_MAIN. Sin embargo, debido a la comparación de cadenas sin distinción entre mayúsculas y minúsculas de la base de datos de SQL, la cadena ya existe en la tabla A_CONFIGURATION de la base de datos DQS_MAIN y se producirá un error en la operación de inserción.  
   
 **Solución alternativa:** para corregir este problema, puede elegir alguna de las opciones siguientes:  
   

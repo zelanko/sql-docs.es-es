@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542218"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
   Las tablas, las matrices, los gráficos y las imágenes que se incluyen en los informes, se pueden publicar como *elementos de informe*. Se trata de elementos de informe paginado que se han publicado por separado en un servidor de informes y se pueden volver a usar en otros informes paginados. Los elementos de informe tienen una extensión de archivo .rsc.  
@@ -85,7 +85,7 @@ ms.locfileid: "50021949"
  La manera más fácil de crear un informe es agregar un elemento de informe existente, como una tabla o un gráfico, de la galería de elementos de informe a su informe. Después de agregarla a un informe, puede modificarla como convenga o aceptar las actualizaciones del servidor. Los cambios realizados en el elemento del informe no afectan a la instancia del elemento de informe publicada en el sitio o servidor, ni a la relación entre las instancias del informe y del sitio o servidor. Si tiene los permisos necesarios, puede volver a guardar la copia actualizada en el sitio o servidor. Si otro usuario modifica la copia del sitio o servidor, puede decidir mantener su copia como está o actualizarla para que sea como la copia del sitio o servidor.  
   
 ### <a name="searching-for-report-parts"></a>Buscar elementos de informe  
- Pueden buscar elementos de informe en la galería de elementos de informe para agregarlos a un informe. Puede filtrar los elementos de informe por el nombre completo o solo parte de él, quien los creó, quien los modificó por última vez, cuando se modificaron por última vez, donde están almacenados, o el tipo de elemento de informe. Por ejemplo, podría buscar todos los gráficos creados la semana pasada por uno de sus colaboradores.  
+ Pueden buscar elementos de informe en la galería de elementos de informe para agregarlos a un informe. Puede filtrar los elementos de informe por el nombre completo o solo parte de él, quién lo ha creado, quién lo ha modificado por última vez, cuándo se modificaron por última vez, dónde están almacenados, o bien el tipo de elemento de informe. Por ejemplo, podría buscar todos los gráficos creados la semana pasada por uno de sus colaboradores.  
   
  Puede ver los resultados de la búsqueda como miniaturas o como lista, y ordenar los resultados de la búsqueda por nombre, fechas de creación y modificación, y autor. Para obtener más información, vea [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   

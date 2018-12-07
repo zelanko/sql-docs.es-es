@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d9b5b5de9948c72aa3654c0236516886f4c4a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539729"
 ---
 # <a name="create-an-application-role"></a>Crear un rol de aplicación
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47633683"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -59,11 +59,11 @@ ms.locfileid: "47633683"
   
 3.  Expanda la carpeta **Roles** .  
   
-4.  Haga clic con el botón derecho en la carpeta **Roles de aplicación** y seleccione **Nuevo rol de aplicación**.  
+4.  Haga clic con el botón derecho en la carpeta **Roles de aplicación** y seleccione **Nuevo rol de aplicación...**.  
   
-5.  En el cuadro de diálogo **Rol de aplicación - Nuevo** , en la página **General**, escriba el nuevo nombre del nuevo rol de aplicación en el cuadro **Nombre de rol** .  
+5.  En el cuadro de diálogo **Rol de aplicación - Nuevo**, en la página **General**, escriba el nuevo nombre del nuevo rol de aplicación en el cuadro **Nombre de rol**.  
   
-6.  En el cuadro **Esquema predeterminado** , determine el esquema al que pertenecerán los objetos creados por este rol especificando los nombres de objeto. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Buscar esquema** .  
+6.  En el cuadro **Esquema predeterminado** , determine el esquema al que pertenecerán los objetos creados por este rol especificando los nombres de objeto. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Buscar esquema**.  
   
 7.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo rol. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47633683"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El cuadro de diálogo **Rol de aplicación - Nuevo** también proporciona opciones en dos páginas adicionales: **Elementos protegibles** y **Propiedades extendidas**.  
+ En el cuadro de diálogo **Rol de aplicación - Nuevo** también se proporcionan opciones en dos páginas adicionales: **Elementos protegibles** y **Propiedades extendidas**.  
   
 -   La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   

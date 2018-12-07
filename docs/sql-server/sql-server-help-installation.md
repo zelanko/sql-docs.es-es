@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700533"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514532"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visor de Ayuda y ayuda sin conexión de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Puede usar el Visor de Ayuda en SQL Server Management Studio (SSMS) o Visual Studio (VS) para descargar e instalar paquetes de ayuda de SQL Server de orígenes en línea o de un disco para poder verlos sin conexión. En este artículo se describen las herramientas para instalar el Visor de Ayuda, cómo instalar contenido de ayuda sin conexión y cómo ver la ayuda para [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 y SQL Server 2017.
+
+Una vez que se ha descargado el contenido en un sistema que tiene acceso a Internet, podrá migrarlo a un sistema que no tenga acceso a Internet. 
 
 > [!NOTE]
 > Las ayudas de SQL Server 2016 y 2017 están combinadas, aunque algunos temas solo se aplican a una versión. Esto se indica en dichos temas. La mayoría de los temas se aplican a ambas versiones.
@@ -125,7 +127,8 @@ Para ver la ayuda instalada en Visual Studio:
    ![Ver Ayuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    La tabla de contenido de ayuda se muestra en la parte izquierda y el tema de ayuda seleccionado en la parte derecha. 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>Uso del Visor de Ayuda v1.x
 
 Las versiones anteriores de SSMS y VS usan el Visor de Ayuda 1.x, que es compatible con la ayuda de SQL Server 2014. 
@@ -165,13 +168,15 @@ Este proceso usa el Visor de Ayuda 1.x para descargar la ayuda de SQL Server 201
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>Ver ayuda en línea
 
 La ayuda en línea siempre mostrará el contenido más actualizado. 
 
 **Para ver ayuda en línea de SQL Server en SSMS 17.x**
 
-- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
+- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
 
    ![Ver Ayuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +209,22 @@ Al presionar F1 o al hacer clic en **Ayuda** o en el icono **?** de un cuadro de
 
 >  [!NOTE]
 >  La ayuda de F1 solo funciona cuando está conectado a Internet. No hay ningún origen sin conexión para la ayuda de F1. 
+
+## <a name="systems-without-internet-access"></a>Sistemas sin acceso a Internet
+Una vez que ha seguido los [pasos mencionados anteriormente](#use-help-viewer-v2x) para descargar el contenido sin conexión con el Visor de Ayuda de SQL Server a un sistema que tiene acceso a Internet, podrá migrar ese contenido a un sistema sin acceso a Internet. Puede hacerlo mediante los pasos siguientes. 
+
+  >[!NOTE]
+  >En el sistema sin conexión tendrá que instalar software compatible con el Visor de ayuda, como SQL Server Management Studio. 
+
+1. Abra el Visor de ayuda (Ctrl + Alt + F1).
+1. Seleccione la documentación que le interese. Por ejemplo, filtre por SQL y seleccione la documentación técnica de SQL Server. 
+1. Identifique la ruta de acceso física de los archivos en disco, que se puede encontrar en **Ruta de acceso del almacén local**.
+1. Vaya hasta esta ubicación mediante el explorador del sistema de archivos. 
+    1.  La ubicación predeterminada es `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. Seleccione las tres carpetas (**ContentStore**, **Incoming**, **IndexStore**) y cópielas en la misma ubicación en el sistema sin conexión. Es posible que tenga que usar un dispositivo de medios provisional, como un CD o USB. 
+1. Una vez que se hayan movido estos archivos, inicie el Visor de ayuda en el sistema sin conexión y la documentación técnica de SQL Server estará disponible.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>Pasos siguientes

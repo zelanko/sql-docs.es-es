@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675374"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413172"
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51675374"
   
     -   Flecha verde hacia abajo: el estado de mantenimiento para al menos un grupo de archivos o para el grupo de archivos de registro es infrautilizado, no hay grupos de archivos ni un grupo de archivos de registro que estén sobreutilizados.  
   
-    -   Flecha roja hacia arriba: el estado de mantenimiento para al menos un grupo de archivos o el grupo de archivos de registro es sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de “emergencia”, el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
+    -   Flecha roja hacia arriba: el estado de mantenimiento para al menos un grupo de archivos o el grupo de archivos de registro es sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de "emergencia", el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
   
      Para ver o cambiar los límites de la directiva de espacio de archivo, haga clic en la pestaña **Uso del almacenamiento** .  
   
@@ -216,7 +216,7 @@ ms.locfileid: "51675374"
   
 -   Flecha verde hacia abajo: la utilización del espacio de archivo de al menos un archivo de datos en el grupo de archivos está infrautilizada y no hay archivos sobreutilizados en el grupo de archivos.  
   
--   Flecha roja hacia arriba: el uso del espacio de archivo para todos los archivos de datos en el grupo de archivos está sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de “emergencia”, el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
+-   Flecha roja hacia arriba: el uso del espacio de archivo para todos los archivos de datos en el grupo de archivos está sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de "emergencia", el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
   
  Para ver los archivos según el volumen, seleccione el botón de radio **Volumen** en **Agrupar archivos por:** selección. El gráfico del historial de la utilización de almacenamiento muestra el espacio de archivo que utilizan todos los archivos de datos y todos los archivos de registro en el volumen de almacenamiento. Expanda el árbol para ver los detalles de los archivos de datos de la base de datos y de los archivos de registro individuales.  
   

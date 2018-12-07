@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79b653f3e93e896c3a7f72f4d3473fac2f34988b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520969"
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47648103"
   
 -   Las vistas de catálogo para una tabla con columnas dispersas son las mismas que para una tabla típica. La vista de catálogo sys.columns contiene una fila por cada columna de la tabla e incluye un conjunto de columnas si se ha definido alguno.  
   
--   Las columnas dispersas son una propiedad del nivel de almacenamiento, en lugar de la tabla lógica. Por consiguiente una instrucción SELECT.INTO no copia sobre la propiedad de columna dispersa en una nueva tabla.  
+-   Las columnas dispersas son una propiedad del nivel de almacenamiento, en lugar de la tabla lógica. Por tanto, una instrucción SELECT...INTO no copia la propiedad de columna dispersa a una tabla nueva.  
   
 -   La función COLUMNS_UPDATED devuelve un valor **varbinary** para indicar todas las columnas que se actualizaron durante una acción DML. Los bits devueltos por la función COLUMNS_UPDATED son los siguientes:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47648103"
 |**uniqueidentifier**|16|20|43%|  
 |**date**|3|7|69%|  
   
- **Tipos de datos con longitud dependiente de la precisión**  
+ **Tipos de datos de longitud dependiente de la precisión**  
   
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
@@ -103,7 +103,7 @@ ms.locfileid: "47648103"
 |**decimal/numeric(38,s)**|17|21|42%|  
 |**vardecimal(p,s)**|Utilice el tipo **decimal** como un cálculo moderado.|||  
   
- **Tipos de datos con longitud dependiente de los datos**  
+ **Tipos de datos de longitud dependiente de los datos**  
   
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
@@ -119,7 +119,7 @@ ms.locfileid: "47648103"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga en memoria necesaria para las actualizaciones de columnas dispersas  
  A la hora de diseñar tablas con columnas dispersas, tenga en cuenta que se necesita una sobrecarga adicional de 2 bytes para cada columna dispersa que no sea NULL de la tabla cuando se está actualizando una fila. Debido a este requisito de memoria adicional, se puede producir inesperadamente un error 576 en las actualizaciones cuando el tamaño total de fila (incluida esta sobrecarga de memoria) es superior a 8019 y no se puede insertar ninguna columna de manera no consecutiva.  
   
- Considere el ejemplo de una tabla que tiene 600 columnas dispersas de tipo bigint. Si hay 571 columnas no NULL, el tamaño total en disco es de 571 * 12 = 6852 bytes. Después de incluir la sobrecarga de fila adicional y el encabezado de columna dispersa, asciende a unos 6895 bytes. La página todavía tiene 1124 bytes disponibles en disco. Esto puede dar la impresión de que se pueden actualizar correctamente columnas adicionales. Pero durante la actualización hay una sobrecarga adicional en memoria de 2\*(número de columnas dispersas no NULL). En este ejemplo, incluida la sobrecarga adicional – 2 \* 571 = 1142 bytes – el tamaño de fila en disco aumenta hasta 8037 bytes. Este tamaño supera el tamaño máximo permitido de 8019 bytes. Puesto que todas las columnas tienen tipos de datos de longitud fija, no se pueden insertar de manera no consecutiva. Por tanto, se producirá el error 576 en la actualización.  
+ Considere el ejemplo de una tabla que tiene 600 columnas dispersas de tipo bigint. Si hay 571 columnas no NULL, el tamaño total en disco es de 571 * 12 = 6852 bytes. Después de incluir la sobrecarga de fila adicional y el encabezado de columna dispersa, asciende a unos 6895 bytes. La página todavía tiene 1124 bytes disponibles en disco. Esto puede dar la impresión de que se pueden actualizar correctamente columnas adicionales. Pero durante la actualización hay una sobrecarga adicional en memoria de 2\*(número de columnas dispersas no NULL). En este ejemplo, incluida la sobrecarga adicional (2 \* 571 = 1142 bytes) el tamaño de fila en disco aumenta hasta 8037 bytes. Este tamaño supera el tamaño máximo permitido de 8019 bytes. Puesto que todas las columnas tienen tipos de datos de longitud fija, no se pueden insertar de manera no consecutiva. Por tanto, se producirá el error 576 en la actualización.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restricciones de uso de las columnas dispersas  
  Las columnas dispersas pueden adoptar cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y comportarse como cualquier otra columna, con las restricciones siguientes:  

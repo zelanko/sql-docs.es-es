@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030204"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710706"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creación de un informe móvil de Reporting Services
-Con el Publicador de informes móviles de Microsoft SQL Server, puede crear informes móviles de SQL Server 2016 Reporting Services con un escalado adecuado hasta cualquier tamaño de pantalla en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles.  
+Con el Publicador de informes móviles de Microsoft SQL Server, puede crear informes móviles de SQL Server Reporting Services con un escalado adecuado hasta cualquier tamaño de pantalla en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles.  
   
 La primera vez que crea un informe móvil, puede instalar el Publicador de informes móviles de Microsoft SQL Server en la máquina local desde el portal web de Reporting Services. También puede instalarlo desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Después de la primera ejecución, puede iniciarlo desde el portal web o localmente.   
     
@@ -62,7 +62,7 @@ La primera vez que crea un informe móvil, puede instalar el Publicador de infor
   
 11. Es el momento de guardar el informe. Seleccione el icono Guardar situado en la parte superior izquierda y elija **Save Locally (Guardar localmente)** o **Save to Server (Guardarlo en el servidor)**.  
   
-   Para guardarlo en un servidor, necesita tener acceso a un servidor de informes de SQL Server 2016 Reporting Services.  
+   Para guardarlo en un servidor, necesita tener acceso a un servidor de informes de SQL Server Reporting Services.  
      
    ### <a name="see-also"></a>Vea también  
      

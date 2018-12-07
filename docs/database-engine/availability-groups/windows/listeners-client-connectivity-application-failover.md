@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603575"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408892"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Agentes de escucha, conectividad de cliente y conmutación por error de una aplicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,9 +139,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> Intención de aplicación de solo lectura y enrutamiento de solo lectura  
- La propiedad de la cadena de conexión de la intención de aplicaciones expresa la solicitud de la aplicación cliente de ser dirigida a una versión de lectura/escritura o de solo lectura de una base de datos del grupo de disponibilidad. Para utilizar el enrutamiento de solo lectura, un cliente debe utilizar un intento de aplicación de solo lectura en la cadena de conexión al conectarse al agente de escucha del grupo de disponibilidad. Sin el intento de aplicación de solo lectura, las conexiones al agente de escucha del grupo de disponibilidad se dirigen a la base de datos en la réplica principal.  
+ La propiedad de la cadena de conexión de la intención de aplicación expresa la solicitud de la aplicación cliente de ser dirigida a una versión de lectura y escritura, o de solo lectura, de una base de datos del grupo de disponibilidad. Para utilizar el enrutamiento de solo lectura, un cliente debe utilizar un intento de aplicación de solo lectura en la cadena de conexión al conectarse al agente de escucha del grupo de disponibilidad. Sin el intento de aplicación de solo lectura, las conexiones al agente de escucha del grupo de disponibilidad se dirigen a la base de datos en la réplica principal.  
   
- El atributo de la intención de aplicaciones se almacena en la sesión de cliente durante el inicio de sesión y la instancia de SQL Server procesará a continuación esta intención y determinará lo que debe hacer de acuerdo con la configuración del grupo de disponibilidad y el estado de lectura/escritura actual de la base de datos de destino en la réplica secundaria.  
+ El atributo de la intención de aplicación se almacena en la sesión de cliente durante el inicio de sesión y, después, la instancia de SQL Server procesará esta intención y determinará lo que debe hacer de acuerdo con la configuración del grupo de disponibilidad y el estado de lectura y escritura actual de la base de datos de destino en la réplica secundaria.  
   
  El siguiente es un ejemplo de una cadena de conexión para el proveedor ADO.NET (System.Data.SqlClient) que designa el intento de solo lectura de la aplicación:  
   
@@ -183,7 +183,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Si el grupo de disponibilidad vuelve a ponerse en línea durante el intento de conexión de una aplicación cliente pero antes del tiempo de espera de conexión, el controlador cliente puede conectarse correctamente durante uno de los intentos internos de reintento y no se producirá ningún error en la aplicación en este caso.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Compatibilidad con clústeres de conmutación por error de varias subredes de grupo de disponibilidad  
- Si está utilizando las bibliotecas cliente que admiten la opción de conexión MultiSubnetFailover en la cadena de conexión, puede optimizar la conmutación por error del grupo de disponibilidad a otra subred estableciendo MultiSubnetFailover en “true” o en “yes”, dependiendo de la sintaxis del proveedor que use.  
+ Si usa bibliotecas cliente que admiten la opción de conexión MultiSubnetFailover en la cadena de conexión, puede optimizar la conmutación por error del grupo de disponibilidad a otra subred si establece MultiSubnetFailover en "True" o "Yes", en función de la sintaxis del proveedor que use.  
   
 > [!NOTE]  
 >  Se recomienda esta configuración para las conexiones de una red y de varias subredes a los agentes de escucha del grupo de disponibilidad y a los nombres de instancia de clúster de conmutación por error de SQL Server.  La habilitación de esta opción agrega optimizaciones adicionales, incluso en escenarios de una sola subred.  

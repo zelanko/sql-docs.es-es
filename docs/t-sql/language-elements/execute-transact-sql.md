@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799713"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641026"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,6 +235,8 @@ Execute a character string
   
  Si el valor de un parámetro es un nombre de objeto o cadena de caracteres, o está calificado mediante un nombre de base de datos o nombre de esquema, el nombre completo debe escribirse entre comillas simples. Si el valor de un parámetro es una palabra clave, ésta debe escribirse entre comillas dobles.  
   
+Si pasa una sola palabra que no comienzan por `@` y que no está incluida entre comillas (por ejemplo, si se olvida `@` en un nombre de parámetro) la palabra se trata como una cadena nvarchar, a pesar de que faltan las comillas.
+
  Si se define un valor predeterminado en el módulo, un usuario podrá ejecutar el módulo sin especificar ningún parámetro.  
   
  El valor predeterminado puede ser también NULL. Generalmente, la definición del módulo especifica la acción que debe realizarse si el valor del parámetro es NULL.  
@@ -315,7 +317,7 @@ Execute a character string
 |schema_name|El nombre del esquema propietario de la tabla, vista o función con valores de tabla.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Especifica que las columnas devueltas serán aquellas especificadas en la tabla, vista o función con valores de tabla con nombre. Las variables de tabla, tablas temporales y sinónimos no se admiten en la sintaxis de objeto AS.|  
 |AS TYPE [schema_name.]table_type_name|Especifica que las columnas devueltas serán aquellas especificadas en el tipo de tabla.|  
-|AS FOR XML|Especifica que los resultados XML de la instrucción o el procedimiento almacenado llamado por la instrucción EXECUTE se convertirán al formato como si se hubieran generado mediante una instrucción SELECT … FOR XML … . Todo el formato de las directivas de tipo en la instrucción original se quita y los resultados devueltos son como si no se hubiera especificado ninguna directiva de tipo. AS FOR XML no convierte los resultados tabulares que no son XML de la instrucción o el procedimiento almacenado ejecutado en XML.|  
+|AS FOR XML|Especifica que los resultados XML de la instrucción o el procedimiento almacenado llamado por la instrucción EXECUTE se convertirán al formato como si se hubieran generado mediante una instrucción SELECT ... FOR XML …. Todo el formato de las directivas de tipo en la instrucción original se quita y los resultados devueltos son como si no se hubiera especificado ninguna directiva de tipo. AS FOR XML no convierte los resultados tabulares que no son XML de la instrucción o el procedimiento almacenado ejecutado en XML.|  
   
 |Término|Definición|  
 |----------|----------------|  

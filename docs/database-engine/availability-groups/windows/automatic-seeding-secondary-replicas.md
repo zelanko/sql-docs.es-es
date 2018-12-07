@@ -3,7 +3,7 @@ title: Propagación automática de las réplicas secundarias (SQL Server) | Micr
 description: Use la propagación automática para inicializar réplicas secundarias.
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,17 +14,17 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506686"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Propagación automática de réplicas secundarias
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En SQL Server 2012 y 2014, la única manera de inicializar una réplica secundaria en un grupo de disponibilidad AlwaysOn de SQL Server es recurriendo a los trabajos de copia de seguridad, copia y restauración. SQL Server 2016 incorpora una nueva característica para inicializar una réplica secundaria: la *propagación automática*. La propagación automática emplea el transporte de secuencia de registro para transmitir la copia de seguridad con VDI a la réplica secundaria de cada base de datos del grupo de disponibilidad que use los puntos de conexión configurados. Esta nueva característica se puede usar durante la creación inicial de un grupo de disponibilidad o cuando una base de datos se agrega a uno de estos grupos. La propagación automática se incluye en todas las ediciones de SQL Server que admiten grupos de disponibilidad AlwaysOn, y se puede usar tanto con los grupos de disponibilidad tradicionales como con los [grupos de disponibilidad distribuidos](distributed-availability-groups.md).
+En SQL Server 2012 y 2014, la única manera de inicializar una réplica secundaria en un grupo de disponibilidad AlwaysOn de SQL Server es recurriendo a los trabajos de copia de seguridad, copia y restauración. SQL Server 2016 incorpora una característica nueva para inicializar una réplica secundaria: la *propagación automática*. La propagación automática emplea el transporte de secuencia de registro para transmitir la copia de seguridad con VDI a la réplica secundaria de cada base de datos del grupo de disponibilidad que use los puntos de conexión configurados. Esta nueva característica se puede usar durante la creación inicial de un grupo de disponibilidad o cuando una base de datos se agrega a uno de estos grupos. La propagación automática se incluye en todas las ediciones de SQL Server que admiten grupos de disponibilidad AlwaysOn, y se puede usar tanto con los grupos de disponibilidad tradicionales como con los [grupos de disponibilidad distribuidos](distributed-availability-groups.md).
 
 ## <a name="considerations"></a>Consideraciones
 
@@ -86,7 +86,7 @@ Para revertir el comportamiento de SQL Server 2016 y versión anteriores, habili
 Los permisos de seguridad varían según el tipo de réplica que se esté inicializando:
 
 * Si es un grupo de disponibilidad tradicional, el grupo de disponibilidad en la réplica secundaria debe tener concedidos permisos, ya que está unido al grupo de disponibilidad. En Transact-SQL, use el comando `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* En el caso de un grupo de disponibilidad distribuido, en el que las bases de datos de la réplica que se van a crear se encuentran en la réplica principal del segundo grupo de disponibilidad, no se requiere ningún permiso adicional, puesto que ya es un elemento principal.
+* En el caso de un grupo de disponibilidad distribuido, en el que las bases de datos de la réplica que se van a crear se encuentran en la réplica principal del segundo grupo de disponibilidad, no se requiere ningún permiso adicional, dado que ya es un elemento principal.
 * En el caso de una réplica secundaria en el segundo grupo de disponibilidad de un grupo de disponibilidad distribuido, debe usar el comando `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Esta réplica secundaria se propagará desde el elemento principal del segundo grupo de disponibilidad.
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>Crear un grupo de disponibilidad con propagación automática
@@ -117,16 +117,14 @@ Establecer `SEEDING_MODE` en una réplica principal durante la instrucción `CRE
 
 En el caso de una instancia que pasa a ser una réplica secundaria, una vez que dicha instancia se une, se agrega el siguiente mensaje en el registro de SQL Server:
 
->La réplica de disponibilidad local para el grupo de disponibilidad "NombreGD" no tiene permiso para crear bases de datos, pero su modo `SEEDING_MODE` se definió como `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` para permitir la creación de bases de datos propagadas por la réplica de disponibilidad principal.
+>La réplica de disponibilidad local para el grupo de disponibilidad "NombreGD" no tiene permiso para crear bases de datos, pero su modo `SEEDING_MODE` se definió como `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` para permitir la creación de bases de datos propagadas por la réplica de disponibilidad principal.
 
 ### <a name = "grantCreate"></a> Permitir que un grupo de disponibilidad cree permisos de creación de bases de datos en réplicas secundarias
 
 Después de la unión, conceda permiso al grupo de disponibilidad para crear bases de datos en la instancia de réplica de SQL Server. Para que la propagación automática funcione, el grupo de disponibilidad necesita permiso para crear una base de datos. 
 
 >[!TIP]
->Cuando el grupo de disponibilidad crea una base de datos en una réplica secundaria, establece como propietario de la base de datos la cuenta que ha ejecutado la instrucción `ALTER AVAILABILITY GROUP` para conceder permiso para crear una base de datos. La mayoría de las aplicaciones requieren que el propietario de la base de datos de la réplica secundaria sea el mismo que el de la réplica principal.
->
->Para asegurarse de que todas las bases de datos se creen con el mismo propietario de base de datos que el de la réplica principal, ejecute el comando de ejemplo siguiente en el contexto de seguridad del inicio de sesión que sea propietario de la base de datos de la réplica principal. Tenga en cuenta que este inicio de sesión necesita el permiso `ALTER AVAILABILITY GROUP`. 
+>Cuando el grupo de disponibilidad crea una base de datos en una réplica secundaria, establece "sa" (más específicamente, la cuenta con el sid 0x01) como el propietario de la base de datos. 
 >
 >Para cambiar el propietario de la base de datos después de que una réplica secundaria cree automáticamente una base de datos, use `ALTER AUTHORIZATION`. Consulte [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md).
  
@@ -153,7 +151,7 @@ Si se realiza correctamente, las bases de datos se crean automáticamente en la 
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Combinar trabajos de copia de seguridad y restauración con la propagación automática
 
-La propagación automática se puede usar de forma combinada con los trabajos tradicionales de copia de seguridad, copia y restauración. En tal caso, restaure primero la base de datos en una réplica secundaria, incluidos todos los registros de transacciones disponibles. Tras ello, habilite la propagación automática cuando cree el grupo de disponibilidad para "detectar" la base de datos de la réplica secundaria, como si se restaurara una copia del final del registro (vea [Copias del final del registro (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
+La propagación automática se puede usar de forma combinada con los trabajos tradicionales de copia de seguridad, copia y restauración. En tal caso, restaure primero la base de datos en una réplica secundaria, incluidos todos los registros de transacciones disponibles. A continuación, habilite la propagación automática al crear el grupo de disponibilidad para "detectar" la base de datos de la réplica secundaria, como si se restaurara una copia del final del registro (vea [Copias del final del registro (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
 
 ## <a name="add-a-database-to-an-availability-group-with-automatic-seeding"></a>Agregar una base de datos a un grupo de disponibilidad con propagación automática
 
@@ -162,7 +160,7 @@ Si la réplica secundaria usaba la propagación automática cuando se agregó al
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Cambiar el modo de propagación de una réplica
 
-El modo de propagación de una réplica se puede modificar después de haber creado el grupo de disponibilidad, de forma que la propagación automática se pueda habilitar o deshabilitar. Habilitar la propagación automática después de haber creado el grupo de disponibilidad permite agregar una base de datos al grupo de disponibilidad por medio de la propagación automática, si se creó con copia de seguridad, copia y restauración. Por ejemplo:
+El modo de propagación de una réplica se puede modificar después de crear el grupo de disponibilidad, para que la propagación automática se pueda habilitar o deshabilitar. Habilitar la propagación automática después de haber creado el grupo de disponibilidad permite agregar una base de datos al grupo de disponibilidad por medio de la propagación automática, si se creó con copia de seguridad, copia y restauración. Por ejemplo:
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

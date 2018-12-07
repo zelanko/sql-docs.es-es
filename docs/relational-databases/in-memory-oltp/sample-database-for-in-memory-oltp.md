@@ -1,7 +1,7 @@
 ---
 title: Base de datos de ejemplo para OLTP en memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 11/30/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665624"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712486"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "51665624"
   
 -   Instrucciones para [Instalar el ejemplo de In-Memory OLTP basado en AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Descripción de las tablas y los procedimientos de ejemplo:](#Descriptionofthesampletablesandprocedures) contiene descripciones de las tablas y los procedimientos que la muestra de OLTP en memoria agrega a AdventureWorks, y aspectos que se deben tener en cuenta para migrar algunas de las tablas originales de AdventureWorks a tablas optimizadas para memoria  
+-   [Descripción de las tablas y los procedimientos de ejemplo](#Descriptionofthesampletablesandprocedures): contiene descripciones de las tablas y los procedimientos que el ejemplo de OLTP en memoria ha agregado a AdventureWorks, y aspectos que se deben tener en cuenta para migrar algunas de las tablas originales de AdventureWorks a tablas optimizadas para memoria.  
   
--   Instrucciones para realizar [Medidas de rendimiento con la carga de trabajo de demostración](#PerformanceMeasurementsusingtheDemoWorkload) : contiene instrucciones para instalar y ejecutar ostress, una herramienta que se emplea para controlar la carga de trabajo y para ejecutar la carga de trabajo de demostración propiamente dicha.  
+-   Instrucciones para realizar [Medidas de rendimiento con la carga de trabajo de demostración](#PerformanceMeasurementsusingtheDemoWorkload): contiene instrucciones para instalar y ejecutar ostress, una herramienta que se usa para controlar la carga de trabajo y para ejecutar la carga de trabajo de demostración propiamente dicha.  
   
 -   [Uso de memoria y de espacio en disco del ejemplo](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -48,8 +48,8 @@ ms.locfileid: "51665624"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para SQL Server. Para obtener recomendaciones generales de hardware para OLTP en memoria, consulte la siguiente publicación del blog:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
-  
+-   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para SQL Server. Para obtener las instrucciones generales de hardware para OLTP en memoria, vea la entrada de blog siguiente: [Hardware considerations for In-Memory OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md) (Consideraciones de hardware para OLTP en memoria en SQL Server 2014).
+
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalar el ejemplo de In-Memory OLTP basado en AdventureWorks  
  Siga estos pasos para instalar el ejemplo:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "51665624"
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Descripción de las tablas y los procedimientos de ejemplo:  
  El ejemplo crea nuevas tablas para productos y pedidos de venta basadas en tablas existentes en AdventureWorks. El esquema de las nuevas tablas es similar a las tablas existentes, con algunas diferencias, como se explica a continuación.  
   
- Las nuevas tablas optimizadas para memoria llevan el sufijo '_inmem'. El ejemplo también incluye las tablas correspondientes que llevan el sufijo '_ondisk'; estas tablas se pueden usar para realizar una comparación uno a uno entre el rendimiento de las tablas optimizadas para memoria y las tablas basadas en disco del sistema.  
+ Las nuevas tablas optimizadas para memoria llevan el sufijo "_inmem". El ejemplo también incluye las tablas correspondientes que llevan el sufijo "_ondisk"; estas tablas se pueden usar para realizar una comparación uno a uno entre el rendimiento de las tablas optimizadas para memoria y las tablas basadas en disco del sistema.  
   
  Tenga en cuenta que las tablas optimizadas para memoria empleadas en la carga de trabajo para la comparación de rendimiento son totalmente durables y con registro completo. No sacrifican la durabilidad o la confiabilidad para conseguir la mejora del rendimiento.  
   
@@ -158,15 +158,15 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  Sales.SalesOrderDetail  
   
--   *Restricciones DEFAULT:* igual que en SalesOrderHeader, la restricción DEFAULT que requiere la fecha y la hora del sistema no se migra; en su lugar, el procedimiento almacenado que inserta pedidos de venta se encarga de insertar la fecha y la hora actuales del sistema en la primera inserción.  
+-   *Restricciones DEFAULT*: igual que en SalesOrderHeader, la restricción DEFAULT que requiere la fecha y la hora del sistema no se migra; en su lugar, el procedimiento almacenado que inserta pedidos de venta se encarga de insertar la fecha y la hora actuales del sistema en la primera inserción.  
   
--   *Columnas calculadas:* la columna calculada LineTotal no se ha migrado, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]no admite columnas calculadas en las tablas optimizadas para memoria. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
+-   *Columnas calculadas*: la columna calculada LineTotal no se ha migrado, ya que en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no se admiten columnas calculadas en las tablas optimizadas para memoria. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
  Production.Product  
   
--   *UDT de alias:* en la tabla original se usa el tipo de datos definido por el usuario dbo.Flag, que equivale al tipo de datos del sistema bit. La tabla migrada usa el tipo de datos bit en su lugar.  
+-   *UDT de alias*: en la tabla original se usa el tipo de datos definido por el usuario dbo.Flag, que equivale al tipo de datos del sistema bit. La tabla migrada usa el tipo de datos bit en su lugar.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -191,7 +191,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
 -   Índice HASH de (SalesOrderID): bucket_count tiene un tamaño de 10 millones (redondeado hasta 16 millones), ya que el número esperado de pedidos de venta es 10 millones  
   
--   Índice HASH de (SalesPersonID): el bucket_count es 1 millón. El conjunto de datos especificado no tiene muchos vendedores, pero permite el crecimiento futuro, y además no hay penalización de rendimiento por las búsquedas de puntos si el bucket_count está sobredimensionado.  
+-   Índice HASH de (SalesPersonID): el bucket_count es 1 millón. El conjunto de datos especificado no tiene muchos vendedores, pero permite el crecimiento futuro, y además no hay penalización de rendimiento por las búsquedas de puntos si el valor bucket_count está sobredimensionado.  
   
 -   Índice HASH de (CustomerID): el bucket_count es 1 millón. El conjunto de datos especificado no tiene muchos clientes, pero permite el crecimiento futuro.  
   
@@ -213,7 +213,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  Sales.SpecialOffer_inmem tiene un índice HASH en (SpecialOfferID): las búsquedas de puntos de ofertas especiales son una parte crítica de la carga de trabajo de demostración. El bucket_count tiene un tamaño de 1 millón para permitir el crecimiento futuro.  
   
- No se hace referencia a Sales.SpecialOfferProduct_inmem en la carga de trabajo de demostración, por lo que no hay necesidad de usar índices hash en esta tabla para optimizar la carga de trabajo; los índices de (SpecialOfferID, ProductID) y (ProductID) son no clúster.  
+ No se hace referencia a Sales.SpecialOfferProduct_inmem en la carga de trabajo de demostración, por lo que no hay necesidad de usar índices hash en esta tabla para optimizar la carga de trabajo; los índices de (SpecialOfferID, ProductID) y (ProductID) no son agrupados.  
   
  Observe que en la información anterior algunos valores de bucket_count están sobredimensionados, pero no los bucket_counts de los índices de SalesOrderHeader_inmem y SalesOrderDetail_inmem: tienen un tamaño para 10 millones de pedidos de venta. Esto se hace para permitir la instalación del ejemplo en sistemas con poca disponibilidad de memoria, aunque en esos casos la carga de trabajo de demostración producirá un error si no hay memoria suficiente. Si desea escalar el ejemplo más allá de 10 millones de pedidos de venta, no dude en aumentar los números de depósitos en consecuencia.  
   
@@ -229,7 +229,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
     -   Parámetro de salida:  
   
-        -   @SalesOrderID int: SalesOrderID del pedido de venta que se acaba de insertar  
+        -   @SalesOrderID int: el valor SalesOrderID del pedido de venta que se acaba de insertar  
   
     -   Parámetros de entrada (obligatorios):  
   
@@ -299,7 +299,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   Parámetro opcional: @object_id , identificador del objeto cuya integridad se va a validar  
+    -   Parámetro opcional: @object_id, identificador del objeto cuya integridad se va a validar  
   
     -   Este procedimiento usa las tablas dbo.DomainIntegrity, dbo.ReferentialIntegrity y dbo.UniqueIntegrity para las reglas de integridad que es necesario comprobar; el ejemplo rellena estas tablas según las restricciones CHECK, UNIQUE y de clave externa existentes en las tablas originales de la base de datos AdventureWorks.  
   
@@ -313,16 +313,16 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  Pasos para la instalación:  
   
-1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
-  
-2.  Si aparece un cuadro de diálogo que indica que algunos archivos están en uso, haga clic en 'Continue'.  
+1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente: [Download Report Markup Language (RML) for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511) (Descarga de Report Markup Language (RML) para SQL Server).
+
+2.  Si aparece un cuadro de diálogo que indica que algunos archivos están en uso, haga clic en "Continue" (Continuar).  
   
 ### <a name="running-ostress"></a>Ejecutar ostress  
  Ostress se ejecuta desde el símbolo del sistema. Es mejor ejecutar la herramienta desde "RML Cmd Prompt”, que se instala como parte de las utilidades de RML.  
   
  Para abrir RML Cmd Prompt, siga estas instrucciones:  
   
- En Windows Server 2012 [R2] y en Windows 8 y 8.1, abra el menú Inicio haciendo clic en la tecla Windows y escriba 'rml'. Haga clic en “RML Cmd Prompt”, que aparecerá en la lista resultados de la búsqueda.  
+ En Windows Server 2012 [R2] y en Windows 8 y 8.1, haga clic en la tecla Windows para abrir el menú Inicio y escriba "rml". Haga clic en "RML Cmd Prompt", que aparecerá en la lista de resultados de la búsqueda.  
   
  Asegúrese de que el símbolo del sistema se encuentra en la carpeta de instalación de las utilidades de RML.  
   
@@ -330,7 +330,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
 -   -S nombre de la instancia de Microsoft SQL Server a la que conectarse  
   
--   -E usar autenticación de Windows para conectarse (valor predeterminado). Si se usa la autenticación de SQL Server, emplee las opciones –U y –P para especificar el nombre de usuario y la contraseña, respectivamente  
+-   -E usar autenticación de Windows para conectarse (valor predeterminado). Si se usa la autenticación de SQL Server, utilice las opciones -U y -P para especificar el nombre de usuario y la contraseña, respectivamente  
   
 -   -d nombre de la base de datos; para este ejemplo, AdventureWorks2014  
   
@@ -375,12 +375,12 @@ END
   
  Con este script, cada pedido de ejemplo que se crea se inserta 20 veces, mediante 20 procedimientos almacenados que se ejecutan en un bucle WHILE. El bucle se usa para tener en cuenta el hecho de que la base de datos se emplea para crear el pedido de ejemplo. En los entornos de producción típicos, la aplicación de nivel intermedio creará el pedido de venta que se va a insertar.  
   
- El script anterior inserta los pedidos de venta en tablas optimizadas para memoria. El script para insertar pedidos de venta en tablas basadas en disco se deriva reemplazando las dos apariciones de '_inmem' por '_ondisk'.  
+ El script anterior inserta los pedidos de venta en tablas optimizadas para memoria. El script para insertar pedidos de venta en tablas basadas en disco se deriva reemplazando las dos instancias de "_inmem" por "_ondisk".  
   
- Se usará la herramienta ostress para ejecutar los scripts con varias conexiones simultáneas. Usaremos el parámetro '-n' para controlar el número de conexiones y el parámetro 'r' para controlar cuántas veces se ejecuta el script en cada conexión.  
+ Se usará la herramienta ostress para ejecutar los scripts con varias conexiones simultáneas. Se usará el parámetro "-n" para controlar el número de conexiones y el parámetro "r" para controlar cuántas veces se ejecuta el script en cada conexión.  
   
 #### <a name="running-the-workload"></a>Ejecutar la carga de trabajo  
- Para probar la escala insertamos 10 millones de pedidos de venta usando 100 conexiones. Esta prueba funciona razonablemente bien en un servidor modesto (por ejemplo, 8 núcleos físicos y 16 lógicos) y con un almacenamiento SSD básico para el registro. Si la prueba no funciona correctamente en su hardware, vea la sección [Solucionar problemas de pruebas de ejecución lenta](#Troubleshootingslow-runningtests). Si quiere reducir el nivel de esfuerzo de esta prueba, disminuya el número de conexiones cambiando el parámetro ‘-n’. Por ejemplo, para reducir el número de conexiones a 40, cambie el parámetro ‘-n100’ a ‘-n40’.  
+ Para probar la escala insertamos 10 millones de pedidos de venta usando 100 conexiones. Esta prueba funciona razonablemente bien en un servidor modesto (por ejemplo, 8 núcleos físicos y 16 lógicos) y con un almacenamiento SSD básico para el registro. Si la prueba no funciona correctamente en el hardware, vea la sección [Solucionar problemas de pruebas de ejecución lenta](#Troubleshootingslow-runningtests). Si quiere reducir el nivel de esfuerzo de esta prueba, disminuya el número de conexiones cambiando el parámetro "-n". Por ejemplo, para reducir el número de conexiones a 40, cambie el parámetro "-n100" a "-n40".  
   
  Como medida de rendimiento de la carga de trabajo usamos el tiempo transcurrido notificado por ostress.exe después de ejecutar la carga de trabajo.  
   
@@ -394,7 +394,7 @@ END
  Haga clic en el botón Copy para copiar el comando y péguelo en el símbolo del sistema de las utilidades de RML.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  En un servidor de prueba con un número total de 8 núcleos físicos (16 lógicos), se tardaron 2 minutos y 5 segundos. En un segundo servidor de prueba con 24 núcleos físicos (48 lógicos), se tardó 1 minuto y 0 segundos.  
@@ -409,7 +409,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
  Haga clic en el botón Copy para copiar el comando y péguelo en el símbolo del sistema de las utilidades de RML.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  En un servidor de prueba con un número total de 8 núcleos físicos (16 lógicos), se tardaron 41 minutos y 25 segundos. En un segundo servidor de prueba con 24 núcleos físicos (48 lógicos), se tardaron 52 minutos y 16 segundos.  
@@ -418,7 +418,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  Puede observar el uso de la CPU mientras se está ejecutando la carga de trabajo, por ejemplo con el Administrador de tareas. Con las tablas basadas en disco verá que el uso de la CPU está muy alejado del 100 %. En una configuración de prueba con 16 procesadores lógicos, el uso rondaría el 24 %.  
   
- Opcionalmente, puede ver el número de esperas de bloqueos temporales por segundo mediante Monitor de rendimiento, con el contador de rendimiento ‘\SQL Server:Bloqueos temporales\Esperas de bloqueos temporales/s’.  
+ Opcionalmente, puede ver el número de esperas de bloqueos temporales por segundo mediante el Monitor de rendimiento, con el contador de rendimiento "\SQL Server:Bloqueos temporales\Esperas de bloqueos temporales/s".  
   
 #### <a name="resetting-the-demo"></a>Restablecer la demostración  
  Para restablecer la demostración, abra RML Cmd Prompt y ejecute el comando siguiente:  
@@ -767,7 +767,7 @@ ORDER BY state, file_type
 |ACTIVO|DATA|41|5608|  
 |ACTIVO|DELTA|41|328|  
   
- En este caso, hay dos pares de archivos de punto de comprobación en el estado 'under construction', lo que significa que varios pares de archivos pasaron por el estado 'under construction', probablemente debido al elevado nivel de simultaneidad de la carga de trabajo. Varios subprocesos simultáneos necesitaron un nuevo par de archivos al mismo tiempo, por lo que se movió un par de 'precreated' a 'under construction'.  
+ En este caso, hay dos pares de archivos de punto de comprobación en el estado "under construction", lo que significa que varios pares de archivos pasaron por el estado "under construction", probablemente debido al elevado nivel de simultaneidad de la carga de trabajo. Varios subprocesos simultáneos necesitaron un nuevo par de archivos al mismo tiempo, por lo que se movió un par de "precreated" a "under construction".  
   
 ## <a name="see-also"></a>Ver también  
  [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

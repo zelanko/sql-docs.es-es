@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504080"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Crear consultas a partir de otro objeto distinto de una tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,7 +133,7 @@ Para obtener más información sobre cómo agregar una consulta a otra consulta,
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Usar una función definida por el usuario en lugar de una tabla  
 En SQL Server 2000 o superior, puede crear una función definida por el usuario que devuelva una tabla. Estas funciones son útiles para la realización de lógica compleja o de procedimientos.  
   
-Por ejemplo, suponga que la tabla employee (empleados) contiene una columna adicional, employee.manager_emp_id, y que existe una clave externa de manager_emp_id a employee.emp_id. Dentro de cada fila de la tabla employee, la columna manager_emp_id se refiere al jefe del empleado. Para ser más exactos, se referirá al emp_id del jefe del empleado. Puede crear una función definida por el usuario que devuelva una tabla que contenga una fila para cada empleado que trabaje en una determinada jerarquía organizativa de un director de alto nivel. Puede llamar a la función fn_GetWholeTeam y diseñarla para que acepte una variable de entrada: el emp_id del director cuyo equipo desea recuperar.  
+Por ejemplo, suponga que la tabla employee (empleados) contiene una columna adicional, employee.manager_emp_id, y que existe una clave externa de manager_emp_id a employee.emp_id. Dentro de cada fila de la tabla employee, la columna manager_emp_id se refiere al jefe del empleado. Para ser más exactos, se referirá al emp_id del jefe del empleado. Puede crear una función definida por el usuario que devuelva una tabla que contenga una fila para cada empleado que trabaje en una determinada jerarquía organizativa de un director de alto nivel. Puede llamar a la función fn_GetWholeTeam y diseñarla para que acepte una variable de entrada: el valor emp_id del director cuyo equipo quiere recuperar.  
   
 Puede escribir una consulta que utilice la función fn_GetWholeTeam como origen de datos. El código SQL resultante puede presentar el siguiente aspecto:  
   

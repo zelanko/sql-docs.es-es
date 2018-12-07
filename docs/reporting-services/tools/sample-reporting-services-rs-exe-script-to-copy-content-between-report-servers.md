@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b44b5afff54cf0630e3bde1d5668862d1d969133
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 62048b27a917684188c8d8c47cfc67817ed63efa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813738"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528579"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes
 
@@ -49,7 +49,7 @@ El script se puede usar para copiar contenido entre servidores de informes del m
 |Elemento|Migrado|SharePoint|Descripción|  
 |----------|--------------|----------------|-----------------|  
 |Contraseñas|**No**|**No**|Las contraseñas **NO** se migran. Después de migrar elementos de contenido, actualice la información de credenciales en el servidor de destino. Por ejemplo, orígenes de datos con credenciales almacenadas.|  
-|Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **– u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por tanto, el script no copia elementos de informe que se encuentran en las carpetas "Mis informes” de un servidor de informes en modo nativo de origen.<br /><br /> Para migrar el contenido de las carpetas "Mis informes" con este script, siga estos pasos:<br /><br /> 1.  Cree nuevas carpetas en el Administrador de informes. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br />2.  Inicie sesión como uno de los usuarios que tenga contenido de "Mis informes".<br />3.  En el Administrador de informes, haga clic en la carpeta **Mis informes**.<br />4.  Haga clic en la vista **Detalles** de la carpeta.<br />5.  Seleccione cada informe que desea copiar.<br />6.  Haga clic en **Mover** en la barra de herramientas del Administrador de informes.<br />7.  Seleccione la carpeta de destino deseada.<br />8.  Repita los pasos 2 a 7 para cada usuario.<br />9. Ejecute el script.|  
+|Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **-u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por tanto, el script no copia elementos de informe que se encuentran en las carpetas "Mis informes" de un servidor de informes en modo nativo de origen.<br /><br /> Para migrar el contenido de las carpetas "Mis informes" con este script, siga estos pasos:<br /><br /> 1.  Cree nuevas carpetas en el Administrador de informes. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br />2.  Inicie sesión como uno de los usuarios que tenga contenido de "Mis informes".<br />3.  En el Administrador de informes, haga clic en la carpeta **Mis informes**.<br />4.  Haga clic en la vista **Detalles** de la carpeta.<br />5.  Seleccione cada informe que desea copiar.<br />6.  Haga clic en **Mover** en la barra de herramientas del Administrador de informes.<br />7.  Seleccione la carpeta de destino deseada.<br />8.  Repita los pasos 2 a 7 para cada usuario.<br />9. Ejecute el script.|  
 |Historial|**No**|**No**||  
 |Configuración del historial|Sí|Sí|La configuración del historial se migra, pero los detalles del historial NO se migran.|  
 |Programaciones|sí|sí|Para migrar programaciones, es necesario que el Agente SQL Server se esté ejecutando en el servidor de destino. Si el Agente SQL Server no se está ejecutando en el servidor de destino, verá un mensaje de error parecido al siguiente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
@@ -202,11 +202,11 @@ El script se puede usar para copiar contenido entre servidores de informes del m
 |Parámetro|Descripción|Obligatorio|  
 |---------------|-----------------|--------------|  
 |**-s** Dirección_URL_Origen|Dirección URL del servidor de informes de origen.|Sí|  
-|**-u** Dominio\contraseña **–p** contraseña|Credenciales del servidor de origen.|OPCIONAL, se usan las credenciales predeterminadas si no se especifica|  
+|**-u** Dominio\contraseña **-p** contraseña|Credenciales del servidor de origen.|OPCIONAL, se usan las credenciales predeterminadas si no se especifica|  
 |**-v st**="SITIO"||OPCIONAL. Este parámetro solo se usa para los servidores de informes en modo de SharePoint.|  
 |**- v f**="CARPETADEORIGEN"|Se establece en "/" para migrar todo o en algo similar a "/carpeta/subcarpeta" para una migración parcial. Se copiará todo el contenido de esta carpeta|OPCIONAL, el valor predeterminado es "/".|  
 |**-v ts**="DIRECCIÓN_URL_DESTINO"|Dirección URL del servidor de RS de destino||  
-|**-v tu**="dominio\nombreDeUsuario" **-v tp**="contraseña"|Credenciales del servidor de destino.|OPCIONAL, se usan las credenciales predeterminadas si no se especifica. **Nota** : el usuario se mostrará como "creador" de programaciones compartidas y como la cuenta "modificado por" para los elementos de informe en el servidor de destino.|  
+|**-v tu**="dominio\nombreDeUsuario" **-v tp**="contraseña"|Credenciales del servidor de destino.|OPCIONAL, se usan las credenciales predeterminadas si no se especifica. **Nota**: el usuario se mostrará como "creador" de programaciones compartidas y como la cuenta "modificado por" para los elementos de informe en el servidor de destino.|  
 |**-v tst**="SITIO"||OPCIONAL. Este parámetro solo se usa para los servidores de informes en modo de SharePoint.|  
 |**-v tf** ="CARPETADEDESTINO"|Se establece en "/" para migrar en el nivel raíz. Se establece en "/carpeta/subcarpeta" para copiar en una carpeta que ya existe. Se copiará todo el contenido de "CARPETADEORIGEN" en "CARPETADEDESTINO".|OPCIONAL, el valor predeterminado es "/".|  
 |**-v security**= "True/False"|Si se establece en "False", los elementos de catálogo de destino heredarán la configuración de seguridad según la configuración del sistema de destino. Este valor se recomienda para las migraciones entre diferentes tipos de servidor de informes, por ejemplo del modo nativo al modo de SharePoint. Si se establece en "True", el script intenta migrar la configuración de seguridad.|OPCIONAL, el valor predeterminado es "False".|  
@@ -227,7 +227,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Modo nativo a modo de SharePoint: sitio raíz  
- En el ejemplo siguiente se migra contenido de un **Sourceserver** en modo nativo al "sitio raíz" de un **Targetserver**en modo de SharePoint. Las carpetas "Reports" y "Data Sources" del servidor en modo nativo se migran como nuevas bibliotecas de la implementación de SharePoint.  
+ En el ejemplo siguiente se migra contenido de un **SourceServer** en modo nativo al "sitio raíz" de un **TargetServer**en modo de SharePoint. Las carpetas "Reports" y "Data Sources" del servidor en modo nativo se migran como bibliotecas nuevas de la implementación de SharePoint.  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
@@ -235,14 +235,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> Modo nativo a modo de SharePoint: colección de sitios 'bi'  
+###  <a name="bkmk_native_2_sharepoint_with_site"></a> Modo nativo a modo de SharePoint: colección de sitios "bi"  
  En el ejemplo siguiente se migra contenido de un servidor en modo nativo a un servidor de SharePoint que contiene una colección de sitios de "sites/bi" y una biblioteca de documentos compartida. El script crea carpetas en la biblioteca de documentos de destino. Por ejemplo, el script creará las carpetas "Reports" y "Data Sources" en la biblioteca de documentos de destino.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> Modo de SharePoint a modo de SharePoint: colección de sitios 'bi'  
+###  <a name="bkmk_sharepoint_2_sharepoint"></a> Modo de SharePoint a modo de SharePoint: colección de sitios "bi"  
  En el siguiente ejemplo se migra contenido:  
   
 -   De un servidor de SharePoint **SourceServer** que contiene una colección de sitios de "sites/bi" y una biblioteca de documentos compartida.  
@@ -253,7 +253,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Modo nativo a modo nativo: Máquina virtual de Windows Azure  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Modo nativo a modo nativo: máquina virtual de Windows Azure  
  En el siguiente ejemplo se migra contenido:  
   
 -   De un servidor de informes en modo nativo **SourceServer**.  
@@ -267,7 +267,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 > [!TIP]  
 >  Para más información sobre cómo usar Windows PowerShell para crear servidores de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en máquinas virtuales de Windows Azure, vea [Usar PowerShell para crear una máquina virtual de Windows Azure con un servidor de informes en modo nativo](https://msdn.microsoft.com/library/dn449661.aspx).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Modo de SharePoint: colección de sitios 'bi' a servidor en modo nativo en Máquina virtual de Windows Azure  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Modo de SharePoint: colección de sitios "bi" a servidor en modo nativo en Máquina virtual de Windows Azure  
  En el siguiente ejemplo se migra contenido:  
   
 -   De un servidor de informes en modo de SharePoint **SourceServer** que contiene una colección de sitios de "sites/bi" y una biblioteca de documentos compartida.  
@@ -308,11 +308,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 3.  Haga clic en **Roles**.  
   
 ##  <a name="bkmk_troubleshoot"></a> Solucionar problemas  
- Use la marca de seguimiento **– t** para recibir más información. Por ejemplo, si ejecuta el script y ve un mensaje similar al siguiente  
+ Use la marca de seguimiento **-t** para recibir más información. Por ejemplo, si ejecuta el script y ve un mensaje similar al siguiente  
   
 -   No se pudo conectar con el servidor: https://\<nombre_de_servidor>/ReportServer/ReportService2010.asmx  
   
- Vuelva a ejecutar el script con la marca **– t**; verá un mensaje parecido al siguiente:  
+ Vuelva a ejecutar el script con la marca **-t** para ver un mensaje similar al siguiente:  
   
 -   System.Exception: No se pudo conectar con el servidor: https://\<nombre_de_servidor>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Error en la solicitud con el estado HTTP 401: No autorizado**.   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (mensaje pasa clase SoapClientMessage, respuesta de WebResponse, responseStream de flujo, booleano asyncCall) en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, parámetros de objeto []) en Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() en Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (dirección url de cadena, cadena nombre de usuario, contraseña de cadena El dominio de cadena, el tiempo de espera de Int32) en Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fin del seguimiento de la pila de la excepción interna---  
   

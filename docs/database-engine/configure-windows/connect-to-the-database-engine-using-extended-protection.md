@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606015"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395358"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51606015"
 >  Windows no habilita la **protección ampliada** de forma predeterminada. Para obtener información acerca de cómo habilitar la **protección ampliada** en Windows, vea [Protección ampliada para la autenticación](https://support.microsoft.com/kb/968389).  
   
 ## <a name="description-of-extended-protection"></a>Descripción de la protección ampliada  
- La**protección ampliada** usa el enlace de servicio y el enlace de canal para ayudar a evitar un ataque de retransmisión de autenticación. En un ataque de retransmisión de autenticación, un cliente que puede realizar la autenticación NTLM (por ejemplo, el Explorador de Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, una aplicación .NET SqlClient, etc.) se conecta a un atacante (por ejemplo, un servidor de archivos CIFS malintencionado). El atacante utiliza las credenciales del cliente para hacerse pasar por este y autenticarse en un servicio (por ejemplo, una instancia del servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)] ).  
+ La**protección ampliada** usa el enlace de servicio y el enlace de canal para ayudar a evitar un ataque de retransmisión de autenticación. En un ataque de retransmisión de autenticación, un cliente que puede realizar la autenticación NTLM (por ejemplo, el Explorador de Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, una aplicación .NET SqlClient, etc.) se conecta a un atacante (por ejemplo, un servidor de archivos CIFS malintencionado). El atacante usa las credenciales del cliente para hacerse pasar por este y autenticarse en un servicio (por ejemplo, una instancia del servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  
   
  Hay dos variaciones de este ataque:  
   

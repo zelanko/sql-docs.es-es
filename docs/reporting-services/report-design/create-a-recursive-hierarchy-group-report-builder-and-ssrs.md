@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542472"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Crear un grupo de jerarquía recursiva (Generador de informes y SSRS)
 En los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un grupo de jerarquía recursiva organiza los datos existentes en un único conjunto de datos de informe donde existen varios niveles jerárquicos, como puede ser la estructura de mando para las relaciones entre jefes y empleados en una jerarquía de organización.  
@@ -48,7 +48,7 @@ En los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
     > [!NOTE]  
     >  Si el panel Propiedades no está visible, en la pestaña **Ver** , haga clic en **Propiedades** .  
   
-2.  En el panel Propiedades, expanda el nodo **Relleno**, haga clic en **Izquierda** y, en la lista desplegable, seleccione **\<Expresión…>**.  
+2.  En el panel Propiedades, expanda el nodo **Relleno**, haga clic en **Izquierda** y, en la lista desplegable, seleccione **\<Expresión...>**.  
   
 3.  En el panel Expresión, escriba la expresión siguiente:  
   

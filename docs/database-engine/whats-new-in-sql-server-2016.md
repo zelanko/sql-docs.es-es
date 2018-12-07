@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504513"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Esta versión ofrece mejoras en los índices de almacén de columnas, que incluy
 
 Para obtener más información, vea estos temas en la sección de la [Guía de índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-overview.md) de los Libros en pantalla:
 
-- [Resumen de las características de los índices de almacén de columnas para cada versión](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) incluye las novedades.
+- [Resumen de las características de los índices de almacén de columnas para cada versión](~/relational-databases/indexes/columnstore-indexes-what-s-new.md): incluye las novedades.
 
 - [Carga de datos de índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -225,7 +225,7 @@ El muestreo de datos para generar estadísticas ahora se realiza en paralelo (en
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>Umbral infralineal para la actualización de estadísticas
 La actualización automática de estadísticas es ahora más agresiva en tablas grandes (nivel de compatibilidad 130). El umbral para desencadenar la actualización automática de estadísticas es 20 %, a partir de SQL Server 2016, para tablas más grandes, este umbral comenzará a reducirse (todavía en forma de porcentaje) a medida que el número de filas aumenta en la tabla. Ya no necesitará establecer la marca de seguimiento 2371 para reducir el umbral. 
 ### <a name="other-enhancements"></a>Otras mejoras
-La instrucción Insert in an Insert-select es multiproceso o puede tener un plan paralelo (en el nivel de compatibilidad 130). Para obtener un plan paralelo, INSERT... La instrucción SELECT debe utilizar la sugerencia TABLOCK. Para más información, consulte [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)(Insert Select en paralelo)
+La instrucción Insert in an Insert-select es multiproceso o puede tener un plan paralelo (en el nivel de compatibilidad 130). Para obtener un plan paralelo, INSERT ... La instrucción SELECT debe utilizar la sugerencia TABLOCK. Para más información, consulte [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)(Insert Select en paralelo)
 
 ## <a name="live-query-statistics"></a>Estadísticas de consultas activas
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece la posibilidad de ver el plan de ejecución de una consulta activa. Este plan de consulta activa ofrece conocimientos en tiempo real sobre el proceso de ejecución de consulta a medida que los controles fluyen desde un operador de plan de consulta a otro. Para obtener más información, consulte [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
@@ -293,7 +293,7 @@ SQL Server 2016 agrega compatibilidad integrada para la importación y exportaci
  Para obtener más información, vea [PolyBase Guide (Guía de PolyBase)](../relational-databases/polybase/polybase-guide.md).
 
 ## <a name="stretch-database"></a>Stretch Database
- Stretch Database es una nueva característica de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] que migra los datos históricos de forma clara y segura a la nube de Microsoft Azure. Puede tener acceso a los datos de SQL Server sin problemas, independientemente de si están almacenados localmente o extendidos a la nube. Solo tiene que establecer la directiva que defina dónde se almacenan los datos y SQL Server se encargará del movimiento de datos en segundo plano. La tabla entera estará siempre en línea y lista para consultarse. Además, Stretch Database no requiere ningún cambio en las consultas o aplicaciones existentes: la ubicación de los datos es completamente clara para la aplicación. Para obtener más información, vea [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ Stretch Database es una nueva característica de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] que migra los datos históricos de forma clara y segura a la nube de Microsoft Azure. Puede acceder a los datos de SQL Server sin problemas, independientemente de si están almacenados de forma local o extendidos a la nube. Solo tiene que establecer la directiva que defina dónde se almacenan los datos y SQL Server se encargará del movimiento de datos en segundo plano. La tabla entera estará siempre en línea y lista para consultarse. Además, Stretch Database no requiere ningún cambio en las consultas o aplicaciones existentes: la ubicación de los datos es completamente transparente para la aplicación. Para obtener más información, vea [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## <a name="support-for-utf-8"></a>Compatibilidad con UTF-8
 [Utilidad BCP](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) y [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) ahora admiten la página de códigos UTF-8. Para obtener más información, vea esos temas y [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -386,7 +386,7 @@ Con Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pue
 
 
 ### <a name="dynamic-data-masking"></a>Enmascaramiento de datos dinámicos
-El enmascaramiento dinámico de datos limita la exposición de información confidencial ocultándolos a los usuarios sin privilegios. El enmascaramiento dinámico de datos evita el acceso no autorizado a información confidencial permitiendo que los clientes designen la cantidad de información confidencial que se debe revelar, con un impacto mínimo en la capa de aplicación. Se trata de una característica de protección de datos que oculta la información confidencial del conjunto de resultados de una consulta de campos designados de una base de datos, sin modificar los datos de esta última. Para obtener más información, vea [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
+El enmascaramiento dinámico de datos limita la exposición de información confidencial ocultándolos a los usuarios sin privilegios. El enmascaramiento dinámico de datos evita el acceso no autorizado a información confidencial permitiendo que los clientes designen la cantidad de información confidencial que se debe revelar, con un impacto mínimo en la capa de aplicación. Se trata de una característica de seguridad basada en directivas que oculta la información confidencial del conjunto de resultados de una consulta de campos designados de una base de datos, sin modificar los datos de esta última. Para obtener más información, vea [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 
 
 ### <a name="new-permissions"></a>Nuevos permisos

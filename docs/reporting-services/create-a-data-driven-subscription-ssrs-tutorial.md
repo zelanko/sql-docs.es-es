@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815412"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712526"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Crear una suscripción controlada por datos (Tutorial de SSRS)
 En este tutorial de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se explican los conceptos relacionados con las suscripciones controladas por datos mediante un ejemplo sencillo en el que se crea una suscripción controlada por datos para generar y guardar la salida de informe filtrado en un recurso compartido de archivos. 
@@ -56,7 +56,7 @@ En el tutorial se usan el informe *Pedido de venta* creado en el tutorial [Crear
   
 Para utilizar este tutorial, debe tener el software siguiente instalado en el equipo:  
   
--   Una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que admita suscripciones controladas por datos. Para obtener más información, vea [Ediciones y componentes de SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que admita suscripciones controladas por datos. Para obtener más información, vea [Ediciones y características de SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   El servidor de informes debe ejecutarse en modo nativo. La interfaz de usuario descrita en este tutorial se basa en un servidor de informes en modo nativo. Las suscripciones se admiten en los servidores de informes de modo de SharePoint pero la interfaz de usuario será diferente a la que se describe en este tutorial.  
   

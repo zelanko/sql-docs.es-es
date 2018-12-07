@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a690c550a3010a69d6356a0525eecdfc6410c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751063"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392889"
 ---
 # <a name="set-index-options"></a>Establecer opciones de índice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47751063"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47751063"
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Para modificar las propiedades de un índice en el Diseñador de tablas  
   
-1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea modificar las propiedades de un índice.  
+1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que quiere modificar las propiedades de un índice.  
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
@@ -86,11 +86,11 @@ ms.locfileid: "47751063"
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar las propiedades de un índice en el Explorador de objetos  
   
-1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea modificar las propiedades de un índice.  
+1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que quiere modificar las propiedades de un índice.  
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
-3.  Haga clic en el signo más para expandir la tabla en la que desea modificar las propiedades de un índice.  
+3.  Haga clic en el signo más para expandir la tabla en la que quiera modificar las propiedades de un índice.  
   
 4.  Haga clic en el signo más para expandir la carpeta **Índices** .  
   

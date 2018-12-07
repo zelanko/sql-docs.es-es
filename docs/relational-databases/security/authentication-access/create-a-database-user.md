@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3b2ec3e4a055d331799efab64223012b162a1fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516659"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "47648113"
   
 2.  Expanda la base de datos en la que se va a crear el usuario de la misma.  
   
-3.  Haga clic con el botón derecho en la carpeta **Seguridad** , seleccione **Nuevo**y seleccione **Usuario…**.  
+3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y después **Usuario...**.  
   
-4.  En el cuadro de diálogo **Usuario de base de datos - Nuevo** , en la página **General** , seleccione uno de los siguientes tipos de usuario de la lista **Tipo de usuario** :  
+4.  En el cuadro de diálogo **Usuario de base de datos - Nuevo**, en la página **General**, seleccione uno de los tipos de usuario siguientes de la lista **Tipo de usuario**:  
   
     -   **usuario SQL con inicio de sesión**  
   
@@ -93,10 +93,10 @@ ms.locfileid: "47648113"
 5.  Cuando se selecciona una opción, las demás opciones del cuadro de diálogo podrían cambiar. Algunas opciones solo se aplican a tipos específicos de usuarios de base de datos. Algunas opciones pueden dejarse en blanco y usarán un valor predeterminado.  
   
      **Nombre de usuario.**  
-     Escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario** , también puede hacer clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo** .  
+     Escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
   
      **Nombre de inicio de sesión**  
-     Especifique el inicio de sesión del usuario. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión** . Si selecciona**Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
+     Especifique el inicio de sesión del usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. Si selecciona**Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
   
      **Contraseña** y **Confirmar contraseña**  
      Escriba una contraseña para los usuarios que se autentican en la base de datos.  
@@ -105,18 +105,18 @@ ms.locfileid: "47648113"
      Escriba el idioma predeterminado del usuario.  
   
      **Esquema predeterminado**  
-     Escriba el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar esquema** . Si selecciona**Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows**en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
+     Escriba el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar esquema**. Si selecciona**Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows**en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
   
      **Nombre de certificado**  
-     Escriba el certificado que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar certificado**. Si selecciona**Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
+     Escriba el certificado que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar certificado**. Si selecciona**Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
   
      **Nombre de clave asimétrica**  
-     Escriba la clave que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. Si selecciona**Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
+     Escriba la clave que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. Si selecciona**Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El cuadro de diálogo **Usuario de la base de datos - Nuevo** también proporciona opciones en cuatro páginas adicionales: **Esquemas de propiedad**, **Pertenencia**, **Elementos protegibles**y **Propiedades extendidas**.  
+ En el cuadro de diálogo **Usuario de la base de datos - Nuevo** también se proporcionan opciones en cuatro páginas adicionales: **Esquemas de propiedad**, **Pertenencia**, **Elementos protegibles** y **Propiedades extendidas**.  
   
 -   La página **Esquemas de propiedad** enumera todos los esquemas posibles que pueden ser propiedad del nuevo usuario de base de datos. Para agregar o quitar esquemas en un usuario de base de datos, en **Esquemas propiedad de este usuario**, active o desactive las casillas situadas junto a los esquemas.  
   
@@ -135,8 +135,8 @@ ms.locfileid: "47648113"
      **Propiedades**  
      Muestra o especifica las propiedades extendidas del objeto. Cada propiedad extendida está formada por un par nombre/valor de metadatos asociados al objeto.  
   
-     **Puntos suspensivos (…)**  
-     Haga clic en los puntos suspensivos **(…)** que se encuentran a continuación de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](../../databases/value-for-extended-property-dialog-box.md).  
+     **Puntos suspensivos (...)**  
+     Haga clic en los puntos suspensivos **(...)** situados detrás de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida**. Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Eliminar**  
      Elimina la propiedad extendida que se ha seleccionado.  

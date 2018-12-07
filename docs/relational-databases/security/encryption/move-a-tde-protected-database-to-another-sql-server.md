@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521112"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ En los siguientes procedimientos se muestra cómo debe crear una base de datos p
   
 4.  En el cuadro de diálogo **Nueva base de datos** , en el cuadro **Nombre de la base de datos** , escriba el nombre de la nueva base de datos.  
   
-5.  En el cuadro **Propietario** , escriba el nombre del propietario de la nueva base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar propietario de base de datos** . Para obtener más información sobre la creación de una nueva base de datos, vea [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  En el cuadro **Propietario** , escriba el nombre del propietario de la nueva base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar propietario de base de datos**. Para obtener más información sobre la creación de una nueva base de datos, vea [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  En el Explorador de objetos, haga clic en el signo más para expandir la carpeta **Bases de datos** .  
   
@@ -142,7 +142,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
   
 ###  <a name="SSMSMove"></a> Usar SQL Server Management Studio  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos que cifró anteriormente, seleccione **Tareas** y **Separar…**.  
+1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos que cifró anteriormente, seleccione **Tareas** y **Separar...**.  
   
      En el cuadro de diálogo **Separar base de datos** están disponibles las siguientes opciones.  
   
@@ -186,11 +186,11 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
   
 6.  Vuelva a crear el certificado del servidor mediante el archivo de copia de seguridad del certificado del servidor original. Para obtener más información, vea **Usar Transact-SQL** más adelante.  
   
-7.  En el Explorador de objetos, en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** y, después, seleccione **Adjuntar…**.  
+7.  En el Explorador de objetos, en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** y, después, seleccione **Adjuntar...**.  
   
 8.  En el cuadro de diálogo **Adjuntar bases de datos** , en **Bases de datos que se van a adjuntar**, haga clic en **Agregar**.  
   
-9. En el cuadro de diálogo **Buscar archivos de base de datos –**_nombre\_servidor_, seleccione el archivo de base de datos que quiera adjuntar al servidor nuevo y haga clic en **Aceptar**.  
+9. En el cuadro de diálogo **Buscar archivos de base de datos -**_nombre\_servidor_, seleccione el archivo de base de datos que quiera adjuntar al servidor nuevo y haga clic en **Aceptar**.  
   
      En el cuadro de diálogo **Adjuntar bases de datos** están disponibles las siguientes opciones.  
   
@@ -234,7 +234,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
      **"** *<database_name>* **" detalles de la base de datos**  
-     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**…**).  
+     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**...**).  
   
     > [!NOTE]  
     >  Si un archivo no existe, la columna **Mensaje** muestra "No se encontró". Si un archivo de registro no se encuentra, indica que se halla en otro directorio o que se ha eliminado. En tal caso, debe actualizar la ruta de acceso del archivo en la cuadrícula **Detalles de la base de datos** para que señale la ubicación correcta o eliminar el archivo de registro de la cuadrícula. Si un archivo de datos .ndf no se encuentra, debe actualizar su ruta de acceso en la cuadrícula para que señale la ubicación correcta.  

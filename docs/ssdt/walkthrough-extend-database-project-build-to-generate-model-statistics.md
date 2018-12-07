@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659144"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523420"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo
 Puede crear un colaborador de compilación para realizar acciones personalizadas al compilar un proyecto de base de datos. En este tutorial, se crea un colaborador de compilación llamado ModelStatistics que genera estadísticas del modelo de base de datos SQL al compilar un proyecto de base de datos. Dado que este colaborador de compilación acepta parámetros cuando se compila, son necesarios algunos pasos adicionales.  
@@ -46,7 +46,7 @@ Los colaboradores de compilación se ejecutan durante la compilación del proyec
   
 -   Generar estadísticas del modelo e información para el usuario. Este es el ejemplo que se muestra a continuación.  
   
-El punto de entrada principal para los colaboradores de compilación es el método OnExecute. Todas las clases que heredan del BuildContributor deben implementar este método. Un objeto BuildContributorContext se pasa a este método – este contiene todos los datos pertinentes para la compilación, como un modelo de la base de datos, las propiedades de compilación y los argumentos/archivos que usarán los colaboradores de compilación.  
+El punto de entrada principal para los colaboradores de compilación es el método OnExecute. Todas las clases que heredan del BuildContributor deben implementar este método. Un objeto BuildContributorContext se pasa a este método: este contiene todos los datos pertinentes para la compilación, como un modelo de la base de datos, las propiedades de compilación y los argumentos/archivos que usarán los colaboradores de compilación.  
   
 **TSqlModel y la API del modelo de base de datos**  
   
@@ -56,7 +56,7 @@ A continuación se muestran algunos de los comandos usados por el colaborador de
   
 |**Clase**|**Método/propiedad**|**Descripción**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Consulta el modelo de objetos y es el punto de entrada principal a la API modelo. Solo se pueden consultar los tipos de nivel superior como Tabla o Vista – tipos como Columna solo se pueden encontrar recorriendo el modelo. Si no se especifica ningún filtro ModelTypeClass, devolverá todos los tipos de nivel superior.|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Consulta el modelo de objetos y es el punto de entrada principal a la API modelo. Solo se pueden consultar los tipos de nivel superior como Tabla o Vista: los tipos como Columna solo se pueden encontrar recorriendo el modelo. Si no se especifica ningún filtro ModelTypeClass, devolverá todos los tipos de nivel superior.|  
 |[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Detecta relaciones con los elementos a los que hace referencia el TSqlObject actual. Por ejemplo, para una tabla devolverá objetos como columnas de la Tabla. En este caso, se puede utilizar un filtro ModelRelationshipClass para especificar relaciones exactas de la consulta (por ejemplo con el filtro “Table.Columns” se aseguraría de que solo devuelve columnas).<br /><br />Hay varios métodos similares, como GetReferencingRelationshipInstances, GetChildren y GetParent. Para obtener más información, vea la documentación de la API.|  
   
 **Identificar su colaborador de forma exclusiva**  
@@ -68,7 +68,7 @@ Durante el proceso de compilación, los colaboradores personalizados se cargan d
   
 ```  
   
-En este caso el primer parámetro del atributo debe ser un identificador único – éste se utilizará para identificar su colaborador en archivos de proyecto. Una práctica recomendada es combinar el espacio de nombres de la biblioteca (en este tutorial, “ExampleContributors”) con el nombre de clase (en este tutorial, “ModelStatistics”) para generar el identificador. Verá cómo este espacio de nombres se utiliza para especificar que su colaborador se debe ejecutar posteriormente en el tutorial.  
+En este caso el primer parámetro del atributo debe ser un identificador único que se utilizará para identificar su colaborador en archivos de proyecto. Una práctica recomendada es combinar el espacio de nombres de la biblioteca (en este tutorial, “ExampleContributors”) con el nombre de clase (en este tutorial, “ModelStatistics”) para generar el identificador. Verá cómo este espacio de nombres se utiliza para especificar que su colaborador se debe ejecutar posteriormente en el tutorial.  
   
 ## <a name="CreateBuildContributor"></a>Crear un colaborador de compilación  
 Para crear un colaborador de compilación, debe realizar las siguientes tareas:  
@@ -87,7 +87,7 @@ Para crear un colaborador de compilación, debe realizar las siguientes tareas:
   
 1.  Cree un proyecto de bibliotecas de clases de Visual Basic o Visual C# llamado MyBuildContributor.  
   
-2.  Cambie el nombre del archivo de “Class1.cs” a “ModelStatistics.cs.”  
+2.  Cambie el nombre del archivo de “Class1.cs” a “ModelStatistics.cs”.  
   
 3.  En el Explorador de soluciones, haga clic con el botón derecho en el nodo de proyecto y, a continuación, haga clic en **Agregar referencia**.  
   
@@ -480,7 +480,7 @@ Puede hacerlo de una de las maneras siguientes:
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -495,7 +495,7 @@ Puede hacerlo de una de las maneras siguientes:
   
     2.  Cree una carpeta nueva “MyContributors” donde se almacenarán los archivos de destino.  
   
-    3.  Cree un nuevo archivo “MyContributors.targets” en este directorio, agréguele el siguiente texto y, a continuación, guarde el archivo:  
+    3.  Cree un nuevo archivo “MyContributors.targets” en este directorio, agréguele el siguiente texto y después guarde el archivo:  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  

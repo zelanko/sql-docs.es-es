@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763253"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391698"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Método ConfigurationSetting - SetWindowsServiceIdentity
   Ejecuta el servicio de Windows de servidor de informes como el usuario de Windows especificado y concede a esta cuenta suficientes permisos de sistema de archivos para permitir que servidor de informes funcione.  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Notas  
  Cuando el parámetro *UseBuiltInAccount* está establecido en **true** y el servidor de informes se está ejecutando en Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] o Windows XP, el valor de los parámetros *Nombre*, *Dominio*y *Contraseña* se omite y se usa la cuenta local del sistema.  
   
- Cuando el parámetro *UseBuiltInAccount* está establecido en **true** y el servidor de informes se está ejecutando en Windows Server 2003, las propiedades *Dominio* y *Contraseña* se omiten y el campo de nombre debe contener "Builtin\NetworkService", "Builtin\System" o "Builtin\LocalService".  
+ Cuando el parámetro *UseBuiltInAccount* se establece en **true** y el servidor de informes se está ejecutando en Windows Server 2003, las propiedades *Dominio* y *Contraseña* se omiten, y el campo de nombre debe contener "Builtin\NetworkService", "Builtin\System" o "Builtin\LocalService".  
   
  El método SetWindowsServiceIdentity establece los permisos de archivo en los archivos y carpetas en el directorio de instalación del servidor de informes.  
   

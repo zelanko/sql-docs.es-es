@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845713"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537783"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -720,7 +720,7 @@ ONLINE INDEX REBUILD se especifica como reanudable mediante la opción RESUMABLE
  
 -  Al volver a ejecutar la instrucción ALTER INDEX REBUILD original con los mismos parámetros, se reanuda una operación de regeneración de índice en pausa. También se puede reanudar una operación de regeneración de índice en pausa mediante la instrucción ALTER INDEX RESUME.
 -  La opción SORT_IN_TEMPDB=ON no es compatible con el índice reanudable. 
--  El comando DDL con RESUMABLE=ON no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque de confirmación begin tran...).
+-  El comando DDL con RESUMABLE=ON no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin tran ... commit).
 -  Solo se pueden reanudar aquellas operaciones de índice que estén en pausa.
 -  Cuando se reanuda una operación de índice que está en pausa, se puede cambiar el valor de MAXDOP a un nuevo valor.  Si MAXDOP no se especifica cuando se reanuda una operación de índice que está en pausa, se toma el último valor MAXDOP. Si la opción MAXDOP no se especifica en absoluto para la operación de regeneración de índice, se toma el valor predeterminado.
 - Para pausar inmediatamente la operación de índice, puede detener el comando en curso (Ctrl+C) o puede ejecutar el comando ALTER INDEX PAUSE o el comando KILL *session_id*. Una vez que el comando está en pausa, se puede reanudar mediante la opción RESUME.
@@ -733,7 +733,7 @@ Abajo se detallan las funciones que se deshabilitan para las operaciones de rege
    -    Regenerar un índice que está deshabilitado no es compatible con RESUMABLE=ON
    -    Comando ALTER INDEX REBUILD ALL
    -    ALTER TABLE mediante regeneración de índice  
-   -    El comando DDL con RESUMABLE=ON no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque de confirmación begin tran...).
+   -    El comando DDL con “RESUMABLE = ON” no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin tran ... commit)
    -    Regenerar un índice que tiene columnas TIMESTAMP o calculadas como columnas de clave.
 -   En caso de que la tabla base contenga columnas LOB reanudables, para la regeneración de índice agrupado reanudable se necesita un bloqueo Sch-M al inicio de esta operación.
    -    La opción SORT_IN_TEMPDB=ON no es compatible con el índice reanudable. 

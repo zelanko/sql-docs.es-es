@@ -12,19 +12,19 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4f691fa89bf3d6db014542088fdd127e344a8346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690703"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545362"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Mejoras de rendimiento con las recomendaciones de DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 ---
-El rendimiento del almacenamiento de datos y las cargas de trabajo analíticas pueden beneficiarse de los índices de **almacén de columnas**, especialmente para las consultas que necesitan examinar tablas de gran tamaño. Los índices de **almacén de filas** (árbol B+) son más eficaces para las consultas que tienen acceso a cantidades relativamente pequeñas de datos que buscan un valor o un rango de valores determinados. Puesto que los índices de almacén de filas pueden entregar filas ordenadas, también pueden reducir el costo de ordenación en los planes de ejecución de consultas. Por lo tanto, la elección de la combinación de índices de almacén de columnas y de filas que se generará es dependiente de la carga de trabajo de la aplicación.
+El rendimiento del almacenamiento de datos y las cargas de trabajo analíticas pueden beneficiarse de los índices de **almacén de columnas**, especialmente para las consultas que necesitan examinar tablas de gran tamaño. Los índices de **almacén de filas** (árbol B+) son más eficaces para las consultas que tienen acceso a cantidades relativamente pequeñas de datos que buscan un valor o un rango de valores determinados. Puesto que los índices de almacén de filas pueden entregar filas ordenadas, también pueden reducir el costo de ordenación en los planes de ejecución de consultas. Por tanto, la elección de la combinación de índices de almacén de columnas y de filas que se van a generar depende de la carga de trabajo de la aplicación.
 
 El Asistente para la optimización de motor de base de datos (DTA), a partir de SQL Server 2016, puede recomendar una **combinación adecuada de índices de almacén de columnas y de filas** al examinar una carga de trabajo de la base de datos determinada. 
 
@@ -47,13 +47,13 @@ En cada caso, implementamos los índices recomendados. Informamos sobre el prome
 
 **Eficacia de las recomendaciones de índices de almacén de columnas**: el cuarto conjunto de barras correspondiente a la consulta 2 del cliente 2 representa un caso en el que la consulta examina las tablas de gran tamaño que aprovecharían los índices de almacén de columnas. DTA (solo el almacén de filas) genera una recomendación cuyo tiempo de CPU es superior en comparación con cuando estaban los índices de almacén de columnas. DTA (almacén de filas y de columnas) recomienda los índices de almacén de columnas adecuados, con lo que los hace coincidir con el rendimiento de ejecución de consultas de la opción de solo el almacén de columnas.
 
-**Eficacia de las recomendaciones para la carga de trabajo con varias consultas**: el conjunto final de barras correspondiente a la carga de trabajo completa del cliente 2 ejemplifica la capacidad de DTA para examinar varias consultas en la carga de trabajo con el objetivo de recomendar un conjunto apropiado de índices de almacén de columnas y de filas que pueda mejorar el costo de ejecución de la carga de trabajo general. DTA (almacén de filas y de columnas) recomienda 4 índices de almacén de columnas y decenas de índices de almacén de filas que dan lugar a través de una mejora de orden de magnitud de la carga de trabajo en comparación con la opción que crea solo los índices de almacén de columnas; y aproximadamente una mejora entre 4 y 5 veces superior en comparación con DTA (solo el almacén de filas).
+**Eficacia de las recomendaciones para la carga de trabajo con varias consultas**: el conjunto final de barras correspondiente a la carga de trabajo completa del cliente 2 ejemplifica la capacidad de DTA para examinar varias consultas en la carga de trabajo con el objetivo de recomendar un conjunto apropiado de índices de almacén de columnas y de filas que pueda mejorar el costo de ejecución de la carga de trabajo general. DTA (almacén de filas y de columnas) recomienda 4 índices de almacén de columnas y decenas de índices de almacén de filas que dan lugar a una mejora de orden de magnitud de la carga de trabajo en comparación con la opción que crea solo los índices de almacén de columnas; y aproximadamente una mejora entre 4 y 5 veces superior en comparación con DTA (solo el almacén de filas).
 
-En resumen, los ejemplos anteriores muestran la capacidad de DTA para aprovechar adecuadamente los índices de almacén de columnas y de filas compatibles en el motor de base de datos de SQL Server y recomienda una combinación adecuada de índices que puede reducir significativamente el tiempo de CPU para la carga de trabajo. 
+En resumen, en los ejemplos anteriores se muestra la capacidad de DTA para aprovechar adecuadamente los índices de almacén de columnas y de filas compatibles en el motor de base de datos de SQL Server, y se recomienda una combinación adecuada de índices que puede reducir significativamente el tiempo de CPU para la carga de trabajo. 
 
 <a name="see-also"></a>Ver también
 ---
-[Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)
+[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)
 
 [Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 

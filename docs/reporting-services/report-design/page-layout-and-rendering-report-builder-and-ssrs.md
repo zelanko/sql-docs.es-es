@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d525d686b8be1e17214dd8908017b86358f87ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606003"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413702"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
-Obtenga información sobre las extensiones de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los informes paginados, de forma que esté seguro de que su informe tiene el aspecto que quiere, incluidos el diseño y los saltos de página, y el tamaño del papel. 
+Obtenga información sobre las extensiones de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los informes paginados, de forma que esté seguro de que el informe tiene el aspecto que quiere, incluidos el diseño y los saltos de página, y el tamaño del papel. 
 
  Al ver los informes en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o en el panel de vista previa del Generador de informes o del Diseñador de informes, el informe se representa primero mediante el representador de HTML. Después, puede exportar el informe a formatos diferentes, por ejemplo a Excel o a un archivo delimitado por comas (CSV). El informe exportado se puede usar entonces para realizar un análisis más extenso en Excel o como un origen de datos para las aplicaciones que pueden importar y usar archivos CSV.  
   

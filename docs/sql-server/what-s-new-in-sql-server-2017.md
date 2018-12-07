@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ed1c90d0516761b209382321e160ffb0e83237e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701388"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406452"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ SQL Server 2017 incluye muchas mejoras de rendimiento, perfeccionamiento y carac
 - Los **ensamblados CLR** ahora se pueden agregar a una lista de permitidos como solución alternativa para la característica `clr strict security` que se describe en CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) y [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) se agregan para admitir la lista de ensamblados de confianza permitidos (RC1).  
 - La **recompilación de índices en línea reanudable** reanuda una operación de recompilación de índices en línea desde donde se detuvo después de un error (como una conmutación por error en una réplica o espacio en disco insuficiente), o bien pausa y reanuda más adelante una operación de recompilación de índices en línea. Vea [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) y [Directrices para operaciones de índices en línea](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - La opción **IDENTITY_CACHE** de ALTER DATABASE SCOPED CONFIGURATION permite evitar lagunas en los valores de columnas e identidad si un servidor se reinicia inesperadamente o realiza conmutación por error en un servidor secundario. Vea [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
-- Una nueva generación de mejoras de procesamiento de consultas que adapta las estrategias de optimización a las condiciones de tiempo de ejecución de la carga de trabajo de una aplicación. En esta primera versión de la familia de características de **procesamiento de consultas adaptable** se incluyen tres nuevas mejoras: **combinaciones adaptables del modo por lotes**, **comentarios de concesión de memoria del modo por lotes** y **ejecución intercalada** para funciones con valores de tabla de varias instrucciones.  Vea [Procesamiento de consultas adaptable en bases de datos SQL](../relational-databases/performance/adaptive-query-processing.md).
+- Una nueva generación de mejoras de procesamiento de consultas que adapta las estrategias de optimización a las condiciones de tiempo de ejecución de la carga de trabajo de la aplicación. En esta primera versión de la familia de características de **procesamiento de consultas adaptable** se incluyen tres nuevas mejoras: **combinaciones adaptables del modo por lotes**, **comentarios de concesión de memoria del modo por lotes** y **ejecución intercalada** para funciones con valores de tabla de varias instrucciones.  Vea [Procesamiento de consultas adaptable en bases de datos SQL](../relational-databases/performance/adaptive-query-processing.md).
 - El **ajuste automático de bases de datos** proporciona información de los posibles problemas de rendimiento de las consultas, recomienda soluciones y puede corregir automáticamente los problemas identificados. Consulte [Ajuste automático](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
 - Las nuevas **funcionalidades de base de datos de gráficos** para modelar relaciones varios a varios incluyen una nueva sintaxis de [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) para crear tablas de nodos y perimetrales, y la palabra clave [MATCH](../t-sql/queries/match-sql-graph.md) para consultas. Consulte [Procesamiento de gráficos con SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md). (CTP 2.0)
 - Una opción de sp_configure llamada `clr strict security` se habilita de manera predeterminada para mejorar la seguridad de los ensamblados CLR. Consulte [Seguridad estricta de CLR](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)

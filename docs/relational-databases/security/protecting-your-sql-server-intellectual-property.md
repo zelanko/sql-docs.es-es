@@ -14,12 +14,12 @@ ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6664e93697cca238dff535df1b3c2518ba79b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040377ce7f0879b11ec19f0abd21dd984ef363d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596193"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399808"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Proteger su propiedad intelectual de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47596193"
 Los desarrolladores de software a menudo preguntan cómo pueden distribuir su aplicación de datos [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a los clientes y a la vez evitar que la analicen y deconstruyan. En esta situación, lo esencial es proteger su propiedad intelectual. Se trata de un problema legal y la protección correspondiente reside en su contrato de licencia. Si [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] está instalado en un equipo administrado por terceros, usted pierde algunos aspectos de control de forma inherente. 
 
 ## <a name="nature-of-the-problem"></a>Naturaleza del problema
-El propietario o administrador de un equipo puede acceder en todo momento a la instancia de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instalada en dicho equipo. Si implementa su aplicación en el equipo de un cliente, este será un administrador, por lo que podrá conectarse a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] como miembro del rol fijo de servidor **sysadmin**. Incluye la capacidad de conceder permisos, administrar copias de seguridad (incluida la restauración de copias de seguridad a otros equipos), el descifrado y el movimiento de archivos de datos, etc. Para obtener más información, vea [Conectarse a SQL Server cuando los administradores del sistema no tienen acceso](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). 
+El propietario o administrador de un equipo puede acceder en todo momento a la instancia de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instalada en dicho equipo. Si implementa la aplicación en el equipo de un cliente, como es un administrador, se lo podrá conectar a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] como miembro del rol fijo de servidor **sysadmin**. Incluye la capacidad de conceder permisos, administrar copias de seguridad (incluida la restauración de copias de seguridad a otros equipos), el descifrado y el movimiento de archivos de datos, etc. Para obtener más información, vea [Conectarse a SQL Server cuando los administradores del sistema no tienen acceso](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). 
 
 Los procedimientos y datos almacenados pueden estar cifrados, pero la estructura de datos no puede estar oculta y los usuarios que puedan adjuntar un depurador al proceso del servidor pueden recuperar procedimientos y datos descifrados de la memoria en tiempo de ejecución.
 

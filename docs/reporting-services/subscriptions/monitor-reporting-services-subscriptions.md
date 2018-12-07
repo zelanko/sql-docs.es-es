@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535597"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Supervisar suscripciones de Reporting Services
   Puede supervisar las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la interfaz de usuario, Windows PowerShell o los archivos de registro. Las opciones disponibles para la supervisión dependen del modo de servidor de informes que esté ejecutando.  
@@ -85,9 +85,9 @@ ms.locfileid: "50100186"
   
 1.  vaya a la biblioteca de documentos que contiene el informe  
   
-2.  Abra el menú contextual del informe (**…**).  
+2.  Abra el menú contextual del informe (**...**).  
   
-3.  Seleccione la opción de menú expandido (**…**).  
+3.  Seleccione la opción de menú expandido (**...**).  
   
 4.  Elija **Administrar suscripciones**  
   

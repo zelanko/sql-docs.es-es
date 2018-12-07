@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702003"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503790"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "51702003"
  Use SQL Server Stretch Database para ampliar dinámicamente los datos transaccionales tanto activos como inactivos desde SQL Server a Microsoft Azure. A diferencia de lo que suele ocurrir en el almacenamiento de datos inactivos, los datos siempre estarán en línea y disponibles para consultarlos. Además, se pueden establecer escalas de tiempo de retención de datos más prolongadas, sin que ello interrumpa el banco de tablas grandes como el historial de pedidos de cliente. Aproveche el bajo costo de Azure en lugar de escalar a un almacenamiento local prohibitivo. Será usted quien elija el plan de tarifa y configure las opciones que quiera en el Portal de Azure para tener los precios y costos bajo control. Escale o reduzca verticalmente según le convenga. Visite la página de [precios de SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) para obtener información pormenorizada.  
   
  **No hay que cambiar las consultas ni las aplicaciones**  
- Disfrute de acceso a los datos de SQL Server sin problemas, independientemente de si están almacenados localmente o extendidos a la nube.  Solo tiene que establecer la directiva que defina dónde se almacenan los datos y SQL Server se encargará del movimiento de datos en segundo plano. La tabla entera estará siempre en línea y lista para consultarse. Además, Stretch Database no requiere ningún cambio en las consultas o aplicaciones existentes: la ubicación de los datos es completamente clara para la aplicación.  
+ Acceda a los datos de SQL Server sin problemas, independientemente de si están almacenados de forma local o extendidos a la nube.  Solo tiene que establecer la directiva que defina dónde se almacenan los datos y SQL Server se encargará del movimiento de datos en segundo plano. La tabla entera estará siempre en línea y lista para consultarse. Además, Stretch Database no requiere ningún cambio en las consultas o aplicaciones existentes: la ubicación de los datos es completamente transparente para la aplicación.  
   
  **Agiliza el mantenimiento de los datos locales**  
  Reduzca el almacenamiento y mantenimiento local de los datos. mientras que las de los datos locales son más rápidas y finalizan dentro del período de mantenimiento. Las copias de seguridad de los datos almacenados en la nube se hacen automáticamente, Sus necesidades de almacenamiento local se reducirán considerablemente. El almacenamiento de Azure puede ser hasta un 80 % más asequible que recurrir a una SSD local.  
   
  **Los datos se mantienen seguros incluso durante la migración**  
- Relájese mientras extiende las aplicaciones más importantes a la nube sin correr ningún tipo de riesgo. Always Encrypted de SQL Server permite cifrar los datos en movimiento. La seguridad de nivel de fila y otras características de seguridad avanzadas de SQL Server funcionan también con Stretch Database para proteger los datos.  
+ Relájese mientras extiende las aplicaciones más importantes a la nube sin correr ningún tipo de riesgo. Always Encrypted de SQL Server proporciona cifrado para los datos en movimiento. La seguridad de nivel de fila y otras características de seguridad avanzadas de SQL Server funcionan también con Stretch Database para proteger los datos.  
   
 ## <a name="what-does-stretch-database-do"></a>¿Qué hace Stretch Database?  
  Después de habilitar Stretch Database en al menos una tabla y una base de datos y seleccionar una instancia de SQL Server, comenzará a migrar silenciosamente los datos inactivos a Azure.  
@@ -64,7 +64,7 @@ ms.locfileid: "51702003"
 |Tengo que conservar los datos transaccionales durante mucho tiempo.|El tamaño de las tablas empieza a ser desbordante.|  
 |A veces tengo que consultar los datos inactivos.|Mis usuarios afirman que quieren tener acceso a los datos inactivos, pero en realidad apenas si los usan.|  
 |Tengo aplicaciones, incluidas aplicaciones antiguas, que no quiero actualizar.|Estoy constantemente adquiriendo y agregando más espacio de almacenamiento.|  
-|Quiero encontrar una manera de ahorrar dinero en almacenamiento.|No puedo restaurar unas tablas tan grandes ni hacerles copias de seguridad dentro de los términos del contrato de nivel de servicio.|  
+|Quiero encontrar una manera de ahorrar dinero en almacenamiento.|No puedo restaurar unas tablas tan grandes ni hacer copias de seguridad dentro de los términos del contrato de nivel de servicio.|  
   
 ## <a name="what-kind-of-databases-and-tables-are-candidates-for-stretch-database"></a>¿Qué tipos de tablas y bases de datos son aptos para Stretch Database?  
  Stretch Database está pensado para bases de datos transaccionales con grandes cantidades de datos inactivos que suelen almacenarse en un número reducido de tablas. Estas tablas pueden contener millones y millones de filas.  

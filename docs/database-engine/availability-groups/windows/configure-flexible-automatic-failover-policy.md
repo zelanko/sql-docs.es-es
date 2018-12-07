@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 115435aae796ea846e6412e6db5526cd9eb50526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599313"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505827"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurar la directiva de conmutación por error automática flexible
 
@@ -45,7 +45,7 @@ ms.locfileid: "47599313"
     > [!NOTE]  
     >  La directiva flexible de conmutación por error de un grupo de disponibilidad no se puede configurar utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Limitations"></a> Limitaciones de la conmutación automática por error  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47599313"
   
          La relación de estos valores enteros con los niveles de condición de error es la siguiente:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nivel|La conmutación por error iniciada es automática cuando se produce…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |2|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  
@@ -114,7 +114,7 @@ ms.locfileid: "47599313"
   
     -   Para establecer el nivel de condición de conmutación por error, use el parámetro **FailureConditionLevel***nivel*, donde *nivel* es uno de los siguientes valores:  
   
-        |Valor|Level|La conmutación por error iniciada es automática cuando se produce…|  
+        |Valor|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |**OnServerUnresponsive**|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  

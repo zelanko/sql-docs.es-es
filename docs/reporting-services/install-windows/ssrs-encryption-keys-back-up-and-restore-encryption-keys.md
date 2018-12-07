@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6c7dd24c716849d6d36ca28908d57c0e715f17c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81bfdfb8d622096b30ea76a7632c5fd61ac833e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514997"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Claves de cifrado de SSRS: copia de seguridad y restauración de claves de cifrado
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Una parte importante de la configuración del servidor de informes es la creación de una copia de seguridad de la clave simétrica utilizada para cifrar información confidencial. La copia de seguridad de la clave se necesita para varias operaciones rutinarias y, además, permite volver a utilizar una base de datos del servidor de informes existente en una nueva instalación.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
   
  Es necesario restaurar la copia de seguridad de la clave de cifrado cuando se produce alguno de los siguientes eventos:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47645103"
   
 5.  Seleccione **Aceptar**.  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> Hacer copia de seguridad de las claves de cifrado - rskeymgmt (modo nativo)  
+###  <a name="bkmk_backup_rskeymgmt"></a> Realizar copias de seguridad de las claves de cifrado: rskeymgmt (modo nativo)  
   
 1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda el servidor de informes. Debe usar el argumento de extracción **-e** para copiar la clave, dar un nombre de archivo y especificar una contraseña. El siguiente ejemplo ilustra los argumentos que debe especificar:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47645103"
   
 -   Se eliminan los datos de la clave simétrica anteriormente almacenada (por ejemplo, la información de la clave que se encontraba en la base de datos del servidor de informes desde una implementación anterior).  
   
- Para restaurar la clave de cifrado, debe tener una copia de la clave de cifrado en el archivo. También debe conocer la contraseña que desbloquea la copia almacenada. Si conoce la clave y la contraseña, puede ejecutar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** para restaurar la clave. La clave simétrica debe ser la misma que bloquea y desbloquea los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si restaura una copia que no es válida, el servidor de informes no puede obtener acceso a los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si esto sucede, es posible que deba eliminar todos los valores cifrados cuando no pueda restaurar una clave válida. Si por algún motivo no puede restaurar la clave de cifrado (por ejemplo, si no tiene una copia de seguridad), debe eliminar la clave existente y el contenido cifrado. Para más información, vea [Claves de cifrado de SSRS: eliminar y volver a crear las claves de cifrado](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obtener más información sobre la creación de claves simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para restaurar la clave de cifrado, debe tener una copia de la clave de cifrado en el archivo. También debe conocer la contraseña que desbloquea la copia almacenada. Si conoce la clave y la contraseña, puede ejecutar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** para restaurar la clave. La clave simétrica debe ser la misma que bloquea y desbloquea los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si restaura una copia que no es válida, el servidor de informes no puede obtener acceso a los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si esto sucede, es posible que deba eliminar todos los valores cifrados cuando no pueda restaurar una clave válida. Si por algún motivo no puede restaurar la clave de cifrado (por ejemplo, si no tiene una copia de seguridad), debe eliminar la clave existente y el contenido cifrado. Para obtener más información, vea [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obtener más información sobre la creación de claves simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ###  <a name="bkmk_restore_configuration_manager"></a> Restaurar las claves de cifrado - Administrador de configuración de Reporting Services (modo nativo)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47645103"
   
 5.  Seleccione **Aceptar**. 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> Restaurar las claves de cifrado - rskeymgmt (modo nativo)  
+###  <a name="bkmk_restore_rskeymgmt"></a> Restaurar las claves de cifrado: rskeymgmt (modo nativo)  
   
 1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda el servidor de informes. Use el argumento **-a** para restaurar las claves. Debe proporcionar un nombre de archivo completo y especificar una contraseña. El siguiente ejemplo ilustra los argumentos que debe especificar:  
   

@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530564"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,7 +149,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
  **Opciones** : para especificar las opciones avanzadas, seleccione un valor de la lista de opciones de configuración disponibles, situada a la derecha de cada opción.  
   
- **General** : las opciones siguientes se aplican a todo el script.  
+ **General**: las opciones siguientes se aplican a todo el script.  
   
 -   **Relleno ANSI** : incluye **ANSI PADDING ON** en el script. El valor predeterminado es **True**.  
   
@@ -199,7 +199,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 -   **Generar script de seguimiento de cambios** : incluye en el script el seguimiento de cambios si se ha habilitado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **False**. Para obtener más información, vea [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
--   **Incluir restricciones CHECK en el script** : agrega restricciones **CHECK** al script. El valor predeterminado es **True**. Las restricciones**CHECK** requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+-   **Incluir restricciones CHECK en el script**: agrega restricciones **CHECK** al script. El valor predeterminado es **True**. Las restricciones**CHECK** requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 -   **Incluir opciones de compresión de datos en el script** : incluye las opciones de compresión de datos en el script, si se han configurado en la base de datos de origen o en las tablas de la base de datos de origen. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). El valor predeterminado es **False**.  
   
@@ -239,7 +239,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
  **Opciones** : para especificar las opciones avanzadas, seleccione un valor de la lista de opciones de configuración disponibles, situada a la derecha de cada opción.  
   
- **General** : las opciones siguientes se aplican a toda la publicidad.  
+ **General**: las opciones siguientes se aplican a toda la publicidad.  
   
 1.  **Convertir UDDT en tipos base** : si es **True**, los tipos de datos definidos por el usuario (UDDT) se convierten en los tipos de datos base subyacentes que se usaron para crearlos. Use **True** cuando el UDDT no exista en la base de datos en la que se ejecutará el script. Si es **False**, se usan los UDDT. El valor predeterminado es **False**.  
   
@@ -265,7 +265,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 12. **Tipos de datos que se van a publicar**: selecciona lo que se incluirá en el script: **Solo datos**, **Solo esquema** o ambos. El valor predeterminado es **Esquema y datos**.  
   
- **Opciones de publicación** : especifica si se usarán transacciones al publicar el proveedor de hospedaje web.  
+ **Opciones de publicación**: especifica si se usarán transacciones al publicar el proveedor de hospedaje web.  
   
 1.  **Publicar usando una transacción** : usa transacciones al publicar en un proveedor de hospedaje web remoto. Si la base de datos de destino no puede completar la publicación, se revierten las transacciones. El valor predeterminado es **True**.  
   
@@ -340,7 +340,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generar scripts en el Almacenamiento de datos SQL de Azure  
 
-Si la sintaxis que se genera al usar "Script como…" no se parece a la sintaxis de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] o si recibe un mensaje de error, es posible que deba configurar las opciones de scripting de SQL Server Management Studio en [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+Si la sintaxis generada al usar "Script como..." no se parece a la sintaxis de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] o si recibe un mensaje de error, es posible que deba configurar las opciones de scripting de SQL Server Management Studio en [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Cómo establecer opciones de scripting predeterminadas en el Almacenamiento de datos SQL  
 

@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849593"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410862"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` establece las acciones permitidas o prohibidas. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] puede especificar 230 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] tiene menos permisos porque algunas acciones no son pertinentes en Azure. Los permisos se muestran en el tema [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) (Permisos [motor de base de datos]) y en el gráfico al que se hace referencia más abajo.  
   
--   `ON SECURABLE::NAME` es el tipo de elemento protegible (servidor, objeto de servidor, base de datos u objeto de base de datos) y su nombre. Algunos permisos no requieren `ON SECURABLE::NAME` porque este es inequívoco o bien no procede en el contexto. Por ejemplo, el permiso `CREATE TABLE` no requiere la cláusula `ON SECURABLE::NAME` . (Por ejemplo, `GRANT CREATE TABLE TO Mary;` permite a Mary crear tablas).  
+-   `ON SECURABLE::NAME` es el tipo de elemento protegible (servidor, objeto de servidor, base de datos u objeto de base de datos) y su nombre. Algunos permisos no requieren `ON SECURABLE::NAME` porque este es inequívoco o bien no procede en el contexto. Por ejemplo, el permiso `CREATE TABLE` no requiere la cláusula `ON SECURABLE::NAME`. (Por ejemplo, `GRANT CREATE TABLE TO Mary;` permite a Mary crear tablas).  
   
 -   `PRINCIPAL` es la entidad de seguridad (inicio de sesión, usuario o rol) que recibe o pierde el permiso. Conceda permisos a los roles siempre que sea posible.  
   

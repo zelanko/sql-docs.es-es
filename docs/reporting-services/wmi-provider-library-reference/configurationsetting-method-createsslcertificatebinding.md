@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceaaa60f305bceb51e6c0cfec45da926b1084a37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824603"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543464"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Método de ConfigurationSetting: CreateSSLCertificateBinding
   Crea un enlace de certificado SSL.  

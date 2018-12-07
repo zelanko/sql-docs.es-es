@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540393"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "51673354"
   
 3.  Expanda el nodo **Bases de datos** .  
   
-4.  Haga clic con el botón secundario en la base de datos que desee implementar, seleccione **Tareas**y, a continuación, seleccione **Implementar base de datos en SQL Azure…**.  
+4.  Haga clic con el botón derecho en la base de datos que quiera implementar, seleccione **Tareas** y, después, seleccione **Implementar base de datos en SQL Azure...**.  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -92,22 +92,22 @@ ms.locfileid: "51673354"
   
 -   **Siguiente** : continúa a la página **Configuración de implementación** .  
   
--   **Cancelar** ; cancela la operación y cierra el asistente.  
+-   **Cancelar**: cancela la operación y cierra el asistente.  
   
 ##  <a name="Deployment_settings"></a> Página Configuración de implementación  
  Use esta página para especificar el servidor de destino y proporcionar detalles sobre la nueva base de datos.  
   
  **Host local:**  
   
--   **Conexión de servidor** : especifique los detalles de conexión del servidor y haga clic en **Conectar** para comprobar la conexión.  
+-   **Conexión de servidor**: especifique los detalles de conexión del servidor y haga clic en **Conectar** para comprobar la conexión.  
   
--   **Nombre de la nueva base de datos** : especifique un nombre para la nueva base de datos.  
+-   **Nombre de la nueva base de datos**: especifique un nombre para la nueva base de datos.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
 -   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: seleccione la edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el menú desplegable.  
   
--   **Tamaño máximo de la base de datos** : seleccione el tamaño máximo de la base de datos en el menú desplegable.  
+-   **Tamaño máximo de la base de datos**: seleccione el tamaño máximo de la base de datos en el menú desplegable.  
   
  **Otros valores:**  
   

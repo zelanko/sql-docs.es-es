@@ -19,24 +19,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f50c6209c926a4ab4a97e80f7a88a36b9d4cc5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a4ee1dd477473a7415a222a0b479ae01a608d8b
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689093"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302758"
 ---
 # <a name="display-and-save-execution-plans"></a>Mostrar y guardar planes de ejecución
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En esta sección se explica cómo visualizar los planes de ejecución y cómo guardarlos en un archivo de formato XML mediante Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+En esta sección se explica cómo visualizar los planes de ejecución y cómo guardarlos en un archivo de formato XML mediante Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Los planes de ejecución muestran de forma gráfica los métodos de recuperación de datos que usa el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los planes de ejecución representan el costo de ejecución de las instrucciones y consultas específicas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando iconos en lugar de la representación tabular que crean las instrucciones [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) o [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md). Este enfoque gráfico resulta muy útil para comprender las características de rendimiento de una consulta.  
+Los planes de ejecución muestran de forma gráfica los métodos de recuperación de datos que usa el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los planes de ejecución representan el costo de ejecución de las instrucciones y consultas específicas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando iconos en lugar de la representación tabular que crean las instrucciones [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) o [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md). Este enfoque gráfico resulta útil para comprender las características de rendimiento de una consulta.  
 
- Mientras que el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un único plan de ejecución, existen los planes de ejecución **estimados** y **reales**.
- -  Un [plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) devuelve el plan de ejecución tal como lo genera el optimizador de consultas durante el tiempo de compilación. Al generar el plan de ejecución estimado, realmente no se ejecuta la consulta o el lote, por lo que no contiene información en tiempo de ejecución, como las métricas de uso de recursos actual o advertencias en tiempo de ejecución. 
- -  Un [plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md) devuelve el plan de ejecución tal como lo genera el optimizador de consultas, mientras que las consultas y los lotes terminan de ejecutarse después. Esto incluye información en tiempo de ejecución sobre las métricas de uso de recursos y las advertencias en tiempo de ejecución.  
+Mientras que el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un único plan de ejecución, existen los planes de ejecución **estimados** y **reales**.
+-  Un [plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) devuelve el plan de ejecución tal como lo genera el optimizador de consultas en tiempo de compilación. Al generar el plan de ejecución estimado, realmente no se ejecuta la consulta o el lote, por lo que no contiene información en tiempo de ejecución, como las métricas de uso de recursos actual o advertencias en tiempo de ejecución. 
+-  Un [plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md) devuelve el plan de ejecución tal como lo genera el optimizador de consultas, mientras que las consultas y los lotes terminan de ejecutarse después. Esto incluye información en tiempo de ejecución sobre las métricas de uso de recursos y las advertencias en tiempo de ejecución.  
 
- Para obtener más información, consulte [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md).
+Para obtener más información sobre los planes de ejecución de consultas, vea la [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md).
   
 ## <a name="in-this-section"></a>En esta sección  
   

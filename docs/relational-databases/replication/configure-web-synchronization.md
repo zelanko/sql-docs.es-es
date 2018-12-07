@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18f27adad094effd34ab3778f54ac5d362dd4534
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519336"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "47834633"
   
 -   Si se replican grandes volúmenes de datos, podría ser necesario ajustar el tamaño del lote del Agente de mezcla.  
   
- El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica utilizando los parámetros **DownloadGenerationsPerBatch** y–**UploadGenerationsPerBatch** del Agente de mezcla. Para más información, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica con los parámetros **DownloadGenerationsPerBatch** y -**UploadGenerationsPerBatch** del Agente de mezcla. Para más información, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Para grandes volúmenes de datos, especifique un número pequeño para cada uno de los parámetros de procesamiento por lotes. Se recomienda comenzar con un valor de 10 y optimizarlo después de acuerdo con las necesidades y el rendimiento de la aplicación. Normalmente, estos parámetros se especifican en un perfil de agente. Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

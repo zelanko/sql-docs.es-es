@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670144"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520953"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usar MSDeploy con el proveedor de dbSqlPackage
 **DbSqlPackage** es un proveedor de **MSDeploy** que permite interactuar con bases de datos de SQL Server y SQL Azure. **DbSqlPackage** admite las siguientes acciones:  
@@ -39,7 +39,7 @@ Para más información sobre DACFx, consulte la documentación sobre la API admi
   
 ```  
   
-MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] –dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
+MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] -dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
 ```  
   
 ## <a name="ms-deploy-verbs"></a>Verbos de MS-Deploy  
@@ -47,8 +47,8 @@ Especifique los verbos de MS-Deploy con el modificador **-verb** en la línea de
   
 |Verbo|Descripción|  
 |--------|---------------|  
-|volcado|Proporciona información, como el nombre, el número de versión y la descripción, acerca de una base de datos de origen contenida en un archivo .dacpac. Especifique la base de datos de origen con el formato siguiente en la línea de comandos:<br /><br />**msdeploy –verb:dump –source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|Especifique las acciones dbSqlPackage usando el formato siguiente en la línea de comandos:<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Vea las secciones a continuación para conocer los parámetros de origen y de destino para el verbo sync.|  
+|volcado|Proporciona información, como el nombre, el número de versión y la descripción, acerca de una base de datos de origen contenida en un archivo .dacpac. Especifique la base de datos de origen con el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
+|sync|Especifique las acciones dbSqlPackage usando el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Vea las secciones a continuación para conocer los parámetros de origen y de destino para el verbo sync.|  
   
 ## <a name="dbsqlpackage-source"></a>Origen de dbSqlPackage  
 El proveedor de **dbSqlPackage** obtiene una entrada que es una cadena de conexión válida de SQL Server o SQL Azure o bien una ruta de acceso a un archivo .dacpac en el disco.  La sintaxis para especificar el origen de entrada para el proveedor es la siguiente:  
@@ -183,24 +183,24 @@ Los parámetros de **Destination** siguientes solo están disponibles para las o
 Esta es una sintaxis de ejemplo para una operación **Extract** mediante **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>”,<source parameter> –dest:dbSqlPackage="<target dacpac file path>”  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 Esta es una sintaxis de ejemplo para una operación **Publish** mediante **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
 Esta es una sintaxis de ejemplo para una operación **DeployReport** mediante **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
 Esta es una sintaxis de ejemplo para una operación **Script** mediante **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
   

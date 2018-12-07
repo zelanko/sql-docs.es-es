@@ -14,12 +14,12 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe71c72bfd7211a3ee73de7cc95a3d7ddb0bd405
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19acf085cfde3c0247e7c3d5d3316a1cc4f853e6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528354"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Crear alias de tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ Los alias facilitan el trabajo con nombres de tabla. El uso de alias es útil cu
   
 -   Desea acortar la instrucción del [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) y facilitar su lectura.  
   
--   La consulta hace referencia varias veces a un nombre de tabla (como en el caso de los nombres completos de columnas) y desea asegurarse de que la longitud de la consulta no superará un límite específico de caracteres. (Algunas bases de datos imponen una longitud máxima a las consultas.)  
+-   La consulta hace referencia varias veces al nombre de tabla (como en el caso de los nombres completos de columnas) y quiere asegurarse de que la longitud de la consulta no superará un límite específico de caracteres. (Algunas bases de datos imponen una longitud máxima a las consultas.)  
   
 -   Trabaja con varias instancias de la misma tabla (como en el caso de una autocombinación) y necesita una forma de hacer referencia a cada instancia.  
   

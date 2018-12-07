@@ -15,12 +15,12 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b3a57de7e071a66fa1b8a6091d51fb4d799f2cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dc91a21f83283a78e5d47e49dbe1a36ec166e05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419966"
 ---
 # <a name="navigational-access-master-data-services"></a>Acceso por navegación (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47610313"
 
   El acceso por navegación se aplica a la seguridad de los objetos de modelos, que se asigna en la pestaña **Modelos** .  
   
- El acceso por navegación es el que se obtiene en niveles superiores a los que su seguridad le haya asignado.  
+ El acceso por navegación es el que se obtiene para niveles superiores a los que su seguridad le haya asignado.  
   
  En este ejemplo, los permisos se asignan a una entidad y el acceso por navegación se concede en el nivel de modelo.  
   

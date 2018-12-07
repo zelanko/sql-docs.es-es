@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020359"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539101"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos: portal web
 
@@ -48,7 +48,7 @@ Para administrar un conjunto de datos compartido existente, puede hacer lo sigui
 > [!NOTE]
 > Si no ve el conjunto de datos compartido en la carpeta, asegúrese de que está viendo conjuntos de datos. Puede seleccionar **Ver** en la barra de menús de la esquina superior derecha del portal web. Asegúrese de que la casilla **Conjuntos de datos** está activada.  
   
-1.  Haga clic en los **puntos suspensivos (…)** del conjunto de datos que quiere administrar.  
+1.  Haga clic en los **puntos suspensivos (...)** del conjunto de datos que quiera administrar.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   

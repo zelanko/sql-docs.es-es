@@ -10,12 +10,12 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13c981282065d8d18e1eb8be19157e0f9d691ba0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2acb1b560e6a1399751e263f1437f5da1c85aeb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711315"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415892"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar y descodificar identificadores de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ Set-Location (Encode-SqlName "Table:Test")
  Use el cmdlet **Decode-Sqlname** para reemplazar las codificaciones hexadecimales por caracteres representados por la codificación.  
   
 ### <a name="examples-decoding"></a>Ejemplos (descodificación)  
- Este ejemplo devuelve "Table:Test":  
+ Este ejemplo devuelve “Table:Test”:  
   
 ```  
 Decode-SqlName "Table%3ATest"  
@@ -76,7 +76,7 @@ Decode-SqlName "Table%3ATest"
   
 ## <a name="see-also"></a>Ver también  
  [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

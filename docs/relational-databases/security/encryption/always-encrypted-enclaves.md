@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307119"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711186"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -53,9 +53,9 @@ Con los enclaves seguros, Always Encrypted protege la privacidad de la informaci
 - **Cálculos completos (versión preliminar)**: las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de variedades, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios que requiere que dichos cálculos se realicen dentro del sistema de la base de datos.
 
 > [!IMPORTANT]
-> En [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], los cálculos completos tienen pendientes varias optimizaciones de rendimiento, incluida la funcionalidad limitada (sin indexación, etc.), y actualmente están deshabilitados de manera predeterminada. Para habilitar los cálculos completos, consulte la sección sobre cómo [habilitar los cálculos completos](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+> En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], los cálculos completos tienen pendientes varias optimizaciones de rendimiento, incluida la funcionalidad limitada (sin indexación, etc.), y actualmente están deshabilitados de manera predeterminada. Para habilitar los cálculos completos, consulte la sección sobre cómo [habilitar los cálculos completos](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-En [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], Always Encrypted con enclaves seguros usa enclaves seguros de memoria de [Seguridad basada en virtualización (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (también conocidos como enclaves de Modo seguro virtual, VSM) en Windows.
+En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted con enclaves seguros usa enclaves seguros de memoria de [Seguridad basada en virtualización (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (también conocidos como enclaves de Modo seguro virtual, VSM) en Windows.
 
 ## <a name="secure-enclave-attestation"></a>Atestación de un enclave seguro
 
@@ -63,11 +63,11 @@ El enclave seguro dentro del motor de SQL Server puede acceder a información co
 
 El proceso de comprobar el enclave se denomina **atestación del enclave** y, por lo general, implica que un controlador cliente dentro de la aplicación (y, a veces, también SQL Server) se ponga en contacto con un servicio de atestación externo. Los detalles específicos del proceso de atestación dependen de la tecnología del enclave y del servicio de atestación.
 
-El proceso de atestación que SQL Server admite para los enclaves seguros de VBS en [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] es la atestación de entorno de ejecución Protección del sistema de Windows Defender, que usa Servicio de protección de host (HGS) como servicio de atestación. Deberá configura HGS en su entorno y registrar la máquina que hospeda la instancia de SQL Server en HGS. También debe configurar las herramientas o aplicaciones cliente (por ejemplo, SQL Server Management Studio) con una atestación de HGS.
+El proceso de atestación que SQL Server admite para los enclaves seguros de VBS en [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] es la atestación de entorno de ejecución Protección del sistema de Windows Defender, que usa Servicio de protección de host (HGS) como servicio de atestación. Deberá configura HGS en su entorno y registrar la máquina que hospeda la instancia de SQL Server en HGS. También debe configurar las herramientas o aplicaciones cliente (por ejemplo, SQL Server Management Studio) con una atestación de HGS.
 
 ## <a name="secure-enclave-providers"></a>Proveedores de enclaves seguros
 
-Para usar Always Encrypted con enclaves seguros, una aplicación debe usar un controlador cliente que admita la característica. En [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], las aplicaciones deben usar Proveedor de datos .NET Framework 4.7.2 y .NET Framework para SQL Server. Además, las aplicaciones .NET se deben configurar con un **proveedor de enclaves seguros** específico para el tipo de enclave (por ejemplo VBS) y el servicio de atestación (por ejemplo, HGS) que usa. Los proveedores de enclaves admitidos se envían por separado en un paquete NuGet, el que debe integrar con su aplicación. Un proveedor de enclaves implementa la lógica del cliente para el protocolo de atestación y para establecer un canal seguro con un enclave seguro de un tipo determinado.
+Para usar Always Encrypted con enclaves seguros, una aplicación debe usar un controlador cliente que admita la característica. En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], las aplicaciones deben usar Proveedor de datos .NET Framework 4.7.2 y .NET Framework para SQL Server. Además, las aplicaciones .NET se deben configurar con un **proveedor de enclaves seguros** específico para el tipo de enclave (por ejemplo VBS) y el servicio de atestación (por ejemplo, HGS) que usa. Los proveedores de enclaves admitidos se envían por separado en un paquete NuGet, el que debe integrar con su aplicación. Un proveedor de enclaves implementa la lógica del cliente para el protocolo de atestación y para establecer un canal seguro con un enclave seguro de un tipo determinado.
 
 ## <a name="enclave-enabled-keys"></a>Claves habilitadas para el enclave
 
@@ -143,4 +143,4 @@ Estas limitaciones se aplican a la versión preliminar actual, pero están progr
 
 ## <a name="next-steps"></a>Next Steps
 
-- Configure el entorno de prueba y pruebe la funcionalidad de Always Encrypted con enclaves seguros en SSMS; consulte [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) (Tutorial: Introducción a Always Encrypted con enclaves seguros mediante SSMS).
+- Configure el entorno de prueba y pruebe la funcionalidad de Always Encrypted con enclaves seguros en SSMS; consulte [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

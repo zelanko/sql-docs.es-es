@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8042627fcc85cf6b9418f7a0b16eae9255441a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684063"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531622"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
   
 -   Sección de estadísticas de ejecución  
   
-     Esta sección incluye una tabla que muestra las estadísticas recopiladas acerca de las ejecuciones del procedimiento almacenado. Estas son sus columnas:  
+     Esta sección incluye una tabla en la que se muestran las estadísticas recopiladas sobre las ejecuciones del procedimiento almacenado. Estas son sus columnas:  
   
     -   Tiempo en caché. El tiempo que se almacena en caché este plan de ejecución. Si el procedimiento almacenado se sale de la memoria caché de planes y vuelve a entrar, habrá datos para cada caché.  
   
@@ -137,12 +137,12 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
 2.  Escriba el comando siguiente.  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport -FolderPath "<folder_path>"  
     ```  
   
 3.  Compruebe lo siguiente:  
   
-    -   La ruta de acceso de la carpeta está creada, si aún no existe.  
+    -   Se ha creado la ruta de acceso de la carpeta, si todavía no existe.  
   
     -   El informe de lista de comprobación de migración se ha generado para todas las tablas y los procedimientos almacenados de la base de datos y el informe se encuentra en la ubicación especificada mediante ruta_carpeta.  
   
@@ -158,12 +158,12 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
   
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
   
     ```  
   

@@ -1,7 +1,7 @@
 ---
 title: Procedimiento recomendado con el Almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/24/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657844"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712126"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   En este artículo se describen los procedimientos recomendados para usar el Almacén de consultas con la carga de trabajo.  
   
@@ -34,7 +34,7 @@ Descargue la última versión de [!INCLUDE[ssManStudio](../../includes/ssmanstud
   
 ##  <a name="Insight"></a> Uso de Información de rendimiento de consultas en Azure SQL Database  
  Si ejecuta el Almacén de consultas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] puede usar **Información de rendimiento de consultas** para analizar el consumo de DTU a lo largo del tiempo.  
-Aunque puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para obtener el consumo de recursos detallado para todas las consultas (CPU, memoria, E/S, etc.), Información de rendimiento de consultas ofrece una forma rápida y eficaz de determinar su impacto en el consumo global de DTU correspondiente a la base de datos.  
+Aunque se puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para obtener el consumo de recursos detallado para todas las consultas (CPU, memoria, E/S, etc.), Información de rendimiento de consultas ofrece una forma rápida y eficaz de determinar su impacto en el consumo global de DTU de la base de datos.  
 Para obtener más información, vea [Información de rendimiento de consultas de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>Uso del Almacén de consultas con bases de datos del grupo elástico
@@ -48,11 +48,11 @@ Los parámetros predeterminados son lo suficientemente buenos para iniciarse, pe
   
  A continuación se indican algunas instrucciones para establecer valores de parámetro:  
   
- **Tamaño máximo (MB):** especifica el límite del espacio de datos que el Almacén de consultas tomará dentro de la base de datos.  Se trata del valor de configuración más importante que afecta directamente al modo de operación del Almacén de consultas.  
+ **Tamaño máximo (MB):** especifica el límite del espacio de datos que el Almacén de consultas tomará dentro de la base de datos. Se trata del valor de configuración más importante que afecta directamente al modo de operación del Almacén de consultas.  
   
  Mientras que el Almacén de consultas recopila consultas, planes de ejecución y estadísticas, su tamaño en la base de datos crece hasta que se alcanza este límite. Cuando esto ocurre, el Almacén de consultas cambia automáticamente el modo de operación a solo lectura y deja de recopilar datos nuevos, lo que significa que el análisis de rendimiento ya no es preciso.  
   
- El valor predeterminado (100 MB) puede no ser suficiente si la carga de trabajo genera gran cantidad de planes y consultas diferentes o si desea mantener el historial de consultas durante un período de tiempo más largo. Realice un seguimiento del uso de espacio actual y aumente el valor de Tamaño máximo (MB) para impedir que el Almacén de consultas cambie al modo de solo lectura.  Utilice [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o ejecute el siguiente script para obtener la información más reciente sobre el tamaño del Almacén de consultas:  
+ El valor predeterminado (100 MB) puede no ser suficiente si la carga de trabajo genera gran cantidad de planes y consultas diferentes o si desea mantener el historial de consultas durante un período de tiempo más largo. Realice un seguimiento del uso de espacio actual y aumente el valor de Tamaño máximo (MB) para impedir que el Almacén de consultas cambie al modo de solo lectura. Utilice [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o ejecute el siguiente script para obtener la información más reciente sobre el tamaño del Almacén de consultas:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -69,11 +69,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **Intervalo de recopilación de estadísticas:** define el nivel de granularidad de la estadística recopilada en tiempo de ejecución (el valor predeterminado es 1 hora). Considere el uso de un valor inferior si necesita una granularidad más fina o menos tiempo para detectar y mitigar los problemas, pero tenga en cuenta que afectará directamente al tamaño de los datos del Almacén de consultas. Use SSMS o Transact-SQL para establecer otro valor para Statistics Collection Interval (Intervalo de recopilación de estadísticas):  
+
+ **Intervalo de vaciado de datos:** define la frecuencia en segundos para conservar en disco las estadísticas en tiempo de ejecución recopiladas (el valor predeterminado es de 900 segundos, es decir, 15 minutos). Considere la posibilidad de usar un valor más alto si la carga de trabajo no genera gran cantidad de consultas y planes diferentes, o bien si puede soportar más tiempo de conservación de los datos antes de cerrar la base de datos. 
+ 
+> [!NOTE]
+> El uso de la marca de seguimiento 7745 impedirá que los datos del Almacén de consultas se escriban en el disco en el caso de un comando de conmutación por error o apagado. Vea la sección [Uso de marcas de seguimiento en servidores críticos para mejorar la recuperación ante desastres](#Recovery) para obtener más información.
+
+Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer otro valor para el intervalo de vaciado de datos:  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **Intervalo de recopilación de estadísticas:** define el nivel de granularidad de la estadística recopilada en tiempo de ejecución (el valor predeterminado es 60 minutos). Considere el uso de un valor inferior si necesita una granularidad más fina o menos tiempo para detectar y mitigar los problemas, pero tenga en cuenta que afectará directamente al tamaño de los datos del Almacén de consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer otro valor para el intervalo de recopilación de estadísticas:  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Umbral de consulta obsoleta (días):** directiva de limpieza basada en el tiempo que controla el período de retención de las estadísticas en tiempo de ejecución persistentes y las consultas inactivas.  
@@ -97,11 +110,11 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Modo de captura del Almacén de consultas:** Especifica la directiva de captura de consultas para el Almacén de consultas.  
   
--   **All** : Captura todas las consultas. Ésta es la opción predeterminada.  
+-   **All**: captura todas las consultas. Ésta es la opción predeterminada.  
   
--   **Auto** : Se omiten las consultas poco frecuentes y aquellas con una duración de la compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan internamente.  
+-   **Auto**: se omiten las consultas poco frecuentes y aquellas con una duración de compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan internamente.  
   
--   **None** : El Almacén de consultas deja de capturar nuevas consultas.  
+-   **None**: el Almacén de consultas deja de capturar consultas nuevas.  
   
  El siguiente script establece el modo de captura de consultas en Automático:  
   
@@ -132,7 +145,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
   
  En el gráfico siguiente se muestra cómo localizar vistas del Almacén de consultas:  
   
- ![query-store-views](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![Vistas del Almacén de consultas](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")  
   
  En la siguiente tabla se explica cuándo usar cada una de las vistas del Almacén de consultas:  
   
@@ -143,10 +156,11 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 |Top Resource Consuming Queries (Consultas que consumen más recursos)|Elija una métrica de ejecución de interés e identifique las consultas que tenían los valores más extremos para un intervalo de tiempo proporcionado. <br />Use esta vista para centrar la atención en las consultas más importantes que tienen el mayor impacto en el consumo de recursos de base de datos.|  
 |Consultas con planes forzados|Enumera los planes forzados anteriormente mediante el Almacén de consultas. <br />Use esta vista para obtener acceso rápidamente a todos los planes forzados actualmente.|  
 |Consultas con gran variación|Analice consultas con una gran variación de ejecución en lo referente a cualquiera de las dimensiones disponibles, como la duración, el tiempo de CPU, la E/S y el uso de memoria en el intervalo de tiempo deseado.<br />Use esta vista para identificar consultas con un rendimiento muy variable que pueda afectar a la experiencia del usuario a través de las aplicaciones.|  
+|Estadísticas de espera de consulta|Analice las categorías de espera más activas en una base de datos y qué consultas contribuyen más a la categoría de espera seleccionada.<br />Use esta vista para analizar las estadísticas de espera e identificar las consultas que pueden estar afectando a la experiencia del usuario entre las aplicaciones.<br /><br />**Se aplica a:** a partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Tracked Queries (Consultas seguidas)|Realice un seguimiento de la ejecución de las consultas más importantes en tiempo real. Normalmente, esta vista se utiliza cuando tiene consultas con planes forzados y desea asegurarse de que el rendimiento de las mismas es estable.|
   
 > [!TIP]  
->  Para obtener una descripción detallada sobre cómo usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar las consultas que consumen más recursos y corregir aquellas devueltas debido al cambio de una opción de plan, vea los [blogs de @Azure sobre el Almacén de consultas](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
+> Para obtener una descripción detallada sobre cómo usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar las consultas que consumen más recursos y corregir aquellas devueltas debido al cambio de una opción de plan, vea los [blogs de @Azure sobre el Almacén de consultas](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Cuando identifique una consulta con un rendimiento deficiente, la acción dependerá de la naturaleza del problema.  
   

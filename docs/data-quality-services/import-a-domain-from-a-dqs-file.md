@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26af15dea92c143fe995e0072f80d3782a3adaab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7961facbec5f194c45c8677481af5b43bdfaa1e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787233"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616405"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar un dominio desde un archivo .dqs
 
@@ -27,9 +26,9 @@ ms.locfileid: "47787233"
   
  El uso de un archivo de datos .dqs para exportar un dominio de una base de conocimiento e importarlo a continuación en otra simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Le permite compartir un dominio y su conocimiento con otras personas, ahorrándoles tiempo. Es posible importar tanto un dominio individual como un dominio compuesto (dominio que contiene varios dominios únicos). Un archivo .dqs que contiene un solo dominio incluye todos los datos de dominio incluidas propiedades, valores y datos de reglas de dominio salvo la información de datos de referencia asignada. Un archivo .dqs que contiene un dominio compuesto incluye todos los datos de este, incluidos los de los dominios individuales que lo forman, así como las propiedades, relaciones de valor y reglas de CD del dominio compuesto, salvo los datos de referencia asignados. Se importarán tanto los datos publicados como los no publicados.  
   
- Cuando se importa un dominio, su nombre será el mismo que el del dominio que se exportó originalmente, a menos que exista dicho nombre, en cuyo caso DQS le agregará la cadena “_1”. Lo mismo sucederá si se importa un dominio compuesto que contiene un dominio individual con el mismo nombre que uno ya existente.  
+ Cuando se importa un dominio, su nombre será el mismo que el del dominio que se exportó originalmente, a menos que ese nombre ya exista, en cuyo caso DQS le agregará la cadena "_1". Lo mismo sucederá si se importa un dominio compuesto que contiene un dominio individual con el mismo nombre que uno ya existente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para importar un dominio desde un archivo .dqs, es necesario haber exportado previamente un dominio individual o uno compuesto (que contiene varios dominios individuales) a dicho archivo. El archivo .dqs solo puede incluir un dominio. También debe haber creado y abierto una base de conocimiento en la que importar el dominio.  

@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812998"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397713"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
 
@@ -104,7 +104,7 @@ La primera vez que se conecte con el Publicador de informes móviles a un servid
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
-Después, puede utilizar este tema para los informes móviles que cree, aunque no estén destinados al mismo servidor donde tenga implementado dicho tema.   
+Después, puede usar este tema para los informes móviles que cree, aunque no estén destinados al mismo servidor donde tenga implementado el tema.   
   
 ### <a name="using-a-logo"></a>Uso de un logotipo
   

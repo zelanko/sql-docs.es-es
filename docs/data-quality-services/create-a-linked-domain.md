@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
@@ -14,12 +13,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bce721aec2958cca21a4ac002b0da5a90682fb9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702233"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617895"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
 
@@ -36,7 +35,7 @@ ms.locfileid: "51702233"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Controlar el flujo de datos a los dominios compuestos  
  Los dominios vinculados le permiten controlar el flujo de datos entre los campos y los dominios compuestos. Gracias a ellos, es posible diferenciar cuándo los datos de un campo fluyen en un dominio compuesto, y cuándo los datos de otro campo muy similar no lo hacen. Para conseguirlo, es necesario especificar que, de los dos dominios vinculados, uno forma parte de un dominio compuesto y el otro no. Desde una perspectiva de dominio, los dominios vinculados son idénticos. Ambos contienen el mismo conocimiento. Sin embargo, desde una perspectiva de dominio compuesto, los dominios vinculados son diferentes. Uno de ellos participa en el dominio compuesto, pero el otro no.  
   
- Un ejemplo sería un registro que contiene los campos siguientes: Nombre del cliente, Apellidos del cliente y Nombre del padre. Imagine que asigna el nombre del cliente y el nombre del padre a un dominio Nombre, y que incluye tanto este como el dominio Apellidos en el dominio compuesto Nombre completo. El problema es que el nombre del padre se agregará al dominio compuesto sin apellidos. Sin embargo, si vincula cada uno de los dos campos de nombre a un dominio y vincula ambos dominios, podrá agregar el dominio Nombre del cliente al dominio compuesto Nombre completo, y no agregar el campo Nombre del padre a dicho dominio, con lo que evitará que el Nombre del padre se agregue al dominio compuesto.  
+ Un ejemplo sería un registro que contiene los campos siguientes: Nombre del cliente, Apellidos del cliente y Nombre del padre. Imagine que asigna el nombre del cliente y el nombre del padre a un dominio Nombre, y que incluye tanto este como el dominio Apellidos en el dominio compuesto Nombre completo. El problema es que el nombre del padre se agregará al dominio compuesto sin apellidos. Pero si vincula cada uno de los dos campos de nombre a un dominio y vincula ambos dominios, podrá agregar el dominio Nombre del cliente al dominio compuesto Nombre completo, y no agregar el campo Nombre del padre a ese dominio, con lo que evitará que el Nombre del padre se agregue al dominio compuesto.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   

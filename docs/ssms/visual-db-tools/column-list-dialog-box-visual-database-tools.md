@@ -13,18 +13,18 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61ce02c05248eb5041c54abe1106109843d97507
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e347f35f176a1c0419d160206cbcb6ee9313590
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754693"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515382"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Lista de columnas (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Al escribir consultas, puede ser útil ver una lista de columnas disponibles en los objetos con valores de tabla seleccionados.  
   
-Para tener acceso a este cuadro de diálogo, en el panel Diagrama del menú **Diseñador de consultas** , haga clic con el botón derecho en el encabezado de un objeto con valores de tabla y, luego, haga clic en **Propiedades**. En la ventana **Propiedades** , haga clic en el campo **Lista de columnas** . A continuación, haga clic en los puntos suspensivos **(...)** que aparecen a la derecha del campo.  
+Para tener acceso a este cuadro de diálogo, en el panel Diagrama del menú **Diseñador de consultas** , haga clic con el botón derecho en el encabezado de un objeto con valores de tabla y, luego, haga clic en **Propiedades**. En la ventana **Propiedades** , haga clic en el campo **Lista de columnas** . Después, haga clic en los puntos suspensivos **(...)** situados a la derecha del campo.  
   
 Este cuadro de diálogo proporciona una lista de las columnas en el objeto con valores de tabla seleccionado y propiedades básicas, como los tipos de datos y si las columnas permiten valores NULL.  
   

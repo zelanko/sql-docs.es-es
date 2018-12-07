@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702933"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617955"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
 
@@ -33,7 +32,7 @@ ms.locfileid: "47702933"
   
  Para preparar la búsqueda de coincidencias, debe crear una directiva de coincidencia con una o varias reglas de coincidencia y ejecutar dicha directiva con los datos de ejemplo. El proceso del proyecto de búsqueda de coincidencias es independiente del proceso de la directiva de coincidencia, lo que significa que una base de conocimiento no se rellena con el conocimiento de coincidencia obtenido del proyecto de búsqueda de coincidencias. Para obtener más información acerca de cómo crear una directiva de coincidencia, vea [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -67,7 +66,7 @@ ms.locfileid: "47702933"
     > [!NOTE]  
     >  Solo puede asignar los datos de origen para un dominio DQS si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener información acerca de los tipos de datos admitidos en DQS, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Haga clic en el control **más (+)** para agregar una fila a la tabla Asignaciones o en el control **menos (–)** para eliminarla.  
+4.  Haga clic en el control **más (+)** para agregar una fila a la tabla Asignaciones o en el control **menos (-)** para eliminarla.  
   
 5.  Haga clic en **Vista previa del origen de datos** para ver los datos de la tabla o vista de SQL Server que ha seleccionado, o para ver la hoja de cálculo de Excel que ha seleccionado.  
   
@@ -126,9 +125,9 @@ ms.locfileid: "47702933"
   
      Si selecciona Resultados de búsqueda de coincidencias, se exportará lo siguiente:  
   
-    -   Una lista de clústeres y los registros coincidentes de cada clúster, incluido el nombre de la regla y la puntuación. El registro dinámico se marcará como “Dinamización”. Los clústeres aparecerán en primer lugar en la lista de exportación.  
+    -   Una lista de clústeres y los registros coincidentes de cada clúster, incluido el nombre de la regla y la puntuación. El registro dinámico se marcará como "Dinamización". Los clústeres aparecerán en primer lugar en la lista de exportación.  
   
-    -   Una lista de registros no coincidentes, con el valor “NULL” en las columnas Puntuación y Nombre de la regla. Estos registros se anexarán a la lista de exportación a continuación de los clústeres.  
+    -   Una lista de registros no coincidentes, con el valor "NULL" en las columnas Puntuación y Nombre de la regla. Estos registros se anexarán a la lista de exportación a continuación de los clústeres.  
   
      Si selecciona Resultados de permanencia, se exportará lo siguiente:  
   

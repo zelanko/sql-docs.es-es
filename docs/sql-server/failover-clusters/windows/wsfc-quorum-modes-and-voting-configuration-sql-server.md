@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703593"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404100"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuración de los votos y modos de quórum WSFC (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "51703593"
   
  Ningún nodo individual en un clúster WSFC puede determinar definitivamente que el clúster como conjunto sea correcto o incorrecto.  En un momento dado, desde la perspectiva de cada nodo, puede parecer que alguno de los otros nodos están sin conexión, en el proceso de conmutar por error o que no responden debido a un error de comunicación de red.  Una función clave del voto de quórum es determinar si el estado aparente de cada uno de los nodos del clúster WSFC es de hecho ese estado real de los nodos.  
   
- Para todos los modelos de quórum excepto “Solo disco”, la eficacia de un voto de quórum depende de que las comunicaciones entre todos los nodos que votan del clúster sean confiables. Las comunicaciones de red entre los nodos de la misma subred física se deben considerar predecibles; el voto de quórum debe ser de confianza.  
+ Para todos los modelos de quórum excepto "Solo disco", la eficacia de un voto de quórum depende de que las comunicaciones entre todos los nodos que votan del clúster sean confiables. Las comunicaciones de red entre los nodos de la misma subred física se deben considerar predecibles; el voto de quórum debe ser de confianza.  
   
  Sin embargo, si un nodo de otra subred se considera que no responde en un voto de quórum, pero realmente está en conexión y es correcta, es más probable que se deba a un error de comunicaciones de red entre las subredes.  Según la topología de clúster, el modo de quórum y la configuración de directivas de migración tras error, ese error de comunicaciones de red puede crear en efecto más de un conjunto (o subconjunto) de nodos que votan.  
   

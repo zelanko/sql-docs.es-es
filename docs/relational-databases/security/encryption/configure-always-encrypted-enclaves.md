@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534772"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configuración de Always Encrypted con enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -213,7 +213,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>Aprovisionamiento de claves habilitadas para el enclave: Azure Key Vault
+### <a name="provisioning-enclave-enabled-keys---azure-key-vault"></a>Aprovisionamiento de claves habilitadas para el enclave: Azure Key Vault
 
 En el equipo de desarrollo/cliente, abra Windows PowerShell ISE y ejecute el siguiente script.
 
@@ -237,7 +237,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -724,7 +724,7 @@ Si su columna se cifra con una clave de cifrado de columnas habilitada para el e
 
 #### <a name="example"></a>Ejemplo
 
-Suponiendo que la columna SSN se cifra y que la intercalación actual, establecida en el nivel de columna, es Latin1\_General\_BIN2, la siguiente instrucción descifra la columna (y hace que la intercalación no cambie - de forma alternativa, puede elegir cambiar la intercalación, por ejemplo, a una intercalación distinta de BIN2 en la misma instrucción).
+Suponiendo que la columna SSN se cifra y que la intercalación actual, establecida en el nivel de columna, es Latin1\_General\_BIN2, la siguiente instrucción descifra la columna (y hace que la intercalación no cambie; de forma alternativa, puede elegir cambiar la intercalación, por ejemplo, a una intercalación distinta de BIN2 en la misma instrucción).
 
 
 ```sql
@@ -741,7 +741,7 @@ GO
 
 La forma más rápida de probar consultas completas sobre sus columnas habilitadas para el enclave es desde una ventana de consulta de SSMS con Parametrización para Always Encrypted habilitada. Para obtener detalles sobre esta útil funcionalidad de SSMS, consulte:
 
-- [Parametrización para Always Encrypted: uso de SSMS para insertar columnas cifradas, actualizarlas y filtrar por ellas](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Parameterization for Always Encrypted - Using SSMS to Insert into, Update and Filter by Encrypted Columns](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) (Parametrización para Always Encrypted: uso de SSMS para insertar columnas cifradas, actualizarlas y filtrar por ellas)
 - [Consulta de columnas cifradas](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511540"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Desfragmentación de índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -187,7 +187,7 @@ Use el ejemplo de [sys.dm_db_column_store_row_group_physical_stats &#40;Transact
 ### <a name="rebuild-process"></a>Proceso de regeneración  
  Para volver a generar un índice de almacén de columnas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Adquiere un bloqueo exclusivo en la tabla o la partición mientras se produce la regeneración. Los datos están desconectados y no disponibles durante la recompilación, aunque se use `NOLOCK`, RCSI o SI.  
+1.  Adquiere un bloqueo exclusivo en la tabla o la partición mientras se produce la regeneración. Los datos están "desconectados" y no disponibles durante la recompilación, aunque se use `NOLOCK`, RCSI o SI.  
   
 2.  Vuelve a comprimir todos los datos del almacén de columnas. Hay dos copias del índice de almacén de columnas mientras se está produciendo la regeneración. Cuando se finaliza la recopilación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina el índice original del almacén de columnas.  
   

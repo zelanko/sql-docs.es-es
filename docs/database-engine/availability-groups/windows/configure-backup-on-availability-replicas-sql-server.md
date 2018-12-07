@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791253a685908baf69fe789aabd199a5cad7e921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0775eb7bd5cb87c902a6871eeebd4409dbe0cf2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531531"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurar la copia de seguridad en réplicas de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,8 +188,8 @@ ms.locfileid: "51600755"
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -198,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  La generación de un script para un trabajo de copia de seguridad con esta lógica permite programar que el trabajo se ejecute en cada réplica de disponibilidad en la misma programación. Cada uno de estos trabajos examina los mismos datos para determinar qué trabajo debe ejecutarse, por lo que solamente el trabajo programado pasa a la etapa de copia de seguridad.  En el caso de una conmutación por error, no es necesario modificar ninguno de los scripts o de los trabajos. Además, si vuelve a configurar un grupo de disponibilidad para agregar una réplica de disponibilidad, la administración del trabajo de copia de seguridad solo requerirá copiar o programar el trabajo de copia de seguridad. Si quita una réplica de disponibilidad, solo tiene que eliminar el trabajo de copia de seguridad de la instancia de servidor que hospedaba esa réplica.  
   
 > [!TIP]  
->  Si usa el[Asistente para planes de mantenimiento](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)con el fin de crear un trabajo de copia de seguridad determinado, el trabajo incluirá automáticamente la lógica de scripting que llama a la función **sys.fn_hadr_backup_is_preferred_replica** y la comprueba. Sin embargo, el trabajo de copia de seguridad no devolverá el mensaje “Esta no es la réplica preferida…”. Asegúrese de crear trabajos para cada base de datos de disponibilidad de cada instancia del servidor que hospeda una réplica de disponibilidad para el grupo de disponibilidad.  
+>  Si usa el[Asistente para planes de mantenimiento](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)con el fin de crear un trabajo de copia de seguridad determinado, el trabajo incluirá automáticamente la lógica de scripting que llama a la función **sys.fn_hadr_backup_is_preferred_replica** y la comprueba. Pero el trabajo de copia de seguridad no devolverá el mensaje "Esta no es la réplica preferida…". Asegúrese de crear trabajos para cada base de datos de disponibilidad de cada instancia del servidor que hospeda una réplica de disponibilidad para el grupo de disponibilidad.  
   
 ##  <a name="ForInfoAboutBuPref"></a> Para obtener información acerca de los valores de preferencia de copia de seguridad  
  Los siguientes apartados son útiles para obtener la información que es importante para la copia de seguridad en réplicas secundarias.  

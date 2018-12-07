@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 459119eb08117ed52a455fdfb80fe3f393a410fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807115"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617065"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,10 +58,8 @@ Cuando se llama en un bloque CATCH de procedimiento almacenado donde se produce 
 ## <a name="remarks"></a>Notas  
 `ERROR_PROCEDURE` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
-`ERROR_PROCEDURE` devuelve el nombre del procedimiento almacenado o desencadenador en el que se produce un error, con independencia de cuántas veces se ejecute o de dónde se ejecuta dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
-  
-En un bloque `CATCH` anidado, `ERROR_PROCEDURE` devuelve el número de error específico del ámbito del bloque `CATCH` al que hace referencia ese bloque `CATCH`. Por ejemplo, el bloque `CATCH` de una construcción TRY...CATCH externa podría tener una construcción `TRY...CATCH` interna. Dentro de ese bloque interno `CATCH`, `ERROR_PROCEDURE` devuelve el número del error que invocó el bloque `CATCH` interno. Si `ERROR_PROCEDURE` se ejecuta en el bloque `CATCH` externo, devuelve el número del error que invocó ese bloque `CATCH` externo.  
-  
+`ERROR_PROCEDURE` devuelve el nombre del procedimiento almacenado o desencadenador en el que se produce un error, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
+   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Utilizar ERROR_PROCEDURE en un bloque CATCH  

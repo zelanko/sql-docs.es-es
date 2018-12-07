@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d080ae2ac8d10469afb35efbd64122daf89d312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744433"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526441"
 ---
 # <a name="temporal-table-security"></a>Seguridad de la tabla temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "47744433"
 |Operación|Tabla actual|Tabla de historial|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|No permitida.|No permitida.|  
-|**ALTER TABLE…SWITCH PARTITION**|Solo SWITCH IN; vea [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md)(Creación de particiones con tablas temporales)|Solo SWITCH OUT; vea [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md)(Creación de particiones con tablas temporales)|  
-|**ALTER TABLE…DROP PERIOD**|No permitida.|-|  
-|**ALTER TABLE…ADD PERIOD**|-|No permitida.|  
+|**ALTER TABLE...SWITCH PARTITION**|Solo SWITCH IN; vea [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md)(Creación de particiones con tablas temporales)|Solo SWITCH OUT; vea [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md)(Creación de particiones con tablas temporales)|  
+|**ALTER TABLE...DROP PERIOD**|No permitida.|-|  
+|**ALTER TABLE...ADD PERIOD**|-|No permitida.|  
   
 ## <a name="allowed-alter-table-operations"></a>Operaciones ALTER TABLE permitidas  
   
 |Operación|Current|Historial|  
 |---------------|-------------|-------------|  
-|**ALTER TABLE…REBUILD**|Permitida (independientemente)|Permitida (independientemente)|  
+|**ALTER TABLE...REBUILD**|Permitida (independientemente)|Permitida (independientemente)|  
 |**CREATE INDEX**|Permitida (independientemente)|Permitida (independientemente)|  
 |**CREATE STATISTICS**|Permitida (independientemente)|Permitida (independientemente)|  
   

@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703913"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711836"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos. En este artículo se resumen las novedades de SQL Server 2019. Para obtener más información y problemas conocidos, consulte [Notas de la versión de SQL Server 2019](sql-server-ver15-release-notes.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos. En este artículo se resumen las novedades de SQL Server 2019. Para obtener más información y problemas conocidos, consulte [Notas de la versión de SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Pruebe SQL Server 2019.**
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Descargar SQL Server 2019 para instalar en Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ ms.locfileid: "51703913"
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-Community Technology Preview (CTP) 2.1 es la versión pública más reciente de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. En [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1 se han incorporado o mejorado las siguientes características.
+Community Technology Preview (CTP) 2.1 es la versión pública más reciente de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. En [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 se han incorporado o mejorado las siguientes características.
 
 - [Clústeres de macrodatos](#bigdatacluster)
   - Implementación de aplicaciones de Python y R
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 2.1 es la versión pública más reciente de 
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-Community Technology Preview (CTP) 2.0 es la primera versión pública de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. En [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0 se han incorporado o mejorado las siguientes características.
+Community Technology Preview (CTP) 2.0 es la primera versión pública de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. En [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 se han incorporado o mejorado las siguientes características.
 
 - [Clústeres de macrodatos](#bigdatacluster)
   - Implementación de un clúster de macrodatos con contenedores SQL y Spark Linux en Kubernetes
@@ -163,7 +163,7 @@ Compatibilidad total para utilizar la ampliamente utilizada codificación de car
 
 Por ejemplo, de `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 solo está disponible para las intercalaciones de Windows que admiten caracteres adicionales, tal y como se presentó en SQL Server 2012. `NCHAR` y `NVARCHAR` solo permiten la codificación UTF-16 y no se han realizado cambios.
 
-Esta característica puede proporcionar ahorros significativos de almacenamiento, según el juego de caracteres que se esté usando. Por ejemplo, si se cambia un tipo de datos de columna existente con cadenas latinas de `NCHAR(10)` a `CHAR(10)` utilizando una intercalación habilitada para UTF-8, se reducen a la mitad los requisitos de almacenamiento. Esto se debe a que `NCHAR(10)` requiere 22 bytes para el almacenamiento, mientras que `CHAR(10)` necesita 12 bytes para la misma cadena Unicode.
+Esta característica puede proporcionar ahorros significativos de almacenamiento, según el juego de caracteres que se esté usando. Por ejemplo, si se cambia un tipo de datos de columna existente con cadenas latinas de `NCHAR(10)` a `CHAR(10)` utilizando una intercalación habilitada para UTF-8, se reducen a la mitad los requisitos de almacenamiento. Esto se debe a que `NCHAR(10)` requiere 20 bytes para el almacenamiento, mientras que `CHAR(10)` necesita 10 bytes para la misma cadena Unicode.
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Característica Resumable online index create (CTP 2.0)
 
@@ -329,7 +329,7 @@ Para obtener más información, consulte [Novedades de SQL Server Machine Learni
 
 La infraestructura de generación de perfiles ligera de consultas (LWP) proporciona datos de rendimiento de consulta de forma más eficaz que con las tecnologías de generación de perfiles estándar. La generación de perfiles ligera ahora está habilitada de forma predeterminada. Se presentó en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. La generación de perfiles ligera ofrece un mecanismo de recopilación de estadísticas de ejecución de consultas con una sobrecarga esperada del 2 % de CPU, en comparación con una sobrecarga de hasta un 75 % de CPU con el mecanismo de generación de perfiles de consultas estándar. En versiones anteriores, estaba desactivada de forma predeterminada. Los administradores de base de datos pueden habilitarla con la función [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Para obtener más información sobre la generación de perfiles ligera, consulte [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar).
+Para obtener más información sobre la generación de perfiles ligera, vea [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar).
 
 ### <a id="polybase"></a>Nuevos conectores de PolyBase
 

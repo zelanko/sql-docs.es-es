@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800579"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410712"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , se usan expresiones con operadores y funciones comunes para crear informes paginados eficaces y flexibles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -420,9 +420,9 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 ## <a name="Indicator"></a>7. Usar un indicador para mostrar la comparación de ventas  
-En esta sección agregará una nueva columna y usará un indicador para mostrar si las compras hasta la fecha de una persona están por encima o por debajo del promedio de compras hasta la fecha. La función **Redondear** quita los decimales de los valores.  
+En esta sección agregará una nueva columna y usará un indicador para mostrar si las compras hasta la fecha de un usuario están por encima o por debajo del promedio de compras hasta la fecha. La función **Redondear** quita los decimales de los valores.  
   
-Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede saltarse el procedimiento "Para configurar el indicador" y copiar o pegar las expresiones completas de este tutorial en el cuadro de diálogo **Expresión** .  
+Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede saltarse el procedimiento "Para configurar el indicador" y copiar o pegar las expresiones completas de este tutorial en el cuadro de diálogo **Expresión**.  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>Para agregar la columna Promedio + o -  
   
@@ -587,9 +587,9 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
 8. Haga clic en **Parámetros** y en la lista **Valores** , haga doble clic en **RowColor**.  
   
-22. Inmediatamente después de `Parameters!RowColor.Value`, escriba **, "Blanco")**  
+22. Inmediatamente después de `Parameters!RowColor.Value`, escriba **, "Blanco")**.  
   
-    La expresión completa es: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    La expresión completa es: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
     ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

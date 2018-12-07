@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520233"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzar el inicio de un clúster WSFC sin un quórum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51697583"
   
 1.  Abra el Administrador de clústeres de conmutación por error y conéctese al nodo de clúster deseado para forzarlo en línea.  
   
-2.  En el panel **Acciones** , haga clic en **Forzar inicio de clúster**y, a continuación, en **Sí, forzar el inicio del clúster**.  
+2.  En el panel **Acciones**, haga clic en **Forzar inicio de clúster** y después en **Sí, forzar el inicio del clúster**.  
   
 3.  En el panel izquierda, en el árbol **Administrador de clústeres de conmutación por error** , haga clic en el nombre del clúster.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "51697583"
   
 3.  Use `Stop-ClusterNode` para asegurarse de que el servicio de clúster está detenido.  
   
-4.  Use `Start-ClusterNode` con `–FixQuorum` para forzar que se inicie el servicio de clúster.  
+4.  Use `Start-ClusterNode` con `-FixQuorum` para forzar que se inicie el servicio de clúster.  
   
-5.  Use `Get-ClusterNode` con `–Propery NodeWieght = 1` para establecer el valor que garantiza que el nodo es un miembro con derecho a voto del quórum.  
+5.  Use `Get-ClusterNode` con `-Propery NodeWieght = 1` para establecer el valor que garantiza que el nodo es un miembro con derecho a voto del quórum.  
   
 6.  Enviar las propiedades de nodo de clúster en un formato legible.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "51697583"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

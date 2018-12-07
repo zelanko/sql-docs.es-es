@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6919f19a3feec0122ac76d2b4cb4f0bdbbc68466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691574"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515780"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47691574"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47691574"
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo** , seleccione **Guardar***nombre_de_tabla*.  
+9. En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Para mover un índice existente a un grupo de archivos distinto en el Explorador de objetos  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47691574"
   
 8.  Haga clic en **Aceptar**.  
   
- La siguiente información está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice –** *nombre_índice* :  
+ La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** *nombre_índice*:  
   
  **Grupo de archivos**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos.  

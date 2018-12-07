@@ -11,18 +11,18 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7558ff9f09d003088dc1f7c4d00d3a032d8c478a
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269748"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858560"
 ---
 # <a name="the-memory-optimized-filegroup"></a>El grupo de archivos con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para crear tablas optimizadas para memoria, primero debe crear un grupo de archivos optimizados para memoria. El grupo de archivos optimizados para memoria contiene uno o varios contenedores. Cada contenedor contiene archivos de datos, archivos delta o ambos tipos de archivos.  
   
- Aunque las filas de datos de las tablas SCHEMA_ONLY no se conservan y los metadatos de las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa se almacenan en los catálogos tradicionales, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] todavía requiere un grupo de archivos optimizados para memoria para que las tablas SCHEMA_ONLY optimizadas para memoria proporcionen una experiencia uniforme para las bases de datos con tablas optimizadas para memoria.  
+ Aunque las filas de datos de las tablas `SCHEMA_ONLY` no se conservan y los metadatos de las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa se almacenan en los catálogos tradicionales, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] todavía requiere un grupo de archivos optimizados para memoria para que las tablas `SCHEMA_ONLY` optimizadas para memoria proporcionen una experiencia uniforme para las bases de datos con tablas optimizadas para memoria.  
   
  El grupo de archivos optimizados para memoria se basa en el grupo de archivos de FILESTREAM, con las diferencias siguientes:  
   
@@ -48,16 +48,21 @@ Las limitaciones siguientes se aplican al grupo de archivos optimizados para mem
   
 -   Una vez que use un grupo de archivos optimizados para memoria, solo puede quitarlo si quita la base de datos. En un entorno de producción, no es probable que necesite quitar el grupo de archivos optimizados para memoria.  
   
--   No puede quitar un contenedor que no esté vacío ni mover pares de archivos de datos y delta a otro contenedor en el grupo de archivos optimizados para memoria.  
-  
--   No puede especificar `MAXSIZE` para el contenedor.  
+-   No puede quitar un contenedor que no esté vacío ni mover pares de archivos de datos y delta a otro contenedor en el grupo de archivos optimizados para memoria.    
   
 ## <a name="configuring-a-memory-optimized-filegroup"></a>Configurar un grupo de archivos con optimización para memoria  
- Debe considerar la posibilidad de crear varios contenedores en el mismo grupo de archivos optimizados para memoria y distribuirlos en distintas unidades para lograr más ancho de banda para transmitir los datos en memoria.  
+Considere la posibilidad de crear varios contenedores en el mismo grupo de archivos optimizados para memoria y distribuirlos en otras unidades para lograr más ancho de banda para transmitir los datos en memoria. 
+ 
+En un escenario de varios contenedores y varias unidades, los archivos de datos y delta se asignan por turnos (round robin) en los contenedores. El primer archivo de datos se asigna al primer contenedor y el archivo delta se asigna desde el siguiente contenedor, y este modelo de asignación se repite. Este esquema de asignación distribuye uniformemente los archivos de datos y delta entre los contenedores si tiene un número impar de unidades, cada una de ellas asignada a un contenedor. Sin embargo, si tiene un número par de unidades, cada una de ellas asignada a un contenedor, puede provocar un almacenamiento desequilibrado donde los archivos de datos se asignan a las unidades impares y los archivos delta se asignan a las unidades pares. Para obtener un flujo equilibrado de E/S en la recuperación, considere la posibilidad de colocar los pares de archivos de datos y delta en los mismos ejes o almacenamiento.
   
- Al configurar el almacenamiento, debe proporcionar una cantidad de espacio en disco disponible que sea cuatro veces el tamaño de tablas durables optimizadas para memoria. También debe asegurarse de que el subsistema de E/S admita los IOPS necesarios para la carga de trabajo. Si los pares de archivos de datos y delta se rellenan en las IOPS especificadas, necesita 3 veces esas IOPS para dar cabida a las operaciones de almacenamiento y mezcla. Puede agregar capacidad de almacenamiento e IOPS si agrega uno o varios contenedores al grupo de archivos optimizados para memoria.  
+Al configurar el almacenamiento, debe proporcionar una cantidad de espacio en disco disponible que sea cuatro veces el tamaño de tablas durables optimizadas para memoria. También debe asegurarse de que el subsistema de E/S admita los IOPS necesarios para la carga de trabajo. Si los pares de archivos de datos y delta se rellenan en las IOPS especificadas, necesita el triple de esas IOPS para dar cabida a las operaciones de almacenamiento y combinación. Puede agregar capacidad de almacenamiento e IOPS si agrega uno o varios contenedores al grupo de archivos optimizados para memoria.  
+ 
+> [!CAUTION]
+> Si se establece un valor `MAXSIZE` para el grupo de archivos optimizados para memoria y los archivos de punto de control superan el tamaño máximo del contenedor, la base de datos se convertirá en SUSPECT.   
+> En este caso no intente establecer la base de datos OFFLINE y ONLINE, lo que haría que permaneciera en un estado RECOVERY_PENDING.
   
 ## <a name="see-also"></a>Ver también  
- [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
- [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md) 
-  
+[Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
+[Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
+

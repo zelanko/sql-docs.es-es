@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e69ce37e35b259ff44d1f1d1ddb064894729adf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800713"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406692"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47800713"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47800713"
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
-3.  Haga clic en el signo más para expandir la tabla en la que desea ver las propiedades de las estadísticas.  
+3.  Haga clic en el signo más para expandir la tabla en la que quiere ver las propiedades de las estadísticas.  
   
 4.  Haga clic en el signo más para expandir la carpeta **Estadísticas** .  
   

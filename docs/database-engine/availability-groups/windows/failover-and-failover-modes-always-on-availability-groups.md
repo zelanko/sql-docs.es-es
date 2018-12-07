@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 048b5d627e33ac241f68c7d2017535ddb5e0bd16
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523399"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51605315"
   
  Las formas de conmutación por error que admite una determinada réplica de disponibilidad se especifican mediante la propiedad *modo de conmutación por error* . En una determinada réplica de disponibilidad, los modos de conmutación por error posibles dependen del [modo de disponibilidad](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) de la réplica, como sigue:  
   
--   Las**réplicas de confirmación sincrónica** admiten dos valores: automático o manual. El valor “automático” admite tanto la conmutación por error automática como la manual. Para evitar la pérdida de datos, la conmutación automática por error y la conmutación por error planeada requieren que el destino de conmutación por error sea una réplica secundaria de confirmación sincrónica con un estado de sincronización apropiado (esto indica que todas las bases de datos secundarias del destino de conmutación por error están sincronizadas con la base de datos principal correspondiente). Siempre que una réplica secundaria no cumple las dos condiciones, solo admite la conmutación por error manual forzada. Tenga en cuenta que la conmutación por error también admite una réplica cuyo rol esté en el estado RESOLVING.  
+-   Las **réplicas de confirmación sincrónica** admiten dos valores: automático o manual. El valor “automático” admite tanto la conmutación por error automática como la manual. Para evitar la pérdida de datos, la conmutación automática por error y la conmutación por error planeada requieren que el destino de conmutación por error sea una réplica secundaria de confirmación sincrónica con un estado de sincronización apropiado (esto indica que todas las bases de datos secundarias del destino de conmutación por error están sincronizadas con la base de datos principal correspondiente). Siempre que una réplica secundaria no cumple las dos condiciones, solo admite la conmutación por error manual forzada. Tenga en cuenta que la conmutación por error también admite una réplica cuyo rol esté en el estado RESOLVING.  
   
 -   Las**réplicas de confirmación asincrónica** solo admiten el modo de conmutación por error manual. Además, debido a que nunca se sincronizan, solo admiten la conmutación por error forzada.  
   

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606775"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405230"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas
 
@@ -30,7 +30,7 @@ En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCu
   
 - Ya que la actualización es una operación unidireccional (no se puede degradar el formato de archivo), hay un valor en la separación de la habilitación de características nuevas para una operación independiente dentro de la base de datos. Es posible revertir un valor a un nivel de compatibilidad de la base de datos anterior.  El nuevo modelo reduce el número de pasos que hay que realizar durante una ventana de interrupción.  
   
-- Los cambios en el procesador de consultas pueden tener efectos complejos. Aun cuando un cambio "bueno" en el sistema puede ser positivo para la mayoría de las cargas de trabajo, para otras podría causar una regresión inaceptable en una consulta importante. Separar esta lógica del proceso de actualización permite que las características, como el Almacén de consultas, mitiguen las regresiones de elección del plan rápidamente o incluso las eviten completamente en servidores de producción.  
+- Los cambios en el procesador de consultas pueden tener efectos complejos. Aunque un cambio "bueno" en el sistema puede ser positivo para la mayoría de las cargas de trabajo, para otras podría causar una regresión inaceptable en una consulta importante. Separar esta lógica del proceso de actualización permite que las características, como el Almacén de consultas, mitiguen las regresiones de elección del plan rápidamente o incluso las eviten completamente en servidores de producción.  
   
 > [!IMPORTANT]  
 > Se prevén los siguientes comportamientos para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cuando se adjunta o se restaura una base de datos, así como después de una actualización local:

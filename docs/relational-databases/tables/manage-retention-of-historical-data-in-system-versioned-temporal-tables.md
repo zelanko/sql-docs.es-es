@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a209033dc614ad2cccd6c1138d89c462f5152a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698603"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417946"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Uso de Transact-SQL para ajustar una parte de la tabla de historial  
- Para ajustar solo una parte de la tabla de historial primero debe crear una [función de predicado en línea](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). En este ejemplo, supongamos que ha configurado la función de predicado en línea por primera vez el 1 de diciembre de 2015 y quiere ajustar a Azure todas las fechas de historial anteriores al 1 de noviembre de 2015. Para lograr esto, empiece por crear la siguiente función:  
+ Para ajustar solo una parte de la tabla de historial primero debe crear una [función de predicado en línea](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). En este ejemplo, supongamos que ha configurado la función de predicado en línea por primera vez el 1 de diciembre de 2015 y quiere ajustar en Azure todas las fechas de historial anteriores al 1 de noviembre de 2015. Para lograr esto, empiece por crear la siguiente función:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -174,7 +174,7 @@ COMMIT ;
   
 -   Tareas periódicas de mantenimiento de partición  
   
- En la ilustración, supongamos que deseamos mantener datos históricos durante 6 meses y queremos mantener todos los meses de datos en una partición independiente. Además, supongamos que hemos activado la versión del sistema en septiembre de 2015.  
+ En la ilustración, supongamos que se quieren mantener datos históricos durante seis meses y mantener todos los meses de datos en una partición independiente. Además, supongamos que se ha activado el control de versiones del sistema en septiembre de 2015.  
   
  Una tarea de configuración de particiones crea la configuración inicial de partición de la tabla de historial. En este ejemplo, crearíamos las mismas particiones de número que el tamaño de la ventana deslizante, en meses, más una partición vacía adicional preparada previamente (se explica a continuación). Esta configuración garantiza que el sistema podrá almacenar correctamente los datos nuevos cuando iniciemos la tarea de mantenimiento periódico de la partición la primera vez y garantiza que nunca dividiremos las particiones con datos para evitar movimientos de datos valiosos. Debe realizar esta tarea mediante Transact-SQL con el siguiente script de ejemplo.  
   
@@ -184,7 +184,7 @@ COMMIT ;
   
 > **NOTA:** Consulte las consideraciones de rendimiento con las particiones de tabla siguientes para las implicaciones de rendimiento de uso de la opción RANGE LEFT frente a la opción RANGE RIGHT al configurar la creación de particiones.  
   
- Tenga en cuenta que la primera y última partición están "abiertas" en los límites inferior y superior respectivamente para asegurarse de que cada nueva fila tiene la partición de destino independientemente del valor de la columna de partición.   
+ Tenga en cuenta que la primera y última partición están "abiertas" en los límites inferior y superior respectivamente para asegurarse de que cada fila nueva tiene la partición de destino con independencia del valor de la columna de partición.   
 A medida que pasa el tiempo, las nuevas filas de la tabla del historial se dirigirán a particiones superiores. Cuando se llene la partición 6ª, se habrá alcanzado el período de retención de destino. Este es el momento en el que se debe iniciar la tarea de mantenimiento periódico de la partición por primera vez (debe programarse para ejecutarse periódicamente; una vez al mes en este ejemplo).  
   
  La imagen siguiente muestra las tareas de mantenimiento periódico de la partición (vea los pasos detallados a continuación).  
@@ -333,7 +333,7 @@ COMMIT TRANSACTION
 ### <a name="performance-considerations-with-table-partitioning"></a>Consideraciones de rendimiento con las particiones de tabla  
  Es importante realizar las operaciones MERGE y SPLIT RANGE para evitar cualquier movimiento de datos, ya que este puede provocar una sobrecarga considerable del rendimiento. Para obtener más información, vea [Modificar una función de partición](../../relational-databases/partitions/modify-a-partition-function.md). Conseguirá esto usando la opción RANGE LEFT en lugar de la opción RANGE RIGHT cuando aplique [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
   
- Vamos a explicar primero visualmente el significado de las opciones RANGE LEFT y RANGE RIGHT:  
+ Primero se va a explicar visualmente el significado de las opciones RANGE LEFT y RANGE RIGHT:  
   
  ![Creación de particiones3](../../relational-databases/tables/media/partitioning3.png "Creación de particiones3")  
   

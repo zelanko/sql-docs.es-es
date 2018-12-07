@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
@@ -16,12 +15,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd18c3f8614a47a96f5a917fdeb6e59025a2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828593"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616895"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores desde un archivo de Excel a un dominio
 
@@ -35,7 +34,7 @@ ms.locfileid: "47828593"
   
 -   Importe los valores en un dominio existente que ya contenga valores, en cuyo caso solamente se importarán los nuevos valores. Los valores existentes no se importarán.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Para importar dominios desde un archivo de Excel, es necesario tener instalado Excel en el equipo en el que está instalada la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] para poder importar valores de dominio o un dominio completo; también se debe haber creado un archivo de Excel con valores de dominio (vea [How the import works](#How)), así como haber creado y abierto una base de conocimiento en la que importar el dominio.  
@@ -67,9 +66,9 @@ ms.locfileid: "47828593"
   
 10. Haga clic en **Aceptar**. Aparece una barra de progreso, indicando cuántos valores se han importado correctamente, cuántos no se han importado y cuál es el número total de valores. Haga clic en el botón **Cancelar** para cancelar el proceso.  
   
-11. Compruebe que aparece el mensaje “Importación completada” en el cuadro de diálogo **Importar valores del dominio** . En este cuadro de diálogo podrá comprobar los valores que se han importado correctamente y los que no. Indica el nombre y la ruta de acceso del archivo, el estado de conclusión de la operación, cuántos valores se han importado correctamente, cuántos no se han importado y el número total de valores procesados.  
+11. Compruebe que aparece el mensaje "Importación completada" en el cuadro de diálogo **Importar valores del dominio**. En este cuadro de diálogo podrá comprobar los valores que se han importado correctamente y los que no. Indica el nombre y la ruta de acceso del archivo, el estado de conclusión de la operación, cuántos valores se han importado correctamente, cuántos no se han importado y el número total de valores procesados.  
   
-12. Para aquellos valores que no se importaron correctamente, haga clic en **Registro** para mostrar el cuadro de diálogo **Importar valores de dominio: valores con error** y ver por qué se produjo un error en la operación de importación. La columna **Valor con error** muestra los valores que no se pudieron importar desde un archivo de Excel a un dominio, y la columna **Motivo** explica por qué se produjo un error en la importación. Haga clic en **Copiar al Portapapeles** para copiar la tabla **Valor con error** en el Portapapeles, desde donde podrá copiarla en otro programa, como una hoja de cálculo de Excel o un archivo del Bloc de notas. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Valores con error** .  
+12. Para aquellos valores que no se importaron correctamente, haga clic en **Registro** para mostrar el cuadro de diálogo **Importar valores de dominio: valores con error** y ver por qué se ha producido un error en la operación de importación. La columna **Valor con error** muestra los valores que no se pudieron importar desde un archivo de Excel a un dominio, y la columna **Motivo** explica por qué se produjo un error en la importación. Haga clic en **Copiar al Portapapeles** para copiar la tabla **Valor con error** en el Portapapeles, desde donde podrá copiarla en otro programa, como una hoja de cálculo de Excel o un archivo del Bloc de notas. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Valores con error** .  
   
 13. Haga clic en **Aceptar** para completar la operación de importación y cerrar el cuadro de diálogo. Si la importación ha finalizado correctamente, la lista de valores de dominio de la página **Valores del dominio** se actualiza para incluir los nuevos valores importados. El filtro se cambia a **Todos los valores** y se selecciona **Mostrar solo nuevo** . Si se selecciona **Mostrar solo nuevo** después de realizar la operación de importación, solo se mostrarán los valores importados desde el archivo de Excel.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "47828593"
   
     -   El formato esperado es que la primera columna contenga valores iniciales y las columnas siguientes sinónimos.  
   
-    -   Puede importar varios sinónimos en la misma fila o en filas diferentes. Por ejemplo, si desea importar “NYC” y “New York City” como sinónimos de “New York”, puede importar una única fila con “New York” en la columna 1, “NYC” en la columna 2 y “New York City” en la columna 3; o importar una fila con “New York” en la columna 1 y “NYC” en la columna 2, y otra fila con “New York” en la columna 1 y “New York City” en la columna 2. Tenga en cuenta que si el valor “New York” ya existe en el dominio, solo se agregarán los sinónimos, y el usuario no recibirá ningún error durante el proceso de importación indicándole que el valor ya existe. Si el primer valor no existe, se agregará al dominio.  
+    -   Puede importar varios sinónimos en la misma fila o en filas diferentes. Por ejemplo, si quiere importar "NYC" y "New York City" como sinónimos de "New York", puede importar una única fila con "New York" en la columna 1, "NYC" en la columna 2 y "New York City" en la columna 3; o bien importar una fila con "New York" en la columna 1 y "NYC" en la columna 2, y otra fila con "New York" en la columna 1 y "New York City" en la columna 2. Tenga en cuenta que si el valor "New York" ya existe en el dominio, solo se agregarán los sinónimos, y el usuario no recibirá ningún error durante el proceso de importación indicándole que el valor ya existe. Si el primer valor no existe, se agregará al dominio.  
   
  Se aplican las reglas siguientes al archivo de Excel utilizado para la importación:  
   

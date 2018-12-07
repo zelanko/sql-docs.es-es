@@ -1,7 +1,7 @@
 ---
 title: Seguimiento de SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439807"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use eventos extendidos en su lugar.  
-  
+> [!IMPORTANT]
+> Seguimiento de SQL y [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] están en desuso. El espacio de nombres *Microsoft.SqlServer.Management.Trace* que contiene los objetos Trace y Replay de Microsoft SQL Server también están en desuso. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> Use eventos extendidos en su lugar. Para obtener más información sobre [Eventos extendidos ](../../relational-databases/extended-events/extended-events.md), vea [Inicio rápido: Eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) y [Uso de XEvent Profiler de SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 ## <a name="benefits-of-sql-trace"></a>Ventajas de seguimiento SQL  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece procedimientos almacenados del sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] para crear seguimientos en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Puede utilizar estos procedimientos almacenados del sistema desde sus propias aplicaciones para crear seguimientos manualmente, en lugar de utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Esto permite escribir aplicaciones personalizadas específicas para las necesidades de la organización.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece procedimientos almacenados del sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] para crear seguimientos en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Puede utilizar estos procedimientos almacenados del sistema desde sus propias aplicaciones para crear seguimientos manualmente, en lugar de utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Esto permite escribir aplicaciones personalizadas específicas para las necesidades de la organización.  
   
 ## <a name="sql-trace-architecture"></a>Arquitectura de Seguimiento de SQL  
- Los orígenes de eventos pueden ser cualquier origen que genere el evento de seguimiento, como lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] o eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tales como interbloqueos. Para obtener más información acerca de los eventos, vea [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Después de producirse un evento, si la clase de evento se ha incluido en una definición de seguimiento, el seguimiento recopila la información sobre el evento. Si se han definido filtros para la clase de evento en la definición del seguimiento, éstos se aplican y la información de los eventos de seguimiento se pasa a una cola. Desde la cola, la información de seguimiento se escribe en un archivo o puede usarla un SMO en aplicaciones, como el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. En el siguiente diagrama se muestra el modo en que Seguimiento de SQL recopila eventos durante una traza.  
+Los orígenes de eventos pueden ser cualquier origen que genere el evento de seguimiento, como lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] o eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tales como interbloqueos. Para obtener más información acerca de los eventos, vea [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Después de producirse un evento, si la clase de evento se ha incluido en una definición de seguimiento, el seguimiento recopila la información sobre el evento. Si se han definido filtros para la clase de evento en la definición del seguimiento, éstos se aplican y la información de los eventos de seguimiento se pasa a una cola. Desde la cola, la información de seguimiento se escribe en un archivo o puede usarla un SMO en aplicaciones, como el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. En el siguiente diagrama se muestra el modo en que Seguimiento de SQL recopila eventos durante una traza.  
   
- ![Proceso de seguimiento de eventos del motor de base de datos](../../relational-databases/sql-trace/media/tracarch.gif "Proceso de seguimiento de eventos del motor de base de datos")  
+![Proceso de seguimiento de eventos del motor de base de datos](../../relational-databases/sql-trace/media/tracarch.gif "Proceso de seguimiento de eventos del motor de base de datos")  
   
 ## <a name="sql-trace-terminology"></a>Terminología de Seguimiento de SQL  
- Los términos siguientes describen los conceptos clave de Seguimiento de SQL.  
+Los términos siguientes describen los conceptos clave de Seguimiento de SQL.  
   
  **Evento**  
  Repetición de una acción en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -70,7 +72,7 @@ ms.locfileid: "51571454"
  En el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], tabla que se crea cuando se guarda un seguimiento en una tabla.  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>Usar columnas de datos para describir eventos devueltos  
- Seguimiento de SQL utiliza columnas de datos en la salida del seguimiento para describir eventos devueltos cuando se ejecuta el seguimiento. En la tabla siguiente se describen las columnas de datos de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , que son las mismas que usa Seguimiento de SQL, y se indican las columnas seleccionadas de manera predeterminada.  
+Seguimiento de SQL utiliza columnas de datos en la salida del seguimiento para describir eventos devueltos cuando se ejecuta el seguimiento. En la tabla siguiente se describen las columnas de datos de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , que son las mismas que usa Seguimiento de SQL, y se indican las columnas seleccionadas de manera predeterminada.  
   
 |Columna de datos|Número de columna|Descripción|  
 |-----------------|-------------------|-----------------|  

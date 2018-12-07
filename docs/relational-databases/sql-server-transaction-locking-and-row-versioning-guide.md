@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511768"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661122"
   
  Si se produce el error de una instrucción en tiempo de ejecución (como una infracción de restricciones) en un archivo por lotes, el comportamiento predeterminado de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consiste en revertir solamente la instrucción que generó el error. Puede modificar este comportamiento con la instrucción `SET XACT_ABORT`. Una vez ejecutada la instrucción `SET XACT_ABORT`, los errores de instrucciones en tiempo de ejecución hacen que se revierta automáticamente la transacción actual. Los errores de compilación, como los de sintaxis, no se ven afectados por `SET XACT_ABORT`. Para obtener más información, vea [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Cuando se producen errores, la acción correctora (`COMMIT` o `ROLLBACK`) debería incluirse en el código de aplicación. Una herramienta eficaz para controlar errores, incluidos los de transacciones, es la construcción TRY…CATCH de [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY…CATCH`. Para obtener más información y ejemplos que incluyan transacciones, vea [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede usar la instrucción `THROW` para generar una excepción y transferir la ejecución a un bloque `CATCH` o a una construcción `TRY…CATCH`. Para obtener más información, vea [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
+ Cuando se producen errores, la acción correctora (`COMMIT` o `ROLLBACK`) debería incluirse en el código de aplicación. Una herramienta eficaz para controlar errores, incluidos los de transacciones, es la construcción TRY…CATCH de [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH`. Para obtener más información y ejemplos que incluyan transacciones, vea [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede usar la instrucción `THROW` para generar una excepción y transferir la ejecución a un bloque `CATCH` o a una construcción `TRY...CATCH`. Para obtener más información, vea [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Errores de compilación y tiempo de ejecución del modo de confirmación automática  
  En el modo de confirmación automática, a veces parece que [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ha revertido un proceso por lotes completo en vez de revertir solamente una instrucción SQL. Esto sucede si se trata de un error de compilación, no en el caso de un error en tiempo de ejecución. Los errores de compilación impiden que [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] genere un plan de ejecución, por lo que no se ejecuta ninguna instrucción del proceso por lotes. Aunque parezca que se han revertido todas las instrucciones anteriores a la que generó el error, el error impidió que se ejecutara ninguna instrucción del proceso por lotes. En el ejemplo siguiente, no se ejecutó ninguna de las instrucciones `INSERT` del tercer proceso por lotes debido a un error de compilación. Parece que se han revertido las dos primeras instrucciones `INSERT` cuando, en realidad, nunca se ejecutaron.  
@@ -1839,7 +1839,7 @@ GO
   
  Una transacción de larga duración puede provocar graves problemas para una base de datos de la siguiente manera:  
   
--   Si se cierra una instancia de servidor después de que una transacción activa haya realizado un gran número de modificaciones no confirmadas, la fase de recuperación del siguiente reinicio puede durar bastante más que el tiempo especificado en la opción de configuración del servidor **recovery interval** o la opción `ALTER DATABASE … SET TARGET_RECOVERY_TIME`. Estas opciones controlan la frecuencia de puntos de comprobación activos e indirectos, respectivamente. Para obtener más información sobre los tipos de puntos de comprobación, consulte [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   Si se cierra una instancia de servidor después de que una transacción activa haya realizado un gran número de modificaciones no confirmadas, la fase de recuperación del siguiente reinicio puede durar bastante más que el tiempo especificado en la opción de configuración del servidor **recovery interval** o la opción `ALTER DATABASE ... SET TARGET_RECOVERY_TIME`. Estas opciones controlan la frecuencia de puntos de comprobación activos e indirectos, respectivamente. Para obtener más información sobre los tipos de puntos de comprobación, consulte [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 -   Y, lo que es más importante, aunque la transacción en espera genere muy poco registro, la transacción retiene el truncamiento del registro de manera indefinida y provoca el excesivo crecimiento y llenado del mismo. Si el registro de la transacción se llena, la base de datos no puede realizar más actualizaciones. Para obtener más información, vea [Guía de arquitectura y administración de registros de transacciones de SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server)&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) y [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   

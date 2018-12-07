@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf89b1839fe17df60d97719482c4418f7234eeff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d19ecb9c4f14c0f9750a7344a6c2c442785cbb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692242"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416142"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>Método ConfigurationSetting - RestoreEncryptionKey
   Vuelve a aplicar la clave de cifrado especificada a la base de datos del servidor de informes.  
@@ -58,7 +58,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
 ## <a name="remarks"></a>Notas  
- Si ya existe una entrada para el servidor de informes en la base de datos del servidor de informes, se elimina. A continuación, se crea la nueva entrada utilizando la clave de cifrado especificada y la clave pública del servidor de informes.  
+ Si ya existe una entrada para el servidor de informes en la base de datos del servidor de informes, se elimina. Después, se crea la entrada con la clave de cifrado especificada y la clave pública del servidor de informes.  
   
  El método es más efectivo cuando se llama después del método [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) , que borra la lista de claves de cifrado.  
   

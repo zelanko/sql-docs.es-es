@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fe389985659013e88009822eb20cf21302423e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029434"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712556"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>¿Qué es SQL Server Reporting Services (SSRS)?
 
@@ -34,9 +34,9 @@ Cree, implemente y administre informes móviles y paginados de Reporting Service
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Crear, implementar y administrar informes paginados y móviles
 
-SQL Server Reporting Services es una solución que los clientes pueden implementar de forma local para crear, publicar y administrar informes y, luego, entregarlos a los usuarios adecuados de distintas formas: visualizándolos en el explorador web, en el dispositivo móvil o como correo electrónico en su Bandeja de entrada.
+SQL Server Reporting Services es una solución que los clientes pueden implementar de forma local para crear, publicar y administrar informes y, luego, entregarlos a los usuarios adecuados de distintas formas: visualizándolos en el explorador web, en el dispositivo móvil, o bien como correo electrónico en su Bandeja de entrada.
 
-Para SQL Server 2016, Reporting Services ofrece un conjunto actualizado de productos:
+SQL Server Reporting Services ofrece un conjunto actualizado de productos:
 
 * **Informes paginados "tradicionales"** actualizados, de modo que pueda crear informes de aspecto moderno, con herramientas actualizadas y nuevas características para crearlos.
 * **Nuevos informes móviles** con un diseño con capacidad de respuesta que se adapta a diferentes dispositivos y a las distintas formas en que los sostiene.
@@ -46,7 +46,7 @@ Siga leyendo para obtener más información sobre estos productos.
 
 ### <a name="whats-new-in-reporting-services"></a>Novedades de Reporting Services
 
-Estos orígenes le mantendrán al día sobre las nuevas funciones en SQL Server 2016 Reporting Services.
+Estos orígenes le mantendrán al día sobre las nuevas funciones en SQL Server Reporting Services.
 
 * [Novedades de Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 * [Blog del equipo de SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
@@ -56,7 +56,7 @@ Estos orígenes le mantendrán al día sobre las nuevas funciones en SQL Server 
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
-Reporting Services está asociado con informes paginados "tradicionales" con un estilo de documento en los que, cuantos más datos tenga, más filas contendrán las tablas y más páginas contendrá el informe. Es un aspecto positivo si queremos generar documentos que tengan un diseño fijo, píxeles perfectos y que estén optimizados para la impresión, como los archivos PDF y los archivos de Word.
+Reporting Services está asociado con informes paginados "tradicionales" con un estilo de documento en los que, cuantos más datos tenga, más filas contendrán las tablas y más páginas contendrá el informe. Es un aspecto positivo para generar documentos que tengan un diseño fijo, píxeles perfectos y que estén optimizados para la impresión, como los archivos PDF y de Word.
 
 Esta carga de trabajo esencial de BI sigue existiendo en la actualidad, por lo que la hemos modernizado. Ahora puede crear informes de aspecto moderno con características nuevas y actualizadas mediante el [Generador de informes](../reporting-services/report-builder/report-builder-in-sql-server-2016.md) o el Diseñador de informes de [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
@@ -71,9 +71,9 @@ Esta carga de trabajo esencial de BI sigue existiendo en la actualidad, por lo q
 
 La informática móvil ha cambiado los dispositivos con los que tenemos que trabajar, por lo que, hoy en día, las personas tienen unas necesidades diferentes a la hora de crear informes. La experiencia de los informes de diseño fijo no funciona bien cuando se introducen tabletas y teléfonos. Algo diseñado para una pantalla ancha de PC no es una experiencia óptima en una pequeña pantalla de teléfono, no porque sea más pequeña, sino porque puede tener una orientación vertical u horizontal.
 
-Lo que necesita con estos factores de forma de pantalla claramente diferentes no es un diseño fijo, sino un diseño con capacidad de respuesta que se adapte a los distintos dispositivos y a las distintas formas en que los sostiene. Por este motivo, hemos agregado un nuevo tipo de informe: los informes móviles, que se basan en la tecnología Datazen, que adquirimos hace más o menos un año e integramos en el producto. Puede migrar los informes existentes de Datazen a Reporting Services con el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
+Lo que necesita con estos factores de forma de pantalla claramente diferentes no es un diseño fijo, sino un diseño con capacidad de respuesta que se adapte a los distintos dispositivos y a las distintas formas en que los sostiene. Por este motivo, hemos agregado un nuevo tipo de informe: los informes móviles, que se basan en la tecnología Datazen, que adquirimos aproximadamente hace un año e integramos en el producto. Puede migrar los informes existentes de Datazen a Reporting Services con el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
 
-Puede crear estos informes móviles en la nueva aplicación [Publicador de informes móviles](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . En las [aplicaciones nativas de Power BI para dispositivos móviles](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) para Windows 10, iOS, Android y HTML5, puede obtener acceso a los datos que tiene en la nube de Power BI, además de los datos locales de SQL Server 2016 Reporting Services. A medida que crea visualizaciones, el Publicador de informes móviles genera automáticamente datos de ejemplo para cada una de ellas; así, puede ver el aspecto que tendrá la visualización con los datos y comprobar qué tipo de datos va bien en cada visualización.
+Puede crear estos informes móviles en la nueva aplicación [Publicador de informes móviles](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . En las [aplicaciones nativas de Power BI para dispositivos móviles](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) para Windows 10, iOS, Android y HTML5, puede acceder a los datos que tiene en la nube de Power BI, además de los datos locales de SQL Server Reporting Services. A medida que crea visualizaciones, el Publicador de informes móviles genera automáticamente datos de ejemplo para cada una de ellas; así, puede ver el aspecto que tendrá la visualización con los datos y comprobar qué tipo de datos va bien en cada visualización.
 
 ## <a name="web-portal"></a>Portal web
 
@@ -83,7 +83,7 @@ Para los usuarios finales de Reporting Services en modo nativo, la entrada princ
 
 Puede aplicar su propia marca personalizada al portal web y puede crear KPI directamente en él. Los KPI pueden hacer que en el explorador aparezcan métricas empresariales clave para que pueda echarles un vistazo sin tener que abrir ningún informe. 
 
-El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora se trata de una aplicación HTML5 de una sola página y basada en estándares, para la que los exploradores modernos están optimizados: Microsoft Edge, Internet Explorer 10 y 11, Chrome, Firefox, Safari y todos los exploradores principales.
+El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora se trata de una aplicación HTML5 de una sola página y basada en estándares, para la que están optimizados los exploradores modernos: Edge, Internet Explorer 10 y 11, Chrome, Firefox, Safari y todos los exploradores principales.
 
 El contenido del portal web está organizado por tipo: informes móviles y paginados y KPI de Reporting Services, libros de Excel, conjuntos de datos compartidos y orígenes de datos compartidos que se usan como bloques de creación de los informes. Puede almacenarlos y administrarlos con seguridad aquí, en la jerarquía de carpetas tradicional. Puede etiquetar sus favoritos y administrar el contenido si dispone de ese rol.
 

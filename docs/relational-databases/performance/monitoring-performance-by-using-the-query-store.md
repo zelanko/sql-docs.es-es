@@ -1,7 +1,7 @@
 ---
 title: Supervisión del rendimiento mediante el Almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673334"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711506"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   La característica del Almacén de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece datos detallados sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente las diferencias de rendimiento provocadas por cambios en los planes de consulta. El Almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución y las conserva para su revisión. Además, separa los datos por ventanas de tiempo, lo que permite ver patrones de uso de la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar con la opción [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> Uso de la característica de consultas devueltas  
- Después de habilitar el Almacén de consultas, actualice la parte de la base de datos del panel del Explorador de objetos para agregar la sección **Almacén de consultas** .  
+Después de habilitar el Almacén de consultas, actualice la parte de la base de datos del panel del Explorador de objetos para agregar la sección **Almacén de consultas** .  
   
- ![Árbol de almacenamiento de consultas en el Explorador de objetos](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árbol de almacenamiento de consultas en el Explorador de objetos")  
+![Árbol del Almacén de consultas de SQL Server 2016 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 Query Store tree in SSMS Object Explorer")   ![Árbol del Almacén de consultas de SQL Server 2017 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 Query Store tree in SSMS Object Explorer") 
   
- Seleccione **Regressed Queries** (Consultas devueltas) para abrir el panel del mismo nombre **Regressed Queries** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. En el panel Regressed Queries (Consultas devueltas) se muestran las consultas y los planes del Almacén de consultas. Los cuadros desplegables de la parte superior le permiten seleccionar consultas en función de varios criterios. Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, aplicar y eliminar la aplicación de un plan de consulta, y actualizar la pantalla.  
+Seleccione **Regressed Queries** (Consultas devueltas) para abrir el panel del mismo nombre **Regressed Queries** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el panel Regressed Queries (Consultas devueltas) se muestran las consultas y los planes del Almacén de consultas. Use los cuadros desplegables de la parte superior para filtrar las consultas según diversos criterios: **Duración (ms)** (valor predeterminado), Tiempo de CPU (ms), Lecturas lógicas (KB), Escrituras lógicas (KB), Lecturas físicas (KB), Tiempo de CLR (ms), DOP, Consumo de memoria (KB), Recuento de filas, Memoria usada (KB), Memoria de base de datos temporal utilizada (KB) y Tiempo de espera (ms).  
+Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, forzar y no forzar un plan de consulta, alternar entre los formatos de cuadrícula y gráfico, comparar los planes seleccionados (si se ha seleccionado más de uno) y actualizar la pantalla.  
   
- ![Consultas retomadas en el explorador de objetos](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas retomadas en el explorador de objetos")  
+![Consultas devueltas de SQL Server 2016 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")  
   
- Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan**(Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.  
+Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan**(Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.
+
 ##  <a name="Waiting"></a> Búsqueda de consultas de espera
 
-A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], las estadísticas de espera por consulta a lo largo del tiempo están disponibles en el Almacén de consultas. En el Almacén de consultas, los tipos de espera se combinan en **categorías de espera**. La asignación de categorías de espera a tipos de espera está disponible en [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las estadísticas de espera por consulta a lo largo del tiempo están disponibles en el Almacén de consultas. En el Almacén de consultas, los tipos de espera se combinan en **categorías de espera**. La asignación de categorías de espera a tipos de espera está disponible en [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+
+Haga clic en **Estadísticas de espera de consulta** para abrir el panel **Estadísticas de espera de consulta** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 o superior. En el panel Estadísticas de espera de consulta se muestra un gráfico de barras que contiene las categorías de espera principales del Almacén de consultas. Use la lista desplegable de la parte superior para seleccionar un criterio de agregado para el tiempo de espera: avg, max, min, std dev y **total** (valor predeterminado).
+
+ ![Estadísticas de espera de consulta de SQL Server 2017 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 Query Wait Statistics in SSMS Object Explorer")
+
+Para seleccionar una categoría de espera, haga clic en la barra; se mostrará una vista de detalle de la categoría de espera seleccionada. Este gráfico de barras nuevo contiene las consultas que han contribuido a esa categoría de espera. 
+  
+ ![Vista detallada de Estadísticas de espera de consulta de SQL Server 2017 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017 Query Wait Statistics detail view in SSMS Object Explorer")
+
+Use el cuadro desplegable de la parte superior para filtrar las consultas según diversos criterios de tiempo de espera para la categoría de espera seleccionada: avg, max, min, std dev y **total** (valor predeterminado). Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, aplicar y eliminar la aplicación de un plan de consulta, y actualizar la pantalla.  
 
 Las **categorías de espera** combinan distintos tipos de espera en cubos similares por naturaleza. Las distintas categorías de espera exigen un análisis de seguimiento diferente para resolver el problema, pero los tipos de espera de la misma categoría dan lugar a experiencias de solución de problemas muy similares; el proporcionar la consulta afectada además de las esperas sería la pieza que falta para completar correctamente la mayoría de las investigaciones de este tipo.
 
@@ -124,10 +136,9 @@ Estos son algunos ejemplos de cómo se puede obtener más información sobre la 
 |Altas esperas RESOURCE_SEMAPHORE por base de datos|Altas esperas de memoria en el Almacén de consultas para consultas concretas|Busque las consultas del Almacén de consultas que consumen más memoria. Estas consultas probablemente retrasan el progreso de las consultas afectadas. Considere la posibilidad de usar la sugerencia de consulta MAX_GRANT_PERCENT para estas consultas o para las consultas afectadas.|
 |Altas esperas LCK_M_X por base de datos|Altas esperas de bloqueo en el Almacén de consultas para consultas concretas|Compruebe los textos de consulta de las consultas afectadas e identifique las entidades de destino. En el Almacén de consultas, busque otras consultas que modifiquen la misma entidad, que se ejecuten con frecuencia o que tengan una gran duración. Tras identificar estas consultas, considere la posibilidad de cambiar la lógica de aplicación para mejorar la simultaneidad o use un nivel de aislamiento menos restrictivo.|
 |Altas esperas PAGEIOLATCH_SH por base de datos|Altas esperas de E/S del búfer en el Almacén de consultas para consultas concretas|Busque las consultas con un gran número de lecturas físicas en el Almacén de consultas. Si coinciden con las consultas con altas esperas de E/S, considere la posibilidad de introducir un índice en la entidad subyacente para llevar a cabo búsquedas en lugar de análisis y así minimizar la sobrecarga de E/S de las consultas.|
-|Altas esperas SOS_SCHEDULER_YIELD por base de datos|Altas esperas de CPU en el Almacén de consultas para consultas concretas|Busque las consultas del Almacén de consultas que consumen más CPU. Entre ellas, identifique las consultas cuya alta tendencia de CPU se correlaciona con altas esperas de CPU para las consultas afectadas. Céntrese en la optimización de las consultas: podría ser una regresión de plan o quizás un índice que falta.|
+|Altas esperas SOS_SCHEDULER_YIELD por base de datos|Altas esperas de CPU en el Almacén de consultas para consultas concretas|Busque las consultas del Almacén de consultas que consumen más CPU. Entre ellas, identifique las consultas cuya alta tendencia de CPU se correlaciona con altas esperas de CPU para las consultas afectadas. Céntrese en la optimización de las consultas: podría ser una regresión de plan o posiblemente un índice que falta.|
 
 ##  <a name="Options"></a> Opciones de configuración 
-
 Tiene disponibles las siguientes opciones para configurar los parámetros del almacén de consultas.
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> Mantener la estabilidad del rendimiento de consultas  
- En las consultas ejecutadas varias veces, puede observar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diferentes planes que han generado diferente duración y uso de los recursos. Con el Almacén de consultas puede detectar cuándo se ha devuelto el rendimiento de las consultas y determinar el plan óptimo en un período de interés. Luego puede forzar ese plan óptimo para futuras ejecuciones de consultas.  
+En las consultas ejecutadas varias veces, puede observar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diferentes planes que han generado diferente duración y uso de los recursos. Con el Almacén de consultas puede detectar cuándo se ha devuelto el rendimiento de las consultas y determinar el plan óptimo en un período de interés. Luego puede forzar ese plan óptimo para futuras ejecuciones de consultas.  
   
- También puede identificar el rendimiento incoherente de las consultas para una consulta con parámetros (ya sea con parámetros automáticos o con parámetros manuales). Entre los distintos planes puede identificar el plan que es lo suficientemente rápido y óptimo para todos o la mayoría de los valores de parámetros y forzar ese plan, manteniendo un rendimiento predecible para el conjunto más amplio de escenarios de usuario.  
+También puede identificar el rendimiento incoherente de una consulta con parámetros (ya sea con parámetros automáticos o con parámetros manuales). Entre los distintos planes puede identificar el plan que es lo suficientemente rápido y óptimo para todos o la mayoría de los valores de parámetros y forzar ese plan, manteniendo un rendimiento predecible para el conjunto más amplio de escenarios de usuario.  
   
- **Forzar o planear una consulta (aplicar directiva de forzado).** Cuando se fuerza un plan para una determinada consulta, cada vez que una consulta entra en ejecución, se ejecutará con el plan que se fuerza.  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Forzar un plan para una consulta (aplicar directiva de forzado)
+
+Cuando se fuerza un plan para una consulta determinada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta forzarlo en el optimizador. Si se produce un error al exigir el plan, se producirá un evento XEvent y el optimizador realizará su trabajo de forma normal.
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Al usar **sp_query_store_force_plan** solo puede forzar los planes que se grabaron por el almacén de consultas como un plan para esa consulta. Es decir, los únicos planes disponibles para una consulta son aquellos que ya se han usado para ejecutar la consulta mientras el Almacén de consultas estaba activo.  
+Al usar **sp_query_store_force_plan** solo puede forzar los planes que se grabaron por el almacén de consultas como un plan para esa consulta. Es decir, los únicos planes disponibles para una consulta son aquellos que ya se han usado para ejecutar la consulta mientras el Almacén de consultas estaba activo.  
   
- **Quitar el forzado de un plan para una consulta.** Para volver a confiar en el optimizador de consultas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular el plan de consulta óptimo, use **sp_query_store_unforce_plan** para eliminar la aplicación del plan que se seleccionó para la consulta.  
+### <a name="remove-plan-forcing-for-a-query"></a>Quitar el forzado de un plan para una consulta
+
+Para volver a confiar en el optimizador de consultas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular el plan de consulta óptimo, use **sp_query_store_unforce_plan** para eliminar la aplicación del plan que se seleccionó para la consulta.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

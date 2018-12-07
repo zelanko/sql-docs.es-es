@@ -13,12 +13,12 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb665581f6a85e073e900c18547ee20406a7582
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700771"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407722"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Ver la configuración de NodeWeight de quórum de clúster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51700771"
 2.  Consulte la vista [sys].[dm_hadr_cluster_members].  
   
 ### <a name="example-transact-sql"></a>Ejemplo (Transact-SQL)  
- En el siguiente ejemplo se consulta una vista de sistema para devolver valores para todos los nodos del clúster de dicha instancia.  
+ En el ejemplo siguiente se consulta una vista del sistema para devolver valores para todos los nodos del clúster de esa instancia.  
   
 ```tsql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
@@ -73,7 +73,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  Enviar las propiedades de nodo de clúster en un formato legible.  
   
 ### <a name="example-powershell"></a>Ejemplo (PowerShell)  
- En el siguiente ejemplo se envían algunas de las propiedades de nodo para el clúster denominado “Cluster001”.  
+ En el ejemplo siguiente se envían algunas de las propiedades de nodo para el clúster denominado "Cluster001".  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -96,7 +96,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Use **cluster.exe** para devolver el estado de nodo y los valores de NodeWeight  
   
 ### <a name="example-clusterexe"></a>Ejemplo (Cluster.exe)  
- En el siguiente ejemplo se envían algunas de las propiedades de nodo para el clúster denominado “Cluster001”.  
+ En el ejemplo siguiente se envían algunas de las propiedades de nodo para el clúster denominado "Cluster001".  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  

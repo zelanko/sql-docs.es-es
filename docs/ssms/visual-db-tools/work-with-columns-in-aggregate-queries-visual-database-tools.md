@@ -16,12 +16,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 393bc1e434071c82bc198531e855f9c355feaac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b3d6a176379c4cdfae4509e3ab3988202831c49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819253"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540656"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabajar con columnas en consultas de funciones agregadas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Los principios siguientes describen cómo puede hacer referencia a columnas de u
     WHERE price > 10  
     ```  
   
--   Si crea una condición de búsqueda que incluya una columna utilizada también en una cláusula GROUP BY o en una función de agregado, la condición de búsqueda puede aparecer como una cláusula WHERE o como una cláusula HAVING: puede decidir cuál al crear la condición. Por ejemplo, la siguiente instrucción crea un precio medio de los títulos de cada editorial y, a continuación, muestra la media de las editoriales cuyo precio medio supera los 10,00 USD:  
+-   Si crea una condición de búsqueda que incluya una columna que también se usa en una cláusula GROUP BY o en una función de agregado, la condición de búsqueda puede aparecer como una cláusula WHERE o como una cláusula HAVING: puede decidir cuál al crear la condición. Por ejemplo, la siguiente instrucción crea un precio medio de los títulos de cada editorial y, a continuación, muestra la media de las editoriales cuyo precio medio supera los 10,00 USD:  
   
     ```  
     SELECT pub_id, AVG(price)  

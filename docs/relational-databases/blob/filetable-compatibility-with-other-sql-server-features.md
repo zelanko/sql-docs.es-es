@@ -13,12 +13,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3e0a936d4898988dfeacfefe1bf00058b16fa5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522374"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidad de FileTable con otras características de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47757815"
   
 -   Además de estos impactos, los desencadenadores de las FileTables deben ocuparse de un par de comportamientos adicionales  
   
-    -   En el caso de operaciones de actualización no transaccional de una FileTable a través del sistema de archivos, es posible que el contenido de FILESTREAM esté bloqueado exclusivamente por otras operaciones de Win32 y quizá no se pueda acceder a él para operaciones de lectura y escritura a través del cuerpo del desencadenador. En casos como este, cualquier intento de acceso al contenido de FILESTREAM dentro del cuerpo del desencadenador puede provocar un error de “Infracción de uso compartido”. Los desencadenadores se deben diseñar para controlar ese tipo de errores apropiadamente.  
+    -   En el caso de operaciones de actualización no transaccional de una FileTable a través del sistema de archivos, es posible que el contenido de FILESTREAM esté bloqueado exclusivamente por otras operaciones de Win32 y quizá no se pueda acceder a él para operaciones de lectura y escritura a través del cuerpo del desencadenador. En casos como este, cualquier intento de acceso al contenido de FILESTREAM dentro del cuerpo del desencadenador puede provocar un error de "Infracción de uso compartido". Los desencadenadores se deben diseñar para controlar ese tipo de errores apropiadamente.  
   
     -   La imagen AFTER de FILESTREAM quizá no sea estable porque, en algunos casos, otras actualizaciones no transaccionales pueden escribir activamente en ella al mismo tiempo, debido a los modos de uso compartido permitidos en el acceso al sistema de archivos.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "47757815"
   
 -   La vista no tendrá semántica de FileTable. Es decir, las columnas de la vista (incluidas las columnas de atributos de archivo) se comportan como columnas de vistas normales sin ninguna semántica especial y lo mismo se aplica a las filas que representen archivos y directorios.  
   
--   La vista se puede actualizar basándose en la semántica “vista actualizable”, pero las restricciones de la tabla subyacente pueden rechazar las actualizaciones como en la tabla.  
+-   La vista se puede actualizar en función de la semántica de "vista actualizable", pero las restricciones de la tabla subyacente pueden rechazar las actualizaciones como en la tabla.  
   
 -   La ruta de acceso al archivo de un archivo se puede mostrar agregándola como columna explícita en la vista. Por ejemplo:  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **Vistas indizadas**  
  Las vistas indizadas actualmente no pueden incluir columnas FILESTREAM ni columnas calculadas o columnas calculadas persistentes que dependan de las columnas FILESTREAM. Además, este comportamiento se mantiene sin cambios con las vistas definidas en la FileTable.  

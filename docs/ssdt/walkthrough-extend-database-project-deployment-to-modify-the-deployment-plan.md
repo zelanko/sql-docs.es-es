@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531561"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Tutorial: Ampliar la implementación del proyecto de base de datos para modificar el plan de implementación
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) o un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Utilice un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para cambiar el plan antes de ejecutarlo y un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) para realizar operaciones mientras se ejecuta el plan. En este tutorial, creará un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) denominado SqlRestartableScriptContributor que agrega instrucciones IF a los lotes del script de implementación para permitir volver a ejecutar el script hasta que se completen en el caso de que se produzca un error durante la ejecución.  
@@ -58,7 +58,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
 1.  Cree un proyecto de bibliotecas de clases de Visual C# o Visual Basic llamado MyOtherDeploymentContributor.  
   
-2.  Cambie el nombre del archivo “Class1.cs” a “SqlRestartableScriptContributor.cs.”  
+2.  Cambie el nombre del archivo “Class1.cs” a “SqlRestartableScriptContributor.cs”.  
   
 3.  En el Explorador de soluciones, haga clic con el botón derecho en el nodo de proyecto y, a continuación, haga clic en **Agregar referencia**.  
   
@@ -191,7 +191,7 @@ A continuación, empiece a agregar el código a la clase.
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -674,7 +674,7 @@ Debe actualizar siempre el archivo de proyecto SQL para especificar el identific
   
     2.  Cree una carpeta nueva “MyContributors” donde se almacenarán los archivos de destino.  
   
-    3.  Cree un nuevo archivo “MyContributors.targets” en este directorio, agréguele el siguiente texto y guarde el archivo:  
+    3.  Cree un archivo nuevo “MyContributors.targets” en este directorio, agréguele el siguiente texto y guarde el archivo:  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -697,17 +697,17 @@ Debe actualizar siempre el archivo de proyecto SQL para especificar el identific
 Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin de pasar los parámetros para compilaciones de línea de comandos.  
   
 > [!NOTE]  
-> Debe actualizar siempre la propiedad “DeploymentContributors” para especificar el identificador de colaborador. Es el mismo identificador utilizado en el atributo “ExportDeploymentPlanModifier” en el archivo de origen del colaborador. Sin él su colaborador no se ejecutará al compilar el proyecto. Únicamente es necesario actualizar la propiedad "ContributorArguments" si tiene argumentos necesarios para ejecutar su colaborador.  
+> Debe actualizar siempre la propiedad “DeploymentContributors” para especificar el identificador de colaborador. Es el mismo identificador utilizado en el atributo “ExportDeploymentPlanModifier” en el archivo de origen del colaborador. Sin él su colaborador no se ejecutará al compilar el proyecto. Únicamente es necesario actualizar la propiedad “ContributorArguments” si tiene argumentos necesarios para ejecutar su colaborador.  
   
 ## <a name="deploy-the-database-project"></a>Implementar el proyecto de base de datos  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Para implementar el proyecto de SQL y generar un informe de implementación  
   
--   El proyecto se puede publicar o implementar de manera habitual en Visual Studio. No tiene más que abrir una solución que contenga el proyecto SQL y elegir la opción Publicar... en el menú contextual del proyecto, o usar F5 para una implementación de depuración en LocalDB. En este ejemplo, usaremos el cuadro de diálogo "Publicar..." para generar un script de implementación.  
+-   El proyecto se puede publicar o implementar de manera habitual en Visual Studio. Abra simplemente una solución que contenga el proyecto de SQL y elija la opción del menú contextual del botón secundario “Publicar…” para el proyecto, o utilice F5 para una implementación de depuración en LocalDB. En este ejemplo utilizaremos el diálogo “Publicar…” para generar un script de implementación.  
   
     1.  Abra Visual Studio y abra la solución que contiene el proyecto de SQL.  
   
-    2.  Haga clic con el botón derecho en el proyecto del Explorador de soluciones y elija la opción **Publicar…** .  
+    2.  Haga clic con el botón derecho en el proyecto del Explorador de soluciones y elija la opción **Publicar…**.  
   
     3.  Establezca el nombre del servidor y de la base de datos en los que vaya a publicar.  
   

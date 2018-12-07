@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6222c5829af5a63e4ab7fd079a405063f08ec5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f2efdc555a1fe236d42ea342846674154cbee5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661734"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393078"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Resolver problemas comunes con JSON en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ FOR JSON PATH
 Cada resultado de una consulta FOR JSON o la función JSON_QUERY en las expresiones de columna se formatea como un subobjeto JSON anidado independiente y se incluye en el resultado principal.  
 
 ### <a name="prevent-double-escaped-json-in-for-json-output"></a>Prevención de texto JSON con caracteres de doble escape en el resultado FOR JSON  
- **Pregunta.** Tengo texto JSON almacenado en una columna de tabla. Quiero incluirlo en el resultado de FOR JSON. Pero FOR JSON aplica caracteres de escape a todos los caracteres JSON, por lo que obtengo una cadena JSON en lugar de un objeto anidado, tal y como se muestra en el ejemplo siguiente.  
+ **Pregunta.** Tengo texto JSON almacenado en una columna de tabla. Quiero incluirlo en el resultado de FOR JSON. Pero FOR JSON aplica caracteres de escape a todos los caracteres JSON, por lo que obtengo una cadena JSON en lugar de un objeto anidado, como se muestra en el ejemplo siguiente.  
   
 ```sql  
 SELECT 'Text' AS myText, '{"day":23}' AS myJson  
@@ -131,9 +131,9 @@ WHERE [key] = 'color'
 ```  
 
 ### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON requiere el nivel de compatibilidad 130  
- **Pregunta.** Estoy tratando de ejecutar OPENJSON en SQL Server 2016 y obtengo el siguiente error.  
+ **Pregunta.** Estoy tratando de ejecutar OPENJSON en SQL Server 2016 y obtengo el error siguiente.  
   
- `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
+ `Msg 208, Level 16, State 1 'Invalid object name OPENJSON'`  
   
  **Respuesta.** La función OPENJSON solo está disponible en el nivel de compatibilidad 130. Si el nivel de compatibilidad de base de datos es inferior a 130, OPENJSON estará oculto. Hay otras funciones JSON que sí están disponibles en todos los niveles de compatibilidad.  
  

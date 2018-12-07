@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534445"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637493"
   
     -   Establezca el valor del parámetro **@working_directory** en la carpeta de instantáneas que se usa en la entidad de seguridad.  
   
-4.  Especifique el nombre de la entidad reflejada para el parámetro de agente **– PublisherFailoverPartner** . Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
+4.  Especifique el nombre de la entidad reflejada para el parámetro de agente **- PublisherFailoverPartner**. Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
   
     -   Agente de instantáneas (para todas las publicaciones)  
   
@@ -97,9 +97,9 @@ ms.locfileid: "47637493"
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     Se recomienda agregar el parámetro **–PublisherFailoverPartner** a un perfil de agente y, a continuación, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
+     Se recomienda agregar el parámetro **-PublisherFailoverPartner** a un perfil de agente y, después, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

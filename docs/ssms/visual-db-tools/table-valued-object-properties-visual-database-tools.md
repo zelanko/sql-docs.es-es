@@ -13,12 +13,12 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b99978fa5b861ce6fe8481bb0172b91e42d8e72e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243ad5c0489f2af49823eb0663efbb8b6b474056
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616823"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519850"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propiedades de objeto con valores de tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +46,11 @@ Se expande para mostrar las propiedades de **Alias**, **Lista de columnas**, **N
 Muestra el alias del objeto de la tabla con valores seleccionada. Para agregar o cambiar un alias, escríbalo en el campo.  
   
 **Lista de columnas**  
-Muestra las columnas incluidas en el objeto de la tabla con valores seleccionada. Para verlas en una ventana independiente, haga clic en la Lista de columnas y, a continuación, haga clic en los puntos suspensivos (...) a la derecha de la propiedad.  
+Muestra las columnas incluidas en el objeto de la tabla con valores seleccionada. Para verlas en una ventana independiente, haga clic en la Lista de columnas y después en los puntos suspensivos (...) situados a la derecha de la propiedad.  
   
 **Nombre completo**  
 Muestra el nombre del objeto con valores de tabla seleccionado, incluyendo información adicional como el esquema o el origen de datos del objeto.  
   
 **Lista de parámetros**  
-Muestra los parámetros definidos para la función con valores de tabla seleccionada. Para definir un valor para los parámetros, haga clic en la Lista de parámetros y, a continuación, haga clic en los puntos suspensivos (...) a la derecha de la propiedad. En el cuadro de diálogo Parámetros de la función, escriba los valores. Esta propiedad solo está disponible cuando se selecciona una función con valores de tabla.  
+Muestra los parámetros definidos para la función con valores de tabla seleccionada. Para definir un valor para los parámetros, haga clic en la Lista de parámetros y después en los puntos suspensivos (...) situados a la derecha de la propiedad. En el cuadro de diálogo Parámetros de la función, escriba los valores. Esta propiedad solo está disponible cuando se selecciona una función con valores de tabla.  
   

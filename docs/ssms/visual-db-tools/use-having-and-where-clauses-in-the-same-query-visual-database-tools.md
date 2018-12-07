@@ -21,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f30ac6e2e597f822fde99d52840a2d39ac23ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a6e778155ad0a470bd5b9e97484aea94d205055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537297"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utilizar cláusulas HAVING y WHERE en la misma consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ Una cláusula HAVING es como una cláusula WHERE, pero que solo se aplica a los 
   
 -   La cláusula HAVING se aplica a continuación a las filas del conjunto de resultados. Solo aparecen en el resultado de la consulta los grupos que cumplen las condiciones HAVING. Solo puede aplicar una cláusula HAVING a las columnas que también aparecen en la cláusula GROUP BY o en una función de agregado.  
   
-Imagine, por ejemplo, que va a combinar las tablas `titles` y `publishers` para crear una consulta que muestre el precio medio de los libros de un conjunto de editoriales. Solo desea ver el precio medio de un conjunto específico de editoriales: las del estado de California, por ejemplo. Y además, solo quiere ver el precio medio si éste es superior a 10,00 USD.  
+Imagine, por ejemplo, que va a combinar las tablas `titles` y `publishers` para crear una consulta que muestre el precio medio de los libros de un conjunto de editoriales. Solo quiere ver el precio medio de un conjunto específico de editores: los del estado de California, por ejemplo. Y además, solo quiere ver el precio medio si éste es superior a 10,00 USD.  
   
 Puede establecer la primera condición incluyendo una cláusula WHERE, que descarta todas las editoriales que no están en California, antes de calcular los precios medios. La segunda condición requiere una cláusula HAVING, ya que se basa en los resultados de la agrupación y del resumen de los datos. La instrucción SQL resultante podría tener la forma siguiente:  
   

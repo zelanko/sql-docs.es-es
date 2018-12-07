@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857163"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541805"
 ---
 # <a name="glossary-report-builder"></a>Glosario (Generador de informes)
   
@@ -186,7 +186,7 @@ ms.locfileid: "47857163"
 |KPI|Véase: indicador clave de rendimiento|  
 |campo de etiqueta|Campo de conjunto de datos de informe que identifica una etiqueta para el campo de clave correspondiente. Los parámetros y regiones de datos pueden mostrar la etiqueta de un campo de clave en lugar del valor.|  
 |latency|Período de tiempo que transcurre cuando finaliza un cambio de datos en un servidor y cuando dicho cambio aparece en otro servidor.|  
-|latitud|Coordenada de latitud como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de –90.0 a +90.0.|  
+|latitud|Coordenada de latitud como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de -90.0 a +90.0.|  
 |capa|En un elemento de informe de mapa, una capa especifica el tipo y la representación de un tipo único de datos espaciales. Un elemento de informe de mapa es un contenedor para varias capas.|  
 |LCID|Número que identifica una configuración regional basada en Windows.|  
 |leyenda|En un gráfico de informe, mapa o región de datos de medidor, elemento que proporciona una guía para relacionar la representación de los datos y los valores de datos subyacentes.|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857163"
 |archivo de registro|Archivo o conjunto de archivos que contiene registros de las modificaciones realizadas en una base de datos.|  
 |nombre lógico|Nombre utilizado por SQL Server para identificar un archivo.|  
 |operadores lógicos|Operadores AND, OR y NOT. Se usan para conectar las condiciones de búsqueda en las cláusulas WHERE.|  
-|longitud|Coordenada como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de –180.0 a +180.0.|  
+|longitud|Coordenada como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de -180.0 a +180.0.|  
 |relación de varios a varios|Relación entre dos tablas donde las filas de cada tabla tienen varias filas coincidentes en la tabla relacionada. Por ejemplo, cada factura de venta puede tener varios productos, pero cada producto puede aparecer en varias facturas de venta.|  
 |relación de varios a uno|Relación entre dos tablas donde una fila de una tabla puede relacionarse con varias filas de otra tabla.|  
 |mapa|Elemento de informe que sirve de contenedor, para títulos, diversos tipos de leyenda y capas de mapa.|  

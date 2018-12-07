@@ -14,12 +14,12 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03c2b23d2a4d320c7a96f04788bb2354aacabad5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ce518617b3e7728e503504bfea838fee4f1beb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698614"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400898"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Seleccionar las filas que se van a migrar mediante una función de filtro (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>Expresiones constantes  
  Las constantes que se usan en una función de filtro pueden ser cualquier expresión determinista que se puede evaluar cuando se define la función. Las expresiones constantes pueden contener lo siguiente.  
   
--   Literales. Por ejemplo, `N’abc’, 123`.  
+-   Literales. Por ejemplo, `N'abc', 123`.  
   
 -   Expresiones algebraicas. Por ejemplo, `123 + 456`.  
   
@@ -509,7 +509,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   Todos los operadores de la función anterior deben existir en la nueva.  
   
--   La nueva función no puede contener operadores que no existan en la anterior.  
+-   La función nueva no puede contener operadores que no existan en la anterior.  
   
 -   No se puede cambiar el orden de los argumentos del operador.  
   

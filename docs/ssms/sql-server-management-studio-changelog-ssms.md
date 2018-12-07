@@ -1,7 +1,7 @@
 ---
 title: 'SQL Server Management Studio: Registro de cambios (SSMS) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703993"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712736"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 
@@ -198,10 +198,10 @@ SSMS no se agrega a la variable de entorno PATH:
 
 - La ruta de acceso de SSMS. EXE (y de las herramientas en general) ya no se agrega a la ruta de acceso. Los usuarios pueden agregarla ellos mismos o, si se encuentran en una versión moderna de Windows, confiar en el menú Inicio.
 
-Compatibilidad con [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+Compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-- Es la primera versión de SSMS totalmente *compatible* con [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc).
-- Admite "BATCH_STARTED_GROUP" y "BATCH_COMPLETED_GROUP" en [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] e Instancia administrada en SSMS.
+- Esta es la primera versión de SSMS totalmente *compatible* con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (compatLevel 150, etc).
+- Admite "BATCH_STARTED_GROUP" y "BATCH_COMPLETED_GROUP" en [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e Instancia administrada en SSMS.
 - GraphDB: Se agrega marca en el plan de presentación para Graph TC Sequence.
 - Always Encrypted: Sa ha agregado compatibilidad con [Always Encrypted con enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).
   - El cuadro de diálogo de conexión presenta una nueva pestaña "Always Encrypted" cuando el usuario hace clic en el botón "Opciones" para habilitar y configurar la compatibilidad de enclave.
@@ -430,7 +430,36 @@ SSIS
 - El paquete no se puede implementar ni ejecutar correctamente cuando tiene como destino una versión antigua de SQL Server y contiene Tarea Script y Componente de script a la vez.
 - SSMS no se puede conectar a una instancia remota de Integration Services.
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (versión más reciente de GA)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (versión más reciente de GA)
+
+![descargar](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- Número de versión: 17.9.1<br>
+- Número de compilación: 14.0.17289.0<br>
+- Fecha de publicación: 21 de noviembre de 2018
+
+17.9.1 es una pequeña actualización de 17.9 con las correcciones de errores siguientes:
+
+- Se ha corregido un problema que hace que los usuarios experimenten que su conexión se cierra y se vuelve a abrir con cada invocación de consulta cuando se usa la autenticación "Active Directory: Universal compatible con MFA" con el editor de consultas SQL. Entre los efectos secundarios del cierre de la conexión se incluyen tablas temporales globales que se quitan de forma inesperada y, a veces, la asignación de un SPID nuevo a la conexión.
+- Se ha corregido un problema pendiente desde hace mucho tiempo por el que se producía un error al buscar un plan de restauración, o bien se generaba un plan de restauración ineficaz en determinadas condiciones.
+- Se ha corregido un problema en el Asistente "para importar aplicaciones de capa de datos" que podía producir un error cuando se conectaba a una base de datos Azure SQL.
+
+
+
+> [!NOTE]
+> Las versiones localizadas de SSMS 17.x en idiomas diferentes al inglés requieren el [paquete de actualización de seguridad KB 2862966](https://support.microsoft.com/kb/2862966) cuando se instalan en: Windows 8, Windows 7, Windows Server 2012 y Windows Server 2008 R2.
+
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![descargar](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -496,7 +525,7 @@ Monitor de actividad:
 
 Integración de Microsoft Azure: 
 
-- Se ha corregido un problema donde SSMS solo mostraba las primeras 50 suscripciones (cuadros de diálogo de Always Encrypted, cuadros de diálogo de copia de seguridad y restauración desde la dirección URL, etc.). 
+- Se ha corregido un problema por el que SSMS solo mostraba las primeras 50 suscripciones (cuadros de diálogo de Always Encrypted, cuadros de diálogo de copia de seguridad y restauración desde la dirección URL, etc...). 
 - Se ha corregido un problema por el que SSMS iniciaba una excepción ("Índice fuera del intervalo") al intentar iniciar sesión en una cuenta de Microsoft Azure que no tenía ninguna cuenta de almacenamiento (en el cuadro de diálogo de restauración de copia de seguridad desde la dirección URL). 
 
 Scripting de objetos: 
@@ -582,7 +611,7 @@ Always Encrypted:
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-- Al hacer clic en el botón *Script* después de modificar cualquier propiedad de grupo de archivos en la ventana *Propiedades*, se generan dos scripts: un script con una instrucción *USE <database>* y un segundo script con una instrucción *USE master*.  El script *USE master* se genera en el error y se debe descartar. Ejecute el script que contiene la instrucción *USE <database>*.
+- Al hacer clic en el botón *Script* después de modificar cualquier propiedad de grupo de archivos en la ventana *Propiedades*, se generan dos scripts: uno con una instrucción *USE <database>* y un segundo script con una instrucción *USE master*.  El script *USE master* se genera en el error y se debe descartar. Ejecute el script que contiene la instrucción *USE <database>*.
 - Algunos cuadros de diálogo muestran un error de edición no válida cuando se trabaja con nuevas ediciones de Azure SQL Database *de uso general* o *crítico para la empresa*.
 - Se puede observar alguna latencia en el visor de XEvents. Es un [problema conocido de .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere la posibilidad de actualizar a NetFx 4.7.2.
 
@@ -867,7 +896,7 @@ Se ha corregido un problema que hacía que SSMS se bloqueara en algunos casos cu
 Se han corregido problemas por los que, a veces, los usuarios no podían cargar un archivo XEL completo.
 - Generador de perfiles XEvent: se ha corregido un problema por el que SSMS se bloqueaba si un usuario no tenía permisos *VIEW SERVER STATE*.
 Se ha corregido un problema en el que, al cerrar la ventana de datos actualizados del generador de perfiles XEvent, no se detenía la sesión subyacente.
-- Se ha corregido un problema por el que el comando "Mover a…" dejó de funcionar (vea el [artículo 3142862 de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3142862) y el [artículo 3144359 de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)).
+- Se ha corregido un problema por el que el comando "Mover a…" dejaba de funcionar (vea el [artículo 3142862 de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3142862) y el [artículo 3144359 de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)).
 - SMO: se ha corregido un problema por el que el método TransferData en el objeto de transferencia no funcionaba.
 Se ha corregido un problema por el que las bases de datos de servidor iniciaban una excepción con las bases de datos de SQL DW en pausa.
 Se ha corregido un problema en el que, al crear scripts de bases de datos SQL en SQL DW, se generaban valores de parámetro de T-SQL incorrectos.
@@ -924,7 +953,7 @@ Disponible con carácter general | Número de compilación: 14.0.17199.0
 
 - XEvent: 
    - Se ha corregido el problema que hacía que SSMS abriera únicamente parte de los eventos del archivo .xel.
-   - Se ha mejorado la experiencia "Observar datos en directo" cuando la base de datos predeterminada no es "master". [Artículo de Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
+   - Se ha mejorado la experiencia "Observar datos en directo" cuando la base de datos predeterminada no es "master" (vea el [artículo de Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582)).
 - Always On: se ha corregido el problema que podía producir un error "El registro de este conjunto de copia de seguridad finaliza en el LSN x, demasiado pronto para aplicarlo a la base de datos" en "Restaurar copias de seguridad de registro".
 - Monitor de actividad de trabajo: se han corregido los iconos incoherentes. [Artículo de Connect 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
 - Almacén de consultas: se ha corregido el problema que hacía que el usuario no pudiera elegir un intervalo de fechas "personalizado" para los informes del almacén de consultas. Vinculado a los artículos de Connect siguientes.
@@ -948,7 +977,7 @@ Se ha vuelto a habilitar el "botón Script" al seleccionar objetos de SQL Azure.
    - Se ha corregido el problema por el que Profiler no funcionaba al seleccionar SQL 2005.
    - Se ha corregido el problema que hacía que Profiler no aceptara la opción de conexión "Confiar en certificado de servidor".
 - Monitor de actividad: se ha corregido el problema que hacía que el Monitor de actividad no funcionara al apuntar a SQL Server en ejecución en Linux.
-- Se ha corregido un problema con la clase de transferencia de SMO que hacía que no se transfirieran objetos de origen de datos externo o formato de archivo externo; ahora los objetos de estos tipos deben incluirse correctamente en la transferencia.
+- Se ha corregido un problema con la clase de transferencia de SMO que hacía que no se transfirieran objetos de origen de datos externo o formato de archivo externo; ahora los objetos de estos tipos se deben incluir correctamente en la transferencia.
 - Servidores registrados:
    - Se ha habilitado la consulta multiservidor para servidores de agente de usuario (intenta usar el mismo token para cada servidor de agente de usuario del grupo).
 - Autenticación universal de AD:
@@ -978,14 +1007,14 @@ Se ha vuelto a habilitar el "botón Script" al seleccionar objetos de SQL Azure.
 **SSMS general**
 
 - La siguiente funcionalidad de SSMS no es compatible con la autenticación de Azure AD mediante UA con MFA:
-   - El Asistente para la optimización de motor de base de datos no es compatible con la autenticación de Azure AD; hay un problema conocido que consiste en que el mensaje de error que se presenta al usuario es un poco críptico: "No se puede cargar el archivo o ensamblado 'Microsoft.IdentityModel.Clients.ActiveDirectory,..." en lugar del esperado: "El Asistente para la optimización de motor de base de datos no admite Microsoft Azure SQL Database. (DTAClient)".
+   - El Asistente para la optimización de motor de base de datos no es compatible con la autenticación de Azure AD; hay un problema conocido que consiste en que el mensaje de error que se presenta al usuario es un poco críptico: "No se puede cargar el archivo o ensamblado "Microsoft.IdentityModel.Clients.ActiveDirectory,..." en lugar del esperado: "El Asistente para la optimización de motor de base de datos no admite Microsoft Azure SQL Database. (DTAClient)".
 - Al intentar analizar una consulta en DTA se produce un error: "El objeto debe implementar IConvertible. (mscorlib)".
 - *Consultas con regresión* no aparece en la lista Almacén de consultas de informes del Explorador de objetos.
    - Solución: haga clic con el botón derecho en el nodo **Almacén de consultas** y seleccione **Ver consultas con regresión**.
 
 **Integration Services (IS)**
 
-- La [execution_path] de [catalog].[event_messagea] no es correcta para ejecuciones de paquetes en Escalabilidad horizontal. [execution_path] comienza con "\Package" en lugar del nombre de objeto del ejecutable del paquete. Al ver el informe general sobre ejecuciones de paquetes en SSMS, el vínculo de "Ruta de acceso de ejecución" de Información general de ejecución no puede funcionar. La solución es hacer clic en "Ver mensajes" en el informe general para comprobar todos los mensajes de eventos.
+- La [execution_path] de [catalog].[event_messagea] no es correcta para ejecuciones de paquetes en Escalabilidad horizontal. [execution_path] comienza con "\Package" en lugar del nombre de objeto del ejecutable del paquete. Al ver el informe general sobre ejecuciones de paquetes en SSMS, el vínculo de "Ruta de acceso de ejecución" de Información general de ejecución no puede funcionar. La solución alternativa consiste en hacer clic en "Ver mensajes" en el informe general para comprobar todos los mensajes de eventos.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![descargar](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - El diseñador **Nueva tabla o vista** muestra el aviso de inicio de sesión antiguo y no funciona para la autenticación de Azure AD.
   - La característica **Editar las primeras 200 filas** no es compatible con la autenticación de Azure AD.
   - El componente **Servidor registrado** no es compatible con la autenticación de Azure AD.
-  - El **Asistente para la optimización de motor de base de datos** no es compatible con la autenticación de Azure AD. Hay un problema conocido en el que el mensaje de error que se presenta al usuario no es nada útil: *No se puede cargar el archivo o ensamblado 'Microsoft.IdentityModel.Clients.ActiveDirectory,...* en lugar del que se espera *El Asistente para la optimización de motor de base de datos no admite Microsoft Azure SQL Database. (DTAClient)*.
+  - El **Asistente para la optimización de motor de base de datos** no es compatible con la autenticación de Azure AD. Hay un problema conocido que consiste en que el mensaje de error que se presenta al usuario es un poco críptico: *No se puede cargar el archivo o ensamblado "Microsoft.IdentityModel.Clients.ActiveDirectory,...* en lugar del esperado *El Asistente para la optimización de motor de base de datos no admite Microsoft Azure SQL Database. (DTAClient)*.
 
 **Analysis Services (AS)**
 
@@ -1224,7 +1253,7 @@ Se ha corregido un problema del Asistente de AE por el que la página de inicio 
 - Se corrigió un problema en que el elemento de menú contextual "Ver registro de SQL Server" aparecía de forma incorrecta para los tipos de servidores no relacionales (AS\RS\IS) 
 - Se corrigió un error en que la comprobación de la sintaxis de una consulta de partición de Analysis Services mediante la autenticación de SQL podía generar un mensaje de error de inicio de sesión
 - Se corrigió un problema en que cambiar el nombre de un modelo tabular AS de nivel de compatibilidad 1400 de versión preliminar podía generar un error en SSMS
-- Se corrigió un problema del tipo "error de operación en el modelo" que podía producirse después de intentar una operación no válida en el servidor AS en circunstancias excepcionales, revertir los cambios locales después de que no se guardaron correctamente en el modelo
+- Se ha corregido un problema del tipo "error de operación en el modelo" que podía producirse después de intentar una operación no válida en el servidor AS en circunstancias excepcionales, revertir los cambios locales después de que no se guardaran correctamente en el modelo.
 - Se corrigió un error de escritura en el cuadro de diálogo emergente Sincronizar base de datos de Analysis Services
 - Los cuadros de diálogo para realizar copia de seguridad y restaurar contenedor aparecen fuera de pantalla en varias configuraciones de monitor. 
 - Se produce un error en la creación de SecurityPolicy si el nombre del objeto de destino contiene ].
@@ -1251,7 +1280,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Los errores de Always Encrypted al actualizar los módulos después del cifrado se tratan incorrectamente.
 - Se ha cambiado de 15 a 30 segundos el tiempo de espera predeterminado de conexión para OLTP y OLAP a fin de corregir una clase de errores de conexión que se omitían. 
 - Se ha corregido un bloqueo en SSMS cuando se iniciaba un informe personalizado. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- Se ha corregido un problema por el cual se produce un error en "Generar script…" para bases de datos SQL de Azure.
+- Se ha corregido un problema por el que se produce un error en "Generar script…" para bases de datos SQL de Azure.
 - Se ha corregido la opción "Script como" y el "Asistente para generar scripts" para que no agreguen nuevas líneas adicionales al generar scripts para objetos, como procedimientos almacenados. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Proveedor SQLAS de PowerShell: se ha agregado la propiedad LastProcessed a las carpetas Dimension y MeasureGroup. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - Estadísticas de consultas activas: se ha corregido un problema que hacía que solo se mostrase la primera consulta de un lote. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3114221)  
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Se ha corregido un problema de truncamiento de la interfaz de usuario del cuadro de diálogo "Nuevo registro de servidor".
 - Se ha corregido la interfaz de usuario de la condición DMF, que actualizaba incorrectamente las expresiones con valores de constante de cadena que incluían comillas.
 - Se ha corregido un problema que podía hacer que SSMS se bloquease al ejecutar informes personalizados.
-- Se ha agregado el elemento de menú "Execution in Scale Out…" (Ejecución en escalado horizontal…) al nodo de carpeta.
+- Se ha agregado el elemento de menú "Ejecución en escalabilidad horizontal..." al nodo de carpeta.
 - Se ha corregido un problema con la característica de dirección IP de lista blanca de firewall de base de datos SQL de Azure.
 - Se ha corregido un problema en SSMS que hacía que una referencia de objeto no estableciera la excepción al editar el origen de la partición multidimensional de AS.
 - Se ha corregido un problema en SSMS que hacía que una referencia de objeto no estableciera la excepción al eliminar un ensamblado personalizado del servidor multidimensional de AS.

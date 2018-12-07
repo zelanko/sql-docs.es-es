@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6364a5c3aec5a96bfa3b05cdccc7e91da6f50b71
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905795"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712646"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
@@ -342,6 +342,6 @@ Ha completado correctamente el tutorial Agregar un KPI a un informe. Para obtene
   
 ## <a name="see-also"></a>Ver también  
 * [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)
-* [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Generador de informes en SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

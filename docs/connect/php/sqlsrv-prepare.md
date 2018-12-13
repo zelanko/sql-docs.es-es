@@ -84,7 +84,7 @@ La combinación de **sqlsrv_prepare** y **sqlsrv_execute** separa la preparació
   
 Para consultar estrategias alternativas de lectura y escritura de grandes cantidades de información, diríjase a [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) (Lotes de instrucciones SQL) y [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Para obtener más información, consulte [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Para obtener más información, consulte [Cómo recuperar parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se prepara y se ejecuta una instrucción. Cuando se ejecuta la instrucción (vea [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), se actualiza un campo de la tabla *Sales.SalesOrderDetail* de la base de datos AdventureWorks. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  

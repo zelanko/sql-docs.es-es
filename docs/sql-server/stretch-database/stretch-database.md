@@ -24,7 +24,7 @@ ms.locfileid: "52503790"
 
   Stretch Database migra los datos inactivos de forma clara y segura a la nube de Microsoft Azure.  
   
- Consulte [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)si su intención es comenzar a usar inmediatamente Stretch Database.  
+ Consulte [Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)si su intención es comenzar a usar inmediatamente Stretch Database.  
   
 ## <a name="what-are-the-benefits-of-stretch-database"></a>¿Cuáles son las ventajas de Stretch Database?  
  Stretch Database reporta las siguientes ventajas:  

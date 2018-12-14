@@ -56,7 +56,7 @@ ms.locfileid: "51602675"
  Solo conexiones de intención de lectura  
  Las bases de datos secundarias solo están disponibles para la conexión en que la propiedad de conexión **Application Intent** está establecida en **ReadOnly** (*conexiones de intención de lectura*).  
   
- Para obtener información acerca de esta conexión, vea [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obtener información acerca de esta conexión, vea [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Permitir cualquier conexión de solo lectura  
  Todas las bases de datos secundarias están disponibles para conexiones de acceso de lectura. Esta opción permite la conexión a los clientes de una versión anterior.  

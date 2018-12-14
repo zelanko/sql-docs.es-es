@@ -53,7 +53,7 @@ ms.locfileid: "51600285"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la autenticación Kerberos. Para obtener más información, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) y [Microsoft Kerberos Configuration Manager para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ### <a name="registering-a-server-principal-name-spn"></a>Registrar un nombre de la entidad de seguridad del servidor (SPN)  
- El servicio de autenticación de Kerberos usa un SPN para autenticar un servicio. Para obtener más información, vea [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ El servicio de autenticación de Kerberos usa un SPN para autenticar un servicio. Para obtener más información, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
  Los SPN también se pueden utilizar para hacer que la autenticación del cliente sea más segura al conectar con NTLM. Para obtener más información, vea [Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   

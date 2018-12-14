@@ -57,7 +57,7 @@ ms.locfileid: "52711967"
   
 -   [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) Pasos detallados para crear suscripciones con un servidor de informes en modo nativo.  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) Pasos detallados para crear suscripciones con un servidor de informes de modo de SharePoint.  
+-   [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) Pasos detallados para crear suscripciones con un servidor de informes de modo de SharePoint.  
   
 -   [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md) Describe la configuración y el funcionamiento de la entrega a recursos compartidos del servidor de informes.  
   

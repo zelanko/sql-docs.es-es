@@ -64,7 +64,7 @@ ms.locfileid: "51602966"
   
 1.  En primer lugar, descargue un certificado de administración para la suscripción de Windows Azure. Haga clic en **Descargar** para abrir la página de inicio de sesión.  
   
-2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) (Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft) y [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852)(Solución de problemas de inicio de sesión con la cuenta corporativa).  
+2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft](https://technet.microsoft.com/jj592903) y [Solución de problemas de inicio de sesión con la cuenta corporativa](https://support.microsoft.com/kb/2756852).  
   
 3.  A continuación, haga clic en **Conectar**para conectarse a su suscripción. Cuando lo haya hecho, las listas desplegables se rellenan con los parámetros de Windows Azure, como **Red virtual** y **Subred de la red virtual**.  
   

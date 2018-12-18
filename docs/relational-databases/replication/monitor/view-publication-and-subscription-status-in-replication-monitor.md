@@ -55,11 +55,11 @@ ms.locfileid: "47613444"
   
  **Para ver el estado de la publicación y la suscripción**  
   
--   Monitor de replicación: [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) (Ver información y realizar tareas para una publicación [Monitor de replicación]) y [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) (Ver información y realizar tareas para una suscripción [Monitor de replicación]).  
+-   Monitor de replicación: [Ver información y realizar tareas para una publicación&#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) y [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
  **Para ver información detallada de los agentes**  
   
--   Monitor de replicación: [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) (Ver información y realizar tareas para los agentes asociados con una publicación [Monitor de replicación]) y [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md) (Ver información y realizar tareas para los agentes asociados con una suscripción [Monitor de replicación]).  
+-   Monitor de replicación: [Ver información y realizar tareas para los agentes asociados con una publicación&#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) y [Ver información y realizar tareas para los agentes asociados con una suscripción&#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Valores del estado de la publicación  
  En la siguiente tabla se muestran los valores de estado de la publicación y sus iconos correspondientes en orden de prioridad.  

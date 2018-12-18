@@ -37,7 +37,7 @@ Para más información sobre el modelo de implementación de paquetes heredada, 
 > [!NOTE]
 > En este artículo se describe cómo implementar paquetes SSIS en general y cómo implementar los paquetes de forma local. Los paquetes SSIS también se pueden implementar en las plataformas siguientes:
 > - **La nube de Microsoft Azure**. Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
-> - **Linux**. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
+> - **Linux**. Para obtener más información, consulte [Extracción, transformación y carga de datos en Linux con SSIS](../../linux/sql-server-linux-migrate-ssis.md) .
 
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Comparación del modelo de implementación de proyectos y el modelo de implementación de paquetes heredados  
  El tipo de modelo de implementación que elija para un proyecto determina qué opciones de desarrollo y administrativas están disponibles para ese proyecto. En la tabla siguiente se muestran las diferencias y similitudes entre utilizar el modelo de implementación del proyecto y utilizar el modelo de implementación de paquetes.  
@@ -90,7 +90,7 @@ Este error suele ser el resultado de la falta de permisos de DCOM. Para corregir
 8.  Haga clic en **Aceptar** dos veces y, a continuación, cierre la consola **Servicios de componente**.
 
 Para obtener más información sobre el error descrito en esta sección y los permisos necesarios para la cuenta de servicio de SSIS, vea la entrada de blog siguiente.  
-[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/) (System.ComponentModel.Win32Exception: el cliente no dispone de un privilegio requerido durante la implementación de un proyecto de SSIS)
+[System.ComponentModel.Win32Exception: el cliente no dispone de un privilegio requerido durante la implementación de un proyecto de SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implementación de paquetes en el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite administrar paquetes, ejecutar paquetes y configurar valores de tiempo de ejecución para paquetes usando entornos.  
@@ -416,7 +416,7 @@ Inicie el asistente de una de estas dos formas:
 > 2.  Haga clic con el botón derecho en el paquete y, después, haga clic en **Ejecutar**.  
 > 3.  Según sea necesario, establezca los valores de parámetros, las propiedades del administrador de conexiones y las opciones de la pestaña **Avanzadas** , como el nivel de registro.  
 >   
->      Para obtener más información acerca de los niveles de registro, vea [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
+>      Para obtener más información acerca de los niveles de registro, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Antes de hacer clic en **Aceptar** para ejecutar el paquete, haga clic en **Script**. Transact-SQL aparece en una ventana del Editor de consultas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>Para implementar y ejecutar un paquete mediante procedimientos almacenados  

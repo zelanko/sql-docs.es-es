@@ -45,7 +45,7 @@ ms.locfileid: "52534674"
 ## <a name="about-startup-options"></a>Acerca de las opciones de inicio  
  Cuando instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el programa de instalación escribe una serie de opciones de inicio predeterminadas en el Registro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Puede utilizar estas opciones de inicio para especificar un archivo alternativo para la base de datos maestra, el archivo de registro de la base de datos maestra o un archivo de registro de errores. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] no puede encontrar los archivos necesarios, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se iniciará.  
   
- Las opciones de inicio se pueden definir mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configurar opciones de inicio del servidor &amp;#40;Administrador de configuración de SQL Server&amp;#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+ Las opciones de inicio se pueden definir mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configurar opciones de inicio del servidor &amp;#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 ## <a name="list-of-startup-options"></a>Lista de opciones de inicio  
 ### <a name="default-startup-options"></a>Opciones de inicio predeterminadas  

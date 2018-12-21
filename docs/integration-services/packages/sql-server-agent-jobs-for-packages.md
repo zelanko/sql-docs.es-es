@@ -124,7 +124,7 @@ ms.locfileid: "52400708"
   
     > **NOTA:** Si cambia la contraseña para la credencial que la cuenta de proxy usa, necesita actualizar la contraseña de la credencial. De lo contrario, se producirá un error en el paso de trabajo.  
   
-     Para más información sobre cómo configurar la cuenta del servicio del Agente SQL Server, vea [Establecer la cuenta de inicio del servicio para el Agente SQL Server &amp;#40;Administrador de configuración de SQL Server&amp;#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+     Para más información sobre cómo configurar la cuenta del servicio del Agente SQL Server, vea [Establecer la cuenta de inicio del servicio para el Agente SQL Server &amp;#40;Administrador de configuración de SQL Server&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
   
 8.  En el cuadro de lista **Origen del paquete** , haga clic en el origen del paquete y configure después las opciones del paso de trabajo.  
   

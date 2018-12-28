@@ -337,7 +337,7 @@ Es un valor predeterminado para el parámetro. Si se define un valor *default*, 
   
  En las TVF insertadas, el valor devuelto de TABLE se define mediante una única instrucción SELECT. Las funciones insertadas no tienen variables devueltas asociadas.  
   
- <a name="mstvf"></a> En las MSTVF, @*return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. @*return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
+ <a name="mstvf"></a> En las MSTVF, @*return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. @ *return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
   
  *select_stmt*  
  Es la instrucción SELECT individual que define el valor devuelto de una función insertada con valores de tabla (TVF).  

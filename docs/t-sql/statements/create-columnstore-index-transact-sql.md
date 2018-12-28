@@ -132,7 +132,7 @@ Especifica el nombre del nuevo índice.
   
 Si la tabla ya tiene un índice clúster de almacén de columnas, puede especificar el mismo nombre que el índice existente o puede usar la opción DROP EXISTING para especificar uno nuevo.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    Especifica el nombre de una, dos o tres partes de la tabla que se almacenará como un índice clúster de almacén de columnas. Si la tabla es un montón o un índice clúster, se convierte de almacén de filas en un almacén de columnas. Si la tabla ya es un almacén de columnas, esta instrucción vuelve a compilar el índice clúster de almacén de columnas.  
   
 #### <a name="with-options"></a>Opciones de WITH  

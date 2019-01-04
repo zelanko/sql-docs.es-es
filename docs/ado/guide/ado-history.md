@@ -32,7 +32,7 @@ En este tema se enumera las nuevas características introducidas con cada versi�
  *No se permite el acceso de unidad de disco duro fuera de una zona de confianza.*
 En dominio entre secuencias de comandos relacionadas con sitios de confianza, se deshabilitan las siguientes operaciones: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, y **Recordset.Open**, que se usa junto con el **adCmdFile** marca o con el proveedor Microsoft OLE DB persistencia (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, y* **Stream.LoadFromFile***operará solo los archivos físicos.* 
+ **Recordset.Open** *,* **Recordset.Save** *,* **Stream.SaveToFile** *, y* **Stream.LoadFromFile** *operará solo los archivos físicos.*
 Estos métodos ahora para comprobar que los identificadores de archivos punto a solo los archivos físicos.
 
  **Recordset.ActiveCommand***devuelve un error cuando se invoca desde una página ASP/HTML.* 

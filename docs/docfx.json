@@ -77,7 +77,6 @@
 
     "globalMetadata": {
       "layout": "Conceptual",
-      "bilingual_type": "hover over",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
       "searchScope": ["sql"],
       "_op_documentIdPathDepotMapping": {

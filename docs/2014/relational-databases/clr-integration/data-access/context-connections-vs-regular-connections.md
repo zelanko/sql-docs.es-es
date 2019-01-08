@@ -13,17 +13,17 @@ ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8271f3593da39727dc70c71b17cc032bdb0877e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4255e17f7cd76cf402c10d84b015a1324d7d6f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097195"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534226"
 ---
 # <a name="regular-vs-context-connections"></a>Conexiones de contexto frente a Conexiones de contexto
   Si se conecta a un servidor remoto, utilice siempre conexiones normales en lugar de conexiones de contexto. Si se debe conectar al mismo servidor donde se está ejecutando el procedimiento almacenado o la función, utilice la conexión de contexto en la mayoría de los casos. Entre las ventajas que esto presenta se encuentran la ejecución en el mismo espacio de la transacción y que no es necesario volver a autenticarse.  
   
- Además, la utilización de la conexión de contexto suele proporciona un mejor rendimiento y menos uso de recursos. La conexión de contexto es una conexión solo en proceso, por lo que puede ponerse en contacto "directamente" con el servidor omitiendo los niveles de transporte y protocolo de red para enviar las instrucciones Transact-SQL y recibir los resultados. También se omite el proceso de autenticación. En la figura siguiente se muestran los componentes principales del proveedor administrado de `SqlClient`, así como la forma en que interactúan los diferentes componentes entre sí al utilizar una conexión normal y al utilizar la conexión de contexto.  
+ Además, la utilización de la conexión de contexto suele proporciona un mejor rendimiento y menos uso de recursos. La conexión de contexto es una conexión sólo en proceso, por lo que puede contactar con el servidor "directamente" omitiendo las capas de transporte y protocolo de red para enviar instrucciones Transact-SQL y recibir resultados. También se omite el proceso de autenticación. En la figura siguiente se muestran los componentes principales del proveedor administrado de `SqlClient`, así como la forma en que interactúan los diferentes componentes entre sí al utilizar una conexión normal y al utilizar la conexión de contexto.  
   
  ![Rutas de código de un contexto y una conexión normal. ](../../../database-engine/dev-guide/media/clrintdataaccess.gif "Código rutas de acceso de un contexto y una conexión normal.")  
   

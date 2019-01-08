@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507272"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
@@ -83,7 +83,7 @@ Network=dbnmpntw;
 >  Dado que las canalizaciones con nombre no usan el algoritmo de reintento TCP/IP, en muchos casos, un intento de conexión a canalizaciones con nombre puede agotar el tiempo de espera antes de conectarse a una base de datos reflejada.  
   
 #### <a name="server-attribute"></a>Atributo Server  
- La cadena de conexión debe contener un `Server` atributo que proporciona el nombre del asociado inicial, que debería identificar la instancia del servidor principal actual.  
+ La cadena de conexión debe contener un atributo `Server` que proporciona el nombre del asociado inicial, que debería identificar la instancia del servidor principal actual.  
   
  La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>*[**\\***<nombre_de_instancia_de_SQL_Server>*]. Por ejemplo:  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  Si solo se proporciona el nombre del asociado inicial, los programadores de la aplicación no necesitarán realizar ninguna acción ni escribir ningún código para volver a conectarse.  
   
 > [!NOTE]  
->  Los desarrolladores de aplicaciones de código administrado proporcionan el nombre del asociado de conmutación por error en la `ConnectionString` de la `SqlConnection` objeto. Para obtener información acerca de cómo utilizar esta cadena de conexión, vea el apartado sobre la compatibilidad de la creación de reflejo de la base de datos del proveedor de datos de .NET Framework para SQL Server en la documentación de ADO.NET, que forma parte del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+>  Los programadores de aplicaciones de código administrado proporcionan el nombre del asociado de conmutación por error en la cadena `ConnectionString` del objeto `SqlConnection`. Para obtener información acerca de cómo utilizar esta cadena de conexión, vea el apartado sobre la compatibilidad de la creación de reflejo de la base de datos del proveedor de datos de .NET Framework para SQL Server en la documentación de ADO.NET, que forma parte del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 #### <a name="example-connection-string"></a>Ejemplo de cadena de conexión  
  Por ejemplo, para conectarse explícitamente con TCP/IP a la base de datos **AdventureWorks** en Partner_A o Partner_B, una aplicación cliente que use el controlador ODBC podría proporcionar la cadena de conexión siguiente:  

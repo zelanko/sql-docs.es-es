@@ -15,12 +15,12 @@ ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df4a73890841b4a72dbffa0d5a5ae934bf618f16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649853"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523899"
 ---
 # <a name="statement-transitions"></a>Transiciones de instrucción
 Instrucciones de ODBC tienen los siguientes estados.  
@@ -47,7 +47,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1], [5], [6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[2], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
@@ -66,25 +66,25 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbindparameter"></a>SQLBindParameter  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbrowseconnect-sqlconnect-and-sqldriverconnect"></a>SQLBrowseConnect, SQLConnect y SQLDriverConnect  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |08002|08002|08002|08002|08002|08002|08002|  
   
 ## <a name="sqlbulkoperations"></a>SQLBulkOperations  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|Consulte la tabla siguiente|HY010|E/s de HY010 NS [c]|  
   
@@ -96,7 +96,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlcancel"></a>SQLCancel  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1 S2 [1] [n] y [2] S3 [r] y S5 [2] [3] y [5] S6 ([3] o [4]) y S7 [6] [4] y [7]|Consulte la tabla siguiente|  
   
@@ -126,13 +126,13 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|24000|24000|24000|S1 S3 [np] [p]|HY010|HY010|  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|Consulte la tabla siguiente|24000|--S11 [s] [x]|HY010|E/s de HY010 NS [c]|  
   
@@ -148,7 +148,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges y SQLTables  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S5 S11 [s] [x]|S1 S5 [e] [s] S11 [x]|S1 [e] y [1] S5 [s] y [1] S11 [x] y [1] 24000 [2]|Consulte la tabla siguiente|HY010|E/s de HY010 NS [c]|  
   
@@ -166,7 +166,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|--|--|HY010|NS [c] y [3] HY010 [o] o [4]|  
 |IH [2]|HY010|Consulte la tabla siguiente|24000|--S11 [s] x|HY010|NS [c] y [3] HY010 [o] o [4]|  
@@ -189,13 +189,13 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources y SQLDrivers  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqldescribecol"></a>SQLDescribeCol  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|Consulte la tabla siguiente|24000|--S11 [s] [x]|HY010|E/s de HY010 NS [c]|  
   
@@ -207,13 +207,13 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|--S11 [s] [x]|HY010|HY010|HY010|HY010 NS [c] [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|S0 [1]|S0 [1]|S0 [1]|S0 [1]|(HY010)|(HY010)|  
   
@@ -221,7 +221,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|: [2] o [3] S1 [1]|--S1 [3] [np] y ([1] o [2]) S1 [p] y S2 [1] [p] y [2]|--S1 [3] [np] y ([1] o [2]) S1 [p] y S3 [1] [p] y [2]|(HY010)|(HY010)|  
   
@@ -233,7 +233,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlexecdirect"></a>SQLExecDirect  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S4 [s] y [nr] S5 [s] y [r] [d] S8 S11 [x]|--S1 [1] [e] y [2] S4 [s] y [nr] S5 [e] y [s] y [r] [d] S8 S11 [x]|--[e], [1] y [3] S1 [e], [2] y [3] S4 [s], [nr,] y [3] S5 [s], [r], S8 [3] [d] y [3] S11 [x] y [3] 24000 [4]|Consulte la tabla siguiente|HY010|HY010 NS [c] [o]|  
   
@@ -255,7 +255,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|(HY010)|Consulte la tabla siguiente|S2 [e], p y S4 [1] [s], [p], [nr,] y [1] S5 [s], [p], [r] y S8 [d] [p], [1] y [1] S11 [x], [p] y [1] 24000 [p] y [2] HY010 [SP]|Consulte la tabla de Estados de cursor|HY010|HY010 NS [c] [o]|  
   
@@ -279,7 +279,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|S1010|S1010|24000|Consulte la tabla siguiente|S1010|S1010 NS [c] [o]|  
   
@@ -291,7 +291,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlfetch-and-sqlfetchscroll"></a>SQLFetch y SQLFetchScroll  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|Consulte la tabla siguiente|HY010|HY010 NS [c] [o]|  
   
@@ -303,7 +303,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |-- [1]|HY010|HY010|HY010|HY010|HY010|HY010|  
 |IH [2]|S0|S0|S0|S0|HY010|HY010|  
@@ -317,7 +317,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|S1 S2 [np] [p]|S1 S3 [np] [p]|HY010|HY010|  
 |IH [2]|--|--|--|--|HY010|HY010|  
@@ -328,19 +328,19 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetcursorname"></a>SQLGetCursorName  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|Consulte la tabla siguiente|HY010|HY010 NS [c] [o]|  
   
@@ -352,7 +352,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField y SQLGetDescRec  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--[1] o HY010 [2] [3]|Consulte la tabla siguiente|--[1] o 24000 [2] [3]|--[1], [2], o S11 [3] [3] y [x]|HY010|NS [c] o [4] HY010 [o] y [5]|  
   
@@ -380,7 +380,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField y SQLGetDiagRec  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
 |IH [2]|--[3]|--[3]|--|--|--[3]|--[3]|  
@@ -393,25 +393,25 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--[1] 24000[2]|--[1] 24000[2]|--[1] 24000[2]|Consulte la tabla siguiente|HY010|HY010|  
   
@@ -431,7 +431,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|--[1]|--[1]|--[s] y [2] S1 [nf], [SP] y S2 [4] [nf], [p] y S5 [4] [s] y [3] S11 [x]|S1 [nf], [SP] y S3 [4] [nf], [p] y [4] S4 [s] y [2] S5 [s] y [3] S11 [x]|HY010|HY010 NS [c] [o]|  
   
@@ -445,25 +445,25 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlnumparams"></a>SQLNumParams  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|--S11 [s] [x]|--S11 [s] [x]|--S11 [s] [x]|HY010|HY010 NS [c] [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|--S11 [s] [x]|--S11 [s] [x]|--S11 [s] [x]|HY010|HY010 NS [c] [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|Consulte la tabla siguiente|HY010 NS [c] [o]|  
   
@@ -485,7 +485,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S2 [s] y [nr] S3 [s] y [r] S11 [x]|--[s] o ([e] y [1]) S1 [e] y [2] S11 [x]|S1 [e] y [3] S2 [s], [nr,] y [3] S3 [s], [r] y [3] S11 [x] y [3] 24000 [4]|Consulte la tabla siguiente|HY010|HY010 NS [c] [o]|  
   
@@ -505,7 +505,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlputdata"></a>SQLPutData  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|Consulte la tabla siguiente|HY010 NS [c] [o]|  
   
@@ -529,13 +529,13 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlrowcount"></a>SQLRowCount  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--[2] 24000[3]|HY010|HY010|  
   
@@ -547,13 +547,13 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlsetcursorname"></a>SQLSetCursorName  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|24000|24000|HY010|HY010|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField y SQLSetDescRec  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|--|--|HY010|HY010|  
   
@@ -561,13 +561,13 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |HY011|HY011|HY011|HY011|Y011|HY01|HY011|  
   
 ## <a name="sqlsetpos"></a>SQLSetPos  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|Consulte la tabla siguiente|HY010|HY010 NS [c] [o]|  
   
@@ -579,7 +579,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
   
-|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2, S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 – S7<br /><br /> Cursor|S10 – S8<br /><br /> Necesita los datos|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Sin asignar|S1<br /><br /> asignado|S2 Y S3<br /><br /> Prepared|S4<br /><br /> ejecuta|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> Necesita los datos|S11 S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--HY011 [1] [2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] o [1] HY011 [p] y [2]|HY010 [np] o [1] HY011 [p] y [2]|  
   

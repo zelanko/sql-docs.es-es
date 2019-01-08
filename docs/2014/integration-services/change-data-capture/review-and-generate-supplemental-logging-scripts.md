@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - scripts
@@ -13,12 +12,12 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622bdebc82f1c557a80ea43a18f474a852cca9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d4731cbc7b6b4a761de3c5d0e3777a028c8a3c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048995"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777095"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar y generar scripts de registro complementario
   Use la pestaña **Scripts** para ejecutar o volver a ejecutar un script en la base de datos de origen de Oracle que configura el registro complementario.  
@@ -56,6 +55,6 @@ ms.locfileid: "48048995"
   
 ## <a name="see-also"></a>Vea también  
  [Cómo editar las propiedades de la instancia CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Credenciales de Oracle para ejecutar script](oracle-credentials-for-running-script.md)  
+ [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
   

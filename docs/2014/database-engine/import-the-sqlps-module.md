@@ -11,12 +11,12 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e73c0d114744241d18dc7946e852e05b3a2c6e5e
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: b6fdc0b8267f1e995812d573ae80f0f24ee11843
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629558"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404121"
 ---
 # <a name="import-the-sqlps-module"></a>Importar el módulo SQLPS
   El método recomendado para administrar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde PowerShell consiste en importar el módulo `sqlps` en un entorno de Windows PowerShell 2.0. El módulo carga y registra los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y los ensamblados de administración.  
@@ -25,7 +25,7 @@ ms.locfileid: "51629558"
   
 2.  **Para cargar el módulo:**  [Cargar el módulo sqlps](#LoadSqlps)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Después de importar el módulo de `sqlps` en Windows PowerShell, a continuación puede:  
   
 -   Ejecutar interactivamente comandos de Windows PowerShell.  
@@ -57,7 +57,7 @@ ms.locfileid: "51629558"
 ```  
 ## Import the SQL Server Module.  
   
-Import-Module “sqlps” -DisableNameChecking  
+Import-Module "sqlps" -DisableNameChecking  
   
 ```  
   

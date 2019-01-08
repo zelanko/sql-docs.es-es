@@ -1,5 +1,5 @@
 ---
-title: Definición y uso de una acción de obtención de detalles | Documentos de Microsoft
+title: Definición y uso de una acción de obtención de detalles | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018052"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507962"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lección 8-1: definir y usar una acción de obtención de detalles
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lección 8-1: definir y utilizar una acción de obtención de detalles
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 El dimensionamiento de datos de hecho mediante una dimensión de hecho sin filtrar correctamente los datos devueltos por la consulta puede producir un rendimiento lento de las consultas. Para evitarlo, puede definir una acción de obtención de detalles que restrinja el número total de filas que se devuelven. Esto mejorará significativamente el rendimiento de las consultas.  
@@ -55,7 +55,7 @@ En las tareas de este tema, definirá una acción de obtención de detalles para
   
 8.  En el cuadro **Número máximo de filas** , escriba **10**.  
   
-9. En el cuadro **Título** , escriba **Drillthrough to Order Details…**.  
+9. En el **título** , escriba **Drillthrough to Order Details...** .  
   
     Esta configuración limita el número de filas devueltas y especifica el título que aparece en el menú de la aplicación cliente. En la ilustración siguiente se muestra esta configuración en el cuadro **Propiedades adicionales** .  
   

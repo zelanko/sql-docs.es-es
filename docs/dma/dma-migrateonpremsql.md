@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643843"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395428"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Actualización local de SQL Server a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant
 
 Data Migration Assistant proporciona evaluaciones sin problemas de SQL Server local y las actualizaciones a las versiones posteriores de SQL Server o migraciones de SQL Server en máquinas virtuales de Azure o Azure SQL Database.
 
-Este artículo proporciona instrucciones paso a paso para actualizar SQL Server local a una versión posterior de SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant.   
+Este artículo proporciona instrucciones paso a paso para actualizar SQL Server local a una versión posterior de SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant.   
 
 ## <a name="create-a-new-migration-project"></a>Cree un nuevo proyecto de migración
 
@@ -65,9 +65,9 @@ Este artículo proporciona instrucciones paso a paso para actualizar SQL Server 
    > [!NOTE]
    > Puede aplicar la configuración de migración para todas las bases de datos que se va a migrar, seleccionando el servidor en el panel izquierdo. También puede configurar una base de datos individual con una configuración específica, seleccione la base de datos en el panel izquierdo.
 
-    A. Especifique el **comparten ubicación accesible por los servidores SQL de origen y destino para la operación de copia de seguridad**. Asegúrese de que la cuenta de servicio que ejecuta el origen tiene la instancia de SQL Server escribir privilegios en la ubicación compartida y la cuenta de servicio de destino con privilegios de lectura en la ubicación compartida.
+    a. Especifique el **comparten ubicación accesible por los servidores SQL de origen y destino para la operación de copia de seguridad**. Asegúrese de que la cuenta de servicio que ejecuta el origen tiene la instancia de SQL Server escribir privilegios en la ubicación compartida y la cuenta de servicio de destino con privilegios de lectura en la ubicación compartida.
 
-    B. Especifique la ubicación para restaurar los datos y archivos de registro transaccional en el servidor de destino.
+    b. Especifique la ubicación para restaurar los datos y archivos de registro transaccional en el servidor de destino.
 
     ![Agregar página de las bases de datos](../dma/media/AddDatabases.png)
 

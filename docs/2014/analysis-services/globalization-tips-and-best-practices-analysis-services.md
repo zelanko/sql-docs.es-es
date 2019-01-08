@@ -17,12 +17,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 026c1bf822a6493c6605128582f7142178ad6776
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188265"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357308"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Sugerencias de globalización y procedimientos recomendados (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
@@ -50,7 +50,7 @@ ms.locfileid: "48188265"
   
  El carácter de espacio es un “caso especial” porque se puede representar como un juego de caracteres de byte único (SBCS) o de doble byte (DBCS) en Unicode. En el motor relacional, dos cadenas compuestas separadas por un espacio, una en SBCS y la otra en DBCS, se consideran idénticas. En Analysis Services, durante el procesamiento, las dos cadenas compuestas no son idénticas, y la segunda instancia se marcará como duplicado.  
   
- Para ver más detalles y las soluciones alternativas sugeridas, consulte el tema sobre [espacios en blanco en una cadena Unicode que tienen resultados de procesamiento diferentes en función de la intercalación](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
+ Para ver más detalles y las soluciones alternativas sugeridas, consulte el tema sobre [espacios en blanco en una cadena Unicode que tienen resultados de procesamiento diferentes en función de la intercalación](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
 ##  <a name="bkmk_recos"></a> Recomendaciones de intercalación comunes  
  Analysis Services siempre muestra la lista completa de todos los idiomas e intercalaciones disponibles; no filtra las intercalaciones según el idioma seleccionado. Asegúrese de elegir una combinación factible.  
@@ -69,7 +69,7 @@ ms.locfileid: "48188265"
   
      En RPC y Singapur, Microsoft Support acostumbra a preferir el chino simplificado con pinyin como orden de clasificación. Las intercalaciones recomendadas son Chinese_PRC (para SQL Server 2000), Chinese_PRC_90 (para SQL Server 2005) o Chinese_Simplified_Pinyin_100 (para SQL Server 2008 y versiones posteriores).  
   
-     En Taiwán, es más habitual ver chino tradicional con el criterio de ordenación recomendado basado en el número de trazos: Chinese_Taiwan_Stroke (para SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
+     En Taiwán, es más común el uso del chino tradicional con el criterio de ordenación recomendado en función del número de trazos: Chinese_Taiwan_Stroke (para SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
   
      Otras regiones (por ejemplo, Hong Kong y Macao) también utilizan el chino tradicional. Para las intercalaciones en Hong Kong es habitual ver Chinese_Hong_Kong_Stroke_90 (en SQL Server 2005). En Macao, se utiliza con bastante frecuencia Chinese_Traditional_Stroke_Count_100 (en SQL Server 2008 y versiones posteriores).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48188265"
   
 |Alfabeto del idioma|Distinción de mayúsculas y minúsculas|  
 |---------------------|----------------------|  
-|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objetos siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
+|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objeto siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
 |**Cirílico, griego, copto y armenio**|Los identificadores de objetos en script bicameral no latino, como el cirílico, siempre distinguen entre mayúsculas y minúsculas. Por ejemplo, Измерение y измерение se consideran dos valores distintos, aunque la única diferencia sea el uso de mayúsculas y minúsculas en la primera letra.|  
   
  **Implicaciones de la distinción entre mayúsculas y minúsculas para los identificadores de objetos**  
@@ -140,7 +140,7 @@ ms.locfileid: "48188265"
   
 3.  **Usar formatos de fecha ISO para información de fecha y hora universal**  
   
-     Un [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: “Siempre uso el formato de fecha ISO, aaaa-mm-dd, para las cadenas de fecha que paso a las consultas en SQL o MDX, porque no es ambiguo y funciona sea cual sea la configuración regional del servidor o del cliente. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
+     Una [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: "Siempre uso el formato de fecha ISO aaaa-mm-dd para todas las cadenas de fechas que paso a consultas en SQL o MDX porque no es ambiguo y funciona independientemente del cliente o de la configuración regional del servidor. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

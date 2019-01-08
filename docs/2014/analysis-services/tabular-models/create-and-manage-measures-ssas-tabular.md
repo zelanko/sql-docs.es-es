@@ -11,15 +11,15 @@ ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc49813893a296ac5342452a286f39284a8901d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3b50c9284610cfa8c35eba21de7723c18729401
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126371"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405018"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>Crear y administrar medidas (SSAS tabular)
-  Una medida es una fórmula que se crea específicamente para su uso en un informe o una tabla dinámica de Excel (o gráfico dinámico). Las medidas pueden estar basadas en funciones de agregación estándar, como COUNT o SUM, o puede definir su propia fórmula utilizando DAX. Las tareas de este tema explican cómo crear y administrar medidas mediante la cuadrícula de medidas de una tabla.  
+  Una medida es una fórmula que se crea específicamente para su uso en un informe o una tabla dinámica de Excel (o gráfico dinámico). Las medidas pueden estar basadas en funciones de agregación estándar, como COUNT o SUM, o puede definir su propia fórmula utilizando DAX. Las tareas de este tema describen cómo crear y administrar medidas mediante la cuadrícula de medidas de una tabla.  
   
  En este tema se incluyen las tareas siguientes:  
   
@@ -61,8 +61,8 @@ ms.locfileid: "48126371"
 -   En la cuadrícula de medidas, haga clic con el botón derecho en una medida y, después, haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Las medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)   
- [KPI &#40;Tabular de SSAS&#41;](kpis-ssas-tabular.md)   
- [Columnas calculadas &#40;Tabular de SSAS&#41;](ssas-calculated-columns.md)  
+ [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)   
+ [KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)   
+ [Columnas calculadas &#40;SSAS tabular&#41;](ssas-calculated-columns.md)  
   
   

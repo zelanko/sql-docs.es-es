@@ -1,5 +1,5 @@
 ---
-title: Definir los datos de un origen de vista (Analysis Services) | Documentos de Microsoft
+title: Definir los datos de un origen de vista (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025852"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523101"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definir una vista del origen de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Una vista del origen de datos contiene el modelo lógico del esquema que utilizan los objetos de bases de datos multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a saber, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
+  Una vista del origen de datos contiene el modelo lógico del esquema utilizado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos multidimensional objetos a saber, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
   
 -   Contiene los metadatos que representan objetos seleccionados de uno o varios orígenes de datos subyacentes, o los metadatos que se usarán para generar un almacén de datos relacional subyacente si emplea el enfoque de arriba abajo para la generación de esquemas.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34025852"
   
  El Asistente para vistas del origen de datos usa la respuesta para hacer coincidir los nombres de columna y crear relaciones entre las diferentes tablas de la DSV. Puede especificar cualquiera de los criterios que se enumeran en la siguiente tabla.  
   
-|Criterios de coincidencia de nombres|Description|  
+|Criterios de coincidencia de nombres|Descripción|  
 |----------------------------|-----------------|  
 |**Mismo nombre que el de la clave principal**|El nombre de la columna de clave externa de la tabla de origen es igual que el nombre de la columna de clave principal de la tabla de destino. Por ejemplo, la columna de clave externa `Order.CustomerID` es igual que la columna de clave principal `Customer.CustomerID`.|  
 |**Mismo nombre que el nombre de tabla de destino**|El nombre de la columna de clave externa de la tabla de origen es igual que el nombre de la tabla de destino. Por ejemplo, la columna de clave externa `Order.Customer` es igual que la columna de clave principal `Customer.CustomerID`.|  
@@ -131,7 +131,7 @@ ms.locfileid: "34025852"
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Definir consultas con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
  [Reemplazar una tabla o una consulta con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Trabajar con diagramas en el Diseñador de vistas del origen de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Explorar datos en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
  [Eliminar una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Actualizar el esquema de una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  

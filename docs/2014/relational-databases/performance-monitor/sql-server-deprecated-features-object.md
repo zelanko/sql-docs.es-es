@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -15,12 +15,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211855"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763947"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
@@ -46,7 +46,7 @@ ms.locfileid: "48211855"
 |CREATE TRIGGER WITH APPEND|Se encontró una instrucción CREATE TRIGGER con la cláusula WITH APPEND. Vuelva a crear el desencadenador entero en su lugar. Se produce una vez por cada uso en una instrucción DDL.|  
 |CREATE_DROP_DEFAULT|Se encontró la sintaxis CREATE DEFAULT o DROP DEFAULT. Vuelva a escribir el comando utilizando la opción DEFAULT de CREATE TABLE o ALTER TABLE. Se produce una vez por cada compilación.|  
 |CREATE_DROP_RULE|Se encontró la sintaxis CREATE RULE. Reescriba el comando utilizando las restricciones. Se produce una vez por cada compilación.|  
-|Data types: text ntext or image|Se encontraron los tipos de datos `text`, `ntext` o `image`. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
+|Data types: text ntext or image|Se encontraron los tipos de datos `text`, `ntext` o `image`. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis de los tipos de datos `text`, `ntext` y `image`. Se produce una vez por cada consulta.|  
 |Database compatibility level 80|Número total de veces que una base de datos se cambió al nivel de compatibilidad 80. Planee actualizar la base de datos y la aplicación antes de la versión siguiente. También se produce cuando se inicia una base de datos en el nivel de compatibilidad 80.|  
 |Nivel de compatibilidad de la base de datos 90|Número total de veces que una base de datos se cambió al nivel de compatibilidad 90. Planee actualizar la base de datos y la aplicación en una versión futura. También se produce cuando se inicia una base de datos en el nivel de compatibilidad 90.|  
 |DATABASE_MIRRORING|Se encontraron referencias a la característica de creación de reflejo de la base de datos. Planee la actualización a grupos de disponibilidad AlwaysOn, o si ejecuta una edición de SQL Server que no admite grupos de disponibilidad AlwaysOn, planee la migración al trasvase de registros.|  
@@ -112,14 +112,14 @@ ms.locfileid: "48211855"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Hace referencia que se encontraron sys.numbered_procedure_parameters desusados. No debe usarse. Se produce una vez por cada compilación.|  
 |numbered_procedures|Hace referencia a que se encontraron sys.numbered_procedures desusados. No debe usarse. Se produce una vez por cada compilación.|  
-|Oldstyle RAISEERROR|Se encontró la sintaxis de RAISERROR obsoleta (Formato: RAISERROR integer string). Reescriba la instrucción usando la sintaxis de RAISERROR actual. Se produce una vez por cada compilación.|  
+|Oldstyle RAISEERROR|Se encontró la sintaxis RAISERROR obsoleta (formato: cadena de entero RAISERROR). Reescriba la instrucción usando la sintaxis de RAISERROR actual. Se produce una vez por cada compilación.|  
 |OLEDB para conexiones ad hoc|SQLOLEDB no es un proveedor admitido. Utilice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para las conexiones ad hoc.|  
 |PERMISSIONS|Se encontraron referencias a la función intrínseca PERMISSIONS. Consulte en su lugar sys.fn_my_permissions. Se produce una vez por cada consulta.|  
 |ProcNums|Se encontró la sintaxis de ProcNums desusada. Reescriba las instrucciones para quitar las referencias. Se produce una vez por cada compilación.|  
 |READTEXT|Se encontró la sintaxis de READTEXT. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis del tipo de datos `text`. Se produce una vez por cada consulta.|  
-|RESTORE DATABASE o LOG WITH DBO_ONLY|Se encontró la sintaxis RESTORE … WITH DBO_ONLY. En su lugar, use RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE or LOG WITH MEDIAPASSWORD|Se encontró la sintaxis RESTORE … WITH MEDIAPASSWORD. WITH MEDIAPASSWORD proporciona poca seguridad y se debería quitar.|  
-|RESTORE DATABASE or LOG WITH PASSWORD|Se encontró la sintaxis RESTORE … WITH PASSWORD. WITH PASSWORD proporciona poca seguridad y se debería quitar.|  
+|RESTORE DATABASE o LOG WITH DBO_ONLY|Se ha encontrado la sintaxis RESTORE ... WITH DBO_ONLY. En su lugar, use RESTORE ... RESTRICTED_USER.|  
+|RESTORE DATABASE or LOG WITH MEDIAPASSWORD|Se ha encontrado la sintaxis RESTORE ... WITH MEDIAPASSWORD. WITH MEDIAPASSWORD proporciona poca seguridad y se debería quitar.|  
+|RESTORE DATABASE or LOG WITH PASSWORD|Se ha encontrado la sintaxis RESTORE ... WITH PASSWORD. WITH PASSWORD proporciona poca seguridad y se debería quitar.|  
 |Devolver resultados del desencadenador|Este evento se produce una vez por cada invocación del desencadenador. Reescriba el desencadenador para que no devuelva conjuntos de resultados.|  
 |ROWGUIDCOL|Se encontró la sintaxis de ROWGUIDCOL. Reescriba las instrucciones para que usen la sintaxis de $rowguid. Se produce una vez por cada compilación.|  
 |SET ANSI_NULLS OFF|Se encontró la sintaxis de SET ANSI_NULLS OFF. Quite esta sintaxis desusada. Se produce una vez por cada compilación.|  
@@ -156,13 +156,13 @@ ms.locfileid: "48211855"
 |sp_configure 'ft notify bandwidth (min)'|Se encontró la opción ft notify bandwidth (min) de sp_configure. No debe usarse. Se produce una vez por cada consulta.|  
 |sp_configure 'locks'|Se encontró la opción locks de sp_configure. Los bloqueos ya no son configurables. No debe usarse. Se produce una vez por cada consulta.|  
 |sp_configure 'open objects'|Se encontró la opción open objects de sp_configure. El número de objetos abiertos ya no es configurable. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'priority boost'|Se encontró la opción Aumento de prioridad de sp_configure. No debe usarse. Se produce una vez por cada consulta. Use en su lugar la opción start/high … program.exe de Windows.|  
+|sp_configure 'priority boost'|Se encontró la opción Aumento de prioridad de sp_configure. No debe usarse. Se produce una vez por cada consulta. En su lugar, use la opción start /high ... program.exe de Windows.|  
 |sp_configure 'remote proc trans'|Se encontró la opción remote proc trans de sp_configure. No debe usarse. Se produce una vez por cada consulta.|  
 |sp_configure 'set working set size'|Se encontró la opción set working set size de sp_configure. El tamaño del espacio de trabajo ya no es configurable. No debe usarse. Se produce una vez por cada consulta.|  
 |sp_control_dbmasterkey_password|El procedimiento almacenado sp_control_dbmasterkey_password no comprueba si existe una clave maestra. Esto se admite por cuestiones de compatibilidad con versiones anteriores, pero muestra una advertencia. Este comportamiento se ha desaprobado. En una futura versión, la clave maestra debe existir y la contraseña utilizada en el procedimiento almacenado sp_control_dbmasterkey_password debe coincidir con una de las utilizadas para cifrar la clave maestra de base de datos.|  
 |sp_create_removable|Se encontró el procedimiento sp_create_removable. Utilice CREATE DATABASE en su lugar. Se produce una vez por cada consulta.|  
-|sp_db_vardecimal_storage_format|El uso de `vardecimal` se encontró el formato de almacenamiento. En su lugar, use la compresión de datos.|  
-|sp_dbcmptlevel|Se encontró el procedimiento sp_dbcmptlevel. En su lugar, use ALTER DATABASE … SET COMPATIBILITY_LEVEL. Se produce una vez por cada consulta.|  
+|sp_db_vardecimal_storage_format|Se encontró que se usa el de formato de almacenamiento `vardecimal`. En su lugar, use la compresión de datos.|  
+|sp_dbcmptlevel|Se encontró el procedimiento sp_dbcmptlevel. Use ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Se produce una vez por cada consulta.|  
 |sp_dbfixedrolepermission|Se encontró el procedimiento sp_dbfixedrolepermission. No debe usarse. Se produce una vez por cada consulta.|  
 |sp_dboption|Se encontró el procedimiento sp_dboption. Use ALTER DATABASE y DATABASEPROPERTYEX en su lugar. Se produce una vez por cada compilación.|  
 |sp_dbremove|Se encontró el procedimiento sp_dbremove. Use DROP DATABASE en su lugar. Se produce una vez por cada consulta.|  
@@ -179,7 +179,7 @@ ms.locfileid: "48211855"
 |sp_droprole|Se encontró el procedimiento sp_droprole. Utilice DROP ROLE en su lugar. Se produce una vez por cada consulta.|  
 |sp_droptype|Se encontró el procedimiento sp_droptype. Utilice DROP TYPE en su lugar.|  
 |sp_dropuser|Se encontró el procedimiento sp_dropuser. Utilice DROP USER en su lugar. Se produce una vez por cada consulta.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|El uso de `vardecimal` se encontró el formato de almacenamiento. Utilice en su lugar la compresión de datos y sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|Se encontró que se usa el de formato de almacenamiento `vardecimal`. Utilice en su lugar la compresión de datos y sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|Se encontró el procedimiento sp_fulltext_catalog. Use CREATE/ALTER/DROP FULLTEXT CATALOG en su lugar. Se produce una vez por cada compilación.|  
 |sp_fulltext_column|Se encontró el procedimiento sp_fulltext_column. Utilice ALTER FULLTEXT INDEX en su lugar. Se produce una vez por cada compilación.|  
 |sp_fulltext_database|Se encontró el procedimiento sp_fulltext_database. Use ALTER DATABASE en su lugar. Se produce una vez por cada compilación.|  
@@ -249,13 +249,13 @@ ms.locfileid: "48211855"
 |sysusers|Se encontraron referencias a sysusers. Utilice en su lugar sys.database_principals. Se produce una vez por cada compilación.|  
 |Sugerencia de table sin WITH|Se encontró una instrucción que utilizaba sugerencias de tabla pero no usaba la palabra clave WITH. Modifique las instrucciones para incluir la palabra WITH. Se produce una vez por cada compilación.|  
 |Opción de tabla Text in row|Se encontraron referencias a la opción de tabla 'text in row'. Utilice sp_tableoption 'large value types out of row' en su lugar. Se produce una vez por cada consulta.|  
-|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
-|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
-|timestamp|Número total de veces en desuso `timestamp` se ha encontrado el tipo de datos en una instrucción DDL. Use el `rowversion` del tipo de datos en su lugar.|  
-|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para usar el `varchar(max)` tipo de datos y quitar `text`, `ntext`, y `image` sintaxis del tipo de datos. Se produce una vez por cada consulta.|  
+|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis de los tipos de datos `text`, `ntext` y `image`. Se produce una vez por cada consulta.|  
+|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis de los tipos de datos `text`, `ntext` y `image`. Se produce una vez por cada consulta.|  
+|timestamp|Número total de veces que el tipo de datos `timestamp` obsoleto se encontró en una instrucción DDL. En su lugar, use el tipo de datos `rowversion`.|  
+|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis de los tipos de datos `text`, `ntext` y `image`. Se produce una vez por cada consulta.|  
 |USER_ID|Se encontraron referencias a la función USER_ID. Utilice en su lugar la función DATABASE_PRINCIPAL_ID. Se produce una vez por cada compilación.|  
 |Uso de OLEDB para servidores vinculados||  
-|Formato de almacenamiento vardecimal|El uso de `vardecimal` se encontró el formato de almacenamiento. En su lugar, use la compresión de datos.|  
+|Formato de almacenamiento vardecimal|Se encontró que se usa el de formato de almacenamiento `vardecimal`. En su lugar, use la compresión de datos.|  
 |XMLDATA|Se encontró la sintaxis de FOR XML. Utilice la generación XSD para los modos AUTO y RAW. No hay sustituto para el modo explícito. Se produce una vez por cada compilación.|  
 |XP_API|Se encontró una instrucción de procedimiento almacenado extendido. No debe usarse.|  
 |xp_grantlogin|Se encontró el procedimiento xp_grantlogin. Utilice CREATE LOGIN en su lugar. Se produce una vez por cada compilación.|  

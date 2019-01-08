@@ -12,18 +12,18 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514942"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Creación de casos de prueba (SybaseToSQL)
 Use el Asistente de caso de prueba para crear una prueba. Este asistente le permite crear casos de prueba eligiendo probados y comprobados los objetos y especificando los parámetros de pruebas.  
   
 ## <a name="starting-the-test-case-wizard"></a>Para iniciar al Asistente de caso de prueba  
-Para iniciar el Asistente de caso de prueba, haga clic **nuevo caso de prueba...** desde el **evaluador** menú.  
+Para iniciar el Asistente de caso de prueba, haga clic **nuevo caso de prueba...**  desde el **evaluador** menú.  
   
 Cuando se inicia, el asistente busca ssmatester2005db de base de datos o ssmatester2008db (según el tipo de proyecto) del servidor de origen Sybase. Es el esquema de extensión evaluador utilizado para almacenar los objetos auxiliares. Si el Asistente de caso de prueba no se encuentra ssmatester2005db o ssmatester2008db, muestra una ventana de cuadro de diálogo que propone para crear la base de datos de extensión de evaluador. (Esta situación suele sucede durante la primera ejecución del evaluador de SSMA.)  
   

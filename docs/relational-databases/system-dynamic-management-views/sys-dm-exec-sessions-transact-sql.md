@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705721"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535189"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705721"
   
  Las vistas de administración dinámica sys.dm_exec_connections, sys.dm_exec_sessions y sys.dm_exec_requests se asignan a la [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) tabla del sistema.  
   
-> **Nota:** para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_exec_sessions**.  
+> **NOTA:** Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Nombre de columna|Tipo de datos|Descripción e información específica de la versión|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica la sesión asociada a cada conexión principal activa. No admite valores NULL.|  
 |login_time|**datetime**|Hora en que se estableció la sesión. No admite valores NULL.|  
-|host_name|**nvarchar(128)**|Nombre de la estación de trabajo cliente específica de una sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.<br /><br /> **Nota de seguridad:** la aplicación cliente proporciona el nombre de la estación de trabajo y puede proporcionar datos inexactos. No confíe en HOST_NAME como característica de seguridad.|  
+|host_name|**nvarchar(128)**|Nombre de la estación de trabajo cliente específica de una sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.<br /><br /> **Nota de seguridad:** La aplicación cliente proporciona el nombre de la estación de trabajo y puede proporcionar datos inexactos. No confíe en HOST_NAME como característica de seguridad.|  
 |program_name|**nvarchar(128)**|Nombre del programa cliente que inició la sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |host_process_id|**int**|Identificador de proceso del programa cliente que inició la sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |client_version|**int**|Versión del protocolo TDS de la interfaz utilizada por el cliente para conectarse al servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47705721"
 |login_name|**nvarchar(128)**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se está ejecutando la sesión. Para saber qué nombre de inicio de sesión original ha creado la sesión, vea original_login_name. Puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica el nombre de inicio de sesión o un nombre de usuario de dominio autenticado de Windows. No admite valores NULL.|  
 |nt_domain|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Dominio de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
 |nt_user_name|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de usuario de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
-|status|**nvarchar(30)**|Estado de la sesión. Valores posibles:<br /><br /> **Ejecutando** -uno o más solicitudes en ejecución<br /><br /> **En modo de suspensión** -no hay solicitudes en ejecución actualmente<br /><br /> **Latente** : sesión se ha restablecido debido a la agrupación de conexiones y ahora está en estado de inicio.<br /><br /> **Preconnect** -sesión está en el clasificador del regulador de recursos.<br /><br /> No admite valores NULL.|  
+|status|**nvarchar(30)**|Estado de la sesión. Valores posibles:<br /><br /> **Ejecutando** -uno o más solicitudes en ejecución<br /><br /> **En modo de suspensión** -no hay solicitudes en ejecución actualmente<br /><br /> **Latente** -sesión se ha restablecido debido a la agrupación de conexiones y ahora está en estado de inicio.<br /><br /> **Preconnect** -sesión está en el clasificador del regulador de recursos.<br /><br /> No admite valores NULL.|  
 |context_info|**varbinary(128)**|Valor CONTEXT_INFO para la sesión. La información de contexto se establece por el usuario mediante el [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) instrucción. Acepta valores NULL.|  
 |cpu_time|**int**|Tiempo de CPU, en milisegundos, utilizado por esta sesión. No admite valores NULL.|  
 |memory_usage|**int**|Número de páginas de memoria de 8 KB utilizadas por esta sesión. No admite valores NULL.|  
@@ -133,7 +133,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>B. Buscar cursores de ejecución prolongada  
+### <a name="b-finding-long-running-cursors"></a>b. Buscar cursores de ejecución prolongada  
  En el ejemplo siguiente se buscan los cursores que se han abierto durante más de un período concreto, quién los creó y en qué sesión están.  
   
 ```sql  

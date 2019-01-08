@@ -1,11 +1,10 @@
 ---
-title: 'TM: Save Tran Starting, clase de eventos | Microsoft Docs'
+title: 'TM: Save Tran Starting, clase de evento | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12835350620a059e9bc214ed1abf3c629a953cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801447"
 ---
-# <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting, clase de eventos
-  La clase de eventos TM: Save Tran Starting indica que se está iniciando una solicitud SAVE TRANSACTION. La solicitud se envía desde el cliente mediante una interfaz de administración de transacciones.  
+# <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting, clase de evento
+  TM: Save Tran Starting, clase de evento indica que se está iniciando una solicitud SAVE TRANSACTION. La solicitud se envía desde el cliente mediante una interfaz de administración de transacciones.  
   
-## <a name="tm-save-tran-starting-event-class-data-columns"></a>Columnas de datos de la clase de eventos TM: Save Tran Starting  
+## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM: Save TRAN Starting columnas de datos de clase de eventos  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -33,8 +32,8 @@ ms.locfileid: "48204605"
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
 |DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|EventClass|`int`|Tipo de evento = 191.|27|no|  
-|EventSequence|`int`|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
+|EventClass|`int`|Tipo de evento = 191.|27|No|  
+|EventSequence|`int`|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -43,7 +42,7 @@ ms.locfileid: "48204605"
 |NTDomainName|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |IdSolicitud|`int`|Id. de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  

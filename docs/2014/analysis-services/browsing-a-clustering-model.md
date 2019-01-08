@@ -16,12 +16,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c994b43bda37981d7073d0ee16f32369677e244e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535720"
 ---
 # <a name="browsing-a-clustering-model"></a>Examinar un modelo de clústeres
   Al abrir un modelo de agrupación en clústeres con **examinar**, el modelo se muestra en un visor interactivo, similar al Visor de agrupación en clústeres de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor le ayudará a explorar los clústeres que se han creado y a conocer las características del clúster. Asimismo, podrá comparar y contrastar segmentos individuales con otros segmentos o con la población.  
@@ -121,7 +121,7 @@ ms.locfileid: "48060415"
   
     -   El ancho del rombo representa la varianza del atributo en ese nodo. Por tanto, un rombo más estrecho indica que el nodo puede crear una predicción más exacta.  
   
-5.  Para crear más espacio en el gráfico, haga clic en un clúster que no es necesario ver de inmediato y seleccione **Ocultar columna**. Esto no elimina la columna del modelo, tan solo la contrae temporalmente.  
+5.  Para crear más espacio en el gráfico, haga clic en un clúster que no es necesario ver de inmediato y seleccione **Ocultar columna**. Esto no elimina del modelo, tan solo la contrae temporalmente la columna.  
   
      Para ver los clústeres que ha ocultado, haga clic y arrastre el borde de la columna o seleccione el nombre del clúster en la lista, **más clústeres**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48060415"
   
 -   Haga clic en la columna de la del clúster en el encabezado y seleccione **obtención de detalles para estructurar datos** para obtener información detallada acerca de los miembros del clúster que no se incluyó en el modelo.  
   
-     Por ejemplo, si está creando perfiles de clientes, puede que deje la información de contacto en datos subyacentes (la estructura de minería de datos) pero sin incluirla en el modelo porque no es de utilidad para el análisis. Sin embargo, una vez se hayan asignado los clientes a los clústeres, podrá ver los datos detallados mediante la obtención de detalles.  
+     Por ejemplo, si está generando perfiles para los clientes, puede dejar la información de contacto en los datos subyacentes (la estructura de minería de datos) pero no incluirlo en el modelo, porque no es útil para el análisis. Sin embargo, una vez se hayan asignado los clientes a los clústeres, podrá ver los datos detallados mediante la obtención de detalles.  
   
  [Volver al principio](#BKMK_Tabs)  
   
@@ -176,11 +176,11 @@ ms.locfileid: "48060415"
   
 5.  Haga clic en **copiar a Excel**.  
   
-     Tenga en cuenta que el nuevo gráfico de características del clúster se ha agregado en su propia hoja de cálculo. Puede moverlo a la misma hoja de cálculo que el otro perfil para hacer más sencilla su comparación, lo cual lo hará en el paso siguiente.  
+     Tenga en cuenta que el nuevo gráfico de características del clúster se ha agregado en su propia hoja de cálculo. Puede moverlo a la misma hoja de cálculo como el otro perfil para que resulte más fácil compararlos, lo que hará en el paso siguiente.  
   
  **Sugerencias**  
   
--   Observe que la característica principal del cliente en el clúster Más de 65 es que no compran su producto. Si quiere saber por qué es así, puede examinar los clústeres y comparar los grupos o bien, puede crear un modelo relacionado con un algoritmo que sea bueno para examinar las causas y los resultados, como un modelo de árbol de decisión o un modelo Bayes naive.  
+-   Tenga en cuenta que la característica principal del cliente en el clúster más de 65 es que no compran su producto. Si quiere saber por qué es así, puede examinar los clústeres y comparar los grupos o bien, puede crear un modelo relacionado con un algoritmo que sea bueno para examinar las causas y los resultados, como un modelo de árbol de decisión o un modelo Bayes naive.  
   
 -   Si desea obtener una lista completa de atributos y de probabilidades para este clúster (o para todos los clústeres) puede crear una consulta. Para obtener ejemplos de consultas en los modelos de clústeres, consulte [ejemplos de consultas de modelo de agrupación en clústeres](data-mining/clustering-model-query-examples.md).  
   
@@ -205,7 +205,7 @@ ms.locfileid: "48060415"
   
      Tenga en cuenta que, en segundo plano, el **distinción del clúster** Visor envía consultas complejas en el servidor de minería de datos, para extraer los atributos que son más importantes en la distinción entre los dos grupos, facilitando la tarea comparar dos conjuntos de clientes.  
   
-2.  Haga clic en cualquiera de los **favorece...** columnas.  
+2.  Haga clic en cualquiera de los **favorece...**  columnas.  
   
      La barra a la derecha de la lista de atributos y valores muestra las características o valores que son más importantes como rasgos diferenciadores del clúster seleccionado.  
   

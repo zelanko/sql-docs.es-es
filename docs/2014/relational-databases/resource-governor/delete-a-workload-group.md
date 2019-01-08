@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
@@ -14,21 +13,21 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28de150be95c10e8c1c1ef9f4c5280d185c5bc18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764027"
 ---
 # <a name="delete-a-workload-group"></a>Eliminar un grupo de cargas de trabajo
   Puede eliminar un grupo de cargas de trabajo o grupo de recursos de servidor mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
   
--   **Para eliminar un grupo de cargas de trabajo con:**  [Explorador de objetos](#DelWGObjEx), [Propiedades del regulador de recursos](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **Para eliminar una carga de trabajo de grupo, mediante:**  [Explorador de objetos](#DelWGObjEx), [propiedades del Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  No puede eliminar un grupo de cargas de trabajo si contiene sesiones activas.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
@@ -68,9 +67,9 @@ ms.locfileid: "48174335"
 ##  <a name="DelWGTSQL"></a> Eliminar un grupo de cargas de trabajo mediante Transact-SQL  
  **Para eliminar un grupo de cargas de trabajo utilizando Transact-SQL**  
   
-1.  Ejecute el `DROP WORKLOAD GROUP` instrucción especificando el nombre del grupo de cargas de trabajo para eliminar.  
+1.  Ejecute la instrucción `DROP WORKLOAD GROUP` especificando el nombre del grupo de cargas de trabajo que desea eliminar.  
   
-2.  Antes de emitir la instrucción `ALTER RESOURCE GOVERNOR RECONFIGURE`, compruebe que no hay ninguna solicitud activa en el grupo de cargas de trabajo que va a eliminar. Si hay solicitudes activas, `ALTER RESOURCE GOVERNOR` se producirá un error. Para evitar este problema, puede realizar una de las siguientes acciones:  
+2.  Antes de emitir la instrucción `ALTER RESOURCE GOVERNOR RECONFIGURE`, compruebe que no hay ninguna solicitud activa en el grupo de cargas de trabajo que va a eliminar. Si hay solicitudes activas, `ALTER RESOURCE GOVERNOR` producirá un error. Para evitar este problema, puede realizar una de las siguientes acciones:  
   
     -   Espere hasta todas las sesiones del grupo de cargas de trabajo se hayan desconectado.  
   

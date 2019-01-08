@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107445"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394198"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarea 1: definir una directiva de coincidencia
-  En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **Id. de proveedor**, lo que significa que debe coincidir con los identificadores de proveedor antes de usar los demás dominios de la regla. La regla usa otros dos dominios: **Supplier Name** con **similitud** valor establecido en **70%** y **correo electrónico de contacto** con  **Similitud** valor establecido en **30%**.  
+  En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **Id. de proveedor**, lo que significa que debe coincidir con los identificadores de proveedor antes de usar los demás dominios de la regla. La regla usa otros dos dominios: **Nombre de proveedor** con **similitud** valor establecido en **70%** y **correo electrónico de contacto** con **similitud** valor establecido en **30%**.  
   
 1.  En la página principal de **cliente DQS**, haga clic en **flecha derecha** junto a **proveedores** knowledge base y, a continuación, seleccione **directiva de coincidencia**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48107445"
   
 10. Haga clic en **agregar un nuevo elemento de dominio** desde la barra de herramientas.  
   
-11. Seleccione **Supplier Name** dominio, seleccione **Similar** para **similitud**y el tipo **70** para el **peso**.  Aquí, está especificando que los nombres de proveedor no deben ser idénticos, sino que pueden ser similares, para que los registros se consideren una coincidencia. La ponderación indica la contribución de esta puntuación del campo a la puntuación de coincidencia total.  
+11. Seleccione **Supplier Name** dominio, seleccione **Similar** para **similitud**y el tipo **70** para el **peso**.  Aquí, está especificando que los nombres de proveedor no deben ser idénticos, sino que pueden ser similares, para que los registros se consideren una coincidencia. La ponderación indica la contribución de puntuación de este campo a la puntuación de coincidencia total.  
   
 12. Repita los dos pasos anteriores para agregar **correo electrónico de contacto** dominio con **30** para el **peso**.  
   

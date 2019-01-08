@@ -1,5 +1,5 @@
 ---
-title: Definir la granularidad de dimensión en un grupo de medida | Documentos de Microsoft
+title: Definir la granularidad de dimensión en un grupo de medida | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542242"
 ---
-# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lección 5-4-definición granularidad de dimensión dentro de un grupo de medida
+# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lección 5-4: definición de granularidad de dimensión dentro de un grupo de medida
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Los usuarios desearán dimensionar los datos de hechos con una granularidad o especificidad distinta para distintos objetivos. Por ejemplo, los datos de venta para las ventas de proveedor o ventas por Internet pueden registrarse cada día, mientras que es posible que la información sobre cuotas de venta solo exista en el nivel de mes o trimestre. En estos casos, los usuarios desearán una dimensión de tiempo con otra granularidad o un nivel de detalle distinto para cada una de las distintas tablas de hechos. Si bien puede definirse una nueva dimensión de base de datos como una dimensión de tiempo con esta granularidad diferente, hay una forma más fácil de hacerlo con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -95,11 +95,11 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
 7.  En la lista de campos de tabla dinámica, seleccione la jerarquía definida por el usuario **Sales Territories** y haga clic en la flecha hacia abajo de la derecha.  
   
-    ![Jerarquía de territorios de ventas en la lista de campos](../analysis-services/media/l5-granularity-1a.png "jerarquía Sales Territories en la lista de campos")  
+    ![Jerarquía Sales Territories en la lista de campos](../analysis-services/media/l5-granularity-1a.png "jerarquía Sales Territories en la lista de campos")  
   
 8.  En el filtro, haga clic en la casilla Seleccionar todo para desactivar todas las casillas y elija solo **North America**.  
   
-    ![Panel de filtro para seleccionar North America](../analysis-services/media/l5-granularity-1b.png "panel de filtro para seleccionar North America")  
+    ![Panel de filtro para seleccionar North America](../analysis-services/media/l5-granularity-1b.png "panel Filtro para seleccionar North America")  
   
 9. En la lista de campos de la tabla dinámica, expanda **Date**.  
   
@@ -113,7 +113,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
     En la imagen siguiente se muestran los valores para **Sales Amount Quota**.  
   
-    ![Cuota de importe de valores para las ventas](../analysis-services/media/l5-granularity-3.png "valores para las ventas importe de cuota")  
+    ![Los valores de Sales Amount, cuota](../analysis-services/media/l5-granularity-3.png "cuota de importe de los valores de ventas")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Definir las propiedades de uso de dimensiones para el grupo de medida Sales Quotas  
   
@@ -127,7 +127,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
     Observe que las dimensiones de cubo **Employee** y **Date** están vinculadas a los grupos de medida **Sales Quotas y Sales Quotas 1** a través de relaciones normales. Observe también que la dimensión de cubo **Sales Territory** no está vinculada a ninguno de estos grupos de medida.  
   
-4.  Haga clic en la celda en la intersección de la dimensión **Sales Territory** y el grupo de medida **Sales Quotas** y, después, haga clic en el botón Examinar (**…**). Se abre el cuadro de diálogo **Definir relación** .  
+4.  Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas** grupo de medida y, a continuación, haga clic en el botón Examinar (**...** ). Se abre el cuadro de diálogo **Definir relación** .  
   
 5.  En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -141,7 +141,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
 10. Haga clic en **Aceptar**.  
   
-11. Haga clic en la celda en la intersección de la dimensión **Sales Territory** y el grupo de medida **Sales Quotas 1** y, después, haga clic en el botón Examinar (**…**). Se abre el cuadro de diálogo **Definir relación** .  
+11. Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas 1** grupo de medida y, a continuación, haga clic en el botón Examinar (**...** ). Se abre el cuadro de diálogo **Definir relación** .  
   
 12. En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -163,7 +163,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
     Cambiar el nombre de la dimensión de cubo **Order Date** por **Date** facilita a los usuarios comprender su rol como dimensión de fecha principal del cubo.  
   
-20. Haga clic en el botón Examinar (**…**) de la celda que se encuentra en la intersección del grupo de medida **Sales Quotas** y la dimensión **Date** .  
+20. Haga clic en el botón Examinar (**...** ) en la celda en la intersección de la **Sales Quotas** grupo de medida y la **fecha** dimensión.  
   
 21. En el cuadro de diálogo **Definir relación** , seleccione **Regular** en la lista **Seleccionar tipo de relación** .  
   
@@ -218,7 +218,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
     Observe que cada miembro del nivel de trimestre fiscal tiene el mismo valor que el nivel de trimestre. Usando **Q1 FY 2008** como ejemplo, la cuota de $9.180.000, 00 para **Q1 FY 2008** es también el valor de cada uno de sus miembros. Este comportamiento se produce porque el nivel de detalle de los datos de la tabla de hechos es el nivel trimestral y el nivel de detalle de la dimensión Date también es el nivel de trimestre. En la lección 6, aprenderá a asignar el importe trimestral proporcionalmente a cada mes.  
   
-    ![Grupo de medida Sales Quota dimensionado](../analysis-services/media/l5-granularity-7.gif "grupo de medida Sales Quota con dimensiones correctas")  
+    ![Grupo de medida Sales quota con dimensiones correctas](../analysis-services/media/l5-granularity-7.gif "grupo medida Sales Quota bien dimensionado")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 6: Definir cálculos](../analysis-services/lesson-6-defining-calculations.md)  

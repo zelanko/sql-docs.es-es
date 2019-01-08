@@ -1,5 +1,5 @@
 ---
-title: Usar datos de tabla anidada como entrada para un gráfico de precisión | Documentos de Microsoft
+title: Uso de datos de la tabla anidada como entrada para un gráfico de precisión | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505310"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usar datos de tabla anidada como entrada para un gráfico de precisión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015683"
   
 3.  En **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar ( **…** ) para elegir el conjunto de datos externos en una lista de vistas del origen de datos del servidor actual.  
+4.  Haga clic en el botón Examinar **(...)**  para elegir el conjunto de datos externos en una lista de vistas del origen de datos en el servidor actual.  
   
 5.  Haga clic en **Seleccionar tabla de casos**. En el cuadro de diálogo **Seleccionar tabla** , elija la tabla en la vista del origen de datos que contiene los datos de los casos y, a continuación, haga clic en **Aceptar**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34015683"
      Si tiene que modificar la relación entre la tabla anidada y la tabla de casos, haga clic en **Modificar combinación** para abrir el cuadro de diálogo **Crear relación** .  
   
 ## <a name="see-also"></a>Vea también  
- [Elegir y asignar el modelo de datos de prueba](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Aplicar filtros para modelar los datos de prueba](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+ [Elegir y asignar datos de prueba para el modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
+ [Aplicar filtros a los datos de prueba del modelo](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
   

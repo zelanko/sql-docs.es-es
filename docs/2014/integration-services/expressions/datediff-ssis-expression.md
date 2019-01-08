@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DATEDIFF statement
@@ -14,12 +13,12 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04bedeba150a98bbb0ecba04aad6f54f3dd1182d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 790cfc41d4ff4b1cd3265f9a0042a6822a546ddc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810127"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (expresión de SSIS)
   Devuelve el número de límites de fecha y hora entre dos fechas especificadas. El parámetro *datepart* identifica los límites de fecha y hora que se van a comparar.  
@@ -63,7 +62,7 @@ DATEDIFF(datepart, startdate, endate)
   
  DATEDIFF devuelve un resultado NULL si alguno de los argumentos es NULL.  
   
- Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  Se produce un error si una fecha no es válida, si la fecha o unidad de tiempo no es una cadena, si la fecha de inicio no es una fecha o si la fecha de finalización no es una fecha.  
   

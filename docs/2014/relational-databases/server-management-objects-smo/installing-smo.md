@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - installing SMO
@@ -16,12 +14,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31d0a0731c046f58d1a1d0689ad4c987989a0874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165725"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767908"
 ---
 # <a name="installing-smo"></a>Instalar SMO
   Si desea desarrollar una aplicación que use Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO), debe seleccionar el SDK de las herramientas de cliente cuando instale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar el SDK de las herramientas de cliente sin instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instale Objetos de administración compartida desde el Feature Pack de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si desea asegurarse de que estén instalados los Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo que ejecutará la aplicación, puede usar el archivo Shared Management Objects .msi del Feature Pack de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

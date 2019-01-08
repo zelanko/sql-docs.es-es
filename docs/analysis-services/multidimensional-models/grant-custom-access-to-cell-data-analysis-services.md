@@ -1,5 +1,5 @@
 ---
-title: Conceder acceso personalizado a los datos de las celdas (Analysis Services) | Documentos de Microsoft
+title: Conceder acceso personalizado a los datos de las celdas (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539038"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Otorgar acceso personalizado a los datos de las celdas (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34025249"
   
  Los permisos de celda se aplican a los datos en el interior de la celda y no a sus metadatos. Fíjese cómo la celda sigue visible en los resultados de una consulta, con un valor de **#N/A** en lugar del valor real de la celda. El valor **#N/A** aparece en la celda, a no ser que la aplicación cliente convierta el valor o que se especifique otro valor estableciendo la propiedad Secured Cell Value en la cadena de conexión.  
   
- Para ocultar completamente la celda, tiene que limitar los miembros (dimensiones, atributos de dimensión y miembros de atributo de dimensión) que se pueden ver. Para obtener más información, vea [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
+ Para ocultar completamente la celda, tiene que limitar los miembros de dimensiones, atributos de dimensión y miembros de atributo de dimensión-que están visibles. Para obtener más información, vea [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
   
  Como administrador, puede especificar si los miembros del rol van a tener permisos de Lectura, Contingente de lectura o Lectura y escritura. Conferir permisos a una celda es tan solo el nivel inferior de seguridad permitido, por tanto, antes de comenzar a aplicar permisos en este nivel, es importante que tenga en cuenta diversos aspectos:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34025249"
 ## <a name="allow-access-to-specific-measures"></a>Permitir el acceso a medidas específicas  
  Puede usar la seguridad de celda para elegir explícitamente qué medidas estarán disponibles. Una vez que haya identificado específicamente los miembros que se permiten, el resto de medidas pasa a no estar disponible. Se trata quizás del escenario más sencillo para realizar implementaciones a través de scripts MDX, tal como se describe en los pasos siguientes.  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], seleccione una base de datos, abra la carpeta **Roles** y, después, haga clic en un rol de base de datos (o cree un rol de base de datos nuevo). La pertenencia ya debería estar especificada y el rol debería tener acceso de **Read** al cubo. Vea [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) si necesita ayuda con este paso.  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], seleccione una base de datos, abra la carpeta **Roles** y, después, haga clic en un rol de base de datos (o cree un rol de base de datos nuevo). La pertenencia ya debería estar especificada y el rol debería tener acceso de **Read** al cubo. Vea [Grant cube or model permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) si necesita ayuda con este paso.  
   
 2.  En **Datos de celda**, compruebe la selección del cubo para asegurarse de que ha elegido el correcto y, después, seleccione **Habilitar permisos de lectura**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34025249"
   
  En Excel, la seguridad de celda se hace patente en la ilustración siguiente:  
   
- ![Columnas que muestran celdas como no disponible en Excel](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "columnas que muestran celdas como no disponible en Excel")  
+ ![Las columnas que muestran celdas como no disponible en Excel](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "columnas que muestran celdas como no disponible en Excel")  
   
 ## <a name="set-read-permissions-on-calculated-measures"></a>Establecer permisos de Lectura en medidas calculadas  
  Los permisos en medidas calculadas se pueden establecer independientemente de sus partes constituyentes. Si quiere coordinar los permisos entre una medida calculada y sus medidas dependientes, pase a la siguiente sección sobre Contingente de lectura.  
@@ -74,7 +74,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  En Excel, conéctese al cubo con el rol actual y elija las tres medidas para ver el resultado de la seguridad de celda. Vea que las medidas en el conjunto que se ha denegado no están disponibles, pero el usuario puede ver la medida calculada.  
   
- ![Tabla de Excel con disponibles y no cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "tabla de Excel con cellls disponible y no está disponible")  
+ ![Tabla de Excel con disponibles y no cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "tabla de Excel con cellls disponibles y no está disponible")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>Establecer permisos de Contingente de lectura en medidas calculadas  
  La seguridad de celda ofrece una alternativa, Contingente de lectura, para establecer permisos en las celdas asociadas que participan en un cálculo. Remítase de nuevo al ejemplo de **Reseller Gross Profit** . Al especificar la misma expresión MDX que se proporciona en la sección anterior, colóquela esta vez en la segunda área de texto del cuadro de diálogo **Crear rol** | **Datos de celda** (en el área de texto inferior **Permitir la lectura del contenido de la celda supeditado a la seguridad de celda**), el resultado aparece cuando se ve en Excel. Dado que **Reseller Gross Profit** depende de **Reseller Sales Amount** y **Reseller Total Product Cost**, ahora no se puede tener acceso al beneficio bruto porque no se tiene acceso a sus partes constituyentes.  
@@ -89,10 +89,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>Vea también  
  [Generador MDX &#40;Analysis Services - Datos multidimensionales&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [El Script MDX básico & #40; MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Conceder permisos de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [Conceder permisos para una dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [Conceder acceso personalizado a la dimensión de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder el cubo o modelo permisos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [Script MDX básico &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [Otorgar permisos para una dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

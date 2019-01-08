@@ -11,12 +11,12 @@ ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145105"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515968"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implementar las soluciones de PowerPivot en SharePoint
   Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de PowerPivot a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar PowerPivot para SharePoint en un servidor SharePoint 2010. Para ver una lista completa de los pasos necesarios, consulte [configuración en Administración Central y administración de servidores PowerPivot](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -27,9 +27,9 @@ ms.locfileid: "48145105"
   
  Este tema contiene las siguientes secciones:  
   
- [Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación](#bkmk_classic)  
+ [Requisito previo: Compruebe que la aplicación Web usa autenticación de modo clásico](#bkmk_classic)  
   
- [Paso 1: implementar la solución de granja](#bkmk_farm)  
+ [Paso 1: Implementar la solución de granja de servidores](#bkmk_farm)  
   
  [Paso 2: Implementar la solución de aplicación Web de PowerPivot en Administración Central](#deployCA)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48145105"
   
  [Acerca de las soluciones de PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación  
+##  <a name="bkmk_classic"></a> Requisito previo: Compruebe que la aplicación Web usa el Modo clásico de autenticación.  
  PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde la **SharePoint 2010 Management Shell**, reemplazando `http://<top-level site name>` con el nombre del sitio de SharePoint:  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Se debería devolver el valor **false**. Si es **true**, no se puede obtener acceso a datos PowerPivot con esta aplicación web.  
   
-##  <a name="bkmk_farm"></a> Paso 1: implementar la solución de granja  
+##  <a name="bkmk_farm"></a> Paso 1: Implementar la solución de granja de servidores  
  En esta sección se muestra cómo implementar soluciones con PowerShell, pero también puede utilizar la Herramienta de configuración de PowerPivot para completar esta tarea. Para obtener más información, consulte [configurar o reparar PowerPivot para SharePoint 2010 &#40;herramienta de configuración de PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Esta tarea solo tiene que realizarse una vez, después de instalar PowerPivot para SharePoint.  
@@ -58,7 +58,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Ejecute el siguiente cmdlet para agregar la solución de granja.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implementará la solución.  
@@ -66,7 +66,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Ejecute el siguiente cmdlet para implementar la solución de granja:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 ##  <a name="deployCA"></a> Paso 2: Implementar la solución de aplicación Web de PowerPivot en Administración Central  
@@ -83,7 +83,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Ejecute el siguiente cmdlet para agregar la solución de granja.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implementará la solución.  

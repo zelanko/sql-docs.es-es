@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], defaults
@@ -13,12 +12,12 @@ ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75bf4ef757be34eabff2f0283cf53947fbffdcc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167025"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751648"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Configurar los valores predeterminados de definición de seguimiento (SQL Server Profiler)
   El valor predeterminado de definición de seguimiento es la plantilla de seguimiento predeterminada que se utiliza para cada proveedor o servidor. Puede configurar las plantillas de seguimiento predeterminadas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

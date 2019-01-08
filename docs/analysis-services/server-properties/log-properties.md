@@ -1,4 +1,5 @@
 ---
+title: Propiedades de registro de Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999347"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071932"
 ---
 # <a name="log-properties"></a>Propiedades de registro
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999347"
  El valor predeterminado para esta propiedad está en blanco, que a su vez establece el valor predeterminado en FlightRecorderTraceDef.xml.  
   
 ## <a name="query-log"></a>Registro de consultas  
- **Se aplica a:** modo de servidor multidimensional únicamente  
+ **Se aplica a:** modo de servidor multidimensional  únicamente  
   
  **QueryLog\QueryLogFileName**  
  Una propiedad de cadena que especifica el nombre del archivo de registro de consultas. Esta propiedad solo se aplica cuando se utiliza un archivo de disco para realizar el registro, a diferencia de cuando se utiliza una tabla de base de datos (comportamiento predeterminado).  
@@ -156,9 +157,6 @@ ms.locfileid: "37999347"
  Una propiedad booleana que especifica si se crea la tabla del registro de consultas.  
   
  El valor predeterminado para esta propiedad es False, que indica que el servidor no creará automáticamente la tabla del registro y no registrará eventos de consulta.  
-  
-> [!NOTE]  
->  Para obtener más información sobre cómo configurar el registro de consultas, vea el tema sobre la [configuración del registro de consultas de Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

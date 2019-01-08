@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052515"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533304"
 ---
 # <a name="technical-reference-database-engine"></a>Referencia técnica (motor de base de datos)
   Encontrará la documentación de referencia de programación de herramientas, lenguajes y administración de [!INCLUDE[ssDE](../includes/ssde-md.md)] en Microsoft [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -38,10 +38,10 @@ ms.locfileid: "48052515"
   
  [SqlLocalDB (utilidad)](../tools/sqllocaldb-utility.md)  
   
- [Más…](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Más...](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![Icono carpeta de archivos pequeños](../../2014/integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") **Cmdlets de PowerShell del motor de base de datos**  
- [Cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
+ [cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
   
  [Cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
   

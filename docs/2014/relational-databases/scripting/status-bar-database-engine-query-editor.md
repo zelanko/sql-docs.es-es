@@ -11,21 +11,21 @@ ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 133a21d00442859738ac6114847f68ab7bfb1564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512078"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de estado (Editor de consultas del motor de base de datos)
   La barra de estado de las ventanas del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede codificarse por colores para indicar la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a la que está conectada cada ventana.  
   
 1.  **Antes de empezar:**  [Colores de la barra de estado](#StatusBarColors)  
   
-2.  **Para establecer un color de estado del servidor en:**  [Explorador de objetos](#SetOEServerColor), [Servidor registrado](#SetRegServerColor)  
+2.  **Para establecer un color de estado del servidor en:**  [Explorador de objetos](#SetOEServerColor), [servidor registrado](#SetRegServerColor)  
   
-3.  **Para usar un color de estado:**  [Abrir el editor de consultas usando un color de servidor](#OpenServerColor), [Abrir un editor de consultas especificando un color de estado](#OpenSpecColor)  
+3.  **Para usar un color de estado:**  [Abra el Editor de consultas usando un Color de servidor](#OpenServerColor), [abrir un Editor de consultas especificando un Color de estado](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Colores de la barra de estado  
  Puede asociar el color de una barra de estado con un determinado nodo del servidor en el **Explorador de objetos** o en los **Servidores registrados**. Los colores solo se pueden especificar en los nodos del servidor conectados a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], no en los nodos del servidor de otras tecnologías de SQL Server. También puede especificar un color personalizado para la barra de estado cada vez que conecte una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Puede abrir una ventana del Editor de consultas mediante el color de estado definido en el nodo de servidor o especificar un color único para la ventana del editor.  
@@ -35,13 +35,13 @@ ms.locfileid: "48093435"
 ##  <a name="SetOEServerColor"></a> Establecer el color de estado de un servidor en el Explorador de objetos  
  **Para establecer el color de estado del servidor en el Explorador de objetos**  
   
-1.  En el **Explorador de objetos**, haga clic en el botón **Conectar** y, a continuación, seleccione **Motor de base de datos...**.  
+1.  En el **Explorador de objetos**, haga clic en el botón **Conectar** y después seleccione **Motor de base de datos...**.  
   
 2.  En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>**.  
   
 3.  Active la casilla **Usar color personalizado** .  
   
-4.  Para elegir el color, haga clic en el botón **Seleccionar…** .  
+4.  Para elegir el color, haga clic en el botón **Seleccionar…**.  
   
 5.  Seleccione un color básico o personalizado y haga clic en Aceptar.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "48093435"
 ##  <a name="SetRegServerColor"></a> Establecer el color de estado en un servidor registrado  
  **Para establecer el color de estado en un servidor registrado**  
   
-1.  En **Servidores registrados**, haga clic con el botón secundario en el nodo de servidor y, a continuación, haga clic en **Propiedades...**.  
+1.  En **Servidores registrados**, haga clic con el botón derecho en el nodo de servidor y después haga clic en **Propiedades...**.  
   
 2.  En el cuadro de diálogo **Editar propiedades de registro de servidor** , seleccione la pestaña **Propiedades de conexión** .  
   
 3.  Active la casilla **Usar color personalizado** .  
   
-4.  Para elegir el color, haga clic en el botón **Seleccionar…** .  
+4.  Para elegir el color, haga clic en el botón **Seleccionar…**.  
   
 5.  Seleccione un color básico o personalizado y haga clic en Aceptar.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093435"
   
 -   Active la casilla **Usar color personalizado** .  
   
--   Para elegir el color, haga clic en el botón **Seleccionar…** .  
+-   Para elegir el color, haga clic en el botón **Seleccionar…**.  
   
 -   Seleccione un color básico o personalizado y haga clic en Aceptar.  
   

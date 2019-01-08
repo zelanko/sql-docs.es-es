@@ -13,19 +13,19 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0c766ed98bf5833790d2c0c1a35bfbff3c91e3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f635faa05d7d77a50d31491b1bab9b16875e728c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208865"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510923"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>Información general sobre instrucciones Transact-SQL para grupos de disponibilidad de AlwaysOn (SQL Server)
   En este tema se presentan las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] que admiten la implementación de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la creación y administración de un grupo de disponibilidad, réplica de disponibilidad y base de datos de disponibilidad dados.  
   
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](/sql/t-sql/statements/create-endpoint-transact-sql) crea un punto de conexión de creación de reflejo de la base de datos si no existe ninguno en la instancia de servidor. Cada instancia de servidor en el que vaya a implementar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o la creación de reflejo de la base de datos requiere un extremo de creación de reflejo de la base de datos.  
+ [CREATE ENDPOINT ... FOR DATABASE_MIRRORING](/sql/t-sql/statements/create-endpoint-transact-sql) crea un punto de conexión de creación de reflejo de la base de datos si no existe ninguno en la instancia de servidor. Cada instancia de servidor en el que vaya a implementar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o la creación de reflejo de la base de datos requiere un extremo de creación de reflejo de la base de datos.  
   
  Ejecute esta instrucción en la instancia de servidor en la que se va a crear el extremo. Puede crear solo un extremo de creación de reflejo de la base de datos en una instancia de servidor determinada. Para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
@@ -39,13 +39,13 @@ ms.locfileid: "48208865"
   
  Ejecute ALTER AVAILABILITY GROUP en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal actual.  
   
-##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
+##  <a name="AlterDb"></a> ALTER DATABASE ... SET HADR ...  
  Las opciones de la cláusula [SET HADR](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) de la instrucción ALTER DATABASE permiten combinar una base de datos secundaria con el grupo de disponibilidad de la base de datos principal correspondiente, quitar una base de datos combinada y suspender la sincronización de datos en una base de datos combinada, y reanudar la sincronización de datos.  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
  [DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql) quita un grupo de disponibilidad especificado y todas sus réplicas. DROP AVAILABILITY GROUP se puede ejecutar desde cualquier nodo de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] del clúster de conmutación por error de WSFC.  
   
-##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
+##  <a name="Restrictions"></a> Restricciones de las instrucciones AVAILABILITY GROUP de Transact-SQL  
  Las instrucciones CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP y DROP AVAILABILITY GROUP de [!INCLUDE[tsql](../../../includes/tsql-md.md)] tienen las siguientes restricciones:  
   
 -   Excepto en DROP AVAILABILITY GROUP, la ejecución de estas instrucciones requiere que el servicio HADR esté habilitado en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md).  

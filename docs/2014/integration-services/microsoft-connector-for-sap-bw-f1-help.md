@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e7412074cbea2baecf2a3437f7bbc267ed1e2ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 783bb0c879688bae668c164ce00b6ad8ed3eb9db
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747477"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Ayuda F1 de Microsoft Connector 1.1 for SAP BW
   Esta sección contiene los temas de la Ayuda F1 para los tres componentes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. También puede obtener acceso a estos temas desde la interfaz de usuario al presionar la tecla F1 o hacer clic en Ayuda en las páginas y los cuadros de diálogo del asistente.  
@@ -34,11 +33,11 @@ ms.locfileid: "48199755"
   
 -   [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de SAP BW &#40;página columnas&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Editor de origen de SAP BW &#40;página Columnas&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Editor de origen de SAP BW &#40;página de salida de Error&#41;](data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Editor de origen de SAP BW &#40;página Salida de error&#41;](data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Editor de origen de SAP BW &#40;página Avanzadas&#41;](data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [Buscar destino RFC](data-flow/look-up-rfc-destination.md)  
   
@@ -52,11 +51,11 @@ ms.locfileid: "48199755"
   
 -   [Editor de destino de SAP BW &#40;página Administrador de conexiones&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de SAP BW &#40;página asignaciones&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Editor de destino de SAP BW &#40;página Asignaciones&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Editor de destino de SAP BW &#40;página de salida de Error&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Editor de destino de SAP BW &#40;página Salida de error&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor de destino de SAP BW &#40;página Opciones avanzadas&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Editor de destino de SAP BW &#40;página Avanzadas&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
   
 -   [Buscar InfoPackage](data-flow/look-up-infopackage.md)  
   

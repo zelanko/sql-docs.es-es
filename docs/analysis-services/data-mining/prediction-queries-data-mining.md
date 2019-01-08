@@ -1,5 +1,5 @@
 ---
-title: Consultas de predicción (minería de datos) | Documentos de Microsoft
+title: Consultas de predicción (minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a8bc3dac0b76adc326b5beab8444475fb76af8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017852"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506040"
 ---
 # <a name="prediction-queries-data-mining"></a>Consultas de predicción (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34017852"
 ###  <a name="bkmk_PredFunc"></a> Agregar funciones de predicción  
  Además de predecir un valor concreto, puede personalizar una consulta de predicción para que devuelva diversos tipos de información relacionados con la predicción. Por ejemplo, si la predicción crea una lista de productos para recomendar a un cliente, es posible que también desee devolver la probabilidad de cada predicción, de modo que pueda clasificarlas y mostrar únicamente las principales recomendaciones al usuario.  
   
- Para ello, agregue *funciones de predicción* a la consulta. Cada modelo o tipo de consulta admite unas determinadas funciones. Por ejemplo, los modelos de agrupación en clústeres admiten funciones de predicción especiales que proporcionan detalles adicionales sobre los clústeres creados por el modelo, mientras que los modelos de serie temporal tienen funciones que calculan las diferencias a lo largo del tiempo. También existen funciones de predicción generales que funcionan con casi todos los tipos de modelos. Para obtener una lista de las funciones de predicción admitidas en los diferentes tipos de consultas, vea este tema en la referencia de DMX: [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md).  
+ Para ello, agregue *funciones de predicción* a la consulta. Cada modelo o tipo de consulta admite unas determinadas funciones. Por ejemplo, los modelos de agrupación en clústeres admiten funciones de predicción especiales que proporcionan detalles adicionales sobre los clústeres creados por el modelo, mientras que los modelos de serie temporal tienen funciones que calculan las diferencias a lo largo del tiempo. También existen funciones de predicción generales que funcionan con casi todos los tipos de modelos. Para obtener una lista de las funciones de predicción admitidas en los diferentes tipos de consultas, vea este tema en la referencia DMX:  [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Crear consultas de predicción singleton  
  Las consultas de predicción singleton resultan de gran utilidad para crear predicciones rápidas en tiempo real. Un escenario habitual podría ser en el que ha obtenido información de un cliente, quizás mediante un formulario en un sitio web, y desea enviar dicha información como entrada a una consulta de predicción singleton. Por ejemplo, cuando un cliente elige un producto de una lista, podría utilizar esa selección como la entrada a una consulta que prediga los mejores productos que puede recomendar.  
@@ -68,7 +68,7 @@ ms.locfileid: "34017852"
  Las consultas de predicción singleton no requieren ninguna tabla independiente que contenga la entrada. En su lugar, se proporcionan una o varias filas de valores como entrada para el modelo, y las predicciones se devuelven en tiempo real.  
   
 > [!WARNING]  
->  A pesar de su nombre, las consultas de predicción singleton no realizan solamente predicciones únicas, puede generar varias predicciones para cada conjunto de entradas. Puede proporcionar varios casos de entrada creando una instrucción SELECT para cada caso de entrada y combinándolas con el operador UNION.  
+>  A pesar del nombre, consultas de predicción singleton no solamente predicciones únicas-puede generar varias predicciones para cada conjunto de entradas. Puede proporcionar varios casos de entrada creando una instrucción SELECT para cada caso de entrada y combinándolas con el operador UNION.  
   
  Al crear una consulta de predicción singleton, debe proporcionar los nuevos datos al modelo con el formato PREDICTION JOIN. Esto significa que, aunque no se esté realizando una asignación a una tabla real, hay que asegurarse de que los nuevos datos coinciden con las columnas existentes en el modelo de minería de datos. Si las nuevas columnas de datos y los nuevos datos coinciden exactamente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asignará las columnas. Esto se denomina *NATURAL PREDICTION JOIN*. Sin embargo, si las columnas no coinciden, o si los nuevos datos no contienen el mismo tipo y cantidad de datos que hay en el modelo, deberá especificar qué columnas del modelo se asignan a los nuevos datos, o especificar los valores que faltan.  
   
@@ -148,7 +148,7 @@ FROM
  Si el proveedor no puede procesar conjuntos de filas jerárquicos, se puede eliminar la estructura de los resultados utilizando la palabra clave FLATTEN en la consulta de predicción. Para más información y ejemplos de conjuntos de filas planas, vea [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido consultas & #40; minería de datos & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Consultas de definición de datos & #40; minería de datos & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Consultas de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Consultas de definición de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

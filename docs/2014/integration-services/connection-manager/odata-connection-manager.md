@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756647"
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
   Un administrador de conexiones OData permite que un paquete se conecte a un origen OData. Un componente de origen OData se conecta a un origen OData mediante un administrador de conexiones OData y usa datos del servicio. Vea la sección [OData Source](../data-flow/odata-source.md)para obtener información detallada, incluidas las instrucciones de instalación de estos componentes.  
@@ -24,11 +23,11 @@ ms.locfileid: "48136635"
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>Agregar un administrador de conexiones a un paquete SSIS  
  Hay tres formas de agregar un nuevo administrador de conexiones OData a un paquete SSIS:  
   
--   Haga clic en el botón **Nuevo...** en el **Editor de origen OData**  
+-   Haga clic en el botón **Nuevo…** en el **Editor de origen de OData**.  
   
 -   Haga clic con el botón secundario en la carpeta **Administradores de conexiones** en el **Explorador de soluciones** y, a continuación, haga clic en **Nuevo administrador de conexiones**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
   
--   Haga clic con el botón secundario en el panel **Administradores de conexiones** en la parte inferior del diseñador de paquetes y seleccione **Nueva conexión...**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
+-   Haga clic en el **administradores de conexión** panel en la parte inferior del diseñador y, a continuación, seleccione paquete **nueva conexión...** . Seleccione **ODATA** en **Tipo de administrador de conexión**.  
   
 ## <a name="connection-manager-authentication"></a>Autenticación del administrador de conexiones  
  El administrador de conexiones OData admite dos modos de autenticación.  

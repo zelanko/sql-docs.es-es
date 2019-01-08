@@ -14,12 +14,12 @@ ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 626ee1de57fdcecdf53d20263b1717df25480c40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696283"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532525"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (controlador de Access)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47696283"
   
  **SQLGetInfo** es compatible con el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica el modo en que el controlador trata directamente los archivos en un origen de datos:  
   
--   SQL_FILE_NOT_SUPPORTED: El controlador no es un controlador de nivel único.  
+-   SQL_FILE_NOT_SUPPORTED - el controlador no es un controlador de nivel único.  
   
--   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos de origen de datos como tablas.  
+-   SQL_FILE_TABLE - un controlador de nivel único trata los archivos de origen de datos como tablas.  
   
--   SQL_FILE_QUALIFIER: Un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
+-   SQL_FILE_QUALIFIER - un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
   
  El controlador ODBC devuelve SQL_FILE_QUALIFIER porque cada archivo es una base de datos completa.  
   

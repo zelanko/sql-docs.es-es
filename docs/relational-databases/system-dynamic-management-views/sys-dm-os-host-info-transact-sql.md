@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672954"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209554"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Esta vista es similar a [sys.dm_os_windows_info](../../relational-databases/syst
 ### <a name="permissions"></a>Permisos  
 El `SELECT` permiso en `sys.dm_os_host_info` se concede a los `public` rol de forma predeterminada. Si revoca, requiere `VIEW SERVER STATE` permiso en el servidor.   
  
->  [!CAUTION]
+> [!CAUTION]
 >  Desde la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] requiere la versión 17 `SELECT` permiso en `sys.dm_os_host_info` con el fin de conectarse a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Si `SELECT` se revoca el permiso de `public`, solo los inicios de sesión con `VIEW SERVER STATE` permiso puede conectarse con la versión más reciente de SSMS. (Existen otras herramientas, como `sqlcmd.exe` puede conectarse sin `SELECT` permiso en `sys.dm_os_host_info`.)
 
   

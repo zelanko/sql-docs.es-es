@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106875"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400659"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
   Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
@@ -162,7 +162,7 @@ ms.locfileid: "48106875"
   
  Para obtener más información, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La versión de una palabra que se almacena después de una indización de texto completo es un símbolo en formato comprimido. Las consultas posteriores al índice de texto completo generan formas no flexionadas de una palabra determinada según las reglas de ese idioma, para asegurarse de que se realizan todas las coincidencias probables. Por ejemplo, aunque el símbolo que se almacena podría ser “ejecutar”, el motor de consultas también busca los términos “ejecutándose“, "ejecutado” y “ejecutor”, porque son variaciones morfológicas derivadas de forma regular de la palabra raíz “ejecutar”.  
+ La versión de una palabra que se almacena después de una indización de texto completo es un símbolo en formato comprimido. Las consultas posteriores al índice de texto completo generan formas no flexionadas de una palabra determinada según las reglas de ese idioma, para asegurarse de que se realizan todas las coincidencias probables. Por ejemplo, aunque el token que se almacena podría ser "ejecutar", el motor de consultas también busca los términos "running", "corrió" y "corredor", porque son variaciones morfológicas derivadas de la palabra raíz "ejecutar".  
   
  También puede crear y generar un diccionario de sinónimos de usuario para almacenar los sinónimos y habilitar mejores resultados de la búsqueda, o la clasificación de los términos. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -203,6 +203,6 @@ ms.locfileid: "48106875"
   
 ## <a name="see-also"></a>Vea también  
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluciones de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

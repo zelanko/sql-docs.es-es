@@ -14,12 +14,12 @@ ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ee6af3d8a448a85818693a24b05eec2699b5f4fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75fed63f44e0371b81fbd7309a0a3f826543b5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082075"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401058"
 ---
 # <a name="custom-report-item-architecture"></a>Arquitectura de elementos de informe personalizados
   Un elemento de informe personalizado es una extensión del lenguaje RDL (Report Definition Language) que permite a los programadores agregar la funcionalidad que no se admite de forma nativa en RDL o que extiende la funcionalidad de los controles existentes. Hay dos componentes principales en un elemento de informe personalizado: el componente de tiempo de ejecución y el componente de tiempo de diseño. Estos componentes se implementan como ensamblados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y se pueden escribir en cualquier lenguaje compatible con CLS.  
@@ -37,6 +37,6 @@ ms.locfileid: "48082075"
 ## <a name="see-also"></a>Vea también  
  [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Creación de un componente de tiempo de diseño de elemento de informe personalizado](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Implementación de un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Cómo: Implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

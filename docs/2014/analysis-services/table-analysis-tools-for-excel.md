@@ -14,12 +14,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049075"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391903"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Herramientas de análisis de tabla para Excel
   Las herramientas de minería de datos en el **analizar** barra de herramientas son la manera más fácil empezar a trabajar con minería de datos. Cada una de estas herramientas analiza automáticamente la distribución y el tipo de los datos, y establece los parámetros para asegurarse de que los resultados son válidos. No tiene que seleccionar un algoritmo ni configurar parámetros complejos.  
@@ -34,7 +34,7 @@ ms.locfileid: "48049075"
  El **analizar Influenciadores clave** herramienta usa el algoritmo Bayes Naïve de Microsoft.  
   
  [Detectar categorías &#40;herramientas de análisis de tabla para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- Esta herramienta le permite agregar cualquier conjunto de datos y aplicar la agrupación en clústeres para buscar agrupaciones de datos. Es útil para buscar similitudes y crear grupos para analizarlos después más a fondo.  
+ Esta herramienta le permite agregar cualquier conjunto de datos y aplicar la agrupación en clústeres para buscar agrupaciones de datos. Es útil para buscar similitudes y crear grupos para analizarlos en detalle.  
   
  El **detectar categorías** herramienta usa el algoritmo Microsoft Clustering.  
   

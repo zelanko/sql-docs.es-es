@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, monitoring
@@ -22,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d408644f56f097e3389dab51d8b8d10ccc8954cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786747"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Ver el estado de la suscripción y la publicación en el Monitor de replicación
   En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones:  
@@ -54,11 +53,11 @@ ms.locfileid: "48218245"
   
  **Para ver el estado de la publicación y la suscripción**  
   
--   Monitor de replicación: [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) (Ver información y realizar tareas para una publicación [Monitor de replicación]) y [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) (Ver información y realizar tareas para una suscripción [Monitor de replicación]).  
+-   Monitor de replicación: [Ver información y realizar tareas para una publicación &#40;Monitor de replicación&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) y [ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
   
  **Para ver información detallada de los agentes**  
   
--   Monitor de replicación: [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md) (Ver información y realizar tareas para los agentes asociados con una publicación [Monitor de replicación]) y [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md) (Ver información y realizar tareas para los agentes asociados con una suscripción [Monitor de replicación]).  
+-   Monitor de replicación: [Ver información y realizar tareas para los agentes asociados con una publicación &#40;Monitor de replicación&#41; ](view-information-and-perform-tasks-for-publication-agents.md) y [ver información y realizar tareas para los agentes asociados con una suscripción &#40;replicación Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Valores del estado de la publicación  
  En la siguiente tabla se muestran los valores de estado de la publicación y sus iconos correspondientes en orden de prioridad.  

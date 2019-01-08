@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2f3c3da8228924a7d4b697865ee729e9b84aff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131195"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515400"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error (grupos de disponibilidad AlwaysOn)
   En este tema se describe cómo configurar la directiva de conmutación por error flexible para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una directiva de conmutación por error flexible proporciona mayor control sobre las condiciones que produce una conmutación automática por error para un grupo de disponibilidad. Al cambiar las condiciones de error que activan una conmutación automática por error y la frecuencia de comprobaciones de estado, se puede aumentar o reducir la probabilidad de una conmutación automática por error que sea compatible con su SLA por tener alta disponibilidad.  
@@ -29,7 +29,7 @@ ms.locfileid: "48131195"
     > [!NOTE]  
     >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Limitations"></a> Limitaciones de la conmutación automática por error  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48131195"
   
          La relación de estos valores enteros con los niveles de condición de error es la siguiente:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nivel|La conmutación por error iniciada es automática cuando se produce…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |2|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  
@@ -90,13 +90,13 @@ ms.locfileid: "48131195"
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para configurar la directiva flexible de conmutación por error**  
   
-1.  Establezca el valor predeterminado (`cd`) a la instancia de servidor que hospeda la réplica principal.  
+1.  Establezca el valor predeterminado (`cd`) en la instancia del servidor que hospeda la réplica de disponibilidad principal.  
   
 2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityGroup`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityGroup`.  
   
     -   Para establecer el nivel de condición de conmutación por error, use la `FailureConditionLevel` *nivel* parámetro, donde *nivel* es uno de los siguientes valores:  
   
-        |Valor|Level|La conmutación por error iniciada es automática cuando se produce…|  
+        |Valor|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |`OnServerUnresponsive`|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  
@@ -125,7 +125,7 @@ ms.locfileid: "48131195"
         ```  
   
 > [!NOTE]  
->  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   

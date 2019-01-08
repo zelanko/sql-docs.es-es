@@ -18,12 +18,12 @@ ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039f09a1d3731b316359acd03e72312b4485df89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b66b87b0c741bf943cc2558862a0e1853c386b5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726823"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510733"
 ---
 # <a name="types-of-locks"></a>Tipos de bloqueos
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

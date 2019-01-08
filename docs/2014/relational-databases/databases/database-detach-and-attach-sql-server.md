@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -28,12 +27,12 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3d3850e98bce1031d285388b6f5fbe75737e37b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778447"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
   Los archivos de registro de datos y transacciones de una base de datos se pueden desasociar y volverse a adjuntar posteriormente a la misma instancia u otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Separar y adjuntar una base de datos es útil si desea cambiar la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo o si desea mover la base de datos.  
@@ -60,7 +59,7 @@ ms.locfileid: "48107345"
   
 -   Existe una instantánea de base de datos en la base de datos.  
   
-     Para poder separar la base de datos, debe quitar todas sus instantáneas. Para obtener más información, consulte [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
+     Para poder separar la base de datos, debe quitar todas sus instantáneas. Para obtener más información, vea [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  No puede separar ni adjuntar una instantánea de base de datos.  
@@ -93,7 +92,7 @@ ms.locfileid: "48107345"
 > [!NOTE]  
 >  Si el archivo de datos principal que se va a adjuntar es de solo lectura, [!INCLUDE[ssDE](../../includes/ssde-md.md)] considera que la base de datos es de solo lectura.  
   
- Cuando se adjunta una base de datos cifrada en primer lugar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. Se recomienda habilitar el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Cuando se adjunta una base de datos cifrada en primer lugar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: OPEN MASTER KEY DESCIFRADO POR CONTRASEÑA = **'*`password`*'**. Se recomienda que habilite el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY AGREGAR CIFRADO POR CLAVE MAESTRA DE SERVICIO. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Las condiciones para adjuntar archivos de registro dependen, en parte, de si la base de datos es de lectura y escritura o de solo lectura. Vea a continuación:  
   

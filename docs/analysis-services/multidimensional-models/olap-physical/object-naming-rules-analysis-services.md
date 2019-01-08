@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147962"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509471"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "50147962"
   
  Las siguientes reglas se aplican a las propiedades **Name** e **ID** .  
   
--   Los nombres no distinguen mayúsculas de minúsculas. No puede tener un cubo denominado "ventas" y otro denominado "Ventas" en la misma base de datos.  
+-   Los nombres no distinguen mayúsculas de minúsculas. No puede tener un cubo denominado "sales" y otro denominado "Ventas" en la misma base de datos.  
   
 -   No se permiten espacios iniciales o finales en el nombre de un objeto, aunque sí se pueden incluir espacios dentro de un nombre. Los espacios iniciales o finales se recortan implícitamente. Esto se aplica a los valores de **Name** e **ID** de un objeto.  
   
@@ -72,16 +72,16 @@ ms.locfileid: "50147962"
 |**Dimension** o **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
 |Todos los demás objetos|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
   
- **Excepciones: Cuándo permiten caracteres reservados se**  
+ **Excepciones: Cuando se permiten caracteres reservados**  
   
  Como se ha indicado, los nombres de las bases de datos de una modalidad y un nivel de compatibilidad determinados pueden incluir caracteres reservados. Los nombres de objeto de atributo de dimensión, jerarquía, nivel, medida y KPI pueden incluir caracteres reservados para las bases de datos tabulares (1103 o superior) que permiten el uso de caracteres extendidos:  
   
 |Modo de servidor y nivel de compatibilidad de base de datos|¿Se permiten caracteres reservados?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (todas las versiones)|no|  
-|Tabular - 1050|no|  
-|Tabular - 1100|no|  
-|Tabular – 1130 y superior|Sí|  
+|MOLAP (todas las versiones)|No|  
+|Tabular - 1050|No|  
+|Tabular - 1100|No|  
+|Tabular - 1130 y superior|Sí|  
   
  Las bases de datos pueden tener un ModelType predeterminado (default). Default es equivalente a multidimensional y por tanto no admite el uso de caracteres reservados en los nombres de columna.  
   

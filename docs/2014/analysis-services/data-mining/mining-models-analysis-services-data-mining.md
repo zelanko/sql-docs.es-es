@@ -18,12 +18,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a328e2b7af2fb1e743c81e23a0f80e7530f3810
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146010"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540140"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelos de minería de datos (Analysis Services - Minería de datos)
   Un *modelo de minería de datos* se crea mediante la aplicación de un algoritmo a los datos, pero es algo más que un algoritmo o un contenedor de metadatos: es un conjunto de datos, estadísticas y patrones que se pueden aplicar a los nuevos datos para generar predicciones y deducir relaciones.  
@@ -49,11 +49,11 @@ ms.locfileid: "50146010"
   
  ![modelo que contiene los metadatos, patrones y enlaces](../media/dmcon-modelarch2.gif "modelo contiene los metadatos, patrones y enlaces")  
   
- Los metadatos especifican el nombre del modelo y el servidor donde está almacenado, así como una definición del mismo, incluidas las columnas de la estructura de minería de datos que se usaron para generarlo, las definiciones de los filtros que se aplicaron al procesarlo y el algoritmo empleado para analizar los datos. Todas estas opciones, las columnas de datos y sus tipos de datos, filtros y algoritmo, influyen en gran medida en los resultados del análisis.  
+ Los metadatos especifican el nombre del modelo y el servidor donde está almacenado, así como una definición del mismo, incluidas las columnas de la estructura de minería de datos que se usaron para generarlo, las definiciones de los filtros que se aplicaron al procesarlo y el algoritmo empleado para analizar los datos. Todas las columnas de estas opciones de los datos y sus tipos de datos, los filtros y los algoritmo tener una influencia muy eficaz en los resultados del análisis.  
   
  Por ejemplo, puede usar los mismos datos para crear varios modelos, quizás mediante un algoritmo de clústeres, un algoritmo de árboles de decisión y un algoritmo Bayes Naïve. Cada tipo de modelo crea un conjunto diferente de patrones, conjuntos de elementos, reglas o fórmulas, que puede usar para realizar predicciones. Por lo general, cada algoritmo analiza los datos de forma diferente, por lo que el *contenido* del modelo resultante también se organiza en estructuras diferentes. En un tipo de modelo, los datos y los modelos pueden estar agrupados en *clústeres*; en otro, los datos pueden estar organizados en árboles, ramas y las reglas que los dividen y definen.  
   
- El modelo también se ve afectado por los datos usados en el entrenamiento: incluso los modelos cuyo entrenamiento se ha realizado en la misma estructura de minería de datos pueden producir resultados distintos si se filtran los datos de manera diferente o se usan semillas distintas durante el análisis. Sin embargo, los datos reales no se almacenan en el modelo; solo lo hacen las estadísticas de resumen, mientras que los datos reales residen en la estructura de minería de datos. Si ha creado filtros en los datos al realizar el entrenamiento del modelo, las definiciones de filtro también se guardan con el objeto de modelo.  
+ El modelo también se ve afectado por los datos usados en el entrenamiento: incluso los modelos cuyo entrenamiento se ha realizado en la misma estructura de minería de datos pueden producir resultados distintos si se filtran los datos de manera diferente o se usan semillas distintas durante el análisis. Sin embargo, los datos reales no se almacenan en el modelo solo se almacenan las estadísticas de resumen, con los datos reales que residen en la estructura de minería de datos. Si ha creado filtros en los datos al realizar el entrenamiento del modelo, las definiciones de filtro también se guardan con el objeto de modelo.  
   
  El modelo contiene un conjunto de enlaces, que señalan a los datos almacenados en memoria caché en la estructura de minería de datos. Si los datos se han almacenado en memoria caché en la estructura y no se han borrado después del procesamiento, estos enlaces le permiten obtener detalles de los resultados para llegar a los casos en que se basan los resultados. Sin embargo, los datos reales están almacenados en la memoria caché de la estructura, no en el modelo.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50146010"
   
 -   Seleccione el algoritmo más adecuado para la tarea analítica.  
   
--   Elija las columnas de la estructura que se incluirán en el modelo y especifique cómo se deben usar, es decir, qué columna contiene el resultado que desea predecir, qué columnas son únicamente para la entrada, etc.  
+-   Elija las columnas de la estructura para usar en el modelo y especificar cómo deben ser la columna usa, lo que contiene el resultado que desea predecir, qué columnas son de solo entrada, y así sucesivamente.  
   
 -   Opcionalmente, puede establecer los parámetros para ajustar el procesamiento del algoritmo.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "50146010"
   
 -   Una instrucción DMX ALTER STRUCTURE ADD MODEL se puede usar para agregar un nuevo modelo de minería de datos a una estructura existente. Utilice este método si desea experimentar con diferentes modelos que se basen en el mismo conjunto de datos.  
   
- También puede crear mediante programación modelos de minería de datos, utilizando AMO o XML/A, u otros clientes como el Cliente de minería de datos para Excel. Para obtener más información, consulte los temas siguientes:  
+ También puede crear mediante programación modelos de minería de datos, utilizando AMO o XML/A, u otros clientes como el Cliente de minería de datos para Excel. Para obtener más información, vea los temas siguientes:  
   
  [Arquitectura del modelo de minería de datos](#bkmk_mdlArch)  
   

@@ -14,12 +14,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72089aad9a38c488b36fdb65cc94060d70c6482c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104765"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398678"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Establecer opciones de procesamiento (Reporting Services en el modo integrado de SharePoint)
   Puede establecer opciones de procesamiento en un informe [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para determinar cuándo debe tener lugar el procesamiento de datos. También puede establecer un valor de tiempo de espera para el procesamiento de informes, así como opciones que determinen si debe habilitarse el historial de informes para el informe actual.  
@@ -31,7 +31,7 @@ ms.locfileid: "48104765"
 -   El historial del informe es un conjunto de copias de un informe ejecutadas con anterioridad. Puede usar el historial de informe para conservar un registro de un informe a lo largo del tiempo. El historial del informe no se ha diseñado para informes que contienen datos confidenciales o personales. Por este motivo, el historial solamente puede incluir aquellos informes que realizan una consulta a un origen de datos mediante un único conjunto de credenciales (sean credenciales almacenadas o credenciales usadas para la ejecución de informes desatendida) disponible para todos los usuarios que ejecutan un informe.  
   
     > [!NOTE]  
-    >  La integración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con SharePoint usa las características de mantenimiento de entrada y salida de SharePoint para guardar las actualizaciones en los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Esto incluye la creación de instantáneas de informe. Por consiguiente si ha habilitado la versión en una biblioteca de documentos, verá la versión del informe actualizada cuando se crea una nueva instantánea del historial de informes. Este es un efecto secundario de actualizar las instantáneas. Cuando una instantánea está actualizada hace que la propiedad LastExecution del informe cambie y eso producirá un cambio en la versión del informe.  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con SharePoint usa las características de mantenimiento de entrada y salida de SharePoint para guardar las actualizaciones en los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Esto incluye la creación de instantáneas de informe. Por consiguiente si ha habilitado la versión en una biblioteca de documentos, verá la versión del informe actualizada cuando se crea una nueva instantánea del historial de informes. Este es un efecto secundario de actualizar las instantáneas. Cuando una instantánea está actualizada hace que la propiedad LastExecution del informe cambie y eso producirá un cambio en la versión del informe.  
   
 -   La especificación de valores de tiempo de espera permite establecer límites relativos al empleo de los recursos del sistema.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "48104765"
   
 ##  <a name="bkmk_set_database_timeout"></a> Establecer tiempo de espera de base de datos  
   
-1.  Usar Windows PowerShell para establecer el tiempo de espera de la base de datos de un servidor de informes de SharePoint. Para obtener más información, consulte el "obtener y establecer propiedades de la base de datos de aplicación de servicio de informes" sección de [cmdlets de PowerShell para Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+1.  Usar Windows PowerShell para establecer el tiempo de espera de la base de datos de un servidor de informes de SharePoint. Para obtener más información, vea la sección "Obtener y establecer las propiedades de la base de datos de aplicación de Reporting Services" de [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades de procesamiento de informes](report-server/set-report-processing-properties.md)   
+ [Establecer las propiedades del procesamiento de informes](report-server/set-report-processing-properties.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [Establecer valores de tiempo de espera de procesamiento de informes y conjunto de datos compartido &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207325"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403620"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
     
@@ -82,12 +82,12 @@ ms.locfileid: "48207325"
  Compruebe la ortografía de las expresiones. En los parámetros y nombres de campo globales integrados se distinguen mayúsculas de minúsculas. En la expresión que produce el error, compruebe que el nombre existe realmente en el informe y que está escrito con la grafía correcta. Para obtener más información, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="parameter-properties-and-null"></a>Propiedades de parámetros y NULL  
- Los parámetros de varios valores no pueden ser NULL. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Los parámetros de varios valores no pueden ser NULL. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>No se puede procesar el informe principal con subinforme  
  La misma versión del procesador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe procesar un informe con subinformes. Al actualizar los informes a la versión actual del esquema de definición de informe, el informe principal y los subinformes pueden actualizarse o no al mismo tiempo. Si la versión no es compatible entre un informe y sus subinformes, se muestra el mensaje siguiente: "No se pudo procesar el subinforme".  
   
- Debe cambiar el informe principal o los subinformes para que todos los informes se puedan procesar con la misma versión del procesador de informes. Para obtener información acerca de por qué un informe no se puede actualizar, vea [actualizar informes](../install-windows/upgrade-reports.md).  
+ Debe cambiar el informe principal o los subinformes para que todos los informes se puedan procesar con la misma versión del procesador de informes. Para obtener información sobre los motivos por los que no se puede actualizar un informe, vea [Actualizar informes](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Compruebe que las llamadas a funciones son de Visual Basic y no de SQL  
  Puede utilizar funciones SQL en el texto de consulta en una base de datos relacional. No puede utilizar las funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] en texto de consulta.  
@@ -127,12 +127,12 @@ ms.locfileid: "48207325"
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Referencia a las funciones de agregado &#40;generador de informes y SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtros de uso frecuente &#40;Generador de informes y SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Referencias a la colección de parámetros &#40;generador de informes y SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

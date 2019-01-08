@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
@@ -12,12 +12,12 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc0e52371d63ce8ce5789c6407259c269f5bf70f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800287"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Color (cuadro de diálogo, Visual Database Tools)
   El cuadro de diálogo **Color** devuelve el valor RGB de un color seleccionado por el usuario. El usuario puede seleccionarlo desde un conjunto de colores básicos determinados por el controlador de pantalla o desde un conjunto de colores personalizados. Seleccione desde los colores básicos o cree colores personalizados. Puede definir colores haciendo clic en la matriz de color o escribiendo en los cuadros **Matiz**, **Sat.**, **Lum.**, **Rojo**, **Verde**y **Azul** .  

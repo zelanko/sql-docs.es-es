@@ -11,12 +11,12 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 730e9fa68477cbd96261a7036d7a95033db326a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183195"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544251"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los punteros de un medidor (Generador de informes y SSRS)
   El puntero de un medidor indica el valor actual del medidor. De forma predeterminada, cuando se agrega un campo, los valores contenidos en él se agregan a un valor mostrado por el puntero en el medidor. Puede agregar varios punteros al medidor para que apunten a varios valores en la misma escala o agregar varias escalas y un puntero para cada una. Después de agregar un campo a un medidor, debe establecer los valores máximo y mínimo en la escala correspondiente para dar contexto al valor del puntero. También tiene la opción de establecer los valores mínimo y máximo en un intervalo, que muestra un área crítica en la escala.  
@@ -39,11 +39,11 @@ ms.locfileid: "48183195"
 ##  <a name="DisplayingMultiple"></a> Mostrar varios punteros en el medidor  
  Puede agregar varios punteros al medidor para que apunten a varios valores en la misma escala. Esto puede ser útil para mostrar un valor alto y un valor bajo al mismo tiempo. Para especificar más de un puntero en el medidor para la misma escala, haga clic con el botón derecho en cualquier lugar dentro del medidor y haga clic en **Agregar puntero** en el menú contextual. O bien, puede agregar una escala haciendo clic con el botón derecho en cualquier lugar del medidor y, después, haciendo clic en **Agregar escala**. A continuación, podrá agregar un nuevo puntero que se asociará automáticamente a la última escala.  
   
- Cuando se superponen los punteros, el orden en el que se dibujan está determinado por el orden en el que se agregan al medidor. No es posible reorganizar el orden en el que se dibujan los punteros cambiando el orden de los campos en el panel de datos. Para cambiar el orden de dibujo de varios punteros, abra el panel de propiedades y haga clic en **Punteros (…)**. A continuación, cambie el orden de los punteros en la colección Puntero.  
+ Cuando se superponen los punteros, el orden en el que se dibujan está determinado por el orden en el que se agregan al medidor. No es posible reorganizar el orden en el que se dibujan los punteros cambiando el orden de los campos en el panel de datos. Para cambiar el orden de dibujo de varios punteros, abra el panel Propiedades y haga clic en **Punteros (...)**. A continuación, cambie el orden de los punteros en la colección Puntero.  
   
   
 ##  <a name="SettingGradients"></a> Establecer degradados en un extremo de aguja  
- Puede especificar un extremo de aguja que se puede dibujar encima o debajo del puntero únicamente en un medidor radial. Todos los estilos de extremos de aguja se dibujan utilizando degradados integrados que no se pueden modificar. La excepción es el `RoundedDark` estilo, donde puede especificar un color y estilo de degradado.  
+ Puede especificar un extremo de aguja que se puede dibujar encima o debajo del puntero únicamente en un medidor radial. Todos los estilos de extremos de aguja se dibujan utilizando degradados integrados que no se pueden modificar. La excepción es el estilo `RoundedDark`, donde puede especificar un color y un estilo de degradado.  
   
   
 ##  <a name="SettingSnappingInterval"></a> Establecer un intervalo de ajuste  
@@ -58,7 +58,7 @@ ms.locfileid: "48183195"
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Aplicar formato a los intervalos de un medidor &#40;generador de informes y SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Aplicar formato a los rangos de un medidor &#40;Generador de informes y SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

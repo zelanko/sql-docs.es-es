@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Crear un informe de gráfico rápido sin conexión (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091375"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527004"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
-  En este tutorial, creará un gráfico circular usando un asistente y, a continuación, lo modificará un poco, solo para hacerse una idea de las posibilidades. Puede hacerlo de dos maneras diferentes: Ambos métodos tienen el mismo resultado; un gráfico circular como el de la siguiente ilustración:  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (generador de informes)
+  En este tutorial, creará un gráfico circular usando un asistente y, a continuación, lo modificará un poco, solo para hacerse una idea de las posibilidades. Puede hacerlo de dos maneras diferentes: Ambos métodos tienen el mismo resultado, un gráfico circular semejante de la siguiente ilustración:  
   
  ![Ver "Mi primer gráfico circular" en ejecución](../media/rs-my1stpierunview.gif "mi primer gráfico circular en la vista de ejecución")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091375"
  [Crear el gráfico circular con datos XML](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>Usar una consulta Transact SQL que contenga los datos de este tutorial  
- Puede copiar desde este tema una consulta con datos incluidos en él y pegarlos en el asistente. Necesitará el nombre de una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] y credenciales suficientes para tener acceso de solo lectura a cualquier base de datos. La consulta del conjunto de datos en el tutorial usa datos literales, pero la consulta debe ser procesada por una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para que devuelva los metadatos requeridos por un conjunto de datos de informe.  
+ Puede copiar desde este tema una consulta con datos incluidos en él y pegarlos en el asistente. Necesitará el nombre de una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] y credenciales suficiente para el acceso de solo lectura a cualquier base de datos. La consulta del conjunto de datos en el tutorial usa datos literales, pero la consulta debe ser procesada por una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para que devuelva los metadatos requeridos por un conjunto de datos de informe.  
   
  La ventaja de usar la consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] es que todos los demás tutoriales del Generador de informes usan el mismo método, de modo que cuando realice los otros tutoriales ya sabrá lo que debe hacer.  
   
- El [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta requieren algunos otros requisitos previos. Para obtener más información, consulte [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../report-builder-tutorials.md).  
+ La consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] TSQL requiere otros requisitos previos. Para obtener más información, consulte [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../report-builder-tutorials.md).  
   
  [Crear el gráfico circular con una consulta Transact-SQL que contenga datos](#CreatePieQueryData)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091375"
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Crear el gráfico circular con un [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta  
+##  <a name="CreatePieQueryData"></a> Crear el gráfico circular con una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>Para crear el gráfico circular con una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] que contenga los datos  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091375"
   
 3.  Tipo `#PERCENT{P0}` para el **etiquetar datos** opción.  
   
-     El `{P0}` le da el porcentaje sin decimales. Si simplemente escribe `#PERCENT`, los números tendrán dos posiciones decimales. `#PERCENT` es una palabra clave que realiza un cálculo o función automáticamente; Hay muchas otras.  
+     `{P0}` le da el porcentaje sin decimales. Si simplemente escribe `#PERCENT`, los números tendrán dos posiciones decimales. `#PERCENT` es una palabra clave que realiza un cálculo o función automáticamente; hay muchas otras.  
   
  Para obtener más información acerca de cómo personalizar las etiquetas del gráfico y las leyendas, consulte [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda&#40;Generador de informes y SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091375"
 ##  <a name="WhatsNext"></a> ¿Qué debe hacer a continuación?  
  Ahora que ha creado su primer informe en el Generador de informes, está listo para leer los demás tutoriales y empezar a crear informes a partir de sus propios datos. Para ejecutar el generador de informes, necesita permiso para tener acceso a los orígenes de datos, como bases de datos, con un *cadena de conexión*, que le conecta al origen de datos. El administrador del sistema tiene esta información y puede facilitársela.  
   
- Para trabajar con otros tutoriales, necesita el nombre de una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] y credenciales suficientes para tener acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  
+ Para trabajar con otros tutoriales, necesita el nombre de una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] y credenciales suficientes para el acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  
   
  Finalmente, para guardar los informes en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes, necesitará la dirección URL y los permisos necesarios. Puede ejecutar cualquier informe que cree directamente desde su equipo, pero los informes tienen más funcionalidad cuando se ejecutan desde el servidor de informes o desde el sitio de SharePoint. Necesita permisos para ejecutar sus informes u otros desde el servidor de informes o desde el sitio de SharePoint donde estén publicados. Hable con el administrador del sistema para obtener acceso.  
   

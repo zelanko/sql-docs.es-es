@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723493"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392698"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47723493"
 |max_worker_percent|**decimal(5,2)**|Máximo de trabajos simultáneos (solicitudes) en porcentaje basado en el límite del nivel de servicio de la base de datos.<br /><br /> Actualmente se calcula el máximo para el intervalo de cinco minutos en función de las muestras de 15 segundos de recuentos de trabajo simultáneas.|  
 |max_session_percent|**decimal(5,2)**|Número máximo de sesiones simultáneo en porcentaje basado en el límite del nivel de servicio de la base de datos.<br /><br /> Actualmente se calcula el máximo para el intervalo de cinco minutos en función de las muestras de 15 segundos de recuentos de sesiones simultáneas.|  
 |dtu_limit|**int**|Base de datos max DTU configuración actual de esta base de datos durante este intervalo. |  
-|allocated_storage_in_megabytes|**float**|El formato de la cantidad de espacio de archivo en MB disponible para almacenar la base de datos. Espacio de archivo con formato también se conoce como espacio de datos asignado.  Para obtener más información, consulte: [administración del espacio de archivo en la base de datos SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|El formato de la cantidad de espacio de archivo en MB disponible para almacenar la base de datos. Espacio de archivo con formato también se conoce como espacio de datos asignado.  Para obtener más información, vea: [Administración del espacio de archivo en la base de datos SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Para obtener más contexto sobre estos límites y los niveles de servicio, vea los temas [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  

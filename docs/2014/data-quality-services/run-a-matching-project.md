@@ -14,12 +14,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031512"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512050"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
   En este tema se describe cómo realizar la búsqueda de coincidencias de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias identifica los clústeres de registros coincidentes en función de las reglas de coincidencia existentes en la directiva de coincidencia, designa un registro de cada clúster como el registro que permanece basándose en una regla de permanencia, y exporta los resultados. DQS realiza el proceso de búsqueda de coincidencias, también denominado eliminación de datos duplicados, en un proceso asistido por PC, pero es usted quien crea las reglas de coincidencia de forma interactiva y quien selecciona la regla de permanencia entre varias opciones, por lo que también es quien controla el proceso de búsqueda de coincidencias.  
@@ -41,7 +41,7 @@ ms.locfileid: "51031512"
 ####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para ejecutar un proyecto de búsqueda de coincidencias.  
   
-##  <a name="StartingaMatchingProject"></a> Primer paso: iniciar un proyecto de búsqueda de coincidencias  
+##  <a name="StartingaMatchingProject"></a> Primer paso: Iniciar un proyecto de búsqueda de coincidencias  
  Realizará la actividad de búsqueda de coincidencias en un proyecto de calidad de datos que creará en la aplicación cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "51031512"
     > [!NOTE]  
     >  Solo puede asignar los datos de origen para un dominio DQS si el tipo de datos de origen se admiten en DQS y coincide con el tipo de datos de dominio DQS. Para obtener información acerca de los tipos de datos admitidos en DQS, vea [Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Haga clic en el control **más (+)** para agregar una fila a la tabla Asignaciones o en el control **menos (–)** para eliminarla.  
+4.  Haga clic en el control **más (+)** para agregar una fila a la tabla Asignaciones o en el control **menos (-)** para eliminarla.  
   
 5.  Haga clic en **Vista previa del origen de datos** para ver los datos de la tabla o vista de SQL Server que ha seleccionado, o para ver la hoja de cálculo de Excel que ha seleccionado.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51031512"
   
  La permanencia es opcional. Puede exportar los resultados sin ejecutar la permanencia, en cuyo caso DQS utilizará el registro dinámico que designó en el análisis de coincidencia. Si dos o más registros de un clúster cumplen la regla de permanencia, el proceso de permanencia seleccionará como el registro que permanece aquel cuyo identificador de registro sea más bajo. Puede exportar los registros que permanecen a varios archivos o tablas usando reglas de permanencia diferentes.  
   
-1.  En la página **Exportar** , seleccione el destino al que desea exportar los datos coincidentes en **Tipo de destino**: **SQL Server**, **Archivo CSV**o **Archivo de Excel**.  
+1.  En el **exportar** página, seleccione el destino donde desea exportar los datos coincidentes en **tipo de destino**: **SQL Server**, **archivo CSV**, o **el archivo de Excel**.  
   
     > [!IMPORTANT]  
     >  Si utiliza la versión de 64 bits de Excel, no puede exportar los datos coincidentes en un archivo de Excel; puede exportar únicamente a una base de datos de SQL Server o un archivo .csv.  
@@ -121,9 +121,9 @@ ms.locfileid: "51031512"
   
      Si selecciona Resultados de búsqueda de coincidencias, se exportará lo siguiente:  
   
-    -   Una lista de clústeres y los registros coincidentes de cada clúster, incluido el nombre de la regla y la puntuación. El registro dinámico se marcará como “Dinamización”. Los clústeres aparecerán en primer lugar en la lista de exportación.  
+    -   Una lista de clústeres y los registros coincidentes de cada clúster, incluido el nombre de la regla y la puntuación. El registro dinámico se marcará como "Dinamización". Los clústeres aparecerán en primer lugar en la lista de exportación.  
   
-    -   Una lista de registros no coincidentes, con el valor “NULL” en las columnas Puntuación y Nombre de la regla. Estos registros se anexarán a la lista de exportación a continuación de los clústeres.  
+    -   Una lista de registros no coincidentes, con el valor "NULL" en las columnas Puntuación y Nombre de la regla. Estos registros se anexarán a la lista de exportación a continuación de los clústeres.  
   
      Si selecciona Resultados de permanencia, se exportará lo siguiente:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "51031512"
     > [!NOTE]  
     >  Si finaliza un proyecto de búsqueda de coincidencias y, más adelante, lo vuelve a utilizar, este usará la base de conocimiento que tenía cuando se publicó. No usará ninguno de los cambios realizados en la base de conocimiento desde la finalización del proyecto. Para utilizar estos cambios, o para utilizar una base de conocimiento nueva, tendrá que crear un proyecto de búsqueda de coincidencias nuevo. Por otro lado, si ha creado, pero no finalizado, un proyecto de búsqueda de coincidencias, los cambios que haya publicado en la directiva de coincidencia se utilizarán si ejecuta la búsqueda de coincidencias en el proyecto.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de ejecutar un proyecto de búsqueda de coincidencias  
+##  <a name="FollowUp"></a> Sigue: Después de ejecutar un proyecto de coincidencia  
  Después de ejecutar un proyecto de búsqueda de coincidencias, puede cambiar la directiva de coincidencia en la base de conocimiento y crear y ejecutar otro proyecto de búsqueda de coincidencias basado en la directiva de coincidencia actualizada. Para obtener más información, consulte [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Pestañas Generador de perfiles y Resultados  
@@ -175,27 +175,27 @@ ms.locfileid: "51031512"
   
  Las estadísticas de la base de datos de origen incluyen:  
   
--   **Registros**: el número total de registros existentes en la base de datos  
+-   **Registros**: El número total de registros existentes en la base de datos  
   
--   **Valores totales**: el número total de valores existentes en los campos  
+-   **Valores totales**: El número total de valores de los campos  
   
--   **Nuevos valores**: el número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
+-   **Nuevos valores**: El número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
   
--   **Valores únicos**: el número total de valores únicos existentes en los campos y su porcentaje del total  
+-   **Valores únicos**: El número total de valores únicos de los campos y su porcentaje del total  
   
--   **Nuevos valores únicos**: el número total de valores únicos que son nuevos en los campos y su porcentaje del total  
+-   **Nuevos valores únicos**: El número total de valores únicos que son nuevos en los campos y su porcentaje del total  
   
  Las estadísticas del campo incluyen las siguientes:  
   
--   **Campo**: nombre del campo incluido en las asignaciones  
+-   **Campo**: Nombre del campo que se incluyó en las asignaciones.  
   
--   **Dominio**: nombre del dominio asignado al campo  
+-   **Dominio**: Nombre del dominio que se ha asignado al campo.  
   
--   **Nuevo**: el número de nuevas coincidencias encontradas y su porcentaje del total  
+-   **Nuevo**: El número de nuevas coincidencias encontradas y su porcentaje del total  
   
--   **Único**: el número de registros únicos del campo y su porcentaje sobre el total  
+-   **Único**: El número de registros únicos del campo y su porcentaje sobre el total  
   
--   **Integridad**: el porcentaje de la regla que se ha ejecutado  
+-   **Integridad**: El porcentaje de la ejecución de la regla completa.  
   
 ### <a name="matching-policy-notifications"></a>Notificaciones de directiva de coincidencia  
  En la actividad de directiva de coincidencia, se producen notificaciones cuando se dan las condiciones siguientes:  

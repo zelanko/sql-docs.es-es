@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ddacdc7ede5d65132912783464250ff5f0db6bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 027cea0f06d9a673c7c5216c548e907b6326544d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122035"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767463"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>Paso 3: Probar el paquete de la lección 6
   En tiempo de ejecución, el paquete obtendrá el valor de la Propiedad de directorio desde el parámetro VarFolderName.  
@@ -28,11 +27,11 @@ ms.locfileid: "48122035"
   
  **Flujo de control**  
   
- ![Flujo de control](../../2014/tutorials/media/task3lesson6control.jpg "flujo de Control")  
+ ![Flujo de control](../../2014/tutorials/media/task3lesson6control.jpg "Flujo de control")  
   
  **Flujo de datos**  
   
- ![Flujo de datos](../../2014/tutorials/media/task3lesson6data.jpg "flujo de datos")  
+ ![Flujo de datos](../../2014/tutorials/media/task3lesson6data.jpg "Flujo de datos")  
   
 ### <a name="to-test-the-lesson-6-tutorial-package"></a>Para probar el paquete del tutorial de la lección 6  
   
@@ -41,6 +40,6 @@ ms.locfileid: "48122035"
 2.  Una vez que se haya completado la ejecución del paquete, en el menú Depurar, haga clic en Detener depuración.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 4: implementar el paquete de la lección 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [Paso 4: Implementar el paquete de la lección 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cd116bbb0305f56302f679881ef0a2a795739eb3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 277f2b8195aa4238a490d37faaf81abdafc0008c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538741"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Establecer contraseña de administrador para iniciar sesión en los nodos de AD en Directory Services Restore modo (DSRM) - Analytics Platform System
 Modo de restauración de servicios de directorio (DSRM) es un modo de arranque para reparar o recuperar los servicios de dominio de Active Directory (AD DS). Se utiliza para iniciar sesión en los nodos de AD del dispositivo después de que ha producido un error en AD DS o cuando AD DS debe restaurarse. La contraseña de DSRM se inicializó durante la configuración del dispositivo en el sitio del proveedor de hardware y debe ser cambiada por el administrador del dispositivo. Analytics Platform System tiene dos AD DS (controladores de dominio);  **_appliance_domain_-AD01** y  **_appliance_domain_-AD02**. Para cada nodo de dispositivo AD, cambie la contraseña DSRM siguiendo estos pasos.  
   
 ## <a name="HowToDSRM"></a>Para restablecer la contraseña de administrador  
   
-1.  Abra una ventana del símbolo del sistema en un nodo de dispositivo AD ***appliance_domain *– AD*xx***máquina virtual.  
+1.  Abra una ventana del símbolo del sistema en un nodo de dispositivo AD ***appliance_domain *-AD*xx***máquina virtual.  
   
 2.  En el símbolo del sistema, escriba `ntdsutil`.  
   
@@ -31,7 +31,7 @@ Modo de restauración de servicios de directorio (DSRM) es un modo de arranque p
   
 5.  En el símbolo del sistema, escriba la nueva contraseña.  
   
-6.  Repita los pasos 1 a 5 anteriores para cada máquina virtual de AD del dispositivo.  
+6.  Repita los pasos 1-5 anteriores para cada máquina virtual de AD del dispositivo.  
   
     > [!WARNING]  
     > Analytics Platform System no es compatible con el carácter de signo de dólar ($) en el Administrador de dominio o las contraseñas de administrador local. Una contraseña que contenga un signo de dólar validará y ser utilizable pero puede bloquear las actividades de actualización y mantenimiento.  

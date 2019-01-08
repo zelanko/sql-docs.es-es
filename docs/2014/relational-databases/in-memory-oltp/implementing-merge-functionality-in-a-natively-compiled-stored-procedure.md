@@ -10,17 +10,17 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9614ee30c6e0566dc270f07e20b0c4dc29d1feb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: faf6112fa3f8ec588d00480d09ff072a71051a02
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508166"
 ---
 # <a name="implementing-merge-functionality"></a>Implementar la funcionalidad MERGE
   Una base de datos puede necesitar realizar una inserción o una actualización, dependiendo de si una fila determinada ya existe en la base de datos.  
   
- Sin usar el `MERGE` instrucción, el siguiente es un enfoque que puede usar en [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Es posible usar el siguiente método en [!INCLUDE[tsql](../../includes/tsql-md.md)] sin hacer uso de la instrucción `MERGE`:  
   
 ```tsql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  
@@ -32,7 +32,7 @@ IF @@ROWCOUNT = 0
   
 ```tsql  
 IF EXISTS (SELECT 1 FROM mytable WHERE myPK = @parm)  
-    UPDATE….  
+    UPDATE....  
 ELSE  
     INSERT  
 ```  
@@ -43,7 +43,7 @@ ELSE
 DECLARE @i  int  = 0  -- or whatever your PK data type is  
 UPDATE mytable SET @i=myPK, othercolums = other values WHERE myPK = @parm  
 IF @i = 0  
-   INSERT….  
+   INSERT....  
 ```  
   
 ## <a name="see-also"></a>Vea también  

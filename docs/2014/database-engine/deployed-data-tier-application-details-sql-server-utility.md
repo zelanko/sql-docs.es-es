@@ -18,12 +18,12 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354924"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalles de la aplicación de capa de datos implementada (Utilidad de SQL Server)
   La información en la vista de aplicaciones de capa de datos implementadas del explorador de Utilidad facilita datos de utilización para las aplicaciones de capa de datos individuales, el historial de la utilización de la CPU, los detalles de la utilización del almacenamiento de nivel de archivo, y la capacidad para ver y actualizar los umbrales de directivas. Los umbrales de directivas se pueden supervisar en el nivel de la aplicación de capa de datos para la utilización de la CPU y para los archivos de datos y de registro de la base de datos. También puede ver los detalles de propiedades para las aplicaciones de capa de datos individuales.  
@@ -60,7 +60,7 @@ ms.locfileid: "48073305"
   
     -   Flecha verde hacia abajo: el estado de mantenimiento para al menos un grupo de archivos o para el grupo de archivos de registro es infrautilizado, no hay grupos de archivos ni un grupo de archivos de registro que estén sobreutilizados.  
   
-    -   Flecha roja hacia arriba: el estado de mantenimiento para al menos un grupo de archivos o el grupo de archivos de registro es sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de “emergencia”, el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
+    -   Flecha roja hacia arriba: el estado de mantenimiento para al menos un grupo de archivos o el grupo de archivos de registro es sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de "emergencia", el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
   
      Para ver o cambiar los límites de la directiva de espacio de archivo, haga clic en la pestaña **Uso del almacenamiento** .  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48073305"
   
 -   Fecha de implementación  
   
--   De confianza: (True o False)  
+-   Confianza: (True o False)  
   
 -   Intercalación  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48073305"
   
 -   Cifrado habilitado: (True o False)  
   
--   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
+-   Modelo de recuperación: (Simple, completa o Bulk-Logged.)  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
+-   Última hora notificada: Esta columna muestra el UCP fecha y hora local mediante el tipo de datos de fecha y hora. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de la CPU muestra gráficos en paralelo de datos históricos para la aplicación de capa de datos y la utilización de la CPU del sistema informático.  
@@ -104,7 +104,7 @@ ms.locfileid: "48073305"
 -   1 año; se muestra en intervalos de 1 mes.  
   
  Pestaña Uso del almacenamiento  
- La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de utilización del almacenamiento para los archivos de base de datos y archivos de registro que pertenecen a la aplicación de capa de datos seleccionada en la vista de lista. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
+ La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de utilización del almacenamiento para los archivos de base de datos y archivos de registro que pertenecen a la aplicación de capa de datos seleccionada en la vista de lista. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
  La presentación se puede agrupar según el grupo de archivos o según el volumen. Para utilizar la vista de árbol de grupo de archivos, seleccione el botón de radio **Grupo de archivos** en **Archivos agrupados por:** selección.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48073305"
   
 -   Flecha verde hacia abajo: la utilización del espacio de archivo de al menos un archivo de datos en el grupo de archivos está infrautilizada y no hay archivos sobreutilizados en el grupo de archivos.  
   
--   Flecha roja hacia arriba: el uso del espacio de archivo para todos los archivos de datos en el grupo de archivos está sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de “emergencia”, el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
+-   Flecha roja hacia arriba: el uso del espacio de archivo para todos los archivos de datos en el grupo de archivos está sobreutilizado. Tenga en cuenta que si una base de datos se encuentra en estado de "emergencia", el estado de mantenimiento mostrará el espacio de archivo de registro excesivo sobreutilizado.  
   
  Para ver los archivos según el volumen, seleccione el botón de radio **Volumen** en **Agrupar archivos por:** selección. El gráfico del historial de la utilización de almacenamiento muestra el espacio de archivo que utilizan todos los archivos de datos y todos los archivos de registro en el volumen de almacenamiento. Expanda el árbol para ver los detalles de los archivos de datos de la base de datos y de los archivos de registro individuales.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48073305"
   
 -   Fecha de implementación  
   
--   De confianza: (True o False)  
+-   Confianza: (True o False)  
   
 -   Intercalación  
   
@@ -161,9 +161,9 @@ ms.locfileid: "48073305"
   
 -   Cifrado habilitado: (True o False)  
   
--   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
+-   Modelo de recuperación: (Simple, completa o Bulk-Logged.)  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
+-   Última hora notificada: Esta columna muestra el UCP fecha y hora local mediante el tipo de datos de fecha y hora. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
 ## <a name="see-also"></a>Vea también  
  [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

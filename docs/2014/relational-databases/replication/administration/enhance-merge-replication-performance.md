@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175665"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772027"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
   Tras considerar las sugerencias generales de rendimiento que se describen en [Aumentar el rendimiento general de la replicación](enhance-general-replication-performance.md), tenga en cuenta estas otras áreas específicas de la replicación de mezcla.  
@@ -42,7 +41,7 @@ ms.locfileid: "48175665"
   
 -   Considere la posibilidad de aplicar una normalización excesiva a las tablas que incluyan tipos de datos de objetos grandes (LOB).  
   
-     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos `text`, `ntext`, y `image` están en desuso. Si incluye LOB, se recomienda que utilice los tipos de datos `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivamente.  
+     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos `text`, `ntext` y `image` han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)`, respectivamente.  
   
 ## <a name="publication-design"></a>Diseño de la publicación  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48175665"
   
 -   Establezca la opción **join_unique_key** en **1** si lo permite la lógica.  
   
-     Al establecer este parámetro en **1** , se indica que la relación entre la tabla principal y la secundaria de un filtro de combinación es de uno a uno o de uno a varios. Configure este parámetro en **1** únicamente si tiene una restricción en la columna de combinación de la tabla secundaria que garantiza la exclusividad. Si el parámetro se establece en **1** de forma incorrecta, se podría producir la no convergencia de los datos. Para más información, vea [Join Filters](../merge/join-filters.md).  
+     Al establecer este parámetro en **1** , se indica que la relación entre la tabla principal y la secundaria de un filtro de combinación es de uno a uno o de uno a varios. Configure este parámetro en **1** únicamente si tiene una restricción en la columna de combinación de la tabla secundaria que garantiza la exclusividad. Si el parámetro se establece en **1** de forma incorrecta, se podría producir la no convergencia de los datos. Para obtener más información, consulte [Join Filters](../merge/join-filters.md).  
   
 -   Evite la ejecución de lotes con muchos cambios cuando use particiones precalculadas.  
   
@@ -101,9 +100,9 @@ ms.locfileid: "48175665"
   
      Al actualizar el suscriptor a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior se actualiza el Agente de mezcla que usan las suscripciones en el suscriptor. Para aprovechar muchas de las nuevas características y optimizaciones de rendimiento, se requiere el Agente de mezcla de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior.  
   
--   Si una suscripción se sincroniza mediante una conexión rápida y los cambios se envían desde el publicador y el suscriptor, use el parámetro **–ParallelUploadDownload** en el Agente de mezcla.  
+-   Si una suscripción se sincroniza mediante una conexión rápida y los cambios se envían desde el publicador y el suscriptor, use el parámetro **-ParallelUploadDownload** en el Agente de mezcla.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo parámetro del Agente de mezcla: **–ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+     En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] se introdujo un nuevo parámetro del Agente de mezcla: **-ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
   
     -   [Trabajar con perfiles del Agente de replicación](../agents/replication-agent-profiles.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48175665"
   
 -   De vez en cuando, vuelva a crear los índices de tablas del sistema de la replicación de mezcla.  
   
-     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte del mantenimiento de replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, y **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, y **MSmerge_ past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Supervise el rendimiento de la sincronización utilizando la pestaña **Historial de sincronizaciones** del Monitor de replicación.  
   

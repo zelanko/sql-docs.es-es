@@ -15,12 +15,12 @@ ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4f4831bb8ab288e2dcdf2770936084d0492a91e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbee38fc49361f8a4350467a0813ffcb9c483533
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506460"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de dimensiones (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para configurar el control de errores.  
@@ -99,8 +99,8 @@ ms.locfileid: "48085345"
  Seleccione una ruta de acceso para el registro de errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página asignaciones&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
+ [Editor de destino de procesamiento de dimensiones &#40;página Asignaciones&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   
   

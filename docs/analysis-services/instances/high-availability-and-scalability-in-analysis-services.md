@@ -1,5 +1,5 @@
 ---
-title: Alta disponibilidad y escalabilidad en Analysis Services | Documentos de Microsoft
+title: Alta disponibilidad y escalabilidad en Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700906"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439507"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidad y escalabilidad en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -98,11 +98,11 @@ ms.locfileid: "35700906"
 - Al implementar Analysis Services en un clúster, asegúrese de que los nodos que participan en el clúster se ejecuten en hardware idéntico o muy similar y que el contexto operativo de cada nodo sea el mismo en lo que respecta a la versión del sistema operativo y los Service Pack, la versión de Analysis Services y los Service Pack (o actualizaciones acumulativas) y el modo de servidor.
 - Evite reasignar un nodo pasivo como nodo activo de otra carga de trabajo. Si el nodo no puede controlar las cargas de trabajo, se perderán las ganancias a corto plazo en el uso del equipo en caso de una situación real de conmutación por error.
  
- En estas notas del producto encontrará instrucciones detalladas e información general sobre la implementación de Analysis Services en un clúster de conmutación por error: [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(Cómo implementar SQL Server Analysis Services en un clúster). Aunque redactado para SQL Server 2012, este documento sigue siendo válido para las versiones más recientes de Analysis Services.  
+ En estas notas del producto se proporcionan instrucciones detalladas e información de fondo para la implementación de Analysis Services en un clúster de conmutación por error: [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Aunque redactado para SQL Server 2012, este documento sigue siendo válido para las versiones más recientes de Analysis Services.  
   
 ## <a name="see-also"></a>Vea también  
  [Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Forzar la afinidad NUMA para bases de datos tabulares de Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Forcing NUMA affinity for Analysis Services Tabular Databases (Forzar la afinidad de NUMA para bases de datos tabulares de Analysis Services)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Un caso práctico de Analysis Services: Uso de modelos tabulares en una solución comercial a gran escala](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

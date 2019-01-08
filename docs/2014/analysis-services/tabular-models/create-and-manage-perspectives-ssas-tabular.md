@@ -13,12 +13,12 @@ ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6a8fb56ea065fea1a4077dcc1aae9ebc49d14da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25f8de0649f82abbcc6ceb4ac6a92844de04b4b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502281"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>Crear y administrar perspectivas (SSAS tabular)
   Las perspectivas definen subconjuntos visibles de un modelo que ofrecen puntos de vista centrados, específicos del negocio o específicos de la aplicación del modelo. Las tareas de este tema explican cómo crear y administrar perspectivas mediante el cuadro de diálogo **Perspectivas** del diseñador de modelos.  
@@ -46,22 +46,22 @@ ms.locfileid: "48121695"
   
 ###  <a name="bkmk_edit"></a> Para editar una perspectiva  
   
--   Para modificar una perspectiva, active y desactive los campos en la columna de la perspectiva, lo que agrega y quita objetos de campo de la perspectiva.  
+-   Para modificar una perspectiva, active y desactive los campos de columna de la perspectiva, que agrega y quita los objetos de campo desde la perspectiva.  
   
 ###  <a name="bkmk_rename"></a> Para cambiar el nombre de una perspectiva  
   
--   Al mantener el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), aparece el botón **Cambiar nombre** . Para cambiar el nombre de la perspectiva, haga clic en **Cambiar nombre**y, a continuación, escriba un nuevo nombre o edite el nombre existente.  
+-   Cuando mantenga el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), el **cambiar el nombre** aparece el botón. Para cambiar el nombre de la perspectiva, haga clic en **Cambiar nombre**y, a continuación, escriba un nuevo nombre o edite el nombre existente.  
   
 ###  <a name="bkmk_delete"></a> Para eliminar una perspectiva  
   
--   Al mantener el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), aparece el botón **Eliminar** . Para eliminar la perspectiva, haga clic en el botón **Eliminar** y, a continuación, haga clic en **Sí** en la ventana de confirmación.  
+-   Cuando mantenga el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), el **eliminar** aparece el botón. Para eliminar la perspectiva, haga clic en el botón **Eliminar** y, a continuación, haga clic en **Sí** en la ventana de confirmación.  
   
 ###  <a name="bkmk_copy"></a> Para copiar una perspectiva  
   
--   Al mantener el mouse sobre el encabezado de columna de una perspectiva, aparece el botón **Copiar** . Para crear una copia de esa perspectiva, haga clic en el botón **Copiar** . Se agregará una copia de la perspectiva seleccionada como una perspectiva nueva a la derecha de las perspectivas existentes. La nueva perspectiva hereda el nombre de la perspectiva copiada y se anexa una anotación *-Copia* al final del nombre. Por ejemplo, si se crea una copia de la perspectiva *Ventas* , la nueva perspectiva se llama *Ventas – Copiar*.  
+-   Cuando mantenga el mouse sobre un encabezado de columna perspectiva, el **copia** aparece el botón. Para crear una copia de esa perspectiva, haga clic en el botón **Copiar** . Se agregará una copia de la perspectiva seleccionada como una perspectiva nueva a la derecha de las perspectivas existentes. La nueva perspectiva hereda el nombre de la perspectiva copiada y se anexa una anotación *-Copia* al final del nombre. Por ejemplo, si una copia de la *ventas* se crea la perspectiva, se llama a la nueva perspectiva *ventas - copiar*.  
   
 ## <a name="see-also"></a>Vea también  
- [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
- [Jerarquías &#40;Tabular de SSAS&#41;](hierarchies-ssas-tabular.md)  
+ [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)   
+ [Jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md)  
   
   

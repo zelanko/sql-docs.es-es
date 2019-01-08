@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806733"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515099"
 ---
 # <a name="odbc-driver-for-oracle"></a>Controlador ODBC para Oracle
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806733"
   
  ![Controlador ODBC para Oracle aplicación&#47;arquitectura de controladores](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- El controlador ODBC para Oracle cumple con API de conformidad de nivel 1 y principales del nivel de conformidad de SQL. También admite algunas funciones en 2 de nivel de conformidad de API y la mayoría de la gramática de los niveles de conformidad de Core y SQL extendido. El controlador es compatible con 2.5 de ODBC y es compatible con sistemas de 32 bits. Oracle 7.3 x se admite por completo; Oracle8 tiene compatibilidad limitada. El controlador ODBC para Oracle no admite cualquiera de los nuevos tipos de datos de Oracle8: tipos de datos Unicode, BLOB, CLOB, y así sucesivamente, ni tampoco admite el nuevo modelo de objetos relacionales de Oracle. Para obtener más información acerca de los tipos de datos admitidos, consulte [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) en esta guía.  
+ El controlador ODBC para Oracle cumple con API de conformidad de nivel 1 y principales del nivel de conformidad de SQL. También admite algunas funciones en 2 de nivel de conformidad de API y la mayoría de la gramática de los niveles de conformidad de Core y SQL extendido. El controlador es compatible con 2.5 de ODBC y es compatible con sistemas de 32 bits. Oracle 7.3 x se admite por completo; Oracle8 tiene compatibilidad limitada. El controlador ODBC para Oracle no admite cualquiera de los tipos de datos de Oracle8 - los tipos de datos Unicode, BLOB, CLOB y así sucesivamente - ni admite nuevo modelo de objetos relacionales de Oracle. Para obtener más información acerca de los tipos de datos admitidos, consulte [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) en esta guía.  
   
  Para obtener acceso a datos de Oracle, se requieren los siguientes componentes:  
   

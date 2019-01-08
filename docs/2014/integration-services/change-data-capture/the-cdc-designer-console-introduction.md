@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779897"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
   En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity.  
@@ -40,11 +39,11 @@ ms.locfileid: "48107755"
   
  **Base de datos de Oracle**  
   
--   Versión 2 de la base de datos 10g de Oracle: 10.2.0.1-10.2.0.5 (revisión de abril de 2010)  
+-   Oracle Database 10g versión 2: 10.2.0.1-10.2.0.5 (revisión de abril de 2010)  
   
--   Versión 1 de la base de datos 11g de Oracle: 11.1.0.6-11.1.0.7 (revisión de septiembre de 2008)  
+-   Oracle Database 11g versión 1: 11.1.0.6-11.1.0.7 (revisión de septiembre de 2008)  
   
--   Versión 2 de la base de datos 11g de Oracle: 11.2.0.1-11.2.0.3 (revisión de septiembre de 2011)  
+-   Oracle Database 11g versión 2: 11.2.0.1-11.2.0.3 (revisión de septiembre de 2011)  
   
  **Base de datos de SQL Server**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107755"
   
 -   Cliente Oracle 11.x  
   
- **Tenga en cuenta**: debe usar la versión de 32 bits o 64 bits de este software según la versión de la consola del diseñador CDC de Oracle instalada.  
+ **Nota**: Debe usar la versión de 32 bits o 64 bits de este software según la versión de la consola del diseñador CDC de Oracle instalada.  
   
  La Consola del diseñador CDC de Oracle emplea el proveedor ODBC de Oracle para comunicarse con la base de datos de Oracle de origen.  
   

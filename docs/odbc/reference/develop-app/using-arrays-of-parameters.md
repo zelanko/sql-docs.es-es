@@ -14,12 +14,12 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7990c1c8524063c16b44464828900450d5241ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777883"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529331"
 ---
 # <a name="using-arrays-of-parameters"></a>Utilizar matrices de parámetros
 Utilizar matrices de parámetros, la aplicación llama a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar el número de conjuntos de parámetros. Llama a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar la dirección de una variable en el que el controlador puede devolver el número de conjuntos de parámetros procesados, establece el error incluida. Llama a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para que apunte a una matriz en la que se va a devolver información de estado para cada fila de valores de parámetro. El controlador almacena estas direcciones en la estructura que se mantiene para la instrucción.  
@@ -35,7 +35,7 @@ Utilizar matrices de parámetros, la aplicación llama a **SQLSetStmtAttr** con 
   
 -   Comprobar la compatibilidad de las matrices de parámetros en tiempo de ejecución. Un controlador es compatible con matrices de parámetros si es posible establecer el atributo de instrucción de SQL_ATTR_PARAMSET_SIZE en un valor mayor que 1. Aplicaciones genéricas y aplicaciones verticales suelen comprobación la compatibilidad de las matrices de parámetros en tiempo de ejecución.  
   
- Se puede determinar la disponibilidad de los recuentos de filas y conjuntos de resultados en ejecución con parámetros mediante una llamada a **SQLGetInfo** con las opciones SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. Para **insertar**, **actualización**, y **eliminar** instrucciones, la opción SQL_PARAM_ARRAY_ROW_COUNTS indica si son recuentos de filas individuales (uno para cada conjunto de parámetros) disponible (SQL_PARC_BATCH) o si se consolidan recuentos de filas en uno (SQL_PARC_NO_BATCH). Para **seleccione** instrucciones, la opción SQL_PARAM_ARRAY_SELECTS indica si un conjunto de resultados está disponible para cada conjunto de parámetros (SQL_PAS_BATCH) o si solo un conjunto de resultados está disponible (SQL_PAS_NO_BATCH). Si el controlador no admite instrucciones de: Generar conjunto de resultados que se ejecutarán con una matriz de parámetros, SQL_PARAM_ARRAY_SELECTS devuelve SQL_PAS_NO_SELECT. Si las matrices de parámetros se pueden utilizar con otros tipos de instrucciones, especialmente porque el uso de parámetros en estas instrucciones sería específico del origen de datos y no seguir gramática SQL de ODBC es específico del origen de datos.  
+ Se puede determinar la disponibilidad de los recuentos de filas y conjuntos de resultados en ejecución con parámetros mediante una llamada a **SQLGetInfo** con las opciones SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. Para **insertar**, **actualización**, y **eliminar** instrucciones, la opción SQL_PARAM_ARRAY_ROW_COUNTS indica si son recuentos de filas individuales (uno para cada conjunto de parámetros) disponible (SQL_PARC_BATCH) o si se consolidan recuentos de filas en uno (SQL_PARC_NO_BATCH). Para **seleccione** instrucciones, la opción SQL_PARAM_ARRAY_SELECTS indica si un conjunto de resultados está disponible para cada conjunto de parámetros (SQL_PAS_BATCH) o si solo un conjunto de resultados está disponible (SQL_PAS_NO_BATCH). Si el controlador no admite las instrucciones generadora de conjunto de resultados que se ejecutarán con una matriz de parámetros, SQL_PARAM_ARRAY_SELECTS devuelve SQL_PAS_NO_SELECT. Si las matrices de parámetros se pueden utilizar con otros tipos de instrucciones, especialmente porque el uso de parámetros en estas instrucciones sería específicas del origen de datos y no seguir gramática SQL de ODBC es específica del origen de datos.  
   
  La matriz señalada por el atributo de instrucción SQL_ATTR_PARAM_OPERATION_PTR puede utilizarse para omitir las filas de parámetros. Si un elemento de la matriz se establece en SQL_PARAM_IGNORE, el conjunto de parámetros que corresponde a ese elemento se excluye de la **SQLExecute** o **SQLExecDirect** llamar. La matriz señalada por el atributo SQL_ATTR_PARAM_OPERATION_PTR es asignada y rellenada por la aplicación y leer el controlador. Si las filas capturadas se usan como parámetros de entrada, los valores de la matriz de Estados de fila pueden utilizarse en la matriz de parámetros de operación.  
   

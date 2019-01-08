@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9826f15be35c001f1b951f3b2a3750fa9aba925b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663402"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418692"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,10 +72,10 @@ ms.locfileid: "47663402"
 |**last_elapsed_time**|**bigint**|El tiempo transcurrido, en microsegundos, hasta la ejecución completada más recientemente de este procedimiento almacenado.|  
 |**min_elapsed_time**|**bigint**|El tiempo mínimo transcurrido, en microsegundos, completa cualquier ejecución de este procedimiento almacenado.|  
 |**max_elapsed_time**|**bigint**|El tiempo máximo transcurrido, en microsegundos, completa cualquier ejecución de este procedimiento almacenado.|  
-|**total_spills**|**bigint**|El número total de páginas transferidas por la ejecución de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|El número de páginas transferidas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|El número mínimo de páginas que este procedimiento almacenado se ha transferido alguna vez durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|El número máximo de páginas que este procedimiento almacenado se ha transferido alguna vez durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|El número total de páginas transferidas por la ejecución de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|El número de páginas transferidas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|El número mínimo de páginas que este procedimiento almacenado se ha transferido alguna vez durante una ejecución.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|El número máximo de páginas que este procedimiento almacenado se ha transferido alguna vez durante una ejecución.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|El identificador para el nodo en esta distribución.<br /><br />**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup> para los procedimientos almacenados compilados de forma nativa cuando se habilita la recopilación de estadísticas, tiempo de trabajo se recopila en milisegundos. Si la consulta se ejecuta en menos de un milisegundo, el valor será 0.  

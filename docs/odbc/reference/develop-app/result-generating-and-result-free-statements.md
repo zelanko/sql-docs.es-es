@@ -17,12 +17,12 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e38e17ac469ec0685f11d7dfde587f36073fb970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706913"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517353"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Instrucciones generan resultados y libre de resultado
 Las instrucciones SQL pueden dividirse flexible en las cinco categorías siguientes:  
@@ -37,4 +37,4 @@ Las instrucciones SQL pueden dividirse flexible en las cinco categorías siguien
   
 -   **Instrucciones administrativas** son instrucciones SQL usadas para fines administrativos en una base de datos. Por ejemplo, **GRANT** y **REVOCAR**.  
   
- Las instrucciones SQL en las dos primeras categorías se conocen colectivamente como *generan instrucciones*. Instrucciones SQL en las tres categorías este últimas se conocen colectivamente como *libre de resultado instrucciones*. ODBC define la semántica de los lotes que incluyen solo generan instrucciones. Estas semánticas varían ampliamente y, por tanto, son específicos del origen de datos. Por ejemplo, el controlador de SQL Server no admite la eliminación de un objeto y, a continuación, que hace referencia a o volver a crear el mismo objeto en el mismo lote. Por lo tanto, el término *batch* que se usa en este manual se refiere solo a los lotes de generan instrucciones.
+ Las instrucciones SQL en las dos primeras categorías se conocen colectivamente como *generan instrucciones*. Instrucciones SQL en las tres categorías este últimas se conocen colectivamente como *libre de resultado instrucciones*. ODBC define la semántica de los lotes que incluyen solo generan instrucciones. Estas semánticas varían ampliamente y, por tanto, son específicas del origen de datos. Por ejemplo, el controlador de SQL Server no admite la eliminación de un objeto y, a continuación, que hace referencia a o volver a crear el mismo objeto en el mismo lote. Por lo tanto, el término *batch* que se usa en este manual se refiere solo a los lotes de generan instrucciones.

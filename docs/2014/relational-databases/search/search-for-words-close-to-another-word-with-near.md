@@ -20,12 +20,12 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502837"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
   Puede usar un término de proximidad (NEAR) en un predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o en una función [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para buscar palabras o frases que están cerca unas de otras. También puede especificar el número máximo de términos de no búsqueda que separan el primero y el último término de búsqueda. Además, puede buscar palabras o frases en cualquier orden o puede buscar palabras y frases en el orden en el que las especifique. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite tanto el anterior [término de proximidad genérico](#Generic_NEAR), que está en desuso y el [término de proximidad personalizado](#Custom_NEAR), que es nuevo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -51,11 +51,11 @@ ms.locfileid: "48149025"
   
  {  
   
- *término_búsqueda* [ ,…*n* ]  
+ *término_búsqueda* [,... *n* ]  
   
  |  
   
- (*término_búsqueda* [ ,…*n* ] ) [, <distancia_máxima> [, <orden_coincidencia> ] ]  
+ (*término_búsqueda* [,... *n* ]) [, < distancia_máxima > [, < orden_coincidencia >]]  
   
  }  
   
@@ -107,7 +107,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- No puede combinar un término de proximidad personalizado con un término de proximidad genérico (*término1* NEAR *término2*), un término de generación (ISABOUT …) o un término ponderado (FORMSOF …).  
+ No se puede combinar un término de proximidad personalizado con un término de proximidad genérico (*término1* NEAR *término2*), un término de generación (ISABOUT …) o un término ponderado (FORMSOF …).  
   
 ### <a name="example-using-the-custom-proximity-term"></a>Ejemplo: Usar el término de proximidad personalizado  
  En el siguiente ejemplo se buscan todos los resúmenes de documento que contienen el palabra "reflector" en el mismo documento que la palabra "bracket" en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks2012` .  
@@ -160,7 +160,7 @@ GO
   
  Un término de proximidad genérico indica que todos los términos de búsqueda especificados deben estar en un documento para que se devuelva una coincidencia, independientemente del número de términos de no búsqueda (la *distancia*) que haya entre los términos de búsqueda. La sintaxis básica es:  
   
- { *término_búsqueda* { NEAR | ~ } *término_búsqueda* } [ ,…*n* ]  
+ { *término_búsqueda* {NEAR | ~} *término_búsqueda* } [,... *n* ]  
   
  Por ejemplo, en los ejemplos siguientes deben aparecer las palabras 'fox' y 'chicken', en cualquier orden, para que se genere una coincidencia:  
   
@@ -184,7 +184,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- No puede combinar un término de proximidad genérico con un término de proximidad personalizado, como `NEAR((term1,term2),5)`, un término ponderado (ISABOUT …) o un término de generación (FORMSOF …).  
+ No se puede combinar un término de proximidad genérico con un término de proximidad personalizado, como `NEAR((term1,term2),5)`, un término ponderado (ISABOUT …) o un término de generación (FORMSOF …).  
   
 ### <a name="example-using-the-generic-proximity-term"></a>Ejemplo: Usar el término de proximidad genérico  
  En el siguiente ejemplo se utiliza el término de proximidad genérico para buscar la palabra "reflector" en el mismo documento que la palabra "bracket".  

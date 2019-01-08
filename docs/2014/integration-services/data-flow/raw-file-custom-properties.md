@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b115edd3e8addbedc60c0c37b4ea014a3123909
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38acf6fd70bebf5033fde5dcf33fe5b2a6ac6722
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754827"
 ---
 # <a name="raw-file-custom-properties"></a>Propiedades personalizadas de archivo sin formato
   **Propiedades personalizadas de origen**  
@@ -44,7 +43,7 @@ ms.locfileid: "48098228"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (enumeración)|Valor que especifica si la propiedad FileName contiene un nombre de archivo o el nombre de una variable que contiene un nombre de archivo. Las opciones son `File name` (0) y `File name from variable` (1).|  
 |FileName|String|Nombre del archivo donde escribe el destino de archivo sin formato.|  
-|WriteOption|Integer (enumeración)|Valor que especifica si el destino de archivo sin formato elimina un archivo existente que tiene el mismo nombre. Las opciones son `Create Always` (0), `Create Once` (1), `Truncate and Append` (3), y `Append` (2). El valor predeterminado de esta propiedad es `Create Always` (0).|  
+|WriteOption|Integer (enumeración)|Valor que especifica si el destino de archivo sin formato elimina un archivo existente que tiene el mismo nombre. Las opciones son `Create Always` (0), `Create Once` (1), `Truncate and Append` (3) y `Append` (2). El valor predeterminado de esta propiedad es `Create Always` (0).|  
   
 > [!NOTE]  
 >  Una operación de anexión requiere que los metadatos de los datos anexados coincidan con los metadatos de los datos que ya están en el archivo.  

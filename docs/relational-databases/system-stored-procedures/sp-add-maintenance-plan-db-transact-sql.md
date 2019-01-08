@@ -18,12 +18,12 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 672058e0273f4269acc5ac463ed070dac6635c53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 007f0eea045c22ea2fb7ef2ed0d6db6e9262d060
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630133"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535810"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'**_plan_id_**'**  
  Especifica el identificador del plan del plan de mantenimiento. *plan_id* es **uniqueidentifier**, y debe ser un identificador válido.  
   
- [  **@db_name =**] **'***database_name***'**  
+ [  **@db_name =**] **'**_database_name_**'**  
  Especifica el nombre de la base de datos que va a agregarse al plan de mantenimiento. La base de datos deberá crearse o bien existir antes de su adición al plan. *database_name* es **sysname**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

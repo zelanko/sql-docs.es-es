@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711013"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518718"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47711013"
 |**column_master_key_id**|**int**|Id. de la clave maestra de columna.|  
 |**create_date**|**datetime**|Fecha de que creación de la clave maestra de columna.|  
 |**modify_date**|**datetime**|Fecha en la que se modificó por última vez la clave maestra de columna.|  
-|**key_store_provider_name**|**sysname**|Nombre del proveedor para el almacén de claves maestras de columna que contiene la CMK. Los valores permitidos son:<br /><br /> MSSQL_CERTIFICATE_STORE: si el almacén de claves maestras de columna es un certificado de Store.<br /><br /> Un valor definido por el usuario, si el almacén de claves maestras de columna es de un tipo personalizado.|  
+|**key_store_provider_name**|**sysname**|Nombre del proveedor para el almacén de claves maestras de columna que contiene la CMK. Los valores permitidos son:<br /><br /> MSSQL_CERTIFICATE_STORE - si el almacén de claves maestras de columna es un certificado de Store.<br /><br /> Un valor definido por el usuario, si el almacén de claves maestras de columna es de un tipo personalizado.|  
 |**key_path**|**nvarchar(4000)**|Una columna de clave principal específico del almacén ruta de acceso de la clave. El formato de la ruta de acceso depende el tipo de almacén de clave maestra de columna. Ejemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para un almacén de claves maestras de columna personalizada, el desarrollador es responsable de definir lo que una ruta de acceso de clave es para el almacén de claves maestras de columna personalizada.|  
-|**allow_enclave_computations**|**bit**|Indica si la clave maestra de columna está enclave habilitado (si las claves de cifrado de columna, cifradas con esta clave maestra, pueden usarse para realizar cálculos dentro de los enclaves seguros del servidor). Para obtener más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**allow_enclave_computations**|**bit**|Indica si la clave maestra de columna está enclave habilitado (si las claves de cifrado de columna, cifradas con esta clave maestra, pueden usarse para realizar cálculos dentro de los enclaves seguros del servidor). Para más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|Una firma digital de **key_path** y **allow_enclave_computations**, usando la clave maestra de columna, al que hace referencia **key_path**.|
 
 

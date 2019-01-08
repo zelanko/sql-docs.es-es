@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145990"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516737"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Novedades de SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,7 +64,7 @@ Esta versión presenta sugerencias de codificación, una característica avanzad
 
 * Codificación hash es preferible para las columnas de group by (a menudo valores de tabla de dimensiones) y las claves externas. Las columnas de cadena siempre son hash codificado.
 
-Las columnas numéricas pueden utilizar cualquiera de estos métodos de codificación. Cuando Analysis Services empieza a procesar una tabla, si bien la tabla está vacía (con o sin particiones) o se realiza una operación de procesamiento de la tabla completa, se toman valores de ejemplo para que cada columna determinar si se debe aplicar codificación de hash o valor numérico . De forma predeterminada, la codificación del valor se elige cuando el ejemplo de valores distintos en la columna es lo suficientemente grande: en caso contrario, normalmente codificación hash proporciona una mejor compresión. Es posible que Analysis Services cambiar el método de codificación después de la columna se ha procesado parcialmente basándose en más información sobre la distribución de datos y reiniciar el proceso de codificación Sin embargo, esto aumenta el tiempo de procesamiento y es ineficaz. Las notas del producto de optimización del rendimiento trata de volver a codificar con más detalle y describen cómo detectar mediante SQL Server Profiler.
+Las columnas numéricas pueden utilizar cualquiera de estos métodos de codificación. Cuando Analysis Services empieza a procesar una tabla, si bien la tabla está vacía (con o sin particiones) o se realiza una operación de procesamiento de la tabla completa, se toman valores de ejemplo para que cada columna determinar si se debe aplicar codificación de hash o valor numérico . De forma predeterminada, la codificación del valor se elige cuando el ejemplo de valores distintos en la columna es lo suficientemente grande como; en caso contrario, normalmente codificación hash proporciona una mejor compresión. Es posible que Analysis Services cambiar el método de codificación después de la columna se ha procesado parcialmente basándose en más información sobre la distribución de datos y reiniciar el proceso de codificación Sin embargo, esto aumenta el tiempo de procesamiento y es ineficaz. Las notas del producto de optimización del rendimiento trata de volver a codificar con más detalle y describen cómo detectar mediante SQL Server Profiler.
 
 Sugerencias de codificación permiten el Modelador especificar una preferencia para el método de codificación tiene conocimiento previo de generación de perfiles de datos o en respuesta a volver a codificar los eventos de seguimiento. Puesto que la agregación con las columnas con codificación hash es más lento de a través de las columnas de valor codificado, valor de codificación puede especificarse como una sugerencia para estas columnas. No se garantiza que se aplica la preferencia. Es una sugerencia en lugar de una configuración. Para especificar una sugerencia de codificación, establezca la propiedad EncodingHint en la columna. Los valores posibles son "Default", "Value" y "Hash". El siguiente fragmento de metadatos basados en JSON desde el archivo Model.bim especifica el valor de codificación para la columna Sales Amount.
 

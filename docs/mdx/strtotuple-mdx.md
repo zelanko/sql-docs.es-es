@@ -1,5 +1,5 @@
 ---
-title: StrToTuple (MDX) | Documentos de Microsoft
+title: StrToTuple (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 35cd9cf849ce35bf82c839f0bbeeb657a75e990c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 054786440afaf2b7ab458b4704bd5f8e2e26c135
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743234"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524534"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  Devuelve la tupla especificada por una cadena con formato de Expresiones multidimensionales (MDX).  
+  Devuelve la tupla especificada por una cadena con formato de expresiones multidimensionales MDX.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,10 +32,10 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  *Tuple_Specification*  
  Expresión de cadena válida que especifica, directa o indirectamente, una tupla.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **StrToTuple** función devuelve el conjunto especificado. El **StrToTuple** función normalmente se utiliza con funciones definidas por el usuario para devolver una especificación de tupla desde una función externa a una instrucción MDX.  
   
--   Cuando se utiliza la marca CONSTRAINED, la especificación de tupla debe contener nombres de miembro calificados o no calificados. Esta marca se utiliza para reducir el riesgo de ataques por inyección de código a través de la cadena especificada. Si se proporciona una cadena que no se resuelve directamente en nombres de miembro calificados o no calificados, aparece el siguiente error: "Se infringieron las restricciones impuestas por la marca CONSTRAINED en la función STRTOTUPLE."  
+-   Cuando se utiliza la marca CONSTRAINED, la especificación de tupla debe contener nombres de miembro calificados o no calificados. Esta marca se utiliza para reducir el riesgo de ataques por inyección de código a través de la cadena especificada. Si no se proporciona una cadena no es nombres de miembros directamente resolverse en o no calificado, aparece el siguiente error: "Las restricciones impuestas por la CONSTRAINED se han infringido la marca en la función STRTOTUPLE."  
   
 -   Cuando no se utiliza la marca CONSTRAINED, la tupla especificada se puede resolver en una expresión MDX válida que devuelve una tupla.  
   

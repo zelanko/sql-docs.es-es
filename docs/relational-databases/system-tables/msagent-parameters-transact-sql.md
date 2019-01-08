@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSagent_parameters_TSQL
@@ -19,12 +18,12 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cad69c92a58b9749008ceb1320076aa68665b90d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3903fa2047e5c629563b78b2ff2da73d2c34951
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624414"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783847"
 ---
 # <a name="msagentparameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47624414"
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|El identificador del perfil desde el **MSagent_profiles** tabla.|  
 |**parameter_name**|**sysname**|Nombre del parámetro.|  
-|**Valor**|**nvarchar(255)**|El valor del parámetro.|  
+|**value**|**nvarchar(255)**|El valor del parámetro.|  
   
 ## <a name="see-also"></a>Vea también  
  [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

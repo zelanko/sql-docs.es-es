@@ -20,21 +20,21 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183705"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532509"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
   Puede eliminar una aplicación de capa de datos mediante el Asistente para eliminar aplicación de capa de datos o un script de Windows PowerShell. Puede especificar si la base de datos asociada se conserva, se separa o se quita.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
   
--   **Para actualizar una DAC mediante:**  [Asistente para registrar aplicación de capa de datos](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **Para actualizar una DAC, mediante:**  [El Asistente para registrar aplicación de capa de datos](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Cuando elimine una instancia de la aplicación de capa de datos (DAC), elija una de tres opciones que especifican lo que se va a hacer con la base de datos asociada a la aplicación de capa de datos. Las tres opciones eliminan los metadatos de la definición de DAC. Las opciones difieren en lo que hacen con la base de datos asociada a la aplicación de capa de datos. El asistente no elimina ninguno de los objetos del nivel de instancia asociado a la DAC o la base de datos, como los inicios de sesión.  
   
 |Opción|Acciones de base de datos|  
@@ -67,7 +67,7 @@ ms.locfileid: "48183705"
   
 3.  Expanda el nodo **Aplicaciones de capa de datos** .  
   
-4.  Haga clic con el botón derecho en la DAC que quiere eliminar y luego seleccione **Eliminar aplicación de capa de datos…**  
+4.  Haga clic con el botón derecho en la DAC que quiere eliminar y luego seleccione **Eliminar aplicación de capa de datos...**.  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -132,22 +132,22 @@ ms.locfileid: "48183705"
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia que contiene la DAC que se va a eliminar.  
   
-2.  Abra un `ServerConnection` de objetos y conectarse a la misma instancia.  
+2.  Abra un objeto `ServerConnection` y conéctese a la misma instancia.  
   
-3.  Use `add_DacActionStarted` y `add_DacActionFinished` para suscribirse a eventos de actualización de la DAC.  
+3.  Use `add_DacActionStarted` y `add_DacActionFinished` para suscribirse a los eventos de actualización de DAC.  
   
 4.  Especifique la DAC que desea eliminar.  
   
 5.  Use uno de estos tres conjuntos de código, según la opción de eliminación que resulte apropiada:  
   
-    -   Para eliminar el registro de la DAC pero dejar intacta la base de datos, utilice el `Unmanage()` método.  
+    -   Para eliminar el registro de la DAC pero dejar la base de datos intacta, use el método `Unmanage()`.  
   
     -   Para eliminar el registro de la DAC y separar la base de datos, use el método `Uninstall()` y especifique `DetachDatabase`.  
   
-    -   Para eliminar el registro de la DAC y quitar la base de datos, utilice el `Uninstall()` método y especifique `DropDatabase`.  
+    -   Para eliminar el registro de la DAC y quitar la base de datos, use el método `Uninstall()` y especifique `DropDatabase`.  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Ejemplo para eliminar la DAC y mantener la base de datos (PowerShell)  
- En el ejemplo siguiente se elimina una DAC denominada MyApplication mediante el `Unmanage()` método para eliminar la DAC pero dejar intacta la base de datos.  
+ En el ejemplo siguiente se elimina una DAC denominada MyApplication mediante el método `Unmanage()` para eliminar la DAC pero para dejar la base de datos intacta.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -171,7 +171,7 @@ $dacstore.Unmanage($dacName)
 ```  
   
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Ejemplo para eliminar la DAC y separar la base de datos (PowerShell)  
- En el ejemplo siguiente se elimina una DAC denominada MyApplication mediante el `Uninstall()` método para eliminar la DAC y separar la base de datos.  
+ En el ejemplo siguiente se elimina una DAC denominada MyApplication mediante el método `Uninstall()` para eliminar la DAC y separar la base de datos.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

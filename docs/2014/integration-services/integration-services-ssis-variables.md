@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772577"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -46,7 +45,7 @@ ms.locfileid: "48069745"
 ## <a name="system-and-user-defined-variables"></a>Variables del sistema y definidas por el usuario  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite dos tipos de variables: variables definidas por el usuario y variables del sistema. Las variables definidas por el usuario son definidas por los desarrolladores de paquetes y las variables del sistema son definidas por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Puede crear la cantidad de variables definidas por el usuario que requiera un paquete, pero no puede crear variables del sistema adicionales.  
   
- Todas las variables, del sistema y definidas por el usuario, se pueden utilizar en los enlaces de parámetros que utiliza la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para obtener más información, vea [Tarea Ejecutar SQL](control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ Todas las variables (del sistema y definidas por el usuario) se pueden usar en los enlaces de parámetros que usa la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para más información, vea [Tarea Ejecutar SQL](control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  Los nombres de variables definidas por el usuario y variables del sistema distinguen mayúsculas y minúsculas.  
@@ -141,9 +140,9 @@ ms.locfileid: "48069745"
 ## <a name="configuring-variables"></a>Configurar variables  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)], consulte [Ventana Variables](../../2014/integration-services/variables-window.md).  
+ Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , consulte [Ventana Variables](../../2014/integration-services/variables-window.md).  
   
- Para obtener más información acerca de las propiedades de variables y para obtener más información sobre cómo establecer estas propiedades mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Para obtener más información sobre las propiedades de las variables, así como recabar obtener más información sobre la configuración mediante programación de estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

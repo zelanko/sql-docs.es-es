@@ -1,5 +1,5 @@
 ---
-title: 'Lección del tutorial de Analysis Services 10: creación de particiones | Microsoft Docs'
+title: 'Analysis Services lección del tutorial de 10: Creación de particiones | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091333"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401148"
 ---
 # <a name="create-partitions"></a>Crear particiones
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-En esta lección, creará particiones dividir la tabla FactInternetSales en partes lógicas más pequeñas que se pueden procesar (actualiza) independientemente de otras particiones. De forma predeterminada, cada tabla que se incluye en el modelo tiene una partición, que incluye toda la tabla columnas y filas. Para la tabla FactInternetSales, queremos dividir los datos por año; una partición para cada uno de cinco años de la tabla. Cada partición se podrá procesar entonces independientemente. Para obtener más información, consulte [particiones](../tabular-models/partitions-ssas-tabular.md). 
+En esta lección, creará particiones dividir la tabla FactInternetSales en partes lógicas más pequeñas que se pueden procesar (actualiza) independientemente de otras particiones. De forma predeterminada, cada tabla que se incluye en el modelo tiene una partición, que incluye toda la tabla columnas y filas. Para la tabla FactInternetSales, queremos dividir los datos por año; una partición para cada uno de cinco años de la tabla. Cada partición se podrá procesar entonces independientemente. Para obtener más información, consulte [Particiones](../tabular-models/partitions-ssas-tabular.md). 
   
 Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 9: crear jerarquías](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 9: Crear jerarquías](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Crear particiones  
   
@@ -117,4 +117,4 @@ En el Administrador de particiones, tenga en cuenta la **procesado por última v
   
  ## <a name="whats-next"></a>¿Qué sigue?
 
-Vaya a la siguiente lección: [lección 11: crear Roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md). 
+Vaya a la lección siguiente: [Lección 11: Crear Roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md). 

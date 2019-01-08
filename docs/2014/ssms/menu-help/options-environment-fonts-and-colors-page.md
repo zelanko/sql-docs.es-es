@@ -1,23 +1,23 @@
 ---
-title: 'Opciones (entorno: página fuentes y colores) | Microsoft Docs'
+title: 'Opciones (entorno: Página fuentes y colores) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2a73bd30ab72cc293f8cbd0dcebc2b123d6538e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818757"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Opciones (entorno: página Fuentes y colores)
+# <a name="options-environment-fonts-and-colors-page"></a>Opciones (entorno: Página fuentes y colores)
   El cuadro de diálogo **Opciones[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] le permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de**  [!INCLUDE[msCoName](../../includes/msconame-md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
   
  Los cambios en la combinación de colores no surtirán efecto durante la sesión en la que los realice. Puede evaluar los cambios de color abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y creando las condiciones bajo las cuales espera que se apliquen los cambios.  
@@ -29,8 +29,8 @@ ms.locfileid: "51031813"
 |Término|Definición|  
 |----------|----------------|  
 |Editor de texto|Los cambios en la configuración del estilo, tamaño y color de fuente para el Editor de texto afectan a la apariencia del editor de texto predeterminado. Los documentos abiertos en un editor de texto fuera de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no afectarán a esta configuración.|  
-|Impresora|Los cambios en la configuración del estilo, tamaño y color de fuente para la impresora afectan a la apariencia del texto de los documentos impresos.<br /><br /> Sugerencia: si es necesario, puede seleccionar una fuente predeterminada para imprimir distinta a la se usa para mostrarlo en el Editor de texto. Esta opción puede ser útil para imprimir código que contenga caracteres de un solo byte o de doble byte.|  
-|[Todas las ventanas de herramientas de texto **]**|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de las ventanas de herramientas que tienen paneles de resultados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por ejemplo, ventana Resultados, ventana TextResults, etc.<br /><br /> Nota: Los cambios en el texto de los elementos [Todas las ventanas de herramientas de texto] no surten efecto durante la sesión en la que se realizan. Puede evaluar dichos cambios abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|Impresora|Los cambios en la configuración del estilo, tamaño y color de fuente para la impresora afectan a la apariencia del texto de los documentos impresos.<br /><br /> Sugerencia: Si fuera necesario, puede seleccionar una fuente predeterminada para imprimir distinta a la utilizada para la visualización en el Editor de texto. Esta opción puede ser útil para imprimir código que contenga caracteres de un solo byte o de doble byte.|  
+|[Todas las ventanas de herramientas de texto **]**|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de las ventanas de herramientas que tienen paneles de resultados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por ejemplo, ventana Resultados, ventana TextResults, etc.<br /><br /> Nota: Los cambios realizados en el texto de elementos [todas Windows de herramienta de texto] no surten efecto durante la sesión en el que se realizan. Puede evaluar dichos cambios abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Ventana Resultados de la búsqueda|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana FindResults.|  
 |Resultados (ventana)|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana Resultados.|  
 |Resultados de la cuadrícula|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto del área **Resultados de la cuadrícula** de la ventana Consultar.|  
@@ -55,9 +55,9 @@ ms.locfileid: "51031813"
   
  Algunos elementos de muestra son los siguientes:  
   
--   Margen del indicador: margen situado a la izquierda del Editor de código en el que aparecen los iconos de marcadores y puntos de interrupción.  
+-   Margen del indicador: Margen situado a la izquierda del Editor de código donde se muestran los puntos de interrupción y los iconos de marcadores.  
   
--   Texto contraíble: bloque de texto o código que se puede cambiar dentro y fuera de la vista del CodeEditor (solo XML).  
+-   Texto contraíble: Un bloque de texto o código que se puede cambiar dentro y fuera de la vista del CodeEditor (solo XML).  
   
  **Primer plano del elemento**  
  Muestra los colores disponibles que puede elegir para el primer plano del elemento seleccionado en **Mostrar los elementos**. Puesto que algunos elementos están relacionados, debe mantenerse una combinación de visualización coherente; por ejemplo, al cambiar el color de primer plano del texto también cambiará el color de primer plano de elementos como Cadena.  
@@ -82,6 +82,6 @@ ms.locfileid: "51031813"
   
 ## <a name="see-also"></a>Vea también  
  [Codificación de colores en los editores de consultas](../../relational-databases/scripting/color-coding-in-query-editors.md)   
- [Opciones de &#40;Editor de texto: pestaña Editor y página barra de estado&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
+ [Opciones de &#40;Editor de texto: Pestaña Editor y página barra de estado&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

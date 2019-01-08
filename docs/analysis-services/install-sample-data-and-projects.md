@@ -1,5 +1,5 @@
 ---
-title: Instalar los datos de ejemplo y proyectos | Microsoft Docs
+title: Instalar los datos de ejemplo de Analysis Services y proyectos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,30 +9,30 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057973"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072732"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Instalar los datos de ejemplo y proyectos multidimensionales 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 Use las instrucciones y vínculos proporcionados en este artículo para instalar los archivos de proyecto y los datos usados en los tutoriales de Analysis Services. 
   
-## <a name="step-1-install-prerequisites"></a>Paso 1: Instalar los requisitos previos 
+## <a name="step-1-install-prerequisites"></a>Paso 1: Requisitos previos de instalación 
 En las lecciones de este tutorial se supone que tiene el siguiente software instalado. Puede instalar todas las características en un único equipo. Para instalar estas características, ejecute el programa de instalación de SQL Server y selecciónelas en la página Selección de características.  
   
 -   Motor de base de datos de SQL Server  
   
 -   SQL Server Analysis Services (SSAS) 
   
-    Analysis Services solo está disponible en estas ediciones: Evaluation, Enterprise, Business Intelligence, Standard. No se admiten los modelos multidimensionales en Azure Analysis Services.
+    Analysis Services está disponible en estas ediciones solo: Evaluation, Enterprise, Business Intelligence, Standard. No se admiten los modelos multidimensionales en Azure Analysis Services.
   
     De forma predeterminada, Analysis Services 2016 y versiones posteriores se instala como una instancia tabular, que puede invalidar si elige el modo servidor Multidimensional en el servidor de página de configuración del Asistente para la instalación.
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>Paso 2: Descargar e instalar herramientas de administración y desarrollo
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>Paso 2: Descargue e instale las herramientas de administración y desarrollo
 SQL Server Data Tools (SSDT) para Visual Studio se descargan e instalado por separado de otras características de SQL Server. Los diseñadores y plantillas de proyecto que se usa para crear modelos de BI e informes están incluidas en SSDT para Visual Studio 2015 o como [paquetes de Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) para Visual Studio 2017.  
   
 [Descargar SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542).   
@@ -45,10 +45,10 @@ Opcionalmente, considere la posibilidad de instalar Excel para examinar los dato
   
 O bien, puede examinar los datos usando el diseñador de consultas MDX integrado en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. El diseñador de consultas devuelve los mismos datos, excepto los presentados como un conjunto de filas plano.  
   
-## <a name="step-3-install-databases"></a>Paso 3: Instalación de bases de datos  
+## <a name="step-3-install-databases"></a>Paso 3: Instalar bases de datos  
 Un modelo multidimensional de Analysis Services usa datos transaccionales importados de un sistema de administración de bases de datos relacionales. Para los fines de este tutorial, usará la siguiente base de datos relacional como origen de datos.  
   
--   **AdventureWorksDW2012 o una versión posterior** : se trata de un almacén de datos relacional que se ejecuta en una instancia del motor de base de datos. Proporciona los datos originales usados por las bases de datos de Analysis Services y los proyectos que generará e implementará en el tutorial. El tutorial supone que está usando AdventureWorksDW2012, sin embargo, ¿funcionan las versiones posteriores.
+-   **AdventureWorksDW2012 o una versión posterior** -se trata de un almacén de datos relacional que se ejecuta en una instancia del motor de base de datos. Proporciona los datos originales usados por las bases de datos de Analysis Services y los proyectos que generará e implementará en el tutorial. El tutorial supone que está usando AdventureWorksDW2012, sin embargo, ¿funcionan las versiones posteriores.
   
     Puede usar esta base de datos de ejemplo con [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones posteriores. En general, debe usar la versión de base de datos de ejemplo que coincida con la versión del motor de base de datos.
   
@@ -80,7 +80,7 @@ En los proyectos de ejemplo se usa la configuración de suplantación del origen
   
 6.  Active la casilla de verificación junto a la **AdventureWorksDW** base de datos. La pertenencia al rol debería incluir **db_datareader** y **public**de forma automática. Haga clic en **Aceptar** para aceptar los valores predeterminados.  
   
-## <a name="step-5-install-projects"></a>Paso 5: Los proyectos de instalación  
+## <a name="step-5-install-projects"></a>Paso 5: Instalar los proyectos  
 
 El tutorial incluye proyectos de ejemplo para que pueda comparar sus resultados con un proyecto acabado, o iniciar una lección que está más adelante en la secuencia.  
   
@@ -88,7 +88,7 @@ El tutorial incluye proyectos de ejemplo para que pueda comparar sus resultados 
   
     Los proyectos del tutorial funcionan para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones posteriores.  
   
-2.  Mueva el archivo de .zip a una carpeta que esté debajo de la unidad raíz (por ejemplo, C:\Tutorial). Este paso mitiga el error “Ruta de acceso demasiado larga” que aparece en ocasiones si intenta descomprimir los archivos en la carpeta Descargas.  
+2.  Mueva el archivo de .zip a una carpeta que esté debajo de la unidad raíz (por ejemplo, C:\Tutorial). Este paso mitiga el error "Ruta de acceso demasiado larga" que a veces se produce si intenta descomprimir los archivos en la carpeta descargas.  
   
 3.  Descomprima los proyectos de ejemplo: haga clic con el botón derecho en el archivo y seleccione **Extraer todo**. Después de extraer los archivos, debe tener las carpetas lección 1, 2, 3, 5, 6, 7, 8, 9, 10 completar y Lesson 4 Start. 
   

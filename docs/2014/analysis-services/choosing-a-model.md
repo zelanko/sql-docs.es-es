@@ -17,17 +17,17 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113295"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400518"
 ---
 # <a name="choosing-a-model"></a>Elegir un modelo
-  **Algoritmo de minería de datos:** la minería de datos *algoritmo* es el mecanismo que crea patrones a partir de datos. El algoritmo define cómo se cuentan los datos, cómo se derivan las relaciones, y cómo se guardan los patrones. La selección de un algoritmo depende en parte del tipo de datos que se desea analizar. Por ejemplo, algunos algoritmos solo funcionan con números continuos, mientras que otros funcionan mejor con un número limitado de valores diferentes.  
+  **Algoritmo de minería de datos:** La minería de datos *algoritmo* es el mecanismo que crea patrones a partir de datos. El algoritmo define cómo se cuentan los datos, cómo se derivan las relaciones, y cómo se guardan los patrones. La selección de un algoritmo depende en parte del tipo de datos que se desea analizar. Por ejemplo, algunos algoritmos solo funcionan con números continuos, mientras que otros funcionan mejor con un número limitado de valores diferentes.  
   
- **Modelo de minería de datos:** el resultado del análisis de datos mediante un algoritmo se guarda en un *modelo de minería de datos*. Un modelo de minería de datos es una colección de reglas, estadísticas y patrones. El *contenido* del modelo de minería de datos depende del algoritmo utilizado para procesar los datos, pero puede incluir lo siguiente:  
+ **Modelo de minería de datos:** El resultado del análisis de datos mediante un algoritmo se guarda en un *modelo de minería de datos*. Un modelo de minería de datos es una colección de reglas, estadísticas y patrones. El *contenido* del modelo de minería de datos depende del algoritmo utilizado para procesar los datos, pero puede incluir lo siguiente:  
   
 -   Reglas if-then que describen cómo se agrupan los productos en una transacción.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48113295"
   
 -   *Nodos* en una red, conectada por *bordes*. Los nodos representan elementos o grupos de elementos. Los bordes se puntúan de acuerdo con la importancia de las relaciones existentes entre los nodos.  
   
- **Mediante el modelo:** después de que ha creado un modelo, puede utilizar los visores proporcionados para explorarlo, o puede crear una consulta en el modelo. Las consultas se pueden usar para:  
+ **Mediante el modelo:** Después de haber creado un modelo, puede utilizar los visores proporcionados para explorarlo, o puede crear una consulta en el modelo. Las consultas se pueden usar para:  
   
 -   Predecir valores futuros.  
   

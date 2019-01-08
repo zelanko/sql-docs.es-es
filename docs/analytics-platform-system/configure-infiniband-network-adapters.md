@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518274"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de red InfiniBand para Analytics Platform System
 Describe cómo configurar los adaptadores de red InfiniBand en un servidor que no sea de dispositivo cliente para conectarse al nodo de Control en el almacenamiento de datos paralelos (PDW). Siga estas instrucciones para la conectividad básica y de alta disponibilidad, para que los procesos de copia de seguridad, la cargando y otros se conectan automáticamente a la red InfiniBand activa.  
@@ -42,9 +42,9 @@ Después de configurar los adaptadores de red InfiniBand, procesos del cliente p
   
 Por ejemplo, si el nombre de la región PDW es MyPDW y el nombre del dispositivo es MyAPS, la especificación de servidor dwloader para cargar los datos es uno de los siguientes:  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>Antes de empezar  
   
@@ -61,7 +61,7 @@ Mediante el uso de SQLCTL01, el sistema DNS de plataforma de análisis se conect
   
 Para satisfacer sus requisitos empresariales, también puede unir el servidor de cliente a su propio grupo de trabajo que no sea de dispositivo o un dominio de Windows.  
   
-## <a name="Sec1"></a>Paso 1: Obtener el dispositivo, configuración de red de InfiniBand  
+## <a name="Sec1"></a>Paso 1: Obtener el dispositivo la configuración de red de InfiniBand  
 *Para obtener el dispositivo la configuración de red de InfiniBand*  
   
 1.  Inicie sesión en el dispositivo AD01 nodo mediante la cuenta appliance_domain\Administrator.  
@@ -161,7 +161,7 @@ Para satisfacer sus requisitos empresariales, también puede unir el servidor de
   
 1.  En la ventana Conexiones de red, haga doble clic en una de las ranuras de la red para el adaptador Mellanox y seleccione Propiedades.  
   
-2.  Haga clic en el avanzado... botón Examinar (...).  
+2.  Haga clic en Opciones avanzadas... botón.  
   
 3.  En la ventana de configuración avanzada de TCP/IP, si la anexar estos sufijos DNS (en orden) opción no es atenuada, llama la casilla de verificación Anexar estos sufijos DNS (en orden): seleccione el sufijo de dominio de aplicación y haga clic en Agregar... El sufijo de dominio de aplicación `appliance_domain.local`  
   

@@ -15,12 +15,12 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674423"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501752"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Cuadro de diálogo de configuración de Visual FoxPro ODBC
 El **programa de instalación de Visual FoxPro ODBC** cuadro de diálogo permite agregar o cambiar un origen de datos de Visual FoxPro.  
@@ -60,7 +60,7 @@ El **programa de instalación de Visual FoxPro ODBC** cuadro de diálogo permite
  Cuando se selecciona esta casilla, el controlador abre la base de datos de Visual FoxPro exclusivamente cuando tiene acceso a datos mediante el origen de datos. Otros usuarios no pueden acceder a la base de datos o las tablas de la base de datos mientras se abre de forma exclusiva la base de datos. Se abren tablas dentro de la base de datos abierta exclusivamente como compartido. Para abrir una tabla exclusivamente, utilice el [establecer exclusivo](../../odbc/microsoft/set-exclusive-command.md) comando. Esta casilla está deshabilitada cuando **tipo base de datos** está establecido en **directory tabla libre**.  
   
  **Null**  
- Determina si las columnas creadas con ALTER TABLE y CREATE TABLE admiten valores null. Si se establece en Null, Insertar – SQL inserta un valor null en cualquier columna que no se incluye en una instrucción INSERT: SQL... Cláusula VALUE. Si Null es OFF, se inserta un espacio en blanco. También puede controlar esta opción a través de una cadena de conexión pasada como se muestra en el código siguiente:  
+ Determina si las columnas creadas con ALTER TABLE y CREATE TABLE admiten valores null. Si se establece en Null, INSERT - SQL inserta un valor null en cualquier columna que no se incluye en una instrucción INSERT - SQL... Cláusula VALUE. Si Null es OFF, se inserta un espacio en blanco. También puede controlar esta opción a través de una cadena de conexión pasada como se muestra en el código siguiente:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  

@@ -11,28 +11,28 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155455"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617145"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Agregar tipos de contenido del servidor de informes a una biblioteca (Reporting Services en el modo integrado de SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Proporciona SharePoint tipos de contenido predefinidos que se usan para administrar archivos de definición (.rdl) del informe de generador de informes, modelos de informe (.smdl) y archivos de datos compartidos (.rsds) de origen. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona tipos de contenido de SharePoint predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
  Para agregar tipos de contenido a una biblioteca, debe ser administrador del sitio o disponer del nivel de permiso Control total.  
   
- El [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contenido tipos y la administración del tipo de contenido se habilitarán automáticamente en todas las bibliotecas de documentos para colecciones de sitios existentes creadas a partir los siguientes **centro de Business Intelligence** plantilla de sitio.  
+ Los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y su administración se habilitarán automáticamente en todas las bibliotecas de documentos de las colecciones de sitios existentes creadas a partir de las siguientes plantillas de sitio de **Centro de Business Intelligence** .  
   
  Los sitios creados después de la integración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no tendrán habilitados los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!TIP]  
->  Si tiene **no** previamente configurado para una biblioteca de tipos de contenido primero habilite la administración de tipos de contenido y después activar el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tipos de contenido. Vea los procedimientos para habilitar la administración de tipos de contenido en una única biblioteca de documentos.  
+>  Si **no** ha configurado previamente los tipos de contenido de una biblioteca, habilite primero la administración de tipos de contenido y, a continuación, habilite los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vea los procedimientos para habilitar la administración de tipos de contenido en una única biblioteca de documentos.  
   
- **Vídeo corto:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w) (Habilitación de tipos de contenido en SharePoint2010.wmv).  
+ **Vídeo corto:** [(SSRS) Habilitación de Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **En este tema:**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48155455"
   
 5.  Actualice el explorador y haga clic en **Activar** junto a la **Característica de integración del servidor de informes**.  
   
-     ![rs_reportserver_integration_deactive](media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+    ![Desactivar](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> Para habilitar la administración de tipos de contenido para una sola biblioteca de documentos (SharePoint 2013)  
   
@@ -107,17 +107,17 @@ ms.locfileid: "48155455"
 8.  Cuando termine de agregar tipos de contenido, haga clic en **Aceptar**.  
   
 9. > [!NOTE]  
-    >  Si el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] grupo de tipo de contenido **tipos de contenido de SQL Server Reporting Services** no está visible en el **agregar tipos de contenido** página, una de las siguientes condiciones es verdadera:  
+    >  Si el grupo de tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Tipos de contenido de SQL Server Reporting Services **de** no es visible en la página **Agregar tipos de contenido** , se cumple una de las condiciones siguientes:  
   
     -   No se ha instalado el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Para obtener más información, consulte [instalar o desinstalar el complemento Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). El tema contiene información sobre la instalación del complemento y la ejecución paso a paso en una instalación solo de archivos del complemento para solucionar problemas.  
   
     -   Se instala el complemento, pero la característica de colección de sitios **Característica de integración del servidor de informes** no está activa. Compruebe la característica de colección de sitios en **Configuración del sitio**.  
   
-    -   Todos los [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ya se han agregado a la biblioteca de tipos de contenido. Si todos los tipos de contenido forman parte de una biblioteca, el grupo se quita de la página **Agregar tipos de contenido** . Si elimina uno o varios de los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , el grupo **Tipos de contenido de SQL Server Reporting Services** será visible en la página **Agregar tipos de contenido** .  
+    -   Ya se han agregado a la biblioteca todos los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Si todos los tipos de contenido forman parte de una biblioteca, el grupo se quita de la página **Agregar tipos de contenido** . Si elimina uno o varios de los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , el grupo **Tipos de contenido de SQL Server Reporting Services** será visible en la página **Agregar tipos de contenido** .  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Para habilitar la administración de tipos de contenido para una sola biblioteca de documentos (SharePoint 2010)  
   
-1.  Abra la biblioteca para la que desee habilitar varios tipos de contenido. En la barra de menús de la biblioteca, debería ver los siguientes menús: **Nuevo**, **Cargar**, **Acciones**y **Configuración**. Si no ve **Configuración**, significa que no tiene permiso para agregar un tipo de contenido.  
+1.  Abra la biblioteca para la que desee habilitar varios tipos de contenido. En la barra de menús de la biblioteca se deberían ver los menús siguientes: **Nuevo**, **cargar**, **acciones**, y **configuración**. Si no ve **Configuración**, significa que no tiene permiso para agregar un tipo de contenido.  
   
 2.  En la cinta **Herramientas de bibliotecas** , haga clic en **Biblioteca**.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48155455"
 4.  Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de permisos de lista de elementos del servidor de informes y sitio de SharePoint](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Iniciar el generador de informes &#40;generador de informes&#41;](report-builder/start-report-builder.md)  
   
   

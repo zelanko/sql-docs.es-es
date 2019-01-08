@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521930"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Función de conversión de tipo de datos explícito
 Conversión de tipos de datos explícito se especifica en términos de definiciones de tipo de datos SQL.  
@@ -29,7 +29,7 @@ Conversión de tipos de datos explícito se especifica en términos de definicio
   
  El formato de la **convertir** función es:  
   
- **CONVERTIR (** *value_exp*, *data_type ***)**  
+ **CONVERTIR (** *value_exp*, _data_type_**)**  
   
  La función devuelve el valor especificado por *value_exp* convertir al especificado *data_type*, donde *data_type* es una de las siguientes palabras clave:  
   
@@ -65,7 +65,7 @@ Conversión de tipos de datos explícito se especifica en términos de definicio
   
  Convierte el resultado de la función escalar CURDATE en una cadena de caracteres.  
   
- Dado que ODBC no impone un tipo de datos para los valores devueltos de funciones escalares (porque las funciones suelen ser específico del origen de datos), las aplicaciones deben usar la función escalar de CONVERT siempre que sea posible forzar la conversión de tipos de datos.  
+ Dado que ODBC no impone un tipo de datos para los valores devueltos de funciones escalares (dado que las funciones a menudo son específicas del origen de datos), las aplicaciones deben usar la función escalar de CONVERT siempre que sea posible forzar la conversión de tipos de datos.  
   
  Los dos ejemplos siguientes ilustran el uso de la **convertir** función. Estos ejemplos supone la existencia de una tabla denominada a EMPLOYEES, con una columna EMPNO de tipo SQL_SMALLINT y una columna EMPNAME de tipo SQL_CHAR.  
   

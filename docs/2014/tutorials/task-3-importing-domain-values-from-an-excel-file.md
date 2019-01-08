@@ -13,12 +13,12 @@ ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 56aa693625ecf78ddd5084b88e6fd6c3e2e0f5b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16356826909edbde5218ad509af6864817a856c1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215105"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399208"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>Tarea 3: importar valores de dominio desde un archivo de Excel
   En esta tarea, importará valores para el dominio **Estado** desde una hoja de cálculo de un archivo de Excel.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215105"
   
      ![Importar dominio de valores de cuadro de diálogo](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-02.jpg "Importar dominio de valores de cuadro de diálogo")  
   
-6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Importar valores del dominio** . Debe ver todos los nombres de los estados que importó en la lista. Observe que la opción **Mostrar solo nuevo** está seleccionada automáticamente después de la importación. Cuando importa valores y no ve los valores anteriores en la lista, es porque esta opción se habilita automáticamente después de la importación. Para ver todos los valores, desactive la casilla. Si importa de nuevo el mismo conjunto de valores, no se importa ninguno de los valores porque ya existen en el dominio.  
+6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Importar valores del dominio** . Debe ver todos los nombres de los estados que importó en la lista. Observe que la opción **Mostrar solo nuevo** está seleccionada automáticamente después de la importación. Al importar los valores y no ve los valores anteriores en la lista, es porque esta opción se habilita automáticamente después de importar. Para ver todos los valores, desactive la casilla. Si importa de nuevo el mismo conjunto de valores, no se importa ninguno de los valores porque ya existen en el dominio.  
   
      ![Mostrar solamente nueva casilla en valores de dominio](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "mostrar solamente nueva casilla en valores de dominio")  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795044"
 ---
 # <a name="localdbgetinstances-function"></a>Función LocalDBGetInstances
   Devuelve todas las instancias de SQL Server Express LocalDB con la versión indicada.  
@@ -42,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parámetros  
  *pInstanceNames*  
- [Salida] Cuando esta función devuelve valores, contiene los nombres de las instancias predeterminadas y con nombre de LocalDB en la estación de trabajo del usuario.  
+ [Salida] Cuando esta función devuelve, contiene los nombres de ambos denominado y predeterminada de las instancias de LocalDB en la estación de trabajo del usuario.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encontraron en la estación de trabajo del usuario.  
+ [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encuentra en la estación de trabajo del usuario.  
   
 ## <a name="returns"></a>Devuelve  
  S_OK  

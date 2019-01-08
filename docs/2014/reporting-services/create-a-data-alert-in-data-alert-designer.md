@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5e70f08293132f570ddb0663db7944ecb4bba497
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071849"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507968"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean en el Diseñador de alertas de datos. Una vez guardadas las definiciones de alertas, es posible volver a abrirlas, modificarlas y volver a guardarlas en el Diseñador de alertas de datos. Para más información sobre cómo editar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md) y [Editar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "49071849"
   
      El nombre predeterminado de la definición de alerta es el nombre del informe. Los nombres de definición de alertas no tienen que ser únicos, lo que puede dificultar distinguirlos al ver la lista de alertas posteriormente en el Administrador de alertas de datos. Se recomienda que utilice nombres significativos y únicos para sus definiciones de alerta.  
   
-6.  Si lo desea, cambie la opción de datos predeterminada de **cualquier dato en la fuente de datos tiene** a **ningún dato de la fuente de datos tiene**.  
+6.  Si lo desea, cambie la opción de datos predeterminada de **algún dato de la fuente de distribución de datos tiene** a **ningún dato de la fuente de distribución de datos tiene**.  
   
 7.  Haga clic en **Agregar regla**.  
   
@@ -65,21 +65,21 @@ ms.locfileid: "49071849"
   
      Se muestran distintos operadores de comparación en función del tipo de datos de la columna seleccionada. Si la columna tiene un tipo de datos de fecha, se muestra un icono de calendario junto al valor del umbral de la regla. Puede especificar una fecha haciendo clic en una fecha en el calendario o escribiendo la fecha.  
   
-     El Diseñador de alertas de datos proporciona dos modos de comparación: **Modo de entrada de valores** y **Modo de selección de campos**. El modo predeterminado es **Modo de entrada de valores**. Solo puede agregar cláusulas OR cuando se encuentre en el **Modo de entrada de valores** y utilice la comparación **is** .  
+     Diseñador de alertas de datos proporciona dos modos de comparación: **Modo de entrada de valor** y **modo de selección de campo**. El modo predeterminado es **Modo de entrada de valores**. Solo puede agregar cláusulas OR cuando se encuentre en el **Modo de entrada de valores** y utilice la comparación **is** .  
   
 9. Para agregar una cláusula OR, haga clic en la flecha abajo y, después, haga clic en **Modo de entrada de valores**.  
   
 10. Escriba el valor de comparación.  
   
-11. De manera opcional, vuelva a hacer clic en el signo de puntos suspensivos **(…)** .  
+11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)**.  
   
-     Los puntos suspensivos **(…)** aparecen en la línea que contiene la primera cláusula.  
+     Los puntos suspensivos **(...)** aparecen en la línea que contiene la primera cláusula.  
   
      La cláusula OR se agrega debajo y dentro de la regla AND.  
   
 12. De manera opcional, haga clic en la flecha abajo, seleccione **Modo de selección de campos**y, después, seleccione una columna de la lista.  
   
-     Observará que el signo de puntos suspensivos **(…)** en los que se hace clic para agregar cláusulas OR ha desaparecido.  
+     Observará que el signo de puntos suspensivos **(...)** en los que se hace clic para agregar cláusulas OR ha desaparecido.  
   
 13. Si lo desea, haga clic en **Agregar regla** de nuevo para agregar más reglas.  
   

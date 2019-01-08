@@ -10,18 +10,18 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400918"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617965"
 ---
 # <a name="configure-auto-statistics"></a>Configuración automática de estadísticas
 
 Obtenga información sobre cómo configurar el almacenamiento de datos paralelos para utilizar estadísticas automáticamente para crear y actualizar estadísticas automáticamente.  Utilizar esta capacidad para mejorar los planes de consulta y, por lo tanto, mejorar el rendimiento de las consultas.
 
-**Se aplica a:** APS (a partir de 2016 AU7)
+**Se aplica a:** Puntos de acceso (a partir de 2016 AU7)
 
 ## <a name="what-are-statistics"></a>¿Cuáles son las estadísticas?
 Las estadísticas de optimización de la consulta son objetos que contienen información estadística sobre la distribución de valores en una o varias columnas de una tabla. El optimizador de consultas utiliza estas estadísticas para estimar la cardinalidad o tienen como resultado el número de filas de la consulta. Estas estimaciones de cardinalidad habilitar el optimizador de consultas crear un plan de consulta de alta calidad. Por ejemplo, los puntos de acceso, los usos del optimizador de consultas MPP estimaciones de cardinalidad para elegir en orden aleatorio o replicar el menor de dos tablas que se utilizan en una cláusula join y hacerlo mejoran el rendimiento de la consulta.  Para obtener más información, consulte [estadísticas](../relational-databases/statistics/statistics.md) y [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)

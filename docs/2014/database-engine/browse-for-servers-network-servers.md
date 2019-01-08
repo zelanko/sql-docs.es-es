@@ -12,12 +12,12 @@ ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a9efc4b78f1f1b15fbbba54a1b59e3a8995051c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508187"
 ---
 # <a name="browse-for-servers-network-servers"></a>Buscar servidores (Servidores de redes)
   Si se conecta a un componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y no conoce el nombre exacto de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic en **Buscar más** del cuadro **Nombre del servidor** para abrir el cuadro de diálogo **Buscar servidores**.  
@@ -34,6 +34,6 @@ ms.locfileid: "48208685"
   
 ## <a name="options"></a>Opciones  
  **Seleccionar una de las instancias de SQL Server de la red para la conexión**  
- Indique el servidor con el que desea conectarse, haciendo clic en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se muestra en el árbol. Para mostrar u ocultar partes de la vista de árbol, haga clic en los nodos marcados con el símbolo **+** o **–** .  
+ Indique el servidor con el que desea conectarse, haciendo clic en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se muestra en el árbol. Puede mostrar u ocultar partes de la vista de árbol, haga clic en los nodos marcados con un **+** o **-** símbolos.  
   
   

@@ -20,16 +20,16 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99d7f84f2153f57cc9bc392c22d79739deaf6b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599623"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211994"
 ---
 # <a name="sqlsetpos-function"></a>Función SQLSetPos
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLSetPos** establece la posición del cursor en un conjunto de filas y permite que una aplicación para actualizar los datos del conjunto de filas o actualizar o eliminar datos en el conjunto de resultados.  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  El valor SQL_ADD para el *operación* argumento ha quedado en desuso en ODBC 3 *.x*. ODBC 3. *x* controladores deberá ser compatible con SQL_ADD para compatibilidad con versiones anteriores. Esta funcionalidad se ha reemplazado por una llamada a **SQLBulkOperations** con un *operación* de SQL_ADD. Cuando un ODBC 3. *x* aplicación trabaja con un ODBC 2. *x* controlador, el Administrador de controladores asigna una llamada a **SQLBulkOperations** con un *operación* de SQL_ADD a **SQLSetPos** con un  *Operación* de SQL_ADD.  
   
  Para obtener más información, vea "Comentarios".  
@@ -122,7 +122,7 @@ SQLRETURN SQLSetPos(
   
 ## <a name="comments"></a>Comentarios  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Para obtener información acerca de la instrucción indica que **SQLSetPos** puede llamarse y lo que necesita hacer para ofrecer compatibilidad con ODBC 2 *.x* las aplicaciones, vea [cursores de bloque, cursores desplazables, y Compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>Argumento RowNumber  

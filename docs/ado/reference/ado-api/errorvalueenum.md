@@ -16,23 +16,23 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542597"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica el tipo de error de tiempo de ejecución de ADO.  
   
  Se muestran tres formas del número de error:  
   
--   Decimal positivo: los dos bytes bajos del número completo en formato decimal. Este número se muestra en el cuadro de diálogo del mensaje de error predeterminada Visual Basic. Por ejemplo, error de tiempo de ejecución "3707".  
+-   Positivos decimal, el bajo dos bytes del número completo en formato decimal. Este número se muestra en el cuadro de diálogo del mensaje de error predeterminada Visual Basic. Por ejemplo, error de tiempo de ejecución "3707".  
   
--   Decimal negativo: la traducción decimal del número de error completo.  
+-   Negativo decimal, la traducción decimal del número de error completo.  
   
--   Hexadecimal: la representación hexadecimal del número de error completo. El código de componente de Windows está en el cuarto dígito. El código de servicio para los números de error de ADO es *A*. Por ejemplo: 0 x 800***A***0E7B.  
+-   Hexadecimal, la representación hexadecimal del número de error completo. El código de componente de Windows está en el cuarto dígito. El código de servicio para los números de error de ADO es *A*. Por ejemplo: 0 x 800***A***0E7B.  
   
 > [!NOTE]
 >  Errores de OLE DB pueden pasarse a la aplicación de ADO. Normalmente, estos pueden identificarse mediante un código de servicio de Windows de *4*. Por ejemplo, 0 x 800***4***.  

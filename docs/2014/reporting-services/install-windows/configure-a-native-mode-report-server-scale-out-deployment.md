@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606855"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395238"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (Administrador de configuración de SSRS)
 
@@ -111,9 +111,9 @@ ms.locfileid: "51606855"
 3.  En la página implementación escalada, seleccione la instancia de servidor de informes que está esperando para unirse a la implementación y haga clic en **Agregar servidor**.  
   
     > [!NOTE]  
-    >  **Issue:** al intentar combinar una instancia del servidor de informes de Reporting Services con la implementación escalada, es posible que aparezcan mensajes de error similares a “Acceso denegado”.  
+    >  **Problema:** Al intentar unir una instancia de servidor de informes de Reporting Services a la implementación escalada, puede experimentar los mensajes de error similares a "Acceso denegado".  
     >   
-    >  **Solución alternativa:** haga una copia de seguridad de la clave de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la primera instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y restáurela en el segundo servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Solución alternativa:** Copia de seguridad de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] clave de cifrado de la primera [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de instancia y restaurar la clave en el segundo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes. A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Ahora debería poder para comprobar que ambas instancias del servidor de informes están operativas. Para comprobar la segunda instancia, puede utilizar la herramienta Configuración de Reporting Services con el fin de conectarse al servidor de informes y hacer clic en la dirección URL del servicio web o en la dirección URL del Administrador de informes.  
   

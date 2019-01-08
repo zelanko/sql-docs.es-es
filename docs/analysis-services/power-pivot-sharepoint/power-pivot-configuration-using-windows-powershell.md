@@ -1,5 +1,5 @@
 ---
-title: Configuración dinámica mediante Windows PowerShell de energía | Documentos de Microsoft
+title: Configuración Pivot mediante Windows PowerShell de energía | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7deb70905efe8874e3b512c10eff5c0951ab4b24
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e290e0e15797a8b84a6d52c945a5fd78458515fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024962"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505626"
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>Configuración de Power Pivot mediante Windows PowerShell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34024962"
   
     -   17 cmdlets con el servidor de SQL Server 2012 Analysis Services configurado en modo de SharePoint, y SharePoint 2010.  
   
-     Si no se devuelve ningún comando en la lista o aparece un mensaje de error similar a “`get-help could not find *powerpivot* in a help file in this session.`“, vea la próxima sección de este tema para obtener instrucciones sobre cómo habilitar los cmdlets de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el servidor.  
+     Si se devuelve ningún comando en la lista o aparece un mensaje de error similar a "`get-help could not find *powerpivot* in a help file in this session.`", consulte la sección siguiente de este tema para obtener instrucciones sobre cómo habilitar el [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlets en el servidor.  
   
      Todos los cmdlets tienen ayuda en pantalla. En el ejemplo siguiente se muestra cómo ver la ayuda en línea del cmdlet **New-PowerPivotServiceApplication** :  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34024962"
 2.  Ejecute el primer cmdlet:  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implemente la solución.  
@@ -75,7 +75,7 @@ ms.locfileid: "34024962"
 3.  Ejecute el segundo cmdlet para implementar la solución:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  Cierre la ventana. Vuelva a abrirla utilizando de nuevo la opción **Ejecutar como administrador** .  

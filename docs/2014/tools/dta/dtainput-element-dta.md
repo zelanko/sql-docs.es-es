@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da1874685815c46223a4a9e644104012c047d471
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764367"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput (DTA, elemento)
   Contiene la definición de la entrada XML del Asistente para la optimización de motor de base de datos.  
@@ -47,8 +46,8 @@ ms.locfileid: "48060605"
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento DTAXML &#40;DTA&#41;](dtaxml-element-dta.md)|  
-|**Elementos secundarios**|[Elemento Server &#40;DTA&#41;](server-element-dta.md)<br /><br /> [Elemento de la carga de trabajo &#40;DTA&#41;](workload-element-dta.md)<br /><br /> [TuningOptions, elemento &#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [Elemento de configuración &#40;DTA&#41;](configuration-element-dta.md)|  
+|**Elemento primario**|[DTAXML &#40;DTA, elemento&#41;](dtaxml-element-dta.md)|  
+|**Elementos secundarios**|[Server &#40;DTA, elemento&#41;](server-element-dta.md)<br /><br /> [Workload &#40;DTA, elemento&#41;](workload-element-dta.md)<br /><br /> [Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [Configuration &#40;DTA, elemento&#41;](configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento es la raíz de la jerarquía del esquema de entrada del Asistente para la optimización de motor de base de datos. La entrada del Asistente para la optimización de motor de base de datos pueden ser argumentos que especifiquen los servidores cuyas bases de datos se desean optimizar, cargas de trabajo, opciones de optimización o una configuración especificada por el usuario.  

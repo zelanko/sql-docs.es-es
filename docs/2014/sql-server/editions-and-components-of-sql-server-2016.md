@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -34,24 +33,24 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798287"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>Ediciones y componentes de SQL Server 2014
   Los requisitos de instalación varían según las necesidades de las aplicaciones. Las distintas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] han sido diseñadas para satisfacer los requisitos de rendimiento, tiempo de ejecución y precio propios de cada organización y cada persona. Los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que instale también dependen de sus necesidades concretas. Las secciones siguientes le servirán de ayuda para elegir la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>Ediciones principales de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- En la tabla siguiente se describen las principales ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [características compatibles con las ediciones de SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ En la tabla siguiente se describen las principales ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definición|  
 |---------------------------------------|----------------|  
-|Enterprise (64 bits y 32 bits)|La mejor oferta, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition proporciona capacidades de centro de datos de tecnología avanzada completas con un rendimiento ultrarápido, virtualización ilimitada y Business Intelligence integral, que habilita los mayores niveles de servicio para las cargas de trabajo de gran importancia y el acceso del usuario final a ideas claras de los datos.|  
+|Enterprise (64 bits y 32 bits)|La mejor oferta, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition proporciona funciones de centro de datos de tecnología avanzada completas con un rendimiento ultrarápido, virtualización ilimitada e inteligencia empresarial integral, lo que habilita los mayores niveles de servicio para las cargas de trabajo de gran importancia y el acceso del usuario final a información sobre los datos.|  
 |Business Intelligence (64 bits y 32 bits)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition ofrece una plataforma completa que capacita a las organizaciones para crear e implementar soluciones de BI seguras, escalables y fáciles de administrar. Proporciona funcionalidad emocionante, como visualizarlos y explorarlos; basada en el explorador capacidades de mashup de datos eficaces y gestión de la integración mejorada.|  
-|Standard (64 bits y 32 bits)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition proporciona de administración básica de bases de datos y base de datos de Business Intelligence para que los departamentos y pequeñas organizaciones ejecuten sus aplicaciones y admite las herramientas de desarrollo comunes, tanto locales como en la nube, que habilitan la administración eficaz de bases de datos con recursos de TI mínimos.|  
+|Standard (64 bits y 32 bits)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition proporciona administración básica de datos y base de datos de inteligencia empresarial para que los departamentos y pequeñas organizaciones ejecuten sus aplicaciones y admite las herramientas de desarrollo comunes, tanto locales como en la nube, que habilitan la administración eficaz de bases de datos con recursos de TI mínimos.|  
   
 ## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>Ediciones especializadas de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Las ediciones especializadas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] están destinadas a las cargas de trabajo empresariales. En la tabla siguiente se describen las ediciones especializadas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a8ab0e95ce4998540e14849bb74b53d1be1c8e15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207583"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414092"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
   El grupo de disponibilidad AlwaysOn es una colección predefinida de bases de datos relacionales de SQL Server que conmuta por error conjuntamente cuando las condiciones desencadenan una conmutación por error en una base de datos, redirigiendo las solicitudes a una base de datos reflejada en otra instancia del mismo grupo de disponibilidad. Si utiliza grupos de disponibilidad como solución de alta disponibilidad, puede usar una base de datos de ese grupo como origen de datos en una solución tabular o multidimensional de Analysis Services. Todas las operaciones de Analysis Services siguientes funcionan de la manera esperada cuando se utiliza una base de datos de disponibilidad: procesando o importando datos, consultando datos relacionales directamente (utilizando el modo DirectQuery o almacenamiento ROLAP) y con reescritura.  
@@ -30,7 +30,7 @@ ms.locfileid: "48207583"
   
  **(Para cargas de trabajo de solo lectura)**. El rol de réplica secundaria se debe configurar para las conexiones de solo lectura, el grupo de disponibilidad debe tener una lista de distribución y la conexión del origen de datos de Analysis Services debe especificar el agente de escucha del grupo de disponibilidad. En este tema se proporcionan instrucciones al respecto.  
   
-##  <a name="bkmk_UseSecondary"></a> Lista de comprobación: usar una réplica secundaria para las operaciones de solo lectura  
+##  <a name="bkmk_UseSecondary"></a> Lista de comprobación: Usar una réplica secundaria para operaciones de solo lectura  
  A menos que la solución de Analysis Services incluya reescritura, puede configurar una conexión a un origen de datos para utilizar una réplica secundaria legible. Si tiene una conexión de red rápida, la replicación secundaria tiene una latencia de datos muy baja, proporcionando datos casi idénticos a los de la réplica primaria. Con la réplica secundaria para las operaciones de Analysis Services, puede reducir la contención de lectura/escritura de la replicación primaria y conseguir una mejor utilización de las réplicas secundarias en el grupo de disponibilidad.  
   
  De forma predeterminada, tanto el acceso de lectura-escritura como de intención de lectura se permiten en la réplica principal y no se permiten conexiones en las réplicas secundarias. Se requiere una configuración adicional para configurar una conexión de cliente de solo lectura en una réplica secundaria. La configuración requiere establecer las propiedades en la réplica secundaria y ejecutar un script T-SQL que defina una lista de enrutamiento de solo lectura. Utilice los procedimientos siguientes para asegurarse de que ha realizado los dos pasos.  
@@ -38,7 +38,7 @@ ms.locfileid: "48207583"
 > [!NOTE]  
 >  En los pasos siguientes se supone que existen las bases de datos y el grupo de disponibilidad AlwaysOn. Si va a configurar un grupo, utilice el Asistente para nuevo grupo de disponibilidad a fin de crear el grupo y para combinar las bases de datos. El asistente comprueba los requisitos previos, proporciona orientación en cada paso y realiza la sincronización inicial. Para obtener más información, vea [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>Paso 1: configurar el acceso en una réplica de disponibilidad  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Paso 1: Configurar el acceso en una réplica de disponibilidad  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48207583"
   
          Esta propiedad también es un requisito para la conmutación por error planeada. Si desea realizar una conmutación por error manual planeada para pruebas, establezca **Modo de disponibilidad** en **Confirmación sincrónica** tanto para la replicación primaria como para la secundaria.  
   
-#### <a name="step-2-configure-read-only-routing"></a>Paso 2: configurar el enrutamiento de solo lectura  
+#### <a name="step-2-configure-read-only-routing"></a>Paso 2: Configurar el enrutamiento de solo lectura  
   
 1.  Conéctese a la réplica principal.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "48207583"
   
 3.  Modifique el script, reemplazando los marcadores de posición con valores válidos para su implementación:  
   
-    -   Reemplace “Computer01” con el nombre de la instancia de servidor que hospeda la replicación primaria.  
+    -   Reemplace "Computer01" con el nombre de la instancia de servidor que hospeda la replicación primaria.  
   
-    -   Reemplace “Computer02” con el nombre de la instancia de servidor que hospeda la replicación secundaria.  
+    -   Reemplace "Computer02" con el nombre de la instancia de servidor que hospeda la replicación secundaria.  
   
-    -   Reemplace “contoso.com” con el nombre del dominio u omítalo del script si todos los equipos están en el mismo dominio. Mantenga el número de puerto si el agente de escucha utiliza el puerto predeterminado. El puerto que utiliza realmente el agente de escucha en la página de propiedades de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Reemplace "contoso.com" con el nombre del dominio u omítalo del script si todos los equipos están en el mismo dominio. Mantenga el número de puerto si el agente de escucha utiliza el puerto predeterminado. El puerto que utiliza realmente el agente de escucha en la página de propiedades de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Ejecute el script.  
   
@@ -151,11 +151,11 @@ ms.locfileid: "48207583"
 ##  <a name="bkmk_test"></a> Probar la configuración  
  Después de configurar la replicación secundaria y crear una conexión a un origen de datos en Analysis Services, puede confirmar que los comandos de consulta y procesamiento se redirigen a la réplica secundaria. También puede realizar una conmutación por error manual planeada para comprobar el plan de recuperación para este escenario.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Paso 1: confirmar que la conexión a un origen de datos se redirige a la réplica secundaria  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Paso 1: Confirme que la conexión de origen de datos se redirige a la réplica secundaria  
   
 1.  Inicie SQL Server Profiler y conéctese a la instancia de SQL Server que hospeda la réplica secundaria.  
   
-     Cuando se ejecuta el seguimiento, el `SQL:BatchStarting` y `SQL:BatchCompleting` eventos mostrarán las consultas emitidas desde Analysis Services que se ejecutan en la instancia del motor de base de datos. Estos eventos están seleccionados de forma predeterminada de modo que todo lo que debe hacer es iniciar el seguimiento.  
+     Cuando se ejecute el seguimiento la traza, los eventos `SQL:BatchStarting` y de `SQL:BatchCompleting` mostrarán las consultas emitidas desde Analysis Services que se ejecuta en la instancia del motor de base de datos. Estos eventos están seleccionados de forma predeterminada de modo que todo lo que debe hacer es iniciar el seguimiento.  
   
 2.  En [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], abra el proyecto de Analysis Services o la solución que contenga una conexión a un origen de datos que desee probar. Asegúrese de que el origen de datos especifica el agente de escucha de grupo de disponibilidad y no una instancia del grupo.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "48207583"
   
 4.  Implemente la solución y, cuando se complete, detenga el seguimiento.  
   
-     En la ventana de seguimiento debería ver los eventos de la aplicación **Microsoft SQL Server Analysis Services**. Debería ver `SELECT` instrucciones que recuperan datos de una base de datos en la instancia del servidor que hospeda la réplica secundaria, demuestra que la conexión se realiza mediante el agente de escucha a la réplica secundaria.  
+     En la ventana de seguimiento debería ver los eventos de la aplicación **Microsoft SQL Server Analysis Services**. Debe ver las instrucciones de `SELECT` que recuperan los datos de una base de datos en la instancia del servidor que hospeda la replicación secundaria, lo que prueba que la conexión se realiza a través del agente escucha a la réplica secundaria.  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Paso 2: realizar una conmutación por error planeada para probar la configuración  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Paso 2: Realizar una conmutación por error planeada para probar la configuración  
   
 1.  En [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] compruebe las réplicas primaria y secundaria para asegurarse de que ambas están configuradas para el modo de confirmación sincrónico y que están sincronizadas.  
   
@@ -199,9 +199,9 @@ ms.locfileid: "48207583"
 9. Repita el comando de procesamiento o de consulta en la solución Analysis Services y después observe los seguimientos en SQL Server Profiler. Debe ver la prueba del procesamiento en la otra instancia, que ahora es la nueva réplica secundaria.  
   
 ##  <a name="bkmk_whathappens"></a> Qué ocurre después de una conmutación por error  
- Durante una conmutación por error, una réplica secundaria realiza la transición al rol principal y la réplica principal anterior realiza la transición al rol secundario. Todas las conexiones de cliente se terminan, la propiedad del agente de grupo de disponibilidad pasa con el rol de réplica principal a una nueva instancia de SQL Server y el extremo de agente de escucha se enlaza a los puertos TCP y las direcciones IP virtuales de la nueva instancia. Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
+ Durante una conmutación por error, una réplica secundaria realiza la transición al rol principal y la réplica principal anterior realiza la transición al rol secundario. Todas las conexiones de cliente se terminan, la propiedad del agente de grupo de disponibilidad pasa con el rol de réplica principal a una nueva instancia de SQL Server y el punto de conexión del agente de escucha se enlaza a los puertos TCP y las direcciones IP virtuales de la nueva instancia. Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Si la conmutación por error se produce durante el procesamiento, aparece el siguiente error en Analysis Services en el archivo de registro o la ventana de resultados: “Error de OLE DB: OLE DB o error de ODBC: Error de vínculo de comunicación; 08S01; proveedor de TPC: el host remoto cerró a la fuerza una conexión existente. ; 08S01.”  
+ Si la conmutación por error se produce durante el procesamiento, se produce el siguiente error en Analysis Services en la ventana de salida o de archivo de registro: "Error de OLE DB: Error de OLE DB u ODBC. Error de vínculo de comunicación; 08S01; Proveedor TPC: El host remoto cerró fuerza una conexión existente. ; 08S01".  
   
  Este error se debe resolver si espera un minuto y vuelve a intentarlo. Si el grupo de disponibilidad se configura correctamente para la réplica secundaria legible, el procesamiento se reanudará en la nueva réplica secundaria cuando se reintente el procesamiento.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48207583"
 ##  <a name="bkmk_writeback"></a> Reescritura al usar una base de datos de disponibilidad AlwaysOn  
  La reescritura es una característica de Analysis Services que admite realizar análisis Y si en Excel. También es de utilidad para tareas de presupuesto y previsión en aplicaciones personalizadas.  
   
- La compatibilidad con la reescritura requiere una conexión de cliente READWRITE. En Excel, si intenta reescribir en una conexión de solo lectura, aparecerá un error similar al siguiente: "No se pudieron recuperar datos del origen de datos externo".  
+ La compatibilidad con la reescritura requiere una conexión de cliente READWRITE. En Excel, si intenta reescribir en una conexión de solo lectura, se producirá el error siguiente: "No se pudieron recuperar datos del origen de datos externo". "No se pudieron recuperar datos del origen de datos externo".  
   
  Si configuró una conexión para acceder siempre en una replica secundaria legible, ahora debe configurar una nueva conexión que use una conexión READWRITE a la replicación primaria.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "48207583"
   
 ## <a name="see-also"></a>Vea también  
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Secundarias activas: Réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Habilitar reescritura en la dimensión](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

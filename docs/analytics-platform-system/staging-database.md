@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f55c922c1424235203505a6ba17bbec56972c9f7
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400818"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396520"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Uso de una base de datos provisional en el almacenamiento de datos paralelos (PDW)
 Almacenamiento de datos paralelos (PDW) de SQL Server usa una base de datos de almacenamiento provisional para almacenar datos temporalmente durante el proceso de carga. De forma predeterminada, SQL Server PDW usa la base de datos de destino como la base de datos de almacenamiento provisional, lo que puede provocar la fragmentación de las tablas. Para reducir la fragmentación de las tablas, puede crear una base de datos de almacenamiento provisional definido por el usuario. O bien, cuando la reversión de un error de carga no es un problema, puede usar el modo de carga de fastappend para mejorar el rendimiento mediante la omisión de la tabla temporal y cargando directamente en la tabla de destino.  

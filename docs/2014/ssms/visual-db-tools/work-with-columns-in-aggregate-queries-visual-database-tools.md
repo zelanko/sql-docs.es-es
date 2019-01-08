@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -15,12 +15,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671fb9fe3de95d4480f7f293668dd124d2cc3a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127927"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795947"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabajar con columnas en consultas de funciones agregadas (Visual Database Tools)
   Al crear consultas agregadas, el [Diseñador de consultas y vistas](visual-database-tools.md) asume determinados criterios para poder crear una consulta válida. Por ejemplo, si está creando una consulta de funciones de agregado y marca una columna de datos para los resultados, el Diseñador de consultas y vistas incluye automáticamente la columna en la cláusula GROUP BY para que no intente mostrar sin darse cuenta el contenido de una fila individual en un resumen.  
@@ -55,7 +55,7 @@ ms.locfileid: "48127927"
     WHERE price > 10  
     ```  
   
--   Si crea una condición de búsqueda que incluya una columna utilizada también en una cláusula GROUP BY o en una función de agregado, la condición de búsqueda puede aparecer como una cláusula WHERE o como una cláusula HAVING: puede decidir cuál al crear la condición. Por ejemplo, la siguiente instrucción crea un precio medio de los títulos de cada editorial y, a continuación, muestra la media de las editoriales cuyo precio medio supera los 10,00 USD:  
+-   Si crea una condición de búsqueda que incluya una columna que también se usa en una cláusula GROUP BY o en una función de agregado, la condición de búsqueda puede aparecer como una cláusula WHERE o como una cláusula HAVING: puede decidir cuál al crear la condición. Por ejemplo, la siguiente instrucción crea un precio medio de los títulos de cada editorial y, a continuación, muestra la media de las editoriales cuyo precio medio supera los 10,00 USD:  
   
     ```  
     SELECT pub_id, AVG(price)  

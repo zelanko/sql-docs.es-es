@@ -19,21 +19,21 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 872b14f2b9ced766086d98af74e5ea9d1129d6df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501934"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expresiones y evaluación de consultas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   El contexto de una expresión es la información que se utiliza para analizarla y evaluarla. A continuación, se muestran las dos fases de evaluación de XQuery:  
   
--   **Contexto estático** : esta es la fase de compilación de consulta. En función de la información disponible, a veces pueden producirse errores durante este análisis estático de la consulta.  
+-   **Contexto estático** -esta es la fase de compilación de consulta. En función de la información disponible, a veces pueden producirse errores durante este análisis estático de la consulta.  
   
--   **Contexto dinámico** : esta es la fase de ejecución de consulta. Aunque una consulta no presente errores estáticos, como errores que se hayan producido durante la compilación de la consulta, la consulta puede devolver errores durante su ejecución.  
+-   **Contexto dinámico** -esta es la fase de ejecución de consulta. Aunque una consulta no presente errores estáticos, como errores que se hayan producido durante la compilación de la consulta, la consulta puede devolver errores durante su ejecución.  
   
 ## <a name="static-context"></a>Contexto estático  
  La inicialización del contexto estático se refiere al proceso que consiste en reunir toda la información de cara al análisis estático de la expresión. Como parte de la inicialización del contexto estático, se llevan a cabo los siguientes pasos:  

@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ce5bc22f1cf7dd8794aaa8d65e23d0324a204d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172135"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540007"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Las funciones definidas por el usuario no se permiten en system_function_schema
   El Asesor de actualizaciones detectó funciones definidas por el usuario que son propiedad del usuario no documentado **system_function_schema**. No puede crear una función del sistema definida por el usuario especificando este usuario. El **system_function_schema** no existe el nombre de usuario y el identificador de usuario que está asociado con este nombre (UID = 4) está reservado para el **sys** esquema y se restringe a solo para uso interno.  
@@ -40,7 +40,7 @@ ms.locfileid: "48172135"
   
  Estos cambios tienen el efecto siguiente sobre las funciones del sistema definidas por el usuario:  
   
--   Instrucciones de Definition Language (DDL) de datos que hacen referencia **system_function_schema** se producirá un error. Por ejemplo, la instrucción `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... no tendrá éxito.  
+-   Instrucciones de Definition Language (DDL) de datos que hacen referencia **system_function_schema** se producirá un error. Por ejemplo, la instrucción `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... no se realizará correctamente.  
   
 -   Después de actualizar a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], los objetos existentes que pertenecen a **system_function_schema** solo están contenidos en el **sys** esquema de la **maestro** base de datos. Dado que no se puede modificar los objetos del sistema, estas funciones nunca se pueden modificar o quitar de la **maestro** base de datos. Además, estas funciones no se pueden invocar desde otras bases de datos especificando solo un nombre de función con una parte.  
   

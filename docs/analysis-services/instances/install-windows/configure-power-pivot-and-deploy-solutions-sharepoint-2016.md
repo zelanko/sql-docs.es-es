@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984067"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400019"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configuración de Power Pivot e implementación de soluciones (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "38984067"
  Para obtener información acerca de cómo instalar el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para la herramienta de configuración de SharePoint 2016, consulte [instalar o desinstalar el Power Pivot para SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Ejecución de la configuración de Power Pivot para SharePoint 2016  
- **Nota** : para completar los pasos siguientes, debe ser administrador de la granja de servidores. Si ve un mensaje de error similar al siguiente:  
+ **Nota:** Para completar los pasos siguientes, debe ser un administrador de granja de servidores. Si ve un mensaje de error similar al siguiente:  
   
--   "El usuario no es un administrador de granja. Solucione los errores de validación y vuelva a intentarlo."  
+-   "El usuario no es un administrador de granja de servidores. Solucione los errores de validación y vuelva a intentarlo."  
   
  Inicie sesión como la cuenta que instaló SharePoint o configure la cuenta de instalación como administrador principal del sitio de Administración central de SharePoint.  
   
 1.  En el menú **Inicio** , seleccione sucesivamente **Todos los programas**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Herramientas de configuración**y **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016**. Las herramientas solo se muestran si [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint está instalado en el servidor local.  
   
-2.  Seleccione **configurar o reparar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint** y, a continuación, seleccione **Aceptar**.  
+2.  Seleccione **Configurar o reparar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint** y, después, **Aceptar**.  
   
 3.  La herramienta ejecuta una validación para comprobar el estado actual de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y los pasos necesarios para completar la configuración. Expanda la ventana al tamaño máximo. Aparecerá una barra de botones en la parte inferior de la ventana con los comandos **Validar** **Ejecutar**y **Salir** .  
   
 4.  En la pestaña **Parámetros** :  
   
-    1.  **Nombre de usuario de cuenta predeterminada**: escriba una cuenta de usuario de dominio para la cuenta predeterminada. Esta cuenta se usará para aprovisionar servicios, incluido el grupo de aplicaciones de servicio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . No especifique ninguna cuenta integrada, como Network Service o Local System. La herramienta bloquea las configuraciones que especifican cuentas integradas.  
+    1.  **Nombre de cuenta de usuario predeterminada**: Escriba una cuenta de usuario de dominio para la cuenta predeterminada. Esta cuenta se usará para aprovisionar servicios, incluido el grupo de aplicaciones de servicio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . No especifique ninguna cuenta integrada, como Network Service o Local System. La herramienta bloquea las configuraciones que especifican cuentas integradas.  
   
-    2.  **Servidor de bases de datos**: puede usar el motor de bases de datos de SQL Server admitido para la granja de servidores de SharePoint.  
+    2.  **Servidor de base de datos**: Puede usar el motor de base de datos de SQL Server que se admite para la granja de SharePoint.  
   
-    3.  **Frase de contraseña**: escriba una frase de contraseña. Si va a crear una nueva granja de SharePoint, la frase de contraseña se usa siempre que se agrega un servidor o una aplicación a la granja de servidores de SharePoint. Si la granja existe todavía, escriba la frase de contraseña que le permitirá agregar una aplicación de servidor a la granja.  
+    3.  **Frase de contraseña**: Escriba una frase de contraseña. Si va a crear una nueva granja de SharePoint, la frase de contraseña se usa siempre que se agrega un servidor o una aplicación a la granja de servidores de SharePoint. Si la granja existe todavía, escriba la frase de contraseña que le permitirá agregar una aplicación de servidor a la granja.  
   
-    4.  Haga clic en **Crear colección de sitios** en la ventana izquierda. Anote la **Dirección URL del sitio** para pueda consultarla en pasos posteriores. Si el servidor de SharePoint no está configurado todavía, el asistente para la configuración usa como valor predeterminado la aplicación web y las direcciones URL de las colecciones de sitios hasta la raíz de `http://[ServerName]`. Para modificar los valores predeterminados, examine las páginas siguientes en la ventana izquierda: **Crear aplicación web predeterminada** e **Implementar solución de aplicación web**  
+    4.  Haga clic en **Crear colección de sitios** en la ventana izquierda. Anote la **Dirección URL del sitio** para pueda consultarla en pasos posteriores. Si el servidor de SharePoint no está configurado todavía, el asistente para la configuración usa como valor predeterminado la aplicación web y las direcciones URL de las colecciones de sitios hasta la raíz de `http://[ServerName]`. Para modificar los valores predeterminados, examine las páginas siguientes en la ventana izquierda: **Crear aplicación Web predeterminada** y **implementar solución de aplicación Web**  
   
-5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información sobre cada uno, vea la sección "Valores de entrada utilizados para configurar el servidor" en [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) en este tema.  
+5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información sobre cada uno de ellos, consulte la sección "valores de entrada utilizados para configurar el servidor en [configurar o reparar Power Pivot para SharePoint 2010 (herramienta de configuración de Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) en este tema.  
   
 6.  Si lo desea, quite cualquier acción que no desee procesar en este momento. Por ejemplo, si quiere configurar el Servicio de almacenamiento seguro más adelante, haga clic en **Configurar el servicio de almacenamiento seguro**y después desactive la casilla **Incluir esta acción en la lista de tareas**.  
   
@@ -59,14 +59,14 @@ ms.locfileid: "38984067"
   
 8.  Seleccione **Ejecutar** para procesar todas las acciones de la lista de tareas. Tenga en cuenta que **Ejecutar** estará disponible cuando valide las acciones. Si **Ejecutar** no está habilitado, seleccione **Validar** primero.  
   
- Para obtener más información, vea [Configurar o reparar Power Pivot para SharePoint 2010 (Herramienta de configuración de Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Para obtener más información, vea [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Comprobación de la configuración de Power Pivot  
  **Servicios:**  
   
 1.  En Administración central, en Configuración del sistema, seleccione **Administrar servicios en el servidor**.  
   
-2.  Compruebe que **SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] System Service** se inicia.  
+2.  Confirme que el **Servicio de sistema de SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** está iniciado.  
   
  **Característica de granja:**  
   

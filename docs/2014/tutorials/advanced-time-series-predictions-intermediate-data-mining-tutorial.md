@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122745"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544328"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal avanzadas (Tutorial intermedio de minería de datos)
   Al explorar el modelo de predicción, observó que, aunque las ventas de la mayoría de las regiones siguen un patrón similar, algunas regiones y algunos modelos, como el modelo M200 en la región del Pacífico, muestran tendencias muy diferentes. Esto no le sorprende, ya que sabe que las diferencias entre regiones son comunes y pueden deberse a muchos factores, como las promociones de marketing, los informes inexactos o los acontecimientos geopolíticos.  
@@ -44,7 +44,7 @@ ms.locfileid: "48122745"
 ##  <a name="bkmk_newExtendData"></a> Creación de nuevos datos extendidos de ventas  
  Para actualizar los datos de ventas, necesitará obtener las últimas cifras de ventas. Los datos que se acaban de introducir de la región del Pacífico son de interés particular. Allí se inició una promoción de ventas regional para llamar la atención sobre las nuevas tiendas y aumentar el conocimiento de sus productos.  
   
- En este escenario, asumiremos que los datos se han importado de un libro de Excel que contiene únicamente tres meses de los nuevos datos para un par de regiones. Creará una tabla para los datos mediante un script Transact-SQL y, a continuación, definirá una vista de origen de datos que usará para la predicción.  
+ En este escenario, asumiremos que se ha importado los datos desde un libro de Excel que contiene sólo tres meses de nuevos datos para un par de regiones. Creará una tabla para los datos mediante un script Transact-SQL y, a continuación, defina una vista del origen de datos que se usará para la predicción.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Crear la tabla con nuevos datos de ventas  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122745"
   
      **Origen de datos**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Seleccionar tablas y vistas**: seleccione la tabla que acaba de crear, NewSalesData.  
+     **Seleccionar tablas y vistas**: Seleccione la tabla que acaba de crear, NewSalesData.  
   
 3.  Haga clic en **Finalizar**.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122745"
   
 2.  En la página de bienvenida del asistente, haga clic en **Siguiente**.  
   
-3.  En el **Seleccionar origen de datos** , seleccione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]y, a continuación, haga clic en **siguiente**.  
+3.  En la página **Seleccionar origen de datos** , seleccione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]y, después, haga clic en **Siguiente**.  
   
-4.  En la página, **Seleccionar tablas y vistas**, no agregue ninguna tabla; sólo haga clic en **Siguiente**.  
+4.  En la página, **seleccionar tablas y vistas**, no agregue tablas, solo clic **siguiente**.  
   
 5.  En la página, **completando el Asistente para**, escriba el nombre `AllRegions`y, a continuación, haga clic en **finalizar**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122745"
   
      **Origen de datos**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Seleccionar tablas y vistas**: no seleccione ninguna tabla  
+     **Seleccionar tablas y vistas**: No seleccione ninguna tabla  
   
      **Nombre**: `T1000 Pacific Region`  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48122745"
   
      **Nombre**: `T1000 Pacific Region`  
   
-     **Descripción**: **filtro`vTimeSeries`por región y modelo**  
+     **Descripción**: **Filtro`vTimeSeries`por región y modelo**  
   
 5.  En el panel de texto, escriba la siguiente consulta y, a continuación, haga clic en Aceptar:  
   

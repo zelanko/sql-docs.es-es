@@ -15,12 +15,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530636"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Editor de la tarea Ejecutar proceso (página Procesar)
   Utilice la página **Proceso** del cuadro de diálogo **Editor de la tarea Ejecutar proceso** para configurar las opciones que permitirán ejecutar el proceso. Estas opciones incluyen el ejecutable que se debe instalar, su ubicación, los argumentos de línea de comandos y las variables que proporcionan información de entrada y capturan información de salida.  
@@ -38,12 +38,12 @@ ms.locfileid: "48100635"
  Proporcione los argumentos de línea de comandos.  
   
  **WorkingDirectory**  
- Escriba la ruta de acceso de la carpeta que contiene el ejecutable, o bien haga clic en el botón para examinar **(…)** y busque la carpeta.  
+ Escriba la ruta de acceso de la carpeta que contiene el ejecutable, o bien haga clic en el botón Examinar **(…)** y busque la carpeta.  
   
  **StandardInputVariable**  
  Seleccione una variable para proporcionar la entrada al proceso o haga clic en \<**Nueva variable…**> para crear una:  
   
- **Temas relacionados:**[agregar Variable  ](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:**  [Agregar variable](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  Seleccione una variable para capturar la salida del proceso o haga clic en \<**Nueva variable…**> para crear una.  
@@ -67,7 +67,7 @@ ms.locfileid: "48100635"
  Especifique el estilo de ventana en el que ejecutará el proceso.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

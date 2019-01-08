@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021797 error
@@ -13,12 +12,12 @@ ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03ebaa70dbb9fb7e774d48b59e06a6d4dc03b11b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097285"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753787"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -31,7 +30,7 @@ ms.locfileid: "48097285"
 |Origen del evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
-|Texto del mensaje|'%s' debe ser un inicio de sesión válido en Windows con el formato: 'MACHINE\Login' o 'DOMAIN\Login'. Vea la documentación de '%s'.|  
+|Texto del mensaje|'%s' debe ser un inicio de sesión de Windows válida en el formulario: 'MACHINE\Login' o 'DOMAIN\Login'. Vea la documentación de '%s'.|  
   
 ## <a name="explanation"></a>Explicación  
  Este error lo generan los siguientes procedimientos almacenados de replicación si el valor especificado para el parámetro **@job_login** es nulo o no es válido. Este error puede producirse si un miembro del rol fijo de base de datos **db_owner** ejecuta scripts de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El modelo de seguridad de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ha cambiado, por lo que dichos scripts deben actualizarse.  

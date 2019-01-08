@@ -5,21 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Cursor Manager Total
 - Cursor Manager Total object
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 6051605e36bc7082cff53e718cfcbf6cc6fc3deb
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: b5f4f653b875621da042d99cb22629b0ff21aea2
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158610"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380976"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>Cursor Manager Total (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52158610"
 |**Velocidad de conversión de cursores**|Número de conversiones de cursor por segundo.|  
 |**Vaciados de cursor**|Número total de instrucciones que se crean de nuevo con cursores en tiempo de ejecución.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

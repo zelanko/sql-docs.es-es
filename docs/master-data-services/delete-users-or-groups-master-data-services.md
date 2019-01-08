@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting groups [Master Data Services]
@@ -17,12 +16,12 @@ ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f94ae6b0ab1e70abe6f466e053523aa56ca8968c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43401193273de1ee72fd6209694b31ea09e2680f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765257"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Eliminar usuarios o grupos (Master Data Services)
 
@@ -55,7 +54,7 @@ ms.locfileid: "47620843"
   
 5.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

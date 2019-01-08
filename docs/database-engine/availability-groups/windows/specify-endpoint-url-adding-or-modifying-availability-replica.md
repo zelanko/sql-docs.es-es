@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc5c128de983fc2bf2c4287b53f74495ff76ebb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6c7ed2edb5eb62b6182b53859877b7f5d9b5b453
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518246"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589669"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar la dirección URL del punto de conexión - Agregar o modificar una réplica de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52518246"
 ##  <a name="SyntaxOfURL"></a> Sintaxis de una dirección URL del extremo  
  La sintaxis de una dirección URL del extremo tiene el siguiente formato:  
   
- TCP**://***\<dirección-del-sistema>***:***\<puerto>*  
+ TCP<strong>://</strong>*\<dirección del sistema>*<strong>:</strong>*\<puerto>*  
   
  donde  
   
@@ -48,15 +48,15 @@ ms.locfileid: "52518246"
   
     -   Dado que todos los nodos del clúster de conmutación por error de Windows Server (WSFC) están en el mismo dominio, puede usar el nombre del equipo; por ejemplo, `SYSTEM46`.  
   
-    -   Para utilizar una dirección IP, ésta debe ser única en el entorno. Recomendamos que utilice una dirección IP solo si es estática. La dirección IP puede ser IP Versión 4 (IPv4) o IP Versión 6 (IPv6). Las direcciones IPv6 se deben incluir entre corchetes, por ejemplo: **[***<dirección_IPv6>***]**.  
+    -   Para utilizar una dirección IP, ésta debe ser única en el entorno. Recomendamos que utilice una dirección IP solo si es estática. La dirección IP puede ser IP Versión 4 (IPv4) o IP Versión 6 (IPv6). Las direcciones IPv6 se deben incluir entre corchetes, por ejemplo: **[**_<dirección_IPv6>_**]**.  
   
          Para conocer la dirección IP de un sistema, en el símbolo del sistema de Windows, escriba el comando **ipconfig** .  
   
     -   El nombre de dominio completo siempre funciona. Esta es una cadena de dirección definida localmente que adopta diferentes formatos en distintos lugares. Con frecuencia, aunque no siempre, el nombre de dominio completo es un nombre compuesto que incluye el nombre del equipo y una serie de segmentos de dominio separados por puntos con el siguiente formato:  
   
-         *nombre_equipo* **.** *segmento_de_dominio*[...**.***segmento_de_dominio*]  
+         _nombre_equipo_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
   
-         donde *nombre_de_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_de_dominio*[...**.***segmento_de_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.**_segmento_dominio_] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Para obtener más información, vea [Buscar el nombre de dominio completo](#Finding_FQDN), más adelante en este tema.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52518246"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Usar un nombre de dominio completo  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Usar un nombre de dominio completo  
  La siguiente dirección URL del extremo especifica un nombre de dominio completo, `DBSERVER8.manufacturing.Adventure-Works.com`, y el puerto `7024`.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -105,7 +105,7 @@ ms.locfileid: "52518246"
   
  Para formar el nombre de dominio completo, concatene los valores de *<host_name>* y *<Primary_Dns_Suffix>* de la siguiente manera:  
   
- *&lt;nombre_host&gt;* **.** *<sufijo_DNS_primario>*  
+ _&lt;nombre_host&gt;_ **.** _<sufijo_DNS_primario>_  
   
  Por ejemplo, la configuración IP  
   
@@ -153,7 +153,7 @@ ms.locfileid: "52518246"
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  

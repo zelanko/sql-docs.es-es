@@ -5,18 +5,18 @@ ms.date: 04/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
-author: stevestein
-ms.author: sstein
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d08e417a3fb14a9679fd3662e570f9596b93656
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: dc21bd2fa9d3c35d436679cf256bec81654f5747
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159063"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380518"
 ---
 # <a name="sql-server-columnstore-object"></a>Objeto Columnstore de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52159063"
 |**Total de grupos de filas comprimidos de combinación**|Número de grupos de filas de destino comprimidos creados con MERGE desde el inicio de SQL Server.|  
 |**Total de grupos de filas de origen combinados**|Número de grupos de filas de origen combinados desde el inicio de SQL Server.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

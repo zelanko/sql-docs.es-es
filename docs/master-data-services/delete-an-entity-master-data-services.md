@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], deleting
@@ -15,12 +14,12 @@ ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97437fc6e92849d516cad0cf3fe75be4ce4e000a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3453c6418c2871e697f1eb9de2a1499d4262d226
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722725"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765097"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Eliminar una entidad (Master Data Services)
 
@@ -52,7 +51,7 @@ ms.locfileid: "47722725"
   
 6.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   

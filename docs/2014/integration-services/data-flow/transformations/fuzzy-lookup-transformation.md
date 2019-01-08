@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106405"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361967"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
   
 > [!NOTE]  
->  Para obtener información más detallada sobre la transformación Búsqueda aproximada, incluidas las limitaciones de rendimiento y memoria, vea las notas del producto [Búsqueda aproximada y Agrupación aproximada en SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Para obtener información más detallada sobre la transformación Búsqueda aproximada, incluidas las limitaciones de rendimiento y memoria, vea las notas del producto [Búsqueda aproximada y Agrupación aproximada en SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  La transformación Búsqueda aproximada difiere de la Búsqueda aproximada en su uso de coincidencia aproximada. La transformación Búsqueda utiliza una combinación de igualdad para localizar los registros que coinciden en la tabla de referencia. Devuelve los registros que tienen al menos un registro coincidente y devuelve registros que no tienen registros coincidentes. En cambio, la transformación Búsqueda aproximada emplea la coincidencia aproximada para devolver una o más coincidencias similares en la tabla de referencia.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48106405"
   
  Esta transformación tiene una entrada y una salida.  
   
- Para la coincidencia aproximada, solo se pueden utilizar columnas de entrada con tipos de datos `DT_WSTR` y `DT_STR`. Para la búsqueda exacta se puede utilizar cualquier tipo de datos DTS, excepto `DT_TEXT`, `DT_NTEXT`y `DT_IMAGE`. Para más información, consulte [Integration Services Data Types](../integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con DTS `DT_WSTR` tipo de datos a una columna con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de datos, pero no que se puede combinar una columna con el `DT_WSTR` tipo de datos a una columna con el `int` tipo de datos.  
+ Para la coincidencia aproximada, solo se pueden utilizar columnas de entrada con tipos de datos `DT_WSTR` y `DT_STR`. Para la búsqueda exacta se puede utilizar cualquier tipo de datos DTS, excepto `DT_TEXT`, `DT_NTEXT`y `DT_IMAGE`. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con DTS `DT_WSTR` tipo de datos a una columna con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de datos, pero no que se puede combinar una columna con el `DT_WSTR` tipo de datos a una columna con el `int` tipo de datos.  
   
  Puede personalizar esta transformación, especificando la cantidad máxima de memoria, el algoritmo de comparación de filas y el almacenamiento en caché de índices y tablas de referencia que utiliza la transformación.  
   
@@ -120,18 +119,18 @@ ms.locfileid: "48106405"
 ## <a name="temporary-tables-and-indexes"></a>Tablas e índices temporales  
  En tiempo de ejecución, la transformación Búsqueda aproximada crea objetos temporales, como tablas e índices, en la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se conecta la transformación. El tamaño de estas tablas e índices temporales es proporcional al número de filas y tokens de la tabla de referencia y al número de tokens que crea la transformación Búsqueda aproximada; por lo tanto, podría consumir una cantidad importante de espacio en disco. La transformación también consulta estas tablas temporales. Por lo tanto, debe considerar la posibilidad de conectar la transformación Búsqueda aproximada a una instancia de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no sea de producción, en especial si el servidor de producción tiene un espacio en disco disponible limitado.  
   
- El rendimiento de esta transformación puede mejorar si las tablas e índices que utiliza están ubicados en el equipo local. Si la tabla de referencia que utiliza la transformación Búsqueda aproximada está en el servidor de producción, debe plantearse copiar la tabla a un servidor que no sea de producción y configurar la transformación Búsqueda aproximada para que tenga acceso a la copia. Haciendo esto, puede evitar que las consultas de búsqueda consuman recursos del servidor de producción. Además, si MatchIndexOptions está establecida en **GenerateAndMaintainNewIndex**, la transformación Búsqueda aproximada mantiene el índice de coincidencias y puede bloquear la tabla de referencia durante la operación de limpieza de datos, evitando que otros usuarios y aplicaciones accedan a ella.  
+ El rendimiento de esta transformación puede mejorar si las tablas e índices que utiliza están ubicados en el equipo local. Si la tabla de referencia que utiliza la transformación Búsqueda aproximada está en el servidor de producción, debe plantearse copiar la tabla a un servidor que no sea de producción y configurar la transformación Búsqueda aproximada para que tenga acceso a la copia. Haciendo esto, puede evitar que las consultas de búsqueda consuman recursos del servidor de producción. Además, si la transformación “Búsqueda aproximada” mantiene el índice de coincidencia (es decir, si MatchIndexOptionsis se establece en **GenerateAndMaintainNewIndex**), la transformación puede bloquear la tabla de referencia durante la operación de limpieza de datos, lo que evitaría que otros usuarios y aplicaciones accedan a ella.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurar la transformación Búsqueda aproximada  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Búsqueda aproximada** , haga clic en uno de los temas siguientes:  
   
--   [Editor de transformación Búsqueda aproximada &#40;pestaña tabla de referencia&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformación Búsqueda aproximada &#40;pestaña Tabla de referencia&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Editor de transformación Búsqueda aproximada &#40;pestaña columnas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Editor de transformación Búsqueda aproximada &#40;ficha Opciones avanzadas&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Búsqueda aproximada &#40;pestaña Avanzadas&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -143,7 +142,7 @@ ms.locfileid: "48106405"
  Para obtener más detalles sobre cómo establecer las propiedades de un componente de flujo de datos, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación búsqueda](lookup-transformation.md)   
+ [Transformación Búsqueda](lookup-transformation.md)   
  [Transformación Agrupación aproximada](fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   

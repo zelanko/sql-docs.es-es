@@ -17,21 +17,21 @@ ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db02b170bd4cccb2842b44d405da332f3df18e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ed548f52fbb81a4a5a7b973af9bd58cb5a3a452
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107585"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374677"
 ---
 # <a name="system-requirements"></a>Requisitos del sistema
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO) usa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` controlador de objetos para conectarse y comunicarse con instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Los clientes SMO requieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que se incluye con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
+ Los clientes SMO requieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que está incluido con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
   
- Para desarrollar aplicaciones utilizando SMO, debe tener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 instalado.  
+ Para desarrollar las aplicaciones utilizando SMO, debe tener instalado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la instalación de SQL Server](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
+ [Información general de la instalación de SQL Server](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905985"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374327"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
   Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el Administrador de informes al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -32,7 +32,7 @@ ms.locfileid: "48905985"
  Tanto el programa de instalación como la herramienta también asignarán permisos en la dirección URL al servicio del servidor de informes, comprobarán si hay instancias duplicadas y agregarán la reserva de direcciones URL a HTTP.SYS. No cree ni modifique nunca una reserva de direcciones URL de Reporting Services directamente mediante HttpCfg.exe u otra herramienta. Si omite un paso o establece un valor no válido, encontrará problemas que podrían ser difíciles de diagnosticar o corregir.  
   
 > [!NOTE]  
->  HTTP.SYS es un componente del sistema operativo que escucha las solicitudes de red y las enruta a una cola de solicitudes. En esta versión de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establece y mantiene la cola de solicitudes para el servicio web del servidor de informes y el Administrador de informes. Internet Information Services (IIS) ya no se utiliza para hospedar o tener acceso a aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la funcionalidad de HTTP.SYS, vea [HTTP Server API](http://go.microsoft.com/fwlink/?LinkId=92652) en MSDN.  
+>  HTTP.SYS es un componente del sistema operativo que escucha las solicitudes de red y las enruta a una cola de solicitudes. En esta versión de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establece y mantiene la cola de solicitudes para el servicio web del servidor de informes y el Administrador de informes. Internet Information Services (IIS) ya no se utiliza para hospedar o tener acceso a aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la funcionalidad de HTTP.SYS, vea [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) en MSDN.  
   
 ##  <a name="ReportingServicesURLs"></a> Direcciones URL en Reporting Services  
  En una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puede tener acceso a las herramientas, aplicaciones y elementos siguientes a través de direcciones URL:  
@@ -51,7 +51,7 @@ ms.locfileid: "48905985"
 >  En este tema no se describe el acceso con direcciones URL al Generador de informes ni a informes específicos que se almacenan en el servidor de informes. Para obtener más información sobre el acceso con direcciones URL a estos elementos, vea [Acceder a elementos del servidor de informes mediante el acceso URL](../access-report-server-items-using-url-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLreservation"></a> Reserva y registro de direcciones URL  
- Una reserva de direcciones URL define las direcciones URL que se pueden usar para tener acceso a una aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reservará una o más direcciones URL para servicio web del servidor de informes y para el Administrador de informes en HTTP.SYS, y las registrará cuando se inicie el servicio. Las direcciones URL del Generador de informes y los informes se basan en la reserva de direcciones URL del servicio web del servidor de informes. Si anexa parámetros a la dirección URL, puede abrir el Generador de informes o los informes a través del servicio web. HTTP.SYS proporciona las reservas y permite el registro. Para obtener más información, vea [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653) en MSDN.  
+ Una reserva de direcciones URL define las direcciones URL que se pueden usar para tener acceso a una aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reservará una o más direcciones URL para servicio web del servidor de informes y para el Administrador de informes en HTTP.SYS, y las registrará cuando se inicie el servicio. Las direcciones URL del Generador de informes y los informes se basan en la reserva de direcciones URL del servicio web del servidor de informes. Si anexa parámetros a la dirección URL, puede abrir el Generador de informes o los informes a través del servicio web. HTTP.SYS proporciona las reservas y permite el registro. Para obtener más información, vea [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) en MSDN.  
   
  La*reserva de direcciones URL* es el proceso por el que se crea un extremo de dirección URL para una aplicación web y se almacena en HTTP.SYS. HTTP.SYS es el repositorio común de todas las reservas de direcciones URL que se definen en un equipo y define un conjunto de reglas comunes que garantizan que las reservas sean únicas.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48905985"
   
  Las direcciones URL se eliminan del Registro si detiene el servicio o recicla el servicio web o el dominio de aplicación del Administrador de informes. Si modifica una reserva de direcciones URL mientras el servicio se está ejecutando, el servidor de informes reciclará el dominio de aplicación inmediatamente para que se pueda eliminar del Registro la dirección URL anterior y empezar a usar la nueva.  
   
- Unos sencillos ejemplos ilustran el concepto de reserva de direcciones URL y cómo se relaciona con las direcciones URL que se usan para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Un punto clave a tener en cuenta es que la reserva de dirección URL tiene una sintaxis diferente a la dirección URL utiliza para tener acceso a la aplicación:  
+ Unos sencillos ejemplos ilustran el concepto de reserva de direcciones URL y cómo se relaciona con las direcciones URL que se usan para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un punto clave que tener en cuenta es que la reserva de direcciones URL tiene una sintaxis diferente a la que la dirección URL utiliza para tener acceso a la aplicación:  
   
 |Reserva de direcciones URL en HTTP.SYS|Dirección URL|Explicación|  
 |---------------------------------|---------|-----------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "48905985"
   
 5.  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]  
   
-|Tipo de instancia|Aplicación|Dirección URL predeterminada|Reserva de direcciones URL real en HTTP.SYS|  
+|Tipo de instancia|Application|Dirección URL predeterminada|Reserva de direcciones URL real en HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
 |Instancia predeterminada|servicio web del servidor de informes|http://\<servername > / reportserver|http://\<nombreDeServidor >: 80/reportserver.|  
 |Instancia predeterminada|Administrador de informes|http://\<servername > / reportserver|http://\<nombreDeServidor >: 80/reportserver.|  
@@ -105,7 +105,7 @@ ms.locfileid: "48905985"
   
  La dirección URL http://localhost se interpreta como http://127.0.0.1. Si asoció la reserva de direcciones URL a un único nombre de equipo o dirección IP, no puede utilizar el host local a menos que cree una reserva adicional para 127.0.0.1 en el equipo local. De igual forma, si localhost o 127.0.0.1 se deshabilitan en el equipo, no puede utilizar esa dirección URL.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] y [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] incluyen nuevas características de seguridad para reducir el riesgo de ejecutar accidentalmente programas con privilegios elevados. Se necesitan pasos adicionales para habilitar la administración local en estos sistemas operativos. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] y [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] incluyen nuevas características de seguridad para reducir el riesgo de ejecutar accidentalmente programas con privilegios elevados. Se necesitan pasos adicionales para habilitar la administración local en estos sistemas operativos. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="URLSharePoint"></a> Direcciones URL para el servidor de informes en modo integrado de SharePoint  
  Si un servidor de informes independiente se configura para ejecutarse dentro de una implementación más amplia de una tecnología o producto de SharePoint, la construcción de las direcciones URL y los directorios virtuales se verá afectada de las siguientes formas:  

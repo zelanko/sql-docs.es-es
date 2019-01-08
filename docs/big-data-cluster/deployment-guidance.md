@@ -1,20 +1,22 @@
 ---
-title: Cómo implementar grandes de datos de SQL Server a clústeres de Kubernetes | Microsoft Docs
+title: Cómo implementar
+titleSuffix: SQL Server 2019 big data clusters
 description: Obtenga información sobre cómo implementar clústeres de macrodatos de 2019 de SQL Server (versión preliminar) en Kubernetes.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.custom: seodec18
+ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269868"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246754"
 ---
-# <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Cómo implementar SQL Server al clúster de macrodatos en Kubernetes
+# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
 Clúster de macrodatos de SQL Server se puede implementar como contenedores de docker en un clúster de Kubernetes. Se trata de una visión general de los pasos de instalación y configuración:
 
@@ -26,7 +28,7 @@ Clúster de macrodatos de SQL Server se puede implementar como contenedores de d
 
 ## <a id="prereqs"></a> Requisitos previos de clúster de Kubernetes
 
-Clúster de macrodatos de SQL Server requiere una versión de v1.10 mínimo de Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Las versiones más recientes de minikube y AKS son menos 1.10. Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada.
+Clústeres de SQL Server datos de gran tamaño requieren una versión mínima de Kubernetes de al menos v1.10 para el servidor y cliente (kubectl).
 
 > [!NOTE]
 > Tenga en cuenta que las versiones de Kubernetes de cliente y servidor deben ser la versión secundaria + 1 o -1. Para obtener más información, consulte [Kubernetes admite versiones y componente sesgo](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -37,20 +39,22 @@ Si ya tiene un clúster de Kubernetes que se cumple por encima de los requisitos
 
 Puede elegir implementar Kubernetes en cualquiera de estas tres maneras:
 
-| Implementación de Kubernetes en: | Descripción |
-|---|---|
-| **Minikube** | Un clúster de Kubernetes de nodo único en una máquina virtual. |
-| **Azure Kubernetes Service (AKS)** | Un servicio de contenedor de Kubernetes administrado en Azure. |
-| **Varias máquinas** | Un clúster de Kubernetes implementado en máquinas físicas o virtuales con **kubeadm** |
-
-Para obtener instrucciones sobre cómo configurar una de estas opciones de clúster de Kubernetes para un clúster de macrodatos de SQL Server, consulte uno de los siguientes artículos:
-
-   - [Configurar Minikube](deploy-on-minikube.md)
-   - [Configuración de Kubernetes en Azure Kubernetes Service](deploy-on-aks.md)
-   - [Configuración de Kubernetes en varios equipos con kubeadm](deploy-with-kubeadm.md)
-   
+| Implementación de Kubernetes en: | Descripción | Vínculo |
+|---|---|---|
+| **Minikube** | Un clúster de Kubernetes de nodo único en una máquina virtual. | [Instrucciones](deploy-on-minikube.md) |
+| **Azure Kubernetes Service (AKS)** | Un servicio de contenedor de Kubernetes administrado en Azure. | [Instrucciones](deploy-on-aks.md) |
+| **Varias máquinas** | Un clúster de Kubernetes implementado en máquinas físicas o virtuales con **kubeadm** | [Instrucciones](deploy-with-kubeadm.md) |
+  
 > [!TIP]
 > Para un script de python de ejemplo que implementa el clúster de macrodatos AKS y SQL Server, vea [implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
+## <a name="deploy-sql-server-2019-big-data-tools"></a>Implementar herramientas de datos de gran tamaño de SQL Server 2019
+
+Antes de implementar el clúster de SQL Server 2019 datos de gran tamaño, en primer lugar [instalar las herramientas de datos de gran tamaño](deploy-big-data-tools.md):
+- **mssqlctl**
+- **kubectl**
+- **Azure Data Studio**
+- **Extensión de SQL Server 2019**
 
 ## <a id="deploy"></a> Implementar el clúster de macrodatos de SQL Server
 
@@ -61,9 +65,9 @@ Después de haber configurado el clúster de Kubernetes, puede continuar con la 
 
 Para implementar un clúster de macrodatos en Azure con todas las configuraciones predeterminadas para un entorno de desarrollo y pruebas, siga las instrucciones de este artículo:
 
-[Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-Si desea personalizar la configuración del clúster de macrodatos según sus necesidades de carga de trabajo, siga el siguiente conjunto de instrucciones.
+Si desea personalizar la implementación de clúster de macrodatos según la carga de trabajo necesita, siga las instrucciones en el resto de este artículo.
 
 ## <a name="verify-kubernetes-configuration"></a>Comprobar la configuración de kubernetes
 
@@ -72,52 +76,6 @@ Ejecute el **kubectl** comando para ver la configuración del clúster. Asegúre
 ```bash
 kubectl config view
 ```
-
-## <a id="mssqlctl"></a> Instalar mssqlctl
-
-**mssqlctl** es una utilidad de línea de comandos escrita en Python que habilita los administradores para arrancar y administrar el clúster de macrodatos mediante las API de REST de clúster. La versión de Python mínima requerida es v3.5. También debe tener `pip` que se utiliza para descargar e instalar **mssqlctl** herramienta. 
-
-> [!IMPORTANT]
-> Si ha instalado una versión anterior, debe eliminar el clúster *antes* actualizar **mssqlctl** e instalar la nueva versión. Para obtener más información, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
-
-### <a name="windows-mssqlctl-installation"></a>Instalación de Windows mssqlctl
-
-1. En un cliente de Windows, descargue el paquete de Python necesario [ https://www.python.org/downloads/ ](https://www.python.org/downloads/). Python3.5.3 y versiones posteriores, pip3 también se instala al instalar Python. 
-
-   > [!TIP] 
-   > Al instalar Python3, seleccione esta opción para agregar Python a la ruta de acceso. Si no lo hace, puede encontrar más adelante en el que se encuentra pip3 y agregarlo manualmente a la ruta de acceso.
-
-1. Asegúrese de que tiene la versión más reciente **solicitudes** paquete.
-
-   ```cmd
-   python -m pip install requests
-   python -m pip install requests --upgrade
-   ```
-
-1. Instalar **mssqlctl** con el siguiente comando:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
-
-### <a name="linux-mssqlctl-installation"></a>Instalación de Linux mssqlctl
-
-En Linux, debe instalar la **python3** y **python3-pip** paquetes y, a continuación, ejecute `sudo pip3 install --upgrade pip`. Esto instala la última versión 3.5 de Python y pip. El ejemplo siguiente muestra cómo funcionaría estos comandos para Ubuntu (si usa otra plataforma, modifique los comandos para el Administrador de paquetes):
-
-1. Instalar los paquetes de Python necesarios:
-
-   ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
-   ```
-
-1. Instalar **mssqlctl** con el siguiente comando:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
 
 ## <a name="define-environment-variables"></a>Definir variables de entorno
 
@@ -128,32 +86,32 @@ La configuración del clúster puede personalizarse mediante un conjunto de vari
 | **ACCEPT_EULA** | Sí | N/D | Acepte el contrato de licencia de SQL Server (por ejemplo, ' Y').  |
 | **NOMBREDECLÚSTER** | Sí | N/D | El nombre del espacio de nombres para implementar SQLServer agrupar datos de gran tamaño en Kubernetes. |
 | **CLUSTER_PLATFORM** | Sí | N/D | La plataforma que se implementa el clúster de Kubernetes. Puede ser `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | no | 1 | El número de réplicas del grupo de proceso para elaborar. En CTP2.0 solo con valores permitido es 1. |
-| **CLUSTER_DATA_POOL_REPLICAS** | no | 2 | El número de datos de grupo de réplicas para elaborar. |
-| **CLUSTER_STORAGE_POOL_REPLICAS** | no | 2 | El número de réplicas de grupo de almacenamiento para elaborar. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | El número de réplicas del grupo de proceso para elaborar. En CTP 2.2 solo con valores permitido es 1. |
+| **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | El número de datos de grupo de réplicas para elaborar. |
+| **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | El número de réplicas de grupo de almacenamiento para elaborar. |
 | **DOCKER_REGISTRY** | Sí | TBD | El registro privado donde se almacenan las imágenes se usan para implementar el clúster. |
 | **DOCKER_REPOSITORY** | Sí | TBD | El repositorio privado en el registro anterior donde se almacenan las imágenes.  Se requiere para la duración de la versión preliminar pública validada. |
 | **DOCKER_USERNAME** | Sí | N/D | El nombre de usuario para tener acceso a las imágenes de contenedor en caso de que se almacenan en un repositorio privado. Se requiere para la duración de la versión preliminar pública validada. |
 | **DOCKER_PASSWORD** | Sí | N/D | La contraseña para acceder al repositorio privado anterior. Se requiere para la duración de la versión preliminar pública validada.|
 | **DOCKER_EMAIL** | Sí | N/D | El correo electrónico asociado con el repositorio privado anterior. Se requiere para la duración de la versión preliminar privada validada. |
-| **DOCKER_IMAGE_TAG** | no | Más reciente | La etiqueta utilizada para etiquetar las imágenes. |
-| **DOCKER_IMAGE_POLICY** | no | Always | Fuerce siempre una extracción de las imágenes.  |
+| **DOCKER_IMAGE_TAG** | No | Más reciente | La etiqueta utilizada para etiquetar las imágenes. |
+| **DOCKER_IMAGE_POLICY** | No | Always | Fuerce siempre una extracción de las imágenes.  |
 | **DOCKER_PRIVATE_REGISTRY** | Sí | 1 | El período de tiempo de la versión preliminar pública validada, este valor debe establecerse en 1. |
 | **CONTROLLER_USERNAME** | Sí | N/D | El nombre de usuario para el Administrador de clústeres. |
 | **CONTROLLER_PASSWORD** | Sí | N/D | La contraseña para el Administrador de clústeres. |
 | **KNOX_PASSWORD** | Sí | N/D | La contraseña de usuario de Knox. |
 | **MSSQL_SA_PASSWORD** | Sí | N/D | La contraseña del usuario SA para la instancia principal de SQL. |
-| **USE_PERSISTENT_VOLUME** | no | true | `true` Para usar notificaciones de volumen persistente de Kubernetes para el almacenamiento de pod.  `false` uso del almacenamiento efímero host para el almacenamiento de pod. Consulte la [persistencia de datos](concept-data-persistence.md) artículo para obtener más detalles. Si implementa SQL Server datos de gran tamaño de clúster de minikube y USE_PERSISTENT_VOLUME = true, debe establecer el valor de `STORAGE_CLASS_NAME=standard`. |
-| **STORAGE_CLASS_NAME** | no | predeterminados | Si `USE_PERSISTENT_VOLUME` es `true` indica el nombre de la clase de almacenamiento de Kubernetes para usar. Consulte la [persistencia de datos](concept-data-persistence.md) artículo para obtener más detalles. Si implementa un clúster de macrodatos en minikube de SQL Server, el nombre de clase de almacenamiento predeterminada es diferente y se debe invalidar estableciendo `STORAGE_CLASS_NAME=standard`. |
-| **MASTER_SQL_PORT** | no | 31433 | El puerto TCP/IP que escucha la instancia SQL maestra de la red pública. |
-| **KNOX_PORT** | no | 30443 | El puerto TCP/IP que Knox Apache escucha en la red pública. |
-| **GRAFANA_PORT** | no | 30888 | El puerto TCP/IP que escucha la aplicación de supervisión de Grafana de la red pública. |
-| **KIBANA_PORT** | no | 30999 | El puerto TCP/IP que escucha la aplicación de búsqueda de registro de Kibana en la red pública. |
+| **USE_PERSISTENT_VOLUME** | No | true | `true` Para usar notificaciones de volumen persistente de Kubernetes para el almacenamiento de pod.  `false` uso del almacenamiento efímero host para el almacenamiento de pod. Consulte la [persistencia de datos](concept-data-persistence.md) artículo para obtener más detalles. Si implementa SQL Server datos de gran tamaño de clúster de minikube y USE_PERSISTENT_VOLUME = true, debe establecer el valor de `STORAGE_CLASS_NAME=standard`. |
+| **STORAGE_CLASS_NAME** | No | predeterminados | Si `USE_PERSISTENT_VOLUME` es `true` indica el nombre de la clase de almacenamiento de Kubernetes para usar. Consulte la [persistencia de datos](concept-data-persistence.md) artículo para obtener más detalles. Si implementa un clúster de macrodatos en minikube de SQL Server, el nombre de clase de almacenamiento predeterminada es diferente y se debe invalidar estableciendo `STORAGE_CLASS_NAME=standard`. |
+| **MASTER_SQL_PORT** | No | 31433 | El puerto TCP/IP que escucha la instancia SQL maestra de la red pública. |
+| **KNOX_PORT** | No | 30443 | El puerto TCP/IP que Knox Apache escucha en la red pública. |
+| **GRAFANA_PORT** | No | 30888 | El puerto TCP/IP que escucha la aplicación de supervisión de Grafana de la red pública. |
+| **KIBANA_PORT** | No | 30999 | El puerto TCP/IP que escucha la aplicación de búsqueda de registro de Kibana en la red pública. |
 
 > [!IMPORTANT]
 >1. Durante la duración de la versión preliminar privada limitada, le proporcionará las credenciales para el registro privado de Docker para usted tras la clasificación de su [registro EAP](https://aka.ms/eapsignup).
 >1. Para un clúster local integrada con **kubeadm**, el valor de variable de entorno `CLUSTER_PLATFORM` es `kubernetes`. También, cuando `USE_PERSISTENT_VOLUME=true`, debe aprovisionar previamente una clase de almacenamiento de Kubernetes y pasarlo a través del uso del `STORAGE_CLASS_NAME`.
->1. Asegúrese de que incluir las contraseñas en las comillas dobles si contiene algún carácter especial. Puede establecer el MSSQL_SA_PASSWORD que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&` o `‘` caracteres. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de bash.
+>1. Asegúrese de que incluir las contraseñas en las comillas dobles si contiene algún carácter especial. Puede establecer el MSSQL_SA_PASSWORD que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&` o `'` caracteres. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de bash.
 >1. El nombre del clúster debe ser solo alfanuméricos caracteres en minúsculas, sin espacios en blanco. Todos los artefactos de Kubernetes (contenedores, pods, conjuntos con estado, los servicios) para el clúster se creará en un espacio de nombres con el mismo nombre que el clúster de nombre especificado.
 >1. El **SA** cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno MSSQL_SA_PASSWORD especificada es detectable mediante la ejecución de eco MSSQL_SA_PASSWORD $ en el contenedor. Por motivos de seguridad, cambiar la contraseña de SA según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
@@ -169,9 +127,9 @@ Con una ventana CMD (no PowerShell), configure las siguientes variables de entor
 SET ACCEPT_EULA=Y
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
+SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
+SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
+SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
 SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
 SET DOCKER_REGISTRY=private-repo.microsoft.com
@@ -190,9 +148,9 @@ Inicialice las variables de entorno siguientes. En bash, puede usar comillas alr
 export ACCEPT_EULA=Y
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
 export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
 export DOCKER_REGISTRY="private-repo.microsoft.com"
@@ -230,36 +188,44 @@ Si va a implementar con kubeadm en sus propias máquinas físicas o virtuales, d
 La API de creación de clústeres se utiliza para inicializar el espacio de nombres de Kubernetes e implementar todos los pods de aplicación en el espacio de nombres. Para implementar el clúster de macrodatos de SQL Server en el clúster de Kubernetes, ejecute el siguiente comando:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl create cluster <your-cluster-name>
 ```
 
-Durante el arranque del clúster, la ventana de comandos de cliente dará como resultado el estado de implementación. También puede comprobar el estado de implementación mediante la ejecución de estos comandos en una ventana cmd diferentes:
+Durante el arranque del clúster, la ventana de comandos de cliente dará como resultado el estado de implementación. Durante el proceso de implementación, debería ver una serie de mensajes donde está esperando el pod del controlador:
 
-```bash
-kubectl get all -n <name of your cluster>
-kubectl get pods -n <name of your cluster>
-kubectl get svc -n <name of your cluster>
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-Puede ver un estado y la configuración para cada pod más granulares mediante la ejecución:
-```bash
-kubectl describe pod <pod name> -n <name of your cluster>
+Después de 10 a 20 minutos, se debería notificar que se está ejecutando el pod del controlador:
+
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-Una vez que se está ejecutando el pod del controlador, puede aprovechar la pestaña implementación en el Portal de administración de clúster para supervisar la implementación.
+> [!IMPORTANT]
+> Toda la implementación puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor para los componentes del clúster de macrodatos. Sin embargo, no debería tardar varias horas. Si experimenta problemas con la implementación, consulte el [solución de problemas](#troubleshoot) sección de este artículo para obtener información sobre cómo supervisar e inspeccione la implementación.
+
+Cuando finalice la implementación, la salida le notifica de éxito:
+
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+```
 
 ## <a id="masterip"></a> Obtener la instancia de SQL Server Master y direcciones IP del clúster de macrodatos de SQL Server
 
-Después de que el script de implementación se ha completado correctamente, puede obtener la dirección IP de la instancia principal de SQL Server siguiendo los pasos descritos a continuación. Utilizará esta dirección IP y puerto número 31433 para conectarse a la instancia principal de SQL Server (por ejemplo:  **\<ip-address\>, 31433**). De forma similar, para la IP del clúster de SQL Server datos de gran tamaño. Todos los puntos de conexión de clúster se describen en la pestaña de extremos de servicio en el Portal de administración de clúster. Puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
+Después de que el script de implementación se ha completado correctamente, puede obtener la dirección IP de la instancia principal de SQL Server siguiendo los pasos descritos a continuación. Utilizará esta dirección IP y puerto número 31433 para conectarse a la instancia principal de SQL Server (por ejemplo:  **\<ip-address\>, 31433**). De forma similar, para la IP del clúster de SQL Server datos de gran tamaño. Todos los puntos de conexión de clúster se describen en la pestaña de extremos de servicio en el Portal de administración de clúster. Puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
 
 ### <a name="aks"></a>AKS
 
 Si usa AKS, Azure proporciona el servicio del equilibrador de carga de Azure. Ejecute el siguiente comando:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <name of your cluster>
-kubectl get svc service-security-lb -n <name of your cluster>
-kubectl get svc service-proxy-lb -n <name of your cluster>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc service-security-lb -n <your-cluster-name>
+kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 Busque el **External-IP** valor que se asigna al servicio. Después, conéctese a la instancia principal de SQL Server con la dirección IP en el puerto 31433 (p. ej.:  **\<ip-address\>, 31433**) y al extremo de clúster de macrodatos de SQL Server mediante la IP externa para `service-security-lb` service. 
@@ -274,7 +240,7 @@ minikube ip
 
 Independientemente de la plataforma usa su clúster de Kubernetes, para obtener todos los extremos de servicio implementados para el clúster, ejecute el siguiente comando:
 ```bash
-kubectl get svc -n <name of your cluster>
+kubectl get svc -n <your-cluster-name>
 ```
 
 ## <a id="upgrade"></a> Actualizar a una nueva versión
@@ -292,7 +258,7 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
 1. Instale la versión más reciente de **mssqlctl**.
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
    > [!IMPORTANT]
@@ -300,6 +266,62 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
 
 1. Instalar la versión más reciente mediante las instrucciones de la [implementar sección](#deploy) de este artículo. 
 
+## <a id="troubleshoot"></a> Supervisión y solución de problemas
+
+Para supervisar o solucionar problemas de una implementación, use **kubectl** para inspeccionar el estado del clúster y para detectar posibles problemas. En cualquier momento durante la implementación, puede abrir una ventana de comandos diferentes para ejecutar las pruebas siguientes.
+
+1. Inspeccionar el estado de los pods del clúster.
+
+   ```cmd
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+   Durante la implementación, pods con un **estado** de **ContainerCreating** todavía próximamente. Si la implementación se bloquea por cualquier motivo, esto puede darle una idea donde podría ser el problema. Examine también el **listo** columna. Esto indica cuántos contenedores se han iniciado en el pod. Tenga en cuenta que las implementaciones pueden tardar treinta minutos o más dependiendo de su configuración y la red. Gran parte de este tiempo se dedica a descargar las imágenes de contenedor para los distintos componentes. La siguiente tabla muestra la salida de ejemplo que se puede editar de dos contenedores durante la implementación:
+
+   ```output
+   PS C:\> kubectl get pods -n sbdc8
+   NAME                                     READY   STATUS              RESTARTS   AGE
+   mssql-controller-h79ft                   4/4     Running             0          13m
+   mssql-storage-pool-default-0             0/7     ContainerCreating   0          6m
+   ```
+
+1. Describir un pod individual para obtener más detalles. El siguiente comando inspecciona el `mssql-storage-pool-default-0` pod.
+
+   ```cmd
+   kubectl describe pod mssql-storage-pool-default-0 -n <your-cluster-name>
+   ```
+
+   Esto envía la información detallada sobre el pod, incluidos los eventos recientes. Si se ha producido un error, a veces pueden encontrar aquí el error.
+
+1. Recuperar los registros de contenedores que se ejecutan en un pod. El comando siguiente recupera los registros para todos los contenedores que se ejecutan en el pod denominado `mssql-storage-pool-default-0` y la envía a un nombre de archivo `pod-logs.txt`:
+
+   ```cmd
+   kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
+   ```
+
+1. Revise los servicios de clúster durante y después de una implementación con el siguiente comando:
+
+   ```cmd
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+   Estos servicios admiten conexiones internas y externas al clúster de macrodatos. Para las conexiones externas, se usan los siguientes servicios:
+
+   | ssNoVersion | Descripción |
+   |---|---|
+   | **punto de conexión-master-pool** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP, 31433** y **SA** usuario) |
+   | **servicio-mssql-controller-lb**<br/>**servicio-mssql-controller-nodeport** | Es compatible con las herramientas y los clientes que administran el clúster. |
+   | **proxy de servicio de equilibrador de carga**<br/>**servicio de proxy-nodeport** | Proporciona acceso a la [Portal de administración de clúster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777 o el portal)|
+   | **seguridad de servicio de equilibrador de carga**<br/>**servicio-seguridad-nodeport** | Proporciona acceso a la puerta de enlace de Spark o HDFS.<br/>(**EXTERNAL-IP** y **raíz** usuario) |
+
+   > [!NOTE]
+   > Los nombres de servicio pueden variar según el entorno de Kubernetes. Al implementar en Azure Kubernetes Service (AKS), los nombres de servicio acabar **-lb**. Para las implementaciones de minikube y kubeadm, los nombres de servicio acaban **- nodeport**.
+
+1. Use la [Portal de administración de clúster](cluster-admin-portal.md) para supervisar la implementación en el **implementación** ficha. Tendrá que esperar el **proxy-service-lb** que se inicie antes de acceder a este portal, por lo que no estará disponible al principio de una implementación de servicio.
+
+> [!TIP]
+> Para obtener más información sobre cómo solucionar problemas del clúster, consulte [comandos Kubectl para la supervisión y solución de problemas de clústeres de SQL Server macrodatos](cluster-troubleshooting-commands.md).
+
 ## <a name="next-steps"></a>Pasos siguientes
 
-Después de implementar correctamente SQL Server al clúster de macrodatos a Kubernetes, [instalar las herramientas de macrodatos](deploy-big-data-tools.md) y pruebe algunas de las nuevas capacidades y aprenda [para usar cuadernos en versión preliminar de SQL Server 2019](notebooks-guidance.md).
+Pruebe algunas de las nuevas capacidades y aprenda [para usar cuadernos en versión preliminar de SQL Server 2019](notebooks-guidance.md).

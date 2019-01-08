@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148410"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364107"
 ---
 # <a name="tabular-model-data-access"></a>Acceso a datos de modelos tabulares
   A las bases de datos modelo tabulares de Analysis Services se puede tener acceso con la mayoría de los clientes, interfaces e idiomas que se usan para recuperar los datos o metadatos de un modelo multidimensional. Para más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "50148410"
  Las aplicaciones cliente siguientes de Microsoft admiten conexiones nativas a las bases de datos de modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ### <a name="excel"></a>Excel  
- Puede conectarse a bases de datos de modelos tabulares de Excel, utilizando las capacidades de visualización y análisis de los datos en Excel para trabajar con los datos. Para tener acceso a los datos, defina una conexión de datos de Analysis Services, especifique un servidor que se ejecute en modo de servidor tabular y elija la base de datos que desea utilizar. Para obtener más información, vea [Conectarse a datos o importarlos desde SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Puede conectarse a bases de datos de modelos tabulares de Excel, utilizando las capacidades de visualización y análisis de los datos en Excel para trabajar con los datos. Para tener acceso a los datos, defina una conexión de datos de Analysis Services, especifique un servidor que se ejecute en modo de servidor tabular y elija la base de datos que desea utilizar. Para obtener más información, vea [Conectarse a datos o importarlos desde SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
  Excel también es la aplicación recomendada para examinar modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La herramienta incluye una opción **Analizar en Excel** que inicia una nueva instancia de Excel, crea un libro de Excel y abre una conexión de datos del libro con la base de datos del área de trabajo del modelo. Al examinar datos de modelo tabulares en Excel, tenga en cuenta que Excel emite consultas en el modelo utilizando el cliente de tablas dinámicas de Excel. En consecuencia, las operaciones en el libro de Excel dan lugar a que se envíen consultas MDX a la base de datos del área de trabajo, en lugar de consultas DAX. Si utiliza SQL Server profiler u otra herramienta de supervisión para supervisar consultas, puede suceder que vea MDX y no DAX en el seguimiento del analizador. Para más información sobre la característica Analizar en Excel, vea [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50148410"
  Las consultas que el cliente [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] envía al modelo se generan como instrucciones DAX, que puede supervisarse estableciendo un seguimiento en el modelo.  El cliente también emite una solicitud al servidor pidiendo la definición de esquema inicial, que se muestra según el lenguaje de definición de esquemas conceptuales (CSDL). Para más información, vea [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar las instancias que hospedan modelos tabulares y para consultar los metadatos y los datos que contienen. Puede procesar los modelos o los objetos de un modelo, crear y administrar las particiones, y establecer la seguridad que se puede utilizar para administrar el acceso a los datos. Para obtener más información, consulte los temas siguientes:  
+ Puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar las instancias que hospedan modelos tabulares y para consultar los metadatos y los datos que contienen. Puede procesar los modelos o los objetos de un modelo, crear y administrar las particiones, y establecer la seguridad que se puede utilizar para administrar el acceso a los datos. Para obtener más información, vea los temas siguientes:  
   
 -   [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

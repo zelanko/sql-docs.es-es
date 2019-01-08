@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085481"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590189"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
-  Ahora que ha creado el **Sequence Clustering with Region** modelo, puede explorar utilizando el [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia en el **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia contiene cinco pestañas: **diagrama del clúster**, **perfiles del clúster**, **características del clúster**,  **ClusterDiscrimination**, y **transiciones de estado**. Para obtener más información sobre cómo usar este visor, vea [examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Ahora que ha creado el **Sequence Clustering with Region** modelo, puede explorar utilizando el [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia en el **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia contiene cinco pestañas: **Diagrama del clúster**, **perfiles del clúster**, **características del clúster**, **ClusterDiscrimination**, y **transicionesdeestado**. Para obtener más información sobre cómo usar este visor, vea [examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Pestaña diagrama del clúster](#bkmk_CDiagram)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "49085481"
  [Volver al principio](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> Pestaña distinción del clúster  
- El **distinción del clúster** pestaña le permite comparar dos clústeres, para determinar qué atributos distinguen un clúster determinado desde otro clúster. La pestaña contiene cuatro columnas: **Variables**, **valores**, **clúster 1**, y **clúster 2**.  Puede elegir cualquier clúster para usarlo como **clúster 1** y **clúster 2**.  
+ El **distinción del clúster** pestaña le permite comparar dos clústeres, para determinar qué atributos distinguen un clúster determinado desde otro clúster. La pestaña contiene cuatro columnas: **Las variables**, **valores**, **clúster 1**, y **clúster 2**.  Puede elegir cualquier clúster para usarlo como **clúster 1** y **clúster 2**.  
   
  El **Variables** columna indica el nombre del atributo, que puede ser un nombre de columna o combinación de nombre de columna y la palabra **transición**. El **valores** columna muestra el valor exacto del atributo o la transición. Las columnas de las barras sombreadas **clúster 1** y **clúster 2** indican la fuerza del atributo en los clústeres que van a comparar. Cuanto mayor sea la barra, mayor será la probabilidad de que incluya casos con ese atributo.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085481"
   
 1.  En el **distinción del clúster** ficha, para **clúster 1**, seleccione `Pacific Cluster`.  
   
-     De forma predeterminada, la selección de **clúster 2** cambia a **complemento de Pacífico *** clúster**.  
+     De forma predeterminada, la selección de **clúster 2** cambia a **complemento de Pacific Cluster**.  
   
      El principal atributo que distingue `Pacific Cluster` de todos los demás casos es la región. Region es un tipo de atributo de agrupación en clústeres que oculta otros atributos. Para evitar este efecto, intente comparar algunos de los clústeres más pequeños entre sí. Al hacerlo, la lista de atributos cambia y se pueden incluir más transiciones entre los modelos.  
   

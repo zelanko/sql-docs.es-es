@@ -19,15 +19,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161765"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353912"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Libros en pantalla de SQL Server 2014
-  Bienvenido a [!INCLUDE[msCoName](../includes/msconame-md.md)]® libros en pantalla para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Libros en pantalla contiene descripciones de tareas y documentación de referencia que se describe cómo realizar el trabajo de inteligencia empresarial y administración de datos mediante el uso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Bienvenido a [!INCLUDE[msCoName](../includes/msconame-md.md)]® libros en pantalla para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Los Libros en pantalla contienen descripciones de tareas y documentación de referencia que describe cómo realizar el trabajo de administración de datos y Business Intelligence mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Pruébelo:**  
  ![Azure Virtual Machine pequeña](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) ¿Tiene una cuenta de Azure?  A continuación, vaya **[aquí](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** en marcha una máquina Virtual con SQL Server 2014 Service Pack 1 (SP1) ya instalado. Para obtener más información sobre SQL Server 2014 (SP1), consulte [información de versión de SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
@@ -50,17 +50,17 @@ ms.locfileid: "48161765"
   
  **Sitios Web de SQL Server**  
   
--   [SQL Server en Microsoft.com](http://go.microsoft.com/fwlink/?linkid=8504)  
+-   [SQL Server en Microsoft.com](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [Centro de recursos de SQL Server](http://go.microsoft.com/fwlink/?linkid=218841)  
+-   [Centro de recursos de SQL Server](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [TechCenter de SQL Server](http://go.microsoft.com/fwlink/?linkid=28107)  
+-   [TechCenter de SQL Server](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [Centro para desarrolladores de SQL Server](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [Centro para desarrolladores de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [Centro para desarrolladores de plataforma de datos](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [Centro para desarrolladores de plataforma de datos](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [Centro para desarrolladores de XML](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [Centro para desarrolladores de XML](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>Vea también  
  [Ayuda del Administrador de configuración de SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

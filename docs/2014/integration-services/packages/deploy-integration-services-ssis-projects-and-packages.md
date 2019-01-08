@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200905"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372157"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Implementación de proyectos y paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Para más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
+ Para más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
   
  Para obtener más información acerca del modelo de implementación de paquetes, consulte [la implementación del paquete &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48200905"
 |Se requiere la integración con CLR en el motor de base de datos.|No se requiere la integración con CLR en el motor de base de datos.|  
 |Los valores de parámetros específicos del entorno se almacenan en variables de entorno.|Los valores de configuración específicos del entorno se almacenan en archivos de configuración.|  
 |Los proyectos y los paquetes del catálogo se pueden validar en el servidor antes de la ejecución. Puede utilizar SQL Server Management Studio, procedimientos almacenados o código administrado para realizar la validación.|Los paquetes se validan inmediatamente antes de la ejecución. También puede validar un paquete con dtExec o con código administrado.|  
-|Los paquetes se ejecutan iniciando una ejecución en el motor de base de datos. Se asignan un identificador del proyecto, valores de parámetros explícitos (opcional) y referencias de entorno (opcional) a una ejecución antes de que se inicie.<br /><br /> También puede ejecutar paquetes mediante `dtExec`.|Los paquetes se ejecutan utilizando el `dtExec` y `DTExecUI` utilidades de ejecución. Las configuraciones aplicables se identifican mediante los argumentos del símbolo del sistema (opcional).|  
+|Los paquetes se ejecutan iniciando una ejecución en el motor de base de datos. Se asignan un identificador del proyecto, valores de parámetros explícitos (opcional) y referencias de entorno (opcional) a una ejecución antes de que se inicie.<br /><br /> También puede ejecutar paquetes mediante `dtExec`.|Los paquetes se ejecutan con las utilidades de ejecución de `dtExec` y de `DTExecUI`. Las configuraciones aplicables se identifican mediante los argumentos del símbolo del sistema (opcional).|  
 |Durante la ejecución, los eventos producidos por el paquete se capturan automáticamente y se guardan en el catálogo. Puede consultar estos eventos con las vistas de Transact-SQL.|Durante la ejecución, los eventos producidos por un paquete no se capturan automáticamente. Un proveedor de registro se debe agregar al paquete para capturar eventos.|  
 |Los paquetes se ejecutan en un proceso de Windows independiente.|Los paquetes se ejecutan en un proceso de Windows independiente.|  
 |Se utiliza el Agente SQL Server para programar la ejecución del paquete.|Se utiliza el Agente SQL Server para programar la ejecución del paquete.|  
@@ -58,10 +57,10 @@ ms.locfileid: "48200905"
   
 ## <a name="required-tasks"></a>Tareas necesarias  
   
--   [Implementar proyectos en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md)  
+-   [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada del blog, sobre [consideraciones sobre las estrategias de bifurcación en los proyectos de SSIS](http://go.microsoft.com/fwlink/?LinkId=245739), en mattmasson.com.  
+ Entrada del blog, sobre [consideraciones sobre las estrategias de bifurcación en los proyectos de SSIS](https://go.microsoft.com/fwlink/?LinkId=245739), en mattmasson.com.  
   
 ## <a name="see-also"></a>Vea también  
  [dtexec (utilidad)](dtexec-utility.md)  

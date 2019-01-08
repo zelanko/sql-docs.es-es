@@ -1,5 +1,5 @@
 ---
-title: Comparar soluciones tabulares y multidimensionales (SSAS) | Documentos de Microsoft
+title: Comparación de modelos tabulares y multidimensionales de Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,42 +9,42 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e6a5941b33d2d73ee8bd86e33a710e065a21ae1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d36c20e0278a90bc5afcbd312afea2cb596e9c51
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018902"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072550"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparar soluciones tabulares y multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  SQL Server Analysis Services proporciona varios enfoques para crear un modelo semántico de business intelligence: Tabular, Multidimensional y Power Pivot para SharePoint.
+  SQL Server Analysis Services proporciona varios enfoques para crear un modelo semántico de business intelligence: Tabular, Multidimensional y PowerPivot para SharePoint.
   
  El uso de más de un método permite una experiencia de modelado adaptada a los diferentes requisitos empresariales y del usuario. El modelo multidimensional es una tecnología consolidada basada en estándares abiertos que adoptan muchos proveedores de software de BI, pero puede ser difícil de dominar. El modelo tabular ofrece un enfoque de modelado relacional que muchos desarrolladores consideran más intuitivo. El modelo PowerPivot es todavía más sencillo, ya que ofrece el modelado visual de datos en Excel, con compatibilidad de servidor proporcionada a través de SharePoint.  
   
  Todos los modelos se implementan como bases de datos que se ejecutan en una instancia de Analysis Services, a las que tienen acceso las herramientas de cliente mediante un único conjunto de proveedores de datos. Se visualizan en informes interactivos y estáticos a través de Excel, Reporting Services, Power BI y herramientas de BI de otros proveedores.  
   
- Soluciones tabulares y multidimensionales se generan con SSDT y están diseñadas para proyectos BI corporativos que se ejecutan en una independiente [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia local y para los modelos tabulares, una [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) server en el en la nube. Ambas soluciones producen bases de datos analíticas de alto rendimiento que se integran fácilmente con los clientes de BI. Con todo, cada solución difiere en cómo se crea, se usa y se implementa. En la mayor parte de este tema se comparan estos dos tipos para que pueda identificar el enfoque correcto para su caso.  
+ Las soluciones tabulares y multidimensionales se crean con SSDT y están pensadas para proyectos BI corporativos que se ejecutan en una independiente [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia local y para los modelos tabulares, una [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) server en el en la nube. Ambas soluciones producen bases de datos analíticas de alto rendimiento que se integran fácilmente con los clientes de BI. Con todo, cada solución difiere en cómo se crea, se usa y se implementa. En la mayor parte de este tema se comparan estos dos tipos para que pueda identificar el enfoque correcto para su caso.  
   
- Para los nuevos proyectos, generalmente recomendamos los modelos tabulares. Los modelos tabulares son más rápidos diseñar, probar e implementar; y trabajar mejor con las aplicaciones de BI de autoservicio más recientes y los servicios de Microsoft en la nube.  
+ Para proyectos nuevos, por lo general se recomienda los modelos tabulares. Los modelos tabulares son más rápidas diseñar, probar e implementar; y funcione mejor con las aplicaciones de BI de autoservicio más recientes y los servicios de Microsoft en la nube.  
   
 ##  <a name="bkmk_overview"></a> Información general de tipos de modelado  
  ¿No está familiarizado con Analysis Services? En la tabla siguiente se enumeran los diferentes modelos, se resume el enfoque y se identifica el vehículo de lanzamiento inicial.  
  
  > [!NOTE]  
->  **Azure Analysis Services** es compatible con los modelos tabulares en los niveles de compatibilidad 1200 y versiones posteriores. Sin embargo, no toda la funcionalidad de creación de modelos tabulares que se describe en este tema se admite en los servicios de análisis de Azure. Al crear e implementar los modelos tabulares a los servicios de análisis de Azure es muy parecida a las ya que es local, es importante comprender las diferencias. Para obtener más información, consulte [¿qué es Azure Analysis Services?](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
+>  **Azure Analysis Services** admite modelos tabulares en los niveles de compatibilidad 1200 y superior. Sin embargo, no toda la funcionalidad de creación de modelos tabulares que se describe en este tema se admite en Azure Analysis Services. Al crear e implementar los modelos tabulares en Azure Analysis Services es similar a como lo es para un entorno local, es importante comprender las diferencias. Para obtener más información, consulte [¿qué es Azure Analysis Services?](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
   
 ||||  
 |-|-|-|  
 |**Tipo**|**Descripción de modelado**|**Publicado**|  
 |Tabular|Construcciones de modelado relacional (modelo, tablas, columnas). Internamente, los metadatos se heredan de las construcciones de modelado OLAP (cubos, dimensiones, medidas). El código y los scripts usan metadatos de OLAP.|SQL Server 2012 y posterior (niveles de compatibilidad 1050-1103) <sup>1</sup>|  
-|Tabular en SQL Server 2016|Construcciones (modelo, tablas, columnas), articuladas en definiciones de objetos de metadatos tabulares de modelado relacional [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) y [el modelo de objeto Tabular (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) código.|SQL Server 2016 (nivel de compatibilidad 1200)| 
-|Tabular en SQL Server de 2017|Construcciones (modelo, tablas, columnas), articuladas en definiciones de objetos de metadatos tabulares de modelado relacional [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) y [el modelo de objeto Tabular (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) código.|SQL Server 2017 (nivel de compatibilidad 1400)| 
+|Tabular en SQL Server 2016|Construcciones (modelo, tablas, columnas) articuladas en definiciones de objetos de metadatos tabulares de modelado relacional [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) y [el modelo de objetos tabulares (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) código.|SQL Server 2016 (nivel de compatibilidad 1200)| 
+|Tabular en SQL Server 2017|Construcciones (modelo, tablas, columnas) articuladas en definiciones de objetos de metadatos tabulares de modelado relacional [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) y [el modelo de objetos tabulares (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) código.|SQL Server 2017 (nivel de compatibilidad 1400)| 
 |Multidimensional|Construcciones de modelado OLAP (cubos, dimensiones, medidas).|SQL Server 2000 y posterior|  
 |Power Pivot|Originalmente un complemento, pero ahora totalmente integrado en Excel. Solo modelado visual sobre una infraestructura tabular interna. Puede importar un modelo de Power Pivot en SSDT para crear un nuevo modelo tabular que se ejecute en una instancia de Analysis Services.|A través de Excel y Power Pivot BI Desktop|  
   
- <sup>1</sup> niveles de compatibilidad son significativos en la versión actual debido al motor de metadatos tabulares y soporte técnico para habilitar escenarios características disponibles solo en el nivel superior. Las versiones posteriores admiten niveles de compatibilidad inferiores, pero se recomienda crear nuevos modelos o actualizar los modelos existentes en el nivel más alto de compatibilidad admitido por la versión del servidor.
+ <sup>1</sup> los niveles de compatibilidad son importantes en la versión actual debido a que el motor de metadatos tabulares y soporte técnico para habilitar escenarios características disponibles solo en el nivel superior. Las versiones posteriores admiten niveles de compatibilidad de versiones anteriores, pero se recomienda crear nuevos modelos o actualizar los modelos existentes hasta el máximo nivel de compatibilidad admitido por la versión del servidor.
   
 ##  <a name="bkmk_models"></a> Características de modelo  
   En la tabla siguiente se resume la disponibilidad de características en el nivel de modelo. Revise esta lista para asegurarse de que la característica que quiere usar está disponible en el tipo de modelo que tiene previsto crear.  
@@ -52,35 +52,35 @@ ms.locfileid: "34018902"
 |||| 
 |-|-|-|
 ||Multidimensional|Tabular|
-|Acciones|Sí|no|
-|Agregaciones|Sí|no|
-|Columna calculada|no|Sí|  
+|Acciones|Sí|No|
+|Agregaciones|Sí|No|
+|Columna calculada|No|Sí|  
 |Medidas calculadas|Sí|Sí| 
-|Tablas calculadas|no|Sí<sup>1</sup>|  
-|Ensamblados personalizados|Sí|no|
-|Resúmenes personalizados|Sí|no| 
-|Miembro predeterminado|Sí|no|  
+|Tablas calculadas|No|Sí<sup>1</sup>|  
+|Ensamblados personalizados|Sí|No|
+|Resúmenes personalizados|Sí|No| 
+|Miembro predeterminado|Sí|No|  
 |Carpetas para mostrar|Sí|Sí<sup>1</sup>|  
 |Distinct Count|Sí|Sí (mediante DAX)|
 |Obtención de detalles|Sí|Sí (depende de la aplicación cliente)|
 |Jerarquías|Sí|Sí|
 |KPI|Sí|Sí| 
 |Objetos vinculados|Sí|Sí (tablas vinculadas)|
-|Expresiones de M|no|Sí<sup>1</sup>|
-|Relaciones varios a varios|Sí|No (pero no hay [bidireccional filtros cruzados](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) en niveles de compatibilidad 1200 y versiones posteriores)| 
-|Conjuntos con nombre|Sí|no| 
+|Expresiones de M|No|Sí<sup>1</sup>|
+|Relaciones varios a varios|Sí|No (pero no hay [bidireccionales filtros cruzados](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) en niveles de compatibilidad 1200 y versiones posteriores)| 
+|Conjuntos con nombre|Sí|No| 
 |Jerarquías desiguales|Sí|Sí<sup>1</sup>|  
 |Jerarquías de elementos primarios y secundarios|Sí|Sí (mediante DAX)|
 |Particiones|Sí|Sí| 
-|Perspectivas|Sí|Sí|
+|perspectivas|Sí|Sí|
 |Seguridad de filas|Sí|Sí| 
 |Seguridad de nivel de objeto|Sí|Sí<sup>1</sup>|
 |Medidas de suma parcial|Sí|Sí| 
-|Traducciones|[Sí](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sí| 
+|Translations|[Sí](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sí| 
 |Jerarquías definidas por el usuario|Sí|Sí|
-|Reescritura|Sí|no| 
+|Reescritura|Sí|No| 
   
- <sup>1</sup> vea [Compatibility Level for Tabular los modelos de Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) para obtener información sobre las diferencias funcionales entre los niveles de compatibilidad.  
+ <sup>1</sup> vea [modelos Compatibility Level for Tabular de Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) para obtener información sobre las diferencias funcionales entre los niveles de compatibilidad.  
   
 ##  <a name="bkmk_ds"></a> Consideraciones sobre los datos  
  Los modelos tabulares y multidimensionales usan datos importados de orígenes externos. La cantidad y el tipo de datos que necesita importar puede ser una consideración principal a la hora de decidir qué tipo de modelo se adapta mejor a sus datos.  
@@ -95,11 +95,11 @@ ms.locfileid: "34018902"
   
  El tamaño de una base de datos de Analysis Services está limitado solo por los recursos disponibles para ejecutarla. El tipo de modelo y el modo de almacenamiento también desempeñan un papel importante al determinar el tamaño que puede alcanzar la base de datos.  
   
- Las bases de datos tabulares se ejecutan en memoria o en el modo DirectQuery, que descarga la ejecución de consultas en una base de datos externa. Para realizar análisis en memoria tabular, la base de datos se almacena completamente en la memoria, lo que significa que debe tener suficiente memoria no sólo para cargar todos los datos, sino también estructuras de datos adicionales que se crearon para admitir las consultas.  
+ Las bases de datos tabulares se ejecutan en memoria o en el modo DirectQuery, que descarga la ejecución de consultas en una base de datos externa. Para realizar análisis en memoria tabular, la base de datos se almacena completamente en memoria, lo que significa que debe tener suficiente memoria, no solo para cargar todos los datos, sino también estructuras de datos adicionales que se crearon para admitir las consultas.  
   
  DirectQuery se ha renovado en SQL Server 2016, tiene menos restricciones que antes y un mejor rendimiento. El aprovechamiento de la base de datos relacional de back-end para el almacenamiento y la ejecución de consultas hace que la generación de un modelo tabular a gran escala sea más viable que antes.  
   
- Históricamente, las bases de datos más grandes en producción son multidimensionales, con cargas de trabajo de procesamiento y consulta ejecuta de forma independiente en un hardware dedicado, cada uno optimizado para su uso respectivo.  Las bases de datos tabulares se están poniendo al día rápidamente, y los nuevos avances en DirectQuery ayudarán a salvar distancia todavía más.  
+ Históricamente, las bases de datos más grandes en producción son multidimensionales, con cargas de trabajo de procesamiento y consulta que se ejecuta por separado en hardware dedicado, cada uno optimizado para su uso respectivo.  Las bases de datos tabulares se están poniendo al día rápidamente, y los nuevos avances en DirectQuery ayudarán a salvar distancia todavía más.  
   
  Para la consulta y el almacenamiento de datos multidimensional descarga ejecución está disponible a través de ROLAP.   En un servidor de consultas, es posible almacenar en caché conjuntos de filas y paginar los antiguos. El uso eficiente y equilibrado de los recursos de memoria y disco guía suele llevar a los clientes a optar por soluciones multidimensionales.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34018902"
   
  **Orígenes de datos compatibles**  
   
- Los modelos tabulares pueden importar datos de orígenes de datos relacionales, fuentes de distribución de datos y algunos formatos de documento. También puede usar OLE DB para proveedores de ODBC con modelos tabulares. Los modelos tabulares en el nivel de compatibilidad de 1400 ofrecen un aumento significativo en la gran variedad de orígenes de datos desde el que puede importar desde. Esto es debido a la incorporación de los datos modernos obtener datos de consulta y características en SSDT utilizando el lenguaje de fórmulas de consulta M de importación.   
+ Los modelos tabulares pueden importar datos de orígenes de datos relacionales, fuentes de distribución de datos y algunos formatos de documento. También puede usar OLE DB para los proveedores ODBC con modelos tabulares. Los modelos tabulares en el nivel de compatibilidad 1400 ofrecen un aumento significativo en la variedad de orígenes de datos desde el que puede importar desde. Esto es debido a la introducción de los datos modernos obtener datos de consulta y características en SSDT, utilizando el lenguaje de consulta de fórmulas M de importación.   
 
   Las soluciones multidimensionales pueden importar los datos de orígenes de datos relacionales mediante proveedores administrados y nativos OLE DB.  
   
@@ -124,11 +124,11 @@ ms.locfileid: "34018902"
 ##  <a name="bkmk_lang"></a> Compatibilidad con lenguaje de scripting y consulta  
  Analysis Services incluye MDX, DMX, DAX, XML/A, ASSL y TMSL. La compatibilidad con estos idiomas puede variar según el tipo de modelo. Si debe tener en cuenta requisitos del lenguaje de scripting y consulta, revise la lista siguiente.  
 
--   Las bases de datos modelo tabulares admiten los cálculos DAX, consultas DAX y consultas MDX. Esto es cierto en todos los niveles de compatibilidad. Lenguajes de script son ASSL (a través de XMLA) para los niveles de compatibilidad 1050-1103 y TMSL (en XMLA) para el nivel de compatibilidad 1200 y versiones posterior. 
+-   Las bases de datos modelo tabulares admiten los cálculos DAX, consultas DAX y consultas MDX. Esto es cierto en todos los niveles de compatibilidad. Lenguajes de script son ASSL (a través de XMLA) para los niveles de compatibilidad 1050-1103 y TMSL (en XMLA) para el nivel de compatibilidad 1200 y superior. 
 
 -   Los libros de PowerPivot usan DAX para los cálculos y DAX o MDX para las consultas.  
   
--   Bases de datos de modelo multidimensionales admiten cálculos MDX, consultas MDX, consultas DAX y ASSL. 
+-   Bases de datos modelo multidimensionales admiten cálculos MDX, las consultas MDX, las consultas DAX y ASSL. 
   
 -   Los modelos de minería de datos admiten DMX y ASSL.  
   
@@ -140,13 +140,13 @@ ms.locfileid: "34018902"
  Todas las soluciones de Analysis Services se pueden proteger en la base de datos. Las opciones de seguridad más específicas varían según el modo. Si debe tener en cuenta requisitos de configuración de seguridad específicos en su solución, revise la lista siguiente para asegurarse de que el nivel de seguridad que desea se admite en el tipo de solución que desea crear:  
 
   
--   Las bases de datos de modelo tabular pueden usar seguridad de nivel de fila, con permisos basados en rol.  
+-   Las bases de datos de modelo tabular pueden utilizar la seguridad de nivel de fila, con permisos basados en rol.  
   
--   Dimensión y la seguridad de nivel de celda, con permisos basados en rol, pueden utilizar las bases de datos de modelo multidimensional.  
+-   Dimensión y la seguridad de nivel de celda, con permisos basados en rol, pueden usar las bases de datos de modelo multidimensional.  
 
 -   Los libros de[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] se protegen en el nivel de archivo, con los permisos de SharePoint.  
   
- Los libros de[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pueden restaurarse en un servidor de modo tabular. Una vez restaurado el archivo, se separa de SharePoint, lo que le permite usar todas las características de modelado tabular, incluida la seguridad de nivel de fila.  
+ Los libros de[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pueden restaurarse en un servidor de modo tabular. Una vez restaurado el archivo, se separa de SharePoint, lo que permite usar todas las características de modelado tabular, incluida la seguridad de nivel de fila.  
   
 ##  <a name="bkmk_designer"></a> Herramientas de diseño  
  Los conocimientos sobre el modelado de datos y la capacidad técnica pueden variar enormemente según los usuarios encargados de generar modelos analíticos. Si debe tener en cuenta el conocimiento de la herramienta o la experiencia del usuario en su solución, compare las experiencias siguientes para la creación del modelo.  
@@ -157,7 +157,7 @@ ms.locfileid: "34018902"
 |[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] para Excel|Se usa para crear un libro [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] que implementará después en una granja de SharePoint que tenga una instalación de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] para SharePoint. [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] para Excel tiene un área de trabajo de aplicación independiente que se abre con Excel. Utiliza las mismas metáforas visuales (páginas con pestañas, diseño de cuadrícula y barra de fórmulas) que Excel. Los usuarios que sean expertos en Excel preferirán esta herramienta en lugar de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].|  
   
 ##  <a name="bkmk_client"></a> Compatibilidad con aplicaciones de cliente  
- Las soluciones en general, tabulares y multidimensionales admiten aplicaciones de cliente mediante una o varias de las bibliotecas de cliente de Analysis Services (MSOLAP, AMOMD, ADOMD). Por ejemplo, Excel, Power BI Desktop y aplicaciones personalizadas.   
+ Soluciones en general, tabulares y multidimensionales admiten las aplicaciones de cliente mediante una o varias de las bibliotecas de cliente de Analysis Services (MSOLAP, AMOMD, ADOMD). Por ejemplo, Excel, Power BI Desktop y aplicaciones personalizadas.   
  
  Si utiliza Reporting Services, la disponibilidad de las características de informe varía según las ediciones y los modos de servidor. Por esta razón, el tipo de informe que desea generar puede influir en el modo de servidor que elige instalar.  
   

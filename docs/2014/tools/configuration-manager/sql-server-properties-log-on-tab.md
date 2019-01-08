@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48746f150d12342b8ab0c5b95ab6a1164d7b2500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364978"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Propiedades de SQL Server (pestaña Iniciar sesión)
   Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de SQL Server** para especificar la cuenta que utiliza el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cambiar la contraseña de una cuenta e iniciar y detener el servicio. Cambiar la contraseña de una cuenta surte efecto inmediato.  
@@ -62,7 +61,7 @@ ms.locfileid: "48062885"
  Reanude un servicio en pausa.  
   
 > [!IMPORTANT]  
->  De forma predeterminada, solo los miembros del grupo local de administradores pueden iniciar, detener, pausar, reanudar o reiniciar un servicio. Para conceder la capacidad de administrar servicios a usuarios que no son administradores, vea [CÓMO: Conceder a los usuarios derechos para administrar servicios en la familia Windows Server 2003](http://support.microsoft.com/kb/325349). El proceso es similar en las demás versiones de Windows.  
+>  De forma predeterminada, solo los miembros del grupo local de administradores pueden iniciar, detener, pausar, reanudar o reiniciar un servicio. Para conceder la capacidad de administrar servicios a usuarios que no son administradores, vea [CÓMO: Conceder a los usuarios derechos para administrar servicios en la familia Windows Server 2003](https://support.microsoft.com/kb/325349). El proceso es similar en las demás versiones de Windows.  
   
 > [!NOTE]  
 >  Si al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aparece el error de WMI "no implementado [0x80004001]", podría indicar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está instalado en el equipo de destino.  

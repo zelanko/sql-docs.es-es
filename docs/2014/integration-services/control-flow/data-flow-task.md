@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069585"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366867"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
   La tarea Flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y permite al usuario transformar, limpiar y modificar datos a medida que se mueven. Agregar una tarea Flujo de datos a un flujo de control de paquetes permite que el paquete extraiga, transforme y cargue datos.  
@@ -45,18 +44,18 @@ ms.locfileid: "48069585"
  ![Flujos de datos](../media/mw-dts-09.gif "Flujos de datos")  
   
 ## <a name="log-entries"></a>Entradas del registro  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] También proporciona entradas del registro personalizadas para numerosas tareas. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica que la tarea Flujo de datos cambió el tamaño del búfer. En la entrada del registro se describen las razones del cambio de tamaño y se indica el nuevo tamaño temporal del búfer.|  
-|`OnPipelinePostEndOfRowset`|Indica que un componente se ha dado la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
-|`OnPipelinePostPrimeOutput`|Indica que el componente ha completado su última llamada a la `PrimeOutput` método. En función del flujo de datos, es posible que se escriban varias entradas. Si el componente es un origen, esta entrada del registro significa que el componente ha terminado de procesar filas.|  
-|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePostEndOfRowset`|Indica que se ha dado la señal de fin del conjunto de filas a un componente, la cual se establece a través de la última llamada del método `ProcessInput`. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePostPrimeOutput`|Indica que el componente ha completado su última llamada al método `PrimeOutput`. En función del flujo de datos, es posible que se escriban varias entradas. Si el componente es un origen, esta entrada del registro significa que el componente ha terminado de procesar filas.|  
+|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, la cual se establece a través de la última llamada del método `ProcessInput`. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |`OnPipelinePrePrimeOutput`|Indica que el componente está a punto de recibir su última llamada del método `PrimeOutput`. En función del flujo de datos, es posible que se escriban varias entradas.|  
 |`OnPipelineRowsSent`|Informa del número de filas que se proporciona a una entrada de componentes a través de una llamada al método `ProcessInput`. La entrada del registro incluye el nombre del componente.|  
 |`PipelineBufferLeak`|Proporciona información sobre cualquier componente que mantuvo la conexión de los búferes después de que desapareciera el administrador de búferes. Si se mantiene la conexión de un búfer, no se liberan los recursos de los búferes y podrían ocasionarse pérdidas de memoria. La entrada del registro proporciona el nombre del componente y el Id. del búfer.|  
-|`PipelineComponentTime`|Notifica la cantidad de tiempo (en milisegundos) que el componente consumió en cada uno de sus cinco pasos de procesamiento principales, (PreExecute, PostExecute, ProcessInput y ProcessOutput.|  
+|`PipelineComponentTime`|Indica la cantidad de tiempo (en milisegundos) que el componente ha usado en cada uno de los cinco pasos de procesamiento principales: Validate, PreExecute, PostExecute, ProcessInput y ProcessOutput.|  
 |`PipelineExecutionPlan`|Informa del plan de ejecución del flujo de datos. El plan de ejecución proporciona información sobre cómo se van a enviar los búferes a los componentes. Esta información, junto con la entrada del registro PipelineExecutionTrees, describe lo que ocurre en la tarea Flujo de datos.|  
 |`PipelineExecutionTrees`|Informa sobre los árboles de ejecución del diseño del flujo de datos. El programador del motor de flujo de datos utiliza los árboles para generar el plan de ejecución del flujo de datos.|  
 |`PipelineInitialization`|Proporciona información de inicialización sobre la tarea. Esta información incluye los directorios que se utilizan para el almacenamiento temporal de datos BLOB, el tamaño predeterminado del búfer y la cantidad de filas de un búfer. En función de la configuración de la tarea Flujo de datos, es posible que se escriban varias entradas.|  
@@ -65,7 +64,7 @@ ms.locfileid: "48069585"
   
  Para obtener más información sobre cómo utilizar estas entradas de registro para supervisar y mejorar el rendimiento del flujo de datos, vea uno de los temas siguientes:  
   
--   [Contadores de rendimiento](../performance/performance-counters.md)  
+-   [Performance Counters](../performance/performance-counters.md)  
   
 -   [Características de rendimiento del flujo de datos](../data-flow/data-flow-performance-features.md)  
   
@@ -87,12 +86,12 @@ ms.locfileid: "48069585"
   
  Muchos eventos de registro escriben varias entradas, y los mensajes de un gran número de entradas del registro contienen datos complejos. Para facilitar la comprensión y comunicar el contenido de mensajes complejos, puede analizar el texto del mensaje. En función de la ubicación de los registros, puede usar instrucciones Transact-SQL o un componente de script para separar el texto complejo en columnas u otros formatos que considere más útiles.  
   
- Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185 : Salida de origen de OLE DB : 1180 : Ordenar : 1181 : Entrada de ordenación : 76", analizado en columnas. El evento `OnPipelineRowsSent` escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
+ Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185: Salida de origen OLE DB: 1180: Ordenación: 1181: Entrada de ordenación: 76", analizado en columnas. El evento `OnPipelineRowsSent` escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
   
 |columna|Descripción|Valor|  
 |------------|-----------------|-----------|  
-|**PathID**|El valor de la `ID` propiedad de la ruta de acceso entre el origen de OLE DB y la transformación Ordenar.|1185|  
-|**PathName**|El valor de la `Name` propiedad de la ruta de acceso.|Salida de origen de OLE DB|  
+|**PathID**|Valor de la propiedad `ID` de la ruta entre el origen de OLE DB y la transformación Ordenar.|1185|  
+|**PathName**|Valor de la propiedad `Name` de la ruta.|Salida de origen de OLE DB|  
 |**ComponentID**|El valor de la `ID` propiedad de la transformación Ordenar.|1180|  
 |**ComponentName**|Valor de la propiedad `Name` de la transformación Ordenar.|Sort|  
 |**InputID**|Valor de la propiedad `ID` de la entrada de la transformación Ordenar.|1181|  
@@ -115,6 +114,6 @@ ms.locfileid: "48069585"
  [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com  
+ Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com  
   
   

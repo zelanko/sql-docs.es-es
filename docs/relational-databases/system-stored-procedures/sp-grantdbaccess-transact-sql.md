@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be0252386717bb2e9cffcef45918a0dd85d06b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652954"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591559"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ]  **' *** inicio de sesión* **'** es el nombre del grupo de Windows, el inicio de sesión de Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión que debe asignarse a la nueva base de datos usuario. Los nombres de grupos de Windows e inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows en el formulario *dominio*\\*inicio de sesión *; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *inicio de sesión* es un **sysname**, no tiene ningún valor predeterminado.  
+ [  **@loginame =** ] **'**_inicio de sesión_ **'**  
+ Es el nombre del grupo de Windows, inicio de sesión de Windows o inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a asignar al nuevo usuario de la base de datos. Los nombres de grupos de Windows e inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows en el formulario *dominio*\\*inicio de sesión*; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *inicio de sesión* es un **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@name_in_db=**] **'***name_in_db***'** [ **salida**]  
+ [  **@name_in_db=**] **'**_name_in_db_**'** [ **salida**]  
  Es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable OUTPUT con un tipo de datos de **sysname**y su valor predeterminado es null. Si no se especifica, *inicio de sesión* se utiliza. Si se especifica como variable OUTPUT con un valor NULL, **@name_in_db** está establecido en *inicio de sesión*. *name_in_db* no debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -15,12 +15,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a84857925cd4f9db7088ec922a3cceccb0d64895
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538887"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de obtención de detalles (minería de datos)
   Una *consulta de obtención de detalles* permite recuperar los detalles de los casos o de los datos de estructura subyacentes mediante el envío de una consulta al modelo de minería de datos. La obtención de detalles resulta útil para ver los casos usados para entrenar el modelo frente a los casos que se usaron para probarlo, o si desea revisar detalles adicionales de los datos de los casos.  
@@ -29,7 +29,7 @@ ms.locfileid: "50147621"
   
 -   Obtener detalles de los **casos del modelo**  
   
-     La obtención de detalles de los casos del modelo se usa cuando se desea partir de un patrón específico del modelo, como un clúster o una rama de un árbol de decisión, para ver más detalles sobre los casos individuales.  
+     Obtención de detalles de los casos del modelo se usa cuando desea ir desde un patrón específico en el modelo, como un clúster o una rama de un árbol de decisión- y ver detalles acerca de los casos individuales.  
   
 -   Obtener detalles de los **casos de la estructura**  
   

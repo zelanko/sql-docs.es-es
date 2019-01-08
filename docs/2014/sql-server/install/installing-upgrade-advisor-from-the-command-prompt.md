@@ -16,12 +16,12 @@ ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e834cb85458b7fd0e265e5077500ebc4dec5f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095417"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589869"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Instalar el Asesor de actualizaciones desde el símbolo del sistema
   Puede instalar el Asesor de actualizaciones mediante el Asistente para instalación o desde el símbolo del sistema. Mediante el símbolo del sistema, podrá realizar instalaciones desatendidas y automatizadas.  
@@ -36,7 +36,7 @@ ms.locfileid: "48095417"
 |Argumento|Descripción|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Establece el nivel de la interfaz de usuario (UI):<br /><br /> n = sin interfaz de usuario<br /><br /> b = interfaz de usuario básica (solo progresos, sin interacción)<br /><br /> r = interfaz de usuario reducida (cuadro de diálogo al final de la instalación)<br /><br /> f = interfaz de usuario completa|  
-|/L|Especifica las opciones del archivo de registro. Para registrar todos los mensajes en *log_file_name*, utilice **-L\*v *** nombre_archivo_registro*. Para registrar los mensajes de error, use `-Le` *log_file_name*.|  
+|/L|Especifica las opciones del archivo de registro. Para registrar todos los mensajes en *log_file_name*, utilice **-L\*v**_log_file_name_. Para registrar los mensajes de error, use `-Le` *log_file_name*.|  
 |ADDLOCAL = ALL&AMP;#124; QUITAR = ALL&AMP;#124;REINSTALL = ALL|Se usa para instalar (ADDLOCAL), quitar (REMOVE) o reinstalar (REINSTALL) el Asesor de actualizaciones.|  
 |UAINSTALLDIR=ruta|Instala el Asesor de actualizaciones en la ubicación especificada por la ruta.|  
   

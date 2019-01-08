@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364777"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS)
   Un mapa es una colección de capas. Al agregar un mapa a un informe, define la primera capa. Puede crear capas adicionales con el Asistente para capas de mapa.  
@@ -57,7 +57,7 @@ ms.locfileid: "48137635"
   
  En la parte inferior del panel Mapa es el área de la vista Mapa. Para cambiar las opciones de centro o zoom del mapa, utilice las teclas de dirección para ajustar el centro de la vista y el control deslizante para ajustar el nivel de zoom.  
   
- Para obtener más información sobre las capas, vea [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
+ Para obtener más información sobre las capas, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48137635"
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en el tipo de capa que quiere agregar: **Punto**, **Línea**o **Polígono**.  
+2.  En la barra de herramientas, haga clic en el **Agregar capa** botón y, en la lista desplegable, haga clic en el tipo de capa que desea agregar: **Punto**, **línea**, o **polígono**.  
   
     > [!NOTE]  
     >  Aunque puede agregar una capa de mapa y configurarla manualmente, recomendamos utilizar el Asistente para capas de mapa si desea agregar capas nuevas. Para iniciar el asistente desde la barra de herramientas del panel Mapa, haga clic en el botón del Asistente para capas (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -125,9 +125,9 @@ ms.locfileid: "48137635"
   
 1.  Seleccione **General** en el cuadro de diálogo **Propiedades de punto de mapa** para cambiar las opciones de etiqueta, información sobre herramientas y tipo de marcador de los elementos de mapa siguientes:  
   
-    -   Todos los puntos dinámicos o incrustados de una capa de punto. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos invalidan estas opciones. Para invalidar las opciones para un punto incrustado concreto, use la [Map Embedded Point Properties Dialog Box, marcador](../map-embedded-point-properties-dialog-box-marker.md) página.  
+    -   Todos los puntos dinámicos o incrustados de una capa de punto. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos invalidan estas opciones. Para invalidar las opciones de un punto incrustado concreto, utilice la página [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) .  
   
-    -   El punto central de todos los polígonos dinámicos o incrustados de una capa de polígono. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos centrales invalidan estas opciones. Para invalidar las opciones de un punto central concreto, use la página [Cuadro de diálogo de Propiedades de punto incrustado de mapa, Marcador](../map-embedded-point-properties-dialog-box-marker.md).  
+    -   El punto central de todos los polígonos dinámicos o incrustados de una capa de polígono. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos centrales invalidan estas opciones. Para invalidar las opciones de un punto central concreto, use la página [Cuadro de diálogo de Propiedades de punto incrustado de mapa, Marcador](../map-embedded-point-properties-dialog-box-marker.md) .  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137635"
 4.  En **Nombre de archivo**, escriba la ubicación del archivo de forma ESRI o haga clic en **Examinar** para seleccionar un archivo de forma ESRI.  
   
     > [!NOTE]  
-    >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea cómo cargar un archivo o informe (Administrador de informes) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
+    >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea "Cómo: Cargar un archivo o informe (Administrador de informes) "en el [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137635"
 2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en **Capa de mosaico**.  
   
     > [!NOTE]  
-    >  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
+    >  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 3.  Haga clic con el botón derecho en la capa de mosaico en el panel Mapa y, después, haga clic en **Propiedades del mosaico**.  
   

@@ -1,22 +1,21 @@
 ---
-title: 'Lección 2: Conexión desde otro equipo | Microsoft Docs'
+title: 'Lección 2: Conectarse desde otro equipo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183215"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367199"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
   Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
@@ -58,7 +57,7 @@ ms.locfileid: "48183215"
  Para mejorar la seguridad, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]y Windows 7 activan el Firewall de Windows. Si desea conectarse a esta instancia desde otro equipo, debe abrir un puerto de comunicaciones en el firewall. La instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] escucha en el puerto 1433; por tanto, no tiene que configurar un puerto fijo. No obstante, las instancias con nombre incluidas las de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escuchan en puertos dinámicos. Para poder abrir un puerto en el firewall, debe configurar primero [!INCLUDE[ssDE](../includes/ssde-md.md)] para que escuche en un puerto específico conocido como puerto fijo o estático; de lo contrario, es posible que [!INCLUDE[ssDE](../includes/ssde-md.md)] escuche en un puerto distinto cada vez que se inicie. Para obtener más información sobre firewalls, la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al motor de base de datos, Analysis Services, Reporting Services e Integration Services, consulte [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  La Internet Assigned Numbers Authority administra las asignaciones del número de puerto, que se muestran en [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Los números de puerto deben tener asignados números de 49152 a 65535.  
+>  La Internet Assigned Numbers Authority administra las asignaciones del número de puerto, que se muestran en [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). Los números de puerto deben tener asignados números de 49152 a 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configurar SQL Server para escuchar en un puerto específico  
   
@@ -128,6 +127,6 @@ ms.locfileid: "48183215"
  Con esto finaliza este breve tutorial sobre la conectividad básica.  
   
 ## <a name="return-to-tutorials-portal"></a>Volver al portal de tutoriales  
- [Tutorial: Introducción al motor de base de datos](tutorial-getting-started-with-the-database-engine.md)  
+ [Tutorial: Introducción a con el motor de base de datos](tutorial-getting-started-with-the-database-engine.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: fb30ce3e7115bad41d26dd126b6f8b9ae9e0b934
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018100"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373957"
 ---
 # <a name="spatial-data-sql-server"></a>Datos espaciales (SQL Server)
   Los datos espaciales representan información sobre la ubicación física y la forma de objetos geométricos. Estos objetos pueden ser ubicaciones de punto u objetos más complejos como países, carreteras o lagos.  
@@ -36,7 +36,7 @@ ms.locfileid: "51018100"
  Ambos tipos de datos se implementan como tipos de datos .NET Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], descargue las notas del producto [New Spatial Features in SQL Server 2012 (Nuevas características espaciales de SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], descargue las notas del producto [New Spatial Features in SQL Server 2012 (Nuevas características espaciales de SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="reltasks"></a> Tareas relacionadas  
  [Crear, construir y consultar instancias de Geometry](create-construct-and-query-geometry-instances.md)  

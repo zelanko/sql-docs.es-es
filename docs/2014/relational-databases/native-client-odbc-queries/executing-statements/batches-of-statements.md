@@ -17,15 +17,15 @@ ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa97baae4ad6331193cab16ae2609212753c5be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368717"
 ---
 # <a name="batches-of-statements"></a>Lotes de instrucciones
-  Un lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones contiene dos o más instrucciones, separadas por punto y coma (;), integrado en una sola cadena pasada a **SQLExecDirect** o [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360). Por ejemplo:  
+  Un lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones contiene dos o más instrucciones, separadas por punto y coma (;), integrado en una sola cadena pasada a **SQLExecDirect** o [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360). Por ejemplo:  
   
 ```  
 SQLExecDirect(hstmt,   

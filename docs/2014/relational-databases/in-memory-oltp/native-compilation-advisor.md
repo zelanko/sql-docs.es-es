@@ -13,19 +13,19 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36a6a30ffbf5a0991e2b55ba655549454516e82d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147105"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358707"
 ---
 # <a name="native-compilation-advisor"></a>Asistente de compilación nativa
   La herramienta de informes de rendimiento de transacciones (vea [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) le informa sobre los procedimientos almacenados interpretados de la base de datos que se beneficiarían si se convierten para utilizar la compilación nativa. Después de identificar el procedimiento almacenado que desea convertir para que utilice la compilación nativa, puede utilizar el Asistente de compilación nativa para que le ayude a migrar el procedimiento almacenado interpretado a la compilación nativa. Para obtener más información acerca de los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
  Para empezar, conéctese a la instancia que contiene el procedimiento almacenado interpretado. Puede conectarse a una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Sin embargo, si desea realizar una operación de migración con el asistente, debe conectarse a una instancia de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] que tenga habilitada la funcionalidad de OLTP en memoria. Para obtener más información acerca de los requisitos de OLTP en memoria, vea [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Para obtener información sobre las metodologías de migración, vea [OLTP en memoria: patrones comunes de carga de trabajo y consideraciones sobre la migración](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Tutorial del uso del Asistente de compilación nativa  
  En el **Explorador de objetos**, haga clic con el botón secundario en el procedimiento almacenado que desea convertir, y seleccione **Asistente de compilación nativa**. Se mostrará la página de bienvenida del **Asistente de compilación nativa de procedimiento almacenado**. Para continuar, haga clic en **Siguiente** .  

@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096395"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211844"
 ---
 # <a name="specify-parameters"></a>Especificar parámetros
   Al especificar parámetros de procedimiento, los programas de llamada pueden pasar valores en el cuerpo del procedimiento. Estos valores se pueden usar para distintos fines durante la ejecución del procedimiento. Los parámetros de procedimiento también pueden devolver valores al programa de llamada si el parámetro se marca como OUTPUT.  
@@ -62,10 +62,10 @@ GO
   
  La asignación de nombres de forma explícita a los parámetros y la asignación de los valores adecuados para cada uno en una llamada a procedimiento permite proporcionar los parámetros en cualquier orden. Por ejemplo, si el procedimiento **my_proc** espera tres parámetros llamados **\@first**, **\@second** y **\@third**, los valores pasados al procedimiento pueden asignarse a los nombres de los parámetros; por ejemplo: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si un valor de parámetro se proporciona con el formato **/@parameter =***valor*, todos los parámetros posteriores se deben proporcionar de esta manera. Si los valores de parámetro no se pasan con el formato **\@parameter =***value*, los valores se deben proporcionar en el orden idéntico (de izquierda a derecha) en el que los parámetros se enumeran en la instrucción CREATE PROCEDURE.  
-  
-> [!WARNING]  
+> 
+> [!WARNING]
 >  Cualquier parámetro pasado con el formato **\@parameter =***value* con el parámetro mal escrito, provocará que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un error e impida la ejecución del procedimiento.  
   
 ## <a name="specifying-parameter-data-types"></a>Especificar los tipos de datos de parámetro  

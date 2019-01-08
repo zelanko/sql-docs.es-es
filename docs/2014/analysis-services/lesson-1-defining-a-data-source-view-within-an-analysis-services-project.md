@@ -11,14 +11,14 @@ ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9fe97795be77255412ecac2dbcda11214369c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218715"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365174"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lección 1: definir una vista del origen de datos en un proyecto de Analysis Services
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lección 1: Definir una vista del origen de datos en un proyecto de Analysis Services
   Para diseñar una aplicación de Business Intelligence en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , primero debe crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En este proyecto, debe definir todos los elementos de la solución, empezando por una vista del origen de datos.  
   
  Esta lección contiene las siguientes tareas:  
@@ -35,7 +35,7 @@ ms.locfileid: "48218715"
  [Modificar los nombres de tabla predeterminados](lesson-1-4-modifying-default-table-names.md)  
  En esta tarea, modificará los nombres de tabla de la vista del origen de datos, de modo que los nombres de los objetos subsiguientes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que definirá sean más descriptivos.  
   
- Compare sus resultados en un archivo de proyecto de ejemplo que se creó para esta lección. Para obtener más información sobre cómo descargar los proyectos de ejemplo relacionados con este tutorial, consulte [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) (Proyectos de modelo multidimensional de SSAS para SQL Server 2012) en la página de ejemplos del producto de codeplex.  
+ Compare sus resultados en un archivo de proyecto de ejemplo que se creó para esta lección. Para obtener más información sobre cómo descargar los proyectos de ejemplo relacionados con este tutorial, consulte [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) (Proyectos de modelo multidimensional de SSAS para SQL Server 2012) en la página de ejemplos del producto de codeplex.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
  [Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
@@ -45,6 +45,6 @@ ms.locfileid: "48218715"
  [Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Escenario de Tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   
- [Modelado multidimensional &#40;Tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

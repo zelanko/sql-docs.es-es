@@ -18,12 +18,12 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b504b0bbf443a35778e4af63bbaed56b8593cf78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845725"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407942"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Asignación de origen y bases de datos de destino (AccessToSQL)
 Cuando se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, deberá especificar una base de datos de destino para la migración. Si tiene varias bases de datos de Access se puede asignar a varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos (o esquemas) o a varios esquemas en la base de datos de SQL Azure conectada.  

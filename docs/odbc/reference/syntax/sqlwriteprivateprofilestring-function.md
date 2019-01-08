@@ -20,16 +20,16 @@ ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeff68aaa4e4901820054a9bf3079efc7d74cebc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f070b1494cb54d026d65f5a432c5faf834c38aa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818853"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201744"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>Función SQLWritePrivateProfileString
 **Conformidad**  
- Versión introdujo: ODBC 2.0  
+ Versión de introducción: ODBC 2.0  
   
  **Resumen**  
  **SQLWritePrivateProfileString** escribe un nombre de valor y los datos en la subclave Odbc.ini la información del sistema.  
@@ -39,10 +39,10 @@ ms.locfileid: "47818853"
 ```  
   
 BOOL SQLWritePrivateProfileString(  
-     LPCSTR     lpszSection,  
-     LPCSTR     lpszEntry,  
-     LPCSTR     lpszString,  
-     LPCSTR     lpszFilename);  
+     LPCSTR     lpszSection,  
+     LPCSTR     lpszEntry,  
+     LPCSTR     lpszString,  
+     LPCSTR     lpszFilename);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

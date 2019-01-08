@@ -18,15 +18,15 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 405bb71bc5ceaee65afa70d055c88a75a2326ca9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b59f544894677c75f923c2dd6185c229495e42ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107475"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372787"
 ---
 # <a name="schedules"></a>Programaciones
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Proporciona programaciones compartidas y programaciones específicas del informe para ayudarle a controlar el procesamiento y distribución de informes. La diferencia entre los dos tipos de programaciones radica en cómo se definen, almacenan y administran. La construcción interna de los dos tipos de programación es la misma. Todas las programaciones especifican un tipo de periodicidad: mensual, semanal o diaria. Dentro del tipo de periodicidad, se deben establecer los intervalos y el período para la frecuencia con que se debe producir un evento. El tipo de patrón de periodicidad y cómo se especifican los patrones es el mismo si crea una programación compartida o una programación específica del informe.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona programaciones compartidas y programaciones específicas del informe para ayudarle a controlar el procesamiento y distribución de los informes. La diferencia entre los dos tipos de programaciones radica en cómo se definen, almacenan y administran. La construcción interna de los dos tipos de programación es la misma. Todas las programaciones especifican un tipo de periodicidad: mensual, semanal o diaria. Dentro del tipo de periodicidad, se deben establecer los intervalos y el período para la frecuencia con que se debe producir un evento. El tipo de patrón de periodicidad y cómo se especifican los patrones es el mismo si crea una programación compartida o una programación específica del informe.  
   
  En este tema:  
   
@@ -64,10 +64,10 @@ ms.locfileid: "48107475"
   
  Cuando se crea una programación, el informe guarda la información de programación en la base de datos del servidor de informes o para el modo de SharePoint, en la base de datos de aplicación de servicio. El servidor de informes también crea un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se usa para desencadenar la programación. El procesamiento de programaciones se basa en la hora local del servidor de informes que contiene la programación. El formato de hora sigue el estándar del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Para obtener más información sobre cómo crear y administrar programaciones, consulte [crear, modificar y eliminar programaciones](create-modify-and-delete-schedules.md).  
+ Para obtener información detallada acerca de cómo crear y administrar programaciones, vea [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Las operaciones de programación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Las operaciones de programación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_compare"></a> Comparar programaciones compartidas y programaciones específicas del informe  
  Ambos tipos de programaciones producen el mismo resultado:.  
@@ -101,7 +101,7 @@ ms.locfileid: "48107475"
 |Crear, modificar o eliminar programaciones específicas del informe en una suscripción definida por el usuario|Administrar suscripciones individuales|Explorador, Generador de informes, Mis informes, Administrador de contenido|Visitantes, Miembros|  
 |Crear, modificar o eliminar programaciones específicas del informe para todo el resto de operaciones programadas|Administrar historial de informe, Administrar todas las suscripciones y Administrar informes|Administrador de contenido|Propietarios|  
   
- Para obtener más información sobre la seguridad en modo nativo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Roles predefinidos](../security/role-definitions-predefined-roles.md), [conceder permisos en un servidor de informes de modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md) y [tareas y permisos](../security/tasks-and-permissions.md). Para el modo de SharePoint, vea [Comparación de roles y tareas en Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ Para más información sobre la seguridad en un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]en modo nativo, vea [Roles predefinidos](../security/role-definitions-predefined-roles.md), [Conceder permisos en un servidor de informes en modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md) y [Tareas y permisos](../security/tasks-and-permissions.md). Para el modo de SharePoint, vea [Comparación de roles y tareas en Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Funcionamiento del Procesador de entrega y programación  
  El Procesador de entrega y programación ofrece las siguientes funcionalidades:  
@@ -126,7 +126,7 @@ ms.locfileid: "48107475"
   
      Antes de que se procesen los eventos, el Procesador de entrega y programación realiza un paso de autenticación para comprobar que el propietario de la suscripción tiene permiso para ver el informe.  
   
- Reporting Services mantiene una cola de eventos para todas las operaciones programadas. La sondea a intervalos regulares para detectar nuevos eventos. De forma predeterminada, la cola se recorre a intervalos de 10 segundos. Puede cambiar el intervalo modificando el `PollingInterval`, `IsNotificationService`, y `IsEventService` opciones de configuración en el archivo RSReportServer.config. El modo de SharePoint también usa el archivo RSreporserver.config para estas configuraciones y los valores se aplican a todas las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
+ Reporting Services mantiene una cola de eventos para todas las operaciones programadas. La sondea a intervalos regulares para detectar nuevos eventos. De forma predeterminada, la cola se recorre a intervalos de 10 segundos. Es posible cambiar el intervalo si se modifican los valores de configuración `PollingInterval`, `IsNotificationService` e `IsEventService` del archivo RSReportServer.config. El modo de SharePoint también usa el archivo RSreporserver.config para estas configuraciones y los valores se aplican a todas las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dependencias de servidor  
  El Procesador de entrega y programación requiere que se hayan iniciado el servicio del servidor de informes y el Agente SQL Server. La característica procesador de entrega y programación debe habilitarse a través de la `ScheduleEventsAndReportDeliveryEnabled` propiedad de la **configuración de área expuesta para Reporting Services** faceta de administración basada en directivas. Tanto el Agente SQL Server como el servicio del servidor de informes deben estar en ejecución para que se puedan realizar las operaciones programadas.  
@@ -146,9 +146,9 @@ ms.locfileid: "48107475"
 ## <a name="see-also"></a>Vea también  
  [Crear, modificar y eliminar instantáneas del historial de informes](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Suscripciones controladas por datos](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Caché de conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

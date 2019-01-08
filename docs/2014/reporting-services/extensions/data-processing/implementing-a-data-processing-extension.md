@@ -17,12 +17,12 @@ ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 919f77d0f2295091133203de2474cf81a070d956
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ca26d9b4af7adebda9f5bf0021ba7871f8425aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162195"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358299"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementar una extensión de procesamiento de datos
   Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permiten conectarse a los orígenes de datos y recuperar los datos. También actúan como puente entre un origen de datos y un conjunto de datos. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se modelan según un subconjunto de las interfaces del proveedor de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "48162195"
  [Eliminación de una extensión de procesamiento de datos](removing-a-data-processing-extension.md)  
  Describe cómo quitar una extensión de procesamiento de datos de un servidor de informes o del Diseñador de informes.  
   
- Para obtener un ejemplo de una extensión de procesamiento de datos totalmente implementada, vea [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obtener un ejemplo de una extensión de procesamiento de datos totalmente implementada, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   

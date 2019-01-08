@@ -10,17 +10,17 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216676"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375037"
 ---
 # <a name="supported-sql-server-features"></a>Características admitidas de SQL Server
   En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden usar o no con objetos optimizados para memoria.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Características admitidas para OLTP en memoria  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>Características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitidas para OLTP en memoria  
  Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten en una base de datos que tiene objetos optimizados para memoria, incluido el grupo de archivos optimizados para memoria.  
   
  Para obtener información acerca de los tipos de datos admitidos, vea [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48216676"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  Para más información, vea [Compatibilidad de SQL Server Management Studio con OLTP en memoria](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para obtener más información, vea [Información general de SQL Server PowerShell](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para obtener más información, vea [Información general de SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Importar y exportar datos de forma masiva con la utilidad bcp. Para más información, vea [Importar y exportar datos de forma masiva con la utilidad bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48216676"
   
 -   Varios contenedores en un grupo de archivos de datos optimizados para memoria para almacenar objetos de OLTP en memoria y reducir el objetivo de tiempo de recuperación (RTO).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloques de registro de transacciones calcular la suma de comprobación y validación.  
+-   Los bloques de registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calculan la suma de comprobación y la validan.  
   
 -   La nueva sugerencia de tabla SNAPSHOT. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48216676"
   
 -   Service Broker, con limitaciones. No puede tener acceso a una cola desde un procedimiento almacenado compilado de forma nativa. No puede tener acceso a una cola en una base de datos remota en una transacción que tiene acceso a tablas optimizadas para memoria.  
   
--   Clústeres de conmutación por error: como parte de la oferta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, las instancias de clúster de conmutación por error de AlwaysOn aprovechan la funcionalidad de Clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante redundancia en el nivel de instancia del servidor; es decir, una instancia de clúster de conmutación por error (FCI). Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
+-   Clústeres de conmutación por error: Como parte de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn oferta, las instancias de clúster de conmutación por error de AlwaysOn aprovechan la funcionalidad de agrupación en clústeres de conmutación por error de servidor de Windows (WSFC) para proporcionar alta disponibilidad local mediante la redundancia en el clúster de un nivel de conmutación por error de la instancia del servidor instancia (FCI). Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
   
 -   Integración con AlwaysOn: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece varias opciones para crear alta disponibilidad para un servidor o una base de datos, incluida AlwaysOn. Para más información, vea [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Trasvase de registros: el trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite enviar automáticamente copias de seguridad del registro de transacciones desde una base de datos principal de una instancia del servidor principal a una o varias bases de datos secundarias en instancias independientes del servidor secundario. Para más información, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Trasvase de registros: El trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite enviar automáticamente copias de seguridad del registro de transacciones desde una base de datos principal de una instancia del servidor principal a una o varias bases de datos secundarias en instancias independientes del servidor secundario. Para más información, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   La replicación transaccional en tablas optimizadas para memoria en suscriptores se admite con algunas restricciones. Para obtener más información, vea [Replicación para los suscriptores de tablas con optimización para memoria](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
--   Regulador de recursos: el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que puede utilizar para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria que pueden usar las solicitudes entrantes procedentes de las aplicaciones. Para obtener más información, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) y [Resource Governor](../resource-governor/resource-governor.md).  
+-   Regulador de recursos: el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que puede utilizar para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria que pueden usar las solicitudes entrantes procedentes de las aplicaciones. Para obtener más información, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) y [Resource Governor](../resource-governor/resource-governor.md).  
   
 -   OLTP en memoria tiene restricciones en las páginas de códigos compatibles para las columnas (var)char en tablas optimizadas para memoria y las intercalaciones compatibles utilizadas en índices y procedimientos almacenados compilados de forma nativa. Para obtener más información, consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48216676"
 |Compresión de datos en tablas optimizadas para memoria.|Puede usar la característica de compresión de datos como ayuda para comprimir los datos de una base de datos y reducir el tamaño de la base de datos. Para obtener más información, consulte [Data Compression](../data-compression/data-compression.md).|  
 |Creación de particiones de tablas optimizadas para memoria e índices HASH.|Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Para obtener más información, vea [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).|  
 |Cifrado de datos transparente (TDE) en el grupo de archivos de datos optimizado para memoria de una base de datos.|El cifrado de datos transparente (TDE) realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> El TDE se puede habilitar en una base de datos que tenga objetos de OLTP en memoria. Las entradas del registro de OLTP en memoria se cifran si se ha habilitado el TDE. Los archivos de punto de comprobación de las tablas durables no se cifran, incluso aunque el TDE esté habilitado en la base de datos.|  
-|Replicación|Las configuraciones de replicación que no sean la replicación transaccional en tablas optimizadas para memoria en los suscriptores son incompatibles con tablas o vistas que hacen referencia a tablas optimizadas para memoria. La replicación con sync_mode=’database snapshot’ no se admite si hay un grupo de archivos optimizados para memoria. Para obtener más información, consulte [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|REPLICATION|Las configuraciones de replicación que no sean la replicación transaccional en tablas optimizadas para memoria en los suscriptores son incompatibles con tablas o vistas que hacen referencia a tablas optimizadas para memoria. Replicación con sync_mode = 'database snapshot' no se admite si hay un grupo de archivos optimizados para memoria. Para obtener más información, vea [Replicación para los suscriptores de tablas con optimización para memoria](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |Conjuntos de resultados activos múltiples (MARS)|Las tablas optimizadas para memoria no admiten Multiple Active Result Sets (MARS). Este error también puede indicar que se está usando un servidor vinculado. El servidor vinculado puede utilizar MARS. Las tablas optimizadas para memoria no admiten servidores vinculados. En su lugar, conéctese directamente al servidor y a la base de datos que hospedan las tablas optimizadas para memoria.|  
 |Creación de reflejo|Creación de reflejo de la base de datos es una solución para aumentar la disponibilidad de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Recompilar el registro|La recompilación del registro, ya sea a través de un adjunto o de ALTER DATABASE, no se admite para bases de datos con un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
@@ -107,7 +107,7 @@ ms.locfileid: "48216676"
   
 |Bases de datos|Permitido|Descripción|  
 |---------------|-------------|-----------------|  
-|Bases de datos de usuario, modelo y msdb|no|Las consultas y transacciones entre bases de datos no se admiten.<br /><br /> Las consultas y transacciones que tienen acceso a tablas optimizadas para memoria o a procedimientos almacenados compilados de forma nativa no pueden tener acceso a otras bases de datos, excepto a las bases de datos del sistema maestra (acceso de solo lectura) y tempdb.|  
+|Bases de datos de usuario, modelo y msdb|No|Las consultas y transacciones entre bases de datos no se admiten.<br /><br /> Las consultas y transacciones que tienen acceso a tablas optimizadas para memoria o a procedimientos almacenados compilados de forma nativa no pueden tener acceso a otras bases de datos, excepto a las bases de datos del sistema maestra (acceso de solo lectura) y tempdb.|  
 |Base de datos de recursos y tempdb|Sí|No hay restricciones en las transacciones entre bases de datos que, además de una base de datos de usuario único, usan solo la base de datos de recursos y tempdb.|  
 |maestra|solo lectura|Las transacciones entre bases de datos que tocan OLTP en memoria y la base de datos maestra no pueden confirmarse si incluyen operaciones de escritura en la base de datos maestra. Se permiten las transacciones entre bases de datos que solo leen de la base de datos maestra y usan una base de datos de un solo usuario.|  
   

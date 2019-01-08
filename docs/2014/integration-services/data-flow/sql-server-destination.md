@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
@@ -19,12 +18,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad8750547ff9744b525d8d6d234f02f0bb78375
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c8e1d7c41e2caf1a3e3bc03e8278c21e4fe7b79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159895"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375727"
 ---
 # <a name="sql-server-destination"></a>SQL Server, destino
   El destino de SQL Server se conecta a una base de datos local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y realiza una carga masiva de datos en tablas y vistas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No se puede usar el destino de SQL Server en paquetes con acceso a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor remoto. En su lugar, los paquetes deben utilizar el destino de OLE DB. Para más información, consulte [OLE DB Destination](ole-db-destination.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "48159895"
  Los usuarios que ejecutan paquetes que incluyen el destino de SQL Server deben tener el permiso Crear objetos globales. Para otorgar este permiso a los usuarios, utilice la herramienta Directiva de seguridad local que se abre desde el menú **Herramientas administrativas** . Si recibe un mensaje de error al ejecutar un paquete que utiliza el destino de SQL Server, asegúrese de que la cuenta que ejecuta el paquete tiene el permiso Crear objetos globales.  
   
 ## <a name="bulk-inserts"></a>Inserciones masivas  
- Si se intenta utilizar el destino de SQL Server para realizar una carga masiva de datos en una base de datos remota de SQL Server, puede recibir un mensaje de error similar al siguiente: "Hay un registro OLE DB disponible. Origen: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Resultado: 0x80040E14 Descripción: "No se pudo realizar la carga masiva porque el objeto de asignación de archivos SSIS "Global\DTSQLIMPORT" no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
+ Si intenta usar el destino de SQL Server para cargar datos de forma masiva en una base de datos de SQL Server remota, verá un mensaje de error similar al siguiente: "Un registro OLE DB está disponible. Origen : "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo" Hresult: 0x80040E14 Descripción: "Podría no realizar la carga masiva porque el objeto de asignación de archivos SSIS"Global\DTSQLIMPORT"no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
   
  El destino de SQL Server ofrece la misma inserción de datos de alta velocidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que proporciona la tarea Inserción masiva. En cambio, al usar el destino de SQL Server, un paquete puede aplicar transformaciones a los datos de las columnas antes de que estos se carguen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -94,15 +93,15 @@ ms.locfileid: "48159895"
   
 -   [Editor de destino de SQL &#40;página Administrador de conexiones&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de SQL &#40;página asignaciones&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Editor de destino de SQL &#40;página Asignaciones&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Editor de destino de SQL &#40;página Opciones avanzadas&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Editor de destino de SQL &#40;página Avanzadas&#41;](../sql-destination-editor-advanced-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Common Properties](../common-properties.md)  
   
--   [Propiedades personalizadas del destino de SQL Server](sql-server-destination-custom-properties.md)  
+-   [Propiedades personalizadas del destino SQL Server](sql-server-destination-custom-properties.md)  
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   
@@ -118,11 +117,11 @@ ms.locfileid: "48159895"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, sobre la [posible aparición del error "No se puede preparar la inserción masiva de SSIS para la inserción de datos" en sistemas habilitados para UAC](http://go.microsoft.com/fwlink/?LinkId=199482), en support.microsoft.com.  
+-   Artículo técnico, sobre la [posible aparición del error "No se puede preparar la inserción masiva de SSIS para la inserción de datos" en sistemas habilitados para UAC](https://go.microsoft.com/fwlink/?LinkId=199482), en support.microsoft.com.  
   
--   Artículo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
+-   Artículo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
   
--   Artículo técnico [Usar SQL Server Integration Services para cargar datos de forma masiva](http://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
+-   Artículo técnico [Usar SQL Server Integration Services para cargar datos de forma masiva](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](data-flow.md)  

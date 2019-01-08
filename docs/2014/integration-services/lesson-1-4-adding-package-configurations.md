@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20d4e13b765e58ef5bfd7464bbf46b6106e4f525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085397"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364017"
 ---
 # <a name="step-4-adding-package-configurations"></a>Paso 4: Agregar configuraciones de paquetes
   En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona diversos tipos de configuración. Puede almacenar configuraciones en variables de entorno, entradas del Registro, variables definidas por el usuario, tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y archivos XML. Para proporcionar más flexibilidad, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite el uso de configuraciones indirectas. Esto significa que se usa una variable de entorno para especificar la ubicación de la configuración, que a su vez especifica los valores reales. Los paquetes del proyecto Deployment Tutorial utilizan una combinación de archivos de configuración XML y configuraciones indirectas. Un archivo de configuración XML puede incluir configuraciones de varias propiedades y, si hace falta, varios paquetes pueden hacer referencia a él. En este tutorial, utilizará un archivo de configuración independiente para cada paquete.  
   
- Los archivos de configuración suelen contener información confidencial como cadenas de conexión. Por tanto, debe utilizar una lista de control de acceso (ACL) para restringir el acceso a la ubicación o a la carpeta donde se almacenan los archivos, y permitir el acceso solamente a los usuarios o cuentas que pueden ejecutar paquetes. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../2014/integration-services/access-to-files-used-by-packages.md).  
+ Los archivos de configuración suelen contener información confidencial como cadenas de conexión. Por tanto, debe utilizar una lista de control de acceso (ACL) para restringir el acceso a la ubicación o a la carpeta donde se almacenan los archivos, y permitir el acceso solamente a los usuarios o cuentas que pueden ejecutar paquetes. Para más información, vea [Acceso a los archivos usados por los paquetes](../../2014/integration-services/access-to-files-used-by-packages.md).  
   
  Los paquetes (DataTransfer y LoadXMLData) que ha agregado al proyecto Deployment Tutorial en la tarea anterior necesitan configuraciones para ejecutarse correctamente una vez que se han implementado en el servidor de destino. Para implementar configuraciones, primero creará las configuraciones indirectas para los archivos de configuración XML y, a continuación, creará los archivos de configuración XML.  
   
@@ -132,7 +131,7 @@ ms.locfileid: "48085397"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 5: Probar los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   

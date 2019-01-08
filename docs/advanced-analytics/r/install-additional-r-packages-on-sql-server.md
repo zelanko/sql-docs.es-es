@@ -1,5 +1,5 @@
 ---
-title: Instalar nuevos paquetes de R en SQL Server Machine Learning Services | Microsoft Docs
+title: Instalar nuevos paquetes de idioma R - SQL Server Machine Learning Services
 description: Agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f345dc0649c5b7b9665e095207ad7a5a12d16871
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 590dbcc08d433147b61678c2b865ba205a0e547d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697053"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432808"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar nuevos paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ En este artículo se describe cómo instalar nuevos paquetes de R a una instanci
 
 La biblioteca de paquetes de R se encuentra físicamente en la carpeta archivos de programa de la instancia de SQL Server en una carpeta segura con acceso restringido. Escritura en esta ubicación requiere permisos de administrador.
 
-No administradores pueden instalar paquetes, pero para ello se requiere configuración addititional y funcionalidad no está disponible en las instalaciones iniciales. Existen dos enfoques para las instalaciones de paquete sin derechos administrativos: RevoScaleR con versión 9.0.1 y versiones posteriores, o mediante CREATE EXTERNAL LIBRARY (sólo en SQL Server 2017). En SQL Server 2017, **dbo_owner** o de otro usuario con permiso CREATE EXTERNAL LIBRARY puede instalar paquetes de R a la base de datos actual.
+No administradores pueden instalar paquetes, pero para ello se requiere configuración addititional y funcionalidad no está disponible en las instalaciones iniciales. Hay dos enfoques para las instalaciones de paquetes sin derechos administrativos: RevoScaleR con versión 9.0.1 y versiones posteriores, o mediante CREATE EXTERNAL LIBRARY (sólo en SQL Server 2017). En SQL Server 2017, **dbo_owner** o de otro usuario con permiso CREATE EXTERNAL LIBRARY puede instalar paquetes de R a la base de datos actual.
 
 Los desarrolladores de R están acostumbrados a la creación de bibliotecas de usuario para los paquetes que necesitan si ubicadas centralmente las bibliotecas son navegadores. Esta práctica es problemática para código de R que se ejecuta en una instancia del motor de base de datos de SQL Server. SQL Server no se puede cargar paquetes desde bibliotecas externas, incluso si dicha biblioteca está en el mismo equipo. Solo los paquetes de la biblioteca de instancia se pueden usar en código de R que se ejecuta en SQL Server.
 

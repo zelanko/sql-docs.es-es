@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15f862ceff618fb3c0f20d6e2bdf8d9d5b276801
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c7159682e421005385fd830ceed4380086089c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806843"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432268"
 ---
-#<a name="installing-smo"></a>Instalar SMO
+# <a name="installing-smo"></a>Instalar SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -38,11 +38,11 @@ Esto es un sustituto de SharedManagementObjects.msi, que anteriormente se public
 >>[!Important]
 >>Como se mencionó en el [archivos y números de versión](files-and-version-numbers.md) página, no debe instalar los ensamblados SMO en la GAC. Si lo hace, podría causar problemas con otras aplicaciones que también usan esas versiones de SMO (por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
 
-##<a name="installing-the-package"></a>Instalación del paquete
+## <a name="installing-the-package"></a>Instalación del paquete
 
 Consulte [NuGet Quick Start - uso de un paquete](https://docs.microsoft.com/nuget/quickstart/use-a-package) para obtener instrucciones y ejemplos de instalación y uso de un paquete de NuGet. 
   
 ## <a name="system-requirements"></a>Requisitos del sistema
   
- SMO requiere [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 se ejecutan, por lo que las aplicaciones que usen, deben asegurarse de que los equipos cliente tengan la versión o superior instalado.
+ SMO requiere [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 se ejecutan, por lo que las aplicaciones que usen, deben asegurarse de que los equipos cliente tengan la versión o superior instalado. Algunos archivos binarios nativos que se instala con las bibliotecas de NetFx SMO también requieren el tiempo de ejecución de VC 2013 instalado; ese tiempo de ejecución no se incluye en el paquete. Puede descargar el adecuado para la arquitectura de destino desde redist https://www.microsoft.com/download/details.aspx?id=40784
   

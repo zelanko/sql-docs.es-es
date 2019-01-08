@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 862d07d3a27549f8bb0b45a807d1a04c7b13e364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8ecfff92b5865ebe9bf255f4bcc1b02150cffb31
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659639"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588396"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada columna devuelta por las funciones con valores de tabla a las que puede tener acceso el usuario actual en la base de datos actual.  
   
- Para recuperar información desde esta vista, especifique el nombre completo de **INFORMATION_SCHEMA. *** view_name*.  
+ Para recuperar información desde esta vista, especifique el nombre completo de **INFORMATION_SCHEMA.** _view_name_.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Nombre de catálogo o base de datos de la función con valores de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la función con valores de tabla.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la función con valores de tabla.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nombre de la función con valores de tabla.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nombre de columna.|  
 |**ORDINAL_POSITION**|**int**|Número de identificación de la columna.|  
@@ -57,7 +57,7 @@ ms.locfileid: "51659639"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Siempre devuelve NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para el criterio de ordenación si la columna de datos de caracteres o **texto** tipo de datos. De lo contrario, devuelve NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos de alias, esta columna es el nombre de la base de datos en que se creó el tipo de datos definido por el usuario. De lo contrario, devuelve NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna indica el nombre del esquema que contiene el tipo de datos definido por el usuario. De lo contrario, devuelve NULL.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna indica el nombre del esquema que contiene el tipo de datos definido por el usuario. De lo contrario, devuelve NULL.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**NOMBRE_DOMINIO**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna es el nombre del tipo de datos definido por el usuario. De lo contrario, devuelve NULL.|  
   
 ## <a name="see-also"></a>Vea también  

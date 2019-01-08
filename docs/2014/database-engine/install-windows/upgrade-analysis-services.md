@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -20,12 +20,12 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88dfe4836cc84b7792639817a01c026f6d3f3283
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018110"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363487"
 ---
 # <a name="upgrade-analysis-services"></a>Actualizar Analysis Services
   Use el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información detallada sobre cómo actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de SharePoint, vea [actualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obtener más información acerca de cómo actualizar un servidor SQL existente de la instancia, vea [actualizar a SQL Server 2014 mediante el Asistente para instalación &#40;instalación&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51018110"
 ## <a name="known-upgrade-issues"></a>Problemas de actualización conocidos  
  Antes de actualizarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], revise lo siguiente:  
   
--   [Notas de la versión de SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [Notas de la versión de SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   Para saber qué [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] características y funcionalidades se han eliminado, en desuso o cambiado vea [compatibilidad con versiones anteriores de Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md).  
   

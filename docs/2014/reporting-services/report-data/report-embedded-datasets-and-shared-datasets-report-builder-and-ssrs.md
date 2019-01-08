@@ -13,12 +13,12 @@ ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cee911569d1b90751e6c553b365a08bbaa3108eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 278cbff64973a76afd82ae7f01e8c81d12f20e5a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138275"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373397"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  
@@ -57,7 +57,7 @@ ms.locfileid: "48138275"
 ##  <a name="Overview"></a> Descripción de los conjuntos de datos y las consultas de informe  
  Un conjunto de datos de informe contiene un comando de consulta que se ejecuta en el origen de datos externo y especifica qué datos recuperar. Para crear el comando de consulta, se utiliza el diseñador de consultas asociado a la extensión de datos para el origen de datos externo. En el diseñador de consultas puede ejecutar el comando de consulta y ver un conjunto de resultados. El conjunto de resultados es un conjunto de filas rectangular que tiene nombres de columna y filas con el mismo número de valores en cada fila. No se admiten datos jerárquicos, también conocidos como *jerarquías desiguales*. Los nombres de columna se guardan en la definición del informe en forma de lista de campos de conjunto de datos.  
   
- Después de agregar conjuntos de datos a un informe, puede arrastrar campos desde las colecciones de campos del panel Datos de informe hasta las tablas, gráficos y otros elementos de informe que utiliza para diseñar el informe. Para obtener más información sobre cómo trabajar con campos, consulte [colección de campos de conjunto de datos &#40;generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Después de agregar conjuntos de datos a un informe, puede arrastrar campos desde las colecciones de campos del panel Datos de informe hasta las tablas, gráficos y otros elementos de informe que utiliza para diseñar el informe. Para obtener más información sobre cómo trabajar con campos, vea [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>Descripción de los datos del conjunto de datos de informe  
  Dependiendo de la extensión de los datos, un conjunto de datos de informe puede estar formado por los siguientes tipos de datos:  
@@ -76,11 +76,11 @@ ms.locfileid: "48138275"
   
 -   Un conjunto de resultados de cualquier proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] registrado y configurado.  
   
--   Datos de un modelo de informe que se ha diseñado para un origen de datos concreto, con entidades, relaciones de entidad y campos predefinidos. Para obtener más información, consulte "**Usar modelos de informe** como orígenes de datos" en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
+-   Datos de un modelo de informe que se ha diseñado para un origen de datos concreto, con entidades, relaciones de entidad y campos predefinidos. Para obtener más información, consulte "**Usar modelos de informe** como orígenes de datos" en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
   
- Cuando el informe se procesa en tiempo de ejecución, el conjunto de resultados real devuelto para una consulta puede tener cero o más filas. También es posible que las columnas definidas en la consulta no estén presentes en el origen de datos. Los valores NULL del origen de datos se asignan a la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] valor `System.DBNull.Value`.  
+ Cuando el informe se procesa en tiempo de ejecución, el conjunto de resultados real devuelto para una consulta puede tener cero o más filas. También es posible que las columnas definidas en la consulta no estén presentes en el origen de datos. Los valores NULL del origen de datos se asignan al valor de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]  `System.DBNull.Value`.  
   
- Para obtener más información acerca de los campos de conjunto de datos, vea [colección de campos de conjunto de datos &#40;generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Para obtener más información sobre los campos del conjunto de datos, vea [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="dataset-query"></a>Consulta de conjunto de datos  
  Al ejecutar en tiempo de diseño una consulta de conjunto de datos en un diseñador de consultas, podrá ver un conjunto de filas del origen de datos con datos de ejemplo. Cuando un usuario ve el informe en tiempo de ejecución, la consulta de conjunto de datos puede generar valores diferentes, ya que los datos en el origen de datos han cambiado. Cada vez que se procesa el informe, pueden aparecer nuevos datos.  
@@ -107,7 +107,7 @@ ms.locfileid: "48138275"
   
 -   Cree un nuevo campo personalizado basado en un campo de base de datos y proporcione un formato personalizado.  
   
- Para obtener más información, consulte [colección de campos de conjunto de datos &#40;generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>Importar consultas existentes para un conjunto de datos  
  Cuando se crea un conjunto de datos, es posible crear una nueva consulta o importar una ya existente de un archivo o de otro informe. Cuando se importa una consulta de otro informe, es posible elegir qué consulta se debe importar en la lista de conjuntos de datos del informe.  
@@ -152,7 +152,7 @@ ms.locfileid: "48138275"
 |Campos|Campos en el comando de consulta<br /><br /> Los campos calculados no forman parte de la definición del conjunto de datos|Se ven los campos, pero no se pueden cambiar<br /><br /> La colección de campos es estática y está basada en la consulta en el momento que agregó el conjunto de datos compartido al informe. Para actualizar, haga clic en **Actualizar campos** en el cuadro de diálogo **Propiedades del conjunto de datos** . La colección de campos actual es cualquier la consulta actual que la definición devuelve.<br /><br /> Agregar campos calculados|  
 |Dataset|Opciones de datos como la distinción entre mayúsculas y minúsculas|Invalidar las opciones de datos en la instancia|  
   
- Para obtener más información sobre cómo crear conjuntos de datos, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) y [Herramientas de Reporting Services](../tools/reporting-services-tools.md) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
+ Para obtener más información sobre cómo crear conjuntos de datos, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) y [Herramientas de Reporting Services](../tools/reporting-services-tools.md) en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
 ##  <a name="SortGroupFilter"></a> Filtrar, ordenar y agrupar los datos de un conjunto de datos  
  Los datos de un conjunto de datos proceden de la ejecución de un comando de consulta en un origen de datos externo. La sintaxis del comando de consulta para una extensión de datos determina si los datos se pueden ordenar o agrupar. Las acciones de ordenación y agrupación tienen lugar en la consulta antes de que los datos se recuperen para un informe. El filtrado tiene lugar después de que se han recuperado los datos para un informe.  
@@ -164,14 +164,14 @@ ms.locfileid: "48138275"
   
  Los filtros forman parte de la definición de un conjunto de datos compartido. Los filtros de conjunto de datos compartido afectan a todos los informes que contienen el conjunto de datos compartido. Después de agregar un conjunto de datos compartido a su informe, o después de agregar un componente con un conjunto de datos compartido dependiente, puede crear más filtros de conjunto de datos. Los filtros que cree solo se usan en su informe, no forman parte de la definición del conjunto de datos compartido del servidor de informes.  
   
- Puede establecer filtros adicionales en una región de datos o un grupo de regiones de datos. También puede utilizar una combinación de parámetros y filtros para que los usuarios puedan elegir los datos que desean ver en un informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Puede establecer filtros adicionales en una región de datos o un grupo de regiones de datos. También puede utilizar una combinación de parámetros y filtros para que los usuarios puedan elegir los datos que desean ver en un informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="sorting-data-in-a-dataset"></a>Ordenar datos en un conjunto de datos  
- En un conjunto de datos, el orden de los datos es el orden en que se recuperan desde el origen de datos externo. Es el mismo orden que se ve al ejecutar la consulta en el diseñador de consultas. Si la sintaxis del comando de consulta admite ordenación, puede editar la consulta para ordenar los datos en el origen, antes de ser devueltos como datos de informe. Por ejemplo, para una consulta de [!INCLUDE[tsql](../../../includes/tsql-md.md)], la instrucción ORDER BY controla el criterio de ordenación.  
+ En un conjunto de datos, el orden de los datos es el orden en que se recuperan desde el origen de datos externo. Es el mismo orden que se ve al ejecutar la consulta en el diseñador de consultas. Si la sintaxis del comando de consulta admite ordenación, puede editar la consulta para ordenar los datos en el origen, antes de ser devueltos como datos de informe. Por ejemplo, para una consulta de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la instrucción ORDER BY controla el criterio de ordenación.  
   
  Para ordenar los datos una vez devueltos al informe, defina expresiones de ordenación en las regiones de datos y los grupos de regiones de datos. Para más información, vea el tema relativo al tipo de región de datos concreto, por ejemplo, [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- También puede utilizar una combinación de parámetros y expresiones de ordenación para que los usuarios puedan elegir el criterio de ordenación para los datos de un informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ También puede utilizar una combinación de parámetros y expresiones de ordenación para que los usuarios puedan elegir el criterio de ordenación para los datos de un informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="grouping-data-in-a-dataset"></a>Agrupar datos de un conjunto de datos  
  Los datos de un grupo de datos no se pueden agrupar. Para agregar los datos de un conjunto de datos, puede editar el comando de consulta para calcular los agregados antes de que los datos se recuperen para un informe. Estos se conocen como *agregados de servidor*. En las expresiones, para identificar estos valores como agregados precalculados, use la función de agregado. Para obtener más información, vea [Función de agregado &#40;Generador de informes y SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md).  
@@ -206,9 +206,9 @@ ms.locfileid: "48138275"
   
 -   Muestre los datos de cada conjunto de datos usando una región de datos independiente. Para más información, vea [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   Puede vincular más de una región de datos a un conjunto de datos y proporcionar varias vistas de los mismos datos. Para obtener más información, consulte [vincular varias regiones de datos al mismo conjunto de datos &#40;generador de informes y SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   Puede vincular más de una región de datos a un conjunto de datos y proporcionar varias vistas de los mismos datos. Para obtener más información, vea [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
--   Puede usar conjuntos de datos para proporcionar una lista desplegable de valores disponibles o valores predeterminados para un parámetro de informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+-   Puede usar conjuntos de datos para proporcionar una lista desplegable de valores disponibles o valores predeterminados para un parámetro de informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 -   Es posible vincular datos relacionados de varios conjuntos de datos usando parámetros con informes o subinformes detallados. Por ejemplo, un informe de ventas puede mostrar los datos de resumen para todas las tiendas, y un vínculo de obtención de detalles puede especificar el identificador de tienda como un parámetro para un informe con una consulta de conjunto de datos que recupera las ventas individuales para la tienda especificada. Para más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) y [Subinformes &#40;Generador de informes y SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md).  
   
@@ -218,11 +218,11 @@ ms.locfileid: "48138275"
  Durante el procesamiento del informe, cuando se ejecuta la consulta para un conjunto de datos, es posible que el conjunto de resultados no contenga ninguna fila. En el informe representado, una región de datos vinculada a un conjunto de datos vacío aparece como una región de datos vacía. Puede especificar el texto que se debe mostrar en el informe representado en lugar de la región de datos vacía. También puede especificar un mensaje para los subinformes cuando las consultas para todos los conjuntos de datos no generan ningún dato en tiempo de ejecución. Para obtener más información, vea [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Configurar opciones de conjunto de datos  
- En el caso de orígenes de datos que admiten datos internacionales, podría tener que ajustar las propiedades de un conjunto de datos que afectan al criterio de ordenación, las propiedades de caracteres internacionales y la distinción entre mayúsculas y minúsculas. Algunas de estas propiedades son mayúsculas y minúsculas, el tipo de kana, el ancho, el acento y la intercalación. Para obtener más información, vea "Consideraciones internacionales para bases de datos y aplicaciones con motor de base de datos" y "Trabajar con intercalaciones" en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Para más información sobre cómo establecer estas propiedades, vea [Propiedades del conjunto de datos (cuadro de diálogo), Opciones &#40;Generador de informes&#41;](dataset-properties-dialog-box-options-report-builder.md).  
+ En el caso de orígenes de datos que admiten datos internacionales, podría tener que ajustar las propiedades de un conjunto de datos que afectan al criterio de ordenación, las propiedades de caracteres internacionales y la distinción entre mayúsculas y minúsculas. Algunas de estas propiedades son mayúsculas y minúsculas, el tipo de kana, el ancho, el acento y la intercalación. Para obtener más información, vea "Consideraciones internacionales para bases de datos y aplicaciones con motor de base de datos" y "Trabajar con intercalaciones" en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335). Para más información sobre cómo establecer estas propiedades, vea [Propiedades del conjunto de datos (cuadro de diálogo), Opciones &#40;Generador de informes&#41;](dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
   
   

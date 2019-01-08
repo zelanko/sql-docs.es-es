@@ -19,15 +19,15 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369737"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
-  Un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede modificar las propiedades de configuración predeterminadas del servidor para una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cada instancia tiene sus propias propiedades de configuración que se pueden establecer independientemente de las demás instancias en el mismo servidor.  
+  Un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede modificar las propiedades de configuración predeterminadas del servidor para una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instancia tiene sus propias propiedades de configuración que se pueden establecer independientemente de las demás instancias en el mismo servidor.  
   
  Para establecer propiedades de servidor, utilice SQL Server Management Studio o modifique el archivo msmdsrv.ini de una instancia específica.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48201865"
   
      La modificación de las propiedades de servidor solo se admite en los servidores en modo tabular y modo multidimensional. Si ha instalado [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilice siempre los valores predeterminados, a menos que un ingeniero de soporte técnico de Microsoft indique lo contrario.  
   
-     Para obtener información sobre cómo resolver problemas de funcionamiento o de rendimiento mediante las propiedades de servidor, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+     Para obtener información sobre cómo resolver problemas de funcionamiento o de rendimiento mediante las propiedades de servidor, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     También puede leer sobre las propiedades del servidor (que en gran parte no se han cambiado en las últimas versiones) en estas notas del producto de Microsoft, [SQL Server 2005 Analysis Services (SSAS) Server Properties (Propiedades del servidor SQL Server 2005 Analysis Services (SSAS))](http://go.microsoft.com/fwlink/?LinkID=199102).  
+     También puede leer sobre las propiedades del servidor (que en gran parte no se han cambiado en las últimas versiones) en estas notas del producto de Microsoft, [SQL Server 2005 Analysis Services (SSAS) Server Properties (Propiedades del servidor SQL Server 2005 Analysis Services (SSAS))](https://go.microsoft.com/fwlink/?LinkID=199102).  
   
     > [!NOTE]  
     >  Algunas propiedades se pueden establecer solo en el archivo msmdrsrv.ini. Si la propiedad que desea establecer no está visible incluso después de mostrar las propiedades avanzadas, es posible que tenga que modificar el archivo msmdsrv.ini directamente.  
@@ -76,7 +76,7 @@ ms.locfileid: "48201865"
 ##  <a name="bkmk_ref"></a> Referencia de las propiedades de servidor  
  Las propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son importantes para ajustar bien el sistema. Por ejemplo, para hacer que el comportamiento del registro de consultas sea coherente con los requisitos, puede establecer las propiedades relevantes.  
   
- Los siguientes temas explican los diversos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propiedades de configuración:  
+ En los siguientes temas se explican las diversas propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

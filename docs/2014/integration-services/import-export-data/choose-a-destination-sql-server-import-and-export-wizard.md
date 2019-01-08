@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,19 +12,19 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117012"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360898"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Elegir un destino (Asistente para importación y exportación de SQL Server)
   Use la **elegir un destino** página para especificar el destino de los datos que se van a copiar.  
   
- Para más información acerca de este asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
   
- El propósito de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard consiste en copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ La finalidad del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Opciones estáticas  
  **Destino**  
@@ -50,7 +49,7 @@ ms.locfileid: "48117012"
  Especifique si el paquete debe utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
  **Nombre de usuario.**  
- Especifique un nombre de usuario para la conexión de base de datos cuando se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.  
+ Especifique un nombre de usuario para la conexión de la base de datos cuando utilice la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Contraseña**  
  Proporcione la contraseña para la conexión de la base de datos cuando use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -110,7 +109,7 @@ ms.locfileid: "48117012"
  Seleccione la versión de Excel que utiliza el libro de destino.  
   
 > [!NOTE]  
->  Al exportar datos a un [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] destino, el asistente usa el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente de destino de Excel. Para obtener información sobre algunas consideraciones de uso y problemas conocidos, vea [destino de Excel](../data-flow/excel-destination.md).  
+>  Al exportar datos a un destino de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , el asistente utiliza el componente Destino de Excel de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener información sobre algunas consideraciones de uso y problemas conocidos, vea [destino de Excel](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Destino = Microsoft Access  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48117012"
  Especifique una contraseña de usuario para la conexión de base de datos si hay un archivo de información de grupo de trabajo asociado a la base de datos. Sin embargo, si la base de datos está protegida con una misma contraseña para todos los usuarios, debe proporcionar este valor en el cuadro de diálogo **Propiedades del vínculo de datos** , al que se obtiene acceso desde el botón **Avanzadas** .  
   
  **Avanzadas**  
- Especifique las opciones avanzadas, como la contraseña de la base de datos o un archivo de información del grupo de trabajo no predeterminado, mediante el cuadro de diálogo **Propiedades de vínculo de datos**. Para obtener más información sobre las propiedades de proveedor OLE DB, busque en la sección sobre acceso a datos de [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Especifique las opciones avanzadas, como la contraseña de la base de datos o un archivo de información del grupo de trabajo no predeterminado, mediante el cuadro de diálogo **Propiedades de vínculo de datos**. Para obtener más información sobre las propiedades de proveedor OLE DB, busque en la sección sobre acceso a datos de [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

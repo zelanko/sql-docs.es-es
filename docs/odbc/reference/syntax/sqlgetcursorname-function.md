@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855083"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591819"
 ---
 # <a name="sqlgetcursorname-function"></a>Función SQLGetCursorName
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLGetCursorName** devuelve el nombre del cursor asociado con una instrucción especificada.  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|Controlador no admite esta función|(DM) el controlador asociado con el *StatementHandle* no admite la función.|  
   
 ## <a name="comments"></a>Comentarios  
- Los nombres de cursor solo se usan en actualización posicionada y eliminar instrucciones (por ejemplo, **actualizar** *nombre-tabla* ... **WHERE CURRENT OF** *nombre de cursor*). Para obtener más información, consulte [coloca actualizar y eliminar instrucciones](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si la aplicación no llama a **SQLSetCursorName** para definir un nombre de cursor, el controlador generará un nombre. Este nombre comienza con las letras SQL_CUR.  
+ Los nombres de cursor solo se usan en actualización posicionada y eliminar instrucciones (por ejemplo, **actualizar** _nombre-tabla_ ... **WHERE CURRENT OF** _nombre de cursor_). Para obtener más información, consulte [coloca actualizar y eliminar instrucciones](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si la aplicación no llama a **SQLSetCursorName** para definir un nombre de cursor, el controlador generará un nombre. Este nombre comienza con las letras SQL_CUR.  
   
-> [!NOTE]  
+> [!NOTE]
 >  En ODBC 2 *.x*, cuando se ha producido ningún cursor abierto y se haya establecido mediante una llamada a ningún nombre **SQLSetCursorName**, una llamada a **SQLGetCursorName** devuelve SQLSTATE HY015 (ningún nombre de cursor disponible). En ODBC 3 *.x*, esto ya no es true; independientemente de cuándo **SQLGetCursorName** es llama, el controlador devuelve el nombre del cursor.  
   
  **SQLGetCursorName** devuelve el nombre de un cursor o no el nombre se creó explícitamente o implícitamente. Un nombre de cursor se genera de manera implícita si **SQLSetCursorName** no se llama. **SQLSetCursorName** se puede llamar para cambiar el nombre de un cursor en una instrucción siempre y cuando el cursor está en un estado asignado o preparado.  

@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140355"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368465"
 ---
 # <a name="linked-measure-groups"></a>Grupos de medida vinculados
   Un grupo de medida vinculado está basado en otro grupo de medida de un cubo diferente dentro de la misma base de datos o en una base de datos de Analysis Services diferente. Puede usar un grupo de medida vinculada si desea reutilizar un conjunto de medidas, y los valores de datos correspondientes, en varios cubos.  
@@ -47,7 +47,7 @@ ms.locfileid: "48140355"
   
 -   No se admite la reescritura en grupos de medida vinculados.  
   
--   Los grupos de medida vinculada no se pueden usar en diversas relaciones varios a varios, especialmente cuando estas relaciones están en distintos cubos. Si lo hace, puede producir agregaciones ambiguas. Para más información, vea [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Cantidades incorrectas para medidas vinculadas en cubos que contienen relaciones varios a varios).  
+-   Los grupos de medida vinculada no se pueden usar en diversas relaciones varios a varios, especialmente cuando estas relaciones están en distintos cubos. Si lo hace, puede producir agregaciones ambiguas. Para más información, vea [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Cantidades incorrectas para medidas vinculadas en cubos que contienen relaciones varios a varios).  
   
  Las medidas contenidas en un grupo de medida vinculado solamente se pueden organizar directamente en dimensiones vinculadas recuperadas de la misma base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No obstante, puede usar miembros calculados para relacionar la información de grupos de medida vinculados con las otras dimensiones no vinculadas del cubo. También puede usar una relación indirecta, como una referencia o una relación de varios a varios, para relacionar dimensiones no vinculadas con un grupo de medida vinculado.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48140355"
 ## <a name="secure-a-linked-measure"></a>Proteger una medida vinculada  
  Una vez definido este vínculo, el acceso a las medidas de un grupo de medida vinculado se administra de la misma manera que el acceso a otros grupos de medida. Un objeto vinculado aparece junto con sus homólogos no vinculados en el Diseñador de roles. Para más información sobre cómo administrar la seguridad de un grupo de medida, vea [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Para definir o usar un grupo de medida vinculado, el Windows cuenta de servicio de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia debe pertenecer a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rol de base de datos que tiene `ReadDefinition` y `Read` derechos en el origen de acceso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia a la cubo y grupo de medida de origen, o debe pertenecer a la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] función Administradores para el origen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia.  
+ Para definir o usar un grupo de medida vinculado, la cuenta de servicio de Windows para la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] debe pertenecer a un rol de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tenga derechos de acceso `ReadDefinition` y `Read` en la instancia de origen de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al cubo y el grupo de medida de origen, o bien, pertenecer al rol de administradores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para la instancia de origen de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Definir dimensiones vinculadas](define-linked-dimensions.md)  

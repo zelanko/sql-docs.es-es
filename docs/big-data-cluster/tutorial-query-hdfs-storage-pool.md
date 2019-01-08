@@ -1,22 +1,24 @@
 ---
-title: Cómo consulta HDFS en un clúster de macrodatos de SQL Server | Microsoft Docs
+title: Consultar datos HDFS en el bloque de almacenamiento
+titleSuffix: SQL Server 2019 big data clusters
 description: Este tutorial muestra cómo consultar datos HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Crear una tabla externa a través de los datos en el grupo de almacenamiento y, a continuación, ejecutar una consulta.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644248"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432178"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta de HDFS en un clúster de macrodatos de SQL Server
 
-Este tutorial muestra cómo consultar datos HDFS en un clúster de macrodatos de SQL Server 2019.
+Este tutorial muestra cómo consultar datos HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 
 En este tutorial, obtendrá información sobre cómo:
 
@@ -27,19 +29,19 @@ En este tutorial, obtendrá información sobre cómo:
 > [!TIP]
 > Si lo prefiere, puede descargar y ejecutar un script para los comandos en este tutorial. Para obtener instrucciones, consulte el [ejemplos de datos de virtualización](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) en GitHub.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a id="prereqs"></a> Requisitos previos
 
-- [Implementar un clúster de macrodatos en Kubernetes](deployment-guidance.md).
-- [Instalar Data Studio de Azure y la extensión de SQL Server 2019](deploy-big-data-tools.md).
-- [Cargar datos de ejemplo en el clúster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Extensión de SQL Server 2019**
+- [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>Crear una tabla HDFS externa
 
 El grupo de almacenamiento contiene datos de la secuencia de clics de web en un archivo CSV que se almacenan en HDFS. Use los pasos siguientes para definir una tabla externa que puede tener acceso a los datos en ese archivo.
 
-1. En Azure Data Studio, conéctese a la instancia principal de SQL Server del clúster de macrodatos. Para obtener más información, consulte [conectar a la instancia principal de SQL Server](deploy-big-data-tools.md#master).
+1. En Azure Data Studio, conéctese a la instancia principal de SQL Server del clúster de macrodatos. Para obtener más información, consulte [conectar a la instancia principal de SQL Server](connect-to-big-data-cluster.md#master).
 
 2. Haga doble clic en la conexión en el **servidores** ventana para mostrar el panel del servidor para la instancia principal de SQL Server. Seleccione **nueva consulta**.
 

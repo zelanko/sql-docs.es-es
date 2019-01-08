@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -21,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377627"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
   Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas gráficas de diseño proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
@@ -49,11 +48,11 @@ ms.locfileid: "48058885"
  Un paquete suele incluir al menos un administrador de conexiones. Un administrador de conexiones es un vínculo entre un paquete y un origen de datos que define la cadena de conexión para acceder a los datos que las tareas, transformaciones y controladores de eventos del paquete usan. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye topos de conexiones para orígenes de datos tales como archivos de texto y XML, bases de datos relacionales y proyectos y bases de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="package-templates"></a>Plantillas de paquetes  
- Los paquetes se utilizan con frecuencia como plantillas para generar paquetes que comparten una funcionalidad básica. Puede generar el paquete básico y luego copiarlo, o puede designar que el paquete sea una plantilla. Por ejemplo, un paquete que descarga y copia archivos, y luego extrae los datos, puede incluir las tareas FTP y Sistema de archivos en un bucle Foreach que enumera archivos de una carpeta. También podría incluir administradores de conexión de archivos planos para el acceso a los datos, y orígenes de archivos planos para la extracción de los datos. El destino de los datos varía y se agrega a cada nuevo paquete una vez copiado del paquete básico. También puede crear paquetes y luego usarlos como plantillas para los nuevos paquetes que agregue a un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para más información, consulte [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
+ Los paquetes se utilizan con frecuencia como plantillas para generar paquetes que comparten una funcionalidad básica. Puede generar el paquete básico y luego copiarlo, o puede designar que el paquete sea una plantilla. Por ejemplo, un paquete que descarga y copia archivos, y luego extrae los datos, puede incluir las tareas FTP y Sistema de archivos en un bucle Foreach que enumera archivos de una carpeta. También podría incluir administradores de conexión de archivos planos para el acceso a los datos, y orígenes de archivos planos para la extracción de los datos. El destino de los datos varía y se agrega a cada nuevo paquete una vez copiado del paquete básico. También puede crear paquetes y luego usarlos como plantillas para los nuevos paquetes que agregue a un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información, vea [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
- Cuando se crea un paquete, ya sea mediante programación o mediante el Diseñador SSIS, se agrega un GUID a su `ID` propiedad y un nombre a su `Name` propiedad. Si crea un nuevo paquete mediante la copia de un paquete existente o mediante una plantilla de paquetes, también se copian el nombre y GUID del paquete existente. Esto puede ser un problema si se está realizando el registro, dado que el nombre y GUID del paquete se escriben en los registros para identificar el paquete al que pertenece la información registrada. Por lo tanto, debe actualizar el nombre y GUID de los nuevos paquetes para diferenciarlos entre sí y del paquete del que se copiaron en los datos de registro.  
+ Cuando se crea un paquete por primera vez, ya sea mediante programación o mediante el Diseñador SSIS, se agrega un GUID a su propiedad `ID` y un nombre a su propiedad `Name`. Si crea un nuevo paquete mediante la copia de un paquete existente o mediante una plantilla de paquetes, también se copian el nombre y GUID del paquete existente. Esto puede ser un problema si se está realizando el registro, dado que el nombre y GUID del paquete se escriben en los registros para identificar el paquete al que pertenece la información registrada. Por lo tanto, debe actualizar el nombre y GUID de los nuevos paquetes para diferenciarlos entre sí y del paquete del que se copiaron en los datos de registro.  
   
- Para cambiar el GUID del paquete, vuelva a generar un GUID en el `ID` propiedad en la ventana Propiedades en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para cambiar el nombre del paquete, puede actualizar el valor de la `Name` propiedad en la ventana Propiedades. También puede utilizar el símbolo del sistema **dtutil** o actualizar el nombre y el GUID mediante programación. Para obtener más información, vea [Establecer las propiedades de paquetes](set-package-properties.md) y [dtutil (utilidad)](dtutil-utility.md).  
+ Para cambiar el GUID del paquete, debe volver a generar un GUID en la propiedad `ID` y en la ventana Propiedades de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para cambiar el nombre del paquete, puede actualizar el valor de la propiedad `Name` en la ventana Propiedades. También puede utilizar el símbolo del sistema **dtutil** o actualizar el nombre y el GUID mediante programación. Para obtener más información, vea [Establecer las propiedades de paquetes](set-package-properties.md) y [dtutil (utilidad)](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Objetos que extienden la funcionalidad de un paquete  
  Los paquetes pueden incluir objetos adicionales que proporcionan características avanzadas o extienden la funcionalidad existente, como controladores de eventos, configuraciones, registro y variables.  
@@ -64,7 +63,7 @@ ms.locfileid: "48058885"
 ### <a name="configurations"></a>Configuraciones  
  Una configuración es un conjunto de pares propiedad-valor que define las propiedades del paquete y sus tareas, contenedores, variables, conexiones y controladores de eventos cuando se ejecuta el paquete. El uso de configuraciones permite actualizar propiedades sin modificar el paquete. Cuando se ejecuta el paquete, se carga la información de configuración y se actualizan los valores de las propiedades. Por ejemplo, una configuración puede actualizar la cadena de conexión de la conexión.  
   
- La configuración se guarda y se implementa con el paquete cuando se instala el paquete en otro equipo. Los valores de la configuración pueden actualizarse cuando se instala el paquete para ofrecer compatibilidad con un entorno diferente. Para más información, vea [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md).  
+ La configuración se guarda y se implementa con el paquete cuando se instala el paquete en otro equipo. Los valores de la configuración pueden actualizarse cuando se instala el paquete para ofrecer compatibilidad con un entorno diferente. Para obtener más información, vea [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md).  
   
 ### <a name="logging-and-log-providers"></a>Registro y proveedores de registro  
  Un registro es un conjunto de datos sobre el paquete que se recopilan cuando se ejecuta el paquete. Por ejemplo, un registro puede proporcionar la hora de inicio y la hora de finalización de la ejecución de un paquete. Un proveedor de registro define el tipo de destino y el formato que el paquete y sus contenedores y tareas pueden utilizar para registrar información de tiempo de ejecución. Los registros están asociados con un paquete, pero las tareas y los contenedores del paquete pueden registrar información en cualquier registro de paquete. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye diversos proveedores de registro integrados para el registro. Por ejemplo, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye proveedores de registro para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y archivos de texto. También puede crear proveedores de registro personalizados y usarlos para el registro. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md).  
@@ -72,7 +71,7 @@ ms.locfileid: "48058885"
 ### <a name="variables"></a>Variables  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite variables del sistema y variables definidas por el usuario. Las variables del sistema proporcionan información útil acerca de objetos de paquete en tiempo de ejecución y las variables definidas por el usuario admiten escenarios personalizados en paquetes. Ambos tipos de variables pueden usarse en expresiones, scripts y configuraciones.  
   
- Las variables de nivel de paquete incluyen las variables del sistema predefinidas disponibles para un paquete y las variables definidas por el usuario con el ámbito del paquete. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Las variables de nivel de paquete incluyen las variables del sistema predefinidas disponibles para un paquete y las variables definidas por el usuario con el ámbito del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ### <a name="parameters"></a>Parámetros  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permiten asignar valores a propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo. Para obtener más información, vea [Paquete de Integration Services &#40;SSIS&#41; y los parámetros del proyecto](integration-services-ssis-package-and-project-parameters.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "48058885"
  Se puede configurar el objeto de paquete para que admita características como reiniciar el paquete en puntos de comprobación, firmar el paquete con un certificado digital, establecer el nivel de protección del paquete y garantizar la integridad de los datos mediante transacciones.  
   
 ### <a name="restarting-packages"></a>Reiniciar paquetes  
- El paquete incluye propiedades de punto de comprobación que puede utilizar para reiniciarlo si se produce un error en una o más de sus tareas. Por ejemplo, si un paquete tiene dos tareas Flujo de datos que actualizan dos tablas distintas y la segunda tarea no se ejecuta correctamente, el paquete puede volver a ejecutarse sin repetir la primera tarea Flujo de datos. Si reinicia un paquete, ahorrará tiempo en el caso de los paquetes de ejecución prolongada. Al reiniciar, puede iniciar el paquete a partir de la tarea que no se ejecutó correctamente en lugar de tener que volver a ejecutar el paquete completo. Para obtener más información, vea [Reiniciar paquetes de usando puntos de comprobación](packages/restart-packages-by-using-checkpoints.md).  
+ El paquete incluye propiedades de punto de comprobación que puede utilizar para reiniciarlo si se produce un error en una o más de sus tareas. Por ejemplo, si un paquete tiene dos tareas Flujo de datos que actualizan dos tablas distintas y la segunda tarea no se ejecuta correctamente, el paquete puede volver a ejecutarse sin repetir la primera tarea Flujo de datos. Si reinicia un paquete, ahorrará tiempo en el caso de los paquetes de ejecución prolongada. Al reiniciar, puede iniciar el paquete a partir de la tarea que no se ejecutó correctamente en lugar de tener que volver a ejecutar el paquete completo. Para obtener más información, vea [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="securing-packages"></a>Proteger paquetes  
  Un paquete puede firmarse con una firma digital y cifrarse con una contraseña o una clave de usuario. Una firma digital autentica el origen del paquete. Sin embargo, también se debe configurar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para que compruebe la firma digital al cargar el paquete. Para obtener más información, vea [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md) y [Control del acceso a la información confidencial en paquetes](security/access-control-for-sensitive-data-in-packages.md).  
@@ -94,8 +93,8 @@ ms.locfileid: "48058885"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|`PackageStart`|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
-|`PackageEnd`|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|`PackageStart`|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|`PackageEnd`|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
 |`Diagnostic`|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.|  
   
 ## <a name="configuration-of-packages"></a>Configuración de paquetes  
@@ -116,8 +115,8 @@ ms.locfileid: "48058885"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Implementación de SQL Server Integration Services con Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementación de SQL Server Integration Services con Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [Cómo: configurar el paquete SQL Server Integration Services para Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
+-   [Cómo: Configurar el paquete SQL Server Integration Services para Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

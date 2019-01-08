@@ -11,12 +11,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065665"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367777"
 ---
 # <a name="check-files-in-use"></a>Comprobar archivos en uso
   Para no tener que reiniciar Windows después de instalar las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use la página Comprobar archivos en uso con el fin de identificar los procesos que están bloqueando los archivos requeridos por el programa de instalación de la actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "48065665"
   
  Para eliminar el requisito de reinicio del equipo tras la instalación, el programa de instalación muestra una lista de los procesos que están bloqueando los archivos. Detenga o finalice los procesos y las aplicaciones de la lista. A continuación, haga clic en **Actualizar comprobación** para volver a ejecutar la comprobación. Haga clic en **Detener comprobación** para finalizar una comprobación que se esté ejecutando. Si no se encuentra ningún archivo bloqueado, la tabla está vacía. Cuando todos los procesos bloqueados se hayan cerrado o detenido, haga clic en **Siguiente** para continuar.  
   
- El programa de instalación registra la información en los archivos de registro. Para obtener más información sobre cómo ver los archivos de registro, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) y [Cómo leer un archivo de registro de instalación de SQL Server](http://go.microsoft.com/fwlink/?LinkID=134490).  
+ El programa de instalación registra la información en los archivos de registro. Para obtener más información sobre cómo ver los archivos de registro, consulte [vista y lectura de SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) y [Cómo: Leer un archivo de registro de instalación SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
   
  En el archivo de registro se incluye la información siguiente:  
   

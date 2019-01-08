@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676354"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589489"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "51676354"
 |**success_count**|**int**|Número de conexiones correctas.|  
 |**total_failure_count**|**int**|Número total de conexiones con error. Esta es la suma de **connection_failure_count**, **terminated_connection_count**, y **throttled_connection_count**y no incluye los eventos de interbloqueo.|  
 |**connection_failure_count**|**int**|Número total de errores de inicio de sesión.|  
-|**terminated_connection_count**|**int**|***Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexiones terminadas.|  
-|**throttled_connection_count**|**int**|***Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número máximo de conexiones aceleradas.|  
+|**terminated_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexiones terminadas.|  
+|**throttled_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676354"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>Start_time y end_time de intervalo  
- Un evento se incluye en un intervalo de agregación cuando se produce el evento *en* o *después *** start_time** y *antes *** end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
+ Un evento se incluye en un intervalo de agregación cuando se produce el evento *en* o _después_**start_time** y _antes_  **end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
   
 ```  
   

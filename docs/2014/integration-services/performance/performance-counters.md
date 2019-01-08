@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
@@ -17,12 +16,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8edbd94ef143eeb4f8b029f8f8d567cc3c571a19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70694b2814ab23ad13e29a1348e7bfb73d884fbc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140745"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367677"
 ---
 # <a name="performance-counters"></a>Performance Counters
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala un conjunto de contadores de rendimiento que pueden usarse para supervisar el rendimiento del motor de flujo de datos. Por ejemplo, puede observar el contador "Búferes puestos en cola" para determinar si se están escribiendo búferes de datos en el disco temporalmente mientras se ejecuta un paquete. Este intercambio reduce el rendimiento e indica que el equipo no tiene memoria suficiente.  
@@ -72,13 +71,13 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Herramienta, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146626)(Visualización del rendimiento de SSIS para Business Intelligence Development Studio (proyecto CodePlex)), en codeplex.com.  
+-   Herramienta, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626) (Visualización del rendimiento de SSIS para Business Intelligence Development Studio (proyecto CodePlex)), en codeplex.com.  
   
--   Vídeo, [Medir y conocer el rendimiento de los paquetes SSIS en la empresa (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=150497), en msdn.microsoft.com.  
+-   Vídeo, [Medir y conocer el rendimiento de los paquetes SSIS en la empresa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497), en msdn.microsoft.com.  
   
--   Artículo de soporte técnico, [El contador de rendimiento de SSIS ya no está disponible en el monitor de rendimiento después de actualizar a Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319), en support.microsoft.com.  
+-   Artículo de soporte técnico, [El contador de rendimiento de SSIS ya no está disponible en el monitor de rendimiento después de actualizar a Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), en support.microsoft.com.  
   
 ## <a name="see-also"></a>Vea también  
- [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  
+ [Ejecución de proyectos y paquetes](../packages/run-integration-services-ssis-packages.md)  
   
   

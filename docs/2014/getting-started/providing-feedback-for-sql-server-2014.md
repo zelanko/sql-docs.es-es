@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109910"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376747"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Comentarios sobre SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] agradece que dedique parte de su tiempo a ayudarnos a mejorar nuestros productos y documentación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Puede transmitirnos sus sugerencias e informes de errores sobre las características e interfaz de usuario del producto, presentarnos sus comentarios acerca de la documentación y, si lo desea, enviarnos de manera automática sus informes de errores y datos de uso a [!INCLUDE[msCoName](../includes/msconame-md.md)] para su estudio. En el presente documento se describen las tres opciones para transmitirnos sus comentarios.  
@@ -37,7 +37,7 @@ ms.locfileid: "48109910"
   
  Puede encontrar la página de comentarios [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de muchas maneras.  
   
--   Vaya a la [página web](http://go.microsoft.com/fwlink/?linkid=34178) de comentarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Vaya a la [página web](https://go.microsoft.com/fwlink/?linkid=34178) de comentarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
   
 -   En la barra de herramientas Ayuda de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en el botón **Enviar comentarios** o seleccione el comando **Comunidad/Enviar comentarios**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109910"
   
 -   Obtenga acceso a la ayuda desde la utilidad.  
   
--   Active la casilla **Ayuda** en la pestaña **Barras de herramientas** del comando **Herramientas/Personalizar…** .  
+-   Seleccione el **ayuda** casilla de verificación en la **las barras de herramientas** pestaña de la **herramientas/Personalizar...**  comando.  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Informes automáticos de errores y usos  
  Puede habilitar determinadas características para notificar errores de manera automática y enviar información acerca de cómo utiliza el software y los servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../includes/msconame-md.md)] utiliza esta información para mejorar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toda los datos se consideran información confidencial.  

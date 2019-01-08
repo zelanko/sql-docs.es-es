@@ -13,15 +13,15 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8daff4753eb5921ee80eef8f44de96487ea86a15
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018200"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374857"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Crear, construir y consultar instancias de Geometry
-  El tipo de datos espacial plano `geometry` representa los datos en un sistema de coordenadas euclidiano (plano). Implementan este tipo como un tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Common Language Runtime (CLR).  
+  El tipo de datos espacial plano `geometry` representa los datos en un sistema de coordenadas euclidiano (plano). Implementan este tipo como un tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Common Language Runtime (CLR).  
   
  El tipo `geometry` está predefinido y está disponible en cada base de datos. Puede crear columnas de tabla de tipo `geometry` y operar con los datos `geometry` de la misma manera que con los demás tipos CLR.  
   
@@ -29,11 +29,11 @@ ms.locfileid: "51018200"
   
  Para obtener más información acerca de las especificaciones de OGC, vea lo siguiente:  
   
--   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [Especificaciones de OGC; Acceso a características simples, Parte 2 - Opciones de SQL](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [Especificaciones de OGC, acceso a características simples, parte 2: opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto del estándar GML 3.1 existente que se define en el siguiente esquema: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto del estándar GML 3.1 existente que se define en el siguiente esquema: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959).  
   
 ##  <a name="creating"></a> Crear o construir una instancia de geometry  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a23e9885a2d5bd49d074dc72699601eb08a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850563"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588939"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +43,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicación***'**  
+ [  **@publication =** ] **'**_publicación_**'**  
  Es el nombre de la publicación asociada. *publicación* es **sysname**, su valor predeterminado es **%**, que devuelve información de todas las suscripciones para este servidor.  
   
- [  **@article=** ] **'***artículo***'**  
+ [  **@article=** ] **'**_artículo_**'**  
  Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es **%**, que devuelve información de todas las suscripciones para las publicaciones y suscriptores seleccionados. Si **todas**, se devuelve una sola entrada por cada suscripción completa en una publicación.  
   
- [  **@subscriber=** ] **'***suscriptor***'**  
+ [  **@subscriber=** ] **'**_suscriptor_**'**  
  Es el nombre del suscriptor acerca del cual se obtendrá la información de suscripción. *suscriptor* es **sysname**, su valor predeterminado es **%**, que devuelve información de todas las suscripciones para las publicaciones y artículos seleccionados.  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  Es el nombre de la base de datos de destino. *destination_db* es **sysname**, su valor predeterminado es **%**.  
   
- [  **@found=** ] **'***encuentra***'** salida  
+ [  **@found=** ] **'**_encuentra_**'** salida  
  Es una marca para indicar que se devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es 23456.  
   
  **1** indica que se encuentra la publicación.  
   
  **0** indica que no se encuentra la publicación.  
   
- [ **@publisher**=] **'***publisher***'**  
+ [ **@publisher**=] **'**_publisher_**'**  
  Es el nombre del publicador. *publicador* es **sysname**y el valor predeterminado es el nombre del servidor actual.  
   
 > [!NOTE]  
@@ -91,9 +90,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Ubicación del paquete DTS, si se asigna uno a la suscripción. Si hay un paquete, un valor de **0** especifica la ubicación del paquete en el **distribuidor**. Un valor de **1** especifica la **suscriptor**.|  
 |**subscriber_security_mode**|**smallint**|Es el modo de seguridad en el suscriptor, donde **1** significa autenticación de Windows y **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**subscriber_login**|**sysname**|Es el nombre de inicio de sesión del suscriptor.|  
-|**subscriber_password**||La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara mediante una "**\*\*\*\*\*\***" cadena.|  
+|**subscriber_password**||La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara mediante una "**&#42;&#42;&#42;&#42;&#42;&#42;**" cadena.|  
 |**job_login**|**sysname**|Nombre de la cuenta de Windows en la que se ejecuta el Agente de distribución.|  
-|**job_password**||La contraseña real del trabajo no se devuelve nunca. El resultado se enmascara mediante una "**\*\*\*\*\*\***" cadena.|  
+|**job_password**||La contraseña real del trabajo no se devuelve nunca. El resultado se enmascara mediante una "**&#42;&#42;&#42;&#42;&#42;&#42;**" cadena.|  
 |**distrib_agent_name**|**Nvarchar (100)**|Nombre del trabajo del agente que sincroniza la suscripción.|  
 |**propiedad subscriber_type**|**tinyint**|Tipo de suscriptor, que puede ser uno de los siguientes:<br /><br /> **0** = suscriptor de SQL Server<br /><br /> **1** = servidor de origen de datos ODBC<br /><br /> **2** = base de datos Microsoft JET (desusado)<br /><br /> **3** = proveedor OLE DB|  
 |**subscriber_provider**|**sysname**|Identificador de programación único (PROGID) mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de SQL Server.|  

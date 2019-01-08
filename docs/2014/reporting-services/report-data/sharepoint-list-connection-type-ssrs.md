@@ -11,12 +11,12 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358247"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
   Para incluir los datos de una lista de Microsoft SharePoint en el informe, debe agregar o crear un conjunto de datos basado en un origen de datos de informe de tipo de lista de Microsoft SharePoint. Este es un tipo de origen de datos integrado que se basa en la extensión de datos de lista de SharePoint de Microsoft SQL Server Reporting Services. Utilice este tipo de origen de datos para conectarse a, y recuperar datos de lista de, los sitios de [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 y [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -28,7 +28,7 @@ ms.locfileid: "48116357"
   
  El diseñador de consultas muestra automáticamente las listas de SharePoint para las que el usuario tiene los permisos necesarios para obtener acceso.  
   
- Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes. Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos. Los tipos de credenciales que se pueden utilizar con esta extensión de datos dependen de la configuración de la tecnología de SharePoint para la lista de SharePoint que se esté utilizando como origen de datos.  
@@ -42,18 +42,18 @@ ms.locfileid: "48116357"
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|<sup>3</sup> autenticación mediante formularios|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, pedir, ninguna (con credenciales de Windows<sup>1</sup>)|Sí|no|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|Sí|No|  
 |Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<sup>2</sup>|  
-||Almacenada, pedir, ninguna (con credenciales de Windows<sup>1</sup>)|Sí|No<sup>2</sup>|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|Sí|No<sup>2</sup>|  
   
  **tabla 2**  
   
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|<sup>3</sup> autenticación mediante formularios|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, pedir, ninguna (con credenciales de Windows<sup>1</sup>)|no|no|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|No|No|  
 |Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<sup>2</sup>|  
-||Almacenada, pedir, ninguna (con credenciales de Windows<sup>1</sup>)|no|No<sup>2</sup>|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|No|No<sup>2</sup>|  
   
  <sup>1</sup> almacenadas y símbolo del sistema con credenciales que no son Windows no se admite.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116357"
  **No se necesitan credenciales (No usar credenciales):**  
  Para usar esta opción, la cuenta de ejecución desatendida debe estar configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md), y [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116357"
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
   

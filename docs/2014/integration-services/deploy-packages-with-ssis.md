@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial SSIS: Implementar paquetes | Microsoft Docs'
+title: 'Tutorial de SSIS: Implementación de paquetes | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
@@ -21,12 +20,12 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49aff131d55dbc38511fdae0dc930e161904a985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55b593bc172174002074de759f45b9b5f7d8243
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188975"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368257"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Tutorial de SSIS: Implementar paquetes
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona herramientas que permiten implementar paquetes en otro equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.  
@@ -47,7 +46,7 @@ ms.locfileid: "48188975"
  La mejor forma de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usándolas. Este tutorial le guía por los pasos para crear un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, agregar los paquetes y otros archivos necesarios al proyecto. Después de completar el proyecto, creará un paquete de implementación, copiará el paquete al equipo de destino e instalará los paquetes en él.  
   
 ## <a name="requirements"></a>Requisitos  
- Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor básica [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceptos que utilizará en este tutorial, puede resultarle útil completar primero el siguiente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriales: [ejecutar la importación de SQL Server y el Asistente para exportación de](import-export-data/start-the-sql-server-import-and-export-wizard.md) y [ Tutorial SSIS: Crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).  
+ Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor básica [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceptos que utilizará en este tutorial, puede resultarle útil completar primero el siguiente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriales: [Ejecutar el servidor SQL de importación y exportación de asistente](import-export-data/start-the-sql-server-import-and-export-wizard.md) y [SSIS Tutorial: Creación de un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Equipo de origen.** El equipo en el que creará el paquete de implementación debe tener instalados los siguientes componentes:  
   
@@ -82,9 +81,9 @@ ms.locfileid: "48188975"
  [Lección 2: Crear el paquete de implementación](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  En esta lección, generará una utilidad de implementación y comprobará que el paquete de implementación incluye los archivos necesarios.  
   
- [Lección 3: Instalar paquetes](../integration-services/lesson-3-install-ssis-package.md)  
+ [Lección 3: Instalación de paquetes](../integration-services/lesson-3-install-ssis-package.md)  
  En esta lección, copiará el paquete de implementación en el equipo de destino, instalará los paquetes y, a continuación, los ejecutará.  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

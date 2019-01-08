@@ -20,21 +20,21 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814078"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761457"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar una base de datos como una DAC
   Usar el **registrar el Asistente para aplicaciones de capa de datos** o un Windows script de PowerShell para compilar una definición de aplicación (DAC) de capa de datos que se describe los objetos de base de datos existente y registre la definición de DAC en la `msdb` base de datos del sistema (**maestro** en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
   
--   **Para actualizar una DAC mediante:**  [Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Para actualizar una DAC, mediante:**  [El Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  El proceso de registro crea una definición de DAC que define los objetos de la base de datos. La combinación de la definición de DAC y la base de datos forma una instancia de DAC. Si registra una base de datos como una DA CONTINUACIÓN en una instancia administrada del motor de base de datos, la DAC registrada se incorporará a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
@@ -52,7 +52,7 @@ ms.locfileid: "51814078"
   
 2.  Expanda el nodo **Bases de datos** .  
   
-3.  Haga clic con el botón derecho en la base de datos que se registrará, seleccione **Tareas**y **Registrar como aplicación de capa de datos…**  
+3.  Haga clic con el botón derecho en la base de datos que se va a registrar, seleccione **Tareas** y después **Registrar como aplicación de capa de datos...**  
   
 4.  Complete los cuadros de diálogo del asistente:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51814078"
 ##  <a name="Set_properties"></a> Página Definir propiedades  
  Use esta página para especificar propiedades en el nivel de DAC como el nombre y la versión de la aplicación.  
   
- **Nombre de aplicación.** -Una cadena que especifica el nombre usado para identificar la definición de DAC, el campo se rellena con el nombre de la base de datos.  
+ **Nombre de aplicación.** - Una cadena que especifica el nombre que se usa para identificar la definición de la DAC; el campo se rellena con el nombre de la base de datos.  
   
  **Versión.** - Un valor numérico que identifica la versión de la DAC. La versión de DAC se usa en Visual Studio para identificar la versión de la DAC en la que están trabajando los desarrolladores. Al implementar una DAC, la versión se almacena en el `msdb` de base de datos y más adelante se pueden ver en el **aplicaciones de capa de datos** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

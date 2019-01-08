@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
@@ -13,12 +12,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f178c968a6460841e12aa3d0e675bc7f4de56e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbac13f1d65a984a90ffbeb3ee0b1ae4e0cec719
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086375"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376087"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
   La tarea Control CDC se usa para controlar el ciclo de vida de los paquetes de captura de datos modificados (CDC). Controla la sincronización de paquetes CDC con el paquete de carga inicial, la administración de los intervalos de número de secuencia de registro (LSN) que se procesan en una ejecución de un paquete CDC. Además, la tarea Control CDC se ocupa de los escenarios de error y de la recuperación.  
@@ -41,16 +40,16 @@ ms.locfileid: "48086375"
 |Operación|Descripción|  
 |---------------|-----------------|  
 |GetProcessingRange|Esta operación se usa antes de invocar el flujo de datos que usa el flujo de datos origen de CDC. Establece un intervalo de LSN que lee el flujo de datos de origen de CDC cuando se invoca. El intervalo se almacena en una variable de paquete SSIS que usa el origen de CDC durante el procesamiento del flujo de datos.<br /><br /> Para obtener más información sobre los estados que se almacenan, vea [Definir una variable de estado](../data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|: esta operación se ejecuta después de cada ejecución de CDC (después de que el flujo de datos de CDC se completa correctamente) para registrar el último LSN que se ha procesado totalmente en la ejecución de CDC. La próxima vez que se ejecute GetProcessingRange, esta posición será el inicio del intervalo de procesamiento.|  
+|MarkProcessedRange|: Esta operación se ejecuta después de cada ejecución CDC (después de que el flujo de datos CDC se complete correctamente) para registrar el último LSN que se haya procesado totalmente en la ejecución CDC. La próxima vez que se ejecute GetProcessingRange, esta posición será el inicio del intervalo de procesamiento.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Controlar la persistencia de estado CDC  
  La tarea Control CDC mantiene un estado persistente entre las activaciones. La información almacenada en el estado CDC se usa para determinar y mantener el intervalo de procesamiento del paquete CDC y para detectar condiciones de error. El estado persistente se almacena como una cadena. Para obtener más información, consulte [Definir una variable de estado](../data-flow/define-a-state-variable.md).  
   
  La tarea Control CDC admite dos tipos de persistencia de estado  
   
--   Persistencia de estado manual: en este caso, la tarea Control CDC administra el estado almacenado en una variable de paquete pero el desarrollador del paquete debe leer la variable desde un almacén persistente antes de llamar al Control CDC y después escribirla de nuevo en el almacén persistente cuando el Control CDC se llame por última vez y la ejecución del CDC se complete.  
+-   Persistencia de estado manual: En este caso, la tarea Control CDC administra el estado almacenado en una variable de paquete, pero el desarrollador del paquete debe leer la variable desde un almacén persistente antes de llamar al Control CDC y, a continuación, llama escribirlos en el almacén persistente después de que sea el último Control CDC y se completa la ejecución de CDC.  
   
--   Persistencia de estado automática: el estado del CDC se almacena en una tabla de una base de datos. El estado se almacena con un nombre proporcionado en la propiedad **StateName** en una tabla denominada en la propiedad **Tabla para Storing State** , que se encuentra en un administrador de conexiones seleccionado para almacenar el estado. El valor predeterminado es el administrador de conexiones de origen pero la práctica común es que sea el administrador de conexiones de destino. La tarea Control CDC actualiza el valor de estado en la tabla de estados y esta se confirma como parte de la transacción ambiente.  
+-   Persistencia de estado automática: El estado CDC se almacena en una tabla en una base de datos. El estado se almacena con un nombre proporcionado en la propiedad **StateName** en una tabla denominada en la propiedad **Tabla para Storing State** , que se encuentra en un administrador de conexiones seleccionado para almacenar el estado. El valor predeterminado es el administrador de conexiones de origen pero la práctica común es que sea el administrador de conexiones de destino. La tarea Control CDC actualiza el valor de estado en la tabla de estados y esta se confirma como parte de la transacción ambiente.  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  La tarea Control CDC puede notificar un error cuando:  
@@ -70,7 +69,7 @@ ms.locfileid: "48086375"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Editor de la tarea Control CDC](../cdc-control-task-editor.md)  
+-   [Editor de la tarea Control de CDC](../cdc-control-task-editor.md)  
   
 -   [Propiedades personalizadas de la tarea Control CDC](cdc-control-task-custom-properties.md)  
   
@@ -79,10 +78,10 @@ ms.locfileid: "48086375"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico [Instalar la captura de datos modificados Microsoft SQL Server 2012 para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), en social.technet.microsoft.com.  
+-   Artículo técnico [Instalar la captura de datos modificados Microsoft SQL Server 2012 para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), en social.technet.microsoft.com.  
   
--   Artículo técnico [Solucionar problemas de configuración de la captura de datos modificados de Microsoft para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), en social.technet.microsoft.com.  
+-   Artículo técnico [Solucionar problemas de configuración de la captura de datos modificados de Microsoft para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), en social.technet.microsoft.com.  
   
--   Artículo técnico [Solucionar problemas de errores de instancias de CDC de la captura de datos modificados de Microsoft para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), en social.technet.microsoft.com.  
+-   Artículo técnico [Solucionar problemas de errores de instancias de CDC de la captura de datos modificados de Microsoft para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), en social.technet.microsoft.com.  
   
   

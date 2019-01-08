@@ -1,5 +1,5 @@
 ---
-title: En bases de datos análisis de Python para desarrolladores de SQL | Microsoft Docs
+title: 'Tutorial de análisis de Python en bases de datos para desarrolladores de SQL: SQL Server Machine Learning'
 description: Obtenga información sobre cómo insertar código de Python en las funciones de Transact-SQL y procedimientos almacenados de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560388"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596686"
 ---
 # <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Tutorial: Análisis de Python en bases de datos para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ Tanto si es un programador SQL nuevo para Python, o un desarrollador de Python e
 
 + [Lección 3: Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [Lección 4: Predecir resultados posibles con un modelo de Python en un procedimiento almacenado](sqldev-py6-operationalize-the-model.md)
++ [Lección 4: Predecir los resultados posibles con un modelo de Python en un procedimiento almacenado](sqldev-py6-operationalize-the-model.md)
 
 Después de que el modelo se ha guardado en la base de datos, puede llamar el modelo para las predicciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante procedimientos almacenados.
 

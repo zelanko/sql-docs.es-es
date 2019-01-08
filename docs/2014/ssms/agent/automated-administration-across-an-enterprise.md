@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f4e14eabe3d94f4497d6c4e622ff62e0ef8258b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181911"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210184"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administración automatizada en una empresa
   Automatizar la administración en varias instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se conoce con el nombre de *administración multiservidor*. Utilice la administración multiservidor para realizar lo siguiente:  
@@ -64,7 +64,7 @@ ms.locfileid: "48181911"
  Contiene información acerca de cómo usar cuentas de Windows no administrativas o la cuenta Sistema local para que el servicio del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueda afectar a entornos multiservidor.  
   
  [Establecer opciones de cifrado en servidores de destino](set-encryption-options-on-target-servers.md)  
- Contiene información acerca de cómo establecer la subclave del Registro del Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] MsxEncryptChannelOptions en los servidores de destino.  
+ Contiene información acerca de cómo establecer la subclave del Registro del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] MsxEncryptChannelOptions en los servidores de destino.  
   
  [Administrar trabajos en una empresa](manage-jobs-across-an-enterprise.md)  
  Contiene información sobre cómo comprobar el estado del trabajo, cómo cambiar servidores de destino de trabajos, cómo sincronizar los relojes de los servidores de destino y cómo sondear el estado del trabajo actual de los servidores maestros.  

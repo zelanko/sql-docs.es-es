@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergedeleteconflictrows
@@ -17,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 270ca534b5527efa9dea52b107166bb445965b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595683"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591179"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +41,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
+ [  **@publication=**] **'**_publicación_**'**  
  Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación.  
   
- [  **@source_object=**] **'***source_object***'**  
+ [  **@source_object=**] **'**_source_object_**'**  
  Es el nombre del objeto de origen. *source_object* es **nvarchar (386)**, su valor predeterminado es null.  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  Es el nombre del publicador. *publisher* es **sysname**, su valor predeterminado es null.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -60,7 +59,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Objeto de origen del conflicto de eliminación.|  
 |**rowguid**|**uniqueidentifier**|Identificador de la fila del conflicto de eliminación.|  
-|**conflict_type**|**int**|Código que indica el tipo de conflicto:<br /><br /> **1** = UpdateConflict: conflicto se detecta en el nivel de fila.<br /><br /> **2** = ColumnUpdateConflict: conflicto detectado en el nivel de columna.<br /><br /> **3** = UpdateDeleteWinsConflict: eliminación gana el conflicto.<br /><br /> **4** = UpdateWinsDeleteConflict: la columna rowguid eliminada que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = UploadInsertFailed: inserción del suscriptor no pudo aplicarse en el publicador.<br /><br /> **6** = DownloadInsertFailed: inserción del publicador no pudo aplicarse en el suscriptor.<br /><br /> **7** = UploadDeleteFailed: no se pudo cargar la eliminación en el suscriptor en el publicador.<br /><br /> **8** = DownloadDeleteFailed: no se pudo descargar la eliminación en el publicador al suscriptor.<br /><br /> **9** = UploadUpdateFailed: actualización del suscriptor no pudo aplicarse en el publicador.<br /><br /> **10** = DownloadUpdateFailed: actualización en el publicador no pudo aplicarse al suscriptor.|  
+|**conflict_type**|**int**|Código que indica el tipo de conflicto:<br /><br /> **1** = UpdateConflict: Conflicto se detecta en el nivel de fila.<br /><br /> **2** = ColumnUpdateConflict: Conflicto se detecta en el nivel de columna.<br /><br /> **3** = UpdateDeleteWinsConflict: Eliminación gana el conflicto.<br /><br /> **4** = UpdateWinsDeleteConflict: La columna rowguid eliminada que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = UploadInsertFailed: Inserción del suscriptor no pudo aplicarse en el publicador.<br /><br /> **6** = DownloadInsertFailed: Inserción del publicador no pudo aplicarse en el suscriptor.<br /><br /> **7** = UploadDeleteFailed: No se pudo cargar la eliminación en el suscriptor en el publicador.<br /><br /> **8** = DownloadDeleteFailed: No se pudo descargar la eliminación en el publicador al suscriptor.<br /><br /> **9** = UploadUpdateFailed: Actualización del suscriptor no pudo aplicarse en el publicador.<br /><br /> **10** = DownloadUpdateFailed: Actualización en el publicador no pudo aplicarse al suscriptor.|  
 |**reason_code**|**Int**|Código del error, que puede depender del contexto.|  
 |**reason_text**|**varchar(720)**|Descripción del error, que puede depender del contexto.|  
 |**origin_datasource**|**varchar (255)**|Origen del conflicto.|  

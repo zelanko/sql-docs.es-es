@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
@@ -16,15 +15,15 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1057dd8a7e70dc663d1b0de7d206fd7cc84e2c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41ab59a7eedcfcdfb2c93217397da1b3cd81e8e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129915"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360657"
 ---
 # <a name="integration-services-transactions"></a>Transacciones de Integration Services
-  Los paquetes utilizan transacciones para enlazar las acciones de base de datos que las tareas realizan en unidades atómicas y mantener de esta forma la integridad de los datos. Todos los tipos de contenedor de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (contenedores de paquetes, de bucles For y Foreach o de secuencias, y hosts de las tareas que encapsulan cada tarea, se pueden configurar para que utilicen transacciones. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona tres opciones para configurar transacciones: **NotSupported**, **Supported**y **Required**.  
+  Los paquetes utilizan transacciones para enlazar las acciones de base de datos que las tareas realizan en unidades atómicas y mantener de esta forma la integridad de los datos. Todos los tipos de contenedor de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (los contenedores de paquetes, de bucles For y Foreach o de secuencias, así como los hosts de las tareas que encapsulan cada tarea) se pueden configurar para que usen transacciones. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona tres opciones para configurar transacciones: **NotSupported**, **admite**, y **necesario**.  
   
 -   **Required** indica que el contenedor inicia una transacción, a menos que el contenedor principal ya haya iniciado otra. Si ya existe una transacción, el contenedor la combina. Por ejemplo, si un paquete que no está configurado para admitir transacciones, incluye un contenedor de secuencias que utiliza la opción **Required** , el contenedor de secuencias iniciará su propia transacción. Si el paquete se hubiera configurado para utilizar la opción **Required** , el contenedor de secuencias combinaría la transacción del paquete.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48129915"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog, [Cómo usar transacciones en SQL Server Integration Services (SSIS)](http://go.microsoft.com/fwlink/?LinkId=157783)(en inglés), en www.mssqltips.com  
+-   Entrada de blog, [Cómo usar transacciones en SQL Server Integration Services (SSIS)](https://go.microsoft.com/fwlink/?LinkId=157783)(en inglés), en www.mssqltips.com  
   
 ## <a name="see-also"></a>Vea también  
  [Transacciones heredadas](../../2014/integration-services/inherited-transactions.md)   

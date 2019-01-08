@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018210"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376427"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
   Hay dos tipos de datos espaciales. El tipo de datos `geometry` admite datos planos o euclidianos (de tierra plana). El tipo de datos `geometry` se ajusta tanto a las características simples de Geospatial Consortium (OGC) para la especificación SQL versión 1.1.0 como a SQL MM (estándar ISO).  
@@ -27,7 +27,7 @@ ms.locfileid: "51018210"
  Además, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite el tipo de datos `geography`, que almacena datos elípticos (tierra redonda), como coordenadas de latitud y longitud GPS.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las mejoras en los tipos de datos espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las mejoras en los tipos de datos espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="objects"></a> Objetos de datos espaciales  
  Los tipos de datos `geometry` y `geography` admiten dieciséis objetos de datos espaciales o tipos de instancia. Pero solo se pueden *crear instancias*de once de estos tipos de instancia; puede crear y trabajar con estas instancias (o crear instancias de ellas) en una base de datos. Estas instancias obtienen determinadas propiedades de sus tipos de datos primarios que los distinguen como `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` o como varias `geometry`o `geography` instancias en un `GeometryCollection`. El tipo `Geography` tiene un tipo de instancia adicional, `FullGlobe`.  
@@ -99,9 +99,9 @@ ms.locfileid: "51018210"
   
  Para obtener más información acerca de las especificaciones de OGC, vea lo siguiente:  
   
--   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [Especificaciones de OGC; Acceso a características simples, Parte 2 - Opciones de SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Especificaciones de OGC, acceso a características simples, parte 2: opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> Segmentos de arco circular  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  La ilustración siguiente muestra cómo se almacena cada tipo (línea roja indica `LineString``@g1`azul muestra la línea `CircularString``@g2`):  

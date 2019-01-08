@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a28070a2229e016bbc03b90d559252bd8851ac78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6768eba62eec59bc37ce360014d9c000aa01c724
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215145"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375207"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de distribución de valores de columna (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de distribución de valores de columna** seleccionadas en el panel de solicitudes. Un perfil de distribución de valores de columna notifica todos los valores distintos en la columna seleccionada y el porcentaje de filas en la tabla que cada valor representa. El perfil también puede notificar los valores que representan más de un porcentaje especificado de filas en la tabla. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo un número incorrecto de valores distintos en una columna. Por ejemplo, genera un perfil de una columna de estados de Estados Unidos y detecta más de 50 valores distintos.  
@@ -103,7 +102,7 @@ ms.locfileid: "48215145"
  Especifique el umbral (con un valor entre 0 y 1) por encima del que se debería notificar el valor de la columna. Esta opción está deshabilitada al seleccionar **AllValues** como **ValueDistributionOption**. El valor predeterminado de esta opción es 0.001.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

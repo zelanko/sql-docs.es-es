@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
@@ -24,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b254c1e7d814af64117343d98d3275e5ac66d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d0e1d1528d9ba2f85867aa09b7314f4030dfcd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128995"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357650"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Si un firewall está activado pero no está configurado correctamente, es posible que se bloqueen los intentos de conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -37,7 +36,7 @@ ms.locfileid: "48128995"
  Para obtener acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso. El firewall es un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. También puede instalar un firewall de otra compañía. En este tema se discute cómo configurar el firewall de Windows, pero los principios básicos se aplican a otros programas de firewall.  
   
 > [!NOTE]  
->  En este tema se proporciona información general de configuración del firewall y se resume información de interés para un administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca del firewall e información autorizada, vea la documentación sobre el firewall como [Windows Firewall con seguridad avanzada e IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  En este tema se proporciona información general de configuración del firewall y se resume información de interés para un administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca del firewall e información autorizada, vea la documentación sobre el firewall como [Windows Firewall con seguridad avanzada e IPsec](https://go.microsoft.com/fwlink/?LinkID=116904).  
   
  Los usuarios que conozcan el elemento **Firewall de Windows** del Panel de control y el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada, y que sepan qué opciones del firewall quieren configurar, pueden ir directamente a los temas de la lista siguiente:  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48128995"
   
  Elegir una estrategia del firewall es más complejo que decidir simplemente si un puerto determinado debe estar abierto o cerrado. Al diseñar una estrategia de firewall para la empresa, asegúrese considerar todas las reglas y opciones de configuración disponibles. En este tema no se revisan todas las posibles opciones de firewall. Se recomienda que revise los siguientes documentos:  
   
- [Guía de introducción del Firewall de Windows con seguridad avanzada](http://go.microsoft.com/fwlink/?LinkId=116080)  
+ [Guía de introducción del Firewall de Windows con seguridad avanzada](https://go.microsoft.com/fwlink/?LinkId=116080)  
   
- [Guía de diseño del Firewall de Windows con seguridad avanzada](http://go.microsoft.com/fwlink/?LinkId=116904)  
+ [Guía de diseño del Firewall de Windows con seguridad avanzada](https://go.microsoft.com/fwlink/?LinkId=116904)  
   
- [Introducción al aislamiento de servidor y dominio](http://go.microsoft.com/fwlink/?LinkId=116081)  
+ [Introducción al aislamiento de servidor y dominio](https://go.microsoft.com/fwlink/?LinkId=116081)  
   
 ##  <a name="BKMK_default"></a> Configuración predeterminada del firewall  
  El primer paso para planear la configuración del firewall es determinar el estado actual del firewall para el sistema operativo. Si el sistema operativo se actualizó desde una versión anterior, se puede haber conservado la configuración de firewall anterior. Además, otro administrador o una Directiva de grupo podría haber cambiado la configuración del firewall en el dominio.  
@@ -80,7 +79,7 @@ ms.locfileid: "48128995"
      El elemento **Firewall de Windows** se puede abrir desde el Panel de control.  
   
     > [!IMPORTANT]  
-    >  Los cambios realizados en el elemento **Firewall de Windows** del Panel de control solo afectan al perfil actual. Los dispositivos móviles, por ejemplo un portátil, no deben utilizar el elemento **Firewall de Windows** del Panel de control, dado que el perfil podría cambiar cuando se conecte con una configuración diferente. Entonces, el perfil configurado previamente no estará en vigor. Para obtener más información sobre los perfiles, vea [Guía de introducción del Firewall de Windows con seguridad avanzada](http://go.microsoft.com/fwlink/?LinkId=116080).  
+    >  Los cambios realizados en el elemento **Firewall de Windows** del Panel de control solo afectan al perfil actual. Los dispositivos móviles, por ejemplo un portátil, no deben utilizar el elemento **Firewall de Windows** del Panel de control, dado que el perfil podría cambiar cuando se conecte con una configuración diferente. Entonces, el perfil configurado previamente no estará en vigor. Para obtener más información sobre los perfiles, vea [Guía de introducción del Firewall de Windows con seguridad avanzada](https://go.microsoft.com/fwlink/?LinkId=116080).  
   
      El elemento **Firewall de Windows** del Panel de control permite configurar opciones básicas. Entre ellas, figuran:  
   
@@ -120,11 +119,11 @@ ms.locfileid: "48128995"
   
      Para obtener más información acerca de **netsh**, consulte los siguientes vínculos:  
   
-    -   [Cómo utilizar la herramienta Netsh.exe y los modificadores de la línea de comandos](http://support.microsoft.com/kb/242468)  
+    -   [Cómo utilizar la herramienta Netsh.exe y los modificadores de la línea de comandos](https://support.microsoft.com/kb/242468)  
   
-    -   [Cómo utilizar el contexto “netsh advfirewall firewall” en lugar del contexto “netsh firewall” para controlar el comportamiento del Firewall de Windows en Windows Server 2008 y en Windows Vista](http://support.microsoft.com/kb/947709)  
+    -   [Cómo usar el contexto "netsh advfirewall firewall" en lugar del contexto "netsh firewall" para controlar el comportamiento del Firewall de Windows en Windows Server 2008 y en Windows Vista](https://support.microsoft.com/kb/947709)  
   
-    -   [El comando "netsh firewall" junto con el parámetro "profile=all" no configura el perfil público en un equipo basado en Windows Vista](http://support.microsoft.com/kb/947213)  
+    -   [El comando "netsh firewall" junto con el parámetro "profile=all" no configura el perfil público en un equipo basado en Windows Vista](https://support.microsoft.com/kb/947213)  
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Puertos utilizados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Las tablas siguientes pueden ayudarle a identificar los puertos que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -173,8 +172,8 @@ ms.locfileid: "48128995"
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Puerto TCP 2383 para la instancia predeterminada|El puerto estándar para la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servicio Browser|El puerto TCP 2382 solamente es necesario para una instancia con nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Las solicitudes de conexión de cliente para una instancia con nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que no especifican un número de puerto se dirigen al puerto 2382, el puerto en el que escucha el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a continuación redirige la solicitud al puerto que utiliza la instancia con nombre.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTP<br /><br /> (El Servicio PivotTable® utiliza HTTP o HTTPS)|Puerto TCP 80|Se utiliza para una conexión HTTP a través de una dirección URL.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTPS<br /><br /> (El Servicio PivotTable® utiliza HTTP o HTTPS)|Puerto TCP 443|Se utiliza para una conexión HTTPS a través de una dirección URL. HTTPS es una conexión HTTP que utiliza SSL (Capa de sockets seguros).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTP<br /><br /> (La tabla dinámica?? Servicio utiliza HTTP o HTTPS)|Puerto TCP 80|Se utiliza para una conexión HTTP a través de una dirección URL.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTPS<br /><br /> (La tabla dinámica?? Servicio utiliza HTTP o HTTPS)|Puerto TCP 443|Se utiliza para una conexión HTTPS a través de una dirección URL. HTTPS es una conexión HTTP que utiliza SSL (Capa de sockets seguros).|  
   
  Si los usuarios tienen acceso a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a través de IIS e Internet, debe abrir el puerto en el que está escuchando IIS y especificar ese puerto en la cadena de conexión del cliente. En este caso, no se tiene que abrir ningún puerto para acceso directo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El puerto predeterminado, 2389 y el puerto 2382 deben restringirse junto con los demás puertos que no sean necesarios.  
   
@@ -206,24 +205,24 @@ ms.locfileid: "48128995"
 |--------------|----------|--------------|  
 |Instrumental de administración de Windows<br /><br /> Para obtener más información acerca de WMI, vea [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI se ejecuta como parte de un host de servicio compartido con puertos asignados a través de DCOM. WMI podría estar utilizando el puerto TCP 135.<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza WMI para enumerar y administrar servicios. Recomendamos usar el grupo de reglas preconfigurado **Instrumental de administración de Windows (WMI)**. Para obtener más información, vea la sección [Interacción con otras reglas de firewall](#BKMK_other_rules) más adelante|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Coordinador de transacciones distribuidas de (MS DTC)|Puerto TCP 135<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)|Si la aplicación utiliza transacciones distribuidas, quizá deba configurar el firewall para permitir que el tráfico del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) fluya entre instancias independientes de MS DTC y entre MS DTC y administradores de recursos como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda usar el grupo de reglas preconfigurado **Coordinador de transacciones distribuidas** .<br /><br /> Cuando se configura un único MS DTC compartido para todo el clúster en un grupo de recursos independiente, se debería agregar sqlservr.exe como excepción al firewall.|  
-|El botón Examinar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utiliza UDP para establecer conexión con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. Para obtener más información, vea [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|Puerto UDP 1434|UDP es un protocolo sin conexión.<br /><br /> El firewall tiene una configuración, que se denomina [Propiedad UnicastResponsesToMulticastBroadcastDisabled de la interfaz INetFwProfile](http://go.microsoft.com/fwlink/?LinkId=118371) y controla el comportamiento del firewall respecto a las respuestas de unidifusión a una solicitud UDP de difusión (o multidifusión).  Tiene dos comportamientos.<br /><br /> Si el valor es TRUE, no se permite en absoluto ninguna respuesta de unidifusión a una difusión. La enumeración de servicios producirá un error.<br /><br /> Si la configuración es FALSE (valor predeterminado), las respuestas de unidifusión se permiten durante 3 segundos. La longitud de tiempo no es configurable. En una red congestionada o de latencia alta, o en servidores muy cargados, los intentos de enumerar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden devolver una lista parcial, que puede desorientar a los usuarios.|  
+|El botón Examinar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utiliza UDP para establecer conexión con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. Para obtener más información, vea [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|Puerto UDP 1434|UDP es un protocolo sin conexión.<br /><br /> El firewall tiene una configuración, que se denomina [Propiedad UnicastResponsesToMulticastBroadcastDisabled de la interfaz INetFwProfile](https://go.microsoft.com/fwlink/?LinkId=118371) y controla el comportamiento del firewall respecto a las respuestas de unidifusión a una solicitud UDP de difusión (o multidifusión).  Tiene dos comportamientos.<br /><br /> Si el valor es TRUE, no se permite en absoluto ninguna respuesta de unidifusión a una difusión. La enumeración de servicios producirá un error.<br /><br /> Si la configuración es FALSE (valor predeterminado), las respuestas de unidifusión se permiten durante 3 segundos. La longitud de tiempo no es configurable. En una red congestionada o de latencia alta, o en servidores muy cargados, los intentos de enumerar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden devolver una lista parcial, que puede desorientar a los usuarios.|  
 |Tráfico IPSec|Puerto UDP 500 y puerto UDP 4500|Si la directiva de dominio requiere que las comunicaciones se realicen a través de IPSec, también debe agregar los puertos UDP 4500 y 500 a la lista de excepciones. IPSec es una opción que usa el **Asistente para nueva regla de entrada** en el complemento de Firewall de Windows. Para obtener más información, vea [Utilizar el complemento Firewall de Windows con seguridad avanzada](#BKMK_WF_msc) más adelante.|  
-|Utilizar la autenticación de Windows con dominios de confianza|Los firewalls se deben configurar para permitir solicitudes de autenticación.|Para obtener más información, vea [Cómo configurar un firewall para dominios y confianza](http://support.microsoft.com/kb/179442/).|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Agrupación en clústeres de Windows|La agrupación en clústeres requiere puertos adicionales que no se relacionan directamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Para obtener más información, vea [Habilitar una red para el uso de clústeres](http://go.microsoft.com/fwlink/?LinkId=118372).|  
-|Espacios de nombres URL reservados en la API del Servidor HTTP (HTTP.SYS)|Probablemente el puerto TCP 80, pero se puede configurar en otros puertos. Para obtener información general, vea [Configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373).|Para obtener información específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre cómo reservar un punto de conexión HTTP.SYS con HttpCfg.exe, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
+|Utilizar la autenticación de Windows con dominios de confianza|Los firewalls se deben configurar para permitir solicitudes de autenticación.|Para obtener más información, vea [Cómo configurar un firewall para dominios y confianza](https://support.microsoft.com/kb/179442/).|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Agrupación en clústeres de Windows|La agrupación en clústeres requiere puertos adicionales que no se relacionan directamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Para obtener más información, vea [Habilitar una red para el uso de clústeres](https://go.microsoft.com/fwlink/?LinkId=118372).|  
+|Espacios de nombres URL reservados en la API del Servidor HTTP (HTTP.SYS)|Probablemente el puerto TCP 80, pero se puede configurar en otros puertos. Para obtener información general, vea [Configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373).|Para obtener información específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre cómo reservar un punto de conexión HTTP.SYS con HttpCfg.exe, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
   
 ##  <a name="BKMK_port_135"></a> Consideraciones especiales para el puerto 135  
  Cuando utilice RPC con TCP/IP o con UDP/IP como transporte, los puertos entrantes suelen asignarse dinámicamente a los servicios del sistema cuando es necesario; se utilizan los puertos TCP/IP y UDP/IP mayores que el puerto 1024. Se suelen conocer informalmente como "puertos RPC aleatorios". En estos casos, los clientes RPC se apoyan en el mapeador de extremos RPC para indicar qué puertos dinámicos se asignaron al servidor. Para algunos servicios basados en RPC, puede configurar un puerto concreto en lugar de permitir que RPC asigne dinámicamente uno. También puede restringir el intervalo de puertos que RPC asigna dinámicamente a un intervalo pequeño, con independencia del servicio. Dado que el puerto 135 se utiliza para muchos servicios, los usuarios malintencionados lo atacan con frecuencia. Al abrir el puerto 135, considere restringir el ámbito de la regla de firewall.  
   
  Para obtener más información sobre el puerto 135, vea las siguientes referencias:  
   
--   [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](http://support.microsoft.com/kb/832017)  
+-   [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](https://support.microsoft.com/kb/832017)  
   
--   [Cómo solucionar errores del mapeador de extremos de RPC](http://support.microsoft.com/kb/839880)  
+-   [Cómo solucionar errores del mapeador de extremos de RPC](https://support.microsoft.com/kb/839880)  
   
--   [Llamada a procedimiento remoto (RPC)](http://go.microsoft.com/fwlink/?LinkId=118375)  
+-   [Llamada a procedimiento remoto (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)  
   
--   [Configurar la asignación dinámica de puertos RPC para trabajar con firewalls](http://support.microsoft.com/kb/154596/)  
+-   [Configurar la asignación dinámica de puertos RPC para trabajar con firewalls](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> Interacción con otras reglas de firewall  
  El Firewall de Windows utiliza reglas y grupos de reglas para establecer su configuración. Cada regla o grupo de reglas suele estar asociado con un programa o servicio determinado, y ese programa o servicio podría modificar o eliminar esa regla sin su conocimiento. Por ejemplo, los grupos de reglas **World Wide Web Services (HTTP)** y **World Wide Web Services (HTTPS)** están asociados a IIS. Al habilitar esas reglas, se abrirán los puertos 80 y 443, y las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dependen de los puertos 80 y 443 funcionarán si esas reglas están habilitadas. Sin embargo, los administradores que configuran IIS podrían modificar o deshabilitar esas reglas. Por consiguiente, si está utilizando el puerto 80 o el puerto 443 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear su propia regla o su propio grupo de reglas que mantenga la configuración de puerto que desee independientemente de las demás reglas IIS.  
@@ -231,7 +230,7 @@ ms.locfileid: "48128995"
  El complemento MMC del Firewall de Windows con seguridad avanzada permite cualquier tráfico que coincida con cualquier regla de permiso aplicable. Por lo tanto, si hay dos reglas que se apliquen al puerto 80 (con parámetros diferentes), se permitirá el tráfico que coincida con cualquiera de ellas. Así si una regla permite el tráfico sobre el puerto 80 de la subred local y otra permite el tráfico procedente de cualquier dirección, el efecto de la red será que se permita todo el tráfico dirigido al puerto 80, sin tener en cuenta su origen. Para administrar eficazmente el acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los administradores deben revisar periódicamente las reglas de firewall habilitadas en el servidor.  
   
 ##  <a name="BKMK_profiles"></a> Introducción a los perfiles de firewall  
- Los perfiles de firewall se explican en [Guía de introducción del Firewall de Windows con seguridad avanzada](http://go.microsoft.com/fwlink/?LinkId=116080) , en la sección **Firewall de host con reconocimiento de ubicación de red**. En resumen, los sistemas operativos identifican y recuerdan cada una de las redes a las que se conectan con respecto a la conectividad, las conexiones y la categoría.  
+ Los perfiles de firewall se explican en [Guía de introducción del Firewall de Windows con seguridad avanzada](https://go.microsoft.com/fwlink/?LinkId=116080) , en la sección **Firewall de host con reconocimiento de ubicación de red**. En resumen, los sistemas operativos identifican y recuerdan cada una de las redes a las que se conectan con respecto a la conectividad, las conexiones y la categoría.  
   
  Hay tres tipos de ubicación de red en Firewall de Windows con seguridad avanzada:  
   
@@ -321,9 +320,9 @@ ms.locfileid: "48128995"
   
          El modificador **-n** indica a **netstat** que muestre numéricamente la dirección y el número de puerto de las conexiones TCP activas. El modificador **-a** indica a **netstat** que muestre los puertos TCP y UDP en los que está escuchando el equipo.  
   
--   La utilidad **PortQry** se puede usar para notificar el estado de los puertos TCP/IP para indicar que están escuchando, no escuchando o filtrados. (Con un estado de filtrado, el puerto puede o no estar escuchando; este estado indica que la utilidad no ha recibido una respuesta del puerto.) La utilidad **PortQry** se puede descargar desde el [Centro de descargas de Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
+-   La utilidad **PortQry** se puede usar para notificar el estado de los puertos TCP/IP para indicar que están escuchando, no escuchando o filtrados. (Con un estado de filtrado, el puerto puede o no estar escuchando; este estado indica que la utilidad no ha recibido una respuesta del puerto.) La utilidad **PortQry** se puede descargar desde el [Centro de descargas de Microsoft](https://go.microsoft.com/fwlink/?LinkId=28590).  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](http://support.microsoft.com/kb/832017)  
+ [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](https://support.microsoft.com/kb/832017)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657137"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591709"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,24 +47,24 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_name=** ] **'***table_name***'**  
+ [  **@table_name=** ] **'**_table_name_**'**  
  Especifica la tabla que se usa para devolver información de catálogo. *table_name* es **sysname**, no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
- [  **@table_owner=** ] **'***propietario***'**  
+ [  **@table_owner=** ] **'**_propietario_**'**  
  Es el nombre del propietario de la tabla de la tabla utilizada para devolver información del catálogo. *TABLE_OWNER* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla en la que se especifica el nombre, se devuelven los índices de esa tabla. Si *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *nombre* que pertenecen a la propietario de la base de datos. Si existe una, se devuelven los índices de esa tabla.  
   
- [  **@table_qualifier=** ] **'***calificador***'**  
- Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ [  **@table_qualifier=** ] **'**_calificador_**'**  
+ Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
- [  **@index_name=** ] **'***index_name***'**  
+ [  **@index_name=** ] **'**_index_name_**'**  
  Es el nombre del índice. *index_name* es **sysname**, su valor predeterminado es %. Se admite la coincidencia de patrón de caracteres comodín.  
   
- [  **@is_unique=** ] **'***is_unique***'**  
+ [  **@is_unique=** ] **'**_is_unique_**'**  
  Es si solo los índices únicos (si **Y**) se devuelven. *is_unique* es **char (1)**, su valor predeterminado es **N**.  
   
- [  **@accuracy=** ] **'***precisión***'**  
+ [  **@accuracy=** ] **'**_precisión_**'**  
  Es el nivel de cardinalidad y la precisión de página de las estadísticas. *precisión* es **char (1)**, su valor predeterminado es **Q**. Especificar **E** para asegurarse de que las estadísticas se actualizan para que la cardinalidad y las páginas son precisas.  
   
  El valor **E** (SQL_ENSURE) pide al controlador para recuperar las estadísticas de forma incondicional.  

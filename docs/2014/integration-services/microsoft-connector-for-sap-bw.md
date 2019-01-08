@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d961edcab2527cf31342209286bee4c9b51c854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4ff7e5568ee16f1b7efa5429fd93d2279b43549
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164845"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372597"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW consta de un conjunto de tres componentes que le permiten tanto extraer datos de un sistema SAP NetWeaver BW versión 7 como cargarlos en él.  
@@ -36,7 +35,7 @@ ms.locfileid: "48164845"
   
 -   **Administrador de conexiones de SAP BW**: el administrador de conexiones de SAP BW conecta un origen o un destino de SAP BW con un sistema SAP Netweaver BW versión 7.  
   
- Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server Integration Services con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkId=301897). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
+ Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server Integration Services con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
   
 ## <a name="documentation"></a>Documentación  
  Este archivo de Ayuda de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW contiene los temas y las secciones siguientes:  

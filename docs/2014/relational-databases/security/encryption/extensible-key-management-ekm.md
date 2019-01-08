@@ -14,12 +14,12 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111245"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375787"
 ---
 # <a name="extensible-key-management-ekm"></a>Administración extensible de claves (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona las funciones del cifrado de datos junto con la *Administración extensible de claves* (EKM), las cuales usan la *API criptográfica de Microsoft* (MSCAPI) para el cifrado y generación de clave. Las claves de cifrado utilizadas para cifrar datos y claves se crean en contenedores transitorios de claves y se deben exportar desde un proveedor antes de que se almacenen en la base de datos. Este enfoque permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
@@ -32,7 +32,7 @@ ms.locfileid: "48111245"
   
  La Administración extensible de claves de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los fabricantes de EKM/HSM registrar sus módulos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cuando se registra, los usuarios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden utilizar las claves de cifrado almacenadas en los módulos EKM. Esto permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtener acceso a las características de cifrado avanzadas que admiten estos módulos, como el cifrado y descifrado masivo, o las funciones de administración de claves, como el vencimiento o la rotación de claves.  
   
- Al ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una máquina virtual de Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden usar claves almacenadas en el [almacén de claves de Azure](http://go.microsoft.com/fwlink/?LinkId=521401). Para obtener más información, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
+ Al ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una máquina virtual de Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden usar claves almacenadas en el [almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521401). Para obtener más información, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
   
 ## <a name="ekm-configuration"></a>Configuración de EKM  
  La Administración extensible de claves no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -105,8 +105,8 @@ GO
 |-------------------------|---------------|  
 |Cifrado de claves simétricas|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
 |Cifrado de claves asimétricas|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'texto no cifrado', …)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(texto cifrado, …)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByKey(key_guid, "texto_no_cifrado", ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(texto_cifrado, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
 |EncryptByAsmKey (key_guid, 'texto no cifrado')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
 |DecryptByAsmKey(texto cifrado)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   

@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192525"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359567"
 ---
 # <a name="securing-sql-server"></a>Proteger SQL Server
   La protección de la seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conlleva una serie de pasos que afectan a cuatro áreas: la plataforma, la autenticación, los objetos (incluidos los datos) y las aplicaciones que tienen acceso al sistema. Los siguientes temas le guiarán durante el proceso de creación e implementación de un plan de seguridad eficaz.  
   
- Puede buscar más información sobre la seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el sitio web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . En él encontrará una guía de prácticas recomendadas y una lista de comprobación de seguridad. Este sitio también incluye las últimas descargas e información sobre los Service Packs.  
+ Puede buscar más información sobre la seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el sitio web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . En él encontrará una guía de prácticas recomendadas y una lista de comprobación de seguridad. Este sitio también incluye las últimas descargas e información sobre los Service Packs.  
   
 ## <a name="platform-and-network-security"></a>Seguridad de la plataforma y de la red  
  La plataforma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye el hardware físico y los sistemas de redes que conectan los clientes con los servidores de bases de datos, así como los archivos binarios que se utilizan para procesar solicitudes de base de datos.  
@@ -76,7 +76,7 @@ ms.locfileid: "48192525"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Archivos de programa|[Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan una seguridad mejorada. Para determinar el último Service Pack disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el sitio web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan una seguridad mejorada. Para determinar el último Service Pack disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el sitio web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  Puede usar el siguiente script para determinar el Service Pack instalado en el sistema:  
   
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="principals-and-database-object-security"></a>Entidades de seguridad y seguridad de objetos de base de datos  
- Las entidades de seguridad son los individuos, grupos y procesos que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los “elementos protegibles” son el servidor, la base de datos y los objetos incluidos en la base de datos. Cada uno de estos elementos dispone de un conjunto de permisos que pueden configurarse para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la tabla siguiente se incluye información sobre las entidades de seguridad y los elementos protegibles.  
+ Las entidades de seguridad son los individuos, grupos y procesos que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los "elementos protegibles" son el servidor, la base de datos y los objetos incluidos en la base de datos. Cada uno de estos elementos dispone de un conjunto de permisos que pueden configurarse para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la tabla siguiente se incluye información sobre las entidades de seguridad y los elementos protegibles.  
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  

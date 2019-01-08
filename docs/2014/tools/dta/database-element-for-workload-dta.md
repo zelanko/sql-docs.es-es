@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3f5f7d912a41476588662c4543b20c041b02672
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172145"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813037"
 ---
 # <a name="database-element-for-workload-dta"></a>Database (DTA, elemento de Workload)
   Especifica la base de datos en la que se ubica la tabla de seguimiento de la carga de trabajo.  
@@ -41,14 +40,14 @@ ms.locfileid: "48172145"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Debe especificar un `EventString`, un `File`, o un `Database` elemento secundario para el `Workload` primario, pero solo un tipo se puede usar. Por ejemplo, si especifica una carga de trabajo con el `Database` elemento, no se puede especificar también una carga de trabajo con el `File` elemento en el mismo archivo de entrada XML.|  
+|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario `EventString`, `File` o `Database` para el elemento primario `Workload`, aunque solo se puede utilizar un tipo. Por ejemplo, si especifica una carga de trabajo con el `Database` elemento, no se puede especificar también una carga de trabajo con el `File` elemento en el mismo archivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento de la carga de trabajo &#40;DTA&#41;](workload-element-dta.md)|  
-|**Elementos secundarios**|[Nombre de elemento de base de datos &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Elemento de esquema de base de datos &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**Elemento primario**|[Workload &#40;DTA, elemento&#41;](workload-element-dta.md)|  
+|**Elementos secundarios**|[Name &#40;DTA, elemento de Database&#41;](name-element-for-database-dta.md)<br /><br /> [Schema &#40;DTA, elemento de Database&#41;](schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento tiene el nombre **DatabaseDetailsTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. No confunda este elemento `Database` con el que tiene al elemento `Configuration` como raíz primaria. (Vea [Elemento Database de Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)).  

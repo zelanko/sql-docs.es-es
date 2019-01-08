@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - SqlErrorLogEvent class
@@ -15,12 +13,12 @@ ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd0b66fb83d62291d30ca3488591e1cceda5d781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179815"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359557"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
   Proporciona las propiedades para ver los eventos en un archivo de registro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado.  
@@ -44,11 +42,11 @@ class SQLErrorLogEvent
   
 |||  
 |-|-|  
-|FileName|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
-|InstanceName|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
-|LogDate|Tipo de datos: `datetime`<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
-|de mensaje|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
-|ProcessInfo|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
+|FileName|Tipo de datos: `string`<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
+|InstanceName|Tipo de datos: `string`<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Certificadores: Key<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
+|LogDate|Tipo de datos: `datetime`<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Certificadores: Key<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
+|de mensaje|Tipo de datos: `string`<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
+|ProcessInfo|Tipo de datos: `string`<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -95,7 +93,7 @@ Next
   
      **\<Unidad >: \Program Files\Microsoft SQL Server\MSSQL12** **.\< NombreDeInstancia > \MSSQL\Log**  
   
- Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota comenzando con Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota comenzando con Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Vea también  
  [Clase SqlErrorLogFile](sqlerrorlogfile-class.md)   

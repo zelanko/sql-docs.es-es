@@ -22,22 +22,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afab607b547302d3f24f3bb64060757bfa76495a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604623"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209914"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Esta característica se encuentra en un estado de vista previa. No dependa de la implementación específica de esta característica, ya que podría modificarse o quitarse en una versión futura.  
->   
+> 
 >  Mientras se encuentra en estado de vista previa, el equipo de operaciones de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] podría activar y desactivar la recopilación de datos para esta DMV:  
->   
+> 
 >  -   Si está activada, la DMV devuelve los datos actuales tal como están agregados.  
 > -   Si está desactivada, la DMV devuelve datos históricos, que podrían estar desusados.  
   

@@ -10,18 +10,18 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92f0094262f2f53dfcdc51fcbd77b08fa079d3be
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6dda82b297b04f21fe1b4d2b7255c65b5b8a4aef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032852"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366237"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   En esta sección se proporciona información sobre las actividades de administración de bases de datos que se pueden realizar en las bases de datos de DQS, como la copia de seguridad/restauración o las operaciones de separar/adjuntar.  
   
 ##  <a name="BackupRestore"></a> Copia de seguridad y restauración de las bases de datos de DQS  
- La copia de seguridad y la restauración de bases de datos de SQL Server son operaciones habituales que los administradores de bases de datos llevan a cabo para evitar la pérdida de datos en caso de desastre y que les permiten recuperar la información de las copias de seguridad de las bases de datos. Básicamente, hay dos bases de datos de SQL Server que implementan[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] : DQS_MAIN y DQS_PROJECTS. Los procedimientos de copia de seguridad y restauración de las bases de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) son similares a los del resto de bases de datos de SQL Server. Las operaciones de copia de seguridad y restauración de las bases de datos de DQS plantean estos tres retos:  
+ La copia de seguridad y la restauración de bases de datos de SQL Server son operaciones habituales que los administradores de bases de datos llevan a cabo para evitar la pérdida de datos en caso de desastre y que les permiten recuperar la información de las copias de seguridad de las bases de datos. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se implementa principalmente por dos bases de datos de SQL Server: DQS_MAIN y DQS_PROJECTS. Los procedimientos de copia de seguridad y restauración de las bases de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) son similares a los del resto de bases de datos de SQL Server. Las operaciones de copia de seguridad y restauración de las bases de datos de DQS plantean estos tres retos:  
   
 -   Dichas operaciones deben estar sincronizadas. En caso contrario, el [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] restaurado ya no será funcional.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "51032852"
   
 -   El modelo de recuperación predeterminado de las bases de datos de DQS está establecido en **Simple**. En el modelo de recuperación simple, se realiza un registro mínimo de las transacciones, y el truncamiento del registro se produce automáticamente después de que la transacción finaliza para liberar espacio en el registro de transacciones (archivo .ldf). Para obtener información detallada sobre el modelo de recuperación simple, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
-> [!IMPORTANT]  
->  -   En el modelo de recuperación simple, cuando las entradas de registro permanecen activas durante mucho tiempo (por ejemplo, una transacción prolongada), el truncamiento del registro se puede retrasar y, por tanto, se podría llenar el registro de transacciones. Además, el truncamiento del registro no reduce el tamaño del archivo de registro físico (archivo. ldf). Para reducir el tamaño de un archivo de registro físico, se debe reducir el archivo de registro. Para obtener información sobre la solución de problemas relativos al registro de transacciones, vea [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o el artículo del servicio de soporte técnico de Microsoft en [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446).  
+> [!IMPORTANT]
+>  -   En el modelo de recuperación simple, cuando las entradas de registro permanecen activas durante mucho tiempo (por ejemplo, una transacción prolongada), el truncamiento del registro se puede retrasar y, por tanto, se podría llenar el registro de transacciones. Además, el truncamiento del registro no reduce el tamaño del archivo de registro físico (archivo. ldf). Para reducir el tamaño de un archivo de registro físico, se debe reducir el archivo de registro. Para obtener información sobre la solución de problemas relativos al registro de transacciones, vea [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o el artículo del servicio de soporte técnico de Microsoft en [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Debe realizar periódicamente una copia de seguridad completa o diferencial de las bases de datos de DQS, y una copia de seguridad del registro de transacciones para crear un punto de recuperación de los datos. Para más información, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) y [Realizar copias de seguridad de un registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="DetachAttach"></a> Adjuntar y separar las bases de datos de DQS  

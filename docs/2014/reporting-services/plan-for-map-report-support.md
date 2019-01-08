@@ -11,12 +11,12 @@ ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366607"
 ---
 # <a name="plan-for-map-report-support"></a>Planear la compatibilidad de informe de mapa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] admite informes de mapas que usan orígenes de datos espaciales. Los datos espaciales pueden proceder de bases de datos de SQL Server, de archivos de forma ESRI o de la galería de mapas que se instala con Reporting Services o con el Generador de informes. Un mapa también puede mostrar un fondo de mosaicos de mapa de Bing. Un autor de informes puede crear un informe que especifique datos espaciales o mosaicos de mapa de Bing como dinámicos y recuperados en el tiempo de ejecución o como estáticos e incrustados en la definición de informe.  
@@ -27,7 +27,7 @@ ms.locfileid: "48105887"
  En cada informe, sus autores pueden especificar si se utiliza una conexión de Capa de sockets seguros (SSL) para recuperar los mosaicos del servidor de mosaicos. Para ello, en el panel de propiedades de la capa de mosaico, debe establecer la propiedad booleana UseSecureConnection a `true`.  
   
 > [!NOTE]  
->  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
+>  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 ## <a name="report-design-recommendations"></a>Recomendaciones de diseño de informes  
  Un buen diseño de los informes de mapas requiere que su autor evalúe los pros y los contras entre los datos espaciales estáticos y dinámicos, y que encuentre un equilibrio que sirva para los usuarios del informe. Los elementos de mapa incrustados pueden aumentar considerablemente el tamaño de la definición de informe, pero reducen el tiempo necesario para ver el informe de mapa. Los elementos de mapa dinámicos reducen el tamaño de la definición de informe, pero aumentan el tiempo necesario para procesar y ver el mapa. El autor del informe debe buscar el equilibrio adecuado entre estos aspectos opuestos.  

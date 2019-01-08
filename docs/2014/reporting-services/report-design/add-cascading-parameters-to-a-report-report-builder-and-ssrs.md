@@ -11,12 +11,12 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078355"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376447"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Agregar parámetros en cascada a un informe (Generador de informes y SSRS)
   Los parámetros en cascada permiten administrar grandes cantidades de datos de informe. Es posible definir un conjunto de parámetros relacionados de manera que la lista de valores de uno de ellos dependa del valor seleccionado en otro parámetro. Por ejemplo, el primer parámetro es independiente y podría presentar una lista de categorías de productos. Cuando el usuario selecciona una categoría, el segundo parámetro depende del valor del primer parámetro. Sus valores se actualizan con una lista de subcategorías para la categoría elegida. Cuando el usuario ve el informe, los valores de los parámetros de categoría y subcategoría se usan para filtrar los datos del informe.  
@@ -28,7 +28,7 @@ ms.locfileid: "48078355"
   
  El orden es importante para los parámetros en cascada, dado que la consulta del conjunto de datos de un parámetro que aparece más adelante en la lista incluye una referencia a cada parámetro que aparece antes en la lista. En tiempo de ejecución, el orden de los parámetros en el panel Datos de informe determina el orden en que aparecen las consultas de parámetros en el informe, y por consiguiente, el orden en el que el usuario elige cada uno de los valores de los parámetros sucesivos.  
   
- Para obtener información sobre la creación de parámetros en cascada con varios valores e incluso la función Select All, vea [Tener un parámetro en cascada con varios valores y Select All](http://go.microsoft.com/fwlink/?LinkId=184757).  
+ Para obtener información sobre la creación de parámetros en cascada con varios valores e incluso la función Select All, vea [Tener un parámetro en cascada con varios valores y Select All](https://go.microsoft.com/fwlink/?LinkId=184757).  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Para crear el conjunto de datos principal con una consulta que incluye varios parámetros relacionados  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48078355"
   
     1.  Una lista de campos del origen de datos. Por ejemplo, en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] , la instrucción SELECT especifica una lista de nombres de columnas de la base de datos de una tabla o vista determinada.  
   
-    2.  Un parámetro de consulta para cada parámetro en cascada. Un parámetro de consulta limita los datos recuperados del origen de datos especificando determinados valores para incluirlos o excluirlos de la consulta. Normalmente, los parámetros de consulta se sitúan en una cláusula de restricción de la consulta. Por ejemplo, en una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] , los parámetros de consulta se sitúan en la cláusula WHERE. Para obtener más información, vea "Filtrar filas mediante WHERE y HAVING" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+    2.  Un parámetro de consulta para cada parámetro en cascada. Un parámetro de consulta limita los datos recuperados del origen de datos especificando determinados valores para incluirlos o excluirlos de la consulta. Normalmente, los parámetros de consulta se sitúan en una cláusula de restricción de la consulta. Por ejemplo, en una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] , los parámetros de consulta se sitúan en la cláusula WHERE. Para obtener más información, vea "Filtrar filas mediante WHERE y HAVING" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 6.  Haga clic en **Ejecutar** (**!**). Una vez incluidos los parámetros de la consulta y ejecutada la consulta, automáticamente se crean parámetros de informe correspondientes a los parámetros de la consulta.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48078355"
 4.  Haga clic en **Ver informe**. El informe actualiza la presentación basándose en los parámetros que ha elegido.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar, cambiar o eliminar un parámetro de informe &#40;generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Agregar un parámetro a un informe &#40;generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)   
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

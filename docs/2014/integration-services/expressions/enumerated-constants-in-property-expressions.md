@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -18,19 +17,19 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd7508b806d3dbfc488dd8e1358d3bab4d624b06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089665"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359797"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas en expresiones de propiedad
-  Si las expresiones de propiedad incluyen valores de una lista de miembros enumeradores, la expresión debe utilizar el valor numérico del miembro enumerador en lugar del nombre descriptivo del miembro. Por ejemplo, si una expresión establece la `LoggingMode` propiedad, debe utilizar el valor 2 en lugar del nombre descriptivo deshabilitado.  
+  Si las expresiones de propiedad incluyen valores de una lista de miembros enumeradores, la expresión debe utilizar el valor numérico del miembro enumerador en lugar del nombre descriptivo del miembro. Por ejemplo, si una expresión establece la propiedad `LoggingMode`, debe utilizar el valor 2 en lugar del nombre descriptivo Deshabilitado.  
   
  Este tema enumera solo los valores numéricos equivalentes a los nombres descriptivos de los enumeradores cuyos miembros se utilizan generalmente en expresiones de propiedad. El modelo de objetos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye varios enumeradores adicionales que puede utilizar cuando programa el modelo de objetos para generar paquetes mediante programación o elementos de paquete de código personalizado tales como tareas y componentes de flujo de datos.  
   
- Además de las propiedades personalizadas de los paquetes y objetos de paquetes, la ventana Propiedades de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un conjunto de propiedades disponibles para paquetes, tareas, y los contenedores de secuencias, de bucles Foreach y de bucles For. Las propiedades comunes establecidas por valores de enumeradores `ForceExecutionResult`, `LoggingMode`, `IsolationLevel` y `Transaction Option` se enumeran en la sección Propiedades comunes.  
+ Además de las propiedades personalizadas de los paquetes y objetos de paquetes, la ventana Propiedades de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un conjunto de propiedades disponibles para paquetes, tareas, y los contenedores de secuencias, de bucles Foreach y de bucles For. Las propiedades comunes establecidas por valores de enumeradores -`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, y `Transaction Option`-se muestran en la sección Propiedades comunes.  
   
  Las siguientes secciones proporcionan información sobre constantes enumeradas:  
   
@@ -47,18 +46,18 @@ ms.locfileid: "48089665"
 ##  <a name="Package"></a> Paquete  
  Las siguientes tablas enumeran los nombres descriptivos y los equivalentes de valores numéricos de las propiedades de paquetes que se establecen utilizando valores de un enumerador.  
   
- `PackageType` propiedad, establecer mediante los valores de la `DTSPackageType` enumeración.  
+ `PackageType` Conjunto de propiedades con valores de la `DTSPackageType` enumeración.  
   
 |Nombre descriptivo en DTSPackageType|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Valor de DB-Library|0|  
+|Default|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage` propiedad, establecer mediante los valores de la `DTSCheckpointUsage` enumeración.  
+ `CheckpointUsage` Conjunto de propiedades con valores de la `DTSCheckpointUsage` enumeración.  
   
 |Nombre descriptivo en DTSCheckpointUsage|Valor numérico|  
 |-----------------------------------------|-------------------|  
@@ -66,17 +65,17 @@ ms.locfileid: "48089665"
 |IfExists|1|  
 |Always|2|  
   
- `PackagePriorityClass` propiedad, establecer mediante los valores de la `DTSPriorityClass` enumeración.  
+ `PackagePriorityClass` Conjunto de propiedades con valores de la `DTSPriorityClass` enumeración.  
   
 |Nombre descriptivo en DTSPriorityClass|Valor numérico|  
 |---------------------------------------|-------------------|  
-|Valor de DB-Library|0|  
+|Default|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
 |Idle|4|  
   
- `ProtectionLevel` propiedad, establecer mediante los valores de la `DTSProtectionLevel` enumeración.  
+ `ProtectionLevel` Conjunto de propiedades con valores de la `DTSProtectionLevel` enumeración.  
   
 |Nombre descriptivo en DTSProtectionLevel|Valor numérico|  
 |-----------------------------------------|-------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "48089665"
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> Restricciones de precedencia  
- `EvalOp` propiedad, establecer mediante los valores de la `DTSPrecedenceEvalOp` enumeración.  
+ `EvalOp` Conjunto de propiedades con valores de la `DTSPrecedenceEvalOp` enumeración.  
   
 |Nombre descriptivo en DTSPrecedenceEvalOp|Valor numérico|  
 |------------------------------------------|-------------------|  
@@ -97,7 +96,7 @@ ms.locfileid: "48089665"
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value` propiedad, establecer mediante los valores de la `DTSExecResult` enumeración.  
+ `Value` Conjunto de propiedades con valores de la `DTSExecResult` enumeración.  
   
 |Nombre descriptivo|Valor numérico|  
 |-------------------|-------------------|  
@@ -110,7 +109,7 @@ ms.locfileid: "48089665"
  El bucle Foreach incluye un conjunto de enumeradores con propiedades que se pueden establecer a partir de expresiones de propiedad.  
   
 ### <a name="foreach-ado-enumerator"></a>Enumerador de ADO para Foreach  
- `Type` propiedad, establecer mediante los valores de la `ADOEnumerationType` enumeración.  
+ `Type` Conjunto de propiedades con valores de la `ADOEnumerationType` enumeración.  
   
 |Nombre descriptivo en ADOEnumerationType|Valor numérico|  
 |-----------------------------------------|-------------------|  
@@ -119,7 +118,7 @@ ms.locfileid: "48089665"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Enumerador de lista de nodos para Foreach  
- `SourceDocumentType`, `InnerXPathStringSourceType`, y **OuterXPathStringSourceType** propiedades, establezca utilizando valores de la `SourceType` enumeración.  
+ `SourceDocumentType`, `InnerXPathStringSourceType`, y **OuterXPathStringSourceType** conjunto de propiedades con valores de la `SourceType` enumeración.  
   
 |Nombre descriptivo en SourceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -127,7 +126,7 @@ ms.locfileid: "48089665"
 |Variable|1|  
 |DirectInput|2|  
   
- `EnumerationType` propiedad, establecer mediante los valores de la `EnumerationType` enumeración.  
+ `EnumerationType` Conjunto de propiedades con valores de la `EnumerationType` enumeración.  
   
 |Nombre descriptivo en EnumerationType|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -136,7 +135,7 @@ ms.locfileid: "48089665"
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType` propiedad, establecer mediante los valores de la `InnerElementType` enumeración.  
+ `InnerElementType` Conjunto de propiedades con valores de la `InnerElementType` enumeración.  
   
 |Nombre descriptivo en InnerElementType|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -148,7 +147,7 @@ ms.locfileid: "48089665"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye numerosas tareas con propiedades que se establecen a partir de expresiones de propiedad.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services  
- `SourceType` propiedad, establecer mediante los valores de la `DDLSourceType` enumeración.  
+ `SourceType` Conjunto de propiedades con valores de la `DDLSourceType` enumeración.  
   
 |Nombre descriptivo en DDLSourceType|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -157,7 +156,7 @@ ms.locfileid: "48089665"
 |Variable|2|  
   
 ### <a name="bulk-insert-task"></a>Inserción masiva, tarea  
- `DataFileType` propiedad, establecer mediante los valores de la `DTSBulkInsert_DataFileType` enumeración.  
+ `DataFileType` Conjunto de propiedades con valores de la `DTSBulkInsert_DataFileType` enumeración.  
   
 |Nombre descriptivo en DTSBulkInsert_DataFileType|Valor numérico|  
 |--------------------------------------------------|-------------------|  
@@ -167,7 +166,7 @@ ms.locfileid: "48089665"
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### <a name="execute-sql-task"></a>Tarea Ejecutar SQL  
- `ResultSetType` propiedad, establecer mediante los valores de la `ResultSetType` enumeración.  
+ `ResultSetType` Conjunto de propiedades con valores de la `ResultSetType` enumeración.  
   
 |Nombre descriptivo en ResultSetType|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -176,7 +175,7 @@ ms.locfileid: "48089665"
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType` propiedad, establecer mediante los valores de la `SqlStatementSourceType` enumeración.  
+ `SqlStatementSourceType` Conjunto de propiedades con valores de la `SqlStatementSourceType` enumeración.  
   
 |Nombre descriptivo en SqlStatementSourceType|Valor numérico|  
 |---------------------------------------------|-------------------|  
@@ -185,7 +184,7 @@ ms.locfileid: "48089665"
 |Variable|3|  
   
 ### <a name="file-system-task"></a>Tarea Sistema de archivos  
- `Operation` propiedad, establecer mediante los valores de la `DTSFileSystemOperation` enumeración.  
+ `Operation` Conjunto de propiedades con valores de la `DTSFileSystemOperation` enumeración.  
   
 |Nombre descriptivo en DTSFileSystemOperation|Valor numérico|  
 |---------------------------------------------|-------------------|  
@@ -200,7 +199,7 @@ ms.locfileid: "48089665"
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes` propiedad, establecer mediante los valores de la `DTSFileSystemAttributes` enumeración.  
+ `Attributes` Conjunto de propiedades con valores de la `DTSFileSystemAttributes` enumeración.  
   
 |Nombre descriptivo en DTSFileSystemAttributes|Valor numérico|  
 |----------------------------------------------|-------------------|  
@@ -211,7 +210,7 @@ ms.locfileid: "48089665"
 |Sistema|8|  
   
 ### <a name="ftp-task"></a>Tarea FTP  
- `Operation` propiedad, establecer mediante los valores de la `DTSFTPOp` enumeración.  
+ `Operation` Conjunto de propiedades con valores de la `DTSFTPOp` enumeración.  
   
 |Nombre descriptivo en DTSFTPOp|Valor numérico|  
 |-------------------------------|-------------------|  
@@ -225,7 +224,7 @@ ms.locfileid: "48089665"
 |RemoveDirRemote|7|  
   
 ### <a name="message-queue-task"></a>Message Queue Task  
- `MessageType` propiedad, establecer mediante los valores de la `MQMessageType` enumeración.  
+ `MessageType` Conjunto de propiedades con valores de la `MQMessageType` enumeración.  
   
 |Nombre descriptivo en MQMessageType|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -234,7 +233,7 @@ ms.locfileid: "48089665"
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType` propiedad, establecer mediante los valores de la `MQStringMessageCompare` enumeración.  
+ `StringCompareType` Conjunto de propiedades con valores de la `MQStringMessageCompare` enumeración.  
   
 |Nombre descriptivo en MQStringMessageCompare|Valor numérico|  
 |---------------------------------------------|-------------------|  
@@ -243,7 +242,7 @@ ms.locfileid: "48089665"
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType` propiedad, establecer mediante los valores de la `MQType` enumeración.  
+ `TaskType` Conjunto de propiedades con valores de la `MQType` enumeración.  
   
 |Nombre descriptivo en MQType|Valor numérico|  
 |-----------------------------|-------------------|  
@@ -251,7 +250,7 @@ ms.locfileid: "48089665"
 |DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>Enviar correo, tarea  
- `MessageSourceType` propiedad, establecer mediante los valores de la `SendMailMessageSourceType` enumeración.  
+ `MessageSourceType` Conjunto de propiedades con valores de la `SendMailMessageSourceType` enumeración.  
   
 |Nombre descriptivo en SendMailMessageSourceType|Valor numérico|  
 |------------------------------------------------|-------------------|  
@@ -259,7 +258,7 @@ ms.locfileid: "48089665"
 |FileConnection|1|  
 |Variable|2|  
   
- `Priority` propiedad, establecer mediante los valores de la `MailPriority` enumeración.  
+ `Priority` Conjunto de propiedades con valores de la `MailPriority` enumeración.  
   
 |Nombre descriptivo en MailPriority|Valor numérico|  
 |-----------------------------------|-------------------|  
@@ -268,14 +267,14 @@ ms.locfileid: "48089665"
 |Baja|5|  
   
 ### <a name="transfer-database-task"></a>Tarea Transferir bases de datos  
- `Action` propiedad, establecer mediante los valores de la `TransferAction` enumeración.  
+ `Action` Conjunto de propiedades con valores de la `TransferAction` enumeración.  
   
 |Nombre descriptivo en TransferAction|Valor numérico|  
 |-------------------------------------|-------------------|  
 |Copiar|0|  
 |Mover|1|  
   
- `Method` propiedad, establecer mediante los valores de la `TransferMethod` enumeración.  
+ `Method` Conjunto de propiedades con valores de la `TransferMethod` enumeración.  
   
 |Nombre descriptivo en TransferMethod|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -283,7 +282,7 @@ ms.locfileid: "48089665"
 |DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>Tarea Transferir mensajes de error  
- `IfObjectExists` propiedad, establecer mediante los valores de la `IfObjectExists` enumeración.  
+ `IfObjectExists` Conjunto de propiedades con valores de la `IfObjectExists` enumeración.  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -292,7 +291,7 @@ ms.locfileid: "48089665"
 |Omitir|2|  
   
 ### <a name="transfer-jobs-task"></a>Tarea Transferir trabajos  
- `IfObjectExists` propiedad, establecer mediante los valores de la `IfObjectExists` enumeración.  
+ `IfObjectExists` Conjunto de propiedades con valores de la `IfObjectExists` enumeración.  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -301,7 +300,7 @@ ms.locfileid: "48089665"
 |Omitir|2|  
   
 ### <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión  
- `IfObjectExists` propiedad, establecer mediante los valores de la `IfObjectExists` enumeración.  
+ `IfObjectExists` Conjunto de propiedades con valores de la `IfObjectExists` enumeración.  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -309,7 +308,7 @@ ms.locfileid: "48089665"
 |Sobrescribir|1|  
 |Omitir|2|  
   
- `LoginsToTransfer` propiedad, establecer mediante los valores de la `LoginsToTransfer` enumeración.  
+ `LoginsToTransfer` Conjunto de propiedades con valores de la `LoginsToTransfer` enumeración.  
   
 |Nombre descriptivo en LoginsToTransfer|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -318,7 +317,7 @@ ms.locfileid: "48089665"
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>Tarea Transferir procedimientos almacenados principales  
- `IfObjectExists` propiedad, establecer mediante los valores de la `IfObjectExists` enumeración.  
+ `IfObjectExists` Conjunto de propiedades con valores de la `IfObjectExists` enumeración.  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -327,7 +326,7 @@ ms.locfileid: "48089665"
 |Omitir|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server  
- `ExistingData` propiedad, establecer mediante los valores de la `ExistingData` enumeración.  
+ `ExistingData` Conjunto de propiedades con valores de la `ExistingData` enumeración.  
   
 |Nombre descriptivo en ExistingData|Valor numérico|  
 |-----------------------------------|-------------------|  
@@ -335,7 +334,7 @@ ms.locfileid: "48089665"
 |Anexar|1|  
   
 ### <a name="web-service-task"></a>Tarea Servicio web  
- `OutputType` propiedad, establecer mediante los valores de la `DTSOutputType` enumeración.  
+ `OutputType` Conjunto de propiedades con valores de la `DTSOutputType` enumeración.  
   
 |Nombre descriptivo en DTSOutputType|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -343,7 +342,7 @@ ms.locfileid: "48089665"
 |Variable|1|  
   
 ### <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI  
- `OverwriteDestination` propiedad, establecer mediante los valores de la `OverwriteDestination` enumeración.  
+ `OverwriteDestination` Conjunto de propiedades con valores de la `OverwriteDestination` enumeración.  
   
 |Nombre descriptivo en OverwriteDestination|Valor numérico|  
 |-------------------------------------------|-------------------|  
@@ -351,7 +350,7 @@ ms.locfileid: "48089665"
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType` propiedad, establecer mediante los valores de la `OutputType` enumeración.  
+ `OutputType` Conjunto de propiedades con valores de la `OutputType` enumeración.  
   
 |Nombre descriptivo en OutputType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -359,14 +358,14 @@ ms.locfileid: "48089665"
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType` propiedad, establecer mediante los valores de la `DestinationType` enumeración.  
+ `DestinationType` Conjunto de propiedades con valores de la `DestinationType` enumeración.  
   
 |Nombre descriptivo en DestinationType|Valor numérico|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `WqlQuerySourceType` propiedad, establecer mediante los valores de la `QuerySourceType` enumeración.  
+ `WqlQuerySourceType` Conjunto de propiedades con valores de la `QuerySourceType` enumeración.  
   
 |Nombre descriptivo en QuerySourceType|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -374,21 +373,21 @@ ms.locfileid: "48089665"
 |DirectInput|1|  
 |Variable|2|  
   
- Propiedad `ActionAtEvent` del Monitor de eventos WMI: se establece mediante el uso de valores provenientes de la enumeración `ActionAtEvent`.  
+ Monitor de eventos WMI `ActionAtEvent` conjunto de propiedades con valores de la `ActionAtEvent` enumeración.  
   
 |Nombre descriptivo en ActionAtEvent|Valor numérico|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout` propiedad, establecer mediante los valores de la `ActionAtTimeout` enumeración.  
+ `ActionAtTimeout` Conjunto de propiedades con valores de la `ActionAtTimeout` enumeración.  
   
 |Nombre descriptivo en ActionAtTimeout|Valor numérico|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent` propiedad, establecer mediante los valores de la `AfterEvent` enumeración.  
+ `AfterEvent` Conjunto de propiedades con valores de la `AfterEvent` enumeración.  
   
 |Nombre descriptivo en AfterEvent|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -396,7 +395,7 @@ ms.locfileid: "48089665"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout` propiedad, establecer mediante los valores de la `AfterTimeout` enumeración.  
+ `AfterTimeout` Conjunto de propiedades con valores de la `AfterTimeout` enumeración.  
   
 |Nombre descriptivo en AfterTimeout|Valor numérico|  
 |-----------------------------------|-------------------|  
@@ -404,7 +403,7 @@ ms.locfileid: "48089665"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType` propiedad, establecer mediante los valores de la `QuerySourceType` enumeración.  
+ `WqlQuerySourceType` Conjunto de propiedades con valores de la `QuerySourceType` enumeración.  
   
 |Nombre descriptivo en QuerySourceType|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -413,7 +412,7 @@ ms.locfileid: "48089665"
 |Variable|2|  
   
 ### <a name="xml-task"></a>Tarea XML  
- `OperationType` propiedad, establecer mediante los valores de la `DTSXMLOperation` enumeración.  
+ `OperationType` Conjunto de propiedades con valores de la `DTSXMLOperation` enumeración.  
   
 |Nombre descriptivo en DTSXMLOperation|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -424,7 +423,7 @@ ms.locfileid: "48089665"
 |Diferencias|4|  
 |Revisión|5|  
   
- Propiedades `SourceType`, `SecondOperandType` y `XPathSourceType`: se establecen mediante el uso de valores provenientes de la enumeración `DTSXMLSourceType`.  
+ `SourceType`, `SecondOperandType`, y `XPathSourceType` conjunto de propiedades con valores de la `DTSXMLSourceType` enumeración.  
   
 |Nombre descriptivo en DTSXMLSourceType|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -432,21 +431,21 @@ ms.locfileid: "48089665"
 |Variable|1|  
 |DirectInput|2|  
   
- `DestinationType` y **DiffGramDestinationType** propiedades, establezca utilizando valores de la `DTSXMLSaveResultTo` enumeración.  
+ `DestinationType` y **DiffGramDestinationType** conjunto de propiedades con valores de la `DTSXMLSaveResultTo` enumeración.  
   
 |Nombre descriptivo en DTSXMLSaveResultTo|Valor numérico|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `ValidationType` propiedad, establecer mediante los valores de la `DTSXMLValidationType` enumeración.  
+ `ValidationType` Conjunto de propiedades con valores de la `DTSXMLValidationType` enumeración.  
   
 |Nombre descriptivo en DTSXMLValidationType|Valor numérico|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- `XPathOperation` propiedad, establecer mediante los valores de la `DTSXMLXPathOperation` enumeración.  
+ `XPathOperation` Conjunto de propiedades con valores de la `DTSXMLXPathOperation` enumeración.  
   
 |Nombre descriptivo en DTSXMLXPathOperation|Valor numérico|  
 |-------------------------------------------|-------------------|  
@@ -454,7 +453,7 @@ ms.locfileid: "48089665"
 |Valores|1|  
 |NodeList|2|  
   
- `DiffOptions` propiedad, establecer mediante los valores de la `DTSXMLDiffOptions` enumeración. Las opciones de este enumerador no se excluyen mutualmente. Para utilizar varias opciones, proporcione una lista separada por comas de las opciones que se deben aplicar.  
+ `DiffOptions` Conjunto de propiedades con valores de la `DTSXMLDiffOptions` enumeración. Las opciones de este enumerador no se excluyen mutualmente. Para utilizar varias opciones, proporcione una lista separada por comas de las opciones que se deben aplicar.  
   
 |Nombre descriptivo en DTSXMLDiffOptions|Valor numérico|  
 |----------------------------------------|-------------------|  
@@ -468,7 +467,7 @@ ms.locfileid: "48089665"
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm` propiedad, establecer mediante los valores de la `DTSXMLDiffAlgorithm` enumeración.  
+ `DiffAlgorithm` Conjunto de propiedades con valores de la `DTSXMLDiffAlgorithm` enumeración.  
   
 |Nombre descriptivo en DTSXMLDiffAlgorithm|Valor numérico|  
 |------------------------------------------|-------------------|  
@@ -484,7 +483,7 @@ ms.locfileid: "48089665"
 ### <a name="all-maintenance-tasks"></a>Todas las tareas de mantenimiento  
  Todas las tareas de mantenimiento utilizan las siguientes enumeraciones para establecer las propiedades especificadas.  
   
- `DatabaseSelectionType` propiedad, establecer mediante los valores de la `DatabaseSelection` enumeración.  
+ `DatabaseSelectionType` Conjunto de propiedades con valores de la `DatabaseSelection` enumeración.  
   
 |Nombre descriptivo en DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
@@ -494,7 +493,7 @@ ms.locfileid: "48089665"
 |Usuario|3|  
 |Specific|4|  
   
- `TableSelectionType` propiedad, establecer mediante los valores de la `TableSelection` enumeración.  
+ `TableSelectionType` Conjunto de propiedades con valores de la `TableSelection` enumeración.  
   
 |Nombre descriptivo en TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -502,7 +501,7 @@ ms.locfileid: "48089665"
 |All|1|  
 |Specific|2|  
   
- `ObjectTypeSelection` propiedad, establecer mediante los valores de la `ObjectType` enumeración.  
+ `ObjectTypeSelection` Conjunto de propiedades con valores de la `ObjectType` enumeración.  
   
 |Nombre descriptivo en ObjectType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -511,21 +510,21 @@ ms.locfileid: "48089665"
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Tarea Copia de seguridad de la base de datos  
- `DestinationCreationType` propiedad, establecer mediante los valores de la `DestinationType` enumeración.  
+ `DestinationCreationType` Conjunto de propiedades con valores de la `DestinationType` enumeración.  
   
 |Nombre descriptivo en DestinationType|Valor numérico|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |Manual|1|  
   
- `ExistingBackupsAction` propiedad, establecer mediante los valores de la `ActionForExistingBackups` enumeración.  
+ `ExistingBackupsAction` Conjunto de propiedades con valores de la `ActionForExistingBackups` enumeración.  
   
 |Nombre descriptivo en ActionForExistingBackups|Valor numérico|  
 |-----------------------------------------------|-------------------|  
 |Anexar|0|  
 |Sobrescribir|1|  
   
- `BackupAction` propiedad, establecer mediante los valores de la `BackupTaskType` enumeración. Esta propiedad funciona con el `BackupIsIncremental` propiedad para definir el tipo de copia de seguridad que realiza la tarea.  
+ `BackupAction` Conjunto de propiedades con valores de la `BackupTaskType` enumeración. Esta propiedad trabaja con la propiedad `BackupIsIncremental` para definir el tipo de copia de seguridad que realiza la tarea.  
   
 |Nombre descriptivo en BackupTaskType|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -533,7 +532,7 @@ ms.locfileid: "48089665"
 |Archivos|1|  
 |Log|2|  
   
- Propiedad `BackupDevice`: se establece mediante el uso de valores provenientes de la enumeración `DeviceType` de los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
+ `BackupDevice` Conjunto de propiedades con valores de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` enumeración.  
   
 |Nombre descriptivo en DeviceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -543,15 +542,15 @@ ms.locfileid: "48089665"
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### <a name="maintenance-cleanup-task"></a>Tarea Limpieza de mantenimiento  
- `FileTypeSelected` propiedad, establecer mediante los valores de la `FileType` enumeración.  
+### <a name="maintenance-cleanup-task"></a>tarea, Limpieza de mantenimiento  
+ `FileTypeSelected` Conjunto de propiedades con valores de la `FileType` enumeración.  
   
 |Nombre descriptivo en FileType|Valor numérico|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType` propiedad, establecer mediante los valores de la `TimeUnitType` enumeración.  
+ `OlderThanTimeUnitType` Conjunto de propiedades con valores de la `TimeUnitType` enumeración.  
   
 |Nombre descriptivo en TimeUnitType|Valor numérico|  
 |-----------------------------------|-------------------|  
@@ -561,7 +560,7 @@ ms.locfileid: "48089665"
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>Tarea Actualizar estadísticas  
- Propiedad `UpdateType`: se establece mediante el uso de valores provenientes de la enumeración `StatisticsTarget` de los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
+ `UpdateType` Conjunto de propiedades con valores de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` enumeración.  
   
 |Nombre descriptivo en StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -572,7 +571,7 @@ ms.locfileid: "48089665"
 ##  <a name="CommonProperties"></a> Propiedades comunes  
  Los paquetes, tareas, y los contenedores de secuencias, de bucles Foreach y de bucles For pueden utilizar las siguientes enumeraciones para establecer las propiedades especificadas.  
   
- `ForceExecutionResult` propiedad, establecer mediante los valores de la `DTSForcedExecResult` enumeración.  
+ `ForceExecutionResult` Conjunto de propiedades con valores de la `DTSForcedExecResult` enumeración.  
   
 |Nombre descriptivo en DTSForcedExecResult|Valor numérico|  
 |------------------------------------------|-------------------|  
@@ -581,9 +580,9 @@ ms.locfileid: "48089665"
 |Failure|1|  
 |Completion|2|  
   
- Propiedad `IsolationLevel`: se establece mediante la enumeración `IsolationLevel` de .NET Framework. Para obtener más información, vea la biblioteca de clases de .NET Framework. en [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel` Conjunto de propiedades por .NET Framework `IsolationLevel` enumeración. Para obtener más información, vea la biblioteca de clases de .NET Framework. en [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
- `LoggingMode` propiedad, establecer mediante los valores de la `DTSLoggingMode` enumeración.  
+ `LoggingMode` Conjunto de propiedades con valores de la `DTSLoggingMode` enumeración.  
   
 |Nombre descriptivo en DTSLoggingMode|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -591,7 +590,7 @@ ms.locfileid: "48089665"
 |Habilitado|1|  
 |Deshabilitado|2|  
   
- `TransactionOption` propiedad, establecer mediante los valores de la `DTSTransactionOption` enumeración.  
+ `TransactionOption` Conjunto de propiedades con valores de la `DTSTransactionOption` enumeración.  
   
 |Nombre descriptivo en DTSTransactionOption|Valor numérico|  
 |-------------------------------------------|-------------------|  
@@ -604,7 +603,7 @@ ms.locfileid: "48089665"
   
 ## <a name="see-also"></a>Vea también  
  [Usar expresiones de propiedad en paquetes](use-property-expressions-in-packages.md)   
- [Servicios de integración &#40;SSIS&#41; paquetes](../integration-services-ssis-packages.md)   
+ [Paquetes de Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Contenedores de Integration Services](../control-flow/integration-services-containers.md)   
  [Tareas de Integration Services](../control-flow/integration-services-tasks.md)   
  [Restricciones de precedencia](../control-flow/precedence-constraints.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 6: Agregar un control ReportViewer a la aplicación | Microsoft Docs'
+title: 'Lección 6: Agregar un Control ReportViewer a la aplicación | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afb73e5dc93efdadb0754072d652b7328aaa2151
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf11d44179dadbc3362c2fcf6f946c30d6856a56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104005"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361127"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lección 6: agregar un control ReportViewer a la aplicación
   Después de diseñar el informe secundario con el Asistente de informes, el paso siguiente consiste en agregar un control ReportViewer a la aplicación del sitio Web.  
@@ -33,9 +33,9 @@ ms.locfileid: "48104005"
   
 5.  En el cuadro **Elegir informe** , seleccione el informe primario que creó.  
   
-     Al seleccionar un informe, las instancias de los orígenes de datos usados en el informe se crean automáticamente. El código se genera para crear una instancia de cada DataTable (y el contenedor [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) ). Un control [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) se agrega a la superficie de diseño, correspondiente a cada origen de datos utilizado en el informe. Este control de origen de datos se configura automáticamente.  
+     Al seleccionar un informe, las instancias de los orígenes de datos usados en el informe se crean automáticamente. El código se genera para crear una instancia de cada DataTable (y el contenedor [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) ). Un control [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) se agrega a la superficie de diseño, correspondiente a cada origen de datos usado en el informe. Este control de origen de datos se configura automáticamente.  
   
-     Si utiliza Microsoft Visual Studio 2012, asegúrese de que el control ObjectDataSource está enlazado a DataSet1 que esta completo con el espacio de nombres del proyecto, si el nombre completo se muestra en el cuadro de lista desplegable de **Elegir un objeto comercial** (por ejemplo, Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Tiene acceso al cuadro de lista haciendo clic con el botón secundario en ObjectDataSource y, después, haciendo clic en **Configurar origen de datos**.  
+     Si usa Microsoft Visual Studio 2012, asegúrese de que el control ObjectDataSource está enlazado a DataSet1 que esta completo con el espacio de nombres del proyecto, si el nombre completo se muestra en el **Vyberte obchodní objekt**cuadro de lista desplegable (por ejemplo, Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Tiene acceso al cuadro de lista haciendo clic con el botón secundario en ObjectDataSource y, después, haciendo clic en **Configurar origen de datos**.  
   
 6.  En el menú Compilar, haga clic en Compilar sitio Web.  
   

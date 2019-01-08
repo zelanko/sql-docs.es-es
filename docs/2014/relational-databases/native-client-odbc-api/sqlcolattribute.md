@@ -14,18 +14,18 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204925"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361277"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Puede usar `SQLColAttribute` para recuperar un atributo de una columna de conjunto de resultados para instrucciones ODBC preparadas o ejecutadas. Una llamada a `SQLColAttribute` en instrucciones preparadas provoca un ida y vuelta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client recibe datos de columna del conjunto de resultados como parte de la ejecución de la instrucción, por lo que una llamada a `SQLColAttribute` tras la finalización de **SQLExecute** o **SQLExecDirect** does no implican un ida y vuelta del servidor.  
   
 > [!NOTE]  
->  Los atributos de identificador de columna de ODBC no están disponibles en todos los conjuntos de resultados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Los atributos de identificador de columna de ODBC no están disponibles en todos los conjuntos de resultados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Identificador de campo|Descripción|  
 |----------------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "48204925"
   
  Para todas las versiones, solo se notifican los atributos de columna del primer conjunto de resultados cuando un lote preparado de instrucciones SQL genera varios conjuntos de resultados.  
   
- Los siguientes atributos de columna son extensiones expuestas por la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client devuelve todos los valores de la *NumericAttrPtr* parámetro. Los valores se devuelven como SDWORD (largo con signo) excepto SQL_CA_SS_COMPUTE_BYLIST, que es un puntero a una matriz WORD.  
+ Los siguientes atributos de columna son extensiones expuestas por el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client devuelve todos los valores del parámetro *NumericAttrPtr* . Los valores se devuelven como SDWORD (largo con signo) excepto SQL_CA_SS_COMPUTE_BYLIST, que es un puntero a una matriz WORD.  
   
 |Identificador de campo|Valor devuelto|  
 |----------------------|--------------------|  
@@ -94,7 +94,7 @@ ms.locfileid: "48204925"
  El identificador del campo descriptor SQL_DESC_TYPE_NAME existente se usa para indicar el nombre del UDT. El campo SQL_DESC_TYPE de una columna de tipo UDT es SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Compatibilidad de SQLColAttribute con las características mejoradas de fecha y hora  
- Para los valores devueltos para los tipos de fecha y hora, vea la sección "Información devuelta en los campos IRD" de [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Para los valores devueltos en los tipos de fecha y hora, vea la sección "Información que se devuelve en los campos IRD" de [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48204925"
  Para obtener más información, consulte [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLColAttribute](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Función SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [Detalles de implementación de API de ODBC](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

@@ -11,17 +11,17 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc01da68aeaa393631aca6146a41e6eb88ecb14e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073475"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376637"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
   Un mapa del documento proporciona un conjunto de vínculos de navegación a los elementos de informe de un informe representado. Cuando se ve un informe que incluya un mapa del documento, aparece un panel lateral separado junto al informe. Un usuario puede hacer clic en los vínculos del mapa del documento para saltar a la página del informe que muestra el elemento. Las secciones y los grupos del informe se organizan en una jerarquía de vínculos. Cada vez que se hace clic en un elemento del mapa del documento, se actualiza el informe y se muestra el área del mismo correspondiente a dicho elemento en el mapa del documento.  
   
- Para agregar vínculos al mapa del documento, se establece la `DocumentMapLabel` propiedad del elemento de informe para el texto que se cree o en una expresión que se evalúa como el texto que se desea mostrar en el mapa del documento. También puede agregar los valores únicos para un grupo de tablas o de matrices al mapa del documento. Por ejemplo, para un grupo basado en colores, cada color único es un vínculo a la página del informe que muestra la instancia de grupo para ese color.  
+ Para agregar vínculos al mapa del documento, se establece la propiedad `DocumentMapLabel` del elemento de informe en un texto o en una expresión que se evalúa como el texto que se desea mostrar en el mapa del documento. También puede agregar los valores únicos para un grupo de tablas o de matrices al mapa del documento. Por ejemplo, para un grupo basado en colores, cada color único es un vínculo a la página del informe que muestra la instancia de grupo para ese color.  
   
  También puede crear una dirección URL a un informe que invalide la presentación del mapa del documento, lo que le permite ejecutar el informe sin mostrar el mapa del documento y, después, hacer clic en el botón **Mostrar u ocultar mapa del documento** de la barra de herramientas del visor de informes para alternar la presentación.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48073475"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Mapas de documento y extensiones de representación  
- El mapa del documento está pensado para utilizarlo en la extensión de representación en HTML, por ejemplo, en la vista previa y el visor de informes. Otras extensiones de representación tienen diferentes formas de articular un mapa del documento:  
+ El mapa del documento está pensado para usarlo en la extensión de representación de HTML, por ejemplo, en la vista previa y el visor de informes. Otras extensiones de representación tienen diferentes formas de articular un mapa del documento:  
   
 -   PDF representa un mapa del documento como el panel Marcadores.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48073475"
 4.  Pegue la dirección URL en el Administrador de informes y, a continuación, presione ENTRAR. El informe se ejecuta con el mapa del documento oculto.  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
->  Para obtener más información, vea el tema acerca del acceso URL en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
+>  Para obtener más información, vea el tema acerca del acceso URL en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
  
   

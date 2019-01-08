@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098995"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366377"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
   Las tablas, las matrices, los gráficos y las imágenes que se incluyen en los informes, se pueden publicar como *elementos de informe*. Se trata de elementos de informe que se han publicado por separado en un servidor de informes y se pueden volver a utilizar en otros informes. Los elementos de informe tienen una extensión de archivo .rsc.  
@@ -27,7 +27,7 @@ ms.locfileid: "48098995"
   
  El elemento de informe que agrega a un informe mantiene una relación con la instancia del elemento de informe en el sitio o servidor por medio de un identificador único. Después de agregar elementos de informe de un sitio o servidor a un informe, puede modificarlas, de forma independiente del elemento de informe original en el sitio o servidor. Puede aceptar las actualizaciones realizadas por otros usuario al elemento de informe en el sitio o servidor, y puede volver a guardar el elemento de informe modificado en el sitio o servidor, agregando un nuevo elemento de informe o sobrescribiendo el original, si tiene los permisos necesarios.  
   
- Para empezar rápidamente con elementos de informe, vea los vídeos [Elementos de informe de Generador de informes 3 en SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) y [Cómo: Crear elementos de informe reutilizables con el Generador de informes de SQL Server](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ Para empezar rápidamente con elementos de informe, vea los vídeos [elementos de informe de generador de informes 3 en SQL Server 2008 R2](https://technet.microsoft.com/edge/Video/ff711300) y [Cómo: Crear elementos de informe reutilizables con SQL Server Report Builder](https://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> El ciclo de vida de un elemento de informe  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -75,7 +75,7 @@ ms.locfileid: "48098995"
   
  Algunos elementos de informe pueden contener otros elementos de informe. Por ejemplo, una tabla puede contener un gráfico y un rectángulo puede contener una matriz y un gráfico. Al publicar un elemento de informe que contiene otros elementos de informe, se guardan como una unidad. Los demás elementos de informe se guardan incrustados en el elemento de informe que los contiene. No puede actualizarlos por separado, ni guardar los elementos del contenedor como elementos de informe independientes.  
   
- Para obtener más información sobre cómo publicar elementos de informe, vea [publicar y volver a publicar elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ Para obtener más información sobre cómo publicar elementos de informe, vea [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
   
 ### <a name="modifying-report-part-metadata"></a>Modificar los metadatos del elemento de informe  
  Puede publicar elementos de informe con la configuración predeterminada en una ubicación predeterminada, o guardar cada elemento de informe en una ubicación distinta y modificar los metadatos, por ejemplo el título y la descripción.  
@@ -92,9 +92,9 @@ ms.locfileid: "48098995"
  La manera más fácil de crear un informe es agregar un elemento de informe existente, como una tabla o un gráfico, de la galería de elementos de informe a su informe. Después de agregarla a un informe, puede modificarla como convenga o aceptar las actualizaciones del servidor. Los cambios realizados en el elemento del informe no afectan a la instancia del elemento de informe publicada en el sitio o servidor, ni a la relación entre las instancias del informe y del sitio o servidor. Si tiene los permisos necesarios, puede volver a guardar la copia actualizada en el sitio o servidor. Si otro usuario modifica la copia del sitio o servidor, puede decidir mantener su copia como está o actualizarla para que sea como la copia del sitio o servidor.  
   
 ### <a name="searching-for-report-parts"></a>Buscar elementos de informe  
- Pueden buscar elementos de informe en la galería de elementos de informe para agregarlos a un informe. Puede filtrar los elementos de informe por el nombre completo o solo parte de él, quien los creó, quien los modificó por última vez, cuando se modificaron por última vez, donde están almacenados, o el tipo de elemento de informe. Por ejemplo, podría buscar todos los gráficos creados la semana pasada por uno de sus colaboradores.  
+ Pueden buscar elementos de informe en la galería de elementos de informe para agregarlos a un informe. Puede filtrar los elementos de informe por el nombre completo o solo parte de él, quién lo ha creado, quién lo ha modificado por última vez, cuándo se modificaron por última vez, dónde están almacenados, o bien el tipo de elemento de informe. Por ejemplo, podría buscar todos los gráficos creados la semana pasada por uno de sus colaboradores.  
   
- Puede ver los resultados de la búsqueda como miniaturas o como lista, y ordenar los resultados de la búsqueda por nombre, fechas de creación y modificación, y autor. Para obtener más información, consulte [buscar elementos de informe y establecer una carpeta predeterminada &#40;generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
+ Puede ver los resultados de la búsqueda como miniaturas o como lista, y ordenar los resultados de la búsqueda por nombre, fechas de creación y modificación, y autor. Para obtener más información, vea [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### <a name="what-comes-with-a-report-part"></a>Componentes de un elemento de informe  
  Al agregar un elemento de informe al informe, también agrega todo lo que debe tener para que funcione. Por ejemplo, cualquier objeto que muestre datos depende de un conjunto de datos, es decir, una consulta y una conexión a un origen de datos. También puede tener uno o varios parámetros. Todos los elementos de los que depende son sus *dependencias*y todos ellos, o punteros que los señalan, se incluyen con el elemento de informe al agregarlo a un informe. El conjunto de datos y los parámetros se enumeran en el panel Datos de informe en el informe.  
@@ -142,17 +142,17 @@ ms.locfileid: "48098995"
  Los elementos de informe funcionan de forma algo diferente en el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En el Diseñador de informes, la publicación es unidireccional: puede publicar un elemento de informe del Diseñador de informes, pero no puede reutilizar un elemento de informe existente en el Diseñador de informes. Para obtener más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Publicar y volver a publicar elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Buscar elementos de informe y establecer una carpeta predeterminada &#40;generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
  [Buscar o desactivar actualizaciones &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de informe y conjuntos de datos en el generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Elementos de informe y conjuntos de datos en el Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Administrar elementos de informe](report-design/managing-report-parts.md)   
- [El generador de informes elementos de informes 3 en SQL Server 2008 R2 (vídeo)](http://technet.microsoft.com/edge/Video/ff711300)   
- [¿Cómo lo hago?: elementos de informe reutilizables crear con SQL Server Report Builder (vídeo)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [El generador de informes elementos de informes 3 en SQL Server 2008 R2 (vídeo)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [¿Cómo lo hago?: Crear elementos de informe reutilizables con SQL Server Report Builder (vídeo)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

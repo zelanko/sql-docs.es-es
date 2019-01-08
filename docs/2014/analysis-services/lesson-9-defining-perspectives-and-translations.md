@@ -11,18 +11,18 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edc7a43485acd7c0e2d1c4a914867d8de9d1bc19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094065"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362237"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definir perspectivas y traducciones
   En esta lección, aprenderá a definir perspectivas y traducciones. Puede definir perspectivas para reducir la complejidad aparente de un cubo y definir traducciones que permitan a los usuarios ver los metadatos del cubo en el idioma que desee.  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](http://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
   
  Esta lección contiene las siguientes tareas:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48094065"
  En esta tarea, se definen y examinan traducciones de metadatos específicos en determinados idiomas.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 10: Definir roles administrativos](lesson-10-defining-administrative-roles.md)  
+ [Lección 10: Definir Roles administrativos](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   

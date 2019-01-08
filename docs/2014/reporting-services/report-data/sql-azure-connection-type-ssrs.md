@@ -11,15 +11,15 @@ ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 567a9bd8e12a60ba686811553efd9af6a87b9b3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6634e0b09d2a2ea83eb84e252867a4e93c4098f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182535"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363037"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexión SQL Azure (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] hospedada en la nube, base de datos relacional basado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologías. Para incluir en el informe los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , debe tener un conjunto de datos que se base en un origen de datos de informe de tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] es una base de datos relacional hospedada y basada en la nube, que se integra en las tecnologías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para incluir en el informe los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , debe tener un conjunto de datos que se base en un origen de datos de informe de tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Esta extensión de datos admite parámetros de varios valores, agregados del servidor y credenciales administrados con independencia de la cadena de conexión.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48182535"
 > [!NOTE]  
 >  Cuando abra una conexión con [!INCLUDE[ssSDS](../../includes/sssds-md.md)], establezca el tiempo de espera de conexión en 30 segundos.  
   
- Para obtener más información, vea [Base de datos SQL de Windows Azure en MSDN](http://go.microsoft.com/fwlink/?LinkId=206770).  
+ Para obtener más información, vea [Base de datos SQL de Windows Azure en MSDN](https://go.microsoft.com/fwlink/?LinkId=206770).  
   
  Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -54,7 +54,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   Utilizar un nombre de usuario y una contraseña almacenados. Para negociar el salto doble que se produce cuando la base de datos que contiene los datos de informe es distinta del servidor de informes, seleccione opciones para utilizar las credenciales como credenciales de Windows. Puede también decidir suplantar al usuario autenticado tras la conexión al origen de datos.  
   
--   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
+-   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
   
  Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
@@ -79,7 +79,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  Para más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](relational-query-designer-user-interface-report-builder.md) e [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
- El diseñador gráfico de consultas usado por [!INCLUDE[ssSDS](../../includes/sssds-md.md)] proporciona compatibilidad integrada con las agrupaciones y agregados para ayudar a los usuarios a escribir consultas que solo recuperen datos de resumen. Las características de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)] son: la cláusula GROUP BY, la palabra clave DISTINCT y agregados, como SUM y COUNT. El diseñador de consultas basado en texto es totalmente compatible con el lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)] , incluidas las agrupaciones y los agregados. Para más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ El diseñador gráfico de consultas usado por [!INCLUDE[ssSDS](../../includes/sssds-md.md)] proporciona compatibilidad integrada con las agrupaciones y agregados para ayudar a los usuarios a escribir consultas que solo recuperen datos de resumen. Las características de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)] son: la cláusula GROUP BY, la palabra clave DISTINCT y agregados, como SUM y COUNT. El diseñador de consultas basado en texto es totalmente compatible con el lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)] , incluidas las agrupaciones y los agregados. Para más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Usar consultas de tipo Texto  
  En el diseñador de consultas basado en texto, escriba comandos de [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir los datos de un conjunto de datos. Por ejemplo, la siguiente consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] selecciona todos los nombres de todos los empleados que son asistentes de marketing:  
@@ -124,7 +124,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  Si un procedimiento almacenado incluye un parámetro que tiene un valor predeterminado, puede tener acceso a dicho valor utilizando la palabra clave DEFAULT como valor del parámetro. Si el parámetro de consulta está vinculado a un parámetro de informe, el usuario puede escribir o seleccionar la palabra DEFAULT en el cuadro de entrada del parámetro de informe.  
   
- Para obtener más información sobre los procedimientos almacenados, vea "Procedimientos almacenados (motor de base de datos)" en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335) en msdn.microsoft.com.  
+ Para obtener más información sobre los procedimientos almacenados, vea "Procedimientos almacenados (motor de base de datos)" en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335) en msdn.microsoft.com.  
   
   
   
@@ -139,7 +139,7 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- De forma predeterminada, cada parámetro de informe tiene el tipo de datos Texto y un conjunto de datos creado automáticamente para proporcionar una lista desplegable de valores disponibles. Una vez creados los parámetros de informe, podría suceder que tenga que cambiar los valores predeterminados. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ De forma predeterminada, cada parámetro de informe tiene el tipo de datos Texto y un conjunto de datos creado automáticamente para proporcionar una lista desplegable de valores disponibles. Una vez creados los parámetros de informe, podría suceder que tenga que cambiar los valores predeterminados. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
   
@@ -151,7 +151,7 @@ WHERE EmployeeID = (@EmpID)
  Para más información, vea [Tipo de conexión ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Información de plataforma y de versión  
- Para obtener más información sobre la compatibilidad de plataformas y de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para obtener más información sobre la compatibilidad de plataformas y de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
   
@@ -181,7 +181,7 @@ WHERE EmployeeID = (@EmpID)
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324598"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507501"
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos tipos de datos SQL que define el DBMS asociado. Información acerca de cómo se asigna un controlador de DBMS SQL tipos a los identificadores de tipo definido por el ODBC SQL y cómo asigna un controlador de tipos de DBMS SQL a su propio identificadores específicos del controlador de tipo SQL se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos SQL al describir los tipos de datos de columnas y parámetros a través de las llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
@@ -45,14 +45,14 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos t
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Datos Unicode de caracteres de longitud variable. Longitud máxima es depende del origen de datos|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Valor con signo, numérico, exacto con una precisión de al menos *p* y escala *s.* (La precisión máxima es definido por el controlador). (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRICO (*p*,*s*)|Iniciado, el valor numérico exacto con una precisión *p* y escala *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valor numérico exacto con precisión de 5 y escala de 0 (firmado: -32.768 < = *n* < = 32 767; sin signo: 0 < = *n* < = 65 535) [3].|  
-|SQL_INTEGER|INTEGER|Valor numérico exacto con precisión de 10 y escala de 0 (firmado: – 2 [31] < = *n* < = 2 [31] – 1; sin signo: 0 < = *n* < = 2 [32] – 1) [3].|  
-|SQL_REAL|real|Valor con signo, aproximado, numeric con una precisión binaria de 24 (cero o valor absoluto 10 [– 38] a 10[38]).|  
+|SQL_SMALLINT|SMALLINT|Valor numérico exacto con precisión de 5 y escala de 0 (firmado: entre-32.768 y < = *n* < = 32 767; sin signo:  0 < = *n* < = 65 535) [3].|  
+|SQL_INTEGER|INTEGER|Valor numérico exacto con precisión de 10 y escala de 0 (firmado: -2 [31] < = *n* < = 2 [31] - 1; sin signo:  0 < = *n* < = 2 [32] - 1) [3].|  
+|SQL_REAL|real|Valor con signo, aproximado, numeric con una precisión binaria de 24 (cero o valor absoluto 10 [-38] a 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Valor con signo, aproximado, numeric con una precisión binaria de al menos *p*. (La precisión máxima es definido por el controlador). [5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|Valor con signo, aproximado, numeric con una precisión binaria de 53 (cero o valor absoluto 10 [–308] para 10[308]).|  
+|SQL_DOUBLE|DOUBLE PRECISION|Valor con signo, aproximado, numeric con una precisión binaria de 53 (cero o valor absoluto 10 [-308] a 10[308]).|  
 |SQL_BIT|BIT|Datos binarios de bits única. [8]|  
-|SQL_TINYINT|TINYINT|Valor numérico exacto con precisión 3 y escala de 0 (firmado: – 128 < = *n* < = 127; sin signo: 0 < = *n* < = 255) [3].|  
-|SQL_BIGINT|bigint|Exacto de un valor numérico con una precisión de 19 (si tiene signo) o 20 (si no tiene signo) y una escala de 0 (firmado: – 2 [63] < = *n* < = 2 [63] – 1; sin signo: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
+|SQL_TINYINT|TINYINT|Valor numérico exacto con precisión 3 y escala de 0 (firmado: -128 < = *n* < = 127; sin signo:  0 < = *n* < = 255) [3].|  
+|SQL_BIGINT|bigint|Exacto de un valor numérico con una precisión de 19 (si tiene signo) o 20 (si no tiene signo) y una escala de 0 (firmado: -2 [63] < = *n* < = 2 [63] - 1; sin signo: 0 < = *n* < = 2 [64] - 1) [3], [9].|  
 |SQL_BINARY|BINARIO (*n*)|Datos binarios de longitud fija *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Datos binarios de longitud variable de longitud máxima *n*. El máximo se establece por el usuario. [9]|  
 |SQL_LONGVARBINARY|VARBINARY LARGO|Datos binarios de longitud variable. Longitud máxima es depende del origen de datos. [9]|  
@@ -78,7 +78,7 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos t
   
  [1] se trata el valor devuelto en la columna DATA_TYPE mediante una llamada a **SQLGetTypeInfo**.  
   
- [2] es el valor devuelto en la columna nombre y crear PARAMS mediante una llamada a **SQLGetTypeInfo**. La columna nombre devuelve la designación de, por ejemplo, CHAR, mientras que la columna crear PARAMS devuelve una lista separada por comas de parámetros de creación como la precisión, escala y longitud.  
+ [2] es el valor devuelto en la columna nombre y crear PARAMS mediante una llamada a **SQLGetTypeInfo**. La columna nombre devuelve la designación-CHAR, por ejemplo,-, mientras que la columna crear PARAMS devuelve una lista separada por comas de parámetros de creación como la precisión, escala y longitud.  
   
  [3] en una aplicación usa **SQLGetTypeInfo** o **SQLColAttribute** para determinar si un tipo de datos determinado o una columna en particular en un conjunto de resultados es sin signo.  
   

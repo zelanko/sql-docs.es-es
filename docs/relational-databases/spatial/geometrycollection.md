@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fb46d979990977865bbd47d8c1ba1c7960a1b34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: e8f911859b90077e07bbbc13a40a29952fbce07c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018490"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978972"
 ---
 # <a name="geometrycollection"></a>Colección Geometry
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018490"
 ### <a name="accepted-instances"></a>Instancias aceptadas  
  Para que se acepte una instancia de **GeometryCollection** , debe ser una instancia de **GeometryCollection** vacía o todas las instancias que comprenden la instancia de **GeometryCollection** deben ser instancias aceptadas. El siguiente ejemplo muestra instancias aceptadas.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
 DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
@@ -38,14 +38,14 @@ DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
   
  El siguiente ejemplo inicia una `System.FormatException` porque la instancia **LinesString** de la instancia **GeometryCollection** no se acepta.  
   
-```  
+```sql  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>Instancias válidas  
  Una instancia de **GeometryCollection** es válida cuando todas las instancias que comprenden la instancia de **GeometryCollection** son válidas. A continuación se muestran tres instancias de **GeometryCollection** válidas y una instancia que no es válida.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
 DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
@@ -60,12 +60,12 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea `geometry``GeometryCollection` con valores de Z en SRID 1 que contiene una instancia `Point` y una instancia `Polygon` .  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

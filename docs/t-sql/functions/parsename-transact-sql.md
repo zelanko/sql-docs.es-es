@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39dbc37d43c145fe7bd1231decbf7ab017d212a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0198c648cdbf312c4285ce9b758b6ce7fca835e
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700033"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069075"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -62,7 +62,7 @@ PARSENAME ( 'object_name' , object_piece )
  4 = Nombre del servidor  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **nchar**  
+ **sysname**  
   
 ## <a name="remarks"></a>Notas  
  PARSENAME devuelve NULL cuando se cumple una de las siguientes condiciones:  
@@ -113,7 +113,7 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

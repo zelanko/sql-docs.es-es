@@ -20,12 +20,12 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 622e6be1e798569de5184333144ff53e3e7d80a6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667133"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979591"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,11 +93,11 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  Después de crearse una especificación de auditoría de base de datos, podrá ser vista por entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY DATABASE AUDIT, así como la cuenta sysadmin, o por entidades de seguridad que tengan acceso explícito a la auditoría.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se modifica una especificación de auditoría de base de datos denominada `HIPPA_Audit_DB_Specification` en la que se auditan las instrucciones `SELECT` emitidas por el usuario `dbo` para una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPPA_Audit`.  
+ En el ejemplo siguiente se modifica una especificación de auditoría de base de datos denominada `HIPAA_Audit_DB_Specification` en la que se auditan las instrucciones `SELECT` emitidas por el usuario `dbo` para una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPAA_Audit`.  
   
 ```  
-ALTER DATABASE AUDIT SPECIFICATION HIPPA_Audit_DB_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  
          ON OBJECT::dbo.Table1  
          BY dbo)  
@@ -107,7 +107,7 @@ GO
   
  Para ver un ejemplo completo de cómo crear una auditoría, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

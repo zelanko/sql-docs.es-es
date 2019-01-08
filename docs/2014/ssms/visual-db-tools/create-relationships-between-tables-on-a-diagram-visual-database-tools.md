@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
@@ -12,12 +12,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cb069a1e28a10036ebea2738f5eea81a9f8932c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781627"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Crear relaciones entre tablas en un diagrama (Visual Database Tools)
   Puede crear relaciones entre columnas de diferentes tablas en el Diseñador de diagramas si se arrastran las columnas entre las tablas.  
@@ -28,7 +28,7 @@ ms.locfileid: "48128651"
   
 2.  Arrastre las columnas seleccionadas hasta la tabla relacionada.  
   
-3.  Aparecen dos cuadros de diálogo: **Relación de clave externa** y **Tablas y columnas**, esta última en primer plano.  
+3.  Aparecen dos cuadros de diálogo: **Relación de clave externa** y **tablas y columnas**, con el último en primer plano.  
   
 4.  **Nombre de la relación** incluye un nombre proporcionado por el sistema con el formato FK_*tablalocal*_*tablaexterna*. Se puede modificar este valor.  
   

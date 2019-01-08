@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
@@ -14,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c554ec2d49e9e03c3381a54b8c834514bd16e34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071915"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772567"
 ---
 # <a name="set-or-change-the-database-collation"></a>Establecer o cambiar la intercalación de base de datos
   En este tema se describe cómo establecer y cambiar la intercalación de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si no se especifica ninguna intercalación, se utiliza la del servidor.  
@@ -40,7 +39,7 @@ ms.locfileid: "48071915"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48071915"
   
     -   Todos los parámetros `char`, `varchar`, `text`, `nchar`, `nvarchar` o `ntext` y valores devueltos escalares existentes para los procedimientos almacenados y las funciones definidas por el usuario se cambian a la nueva intercalación.  
   
-    -   El `char`, `varchar`, `text`, `nchar`, `nvarchar`, o `ntext` tipos de datos del sistema y todos los tipos de datos definido por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
+    -   Los tipos de datos del sistema `char`, `varchar`, `text`, `nchar`, `nvarchar` o `ntext` y todos los tipos de datos definidos por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
   
 -   Para cambiar la intercalación de cualquier objeto nuevo creado en una base de datos de usuario, utilice la cláusula COLLATE de la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Esta instrucción no modifica la intercalación de las columnas de ninguna de las tablas definidas por el usuario existentes. Para modificarlas, utilice la cláusula COLLATE de [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48071915"
   
 #### <a name="to-set-the-database-collation"></a>Para establecer la intercalación de base de datos  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -113,7 +112,7 @@ GO
   
 #### <a name="to-change-the-database-collation"></a>Para cambiar la intercalación de base de datos  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

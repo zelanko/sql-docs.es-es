@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f6d23e30a589c4924925b834b310921d17ba57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540780"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47818943"
   
 -   Generación 0: almacena todas las transacciones que se confirmaron antes que la transacción activa más antigua. Las versiones de fila generadas por estas transacciones están disponibles inmediatamente para la recolección de elementos no utilizados.  
   
--   Generaciones 1 a 14: almacena las transacciones cuya marca de tiempo es mayor que la transacción activa más antigua. No se pueden recolectar las versiones de fila no utilizadas. Cada generación puede contener hasta 16 transacciones. En estas generaciones pueden existir un total de 224 (14 * 16) transacciones.  
+-   Generaciones 1-14: almacena las transacciones cuya marca de tiempo es mayor que la transacción activa más antigua. No se pueden recolectar las versiones de fila no utilizadas. Cada generación puede contener hasta 16 transacciones. En estas generaciones pueden existir un total de 224 (14 * 16) transacciones.  
   
 -   Generación 15: las transacciones restantes cuya marca de tiempo es mayor que la transacción activa más antigua van a la generación 15. Al igual que ocurre con la generación 0, no hay ningún límite en cuanto al número de transacciones de la generación 15.  
   

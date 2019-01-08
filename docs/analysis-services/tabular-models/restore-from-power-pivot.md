@@ -1,5 +1,5 @@
 ---
-title: Restaurar desde Power Pivot | Documentos de Microsoft
+title: Restaurar desde Power Pivot de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f95c1e891a218af73eb7c5bacbd1ea5a48e3a830
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041932"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072782"
 ---
 # <a name="restore-from-power-pivot"></a>Restaurar de Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

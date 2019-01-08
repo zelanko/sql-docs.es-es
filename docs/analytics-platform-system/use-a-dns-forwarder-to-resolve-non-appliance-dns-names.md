@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 645e2603af6d0447aae22bc7c29b5413501b722f
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168908"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509318"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar un reenviador DNS para resolver nombres DNS que no sea de dispositivo de Analytics Platform System
 Se puede configurar un reenviador DNS en los nodos de Active Directory Domain Services (**_dispositivo\_dominio_-AD01** y  **_dispositivo\_ dominio_-AD02**) de la aplicación Analytics Platform System para permitir que los scripts y aplicaciones de software para tener acceso a servidores externos.  
@@ -36,7 +36,7 @@ La aplicación Analytics Platform System está configurada para evitar la resolu
   
 6.  Escriba la dirección IP para el servidor DNS externo que proporcionará la resolución de nombres. Las máquinas virtuales y servidores (hosts) en el dispositivo se conectarán a servidores externos mediante el uso de nombres de dominio completo.  
   
-7.  Repita los pasos 1 a 6 en el  **_dispositivo\_dominio_-AD02** nodo  
+7.  Repita los pasos del 1 al 6 en el  **_dispositivo\_dominio_-AD02** nodo  
   
 **Para crear un reenviador DNS mediante Windows PowerShell**  
   

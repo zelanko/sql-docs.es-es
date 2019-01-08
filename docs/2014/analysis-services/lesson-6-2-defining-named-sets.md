@@ -11,12 +11,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189135"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507862"
 ---
 # <a name="defining-named-sets"></a>Definir conjuntos con nombre
   Un conjunto con nombre es una expresión de Expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  
@@ -68,7 +68,7 @@ ms.locfileid: "48189135"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     Ahora que ha definido el primer conjunto para la expresión de conjunto Exists, estará listo para agregar el segundo conjunto: el conjunto de miembros de dimensión Reseller que contiene el mayor número de empleados.  
+     Ahora que ha definido el primer conjunto para el método Exists expresión de conjunto, estará listo para agregar el segundo conjunto, el conjunto de miembros de dimensión Reseller que contiene el mayor número de empleados.  
   
 7.  En el **metadatos** pestaña en el **herramientas de cálculo** panel, expanda **Number of Employees** en la dimensión Reseller, expanda `Members`y, a continuación, expanda **Todos los distribuidores**.  
   

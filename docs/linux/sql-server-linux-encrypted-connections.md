@@ -12,25 +12,25 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766599"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826090"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrar conexiones a SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux puede usar capa de transporte (TLS) para cifrar los datos transmitidos a través de una red entre una aplicación cliente y una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es compatible con los mismos protocolos TLS en Windows y Linux: TLS 1.0, 1.1 y 1.2. Sin embargo, son específicos del sistema operativo en el que los pasos para configurar TLS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux puede usar capa de transporte (TLS) para cifrar los datos transmitidos a través de una red entre una aplicación cliente y una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite los mismos protocolos TLS en Windows y Linux: TLS 1.0, 1.1 y 1.2. Sin embargo, son específicos del sistema operativo en el que los pasos para configurar TLS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando.  
 
 ## <a name="requirements-for-certificates"></a>Requisitos de certificados 
 Antes de comenzar, deberá asegurarse de que los certificados cumplen estos requisitos:
 - La hora actual del sistema debe ser posterior válido de propiedad del certificado y antes de la fecha válido para la propiedad del certificado.
 - El certificado debe estar destinado a la autenticación del servidor. Esto requiere que la propiedad de uso mejorado de clave del certificado para especificar la autenticación de servidor (1.3.6.1.5.5.7.3.1).
 - El certificado debe crearse con la opción KeySpec de AT_KEYEXCHANGE. Normalmente, la propiedad de uso de la clave del certificado (KEY_USAGE) también incluye cifrado de clave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- La propiedad de asunto del certificado debe indicar que el nombre común (CN) es el mismo como el nombre de host o nombre de dominio completo (FQDN) del equipo del servidor. Nota: se admiten certificados comodín.
+- La propiedad de asunto del certificado debe indicar que el nombre común (CN) es el mismo como el nombre de host o nombre de dominio completo (FQDN) del equipo del servidor. Nota: Se admiten certificados comodín.
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Configuración de las bibliotecas OpenSSL para su uso (opcional)
 Puede crear vínculos simbólicos en el `/opt/mssql/lib/` directorio que hacen referencia a que `libcrypto.so` y `libssl.so` bibliotecas que se deben usar para el cifrado. Esto es útil si desea obligar a SQL Server para usar una versión específica de OpenSSL que no sea el valor predeterminado proporcionado por el sistema. Si no existen estos vínculos simbólicos, SQL Server se cargará las bibliotecas OpenSSL predeterminado configurado en el sistema.
@@ -56,8 +56,8 @@ TLS se utiliza para cifrar las conexiones desde una aplicación cliente [!INCLUD
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
@@ -65,10 +65,10 @@ TLS se utiliza para cifrar las conexiones desde una aplicación cliente [!INCLUD
 
     -   Si utiliza un certificado firmado de CA, deberá copiar el certificado de entidad de certificación (CA) en lugar del certificado de usuario en el equipo cliente. 
     -   Si usas el certificado autofirmado, copie el archivo .pem a las carpetas siguientes correspondientes a la distribución y ejecutar los comandos para habilitarlas 
-        - **Ubuntu**: certificado de copia para ```/usr/share/ca-certificates/``` rename extensión .crt use certificados de ca de dpkg reconfigure para habilitarlo como certificado de entidad del sistema. 
-        - **RHEL**: certificado de copia para ```/etc/pki/ca-trust/source/anchors/``` usar ```update-ca-trust``` para habilitarlo como certificado de entidad del sistema.
-        - **SUSE**: certificado de copia para ```/usr/share/pki/trust/anchors/``` usar ```update-ca-certificates``` para habilitarlo como certificado de entidad del sistema.
-        - **Windows**: importar el archivo .pem como un certificado en el usuario actual -> entidades de certificación raíz -> certificados de confianza
+        - **Ubuntu**: Certificado de copia para ```/usr/share/ca-certificates/``` rename extensión .crt use certificados de ca de dpkg reconfigure para habilitarlo como certificado de entidad del sistema. 
+        - **RHEL**: Certificado de copia para ```/etc/pki/ca-trust/source/anchors/``` usar ```update-ca-trust``` para habilitarlo como certificado de entidad del sistema.
+        - **SUSE**: Certificado de copia para ```/usr/share/pki/trust/anchors/``` usar ```update-ca-certificates``` para habilitarlo como certificado de entidad del sistema.
+        - **Windows**:  Importar el archivo .pem como un certificado en el usuario actual -> entidades de certificación raíz -> certificados de confianza
         - **macOS**: 
            - Copie el certificado para ```/usr/local/etc/openssl/certs```
            - Ejecute el siguiente comando para obtener el valor de hash: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
@@ -106,8 +106,8 @@ TLS se utiliza para cifrar las conexiones desde una aplicación cliente [!INCLUD
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         

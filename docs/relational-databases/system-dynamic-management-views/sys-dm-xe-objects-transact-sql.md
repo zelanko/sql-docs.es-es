@@ -20,12 +20,12 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543823"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47601373"
 |package_guid|**uniqueidentifier**|GUID del paquete que expone esta acción. Hay una relación de varios a uno con sys.dm_xe_packages.package_id. No admite valores NULL.|  
 |description|**nvarchar(256)**|Descripción de la acción. el autor del paquete establece la descripción. No admite valores NULL.|  
 |capabilities|**int**|Mapa de bits que describe las capacidades del objeto. Acepta valores NULL.|  
-|capabilities_desc|**nvarchar(256)**|Enumera todas las capacidades del objeto. Acepta valores NULL.<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> —<br />                                **Privada**. El único objeto disponible para uso interno, y al que no se puede acceder mediante la DLL CREATE/ALTER EVENT SESSION. Los destinos y los eventos de auditoría pertenecen a esta categoría, así como un pequeño número de objetos usados internamente.<br /><br /> ===============<br /><br /> **Capacidades de eventos**<br /><br /> —<br />                                **No_block**. El evento está en una ruta de acceso de código crítica que se no puede bloquear por ningún motivo. Los eventos con esta capacidad no se pueden agregar a ninguna sesión de evento que especifique NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> —<br />                                **Process_whole_buffers**. El destino consume búferes de eventos a la vez, en lugar de evento por evento.<br /><br /> —<br />                        **Singleton**. Solamente puede haber una instancia del destino en un proceso. Aunque varias sesiones de eventos pueden hacer referencia al mismo destino singleton, en realidad solo hay una instancia, y esa instancia verá cada evento distinto una sola vez. Esto es importante si se agrega el destino a varias sesiones que recopilan el mismo evento.<br /><br /> —<br />                                **Synchronous**. El destino se ejecuta en el subproceso que produce el evento, antes de que se devuelva el control a la línea de código de llamada.|  
+|capabilities_desc|**nvarchar(256)**|Enumera todas las capacidades del objeto. Acepta valores NULL.<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> -<br />                                **Privada**. El único objeto disponible para uso interno, y al que no se puede acceder mediante la DLL CREATE/ALTER EVENT SESSION. Los destinos y los eventos de auditoría pertenecen a esta categoría, así como un pequeño número de objetos usados internamente.<br /><br /> ===============<br /><br /> **Capacidades de eventos**<br /><br /> -<br />                                **No_block**. El evento está en una ruta de acceso de código crítica que se no puede bloquear por ningún motivo. Los eventos con esta capacidad no se pueden agregar a ninguna sesión de evento que especifique NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> -<br />                                **Process_whole_buffers**. El destino consume búferes de eventos a la vez, en lugar de evento por evento.<br /><br /> -<br />                        **Singleton**. Solamente puede haber una instancia del destino en un proceso. Aunque varias sesiones de eventos pueden hacer referencia al mismo destino singleton, en realidad solo hay una instancia, y esa instancia verá cada evento distinto una sola vez. Esto es importante si se agrega el destino a varias sesiones que recopilan el mismo evento.<br /><br /> -<br />                                **Synchronous**. El destino se ejecuta en el subproceso que produce el evento, antes de que se devuelva el control a la línea de código de llamada.|  
 |type_name|**nvarchar(60)**|Nombre de los objetos pred_source y pred_compare. Acepta valores NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID del paquete que expone el tipo en el que este objeto funciona. Acepta valores NULL.|  
 |type_size|**int**|Tamaño del tipo de datos, en bytes. Solo es válido para los tipos de objetos válidos. Acepta valores NULL.|  

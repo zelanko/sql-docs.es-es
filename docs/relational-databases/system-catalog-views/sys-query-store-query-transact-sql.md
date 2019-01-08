@@ -1,7 +1,7 @@
 ---
 title: Sys.query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7fc3462eae5ca53d1c1b0b2ef4ad65c9579569e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726793"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711856"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>Sys.query_store_query (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene información acerca de la consulta y sus estadísticas de ejecución en tiempo de ejecución agregados asociados total.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47726793"
 |**batch_sql_handle**|**varbinary (64)**|Id. del lote de instrucciones de la consulta forma parte de. Rellena solo si la consulta hace referencia a tablas temporales o variables de tabla.|  
 |**query_hash**|**binary (8)**|Hash MD5 de la consulta individual, basándose en el árbol de consulta lógica. Incluye las sugerencias del optimizador.|  
 |**is_internal_query**|**bit**|La consulta se ha generado internamente.|  
-|**query_parameterization_type**|**tinyint**|Tipo de parametrización:<br /><br /> 0: ninguno<br /><br /> 1: usuario<br /><br /> 2 – simple<br /><br /> 3 – forzada|  
+|**query_parameterization_type**|**tinyint**|Tipo de parametrización:<br /><br /> 0: ninguno<br /><br /> 1 - usuario<br /><br /> 2 - simple<br /><br /> 3 - forzada|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|Descripción textual del tipo de parametrización.|  
 |**initial_compile_start_time**|**datetimeoffset**|Compile la hora de inicio.|  
 |**last_compile_start_time**|**datetimeoffset**|Compile la hora de inicio.|  

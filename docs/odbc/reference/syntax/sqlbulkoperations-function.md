@@ -20,16 +20,16 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d59e4d93b082312b6ae33fc3c2e2ca1e4177c771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815183"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212715"
 ---
 # <a name="sqlbulkoperations-function"></a>Función SQLBulkOperations
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: ODBC  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ODBC  
   
  **Resumen**  
  **SQLBulkOperations** realiza inserciones masivas y marcador de forma masiva las operaciones, incluida la actualización, eliminar y recuperar por marcador.  
@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>Comentarios  
   
 > [!CAUTION]  
->  Para obtener información acerca de qué instrucción indica **SQLBulkOperations** puede llamarse y lo que debe hacer para ofrecer compatibilidad con ODBC 2. *x* las aplicaciones, vea el [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) sección en el apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.  
+>  Para obtener información acerca de qué instrucción indica **SQLBulkOperations** puede llamarse y lo que debe hacer para ofrecer compatibilidad con ODBC 2. *x* las aplicaciones, vea el [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) sección en el apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
   
  Una aplicación usa **SQLBulkOperations** para realizar las siguientes operaciones en la tabla base o vista que corresponde a la consulta actual:  
   

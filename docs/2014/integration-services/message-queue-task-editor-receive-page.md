@@ -15,12 +15,12 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545629"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -51,7 +51,7 @@ ms.locfileid: "48060857"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
  **SaveFileAs**  
- Escriba la ruta del archivo que quiere usar o haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
+ Escriba la ruta del archivo que quiere usar, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
   
  **Sobrescribir**  
  Indique si desea sobrescribir los datos de un archivo existente al guardar el contenido del mensaje de archivo de datos. De manera predeterminada, es `False`.  
@@ -71,8 +71,8 @@ ms.locfileid: "48060857"
  Esta opción es de solo lectura. Podría estar en blanco o contener el GUID de un paquete si se ha establecido anteriormente la propiedad Filtro.  
   
 #### <a name="filter--from-package"></a>Filtro = De paquete  
- **Identifier**  
- Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
+ **Identificador**  
+ Si decide aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, especifique el paquete.  
   
  **Temas relacionados:** [Seleccionar un paquete](control-flow/select-a-package.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48060857"
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de la variable o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -97,8 +97,8 @@ ms.locfileid: "48060857"
  Esta opción está en blanco.  
   
 #### <a name="filter--from-package"></a>Filtro = De paquete  
- **Identifier**  
- Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
+ **Identificador**  
+ Si decide aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, especifique el paquete.  
   
  **Temas relacionados:** [Seleccionar un paquete](control-flow/select-a-package.md)  
   
@@ -131,15 +131,15 @@ ms.locfileid: "48060857"
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para retener el mensaje recibido o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable para retener el mensaje recibido, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea cola de mensajes &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Página expresiones](expressions/expressions-page.md)   
- [Tarea Cola de mensajes](control-flow/message-queue-task.md)  
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea Cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea Cola de mensajes &#40;página Enviar&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Página Expresiones](expressions/expressions-page.md)   
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533569"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>Sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47769373"
 |Tipo|**nvarchar(32)**|Tipo del nodo.|'ADMINISTRACIÓN DE PROCESO', 'CONTROL',' '|  
 |NAME|**nvarchar(32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
 |address|**nvarchar(32)**|Dirección IP de este nodo.|En el formato de [0-255]. [0-255]. [0-255]. [0-255].|  
-|is_passive|**int**|Indica si la máquina virtual ejecuta el nodo se está ejecutando en el servidor asignado o se ha conmutado por error para el servidor de reserva.|0: máquina virtual del nodo se está ejecutando en el servidor original.<br /><br /> 1: máquina virtual del nodo se está ejecutando en el servidor de reserva.|  
+|is_passive|**int**|Indica si la máquina virtual ejecuta el nodo se está ejecutando en el servidor asignado o se ha conmutado por error para el servidor de reserva.|0 - nodo de máquina virtual se está ejecutando en el servidor original.<br /><br /> 1 - máquina virtual del nodo se está ejecutando en el servidor de reserva.|  
 |región|**nvarchar(32)**|La región donde se está ejecutando el nodo.|'PDW', 'HDINSIGHT'|  
   
 ## <a name="see-also"></a>Vea también  

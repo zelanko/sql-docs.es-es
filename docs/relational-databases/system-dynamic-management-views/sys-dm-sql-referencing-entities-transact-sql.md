@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 920729184dff2b770eb4cc702a437c6771e3ac91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754743"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204544"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47754743"
   
 -   Desencadenadores DDL de nivel de servidor   
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,19 +105,19 @@ sys.dm_sql_referencing_entities (
 |Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
 |Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
-|procedimiento almacenado CLR|no|Sí|  
+|procedimiento almacenado CLR|No|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|no|Sí|  
-|Desencadenador CLR (DML y DDL)|no|no|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Procedimientos almacenados extendidos|no|Sí|  
-|Cola|no|Sí|  
-|Synonym (Sinónimo)|no|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|no|Sí|  
-|Colección de esquemas XML|no|Sí|  
-|Función de partición|no|Sí|  
+|Función CLR definida por el usuario|No|Sí|  
+|Desencadenador CLR (DML y DDL)|No|No|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Procedimientos almacenados extendidos|No|Sí|  
+|Cola|No|Sí|  
+|Synonym (Sinónimo)|No|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
+|Colección de esquemas XML|No|Sí|  
+|Función de partición|No|Sí|  
   
  \* Una tabla se realiza un seguimiento como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, restricción CHECK o restricción predeterminada.  
   
@@ -125,7 +125,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="permissions"></a>Permisos  
   
-### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   Requiere el permiso CONTROL en el objeto al que se hace referencia. Cuando la entidad a la que se hace referencia es una función de partición, se requiere el permiso CONTROL en la base de datos.  
   
@@ -154,7 +154,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Devolver las entidades que hacen referencia a un tipo determinado  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Devolver las entidades que hacen referencia a un tipo determinado  
  El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El `dbo.Flag` tipo también se utiliza en la definición de varias columnas en el `HumanResources.Employee` tabla; sin embargo, dado que el tipo no está en la definición de una columna calculada, restricción CHECK o restricción DEFAULT en la tabla, se devolverá ninguna fila para el `HumanResources.Employee`tabla.  
   
 ```sql  

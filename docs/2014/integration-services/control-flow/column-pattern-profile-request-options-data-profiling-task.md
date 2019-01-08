@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097575"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767235"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de patrón de columnas** seleccionadas en el panel de solicitudes. Un perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle a identificar problemas en los datos, como cadenas no válidas, y puede sugerir expresiones regulares que se pueden utilizar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.  
@@ -40,7 +39,7 @@ ms.locfileid: "48097575"
  Todos los delimitadores se normalizan en un espacio como parte del proceso de división en tokens, mientras que los símbolos se conservan.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Uso de la tabla de etiquetas  
- Si lo desea, puede agrupar los tokens relacionados con una etiqueta única almacenando las etiquetas y los términos relacionados en una tabla especial que cree en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabla de etiquetas debe tener dos columnas de cadena, una denominada "Etiqueta" y la otra "Término". Estas columnas pueden ser de tipo `char`, `nchar`, `varchar`, o `nvarchar`, pero no `text` o `ntext`. Puede combinar varias etiquetas y los términos correspondientes en una única tabla. Una solicitud de perfil de patrón de columnas puede utilizar solo una tabla de etiquetas. Puede utilizar un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] independiente para conectarse a la tabla de etiquetas. Por consiguiente, la tabla de etiquetas se puede encontrar en una base de datos o en un servidor diferente al de los datos de origen.  
+ Si lo desea, puede agrupar los tokens relacionados con una etiqueta única almacenando las etiquetas y los términos relacionados en una tabla especial que cree en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabla de etiquetas debe tener dos columnas de cadena, una denominada "Etiqueta" y la otra "Término". Estas columnas pueden ser de tipo `char`, `nchar`, `varchar` o `nvarchar`, pero no `text` ni `ntext`. Puede combinar varias etiquetas y los términos correspondientes en una única tabla. Una solicitud de perfil de patrón de columnas puede utilizar solo una tabla de etiquetas. Puede utilizar un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] independiente para conectarse a la tabla de etiquetas. Por consiguiente, la tabla de etiquetas se puede encontrar en una base de datos o en un servidor diferente al de los datos de origen.  
   
  Por ejemplo, podría agrupar los valores "Este", "Oeste", "Norte" y "Sur" que podrían aparecer en direcciones mediante la etiqueta única "Dirección". La tabla siguiente es un ejemplo de este tipo de tabla de etiquetas.  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48097575"
  Para obtener más información al respecto, vea "Uso de la tabla de etiquetas" anteriormente en este tema.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

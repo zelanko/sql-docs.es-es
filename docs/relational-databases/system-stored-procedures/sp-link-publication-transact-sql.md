@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_link_publication_TSQL
@@ -17,22 +16,22 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd0e41f54792978dd2adf8186d88dd4f07c1fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683093"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210063"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Establece la información de configuración y de seguridad que utilizan los desencadenadores de sincronización de las suscripciones de actualización inmediata al conectar con el publicador. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripción.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  Bajo ciertas condiciones, este procedimiento almacenado puede producir un error si el suscriptor se está ejecutando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 o posterior y el publicador está ejecutando una versión anterior. Si el procedimiento almacenado genera un error en este escenario, actualice el publicador al Service Pack 1 de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -65,7 +64,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación con el inicio de sesión especificado en este procedimiento almacenado como *inicio de sesión* y *contraseña*.<br /><br /> Nota: en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta opción se utiliza para especificar una llamada dinámica de procedimiento remoto (RPC).|  
+|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación con el inicio de sesión especificado en este procedimiento almacenado como *inicio de sesión* y *contraseña*.<br /><br /> Nota: En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta opción se utiliza para especificar una llamada a procedimiento remoto (RPC) dinámico.|  
 |**1**|Utiliza el contexto de seguridad (autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticación de Windows) del usuario que realiza el cambio en el suscriptor.<br /><br /> Nota: Esta cuenta también debe existir en el publicador con privilegios suficientes. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.|  
 |**2**|Utiliza una existente, definido por el usuario inicio de sesión vinculado creado mediante **sp_link_publication**.|  
   

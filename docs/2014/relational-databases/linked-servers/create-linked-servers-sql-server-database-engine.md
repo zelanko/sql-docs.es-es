@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120212"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766617"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
   En este tema se muestra cómo crear un servidor vinculado y tener acceso a los datos desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creación de un servidor vinculado permite trabajar con datos de varios orígenes. El servidor vinculado no necesita ser otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sino que es un escenario común.  
@@ -82,7 +81,7 @@ ms.locfileid: "49120212"
     > [!NOTE]  
     >  Si la instancia de **SQL Server** es la instancia predeterminada, escriba el nombre del equipo que hospede la instancia de **SQL Server**. Si **SQL Server** es una instancia con nombre, escriba el nombre del equipo y el de la instancia, por ejemplo, **Accounting\SQLExpress**.  
   
-3.  En el **tipo de servidor** área, seleccione **SQL Server** para indicar que el servidor vinculado es otra instancia de **SQL Server**.  
+3.  En el área **Tipo de servidor**, seleccione **SQL Server** para indicar que el servidor vinculado es otra instancia de **SQL Server**.  
   
 4.  En la página **Seguridad** , especifique el contexto de seguridad que se usará cuando la versión original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecte con el servidor vinculado. En un entorno de dominio donde los usuarios se conectan mediante sus inicios de sesión, la selección de **Se establecerán usando el contexto de seguridad actual del inicio de sesión** suele ser la mejor opción. Cuando los usuarios se conecten a la versión original de **SQL Server** usando un inicio de sesión de **SQL Server** , la mejor opción suele ser seleccionar **Se establecerán usando este contexto de seguridad**y, a continuación, proporcionar las credenciales necesarias para la autenticación en el servidor vinculado.  
   
@@ -221,7 +220,7 @@ ms.locfileid: "49120212"
   
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: pasos que se deben realizar después de crear un servidor vinculado  
+##  <a name="FollowUp"></a> Sigue: pasos que se deben realizar después de crear un servidor vinculado  
   
 #### <a name="to-test-the-linked-server"></a>Para probar el servidor vinculado  
   

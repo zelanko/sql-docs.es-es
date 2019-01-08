@@ -15,12 +15,12 @@ ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b150ecf09dcf2c96c05ac690a366c6d2711586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226865"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523645"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor de la tarea Inserción masiva (página Conexión)
   Use la página **Conexión** del cuadro de diálogo **Editor de la tarea Inserción masiva** para especificar el origen y el destino de la operación de inserción masiva y el formato que se debe utilizar.  
@@ -31,7 +31,7 @@ ms.locfileid: "48226865"
  **Conexión**  
  Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
   
- **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar el administrador de conexiones OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [configurar el Administrador de conexiones OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **Tabla de destino**  
  Escriba el nombre de la tabla o la vista de destino, o seleccione una tabla o una vista de la lista.  
@@ -51,7 +51,7 @@ ms.locfileid: "48226865"
   
  Si obtiene acceso al archivo de origen utilizando el administrador de conexiones de archivos planos, la tarea Inserción masiva no utiliza el formato especificado en el administrador de conexiones de archivos planos. En su lugar, la tarea Inserción masiva usa el formato especificado en un archivo de formato o los valores de las propiedades RowDelimiter y ColumnDelimiter de la tarea.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md), [Administrador de conexiones de archivos planos](connection-manager/flat-file-connection-manager.md), [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md), [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md), [Flat File Connection Manager](connection-manager/flat-file-connection-manager.md), [Editor del Administrador de conexiones de archivos planos &#40;página General&#41; ](general-page-of-integration-services-designers-options.md), [Editor del Administrador de conexiones de archivos planos &#40;página columnas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Editor del Administrador de conexiones de archivos planos &#40;página Opciones avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **Actualizar tablas**  
  Actualice la lista de tablas y vistas.  
@@ -60,7 +60,7 @@ ms.locfileid: "48226865"
   
 ### <a name="format--use-file"></a>Formato = Utilizar archivo  
  **FormatFile**  
- Escriba la ruta de acceso del archivo de formato, o bien haga clic en el botón de puntos suspensivos ( **…** ) para buscar el archivo de formato.  
+ Escriba la ruta de acceso del archivo de formato, o bien haga clic en el botón de puntos suspensivos (**…**) para buscar el archivo de formato.  
   
 ### <a name="format--specify"></a>Formato = Especificar  
  `RowDelimiter`  
@@ -70,10 +70,10 @@ ms.locfileid: "48226865"
  Especifique el delimitador de columna en el archivo de origen. El valor predeterminado es **Tab**.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea de inserción de forma masiva &#40;página General&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
- [Editor de la tarea de inserción de forma masiva &#40;página de opciones&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Página expresiones](expressions/expressions-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea Inserción masiva &#40;página General&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [Editor de la tarea Inserción masiva &#40;página Opciones&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Página Expresiones](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Flujo de control](control-flow/control-flow.md)  
   

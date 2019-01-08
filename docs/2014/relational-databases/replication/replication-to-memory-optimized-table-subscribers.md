@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128655"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800667"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
   Las tablas que actúan como suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas optimizadas para memoria. Otras configuraciones de replicación no son compatibles con las tablas optimizadas para memoria.  
@@ -242,7 +241,7 @@ ms.locfileid: "48128655"
     GO  
     ```  
   
-6.  Aplique el esquema a una base de datos del suscriptor y guarde el esquema para su uso futuro.  
+6.  Aplicar el esquema a la base de datos de un suscriptor y guarde el esquema para un uso futuro.  
   
 7.  Cargue los datos del publicador (origen) en el suscriptor. Los datos no deben cambiarse en el publicador hasta que no agregue una suscripción.  Puede usar BCP como se muestra a continuación:  
   
@@ -302,7 +301,7 @@ GO
   
 -   Hay ciertas restricciones para la actualización de la clave principal de tablas que se replican en una tabla optimizada para memoria en un suscriptor. Para obtener más información, consulte [replicar cambios en una clave principal](#PrimaryKey).  
   
--   En las tablas optimizadas para memoria no se admiten claves externas, restricciones UNIQUE, desencadenadores, modificaciones de esquema, ROWGUIDCOL, columnas calculadas, compresión de datos, tipos de datos de alias, control de versiones ni bloqueos. Consulte [Transact-SQL construcciones no admitidas por OLTP en memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información.  
+-   En las tablas optimizadas para memoria no se admiten claves externas, restricciones UNIQUE, desencadenadores, modificaciones de esquema, ROWGUIDCOL, columnas calculadas, compresión de datos, tipos de datos de alias, control de versiones ni bloqueos. Vea [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información.  
   
 ##  <a name="Schema"></a> Modificar un archivo de esquema  
   

@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51f65bc99f5fa4ac3840c283c110594eeb48800c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814557"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
   Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos xml se serializa de acuerdo con las reglas que se describen en este tema.  
@@ -34,10 +34,10 @@ ms.locfileid: "48156115"
  Por ejemplo:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -48,13 +48,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
  Por ejemplo:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
  Si el tipo SQL de destino es VARCHAR o NCHAR, el resultado se serializa en la codificación que corresponda a la página de códigos de intercalación de la base de datos, sin marca de orden de bytes ni declaración XML. Si el tipo de destino es demasiado pequeño o el valor no se puede asignar a la página de códigos de intercalación de destino, se genera un error.  
@@ -62,10 +62,10 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
  Por ejemplo:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Se puede generar un error si la página de códigos de la intercalación actual no puede representar el carácter Unicode Δ, o se representará en la codificación específica.  
+ Esto puede producir un error, si la página de códigos de la intercalación actual no puede representar el carácter Unicode??, o se representará en la codificación específica.  
   
  Cuando se devuelven los resultados XML al cliente, los datos se envían codificados como UTF-16. Después, el proveedor del lado cliente expondrá los datos de acuerdo con sus reglas de API.  
   
@@ -96,11 +96,11 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   
@@ -118,7 +118,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 This example contains an entitized char: <.  
@@ -130,7 +130,7 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 This example contains an entitized char: <.  

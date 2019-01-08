@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Diseñar el informe primario mediante el Asistente para informes | Microsoft Docs'
+title: 'Lección 3: Diseñar el informe primario usando el Asistente para informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2b872449bf553a00b53bcf6153befd68b6053d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331d073082ce68f3ad1b58749256c5a177897e07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219995"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395070"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseñar el informe primario usando el Asistente para informes
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseñar el informe primario usando al Asistente para informes
   Después de crear una conexión de datos y una tabla de datos para el informe primario, el paso siguiente consiste en diseñar dicho informe usando el Asistente para informes del Diseñador de informes. Para más información sobre el Diseñador de informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>Para diseñar el informe primario usando el Asistente para informes  
@@ -31,7 +31,7 @@ ms.locfileid: "48219995"
   
      Así se inicia el Asistente para informes.  
   
-4.  En el **las propiedades del conjunto de datos** página, en el **origen de datos** cuadro, seleccione el **DataSet1** que creó en [lección 2: definir una conexión de datos y una tabla de datos para Primario informe](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  En el **las propiedades del conjunto de datos** página, en el **origen de datos** cuadro, seleccione el **DataSet1** que creó en [lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     El cuadro **Conjuntos de datos disponibles** se actualiza automáticamente con la **DataTable** que creó anteriormente.  
   
 5.  Haga clic en **Siguiente**.  

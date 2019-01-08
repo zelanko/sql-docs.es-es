@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1336533eb3a7ffb8b3e30e252a1335012b7c373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 634fbc4ddd96fd407aa124c98ae2b55897edaa71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812983"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391233"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47812983"
 |**start_date**|**datetime**|Fecha en que se valida el certificado.|  
 |**Huella digital**|**varbinary(32)**|Hash SHA-1 del certificado. El hash SHA-1 es único globalmente.|  
 |**attested_by**|**nvarchar(260)**|Solo para uso del sistema.|  
-|pvt_key_last_backup_date|**datetime**|Fecha y hora cuando la clave privada del certificado se exportó por última vez.|  
+|pvt_key_last_backup_date|**datetime**|La fecha y la hora que clave privada del certificado se exportó por última vez.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

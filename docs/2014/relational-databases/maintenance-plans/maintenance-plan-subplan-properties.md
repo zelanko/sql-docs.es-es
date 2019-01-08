@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.general.f1
@@ -14,18 +13,18 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65092404fede7f5dd8cd04e64092c46cefcfab44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048945"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803027"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de mantenimiento (Propiedades del subplán)
   Use el cuadro de diálogo **Plan de mantenimiento (Propiedades del subplán)** para especificar un nombre, descripción y programación de un subplán del plan de mantenimiento. Haga clic en **Propiedades del subplán** en la pestaña **Diseño** del plan de mantenimiento o haga doble clic en un subplán en la cuadrícula del diseñador para mostrar este cuadro de diálogo.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba un nombre para el subplán. El nombre tiene un límite de 128 caracteres.  
   
  **Descripción**  

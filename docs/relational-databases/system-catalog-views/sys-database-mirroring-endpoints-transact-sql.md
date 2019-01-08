@@ -23,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734603"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538073"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "47734603"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<hereda columnas >**|—|Hereda columnas de **sys.endpoints** (para obtener más información, consulte [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**Rol**|**tinyint**|Rol de creación de reflejo, uno de los siguientes:<br /><br /> **0** = ninguno<br /><br /> **1** = partner<br /><br /> **2** = testigo<br /><br /> **3** = all<br /><br /> Nota: Este valor solo es relevante para la creación de reflejo de base de datos.|  
-|**role_desc**|**nvarchar(60)**|Descripción del rol de creación de reflejo, uno de los siguientes:<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **TESTIGO**<br /><br /> **ALL**<br /><br /> Nota: Este valor solo es relevante para la creación de reflejo de base de datos.|  
+|**\<hereda columnas >**|-|Hereda columnas de **sys.endpoints** (para obtener más información, consulte [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**Rol**|**tinyint**|Rol de creación de reflejo, uno de los siguientes:<br /><br /> **0** = ninguno<br /><br /> **1** = partner<br /><br /> **2** = testigo<br /><br /> **3** = all<br /><br /> Nota: Este valor solo es aplicable a la creación de reflejo de la base de datos.|  
+|**role_desc**|**nvarchar(60)**|Descripción del rol de creación de reflejo, uno de los siguientes:<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **TESTIGO**<br /><br /> **ALL**<br /><br /> Nota: Este valor solo es aplicable a la creación de reflejo de la base de datos.|  
 |**is_encryption_enabled**|**bit**|**1** significa que el cifrado está habilitado.<br /><br /> **0** significa que el cifrado está deshabilitado.|  
 |**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOCIAR<br /><br /> **4** -CERTIFICADO<br /><br /> **5** -NTLM, EL CERTIFICADO<br /><br /> **6** -KERBEROS, CERTIFICADO<br /><br /> **7** -NEGOTIATE, CERTIFICADOS<br /><br /> **8** -CERTIFICADO, NTLM<br /><br /> **9** -CERTIFICADO, KERBEROS<br /><br /> **10** -CERTIFICADO, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Descripción del tipo de autenticación necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|Identificador del certificado utilizado para la autenticación, si lo hay.<br /><br /> 0 = Se está utilizando la Autenticación de Windows.|  
-|**encryption_algorithm**|**tinyint**|Algoritmo de cifrado, uno de los siguientes:<br /><br /> **0** : NONE<br /><br /> **1** – RC4<br /><br /> **2** : AES<br /><br /> **3** : NONE, RC4<br /><br /> **4** : NINGUNO, AES<br /><br /> **5** : RC4, AES<br /><br /> **6** : AES, RC4<br /><br /> **7** : NONE, RC4, AES<br /><br /> **8** : NINGUNO, AES, RC4|  
+|**encryption_algorithm**|**tinyint**|Algoritmo de cifrado, uno de los siguientes:<br /><br /> **0** -NINGUNO<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -NONE, RC4<br /><br /> **4** -NINGUNO, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -NONE, RC4, AES<br /><br /> **8** -NINGUNO, AES, RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado, uno de los siguientes:<br /><br /> Ninguno<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>Comentarios  

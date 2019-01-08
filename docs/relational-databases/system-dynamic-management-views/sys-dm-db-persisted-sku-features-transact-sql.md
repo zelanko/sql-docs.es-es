@@ -20,19 +20,19 @@ ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f35bb06301fb7d4f53a415e055371db989942586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d8001765a06ce432ea8f5f7e3081e4a54e7efa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642423"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202074"
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Algunas características de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cambiar la manera en que [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena información en los archivos de base de datos. Estas características están restringidas a ediciones concretas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una base de datos que contiene estas características no se puede mover a una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no los admita. Utilice la vista de administración dinámica sys.dm_db_persisted_sku_features para enumerar las características específicas de la edición habilitadas en la base de datos actual.
   
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -47,17 +47,17 @@ ms.locfileid: "47642423"
   
  Sys.dm_db_persisted_sku_features puede enumerar las siguientes características de cambio de base de datos como restringidas a determinados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones:  
   
--   **ChangeCapture**: indica que una base de datos tiene la captura de datos modificados habilitada. Para quitar la captura de datos modificados, utilice el [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) procedimiento almacenado. Para obtener más información, vea [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
+-   **ChangeCapture**: Indica que una base de datos tiene habilitada la captura de datos modificados. Para quitar la captura de datos modificados, utilice el [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) procedimiento almacenado. Para obtener más información, vea [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
--   **ColumnStoreIndex**: indica que al menos una tabla tiene un índice de almacén de columnas. Para habilitar una base de datos se muevan a una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no admite esta característica, use la [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) o [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrucción para quitar el índice de almacén de columnas. Para obtener más información, consulte [índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+-   **ColumnStoreIndex**: Indica que al menos una tabla tiene un índice de almacén de columnas. Para habilitar una base de datos se muevan a una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no admite esta característica, use la [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) o [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrucción para quitar el índice de almacén de columnas. Para obtener más información, consulte [índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
-    **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+    **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
--   **Compresión**: indica que al menos una tabla o índice utiliza compresión de datos o el formato de almacenamiento vardecimal. Para habilitar una base de datos se muevan a una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no admite esta característica, use la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrucción para quitar la compresión de datos. Para quitar el formato de almacenamiento vardecimal, utilice la instrucción sp_tableoption. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   **Compresión**: Indica que al menos una tabla o índice utiliza la compresión de datos o el formato de almacenamiento vardecimal. Para habilitar una base de datos se muevan a una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no admite esta característica, use la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrucción para quitar la compresión de datos. Para quitar el formato de almacenamiento vardecimal, utilice la instrucción sp_tableoption. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
--   **MultipleFSContainers**: indica que la base de datos utiliza varios contenedores FILESTREAM. La base de datos tiene un grupo de archivos FILESTREAM con varios contenedores (archivos). Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+-   **MultipleFSContainers**: Indica que la base de datos utiliza varios contenedores FILESTREAM. La base de datos tiene un grupo de archivos FILESTREAM con varios contenedores (archivos). Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
--   **InMemoryOLTP**: indica que la base de datos utiliza OLTP en memoria. La base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA. Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+-   **InMemoryOLTP**: Indica que la base de datos utiliza OLTP en memoria. La base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA. Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). 
   

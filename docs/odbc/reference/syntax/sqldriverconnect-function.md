@@ -20,16 +20,16 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d254fce8d7765c6248c6e060f2a225f595f804f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597180"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212394"
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLDriverConnect** es una alternativa a **SQLConnect**. Admite los orígenes de datos que requieren más información de conexión que los tres argumentos en **SQLConnect**, cuadros de diálogo para preguntar al usuario para toda la información de conexión y orígenes de datos que no estén definidos en el sistema información.  
@@ -112,8 +112,8 @@ SQLRETURN SQLDriverConnect(
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos a la que estaba intentando conectar el controlador antes de la **SQLDriverConnect** procesamiento de la función se ha completado.|  
 |28000|Especificación de autorización no válido|El identificador de usuario o la cadena de autorización o ambos, como se especifica en la cadena de conexión (*InConnectionString*), han infringido las restricciones definidas por el origen de datos.|  
 |HY000|Error general|Se produjo un error para que se ha producido ningún SQLSTATE específico y para los que se ha definido ningún SQLSTATE específicos de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*szMessageText* búfer describe el error y su causa.|  
-|HY000|Error general: dsn de archivo no válido|(DM) la cadena en **InConnectionString* contenía una palabra clave FILEDSN, pero no se encontró el nombre del archivo DSN.|  
-|HY000|Error general: no se puede crear el búfer de archivo|(DM) la cadena en **InConnectionString* contenía una palabra clave FILEDSN, pero el archivo .dsn era ilegible.|  
+|HY000|Error general: Dsn de archivo no válido|(DM) la cadena en **InConnectionString* contenía una palabra clave FILEDSN, pero no se encontró el nombre del archivo DSN.|  
+|HY000|Error general: No se puede crear el búfer de archivo|(DM) la cadena en **InConnectionString* contenía una palabra clave FILEDSN, pero el archivo .dsn era ilegible.|  
 |HY001|Error de asignación de memoria|El Administrador de controladores no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la **SQLDriverConnect** función.<br /><br /> El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|Procesamiento asincrónico se habilitó para la *ConnectionHandle*. Se llamó a la función, y antes que completó la ejecución, el [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) se ha llamado en el *ConnectionHandle*y, a continuación, el **SQLDriverConnect** función se llamó de nuevo en el *ConnectionHandle*.<br /><br /> O bien, el **SQLDriverConnect** se llamó a la función, y antes que completó la ejecución, **SQLCancelHandle** se ha llamado en el *ConnectionHandle* desde un subproceso diferente en un aplicaciones multiproceso.|  
 |HY010|Error de secuencia de función|(DM) otra función ejecuta de forma asincrónica (no **SQLDriverConnect**) se llamó para el *ConnectionHandle* y aún se estaba ejecutando cuando el **SQLDriverConnect** se llamó a la función.|  
@@ -196,9 +196,9 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT: Si la cadena de conexión no contiene el **controlador**, **DSN**, o **FILEDSN** palabra clave, el Administrador de controladores muestra el cuadro de diálogo orígenes de datos. Construye una cadena de conexión desde el nombre del origen de datos devuelto por el cuadro de diálogo y cualquier otra palabra clave pasado por la aplicación. Si el nombre del origen de datos devuelto por el cuadro de diálogo está vacío, el Administrador de controladores especifica el par de valor de la palabra clave DSN = Default. (Este cuadro de diálogo no mostrará un origen de datos con el nombre "Default".)  
   
--   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: si la cadena de conexión especificada por la aplicación incluye el **DSN** palabra clave, el Administrador de controladores copia la cadena de conexión especificada por la aplicación. En caso contrario, toma las mismas acciones como lo hace cuando *DriverCompletion* es SQL_DRIVER_PROMPT.  
+-   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: Si la cadena de conexión especificada por la aplicación incluye el **DSN** palabra clave, el Administrador de controladores copia la cadena de conexión especificada por la aplicación. En caso contrario, toma las mismas acciones como lo hace cuando *DriverCompletion* es SQL_DRIVER_PROMPT.  
   
--   SQL_DRIVER_NOPROMPT: El Administrador de controladores copia la cadena de conexión especificada por la aplicación.  
+-   SQL_DRIVER_NOPROMPT: El Administrador de controladores se copia la cadena de conexión especificada por la aplicación.  
   
  Si la cadena de conexión especificada por la aplicación contiene el **controlador** palabra clave, el Administrador de controladores copia la cadena de conexión especificada por la aplicación.  
   
@@ -259,7 +259,7 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT: El controlador muestra un cuadro de diálogo con los valores de la información del sistema y de cadena de conexión (si existe) como valores iniciales. Cuando el usuario cierra el cuadro de diálogo, el controlador se conecta al origen de datos. También construye una cadena de conexión desde el valor de la **DSN** o **controlador** palabra clave en \* *InConnectionString* y la información devuelta desde el cuadro de diálogo. Coloca esta cadena de conexión en el **OutConnectionString* búfer.  
   
--   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: si la cadena de conexión contiene información suficiente y esa información es correcta, el controlador se conecta al origen de datos y copias \* *InConnectionString*a \* *OutConnectionString*. Si cualquier información que falta o es incorrecta, el controlador tiene las mismas acciones como lo hace cuando *DriverCompletion* es SQL_DRIVER_PROMPT, excepto si *DriverCompletion* es SQL_DRIVER_COMPLETE_ Es necesario, el controlador desactiva los controles de información no es necesaria para conectarse al origen de datos.  
+-   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: Si la cadena de conexión contiene información suficiente y esa información es correcta, el controlador se conecta al origen de datos y copias \* *InConnectionString* a \* *OutConnectionString* . Si cualquier información que falta o es incorrecta, el controlador tiene las mismas acciones como lo hace cuando *DriverCompletion* es SQL_DRIVER_PROMPT, excepto si *DriverCompletion* es SQL_DRIVER_COMPLETE_ Es necesario, el controlador desactiva los controles de información no es necesaria para conectarse al origen de datos.  
   
 -   SQL_DRIVER_NOPROMPT: Si la cadena de conexión contiene información suficiente, el controlador se conecta al origen de datos y copias \* *InConnectionString* a \* *OutConnectionString*. En caso contrario, el controlador devuelve SQL_ERROR para **SQLDriverConnect**.  
   

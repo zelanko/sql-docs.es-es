@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - maintaining publications [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc1f47866b55c4b4bb577fdaaae793b44cbf06a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4d2ffcc833c47cf94fd67d3b9cd92ecf773f87a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178785"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816517"
 ---
 # <a name="maintain-publications"></a>Mantener publicaciones
   Una vez creada una publicación, puede ser necesario agregar o quitar artículos, o cambiar las propiedades de la publicación o de un artículo. Es posible realizar la mayoría de los cambios una vez creada la publicación. Sin embargo, en algunos casos, es necesario generar una nueva instantánea de la publicación o reinicializar las suscripciones de la misma. Para más información, vea [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos) y [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  

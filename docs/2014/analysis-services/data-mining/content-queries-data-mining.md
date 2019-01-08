@@ -11,12 +11,12 @@ ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530515"
 ---
 # <a name="content-queries-data-mining"></a>Consultas de contenido (minería de datos)
   Una consulta de contenido es una manera de extraer información sobre las estadísticas internas y la estructura del modelo de minería de datos. A veces, una consulta de contenido puede proporcionar detalles que no están disponibles con facilidad en el visor. También puede usar los resultados de una consulta de contenido para extraer información mediante programación para otros usos.  
@@ -135,7 +135,7 @@ ms.locfileid: "48209815"
   
  En esta sección se proporcionan algunos ejemplos para mostrar cómo la elección del algoritmo afecta al tipo de información que se almacena en el modelo. Para más información sobre el contenido del modelo de minería de datos y el contenido específico de cada tipo de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a> Ejemplo 1: consulta de contenido en un modelo de asociación  
+###  <a name="bkmk_Assoc"></a> Ejemplo 1: Consulta de contenido en un modelo de asociación  
  La instrucción `SELECT FROM <model>.CONTENT`devuelve diferentes tipos de información, según el tipo de modelo que esté consultando. Para un modelo de asociación, una información clave es el *tipo de nodo*. Los nodos son como contenedores de información en el contenido del modelo. En un modelo de asociación, los nodos que representan reglas tienen un valor NODE_TYPE de 8, mientras que los nodos que representan conjuntos de elementos tienen un valor NODE_TYPE de 7.  
   
  Así, la consulta siguiente devuelve los 10 mejores conjuntos de elementos, clasificados según el soporte (la ordenación predeterminada).  
@@ -145,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- La consulta siguiente se basa en esta información. La consulta devuelve tres columnas: el identificador del nodo, la regla completa y el producto situado en el lado derecho del conjunto de elementos; es decir, el producto que se prevé que estará asociado a otros productos como parte de un conjunto de elementos.  
+ La consulta siguiente se basa en esta información. La consulta devuelve tres columnas: el identificador del nodo, la regla completa y el producto en el lado derecho del conjunto de elementos: es decir, el producto que se prevé que se asociará con otros productos como parte de un conjunto de elementos.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -167,7 +167,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Para obtener más ejemplos, vea [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a> Ejemplo 2: consulta de contenido en un modelo de árboles de decisión  
+###  <a name="bkmk_DecTree"></a> Ejemplo 2: Consulta de contenido en un modelo de árboles de decisión  
  Un modelo del árbol de decisión se puede utilizar para la predicción así como para la clasificación.  En este ejemplo se supone que está utilizando el modelo para predecir un resultado, pero también desea descubrir qué factores o reglas se pueden utilizar para clasificar el resultado.  
   
  En un modelo de árbol de decisión, los nodos se utilizan para representar árboles y nodos de hoja. El título de cada nodo contiene la descripción de la ruta de acceso al resultado. Por consiguiente, para realizar el seguimiento de la ruta de acceso de cualquier resultado determinado, debe identificar el nodo que lo contiene y obtener los detalles de ese nodo.  

@@ -18,12 +18,12 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909fd7c82e91f90b24b643a555ddd8d8d93c639f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734103"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202574"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Se producirá un error si se intenta quitar o modificar una función, procedimiento almacenado o desencadenador DML al que una guía de plan, habilitada o deshabilitada, haga referencia. También se producirá un error si se intenta quitar una tabla que tenga definido un desencadenador al que haga referencia una guía de plan.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Las guías de plan no se pueden usar en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Las guías de plan son visibles en todas las ediciones. También se pueden adjuntar bases de datos que incluyen guías de plan a cualquier versión. Las guías de plan permanecen intactas cuando se restaura o adjunta una base de datos a una versión actualizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de realizar una actualización de servidor, debe comprobar la idoneidad de las guías de plan en cada base de datos.  
   
 ## <a name="plan-guide-matching-requirements"></a>Requisitos de coincidencia de la guía de plan  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
-### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>B. Crear una guía de plan de tipo SQL para una consulta independiente  
+### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>b. Crear una guía de plan de tipo SQL para una consulta independiente  
  En el ejemplo siguiente se crea una guía de plan que coincide con una consulta de un lote enviado por una aplicación que utiliza el procedimiento almacenado del sistema sp_executesql.  
   
  Este es el lote:  

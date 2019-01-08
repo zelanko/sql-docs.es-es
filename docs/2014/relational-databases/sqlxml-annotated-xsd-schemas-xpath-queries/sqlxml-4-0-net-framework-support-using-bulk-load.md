@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -17,12 +15,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b832f6d92b847ee823a350559dbc54fd35a13ec2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175885"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807367"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Usar la carga masiva SQLXML en el entorno .NET
   En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada acerca de la carga masiva XML, vea [realizar carga masiva de datos XML &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  

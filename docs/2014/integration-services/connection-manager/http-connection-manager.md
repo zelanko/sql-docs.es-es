@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP connection manager
@@ -17,12 +16,12 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0552d4678df69620d4e97f6f4e1a942dd12330
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d41fab7e891fd8393600224902ee36e2f6dad20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113095"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764067"
 ---
 # <a name="http-connection-manager"></a>HTTP, administrador de conexiones
   Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos. La tarea Servicio web que incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa este administrador de conexiones.  
@@ -49,14 +48,14 @@ ms.locfileid: "48113095"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor del Administrador de conexiones HTTP &#40;página del servidor&#41;](../http-connection-manager-editor-server-page.md)  
+-   [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../http-connection-manager-editor-server-page.md)  
   
--   [Editor del Administrador de conexiones HTTP &#40;página Proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [Editor del administrador de conexiones HTTP &#40;página Proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
   
  Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
 ## <a name="see-also"></a>Vea también  
- [Tarea servicio Web](../control-flow/web-service-task.md)   
- [Servicios de integración &#40;SSIS&#41; conexiones](integration-services-ssis-connections.md)  
+ [Tarea Servicio web](../control-flow/web-service-task.md)   
+ [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

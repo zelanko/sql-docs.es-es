@@ -18,12 +18,12 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659054"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545500"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_cursoroption cursor, code, value
  *cursor*  
  Es un *controlar* valor generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y devuelto por el procedimiento almacenado sp_cursoropen. *cursor* requiere un **int** valor para la ejecución de entrada.  
   
- *Código*  
+ *código*  
  Se usa para estipular varios factores de los valores devueltos del cursor. *código* requiere uno de los siguientes **int** valores de entrada:  
   
 |Valor|Nombre|Descripción|  
@@ -53,7 +53,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|Devuelve los datos reales, no el puntero de texto, para ciertas columnas de imagen o texto en las capturas siguientes (es decir, se deshace el efecto de TEXTPTR_ONLY).<br /><br /> Si TEXTDATA está habilitado para una columna en particular, la fila se vuelve a capturar o actualizar, y puede establecerse a continuación de nuevo en TEXTPTR_ONLY. Como con TEXTPTR_ONLY, el parámetro de valor es un entero que especifica el número de columnas y un valor cero devuelve todas las columnas de texto o imagen.|  
 |0x0004|SCROLLOPT|Opción de desplazamiento. Vea "Valores del código de retorno", posteriormente en este tema, para obtener información adicional.|  
 |0x0005|CCOPT|Opción de control de simultaneidad. Vea "Valores del código de retorno", posteriormente en este tema, para obtener información adicional.|  
-|0x0006|ROWCOUNT|El número de filas que están actualmente en el conjunto de resultados.<br /><br /> Nota: El recuento de filas que han cambiado desde el valor que devuelve sp_cursoropen, si se utiliza el rellenado asincrónico. Se devuelve el valor -1 si se desconoce el número de filas.|  
+|0x0006|ROWCOUNT|El número de filas que están actualmente en el conjunto de resultados.<br /><br /> Nota: ROWCOUNT puede haber cambiado del valor que devuelve sp_cursoropen, si se utiliza el rellenado asincrónico. Se devuelve el valor -1 si el número de filas es desconocido.|  
   
  *value*  
  Designa el valor devuelto por *código*. *valor* es un parámetro necesario que requiere un 0 x 0001, 0 x 0002 o 0 x 0003 *código* valor de entrada.  

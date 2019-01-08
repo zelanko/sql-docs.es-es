@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -30,12 +28,12 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5ca0676d280a266561c45388beac938366d17ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144915"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814877"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
   Los elementos de un documento XML pueden estar relacionados. Los elementos pueden estar anidados jerárquicamente y pueden especificarse relaciones ID, IDREF o IDREFS entre los elementos.  
@@ -52,7 +50,7 @@ ms.locfileid: "48144915"
   
  Para proporcionar los nombres de tabla y la información de unión necesaria, se especifican los atributos siguientes en el `sql:relationship` anotación. Estos atributos sólo son válidos con el  **\<SQL: Relationship >** elemento:  
   
- **Nombre**  
+ **Name**  
  Especifica el nombre único de la relación.  
   
  **Parent**  
@@ -186,7 +184,7 @@ ms.locfileid: "48144915"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. Especificar una cadena de relación  
+### <a name="b-specifying-a-relationship-chain"></a>b. Especificar una cadena de relación  
  Para este ejemplo, supongamos que desea que el siguiente documento XML use los datos obtenidos de la base de datos AdventureWorks:  
   
 ```  

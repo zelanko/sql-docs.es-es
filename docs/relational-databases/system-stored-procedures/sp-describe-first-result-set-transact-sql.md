@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072069"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400638"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -69,7 +69,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indica que la columna es una columna adicional agregada para examinar el propósito de la información y que no aparece realmente en el conjunto de resultados.|  
-|**column_ordinal**|**int no NULL**|Contiene la posición ordinal de la columna en el conjunto de resultados. La posición de la primera columna se especificará como 1.|  
+|**column_ordinal**|**int no NULL**|Contiene la posición ordinal de la columna en el conjunto de resultados. La primera posición de la columna se especificará como 1.|  
 |**Nombre**|**sysname es NULL**|Contiene el nombre de la columna si se puede determinar uno. De lo contrario, contendrá NULL.|  
 |**is_nullable**|**bit NOT NULL**|Contiene el valor 1 si la columna permite valores NULL, 0 si la columna no permite valores NULL y 1 si no se puede determinar si la columna permite valores NULL.|  
 |**system_type_id**|**int no NULL**|Contiene el system_type_id del tipo de datos de la columna tal como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
@@ -179,7 +179,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>B. Ejemplos de modo de exploración  
+#### <a name="b-browse-mode-examples"></a>b. Ejemplos de modo de exploración  
  En los tres ejemplos siguientes se muestra la diferencia clave entre los diferentes modos de información de exploración. En los resultados de la consulta solo se incluyen las columnas relevantes.  
   
  El ejemplo que usa 0 indica que no se devuelve información alguna.  
@@ -194,7 +194,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -207,7 +207,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -220,7 +220,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -273,7 +273,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Resultado: \<nombre de columna desconocido > **varchar (20) NULL**  
+ Resultado: \<Nombre de columna desconocido > **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Se exige que el nombre de columna sea idéntico en todos los alias  
  Igual que el caso anterior, pero las columnas tienen el mismo nombre en todos los alias de columna.  

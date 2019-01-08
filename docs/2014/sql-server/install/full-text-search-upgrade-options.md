@@ -14,17 +14,17 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511314"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opciones de actualización de búsqueda de texto completo
   Use la página de opciones de actualización de búsqueda de texto completo del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar la opción de actualización de búsqueda de texto completo que usará con las bases de datos cuya actualización está realizando en este momento.  
   
- En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , cada índice de texto completo reside en un catálogo de texto completo que pertenece a un grupo de archivos, tiene una ruta de acceso física y es tratado como un archivo de base de datos. Ahora, un catálogo de texto completo es un concepto lógico (un objeto virtual) que hace referencia a un grupo de índices de texto completo. Por consiguiente, no se trata a cada nuevo catálogo de texto completo como un archivo de base de datos con una ruta de acceso física. Sin embargo, durante la actualización de cualquier catálogo de texto completo que contiene archivos de datos, se crea un nuevo grupo de archivos en el mismo disco. Esto conserva el comportamiento de E/S del disco antiguo después de la actualización. Si la ruta de acceso raíz existe, todos los índices de texto completo del catálogo se situarán en el nuevo grupo de archivos. Si la ruta de acceso al catálogo de texto completo antiguo no es válida, la actualización mantiene el índice de texto completo en el mismo grupo de archivos que la tabla base o, si se trata de una tabla con particiones, en el grupo de archivos principal.  
+ En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , cada índice de texto completo reside en un catálogo de texto completo que pertenece a un grupo de archivos, tiene una ruta de acceso física y es tratado como un archivo de base de datos. Ahora, un catálogo de texto completo es un objeto lógico de un concepto virtual-que hace referencia a un grupo de índices de texto completo. Por consiguiente, no se trata a cada nuevo catálogo de texto completo como un archivo de base de datos con una ruta de acceso física. Sin embargo, durante la actualización de cualquier catálogo de texto completo que contiene archivos de datos, se crea un nuevo grupo de archivos en el mismo disco. Esto conserva el comportamiento de E/S del disco antiguo después de la actualización. Si la ruta de acceso raíz existe, todos los índices de texto completo del catálogo se situarán en el nuevo grupo de archivos. Si la ruta de acceso al catálogo de texto completo antiguo no es válida, la actualización mantiene el índice de texto completo en el mismo grupo de archivos que la tabla base o, si se trata de una tabla con particiones, en el grupo de archivos principal.  
   
 ## <a name="options"></a>Opciones  
  Al actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], elija una de las opciones de actualización de texto completo siguientes.  

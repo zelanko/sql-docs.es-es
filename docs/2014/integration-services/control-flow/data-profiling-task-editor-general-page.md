@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e6bf10248bb3d8f280a24191634392df3b4ff5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805037"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
   Utilice la página **General** del **Editor de tareas de generación de perfiles de datos** para configurar las opciones siguientes:  
@@ -53,8 +52,8 @@ ms.locfileid: "48084835"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos utilizar, use la opción **Destino** .|  
-|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Para especificar qué variable de paquete utilizar, use la opción **Destino** .|  
+|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Especifique qué Administrador de conexiones de archivos para usar en el **destino** opción.|  
+|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Nota: Especificar qué variable de paquete para usar en el **destino** opción.|  
   
  **Destino**  
  Especifique qué administrador de conexiones de archivos o variable de paquete contiene el perfil de datos generado:  

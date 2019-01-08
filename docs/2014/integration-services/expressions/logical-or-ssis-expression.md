@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
@@ -15,12 +14,12 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63c829e1865213b29aca6e75d1de52021b4d5ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0945d9e749014648b257499374fc9dc41bb511b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052325"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805177"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OR lógico) (expresión de SSIS)
   Realiza una operación lógica OR. La expresión devuelve TRUE si una o ambas condiciones son TRUE.  
@@ -65,9 +64,9 @@ StandardCost < @SPrice || ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [&#124;&#40;Bit a bit OR inclusivo&#41; &#40;expresión de SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [&#124; &#40;OR inclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)   
  [^ &#40;OR exclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
- [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

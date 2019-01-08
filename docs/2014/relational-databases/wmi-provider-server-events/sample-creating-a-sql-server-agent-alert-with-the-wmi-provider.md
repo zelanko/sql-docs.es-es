@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
@@ -16,18 +14,18 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2623087a485070b442716c953501b2496679be9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823449"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Ejemplo: crear una alerta del Agente SQL Server utilizando el proveedor WMI para eventos de servidor
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Ejemplo: Creación de una alerta del Agente SQL Server mediante el proveedor WMI para eventos de servidor
   Una manera común de utilizar el Proveedor de eventos WMI es crear alertas del Agente SQL Server que respondan a eventos concretos. En el ejemplo siguiente se presenta una alerta simple que guarda los eventos de grafo de interbloqueo de XML en una tabla para el análisis posterior. El Agente SQL Server envía una solicitud WQL, recibe los eventos WMI y ejecuta un trabajo en respuesta al evento. Observe que, aunque varios objetos Service Broker están implicados para procesar el mensaje de notificación, el Proveedor de eventos WMI administra los detalles de creación y administración de estos objetos.  
   
 ## <a name="example"></a>Ejemplo  
- Primero, se crea una tabla en la base de datos `AdventureWorks` para contener el evento de grafo de interbloqueo. La tabla contiene dos columnas: la columna `AlertTime` contiene la hora a la que se ejecuta la alerta y la columna `DeadlockGraph` contiene el documento XML que contiene el grafo de interbloqueo.  
+ Primero, se crea una tabla en la base de datos `AdventureWorks` para contener el evento de grafo de interbloqueo. La tabla contiene dos columnas: El `AlertTime` columna contiene la hora a la que se ejecuta la alerta, y la `DeadlockGraph` columna contiene el documento XML que contiene el gráfico de interbloqueo.  
   
  A continuación, se crea la alerta. El script crea primero el trabajo que la alerta ejecutará, agrega un paso de trabajo al trabajo y dirige el trabajo a la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el script crea la alerta.  
   

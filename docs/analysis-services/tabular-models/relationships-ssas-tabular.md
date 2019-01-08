@@ -1,5 +1,5 @@
 ---
-title: Relaciones | Documentos de Microsoft
+title: Las relaciones en los modelos tabulares de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045309"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072532"
 ---
 # <a name="relationships"></a>Relaciones 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34045309"
 ##  <a name="what"></a> Ventajas  
  Una relación es una conexión entre dos tablas de datos, basada en una o más columnas de cada tabla. Para ver por qué son útiles las relaciones, imagine que realiza el seguimiento de los datos de los pedidos de los clientes de su negocio. Podría realizar el seguimiento de todos los datos en una sola tabla que tiene una estructura como la siguiente:  
   
-|CustomerID|Nombre|EMail|DiscountRate|OrderID|OrderDate|Product|Cantidad|  
+|CustomerID|Nombre|EMail|DiscountRate|OrderID|OrderDate|Producto|Cantidad|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -55,13 +55,13 @@ ms.locfileid: "34045309"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Cantidad|  
+|[CustomerID]|OrderID|OrderDate|Producto|Cantidad|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- Si importa estas tablas desde la misma base de datos, el Asistente para la importación de tablas puede detectar las relaciones entre las tablas en función de las columnas que están entre [corchetes] y puede reproducirlas en el diseñador de modelos. Para obtener más información, vea [Detección automática e inferencia de las relaciones](#detection) en este tema. Si importa tablas de varios orígenes, puede crear manualmente las relaciones tal y como se describe en [crear una relación entre dos tablas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Si importa estas tablas desde la misma base de datos, el Asistente para la importación de tablas puede detectar las relaciones entre las tablas en función de las columnas que están entre [corchetes] y puede reproducirlas en el diseñador de modelos. Para obtener más información, vea [Detección automática e inferencia de las relaciones](#detection) en este tema. Si importa tablas desde varios orígenes, puede crear relaciones manualmente como se describe en [crear una relación entre dos tablas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ### <a name="columns-and-keys"></a>Claves y columnas  
  Las relaciones se basan en las columnas de cada tabla que contienen los mismos datos. Por ejemplo, las tablas Customer y Orders se pueden estar relacionadas entre sí porque ambas contienen una columna que almacena un identificador de cliente. En el ejemplo, los nombres de columna son los mismos, pero no es obligatorio. Uno podría ser CustomerID y otro CustomerNumber, siempre que todas las filas de la tabla Orders contengan un identificador que también esté almacenado en la tabla Customers.  
@@ -97,7 +97,7 @@ ms.locfileid: "34045309"
 ### <a name="single-active-relationship-between-tables"></a>Relación única activa entre tablas  
  Varias relaciones podrían producir dependencias ambiguas entre las tablas. Para crear cálculos precisos, se necesita una única ruta de una tabla a la tabla siguiente. Por lo tanto, puede haber solo una relación activa entre cada par de tablas. Por ejemplo, en AdventureWorks DW 2012, la tabla DimDate contiene una columna DateKey que está relacionada con tres columnas diferentes de la tabla FactInternetSales: OrderDate, DueDate y ShipDate. Si intenta importar estas tablas, la primera relación se creará correctamente, pero recibirá el error siguiente en las relaciones sucesivas en las que participe la misma columna:  
   
- \* Relación: tabla [columna 1] -> tabla [columna 2] - estado: error - motivo: no se puede crear una relación entre tablas \<tabla 1 > y \<tabla 2 >. Entre dos tablas solo puede existir una relación directa o indirecta.  
+ \* Relación: tabla [columna 1] -> tabla [columna 2] - estado: error - motivo: No se puede crear una relación entre tablas \<tabla 1 > y \<la tabla 2 >. Entre dos tablas solo puede existir una relación directa o indirecta.  
   
  Si tiene dos tablas y varias relaciones entre ellas, entonces deberá importar varias copias de la tabla que contenga la columna de búsqueda y crear una relación entre cada par de tablas.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "34045309"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many relationships  
  Los modelos tabulares no admiten las relaciones de varios a varios, y no se pueden agregar *tablas de unión* en el diseñador de modelos. Sin embargo, puede usar funciones de DAX para modelar las relaciones de varios a varios.  
   
- También puede intentar configurar un filtro cruzado bidireccional para ver si logra el mismo propósito. A veces se puede satisfacer el requisito de relación de varios a varios mediante filtros cruzados que perduran un contexto de filtro entre varias relaciones de tabla. Vea [Filtros cruzados bidireccionales para modelos tabulares en SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) para obtener más información.  
+ También puede intentar configurar un filtro cruzado bidireccional para ver si logra el mismo propósito. A veces se puede satisfacer el requisito de la relación de varios a varios mediante filtros cruzados que perduran un contexto de filtro a través de varias relaciones de tabla. Vea [Filtros cruzados bidireccionales para modelos tabulares en SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) para obtener más información.  
   
 ### <a name="self-joins-and-loops"></a>Autocombinaciones y bucles  
  Las autocombinaciones no se permiten en las tablas de modelos tabulares. Una autocombinación es una relación recursiva entre una tabla y ella misma. Las autocombinaciones se utilizan a menudo para definir las jerarquías de elementos primarios y secundarios. Por ejemplo, podría unir una tabla de empleados a sí misma para generar una jerarquía que muestre la cadena de dirección en un negocio.  
@@ -159,7 +159,7 @@ ms.locfileid: "34045309"
   
  Si su modelo contiene datos de varios orígenes, probablemente tendrá que crear las relaciones manualmente. Por ejemplo, puede importar las tablas Customers, CustomerDiscounts, y Orders de un origen de datos relacional. Las relaciones que existen entre esas tablas en el origen se crean automáticamente en el modelo. A continuación, puede agregar otra tabla de un origen diferente, por ejemplo, importar datos de la región de una tabla geográfica en un libro de Microsoft Excel. Después, puede crear manualmente una relación entre una columna de la tabla Clientes y una columna de la tabla Geografía.  
   
- Para crear manualmente las relaciones en un modelo tabular, puede usar la vista de diagrama del diseñador de modelos o el cuadro de diálogo Administrar relaciones. La vista de diagrama muestra las tablas, con las relaciones entre ellas, en un formato gráfico. Puede hacer clic en una columna de una tabla y arrastrar el cursor a otra tabla para crear fácilmente una relación, en el orden correcto, entre las tablas. El cuadro de diálogo Administrar relaciones muestra las relaciones entre las tablas en un formato de tabla simple. Para obtener información sobre cómo crear manualmente las relaciones, vea [crear una relación entre dos tablas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Para crear manualmente las relaciones en un modelo tabular, puede usar la vista de diagrama del diseñador de modelos o el cuadro de diálogo Administrar relaciones. La vista de diagrama muestra las tablas, con las relaciones entre ellas, en un formato gráfico. Puede hacer clic en una columna de una tabla y arrastrar el cursor a otra tabla para crear fácilmente una relación, en el orden correcto, entre las tablas. El cuadro de diálogo Administrar relaciones muestra las relaciones entre las tablas en un formato de tabla simple. Para obtener información sobre cómo crear relaciones manualmente, consulte [crear una relación entre dos tablas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  Si elige una columna que no se puede usar en la relación, aparece una X roja al lado de la columna. Puede pausar el cursor sobre el icono de error para ver un mensaje con más información sobre el problema. Entre los problemas que pueden impedir crear una relación entre las columnas seleccionadas están:  
@@ -171,7 +171,7 @@ ms.locfileid: "34045309"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear una relación entre dos tablas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Describe cómo crear manualmente una relación entre dos tablas.|  
 |[Eliminar relaciones](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Describe cómo eliminar una relación y las consecuencias de la eliminación de relaciones.|  

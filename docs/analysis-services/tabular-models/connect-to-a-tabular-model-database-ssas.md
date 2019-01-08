@@ -1,5 +1,5 @@
 ---
-title: Conectarse a una base de datos de modelo tabular | Documentos de Microsoft
+title: Conectarse a una base de datos de modelo tabular de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce70f8ac3e22e31f0420762019c94fc629951a4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045299"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072422"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>Conectarse a una base de datos de modelo tabular  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Después de generar un modelo tabular e implementarlo en un servidor de modo tabular de Analysis Services, debe establecer los permisos que permiten que esté disponible para las aplicaciones cliente. Este artículo se explica cómo establecer permisos y cómo conectarse a una base de datos de las aplicaciones cliente.  
+  Después de generar un modelo tabular e implementarlo en un servidor de modo tabular de Analysis Services, debe establecer los permisos que permiten que esté disponible para las aplicaciones cliente. Este artículo se explica cómo los permisos y cómo conectarse a una base de datos de las aplicaciones cliente.  
   
 > [!NOTE]  
 >  De forma predeterminada, las conexiones remotas a Analysis Services no están disponibles hasta que se configura el firewall. Asegúrese de que ha abierto el puerto adecuado si configura una instancia con nombre o predeterminada para las conexiones de cliente. Para obtener más información, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "34045299"
 ##  <a name="bkmk_userpermissions"></a> Permisos de usuario en la base de datos  
  Los usuarios que se conecten a bases de datos tabulares deben pertenecer a un rol de base de datos que especifique el acceso de lectura.  
   
- Los roles, y a veces la pertenencia a los roles, se definen al crear un modelo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o en el caso de los modelos implementados, mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información sobre cómo crear roles mediante el Administrador de roles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consulte [crear y administrar funciones](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Para obtener más información sobre cómo crear y administrar roles para un modelo implementado, vea [Roles de modelos tabulares](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Los roles, y a veces la pertenencia a los roles, se definen al crear un modelo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o en el caso de los modelos implementados, mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información sobre cómo crear roles mediante el Administrador de roles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consulte [crear y administrar Roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Para obtener más información sobre cómo crear y administrar roles para un modelo implementado, vea [Roles de modelos tabulares](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 > [!CAUTION]  
 >  El nuevo despliegue de un proyecto de modelos tabular con roles definidos mediante el Administrador de roles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sobrescribirá los roles definidos en un modelo tabular implementado.  
@@ -40,7 +40,7 @@ ms.locfileid: "34045299"
   
 1.  En Administración central, abra la página Configurar cuentas de servicio.  
   
-2.  Seleccione el grupo de aplicaciones de servicio que utiliza Excel Services. Puede ser **Grupo de aplicaciones de servicio: Sistema de servicios web de SharePoint** o un grupo de aplicaciones personalizadas. La cuenta administrada que utiliza Excel Services aparecerá en la página.  
+2.  Seleccione el grupo de aplicaciones de servicio que utiliza Excel Services. Es posible que **grupo de aplicaciones de servicio - sistema de SharePoint Web Services** o un grupo de aplicaciones personalizadas. La cuenta administrada que utiliza Excel Services aparecerá en la página.  
   
      Para las granjas de servidores de SharePoint que incluyen Reporting Services en modo de SharePoint, obtenga también la información de cuenta para la aplicación de servicio de Reporting Services.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34045299"
   
 2.  Seleccione **Desde Analysis Services**.  
   
-3.  En **Nombre del servidor**, especifique la instancia de Analysis Services que hospeda la base de datos. El nombre de servidor suele ser el del equipo que ejecuta el software del servidor. Si el servidor se instaló como una instancia con nombre, debe especificar el nombre en este formato: \<servername >\\< instancename\>.  
+3.  En **Nombre del servidor**, especifique la instancia de Analysis Services que hospeda la base de datos. El nombre de servidor suele ser el del equipo que ejecuta el software del servidor. Si el servidor se instaló como una instancia con nombre, debe especificar el nombre en este formato: \<servername >\\< nombreDeInstancia\>.  
   
      La instancia de servidor debe configurarse para la implementación tabular independiente y la instancia de servidor debe tener una regla de entrada que permita el acceso a ella. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) y [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -89,13 +89,13 @@ ms.locfileid: "34045299"
   
  **El Asistente para la conexión de datos no puede obtener una lista de bases de datos del origen de datos especificado.**  
   
- Al importar datos, se produce este error de Microsoft Excel cuando intenta utilizar al Asistente para conectarse a una base de datos de modelo tabular en un servidor de Analysis Services remoto y no tiene permisos suficientes. Para resolver este error, debe tener derechos de acceso de usuario en la base de datos. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder al usuario acceso a los datos.  
+ Al importar datos, este error de Microsoft Excel se produce al intentar usar el Asistente para conectarse a una base de datos de modelo tabular en un servidor remoto de Analysis Services, y no tiene permisos suficientes. Para resolver este error, debe tener derechos de acceso de usuario en la base de datos. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder al usuario acceso a los datos.  
   
- **Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: \<nombre del modelo > espacio aislado**  
+ **Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: \<nombre de modelo > espacio aislado**  
   
  En SharePoint, este error de Microsoft Excel tiene lugar cuando se intenta llevar a cabo una interacción con los datos, por ejemplo filtrar los datos, en una tabla dinámica que utilice datos del modelo. El error se produce porque no tiene los permisos necesarios en el servidor de Analysis Services remoto. Para resolver este error, debe tener derechos de acceso de usuario en la base de datos. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder al usuario acceso a los datos.  
   
- **Error al intentar realizar esta operación. Volver a cargar el libro y vuelva a intentar realizar esta operación de nuevo.**  
+ **Error al intentar realizar esta operación. Volver a cargar el libro y, a continuación, intente realizar de nuevo la operación.**  
   
  En SharePoint, este error de Microsoft Excel tiene lugar cuando se intenta llevar a cabo una interacción con los datos, por ejemplo filtrar los datos, en una tabla dinámica que utilice datos del modelo. El error se produce porque Excel Services no es de confianza para la instancia de Analysis Services en la que se implementan los datos del modelo. Para resolver este error, conceda a Excel Services permisos administrativos en la instancia de Analysis Services. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder permisos de administrador. Si el error persiste, recicle el grupo de aplicaciones de Excel Services.  
   

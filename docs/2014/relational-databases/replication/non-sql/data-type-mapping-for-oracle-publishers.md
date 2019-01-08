@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
@@ -15,12 +14,12 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786657"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
   Los tipos de datos de Oracle y de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no siempre coinciden de forma exacta. En la medida de lo posible, el tipo de datos coincidentes se selecciona automáticamente al publicar en una tabla Oracle. En los casos en que no queda clara una asignación de tipos de datos única, se proporcionan asignaciones alternativas de tipos de datos. Para obtener información acerca de cómo seleccionar asignaciones alternativas, vea la sección "Especificar asignaciones de tipos de datos alternativas" más adelante en este tema.  
@@ -34,30 +33,30 @@ ms.locfileid: "48194745"
 |CHAR([1-2000])|CHAR([1-2000])|Sí|  
 |CLOB|VARCHAR(MAX)|Sí|  
 |DATE|DATETIME|Sí|  
-|FLOAT|FLOAT|no|  
-|FLOAT([1-53])|FLOAT([1-53])|no|  
-|FLOAT([54-126])|FLOAT|no|  
+|FLOAT|FLOAT|No|  
+|FLOAT([1-53])|FLOAT([1-53])|No|  
+|FLOAT([54-126])|FLOAT|No|  
 |INT|NUMERIC(38)|Sí|  
 |INTERVAL|DATETIME|Sí|  
 |LONG|VARCHAR(MAX)|Sí|  
 |LONG RAW|IMAGE|Sí|  
-|NCHAR([1-1000])|NCHAR([1-1000])|no|  
+|NCHAR([1-1000])|NCHAR([1-1000])|No|  
 |NCLOB|NVARCHAR(MAX)|Sí|  
 |NUMBER|FLOAT|Sí|  
-|NUMBER([1-38])|NUMERIC([1-38])|no|  
+|NUMBER([1-38])|NUMERIC([1-38])|No|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sí|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|no|  
-|RAW([1-2000])|VARBINARY([1-2000])|no|  
-|real|FLOAT|no|  
-|ROWID|CHAR(18)|no|  
-|TIMESTAMP|DATETIME|Sí|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
+|RAW([1-2000])|VARBINARY([1-2000])|No|  
+|real|FLOAT|No|  
+|ROWID|CHAR(18)|No|  
+|timestamp|DATETIME|Sí|  
 |MARCA DE TIEMPO(0-7)|DATETIME|Sí|  
 |TIMESTAMP(8-9)|DATETIME|Sí|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|no|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|No|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA LOCAL|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|no|  
-|UROWID|CHAR(18)|no|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|No|  
+|UROWID|CHAR(18)|No|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Sí|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Consideraciones para la asignación de tipos de datos  
@@ -82,7 +81,7 @@ ms.locfileid: "48194745"
 ### <a name="float-and-number-types"></a>Tipos FLOAT y NUMBER  
  La escala y precisión especificadas durante la asignación de tipos de datos FLOAT y NUMBER depende de la escala y precisión especificadas para la columna mediante el tipo de datos de la base de datos de Oracle. La precisión es el número de dígitos de un número. La escala es el número de dígitos situados a la derecha de la coma decimal de un número. Por ejemplo, el número 123,45 tiene una precisión de 5 y una escala de 2.  
   
- Oracle permite que se definan números con una escala mayor que la precisión, como NUMBER(4,5), pero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que la precisión sea igual o mayor que la escala. Para garantizar que no hay truncamiento de datos, si la escala es mayor que la precisión en el publicador de Oracle, se define la precisión para que sea igual a la escala al asignar el tipo de datos: NUMBER(4,5) se asignaría como NUMERIC(5,5).  
+ Oracle permite que se definan números con una escala mayor que la precisión, como NUMBER(4,5), pero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que la precisión sea igual o mayor que la escala. Para garantizar que no hay ningún truncamiento de datos, si la escala es mayor que la precisión en el publicador de Oracle, la precisión se establece igual que la escala cuando se asigna el tipo de datos: Number (4,5) se asignaría como numeric (5,5).  
   
 > [!NOTE]  
 >  Si no se especifica una escala y una precisión para NUMBER, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza de forma predeterminada la escala (8) y precisión (38) máximas. Recomendamos definir una escala y precisión específicas en Oracle para mejorar el almacenamiento y el rendimiento al replicar los datos.  

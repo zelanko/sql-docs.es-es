@@ -1,5 +1,6 @@
 ---
-title: Instalación desatendida de SQL Server en Red Hat Enterprise Linux | Microsoft Docs
+title: Instalación desatendida de SQL Server en Red Hat Enterprise Linux
+titleSuffix: SQL Server
 description: 'Ejemplo de Script SQL Server: instalación desatendida en Red Hat Enterprise Linux'
 author: rothja
 ms.author: jroth
@@ -7,14 +8,14 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 12fd72edb9d8d2909bbbaa3a1e327bd358bcb8c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d82789f3b74c245654061162cf3a3a41bd75f75
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838383"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160523"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Ejemplo: Script de instalación desatendida de SQL Server para Red Hat Enterprise Linux
 

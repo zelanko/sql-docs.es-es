@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distdbproperties.f1
@@ -15,18 +14,18 @@ ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0412108c9b08e8b3345f4930b4076e10c96ec2ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89b8381de605ab3736afc6ac8e3a7da0d53bf9e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796887"
 ---
 # <a name="distribution-database-properties"></a>Propiedades de base de datos de distribución
   El cuadro de diálogo **Propiedades de base de datos de distribución** permite ver un número de propiedades y establecer el período de retención de transacción y retención de historial para la base de datos.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Nombre de la base de datos de distribución que, de manera predeterminada, se establece 'distribución' (de solo lectura).  
   
  **Ubicaciones de archivos**  
@@ -39,7 +38,7 @@ ms.locfileid: "48207715"
  Representa el tiempo durante el cual se almacenan los metadatos de historial para todos los tipos de replicación.  
   
  **Seguridad del Agente de lectura de cola**  
- El Agente de lectura de cola se utiliza con la replicación transaccional que admite suscripciones de actualización en cola. El Agente de lectura de cola se crea automáticamente si selecciona **Publicación transaccional con suscripciones actualizables** en la página **Tipo de publicación** del Asistente para nueva publicación. Haga clic en **Configuración de seguridad…** para cambiar la cuenta con la que el agente se ejecuta y establece conexiones con el distribuidor.  
+ El Agente de lectura de cola se utiliza con la replicación transaccional que admite suscripciones de actualización en cola. El Agente de lectura de cola se crea automáticamente si selecciona **Publicación transaccional con suscripciones actualizables** en la página **Tipo de publicación** del Asistente para nueva publicación. Haga clic en **Configuración de seguridad...** para cambiar la cuenta con la que el agente se ejecuta y establece conexiones con el distribuidor.  
   
  También se puede crear un Agente de lectura de cola seleccionando **Crear Agente de lectura de cola** en esta página (esta opción está deshabilitada si ya se ha creado el agente).  
   

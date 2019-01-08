@@ -10,15 +10,15 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce83a5fae673d32fd86523fa13ef8b67b74b780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 267d39335cd0bf74134030f3bb2af4a11e652319
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137619"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391069"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
-  En este tema se explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) y [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  En este tema se explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información acerca de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [los agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de aplicación &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), y [secundarias activas: Réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Puede especificar el agente de escucha del grupo de disponibilidad de un determinado grupo de disponibilidad en la cadena de conexión. Si una aplicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se conecta a una base de datos de un grupo de disponibilidad que conmuta por error, la conexión original se interrumpe y la aplicación debe abrir una nueva conexión para continuar el trabajo después de la conmutación por error.  
   
@@ -30,11 +30,11 @@ ms.locfileid: "48137619"
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
  Especifique siempre `MultiSubnetFailover=Yes` al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. `MultiSubnetFailover` habilita una conmutación por error más rápida para todos los grupos de disponibilidad y la instancia del clúster de conmutación por error en SQL Server 2012 y reducirá significativamente el tiempo de la conmutación por error en las topologías únicas y AlwaysOn de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
   
- La propiedad de conexión `MultiSubnetFailover` indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a las direcciones IP de todos los grupos de disponibilidad. Cuando `MultiSubnetFailover=Yes` se especifica para una conexión, el cliente reintenta la conexión TCP con más rapidez que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
+ La propiedad de conexión `MultiSubnetFailover` indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a las direcciones IP de todos los grupos de disponibilidad. Cuando `MultiSubnetFailover=Yes` se especifica para una conexión, el cliente lo reintenta intentos de conexión TCP con más rapidez que los intervalos de retransmisión TCP del sistema operativo de forma predeterminada. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
   
  Para más información sobre las palabras clave de cadena de conexión, vea [Usar palabras clave de cadena de conexión con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Especificar `MultiSubnetFailover=Yes` al conectarse a algo que no sea un agente de escucha del grupo de disponibilidad o una instancia de clúster de conmutación por error puede provocar un impacto negativo en el rendimiento y no se admite.  
+ Si se especifica `MultiSubnetFailover=Yes` al conectarse a algo que no sea un agente de escucha de un grupo de disponibilidad o una instancia de clúster de conmutación por error, el rendimiento puede verse afectado negativamente y, por ello, no se admite.  
   
  Utilice las siguientes instrucciones para conectarse a un servidor en un grupo de disponibilidad o una instancia de clúster de conmutación por error:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48137619"
   
 -   La conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada con más de 64 direcciones IP producirá un error en la conexión.  
   
--   El comportamiento de una aplicación que utilice la propiedad de conexión `MultiSubnetFailover` no se ve afectado por el tipo de autenticación: de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Kerberos o autenticación de Windows.  
+-   El comportamiento de una aplicación que use la propiedad de conexión `MultiSubnetFailover` no se ve afectado por el tipo de autenticación: Autenticación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], autenticación de Kerberos o autenticación de Windows.  
   
 -   Puede aumentar el valor de `loginTimeout` para tener en cuenta el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   
@@ -56,23 +56,23 @@ ms.locfileid: "48137619"
   
 2.  Si una aplicación utiliza `ApplicationIntent=ReadWrite` (se explica a continuación) y la ubicación de réplica secundaria está configurada para el acceso de solo lectura.  
   
- Una conexión producirá un error si una réplica principal está configurada para rechazar cargas de trabajo de solo lectura y contiene la cadena de conexión `ApplicationIntent=ReadOnly`.  
+ Una conexión producirá un error si una réplica principal está configurada para rechazar las cargas de trabajo de solo lectura y la cadena de conexión contiene `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Actualizar para utilizar clústeres de varias subredes a partir de la creación de reflejo de la base de datos  
  Se producirá un error de conexión si las palabras clave de conexión `MultiSubnetFailover` y `Failover_Partner` se encuentran en la cadena de conexión. También se producirá un error si se utiliza `MultiSubnetFailover` y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelve una respuesta del asociado de conmutación por error que indica que forma parte de un par de creación de reflejo de la base de datos.  
   
- Si actualiza una aplicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que utilice actualmente la creación de reflejo de la base de datos en un escenario de varias subredes, debe quitar la propiedad de conexión `Failover_Partner` y reemplazarla con `MultiSubnetFailover` establecida en `Yes` y reemplazar el nombre de servidor en la cadena de conexión con un agente de escucha de grupo de disponibilidad. Si usa una cadena de conexión `Failover_Partner` y `MultiSubnetFailover=Yes`, el controlador generará un error. Sin embargo, si usa una cadena de conexión `Failover_Partner` y `MultiSubnetFailover=No` (o `ApplicationIntent=ReadWrite`), la aplicación usará la creación de reflejo de base de datos.  
+ Si actualiza una aplicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que utilice actualmente la creación de reflejo de la base de datos en un escenario de varias subredes, debe quitar la propiedad de conexión `Failover_Partner` y reemplazarla con `MultiSubnetFailover` establecida en `Yes` y reemplazar el nombre de servidor en la cadena de conexión con un agente de escucha de grupo de disponibilidad. Si una cadena de conexión utiliza `Failover_Partner` y `MultiSubnetFailover=Yes`, el controlador generará un error. Sin embargo, si una cadena de conexión utiliza `Failover_Partner` y `MultiSubnetFailover=No` (o `ApplicationIntent=ReadWrite`), la aplicación utilizará la creación de reflejo de la base de datos.  
   
  El controlador devuelve un error si la creación de reflejo de la base de datos se usa en la base de datos principal del grupo de disponibilidad y si `MultiSubnetFailover=Yes` se utiliza en la cadena de conexión que se conecta a una base de datos principal en lugar de a un agente de escucha del grupo de disponibilidad.  
   
 ## <a name="specifying-application-intent"></a>Especificar el intento de la aplicación  
  Cuando `ApplicationIntent=ReadOnly`, el cliente solicita una carga de trabajo de lectura al conectarse a una base de datos habilitada para AlwaysOn. El servidor aplicará el intento en el momento de la conexión y durante una instrucción de base de datos USE pero solo en una base de datos con habilitada para AlwaysOn.  
   
- El `ApplicationIntent` palabra clave no funciona con bases de datos heredados, de solo lectura.  
+ La palabra clave `ApplicationIntent` no funciona con bases de datos de solo lectura heredadas.  
   
  Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino AlwaysOn. (Esto se realiza con el `ALLOW_CONNECTIONS` cláusula de la `PRIMARY_ROLE` y `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones.)  
   
- El `ApplicationIntent` palabra clave se utiliza para habilitar el enrutamiento de solo lectura.  
+ La palabra clave `ApplicationIntent` se utiliza para habilitar el enrutamiento de solo lectura.  
   
 ## <a name="read-only-routing"></a>Enrutamiento de solo lectura  
  El enrutamiento de solo lectura es una característica que puede garantizar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  

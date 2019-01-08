@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
@@ -13,12 +13,12 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15117eadf004cff9359a20b512cffcb4576a6ed8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066005"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808887"
 ---
 # <a name="create-a-job"></a>Crear un trabajo
   En este tema se describe cómo crear un trabajo del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server (SMO).  
@@ -39,7 +39,7 @@ ms.locfileid: "48066005"
   
      [objetos de administración de SQL Server](#SMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48066005"
     >  Si cambia la propiedad de un trabajo a un usuario que no es miembro del rol fijo de servidor **sysadmin** y el trabajo está ejecutando unos pasos que necesitan las cuentas de un servidor proxy (por ejemplo, la ejecución de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), asegúrese de que el usuario tenga acceso a ese servidor proxy o, de lo contrario, se producirán errores en el trabajo.  
   
 ####  <a name="Permissions"></a> Permissions  
- Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
@@ -69,19 +69,19 @@ ms.locfileid: "48066005"
   
 2.  Haga clic en el signo más para expandir **Agente SQL Server**.  
   
-3.  Haga clic con el botón derecho en la carpeta **Trabajos** y, a continuación, seleccione **Nuevo trabajo...**.  
+3.  Haga clic con el botón derecho en la carpeta **Trabajos** y, después, seleccione **Nuevo trabajo...**.  
   
 4.  En el cuadro de diálogo **Nuevo trabajo** , en la página **General** , modifique las propiedades generales del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo y el nuevo trabajo &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
 5.  En la página **Pasos** , organice los pasos de trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: nuevo trabajo &#40;página pasos&#41;](job-properties-new-job-steps-page.md)  
   
-6.  En la página **Programaciones** , organice las programaciones del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: nuevo trabajo &#40;página programaciones&#41;](job-properties-new-job-schedules-page.md)  
+6.  En la página **Programaciones** , organice las programaciones del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;página de programaciones&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  En la página **Alertas** , organice las alertas del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: nuevo trabajo &#40;página de alertas&#41;](job-properties-new-job-alerts-page.md)  
+7.  En la página **Alertas** , organice las alertas del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;página de alertas&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  En la página **Notificaciones** , establezca las acciones que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar cuando se complete el trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: nuevo trabajo &#40;página notificaciones&#41;](job-properties-new-job-notifications-page.md).  
+8.  En la página **Notificaciones** , establezca las acciones que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar cuando se complete el trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;página notificaciones&#41;](job-properties-new-job-notifications-page.md).  
   
-9. En la página **Destinos** , administre los servidores de destino del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: nuevo trabajo &#40;página destinos&#41;](job-properties-new-job-targets-page.md).  
+9. En la página **Destinos** , administre los servidores de destino del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;tiene como destino de la página&#41;](job-properties-new-job-targets-page.md).  
   
 10. Cuando termine, haga clic en **Aceptar**.  
   

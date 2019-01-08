@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf39c69a6211e67d68a9206dad2687caad180
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205535"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750227"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
@@ -34,7 +33,7 @@ ms.locfileid: "48205535"
 |Operación|Descripción|  
 |---------------|-----------------|  
 |GROUP BY|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
-|SUM|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
+|Sum|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
 |Promedio|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para más información, vea [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
 |Count|Devuelve el número de elementos de un grupo. Para más información, vea [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |COUNT DISTINCT|Devuelve el número de valores únicos distintos de NULL de un grupo.|  
@@ -101,7 +100,7 @@ ms.locfileid: "48205535"
   
  La transformación Agregado es asincrónica, lo que significa que no utiliza ni publica datos fila por fila. En lugar de ello, utiliza todo el conjunto de filas, realiza sus agrupaciones y agregaciones, y, seguidamente, publica los resultados.  
   
- Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de la transformación Agregado puede tener tres columnas: **CountryRegion**, **City**y **Population**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
+ Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de transformación agregado puede tener tres columnas: **CountryRegion**, **Ciudad**, y **rellenado**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
   
  Puede también agregar varias salidas a la transformación Agregado y dirigir cada agregación a una salida diferente. Por ejemplo, si la transformación Agregado aplica las funciones Sum y Average, cada agregación se puede dirigir a una salida diferente.  
   
@@ -113,9 +112,9 @@ ms.locfileid: "48205535"
   
  Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de transformación Agregado** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación de agregado &#40;pestaña agregaciones&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor de transformación Agregado &#40;pestaña Agregaciones&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Editor de transformación de agregado &#40;ficha Opciones avanzadas&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Agregado &#40;pestaña Avanzadas&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48205535"
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   
--   [Incorporación de valores en un conjunto de datos con la transformación Agregado](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+-   [Agregar valores en un conjunto de datos mediante la transformación Agregado](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   

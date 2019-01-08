@@ -19,12 +19,12 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5c89e1d4ee1ec4b3590f6b9e0a738561cd61e1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63bf65118f876a0677592bfe1dd8056b05397f71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406682"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47740935"
 |**handle_id**|**int**|Indica el id. del identificador del espacio de nombres. Se trata del identificador específico del NSO y es único en una instancia. No admite valores NULL.|  
 |**client_thread_id**|**varbinary (8)**|Muestra el identificador de subproceso de la aplicación cliente que origina la solicitud.<br /><br /> **\*\* Advertencia \* \***  esto solo es significativa si la aplicación cliente se está ejecutando en el mismo equipo que SQL Server. Cuando se ejecuta la aplicación de cliente de forma remota, el **client_thread_id** muestra el identificador de subproceso de algún proceso del sistema que funciona en nombre del cliente remoto.<br /><br /> Acepta valores NULL.|  
 |**client_process_id**|**varbinary (8)**|Muestra el identificador de proceso de la aplicación cliente si esta se ejecuta en la misma máquina que SQL Server. Para un cliente remoto, muestra el identificador de proceso del sistema que funciona en nombre de la aplicación cliente. Acepta valores NULL.|  
-|**handle_context_address**|**varbinary (8)**|Muestra la dirección de la estructura de NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
+|**handle_context_address**|**varbinary (8)**|Muestra la dirección de la estructura NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
 |**filestream_transaction_id**|**varbinary(128)**|Muestra el identificador de la transacción asociada con el identificador determinado y todas las solicitudes asociadas con este identificador. Es el valor devuelto por la **get_filestream_transaction_context** función. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  

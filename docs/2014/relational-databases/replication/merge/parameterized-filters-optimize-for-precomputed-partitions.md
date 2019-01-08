@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5b082e9849b7eca02cb3a51c5cac3fb25a877a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203495"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800195"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente
   Las particiones precalculadas son una optimización del rendimiento que se puede utilizar con publicaciones de combinación filtradas. Las particiones precalculadas son también un requisito para utilizar registros locales en publicaciones filtradas. Para obtener más información sobre los registros lógicos, vea [Agrupar cambios en filas relacionadas con registros lógicos](group-changes-to-related-rows-with-logical-records.md).  
@@ -68,6 +67,6 @@ ms.locfileid: "48203495"
  Existe un pequeño costo de rendimiento con las particiones precalculadas cuando se cargan cambios desde el suscriptor al publicador, pero la mayor parte del tiempo de procesamiento de mezcla se dedica a evaluar las particiones y descargar los cambios del publicador al suscriptor, por lo que la ganancia neta puede ser importante. La ventaja en cuanto al rendimiento variará dependiendo del número de suscriptores que se sincronicen de forma simultánea y del número de actualizaciones por sincronización que desplacen filas de una partición a otra.  
   
 ## <a name="see-also"></a>Vea también  
- [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
+ [Filtros de fila con parámetros](parameterized-filters-parameterized-row-filters.md)  
   
   

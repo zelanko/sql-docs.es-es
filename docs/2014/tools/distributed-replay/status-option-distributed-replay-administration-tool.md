@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9805f9b14222d8b12b052c3a340ec7ee7183d749
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177055"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761017"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opción Status (herramienta de administración de Distributed Replay)
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de Distributed Replay, `DReplay.exe`, es una herramienta de línea de comandos que puede usar para comunicarse con distributed replay controller. En este tema se describe la opción del símbolo del sistema **status** y la sintaxis correspondiente.  
@@ -46,7 +46,7 @@ dreplay status [-mcontroller] [-fstatus_interval]
  En el ejemplo siguiente, se muestra el estado actual cada 60 segundos. El valor `localhost` indica que el servicio del controlador se está ejecutando en el mismo equipo que la herramienta de administración.  
   
 ```  
-dreplay status –m localhost -f 60  
+dreplay status -m localhost -f 60  
 ```  
   
 ## <a name="permissions"></a>Permisos  
@@ -55,7 +55,7 @@ dreplay status –m localhost -f 60
  Para más información, consulte [Distributed Replay Security](distributed-replay-security.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Reproducción distribuida de SQL Server](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

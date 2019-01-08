@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -16,12 +15,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200525"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805677"
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de paquete
   Este tema describe el modo de copiar elementos de flujo de control, elementos de flujo de datos y administradores de conexión dentro de un paquete o entre paquetes.  
@@ -37,7 +36,7 @@ ms.locfileid: "48200525"
 4.  Seleccione los elementos del flujo de control o del flujo de datos que desee copiar. Puede seleccionar elementos de a uno por vez presionando la tecla Mayús y haciendo clic en el elemento, o puede seleccionar un grupo de elementos arrastrando el puntero a través de los elementos que desea seleccionar.  
   
     > [!IMPORTANT]  
-    >  Las restricciones de precedencia y rutas de acceso que conectan elementos no se seleccionan automáticamente cuando selecciona los dos elementos que conectan. Para copiar un flujo de datos ordenado (un segmento del flujo de control o del flujo de datos), asegúrese también de copiar las restricciones de precedencia y las rutas de acceso.  
+    >  Las restricciones de precedencia y rutas de acceso que conectan elementos no se seleccionan automáticamente cuando selecciona los dos elementos que conectan. Para copiar un flujo de trabajo ordenado (un segmento del flujo de control o de flujo de datos), asegúrese también de copiar las restricciones de precedencia y las rutas de acceso.  
   
 5.  Haga clic con el botón derecho en un elemento seleccionado y, después, haga clic en **Copiar**.  
   

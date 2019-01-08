@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergecleanupmetadata_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 994f24e0b19dac70e6987a0c23d45d5446548689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670610"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210964"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Comentarios  
  **sp_mergecleanupmetadata** debe usarse solo en topologías de replicación que incluyan servidores que ejecuten versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Las topologías que solo incluyan [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 o posterior deben usar la limpieza de metadatos basada en la retención automática. Al ejecutar este procedimiento almacenado, se debe tener en cuenta que el archivo de registro necesita y puede llegar a aumentar en gran medida en el equipo donde se está ejecutando el procedimiento almacenado.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Después de **sp_mergecleanupmetadata** se ejecuta de forma predeterminada, todas las suscripciones en los suscriptores de publicaciones que tienen metadatos almacenados en **MSmerge_genhistory**, **MSmerge_contents**  y **MSmerge_tombstone** se marcan para reinicialización, se pierden los cambios pendientes en el suscriptor y la instantánea actual está marcado como obsoleta.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Si hay varias publicaciones en una base de datos y una de estas publicaciones utiliza un período de retención de publicación infinito (**@retention**=**0**), en ejecución  **sp_mergecleanupmetadata** no limpiará el cambio de la replicación de mezcla metadatos para la base de datos de seguimiento. Por ese motivo, debe utilizar con cuidado la retención infinita de publicaciones.  
   
  Al ejecutar este procedimiento almacenado, puede elegir si desea reinicializar los suscriptores estableciendo el **@reinitialize_subscriber** parámetro **TRUE** (valor predeterminado) o **FALSE**. Si **sp_mergecleanupmetadata** se ejecuta con la **@reinitialize_subscriber** parámetro establecido en **TRUE**, incluso si la suscripción es una instantánea se vuelve a aplicar en el suscriptor se crea sin una instantánea (por ejemplo, si los datos de instantánea y el esquema se han aplicado de forma manual o ya existían en el suscriptor) inicial. Valor del parámetro **FALSE** debe utilizarse con precaución, porque si no se reinicializa la publicación, debe asegurarse de que se sincronizan datos en el publicador y suscriptor.  
@@ -66,7 +65,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  Se recomienda, aunque no es obligatorio, detener todas las actualizaciones a las bases de datos de publicaciones y suscripciones. Si las actualizaciones continúan, al reinicializar la publicación se perderán todas las actualizaciones realizadas en el suscriptor desde la última mezcla, pero se mantendrá la convergencia de datos.  
   
-2.  Ejecute una mezcla con el Agente de mezcla. Se recomienda que use el **– Validate** opción de línea de comandos del agente en cada suscriptor cuando se ejecuta el agente de mezcla. Si está ejecutando mezclas en modo continuo, vea *consideraciones especiales para mezclas en modo continuo* más adelante en esta sección.  
+2.  Ejecute una mezcla con el Agente de mezcla. Se recomienda que use el **-validar** opción de línea de comandos del agente en cada suscriptor cuando se ejecuta el agente de mezcla. Si está ejecutando mezclas en modo continuo, vea *consideraciones especiales para mezclas en modo continuo* más adelante en esta sección.  
   
 3.  Cuando hayan terminado todas las mezclas, ejecute **sp_mergecleanupmetadata**.  
   
@@ -82,7 +81,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  Detener **todas** las actualizaciones de las bases de datos de publicaciones y suscripciones.  
   
-2.  Ejecute una mezcla con el Agente de mezcla. Se recomienda que use el **– Validate** opción de línea de comandos del agente en cada suscriptor cuando se ejecuta el agente de mezcla. Si está ejecutando mezclas en modo continuo, vea *consideraciones especiales para mezclas en modo continuo* más adelante en esta sección.  
+2.  Ejecute una mezcla con el Agente de mezcla. Se recomienda que use el **-validar** opción de línea de comandos del agente en cada suscriptor cuando se ejecuta el agente de mezcla. Si está ejecutando mezclas en modo continuo, vea *consideraciones especiales para mezclas en modo continuo* más adelante en esta sección.  
   
 3.  Cuando hayan terminado todas las mezclas, ejecute **sp_mergecleanupmetadata**.  
   
@@ -106,7 +105,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  Cuando haya completado el paso 3 de la ejecución **sp_mergecleanupmetadata**, reanude las mezclas en modo continuo en función de cómo las haya detenido. Realice una de las acciones siguientes:  
   
--   Agregar el **– Continuous** parámetro nuevo para el agente de mezcla.  
+-   Agregar el **-continua** parámetro nuevo para el agente de mezcla.  
   
 -   Volver a activar la publicación con **sp_changemergepublication.**  
   

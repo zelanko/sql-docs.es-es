@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
@@ -14,18 +14,18 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2209c8de9c65e5740b9a6ebdd62972c93596e396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104865"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768297"
 ---
 # <a name="manage-data-collection"></a>Administrar la recopilación de datos
-  Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados y funciones para administrar distintos aspectos de recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar una colección de conjunto de configuración, o ver los datos en el almacén de datos de administración .  
+  Puede utilizar procedimientos almacenados y funciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Administrar la recopilación de datos mediante el uso de SQL Server Management Studio  
- Puede realizar las siguientes tareas relacionadas con el recopilador de datos utilizando el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ Puede realizar las siguientes tareas relacionadas con el recopilador de datos utilizando el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Configurar el almacén de administración de datos &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48104865"
 > [!IMPORTANT]  
 >  A diferencia de los procedimientos almacenados normales, los procedimientos almacenados del recopilador usan parámetros con establecimiento estricto de tipos y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
   
- Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código proporcionado. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante el `sqlcmd` utilidad. Para obtener más información, vea [Usar la utilidad sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+ Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código que se proporcionan. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante la utilidad `sqlcmd`. Para obtener más información, vea [Usar la utilidad sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Procedimientos almacenados y vistas  
  **Trabajar con el recopilador de datos**  

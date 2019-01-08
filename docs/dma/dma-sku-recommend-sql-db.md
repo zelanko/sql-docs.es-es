@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644003"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544109"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar la SKU de base de datos SQL de Azure adecuada para la base de datos local
 
@@ -54,11 +54,11 @@ No es necesario realizar esta tarea para cada base de datos individualmente. Los
     ![Archivo de PowerShell que se muestra en la carpeta DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. Ejecute el script de PowerShell con los argumentos siguientes:
-    - **ComputerName**: el nombre del equipo que hospeda las bases de datos.
-    - **OutputFilePath**: la ruta de acceso del archivo de salida para guardar los contadores recopilados.
-    - **CollectionTimeInSeconds**: la cantidad de tiempo durante el cual desea recopilar datos del contador de rendimiento.
+    - **ComputerName**: El nombre del equipo que hospeda las bases de datos.
+    - **OutputFilePath**: La ruta de acceso de archivo de salida para guardar los contadores recopilados.
+    - **CollectionTimeInSeconds**: La cantidad de tiempo durante el cual desea recopilar datos del contador de rendimiento.
       Capturar los contadores de rendimiento de al menos 40 minutos en obtener una recomendación significativa. La duración de la captura, más precisa la recomendación será.
-    - **DbConnectionString**: cadena de conexión de la que apunta a la base de datos maestra alojado en el equipo desde el que está recopilando datos del contador de rendimiento.
+    - **DbConnectionString**: La cadena de conexión que apunte a la base de datos maestra alojado en el equipo desde el que está recopilando datos del contador de rendimiento.
      
     Aquí es una invocación de ejemplo:
 
@@ -78,30 +78,30 @@ Usar el archivo de salida de los contadores de rendimiento en el paso anterior c
 
 Ejecute el dmacmd.exe con los argumentos siguientes:
 
-- **/ Action = SkuRecommendation**: especifique este argumento para ejecutar las evaluaciones de SKU.
-- **/ SkuRecommendationInputDataFilePath**: la ruta de acceso para el archivo de contadores recopilados en la sección anterior.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: la ruta de acceso para escribir los resultados de salida en formato TSV.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: la ruta de acceso para escribir los resultados de salida en formato JSON.
-- **/ SkuRecommendationHtmlResultsFilePath**: ruta de acceso para escribir los resultados de salida en formato HTML.
+- **/ Action = SkuRecommendation**: Escriba este argumento para ejecutar las evaluaciones de SKU.
+- **/ SkuRecommendationInputDataFilePath**: La ruta de acceso al archivo de contadores recopilado en la sección anterior.
+- **/ SkuRecommendationTsvOutputResultsFilePath**: La ruta de acceso para escribir los resultados de salida en formato TSV.
+- **/ SkuRecommendationJsonOutputResultsFilePath**: La ruta de acceso para escribir los resultados de salida en formato JSON.
+- **/ SkuRecommendationHtmlResultsFilePath**: Ruta de acceso para escribir los resultados de salida en formato HTML.
 
 Además, debe elegir uno de los argumentos siguientes:
 - Evitar la actualización de precios
-    - **/ SkuRecommendationPreventPriceRefresh**: impide que la actualización de precios que se producen. Utilizar si está ejecutando en modo sin conexión.
+    - **/ SkuRecommendationPreventPriceRefresh**: Impide que la actualización de precios que se producen. Utilizar si está ejecutando en modo sin conexión.
 - Obtener los precios más recientes 
-    - **/ SkuRecommendationCurrencyCode**: la moneda en que se va a mostrar los precios (p. ej. "USD").
-    - **/ SkuRecommendationOfferName**: nombre de la oferta (p. ej. "MS-AZR - 0003P"). Para obtener más información, consulte el [detalles de la oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
-    - **/ SkuRecommendationRegionName**: nombre de la región (por ejemplo, "WestUS").
-    - **/ SkuRecommendationSubscriptionId**: el identificador de suscripción.
-    - **/ AzureAuthenticationTenantId**: el inquilino de autenticación.
-    - **/ AzureAuthenticationClientId**: el identificador de cliente de la aplicación AAD que se usa para la autenticación.
+    - **/ SkuRecommendationCurrencyCode**: La moneda en que se va a mostrar los precios (p. ej. "USD").
+    - **/ SkuRecommendationOfferName**: Nombre de la oferta (p. ej. "MS-AZR - 0003P"). Para obtener más información, consulte el [detalles de la oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
+    - **/ SkuRecommendationRegionName**: Nombre de la región (por ejemplo "WestUS").
+    - **/ SkuRecommendationSubscriptionId**: Identificador de la suscripción.
+    - **/ AzureAuthenticationTenantId**: El inquilino de autenticación.
+    - **/ AzureAuthenticationClientId**: El identificador de cliente de la aplicación AAD que se usa para la autenticación.
     - Una de las opciones de autenticación siguientes:
         - Interactiva
-            - **AzureAuthenticationInteractiveAuthentication**: establecido en true para una ventana emergente de autenticación.
+            - **AzureAuthenticationInteractiveAuthentication**: Establecido en true para una ventana emergente de autenticación.
         - Basada en certificados
-            - **AzureAuthenticationCertificateStoreLocation**: establecido en la ubicación del almacén de certificados (p. ej. "CurrentUser").
-            - **AzureAuthenticationCertificateThumbprint**: establecido en la huella digital del certificado.
+            - **AzureAuthenticationCertificateStoreLocation**: Establecido en la ubicación del almacén de certificados (p. ej. "CurrentUser").
+            - **AzureAuthenticationCertificateThumbprint**: Se establece en la huella digital del certificado.
         - En función del token
-            - **AzureAuthenticationToken**: establecer en el token de certificado.
+            - **AzureAuthenticationToken**: Establecer en el token de certificado.
 
 Estos son algunos invocaciones de ejemplo:
 
@@ -135,7 +135,7 @@ El archivo de salida TSV contendrá las columnas mostradas en el gráfico siguie
 
 Sigue una descripción de cada columna.
 
-- **DatabaseName** : el nombre de la base de datos.
+- **DatabaseName** -el nombre de la base de datos.
 - **MetricName** : si se ha ejecutado una métrica.
 - **MetricType** -nivel recomienda Azure SQL Database.
 - **MetricValue** -recomienda SKU de Azure SQL Database.
@@ -152,11 +152,11 @@ El archivo HTML contiene esta información en un formato gráfico. Puede usar el
 Con tan solo unos clics, puede usar las recomendaciones del paso anterior para aprovisionar bases de datos de destino en Azure a la que puede migrar las bases de datos. También puede realizar cambios a las recomendaciones mediante la actualización del archivo HTML como sigue.
 
 1. Abra el archivo HTML y escriba la siguiente información:
-    - **Id. de suscripción** : el identificador de suscripción de la suscripción de Azure a la que desea aprovisionar las bases de datos.
-    - **Región** : la región en que se va a aprovisionar las bases de datos. Asegúrese de que la suscripción es compatible con la región que seleccione.
+    - **Id. de suscripción** -el identificador de suscripción de la suscripción de Azure a la que desea aprovisionar las bases de datos.
+    - **Región** -la región en que se va a aprovisionar las bases de datos. Asegúrese de que la suscripción es compatible con la región que seleccione.
     - **Grupo de recursos** : el grupo de recursos al que desea implementar las bases de datos. Escriba un grupo de recursos existente.
-    - **Nombre del servidor** : servidor de la base de datos SQL de Azure al que desea que las bases de datos implementadas. Si escribe un nombre de servidor que no existe, se creará.
-    - **Administrador Username\Password** : el nombre de usuario de administrador de servidor y la contraseña.
+    - **Nombre del servidor** -servidor de la base de datos SQL de Azure al que desea que las bases de datos implementadas. Si escribe un nombre de servidor que no existe, se creará.
+    - **Administrador Username\Password** -el nombre de usuario de administrador de servidor y la contraseña.
 
 2. Revise las recomendaciones para cada base de datos y modificar el plan de tarifa, proceso nivel y el tamaño de datos máximo según sea necesario. Asegúrese de anular la selección de las bases de datos que actualmente no desee aprovisionar.
 

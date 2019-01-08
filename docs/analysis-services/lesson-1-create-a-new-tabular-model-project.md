@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear un nuevo proyecto de modelo Tabular | Microsoft Docs'
+title: 'Lección 1: Cree un nuevo proyecto de modelo Tabular | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040863"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410782"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lección 1: Crear un nuevo proyecto de modelo tabular
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -50,7 +50,7 @@ Este tema es la primera lección de un tutorial de creación de modelos tabulare
       
     Si no ve SQL Server 2016 RTM (1200) en el cuadro de lista de nivel de compatibilidad, no se está usando la versión más reciente de SQL Server Data Tools. Para obtener la versión más reciente, vea [Instalar SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
-    Si usa la versión más reciente de SSDT, también puede elegir SQL Server 2017 (1400). Sin embargo, para realizar la lección 13: implementación, necesitará un servidor SQL Server 2017 o Azure para implementar en.
+    Si usa la versión más reciente de SSDT, también puede elegir SQL Server 2017 (1400). Sin embargo, para realizar la lección 13: Implementar, necesitará un servidor de Azure o de SQL Server 2017 para implementar en.
       
     Solo se recomienda seleccionar un nivel de compatibilidad anterior si tiene intención de implementar el modelo tabular completado en una instancia de Analysis Services diferente que ejecuta una versión anterior de SQL Server. Área de trabajo integrada no se admite para los niveles de compatibilidad anteriores. Para obtener más información, vea [Nivel de compatibilidad](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   
@@ -87,7 +87,7 @@ Para obtener más información acerca de los diferentes tipos de proyectos de mo
   
 
 ## <a name="whats-next"></a>¿Qué sigue?
-Vaya a la siguiente lección: [lección 2: agregar datos](../analysis-services/lesson-2-add-data.md).
+Vaya a la lección siguiente: [Lección 2: Agregar datos](../analysis-services/lesson-2-add-data.md).
 
   
   

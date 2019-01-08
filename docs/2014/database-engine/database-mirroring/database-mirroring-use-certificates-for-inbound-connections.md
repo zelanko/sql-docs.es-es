@@ -14,12 +14,12 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 20c4cc7fe03d9c57ea45575b243a24da690ba88d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541889"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes (Transact-SQL)
   En este tema se describen los pasos necesarios para configurar instancias del servidor que utilicen certificados para autenticar conexiones entrantes para la creación de reflejo de la base de datos. Antes de poder configurar las conexiones entrantes, deberá configurar las conexiones salientes en cada una de las instancias del servidor. Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -113,7 +113,7 @@ ms.locfileid: "48064475"
   
 5.  Conceda el permiso CONNECT para el inicio de sesión al extremo de creación de reflejo remoto.  
   
-     Por ejemplo, para conceder permiso para HOST_A a la instancia del servidor remoto de HOST_B para que se conecte a su inicio de sesión local (es decir, para que se conecte a `HOST_B_login`), utilice las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
+     Por ejemplo, para conceder permiso para HOST_A a la instancia del servidor remoto de HOST_B para que se conecte a su inicio de sesión local (es decir, para que se conecte a `HOST_B_login`), use las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes:  
   
     ```  
     USE master;  
@@ -157,7 +157,7 @@ GO
   
  Para obtener información sobre la creación de una base de datos reflejada, incluido un ejemplo de Transact-SQL, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Para ver un ejemplo de Transact-SQL del establecimiento de una sesión de modo de alto rendimiento, vea [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Para obtener un ejemplo de Transact-SQL del establecimiento de una sesión de modo de alto rendimiento, consulte [ejemplo: Configurar la creación de reflejo mediante certificados de la base de datos &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Cuando copie un certificado en otro sistema, utilice un método de copia seguro. Tenga mucho cuidado de mantener todos sus certificados protegidos.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2183b8cb96895dc2bbb1308bccd818fb5a04dba5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156105"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768607"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Ordenar filas (Visual Database Tools)
   Puede ordenar las filas de un resultado de consulta. Es decir, puede indicar una columna o un conjunto de columnas determinado cuyos valores determinen el orden de las filas en el conjunto de resultados.  
@@ -89,7 +89,7 @@ ms.locfileid: "48156105"
   
      Tenga en cuenta que la consulta utiliza `state` como columna de orden secundaria. De este modo, si dos estados tienen el mismo número de autores, esos estados aparecerán en orden alfabético.  
   
--   **Puede ordenar mediante el uso de datos internacionales** Es decir, puede ordenar una columna mediante el uso de convenciones de intercalación diferentes de las convenciones predeterminadas para esa columna. Por ejemplo, puede escribir una consulta que recupere todo los libros de Jaime Patiño. Para que los títulos aparezcan ordenados alfabéticamente, utilice una secuencia de intercalación de español en la columna de los títulos. El código SQL resultante puede presentar el siguiente aspecto:  
+-   **Puede ordenar mediante el uso de datos internacionales** Es decir, puede ordenar una columna mediante el uso de convenciones de intercalación diferentes de las convenciones predeterminadas para esa columna. Por ejemplo, puede escribir una consulta que recupera todos los títulos de libros por Jaime Pati?? o. Para que los títulos aparezcan ordenados alfabéticamente, utilice una secuencia de intercalación de español en la columna de los títulos. El código SQL resultante puede presentar el siguiente aspecto:  
   
     ```  
     SELECT title  
@@ -105,7 +105,7 @@ ms.locfileid: "48156105"
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

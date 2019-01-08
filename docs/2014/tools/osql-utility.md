@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -24,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123711"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808877"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
   La utilidad **osql** permite especificar archivos de script, procedimientos del sistema e instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] . Esta herramienta utiliza ODBC para comunicarse con el servidor.  
@@ -46,7 +45,7 @@ ms.locfileid: "48123711"
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -110,7 +109,7 @@ C:\>osql
  Especifica el número de segundos que tienen que transcurrir antes de que un comando exceda el tiempo de espera. Si no se especifica ningún valor para *time_out* , los comandos no tienen tiempo de espera.  
   
  **-h** *headers*  
- Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si usa -1, no debe dejar espacio entre el parámetro y el valor (**-h-1**, no **-h -1**).  
+ Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si se utiliza -1, no debe haber ningún espacio entre el parámetro y el valor (**-h-1**, no **-h -1**).  
   
  **-s** *col_separator*  
  Especifica el carácter separador de columnas que, de forma predeterminada, es un espacio en blanco. Use caracteres que tienen un significado especial para el sistema operativo (por ejemplo, |; & \< >), incluya el carácter de comillas dobles (").  
@@ -263,7 +262,7 @@ osql -E -i titles.qry -o titles.res
  Puede incluir comentarios en una instrucción Transact-SQL que vaya a enviarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con **osql**. Se permiten dos estilos de comentario: -- y /*...\*/.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Utilizar EXIT para devolver resultados en osql  
- Puede utilizar el resultado de una instrucción SELECT como valor devuelto de **osql**. Si es numérica, la primera columna de la última fila del resultado se convierte en un entero de 4 bytes (long). MS-DOS pasa el byte bajo al proceso primario o al nivel de errores del sistema operativo. Windows pasa el entero de 4 bytes completo. La sintaxis es:  
+ Puede utilizar el resultado de una instrucción SELECT como valor devuelto de **osql**. Si es numérica, la primera columna de la última fila del resultado se convierte en un entero de 4 bytes (long). MS-DOS pasa el byte bajo al proceso primario o al nivel de errores del sistema operativo. Windows pasa el entero de 4 bytes completo. La sintaxis es la siguiente:  
   
 ```  
 EXIT ( < query > )  

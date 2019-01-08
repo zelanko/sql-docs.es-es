@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server replication], troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee17325a02e6b146ef372b4655ae8c437b76cdff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781037"
 ---
 # <a name="errors-and-events-reference-replication"></a>Referencia de errores y eventos (replicación)
   Esta sección de la documentación contiene información sobre la causa y la resolución de una serie de errores relacionados con la replicación.  
@@ -77,7 +76,7 @@ ms.locfileid: "48159755"
 |MSSQL_ENG021642. Consulte [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Los publicadores heterogéneos requieren un servidor vinculado. Ya existe uno con el nombre '%1!s!'. Quítelo o elija otro nombre de publicador.|  
 |MSSQL_ENG021663. Consulte [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|No se encuentra ninguna clave principal válida para la tabla de origen [%s].[%s].|  
 |MSSQL_ENG021684. Consulte [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Los permisos asociados con el inicio de sesión de administrador del publicador de Oracle '%s' no son suficientes.|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' debe ser un inicio de sesión válido en Windows con el formato: 'MACHINE\Login' o 'DOMAIN\Login'. Vea la documentación de '%s'.|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' debe ser un inicio de sesión de Windows válida en el formulario: 'MACHINE\Login' o 'DOMAIN\Login'. Vea la documentación de '%s'.|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|Debe agregar el trabajo de agente '%s' a través de '%s' antes de continuar. Vea la documentación de '%s'.|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|El proceso no pudo ejecutar '%1' en '%2'.|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|El proceso de mezcla no pudo cambiar el historial de generación en '%1'. Para solucionar el problema, reinicie la sincronización con registro de historial detallado y especifique un archivo de salida para escribir en él.|  

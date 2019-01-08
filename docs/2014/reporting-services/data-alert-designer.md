@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518013"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean y editan en el Diseñador de alertas de datos. Una definición de alerta es una colección de metadatos, que incluye los datos del informe de su interés, las reglas que deben satisfacer los datos del informe para que se creen instancias de alertas de datos y se envíen mensajes de alertas de datos, los destinatarios del mensaje de alerta, etc.  
@@ -147,13 +147,13 @@ ms.locfileid: "49120122"
 ### <a name="schedule-settings"></a>Configuración de la programación  
  La programación que se define para la alerta de datos define el patrón de periodicidad para enviar el mensaje de alerta de datos y cuándo iniciar y detener el envío de mensajes de alerta. Los patrones son: una vez, minuto, diaria y semanal. Aunque una alerta solo tiene una programación, puede crear patrones de periodicidad complejos que cubran la mayoría de las necesidades empresariales mediante estos intervalos. A continuación se ofrecen algunos ejemplos de patrones de periodicidad comunes para su uso en las programaciones:  
   
--   **Diaria cada 10 días** : envía alertas una vez al día, cada 10 días.  
+-   **Diaria cada 10 días**: envía alertas una vez al día, cada 10 días.  
   
--   **Semanal cada 2 semanas el lunes** : envía las alertas cada dos semanas el lunes solamente.  
+-   **Semanal cada 2 semanas el lunes**: envía las alertas cada dos semanas el lunes solamente.  
   
--   **Cada hora cada 12 horas** : envía las alertas cada 12 horas.  
+-   **Cada hora cada 12 horas**: envía las alertas cada 12 horas.  
   
--   **Minuto cada 30 minutos** : envía las alertas cada 30 minutos.  
+-   **Minuto cada 30 minutos**: envía las alertas cada 30 minutos.  
   
  El patrón de periodicidad especifica cuándo se envía la alerta. Si las reglas se cumplen durante el intervalo especificado por el patrón, la alerta no se envía hasta el final del intervalo.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "49120122"
  Para obtener más información sobre cómo se genera el correo electrónico, vea [Alertas de datos de Reporting Services](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Crear una definición de alerta de datos  
- Si tiene los permisos Ver elemento y Crear alertas de SharePoint, puede crear una definición de alerta de datos para cualquier informe para el que tenga permiso de visualización, siempre y cuando el informe use credenciales almacenadas o no use credenciales. El informe se ejecuta desde una biblioteca de SharePoint. Los datos disponibles para su uso en el Diseñador de alertas de datos proceden del informe. Si el informe tiene parámetros, deberá ejecutar el informe con distintos valores de parámetro para asegurarse de que los datos que está interesado en aparece en el informe. Después de abrir el informe, puede hacer clic en la opción **Nueva alerta de datos** del menú **Acciones** de la barra de herramientas de informe para abrir el Diseñador de alertas de datos. En la imagen siguiente se muestra cómo se puede abrir el Diseñador de alertas de datos.  
+ Si tiene los permisos Ver elemento y Crear alertas de SharePoint, puede crear una definición de alerta de datos para cualquier informe para el que tenga permiso de visualización, siempre y cuando el informe use credenciales almacenadas o no use credenciales. El informe se ejecuta desde una biblioteca de SharePoint. Los datos disponibles para su uso en el Diseñador de alertas de datos proceden del informe. Si el informe tiene parámetros, puede que tenga que ejecutarlo con diferentes valores de parámetros para asegurarse de que los datos que le interesan aparecen en el informe. Después de abrir el informe, puede hacer clic en la opción **Nueva alerta de datos** del menú **Acciones** de la barra de herramientas de informe para abrir el Diseñador de alertas de datos. En la imagen siguiente se muestra cómo se puede abrir el Diseñador de alertas de datos.  
   
  ![Abrir el Diseñador de alertas desde la biblioteca de SharePoint](media/rs-openalertdesigneriw.gif "Abrir el Diseñador de alertas desde la biblioteca de SharePoint")  
   

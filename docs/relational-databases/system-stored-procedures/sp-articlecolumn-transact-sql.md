@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlecolumn
@@ -17,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d9238e5b0f8ad5480e05ded3a0154eb5510904
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640723"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210124"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
+ [  **@publication=**] **'**_publicación_**'**  
  Es el nombre de la publicación que contiene este artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=**] **'***artículo***'**  
+ [  **@article=**] **'**_artículo_**'**  
  Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@column=**] **'***columna***'**  
+ [  **@column=**] **'**_columna_**'**  
  Es el nombre de la columna que se va a agregar o quitar. *columna* es **sysname**, su valor predeterminado es null. Si es NULL, se publican todas las columnas.  
   
- [  **@operation=**] **'***operación***'**  
+ [  **@operation=**] **'**_operación_**'**  
  Especifica si se agregan o se quitan columnas en un artículo. *operación* es **nvarchar (5)**, con el valor predeterminado es add. **agregar** marca la columna para la replicación. **quitar** anula la selección de la columna.  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -82,13 +81,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios. **1** especifica que los cambios en el artículo que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+ [  **@publisher=** ] **'**_publisher_**'**  
+ Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [  **@internal=** ] **'***interno***'**  
+ [  **@internal=** ] **'**_interno_**'**  
  Exclusivamente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

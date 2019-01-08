@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar KPI | Documentos de Microsoft
+title: Crear y administrar KPI en los modelos tabulares de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042119"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072092"
 ---
 # <a name="create-and-manage-kpis"></a>Crear y administrar KPI 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  En este artículo se describe cómo crear, editar o eliminar un KPI (indicador clave de rendimiento) en un modelo tabular. Para crear un KPI, seleccione una medida que se evalúe como el valor base del KPI. A continuación, use el cuadro de diálogo Indicador clave de rendimiento para seleccionar una segunda medida o un valor absoluto que se evalúe como un valor de destino. Después puede definir umbrales de estado que miden el rendimiento entre las medidas Base y Destino.  
+  En este artículo se describe cómo crear, editar o eliminar un KPI (indicador clave de rendimiento) en un modelo tabular. Para crear un KPI, seleccione una medida que se evalúa como valor Base del KPI. A continuación, use el cuadro de diálogo Indicador clave de rendimiento para seleccionar una segunda medida o un valor absoluto que se evalúe como un valor de destino. Después puede definir umbrales de estado que miden el rendimiento entre las medidas Base y Destino.  
   
 ## <a name="tasks"></a>Tareas  
   
 > [!IMPORTANT]  
->  Antes de crear un KPI, debe crear primero una medida base que se evalúe como un valor. Después, extienda la medida base a un KPI. En otro tema, se describe cómo crear medidas [crear y administrar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md). Un KPI también necesita un valor de destino. Este valor puede ser de otra medida predefinida o puede ser un valor absoluto. Una vez extendida una medida base a un KPI, puede seleccionar el valor de destino y definir umbrales de estado en el cuadro de diálogo Indicador clave de rendimiento.  
+>  Antes de crear un KPI, debe crear primero una medida base que se evalúe como un valor. Después, extienda la medida base a un KPI. Se describe cómo crear medidas en el tema [crear y administrar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md). Un KPI también necesita un valor de destino. Este valor puede ser de otra medida predefinida o puede ser un valor absoluto. Una vez extendida una medida base a un KPI, puede seleccionar el valor de destino y definir umbrales de estado en el cuadro de diálogo Indicador clave de rendimiento.  
   
 ###  <a name="bkmk_create_KPI"></a> Para crear un KPI  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34042119"
   
 ## <a name="see-also"></a>Vea también  
  [KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Crear y managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

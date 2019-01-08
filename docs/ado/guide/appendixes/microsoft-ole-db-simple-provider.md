@@ -15,12 +15,12 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604645"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209062"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Información general de un proveedor sencillo de OLE DB de Microsoft
 Permite que Microsoft OLE DB simples proveedor (OSP) ADO tener acceso a los datos para el que un proveedor se ha escrito utilizando el [Kit de herramientas de OLE DB simples proveedor (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Simple proveedores están diseñados para tener acceso a orígenes de datos que requieren la compatibilidad de OLE DB solo fundamental, como matrices en memoria o documentos XML.
@@ -57,13 +57,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  DSO XML utiliza la heurística integrada para convertir los nodos de un árbol XML a los capítulos jerárquica **Recordset**.
@@ -73,8 +73,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  Tenga en cuenta que las etiquetas de cartera y la información no se representan en el jerárquica **Recordset**. Para obtener una explicación de cómo los DSO XML convierte árboles XML a jerárquica **conjuntos de registros**, vea las siguientes reglas. La columna $Text se describe en la sección siguiente.

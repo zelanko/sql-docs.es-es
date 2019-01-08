@@ -11,12 +11,12 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086545"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528240"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
   Después de definir el origen de datos, necesita definir un conjunto de datos. En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, así como campos y variables calculados.  
@@ -25,7 +25,7 @@ ms.locfileid: "48086545"
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir una consulta de Transact-SQL para los datos de informe  
   
-1.  En el panel **Datos de informe** , haga clic en **Nuevo**y, después, haga clic en **Conjunto de datos...**. Se abre el cuadro de diálogo **Propiedades del conjunto de datos** .  
+1.  En el panel **Datos de informe**, haga clic en **Nuevo** y después en **Conjunto de datos...**. Se abre el cuadro de diálogo **Propiedades del conjunto de datos** .  
   
 2.  En el cuadro **Nombre** , escriba **AdventureWorksDataset**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48086545"
   
 6.  (Opcional) Haga clic en el botón **Diseñador de consultas** . La consulta se muestra en el Diseñador de consultas basado en texto. Puede cambiar al diseñador gráfico de consultas si hace clic en **Editar como texto**. Ver los resultados de la consulta haciendo clic en la ejecución **(!)**  botón en la barra de herramientas Diseñador de consultas.  
   
-     Vea los datos procedentes de seis campos de cuatro tablas distintas de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos. La consulta utiliza funcionalidad de Transact-SQL como los alias. Por ejemplo, la tabla SalesOrderHeader se denomina soh.  
+     Verá los datos procedentes de seis campos de cuatro tablas distintas de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . La consulta utiliza funcionalidad de Transact-SQL como los alias. Por ejemplo, la tabla SalesOrderHeader se denomina soh.  
   
      Haga clic en **Aceptar** para salir del diseñador de consultas.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48086545"
      El conjunto de datos **AdventureWorksDataset** y los campos aparecen en el panel Datos de informe.  
   
 ## <a name="next-task"></a>Tarea siguiente  
- Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Vea [Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Consulte [lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de diseño de herramientas de datos del servidor de informes SQL Diseñador de consultas &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

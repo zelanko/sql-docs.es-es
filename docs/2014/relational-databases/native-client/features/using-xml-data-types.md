@@ -30,12 +30,12 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9540e28716ef81717782e05aa98f173b3e47733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138095"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406012"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
   En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se ha introducido un tipo de datos **xml** que permite almacenar fragmentos y documentos XML en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, el tipo de datos **xml** puede usarse como un tipo de columna al crear una tabla, como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en funciones CAST y CONVERT.  
@@ -90,7 +90,7 @@ ms.locfileid: "48138095"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
   
- <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_XML con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); de lo contrario, los datos se envían al servidor, pero este devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
+ <sup>1</sup>si el tipo de un servidor distinto de DBTYPE_XML se especifica con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); en caso contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
   
  <sup>2</sup>fuera del ámbito de este tema.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48138095"
 #### <a name="the-irowsetchange-interface"></a>La interfaz IRowsetChange  
  Un consumidor puede actualizar una instancia XML de una columna de dos formas. La primera, a través del objeto de almacenamiento **ISequentialStream** creado por el proveedor. El consumidor puede llamar al método **ISequentialStream::Write** para actualizar directamente la instancia XML devuelta por el proveedor.  
   
- La segunda, mediante los métodos **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. En este enfoque, puede especificarse una instancia XML del búfer del consumidor en un enlace de tipo DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML o DBTYPE_IUNKNOWN.  
+ La segunda, mediante los métodos **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. En este enfoque, se puede especificar una instancia XML en el búfer del consumidor en un enlace de tipo DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML o DBTYPE_IUNKNOWN.  
   
  En caso de DBTYPE_BSTR, DBTYPE_WSTR o DBTYPE_VARIANT, el proveedor almacena la instancia XML que reside en el búfer del consumidor en la columna apropiada.  
   
@@ -251,19 +251,19 @@ ms.locfileid: "48138095"
 ### <a name="supported-conversions"></a>Conversiones admitidas  
  Al convertir tipos de datos de SQL en tipos de datos de C, SQL_C_WCHAR, SQL_C_BINARY y SQL_C_CHAR pueden convertirse en SQL_SS_XML, con las condiciones siguientes:  
   
--   SQL_C_WCHAR: formato UTF-16, sin marca de orden de bytes (BOM), con terminación NULL.  
+-   SQL_C_WCHAR: Formato es UTF-16, sin marca de orden de bytes (BOM), con terminación null.  
   
--   SQL_C_BINARY: formato UTF-16, sin terminación NULL. Se agrega una marca BOM a los datos recibidos del servidor. Aunque el servidor devuelva una cadena vacía, se devuelve una marca BOM a la aplicación. Si la longitud de búfer es un número de bytes impar, los datos se truncan correctamente. Si el valor completo se devuelve en fragmentos, éstos pueden concatenarse para reconstituir el valor correcto.  
+-   SQL_C_BINARY: Formato es UTF-16, sin terminación null. Se agrega una marca BOM a los datos recibidos del servidor. Aunque el servidor devuelva una cadena vacía, se devuelve una marca BOM a la aplicación. Si la longitud de búfer es un número de bytes impar, los datos se truncan correctamente. Si el valor completo se devuelve en fragmentos, éstos pueden concatenarse para reconstituir el valor correcto.  
   
--   SQL_C_CHAR: formato de caracteres multibyte codificados en la página de códigos del cliente con terminación NULL. La conversión del UTF-16 proporcionado por el servidor puede producir daños en los datos, de modo que no se recomienda usar este enlace.  
+-   SQL_C_CHAR: El formato es de caracteres multibyte codificados en la página de códigos del cliente con terminación null. La conversión del UTF-16 proporcionado por el servidor puede producir daños en los datos, de modo que no se recomienda usar este enlace.  
   
  Al convertir tipos de datos de C en tipos de datos de SQL, SQL_C_WCHAR, SQL_C_BINARY y SQL_C_CHAR pueden convertirse en SQL_SS_XML, con las condiciones siguientes:  
   
--   SQL_C_WCHAR: siempre se agrega una marca BOM a los datos enviados al servidor. Si los datos ya comenzaban con una marca BOM, habrá dos marcas BOM al inicio del búfer. El servidor usa la primera marca para reconocer la codificación como UTF-16 y, a continuación, la descarta. La segunda marca se interpreta como un carácter de espacio de no separación de ancho cero.  
+-   SQL_C_WCHAR: Siempre se se agrega una marca BOM a los datos enviados al servidor. Si los datos ya comenzaban con una marca BOM, habrá dos marcas BOM al inicio del búfer. El servidor usa la primera marca para reconocer la codificación como UTF-16 y, a continuación, la descarta. La segunda marca se interpreta como un carácter de espacio de no separación de ancho cero.  
   
--   SQL_C_BINARY: no se realiza ninguna conversión y los datos se pasan al servidor "tal cual". Los datos UTF-16 deben comenzar con una marca BOM; de lo contrario, es posible que el servidor no reconozca correctamente la codificación.  
+-   SQL_C_BINARY: Se realiza ninguna conversión y los datos se pasan al servidor "tal"cual. Los datos UTF-16 deben comenzar con una marca BOM; de lo contrario, es posible que el servidor no reconozca correctamente la codificación.  
   
--   SQL_C_CHAR: los datos se convierten a UTF-16 en el cliente y se envían al servidor de la misma forma que SQL_C_WCHAR (incluida la adición de una marca BOM). Si el XML no está codificado en la página de códigos del cliente, pueden producirse daños en los datos.  
+-   SQL_C_CHAR: Los datos se convierten a UTF-16 en el cliente y se envían al servidor, al igual que SQL_C_WCHAR (incluida la adición de una marca BOM). Si el XML no está codificado en la página de códigos del cliente, pueden producirse daños en los datos.  
   
  El estándar XML exige que el XML con codificación UTF-16 comience con una marca de orden de bytes (BOM), el código de carácter UTF-16 0xFEFF. Cuando se trabaja con un enlace SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no requiere ni agrega una marca BOM, como la codificación se infiere del enlace. Se intenta proporcionar simplicidad a la hora de actuar con otros sistemas de almacenamiento y procesadores XML. En este caso, debe haber una marca BOM en el XML con codificación UTF-16 y la aplicación no necesita ocuparse de la codificación real, ya que la mayoría de los procesadores XML (incluido [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) deducen la codificación inspeccionando los primeros bytes del valor. Datos XML recibidos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client usan SQL_C_BINARY enlaces siempre se codifican en UTF-16 con una marca BOM y sin declaración de codificación incrustada.  
   

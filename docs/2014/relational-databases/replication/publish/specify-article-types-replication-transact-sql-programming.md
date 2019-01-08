@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,12 +17,12 @@ ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca43600ff55bad24bc607eeeb30eadcd6f3c087e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90fb6d2a85d30179e630d292f8fc11250958344
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226145"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786157"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artículo (programación de la replicación con Transact-SQL)
   Los tipos de artículo predeterminados para la replicación son los artículos de tabla, pero puede publicar otros objetos de base de datos como los artículos, entre los que se incluyen las vistas, los procedimientos almacenados, las funciones definidas por el usuario y la ejecución de procedimientos almacenados. Puede usar los procedimientos almacenados de replicación para especificar mediante programación un tipo de artículo al definir un artículo. Los procedimientos que se usan dependen del tipo de replicación y del tipo de artículo.  
@@ -47,7 +46,7 @@ ms.locfileid: "48226145"
   
 2.  Para los artículos **logbased manualboth** y **logbased manualfilter** , ejecute [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) a fin de generar el procedimiento almacenado de filtrado para un artículo filtrado horizontalmente. Para más información, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>Para publicar una vista o un artículo de vista indizada en una publicación transaccional o de instantáneas  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48226145"
   
     -   **proc schema only** - artículo de procedimiento almacenado solo de esquema.  
   
-    -   **proc exec** - replica la ejecución del procedimiento almacenado en todos los suscriptores del artículo. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+    -   **proc exec** - replica la ejecución del procedimiento almacenado en todos los suscriptores del artículo. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
     -   **serializable proc exec** - replica la ejecución del procedimiento almacenado solamente si este se ejecuta dentro del contexto de una transacción serializable. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   

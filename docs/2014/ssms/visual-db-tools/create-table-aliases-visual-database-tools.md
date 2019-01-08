@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - table aliases [SQL Server]
@@ -13,19 +13,19 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88b3bf7552d40fb914150b8cdc5cf6d53d22ab22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821809"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Crear alias de tabla (Visual Database Tools)
   Los alias facilitan el trabajo con nombres de tabla. El uso de alias es útil cuando:  
   
 -   Desea acortar la instrucción del [panel SQL](visual-database-tools.md) y facilitar su lectura.  
   
--   La consulta hace referencia varias veces a un nombre de tabla (como en el caso de los nombres completos de columnas) y desea asegurarse de que la longitud de la consulta no superará un límite específico de caracteres. (Algunas bases de datos imponen una longitud máxima a las consultas.)  
+-   La consulta hace referencia varias veces al nombre de tabla (como en el caso de los nombres completos de columnas) y quiere asegurarse de que la longitud de la consulta no superará un límite específico de caracteres. (Algunas bases de datos imponen una longitud máxima a las consultas.)  
   
 -   Trabaja con varias instancias de la misma tabla (como en el caso de una autocombinación) y necesita una forma de hacer referencia a cada instancia.  
   

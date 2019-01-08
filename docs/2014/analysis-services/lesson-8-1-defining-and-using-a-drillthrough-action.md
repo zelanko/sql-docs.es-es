@@ -11,12 +11,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545310"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definir y utilizar una acción de obtención de detalles
   El dimensionamiento de datos de hecho mediante una dimensión de hecho sin filtrar correctamente los datos devueltos por la consulta puede producir un rendimiento lento de las consultas. Para evitarlo, puede definir una acción de obtención de detalles que restrinja el número total de filas que se devuelven. Esto mejorará significativamente el rendimiento de las consultas.  
@@ -55,7 +55,7 @@ ms.locfileid: "48090685"
   
 8.  En el **número máximo de filas** , escriba `10`.  
   
-9. En el **título** , escriba `Drillthrough to Order Details…`.  
+9. En el **título** , escriba `Drillthrough to Order Details...`.  
   
      Esta configuración limita el número de filas devueltas y especifica el título que aparece en el menú de la aplicación cliente. En la ilustración siguiente se muestra esta configuración en el cuadro **Propiedades adicionales** .  
   

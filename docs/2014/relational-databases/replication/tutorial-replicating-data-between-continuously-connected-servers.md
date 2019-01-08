@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial: Replicar datos entre servidores conectados de forma continua | Microsoft Docs'
+title: 'Tutorial: Replicar continuamente los datos entre servidores conectados continua | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753927"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutorial: Replicar datos entre servidores conectados de forma continua
   La replicación es una buena solución para el problema de mover datos entre servidores conectados de forma continua. La utilización de asistentes para replicación le facilitará la configuración y administración de una topología de replicación. Este tutorial le mostrará cómo configurar una topología de replicación para servidores conectados de forma continua.  
@@ -57,7 +56,7 @@ ms.locfileid: "48094627"
   
 -   [Lección 2: Crear una suscripción a la publicación transaccional](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
--   [Lección 3: Validar la suscripción y medir la latencia](lesson-3-validating-the-subscription-and-measuring-latency.md)  
+-   [Lección 3: Validación de la suscripción y medir la latencia](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
  [Iniciar el tutorial](transactional/transactional-replication.md)  
   

@@ -16,15 +16,15 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188555"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810807"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
-  La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos según las características del usuario que ejecuta una consulta (por ejemplo, pertenencia a grupos o contexto de ejecución). Seguridad de nivel de fila ahora está disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consulte [Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx) en la documentación actual para obtener la descripción actual de esta característica.  
+  La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos según las características del usuario que ejecuta una consulta (por ejemplo, pertenencia a grupos o contexto de ejecución). La seguridad de nivel de fila ahora está disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consulte [Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx) en la documentación actual para obtener la descripción actual de esta característica.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear directiva de seguridad &#40;base de datos SQL Azure&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   

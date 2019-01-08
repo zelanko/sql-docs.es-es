@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
@@ -15,12 +14,12 @@ ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54109bc479d06833aeee6af803c39e8ac7873ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195185"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796137"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
   Informa de un problema encontrado por la utilidad **ssbdiagnose** . El archivo de salida XML de **ssbdiagnose** tiene un elemento Issue por cada problema notificado.  

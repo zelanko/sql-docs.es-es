@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e5f2aecb84754ee470a9cbafabdf06e38d38ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102045"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822109"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Paso 3: Modificar el Administrador de conexiones de archivos planos
   En esta tarea, modificará el administrador de conexiones de archivos planos que creó y configuró en la lección 1. Cuando se creó inicialmente, el administrador de conexiones de archivos planos se configuró para cargar de forma estática un único archivo. Para permitir que el Administrador de conexiones de archivos planos cargue archivos de forma iterativa, debe modificar la propiedad ConnectionString del administrador de conexiones de modo que acepte la variable `User:varFileName`, definida por el usuario, que contiene la ruta de acceso del archivo que se cargará en tiempo de ejecución.  
@@ -27,11 +26,11 @@ ms.locfileid: "48102045"
   
 1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data**y, después, seleccione **Propiedades**.  
   
-2.  En la ventana Propiedades, para **Expresiones**, haga clic en la celda vacía y,después, haga clic en el botón de puntos suspensivos **(…)**.  
+2.  En la ventana Propiedades, para **Expresiones**, haga clic en la celda vacía y, después, haga clic en el botón de puntos suspensivos **(…)**.  
   
 3.  En el **Editor de expresiones de propiedad** cuadro de diálogo el **propiedad** columna, escriba o seleccione `ConnectionString`.  
   
-4.  En la columna **Expresión** , haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones** .  
+4.  En la columna **Expresión**, haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones**.  
   
 5.  En el cuadro de diálogo **Generador de expresiones** , expanda el nodo **Variables** .  
   
@@ -42,6 +41,6 @@ ms.locfileid: "48102045"
 8.  Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Editor de expresiones de propiedad** .  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
- [Paso 4: Probar el paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [Paso 4: Probar el paquete del Tutorial lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

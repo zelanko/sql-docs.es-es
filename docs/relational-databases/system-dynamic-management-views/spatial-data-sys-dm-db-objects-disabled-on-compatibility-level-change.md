@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028c3a2fe26d448373fcb9c4a00d2916a1bb34e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726763"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537946"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Datos espaciales: sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -107,18 +107,18 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geography:: BufferWithTolerance**  
   
--   **Geography:: Parse**  
+-   **Geography:: Analizar**  
   
 -   **Geography:: reducir**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamiento de los objetos deshabilitados  
  **Índices**  
   
- Si el índice clúster está deshabilitado o si se fuerza un índice no agrupado, se produce el siguiente error: "el procesador de consultas no puede producir un plan porque el índice ' %. \*ls' en la tabla o vista ' %. \*ls' está deshabilitado. " Para volver a habilitar estos objetos, vuelva a generar los índices después de la actualización llamando **ALTER INDEX ON... Volver a generar**.  
+ Si se deshabilita el índice agrupado o si se fuerza un índice no agrupado, se produce el error siguiente: "El procesador de consultas no puede producir un plan porque el índice ' %. \*ls' en la tabla o vista ' %. \*ls' está deshabilitado. " Para volver a habilitar estos objetos, vuelva a generar los índices después de la actualización llamando **ALTER INDEX ON... REBUILD**.  
   
  **Montones**  
   
- Si se usa una tabla con un montón deshabilitado, se produce el siguiente error. Para volver a habilitar estos objetos, vuelva a generar después de la actualización llamando **ALTER INDEX ON todas... Volver a generar**.  
+ Si se usa una tabla con un montón deshabilitado, se produce el siguiente error. Para volver a habilitar estos objetos, vuelva a generar después de la actualización llamando **ALTER INDEX ON todas... REBUILD**.  
   
 ```  
 // ErrorNumber: 8674  

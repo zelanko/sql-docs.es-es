@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.sqlce.f1
@@ -15,12 +15,12 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6480fc8aea74144ee54fd0c96e50fcbdd74e9cfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757967"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
   En este tema se describe cómo guardar la información de conexión para los servidores a los que tiene acceso frecuentemente, registrando el servidor en el componente Servidores registrados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Un servidor puede registrarse antes de conectarlo o cuando se conecta desde el Explorador de objetos. Hay una opción de menú especial para registrar las instancias de servidor en el equipo local.  

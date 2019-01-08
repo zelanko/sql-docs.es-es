@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/10/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -16,12 +15,12 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e0862083d323131523d0e9eee03b7e4d2f52e04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811897"
 ---
 # <a name="msdb-database"></a>Base de datos msdb
   El Agente **utiliza la base de datos** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar alertas y trabajos. Otras características como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] y Correo electrónico de base de datos también usan esta base de datos.  
@@ -48,7 +47,7 @@ ms.locfileid: "48058805"
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
 |ANSI_NULL_DEFAULT|OFF|Sí|  
 |ANSI_NULLS|OFF|Sí|  
 |ANSI_PADDING|OFF|Sí|  
@@ -59,19 +58,19 @@ ms.locfileid: "48058805"
 |AUTO_SHRINK|OFF|Sí|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|no|  
+|CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sí<br /><br /> Sí|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
 |DB_CHAINING|ON|Sí|  
-|ENCRYPTION|OFF|no|  
+|ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
 |RECOVERY|SIMPLE|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
 |Opciones de Service Broker|ENABLE_BROKER|Sí|  

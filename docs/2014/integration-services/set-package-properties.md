@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -26,12 +25,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12e500402c68da2e38fd88c5d061644a7f51fd58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 379a4084033e4ffadb83de94ee832671b0c77695
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104855"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813547"
 ---
 # <a name="set-package-properties"></a>Establecer las propiedades de paquetes
   Cuando se crea un paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante la interfaz gráfica proporcionada por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se configuran las propiedades del objeto de paquete en la ventana Propiedades.  
@@ -60,18 +59,18 @@ ms.locfileid: "48104855"
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>Para establecer las propiedades del paquete en la ventana Propiedades.  
   
--   [Establecimiento de las propiedades de un paquete](../../2014/integration-services/set-the-properties-of-a-package.md)  
+-   [Establecer las propiedades de un paquete](../../2014/integration-services/set-the-properties-of-a-package.md)  
   
 ## <a name="properties-by-category"></a>Propiedades por categoría  
  Las siguientes tablas enumeran las propiedades de paquete por categoría.  
   
 ###  <a name="Checkpoints"></a> Puntos de comprobación  
- Puede usar las propiedades de esta categoría para reiniciar el paquete desde un punto de error en el flujo de control de paquetes, en lugar de volver a ejecutar el paquete desde el principio de su flujo de control. Para obtener más información, vea [Reiniciar paquetes de usando puntos de comprobación](packages/restart-packages-by-using-checkpoints.md).  
+ Puede usar las propiedades de esta categoría para reiniciar el paquete desde un punto de error en el flujo de control de paquetes, en lugar de volver a ejecutar el paquete desde el principio de su flujo de control. Para obtener más información, vea [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md).  
   
 |Property|Descripción|  
 |--------------|-----------------|  
 |`CheckpointFileName`|Nombre del archivo que captura la información del punto de comprobación que permite que un paquete se reinicie. Cuando el paquete termina correctamente, se elimina este archivo.|  
-|`CheckpointUsage`|Especifica cuándo se puede reiniciar un paquete. Los valores son `Never`, `IfExists`, y `Always`. El valor predeterminado de esta propiedad es `Never`, lo que indica que no se puede reiniciar el paquete. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
+|`CheckpointUsage`|Especifica cuándo se puede reiniciar un paquete. Los valores son `Never`, `IfExists` y `Always`. El valor predeterminado de esta propiedad es `Never`, que indica que el paquete no puede reiniciarse. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
 |`SaveCheckpoints`|Especifica si los puntos de comprobación se escriben en el archivo de punto de comprobación cuando se ejecuta el paquete. El valor predeterminado de esta propiedad es `False`.|  
   
 > [!NOTE]  
@@ -82,14 +81,14 @@ ms.locfileid: "48104855"
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|`DelayValidation`|Indica si la validación del paquete se retrasa hasta que se ejecute el paquete. El valor predeterminado para esta propiedad es `False`.|  
+|`DelayValidation`|Indica si la validación del paquete se retrasa hasta que se ejecute el paquete. El valor predeterminado de esta propiedad es `False`.|  
 |**Deshabilitar**|Indica si el paquete está deshabilitado. El valor predeterminado de esta propiedad es `False`.|  
 |`DisableEventHandlers`|Especifica si se ejecutan los controladores de eventos del paquete. El valor predeterminado de esta propiedad es `False`.|  
 |`FailPackageOnFailure`|Especifica si el paquete genera un error cuando se produce un error en un componente de paquete. El único valor válido de esta propiedad es `False`.|  
 |`FailParentOnError`|Especifica si el contenedor principal genera un error cuando se produce un error en un contenedor secundario. El valor predeterminado de esta propiedad es `False`.|  
 |`MaxConcurrentExecutables`|Cantidad de archivos ejecutables que el paquete puede ejecutar simultáneamente. El valor predeterminado de esta propiedad es **-1**, que indica que no hay límite.|  
 |`MaximumErrorCount`|Cantidad máxima de errores que se pueden producir antes de que un paquete termine de ejecutarse. El valor predeterminado de esta propiedad es **1**.|  
-|`PackagePriorityClass`|Clase de prioridad de subproceso Win32 del subproceso del paquete. Los valores son `Default`, `AboveNormal`, `Normal`, `BelowNormal`, `Idle`. El valor predeterminado de esta propiedad es `Default`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass>.|  
+|`PackagePriorityClass`|Clase de prioridad de subproceso Win32 del subproceso del paquete. Los valores son `Default`, `AboveNormal`, `Normal`, `BelowNormal` y `Idle`. El valor predeterminado de esta propiedad es `Default`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass>.|  
   
 ###  <a name="ForcedExecutionValue"></a> Valor de ejecución forzada  
  Las propiedades de esta categoría configuran un valor de ejecución opcional para el paquete.  
@@ -111,21 +110,21 @@ ms.locfileid: "48104855"
 |`Description`|Descripción de la funcionalidad del paquete.|  
 |`ID`|GUID del paquete, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura. Para generar un nuevo valor aleatorio para el `ID` propiedad, seleccione  **\<generar nuevo Id. >** en la lista desplegable.|  
 |`Name`|Nombre del paquete.|  
-|`PackageType`|Tipo de paquete. Los valores son `Default`, `DTSDesigner`, `DTSDesigner100`, `DTSWizard`, `SQLDBMaint`, y `SQLReplication`. El valor predeterminado de esta propiedad es `Default`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
+|`PackageType`|Tipo de paquete. Los valores son `Default`, `DTSDesigner`, `DTSDesigner100`, `DTSWizard`, `SQLDBMaint` y `SQLReplication`. El valor predeterminado de esta propiedad es `Default`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
 ###  <a name="Misc"></a> Varios  
  Las propiedades de esta categoría se usan para obtener acceso a las configuraciones y expresiones que usa un paquete y proporcionar información acerca de la configuración regional y modo de registro del paquete. Para obtener más información, vea [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md).  
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|`Configurations`|Colección de las configuraciones que usa el paquete. Haga clic en el botón para examinar **(…)** para ver y configurar las configuraciones de paquetes.|  
-|`Expressions`|Haga clic en el botón para examinar **(…)** para crear expresiones para las propiedades de paquete.<br /><br /> Nota: Puede crear expresiones de propiedad para todas las propiedades del paquete que el objeto de modelo incluye, no solo las propiedades enumeradas en la ventana Propiedades.<br /><br /> Para obtener más información, vea [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md).<br /><br /> Para ver expresiones de propiedad existentes, expanda `Expressions`. Haga clic en el botón para examinar **(…)** en un cuadro de texto de expresión para modificar y evaluar una expresión.|  
-|`ForceExecutionResult`|El resultado de la ejecución del paquete. Los valores son `None`, `Success`, `Failure`, y `Completion`. El valor predeterminado de esta propiedad es `None`. Para obtener más información, vea T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
+|`Configurations`|Colección de las configuraciones que usa el paquete. Haga clic en el botón Examinar **(…)** para ver y configurar las configuraciones de paquetes.|  
+|`Expressions`|Haga clic en el botón Examinar **(…)** para crear expresiones para las propiedades del paquete.<br /><br /> Nota: Puede crear expresiones de propiedad para todas las propiedades de paquete que incluye el modelo de objetos, no solo de las propiedades enumeradas en la ventana Propiedades.<br /><br /> Para más información, vea [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md).<br /><br /> Para ver expresiones de propiedad existentes, expanda `Expressions`. Haga clic en el botón Examinar **(…)** en un cuadro de texto de expresión para modificar y evaluar una expresión.|  
+|`ForceExecutionResult`|El resultado de la ejecución del paquete. Los valores son `None`, `Success`, `Failure` y `Completion`. El valor predeterminado de esta propiedad es `None`. Para obtener más información, vea T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |`LocaleId`|Una configuración regional de Microsoft Win32. El valor predeterminado de esta propiedad es la configuración regional del sistema operativo del equipo local.|  
-|`LoggingMode`|Valor que especifica el comportamiento de registro del paquete. Los valores son `Disabled`, `Enabled`, y `UseParentSetting`. El valor predeterminado de esta propiedad es `UseParentSetting`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
+|`LoggingMode`|Valor que especifica el comportamiento de registro del paquete. Los valores son `Disabled`, `Enabled` y `UseParentSetting`. El valor predeterminado de esta propiedad es `UseParentSetting`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |`OfflineMode`|Indica si el paquete está en el modo sin conexión. Esta propiedad es de solo lectura. La propiedad se establece en el nivel de proyecto. Por lo general, el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] intenta conectarse a cada origen de datos utilizado por el paquete para validar los metadatos asociados a los orígenes y destinos. Es posible habilitar la opción **Trabajar sin conexión** en el menú **SSIS** , incluso antes de abrir un paquete, para evitar los intentos de conexión y los errores de validación provocados por esos intentos cuando los orígenes de datos no están disponibles. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.|  
 |`SuppressConfigurationWarnings`|Indica si se suprimen las advertencias generadas por configuraciones. El valor predeterminado de esta propiedad es `False`.|  
-|`UpdateObjects`|Indica si el paquete se actualiza para usar versiones más recientes de los objetos que contiene, si hay versiones más recientes disponibles. Por ejemplo, si esta propiedad se establece en `True`, un paquete que incluye una tarea inserción masiva se actualiza para usar la versión más reciente de la inserción masiva de tareas que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona. El valor predeterminado de esta propiedad es `False`.|  
+|`UpdateObjects`|Indica si el paquete se actualiza para usar versiones más recientes de los objetos que contiene, si hay versiones más recientes disponibles. Por ejemplo, si esta propiedad se establece en `True`, un paquete que incluye una tarea Inserción masiva se actualiza para usar una versión más reciente de la tarea Inserción masiva que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. El valor predeterminado de esta propiedad es `False`.|  
   
 ###  <a name="Security"></a> Seguridad  
  Las propiedades en esta categoría se usan para configurar el nivel de protección del paquete. Para más información, consulte [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
@@ -140,7 +139,7 @@ ms.locfileid: "48104855"
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|`IsolationLevel`|Nivel de aislamiento de la transacción del paquete.  El valor predeterminado de esta propiedad es `Serializable`. Los valores válidos son <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot` <br /><br /> El sistema aplica la propiedad `IsolationLevel` a las transacciones de paquete solamente cuando el valor de la propiedad `TransactionOption` se establece en `Required`.<br /><br /> El valor de la `IsolationLevel` por un contenedor secundario se solicitó una propiedad se omite cuando se cumplen las condiciones siguientes:<br /><br /> El valor de la propiedad `TransactionOption` del contenedor secundario es `Supported`.<br />El contenedor secundario combina la transacción de un contenedor primario.<br /><br /> El valor de la propiedad `IsolationLevel` solicitado por el contenedor se respeta solamente cuando el contenedor inicia una nueva transacción. Un contenedor inicia una nueva transacción cuando se cumplen las condiciones siguientes:<br /><br /> El valor del contenedor `TransactionOption` propiedad es `Required`.<br />El contenedor primario aún no ha iniciado una transacción.<br /><br /> <br /><br /> Nota: El `Snapshot` valor de la `IsolationLevel` propiedad no es compatible con las transacciones de paquete. Por lo tanto, no puede usar el `IsolationLevel` propiedad para establecer el nivel de aislamiento de transacciones de paquete para `Shapshot`. En su lugar, use una consulta SQL para establecer las transacciones de paquete en `Snapshot`. Para obtener más información, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Para obtener más información sobre la propiedad `IsolationLevel`, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`IsolationLevel`|Nivel de aislamiento de la transacción del paquete.  El valor predeterminado de esta propiedad es `Serializable`. Los valores válidos son <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot` <br /><br /> El sistema aplica la propiedad `IsolationLevel` a las transacciones de paquete solamente cuando el valor de la propiedad `TransactionOption` se establece en `Required`.<br /><br /> El valor de la propiedad `IsolationLevel` solicitado por un contenedor secundario se omite cuando se cumplen las condiciones siguientes:<br /><br /> El valor de la propiedad `TransactionOption` del contenedor secundario es `Supported`.<br />El contenedor secundario combina la transacción de un contenedor primario.<br /><br /> El valor de la propiedad `IsolationLevel` solicitado por el contenedor se respeta solamente cuando el contenedor inicia una nueva transacción. Un contenedor inicia una nueva transacción cuando se cumplen las condiciones siguientes:<br /><br /> El valor del contenedor `TransactionOption` propiedad es `Required`.<br />El contenedor primario aún no ha iniciado una transacción.<br /><br /> <br /><br /> Nota: El valor `Snapshot` de la propiedad `IsolationLevel` es incompatible con las transacciones de paquete. Por consiguiente, no puede utilizar la propiedad `IsolationLevel` para establecer el nivel de aislamiento de las transacciones de paquete en `Shapshot`. En su lugar, utilice una consulta SQL para establecer las transacciones de paquete en `Snapshot`. Para obtener más información, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Para obtener más información sobre la propiedad `IsolationLevel`, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Participación transaccional del paquete. Los valores son `NotSupported`, `Supported`, `Required`. El valor predeterminado de esta propiedad es `Supported`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="Version"></a> Versión  

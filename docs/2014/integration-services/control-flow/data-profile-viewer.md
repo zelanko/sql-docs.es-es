@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805007"
 ---
 # <a name="data-profile-viewer"></a>Visor de perfil de datos
   El paso siguiente del proceso de generación de perfiles de datos consiste en ver y analizar los perfiles de datos. Estos perfiles pueden verse después de ejecutar la tarea de generación de perfiles de datos dentro de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y de calcular los perfiles de datos. Para más información sobre cómo configurar y ejecutar las tareas de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](data-profiling-task.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "48905755"
 > [!IMPORTANT]  
 >  La capacidad de detalle, que está disponible en el Visor de perfil de datos, envía las consultas actuales al origen de datos original. Estas consultas pueden tener un efecto desfavorable en el rendimiento del servidor.  
 >   
->  Si obtiene los detalles de un archivo de salida que no se ha creado recientemente, las consultas de obtención de detalles podrían devolver un conjunto diferente de filas en el que se calculó la salida original.  
+>  Si obtiene los detalles de un archivo de salida que no se ha creado recientemente, las consultas de detalle podrían devolver un conjunto diferente de filas al que se usó para calcular la salida original.  
   
  Para obtener más información sobre la interfaz de usuario del Visor de perfil de datos, vea [Data Profile Viewer F1 Help](../data-profile-viewer-f1-help.md).  
   

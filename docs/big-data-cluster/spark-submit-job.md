@@ -1,27 +1,31 @@
 ---
-title: Enviar a trabajo de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
-description: Enviar a trabajo de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Ejecutar trabajos de Spark en Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221611"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246505"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar a trabajo de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
 
-Uno de los escenarios claves es la capacidad de enviar el trabajo de Spark para SQL Server de 2019 CTP 2.1. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con las referencias al clúster de macrodatos de SQL Server 2019. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
+Uno de los escenarios claves para los clústeres de datos de gran tamaño es la capacidad para enviar trabajos de Spark para la versión preliminar de SQL Server 2019. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con las referencias al clúster de macrodatos de SQL Server 2019. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
 
-## <a name="prerequisite"></a>Requisito previo 
-Instalar herramientas de macrodatos para SQL Server y conéctese a un clúster de macrodatos antes de poder enviar trabajo de Spark. Para obtener detalles de la instalación, consulte para vincular [implementar herramientas de macrodatos](deploy-big-data-tools.md).
+## <a name="prerequisites"></a>Requisitos previos
+
+- [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extensión de SQL Server 2019**
+   - **kubectl**
+
+- [Conectarse a Azure Data Studio a la puerta de enlace de Spark o HDFS del clúster de macrodatos](connect-to-big-data-cluster.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Abrir cuadro de diálogo de envío de trabajos de Spark
 Hay varias maneras de abrir el cuadro de diálogo de envío de trabajos de Spark. Las formas de incluyen el panel, menú contextual en el Explorador de objetos y la paleta de comandos.

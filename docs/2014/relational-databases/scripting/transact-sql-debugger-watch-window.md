@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba5a2b12d4f80f497491fef208d5eb0f29f1104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213500"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328755"
 ---
 # <a name="watch-window"></a>Ventana de inspección
-  La ventana **Inspección** muestra información sobre las expresiones que ha seleccionado. Puede haber hasta cuatro ventanas Inspección: **Inspección 1**, **Inspección 2, Inspección 3**e **Inspección 4**. Las expresiones se evalúan dentro del ámbito del marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para observar las variables y las expresiones.  
+  La ventana **Inspección** muestra información sobre las expresiones que ha seleccionado. Puede haber hasta cuatro ventanas Inspección: **Inspección 1**, **inspección 2, inspección 3**, y **inspección 4**. Las expresiones se evalúan dentro del ámbito del marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para observar las variables y las expresiones.  
   
 ## <a name="task-list"></a>Lista de tareas  
  **Para tener acceso a las ventanas Inspección**  
@@ -35,7 +33,7 @@ ms.locfileid: "48213500"
 -   Haga clic con el botón derecho en la expresión y, después, seleccione **Editar valor**.  
   
 ## <a name="columns"></a>Columnas  
- **Nombre**  
+ **Name**  
  Son las expresiones que muestra el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Se admiten las siguientes expresiones:  
   
 -   Variables.  
@@ -46,7 +44,7 @@ ms.locfileid: "48213500"
   
 -   Expresiones generadas mediante la aplicación de operadores a una o más variables, parámetros o funciones del sistema, como @IntegerCounter + 1 o FirstName + LastName.  
   
--   Instrucciones Transact-SQL que devuelven un valor único, como SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+-   Instrucciones de Transact-SQL que devuelven un valor único, como: SELECT CharacterCol FROM MyTable donde PrimaryKey = 1.  
   
  **Valor**  
  Muestra el valor que se devuelve después de que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] evalúe la expresión especificada en **Nombre**.  
@@ -65,5 +63,3 @@ ms.locfileid: "48213500"
  [Ventana de pila de llamadas](transact-sql-debugger-call-stack-window.md)   
  [Cuadro de diálogo Inspección rápida](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expresiones &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

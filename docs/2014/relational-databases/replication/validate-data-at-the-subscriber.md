@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Subscribers [SQL Server replication], data validation
@@ -17,12 +16,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64250d763a4b271fd6a2ebd48ec61dba3c2c2acd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8829bb1a585c61bfa1a8ad0a088d23e8573bace
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055795"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816887"
 ---
 # <a name="validate-data-at-the-subscriber"></a>Validar datos en el suscriptor
   En este tema se describe cómo validar datos en el suscriptor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -53,7 +52,7 @@ ms.locfileid: "48055795"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48055795"
   
 #### <a name="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio"></a>Para validar datos de todas las suscripciones en una publicación de combinación (Management Studio)  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -301,7 +300,7 @@ ms.locfileid: "48055795"
   
      Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) o [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  La replicación permite usar Replication Management Objects (RMO) para validar mediante programación si los datos del suscriptor coinciden con los datos del publicador. Los objetos que se usan dependen del tipo de topología de replicación. La replicación transaccional requiere la validación de todas las suscripciones a una publicación.  
   
 > [!NOTE]  
@@ -313,9 +312,9 @@ ms.locfileid: "48055795"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publicación. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 2 se definieron incorrectamente o no existe la publicación.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Pase lo siguiente:  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Pase lo siguiente:  
   
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>  
   
@@ -333,9 +332,9 @@ ms.locfileid: "48055795"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publicación. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 2 se definieron incorrectamente o no existe la publicación.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Pase el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>que desee.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Pase el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>que desee.  
   
 5.  Ejecute el Agente de mezcla en cada suscripción para iniciar la validación o espere hasta la siguiente ejecución programada del agente. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) y [Synchronize a Push Subscription](synchronize-a-push-subscription.md). El resultado de la operación de la validación se escribe en el historial del agente, que se puede consultar con el Monitor de replicación. Para más información, consulte [Monitoring Replication](monitoring-replication.md).  
   
@@ -345,9 +344,9 @@ ms.locfileid: "48055795"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publicación. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 2 se definieron incorrectamente o no existe la publicación.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Pase el nombre del suscriptor y la base de datos de suscripciones que se validan y el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>deseado.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Pase el nombre del suscriptor y la base de datos de suscripciones que se validan y el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>deseado.  
   
 5.  Ejecute el Agente de mezcla en la suscripción para iniciar la validación o espere hasta la siguiente ejecución programada del agente. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) y [Synchronize a Push Subscription](synchronize-a-push-subscription.md). El resultado de la operación de la validación se escribe en el historial del agente, que se puede consultar con el Monitor de replicación. Para más información, consulte [Monitoring Replication](monitoring-replication.md).  
   

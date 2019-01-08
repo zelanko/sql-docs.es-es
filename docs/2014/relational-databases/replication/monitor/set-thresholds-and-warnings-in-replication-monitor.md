@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3934f596eecf9f0c431814c9e55823f876e51a7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133255"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781197"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
   En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
@@ -62,11 +61,11 @@ ms.locfileid: "48133255"
   
 2.  Haga clic en la pestaña **Advertencias** . Para ver más información acerca de las opciones de esta pestaña, haga clic en **Ayuda** en la barra de menús.  
   
-3.  Para habilitar una advertencia, active la casilla apropiada: **Advertir si una suscripción expirará dentro del umbral** o **Advertir si la latencia supera el valor de umbral**.  
+3.  Para habilitar una advertencia, active la casilla apropiada: **Advertir si una suscripción expirará dentro del umbral** o **advertir si la latencia supera el umbral**.  
   
 4.  En la columna **Umbral** , establezca un umbral para las advertencias. Por ejemplo, si activó la casilla **Advertir si la latencia supera el valor de umbral** en el paso 3, puede seleccionar una latencia de **60 segundos** en la columna **Umbral** .  
   
-5.  Haga clic en **Guardar cambios**.  
+5.  Haga clic en **guardar cambios**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48133255"
   
 4.  En la columna **Umbral** , establezca un umbral para la advertencia. Por ejemplo, puede seleccionar un valor de **70%** en la columna **Umbral** .  
   
-5.  Haga clic en **Guardar cambios**.  
+5.  Haga clic en **guardar cambios**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   

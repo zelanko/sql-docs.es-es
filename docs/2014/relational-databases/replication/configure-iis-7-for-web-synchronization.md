@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819337"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar IIS 7 para la sincronización web
   Los procedimientos descritos en este tema le guiarán a través del proceso de configurar manualmente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) versión 7 y superior para su uso con la sincronización web en la replicación de mezcla. 
@@ -29,7 +28,7 @@ ms.locfileid: "48131755"
  Para obtener información general sobre todo el proceso de configuración, vea [Configurar sincronización web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir los errores similares a "El formato de un mensaje durante la sincronización web no era válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web."  
+>  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] puede provocar errores, tales como: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web."  
   
  Para utilizar la sincronización web, debe configurar IIS 7 mediante los siguientes pasos. Cada paso se describe detalladamente en este tema.  
   

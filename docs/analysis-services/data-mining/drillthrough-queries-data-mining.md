@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516674"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de obtención de detalles (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50148020"
   
 -   Obtener detalles de los **casos del modelo**  
   
-     La obtención de detalles de los casos del modelo se usa cuando se desea partir de un patrón específico del modelo, como un clúster o una rama de un árbol de decisión, para ver más detalles sobre los casos individuales.  
+     Obtención de detalles de los casos del modelo se usa cuando desea ir desde un patrón específico en el modelo, como un clúster o una rama de un árbol de decisión- y ver detalles acerca de los casos individuales.  
   
 -   Obtener detalles de los **casos de la estructura**  
   

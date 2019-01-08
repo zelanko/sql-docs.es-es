@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changesubscriber
@@ -17,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af971732866142104b3f674fbf20f6f774db9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818540"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203104"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Es el nombre del suscriptor donde se van a cambiar las opciones. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@type=**] *tipo*  
- Es el tipo de suscriptor. *tipo* es **tinyint**, su valor predeterminado es null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica que no es[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro servidor de origen de datos ODBC suscriptor.  
+ Es el tipo de suscriptor. *tipo* es **tinyint**, su valor predeterminado es null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro servidor de origen de datos ODBC suscriptor.  
   
  [  **@login=**] **'***inicio de sesión***'**  
  Es el identificador de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
@@ -147,7 +146,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Autenticación de Windows|  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse cuando se cambia las propiedades del artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

@@ -1,7 +1,8 @@
 ---
-title: Studio preguntas más frecuentes de datos de Azure | Microsoft Docs
-description: Preguntas más frecuentes (P+F para Azure Data Studio).
-ms.custom: tools|sos
+title: P+F
+titleSuffix: Azure Data Studio
+description: Preguntas más frecuentes (P+F) sobre Azure Data Studio.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356356"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030339"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] PREGUNTAS MÁS FRECUENTES
 
@@ -48,7 +49,7 @@ El código fuente de Azure Data Studio y sus proveedores de datos está disponib
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>¿Tenemos previsto SSMS de código abierto?
 
-No. Sin embargo, nueva generación herramientas CLI y la GUI de vives son de código abierto. Por ejemplo, la extensión mssql para VS Code, mssql-generador de scripts y msql CLI son todo código abierto en GitHub. El código fuente de Studo de datos de Azure está disponible en GitHub.  
+No. Sin embargo, nueva generación herramientas CLI y la GUI de vives son de código abierto. Por ejemplo, la extensión mssql para VS Code, mssql-generador de scripts y msql CLI son todo código abierto en GitHub. El código fuente de Azure Data Studio está disponible en GitHub.  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>¿Ahora que hay datos de Azure Studio, Microsoft va a dejar de usar SSMS y SSDT? 
 
@@ -80,7 +81,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="shell-features"></a>Características de shell
 
-|Característica|Azure Data Studio|SSMS|
+|Característica|Azure Data Studio |SSMS|
 |:---|:---|:---|
 |El inicio de sesión Azure|Sí|Sí|
 |Panel|Sí| |
@@ -102,7 +103,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="query-editor"></a>Editor de consultas
 
-|Característica|Azure Data Studio|SSMS|
+|Característica|Azure Data Studio |SSMS|
 |:---|:---|:---|
 |Visor de gráficos|Sí||
 |Resultados de la exportación a CSV, JSON, XLSX|Sí||
@@ -120,7 +121,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos
 
-|Característica|Azure Data Studio|SSMS|
+|Característica|Azure Data Studio |SSMS|
 |:---|:---|:---|
 |Windows|Sí|Sí|
 |macOS|Sí||
@@ -128,7 +129,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="data-engineering"></a>Ingeniería de datos
 
-|Característica|Azure Data Studio|SSMS|
+|Característica|Azure Data Studio |SSMS|
 |:---|:---|:---|
 |Asistente para datos externos|Vista previa||
 |Integración de HDFS|Vista previa||
@@ -136,7 +137,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="database-administration"></a>Administración de bases de datos
 
-|Característica|Azure Data Studio|SSMS|
+|Característica|Azure Data Studio |SSMS|
 |:---|:---|:---|
 |Copia de seguridad y restauración|Sí|Sí|
 |Importación de archivos planos|Vista previa|Sí|

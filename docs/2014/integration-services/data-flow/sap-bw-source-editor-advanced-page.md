@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e45ef54da3d79d877882c94ee34fcaf0814514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7729e4762b5289c4ed63b9cf204eac87381a232b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823649"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Editor de origen de SAP BW (página Avanzadas)
   Use la página **Avanzadas** del **Editor de origen de SAP BW** para especificar la regla de conversión de cadenas y el tiempo de espera, así como para restablecer el estado de un determinado identificador de solicitud.  
   
- Para obtener más información sobre el componente de origen de SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Origen de SAP BW](sap-bw-source.md).  
+ Para más información sobre el componente de origen de SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Origen de SAP BW](sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  La documentación de Microsoft Connector 1.1 for SAP BW da por supuesto que se está familiarizado con el entorno SAP Netweaver BW. Para obtener más información acerca de SAP Netweaver BW, o sobre cómo configurar los objetos y los procesos de SAP Netweaver BW, vea la documentación de SAP.  
@@ -47,7 +46,7 @@ ms.locfileid: "48100715"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Conversión de cadena automática**|Convertir todas las cadenas a `nvarchar` cuando el sistema SAP Netweaver BW es un sistema de Unicode. En caso contrario, convertir todas las cadenas a `varchar`.|  
+|**Conversión de cadena automática**|Permite convertir todas las cadenas a `nvarchar` cuando el sistema SAP Netweaver BW es un sistema de Unicode. Si no es así, convierte todas las cadenas a `varchar`.|  
 |**Convertir cadenas a varchar**|Permite convertir todas las cadenas a `varchar`.|  
 |**Convertir cadenas a nvarchar**|Permite convertir todas las cadenas a `nvarchar`.|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48100715"
  Permite especificar el número máximo de segundos que debe esperar el origen.  
   
 > [!NOTE]  
->  Esta opción solo es válida si ha seleccionado **W - Esperar notificación** como el valor de **Modo de ejecución** en la página **Administrador de conexiones** del editor. Para más información, vea [SAP BW Source Editor &#40;Connection Manager Page&#41;](sap-bw-source-editor-connection-manager-page.md).  
+>  Esta opción solo es válida si ha seleccionado **W - Esperar notificación** como el valor de **Modo de ejecución** en la página **Administrador de conexiones** del editor. Para más información, vea [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](sap-bw-source-editor-connection-manager-page.md).  
   
  **Id. de solicitud**  
  Permite especificar el identificador de solicitud cuyo estado quiere restablecer a “G - Verde” al hacer clic en **Restablecer**.  
@@ -65,7 +64,7 @@ ms.locfileid: "48100715"
   
 ## <a name="see-also"></a>Vea también  
  [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Editor de origen de SAP BW &#40;página columnas&#41;](sap-bw-source-editor-columns-page.md)   
+ [Editor de origen de SAP BW &#40;página Columnas&#41;](sap-bw-source-editor-columns-page.md)   
  [Editor de origen de SAP BW &#40;página Salida de error&#41;](sap-bw-source-editor-error-output-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

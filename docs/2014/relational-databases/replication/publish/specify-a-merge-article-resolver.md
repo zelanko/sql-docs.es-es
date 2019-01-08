@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
@@ -15,12 +14,12 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1c2d2934312fb0fa61acf0933190e79cf5f9f51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181385"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816680"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar un solucionador de artículos de mezcla
   En este tema se describe cómo especificar un solucionador de artículos de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "48181385"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48181385"
   
     -   El solucionador predeterminado. El comportamiento del solucionador predeterminado depende de si se trata de una suscripción de cliente o de servidor. Para más información sobre cómo especificar el tipo de suscripción, vea [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md) (Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;).  
   
-    -   Un solucionador personalizado, escrito por el usuario, que puede ser un controlador de lógica de negocios (escrito en código administrado) o un solucionador personalizado basado en COM. Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si necesita implementar lógica personalizada que se ejecute para cada fila replicada, no solo para filas con conflictos, vea [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Un solucionador personalizado, escrito por el usuario, que puede ser un controlador de lógica de negocios (escrito en código administrado) o un solucionador personalizado basado en COM. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si necesita implementar lógica personalizada que se ejecute para cada fila replicada, no solo para filas con conflictos, vea [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Un solucionador estándar basado en COM, incluido con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -146,6 +145,6 @@ ms.locfileid: "48181385"
   
 ## <a name="see-also"></a>Vea también  
  [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

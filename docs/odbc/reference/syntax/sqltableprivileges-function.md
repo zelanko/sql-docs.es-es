@@ -20,16 +20,16 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 099582fa557d9e970db3b38c4fb95ae677bb5274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678323"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204090"
 ---
 # <a name="sqltableprivileges-function"></a>Función SQLTablePrivileges
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLTablePrivileges** devuelve una lista de tablas y los privilegios asociados con cada tabla. El controlador devuelve la información como un conjunto de resultados en la instrucción especificada.  
@@ -130,7 +130,7 @@ SQLRETURN SQLTablePrivileges(
 |TABLE_NAME (ODBC 1.0)|3|Varchar no es NULL|Nombre de la tabla.|  
 |OTORGANTE DE PERMISOS (ODBC 1.0)|4|Varchar|Nombre del usuario que concedió el privilegio; Es NULL si no es aplicable al origen de datos.<br /><br /> Para todas las filas en el que el valor de la columna receptor es el propietario del objeto, la columna GRANTOR será "_SYSTEM".|  
 |RECEPTOR DE (ODBC 1.0)|5|Varchar no es NULL|Nombre del usuario a quien se concedió el privilegio.|  
-|PRIVILEGIO DE (ODBC 1.0)|6|Varchar no es NULL|El privilegio de tabla. Puede ser uno de los siguientes o un privilegio específico del origen de datos.<br /><br /> SELECT: Se permite al receptor de permisos para recuperar datos de una o varias columnas de la tabla.<br /><br /> INSERCIÓN: Se permite que grantee para insertar nuevas filas que contienen datos de una o más columnas en la tabla.<br /><br /> UPDATE: Se permite al receptor de permisos para actualizar los datos en una o varias columnas de la tabla.<br /><br /> DELETE: Se permite al receptor de permisos para eliminar filas de datos de la tabla.<br /><br /> REFERENCIAS: Se permite que grantee para hacer referencia a una o varias columnas de la tabla dentro de una restricción (por ejemplo, un único, referencial, o una restricción check de tabla).<br /><br /> El ámbito de acción permitida al receptor de permisos por un privilegio de tabla determinada es depende del origen de datos. Por ejemplo, el privilegio UPDATE podría permitir que grantee actualizara todas las columnas de una tabla en un origen de datos y solo aquellas columnas para el que el grantor tiene el privilegio UPDATE en otro origen de datos.|  
+|PRIVILEGIO DE (ODBC 1.0)|6|Varchar no es NULL|El privilegio de tabla. Puede ser uno de los siguientes o un privilegio específicas del origen de datos.<br /><br /> SELECCIONE: Se permite al receptor de permisos para recuperar datos de una o varias columnas de la tabla.<br /><br /> INSERTAR: El receptor tiene permiso para insertar nuevas filas que contienen datos de una o más columnas en la tabla.<br /><br /> ACTUALIZACIÓN: Se permite al receptor de permisos para actualizar los datos en una o varias columnas de la tabla.<br /><br /> ELIMINAR: El receptor tiene permiso para eliminar filas de datos de la tabla.<br /><br /> REFERENCIAS: Se permite que grantee para hacer referencia a una o varias columnas de la tabla dentro de una restricción (por ejemplo, un único, referencial, o una restricción check de tabla).<br /><br /> El ámbito de acción permitida al receptor de permisos por un privilegio de tabla determinada es depende del origen de datos. Por ejemplo, el privilegio UPDATE podría permitir que grantee actualizara todas las columnas de una tabla en un origen de datos y solo aquellas columnas para el que el grantor tiene el privilegio UPDATE en otro origen de datos.|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|Indica si se permite que grantee conceda el privilegio a otros usuarios; "Sí", "NO", o NULL si desconocido o no es aplicable al origen de datos.<br /><br /> Un privilegio es que pueden concederse o no se puede conceder pero no ambos. El conjunto de resultados devuelto por **SQLColumnPrivileges** nunca contendrá dos filas para el que todas las columnas excepto la columna IS_GRANTABLE contienen el mismo valor.|  
   
 ## <a name="code-example"></a>Ejemplo de código  

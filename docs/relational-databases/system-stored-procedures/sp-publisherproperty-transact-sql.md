@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publisherproperty
@@ -17,17 +16,17 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002e8a5ffc7a619aeda3e8372e30631e96fa9d30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679433"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204404"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Muestra o cambia las propiedades de publicadores que no sean de[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. Este procedimiento almacenado se ejecuta en el distribuidor.  
+  Muestra o cambia las propiedades de publicadores que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. Este procedimiento almacenado se ejecuta en el distribuidor.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +68,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_publisherproperty** se utiliza en la replicación transaccional para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
+ **sp_publisherproperty** se utiliza en la replicación transaccional para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
   
  Cuando solo *publisher* se especifica, el conjunto de resultados incluye la configuración actual de todas las propiedades que se pueden establecer.  
   

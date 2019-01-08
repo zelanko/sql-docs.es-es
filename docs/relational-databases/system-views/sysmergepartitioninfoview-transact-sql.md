@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepartitioninfoview
@@ -19,12 +18,12 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75b68bd0699443c46be512520822b2faea0daed1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f39591079377dcfc1f357e582474f034a004af6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762053"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816317"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47762053"
 |**sync_objid**|**int**|Id. de objeto de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
-|**Descripción**|**nvarchar(255)**|Descripción breve del artículo.|  
+|**description**|**nvarchar(255)**|Descripción breve del artículo.|  
 |**pre_creation_command**|**tinyint**|La acción predeterminada que se realizará cuando se crea el artículo en la base de datos de suscripción:<br /><br /> **0** = none: si la tabla ya existe en el suscriptor, se realiza ninguna acción.<br /><br /> **1** = drop: quita la tabla antes de volver a crearla.<br /><br /> **2** = delete: realiza una eliminación basada en la cláusula WHERE del filtro de subconjunto.<br /><br /> **3** = Truncate: igual que 2, pero elimina páginas en lugar de filas. Sin embargo, no precisa la cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
 |**alias**|**int**|Alias asignado para la identificación del artículo.|  

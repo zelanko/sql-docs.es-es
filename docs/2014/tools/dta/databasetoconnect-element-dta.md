@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b458e0707f36bde18f6128ae302c7e5826fb5680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821929"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect (DTA, elemento)
   Especifica la primera base de datos a la que se conecta el Asistente para la optimización de motor de base de datos al optimizar una carga de trabajo.  
@@ -40,17 +39,17 @@ ms.locfileid: "48078595"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|`string`, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Opcional. Puede utilizar una vez por cada `TuningOptions` elemento.|  
+|**Repetición**|Opcional. Se puede utilizar una vez por cada elemento `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[TuningOptions, elemento &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|None|  
   
 ## <a name="remarks"></a>Comentarios  
- Use `DatabaseToConnect` para especificar el nombre de la primera base de datos al que desee Database Engine Tuning Advisor para conectarse cuando se inicia la sesión de optimización. Con este elemento, solo es posible especificar una base de datos. Si se especifican varias bases de datos, el Asistente para la optimización de motor de base de datos devuelve un error.  
+ Utilice `DatabaseToConnect` para especificar el nombre de la primera base de datos a la que desea que se conecte el Asistente para la optimización de motor de base de datos cuando inicie la sesión de optimización. Con este elemento, solo es posible especificar una base de datos. Si se especifican varias bases de datos, el Asistente para la optimización de motor de base de datos devuelve un error.  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso, vea [Ejemplo de archivo de entrada XML con carga de trabajo insertada &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

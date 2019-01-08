@@ -10,12 +10,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 981b0b57debf6e1916adb65620feca7025bd3803
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063495"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392029"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
@@ -24,7 +24,7 @@ ms.locfileid: "48063495"
  Todos los cambios realizados en tablas basadas en disco o en tablas optimizadas para memoria se capturan en una o más entradas del registro de transacciones. Cuando se confirma una transacción, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] escribe en el disco las entradas de registro asociadas a la transacción antes de comunicar a la aplicación o a la sesión de usuario que la transacción se ha confirmado. Esto garantiza que los cambios realizados por la transacción sean durables. El registro de transacciones para las tablas optimizadas para memoria está totalmente integrado con el mismo flujo de registro que emplean las tablas basadas en disco. Esta integración permite que las operaciones de copia de seguridad, recuperación y restauración de registros de transacciones existentes sigan funcionando sin necesidad de realizar ningún paso adicional. Sin embargo, puesto que [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] puede mejorar considerablemente el rendimiento de transacciones de la carga de trabajo, debe asegurarse de que el almacenamiento del registro de transacciones está configurado correctamente para controlar los requisitos crecientes de E/S.  
   
 ## <a name="data-and-delta-files"></a>Archivos delta y de datos  
- Los datos de las tablas optimizadas para memoria se almacenan en memoria como filas de datos de forma libre que se vinculan mediante uno o varios índices en memoria. No hay ninguna estructura de página para las filas de datos, como las empleadas para las tablas basadas en disco. Cuando la aplicación está preparada confirmar la transacción, el [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] genera las entradas del registro para la transacción. La persistencia de las tablas optimizadas para memoria se realiza con un conjunto de archivos de datos y delta mediante un subproceso en segundo plano. Los archivos de datos y delta se encuentran en uno o varios contenedores (con el mismo mecanismo empleado para los datos FILESTREAM). Estos contenedores se asignan a un nuevo tipo de grupo de archivos, denominado un grupo de archivos optimizados para memoria.  
+ Los datos de las tablas optimizadas para memoria se almacenan en memoria como filas de datos de forma libre que se vinculan mediante uno o varios índices en memoria. No hay ninguna estructura de página para las filas de datos, como las empleadas para las tablas basadas en disco. Cuando la aplicación está lista para confirmar la transacción, [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] genera las entradas del registro para la transacción. La persistencia de las tablas optimizadas para memoria se realiza con un conjunto de archivos de datos y delta mediante un subproceso en segundo plano. Los archivos de datos y delta se encuentran en uno o varios contenedores (con el mismo mecanismo empleado para los datos FILESTREAM). Estos contenedores se asignan a un nuevo tipo de grupo de archivos, denominado un grupo de archivos optimizados para memoria.  
   
  Los datos se escriben en estos archivos de un modo estrictamente secuencial, lo que reduce la latencia de disco para las unidades de disco. Puede utilizar varios contenedores en discos diferentes para distribuir la actividad de E/S. Los archivos delta y de datos en varios contenedores de discos distintos aumentarán el rendimiento de la recuperación cuando se leen los datos de los archivos delta y de datos en disco, en memoria.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48063495"
  Se tiene acceso a los pares de archivos delta y de datos cuando ocurre lo siguiente.  
   
  Subproceso de punto de comprobación sin conexión  
- Este subproceso anexa las inserciones y eliminaciones para las filas de datos optimizados para memoria a los pares correspondientes de archivos delta y de datos.  
+ Este subproceso anexa las inserciones y eliminaciones para las filas de datos optimizadas para memoria a los pares correspondientes de archivos delta y de datos.  
   
  Operación de combinación  
  La operación combina uno o varios pares de archivos delta y de datos y crea un nuevo par de archivos delta y de datos.  
@@ -111,7 +111,7 @@ ms.locfileid: "48063495"
  Si es necesario, puede realizar explícitamente una combinación manual llamando [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de un CFP  
- Los CPF realizan una transición por varios estados antes de que se puedan desasignar. En un momento dado, los CFP están en una de las fases siguientes: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE y TOMBSTONE. Para obtener una descripción de estas fases, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Los CPF realizan una transición por varios estados antes de que se puedan desasignar. En todo momento, los CFP están en una de las siguientes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE o TOMBSTONE. Para obtener una descripción de estas fases, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
  Después de tener en cuenta el almacenamiento ocupado por los CFP en distintos estados, el almacenamiento total ocupado por las tablas durables optimizadas para memoria puede ser mucho mayor que el doble del tamaño de las tablas en memoria. La DMV [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) se puede consultar para enumerar todos los CFP del grupo de archivos optimizados para memoria, incluida su fase. La transición de los CFP del estado SOURCE MERGE a TOMBSTONE y en última instancia a la recolección de elementos no utilizados puede consumir hasta cinco puntos de comprobación, donde cada punto de comprobación va seguido de una copia de seguridad de registros de transacciones, si la base de datos está configurada para el modelo de recuperación completa u optimizado para cargas masivas de registros.  
   

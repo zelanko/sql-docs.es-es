@@ -18,12 +18,12 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c32bc8d9b8cca81c560e12b82f58169b257ca1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857003"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535502"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|Correcto|  
 |0x0001|Failure|  
-|1FF6|No pudo devolver los metadatos.<br /><br /> Nota: El motivo es que la instrucción no genera un conjunto de resultados; Por ejemplo, es una instrucción INSERT o DDL.|  
+|1FF6|No pudo devolver los metadatos.<br /><br /> Nota: La razón de esto es que la instrucción no genera un conjunto de resultados; por ejemplo, es una instrucción INSERT o DDL.|  
   
 ## <a name="examples"></a>Ejemplos  
  Cuando *stmt* tiene parámetros y el *scrollopt* valor PARAMETERIZED_STMT es ON, el formato de la cadena es como sigue:  

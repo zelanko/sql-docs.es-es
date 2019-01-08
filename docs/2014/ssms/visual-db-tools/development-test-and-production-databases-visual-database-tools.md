@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - production databases [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c4266ccc99aeb49eed2000edd3eff50099db82e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161625"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818697"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de datos de desarrollo, pruebas y producción (Visual Database Tools)
   Si dispone de dos bases de datos con idéntica estructura, puede realizar cambios en una base de datos y propagar los cambios a la otra base de datos. Por ejemplo, si dispone de una base de datos de desarrollo personal y una base de datos de pruebas de grupo, puede modificar la base de datos de desarrollo y, a continuación, propagar los cambios a la base de datos de pruebas.  

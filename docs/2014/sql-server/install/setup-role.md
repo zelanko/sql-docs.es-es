@@ -11,12 +11,12 @@ ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130565"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352842"
 ---
 # <a name="setup-role"></a>Rol de instalación
   Utilice esta página para especificar si utilizar la página Selección de características para seleccionar características individuales o para instalar utilizando un rol de instalación.  
@@ -32,7 +32,7 @@ ms.locfileid: "48130565"
   
  De manera opcional, puede agregar una instancia de motor de base de datos relacional a la instalación en caso que sea necesario hospedar bases de datos en una granja de servidores SharePoint. Si la granja de servidores ya está configurada, puede omitir esta opción.  
   
- Una vez finalizada la instalación, deberá configurar el software mediante uno de los métodos siguientes: herramienta de configuración de PowerPivot, cmdlets de PowerShell o SharePoint 2010 Central Administration. A diferencia de las versiones anteriores, la instalación ya no realiza ninguna tarea de configuración para una instalación de PowerPivot.  
+ Una vez finalizada la instalación, debe configurar el software mediante uno de los métodos siguientes: Herramienta de configuración de PowerPivot, cmdlets de PowerShell o Administración Central de SharePoint 2010. A diferencia de las versiones anteriores, la instalación ya no realiza ninguna tarea de configuración para una instalación de PowerPivot.  
   
  Una instalación basada en roles no incluye la aplicación cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot para Excel. La aplicación cliente se instala por separado.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48130565"
  Cuando el sistema operativo no sea un controlador de dominio, de forma predeterminada, Reporting Services y el Motor de base de datos utilizarán la cuenta NTAUTHORITY\NETWORK SERVICE, Integration Services utilizará la cuenta NTAUTHORITY\NETWORK SERVICE y el selector de demonio de filtro de texto completo de SQL utilizará la cuenta NTAUTHORITY\LOCAL SERVICE.  
   
 ## <a name="see-also"></a>Vea también  
- [Instalar PowerPivot para SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [Requisitos de hardware y Software (PowerPivot para SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [Instalar PowerPivot para SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [Requisitos de hardware y Software (PowerPivot para SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [Selección de características](../../../2014/sql-server/install/feature-selection.md)  
   
   

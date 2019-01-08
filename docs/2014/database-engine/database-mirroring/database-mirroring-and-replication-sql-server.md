@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543581"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
   La creación de reflejo de la base de datos se puede usar conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación. La creación de reflejo de la base de datos incluye la creación de dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos de la entidad de seguridad se aplican a la otra copia de la base de datos, conocida como la base de datos reflejada. La creación de reflejo incluye la aplicación a la base de datos reflejada del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos de la entidad de seguridad.  
@@ -75,7 +75,7 @@ ms.locfileid: "48091625"
   
     -   Establezca el valor del parámetro **@working_directory** en la carpeta de instantáneas que se usa en la entidad de seguridad.  
   
-4.  Especifique el nombre de la entidad reflejada para el parámetro de agente **– PublisherFailoverPartner** . Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
+4.  Especifique el nombre de la entidad reflejada para el parámetro de agente **- PublisherFailoverPartner**. Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
   
     -   Agente de instantáneas (para todas las publicaciones)  
   
@@ -95,9 +95,9 @@ ms.locfileid: "48091625"
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     Se recomienda agregar el parámetro **–PublisherFailoverPartner** a un perfil de agente y, a continuación, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
+     Se recomienda agregar el parámetro **-PublisherFailoverPartner** a un perfil de agente y, después, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

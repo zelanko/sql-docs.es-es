@@ -11,12 +11,12 @@ ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504976"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
   Seleccione **Generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin usar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -42,10 +42,10 @@ ms.locfileid: "48104895"
   
 |columna|Descripción|  
 |------------|-----------------|  
-|**Nombre de medida**|Cada valor de esta columna define el nombre de una medida del cubo. Haga clic en un valor de esta columna para escribir un nombre. Haga clic en **Agregar nueva medida** en esta columna para crear una nueva medida. Esta columna establece la `Name` propiedad del objeto de medida.|  
-|**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la `Name` propiedad del objeto de grupo de medida.|  
-|**Tipo de datos**|El tipo de datos de la medida. Haga clic en este valor para cambiar el tipo de datos. El valor predeterminado cuando se crea una medida es `Single`. Esta columna establece la `DataType` propiedad del objeto de medida.|  
-|**Agregación**|La agregación estándar de la medida. Haga clic en esta celda para especificar una de las agregaciones estándar para la medida (o **Ninguna**). El valor predeterminado cuando se crea una medida es `Sum`. Esta columna establece la `AggregationFunction` propiedad del objeto de medida.|  
+|**Nombre de medida**|Cada valor de esta columna define el nombre de una medida del cubo. Haga clic en un valor de esta columna para escribir un nombre. Haga clic en **Agregar nueva medida** en esta columna para crear una nueva medida. Esta columna establece la propiedad `Name` del objeto de medida.|  
+|**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la propiedad `Name` del objeto de grupo de medida.|  
+|**Tipo de datos**|El tipo de datos de la medida. Haga clic en este valor para cambiar el tipo de datos. El valor predeterminado cuando se crea una medida es `Single`. Esta columna establece la propiedad `DataType` del objeto de medida.|  
+|**Agregación**|La agregación estándar de la medida. Haga clic en esta celda para especificar una de las agregaciones estándar para la medida (o **Ninguna**). El valor predeterminado cuando se crea una medida es `Sum`. Esta columna establece la propiedad `AggregationFunction` del objeto de medida.|  
   
 ## <a name="defining-new-dimensions"></a>Definir nuevas dimensiones  
  Use la página **Definir nuevas dimensiones** del asistente para especificar las dimensiones del nuevo cubo.  
@@ -64,7 +64,7 @@ ms.locfileid: "48104895"
 |**Atributos**|Muestra los atributos que se crearán para la dimensión. Cada nombre de atributo de la lista está precedido del nombre de la dimensión. Esta lista es de solo lectura. Puede editar los atributos con el Diseñador de dimensiones una vez completado el asistente.|  
   
 ## <a name="defining-time-periods"></a>Definir períodos de tiempo  
- Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el 1 de enero del primer año de los datos y que incluya hasta unos años antes de la transacción más reciente. Las transacciones que están fuera del intervalo no aparecen o aparecerán como miembros desconocidos en la dimensión, según la `UnknownMemberVisible` configuración de la propiedad de la dimensión. El `UnknownMemberName` propiedad especifica el título del miembro desconocido. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
+ Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el 1 de enero del primer año de los datos y que incluya hasta unos años antes de la transacción más reciente. Las transacciones que queden fuera del intervalo no aparecerán o, si lo hacen, aparecerán como miembros desconocidos de la dimensión en función del valor de la propiedad `UnknownMemberVisible` de la dimensión. La propiedad `UnknownMemberName` especifica el título del miembro desconocido. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
   
 > [!NOTE]  
 >  La página **Definir períodos de tiempo** solo aparece si incluye una dimensión de tiempo en el cubo en la página **Definir nuevas dimensiones** del asistente.  
@@ -83,7 +83,7 @@ ms.locfileid: "48104895"
 |Calendario|Descripción|  
 |--------------|-----------------|  
 |Calendario fiscal|Calendario fiscal de doce meses. Si selecciona este calendario, especifique el día y el mes de inicio del año fiscal que usa la organización.|  
-|Calendario de informe (o marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral periódico. Si selecciona este calendario, especifique el día y el mes de inicio y un patrón trimestral de 4–4–5, 4–5–4 o 5–4–4 semanas, donde cada dígito representa el número de semanas de un mes.|  
+|Calendario de informe (o marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral periódico. Si selecciona este calendario, especifique el primer día y mes, el patrón de tres meses de 4-4-5, 4-5-4 o 5-4-4 semanas, donde cada dígito representa el número de semanas en un mes.|  
 |Calendario de fabricación|Calendario que usa 13 períodos de cuatro semanas, divididos en tres trimestres de cuatro periodos y un trimestre de cinco períodos. Si selecciona este calendario, especifique la semana (entre 1 y 4) y el mes de inicio del año de fabricación, y el trimestre con períodos adicionales.|  
 |Calendario ISO 8601|Calendario estándar (8601) de Representación de fechas y horas de la Organización internacional de normalización (ISO). Este calendario tiene un número integral de semanas de siete días. Para evitar dividir una semana, este calendario inicia un nuevo año varios días antes o después del 1 de enero.|  
   

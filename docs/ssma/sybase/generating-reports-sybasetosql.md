@@ -14,12 +14,12 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9ee167a46472f4abd4794f767ab4a8e992f4b12a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667914"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411032"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generación de informes (SybaseToSQL)
 Se generan los informes de ciertas actividades realizadas mediante comandos en la consola de SSMA en nivel de árbol de objetos.  
@@ -90,7 +90,7 @@ Use el procedimiento siguiente para generar informes:
 ### <a name="synchronize-target"></a>sincronizar-target:  
 El comando **destino sincronizar** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de errores para la operación de sincronización. A continuación, un archivo con nombre **TargetSynchronizationReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
-**Nota:** si se proporciona la ruta de acceso de carpeta y, después, parámetro 'informe de errores-a' se convierte en un atributo opcional para el comando 'sincronizar-target'.  
+**Nota:** Si se especifica la ruta de acceso de carpeta, parámetro 'informe de errores-to' se convierte en un atributo opcional para el comando 'sincronizar-target'.  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -105,9 +105,9 @@ El comando **destino sincronizar** tiene **informe de errores a** parámetro, qu
   
 />  
 ```  
-**nombre de objeto:** especifica los objetos que se consideran para la sincronización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
+**nombre del objeto:** Especifica los objetos que se consideran para la sincronización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**en caso de error:** especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
+**en caso de error:** Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
 -   total de informes como advertencia  
   
@@ -118,7 +118,7 @@ El comando **destino sincronizar** tiene **informe de errores a** parámetro, qu
 ### <a name="refresh-from-database"></a>actualización-de-database:  
 El comando **actualización de base de datos** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo con nombre **SourceDBRefreshReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
-**Nota:** si se proporciona la ruta de acceso de carpeta y, después, parámetro 'informe de errores-a' se convierte en un atributo opcional para el comando 'sincronizar-target'.  
+**Nota:** Si se especifica la ruta de acceso de carpeta, parámetro 'informe de errores-to' se convierte en un atributo opcional para el comando 'sincronizar-target'.  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -135,9 +135,9 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
   
 />  
 ```  
-**nombre de objeto:** especifica los objetos que se consideran para la actualización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
+**nombre del objeto:** Especifica los objetos que se consideran para la actualización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**en caso de error:** especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
+**en caso de error:** Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
   
 -   total de informes como advertencia  
   

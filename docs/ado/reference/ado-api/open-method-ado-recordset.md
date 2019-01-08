@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606689"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206324"
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
 Se abre un cursor en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Mediante el **abierto** método en un **Recordset** objeto abre un cursor que representa los registros de una tabla base, los resultados de una consulta o guardado anteriormente **Recordset**.  
   
- Usar el elemento opcional *origen* argumento para especificar un origen de datos mediante uno de los siguientes: un **comando** variable de objeto, una instrucción SQL, un procedimiento almacenado, un nombre de tabla, una dirección URL o un nombre de ruta de acceso completa del archivo. Si *origen* es un nombre de ruta de acceso de archivo, puede ser una ruta de acceso completa ("c:\dir\file.rst"), una ruta de acceso relativa (".. \file.rst"), o una dirección URL ("https://files/file.rst").  
+ Usar el elemento opcional *origen* argumento para especificar un origen de datos mediante uno de los siguientes: un **comando** variable de objeto, una instrucción SQL, un procedimiento almacenado, un nombre de tabla, una dirección URL o un nombre de ruta de acceso completa del archivo. Si *origen* es un nombre de ruta de acceso de archivo, puede ser una ruta de acceso completa ("c:\dir\file.rst"), una ruta de acceso relativa (".. \file.rst"), o una dirección URL ("<https://files/file.rst>").  
   
  No es una buena idea usar el *origen* argumento de la **abierto** método para realizar una consulta de acción que no devuelve registros porque no hay ninguna manera fácil de determinar si la llamada se realizó correctamente. El **Recordset** devuelve como una consulta se cerrarán. Para realizar una consulta que no devuelve ningún registro, como una instrucción INSERT de SQL, llame a la [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método de un **comando** objeto o la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de un [Conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto en su lugar.  
   

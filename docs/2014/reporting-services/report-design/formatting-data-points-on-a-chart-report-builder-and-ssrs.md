@@ -14,12 +14,12 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da49fc88b7736bbe161bab4dfec39ab7fdb43c82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167915"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350119"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
   Un punto de datos es la entidad individual más pequeña del gráfico. En los gráficos que no son de formas, los puntos de datos se representan en función del tipo de gráfico. Por ejemplo, una serie de líneas está formada por uno o más puntos de datos conectados. En los gráficos de formas, los puntos de datos se representan por sectores o segmentos individuales que se agregan al gráfico. Por ejemplo, en un gráfico circular, cada sector es un punto de datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "48167915"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Colocar etiquetas de puntos de datos en un gráfico  
  Para mostrar etiquetas de punto de datos en cualquier tipo de gráfico, haga clic con el botón derecho en el gráfico y seleccione **Mostrar etiquetas de datos**. La posición de las etiquetas de puntos de datos se especifica en función del tipo de gráfico:  
   
--   En un gráfico de barras, puede cambiar la posición de la etiqueta de punto de datos usando el atributo personalizado **BarLabelStyle** . Hay cuatro posiciones posibles: Externa, Izquierda, Centro y Derecha. Si el estilo de la etiqueta de la barra se establece en Externa, la etiqueta se colocará fuera de la barra, siempre y cuando quepa en el área del gráfico. Si la etiqueta no se puede colocar fuera de la barra ni dentro del área de gráfico, la etiqueta se situará dentro de la barra.  
+-   En un gráfico de barras, puede cambiar la posición de la etiqueta de punto de datos usando el atributo personalizado **BarLabelStyle** . Hay cuatro posiciones posibles: Externa, izquierda, centro y derecha. Si el estilo de la etiqueta de la barra se establece en Externa, la etiqueta se colocará fuera de la barra, siempre y cuando quepa en el área del gráfico. Si la etiqueta no se puede colocar fuera de la barra ni dentro del área de gráfico, la etiqueta se situará dentro de la barra.  
   
 -   En un gráfico circular, puede cambiar la posición de la etiqueta de punto de datos usando el atributo personalizado **PieLabelStyle** . Hay muchas consideraciones que se deben tener en cuenta al colocar etiquetas de puntos de datos alrededor de un gráfico circular, entre las que se incluyen el tamaño del gráfico, el espacio disponible entre el gráfico y su leyenda correspondiente, y el tamaño de las etiquetas. Para más información, vea [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48167915"
 |#MAX|Máximo de todos los valores Y de la serie.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|El primero de todos los valores Y de la serie.|All|`=First(Fields!MyDataField.Value)`|  
   
- Para dar formato a la palabra clave, incluya una cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre paréntesis. Por ejemplo, para especificar el valor del punto de datos en una información sobre herramientas como un número con dos posiciones decimales, incluya la cadena de formato "N2" entre llaves (por ejemplo, "#VALY {N2}" para la propiedad **ToolTip** de la serie). Para obtener más información sobre las cadenas de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=112024) en MSDN. Para obtener más información sobre cómo dar formato a los números en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Para dar formato a la palabra clave, incluya una cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre paréntesis. Por ejemplo, para especificar el valor del punto de datos en una información sobre herramientas como un número con dos posiciones decimales, incluya la cadena de formato "N2" entre llaves (por ejemplo, "#VALY {N2}" para la propiedad **ToolTip** de la serie). Para obtener más información sobre las cadenas de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Aplicar formato a tipos](https://go.microsoft.com/fwlink/?LinkId=112024) en MSDN. Para obtener más información sobre cómo dar formato a los números en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  Para obtener más información sobre cómo agregar palabras clave a un gráfico, vea [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48167915"
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un gráfico circular a un informe &#40;Generador de informes&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Agregar un gráfico circular al informe &#40;generador de informes&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

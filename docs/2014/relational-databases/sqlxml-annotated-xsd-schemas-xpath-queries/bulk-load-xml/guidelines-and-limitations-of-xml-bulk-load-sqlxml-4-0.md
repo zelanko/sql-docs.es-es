@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
@@ -15,12 +13,12 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f8bb180ef8c0b7483ce8bab27d11804ac81a387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7a569bbc5672b0fc5996507e37ed250721bd2fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082665"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774927"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Instrucciones y limitaciones de la carga masiva XML (SQLXML 4.0)
   Antes de usar la carga masiva XML, debe familiarizarse con las siguientes limitaciones e instrucciones:  
@@ -31,7 +29,7 @@ ms.locfileid: "48082665"
   
 -   Se comprueba que el formato de un documento XML sea correcto, pero no se valida el documento.  
   
-     La carga masiva XML comprueba el documento XML para determinar si el formato es correcto, es decir, para asegurarse de que el XML cumple los requisitos de sintaxis de la recomendación XML 1.0 de World Wide Web Consortium. Si el documento no tiene el formato correcto, la carga masiva XML cancela el procesamiento y devuelve un error. La única excepción a esta regla es que el documento sea un fragmento (por ejemplo, el documento no tiene ningún elemento raíz único), en cuyo caso la carga masiva XML cargará el documento.  
+     Carga masiva XML comprueba el documento XML para determinar si se trata bien-formed-que es, para asegurarse de que el XML cumple los requisitos de sintaxis de la recomendación de XML 1.0 del World Wide Web Consortium. Si el documento no tiene el formato correcto, la carga masiva XML cancela el procesamiento y devuelve un error. La única excepción a esta regla es que el documento sea un fragmento (por ejemplo, el documento no tiene ningún elemento raíz único), en cuyo caso la carga masiva XML cargará el documento.  
   
      La carga masiva XML no valida el documento con respecto a cualquier esquema de datos XML o esquema DTD que se defina o al que se haga referencia dentro del archivo de datos XML. Además, la carga masiva XML no valida el archivo de datos XML en el esquema de asignación proporcionado.  
   
@@ -159,7 +157,7 @@ ms.locfileid: "48082665"
   
      Se crean las tablas que se identifican en el esquema de asignación (la base de datos debe existir). Si ya existen una o varias de las tablas en la base de datos, el sgdroptables, propiedad determina si estas tablas preexistentes se elimina y vuelve a crear.  
   
--   Si especifica la propiedad SchemaGen (por ejemplo, SchemaGen = true), se crean las tablas que se identifican en el esquema de asignación. Pero SchemaGen crea ninguna restricción (por ejemplo, las restricciones PRIMARY KEY/FOREIGN KEY) en estas tablas con una excepción: si los nodos XML que constituyen la clave principal en una relación se definen como si tuviera un tipo de Id. de XML (es decir, `type="xsd:ID"` para XSD) y el sguseid, propiedad se establece en True para SchemaGen, no solo se crean claves principales en el identificador escrito nodos, pero se crean relaciones de clave principal/clave externa de las relaciones del esquema de asignación.  
+-   Si especifica la propiedad SchemaGen (por ejemplo, SchemaGen = true), se crean las tablas que se identifican en el esquema de asignación. Pero SchemaGen crea ninguna restricción (por ejemplo, las restricciones PRIMARY KEY/FOREIGN KEY) en estas tablas con una excepción: Si los nodos XML que constituyen la clave principal en una relación se definen como si tuviera un tipo XML del Id. de (es decir, `type="xsd:ID"` para XSD) y el sguseid, propiedad se establece en True para SchemaGen, no solo se crean claves principales en el identificador con el tipo de nodos , pero se crean relaciones de clave principal/clave externa de las relaciones del esquema de asignación.  
   
 -   SchemaGen no usa extensiones ni facetas del esquema XSD para generar el relacional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esquema.  
   

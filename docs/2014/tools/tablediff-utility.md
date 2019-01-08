@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
@@ -19,14 +18,14 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169405"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791917"
 ---
-# <a name="tablediff-utility"></a>tablediff (utilidad)
+# <a name="tablediff-utility"></a>tablediff, utilidad
   La utilidad **tablediff** se usa para comparar los datos de dos tablas para determinar la no convergencia y es especialmente útil para solucionar problemas de no convergencia en una topología de replicación. Esta utilidad se puede usar desde el símbolo del sistema o en un archivo por lotes para realizar las siguientes tareas:  
   
 -   Una comparación fila a fila entre una tabla de origen de una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúa como publicador de replicación y la tabla de destino de una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúan como suscriptores de replicación.  
@@ -165,7 +164,7 @@ ms.locfileid: "49169405"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Success|  
+|**0**|Correcto|  
 |**1**|Error grave|  
 |**2**|Diferencias entre tablas|  
   

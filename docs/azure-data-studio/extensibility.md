@@ -1,7 +1,8 @@
 ---
-title: Extender la funcionalidad de Azure Data Studio | Microsoft Docs
-description: Obtenga información acerca de la extensión de Azure Data Studio
-ms.custom: tools|sos
+title: Agregar funcionalidad adicional a través de la extensibilidad
+titleSuffix: Azure Data Studio
+description: Obtenga información sobre las áreas de extensibilidad clave para ampliar la funcionalidad de Azure Data Studio y el modelo de extensibilidad
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460250"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030019"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introducción a [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibilidad
 
@@ -68,7 +69,7 @@ Dashboard.Tabs crea las secciones de la pestaña dentro de la página del panel.
     "when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
     "alwaysShow": true,
     "container": {
-        …
+        ...
     }
 }
 ]
@@ -83,13 +84,13 @@ En lugar de especificar panel contenedor insertadas (dentro de la dashboard.tab)
 {
     "id": "innerTab1",
     "container": {
-        …
+        ...
     }
 },
 {
     "id": "innerTab2",
     "container": {
-       …
+       ...
     }
 }
 ]
@@ -112,7 +113,7 @@ Para hacer referencia al contenedor registrado, especifique el identificador del
 
 `dashboard.insights`
 
-Puede registrar información mediante dashboard.insights. Esto es similar a [Tutorial: crear un widget de datos personalizados](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Puede registrar información mediante dashboard.insights. Esto es similar a [Tutorial: Crear un widget de datos personalizados](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -241,7 +242,7 @@ Actualmente, hay cuatro tipos de contenedor admitidos:
                     "dark": "./icons/tab1Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             },
             {
@@ -252,7 +253,7 @@ Actualmente, hay cuatro tipos de contenedor admitidos:
                     "dark": "./icons/tab2Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             }
         ]

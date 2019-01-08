@@ -1,30 +1,31 @@
 ---
-title: Introducción a SQL Server en la nube | Microsoft Docs
+title: Introducción a SQL Server (en Linux) en la nube
+titleSuffix: SQL Server
 description: En este tutorial rápido se muestra cómo ejecutar SQL Server en Linux en la nube de su elección.
-author: annashres
-ms.author: annashres
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682983"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160543"
 ---
-# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>Inicio rápido: Ejecute SQL Server en la nube
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>Inicio rápido: Ejecute SQL Server en la nube
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 En este tutorial, se instalará a SQL Server en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu en la nube de su elección. Vaya a [aprovisionar una máquina virtual de Linux con SQL Server en Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) para ejecutar SQL Server en Linux en Azure.
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> Si decide ejecutar una edición de pago de SQL Server, deberá traiga su propia licencia (BYOL).
 
 ## <a name="amazon-web-services"></a>Servicios Web de Amazon
 1.  Crear un AMI Linux con al menos 2 GB de memoria de marketplace 

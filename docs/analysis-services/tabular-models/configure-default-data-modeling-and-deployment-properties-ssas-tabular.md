@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades de implementación y de modelado de datos predeterminadas | Documentos de Microsoft
+title: Configurar datos de Analysis Services predeterminada de implementación y modelado propiedades | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 926cb59f263b5dfbfb4178d4d512b07511cdc0cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 938ef21a83a6e08336c9e9c53a95e3886ab24dab
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044069"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072582"
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties"></a>Configurar las propiedades de implementación y de modelado de datos predeterminadas 
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>Configurar las propiedades predeterminadas de modelado de datos y de implementación 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Este artículo describe cómo configurar el nivel de compatibilidad predeterminado, implementación y configuración de propiedad de base de datos de área de trabajo, que se puede predefinir, para cada nuevo modelo tabular proyecto se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un proyecto nuevo, estas propiedades se pueden cambiar en función de sus necesidades específicas.  
+  En este artículo se describe cómo configurar el nivel de compatibilidad predeterminado, implementación y configuración de propiedad de base de datos del área de trabajo, que se puede predefinir, para cada nuevo modelo tabular de proyecto cree en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un proyecto nuevo, estas propiedades se pueden cambiar en función de sus necesidades específicas.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Para configurar el valor predeterminado de la propiedad Nivel de compatibilidad para los nuevos proyectos de modelos  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34044069"
   
 3.  Configure los valores de las propiedades siguientes:  
   
-    |Propiedad|Valor predeterminado|Description|  
+    |Property|Valor predeterminado|Descripción|  
     |--------------|---------------------|-----------------|  
     |**Nivel de compatibilidad predeterminado para los nuevos proyectos**|SQL Server 2016 (1200)|Este valor especifica el nivel de compatibilidad predeterminado que se usará al crear un nuevo proyecto de modelo tabular. Puede elegir SQL Server 2012 (1100) si va a realizar la implementación en una instancia de Analysis Services sin SP1 aplicado o SQL Server 2012 SP1 o posterior si la instancia de implementación tiene aplicado SP1. Para más información, vea [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Opciones de nivel compatibilidad**|Todas activadas|Especifica opciones de nivel de compatibilidad para los nuevos proyectos de modelos tabulares y al implementar en otra instancia de Analysis Services.|  
@@ -41,7 +41,7 @@ ms.locfileid: "34044069"
   
 3.  Configure los valores de las propiedades siguientes:  
   
-    |Propiedad|Valor predeterminado|Description|  
+    |Property|Valor predeterminado|Descripción|  
     |--------------|---------------------|-----------------|  
     |**Servidor de implementación predeterminado**|localhost|Esta opción especifica el servidor predeterminado que debe usarse para implementar un modelo. Puede hacer clic en la flecha abajo para buscar en la red local los servidores de Analysis Services que puede utilizar o puede escribir el nombre de un servidor remoto.|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34044069"
   
 3.  Configure los valores de las propiedades siguientes:  
   
-    |Propiedad|Valor predeterminado|Description|  
+    |Property|Valor predeterminado|Descripción|  
     |--------------|---------------------|-----------------|  
     |**Servidor del área de trabajo predeterminado**|**localhost**|Esta propiedad especifica el servidor predeterminado que se usará para hospedar la base de datos del área de trabajo mientras se crea el modelo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Todas las instancias disponibles de Analysis Services que se ejecutan en el equipo local se incluyen en el cuadro de lista.<br /><br /> <br /><br /> Nota: Se recomienda especificar siempre un servidor de Analysis Services local como servidor del área de trabajo. Para las bases de datos del área de trabajo de un servidor remoto, la importación de datos desde [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no se admite, no se pueden realizar copias de seguridad de los datos localmente y la interfaz de usuario puede experimentar latencia durante las consultas.|  
     |**Retención de la base de datos del área de trabajo después de cerrar el modelo**|**Mantener las bases de datos del área de trabajo en disco pero descargarlas de la memoria**|Especifica cómo se conserva una base de datos del área de trabajo después de que se cierre un modelo. Una base de datos del área de trabajo incluye los metadatos del modelo, los datos importados en un modelo y las credenciales de suplantación (cifradas). En algunos casos, la base de datos del área de trabajo puede ser muy grande y usar una cantidad significativa de memoria. De forma predeterminada, las bases de datos del área de trabajo se quitan de la memoria. Al cambiar este valor, es importante tener en cuenta los recursos de memoria disponibles así como la frecuencia con que se piensa trabajar en el modelo. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **Mantener el área de trabajo en memoria** : especifica que se mantengan en memoria las áreas de trabajo después de cerrar un modelo. Esta opción usará más memoria; sin embargo, al abrir un modelo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]se usan menos recursos y el área de trabajo se cargará más rápido.<br /><br /> **Mantener las bases de datos del área de trabajo en disco, pero descargarlas de la memoria** : especifica que se mantenga la base de datos del área de trabajo en el disco (pero no en la memoria) después de cerrar un modelo. Esta opción usa menos memoria; sin embargo, al abrir un modelo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]se usan recursos adicionales y el modelo se cargará más lentamente que cuando la base de datos del área de trabajo se mantiene en la memoria. Use esta opción cuando los recursos de memoria sean limitados o cuando trabaje en una base de datos de área de trabajo remota.<br /><br /> **Eliminar área de trabajo** : especifica que se elimine la base de datos del área de trabajo de la memoria y que no se mantenga en el disco después de cerrar el modelo. Aunque esta opción usa menos memoria y espacio de almacenamiento, al abrir un modelo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se usan recursos adicionales y el modelo se cargará con mayor lentitud que cuando la base de datos del área de trabajo se mantiene en la memoria o en el disco. Use esta opción cuando solo trabaje ocasionalmente con modelos.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], about
@@ -14,19 +13,19 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f3c9b4734dd77424805815eafca29380b17caf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01027aaa813cb3859dfd6d8459b7138a071c0f2d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049704"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352971"
 ---
 # <a name="sql-server-replication"></a>Replicación de SQL Server
   La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia. La replicación permite distribuir datos entre diferentes ubicaciones y entre usuarios remotos o móviles mediante redes locales y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.  
   
  La replicación transaccional se usa normalmente en escenarios servidor a servidor que requieren un alto rendimiento, como por ejemplo, la mejora de la escalabilidad y la disponibilidad, el almacenamiento de datos y la creación de informes, la integración de datos procedentes de varios sitios, la integración de datos heterogéneos, y la descarga del procesamiento por lotes. La replicación de mezcla se ha diseñado principalmente para las aplicaciones móviles o de servidores distribuidos que pueden encontrarse con conflictos de datos. Los escenarios más frecuentes son: el intercambio de datos con usuarios móviles, las aplicaciones de punto de venta (POS) a consumidores, y la integración de datos de varios sitios. La replicación de instantáneas se usa para proporcionar el conjunto de datos inicial para la replicación transaccional y de mezcla; también se puede usar cuando está indicada una actualización completa de los datos. Con estos tres tipos de replicación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un sistema eficaz y flexible para la sincronización de datos en toda la organización. La replicación en SQLCE 3.5 y SQLCE 4.0 se admite tanto en [!INCLUDE[win8srv](../../includes/win8srv-md.md)] como en [!INCLUDE[win8](../../includes/win8-md.md)].  
   
- Como alternativa a la replicación, puede sincronizar bases de datos mediante Microsoft Sync Framework. Sync Framework incluye componentes y una API intuitiva y flexible que facilitan la sincronización entre bases de datos de SQL Server, SQL Server Express, SQL Server Compact y SQL Azure. Sync Framework también incluye clases que se pueden adaptar para sincronizar entre una base de datos de SQL Server y cualquier otra base de datos compatible con ADO.NET. Para obtener documentación detallada de los componentes de sincronización de base de datos de Sync Framework, vea [Sincronizar bases de datos](http://go.microsoft.com/fwlink/?LinkId=209079). Para obtener información general sobre Sync Framework, vea el [Centro para desarrolladores de Microsoft Sync Framework](http://go.microsoft.com/fwlink/?LinkId=209078). Para obtener una comparación entre Sync Framework y la replicación de mezcla, vea [Información general y escenarios](http://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
+ Como alternativa a la replicación, puede sincronizar bases de datos mediante Microsoft Sync Framework. Sync Framework incluye componentes y una API intuitiva y flexible que facilitan la sincronización entre bases de datos de SQL Server, SQL Server Express, SQL Server Compact y SQL Azure. Sync Framework también incluye clases que se pueden adaptar para sincronizar entre una base de datos de SQL Server y cualquier otra base de datos compatible con ADO.NET. Para obtener documentación detallada de los componentes de sincronización de base de datos de Sync Framework, vea [Sincronizar bases de datos](https://go.microsoft.com/fwlink/?LinkId=209079). Para obtener información general sobre Sync Framework, vea el [Centro para desarrolladores de Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=209078). Para obtener una comparación entre Sync Framework y la replicación de mezcla, vea [Información general y escenarios](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
  **Examinar contenido por área**  
  ![Icono carpeta de archivos pequeños](../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [cuáles son las novedades](what-s-new-replication.md)  

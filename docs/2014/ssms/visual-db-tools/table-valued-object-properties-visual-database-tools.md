@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.TVO
@@ -12,12 +12,12 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08686e3dd511d3336c94ab4b0aa96b43ce6d7007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129365"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775920"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propiedades de objeto con valores de tabla (Visual Database Tools)
   Estas propiedades aparecen en la ventana Propiedades cuando selecciona un objeto con valores de tabla en el **Diseñador de vistas y de consultas**. El objeto con valores de tabla puede ser una vista, un sinónimo, una tabla derivada o una función con valores de tabla. A menos que se indique lo contrario, estas propiedades son de solo lectura en la ventana **Propiedades** .  
@@ -31,7 +31,7 @@ ms.locfileid: "48129365"
  **Categoría Identidad**  
  Se expande para mostrar las propiedades de **Nombre** y **Tipo TVO** .  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del objeto de la tabla con valores seleccionada.  
   
  **Tipo TVO**  
@@ -44,12 +44,12 @@ ms.locfileid: "48129365"
  Muestra el alias del objeto de la tabla con valores seleccionada. Para agregar o cambiar un alias, escríbalo en el campo.  
   
  **Lista de columnas**  
- Muestra las columnas incluidas en el objeto de la tabla con valores seleccionada. Para verlas en una ventana independiente, haga clic en la Lista de columnas y, a continuación, haga clic en los puntos suspensivos (...) a la derecha de la propiedad.  
+ Muestra las columnas incluidas en el objeto de la tabla con valores seleccionada. Para verlas en una ventana independiente, haga clic en la Lista de columnas y después en los puntos suspensivos (...) situados a la derecha de la propiedad.  
   
  **Nombre completo**  
  Muestra el nombre del objeto con valores de tabla seleccionado, incluyendo información adicional como el esquema o el origen de datos del objeto.  
   
  **Lista de parámetros**  
- Muestra los parámetros definidos para la función con valores de tabla seleccionada. Para definir un valor para los parámetros, haga clic en la Lista de parámetros y, a continuación, haga clic en los puntos suspensivos (...) a la derecha de la propiedad. En el cuadro de diálogo Parámetros de la función, escriba los valores. Esta propiedad solo está disponible cuando se selecciona una función con valores de tabla.  
+ Muestra los parámetros definidos para la función con valores de tabla seleccionada. Para definir un valor para los parámetros, haga clic en la Lista de parámetros y después en los puntos suspensivos (...) situados a la derecha de la propiedad. En el cuadro de diálogo Parámetros de la función, escriba los valores. Esta propiedad solo está disponible cuando se selecciona una función con valores de tabla.  
   
   

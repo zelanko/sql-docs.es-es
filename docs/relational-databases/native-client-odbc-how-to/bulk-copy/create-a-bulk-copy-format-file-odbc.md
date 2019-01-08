@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a93aa651324d54aa1cc476d2e2408224dd537a95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ad884bb6e08c6d3878ca059cd93aa76ba838f3cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656714"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206984"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Crear un archivo de formato de copia masiva (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,11 +64,11 @@ ms.locfileid: "51656714"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute la primera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para crear la tabla que usará el ejemplo.  
+ Ejecute la primera ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) lista para crear la tabla que va a usar el ejemplo de código.  
   
  Compile la segunda lista de código (C++) con odbc32.lib y odbcbcp.lib.  
   
- Ejecute la tercer lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para eliminar la tabla que usó el ejemplo.  
+ Ejecute la tercera ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) lista para eliminar la tabla que usó el ejemplo de código.  
   
 ```  
 use AdventureWorks  

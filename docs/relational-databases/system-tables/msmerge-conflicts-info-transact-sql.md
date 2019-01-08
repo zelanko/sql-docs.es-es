@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_conflicts_info_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34dd7496d514db14399134eb7ffe222af7251f95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b5332394ac9b05765542be8593446100ea281b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737735"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822779"
 ---
 # <a name="msmergeconflictsinfo-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "47737735"
 |**tablenick**|**int**|El alias de la tabla publicada.|  
 |**rowguid**|**uniqueidentifier**|Identificador de la fila en conflicto.|  
 |**origin_datasource**|**nvarchar(255)**|Nombre de la base de datos donde se originó el cambio conflictivo.|  
-|**conflict_type**|**int**|Tipo de conflicto que ocurrió y que puede ser uno de los siguientes:<br /><br /> **1** = conflicto de actualización: el conflicto se detecta en el nivel de fila.<br /><br /> **2** = conflicto de actualización de columna: el conflicto se detecta en el nivel de columna.<br /><br /> **3** = conflicto de actualización eliminar Wins: la eliminación gana el conflicto.<br /><br /> **4** = Wins eliminar conflictos de actualización: la columna rowguid eliminada que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = error de inserción en carga: la inserción desde el suscriptor no pudo aplicarse en el publicador.<br /><br /> **6** = error de inserción en descarga: la inserción desde el publicador no pudo aplicarse en el suscriptor.<br /><br /> **7** = error de eliminación en carga: no se pudo cargar la eliminación en el suscriptor al publicador.<br /><br /> **8** = error de eliminación en descarga: no se pudo descargar la eliminación en el publicador al suscriptor.<br /><br /> **9** = error de actualización en carga: la actualización en el suscriptor no pudo aplicarse en el publicador.<br /><br /> **10** = error de actualización en descarga: la actualización en el publicador no pudo aplicarse al suscriptor.<br /><br /> **11** = resolución<br /><br /> **12** = lógico actualización de registro de Wins eliminar: el registro lógico eliminado que pierde el conflicto se registra en esta tabla.<br /><br /> **13** = lógico registro conflicto de inserción y actualización: insertar en un registro lógico entra en conflicto con una actualización.<br /><br /> **14** = conflicto de actualización gana de eliminación de registro lógico: el registro lógico actualizado que pierde el conflicto se registra en esta tabla.|  
-|**reason_code**|**int**|Código de error que puede depender del contexto. En el caso de conflictos de actualización-actualización y eliminación-actualización, el valor utilizado para esta columna es el mismo que el **conflict_type**. No obstante, para los conflictos de cambio con error, el código de motivo es el error que evitó que el Agente de mezcla aplicara el cambio. Por ejemplo, si el agente de mezcla no se puede aplicar una inserción en el suscriptor debido a una infracción de clave principal, registra un **conflict_type** de 6 ("descarga de error de inserción") y un **reason_code** de 2627, que es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje de error interno de una infracción de clave principal: "infracción de restricción %ls ' %. * ls'. No se puede insertar una clave duplicada en el objeto ' %. \*ls'. "|  
+|**conflict_type**|**int**|Tipo de conflicto que ocurrió y que puede ser uno de los siguientes:<br /><br /> **1** = conflicto de actualización: El conflicto se detecta en el nivel de fila.<br /><br /> **2** = conflicto de actualización de columna: El conflicto se detecta en el nivel de columna.<br /><br /> **3** = conflicto entre actualización Delete: La eliminación gana el conflicto.<br /><br /> **4** = conflicto entre actualización Delete: La columna rowguid eliminada que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = error de inserción en carga: La inserción desde el suscriptor no pudo aplicarse en el publicador.<br /><br /> **6** = error de inserción en descarga: La inserción desde el publicador no pudo aplicarse en el suscriptor.<br /><br /> **7** = error de eliminación en carga: No se pudo cargar la eliminación en el suscriptor al publicador.<br /><br /> **8** = error de eliminación en descarga: No se pudo descargar la eliminación en el publicador al suscriptor.<br /><br /> **9** = error de actualización de carga: La actualización en el suscriptor no pudo aplicarse en el publicador.<br /><br /> **10** = error de actualización de descarga: La actualización en el publicador no pudo aplicarse al suscriptor.<br /><br /> **11** = resolución<br /><br /> **12** = eliminación de Wins de actualización del registro lógico: El registro lógico eliminado que pierde el conflicto se registra en esta tabla.<br /><br /> **13** = actualización de inserción de conflicto de registros lógicos: Inserte un conflictos de registro lógico con una actualización.<br /><br /> **14** = conflicto de actualización de Wins de eliminación de registros lógicos: El registro lógico actualizado que pierde el conflicto se registra en esta tabla.|  
+|**reason_code**|**int**|Código de error que puede depender del contexto. En el caso de conflictos de actualización-actualización y eliminación-actualización, el valor utilizado para esta columna es el mismo que el **conflict_type**. No obstante, para los conflictos de cambio con error, el código de motivo es el error que evitó que el Agente de mezcla aplicara el cambio. Por ejemplo, si el agente de mezcla no se puede aplicar una inserción en el suscriptor debido a una infracción de clave principal, registra un **conflict_type** de 6 ("descarga de error de inserción") y un **reason_code** de 2627, que es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje de error interno de una infracción de clave principal: "Infracción de restricción %ls ' %. * ls'. No se puede insertar una clave duplicada en el objeto ' %. \*ls'. "|  
 |**reason_text**|**nvarchar(720)**|Descripción del error que puede depender del contexto.|  
 |**pubid**|**uniqueidentifier**|El identificador de la publicación.|  
 |**MSrepl_create_time**|**datetime**|Momento en el que se produjo el conflicto.|  

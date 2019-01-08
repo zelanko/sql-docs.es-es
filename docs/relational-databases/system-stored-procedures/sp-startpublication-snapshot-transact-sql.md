@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_startpublication_snapshot
@@ -17,12 +16,12 @@ ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f44d4edac88887d8869aa4a3885218733acd6fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50657e6a14f68ef297871001bc611f1d7cf9337b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211614"
 ---
 # <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Es el nombre de una que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Es el nombre de una que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -52,7 +51,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_startpublication_snapshot** se utiliza con todos los tipos de replicación.  
   
- Para un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
+ Para que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_startpublication_snapshot**.  

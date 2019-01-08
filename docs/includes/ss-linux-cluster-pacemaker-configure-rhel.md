@@ -7,8 +7,8 @@
 
    > Si el firewall no tiene una configuración de alta disponibilidad integrada, abra los puertos siguientes para Pacemaker.
    >
-   > * TCP: puertos 2224, 3121, 21064
-   > * UDP: puerto 5405
+   > * TCP: Puertos 2224, 3121, 21064
+   > * UDP: Puerto 5405
 
 1. Instale paquetes de Pacemaker en todos los nodos.
 

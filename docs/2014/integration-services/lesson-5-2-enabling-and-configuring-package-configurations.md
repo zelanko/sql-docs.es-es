@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33516b6f47a3c4f33d001c225c5a1a60a9802f7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747967"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Paso 2: Habilitar y configurar las configuraciones de paquetes
   En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Utilizará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad `Directory` del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
@@ -40,11 +39,11 @@ ms.locfileid: "48100806"
   
 7.  Vuelva a la pestaña **Flujo de control** y haga doble clic en el contenedor **Foreach File in Folder** .  
   
-8.  En la página **Colección** del **Editor de bucles Foreach**, haga clic en **Expresiones**y, después, haga clic en el botón de puntos suspensivos **(…)**.  
+8.  En la página **Colección** del **Editor de bucles Foreach**, haga clic en **Expresiones** y, después, haga clic en el botón de puntos suspensivos **(…)**.  
   
 9. En el **Editor de expresiones de propiedad**, haga clic en el **propiedad** lista y seleccione `Directory`.  
   
-10. En el cuadro **Expresión** , haga clic en el botón de puntos suspensivos **(…)**.  
+10. En el cuadro **Expresión**, haga clic en el botón de puntos suspensivos **(…)**.  
   
 11. En el **Generador de expresiones**, expanda la carpeta Variables y arrastre la variable **User:varFolderName** al cuadro **Expresión** .  
   
@@ -106,6 +105,6 @@ ms.locfileid: "48100806"
 3.  En el `New Sample Data` carpeta, pegue los archivos copiados.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 3: Modificar el valor de configuración de la propiedad Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Paso 3: Modificar el valor de configuración de propiedad de directorio](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

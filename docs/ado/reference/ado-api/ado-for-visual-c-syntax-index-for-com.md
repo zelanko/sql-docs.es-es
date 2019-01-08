@@ -17,17 +17,17 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529631"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para el índice de sintaxis de Visual C++ para COM
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basado en Microsoft Visual C++.  
   
- Si usas el **#import** la directiva en la aplicación, se generará un archivo de encabezado que le permitirá usar una sintaxis similar a Microsoft Visual Basic. Nombres de propiedad de la forma **get_ *** PropertyName* y **put_ *** PropertyName* puede tratarse como si se hubieran declarado simplemente como *PropertyName*. Una propiedad, a continuación, puede tratarse como un miembro de datos en lugar de una función.  
+ Si usas el **#import** la directiva en la aplicación, se generará un archivo de encabezado que le permitirá usar una sintaxis similar a Microsoft Visual Basic. Los nombres de propiedad del formulario **get_**_PropertyName_ y **put_**_PropertyName_ puede tratarse como si se hubieran declarado simplemente como  *PropertyName*. Una propiedad, a continuación, puede tratarse como un miembro de datos en lugar de una función.  
   
  Todos los métodos, propiedades y eventos son funciones que devuelven un **HRESULT**, que puede probar para determinar si la función se ejecuta correctamente.  
   

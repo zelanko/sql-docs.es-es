@@ -10,19 +10,19 @@ ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: beb1b18d03b557aad4709ee024be888c712c2c12
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f40a2df471dc1e0593d25f96c1b04837822725d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544533"
 ---
 # <a name="managing-a-composite-domain"></a>Administrar un dominio compuesto
   En este tema se describe el uso de los dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). En ocasiones, un dominio individual no representa los datos de un campo de forma satisfactoria, y estos solo se pueden representar agrupando varios dominios individuales. Para ello, es necesario crear un dominio compuesto. Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados que no están analizados, sino que se incluyen en un valor compuesto único. Cada término de dicho valor se representará mediante un dominio individual distinto. Una vez que se han incluido dominios individuales en dominios compuestos y se ha asignado el dominio compuesto al campo de datos, es posible generar conocimiento en la base de conocimiento sobre los datos de dicho campo generando conocimiento en los dominios individuales. Un dominio compuesto, al igual que un dominio individual, es una representación semántica de los datos de un solo campo de datos.  
   
  Los dominios individuales de un dominio compuesto deben tener un área común de conocimiento. Un ejemplo es un campo de dirección que incluye datos sobre la calle, la ciudad, el estado, el país y el código postal. Los distintos términos de este campo podrían tener tipos de datos diferentes. Para ocuparse de esto, es necesario asignar dichos términos a dominios individuales diferentes. Otro ejemplo es un campo de nombre completo que contiene el nombre, las iniciales y los apellidos. Para utilizar un dominio compuesto, es necesario analizar los datos del campo en distintos dominios individuales, creando un dominio compuesto para el campo y un dominio individual para cada parte del campo.  
   
- Los dominios compuestos no tienen las mismas capacidades que los dominios individuales. No es posible cambiar los valores en el dominio compuesto; esta operación debe hacerse en un dominio individual. Es posible utilizar reglas entre dominios para probar los valores de los dominios individuales del dominio compuesto. También se pueden ver las combinaciones de valores encontradas en los dominios compuestos.  
+ Los dominios compuestos no tienen las mismas capacidades que los dominios individuales. No es posible cambiar los valores en el dominio compuesto; esta operación se debe realizar en un dominio individual. Es posible utilizar reglas entre dominios para probar los valores de los dominios individuales del dominio compuesto. También se pueden ver las combinaciones de valores encontradas en los dominios compuestos.  
   
 ## <a name="in-this-section"></a>En esta sección  
  El uso de un dominio compuesto le permite hacer lo siguiente:  

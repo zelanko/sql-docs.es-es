@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.publisher.f1
@@ -15,12 +14,12 @@ ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b3d6b8de35ff65d0ea715ecaa9940e3f75ee42f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5213c07fcdf84db3297ae5737d1d8726f4355257
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081445"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794447"
 ---
 # <a name="subscription-properties---publisher"></a>Propiedades de la suscripción: publicador
   El cuadro de diálogo **Propiedades de la suscripción** del publicador permite ver y definir las propiedades para las suscripciones de inserción. También se pueden ver algunas propiedades para las suscripciones de extracción, pero el cuadro de diálogo **Propiedades de la suscripción** del suscriptor muestra propiedades adicionales y permite modificarlas.  
@@ -50,7 +49,7 @@ ms.locfileid: "48081445"
   
 ## <a name="options-for-merge-subscriptions"></a>Opciones para suscripciones de mezcla  
  **Definición de partición (HOST_NAME)**  
- Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de las dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de sistema de dos funciones (o ambas si el filtro hace referencia a ambas funciones) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME ()** o **HOST_NAME ()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
@@ -58,7 +57,7 @@ ms.locfileid: "48081445"
  Si ha seleccionado un tipo de suscripción de servidor en el Asistente para nueva suscripción, el suscriptor recibe la prioridad que se utiliza durante la resolución de conflictos.  
   
  **Solucionar conflictos de manera interactiva**  
- Establece si se va a utilizar la interfaz de usuario Solucionador interactivo para solucionar conflictos durante la sincronización de mezcla. Requiere un valor de **Habilitado** en **Utilizar el Administrador de sincronización de Windows**. Para más información, consulte [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Establece si se va a utilizar la interfaz de usuario Solucionador interactivo para solucionar conflictos durante la sincronización de mezcla. Requiere un valor de **Habilitado** en **Utilizar el Administrador de sincronización de Windows**. Para obtener más información, consulte [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="see-also"></a>Vea también  
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  

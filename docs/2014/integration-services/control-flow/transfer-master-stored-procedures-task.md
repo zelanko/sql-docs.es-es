@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 734c659186f749b740bbde5ef7caa59b6925fa9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150235"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761857"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarea Transferir procedimientos almacenados principales
   La tarea Transferir procedimientos almacenados principales transfiere uno o más procedimientos almacenados definidos por el usuario entre las bases de datos **master** en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para transferir un procedimiento almacenado de la base de datos **master** , el propietario del procedimiento debe ser dbo.  
@@ -46,7 +45,7 @@ ms.locfileid: "48150235"
  La tarea Transferir procedimientos almacenados principales no indica el progreso incremental de la transferencia; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  
- El valor de ejecución, definido en el `ExecutionValue` propiedad de la tarea, devuelve el número de procedimientos almacenados transferidos. Asignando una variable definida por el usuario para el `ExecValueVariable` propiedad de la tarea Transferir procedimientos almacenados principales, información sobre la transferencia del procedimiento almacenado puede estar disponible para otros objetos en el paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
+ El valor de ejecución, que se define en la propiedad `ExecutionValue` de la tarea, devuelve el número de procedimientos almacenados transferidos. Si se asigna una variable definida por el usuario a la propiedad `ExecValueVariable` de la tarea Transferir procedimientos almacenados principales, se puede hacer que la información de la transferencia de procedimientos almacenados esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir procedimientos almacenados principales incluye las siguientes entradas del registro personalizadas:  
@@ -55,7 +54,7 @@ ms.locfileid: "48150235"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  Esta entrada del registro indica que ha finalizado la transferencia. La entrada del registro incluye la hora de finalización.  
   
- Además, una entrada de registro para el `OnInformation` evento informa del número de procedimientos almacenados transferidos y una entrada del registro para el `OnWarning` se escribe el evento por cada procedimiento almacenado que se sobrescribe en el destino.  
+ Además, una entrada del registro para el evento `OnInformation` indica el número de procedimientos almacenados transferidos, y se escribe una entrada del registro para el evento `OnWarning` por cada procedimiento almacenado que se sobrescribe en el destino.  
   
 ## <a name="security-and-permissions"></a>Seguridad y permisos  
  El usuario debe tener permisos para ver la lista de procedimientos almacenados de la base de datos **master** en el origen y debe ser miembro del rol de servidor sysadmin o tener permisos para crear procedimientos almacenados en la base de datos **master** del servidor de destino.  
@@ -65,9 +64,9 @@ ms.locfileid: "48150235"
   
  Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Transferir el Editor de tareas de procedimientos almacenados principales &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Transferir procedimientos almacenados principales &#40;Página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Transferir el Editor de tareas de procedimientos almacenados principales &#40;página procedimientos almacenado&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [Editor de la tarea Transferir procedimientos almacenados principales &#40;página Procedimientos almacenados&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48150235"
 -   [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server tarea Transferir objetos de](transfer-sql-server-objects-task.md)   
+ [Tarea Transferir objetos de SQL Server](transfer-sql-server-objects-task.md)   
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

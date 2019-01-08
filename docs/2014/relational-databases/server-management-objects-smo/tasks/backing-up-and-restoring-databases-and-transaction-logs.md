@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [SMO]
@@ -21,12 +19,12 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb3452b587bd455488d391656eae9801e642391f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092945"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805547"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Realizar copias de seguridad y restaurar bases de datos y registros de transacciones
   En SMO, la clase <xref:Microsoft.SqlServer.Management.Smo.Backup> y la clase <xref:Microsoft.SqlServer.Management.Smo.Restore> son clases de utilidad que proporcionan las herramientas para realizar las tareas concretas de copias de seguridad y restauración. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa una tarea de copia de seguridad concreta necesaria en lugar de un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto en la instancia del servidor.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addcopyexistingpackage.f1
@@ -15,12 +14,12 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2de0accc6822eb5d7e30191bee5dc2f5d850720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b96a0f6639764299ba38293ddb059aa09da48ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195375"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779997"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -42,12 +41,12 @@ ms.locfileid: "48195375"
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
  **Ruta de acceso del paquete**  
- Escriba la ruta de acceso del paquete o haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
+ Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
   
 ## <a name="see-also"></a>Vea también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   
- [Referencia de interfaz de usuario de cuadro de diálogo de importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Referencia de interfaz de usuario del cuadro de diálogo de paquete de exportación](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Guardar paquetes](save-packages.md)   
  [Importar y exportar paquetes &#40;servicio SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   

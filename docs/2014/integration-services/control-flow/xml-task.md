@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
@@ -16,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa137e5be6f664ae40e7c195e88a99bf87e9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b696dd451c5b6f76419e4fb4cb501e2e62bba24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759327"
 ---
 # <a name="xml-task"></a>Tarea XML
   La tarea XML se usa para trabajar con datos XML. Mediante esta tarea, un paquete puede recuperar documentos XML, aplicar operaciones a los documentos mediante las hojas de estilos Extensible Stylesheet Language Transformations (XSLT) y expresiones XPath, combinar varios documentos, o bien validar, comparar y guardar los documentos actualizados en archivos y variables.  
@@ -71,7 +70,7 @@ ms.locfileid: "48204195"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**IgnoreComments**|Valor que especifica si se comparan los nodos de comentarios.|  
-|**IgnoreNameSpaces**|Valor que especifica si se comparan el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y sus nombres de atributos. Si esta opción se establece en `true`, dos elementos que tienen el mismo nombre local pero un espacio de nombres diferentes se consideran idénticos.|  
+|**IgnoreNameSpaces**|Valor que especifica si se comparan el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y sus nombres de atributos. Si esta opción se establece en `true`, dos elementos que tienen el mismo nombre local pero un espacio de nombres diferente se consideran idénticos.|  
 |**IgnorePrefixes**|Valor que especifica si se comparan los prefijos de nombres de elementos y atributos. Si esta opción está establecida en `true,` dos elementos que tienen el mismo nombre local pero un URI de espacio de nombres diferente y un prefijo se consideran idénticos.|  
 |**IgnoreXMLDeclaration**|Un valor que especifica si se comparan las declaraciones XML.|  
 |**IgnoreOrderOfChildElements**|Valor que especifica si se compara el orden de los elementos secundarios. Si esta opción se establece en `true`, los elementos secundarios que solo difieren en su posición en una lista de elementos del mismo nivel se consideran idénticos.|  
@@ -94,7 +93,7 @@ ms.locfileid: "48204195"
 ### <a name="validation-operation"></a>Operación de validación  
  La operación de validación se puede configurar para usar una Definición de tipo de documento (DTD) o un esquema de definición del esquema XML (XSD).  
   
- Habilitar `ValidationDetails` para obtener la salida de error detallada. Para obtener más información, vea [Validate XML with the XML Task](xml-task.md).  
+ Habilite `ValidationDetails` para obtener una salida de error detallada. Para obtener más información, vea [Validate XML with the XML Task](xml-task.md).  
   
 ## <a name="xml-document-encoding"></a>Codificación de documentos XML  
  La tarea XML únicamente admite la mezcla de documentos Unicode. Esto significa que la tarea puede aplicar la operación de combinación únicamente a documentos con una codificación Unicode. El uso de otras codificaciones hará que la tarea XML genere un error.  
@@ -122,7 +121,7 @@ ms.locfileid: "48204195"
   
 -   [Editor de la tarea XML &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validar XML con la tarea XML](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

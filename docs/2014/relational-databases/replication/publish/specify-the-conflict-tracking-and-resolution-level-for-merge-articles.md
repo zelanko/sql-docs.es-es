@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], levels
@@ -15,12 +14,12 @@ ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11eed64a7acefb0202553c4e3e99d18333b47910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff61c601be83ac27c4febb7f31598bdb8fce037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228425"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810277"
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>Especificar el seguimiento de conflictos y el nivel de resolución para artículos de mezcla
   En este tema se describe cómo especificar el seguimiento de conflictos y el nivel de resolución para artículos de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -39,7 +38,7 @@ ms.locfileid: "48228425"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48228425"
   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado** o en **Establecer propiedades de todos los artículos de la tabla**.  
   
-3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, seleccione uno de los valores siguientes para la propiedad **Nivel de seguimiento**: **Seguimiento por fila** o **Seguimiento por columna**.  
+3.  En el **propiedades** pestaña de la **propiedades del artículo \<artículo >** cuadro de diálogo, seleccione uno de los siguientes valores para el **nivel de seguimiento** propiedad: **Seguimiento de nivel de fila** o **seguimiento por columna**.  
   
 4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
@@ -84,8 +83,8 @@ ms.locfileid: "48228425"
   
 ## <a name="see-also"></a>Vea también  
  [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Detectar y solucionar conflictos en registros lógicos](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Definir una relación de registros lógicos entre artículos de tabla de mezcla](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Detectar y solucionar conflictos de replicación de mezcla](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

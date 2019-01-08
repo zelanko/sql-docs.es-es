@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080526"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753857"
 ---
 # <a name="publication-properties-subscription-options"></a>Propiedades de la publicación, Opciones de suscripción
   La página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** permite ver y establecer propiedades a nivel de publicación asociadas con suscripciones. Las propiedades se agrupan en las siguientes categorías:  
@@ -78,7 +77,7 @@ ms.locfileid: "48080526"
  Se aplica solamente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite la replicación punto a punto. Si se establece esta opción en **True** , se configuran otras propiedades de la publicación para admitir la replicación punto a punto. Esta opción es de solo lectura si existen suscripciones. Esta opción no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata** , **Permitir suscripciones de actualización en cola**o **Permitir suscriptores que no sean de SQL** están establecidas en **True**. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md).  
   
  **Permitir detección de conflictos de replicación punto a punto**  
- Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica si la detección de conflictos está habilitada para esta publicación. Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los ellos. Para utilizar la detección de conflictos también debe especificar un valor para **Identificador del autor del mismo nivel**. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica si la detección de conflictos está habilitada para esta publicación. Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los ellos. Para utilizar la detección de conflictos también debe especificar un valor para **Identificador del autor del mismo nivel**. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **Identificador del autor del mismo nivel**  
  Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica un Id. para un nodo en una topología punto a punto. Este Id. se utiliza para la detección de conflictos si **Permitir detección de conflictos de replicación punto a punto** se establece en **True**. Especifique un id. positivo distinto de cero que no se haya utilizado jamás en la topología. Para obtener una lista de identificadores que ya se hayan utilizado, consulte la tabla del sistema [Mspeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) .  
@@ -107,7 +106,7 @@ ms.locfileid: "48080526"
   
 ### <a name="filtering"></a>Filtrar  
  **Permitir filtros con parámetros**  
- Se establece en función de si una publicación utiliza filtros con parámetros. Esta opción siempre es de solo lectura. Para obtener más información, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Se establece en función de si una publicación utiliza filtros con parámetros. Esta opción siempre es de solo lectura. Para más información, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Validar suscriptores**  
  Determina qué funciones se utilizan al validar si un suscriptor tiene la partición correcta de datos. Debe utilizarse una coma para separar múltiples valores. Para obtener más información, vea [Validar la información de particiones para un suscriptor de mezcla](validate-partition-information-for-a-merge-subscriber.md).  

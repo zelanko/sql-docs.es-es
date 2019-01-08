@@ -20,16 +20,16 @@ ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7eb460efdd7915eb1f376ec3b640896b6fdd186e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87f2e46c5b774983ecac2f4bbaf377b3e7260bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825319"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208904"
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols (función)
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLNumResultCols** devuelve el número de columnas en un conjunto de resultados.  

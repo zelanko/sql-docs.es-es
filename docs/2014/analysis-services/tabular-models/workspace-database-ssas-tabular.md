@@ -11,12 +11,12 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65d4a23044084f18662c3aca1cc68bfd157ea3dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134995"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416706"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Base de datos del área de trabajo (SSAS tabular)
   La base de datos del área del trabajo de modelos tabulares, utilizada durante la creación de modelos, se crea cuando se crea un nuevo proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La base de datos del área de trabajo reside en memoria, en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo tabular (normalmente, en el mismo equipo que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]).  
@@ -78,10 +78,10 @@ ms.locfileid: "48134995"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Propiedades de los modelos &#40;Tabular de SSAS&#41;](model-properties-ssas-tabular.md)|Proporciona descripciones y pasos de configuración para las propiedades de la base de datos del área de trabajo de un modelo.|  
+|[Propiedades del modelo &#40;SSAS tabular&#41;](model-properties-ssas-tabular.md)|Proporciona descripciones y pasos de configuración de área de trabajo del modelo las propiedades de la base de datos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de implementación y modelado de datos predeterminada &#40;Tabular de SSAS&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Las propiedades del proyecto &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)  
+ [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Propiedades del proyecto &#40;SSAS tabular&#41;](properties-ssas-tabular.md)  
   
   

@@ -13,17 +13,17 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622333"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540440"
 ---
 # <a name="what-is-odbc"></a>¿Qué es ODBC?
 Existen muchas ideas erróneas sobre ODBC en el mundo de la informática. Para el usuario final, es un icono en el Panel de Control de Microsoft® Windows®. Para el programador de aplicaciones, es una biblioteca que contiene rutinas de acceso a datos. Para muchos otros, es la respuesta a todos los problemas de acceso de base de datos nunca imaginado.  
   
- En primer lugar y ante todo, ODBC es una especificación para una API de base de datos. Esta API es independiente del sistema operativo; ni un DBMS Aunque en este manual usa C, la API de ODBC es independiente del lenguaje. La API de ODBC se basa en las especificaciones de la CLI de Open Group y ISO/IEC. ODBC 3. *x* totalmente implementa ambas de estas especificaciones, versiones anteriores de ODBC se basaban en las versiones preliminares de estas especificaciones, pero los implementar completamente y agrega características normalmente necesarias los programadores de basado en pantalla aplicaciones de base de datos, como los cursores desplazables.  
+ En primer lugar y ante todo, ODBC es una especificación para una API de base de datos. Esta API es independiente del sistema operativo; ni un DBMS Aunque en este manual usa C, la API de ODBC es independiente del lenguaje. La API de ODBC se basa en las especificaciones de la CLI de Open Group y ISO/IEC. ODBC 3. *x* totalmente implementa ambas de estas especificaciones - versiones anteriores de ODBC se basaban en las versiones preliminares de estas especificaciones pero no totalmente implementó ellos - y agrega características normalmente necesarias los programadores de basado en pantalla aplicaciones de base de datos, como los cursores desplazables.  
   
  Las funciones de la API de ODBC se implementan los desarrolladores de controladores específicos de DBMS. Las aplicaciones llaman a las funciones de estos controladores para tener acceso a datos de manera independiente del DBMS. Un administrador de controladores administra la comunicación entre aplicaciones y controladores.  
   

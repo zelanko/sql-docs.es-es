@@ -15,12 +15,12 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792403"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208335"
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de patrón
 Funciones de algunos argumentos en el catálogo, como el *TableName* argumento en **SQLTables**, acepte los patrones de búsqueda. Estos argumentos aceptan modelos de búsqueda si se establece el atributo de instrucción SQL_ATTR_METADATA_ID en SQL_FALSE; son los argumentos de identificador que no aceptan un patrón de búsqueda si este atributo está establecido en SQL_TRUE.  
@@ -44,7 +44,7 @@ Funciones de algunos argumentos en el catálogo, como el *TableName* argumento e
   
  Debe tener especial cuidado para escapar caracteres del patrón de búsqueda en los argumentos que aceptan los patrones de búsqueda. Esto es especialmente cierto para el carácter de subrayado, que se utiliza habitualmente en los identificadores. Es un error común en las aplicaciones recuperar un valor de una función de catálogo y pasar ese valor a un argumento de patrón de búsqueda en otra función de catálogo. Por ejemplo, suponga que una aplicación recupera el nombre de tabla MY_TABLE desde el resultado establecido para **SQLTables** y la pasa a **SQLColumns** para recuperar una lista de columnas de MY_TABLE. En lugar de obtener las columnas para MY_TABLE, la aplicación obtendrá las columnas para todas las tablas que coinciden con el patrón de búsqueda MY_TABLE como MY_TABLE, MY1TABLE, MY2TABLE y así sucesivamente.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2. *x* controladores no admiten patrones de búsqueda en el *CatalogName* argumento en **SQLTables**. ODBC 3 *.x* los controladores aceptan modelos de búsqueda en este argumento si el atributo de entorno SQL_ATTR_ ODBC_VERSION está establecido en SQL_OV_ODBC3; no acepta patrones de búsqueda en este argumento si se establece en SQL_OV_ODBC2.  
   
- Pasar un puntero nulo a un argumento de patrón de búsqueda no restringe la búsqueda para ese argumento; es decir, un puntero nulo y el % de patrón de búsqueda (caracteres) son equivalentes. Sin embargo, patrón de búsqueda de una longitud cero, es decir, un puntero válido a una cadena de longitud cero, coincide con la cadena vacía ("").
+ Pasar un puntero nulo a un argumento de patrón de búsqueda no restringe la búsqueda para ese argumento; es decir, un puntero nulo y el % de patrón de búsqueda (caracteres) son equivalentes. Sin embargo, un patrón de búsqueda de longitud cero: es decir, un puntero válido a una cadena de longitud cero - coincide con la cadena vacía ("").

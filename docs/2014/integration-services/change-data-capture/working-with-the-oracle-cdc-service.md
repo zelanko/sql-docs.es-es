@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac741a4f3c5ea5b4aecbe7943a55ec1f6bef145f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae456229482288e2fcf5e27f822e4f6f11540930
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749987"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
   En esta sección se describen algunos conceptos importantes del servicio CDC de Oracle. Los conceptos incluidos en esta sección son:  
@@ -29,7 +28,7 @@ ms.locfileid: "48110565"
   
      En esta sección se proporciona una breve descripción de las bases de datos CDC. Estas bases de datos se crean mediante la Consola del diseñador CDC de Oracle. Vea la documentación incluida con la instalación de la Consola del diseñador CDC para obtener más información acerca de las bases de datos CDC.  
   
--   [Uso de la línea de comandos para configurar el servicio CDC](#BKMK_CommandConfigCDC)  
+-   [Usar la línea de comandos para configurar el servicio CDC](#BKMK_CommandConfigCDC)  
   
      En esta sección se describen los comandos de la línea de comandos que se pueden usar para configurar el servicio CDC de Oracle.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "48110565"
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Los procedimientos almacenados de la base de datos MSXDBCDC  
  En esta sección se describen los siguientes procedimientos almacenados de la base de datos MSXDBCDC.  
   
--   [dbo.xcbcdc_reset_db (nombre de la base de datos)](#BKMK_dboxcbcdc_reset_db)  
+-   [dbo.xcbcdc_reset_db(Database Name)](#BKMK_dboxcbcdc_reset_db)  
   
 -   [dbo.xdbcdc_disable_db(dbname)](#BKMK_dboxdbcdc_disable_db)  
   
@@ -187,11 +186,11 @@ ms.locfileid: "48110565"
 ### <a name="service-program-commands"></a>Comandos del programa de servicio  
  En esta sección se describen los siguientes comandos que se usan para configurar el servicio CDC.  
   
--   [configuración](#BKMK_config)  
+-   [Config](#BKMK_config)  
   
 -   [Crear](#BKMK_create)  
   
--   [Eliminar](#BKMK_delete)  
+-   [Delete](#BKMK_delete)  
   
 ###  <a name="BKMK_config"></a> Config  
  Use `Config` para actualizar una configuración del servicio CDC de Oracle desde un script. El comando se puede usar para actualizar únicamente determinadas partes de la configuración del servicio CDC (por ejemplo, solo la cadena de conexión sin conocer la contraseña de la clave asimétrica). El comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Config` .  
@@ -218,7 +217,7 @@ ms.locfileid: "48110565"
   
  **sql-username**y **sql-password** son las credenciales de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están actualizando. Si sqlacct tiene un nombre de usuario vacío y una contraseña vacía, el servicio CDC de Oracle conectará con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows.  
   
- **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ###  <a name="BKMK_create"></a> Crear  
  Use `Create` para crear un servicio CDC de Oracle desde un script. El comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Create` :  
@@ -244,7 +243,7 @@ ms.locfileid: "48110565"
   
  **sql-username**y **sql-password** son el nombre de cuenta y la contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si ambos parámetros están vacíos, el servicio CDC para Oracle conectará con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows.  
   
- **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  Use `Delete` para eliminar correctamente el servicio CDC de Oracle desde un script. Este comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Delete` .  
@@ -259,7 +258,7 @@ ms.locfileid: "48110565"
   
  **cdc-service-name** es el nombre del servicio CDC que se va a eliminar.  
   
- **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo usar la interfaz de línea de comandos del servicio CDC](how-to-use-the-cdc-service-command-line-interface.md)   

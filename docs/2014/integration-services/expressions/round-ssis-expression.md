@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - rounding expressions
@@ -14,12 +13,12 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950d2c8aa3bd67327eb184017a71bc3851cb2abf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3033398be7625230ac6d9abd7b8b329f312632c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212265"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808017"
 ---
 # <a name="round-ssis-expression"></a>ROUND (expresión de SSIS)
   Devuelve una expresión numérica, redondeada a la longitud o precisión especificada. La evaluación del parámetro de longitud debe devolver un entero.  
@@ -33,7 +32,7 @@ ROUND(numeric_expression,length)
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- Expresión con un tipo numérico válido. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Expresión con un tipo numérico válido. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  *length*  
  Expresión entera. Es la precisión con la que *numeric_expression* se redondea.  

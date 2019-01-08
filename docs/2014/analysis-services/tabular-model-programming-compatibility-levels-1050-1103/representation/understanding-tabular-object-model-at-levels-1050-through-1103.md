@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525794"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Descripción del modelo de objetos tabulares
   Un modelo tabular es una representación lógica de tablas, relaciones, jerarquías, perspectivas, medidas y rendimiento clave. En esta sección se presenta la implementación interna mediante AMO. Consulte [desarrollar con objetos de administración de análisis &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si aún no ha usado AMO antes.  
@@ -57,7 +57,7 @@ ms.locfileid: "50148444"
   
  Consulte [representación de jerarquía &#40;Tabular&#41; ](tables-hierarchy-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de jerarquía.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Representación de indicadores de rendimiento clave (KPI)  
+### <a name="key-performance-indicator--kpi--representation"></a>La clave de rendimiento de representación de KPI - indicadores  
  Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino. En términos de objetos de AMO, una representación de KPI tiene una relación de asignación uno a varios. Un KPI se representa mediante el uso de los siguientes objetos de AMO: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> y <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> son los objetos principales necesarios.  Es importante tener en cuenta que esto no significa que todos los objetos contenidos en los objetos de AMO mencionados anteriormente se puedan usar para realizar el modelado.  
   
 > [!NOTE]  

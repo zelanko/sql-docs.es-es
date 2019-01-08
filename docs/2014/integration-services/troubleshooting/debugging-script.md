@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Script task [Integration Services], debugging
@@ -15,12 +14,12 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 622a34cf8b4ac3c3029d68e5ed6639fdc92654ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 454e4878590a11da1789d2bedba049af5f587874
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155385"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799025"
 ---
 # <a name="debugging-script"></a>Depurar script
   Escribe los scripts que la tarea Script y el componente Script usan, en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA).  
@@ -35,9 +34,9 @@ ms.locfileid: "48155385"
   
 ### <a name="to-set-a-breakpoint-in-visual-studio-for-applications"></a>Para establecer un punto de interrupción en Visual Studio para Aplicaciones  
   
--   [Depurar un script mediante el establecimiento de puntos de interrupción en una tarea Script y un componente de script](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
+-   [Depurar un script estableciendo puntos de interrupción en una tarea Script y un componente Script](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas para solucionar problemas del desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  
+ [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  
   
   

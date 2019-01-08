@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9f597f1968f947b9e0dd792568ea59f42af1d2a0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701643"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521090"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Una instancia de Analysis Services registrará las advertencias, los errores y las notificaciones del servidor en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](http://support.microsoft.com/kb/2965035).  
+  Una instancia de Analysis Services registrará las notificaciones de servidor, los errores y advertencias en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](http://support.microsoft.com/kb/2965035).  
   
- Además de la característica de registro integrada, muchos administradores y desarrolladores también usan herramientas proporcionadas por la comunidad de Analysis Services para recopilar datos sobre las operaciones de servidor, como **ASTrace**. Vea [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Ejemplos de la comunidad de Microsoft SQL Server: Analysis Services) para acceder a los vínculos de descarga.  
+ Además de la característica de registro integrada, muchos administradores y desarrolladores también usan herramientas proporcionadas por la comunidad de Analysis Services para recopilar datos sobre las operaciones de servidor, como **ASTrace**. Consulte [ejemplos de la Comunidad de Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) para los vínculos de descarga.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -43,10 +43,10 @@ ms.locfileid: "51701643"
 |Nombre de archivo o ubicación|Tipo|Se usa para|Activado de forma predeterminada|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Registro de errores|Supervisión rutinaria y solución de problemas básicos|Sí|  
-|Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|no|  
-|Archivos SQLDmp\<guid > .mdmp archivos|Errores y excepciones|Solución de problemas a fondo|no|  
+|Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|No|  
+|Archivos SQLDmp\<guid > .mdmp archivos|Errores y excepciones|Solución de problemas a fondo|No|  
   
- Se recomienda encarecidamente consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Consejos para la recolección de datos inicial de Soporte técnico de Microsoft).  
+ Recomendamos consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Inicial sugerencias de recopilación de datos de Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Información general sobre la configuración del archivo de registro  
  Puede encontrar secciones para cada registro en el archivo de configuración del servidor msmdsrv.ini, ubicado en la carpeta \Archivos de programa\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config. Consulte en [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md) las instrucciones para editar el archivo.  
@@ -146,7 +146,7 @@ ms.locfileid: "51701643"
   
  **Configurar informes de bloqueo**  
   
- A menos que el soporte técnico de Microsoft indique lo contrario, la mayoría de los administradores usan la configuración predeterminada. Este artículo anterior de Knowledge Base aún se utiliza para proporcionar instrucciones sobre cómo configurar los archivos de volcado: [Cómo configurar Analysis Services para generar archivos de volcado de memoria](http://support.microsoft.com/kb/919711).  
+ A menos que el soporte técnico de Microsoft indique lo contrario, la mayoría de los administradores usan la configuración predeterminada. Este artículo anterior de Knowledge Base se sigue usando para ofrecer instrucciones sobre cómo configurar los archivos de volcado: [Cómo configurar Analysis Services para generar archivos de volcado de memoria](http://support.microsoft.com/kb/919711).  
   
  El ajuste de configuración que se modificará con más probabilidad es **CreateAndSendCrashReports** , que se usa para determinar si se generará un archivo de volcado de memoria.  
   
@@ -173,9 +173,9 @@ ms.locfileid: "51701643"
   
 -   Configure el archivo msmdsrv.log para controlar el tamaño y el número de archivos de registro msmdsrv. Estos ajustes no están habilitados de forma predeterminada, por lo que debe asegurarse de agregarlos después de la instalación. Consulte [Archivo de registro del servicio MSMDSRV](#bkmk_msmdsrv) en este tema.  
   
--   Revise esta entrada de blog del servicio de asistencia al cliente de Microsoft para obtener información sobre los recursos que usan para obtener datos sobre las operaciones del servidor: [Recopilación de datos iniciales](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+-   Revise esta entrada de blog del servicio de soporte al cliente de Microsoft para obtener información sobre los recursos que usan para obtener datos acerca de las operaciones del servidor: [Recopilación de datos iniciales](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
--   Utilice ASTrace2012 en lugar de un registro de consultas para averiguar quién está consultando los cubos. El registro de consultas se usa normalmente para proporcionar datos al Asistente para la optimización basada en el uso. Los datos que captura no se leen o interpretan fácilmente. ASTrace2012 es una herramienta de la comunidad ampliamente utilizada que captura las operaciones de consulta. Vea [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Ejemplos de la comunidad de Microsoft SQL Server: Analysis Services).  
+-   Utilice ASTrace2012 en lugar de un registro de consultas para averiguar quién está consultando los cubos. El registro de consultas se usa normalmente para proporcionar datos al Asistente para la optimización basada en el uso. Los datos que captura no se leen o interpretan fácilmente. ASTrace2012 es una herramienta de la comunidad ampliamente utilizada que captura las operaciones de consulta. Consulte [ejemplos de la Comunidad de Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   

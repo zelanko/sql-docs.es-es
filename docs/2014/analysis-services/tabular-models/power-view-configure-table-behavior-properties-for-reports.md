@@ -13,12 +13,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219245"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352883"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar las propiedades de comportamiento de las tablas para informes de Power View (SSAS tabular)
   Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
@@ -41,7 +41,7 @@ ms.locfileid: "48219245"
 -   **Imagen predeterminada** : especifica qué columna proporciona una imagen que representará los datos de fila (por ejemplo, un carnet con fotografía en un registro del empleado).  
   
 > [!NOTE]  
->  En la sección siguiente puede ver un enfoque de las optimizaciones de diseño desde el punto de vista de un formato de presentación determinado:  [Optimizar diseños específicos](#bkmk_optimizeforlayout).  
+>  Consulte la siguiente sección para enfocar las optimizaciones de diseño desde el punto de vista de un formato de presentación determinado:  [Optimizar diseños específicos](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Abrir el cuadro de diálogo de comportamiento de la tabla  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48219245"
 3.  En el cuadro de diálogo **Comportamiento de la tabla** , establezca el **Identificador de tabla**y después especifique otras propiedades en este cuadro de diálogo.  
   
 ## <a name="setting-the-row-identifier-property"></a>Establecer la propiedad Identificador de fila  
- En la tabla, el identificador de fila especifica una columna única que contiene solo valores únicos y ningún valor en blanco. La propiedad Identificador de fila se utiliza para cambiar la agrupación de forma que los grupos no se basen en la composición de campos de una fila, sino en una columna fija que se utilice siempre para identificar de forma única una fila, independientemente de los campos que se usen en un diseño de informe determinado.  
+ En la tabla, el identificador de fila especifica una columna única que contiene solo valores únicos y ningún valor en blanco. La propiedad de identificador de fila se utiliza para cambiar la agrupación de forma que un grupo no se basa en la composición de campos de una fila, sino en una columna fija que siempre se usa para identificar de forma única una fila, independientemente de los campos usados en un diseño de informe determinado.  
   
  El establecimiento de esta propiedad cambia el comportamiento de agrupación predeterminada de una agrupación dinámica basada en las columnas presentes en el lienzo a un comportamiento fijo de agrupación que resume basándose en el identificador de fila. El cambio del comportamiento de agrupación predeterminada es pertinente para los diseños de informe como, por ejemplo, una matriz, que en caso contrario agruparía (o mostraría subtotales) para cada columna de la fila.  
   
- En [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], el establecimiento de un identificador de fila habilita las siguientes propiedades adicionales: **Mantener filas únicas** , **Etiqueta predeterminada** e **Imagen predeterminada** .  
+ En [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], establecer un identificador de fila habilita las siguientes propiedades adicionales: **Mantener filas únicas** propiedad **etiqueta predeterminada** propiedad, y **imagen predeterminada** propiedad.  
   
  También puede utilizar **Identificador de tabla** como una propiedad independiente para habilitar:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48219245"
  Si establece la propiedad **Mantener filas únicas** , podrá designar una o varias columnas para que se repitan siempre, aunque haya instancias duplicadas, siempre que se agregue esa columna al lienzo de informe. Los valores calculados asociados a la fila ahora se asignarán según cada fila individual en lugar de acumularlos en una sola fila. Al elegir las columnas para la propiedad  **Mantener filas únicas** , elija aquellas que contengan valores únicos o casi únicos.  
   
 > [!NOTE]  
->  Dado que las columnas que el usuario final seleccione pueden afectar a la agrupación, que cambiará el contexto de filtro en los cálculos de las expresiones, los diseñadores de modelos deben tener la precaución de crear medidas que devuelvan resultados correctos. Para obtener más información, vea el tema sobre [Preguntas más frecuentes acerca de la vista avanzada](http://go.microsoft.com/fwlink/?LinkId=220674).  
+>  Dado que las columnas que el usuario final seleccione pueden afectar a la agrupación, que cambiará el contexto de filtro en los cálculos de las expresiones, los diseñadores de modelos deben tener la precaución de crear medidas que devuelvan resultados correctos. Para obtener más información, vea el tema sobre [Preguntas más frecuentes acerca de la vista avanzada](https://go.microsoft.com/fwlink/?LinkId=220674).  
   
 ## <a name="setting-a-default-label"></a>Establecer una etiqueta predeterminada  
  Esta propiedad especifica una etiqueta que aparece en la franja de navegación de un informe de mosaico. Cuando se utiliza con una imagen predeterminada, la etiqueta predeterminada aparece debajo de la imagen. Cuando no hay una imagen, la etiqueta predeterminada aparece sola. Al elegir una etiqueta predeterminada, seleccione la columna que proporcione más información acerca de la fila (por ejemplo, un nombre).  
@@ -113,11 +113,11 @@ ms.locfileid: "48219245"
   
  Compare estas imágenes de antes y después que muestran cómo el establecimiento de esta propiedad afecta al diseño de una matriz.  
   
- **Antes: agrupación predeterminada basada en los campos de la matriz**  
+ **Antes: Agrupación predeterminada basada en los campos de matriz**  
   
  ![Diseño de la matriz se agrupa según el identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de la matriz se agrupa según el identificador de fila")  
   
- **Después: agrupación según el identificador de fila**  
+ **Después de: Agrupación según el identificador de fila**  
   
  ![Diseño de la matriz se agrupa según el identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de la matriz se agrupa según el identificador de fila")  
   
@@ -126,11 +126,11 @@ ms.locfileid: "48219245"
   
  Compare estas imágenes de antes y después que muestran cómo el establecimiento de esta propiedad afecta al diseño de un gráfico. Es el mismo informe, con los mismos campos y presentación. La única diferencia consiste es que la imagen inferior muestra un informe después de haberse establecido **Identificador de tabla** en la tabla de elementos.  
   
- **Antes: agrupación predeterminada basada en los campos de un gráfico**  
+ **Antes: Agrupación predeterminada basada en los campos de un gráfico**  
   
  ![Gráfico basado en agrupación predeterminado en el nivel de campo](../media/ssas-rptprop-chartfieldgroup.gif "gráfico basado en agrupación predeterminado en el nivel de campo")  
   
- **Después: agrupación según el identificador de fila (el identificador de fila se convierte en el eje)**  
+ **Después de: Agrupación según el identificador de fila (identificador de fila se convierte en el eje)**  
   
  ![Gráfico basado en agrupación de identificador de fila](../media/ssas-rptprop-chartrowid.gif "gráfico basado en agrupación de identificador de fila")  
   

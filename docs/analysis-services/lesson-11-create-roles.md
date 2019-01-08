@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ec7afeddeeb4aae53f1368f55e2af5ec3ffcd0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985893"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512927"
 ---
-# <a name="lesson-11-create-roles"></a>Lección 11: Creación de Roles
+# <a name="lesson-11-create-roles"></a>Lección 11: Crear roles
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-En esta lección, creará roles. Los roles proporcionan seguridad a los objetos y datos de la base de datos del modelo limitando el acceso únicamente a los usuarios de Windows que sean miembros del rol. Cada rol se define con un permiso único: Ninguno, Lectura, Lectura y proceso, Proceso o Administrador. Los roles se pueden definir durante la creación del modelo mediante el rol de administrador. Una vez implementado un modelo, los roles se pueden administrar con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obtener más información, consulte [Roles](../analysis-services/tabular-models/roles-ssas-tabular.md).  
+En esta lección, creará roles. Los roles proporcionan seguridad a los objetos y datos de la base de datos del modelo limitando el acceso únicamente a los usuarios de Windows que sean miembros del rol. Cada rol se define con un solo permiso: Ninguno, lectura, lectura y proceso, proceso o administrador. Los roles se pueden definir durante la creación del modelo mediante el rol de administrador. Una vez implementado un modelo, los roles se pueden administrar con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obtener más información, consulte [Roles](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  
 > No es necesario crear roles para completar este tutorial. De forma predeterminada, la cuenta con la que ha iniciado sesión tendrá privilegios Administrador para el modelo. Sin embargo, para permitir que a otros usuarios de su organización examinen el modelo mediante el uso de un cliente de informes, debe crear al menos un rol con la lectura de permisos y agregar esos usuarios como miembros.  
@@ -37,7 +37,7 @@ Dado que las cuentas de usuario y grupo de Windows de su organización son únic
 Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 10: crear particiones](../analysis-services/lesson-10-create-partitions.md).  
+Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 10: Crear particiones](../analysis-services/lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Crear roles  
   
@@ -69,10 +69,10 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
     =DimGeography[CountryRegionCode] = "US" 
     ```
     
-    Una fórmula de filtro de fila se debe resolver como un valor booleano (TRUE o FALSE). Con esta fórmula, está especificando que solo las filas con el valor de código de país o región de "US" estarán visibles para el usuario.  
+    Una fórmula de filtro de fila se debe resolver como un valor booleano (TRUE o FALSE). Con esta fórmula, está especificando que solo las filas con el valor del código de región del país "US" sea visible para el usuario.  
     ![como-tabular-lesson11-rol-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
-6.  Opcional: Haga clic en la pestaña **Miembros** y, después, en **Agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol.  
+6.  Opcional: Haga clic en la pestaña **Miembros** y luego en **Agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol.  
   
 #### <a name="to-create-an-administrator-user-role"></a>Para crear un rol de usuario de administrador  
   
@@ -82,11 +82,11 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 3.  Asigne a este rol **administrador** permiso.  
   
-4.  Opcional: Haga clic en la pestaña **Miembros** y, después, en **Agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol. 
+4.  Opcional: Haga clic en la pestaña **Miembros** y luego en **Agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol. 
   
   
 ## <a name="whats-next"></a>¿Qué sigue?
-Vaya a la siguiente lección: [lección 12: analizar en Excel](../analysis-services/lesson-12-analyze-in-excel.md).
+Vaya a la lección siguiente: [Lección 12: Analizar en Excel](../analysis-services/lesson-12-analyze-in-excel.md).
 
   
   

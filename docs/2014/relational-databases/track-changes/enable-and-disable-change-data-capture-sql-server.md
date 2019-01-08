@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -16,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebbfd8c66737afb03564dee557757f4406a5c5a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057565"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202114"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
   Este tema describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
@@ -29,7 +28,7 @@ ms.locfileid: "48057565"
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar la captura de datos modificados en una base de datos  
  Para que pueda crearse una instancia de captura para tablas individuales, es preciso que un miembro del rol fijo de servidor `sysadmin` habilite previamente la base de datos para la captura de datos modificados. Esto se hace ejecutando el procedimiento almacenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) en el contexto de la base de datos. Para determinar si una base de datos ya está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo `sys.databases`.  
   
- Cuando una base de datos está habilitada para la captura de datos modificados, la `cdc` esquema, `cdc` usuario, las tablas de metadatos y otros objetos del sistema se crean para la base de datos. El `cdc` esquema contiene las tablas de metadatos de captura de datos de cambio y, después de las tablas de origen están habilitadas para la captura de datos modificados, las tablas de cambios individuales que sirven como repositorio para los datos modificados. El `cdc` esquema también contiene las funciones de sistema asociadas que se usan para consultar los datos modificados.  
+ Al habilitar una base de datos para la captura de datos modificados, se crean para la base de datos el esquema `cdc`, el usuario `cdc`, las tablas de metadatos y otros objetos de sistema. El esquema `cdc` contiene las tablas de metadatos de la captura de datos modificados y, una vez que las tablas de origen han sido habilitadas para esta captura, también contiene las tablas de cambios individuales que sirven como repositorio de los datos de cambios. Este esquema `cdc` también contiene las funciones de sistema asociadas que se usan para consultar los datos modificados.  
   
  La captura de datos modificados requiere el uso exclusivo del esquema `cdc` y del usuario `cdc`. Si en una base de datos existe un esquema o un usuario de base de datos denominado *cdc* , dicha base de datos no se puede habilitar para la captura de datos modificados hasta que el esquema y/o el usuario se quiten o se cambie su nombre.  
   
@@ -49,7 +48,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>Deshabilitar la captura de datos modificados para una base de datos  
- Un miembro de la `sysadmin` rol fijo de servidor puede ejecutar el procedimiento almacenado [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) en el contexto de base de datos para deshabilitar la captura de datos modificados para una base de datos. No es necesario deshabilitar tablas individuales antes de deshabilitar la base de datos. Cuando se deshabilita la base de datos quitan todos los metadatos de captura de datos modificados asociados, incluidos el `cdc` trabajos de captura de usuario y esquema y los datos modificados. Sin embargo, los roles de acceso creados por la captura de datos modificados no se quitarán automáticamente y se deben eliminar explícitamente. Para determinar si una base de datos está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo sys.databases.  
+ Un miembro de la `sysadmin` rol fijo de servidor puede ejecutar el procedimiento almacenado [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) en el contexto de base de datos para deshabilitar la captura de datos modificados para una base de datos. No es necesario deshabilitar tablas individuales antes de deshabilitar la base de datos. Cuando se deshabilita la base de datos, se quitan todos los metadatos de la captura de datos modificados asociados, incluidos el esquema y el usuario de `cdc` y los trabajos de captura de datos modificados. Sin embargo, los roles de acceso creados por la captura de datos modificados no se quitarán automáticamente y se deben eliminar explícitamente. Para determinar si una base de datos está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo sys.databases.  
   
  Si se quita una base de datos habilitada para la captura de datos modificados, se quitarán automáticamente los trabajos de captura de datos modificados.  
   
@@ -69,7 +68,7 @@ GO
 ```  
   
 ## <a name="enable-change-data-capture-for-a-table"></a>Habilitar la captura de datos modificados para una tabla  
- Después de una base de datos se habilitó para la captura de datos modificados, los miembros de la `db_owner` rol fijo de base de datos puede crear una instancia de captura para tablas de origen individuales mediante el procedimiento almacenado `sys.sp_cdc_enable_table`. Para determinar si una tabla de origen se ha habilitado ya para la captura de datos modificados, examine la columna is_tracked_by_cdc en la vista de catálogo `sys.tables`.  
+ Una vez se haya habilitado una base de datos para la captura de datos modificados, los miembros del rol fijo de base de datos `db_owner` pueden crear una instancia de captura para tablas de origen individuales mediante el procedimiento almacenado `sys.sp_cdc_enable_table`. Para determinar si una tabla de origen se ha habilitado ya para la captura de datos modificados, examine la columna is_tracked_by_cdc en la vista de catálogo `sys.tables`.  
   
  Se pueden especificar las opciones siguientes al crear una instancia de captura:  
   
@@ -99,7 +98,7 @@ GO
   
  `A role for controlling access to a change table.`  
   
- La finalidad del rol con nombre es controlar el acceso a los datos de cambios. El rol especificado puede ser un rol fijo de servidor existente o un rol de base de datos. Si el rol especificado aún no existe, se crea automáticamente un rol de base de datos con ese nombre. Los miembros del rol `sysadmin` o `db_owner` tienen acceso total a los datos de las tablas de cambios. Los demás usuarios deben tener el permiso SELECT en todas las columnas capturadas de la tabla de origen. Además, cuando se especifica un rol, los usuarios que no sean miembros del `sysadmin` o `db_owner` rol también debe ser miembros del rol especificado.  
+ La finalidad del rol con nombre es controlar el acceso a los datos de cambios. El rol especificado puede ser un rol fijo de servidor existente o un rol de base de datos. Si el rol especificado aún no existe, se crea automáticamente un rol de base de datos con ese nombre. Los miembros del rol `sysadmin` o `db_owner` tienen acceso total a los datos de las tablas de cambios. Los demás usuarios deben tener el permiso SELECT en todas las columnas capturadas de la tabla de origen. Además, cuando se especifica un rol, los usuarios que no sean miembros del rol `sysadmin` o `db_owner` también deben ser miembros del rol especificado.  
   
  Si prefiere no usar un rol de acceso, debe establecer explícitamente el valor NULL en el parámetro *@role_name* . Vea la plantilla `Enable a Table Without Using a Gating Role` para obtener un ejemplo de cómo habilitar una tabla sin un rol de acceso.  
   
@@ -142,11 +141,11 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si la captura de datos modificados está habilitada en una tabla con una clave principal existente y el parámetro *@index_name* no se usa para identificar un índice único alternativo, la característica de captura de datos modificados usará la clave principal. Los cambios subsiguientes en la clave principal no se permitirán sin deshabilitar primero la captura de datos modificados para la tabla. Esto es así independientemente de si se solicitó compatibilidad con las consultas net changes cuando se configuró la captura de datos modificados. Si no hay ninguna clave principal en una tabla en el momento en que se habilita para la captura de datos modificados, la captura de datos modificados omite la incorporación posterior de una clave principal. Dado que la captura de datos modificados no utilizará ninguna clave principal que se cree una vez habilitada la tabla, las columnas de clave y la clave se pueden quitar sin restricciones.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Deshabilitar la captura de datos modificados para una tabla  
- Los miembros de la `db_owner` rol fijo de base de datos puede quitar una instancia de captura para tablas de origen individuales mediante el procedimiento almacenado `sys.sp_cdc_disable_table`. Para determinar si una tabla de origen está habilitada actualmente para la captura de datos modificados, examine la columna `is_tracked_by_cdc` en la vista de catálogo `sys.tables`. Si no hay ninguna tabla habilitada para la base de datos después de que tenga lugar la deshabilitación, también se quitarán los trabajos de captura de datos modificados.  
+ Los miembros del rol fijo de base de datos `db_owner` pueden quitar una instancia de captura para las tablas de origen individuales utilizando el procedimiento almacenado `sys.sp_cdc_disable_table`. Para determinar si una tabla de origen está habilitada actualmente para la captura de datos modificados, examine la columna `is_tracked_by_cdc` en la vista de catálogo `sys.tables`. Si no hay ninguna tabla habilitada para la base de datos después de que tenga lugar la deshabilitación, también se quitarán los trabajos de captura de datos modificados.  
   
  Si quita una tabla habilitada para la captura de datos modificados, se quitarán automáticamente los metadatos de la captura de datos modificados que están asociados a la tabla.  
   

@@ -18,12 +18,12 @@ ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66714f9f401c8a5061b1cff2d316555d5e9a71bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807257"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
   Las funciones [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) devuelven una columna denominada RANK que contiene valores ordinales de 0 a 1000 (valores de intervalo). Estos valores se utilizan para clasificar las filas devueltas en función del grado de coincidencia con los criterios de selección. Los valores de clasificación solo indican un orden relativo de relevancia de las filas en el conjunto de resultados, con un valor inferior que indica la relevancia menor. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta.  
@@ -37,7 +37,7 @@ ms.locfileid: "48093345"
   
 ##  <a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: buscar solo las tres primeras coincidencias  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: Busca solo las tres primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver las tres primeras coincidencias.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: buscar las diez primeras coincidencias  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: Buscar las diez primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver la descripción de los 5 productos más destacados, donde la columna `Description` contiene la palabra “aluminum” cerca de la palabra “light” o de la palabra “lightweight”.  
   
 ```  
@@ -176,9 +176,9 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
 ```  
 ContainsRank = same formula used for CONTAINSTABLE ranking of a single term (above).  
 Weight = the weight specified in the query for each term. Default weight is 1.  
-WeightedSum = Σ[key=1 to n] ContainsRankKey * WeightKey  
-Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )   
-      + ( Σ[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
+WeightedSum = ??[key=1 to n] ContainsRankKey * WeightKey  
+Rank =  ( MaxQueryRank * WeightedSum ) / ( ( ??[key=1 to n] ContainsRankKey^2 )   
+      + ( ??[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
   
 ```  
   
@@ -187,14 +187,14 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
  La clasificación de[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) se basa en la fórmula de clasificación OKAPI BM25. Las consultas FREETEXTTABLE agregarán palabras a la consulta a través de la generación de formas con inflexión de las palabras originales de la consulta; estas palabras se tratan como palabras independientes sin ninguna relación especial con las palabras a partir de las cuales se generan. Los sinónimos que se generan con la característica de diccionario de sinónimos se tratan como términos independientes del mismo peso. Cada palabra de la consulta contribuye al rango.  
   
 ```  
-Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
+Rank = ??[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   

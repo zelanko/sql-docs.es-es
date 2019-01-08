@@ -14,12 +14,12 @@ ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec2d6fa40e5f2e6aa7fcfd1d5be40667a518d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 628a94ec8e8c79ec88f8427fd2ea41f158ae6c38
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194335"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539792"
 ---
 # <a name="report-properties-dialog-box-references"></a>Propiedades del informe (cuadro de diálogo), Referencias
   Seleccione **Referencias** en el cuadro de diálogo **Propiedades del informe** para agregar o quitar referencias a ensamblados personalizados u otros ensamblados externos, así como instancias de clases personalizadas que las expresiones usarán en la definición de informe.  
@@ -29,7 +29,7 @@ ms.locfileid: "48194335"
  Muestra los ensamblados a los que el informe hace referencia. El ensamblado debe estar disponible en el equipo donde está instalada la herramienta que está usando para diseñar el informe y en el servidor de informes. El nombre de la referencia debe coincidir con el contenido de  **\<CodeModule >** exactamente las etiquetas en el archivo de lenguaje de definición de informe (.rdl).  
   
  **Agregar**  
- Haga clic en esta opción para agregar un ensamblado. Haga clic en el botón del signo de puntos suspensivos (…) para abrir el cuadro de diálogo **Abrir** y seleccionar los ensamblados necesarios para completar el procesamiento del informe y la evaluación de las expresiones.  
+ Haga clic en esta opción para agregar un ensamblado. Haga clic en el botón de puntos suspensivos (...) para abrir el **abrir** cuadro de diálogo y seleccionar los ensamblados necesarios para completar la evaluación de procesamiento y la expresión de informe.  
   
  **Eliminar**  
  Para quitar una referencia de ensamblado de la lista, seleccione el nombre del ensamblado y haga clic en el botón **Quitar** .  
@@ -38,7 +38,7 @@ ms.locfileid: "48194335"
  Muestra las instancias de clases que se utilizan en el informe. Solo los miembros basados en instancias, no los miembros estáticos, utilizan la lista de clases.  
   
  **Agregar**  
- Haga clic en esta opción para agregar una referencia de clase. Haga clic en el botón del signo de puntos suspensivos (…) para abrir el cuadro de diálogo **Abrir** y seleccionar las clases necesarias para completar el procesamiento del informe y la evaluación de las expresiones.  
+ Haga clic en esta opción para agregar una referencia de clase. Haga clic en el botón de puntos suspensivos (...) para abrir el **abrir** cuadro de diálogo y seleccionar las clases necesarias para completar la evaluación de procesamiento y la expresión de informe.  
   
  **Eliminar**  
  Para eliminar la instancia de clase, selecciónela y haga clic en el botón **Quitar** .  

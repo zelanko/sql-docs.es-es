@@ -20,16 +20,16 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9055fa6c277ebcbeccae909ddd397d39d62cf04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213114"
 ---
 # <a name="sqldatasources-function"></a>Función SQLDataSources
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLDataSources** devuelve información acerca de un origen de datos. Esta función se implementa solo por el Administrador de controladores.  
@@ -71,7 +71,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [Salida] Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponibles para devolver en \* *ServerName*. Si el número de caracteres disponibles para devolver es mayor o igual a *BufferLength1*, el nombre del origen de datos en \* *ServerName* se trunca a *BufferLength1* menos la longitud de un carácter de terminación null.  
   
- *Description*  
+ *Descripción*  
  [Salida] Puntero a un búfer en el que se va a devolver la descripción del controlador asociado con el origen de datos. Por ejemplo, dBASE o SQL Server.  
   
  Si *descripción* es NULL, *NameLength2Ptr* devolverá el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponibles para devolver en el búfer señalado por *Descripción*.  

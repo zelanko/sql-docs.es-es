@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540845"
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
   En este tema se describe cómo agregar columnas incluidas (o sin clave) para ampliar la funcionalidad de índices no clúster en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al incluir columnas sin clave, puede crear índices no clúster que abarcan más consultas. Esto se debe a que las columnas sin clave tienen las siguientes ventajas:  
@@ -55,7 +55,7 @@ ms.locfileid: "48168817"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="DesignRecs"></a> Recomendaciones de diseño  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48168817"
   
 -   Las columnas sin clave solo pueden definirse en índices no clúster.  
   
--   Todos los tipos de datos excepto `text`, `ntext`, y `image` puede usarse como columnas sin clave.  
+-   Todos los tipos de datos excepto `text`, `ntext` e `image` se pueden usar como columnas sin clave.  
   
 -   Las columnas calculadas que son deterministas, y precisas o imprecisas, pueden ser columnas sin clave. Para obtener más información, vea [Indexes on Computed Columns](indexes-on-computed-columns.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48168817"
   
     -   Cambiar la nulabilidad de NOT NULL a NULL.  
   
-    -   Aumente la longitud de `varchar`, `nvarchar`, o `varbinary` columnas.  
+    -   Aumentar la longitud de las columnas `varchar`, `nvarchar` o `varbinary`.  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -96,17 +96,17 @@ ms.locfileid: "48168817"
   
 3.  Haga clic en el signo más para expandir la tabla en la que desea crear un índice con columnas sin clave.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices** , seleccione **Nuevo índice**y, luego, **Índice no agrupado…**.  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
-6.  En la pestaña **Columnas de clave de índice** , haga clic en **Agregar**.  
+6.  En la pestaña **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
 7.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active las casillas de las columnas de tabla que se van a agregar al índice.  
   
 8.  Haga clic en **Aceptar**.  
   
-9. En la pestaña **Columnas incluidas** , haga clic en **Agregar**.  
+9. En la pestaña **Columnas incluidas**, haga clic en **Agregar...**.  
   
 10. En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active las casillas de las columnas de tabla que se van a agregar al índice como columnas sin clave.  
   

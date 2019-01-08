@@ -18,12 +18,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137055"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525560"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Examinar un modelo de árboles de decisión
   Al abrir un modelo de clasificación con **examinar**, el modelo se muestra en un visor de árbol de decisión interactivo, similar a la [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de árboles de decisión de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor muestra los resultados de clasificación en forma de gráfico, que se ha diseñado para resaltar los criterios que distinguen un grupo de datos de otro. También puede explorar en profundidad los subconjuntos individuales del árbol y recuperar los datos subyacentes.  
@@ -90,7 +90,7 @@ ms.locfileid: "48137055"
   
     -   Edad > = 32 y \< ingresos anuales y 53 > = 26 000 e hijos = 0  
   
-         Escenarios totales: 1150  
+         Total de casos: 1150  
   
          Probabilidad de ser comprador de bicicletas: 18%  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48137055"
   
          Total de casos: 402  
   
-         Probabilidad de ser comprador de bicicletas: 16 %  
+         Probabilidad de ser comprador de bicicletas: 16%  
   
 7.  Cambie el valor de **en segundo plano** desde **Sí** a **No** y ver cómo cambia el gráfico.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48137055"
   
 -   Si los datos se pueden dividir en varias series, se crea otro modelo para cada conjunto de datos que desee modelar.  
   
--   En el modelo de datos de ejemplo, solo hay un resultado de predicción (Bike Buyer), pero imaginemos que tiene información sobre si el cliente ha comprado un plan de servicios y desea predecir también eso. En ese caso tendría esos datos en una columna independiente e incluiría dos atributos de predicción en el modelo.  
+-   En el modelo de datos de ejemplo, hay solo un resultado de predicción: Bike Buyer - pero imaginemos que tiene información sobre si el cliente compra un plan de servicio y desea predecir también eso. En ese caso tendría esos datos en una columna independiente e incluiría dos atributos de predicción en el modelo.  
   
      Haga clic en el **histograma** opción, en la esquina superior izquierda del panel de árbol de decisión, para cambiar el número máximo de Estados que pueden aparecer en los histogramas del árbol. Esto resulta útil si el atributo de predicción tiene muchos estados. Los estados aparecen en una histograma en orden de popularidad de izquierda a derecha.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48137055"
   
     -   **Obtener detalles del modelo**. Esta opción obtiene los casos que pertenecen al nodo seleccionado y los guarda en una tabla de Excel. Obtendrá solamente las columnas de los datos que se usaron realmente en la generación del modelo.  
   
-    -   **Obtención de detalles de las columnas de estructura**. Esta opción obtiene los casos que pertenecen al nodo seleccionado y los guarda en una tabla de Excel. Obtendrá toda la información disponible en los datos subyacentes cuando se crearon, incluso los de las columnas que no se usaron en el modelo. Por ejemplo, puede haber excluido la dirección del cliente y código postal porque esos campos no resultan útiles con el análisis, pero los ha dejado en la estructura.  
+    -   **Obtención de detalles de las columnas de estructura**. Esta opción obtiene los casos que pertenecen al nodo seleccionado y los guarda en una tabla de Excel. Obtenga toda la información que estaba disponible en la base de datos cuando se crearon, incluso de una columna no se usaron en el modelo. Por ejemplo, puede haber excluido la dirección del cliente y código postal porque esos campos no resultan útiles con el análisis, pero los ha dejado en la estructura.  
   
      Vuelva a Excel para ver los datos. El visor Examinar ejecuta una consulta, guarda los datos en una hoja de cálculo nueva y etiqueta los resultados.  
   

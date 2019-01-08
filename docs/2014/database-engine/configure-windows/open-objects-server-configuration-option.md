@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - open objects option
@@ -13,12 +12,12 @@ ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6938427e9cf1b963124cea0e972072811eeed10e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8795d9ea157857c38f1c9a6aa452114947fa5760
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109365"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641175"
 ---
 # <a name="open-objects-server-configuration-option"></a>open objects (opción de configuración del servidor)
   Esta opción sigue presente en **sp_configure**, si bien su funcionalidad se ha deshabilitado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La opción no tiene ningún efecto. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el número de objetos de bases de datos abiertos se administra dinámicamente y solo está limitado por la memoria disponible. La opción **open objects** está disponible en **sp_configure** por razones de compatibilidad con versiones anteriores de los scripts existentes.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -14,12 +14,12 @@ ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 191f65592c9bb7962624297daced2692a22a0f4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139555"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795867"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Definir la respuesta a una alerta (SQL Server Management Studio)
   En este tema se describe cómo definir el modo en que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responde a las alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48139555"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -63,13 +63,13 @@ ms.locfileid: "48139555"
   
 3.  Haga clic en el signo más para expandir la carpeta **Alertas** .  
   
-4.  Haga clic con el botón derecho en la alerta en la que desea definir una respuesta y seleccione **Propiedades**.  
+4.  Haga clic con el botón secundario en la alerta en la que desea definir una respuesta y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo *Propiedades de la alerta***nombre_de_alerta*, en **Seleccionar una página**, seleccione **Respuesta**.  
+5.  En el cuadro de diálogo _alert_name_**Propiedades de la alerta** , en **Seleccionar una página**, seleccione **Respuesta**.  
   
-6.  Active la casilla **Ejecutar trabajo** y, en la lista situada debajo de la casilla **Ejecutar trabajo** , seleccione el trabajo que se ejecutará cuando se produzca la alerta. Puede crear un nuevo trabajo haciendo clic en **Nuevo trabajo**. Puede ver más información acerca del trabajo haciendo clic en **View Job**. Para obtener más información sobre las opciones disponibles en los cuadros de diálogo **Nuevo trabajo** y **Propiedades del trabajo***nombre_de_trabajo*, consulte [Crear un trabajo](create-a-job.md) y [Ver un trabajo](view-a-job.md).  
+6.  Active la casilla **Ejecutar trabajo** y, en la lista situada debajo de la casilla **Ejecutar trabajo** , seleccione el trabajo que se ejecutará cuando se produzca la alerta. Puede crear un nuevo trabajo haciendo clic en **Nuevo trabajo**. Puede ver más información acerca del trabajo haciendo clic en **View Job**. Para más información sobre las opciones disponibles en los cuadros de diálogo **Nuevo trabajo** y **Propiedades de trabajo**_nombre_trabajo_ , consulte [Crear un trabajo](create-a-job.md) y [Ver un trabajo](view-a-job.md).  
   
-7.  Active la casilla **Notificar a los operadores** si desea notificar a los operadores cuándo se activará la alerta. En **Lista de operadores**, seleccione uno o más de los métodos siguientes para notificar al operador o a los operadores: **Correo electrónico**, **Buscapersonas**o **Net Send**. Puede crear un nuevo operador haciendo clic en **Nuevo operador**. Puede ver más información acerca de un operador haciendo clic en **Ver operador**. Para obtener más información acerca de las opciones disponibles en los cuadros de diálogo **Nuevo operador** y **Ver las propiedades del operador** , vea [Create an Operator](create-an-operator.md) y [View Information About an Operator](view-information-about-an-operator.md).  
+7.  Active la casilla **Notificar a los operadores** si desea notificar a los operadores cuándo se activará la alerta. En el **lista de operadores**, seleccione uno o varios de los métodos siguientes para notificar al operador o los operadores: **Correo electrónico**, **buscapersonas**, o **Net Send**. Puede crear un nuevo operador haciendo clic en **Nuevo operador**. Puede ver más información acerca de un operador haciendo clic en **Ver operador**. Para obtener más información acerca de las opciones disponibles en los cuadros de diálogo **Nuevo operador** y **Ver las propiedades del operador** , vea [Create an Operator](create-an-operator.md) y [View Information About an Operator](view-information-about-an-operator.md).  
   
 8.  Cuando termine, haga clic en **Aceptar**.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "48139555"
   
     ```  
     -- adds an e-mail notification for Test Alert.  
-    -- assumes that Test Alert already exists and that François Ajenstat is a valid operator name   
+    -- assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name   
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_add_notification  
      @alert_name = N'Test Alert',  
-     @operator_name = N'François Ajenstat',  
+     @operator_name = N'Fran??ois Ajenstat',  
      @notification_method = 1 ;  
     GO  
     ```  

@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysextendedarticlesview_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe6c88ac0dc8b131323282478a2330525d0fcf9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648193"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757039"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47648193"
 |**artid**|**int**|La columna de identidad que proporciona un número de identificación único para el artículo.|  
 |**creation_script**|**nvarchar(255)**|Script de creación de esquemas para el artículo.|  
 |**del_cmd**|**nvarchar(255)**|Comando para ejecutar con DELETE; en caso contrario, se construye a partir del registro.|  
-|**Descripción**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
+|**description**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
 |**dest_table**|**nvarchar(128)**|Nombre de la tabla de destino.|  
 |**filter**|**int**|Identificador de objeto del procedimiento almacenado utilizado para la partición horizontal.|  
 |**filter_clause**|**ntext**|La cláusula WHERE del artículo, utilizada para el filtrado horizontal.|  

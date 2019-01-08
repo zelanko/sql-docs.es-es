@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead2fbcff003474ef04807967a062ff8f2049d03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b92f8d272faf79388939ff3378b489d28ff3697
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219431"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813377"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ayuda F1 del Asistente para actualización del paquete SSIS
   Usar el Asistente para actualizar paquetes de SSIS para actualizar [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] paquetes y [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] paquetes al formato de paquete para la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

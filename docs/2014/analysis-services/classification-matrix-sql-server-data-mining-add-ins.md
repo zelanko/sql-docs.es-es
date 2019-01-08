@@ -16,12 +16,12 @@ ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4892ab57fc39f2888431b61e7b924496d9749f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522170"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matriz de clasificación (Complementos de minería de datos de SQL Server)
   ![Botón matriz de clasificación, cinta de opciones minería de datos](media/dmc-cmatrix.gif "botón matriz de clasificación, cinta de opciones minería de datos")  
@@ -31,7 +31,7 @@ ms.locfileid: "48161856"
  En estos complementos, use el **matriz de clasificación** Asistente para seleccionar un modelo, especificar los datos de prueba y, a continuación, generar una matriz de resultados.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Cómo leer una matriz de clasificación  
- Suponga que el objetivo es diseñar un programa de fidelización de clientes y asignar después los clientes a las categorías adecuadas, de forma que pueda proporcionarles el nivel adecuado de incentivos. Ha implementado tres niveles en el programa de recompensas, bronce, plata y oro, y los aplicado a los clientes en una fase experimental. También ha diseñado un modelo que analiza los clientes y predice las categorías correctas. Ahora usará la matriz de clasificación en los datos de ensayo para determinar la calidad del modelo para predecir la oferta correcta de todos los clientes.  
+ Supongamos que su objetivo es diseñar un programa de fidelización de clientes y, a continuación, asignar a clientes a las categorías apropiadas, por lo que puede proporcionar el nivel adecuado de incentivos. Se ha implementado tres niveles para el programa de recompensas, bronce, plata y oro - y los a los clientes en una fase de prueba. También ha diseñado un modelo que analiza los clientes y predice las categorías correctas. Ahora usará la matriz de clasificación en los datos de ensayo para determinar la calidad del modelo para predecir la oferta correcta de todos los clientes.  
   
  La tabla de la matriz de clasificación indica cuántos clientes se asignarían a cada categoría en función del modelo y compara ese resultado con el número de clientes que se suscribieron realmente a cada nivel de recompensa.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161856"
 |Bronce|**94.45%**|15.18%|1,70%|  
 |Oro|2.72%|**84.82%**|0.00%|  
 |Plata|1.84%|0.00%|**93.80%**|  
-|*Corregir*|*95.45%*|*84.82%*|*98.30%*|  
+|*Correcto*|*95.45%*|*84.82%*|*98.30%*|  
 |*Incorrectas*|*4.55%*|*15.18%*|*1,70%*|  
   
 -   Cada columna muestra los valores reales del conjunto de datos de prueba.  
@@ -61,7 +61,7 @@ ms.locfileid: "48161856"
   
 3.  Seleccione la columna cuya precisión desea evaluar. Puede elegir solo una columna al crear una matriz, pero la columna puede tener varios valores.  
   
-     Sugerencia: puede resultar difícil interpretar una matriz de clasificación si la columna de predicción tiene muchas columnas para comparar.  
+     Sugerencia: Puede ser difícil de interpretar una matriz de clasificación, si la columna de predicción tiene muchas columnas para comparar.  
   
      En el **seleccionar columnas para predecir** página, también puede especificar si desea mostrar el número de valores correctos e incorrectos o mostrar un porcentaje.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48161856"
   
 -   El modelo que va a medir necesita predecir un valor que es discreto o que ya tiene datos discretos.  
   
--   Si no usó la opción de guardar un conjunto de pruebas con la estructura o el modelo, necesita obtener un conjunto de datos de entrada que tenga básicamente el mismo número de columnas, con tipos de datos coincidentes, que los usados en el modelo.  
+-   Si no usó la opción para guardar un conjunto de pruebas con la estructura o modelo, deberá obtener un conjunto de datos de entrada que tiene básicamente el mismo número de columnas con tipos de datos, como los que se usan en el modelo de coincidencia.  
   
 -   Tanto el modelo de minería de datos como los nuevos datos que esté usando para las pruebas deben contener al menos una columna que se pueda predecir, y las columnas deben contener el mismo tipo de datos.  
   

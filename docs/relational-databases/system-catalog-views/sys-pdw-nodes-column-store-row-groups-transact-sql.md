@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7332f9e4196c901777e0c35a349f55207e7608dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698243"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520365"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>Sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698243"
 |**row_group_id**|**int**|Id. de este grupo de filas. Es único en la partición.|  
 |**dellta_store_hobt_id**|**bigint**|El hobt_id para los grupos de filas delta, o NULL si el tipo del grupo de filas no es delta. Un grupo de filas delta es un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas delta tiene el **abierto** estado. Un grupo de filas delta está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.|  
 |**state**|**tinyint**|Número de identificación asociado con el state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Descripción del estado persistente del grupo de filas:<br /><br /> OPEN: grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas abierto está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.<br /><br /> CLOSED: grupo de filas que se ha rellenado, pero que el proceso de tupla motriz aún no ha comprimido.<br /><br /> COMPRESSED: grupo de filas que se ha rellenado y comprimido.|  
+|**state_desccription**|**nvarchar(60)**|Descripción del estado persistente del grupo de filas:<br /><br /> Abra - un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas abierto está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.<br /><br /> CERRADO: un grupo de filas que se ha rellenado, pero el proceso de tupla motriz aún no se han comprimido.<br /><br /> COMPRIMIR - un grupo de filas que se ha rellenado y comprimido.|  
 |**total_rows**|**bigint**|Total de filas almacenadas físicamente en el grupo de filas. Es posible que se hayan eliminado algunas, pero estas se siguen almacenando. El número máximo de filas en un grupo de filas es 1.048.576 (hexadecimal FFFFF).|  
 |**deleted_rows**|**bigint**|Número de filas almacenadas físicamente en el grupo de filas que están marcadas para eliminación.<br /><br /> Siempre 0 para diferencias grupos de filas.|  
 |**size_in_bytes**|**int**|Tamaño total, en bytes, de todas las páginas de este grupo de filas. Este tamaño no incluye el tamaño necesario para almacenar los metadatos o diccionarios compartidos.|  

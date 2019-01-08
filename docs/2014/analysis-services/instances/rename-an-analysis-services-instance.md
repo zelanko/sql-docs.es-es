@@ -16,12 +16,12 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d76840f084f40b77b6b6539d41d2c9f8a1e1ff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077575"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401450"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Cambiar el nombre de una instancia de Analysis Services
   Puede cambiar el nombre de una instancia existente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando el **cambiar el nombre de instancia** cuadro de diálogo.  
@@ -58,7 +58,7 @@ ms.locfileid: "48077575"
   
      Será necesario actualizar un inicio de sesión o los permisos de archivo de base de datos si ha utilizado una cuenta virtual para aprovisionar el servicio. Las cuentas virtuales se basan en el nombre de instancia, por lo que si cambia el nombre de la instancia, la cuenta virtual también se actualiza al mismo tiempo. Esto significa que los inicios de sesión o permisos anteriores creados para la instancia anterior ya no son válidos.  
   
-     En el ejemplo siguiente se propociona una ilustración. Suponga que ha instalado un servidor en modo tabular como una instancia denominada “Tabular” utilizando la cuenta virtual predeterminada, dando lugar a la siguiente configuración:  
+     En el ejemplo siguiente se propociona una ilustración. Supongamos que ha instalado a un servidor de modo tabular como una instancia denominada "Tabular" utilizando la cuenta virtual predeterminada, lo que resulta en la siguiente configuración:  
   
     1.  Nombre de instancia = \<servidor > \TABULAR  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48077575"
   
     3.  Cuenta virtual = NT Service\ MSOLAP$TABULAR  
   
-     Suponga ahora suponga que cambia el nombre de la instancia a “TAB2”. Como consecuencia del cambio de nombre, la configuración podría tener ahora el siguiente aspecto:  
+     Ahora supongamos que cambiar el nombre de la instancia a "TAB2". Como consecuencia del cambio de nombre, la configuración podría tener ahora el siguiente aspecto:  
   
     1.  Nombre de instancia = \<servidor > \TAB2  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48077575"
   
     3.  Cuenta virtual = NT Service\ MSOLAP$TAB2  
   
-     Como puede ver, la base de datos y los permisos de archivo que se concedieron anteriormente a “NT Service\ MSOLAP$TABULAR” ya no son válidos. Para asegurarse de que las tareas y las operaciones realizadas por el servicio se ejecuten como antes, ahora tendría que conceder nuevos permisos de base de datos y de archivo a en “NT Service\ MSOLAP$TAB2”.  
+     Como puede ver, los permisos de base de datos y el archivo que se concedieron anteriormente a "NT Service\ MSOLAP$ TABULAR" ya no son válidos. Para garantizar que las tareas y las operaciones realizadas por el servicio se ejecutan como antes, ahora tendría debe conceder permisos de base de datos y el archivo nuevo a "NT Service\ MSOLAP$ TAB2".  
   
   

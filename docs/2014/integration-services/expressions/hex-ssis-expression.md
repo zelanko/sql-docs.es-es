@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hexadecimal data
@@ -14,12 +13,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6892dd643958aed567893dbe873617a0b4128112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f0db458cb94993d36f0d565a7fae64f18f7876e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805167"
 ---
 # <a name="hex-ssis-expression"></a>HEX (expresión de SSIS)
   Devuelve una cadena que representa el valor hexadecimal de un entero.  
@@ -41,11 +40,11 @@ HEX(integer_expression)
 ## <a name="remarks"></a>Comentarios  
  HEX devuelve null si *integer_expression* es null.  
   
- El argumento *integer_expression* debe devolver un entero. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ El argumento *integer_expression* debe devolver un entero. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  El resultado devuelto no incluye calificadores, como el prefijo 0x. Para incluir un prefijo utilice el operador + (Concatenar). Para más información, vea [+ &#40;Concatenar&#41; &#40;expresión de SSIS&#41;](concatenate-ssis-expression.md).  
   
- En la notación hexadecimal las letras A – F siempre aparecen en mayúscula.  
+ En la notación hexadecimal, las letras A-F siempre aparecen en mayúscula.  
   
  La longitud de la cadena resultante depende del tipo de datos entero usado, como se indica a continuación:  
   

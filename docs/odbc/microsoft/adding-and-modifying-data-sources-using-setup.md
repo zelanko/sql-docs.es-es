@@ -18,18 +18,18 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767763"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526859"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Agregar y modificar orígenes de datos mediante el programa de instalación
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
   
- Un origen de datos identifica una ruta de acceso a los datos que pueden incluir una biblioteca de red, servidor, base de datos y otros atributos, en este caso, el origen de datos es la ruta de acceso a una base de datos de Oracle. Para conectarse a un origen de datos, el Administrador de controladores comprueba el registro de Windows para obtener información de conexión específica.  
+ Un origen de datos identifica una ruta de acceso a los datos que pueden incluir una biblioteca de red, servidor, base de datos y otros atributos: en este caso, el origen de datos es la ruta de acceso a una base de datos de Oracle. Para conectarse a un origen de datos, el Administrador de controladores comprueba el registro de Windows para obtener información de conexión específica.  
   
  Los controladores ODBC y el Administrador de controladores ODBC utiliza la entrada de registro creada por el Administrador de origen de datos ODBC. Esta entrada contiene información sobre cada origen de datos y sus controladores asociados. Antes de poder conectarse a un origen de datos, su información de conexión debe agregarse al registro.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "47767763"
   
 1.  Haga clic en establecer de las opciones más especificaciones sobre el controlador ODBC para la instalación de Oracle:  
   
-    -   **Traducción** , haga clic en Seleccionar para elegir un convertidor de datos cargado. El valor predeterminado es \<ningún convertidor >.  
+    -   **Traducción** -haga clic en Seleccionar para elegir un convertidor de datos cargado. El valor predeterminado es \<ningún convertidor >.  
   
-    -   **Rendimiento** : los comentarios de incluir en la casilla de verificación de las funciones de catálogo especifica si el controlador devuelve columnas de la sección Comentarios para el [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conjunto de resultados. El controlador ODBC para Oracle proporciona un acceso más rápido cuando no se establece este valor.  
+    -   **Rendimiento** -notas de incluir la casilla de verificación de las funciones de catálogo especifica si el controlador devuelve columnas de la sección Comentarios para el [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conjunto de resultados. El controlador ODBC para Oracle proporciona un acceso más rápido cuando no se establece este valor.  
   
          Los SINÓNIMOS de incluir en la casilla de verificación de las columnas SQL especifica si el controlador devuelve información de columna. **Tamaño del búfer** especifica el tamaño, en bytes, asignada para recibir los datos capturados. El controlador optimiza la recuperación para que una búsqueda desde el servidor Oracle devuelve las filas suficientes para rellenar un búfer del tamaño especificado. Los valores más grandes tienden a aumentar el rendimiento al recuperar una gran cantidad de datos.  
   
-    -   **Personalización** : casilla el exigir ODBC DayOfWeek estándar especifica si el conjunto de resultados se ajustará al formato de día de la semana especificado de ODBC (el domingo = 1; El sábado = 7). Si esta casilla está desactivada, se devuelve el valor de Oracle específica de la configuración regional.  
+    -   **Personalización** -casilla el exigir ODBC DayOfWeek estándar especifica si el conjunto de resultados se ajustará al formato de día de la semana especificado de ODBC (el domingo = 1; El sábado = 7). Si esta casilla está desactivada, se devuelve el valor de Oracle específica de la configuración regional.  
   
          El SQLDescribeCol **siempre devuelve un valor de precisión** casilla especifica si el controlador debe devolver un valor distinto de cero para el *cbColDef* argumento de **SQLDescribeCol**. Este atributo de cadena de conexión solo se aplica a las columnas donde no hay ninguna escala definida en Oracle, como calcular numéricas columnas y las columnas definidas como número sin una precisión o escala. Un **SQLDescribeCol** llamada devuelve 130 para la precisión cuando Oracle no proporciona esa información. Si esta casilla está desactivada, el controlador devolverá 0 para estos tipos de columnas.  
   

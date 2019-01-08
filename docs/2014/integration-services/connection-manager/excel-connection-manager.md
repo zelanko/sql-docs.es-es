@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - files [Integration Services], connections
@@ -16,19 +15,19 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa7bc6280afeb9bce7525afc3eb5eb19c73e4c01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc1f62f1e30b3fb49a66c16715cc6837e703425d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183915"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774167"
 ---
 # <a name="excel-connection-manager"></a>Administrador de conexiones con Excel
   Un Administrador de conexiones con Excel permite a un paquete conectarse con un archivo de libro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel existente. El origen de Excel y el destino de Excel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluyen usar el Administrador de conexiones de Excel.  
   
  Cuando agrega un Administrador de conexiones con Excel a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un Administrador de conexiones que se resuelve como una conexión Excel en el tiempo de ejecución, establece las propiedades del Administrador de conexiones y agrega el Administrador de conexiones a la colección `Connections` del paquete.  
   
- El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `EXCEL`.  
+ La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `EXCEL`.  
   
 > [!NOTE]  
 >  No puede conectar con un archivo de Excel protegido mediante contraseña.  
@@ -50,7 +49,7 @@ ms.locfileid: "48183915"
   
  Para más información sobre las propiedades que puede configurar en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor de Administrador de conexiones con Excel](../excel-connection-manager-editor.md).  
   
- Para obtener información acerca de cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
  Para más información sobre cómo crear bucles entre un grupo de archivos de Excel, vea [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../control-flow/foreach-loop-container.md).  
   

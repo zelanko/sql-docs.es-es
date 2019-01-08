@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984767"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544266"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implementar las soluciones de Power Pivot en SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "38984767"
   
  Este tema contiene las siguientes secciones:  
   
- [Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación](#bkmk_classic)  
+ [Requisito previo: Compruebe que la aplicación Web usa autenticación de modo clásico](#bkmk_classic)  
   
- [Paso 1: implementar la solución de granja](#bkmk_farm)  
+ [Paso 1: Implementar la solución de granja de servidores](#bkmk_farm)  
   
- [Paso 2: implementar la solución de aplicación web de Power Pivot para Administración central](#deployCA)  
+ [Paso 2: Implementar la solución de aplicación Web de Power Pivot en Administración Central](#deployCA)  
   
- [Paso 3: implementar la solución de aplicación web de Power Pivot en otras aplicaciones web](#deployUI)  
+ [Paso 3: Implementar la solución de aplicación Web de Power Pivot en otras aplicaciones Web](#deployUI)  
   
  [Volver a implementar o retirar la solución](#retract)  
   
  [Acerca de las soluciones de Power Pivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación  
+##  <a name="bkmk_classic"></a> Requisito previo: Compruebe que la aplicación Web usa el Modo clásico de autenticación.  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint solo se admite en las aplicaciones web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde la **SharePoint 2010 Management Shell**, reemplazando **http://\<nombre de sitio de nivel superior >** con el nombre del sitio de SharePoint:  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Se debería devolver el valor **false**. Si es **true**, no podrá obtener acceso a los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con esta aplicación web.  
   
-##  <a name="bkmk_farm"></a> Paso 1: implementar la solución de granja  
+##  <a name="bkmk_farm"></a> Paso 1: Implementar la solución de granja de servidores  
  En esta sección se muestra cómo implementar soluciones con PowerShell, pero también puede utilizar la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para completar esta tarea. Para más información, vea [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Esta tarea solo tiene que realizarse una vez, después de instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
@@ -57,7 +57,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Ejecute el siguiente cmdlet para agregar la solución de granja.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implementará la solución.  
@@ -65,10 +65,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Ejecute el siguiente cmdlet para implementar la solución de granja:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Paso 2: implementar la solución de aplicación web de Power Pivot para Administración central  
+##  <a name="deployCA"></a> Paso 2: Implementar la solución de aplicación Web de Power Pivot en Administración Central  
  Después de implementar la solución de granja, debe implementar la solución de aplicación web para Administración central. Este paso agrega el Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a Administración central.  
   
 1.  Abra un shell de administración de SharePoint 2010 utilizando la opción **Ejecutar como administrador** .  
@@ -82,7 +82,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Ejecute el siguiente cmdlet para agregar la solución de granja.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implementará la solución.  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Ahora que la solución de aplicación web se implementa en Administración central, puede usar Administración central para completar el resto de pasos de configuración.  
   
-##  <a name="deployUI"></a> Paso 3: implementar la solución de aplicación web de Power Pivot en otras aplicaciones web  
+##  <a name="deployUI"></a> Paso 3: Implementar la solución de aplicación Web de Power Pivot en otras aplicaciones Web  
  En la tarea anterior, implementó Powerpivotwebapp.wsp en Administración central. En esta sección, implementa powerpivotwebapp.wsp en cada una de las aplicaciones web existentes que admiten el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si agrega más aplicaciones web más adelante, asegúrese de repetir este paso para esas aplicaciones web adicionales.  
   
 1.  En Administración central, en Configuración del sistema, haga clic en **Administrar soluciones del conjunto de servidores**.  

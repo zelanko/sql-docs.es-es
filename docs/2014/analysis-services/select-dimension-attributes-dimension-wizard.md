@@ -13,12 +13,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508009"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Seleccionar los atributos de la dimensión (Asistente para dimensiones)
   Utilice la página **Seleccionar los atributos de la dimensión** para seleccionar y modificar los atributos para la dimensión que debe crearse.  
@@ -49,13 +49,13 @@ ms.locfileid: "48218955"
  **Habilitar la exploración**  
  Seleccione esta opción para que el atributo esté disponible para que el usuario final pueda examinar y filtrar. La opción**Habilitar exploración** debe estar seleccionada para el atributo clave. Para los atributos no clave, el valor predeterminado es no tener la opción **Habilitar exploración** seleccionada, lo que hace que se muestren los atributos no clave solo como propiedades de miembro.  
   
- En la mayoría de los casos, el atributo se convierte en disponible o no está disponible para examinar estableciendo la `AttributeHierarchyEnabled` propiedad `True` o `False`, respectivamente. Sin embargo, en los tres casos siguientes, el asistente usa valores diferentes.  
+ En la mayoría de los casos, el atributo se convierte en disponible o no disponible para examinar estableciendo la propiedad `AttributeHierarchyEnabled` en `True` o `False`, respectivamente. Sin embargo, en los tres casos siguientes, el asistente usa valores diferentes.  
   
 |Caso|Configuración|  
 |----------|--------------|  
-|Una dimensión contiene una jerarquía de elementos primarios y secundarios, y la opción **Habilitar exploración** no está seleccionada|El asistente deja la `AttributeHierarchyEnabled` propiedad establecida en `True`y establece el `AttributeHierarchyVisible` atributo `False` para el atributo clave.|  
+|Una dimensión contiene una jerarquía de elementos primarios y secundarios, y la opción **Habilitar exploración** no está seleccionada|El asistente deja la propiedad `AttributeHierarchyEnabled` establecida en `True`y establece el atributo `AttributeHierarchyVisible` en `False` para el atributo clave.|  
 |Una tabla de una dimensión contiene una clave externa a una tabla que no se encuentra en la dimensión.|El asistente selecciona la clave externa como un atributo que se va a incluir pero no seleccionará **Habilitar exploración**. Si mantiene esta configuración, la propiedad `AttributeHiearchyEnabled` del atributo se establecerá en `True`y la propiedad `AttributeHieararchyVisible` se establecerá en `False`.|  
-|Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> y<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene el `AttributeHiearchyEnabled` propiedad establecida en `True`y el `AttributeHieararchyVisible` propiedad establecida en `False`.|  
+|Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> - y -<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene la propiedad `AttributeHiearchyEnabled` establecida en `True`y la propiedad `AttributeHieararchyVisible` establecida en `False`.|  
   
  **Tipo de atributo**  
  (Opcional) Establezca el tipo para el atributo. El valor predeterminado es **Regular**. El tipo de atributo proporciona orientación a las aplicaciones cliente sobre qué información podría contener el atributo.  

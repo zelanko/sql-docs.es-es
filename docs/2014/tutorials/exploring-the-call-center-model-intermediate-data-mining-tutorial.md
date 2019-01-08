@@ -11,19 +11,19 @@ ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518899"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de centro de llamadas (Tutorial intermedio de minería de datos)
   Ahora que ha creado el modelo de exploración, puede usarlo para obtener más información sobre los datos mediante las herramientas siguientes que se proporcionan en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   [Visor de redes neuronales de Microsoft](#bkmk_NNviewer) **:** este visor está disponible en el **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos y está diseñado para ayudarle a experimentar con las interacciones de los datos.  
+-   [Visor de redes neuronales de Microsoft](#bkmk_NNviewer) **:** Este visor está disponible en el **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos y está diseñado para ayudarle a experimentar con las interacciones de los datos.  
   
--   [Visor de árbol de contenido genérico de Microsoft](#bkmk_genviewer) **:** este visor estándar proporciona información más detallada sobre los patrones y estadísticas que detecta el algoritmo al generar el modelo.  
+-   [Visor de árbol de contenido genérico de Microsoft](#bkmk_genviewer) **:** Este visor estándar proporciona detalles precisos sobre los patrones y estadísticas que detecta el algoritmo al generar el modelo.  
   
 ##  <a name="bkmk_NNviewer"></a> Visor de redes neuronales de Microsoft  
  El Visor tiene tres paneles: **entrada**, **salida**, y **Variables**.  
@@ -76,7 +76,7 @@ ms.locfileid: "48110035"
   
 2.  Para **valor**, seleccione **AM**.  
   
-     El **Variables** panel se actualiza para mostrar el impacto en el modelo cuando el turno es **AM**. Las demás selecciones siguen siendo las mismas, sigue comparando los grados de servicio menor y mayor.  
+     El **Variables** panel se actualiza para mostrar el impacto en el modelo cuando el turno es **AM**. Todas las demás selecciones siguen siendo las mismas, sigue comparando los grados de servicio mínimo y máximo.  
   
 3.  Para **valor**, seleccione **PM1**.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48110035"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>Interpretar las estadísticas que se proporcionan en el visor  
  Los tiempos de espera más prolongados son un factor de predicción muy eficaz de una tasa de abandono elevada, lo que significa que el grado de servicio es deficiente. Esto puede parecer una conclusión obvia; sin embargo, el modelo de minería de datos proporciona datos estadísticos adicionales para ayudarle a interpretar estas tendencias.  
   
--   **Puntuación**: valor que indica la importancia global de esta variable para discriminar entre los resultados. Cuanto más alta es la puntuación, más intenso es el efecto que la variable tiene en el resultado.  
+-   **Puntuación**: Valor que indica la importancia global de esta variable para discriminar entre los resultados. Cuanto más alta es la puntuación, más intenso es el efecto que la variable tiene en el resultado.  
   
--   **Probabilidad del valor 1**: porcentaje que representa la probabilidad de que este valor para este resultado.  
+-   **Probabilidad del valor 1**: Porcentaje que representa la probabilidad de que este valor para este resultado.  
   
--   **Probabilidad del valor 2**: porcentaje que representa la probabilidad de que este valor para este resultado.  
+-   **Probabilidad del valor 2**: Porcentaje que representa la probabilidad de que este valor para este resultado.  
   
--   **Elevación del valor 1** y **elevación del valor 2**: puntuaciones que representan el impacto de usar esta variable concreta para predecir los resultados de valor 1 y valor 2. Cuanto más alta es la puntuación, mejor es la variable prediciendo los resultados.  
+-   **Elevación de valor 1** y **elevación del valor 2**: Puntuaciones que representan el impacto de usar esta variable concreta para predecir los resultados de valor 1 y valor 2. Cuanto más alta es la puntuación, mejor es la variable prediciendo los resultados.  
   
  La tabla siguiente contiene algunos valores de ejemplo para los influenciadores más importantes. Por ejemplo, el **probabilidad del valor 1** es 60,6% y **probabilidad del valor 2** es 8,30%, lo que significa que cuando Average Time Per Issue estaba en el intervalo 44-70 minutos, 60,6% de los casos estaban en el turno con los grados de servicio mayores (valor 1) y el 8,30% de los casos estaban en el turno con los peores grados de servicio (valor 2).  
   
@@ -110,8 +110,8 @@ ms.locfileid: "48110035"
   
 |Attribute|Valor|Favorece \< 0,07|Favorece >= 0,12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087 120.000||Puntuación: 100<br /><br /> Probabilidad de Value1: 4,45%<br /><br /> Probabilidad de Value2: % 51.94<br /><br /> Elevación de Value1: 0.19<br /><br /> Elevación de Value2: 1,94|  
-|Average Time Per Issue|44.000 70.597|Puntuación: 92,35<br /><br /> Probabilidad de valor 1: 60,06 %<br /><br /> Probabilidad de valor 2: 8,30 %<br /><br /> Elevación de valor 1: 2,61<br /><br /> Elevación de valor 2: 0,31||  
+|Average Time Per Issue|89.087 120.000||Puntuación:  100<br /><br /> Probabilidad de Value1: 4,45%<br /><br /> Probabilidad de Value2: % 51.94<br /><br /> Elevación de Value1: 0.19<br /><br /> Elevación de Value2: 1,94|  
+|Average Time Per Issue|44.000 70.597|Puntuación: 92,35<br /><br /> Probabilidad de Value1: 60,06%<br /><br /> Probabilidad de Value2: 8,30%<br /><br /> Elevación de Value1: 2,61<br /><br /> Elevación de Value2: 0,31||  
   
  [Volver al principio](#bkmk_NNviewer)  
   
@@ -152,8 +152,8 @@ WHERE NODE_NAME = '10000000000000000'
  [Adición de un modelo de regresión logística a la estructura de centro de llamadas &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Los modelos de red neuronal contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Ejemplos de consultas de modelo de red neuronal](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Ejemplos de consultas de modelos de red neuronal](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Referencia técnica del algoritmo de red neuronal de Microsoft](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Cambiar la discretización de una columna en un modelo de minería de datos](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   

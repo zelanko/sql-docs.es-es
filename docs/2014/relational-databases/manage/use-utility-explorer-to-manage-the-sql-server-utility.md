@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 031efcdc80028e8366a2e19827f180b78a21af0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124035"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759427"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
   El explorador de Utilidad, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se conecta a instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para proporcionar una vista de árbol de todos los objetos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El panel de contenido del explorador de la utilidad proporciona varias maneras para ver datos de resumen y detallados sobre el estado de las instancias administradas de SQL Server. El explorador de la utilidad también proporciona una interfaz de usuario para ver y administrar las definiciones de directiva. Las capacidades del explorador de la utilidad varían ligeramente dependiendo de los objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero, generalmente, incluyen objetos, datos y directivas administrados por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48124035"
 ### <a name="sql-server-utility-navigation-pane"></a>Panel de navegación de la utilidad de SQL Server  
  El panel de navegación del explorador de la utilidad proporciona una vista de árbol de objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , agrupada por punto de control de la utilidad. Para expandir las carpetas, haga clic en el signo más (+) o en el nombre de UCP en el panel de navegación del explorador de la utilidad. Haga clic con el botón secundario en las carpetas o en los objetos para realizar tareas comunes. Los nodos de la vista de árbol son como sigue:  
   
--   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre de nodo se crea como se indica a continuación: "Nombre_Utilidad (NombreEquipo\nombre_instancia_UCP)." Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
+-   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre del nodo se construye como: "Utility_Name" (ComputerName\UCP_instance_name). Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
   
      Haga clic con el botón secundario en el nodo UCP para actualizar los datos en el panel.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "48124035"
 ## <a name="see-also"></a>Vea también  
  [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md)   
  [Configurar las directivas de mantenimiento &#40;Utilidad de SQL Server&#41;](configure-health-policies-sql-server-utility.md)   
- [Ver](../../ssms/object/object-explorer.md)  
+ [Explorador de objetos](../../ssms/object/object-explorer.md)  
   
   

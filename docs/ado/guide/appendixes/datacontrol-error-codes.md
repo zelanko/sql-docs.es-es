@@ -14,12 +14,12 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa058add661ba5dc4054a431e0324f97e1efb422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514384"
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de Error de objeto DataControl
 La siguiente tabla se enumeran los [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) códigos de error de objeto. La conversión de decimal positiva de los dos bytes bajos, la traducción decimal negativo del código de error completo y los valores hexadecimales se muestran.
@@ -33,7 +33,7 @@ La siguiente tabla se enumeran los [RDS. DataControl](../../../ado/reference/rds
 |**IDS_CantFindDataspace**|4102-2146824186 0x800A1006|La propiedad DataSpace no es válida.|
 |**IDS_CantInvokeMethod**|4101-2146824187 0x800A1005|No se puede invocar el método en el objeto de negocios.|
 |**IDS_CrossDomainWarning**|4112-2146824170 0x800A1016|Esta página tiene acceso a datos en otro dominio. ¿Desea permitir esto? Para evitar este mensaje en Internet Explorer, puede agregar un sitio Web seguro a la zona de sitios de confianza en el **seguridad** pestaña de la **opciones de Internet** cuadro de diálogo.|
-|**IDS_InvalidADCClientVersion**|4106-2146824176 0x800A1010|Versión de cliente RDS no válido: El cliente es más reciente que el servidor.|
+|**IDS_InvalidADCClientVersion**|4106-2146824176 0x800A1010|Versión no válida de cliente RDS - cliente es más reciente que el servidor.|
 |**IDS_INVALIDARG**|5376-2147019520 0x80071500|Uno o más argumentos no son válidos.|
 |**IDS_InvalidBindings**|4097-2146824191 0x800A1001|Error en la propiedad de enlaces.|
 |**IDS_InvalidParam**|4110-2146824172 0x800A1014|Uno o más argumentos no son válidos.|

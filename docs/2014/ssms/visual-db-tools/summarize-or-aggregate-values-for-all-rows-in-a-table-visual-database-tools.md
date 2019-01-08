@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
@@ -13,12 +13,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a19834bc54a75e685782b0d73aadf0070bdff62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812807"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir o agregar los valores de todas las filas de una tabla (Visual Database Tools)
   Mediante una función de agregado, puede crear un resumen de todos los valores de una tabla. Por ejemplo, se puede crear una consulta como la que se muestra a continuación para mostrar el precio total de todos los libros de la tabla `titles`:  
@@ -45,7 +45,7 @@ FROM titles
  Cuando se crea un único valor de agregación para todas las filas de una tabla, solo se muestran los propios valores de agregado. Por ejemplo, si calcula el total del valor de la columna `price` de la tabla `titles` , no se mostrarán los títulos individuales, los nombres de las editoriales, etc.  
   
 > [!NOTE]  
->  Si calcula subtotales (es decir, si crea grupos), puede mostrar los valores de columna de cada grupo. Para detalles, consulte [Agrupar filas en los resultados de la consulta &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
+>  Si calcula subtotales (es decir, si crea grupos) puede mostrar los valores de columna de cada grupo. Para detalles, consulte [Agrupar filas en los resultados de la consulta &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
   
 ### <a name="to-aggregate-values-for-all-rows"></a>Para agregar valores de todas las filas  
   
@@ -57,7 +57,7 @@ FROM titles
   
      El Diseñador de consultas y vistas asigna automáticamente un alias a la columna que va a resumir. Puede sustituir este alias por otro más significativo. Para detalles, consulte [Crear alias de columna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-4.  En la columna de cuadrícula **Agrupar por**, seleccione la función de agregado correspondiente, como: **Sum**, **Avg**, **Min**, **Max** o **Count**. Si solo desea agregar filas únicas en el conjunto de resultados, elija una función de agregado con las opciones DISTINCT, como **Min Distinct**. No elija **Group By**, **Expression**o **Where**, ya que estas opciones no se aplican cuando se agregan todas las filas.  
+4.  En el **Group By** columna de cuadrícula, seleccione la correspondiente función de agregado, como: **Suma**, **Avg**, **Min**, **Max**, **recuento**. Si solo desea agregar filas únicas en el conjunto de resultados, elija una función de agregado con las opciones DISTINCT, como **Min Distinct**. No elija **Group By**, **Expression**o **Where**, ya que estas opciones no se aplican cuando se agregan todas las filas.  
   
      El Diseñador de consultas y vistas sustituye el nombre de columna en la instrucción del [panel SQL](sql-pane-visual-database-tools.md) por la función de agregado que especifique. Por ejemplo, la instrucción SQL podría tener el siguiente aspecto:  
   

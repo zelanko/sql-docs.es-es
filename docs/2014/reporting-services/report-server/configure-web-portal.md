@@ -13,12 +13,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81be4bb3802888a8471308135775723c9ba0fd9e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184955"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419866"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurar el Administrador de informes (modo nativo)
   El Administrador de informes es una aplicación front-end web que se usa para ver informes, administrar el contenido del servidor de informes y conceder acceso de usuario a un servidor de informes en modo nativo. El Administrador de informes se instala con el servicio web del servidor de informes en la misma instancia del servidor de informes y, opcionalmente, se configura si se selecciona la opción **Instalar la configuración predeterminada del modo nativo** en el programa de instalación. También puede configurar el Administrador de informes después de haber realizado la instalación. En este tema se proporciona información sobre los siguientes escenarios de configuración del Administrador de informes:  
@@ -55,7 +55,7 @@ ms.locfileid: "48184955"
   
 -   Tener un servidor de informes configurado mínimamente. Para obtener más información sobre cómo configurar mínimamente un servidor de informes, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](configure-a-report-server-reporting-services-native-mode.md).  
   
--   El servidor de informes se debe ejecutar en modo nativo. No puede utilizar el Administrador de informes con un servidor de informes configurado para el modo integrado de SharePoint. En SQL Server 2012, no se puede cambiar un servidor de informes de un modo a otro. Si desea cambiar el tipo de servidor de informes que usa su entorno, debe instalar el modo deseado del servidor de informes y, a continuación, copiar o mover los elementos de informe al nuevo servidor de informes. Este proceso se conoce normalmente como 'migración'. Los pasos necesarios para la migración dependen del modo al que se realice la migración y la versión desde la que se migre. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
+-   El servidor de informes se debe ejecutar en modo nativo. No puede utilizar el Administrador de informes con un servidor de informes configurado para el modo integrado de SharePoint. En SQL Server 2012, no se puede cambiar un servidor de informes de un modo a otro. Si desea cambiar el tipo de servidor de informes que usa su entorno, debe instalar el modo deseado del servidor de informes y, a continuación, copiar o mover los elementos de informe al nuevo servidor de informes. Este proceso se conoce normalmente como "migración". Los pasos necesarios para la migración dependen del modo al que se realice la migración y la versión desde la que se migre. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 -   También debe tener Internet Explorer 7.0 o posterior con scripting habilitado. Para obtener más información, consulte [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48184955"
   
 1.  Abra el archivo **RsReportServer.config** en un editor de texto. De forma predeterminada, se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS12.\<*nombreDeInstancia*>\Reporting Services\ReportServer.  
   
-2.  Buscar `ReportServerURL`.  
+2.  Busque `ReportServerURL`.  
   
 3.  Reemplácelo por la dirección URL de la instancia del servidor de informes.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48184955"
   
     1.  Abra RSReportServer.config en un editor de texto. De forma predeterminada, se encuentra en \Program Files\Microsoft SQL Server\MSRS11. \< *nombreDeInstancia*> \Reporting.  
   
-    2.  Buscar `ReportServerURL`.  
+    2.  Busque `ReportServerURL`.  
   
     3.  Reemplácelo por la dirección URL de la instancia del servidor de informes remota.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "48184955"
   
 8.  Desactive las características del servidor que no esté utilizando:  
   
-    -   En el equipo del Administrador de informes, desactive la opción `WebServiceAndHTTPAccessEnabled` y `ScheduleEventsAndReportDeliveryEnabled`.  
+    -   En el equipo del Administrador de informes, desactive `WebServiceAndHTTPAccessEnabled` y `ScheduleEventsAndReportDeliveryEnabled`.  
   
-    -   En el equipo del servidor de informes, desactive la opción `ReportManagerEnabled`.  
+    -   En el equipo del servidor de informes, desactive `ReportManagerEnabled`.  
   
  Para obtener más información sobre cómo desactivar características, vea [Activar o desactivar las características de Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
@@ -172,14 +172,14 @@ ms.locfileid: "48184955"
  Para obtener más información sobre cómo modificar el archivo de configuración, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para obtener más información sobre cómo deshabilitar características en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Activar o desactivar las características de Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Comprobar una instalación de Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
- [Personalizar hojas de estilos para el Visor de HTML y el Administrador de informes](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Activar o desactivar los informes de las características de servicios](turn-reporting-services-features-on-or-off.md)   
- [Administrar un servidor de informes de modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
+ [Personalizar hojas de estilos para el Visor HTML y el Administrador de informes](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [Activar o desactivar las características de Reporting Services](turn-reporting-services-features-on-or-off.md)   
+ [Administrar un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
- [Configurar un servidor de informes de modo nativo para la administración Local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
   

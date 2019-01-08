@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
@@ -13,12 +12,12 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145535"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786147"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Prácticas recomendadas para filtros de fila basados en el tiempo
   Los usuarios de aplicaciones requieren con frecuencia un subconjunto de datos de una tabla basado en el tiempo. Por ejemplo, un vendedor puede requerir datos para pedidos de la semana pasada o un programador de eventos puede requerir datos para eventos de la semana próxima. En muchos casos, las aplicaciones usan consultas que contienen la función `GETDATE()` para llevar esto a cabo. Considere la siguiente instrucción de filtro de fila:  
@@ -50,13 +49,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>Recomendaciones para usar filtros de fila basados en el tiempo  
  El método siguiente proporciona una buena solución para filtrar en función del tiempo:  
   
--   Agregar una columna a la tabla de tipo de datos `bit`. Esta columna se usa para indicar si se debe replicar una fila.  
+-   Agregue una columna a la tabla con el tipo de datos `bit`. Esta columna se usa para indicar si se debe replicar una fila.  
   
 -   Utilice un filtro de fila que haga referencia a la nueva columna en lugar de una columna basada en el tiempo.  
   
 -   Cree un trabajo del Agente SQL Server (o un trabajo programado con otro mecanismo) que actualice la columna antes de que se ejecute el agente de mezcla según esté programado.  
   
- Este enfoque soluciona los inconvenientes del uso `GETDATE()` u otro método basado en tiempo y evita el problema de tener que determinar cuándo se evalúan los filtros para las particiones. Considere el siguiente ejemplo de una tabla **Events** :  
+ Este enfoque soluciona los inconvenientes del uso de `GETDATE()` u otro método basado en el tiempo, y evita el problema de tener que determinar cuándo se evalúan los filtros para las particiones. Considere el siguiente ejemplo de una tabla **Events** :  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -94,6 +93,6 @@ GO
 ## <a name="see-also"></a>Vea también  
  [GETDATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/getdate-transact-sql)   
  [Implementar trabajos](../../../ssms/agent/implement-jobs.md)   
- [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
+ [Filtros de fila con parámetros](parameterized-filters-parameterized-row-filters.md)  
   
   

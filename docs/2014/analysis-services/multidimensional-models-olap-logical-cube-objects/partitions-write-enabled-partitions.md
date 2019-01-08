@@ -19,12 +19,12 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8429c02d84520524906fb0fbd411ee0a49169815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dcfda333d3381b1a35313c00e6c95173b869c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352489"
 ---
 # <a name="write-enabled-partitions"></a>Particiones habilitadas para escritura
   Los datos de un cubo son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una partición para escritura. Las particiones habilitadas para escritura se usan para que los usuarios corporativos puedan explorar escenarios si cambian los valores de las celdas y analizan los efectos de los cambios en los datos del cubo. Si habilita una partición para escritura, las aplicaciones cliente podrán registrar los cambios en los datos de la partición. Estos cambios, conocidos como datos de reescritura, se almacenan en una tabla independiente y no sobrescriben los datos existentes en un grupo de medida. Sin embargo, se incorporan a los resultados de la consulta como si formasen parte de los datos del cubo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48194645"
  Puede habilitar para escritura un cubo completo o solo algunas particiones del mismo. Las dimensiones habilitadas para escritura son distintas, aunque complementarias. Una partición habilitada para escritura permite a los usuarios actualizar celdas de particiones, mientras que las dimensiones habilitadas para escritura les permiten actualizar miembros de dimensión. También se pueden utilizar conjuntamente estas dos características. Por ejemplo, un cubo habilitado para escritura o una partición habilitada para escritura no tiene que incluir ninguna dimensión habilitada para escritura. **Tema relacionado:**[dimensiones habilitadas para escritura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
->  Si desea habilitar para escritura un cubo que tiene una base de datos de Microsoft Access como origen de datos, no utilice el proveedor Microsoft OLE DB para controladores ODBC en las definiciones de origen de datos del cubo, sus particiones ni sus dimensiones. En su lugar, puede utilizar el proveedor OLE DB de Microsoft Jet 4.0 o cualquier versión del Jet Service Pack que incluya Jet 4.0 OLE. Para obtener más información, consulte el artículo de Microsoft Knowledge Base [cómo obtener el service pack más reciente para el motor de base de datos Microsoft Jet 4.0](http://support.microsoft.com/?kbid=239114).  
+>  Si desea habilitar para escritura un cubo que tiene una base de datos de Microsoft Access como origen de datos, no utilice el proveedor Microsoft OLE DB para controladores ODBC en las definiciones de origen de datos del cubo, sus particiones ni sus dimensiones. En su lugar, puede utilizar el proveedor OLE DB de Microsoft Jet 4.0 o cualquier versión del Jet Service Pack que incluya Jet 4.0 OLE. Para obtener más información, consulte el artículo de Microsoft Knowledge Base [cómo obtener el service pack más reciente para el motor de base de datos Microsoft Jet 4.0](https://support.microsoft.com/?kbid=239114).  
   
  Un cubo solamente puede habilitarse para escritura si todas sus medidas utilizan la función de agregado `Sum`. Los grupos de medida vinculados y los cubos locales no pueden habilitarse para escritura.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48194645"
 ## <a name="see-also"></a>Vea también  
  [Dimensiones habilitadas para escritura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Las agregaciones y diseños de agregaciones](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Dimensiones habilitadas para escritura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

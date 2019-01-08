@@ -1,24 +1,23 @@
 ---
-title: 'Paso 2: Ejecutar el Asistente para instalar paquetes | Microsoft Docs'
+title: 'Paso 2: Ejecutar el Asistente para instalación de paquete | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 661b411c87d5a1f570545d2e8d174c8900274bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053372"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351806"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Paso 2: ejecutar el Asistente para la instalación de paquetes
+# <a name="step-2-running-the-package-installation-wizard"></a>Paso 2: Ejecutar el Asistente para la instalación de paquetes
   En esta tarea, ejecutará el Asistente para la instalación de paquetes para implementar los paquetes del proyecto Deployment Tutorial en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Solamente los paquetes se pueden instalar en la tabla sysssispackages de la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , los archivos compatibles que incluya el paquete de implementación se implementarán en el sistema de archivos.  
   
  El Asistente para la instalación de paquetes le guiará por los pasos para instalar y configurar los paquetes. Instalará los paquetes en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo de destino (el equipo en el que copió el paquete de implementación). También creará una carpeta, C:\DeploymentTutorialInstall, en la que el asistente instalará los archivos no empaquetados.  
@@ -29,7 +28,7 @@ ms.locfileid: "48053372"
   
 1.  En el equipo de destino, busque el paquete de implementación.  
   
-     Si ha usado el valor predeterminado, bin\Deployment, como ubicación de la utilidad de implementación, el paquete de implementación está en la carpeta Bin\Deployment dentro del proyecto Deployment Tutorial.  
+     Si ha usado el valor predeterminado (bin\Deployment) como ubicación de la utilidad de implementación, el paquete de implementación está en la carpeta Deployment dentro del proyecto Deployment Tutorial.  
   
 2.  En la carpeta Deployment, haga doble clic en el archivo de manifiesto, Deployment Tutorial.SSISDeploymentManifest.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48053372"
   
     -   Error al cargar al menos una de las entradas de configuración en el paquete. Compruebe las entradas de configuración y las advertencias anteriores para ver una descripción de los errores de configuración.  
   
-    -   El archivo de configuración: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig” no es válido. Compruebe el nombre del archivo de configuración.  
+    -   El archivo de configuración: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig no es válido. Compruebe el nombre del archivo de configuración.  
   
     -   Error al cargar al menos una de las entradas de configuración en el paquete. Compruebe las entradas de configuración y las advertencias anteriores para ver una descripción de los errores de configuración.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48053372"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 3: Probar los paquetes implementados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   

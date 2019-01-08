@@ -10,12 +10,12 @@ ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95377d761aa46073d7650a274f9ddbe6ccd44cc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6857a18ca740c399feb5e8fd65dae4ec9a7d7dd6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823973"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531456"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>Aviso legal (SSMA para Sybase)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  
@@ -35,7 +35,7 @@ SAP NetWeaver es una marca registrada de SAP AG en Alemania y en otros países o
 Las demás marcas comerciales pertenecen a sus respectivos propietarios.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Directiva de documentación para soporte y actualización de SQL Server  
-El contenido que aparece en la documentación de SQL Server solo se publica una vez se probó lo suficiente. Documentación del producto: libros en pantalla de SQL Server, archivos Léame, documentos de problemas conocidos y artículos de Knowledge Base. El contenido de esta documentación referente a las características de SQL Server y a su funcionalidad, es lo suficientemente fiable como para que lo usen todos los clientes. Esta directiva se aplica tanto a la documentación de SQL Server como a los archivos Léame de las versiones y los Service Pack; un archivo Léame se considera una extensión de los Libros en pantalla.  
+El contenido que aparece en la documentación de SQL Server solo se publica una vez se probó lo suficiente. Documentación del producto: libros en pantalla de SQL Server, archivos Léame, documentos de problemas conocidos y artículos de Knowledge Base - contiene contenido con respecto a las características de SQL Server y la funcionalidad que es suficientemente sólida para ser seguros para uso general por todos los clientes. Esta directiva se aplica tanto a la documentación de SQL Server como a los archivos Léame de las versiones y los Service Pack; un archivo Léame se considera una extensión de los Libros en pantalla.  
   
 En varios casos, es posible que una determinada característica no esté documentada ya que no es algo que los clientes deban usar directamente. A menos que una característica se plasme en la documentación de SQL Server publicada por Microsoft, los contenidos de los libros o sitios web de terceros no serán compatibles con el servicio de asistencia al cliente de Microsoft y no se deberán usar para crear bases de datos o aplicaciones.  
   

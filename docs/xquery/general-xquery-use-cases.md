@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539873"
 ---
 # <a name="general-xquery-use-cases"></a>Casos de uso generales de XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51659384"
  La siguiente consulta devuelve los Id. de modelo de producto y los pesos, si existen, de la descripción del catálogo de productos. La consulta crea XML con el formato siguiente:  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -61,7 +61,7 @@ WHERE CatalogDescription is not null
   
 -   En la cláusula WHERE, el **exist()** método se utiliza para buscar únicamente las filas que contienen descripciones de catálogo de productos. es decir, el XML que contiene el elemento <`ProductDescription`>.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <Product ProductModelID="19"/>  
@@ -89,13 +89,13 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
   
  En la consulta anterior, el **exist()** método de la **xml** tipo de datos en la cláusula WHERE comprueba si hay una <`Weight`> elemento en el <`Specifications`> elemento.  
   
-### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. Encontrar identificadores de modelos de productos para modelos de productos en cuyas descripciones de catálogo se incluyan imágenes de pequeño tamaño y ángulo frontal  
+### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>b. Encontrar identificadores de modelos de productos para modelos de productos en cuyas descripciones de catálogo se incluyan imágenes de pequeño tamaño y ángulo frontal  
  La descripción del catálogo de productos XML incluye imágenes de los productos (el elemento <`Picture`>). Cada imagen tiene varias propiedades. Entre estas propiedades se incluyen el ángulo de la imagen (el elemento <`Angle`>) y el tamaño (el elemento <`Size`>).  
   
  Para los modelos de productos en cuyas descripciones de catálogo se incluyen imágenes de pequeño tamaño y ángulo frontal, la consulta genera XML con el siguiente formato:  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  
@@ -306,7 +306,7 @@ WHERE CatalogDescription.value('
   
 -   El **value()** método de la **xml** tipo de datos compara el valor devuelto por **contains()** en 1.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 ProductModelID Result        

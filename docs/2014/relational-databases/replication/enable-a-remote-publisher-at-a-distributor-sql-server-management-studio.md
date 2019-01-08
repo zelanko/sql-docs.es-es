@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - remote Distributors [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb756cb171c3fe8a1d2d54bbd790ce86a96e4f7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131675"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753057"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar un publicador remoto en un distribuidor (SQL Server Management Studio)
   Habilite un publicador para utilizar un distribuidor remoto en la página **Publicadores** . Esta página está disponible en el Asistente para configurar la distribución y en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Configurar la publicación y la distribución](configure-publishing-and-distribution.md) y [Ver y modificar propiedades del distribuidor y el publicador](view-and-modify-distributor-and-publisher-properties.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "48131675"
   
 4.  En la página **Contraseña del distribuidor** , en los cuadros de texto **Contraseña** y **Confirmar contraseña** , especifique una contraseña segura para la cuenta **distributor_admin** , que la replicación utiliza para conectar del publicador al distribuidor y realizar las tareas administrativas.  
   
-5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**…**).  
+5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**...**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48131675"
   
 4.  En la página **Publicadores** , en los cuadros de texto **Contraseña** y **Confirmar contraseña** , especifique una contraseña segura para la cuenta **distributor_admin** , que la replicación utiliza para conectar del publicador al distribuidor y realizar las tareas administrativas.  
   
-5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**…**).  
+5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**...**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

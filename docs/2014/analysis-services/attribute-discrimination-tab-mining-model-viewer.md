@@ -13,17 +13,17 @@ ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3168cc6e56e7563dae29794219c150face86f584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535062"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Pestaña Distinción del atributo (Visor de modelos de minería de datos)
   Utilice la pestaña **Distinción del atributo** para comparar los estados de los atributos de entrada y ver cómo se relacionan con el atributo de resultados. Los valores de atributo que permiten diferenciar en mayor medida los dos estados de atributo de predicción se enumeran en primer lugar.  
   
- **Para más información:** [Algoritmo Bayes naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [Examinar un modelo usando el visor Bayes naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Para obtener más información:** [Algoritmo Bayes Naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [examinar un modelo usando el Visor Bayes Naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -42,7 +42,7 @@ ms.locfileid: "48161691"
  Elija un estado del atributo de predicción para compararlo con el estado contenido en el **Valor 2**.  
   
  **Valor 2**  
- Seleccione un estado del atributo de predicción para compararlo con el estado contenido en el **Valor 1**. También puede seleccionar **Todos los otros estados** para comparar el valor de **Valor 1** con su complemento, es decir, todos los otros valores excepto Valor 1.  
+ Seleccione un estado del atributo de predicción para compararlo con el estado contenido en el **Valor 1**. También puede seleccionar **todos los otros estados** para comparar el valor de **1 valor** con su complemento: es decir, todos los demás valores excepción valor 1.  
   
  **Puntuaciones de distinción para \<valor 1 > y \<valor 2 >**  
  El gráfico contiene las siguientes columnas, que describen cómo se relaciona el atributo de destino con los estados específicos del atributo de entrada.  
@@ -55,7 +55,7 @@ ms.locfileid: "48161691"
 |**Favorece \<valor 2 >**|La barra indica si el atributo y valor actuales favorecen el resultado de destino seleccionado en **Valor 2.**|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

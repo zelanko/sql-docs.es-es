@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6312332a6c0c8cc9cf07a93f67aa71ebd61b62ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 009a2eda2bf0690ee9657a156a02eb4659a3224d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793570"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (expresión de SSIS)
   Devuelve un token (subcadena) de una cadena basándose en los delimitadores especificados que separan los tokens en la cadena y el número del token que indica qué token se va a devolver.  
@@ -32,7 +31,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  Cadena que contiene los tokens separados por delimitadores.  
   
  *delimiter_string*  
- Cadena que contiene caracteres delimitadores. Por ejemplo, "; ,” contiene tres caracteres delimitadores punto y coma, un espacio en blanco y una coma.  
+ Cadena que contiene caracteres delimitadores. Por ejemplo, “; ,” contiene tres caracteres delimitadores: punto y coma, un espacio en blanco y una coma.  
   
  *occurrence*  
  Entero con o sin signo que especifica el token que se va a devolver. Por ejemplo, si especifica 3 como valor para este parámetro, se devuelve el tercer token de la cadena.  
@@ -58,13 +57,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   Puede usar variables y columnas como valores de todos los argumentos de la expresión.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
- En el ejemplo siguiente, la función TOKEN devuelve "a". La cadena "a little white dog" tiene 4 tokens "a", "little", "white", "dog" separados por el delimitador " " (carácter de espacio). El segundo argumento, una cadena delimitadora, especifica que solo un delimitador, el carácter de espacio, se utiliza en la división de la cadena de entrada en tokens. El último argumento, 1, especifica que se va a devolver el primer token. El primer token es "a" en esta cadena de ejemplo.  
+ En el ejemplo siguiente, la función TOKEN devuelve "a". La cadena “a little white dog” tiene 4 tokens (“a”, “little”, “white” y “dog”) separados por el delimitador “ ” (carácter de espacio). El segundo argumento, una cadena delimitadora, especifica que solo un delimitador, el carácter de espacio, se utiliza en la división de la cadena de entrada en tokens. El último argumento, 1, especifica que se va a devolver el primer token. El primer token es “a” en esta cadena de ejemplo.  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- En el ejemplo siguiente, la función TOKEN devuelve "dog". La cadena delimitadora en este ejemplo contiene 5 delimitadores. La cadena de entrada contiene 4 tokens: "a", "little", "white", "dog".  
+ En el ejemplo siguiente, la función TOKEN devuelve "dog". La cadena delimitadora en este ejemplo contiene 5 delimitadores. La cadena de entrada contiene 4 tokens: “a”, “little”, “white”, “dog”.  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -94,7 +93,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- En el ejemplo siguiente, la función TOKEN devuelve el nombre de archivo a partir de la ruta de acceso especificada. Por ejemplo, si el valor de User::Path es "c:\program files\data\myfile.txt", la función TOKEN devuelve "myfile.txt". La función TOKENCOUNT devuelve 4 y la función TOKEN devuelve el cuarto token, "myfile.txt".  
+ En el ejemplo siguiente, la función TOKEN devuelve el nombre de archivo a partir de la ruta de acceso especificada. Por ejemplo, si el valor de User::Path es “C:\Archivos de programa\data\myfile.txt”, la función TOKEN devuelve “myfile.txt”. La función TOKENCOUNT devuelve 4 y la función TOKEN devuelve el cuarto token, “myfile.txt”.  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

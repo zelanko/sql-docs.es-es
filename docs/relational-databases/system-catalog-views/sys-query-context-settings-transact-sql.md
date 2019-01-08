@@ -1,7 +1,7 @@
 ---
 title: Sys.query_context_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de36098ec2c2792e45724cdb023897b1482ac9cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638493"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710656"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>Sys.query_context_settings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene información sobre la semántica de valores de contexto asociados con una consulta. Hay una serie de valores de contexto disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que influyen en la semántica de consulta (definiendo el resultado correcto de la consulta). El mismo texto de consulta compilado en configuraciones diferentes puede producir resultados diferentes (en función de los datos subyacentes).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47638493"
 |**language_id**|**smallint**|El identificador del idioma. Para obtener más información, consulte [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**DATE_FORMAT**|**smallint**|El formato de fecha. Para más información, vea [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|El primer valor de fecha. Para más información, vea [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**status**|**varbinary(2)**|Campo de máscara de bits que indica el tipo de consulta o contexto en el que se ejecutó la consulta. <br />Valor de la columna puede ser una combinación de varias marcas (expresado en formato hexadecimal):<br /><br /> 0 x 0 – consulta normal (sin marcas específicas)<br /><br /> 0 x 1: consulta ejecutada a través de uno de los procedimientos almacenados de API de cursor<br /><br /> 0 x 2: consulta de notificación<br /><br /> 0 x 4: consulta interna<br /><br /> 0 x 8: consulta con parámetros automática sin la parametrización universal<br /><br /> 0 x 10: captura de cursor refresh query<br /><br /> 0 x 20 - consulta que se usa en las solicitudes de actualización de cursor<br /><br /> 0 x 40 - conjunto de resultados inicial se devuelve cuando se abre un cursor (Cursor automática capturar)<br /><br /> 0 x 80 – consulta cifrada<br /><br /> 0 x 100: la consulta en el contexto del predicado de seguridad de nivel de fila|  
+|**status**|**varbinary(2)**|Campo de máscara de bits que indica el tipo de consulta o contexto en el que se ejecutó la consulta. <br />Valor de la columna puede ser una combinación de varias marcas (expresado en formato hexadecimal):<br /><br /> 0 x 0: consulta normal (sin marcas específicas)<br /><br /> 0 x 1: consulta ejecutada a través de uno de los procedimientos almacenados de API de cursor<br /><br /> 0 x 2: consulta de notificación<br /><br /> 0 x 4: consulta interna<br /><br /> 0 x 8 - consulta parametrizada automática sin la parametrización universal<br /><br /> 0 x 10 - captura de cursor refresh query<br /><br /> 0 x 20 - consulta que se usa en las solicitudes de actualización de cursor<br /><br /> 0 x 40 - conjunto de resultados inicial se devuelve cuando se abre un cursor (Cursor automática capturar)<br /><br /> 0 x 80 - consulta cifrada<br /><br /> 0 x 100 - consulta en el contexto del predicado de seguridad de nivel de fila|  
 |**required_cursor_options**|**int**|Opciones de cursor especificadas por el usuario, como el tipo de cursor.|  
 |**acceptable_cursor_options**|**int**|Opciones de cursor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede convertir de forma implícita para permitir la ejecución de la instrucción.|  
 |**merge_action_type**|**smallint**|El tipo de plan de ejecución de desencadenador utilizado como resultado de una **mezcla** instrucción.<br /><br /> 0 indica un plan sin desencadenadores, un plan de desencadenadores que no se ejecuta como resultado de una **mezcla** instrucción o un plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción que solo especifica un **Eliminar** acción.<br /><br /> 1 indica un **insertar** plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción.<br /><br /> 2 indica un **actualización** plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción.<br /><br /> 3 indica un **eliminar** plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción que contiene el correspondiente **insertar** o **actualización** acción.<br /><br /> <br /><br /> Para ejecutar las acciones en cascada de desencadenadores anidados, este valor es la acción de la **mezcla** instrucción que provocó la cascada.|  

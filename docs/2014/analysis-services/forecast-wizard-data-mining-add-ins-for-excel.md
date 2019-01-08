@@ -14,12 +14,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106465"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543701"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Asistente para pronóstico (Complementos de minería de datos para Excel)
   ![Asistente para asociación en la cinta de opciones minería de datos](media/dmc-forecast.gif "asociar el Asistente en la cinta de opciones minería de datos")  
@@ -67,7 +67,7 @@ ms.locfileid: "48106465"
     -   **Usar modelo temporal**. Si selecciona esta opción, el modelo no se guardará en el servidor. Se eliminan los modelos temporales al cerrar Excel.  
   
 ### <a name="requirements"></a>Requisitos  
- Los datos deben incluir al menos una columna que se pueda utilizar como serie temporal. Los valores de esta columna deben ser únicos y continuos, es decir, no deben faltar datos. Antes de ejecutar el asistente, ordene los datos según la columna de serie temporal en orden ascendente.  
+ Los datos deben incluir al menos una columna que se pueda utilizar como serie temporal. Los valores de esta columna deben ser únicos y continuos, es decir, no debe haber interrupciones. Antes de ejecutar el asistente, ordene los datos según la columna de serie temporal en orden ascendente.  
   
  Si los datos no incluyen una columna de hora o de fecha, puede asignar una serie numérica arbitraria o permitir al asistente crearla. Si permite al asistente crear la columna de orden de la serie, asegúrese de que las otras columnas están ordenadas en el orden que desea antes de iniciar el asistente.  
   

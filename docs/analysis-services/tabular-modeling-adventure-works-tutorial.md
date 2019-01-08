@@ -1,5 +1,5 @@
 ---
-title: Tabular (nivel de compatibilidad 1200) de modelado | Microsoft Docs
+title: Tabular (nivel de compatibilidad 1200) de modelado de Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054692"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072182"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modelado tabular (nivel de compatibilidad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -75,17 +75,17 @@ Este tutorial incluye las siguientes lecciones:
   
 |Lección|Tiempo estimado para completar la lección|  
 |----------|------------------------------|  
-|[Lección 1: Crear un nuevo proyecto de modelo tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
+|[Lección 1: Cree un nuevo proyecto de modelo Tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
 |[Lección 2: Agregar datos](../analysis-services/lesson-2-add-data.md)|20 minutos|  
 |[Lección 3: Marcar como tabla de fechas](../analysis-services/lesson-3-mark-as-date-table.md)|3 minutos|  
-|[Lección 4: Creación de relaciones](../analysis-services/lesson-4-create-relationships.md)|10 minutos|  
+|[Lección 4: Crear relaciones](../analysis-services/lesson-4-create-relationships.md)|10 minutos|  
 |[Lección 5: Crear columnas calculadas](../analysis-services/lesson-5-create-calculated-columns.md)|15 minutos|
 |[Lección 6: Crear medidas](../analysis-services/lesson-6-create-measures.md)|30 minutos|  
-|[Lección 7: Crear indicadores clave de rendimiento](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 minutos|  
+|[Lección 7: Creación de indicadores clave de rendimiento](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 minutos|  
 |[Lección 8: Crear perspectivas](../analysis-services/lesson-8-create-perspectives.md)|5 minutos|  
-|[Lección 9: Creación de jerarquías](../analysis-services/lesson-9-create-hierarchies.md)|20 minutos|  
+|[Lección 9: Crear jerarquías](../analysis-services/lesson-9-create-hierarchies.md)|20 minutos|  
 |[Lección 10: Creación de particiones](../analysis-services/lesson-10-create-partitions.md)|15 minutos|  
-|[Lección 11: Creación de Roles](../analysis-services/lesson-11-create-roles.md)|15 minutos|  
+|[Lección 11: Crear Roles](../analysis-services/lesson-11-create-roles.md)|15 minutos|  
 |[Lección 12: Analizar en Excel](../analysis-services/lesson-12-analyze-in-excel.md)|20 minutos| 
 |[Lección 13: Implementar](../analysis-services/lesson-13-deploy.md)|5 minutos|  
   
@@ -98,7 +98,7 @@ Este tutorial también incluye [lecciones complementarias](http://msdn.microsoft
 
   
 ## <a name="next-step"></a>Paso siguiente  
-Para empezar el tutorial, vaya a la primera lección: [Lección 1: Crear un nuevo proyecto de modelo tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Cree un nuevo proyecto de modelo Tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
   
   

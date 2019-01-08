@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Usar el editor de Transact-SQL de Azure Data Studio para crear objetos de base de datos | Microsoft Docs'
-description: Este tutorial muestra las características clave en Azure Data Studio que simplifican el uso de T-SQL.
-ms.custom: tools|sos
+title: 'Tutorial: Usar el editor de Transact-SQL para crear objetos de base de datos'
+titleSuffix: Azure Data Studio
+description: Este tutorial muestra las características clave en Azure Data Studio que simplifican el trabajo con T-SQL.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355936"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030459"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Usar el editor de Transact-SQL para crear objetos de base de datos: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Utilice el editor de Transact-SQL para crear objetos de base de datos: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Crear y ejecutar consultas, procedimientos almacenados, scripts, etc. son las tareas principales de los profesionales de TI de la base de datos. Este tutorial muestra las características clave en el editor de Transact-SQL para crear objetos de base de datos.
 
@@ -218,7 +219,7 @@ El *setCustomer* procedimiento almacenado creado en la sección anterior requier
    ![resultado de la prueba](./media/tutorial-sql-editor/test-result.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
-En este tutorial, ha aprendido cómo:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 > * Objetos de esquema de búsqueda rápida
 > * Editar datos de tabla 

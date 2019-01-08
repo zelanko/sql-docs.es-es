@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596164"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402860"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "47596164"
 |**last_media_number**|**smallint**|Número de medio del medio en el que termina el conjunto de copia de seguridad. Puede ser NULL.|  
 |**catalog_family_number**|**tinyint**|Número de familia del medio que contiene el comienzo del directorio del conjunto de copia de seguridad. Puede ser NULL.|  
 |**catalog_media_number**|**smallint**|Número de medio del medio que contiene el comienzo del directorio del conjunto de copia de seguridad. Puede ser NULL.|  
-|**Posición**|**int**|Posición del conjunto de copia de seguridad utilizada en la operación de restauración para buscar el conjunto de copia de seguridad y los archivos correspondientes. Puede ser NULL. Para obtener más información, consulte el archivo en [copia de seguridad &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Posición del conjunto de copia de seguridad utilizada en la operación de restauración para buscar el conjunto de copia de seguridad y los archivos correspondientes. Puede ser NULL. Para obtener más información, consulte el archivo en [copia de seguridad &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Fecha y hora de expiración del conjunto de copia de seguridad. Puede ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificación del proveedor de software que escribe el encabezado de medios de copia de seguridad. Puede ser NULL.|  
 |**Nombre**|**nvarchar(128)**|Nombre del conjunto de copia de seguridad. Puede ser NULL.|  
-|**Descripción**|**nvarchar(255)**|Descripción del conjunto de copia de seguridad. Puede ser NULL.|  
+|**description**|**nvarchar(255)**|Descripción del conjunto de copia de seguridad. Puede ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nombre del usuario que realiza la operación de copia de seguridad. Puede ser NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de versión principal. Puede ser NULL.|  
 |**software_minor_version**|**tinyint**|Número de versión secundaria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  

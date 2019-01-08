@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -18,12 +17,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f8ee2b794488a098e68ff54803b624c8fa4455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c056a6a1ebf5958b980c21e3d36d6bc1291f8869
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144725"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792877"
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] es una herramienta gráfica que se puede usar para crear y mantener paquetes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -51,7 +50,7 @@ ms.locfileid: "48144725"
 ## <a name="undo-and-redo"></a>Deshacer y rehacer  
  Puede deshacer y rehacer hasta 20 acciones en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para un paquete, la acción de deshacer o rehacer está disponible en las pestañas **Flujo de control**, **Flujo de datos**, **Controladores de eventos**y **Parámetros** , y en la ventana **Variables** . Para un proyecto, la acción de deshacer o rehacer está disponible en la ventana **Parámetros del proyecto** .  
   
- No se pueden deshacer ni rehacer los cambios en el **Cuadro de herramientas de SSIS**nuevo.  
+ No se pueden deshacer ni rehacer los cambios en el nuevo **Cuadro de herramientas de SSIS**.  
   
  Cuando se realizan cambios en un componente mediante el editor de componentes, los cambios se deshacen y rehacen en conjunto, en lugar de deshacer y rehacer cambios individuales. El conjunto de cambios aparece como una sola acción en la lista desplegable de deshacer y rehacer.  
   

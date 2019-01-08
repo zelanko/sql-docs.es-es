@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetVersions
@@ -18,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 333cd5a6793c335a0003ac6b39ddd6abba710f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077815"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807957"
 ---
 # <a name="localdbgetversions-function"></a>Función LocalDBGetVersions
   Devuelve todas las versiones de SQL Server Express LocalDB disponibles en el equipo.  
@@ -38,7 +36,7 @@ ms.locfileid: "48077815"
   
 ## <a name="parameters"></a>Parámetros  
  *pVersionNames*  
- [Output] Contiene los nombres de las versiones de LocalDB que están disponibles en la estación de trabajo del usuario.  
+ [Salida] Contiene los nombres de las versiones de LocalDB que están disponibles en la estación de trabajo del usuario.  
   
  *lpdwNumberOfVersions*  
  [Input/Output] En la entrada, contiene el número de zonas para las versiones en el búfer de *pVersionNames* .   

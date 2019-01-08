@@ -16,12 +16,12 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c5697fea6bea90407686f909e6c5cbafa2e2877b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66ee754963d6020b39f046ff6a5d73ea46450437
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120795"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407593"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
   En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido.  
@@ -45,7 +45,7 @@ ms.locfileid: "48120795"
   
 -   Equilibrar las peticiones de procesamiento de informes que se envían al servidor mediante la programación del procesamiento de informes y la especificación de los informes que pueden ejecutarse a petición y de los que se cargan desde la memoria caché.  
   
--   Proporcionar permiso para realizar tareas de administración mediante los roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles.  
+-   Proporcionar permiso para realizar tareas de administración mediante el uso de roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles.  
   
  Las herramientas para administrar contenido del servidor de informes son [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o el Administrador de informes. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] permite establecer valores predeterminados y habilitar características. El Administrador de informes se usa para conceder acceso de usuario a las operaciones y elementos del servidor de informes, ver y usar informes y otros tipos de contenido, y ver y usar todos los elementos compartidos y características de distribución de informes. Para obtener más información, vea [Herramientas de Reporting Services](../tools/reporting-services-tools.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48120795"
 |![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
 ||Conjunto de datos compartidos|  
   
- No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".  
+ No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Permiso para mover un elemento se muestra cuando se seleccionan las siguientes tareas en la asignación de roles para el elemento en cuestión: "Administrar informes," "Administrar modelos", "Administran carpetas" y "Administración orígenes de datos".  
   
 ##  <a name="bkmk_Folders"></a> Carpetas  
  Para tener acceso a los elementos que se almacenan y administran en un servidor de informes se utiliza una jerarquía de carpetas.  De forma predeterminada, la estructura de carpetas consta de un nodo raíz denominado Inicio y de carpetas reservadas compatibles con la característica opcional Mis informes. Las carpetas adicionales las define el usuario. Las carpetas del servidor de informes son útiles si desea conceder el mismo nivel de acceso a varios elementos. Los permisos que establece en la carpeta pueden heredarlos los elementos de la carpeta y las carpetas adicionales que cuelgan de esa carpeta. Por ejemplo, puede crear un conjunto de carpetas bajo la carpeta Inicio, asignar permisos de equipo a cada carpeta y permitir que los miembros del equipo personalicen las carpetas incluidas bajo la carpeta de equipo según sea necesario.  
@@ -95,7 +95,7 @@ ms.locfileid: "48120795"
   
  En la siguiente tabla, se describen las carpetas predefinidas que fijan la jerarquía de carpetas y proporcionan un marco para varias características.  
   
-|Carpeta|Finalidad|  
+|Carpeta|Propósito|  
 |------------|-------------|  
 |Inicio|Nodo raíz de la jerarquía de carpetas.|  
 |Usuarios|Esta carpeta aparece cuando se habilita la característica Mis informes. Contiene subcarpetas para todos los usuarios que utilizan la característica Mis informes, y solo los administradores del servidor de informes tienen acceso a ella. El nombre de cada subcarpeta coincide con el de un usuario.|  
@@ -171,7 +171,7 @@ ms.locfileid: "48120795"
  La característica Mis informes es opcional. Cuando se instala un servidor de informes, la característica Mis informes está deshabilitada de forma predeterminada. Para obtener más información sobre cómo habilitar esta característica, vea [Habilitar y deshabilitar Mis informes](enable-and-disable-my-reports.md). Para obtener más información, vea [Proteger Mis informes](../security/secure-my-reports.md).  
   
 ## <a name="tasks"></a>Tareas  
- [Carga de archivos a una carpeta](upload-files-to-a-folder.md)  
+ [Cargar archivos a una carpeta](upload-files-to-a-folder.md)  
   
  [Crear, eliminar o modificar una carpeta &#40;Administrador de informes&#41;](create-delete-or-modify-a-folder-report-manager.md)  
   

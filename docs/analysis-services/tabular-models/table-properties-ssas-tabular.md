@@ -1,5 +1,5 @@
 ---
-title: Propiedades de la tabla | Documentos de Microsoft
+title: Propiedades de la tabla de modelo tabular de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c479fd46f5303d95e5c0390eb97246f8eeb08890
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e5104eacafe60ab3fd1ea1ff29cc64b8453e4ff7
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040449"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072012"
 ---
-# <a name="table-properties"></a>Table Properties 
+# <a name="table-properties"></a>Propiedades de tabla 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Este artículo describen las propiedades de tabla de modelo tabular. Las propiedades que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que definen qué columnas del origen se importan.  
+  Este artículo describe las propiedades de tabla de modelo. Las propiedades que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que definen qué columnas del origen se importan.  
   
  Secciones de este tema:  
   
@@ -27,11 +27,11 @@ ms.locfileid: "34040449"
 -   [Configuración de propiedades de tabla](#bkmk_config_prop)  
   
 ##  <a name="bkmk_properties"></a> Propiedades de tabla  
- **Básico**  
+ **Basic**  
   
-|Propiedad|Valor predeterminado|Description|  
+|Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Nombre de conexión**|\<nombre de conexión >|Nombre de la conexión con el origen de datos de la tabla.<br /><br /> Para modificar la conexión, haga clic en el botón.|  
+|**Nombre de conexión**|\<nombre de la conexión >|El nombre de la conexión al origen de datos de la tabla.<br /><br /> Para modificar la conexión, haga clic en el botón.|  
 |**Oculto**|False|Especifica si la tabla se oculta en las listas de campos del cliente de informes.|  
 |**Particiones**||Las particiones de la tabla no se muestran en la ventana **Propiedades** . Para ver, crear o modificar las particiones, haga clic en el botón para abrir el Administrador de particiones.|  
 |**Datos de origen**||El origen de datos de la tabla no se pueden mostrar en la ventana **Propiedades** . Para ver o modificar los datos de origen, haga clic en el botón para abrir el cuadro de diálogo Editar propiedades de tabla.|  
@@ -40,9 +40,9 @@ ms.locfileid: "34040449"
   
  **Propiedades de informes**  
   
- Para obtener descripciones detalladas e información de configuración de propiedades de informes, consulte [propiedades de informes de Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
+ Para obtener descripciones detalladas e información de configuración de las propiedades de informes, vea [las propiedades de informes de Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
-|Propiedad|Valor predeterminado|Description|  
+|Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
 |**Conjunto de campos predeterminado**|||  
 |Comportamiento de tabla|||  

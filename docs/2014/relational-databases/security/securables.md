@@ -18,17 +18,17 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532473"
 ---
 # <a name="securables"></a>Elementos protegibles
   Los elementos protegibles son los recursos cuyo acceso es regulado por el sistema de autorización del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por ejemplo, una tabla es un elemento protegible. Algunos elementos protegibles pueden estar incluidos en otros, con lo que se crean jerarquías anidadas denominadas "ámbitos" que a su vez se pueden proteger. Los ámbitos protegibles son **servidor**, **base de datos**y **esquema**.  
   
-## <a name="securable-scope-server"></a>Ámbito protegible: servidor  
+## <a name="securable-scope-server"></a>Ámbito protegible: Servidor  
  El ámbito protegible **servidor** contiene los siguientes valores que puede proteger:  
   
 -   grupo de disponibilidad  
@@ -41,7 +41,7 @@ ms.locfileid: "48170185"
   
 -   Base de datos  
   
-## <a name="securable-scope-database"></a>Ámbito protegible: base de datos  
+## <a name="securable-scope-database"></a>Ámbito protegible: Base de datos  
  El ámbito protegible **base de datos** contiene los siguientes valores que puede proteger:  
   
 -   Rol de aplicación  

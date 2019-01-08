@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - xe
@@ -15,14 +14,14 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120262"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767527"
 ---
-# <a name="sql-server-extended-events-sessions"></a>Sesiones de SQL Server Extended Events
+# <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   Una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extended Events se crea en el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda el motor de Extended Events. Los aspectos siguientes de una sesión de Extended Events proporcionan un contexto para entender la infraestructura de Extended Events y el procesamiento general que se produce:  
   
 -   Estados de sesión. Los distintos estados en que se encuentra una sesión de Extended Events cuando se ejecutan las instrucciones CREATE EVENT SESSION y ALTER EVENT SESSION.  
@@ -55,7 +54,7 @@ ms.locfileid: "49120262"
   
  En la ilustración anterior, observe que:  
   
--   La asignación entre los objetos de paquete y las sesiones es varios a varios, lo que significa que un objeto puede aparecer en varias sesiones, y una sesión puede contener varios objetos.  
+-   La asignación entre los objetos de paquete y las sesiones es de varios a varios, lo que significa que un objeto puede aparecer en varias sesiones, y una sesión puede contener varios objetos.  
   
 -   El mismo evento (Event1) o destino (Target1) puede estar habilitado en más de una sesión.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "49120262"
   
  **Seguimiento de causalidad**  
   
- El seguimiento de causalidad proporciona la capacidad de realizar el seguimiento de trabajo por varias tareas. Cuando el seguimiento de causalidad está habilitado, cada evento que se activa tiene un Id. de actividad único en todo el sistema. El Id. de actividad es la combinación de un valor GUID constante en todos los eventos de una tarea y un número de secuencia que se incrementa cada vez que se activa un evento. Cuando una tarea produce trabajo que se debe realizar en otra, el identificador de actividad del elemento principal se envía a la tarea secundaria. La tarea secundaria genera el Id. de actividad del elemento principal la primera vez que se activa un evento.  
+ El seguimiento de causalidad proporciona la capacidad de realizar el seguimiento de trabajo por varias tareas. Cuando el seguimiento de causalidad está habilitado, cada evento que se activa tiene un Id. de actividad único en todo el sistema. El Id. de actividad es la combinación de un valor GUID constante en todos los eventos de una tarea y un número de secuencia que se incrementa cada vez que se activa un evento. Cuando una tarea produce trabajo que se debe realizar en otra, el identificador de actividad del elemento principal se envía a la tarea secundaria. La tarea secundaria genera el identificador de actividad del elemento principal la primera vez que se activa un evento.  
   
  La arquitectura de Extended Events constituye un sistema flexible que permite utilizar diversos objetos conjuntamente para resolver problemas concretos.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time [SQL Server], traces
@@ -16,12 +15,12 @@ ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b4c021e29180c25981582bab0d1ecb888345e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165975"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799727"
 ---
 # <a name="optimize-sql-trace"></a>Optimizar el seguimiento de SQL
   Aunque la ejecución de Seguimiento de SQL supone un costo de rendimiento porque utiliza recursos del sistema para recopilar datos, dicho costo se puede reducir al mínimo de muchas maneras. Para minimizar el costo de rendimiento que provoca un seguimiento, intente las siguientes acciones:  

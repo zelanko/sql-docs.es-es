@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpxactsetjob
@@ -17,12 +16,12 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc52a4069ae9d8dbe88fe992d0af3ae3507f13f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754733"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204684"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [**@publisher** =] **'***publisher***'**  
- Es el nombre del publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que pertenece el trabajo. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre de la que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador al que pertenece el trabajo. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

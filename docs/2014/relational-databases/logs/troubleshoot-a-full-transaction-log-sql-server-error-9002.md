@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
@@ -18,12 +18,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75677d897c714828e23205490d68fd2e691b9b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084915"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759517"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
   En este tema se tratan las posibles respuestas a un registro de transacciones lleno y se sugiere cómo evitar esta situación en el futuro. Cuando el registro de transacciones se llena, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un error 9002. El registro se puede llenar cuando la base de datos está en línea o en recuperación. Si el registro se llena cuando la base de datos está en línea, la base de datos seguirá en conexión, pero solo se puede leer y no actualizar. Si el registro se llena durante la recuperación, [!INCLUDE[ssDE](../../includes/ssde-md.md)] marca la base de datos como RESOURCE PENDING. En ambos casos, es necesaria la intervención del usuario para proporcionar espacio de registro.  
@@ -51,7 +51,7 @@ ms.locfileid: "48084915"
  Estas alternativas se describen en las secciones siguientes. Elija la respuesta más apropiada para la situación.  
   
 ### <a name="backing-up-the-log"></a>Realizar copias de seguridad del registro  
- En el modelo de recuperación completa o en el optimizado para cargas masivas de registros, si no se ha realizado recientemente ninguna copia de seguridad del registro de transacciones, puede que la copia de seguridad sea la que evita el truncamiento del registro. Si nunca ha hecho el registro, debe crear dos copias de seguridad del registro para permitir la [!INCLUDE[ssDE](../../includes/ssde-md.md)] para truncar el registro en el punto de la última copia de seguridad. El truncamiento del registro libera espacio para nuevas entradas del registro. Para evitar que el registro se vuelva a llenar, realice copias de seguridad con frecuencia.  
+ En el modelo de recuperación completa o en el optimizado para cargas masivas de registros, si no se ha realizado recientemente ninguna copia de seguridad del registro de transacciones, puede que la copia de seguridad sea la que evita el truncamiento del registro. Si nunca se ha realizado una copia de seguridad del registro, debe crear dos copias de seguridad de registros para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueda truncar el registro en el punto de la última copia de seguridad. El truncamiento del registro libera espacio para nuevas entradas del registro. Para evitar que el registro se vuelva a llenar, realice copias de seguridad con frecuencia.  
   
  **Para crear una copia de seguridad del registro de transacciones**  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: insertar filas en la columna Geography (ODBC) | Documentos de Microsoft'
+title: 'Cómo: Insertar filas en la columna Geography (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24785ff7f4b708b615280231b13a86009aeaebb0
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753463"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206284"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Insertar filas en la columna Geography (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Cómo: Insertar filas en la columna Geography (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  En este ejemplo se insertan dos filas en una tabla con una columna Geography a partir del lenguaje WellKnownBinary (WKB) con 2 enlaces distintos (SQLCCHAR y SQLCBINARY). Después, se selecciona una fila de esa tabla y se usa ::STAsText() para mostrarla. WKB es 0x01010000000700ECFAD03A4C4001008000B5DF07C0 y la aplicación imprime en la consola: POINT(56.4595 -2.9842).  
+  En este ejemplo se insertan dos filas en una tabla con una columna Geography a partir del lenguaje WellKnownBinary (WKB) con 2 enlaces distintos (SQLCCHAR y SQLCBINARY). A continuación, selecciona una fila de dicha tabla y utiliza::::stastext() para mostrarla. WKB es 0x01010000000700ECFAD03A4C4001008000B5DF07C0 y la aplicación imprime en la consola: PUNTO (56.4595-2.9842).  
   
  Este ejemplo no requiere ningún origen de datos ODBC, pero el ejemplo se ejecuta de forma predeterminada en la instancia local de SQL Server.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "50753463"
  Para obtener más información sobre almacenamiento espacial, vea [datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Ejemplo  
- La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea una tabla usada por este ejemplo.  
+ La primera ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código crea una tabla usada por este ejemplo.  
   
  Compile la segunda lista de código (C++) con odbc32.lib y user32.lib. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50753463"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- La tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina la tabla usada por este ejemplo.  
+ La tercera ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código elimina la tabla usada por este ejemplo.  
   
 ```sql
 use tempdb  

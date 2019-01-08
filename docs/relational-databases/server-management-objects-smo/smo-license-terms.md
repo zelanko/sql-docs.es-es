@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f8a5dc68eed10ea6afce1a1aa0f75c2c2e9e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502293"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de (SMO) de objetos de administración compartida de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 &nbsp;&nbsp;**a.    Código distribuible.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i.    Derecho de uso y distribución. Si cumple con los términos siguientes:**
-*   Puede copiar y distribuir el código objeto del software (“Código distribuible”) en los programas que desarrolle; y
+*   Puede copiar y distribuir el código objeto del software ("código distribuible") en los programas que desarrolle; y
 *   Puede permitir que los distribuidores de sus programas copien y distribuyan el Código distribuible como parte de esos programas.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Requisitos de distribución. Para distribuir cualquier Código distribuible, deberá**
@@ -55,11 +55,11 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 * para cualquier código distribuible que tenga una extensión de nombre de archivo del archivo .dll, distribuir solo los resultados de ejecutar dicho código a través de un vinculador a su programa;
 * exigir a los distribuidores y usuarios finales externos que acepten los términos que lo protegen, al menos en lo que respecta al presente contrato; 
 * mostrar el aviso de copyright válido en los programas; y
-* indemnizar, defender y eximir de responsabilidad a Microsoft frente a cualquier reclamación, incluidos los honorarios de abogado, relativos a la distribución o uso de sus programas.
+* indemnizar, Defender y eximir a Microsoft a cualquier reclamación, incluidos los honorarios de abogados, relacionadas con la distribución o el uso de sus programas.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**iii.  Limitaciones de distribución. No puede**
 * modificar ningún aviso de copyright, marca comercial o patente en el Código distribuible;
-* usar las marcas comerciales de Microsoft en los nombres de sus programas o de cualquier modo que sugiera que estos provienen o son promocionados por Microsoft;
+* Usar marcas comerciales de Microsoft en los nombres de los programas o de forma que sugiere sus programas provienen o están aprobados por Microsoft;
 * incluir el Código distribuible en programas dañinos, engañosos o ilegales ni
 * modificar o distribuir el código fuente de cualquier Código distribuible para que cualquier parte del mismo quede sujeta a un Permiso excluido. Un Permiso excluido es aquel que exige, como condición de uso, modificación o distribución, que
   * el código se divulgue o distribuya como código fuente; o
@@ -81,7 +81,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 **7.    RESTRICCIONES EN MATERIA DE EXPORTACIÓN.** El software está sujeto a las leyes y a los reglamentos en materia de exportación de Estados Unidos. Debe cumplir con todas las leyes y disposiciones en materia de exportación internacionales y nacionales que sean de aplicación para el software. Estas leyes incluyen restricciones de los destinos, usuarios finales y uso final. Para obtener más información, consulte www.microsoft.com/exporting.
 
-**8.    SERVICIOS DE SOPORTE TÉCNICO.** Debido a que este software se presenta “tal cual”, no podemos proporcionar servicios de soporte técnico para el mismo.
+**8.    SERVICIOS DE SOPORTE TÉCNICO.** Dado que este software es "tal cual", no podemos proporcionar servicios de soporte técnico para él.
 
 **9.    CONTRATO COMPLETO**. Este contrato, así como los términos de suplementos, actualizaciones, servicios basados en Internet y servicios de soporte técnico que use, constituyen el contrato completo del software y los servicios de soporte técnico.
 
@@ -95,7 +95,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 **12.   EXCLUSIÓN DE GARANTÍA. LA LICENCIA DEL SOFTWARE SE OTORGA "TAL CUAL". USTED ACEPTA EL RIESGO DE UTILIZARLO. MICROSOFT NO PROPORCIONA GARANTÍAS O CONDICIONES EXPRESAS. ES POSIBLE QUE LA LEGISLACIÓN LOCAL LE OTORGUE DERECHOS DE CONSUMIDOR O GARANTÍAS LEGALES ADICIONALES QUE EL PRESENTE CONTRATO NO PUEDA MODIFICAR. EN LA MEDIDA EN QUE ASÍ LO PERMITA LA LEGISLACIÓN LOCAL, MICROSOFT EXCLUYE LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN PARTICULAR Y AUSENCIA DE INFRACCIÓN DE DERECHOS.**
 
-**PARA AUSTRALIA: Usted cuenta con garantías legales conforme a la ley Australiana del consumidor y nada en estos términos pretende afectar dichos derechos.**
+**PARA AUSTRALIA: usted cuenta garantías legales conforme a la ley australiana del consumidor y nada en estos términos pretende afectar dichos derechos.**
 
 **13.   LIMITACIÓN Y EXCLUSIÓN DE RECURSOS E INDEMNIZACIONES. PUEDE RECUPERAR DE MICROSOFT Y SUS DISTRIBUIDORES SOLO LOS DAÑOS DIRECTOS HASTA LA CANTIDAD DE 5 DÓLARES ESTADOUNIDENSES. NO PODRÁ OBTENER INDEMNIZACIÓN ALGUNA POR DAÑOS DE OTRA ÍNDOLE, INCLUIDOS LOS DAÑOS CONSECUENCIALES, POR LUCRO CESANTE, ESPECIALES, INDIRECTOS O INCIDENTALES.**
 Esta limitación se aplica a

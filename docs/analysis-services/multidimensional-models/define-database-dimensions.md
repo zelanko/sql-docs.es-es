@@ -1,5 +1,5 @@
 ---
-title: Definir dimensiones de base de datos | Documentos de Microsoft
+title: Definir dimensiones de base de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534715"
 ---
 # <a name="define-database-dimensions"></a>Definir dimensiones de base de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "34025862"
   
  El Diseñador de dimensiones tiene tres pestañas, que se describen en la siguiente tabla.  
   
-|Pestaña|Description|  
+|Pestaña|Descripción|  
 |---------|-----------------|  
-|**Estructura de dimensión**|Utilice esta pestaña para trabajar con la estructura de una dimensión: para examinar o crear el esquema de vista del origen de datos para una dimensión, trabajar con atributos y organizar atributos en jerarquías definidas por el usuario.|  
+|**Estructura de dimensión**|Use esta ficha para trabajar con la estructura de una dimensión para examinar o crear el esquema de vista del origen de datos para una dimensión, trabajar con atributos y organizar atributos en jerarquías definidas por el usuario.|  
 |**Relaciones de atributo**|Utilice esta pestaña para crear, modificar o eliminar las relaciones de atributo de una dimensión.|  
 |**Traducciones**|Utilice esta pestaña para agregar y modificar traducciones de metadatos de dimensiones en distintos idiomas.|  
 |**Browser**|Utilice esta pestaña para examinar los miembros de una dimensión procesada y revisar las traducciones de metadatos de dimensiones.|  
   
  En los siguientes temas se describen las tareas que puede realizar en el Diseñador de dimensiones.  
   
- [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Describe cómo definir y configurar un atributo de dimensión.  
   
  [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "34025862"
  [Definir relaciones de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  Describe cómo definir y configurar una relación de atributo.  
   
- [Usar al Asistente de Business Intelligence para mejorar dimensiones](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [Usar el Asistente de Business Intelligence para mejorar dimensiones](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Describe cómo mejorar una dimensión con el Asistente de Business Intelligence.  
   
   

@@ -11,12 +11,12 @@ ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220665"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415283"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar y deshabilitar el espacio seguro para RDL
   La característica de espacio aislado del lenguaje RDL (Report Definition Language) permite detectar y restringir el uso de tipos específicos de uso de recursos por parte de inquilinos individuales en un entorno donde varios inquilinos usan una única granja web de servidores de informes. Un ejemplo de esto es un escenario de servicios de hospedaje en el que podría mantener una única granja web de servidores de informes que utilicen varios inquilinos, y quizás compañías diferentes. Como administrador del servidor de informes, puede habilitar esta característica para alcanzar los siguientes objetivos:  
@@ -35,10 +35,10 @@ ms.locfileid: "48220665"
   
 -   Parámetros con nombre en expresiones.  
   
- En este tema se describe cada elemento en el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para obtener más información acerca de los registros de seguimiento, vea [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
+ En este tema se describe cada elemento del elemento <`RDLSandboxing`> del archivo RSReportServer.Config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Ejemplo de configuración  
- El ejemplo siguiente muestra la configuración y los valores de ejemplo para el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config.  
+ En el siguiente ejemplo se muestra la configuración y los valores de ejemplo para el elemento <`RDLSandboxing`> del archivo RSReportServer.Config.  
   
 ```  
 <RDLSandboxing>  
@@ -47,8 +47,8 @@ ms.locfileid: "48220665"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -62,10 +62,10 @@ ms.locfileid: "48220665"
   
 |Parámetro|Descripción|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Número máximo de caracteres permitido en expresiones RDL.<br /><br /> Valor predeterminado: 1000|  
-|**MaxResourceSize**|Número máximo de KB permitido para un recurso externo.<br /><br /> Valor predeterminado: 100|  
-|**MaxStringResultLength**|Número máximo de caracteres permitido en un valor de devolución para una expresión RDL.<br /><br /> Valor predeterminado: 1000|  
-|**MaxArrayResultLength**|Número máximo de elementos permitido en un valor de devolución de matriz para una expresión RDL.<br /><br /> Valor predeterminado: 100|  
+|**MaxExpressionLength**|Número máximo de caracteres permitido en expresiones RDL.<br /><br /> Predeterminado: 1000|  
+|**MaxResourceSize**|Número máximo de KB permitido para un recurso externo.<br /><br /> Predeterminado: 100|  
+|**MaxStringResultLength**|Número máximo de caracteres permitido en un valor de devolución para una expresión RDL.<br /><br /> Predeterminado: 1000|  
+|**MaxArrayResultLength**|Número máximo de elementos permitido en un valor de devolución de matriz para una expresión RDL.<br /><br /> Predeterminado: 100|  
 |**Tipos**|Lista de los miembros que se permitirán en las expresiones RDL.|  
 |**Allow**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
@@ -119,7 +119,7 @@ ms.locfileid: "48220665"
   
 -   Agregar la nueva clase a la lista de permitidos.  
   
- Para agregar [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] funciones de .NET Framework a la lista de permitidos, agregue los tipos correspondientes del espacio de nombres Microsoft.VisualBasic a la lista de permitidos.  
+ Para agregar funciones de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue los tipos correspondientes del espacio de nombres Microsoft.VisualBasic a la lista de permitidos.  
   
  Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar el [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] palabra clave de .NET Framework `Integer`, agregue el siguiente fragmento XML para el  **\<RDLSandboxing >** elemento:  
   
@@ -142,7 +142,7 @@ ms.locfileid: "48220665"
   
 -   Al agregar los miembros a los tipos de la lista de permitidos.  
   
--   Al actualizar el [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] en el servidor de informes.  
+-   Al actualizar [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] en el servidor de informes.  
   
 -   Al actualizar el servidor de informes a una versión posterior de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   

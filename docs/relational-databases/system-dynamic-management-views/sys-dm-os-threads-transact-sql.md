@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bda588201965644089d3918c687095bb97d31d45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610213"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205834"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE 
   
  La siguiente consulta se utiliza para buscar subprocesos de trabajo, junto con el tiempo consumido en la ejecución, que ejecutan subprocesos no iniciados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!NOTE]  
+> [!NOTE]
 >  Por concisión, la siguiente consulta utiliza un asterisco (`*`) en la instrucción `SELECT`. Evite utilizar asteriscos (*), especialmente con vistas de catálogo, vistas de administración dinámica y funciones con valores de tabla del sistema. Las actualizaciones futuras y las versiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede agregar columnas y cambiar el orden de columnas para estas funciones y vistas. Es posible que estos cambios provoquen errores en las aplicaciones que esperan un determinado orden y número de columnas.  
   
 ```  

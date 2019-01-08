@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541934"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o de red. El destino puede ser un archivo, directorio, página HTML, imagen, programa y así sucesivamente *.*  
@@ -58,7 +58,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
  También se puede definir el contexto abriendo un **registro** o **Recordset** objeto que representa un directorio, porque estos objetos ya tienen un implícita o explícitamente declarado **conexión**  objeto que especifica el contexto.  
   
 ## <a name="scoped-operations"></a>Operaciones de ámbito  
- El contexto también define el ámbito, es decir, el directorio y sus subdirectorios que pueden participar en operaciones posteriores. El **registro** objeto tiene varios métodos con ámbito que operan en un directorio y todos sus subdirectorios. Estos métodos incluyen [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), y [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ El contexto también define el ámbito: es decir, el directorio y sus subdirectorios que pueden participar en operaciones posteriores. El **registro** objeto tiene varios métodos con ámbito que operan en un directorio y todos sus subdirectorios. Estos métodos incluyen [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), y [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>Direcciones URL relativas como texto de comando  
  Puede especificar un comando que se ejecuta en el origen de datos escribiendo una cadena en el *CommandText* parámetro de la **conexión** del objeto [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método y en el  *Origen* parámetro de la **Recordset** del objeto [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
@@ -13,12 +13,12 @@ ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebc0a3ef5a9ad8f452c96e8294dc46847ee6e982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181135"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812447"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Agregar tablas a diagramas (Visual Database Tools)
   Puede agregar una tabla al diagrama de base de datos para editar su estructura o para relacionarla con otras tablas del diagrama. Puede agregar tablas de base de datos existentes a un diagrama o insertar una tabla nueva aún no definida en la base de datos.  
@@ -29,7 +29,7 @@ ms.locfileid: "48181135"
   
      Para crear una tabla en el diagrama actual, haga clic en el botón **Nueva tabla** de la barra de herramientas.  
   
-     O bien  
+     -o bien-  
   
      Haga clic con el botón derecho en el diagrama y seleccione **Nueva tabla**.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd8b33e330a2edd9d6c93cb9ab00c68783ae5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8b3e0e7b353ad37aeb3ce87e39bdfc52d2cbcb0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135425"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749467"
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
   El destino de Procesamiento de dimensiones carga y procesa una dimensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre las dimensiones, vea [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
@@ -49,9 +48,9 @@ ms.locfileid: "48135425"
   
 -   [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de procesamiento de dimensiones &#40;página asignaciones&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Editor de destino de procesamiento de dimensiones &#40;página Asignaciones&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Editor de destino de procesamiento de dimensiones &#40;página Opciones avanzadas&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Editor de destino de procesamiento de dimensiones &#40;página Avanzadas&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   

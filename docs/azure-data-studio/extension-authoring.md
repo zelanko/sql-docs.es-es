@@ -1,7 +1,8 @@
 ---
-title: Crear extensiones para Azure Data Studio | Microsoft Docs
-description: Agregar extensiones a Azure Data Studio
-ms.custom: tools|sos
+title: Crear extensiones
+titleSuffix: Azure Data Studio
+description: Obtenga información sobre cómo crear y agregar extensiones a Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7d778eb4df52d28a44ec8127ebc9f657a9f0dde
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355887"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030526"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Extender la funcionalidad de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Ampliar la funcionalidad mediante la creación de extensiones de Azure Data Studio
 
 Las extensiones en [!INCLUDE[name-sos](../includes/name-sos-short.md)] proporcionan una manera fácil de agregar más funcionalidad a la base de [!INCLUDE[name-sos](../includes/name-sos-short.md)] instalación.
 

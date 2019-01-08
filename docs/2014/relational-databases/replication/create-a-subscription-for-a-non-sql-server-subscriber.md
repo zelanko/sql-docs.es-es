@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -15,12 +14,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077695"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774917"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
   En este tema se describe cómo crear una suscripción para un suscriptor que no sea de SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replicación transaccional y la replicación de instantáneas admiten la publicación de datos en suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre plataformas de suscriptores admitidos, vea [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -97,7 +96,7 @@ ms.locfileid: "48077695"
   
     -   Para IBM DB2, la base de datos se especifica en la propiedad **Catálogo inicial** de la cadena de conexión DB2, la cual puede indicarse en el campo **Opciones de conexión adicionales** que se describe más adelante en este proceso.  
   
-8.  En la página **Seguridad del Agente de distribución** , haga clic en el botón de propiedades (**…**) situado junto al suscriptor para obtener acceso al cuadro de diálogo **Seguridad del Agente de distribución** .  
+8.  En la página **Seguridad del Agente de distribución**, haga clic en el botón de propiedades (**...**) situado junto al suscriptor para acceder al cuadro de diálogo **Seguridad del Agente de distribución**.  
   
 9. En el cuadro de diálogo **Seguridad del Agente de distribución** :  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48077695"
   
     -   Seleccione **Inmediatamente** en la lista desplegable de la columna **Inicializar cuando** para que el Agente de distribución transfiera los archivos de instantáneas al suscriptor una vez que el asistente haya finalizado. Seleccione **En la primera sincronización** para que el agente transfiera los archivos la próxima vez que esté programado para ejecutarse.  
   
-12. En la página **Acciones del asistente** , incluya de forma opcional la suscripción. Para más información, consulte [Scripting Replication](scripting-replication.md).  
+12. En la página **Acciones del asistente** , incluya de forma opcional la suscripción. Para obtener más información, consulte [Scripting Replication](scripting-replication.md).  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>Para conservar las tablas en el suscriptor  
   
@@ -154,12 +153,12 @@ ms.locfileid: "48077695"
   
 2.  En el publicador de la base de datos de publicaciones, compruebe que la publicación admita suscripciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la ejecución de [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
-    -   Si el valor de `enabled_for_het_sub` es 1, que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten los suscriptores.  
+    -   Si el valor de `enabled_for_het_sub` es 1, se admiten Suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Si el valor de `enabled_for_het_sub` es 0, ejecute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** y `true` para  **@value**.  
   
         > [!NOTE]  
-        >  Antes de cambiar `enabled_for_het_sub` a `true`, debe quitar las suscripciones existentes a la publicación. No puede establecer `enabled_for_het_sub` en `true` cuando la publicación también admite las suscripciones de actualización. El cambio de `enabled_for_het_sub` afectará a otras propiedades de publicación. Para más información, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+        >  Antes de cambiar `enabled_for_het_sub` a `true`, debe quitar cualquier suscripción existente en la publicación. No puede establecer `enabled_for_het_sub` en `true` cuando la publicación también admite las suscripciones de actualización. El cambio de `enabled_for_het_sub` afectará a otras propiedades de publicación. Para más información, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber**, un valor de **(destino predeterminado)** para **@destination_db**, un valor de **push** para **@subscription_type**y un valor de 3 para **@subscriber_type** (especifica un proveedor OLE DB).  
   
@@ -188,6 +187,6 @@ ms.locfileid: "48077695"
  [Oracle Subscribers](non-sql/oracle-subscribers.md)   
  [Otros suscriptores que no son de SQL Server](non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md)  
+ [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

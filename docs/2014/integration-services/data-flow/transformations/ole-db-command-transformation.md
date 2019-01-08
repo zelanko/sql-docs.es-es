@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbcommandtrans.f1
@@ -16,12 +15,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: caa2c72308aedf1cb1f5467c355b9b8175849d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6596785f3dd6ac7f89788b7741845602e1aeea54
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146405"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817877"
 ---
 # <a name="ole-db-command-transformation"></a>transformación Comando de OLE DB
   La transformación Comando de OLE DB ejecuta una instrucción SQL para cada fila en un flujo de datos. Por ejemplo, puede ejecutar una instrucción SQL que inserte, actualice o elimine filas en una tabla de base de datos.  
@@ -45,7 +44,7 @@ ms.locfileid: "48146405"
  Esta transformación tiene una entrada, una salida normal y una salida de error.  
   
 ## <a name="logging"></a>Registro  
- Puede registrar las llamadas realizadas por la transformación Comando de OLE DB a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones y los comandos a orígenes de datos externos realizados por la transformación Comando de OLE DB. Para registrar las llamadas que la transformación Comando de OLE DB realiza a los proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Puede registrar las llamadas realizadas por la transformación Comando de OLE DB a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones y los comandos a orígenes de datos externos realizados por la transformación Comando de OLE DB. Para registrar las llamadas que la transformación Comando de OLE DB realiza a los proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Puede configurar la transformación mediante el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o el modelo de objetos. Para obtener detalles sobre cómo configurar la transformación mediante el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vea  [Configurar la transformación Comando de OLE DB](../../configure-the-ole-db-command-transformation.md). Vea la Guía del desarrollador para obtener información detallada sobre la configuración mediante programación de esta transformación.  

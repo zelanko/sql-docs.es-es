@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9c136f2eb27f4c999d71c398b14b67405cee108
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128325"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785227"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
@@ -89,7 +88,7 @@ ms.locfileid: "48128325"
  Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opciones para publicaciones de combinación  
- El cuadro de diálogo **Propiedades del artículo** para las publicaciones de combinación tiene dos pestañas: **Propiedades** y **Solucionador**.  
+ El **propiedades del artículo** cuadro de diálogo para las publicaciones de combinación tiene dos pestañas: **Propiedades** y **resolución**.  
   
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  **Dirección de la sincronización**  
@@ -125,7 +124,7 @@ ms.locfileid: "48128325"
  Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
  **Usar un solucionador personalizado (registrada en el distribuidor)**  
- Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Si el solucionador requiere una entrada, especifíquela en el cuadro de texto **Especifique la información necesaria para el solucionador** . Para obtener más información acerca de la entrada requerida por los solucionadores personalizados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vea [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -136,7 +135,7 @@ ms.locfileid: "48128325"
  Todos los solucionadores basados en COM proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] están firmados. Seleccione esta opción para comprobar que el solucionador sea válido al sincronizar.  
   
 ## <a name="options-for-oracle-publications"></a>Opciones para las publicaciones de Oracle  
- El cuadro de diálogo **Propiedades del artículo** para las publicaciones de Oracle tiene dos pestañas: **Propiedades** y **Asignación de datos**. Las publicaciones de Oracle no admiten todas las propiedades admitidas por las publicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ El **propiedades del artículo** cuadro de diálogo para las publicaciones de Oracle tiene dos pestañas: **Propiedades** y **asignación datos**. Las publicaciones de Oracle no admiten todas las propiedades admitidas por las publicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  **Copiar los procedimientos almacenados INSERT, UPDATE y DELETE**  

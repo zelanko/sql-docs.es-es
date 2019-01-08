@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802469"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504588"
 ---
 # <a name="core-interface-conformance"></a>Conformidad de interfaz de núcleo
-Todos los controladores ODBC deben presentar como nivel básico al menos cumplimiento de la interfaz. Dado que las características en el nivel de núcleo son las necesarias en aplicaciones interoperables más genéricas, el controlador puede trabajar con dichas aplicaciones. Las características en el nivel de núcleo también corresponden a las características definidas en la especificación ISO CLI y a las características no opcionales definidas en la especificación de CLI de grupo abierto. Un controlador ODBC compatibles: interfaz de nivel básico permite a la aplicación hacerlo siguiente:  
+Todos los controladores ODBC deben presentar como nivel básico al menos cumplimiento de la interfaz. Dado que las características en el nivel de núcleo son las necesarias en aplicaciones interoperables más genéricas, el controlador puede trabajar con dichas aplicaciones. Las características en el nivel de núcleo también corresponden a las características definidas en la especificación ISO CLI y a las características no opcionales definidas en la especificación de CLI de grupo abierto. Un controlador ODBC de función de la interfaz de nivel básico permite a la aplicación hacerlo siguiente:  
   
 -   Asignar y liberar todos los tipos de identificadores, mediante una llamada a **SQLAllocHandle** y **SQLFreeHandle**.  
   

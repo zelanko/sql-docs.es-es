@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185825"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408984"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar el servicio Integration Services como recurso de clúster
   Para los clientes que decidan que las ventajas de configurar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como un recurso de clúster son más que los inconvenientes, esta sección contiene las instrucciones de configuración necesarias. Sin embargo, [!INCLUDE[msCoName](../includes/msconame-md.md)] no recomienda que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configure como un recurso de clúster.  
@@ -79,7 +79,7 @@ ms.locfileid: "48185825"
   
 4.  En el menú **Archivo** , seleccione **Nuevo**y, a continuación, haga clic en **Recurso**.  
   
-5.  En la página **Nuevo recurso** del **Resource Wizard** (Asistente para recursos), escriba un nombre y elija **Servicio genérico**como tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Siguiente**.  
+5.  En la página **Nuevo recurso** del **Asistente para recursos**, escriba un nombre y seleccione **“Servicio genérico”** como el tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Siguiente**.  
   
 6.  En la página **Possible Owners** (Posibles propietarios), agregue o quite los nodos del clúster como posibles propietarios del recurso. Haga clic en **Siguiente**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48185825"
   
 2.  En el disco compartido, cree una nueva carpeta denominada **Packages** para que sea el almacén de paquetes. Conceda permisos de escritura y de carpetas de listas en la nueva carpeta a los grupos y usuarios que corresponda.  
   
-3.  En el disco compartido, abra el archivo de configuración en un editor XML o de texto. Cambie el valor de la `ServerName` elemento en el nombre de la memoria virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se encuentra en el mismo grupo de recursos.  
+3.  En el disco compartido, abra el archivo de configuración en un editor XML o de texto. Cambie el valor del elemento `ServerName` por el nombre del equipo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] virtual que está en el mismo grupo de recursos.  
   
 4.  Cambie el valor de la `StorePath` elemento a la ruta de acceso completa de la **paquetes** carpeta creada en el disco compartido en un paso anterior.  
   

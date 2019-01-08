@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
@@ -13,12 +13,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806947"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Índices y claves (cuadro de diálogo, Visual Database Tools)
   Utilice este cuadro de diálogo para crear o modificar índices, claves principales y claves únicas. Para tener acceso a este cuadro de diálogo, abra la definición de la tabla que tiene el índice o la clave, haga clic con el botón derecho en la cuadrícula de la definición de tabla y, a continuación, haga clic en **Índices o claves**.  
@@ -40,7 +40,7 @@ ms.locfileid: "48076805"
  Expandido, muestra las propiedades **Columnas**, **Is Unique**y **Tipo**.  
   
  **Columnas**  
- Muestra los criterios de ordenación elegidos para las columnas de la clave o el índice y proporciona acceso al cuadro de diálogo en el que se pueden definir los criterios de ordenación. Para que se muestre el cuadro de diálogo, haga clic en **Columnas** y, a continuación, en el botón de puntos suspensivos (…) situado a la derecha del campo de propiedad.  
+ Muestra los criterios de ordenación elegidos para las columnas de la clave o el índice y proporciona acceso al cuadro de diálogo en el que se pueden definir los criterios de ordenación. Para que se muestre el cuadro de diálogo, haga clic en **Columnas** y, después, en el botón de puntos suspensivos (...) situado a la derecha del campo de propiedad.  
   
  **Is Unique**  
  Indica si los datos especificados en el índice o en la clave deben ser únicos. Esta propiedad no está disponible en los índices XML.  
@@ -51,11 +51,11 @@ ms.locfileid: "48076805"
  **Categoría Identidad**  
  Expandido, muestra los campos de propiedades de **Nombre** y **Descripción**.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
   
  **Descripción**  
- Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y, a continuación, en el botón de puntos suspensivos (**…**) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
+ Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
   
  **Categoría Diseñador de tablas**  
  Expandido, muestra la información de **Crear como CLUSTERED**.  

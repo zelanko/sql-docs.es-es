@@ -34,12 +34,12 @@ ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d3e19334e37ee418d4e99472845d24344d452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510543"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Orígenes de datos y enlaces (SSAS multidimensional)
   Es posible enlazar cubos, dimensiones y otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un origen de datos. Un origen de datos puede ser uno de los objetos siguientes:  
@@ -50,7 +50,7 @@ ms.locfileid: "48148095"
   
  El medio de expresar el origen de datos varía según el tipo de origen de datos. Por ejemplo, un origen de datos relacional se distingue por una cadena de conexión. Para obtener más información acerca de los orígenes de datos, vea [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md).  
   
- Sin tener en cuenta el origen de datos usado, la vista del origen de datos (DSV) contiene los metadatos para el origen de datos. Así, los enlaces para un cubo u otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se expresan como enlaces a DSV. Estos enlaces pueden incluir enlaces a objetos lógicos, como vistas, columnas calculadas y relaciones que no existen físicamente en el origen de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega una columna calculada que encapsula la expresión en la DSV y, a continuación, enlaza la medida de OLAP correspondiente a dicha columna de la DSV. Para obtener más información acerca de DSVs, vea [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
+ Sin tener en cuenta el origen de datos usado, la vista del origen de datos (DSV) contiene los metadatos para el origen de datos. Así, los enlaces para un cubo u otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se expresan como enlaces a DSV. Estos enlaces pueden incluir enlaces a objetos de objetos lógicos, como vistas, columnas calculadas y relaciones que no existen físicamente en el origen de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega una columna calculada que encapsula la expresión en la DSV y, a continuación, enlaza la medida de OLAP correspondiente a dicha columna de la DSV. Para obtener más información acerca de DSVs, vea [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
   
  Cada objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enlaza con el origen de datos a su manera. Además, los enlaces de datos para estos objetos y la definición del origen de datos se pueden proporcionar insertados con la definición del objeto enlazado a datos (por ejemplo, la dimensión) o fuera de línea como un conjunto independiente de definiciones.  
   
@@ -76,20 +76,20 @@ ms.locfileid: "48148095"
  Todos los datos que se reciben del origen de datos se convierten al tipo de [!INCLUDE[ssAS](../../includes/ssas-md.md)] especificado en el enlace (normalmente, durante el procesamiento). Se produce un error si no se puede realizar la conversión (por ejemplo, de String a Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] normalmente establece el tipo de datos del enlace en el que mejor coincide con el tipo de origen del origen de datos. Por ejemplo, los tipos Date, DateTime, SmallDateTime, DateTime2 y DateTimeOffset de SQL se asignan a Date en [!INCLUDE[ssAS](../../includes/ssas-md.md)] , y el tipo Time de SQL se asigna a String.  
   
 ## <a name="bindings-for-dimensions"></a>Enlaces para dimensiones  
- Cada atributo de una dimensión se enlaza a una columna en una DSV. Todos los atributos de una dimensión deben proceder de un origen de datos único. Sin embargo, los atributos se pueden enlazar a columnas en tablas diferentes. Las relaciones entre las tablas se definen en DSV. En el caso en el que existe más de un conjunto de relaciones para la misma tabla, podría ser necesario introducir una consulta con nombre en la DSV que actúe como 'alias' de tabla. Las expresiones y los filtros se definen en la DSV usando cálculos con nombre y consultas con nombre.  
+ Cada atributo de una dimensión se enlaza a una columna en una DSV. Todos los atributos de una dimensión deben proceder de un origen de datos único. Sin embargo, los atributos se pueden enlazar a columnas en tablas diferentes. Las relaciones entre las tablas se definen en DSV. En el caso donde existe más de un conjunto de relaciones a la misma tabla, podría ser necesario introducir una consulta con nombre en la DSV que actúe como una tabla de 'alias'. Las expresiones y los filtros se definen en la DSV usando cálculos con nombre y consultas con nombre.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Enlaces para grupos de medidas, medidas y particiones  
  Cada grupo de medidas tiene los enlaces predeterminados siguientes:  
   
 -   El grupo de medidas se enlaza a una tabla en una DSV (por ejemplo, `MeasureGroup.Source`).  
   
--   Cada medida está enlazada a una columna de la tabla (por ejemplo, `Measure.ValueColumn.Source`).  
+-   Cada medida se enlaza a una columna de dicha tabla (por ejemplo, `Measure.ValueColumn.Source`).  
   
 -   Cada dimensión de grupo de medidas tiene un conjunto de *atributos de granularidad* que definen la granularidad del grupo de medidas. Cada uno de estos atributos se debe enlazar a la columna o columnas de la tabla de hechos que contienen la clave de atributo. (Para obtener más información sobre los atributos de granularidad, vea Atributos de granularidad de grupo de medidas posteriormente en este tema.)  
   
  Estos enlaces predeterminados se pueden invalidar de manera selectiva por partición. Cada partición puede especificar un origen de datos, tabla o nombre de consulta, o expresión de filtro diferentes. La estrategia de partición más común es invalidar la tabla por partición, usando el mismo origen de datos. Las alternativas incluyen la aplicación de un filtro diferente por partición o el cambio del origen de datos.  
   
- El origen de datos predeterminado se debe definir en la DSV, proporcionando por tanto la información del esquema, incluyendo los detalles de las relaciones. Cualquier consulta o tabla adicional especificada en el nivel de partición no se tiene que mostrar en la DSV, pero deben tener el mismo esquema que la tabla predeterminada definida para el grupo de medidas o, al menos, deben contener todas las columnas usadas por las medidas o los atributos de granularidad. Los enlaces detallados por medida y atributo de granularidad no se pueden invalidar en el nivel de partición y se supone que son para las mismas columnas como se define para el grupo de medidas. Por lo tanto, si la partición usa un origen de datos que tiene de hecho un esquema diferente, el `TableDefinition` consulta definida para la partición debe producir el mismo esquema que el esquema utilizado por el grupo de medida.  
+ El origen de datos predeterminado se debe definir en la DSV, proporcionando por tanto la información del esquema, incluyendo los detalles de las relaciones. Cualquier consulta o tabla adicional especificada en el nivel de partición no se tiene que mostrar en la DSV, pero deben tener el mismo esquema que la tabla predeterminada definida para el grupo de medidas o, al menos, deben contener todas las columnas usadas por las medidas o los atributos de granularidad. Los enlaces detallados por medida y atributo de granularidad no se pueden invalidar en el nivel de partición y se supone que son para las mismas columnas como se define para el grupo de medidas. Por consiguiente, si la partición usa un origen de datos que tiene de hecho un esquema diferente, la consulta `TableDefinition` definida para la partición debe producir el mismo esquema que el usado por el grupo de medidas.  
   
 ### <a name="measuregroup-granularity-attributes"></a>Atributos de granularidad de grupo de medidas  
  Cuando la granularidad de un grupo de medidas coincide con la granularidad conocida en la base de datos, y hay una relación directa de la tabla de hechos a la tabla de dimensiones, el atributo de granularidad solamente tiene que enlazarse con la columna o columnas de clave externa adecuadas de la tabla de hechos. Por ejemplo, piense en el hecho siguiente y en las tablas de dimensiones:  
@@ -108,7 +108,7 @@ ms.locfileid: "48148095"
   
  Si analiza por el producto pedido, para el producto pedido en el rol de dimensión de ventas, el atributo de granularidad de producto se enlazaría a Sales.OrderedProductID.  
   
- Sin embargo, puede haber ocasiones en las que los `GranularityAttributes` no podrían existir como columnas en la tabla de hechos. Por ejemplo, el `GranularityAttributes` no podrían existir como columnas en las siguientes circunstancias:  
+ Sin embargo, puede haber ocasiones en las que los `GranularityAttributes` no podrían existir como columnas en la tabla de hechos. Por ejemplo, `GranularityAttributes` no podrían existir como columnas en las circunstancias siguientes:  
   
 -   La granularidad de OLAP es más amplia que la granularidad en el origen.  
   
@@ -156,18 +156,18 @@ ms.locfileid: "48148095"
   
  En un modelo de minería de datos OLAP, los enlaces de datos siguen estas reglas:  
   
--   Cada columna de tabla no anidada se enlaza a una medida de un cubo, a un atributo de una dimensión de cubo (especificando el `CubeDimension` para eliminar la ambigüedad en el caso de los roles de dimensión), o a un atributo de una dimensión.  
+-   Cada columna de tabla no anidada se enlaza a una medida de un cubo, a un atributo de una dimensión de dicho cubo (especificando `CubeDimension` para eliminar la ambigüedad en el caso de roles de dimensión), o a un atributo de una dimensión.  
   
 -   Cada columna de tabla anidada se enlaza a una `CubeDimension`. Es decir, define cómo navegar desde una dimensión a un cubo relacionado o, en el caso menos común de tablas anidadas, desde un cubo a una de sus dimensiones.  
   
 ## <a name="out-of-line-bindings"></a>enlaces fuera de línea  
  Los enlaces fuera de línea permiten cambiar temporalmente los enlaces de datos existentes mientras dura un comando. Los enlaces fuera de línea hacen referencia a los enlaces incluidos en un comando y que no se conservan. Los enlaces fuera de línea solo se aplican mientras se ejecuta dicho comando concreto. En contraste, los enlaces insertados están contenidos en la definición de objeto de ASSL y se conservan con la definición de objeto dentro de los metadatos del servidor.  
   
- ASSL permite especificar en cualquiera de los enlaces de fuera de línea un `Process` comando, si no está en un lote, o en un `Batch` comando. Si los enlaces fuera de línea se especifican en el comando `Batch`, todos los enlaces especificados en el comando `Batch` crean un nuevo contexto de enlace en el que se ejecutan todos los comandos `Process` del lote. Este nuevo contexto de enlace incluye objetos que se procesan indirectamente debido al comando `Process`.  
+ ASSL permite especificar los enlaces fuera de línea en un comando `Process`, si no está en un lote, o en un comando `Batch`. Si los enlaces fuera de línea se especifican en el comando `Batch`, todos los enlaces especificados en el comando `Batch` crean un nuevo contexto de enlace en el que se ejecutan todos los comandos `Process` del lote. Este nuevo contexto de enlace incluye objetos que se procesan indirectamente debido al comando `Process`.  
   
- Cuando los enlaces fuera de línea se especifican en un comando, invalidan los enlaces insertados contenidos en la DDL almacenada. Estos objetos procesados pueden incluir el objeto directamente nombrado en el `Process` comando, o pueden incluir otros objetos cuyo procesamiento se inicie automáticamente como parte del procesamiento.  
+ Cuando los enlaces fuera de línea se especifican en un comando, invalidan los enlaces insertados contenidos en la DDL almacenada. Estos objetos procesados pueden incluir el objeto directamente nombrado en el comando `Process` o pueden incluir otros objetos cuyo procesamiento se inicie automáticamente como parte del procesamiento.  
   
- Los enlaces fuera de línea se especifican incluyendo el objeto de colección opcional `Bindings` con el comando de procesamiento. El elemento opcional `Bindings` colección contiene los siguientes elementos.  
+ Los enlaces fuera de línea se especifican incluyendo el objeto de colección opcional `Bindings` con el comando de procesamiento. La colección `Bindings` opcional contiene los elementos siguientes.  
   
 |Property|Cardinalidad|Tipo|Descripción|  
 |--------------|-----------------|----------|-----------------|  
@@ -180,7 +180,7 @@ ms.locfileid: "48148095"
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definición del tipo de enlace fuera de línea  
  Dentro de la colección `Bindings` fuera de línea, ASSL permite una colección de enlaces para varios objetos, cada uno de ellos `Binding`. Cada `Binding` tiene una referencia de objeto extendida, similar a la referencia a objeto, pero que también puede hacer referencia a objetos secundarios (por ejemplo, atributos de dimensión y atributos de grupo de medidas). Este objeto toma la forma plana típica del `Object` elemento `Process` comandos, excepto en que el \< *objeto*>\<*/objeto*> las etiquetas no están presentes.  
   
- Cada objeto para el que se especifica el enlace se identifica mediante un elemento XML del formulario \< *objeto*> ID (por ejemplo, `DimensionID`). Después de haber identificado el objeto de manera más específica posible con la forma \< *objeto*> ID, a continuación, identifica el elemento para el que se especifica el enlace, que suele ser `Source`. Un caso común tener en cuenta es en qué `Source` es una propiedad de la `DataItem`, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta `DataItem`; en su lugar, simplemente especifica la propiedad `Source`, como si estuviera directamente en la columna que se va a enlazar.  
+ Cada objeto para el que se especifica el enlace se identifica mediante un elemento XML del formulario \< *objeto*> ID (por ejemplo, `DimensionID`). Después de haber identificado el objeto de manera más específica posible con la forma \< *objeto*> ID, a continuación, identifica el elemento para el que se especifica el enlace, que suele ser `Source`. Un caso común para tener en cuenta es en qué `Source` es una propiedad del `DataItem`, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta `DataItem`; en su lugar, simplemente especifica la propiedad `Source`, como si estuviera directamente en la columna que se va a enlazar.  
   
  `KeyColumns` se identifican por su orden dentro de la colección `KeyColumns`. Allí no es posible especificar, por ejemplo, solo la primera y la tercera columna de clave de un atributo, porque no hay manera de indicar que se va a omitir la segunda columna de clave. Todas las columnas de clave deben encontrarse en el enlace fuera de línea para un atributo de dimensión.  
   

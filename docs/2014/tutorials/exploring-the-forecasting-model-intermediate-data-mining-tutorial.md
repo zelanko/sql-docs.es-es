@@ -11,15 +11,15 @@ ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ff9743774a9c05f4369cb2d24fde592bf011225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151021"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401710"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de previsión (tutorial intermedio de minería de datos)
-  Ahora que ha creado el modelo de minería de datos de pronóstico, puede explorar los resultados utilizando la **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de Series temporales contiene dos pestañas: **gráficos** y **modelo**.  
+  Ahora que ha creado el modelo de minería de datos de pronóstico, puede explorar los resultados utilizando la **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de Series temporales contiene dos pestañas: **Los gráficos** y **modelo**.  
   
  Además, puede usar el visor de árboles genérico de Microsoft con todos los modelos. Cada vista presenta una imagen ligeramente diferente de la información del modelo de series temporales.  
   
@@ -50,17 +50,17 @@ ms.locfileid: "48151021"
   
      Ahora el gráfico contiene únicamente las seis líneas de serie siguientes, lo que le permite comparar con mayor facilidad las bicicletas T1000 y M200.  
   
-    -   **M200 Europe: Quantity**  
+    -   **M200 Europe: Cantidad**  
   
-    -   **M200 Norteamérica: cantidad**  
+    -   **M200 Norteamérica: Cantidad**  
   
-    -   **M200 Pacífico: cantidad**  
+    -   **M200 Pacífico: Cantidad**  
   
-    -   **T1000 Europe: Quantity**  
+    -   **T1000 Europa: Cantidad**  
   
-    -   **T1000 Norteamérica: cantidad**  
+    -   **T1000 Norteamérica: Cantidad**  
   
-    -   **T1000 Pacífico: cantidad**  
+    -   **T1000 Pacífico: Cantidad**  
   
  ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie que predice la cantidad de M200 y T1000")  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48151021"
   
 3.  Tenga en cuenta la escala del eje X. Los cambios en los datos históricos y previstos se expresan siempre como porcentaje, pero los valores reales se ajustan automáticamente para dar cabida a todos los valores del gráfico. Por consiguiente, al comparar modelos debe tener cuidado de no confiar solamente en las representaciones visuales. Para obtener exactamente el valor, o el aumento de porcentaje y el valor para las predicciones, sitúe el mouse sobre la línea de puntos o las líneas llenas, o haga clic en las líneas para ver los valores en el **leyenda de minería de datos**.  
   
-     **Sugerencia**: si el **leyenda de minería de datos** no está visible, cambie a **modelo** ver, haga clic en cualquier nodo y seleccione **Mostrar leyenda**.  
+     **Sugerencia**: Si el **leyenda de minería de datos** no está visible, cambie a **modelo** ver, haga clic en cualquier nodo y seleccione **Mostrar leyenda**.  
   
  Al observar estas tendencias, le preocupa la ausencia de datos para una parte de la serie y se pregunta si puede obtener predicciones más confiables calculando el promedio de ventas por modelo o quizás el promedio de ventas por región. Explorará este método en una lección posterior de este tutorial.  
   
@@ -95,17 +95,17 @@ ms.locfileid: "48151021"
   
  Puede elegir qué combinación de la línea de productos, región y ventas métrica que desea ver seleccionando una serie de la **árbol** lista desplegable el **modelo** ficha.  
   
- ¿Qué puede saber al ver el modelo como un árbol? Por ejemplo, comparemos dos modelos, uno con varios niveles del árbol y otro que tiene un único nodo.  
+ ¿Qué puede saber al ver el modelo como un árbol? Por ejemplo, Comparemos dos modelos, uno que tiene varios niveles del árbol y otro que tiene un único nodo.  
   
 -   Cuando un gráfico de árbol contiene un solo nodo, significa que la tendencia encontrada en el modelo es básicamente homogénea en el tiempo. Puede usar este nodo único, etiquetado **todas**, para ver la fórmula que describe la relación entre las variables de entrada y el resultado.  
   
 -   Cuando un gráfico de árbol para una serie temporal tiene varias bifurcaciones, significa que la serie temporal que se detectó es demasiado compleja para representarse como una sola ecuación. En su lugar, el gráfico de árbol puede contener varias bifurcaciones, cada bifurcación etiquetada con las condiciones que ha provocado el árbol para *dividir*. Cuando se divide el árbol, cada bifurcación representa un segmento de tiempo diferente, en el que la tendencia puede describirse como una sola ecuación.  
   
-     Por ejemplo, si mira el gráfico y ve un salto súbito en el volumen de ventas a partir de algún día de septiembre y continúa hasta las vacaciones Navidad, puede cambiar a la **modelo** vista para ver la fecha exacta donde cambió la tendencia. Las bifurcaciones del árbol que representan 'antes de septiembre' y 'después de septiembre' contendrían fórmulas diferentes: una fórmula que describe matemáticamente las tendencias de ventas hasta la división y otra fórmula que describe las tendencias de ventas de septiembre hasta las vacaciones de Navidad.  
+     Por ejemplo, si mira el gráfico y ve un salto súbito en el volumen de ventas a partir de algún día de septiembre y continúa hasta las vacaciones Navidad, puede cambiar a la **modelo** vista para ver la fecha exacta donde cambió la tendencia. Las ramas del árbol que representan 'antes de septiembre"y"después de septiembre' contendrían fórmulas diferentes: una fórmula que describe matemáticamente las tendencias de ventas hasta la división y otra fórmula que describe las tendencias de ventas de septiembre hasta la Navidad.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Para explorar el árbol de decisión de un modelo de series temporales  
   
-1.  En el **árbol** lista el **modelo** ficha del Visor, seleccione el **T1000 Europe: cantidad** serie.  
+1.  En el **árbol** lista el **modelo** ficha del Visor, seleccione el **T1000 Europa: Cantidad** serie.  
   
      Haga clic en el nodo con la etiqueta **todas**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48151021"
   
      El **leyenda de minería de datos** proporciona casi la misma información que se encuentra en la información sobre herramientas. Si ninguna de las variables independientes son discretas, también aparecerá un histograma que muestra la distribución de variables en el nodo.  
   
-3.  Ahora seleccione una serie temporal diferente para verla. Mediante el **árbol** lista el **modelo** ficha del Visor, seleccione el **M200 North America: cantidad** serie.  
+3.  Ahora seleccione una serie temporal diferente para verla. Mediante el **árbol** lista el **modelo** ficha del Visor, seleccione el **M200 North America: Cantidad** serie.  
   
      El gráfico de árbol contiene ahora un **todas** nodo y dos nodos secundarios. Si examina las etiquetas de los nodos secundarios, puede saber en qué momento cambió la línea de tendencia.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "48151021"
 ##  <a name="bkmk_Content"></a> (Opcional) Visor de árbol de contenido genérico  
  Además del visor personalizado de serie temporal, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el **MicrosoftGeneric Visor de árbol de contenido** para su uso con todos los modelos de minería de datos. Este visor proporciona algunas ventajas:  
   
--   **Visor de Series temporales de Microsoft**: esta vista combina los resultados de los dos algoritmos. Aunque puede ver cada serie por separado, no puede determinar cómo se combinan los resultados de cada algoritmo. Asimismo, en esta vista, la información sobre herramientas y la leyenda de minería de datos muestran solo las estadísticas más importantes.  
+-   **Visor de Series temporales de Microsoft**: Esta vista combina los resultados de los dos algoritmos. Aunque puede ver cada serie por separado, no puede determinar cómo se combinan los resultados de cada algoritmo. Asimismo, en esta vista, la información sobre herramientas y la leyenda de minería de datos muestran solo las estadísticas más importantes.  
   
--   **Visor de árbol de contenido genérico**: le permite examinar y ver todas las series de datos que se usaron en el modelo al mismo tiempo y si ha creado una combinación de modelo, tanto el ARIMA y se muestran los árboles ARTXP en el mismo gráfico.  
+-   **Visor de árbol de contenido genérico**: Le permite examinar y ver todas las series de datos que se usaron en el modelo al mismo tiempo y si ha creado una combinación de modelo, tanto el ARIMA y se muestran los árboles ARTXP en el mismo gráfico.  
   
      Puede usar este visor para obtener todas las estadísticas de ambos algoritmos, así como las asignaciones de los valores.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "48151021"
  [Crear predicciones de serie temporal &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de consultas de modelo de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

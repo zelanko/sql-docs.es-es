@@ -1,5 +1,5 @@
 ---
-title: Actualización de datos de PowerPivot con SharePoint 2013 de energía | Documentos de Microsoft
+title: Actualización de datos de PowerPivot con SharePoint 2013 de energía | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 34208a7b3e3f782bcb93d46ab29099fe609f9925
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5df94dc555aead1225bcb791456e7dc87c0b7590
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024882"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214966"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Actualización de datos Power Pivot con SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34024882"
 ||||  
 |-|-|-|  
 ||Libros de Excel 2013|Libros de Excel 2010|  
-|Desencadenar la actualización de datos|**Interactivo:** Usuario autenticado<br /><br /> **Programada:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
+|Desencadenar la actualización de datos|**Interactiva:** Usuario autenticado<br /><br /> **Programado:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
 |Cargar el libro desde las bases de datos de contenido|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Cargar modelo de datos en la instancia de Analysis Services|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Enviar comandos de procesamiento a la instancia de Analysis Services|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
@@ -54,24 +54,24 @@ ms.locfileid: "34024882"
 |Libro creado en|actualización de datos programada|Actualización interactiva|  
 |-------------------------|----------------------------|-------------------------|  
 |2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel|No compatible. Actualizar el libro **(\*)**|No compatible. Actualizar el libro **(\*)**|  
-|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel|Compatible|No compatible. Actualizar el libro **(\*)**|  
-|Excel 2013|Compatible|Compatible|  
+|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel|Admitida|No compatible. Actualizar el libro **(\*)**|  
+|Excel 2013|Admitida|Admitida|  
   
  **(\*)** Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
- La actualización de datos interactiva, o manual, de SharePoint Server 2013 Excel Services puede actualizar modelos de datos con datos del origen de datos original. La actualización de datos interactiva está disponible después de configurar una aplicación de Excel Services registrando un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. Para obtener más información, consulte [(SharePoint Server 2013) de la configuración del modelo de datos de administrar servicios de Excel](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+ La actualización de datos interactiva, o manual, de SharePoint Server 2013 Excel Services puede actualizar modelos de datos con datos del origen de datos original. La actualización de datos interactiva está disponible después de configurar una aplicación de Excel Services registrando un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. Para obtener más información, consulte [(SharePoint Server 2013) de la configuración del modelo de datos de administración de servicios de Excel](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
-> [!NOTE]  
->  La actualización de datos interactiva solo está disponible para los libros creados en Excel 2013. Si intenta actualizar un libro de Excel 2010, Excel Services mostrará un mensaje de error similar a "Operación de[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con errores: el libro se creó con una versión anterior de Excel y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no se puede actualizar hasta que el archivo se actualice". Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+> [!NOTE]
+>  La actualización de datos interactiva solo está disponible para los libros creados en Excel 2013. Si se intenta actualizar un libro de Excel 2010, Excel Services mostrará un mensaje de error similar a " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] operación con errores: El libro se creó con una versión anterior de Excel y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no se puede actualizar hasta que se actualice el archivo ". Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  **Punto clave de interés de la actualización interactiva:**  
   
 -   La actualización de datos interactiva solo actualiza los datos de la sesión de usuario actual. Los datos no se vuelven a guardar automáticamente en el elemento de libro en la base de datos de contenido de SharePoint.  
   
--   **Credenciales:** la actualización de datos interactiva puede usar la identidad del usuario que ha iniciado sesión como credenciales o credenciales almacenadas para conectarse al origen de datos. Las credenciales empleadas dependen de la configuración de autenticación de Excel Services definida para la conexión del libro al origen de datos externo.  
+-   **Credenciales:** La actualización de datos interactiva puede usar la identidad del usuario que ha iniciado sesión como credenciales o las credenciales almacenadas para conectarse al origen de datos. Las credenciales empleadas dependen de la configuración de autenticación de Excel Services definida para la conexión del libro al origen de datos externo.  
   
--   **Libros admitidos:**  los libros creados en Excel 2013.  
+-   **Libros admitidos:**  libros creados en Excel 2013.  
   
  **Para actualizar datos:**  
   
@@ -83,30 +83,30 @@ ms.locfileid: "34024882"
   
 3.  Excel Services carga la base de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la procesa y después la consulta para actualizar la caché memoria de libros de Excel.  
   
-4.  **Nota:** el libro actualizado no se vuelve a guardar automáticamente en la biblioteca de documentos.  
+4.  **Nota:** El libro actualizado no se vuelve a guardar automáticamente en la biblioteca de documentos.  
   
  ![actualización de datos interactiva](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "actualización de datos interactiva")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Autenticación de Windows con conexiones de datos de libro y actualización de datos interactiva  
  Excel Services envía al servidor de Analysis Services un comando de proceso que indica al servidor que debe suplantar una cuenta de usuario. Para obtener derechos del sistema suficientes para realizar el proceso de suplantación-delegación de usuario, la cuenta de servicio de Analysis Services necesita el privilegio **Actuar como parte del sistema operativo** en el servidor local. El servidor de Analysis Services también debe poder delegar las credenciales del usuario a orígenes de datos. El resultado de la consulta se envía a Excel Services.  
   
- Experiencia de usuario típica: cuando un cliente selecciona "Actualizar todas las conexiones" en un libro de Excel 2013 que contiene un modelo de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , aparece un mensaje de error similar al siguiente:  
+ Experiencia de usuario típica: Cuando un cliente selecciona "Actualizar todas las conexiones" en un libro de Excel 2013 que contiene un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelo, aparece un mensaje de error similar al siguiente:  
   
--   **Error durante la actualización de los datos externos:** Se produjo un error mientras se trabajaba con el modelo de datos del libro. Inténtelo de nuevo. No se pueden actualizar una o más conexiones de datos del libro.  
+-   **No se pudo actualizar los datos externos:** Se produjo un error mientras se trabajaba en el modelo de datos del libro. Inténtelo de nuevo. No se pueden actualizar una o más conexiones de datos del libro.  
   
  Según el proveedor de datos que esté usando, verá mensajes similares a los siguientes en el registro de ULS.  
   
  **Con SQL Native Client:**  
   
--   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores '20102481-39c8-4d21-bf63-68f583ad22bb', pero no se ha usado.  Error de OLE DB u ODBC: Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server.; 08001; Proveedor de SSL: El paquete de seguridad solicitado no existe; 08001; El cliente no pudo establecer la conexión; 08001; No se admite el cifrado en el cliente; 08001.  , ConnectionName: ThisWorkbookDataModel, Libro: book1.xlsx.  
+-   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores '20102481-39c8-4d21-bf63-68f583ad22bb', pero no se ha usado.  Error de OLE DB u ODBC. Se ha producido un error relacionado con la red o específico de la instancia al establecer una conexión con SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para más información, vea los libros en pantalla de SQL Server.; 08001; Proveedor de SSL: El paquete de seguridad solicitado no existe; 08001; El cliente no puede establecer conexión; 08001; Cifrado no compatible en el cliente.; 08001.  , ConnectionName: ThisWorkbookDataModel, libro: book1.xlsx.  
   
  **Con el proveedor Microsoft OLE DB para SQL Server:**  
   
--   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores '6e711bfa-b62f-4879-a177-c5dd61d9c242', pero no se ha usado. Error de OLE DB u ODBC. , ConnectionName: ThisWorkbookDataModel, Libro: OLEDB Provider.xlsx.  
+-   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores '6e711bfa-b62f-4879-a177-c5dd61d9c242', pero no se ha usado. Error de OLE DB u ODBC. , ConnectionName: ThisWorkbookDataModel, libro: OLEDB Provider.xlsx.  
   
  **Con el proveedor de datos de .NET Framework para SQL Server:**  
   
--   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores 'f5fb916c-3eac-4d07-a542-531524c0d44a', pero no se ha usado.  Errores del motor relacional de alto nivel. Excepción al utilizar la interfaz administrada IDbConnection: No se puede cargar el archivo o ensamblado 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' ni una de sus dependencias. No se ha proporcionado el nivel de representación necesario o el nivel de representación no es válido. (Excepción de HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, Libro: NETProvider.xlsx.  
+-   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores 'f5fb916c-3eac-4d07-a542-531524c0d44a', pero no se ha usado.  Errores del motor relacional de alto nivel. Excepción al usar la interfaz administrada IDbConnection: No se puede cargar el archivo o ensamblado 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' o una de sus dependencias. No se ha proporcionado el nivel de representación necesario o el nivel de representación no es válido. (Excepción de HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, libro: NETProvider.xlsx.  
   
  **Resumen de pasos de configuración** Para configurar el privilegio **Actuar como parte del sistema operativo** en el servidor local:  
   
@@ -139,9 +139,9 @@ ms.locfileid: "34024882"
   
     -   Volver a guardar el libro en la base de datos de contenido.  
   
--   **Credenciales:** usa las credenciales almacenadas. No usa la identidad del usuario actual.  
+-   **Credenciales:** Use las credenciales almacenadas. No usa la identidad del usuario actual.  
   
--   **Libros admitidos:** libros creados mediante el complemento [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel 2010 o con Excel 2013. No se admiten los libros creados en Excel 2010 con el complemento [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Actualice el libro como mínimo al formato de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Libros admitidos:** Libros creados mediante el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] complemento para Excel 2010 o con Excel 2013. No se admiten los libros creados en Excel 2010 con el complemento [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Actualice el libro como mínimo al formato de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  Para mostrar la página **Administrar actualización de datos** :  
   
@@ -161,17 +161,17 @@ ms.locfileid: "34024882"
   
     -   Volver a guardar el libro en la base de datos de contenido.  
   
- ![administrar el menú contextual de la actualización de datos](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "administrar menú contextual de la actualización de datos")  
+ ![menú contextual de la actualización de datos administrar](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "administrar menú contextual de la actualización de datos")  
   
 > [!TIP]  
->  Para obtener información sobre cómo actualizar libros desde SharePoint online, consulte [actualizar libros de Excel con modelos de PowerPivot incrustados desde SharePoint Online (notas del producto)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
+>  Para obtener información sobre actualizar libros desde SharePoint online, consulte [actualizar libros de Excel con modelos de PowerPivot incrustados desde SharePoint Online (notas)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
   
 ##  <a name="bkmk_refresh_architecture"></a> Arquitectura de actualización de datos programada de SharePoint 2013  
  En la ilustración siguiente se resume la arquitectura de actualización de datos de SharePoint 2013 y SQL Server 2012 SP1.  
   
  ![arquitectura de actualización de datos de SQL Server 2012 SP1](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "arquitectura de actualización de datos de SQL Server 2012 SP1")  
   
-||Description||  
+||Descripción||  
 |-|-----------------|-|  
 |**(1)**|Motor de Analysis Services|Un servidor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. El servidor se ejecuta fuera de la granja de servidores de SharePoint.|  
 |**(2)**|Interfaz de usuario|La interfaz de usuario consta de dos páginas: una para definir la programación y la segunda para ver el historial de actualización. Las páginas no obtienen acceso directamente a las bases de datos de aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , pero usan el servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para obtener acceso a las bases de datos.|  
@@ -182,7 +182,7 @@ ms.locfileid: "34024882"
 |||Administración de solicitudes de actualización de datos programada para los trabajos del temporizador y las páginas de configuración. El servicio administra las solicitudes para leer datos dentro y fuera de la base de datos de aplicaciones de servicio y desencadena la actualización de datos con Excel Services.|  
 |||Procesamiento de uso y trabajo de temporizador relacionado.|  
 |**(4)**|Excel Calculation Services|Responsable de cargar los modelos de datos.|  
-|**(5)**|Servicio de almacenamiento seguro|Si los valores de autenticación del libro están configurados para **Usar la cuenta de usuario autenticada** o **Ninguno**, se usan las credenciales almacenadas en el identificador de la aplicación de destino de almacenamiento seguro para la actualización de datos. Para obtener más información, vea la sección [Otras consideraciones sobre la autenticación](#datarefresh_additional_authentication) en este tema.|  
+|**(5)**|Servicio de almacenamiento seguro|Si la configuración de autenticación en el libro está configurada para **usar cuenta de usuario autenticada** o **ninguno**, se utilizan las credenciales almacenadas en el identificador de aplicación de destino Store seguro para datos actualización. Para obtener más información, vea la sección [Otras consideraciones sobre la autenticación](#datarefresh_additional_authentication) en este tema.|  
 |**(6)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Trabajo del temporizador de actualización de datos|Indica al servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se conecte a Excel Services para actualizar los modelos de datos.|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] necesita los proveedores de datos y las bibliotecas de cliente adecuados para que el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint pueda obtener acceso a los orígenes de datos.  
@@ -191,15 +191,15 @@ ms.locfileid: "34024882"
 >  Como el servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ya no carga ni guarda modelos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la mayoría de los valores para los modelos de almacenamiento en caché de un servidor de aplicaciones no se aplican a una granja de servidores de SharePoint 2013.  
   
 ## <a name="data-refresh-log-data"></a>Datos de registro de actualización de datos  
- **Datos de uso:** puede ver los datos de uso de actualización de datos en el Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para ver los datos de uso:  
+ **Datos de uso:** Puede ver los datos de uso en el [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] panel de administración. Para ver los datos de uso:  
   
 1.  En Administración central de SharePoint, haga clic en **Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** en el grupo **Configuración de aplicación general**.  
   
-2.  En la parte inferior del panel, vea **Actualización de datos: actividad reciente** y **Actualización de datos: errores recientes**.  
+2.  En la parte inferior del panel, vea el **actualización de datos: actividad reciente** y **actualización de datos: errores recientes**.  
   
 3.  Para obtener más información sobre los datos de uso y cómo habilitarlos, vea [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
- **Datos del registro de diagnóstico:** puede ver datos de registro de diagnóstico de SharePoint relacionados con la actualización de datos. En primer lugar, compruebe el registro de diagnósticos del **Servicio de[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** en la página **Supervisión** de Administración central de SharePoint. Quizás necesite aumentar el nivel de registro para que se registre el "evento menos crítico". Por ejemplo, establezca temporalmente el valor en **Detallado** y vuelva a ejecutar las operaciones de actualización de datos.  
+ **Datos de registro de diagnóstico:** Puede ver los datos de registro de diagnóstico de SharePoint relacionados con la actualización de datos. En primer lugar, compruebe el registro de diagnósticos del **Servicio de[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** en la página **Supervisión** de Administración central de SharePoint. Es posible que deba aumentar el nivel de registro para el "evento menos crítico" al registro. Por ejemplo, establezca temporalmente el valor en **Detallado** y vuelva a ejecutar las operaciones de actualización de datos.  
   
  Las entradas del registro contienen:  
   
@@ -212,11 +212,11 @@ ms.locfileid: "34024882"
 ##  <a name="datarefresh_additional_authentication"></a> Otras consideraciones sobre la autenticación  
  Los valores del cuadro de diálogo **Configuración de autenticación de los Servicios de Excel** en Excel 2013 determinan la identidad de Windows que Excel Services y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emplean para la actualización de datos.  
   
--   **Use la cuenta de usuario autenticado**: Excel Services realiza la actualización de datos con la identidad del usuario que ha iniciado la sesión.  
+-   **Usar la cuenta de usuario autenticada**: Excel Services realiza la actualización de datos con la identidad del usuario que ha iniciado sesión actualmente.  
   
--   **Usar una cuenta almacenada:** presupone un identificador de aplicación de Servicio de almacenamiento seguro de SharePoint, que Excel Services usa para recuperar el nombre de usuario y la contraseña para autenticar la actualización de datos.  
+-   **Usar una cuenta almacenada**: presupone un identificador de aplicación de Servicio de almacenamiento seguro de SharePoint, que Excel Services usa para recuperar el nombre de usuario y la contraseña para autenticar la actualización de datos.  
   
--   **Ninguna**: se usa la **Cuenta de servicio desatendida** de Excel Services. La cuenta de servicio se asocia a un proxy de almacenamiento seguro. Configure los valores de la página **Configuración de la aplicación de Excel Services** , en la sección **Datos externos** .  
+-   **Ninguno**: Los servicios de Excel **cuenta de servicio desatendida** se utiliza. La cuenta de servicio se asocia a un proxy de almacenamiento seguro. Configure los valores de la página **Configuración de la aplicación de Excel Services** , en la sección **Datos externos** .  
   
  Para abrir el cuadro de diálogo de configuración de autenticación:  
   
@@ -226,7 +226,7 @@ ms.locfileid: "34024882"
   
 3.  En el cuadro de diálogo **Conexiones del libro**, seleccione la conexión y haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de conexión** , haga clic en **Definición**y, a continuación, haga clic en el botón **Configuración de autenticación…** .  
+4.  En el **las propiedades de conexión** cuadro de diálogo, haga clic en **definición**y, a continuación, haga clic en el **configuración de autenticación...**  botón.  
   
  ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
@@ -235,7 +235,7 @@ ms.locfileid: "34024882"
 ##  <a name="bkmk_moreinformation"></a> Más información  
  [Solución de problemas de actualización de datos Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services en SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15).  
+ [Servicios de Excel en SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalación de Analysis Services en el modo PowerPivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

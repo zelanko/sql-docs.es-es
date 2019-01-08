@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066765"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816617"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
-  En algunos casos, puede ser útil reducir o expandir el archivo de registro físico del registro de transacciones de físicamente un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Este tema contiene información acerca de cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
+  En algunos casos, puede resultar útil reducir o expandir físicamente el archivo de registro físico del registro de transacciones de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tema contiene información acerca de cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
   
   
 ##  <a name="MonitorSpaceUse"></a> Supervisar el uso de espacio de registro  
@@ -55,7 +55,7 @@ ms.locfileid: "48066765"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Vea las columnas **size**, **max_size** y **growth** de los archivos de registro).  
   
 > [!NOTE]  
->  La reducción de los archivos de base de datos y registro se puede establecer para que se produzca automáticamente. Sin embargo, no recomendamos realizar una reducción automática, y la propiedad de base de datos `autoshrink` está establecida en FALSE de forma predeterminada. Si `autoshrink` está establecida en TRUE, el proceso de reducción automática solo reduce el tamaño de un archivo cuando más del 25% de su espacio está sin utilizar. El tamaño del archivo se reduce hasta un tamaño en el que solo el 25% del archivo corresponde al espacio sin utilizar o hasta el tamaño original del archivo (el que sea mayor). Para obtener información acerca de cómo cambiar la configuración de la `autoshrink` propiedad, vea [ver o cambiar las propiedades de una base de datos](../databases/view-or-change-the-properties-of-a-database.md), utilice el **Auto Shrink** propiedad en el **opciones**página — o [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options), use la opción AUTO_SHRINK.  
+>  La reducción de los archivos de base de datos y registro se puede establecer para que se produzca automáticamente. Sin embargo, no recomendamos realizar una reducción automática, y la propiedad de base de datos `autoshrink` está establecida en FALSE de forma predeterminada. Si `autoshrink` está establecida en TRUE, el proceso de reducción automática solo reduce el tamaño de un archivo cuando más del 25% de su espacio está sin utilizar. El tamaño del archivo se reduce hasta un tamaño en el que solo el 25% del archivo corresponde al espacio sin utilizar o hasta el tamaño original del archivo (el que sea mayor). Para obtener información acerca de cómo cambiar la configuración de la `autoshrink` propiedad, vea [ver o cambiar las propiedades de una base de datos](../databases/view-or-change-the-properties-of-a-database.md)-usar el **Auto Shrink** propiedad en el **opciones**página- o [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-usar la opción AUTO_SHRINK.  
   
   
 ##  <a name="AddOrEnlarge"></a> Agregar o ampliar un archivo de registro  
@@ -71,7 +71,7 @@ ms.locfileid: "48066765"
   
   
 ##  <a name="ControlGrowth"></a> Controlar el crecimiento de un archivo de registro de transacciones  
- Puede usar la instrucción [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) para administrar el crecimiento de un archivo de registro de transacciones. Observe lo siguiente:  
+ Puede usar la instrucción [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) para administrar el crecimiento de un archivo de registro de transacciones. Tenga en cuenta lo siguiente:  
   
 -   Para cambiar el tamaño del archivo actual en unidades de KB, MB, GB y TB, use la opción SIZE.  
   

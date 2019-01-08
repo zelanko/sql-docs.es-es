@@ -20,20 +20,20 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bdc16e4bd09a0f5e93b0335cb8383040e778dc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220965"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349560"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)
-  Como parte de la oferta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, las instancias de clúster de conmutación por error de AlwaysOn aprovechan la funcionalidad de Clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante la redundancia en el nivel de instancias de servidor, una *instancia de clúster de conmutación por error* (FCI). Una FCI es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se instala a través de los nodos de Clústeres de conmutación por error de Windows Server (WSFC) y, posiblemente, a través de varias subredes. En la red, una FCI aparece como una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecuta en un equipo individual, pero proporciona la conmutación por error entre nodos de WSFC si el nodo actual deja de estar disponible.  
+  Como parte de la oferta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On, las instancias de clúster de conmutación por error de Always On aprovechan la funcionalidad de Clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante la redundancia en el nivel de instancias de servidor, una *instancia de clúster de conmutación por error* (FCI). Una FCI es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se instala a través de los nodos de Clústeres de conmutación por error de Windows Server (WSFC) y, posiblemente, a través de varias subredes. En la red, una FCI aparece como una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecuta en un equipo individual, pero proporciona la conmutación por error entre nodos de WSFC si el nodo actual deja de estar disponible.  
   
  Una FCI puede aprovechar las ventajas de los [Grupos de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) para proporcionar recuperación remota ante desastres en la base de datos. Para más información, vea [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
->  A partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], las instancias del clúster de conmutación por error de AlwaysOn admiten los volúmenes compartidos en clúster (CSV) en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](http://technet.microsoft.com/library/dd759255.aspx).  
+>  A partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], las instancias del clúster de conmutación por error de AlwaysOn admiten los volúmenes compartidos en clúster (CSV) en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](https://technet.microsoft.com/library/dd759255.aspx).  
   
  **En este tema:**  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48220965"
 |----------------------------|---------------|  
 |Describe cómo instalar una nueva FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Crear un nuevo clúster de conmutación por error SQL Server (";" Programa de instalación);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Describe cómo actualizarse a un clúster de conmutación por error de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Actualizar un clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Describe los conceptos de clúster de conmutación por error de Windows y proporciona vínculos a las tareas relacionadas con el clúster de conmutación por error de Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Información general de los clústeres de conmutación por error](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Información general de los clústeres de conmutación por error](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Describe los conceptos de clúster de conmutación por error de Windows y proporciona vínculos a las tareas relacionadas con el clúster de conmutación por error de Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Información general de clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Información general de clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Describe las distinciones de conceptos entre nodos de una FCI y réplicas de un grupo de disponibilidad y las consideraciones para utilizar una FCI de modo que hospede una réplica para un grupo de disponibilidad.|[Agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

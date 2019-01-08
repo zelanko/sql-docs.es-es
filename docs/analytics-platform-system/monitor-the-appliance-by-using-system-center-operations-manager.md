@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909725"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417566"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Supervisión con System Center Operations Manager: Analytics Platform System
 Use System Center Operations Manager (SCOM) para supervisar la aplicación Analytics Platform System (APS).
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
 ### <a name="prerequisites"></a>Requisitos previos  
   
@@ -39,9 +39,9 @@ Use System Center Operations Manager (SCOM) para supervisar la aplicación Analy
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Para supervisar SQL Server PDW con SCOM  
-Después de configurar los módulos de administración de SCOM, haga clic en el panel de supervisión de SCOM y profundice para **SQL Server Appliance** y, a continuación, **almacenamiento de datos paralelos de Microsoft SQL Server**. Debajo de Microsoft SQL Server Parallel Data Warehouse, hay cuatro opciones: alertas, dispositivos, diagrama de dispositivo y los nodos.  
+Después de configurar los módulos de administración de SCOM, haga clic en el panel de supervisión de SCOM y profundice para **SQL Server Appliance** y, a continuación, **almacenamiento de datos paralelos de Microsoft SQL Server**. Debajo de Microsoft SQL Server Parallel Data Warehouse, hay cuatro opciones: Las alertas, dispositivos, diagrama de dispositivo y los nodos.  
   
-### <a name="alerts"></a>Trabajos  
+### <a name="alerts"></a>Alertas  
 Las alertas son donde puede encontrar las alertas actuales para administrar.  
   
 ![Alertas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  

@@ -18,25 +18,25 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f038772f5a65b3f2eb3433fc0c996b84679a9a56
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b4deba7e3aa788bf42be9fbd173a6b20844ac68
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030182"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202384"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
   En este tema se describe cómo configurar los niveles de gravedad de las distintas actividades y módulos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Los niveles de gravedad definen la intensidad de los eventos que tienen lugar en DQS. Los eventos de DQS tienen los niveles de gravedad siguientes, en orden decreciente:  
   
--   **Fatal**: errores críticos en tiempo de ejecución que pueden producir resultados graves e inesperados.  
+-   **Irrecuperable**: Errores críticos en tiempo de ejecución que pueden producir resultados graves e inesperados.  
   
--   **Error**: otros errores en tiempo de ejecución.  
+-   **Error**: Otros errores en tiempo de ejecución.  
   
--   **Warn**: advertencia sobre eventos que pueden provocar un error.  
+-   **Advertir**: Advertencia sobre eventos que pueden provocar un error.  
   
--   **Info**: información sobre eventos en general; no se trata ni de un error ni de una advertencia. Por ejemplo, se ha iniciado un proceso de DQS.  
+-   **Información**: Información sobre eventos generales que no es un error o una advertencia. Por ejemplo, se ha iniciado un proceso de DQS.  
   
--   **Debug**: información detallada sobre el evento.  
+-   **Depurar**: Obtener información detallada (detallado) sobre el evento.  
   
  Cuando se configuran niveles de gravedad para las actividades y módulos de DQS, lo que se hace en realidad es filtrar la información que quedará registrada en el archivo de registro de DQS para la actividad o el módulo de DQS correspondiente. Por ejemplo, si establece el nivel de gravedad de una actividad de DQS en **Warn**, solo se registrarán los mensajes de advertencia y los de los niveles de gravedad superiores (Error y Fatal) que estén asociados a la actividad de DQS.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "51030182"
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Configuración**.  
   
-3.  A continuación, haga clic en la pestaña **Configuración del registro** . Aparecen las actividades de DQS para las que puede seleccionar un nivel de gravedad: **Administración de dominios**, **Detección de conocimiento**, **Proyecto de limpieza (p. ej., RDS)**, **Directiva de coincidencia y Proyecto de búsqueda de coincidencias** y **RDS**.  
+3.  A continuación, haga clic en la pestaña **Configuración del registro** . Se muestran las siguientes actividades DQS para las que puede seleccionar un nivel de gravedad: **Administración de dominios**, **Knowledgediscovery**, **(p. ej. proyecto de limpieza RDS)**, **Directiva de coincidencia y Proyecto de búsqueda de coincidencias** y **RDS**.  
   
-4.  Para una actividad de DQS, seleccione el nivel de gravedad que desea registrar. Puede seleccionar uno de los siguientes: **Fatal**, **Error**, **Warn**, **Info**y **Debug**. Por ejemplo, si desea que en los archivos de registro de DQS solo aparezcan mensajes de tipo Fatal para la actividad de detección de conocimiento, seleccione **Fatal** en la lista desplegable de la actividad **KnowledgeDiscovery** .  
+4.  Para una actividad de DQS, seleccione el nivel de gravedad que desea registrar. Puede seleccionar uno de los siguientes: **Irrecuperable**, **Error**, **advertir**, **información**, y **depurar**. Por ejemplo, si desea que en los archivos de registro de DQS solo aparezcan mensajes de tipo Fatal para la actividad de detección de conocimiento, seleccione **Fatal** en la lista desplegable de la actividad **KnowledgeDiscovery** .  
   
     > [!NOTE]  
     >  De forma predeterminada, todas las actividades tienen seleccionado el nivel de gravedad **Error** . Esto significa que, de forma predeterminada, en los archivos de registro de DQS se escribirán los mensajes de tipo Error y Fatal para todas las actividades.  
@@ -70,7 +70,7 @@ ms.locfileid: "51030182"
   
  La configuración de los niveles de gravedad del registro en el nivel de actividad determina la configuración de los niveles de gravedad del registro de todos los módulos que constituyen la actividad. Sin embargo, si existe un conflicto entre la configuración de los niveles de gravedad del registro en el nivel de actividad y en el nivel de módulo, prevalecen los niveles de gravedad del registro en el nivel de módulo.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   De forma predeterminada, el módulo **Microsoft.Ssdqs.Core.Startup** se preconfigura en la sección **Avanzadas** con un nivel de gravedad **Info**. Esto tiene como finalidad habilitar el registro de los eventos con un nivel de gravedad Info o superior (Warn, Error y Fatal) que están relacionados con el inicio y finalización de los servicios de DQS.  
 > -   Debe configurar los niveles de gravedad del registro en el nivel de módulo solo si es un usuario avanzado de DQS que está familiarizado con los ensamblados del sistema de DQS.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "51030182"
   
 2.  En la cuadrícula que aparece, seleccione el nombre de un módulo en la lista desplegable de la columna **Módulo** .  
   
-3.  A continuación, seleccione un nivel de gravedad para el módulo en la lista desplegable de la columna **Gravedad** . Puede seleccionar uno de los siguientes: **Fatal**, **Error**, **Warn**, **Info**y **Debug**.  
+3.  A continuación, seleccione un nivel de gravedad para el módulo en la lista desplegable de la columna **Gravedad** . Puede seleccionar uno de los siguientes: **Irrecuperable**, **Error**, **advertir**, **información**, y **depurar**.  
   
      Por ejemplo, en la actividad de administración de dominios, puede establecer un nivel de granularidad para la funcionalidad de definición de reglas de dominio distinto del de la actividad de administración de dominios; para ello, solo tiene que seleccionar el módulo **Microsoft.Ssdqs.DomainRules.Define** y elegir otro nivel de gravedad del registro. Del mismo modo, puede establecer otro nivel de granularidad para la funcionalidad de reglas entre dominios: seleccione el módulo **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** y elija otro nivel de gravedad del registro.  
   

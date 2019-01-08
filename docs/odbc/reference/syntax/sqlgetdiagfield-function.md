@@ -20,16 +20,16 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826203"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203984"
 ---
 # <a name="sqlgetdiagfield-function"></a>Función SQLGetDiagField
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
   
  **Resumen**  
  **SQLGetDiagField** devuelve el valor actual de un campo de un registro de la estructura de datos de diagnóstico (asociada con un identificador especificado) que contiene el error, advertencia e información de estado.  
@@ -102,11 +102,11 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_SUCCESS: La función devolvió información de diagnóstico.  
   
--   SQL_SUCCESS_WITH_INFO: \* *DiagInfoPtr* era demasiado pequeño para contener el campo de diagnóstico solicitado. Por lo tanto, se truncaron los datos en el campo de diagnóstico. Para determinar que se produjo un truncamiento, la aplicación debe comparar *BufferLength* al número real de bytes disponibles, que se escribe en **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: \**DiagInfoPtr* era demasiado pequeño para contener el campo de diagnóstico solicitado. Por lo tanto, se truncaron los datos en el campo de diagnóstico. Para determinar que se produjo un truncamiento, la aplicación debe comparar *BufferLength* al número real de bytes disponibles, que se escribe en **StringLengthPtr*.  
   
 -   SQL_INVALID_HANDLE: El identificador indicado por *HandleType* y *controlar* no era un identificador válido.  
   
--   SQL_ERROR: Producido uno de los siguientes:  
+-   SQL_ERROR: Se produjo alguna de las siguientes acciones:  
   
     -   *El DiagIdentifier* argumento no era uno de los valores válidos.  
   
@@ -227,13 +227,13 @@ n-definición *|"CREAR EL DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
   
  Si hay dos o más registros de estado, la secuencia de los registros se determina en primer lugar por número de fila. Las siguientes reglas se aplican para determinar la secuencia de registros de diagnóstico por fila:  
   
--   Los registros que no corresponden a cualquier fila aparecen delante de los registros correspondientes a una fila determinada, porque SQL_NO_ROW_NUMBER se define como – 1.  
+-   Los registros que no corresponden a cualquier fila aparecen delante de los registros correspondientes a una fila determinada, porque SQL_NO_ROW_NUMBER se define como -1.  
   
--   Registros para el que se desconoce el número de fila aparecen delante de todos los demás registros, porque SQL_ROW_NUMBER_UNKNOWN se define como – 2.  
+-   Registros para el que se desconoce el número de fila aparecen delante de todos los demás registros, porque SQL_ROW_NUMBER_UNKNOWN se define como -2.  
   
 -   Para todos los registros que pertenecen a filas específicas, los registros se ordenan por el valor del campo SQL_DIAG_ROW_NUMBER. Se enumeran todos los errores y advertencias de la primera fila afectada y, a continuación, todos los errores y advertencias de la siguiente fila afectada y así sucesivamente.  
   
-> [!NOTE]  
+> [!NOTE]
 >  El 3 de ODBC *.x* Administrador de controladores no ordena los registros de estado en la cola de diagnóstico si SQLSTATE 01S01 (Error en la fila) devuelto por una ODBC 2 *.x* controlador o si SQLSTATE 01S01 (Error en la fila) que se devuelve un ODBC 3 *.x* controlador cuando **SQLExtendedFetch** se denomina o **SQLSetPos** se llama en un cursor que se ha colocado con **SQLExtendedFetch** .  
   
  Dentro de cada fila, o para todos los registros que no corresponden a una fila o para que el número de fila es desconocido, o para todos los registros con un número de filas igual a SQL_NO_ROW_NUMBER, el primer registro que aparece se determina mediante el uso de un conjunto de reglas de ordenación. Después del primer registro, el orden de los demás registros que afectan a una fila es indefinido. Una aplicación no puede suponer que los errores preceden advertencias después del primer registro. Las aplicaciones deben examinar la estructura de datos de diagnóstico completo para obtener información completa acerca de una llamada a una función incorrecta.  

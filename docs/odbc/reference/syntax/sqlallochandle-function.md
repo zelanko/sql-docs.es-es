@@ -20,16 +20,16 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538875"
 ---
 # <a name="sqlallochandle-function"></a>Función SQLAllocHandle
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
   
  **Resumen**  
  **SQLAllocHandle** asigna un identificador de entorno, conexión, instrucción o descriptor.  

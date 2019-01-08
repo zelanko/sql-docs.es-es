@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145660"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542203"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -67,7 +67,7 @@ SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sal
 FROM [Adventure Works]  
 ```  
   
- Ejemplo 2: sintaxis alternativa en la que se utiliza un nivel del índice explícito  
+ Ejemplo 2: sintaxis alternativa con un nivel del índice explícito  
   
  En este ejemplo se muestra la sintaxis alternativa, en la que se especifica un nivel del índice mediante una expresión numérica. En este caso, el nivel del índice es 0. En el caso de un índice basado en cero, es el nivel más bajo.  
   

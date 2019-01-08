@@ -1,7 +1,8 @@
 ---
-title: Descargue e instale Data Studio de Azure | Microsoft Docs
+title: Descargue e instale
+titleSuffix: Azure Data Studio
 description: Descarga e instalar Azure datos Studio para Windows, macOS o Linux
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217813"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030659"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descargue e instale Data Studio de Azure
 
@@ -160,7 +161,7 @@ Para comprobar las actualizaciones más recientes, haga clic en el icono de engr
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL admitidas
 
-* Esta versión de Azure Data Studio funciona con todas las [las versiones compatibles de SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) y proporciona compatibilidad para trabajar con las últimas características de nube de Azure SQL Database y Azure SQL Data Warehouse. Azure Data Studio también proporciona compatibilidad de versión preliminar para instancia administrada de SQL Azure.
+* Esta versión de Azure Data Studio funciona con todas las [las versiones compatibles de SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) y proporciona compatibilidad para trabajar con las últimas características de nube de Azure SQL Database y Azure SQL Data Warehouse. Azure Data Studio también proporciona compatibilidad de versión preliminar para instancia administrada de SQL Azure.
 
 ## <a name="move-user-settings"></a>Mover la configuración de usuario
 

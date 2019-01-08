@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,19 +17,19 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328322"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
   Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
 #### <a name="to-find-using-regular-expressions"></a>Para buscar mediante expresiones regulares  
   
-1.  Para permitir el uso de expresiones regulares en el campo **Buscar** en operaciones de **Búsqueda rápida**, **Buscar en archivos**, **Reemplazo rápido**o **Reemplazar en archivos** , active la opción **Usar** de **Opciones de búsqueda**y, luego, elija **Expresiones regulares**.  
+1.  Para habilitar el uso de expresiones regulares en el **buscar** campo durante **búsqueda rápida**, **buscar**, **reemplazo rápido**, o  **Reemplazar en archivos** operaciones, seleccionadas el **Use** opción **opciones de búsqueda** y elija **expresiones regulares**.  
   
 2.  El botón triangular de la **Lista de referencia** situado junto al campo **Buscar** se activa. Haga clic en este botón para obtener una lista de las expresiones regulares más utilizadas. Al elegir alguno de los elementos del Generador de expresiones, éste se inserta en la cadena **Buscar** .  
   
@@ -66,7 +64,7 @@ ms.locfileid: "48077635"
 |----------------|------------|-----------------|  
 |Cero o más como mínimo|@|Devuelve cero o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
-|Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9]^4 devuelve cualquier secuencia de 4 dígitos.|  
+|Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9] ^ 4 devuelve cualquier secuencia de cuatro dígitos.|  
 |Agrupar|()|Agrupa una subexpresión.|  
 |N-ésimo texto etiquetado|\n|En una expresión **Buscar y reemplazar** , indica el texto devuelto por la expresión con etiqueta enésima, donde n es un número de 1 a 9.<br /><br /> En una expresión de **Reemplazar** , \0 inserta todo el texto coincidente.|  
 |Campo justificado a la derecha|\\(w,n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
@@ -136,5 +134,3 @@ ms.locfileid: "48077635"
 ## <a name="see-also"></a>Vea también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)  
-  
-  

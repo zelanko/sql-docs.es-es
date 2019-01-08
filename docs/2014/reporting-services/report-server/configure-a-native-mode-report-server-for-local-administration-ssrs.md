@@ -18,12 +18,12 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189075"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400548"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar un servidor de informes en modo nativo para la administración local (SSRS)
   La implementación de un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en uno de los sistemas operativos siguientes requiere más pasos de configuración si desea administrar la instancia del servidor de informes localmente. En este tema, se describe cómo configurar el servidor de informes para la administración local. Si aún no tiene instalado o configurado el servidor de informes, consulte [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) y [administrar un Reporting Services modo de servidor de informes nativo](manage-a-reporting-services-native-mode-report-server.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "48189075"
 2.  Haga clic en **Configuración del sitio** en la esquina superior de la página Inicio.  
   
     > [!TIP]  
-    >  **Nota:** Si no ve la opción **Configuración del sitio** , cierre y vuelva a abrir el explorador y vaya al Administrador de informes con privilegios administrativos.  
+    >  **Nota:** Si no ve el **configuración del sitio** opción, cierre y vuelva a abrir el explorador y vaya al administrador de informes con privilegios administrativos.  
   
 3.  Haga clic en **Seguridad**.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48189075"
   
 -   Cuando intenta implementar elementos de informe en el servidor de informes local, aparece un mensaje de error similar al siguiente en la ventana **Lista de errores** :  
   
-    -   Los permisos otorgados al usuario 'Dominio\\<nombre de usuario\>' son insuficientes para realizar esta operación.  
+    -   Los permisos otorgados al usuario "Dominio\\<nombre de usuario\>" son insuficientes para realizar esta operación.  
   
  **Para ejecutar SSDT con permisos elevados cada vez que lo abre:**  
   
@@ -184,9 +184,9 @@ ms.locfileid: "48189075"
 -   Vea las secciones [Configuración de carpeta del Administrador de informes](#bkmk_configure_folder_settings) y [Configuración del sitio del Administrador de informes](#bkmk_configure_site_settings) anteriores de este tema.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Información adicional  
- Un paso de configuración frecuente adicional relacionado con la administración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste en abrir el puerto 80 en Firewall de Windows para permitir el acceso al equipo servidor de informes. Para obtener instrucciones, consulte [configurar un Firewall para el acceso al servidor de informes](configure-a-firewall-for-report-server-access.md).  
+ Un paso de configuración frecuente adicional relacionado con la administración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste en abrir el puerto 80 en Firewall de Windows para permitir el acceso al equipo servidor de informes. Para obtener instrucciones, consulte [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
+ [Administrar un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   
   

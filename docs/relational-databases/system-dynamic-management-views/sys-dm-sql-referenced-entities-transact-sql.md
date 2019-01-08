@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756243"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213464"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "47756243"
   
 -   Tipos definidos por el usuario (alias y CLR UDT)  
   
--   colecciones de esquemas XML  
+-   Colecciones de esquemas XML  
   
 -   Funciones de partición  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -97,7 +97,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= El objeto se usa en la cláusula SELECT * (solo en el nivel de objeto).|  
 |is_all_columns_found|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Se pueden encontrar todas las dependencias de columna del objeto.<br /><br /> 0 = No se pueden encontrar las dependencias de columna del objeto.|
 |is_insert_all|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = el objeto se usa en una instrucción INSERT sin una lista de columnas (solo nivel de objeto).|  
-|is_incomplete|**bit**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = el objeto o columna tiene un error de enlace y está incompleta.|
+|is_incomplete|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = el objeto o columna tiene un error de enlace y está incompleta.|
   
 ## <a name="exceptions"></a>Excepciones  
  Devuelve un conjunto de resultados vacío si se da alguna de las condiciones siguientes:  
@@ -124,19 +124,19 @@ sys.dm_sql_referenced_entities (
 |Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
 |Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
-|procedimiento almacenado CLR|no|Sí|  
+|procedimiento almacenado CLR|No|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|no|Sí|  
-|Desencadenador CLR (DML y DDL)|no|no|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Procedimientos almacenados extendidos|no|Sí|  
-|Cola|no|Sí|  
-|Synonym (Sinónimo)|no|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|no|Sí|  
-|Colección de esquemas XML|no|Sí|  
-|Función de partición|no|Sí|  
+|Función CLR definida por el usuario|No|Sí|  
+|Desencadenador CLR (DML y DDL)|No|No|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Procedimientos almacenados extendidos|No|Sí|  
+|Cola|No|Sí|  
+|Synonym (Sinónimo)|No|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
+|Colección de esquemas XML|No|Sí|  
+|Función de partición|No|Sí|  
   
  \* Una tabla se realiza un seguimiento como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, restricción CHECK o restricción predeterminada.  
   
@@ -159,7 +159,7 @@ FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIG
 GO  
 ```  
   
-### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Devolver las entidades a las que hace referencia un objeto  
+### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>b. Devolver las entidades a las que hace referencia un objeto  
  El ejemplo siguiente devuelve las entidades a las que hace referencia la función definida por el usuario `dbo.ufnGetContactInformation`.  
   
 ```sql  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Devolución del uso de objetos o columnas  
- El ejemplo siguiente devuelve los objetos y las dependencias de columna del procedimiento almacenado `HumanResources.uspUpdateEmployeePersonalInfo`. Este procedimiento actualiza las columnas `NationalIDNumber`, `BirthDate,``MaritalStatus`, y `Gender` de la `Employee` tabla basada en un determinado `BusinessEntityID` valor. Otro procedimiento almacenado, `upsLogError`, se define en un bloque TRY…CATCH para capturar cualquier error de ejecución. Las columnas `is_selected`, `is_updated` y `is_select_all` devuelven información sobre cómo se utilizan estos objetos y columnas  dentro del objeto de referencia. La tabla y las columnas que se modifican se indican mediante un 1 en la columna is_updated. La columna `BusinessEntityID` solo se selecciona y el procedimiento almacenado `uspLogError` ni se selecciona ni se modifica.  
+ El ejemplo siguiente devuelve los objetos y las dependencias de columna del procedimiento almacenado `HumanResources.uspUpdateEmployeePersonalInfo`. Este procedimiento actualiza las columnas `NationalIDNumber`, `BirthDate,``MaritalStatus`, y `Gender` de la `Employee` tabla basada en un determinado `BusinessEntityID` valor. Otro procedimiento almacenado, `upsLogError` se define en un bloque TRY... Bloque CATCH para capturar los errores de ejecución. Las columnas `is_selected`, `is_updated` y `is_select_all` devuelven información sobre cómo se utilizan estos objetos y columnas  dentro del objeto de referencia. La tabla y las columnas que se modifican se indican mediante un 1 en la columna is_updated. La columna `BusinessEntityID` solo se selecciona y el procedimiento almacenado `uspLogError` ni se selecciona ni se modifica.  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

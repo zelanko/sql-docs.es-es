@@ -15,12 +15,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e69e7f66b633a218ad5a2fb77cd44047c9810ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544393"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Operadores unarios en dimensiones de elementos primarios y secundarios
   En una dimensión que contiene una relación de elementos primarios y secundarios en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], se especifica una columna de operador unario (o de resumen personalizado) que determina el resumen personalizado para todos los miembros no calculados del atributo primario. El operador unario se aplica a los miembros siempre que los valores de los miembros primarios se evalúan. El elemento **UnaryOperatorColumn** en un atributo primario (**Uso**= Primario) especifica la columna de una tabla en la vista del origen de datos que contiene operadores unarios. Los valores para los operadores de resumen personalizado que se almacenan en esta columna se aplican a cada miembro del atributo.  
@@ -34,7 +34,7 @@ ms.locfileid: "48131619"
 |Operador unario|Descripción|  
 |--------------------|-----------------|  
 |+ (signo más)|El valor del miembro se agrega al valor de agregado de los miembros iguales que ocurren antes del miembro. Éste es el operador predeterminado si no se define una columna de operador unario para un atributo.|  
-|– (signo menos)|El valor del miembro se sustrae al valor de agregado de los miembros iguales que ocurren antes del miembro.|  
+|-(signo menos)|El valor del miembro se sustrae al valor de agregado de los miembros iguales que ocurren antes del miembro.|  
 |* (asterisco)|El valor del miembro se multiplica por el valor de agregado de los miembros iguales que ocurren antes del miembro.|  
 |/ (barra diagonal)|El valor del miembro se divide por el valor de agregado de los miembros iguales que ocurren antes del miembro.|  
 |~ (tilde)|El valor del miembro se omite.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48131619"
  En la pestaña **Explorador** del Diseñador de dimensiones, se pueden ver los operadores unarios junto a cada miembro en una jerarquía. También puede cambiar los operadores unarios al trabajar con una dimensión habilitada para escritura. Si la dimensión no está habilitada para escritura, debe usar una herramienta para modificar directamente el origen de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de propiedades de atributos de dimensión](dimension-attribute-properties-reference.md)   
+ [Referencia de las propiedades de los atributos de dimensión](dimension-attribute-properties-reference.md)   
  [Operadores de resúmenes personalizados en dimensiones de elementos primarios y secundarios](parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones](database-dimensions-bi-wizard-in-dimension-designer.md)  
   

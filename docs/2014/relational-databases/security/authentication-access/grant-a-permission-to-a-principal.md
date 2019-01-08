@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1e24250bfd313004b81a3d512a163963c070c08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520799"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder un permiso a una entidad de seguridad
   En este tema se describe cómo conceder permiso a una entidad de seguridad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "48126364"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Tenga en cuenta las siguientes prácticas recomendadas que pueden facilitar la administración de permisos.  
@@ -65,7 +65,7 @@ ms.locfileid: "48126364"
   
 4.  Haga clic con el botón derecho en un procedimiento almacenado y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo *Propiedades del procedimiento almacenado –***nombre_procecimiento_almacenado*, en Seleccionar una página, seleccione **Permisos**. Utilice esta página para agregar usuarios o roles al procedimiento almacenado y especificar los permisos que los usuarios o los roles tienen.  
+5.  En el **propiedades del procedimiento almacenado-*** stored_procedure_name* cuadro de diálogo Seleccionar una página, seleccione **permisos**. Utilice esta página para agregar usuarios o roles al procedimiento almacenado y especificar los permisos que los usuarios o los roles tienen.  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:guid
@@ -25,12 +23,12 @@ ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40cfd0a589682f9c9a07fc4db1bb62f2e934ada7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb953042707054a7dbfdee697b986e7e65f7059b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786187"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizar las anotaciones sql:guid y sql:identity
   Puede especificar el `sql:identity` y `sql:guid` anotaciones en un esquema XSD en cualquier nodo que se asigna a una columna de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mientras que el formato de diagrama de actualización (updategram) admite los atributos `updg:at-identity` y `updg:guid`, el formato de DiffGram no. El atributo `updg:at-identity` define el comportamiento al actualizar una columna de tipo IDENTITY. El atributo `updg:guid` permite obtener un valor GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y utilizarlo en el diagrama de actualización. Para obtener más información y ejemplos de trabajo, consulte [actualización de inserción de datos usando XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
@@ -42,7 +40,7 @@ ms.locfileid: "48061485"
  Las anotaciones `sql:identity` y `sql:guid` se pueden definir en un elemento de contenido complejo.  
   
 ## <a name="sqlidentity-annotation"></a>Anotación sql:identity  
- Puede especificar la anotación `sql:identity` en el esquema XSD en cualquier nodo que se asigne a una columna de base de datos de tipo IDENTITY. El valor especificado para esta anotación define cómo se actualiza la columna de tipo IDENTITY (ya sea utilizando el valor proporcionado en el diagrama de actualización para modificar la columna u omitiendo el valor, en cuyo caso se utiliza un valor generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para esta columna).  
+ Puede especificar la anotación `sql:identity` en el esquema XSD en cualquier nodo que se asigne a una columna de base de datos de tipo IDENTITY. El valor especificado para esta anotación define cómo se actualiza la columna de tipo IDENTITY (ya sea mediante el valor proporcionado en el diagrama de actualización para modificar la columna o se omite el valor, en cuyo caso un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-valor generado se usa para esta columna).  
   
  A la anotación `sql:identity` se le pueden asignar dos valores:  
   

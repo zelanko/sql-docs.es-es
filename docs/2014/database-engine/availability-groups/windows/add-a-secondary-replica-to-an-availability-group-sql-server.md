@@ -13,12 +13,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a60675d4d934c91be3ae8150cd865f404443d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219967"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525849"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Agregar una réplica secundaria a un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo agregar una réplica secundaria a un grupo de disponibilidad AlwaysOn existente usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -37,9 +37,9 @@ ms.locfileid: "48219967"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Seguimiento:**  [después de agregar una réplica secundaria](#FollowUp)  
+-   **Seguimiento:**  [Después de agregar una réplica secundaria](#FollowUp)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Se recomienda encarecidamente leer esta sección antes de intentar crear el primer grupo de disponibilidad.  
   
 ##  <a name="PrerequisitesRestrictions"></a> Requisitos previos y restricciones  
@@ -77,7 +77,7 @@ ms.locfileid: "48219967"
   
 1.  Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal.  
   
-2.  Agregue la nueva réplica secundaria al grupo de disponibilidad utilizando la cláusula de la instrucción ALTER AVAILABILITY GROUP. Las opciones ENDPOINT_URL, AVAILABILITY_MODE y FAILOVER_MODE son necesarias en una cláusula ADD REPLICA ON. Las demás opciones, BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE y SESSION_TIMEOUT, son opcionales. Para obtener más información, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
+2.  Agregue la nueva réplica secundaria al grupo de disponibilidad utilizando la cláusula de la instrucción ALTER AVAILABILITY GROUP. Las opciones ENDPOINT_URL, AVAILABILITY_MODE y FAILOVER_MODE son necesarias en una cláusula ADD REPLICA ON. Las demás opciones (BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE y SESSION_TIMEOUT) son opcionales. Para obtener más información, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
   
      Por ejemplo, la siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] crea una nueva réplica para un grupo de disponibilidad denominado `MyAG` en la instancia de servidor predeterminada hospedada por `COMPUTER04`, cuya dirección URL del extremo es `TCP://COMPUTER04.Adventure-Works.com:5022'`. Esta réplica admite la conmutación por error manual y el modo de disponibilidad de confirmación asincrónica.  
   
@@ -115,13 +115,13 @@ ms.locfileid: "48219967"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de agregar una réplica secundaria  
+##  <a name="FollowUp"></a> Sigue: Después de agregar una réplica secundaria  
  Para agregar una réplica para un grupo de disponibilidad existente, debe realizar los pasos siguientes:  
   
 1.  Conéctese a la instancia del servidor que va a hospedar la nueva réplica secundaria.  

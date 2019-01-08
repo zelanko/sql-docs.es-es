@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebaa2f29054b1fee64c44ea5c269f7d741617f97
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b9a357303950bc7c36a605483a2a94daf1f3748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673864"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523361"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicar una transformación XSL (proveedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51673864"
   
  La propiedad xsl se especifica en la aplicación. por lo tanto, se aplica la transformación XSL al documento XML que se genera en el cliente y el resultado es una tabla de dos columnas.  
   
- Para ejecutar el comando de plantilla, se debe especificar el lenguaje de plantilla XML {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
+ Para ejecutar el comando de la plantilla, se debe especificar el lenguaje de plantilla XML: {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para el proveedor de datos, que exige la instalación de software cliente de red adicional. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  

@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819243"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211224"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Quita los datos del almacén de administración de datos basándose en una directiva de retención. Este procedimiento lo ejecuta diariamente el mdw_purge_data[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el almacén de datos de administración asociado a la instancia especificada. Puede utilizar este procedimiento almacenado para realizar una eliminación a petición de los datos del almacén de administración de datos.  
+  Quita los datos del almacén de administración de datos basándose en una directiva de retención. Este procedimiento lo ejecuta diariamente el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mdw_purge_data en el almacén de administración de datos asociado a la instancia especificada. Puede utilizar este procedimiento almacenado para realizar una eliminación a petición de los datos del almacén de administración de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -85,7 +85,7 @@ EXECUTE core.sp_purge_data;
 GO  
 ```  
   
-### <a name="b-specifying-retention-and-duration-values"></a>B. Especificación de valores de retención y duración  
+### <a name="b-specifying-retention-and-duration-values"></a>b. Especificación de valores de retención y duración  
  En el ejemplo siguiente se quitan los datos del almacén de administración de datos anteriores a 7 días. Además, el @duration se especifica el parámetro para que ejecute la operación no supere los 5 minutos.  
   
 ```  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '| (bitwise inclusive OR)'
@@ -14,12 +13,12 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e168433f7f7001037ac1d5360cf4115ff246f228
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f13b39ef664eb054047e814bac98212b69859d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810847"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo bit a bit) (expresión de SSIS)
   Lleva a cabo una operación OR bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si cualquiera de los bits es 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en cero (0).  
@@ -36,7 +35,7 @@ integer_expression1 | integer_expression2
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression1 ,integer_ expression2*  
- Cualquier expresión válida de tipo entero con o sin signo. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Cualquier expresión válida de tipo entero con o sin signo. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
@@ -94,9 +93,9 @@ ReorderPoint | SafetyStockLevel
  00000111  
   
 ## <a name="see-also"></a>Vea también  
- [&#124;&#124;&#40;OR lógico&#41; &#40;expresión de SSIS&#41;](logical-or-ssis-expression.md)   
+ [&#124;&#124; &#40;OR lógico&#41; &#40;expresión de SSIS&#41;](logical-or-ssis-expression.md)   
  [^ &#40;OR exclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
- [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

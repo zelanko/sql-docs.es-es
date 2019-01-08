@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606824"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205184"
 ---
 # <a name="sqlparamdata-function"></a>Función SQLParamData
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLParamData** se utiliza junto con **SQLPutData** para suministrar los datos de parámetro en tiempo de ejecución de la instrucción y con **SQLGetData** para recuperar los datos del parámetro de salida transmitidos.  
@@ -61,7 +61,7 @@ SQLRETURN SQLParamData(
 |01000|Advertencia general|Específico del controlador de mensaje informativo. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07006|Infracción del atributo de tipo de datos restringido|El valor de datos identificado por el *ValueType* argumento en **SQLBindParameter** para el parámetro dependiente no se pudo convertir al tipo de datos identificado por el *ParameterType*argumento en **SQLBindParameter**.<br /><br /> Devuelve el valor de datos para un parámetro de enlazado como SQL_PARAM_INPUT_OUTPUT o SQL_PARAM_OUTPUT no se pudo convertir al tipo de datos identificado por el *ValueType* argumento en **SQLBindParameter**.<br /><br /> (Si no se podrían convertir los valores de datos para una o varias filas, pero una o más filas se devolvieron correctamente, esta función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos a la que se ha conectado el controlador antes del procesamiento de la función se ha completado.|  
-|22026|Datos de cadena, desigualdad de longitud|El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se enviaron menos datos para un parámetro largo (el tipo de datos era un tipo de datos específico del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se ha especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**.<br /><br /> El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se enviaron menos datos para una columna long (el tipo de datos era un tipo de datos específico del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se especificó en el búfer de longitud correspondiente a una columna en una fila de datos que se ha agregado o actualizado con **SQLBulkOperations** o actualizados con **SQLSetPos**.|  
+|22026|Datos de cadena, desigualdad de longitud|El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se enviaron menos datos para un parámetro largo (el tipo de datos era un tipo de datos específicos del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se ha especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**.<br /><br /> El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se enviaron menos datos para una columna long (el tipo de datos era un tipo de datos específicos del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se especificó en el búfer de longitud correspondiente a una columna en una fila de datos que se ha agregado o actualizado con **SQLBulkOperations** o actualizados con **SQLSetPos**.|  
 |40001|Error de serialización.|Debido a un interbloqueo de recurso con otra transacción se revirtió la transacción.|  
 |40003|Finalización de instrucción desconocida|Error en la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
 |HY000|Error general|Se produjo un error para que se ha producido ningún SQLSTATE específico y para los que se ha definido ningún SQLSTATE específicos de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
@@ -82,7 +82,7 @@ SQLRETURN SQLParamData(
   
  Cuando una aplicación llama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos**, el controlador devuelve SQL_NEED_ DATOS si necesita datos de datos en ejecución. Una aplicación, a continuación, llama a **SQLParamData** para determinar qué datos se deben enviar. Si el controlador requiere datos de parámetro, el controlador devuelve en el  *\*ValuePtrPtr* el valor que la aplicación se coloca en el búfer de conjunto de filas del búfer de salida. La aplicación puede usar este valor para determinar los datos de parámetro que se está solicitando el controlador. Si el controlador requiere datos de columna, el controlador devuelve en el  *\*ValuePtrPtr* almacenar en búfer la dirección que originalmente se enlazó la columna, como se indica a continuación:  
   
- *Enlazado dirección* + *enlace desplazamiento* + ((*número de fila* – 1) x *ElementSize*)  
+ *Enlazado dirección* + *enlace desplazamiento* + ((*número de fila* - 1) x *ElementSize*)  
   
  donde se definen las variables como se indica en la tabla siguiente.  
   

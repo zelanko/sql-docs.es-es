@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -16,12 +16,12 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e98d9f168e0256b96fefdd1d1c1bf65b5b54155
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4d1ecf24b8bde6ed02557a2a0d4de722240f754
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078395"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762947"
 ---
 # <a name="delete-a-job-category"></a>Eliminar una categoría de trabajo
   En este tema se describe cómo eliminar una categoría de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
@@ -30,13 +30,13 @@ ms.locfileid: "48078395"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Al eliminar una categoría de trabajo definida por el usuario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le solicita que vuelva a asignar los trabajos asignados a ella a otra categoría de trabajo. Solo puede eliminar categorías de trabajo definidas por el usuario.  
   
 ###  <a name="Security"></a> Seguridad  
- Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 
   
@@ -50,13 +50,13 @@ ms.locfileid: "48078395"
   
 3.  Haga clic con el botón derecho en la carpeta **Trabajos** y seleccione **Administrar categorías de trabajos**.  
   
-4.  En el cuadro de diálogo **Administrar categorías de trabajos***nombre_de_servidor*, seleccione la categoría de trabajo que desea eliminar.  
+4.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ , seleccione la categoría de trabajo que desea eliminar.  
   
 5.  Haga clic en **Eliminar**.  
   
 6.  En el cuadro de diálogo **Categorías de trabajo** , haga clic en **Sí**.  
   
-7.  Cierre el cuadro de diálogo **Administrar categorías de trabajos***nombre_de_servidor*.  
+7.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ .  
   
 
   
@@ -87,7 +87,7 @@ ms.locfileid: "48078395"
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
  **Para eliminar una categoría de trabajo**  
   
- Llame a la `JobCategory` clase mediante el uso de un lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell.  
+ Llame a la clase `JobCategory` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell.  
   
 
   

@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221295"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502910"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Genera un script SQL que se puede usar para conceder derechos a un usuario sobre la base de datos del servidor de informes y otras bases de datos necesarias para el funcionamiento de un servidor de informes. Se espera que el autor de la llamada se conecte al servidor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecute el script.  
@@ -89,13 +89,13 @@ out Int32 HRESULT);
   
  En [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], si está utilizando una cuenta integrada y la base de datos del servidor de informes es remota, se devuelve un error.  
   
- Si el `LocalService` se especifica la cuenta integrada y la base de datos del servidor de informes es remota, se devuelve un error.  
+ Si se especifica la cuenta integrada `LocalService` y la base de datos del servidor de informes es remota, se devuelve un error.  
   
  Cuando *IsWindowsUser* es verdadero y el valor proporcionado en *UserName* debe traducirse, el proveedor WMI determina si la base de datos del servidor de informes se encuentra en el mismo equipo o en un equipo remoto. Para determinar si la instalación es local, el proveedor WMI evalúa la propiedad DatabaseServerName con la lista siguiente de valores. Si se encuentra una coincidencia, la base de datos es local. De lo contrario, es remota. La comparación distingue entre mayúsculas y minúsculas.  
   
 |Valor de DatabaseServerName|Ejemplo|  
 |---------------------------------|-------------|  
-|“.”||  
+|"."||  
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  

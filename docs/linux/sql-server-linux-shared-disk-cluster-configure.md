@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085471"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397107"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)
 
@@ -131,10 +131,10 @@ Deberá proporcionar el almacenamiento que pueden tener acceso ambos nodos. Pued
    sudo firewall-cmd --reload
    ```
 
-   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
+   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, los puertos siguientes es necesario abrir para que Pacemaker pueda comunicarse con otros nodos del clúster
    >
-   > * TCP: puertos 2224, 3121, 21064
-   > * UDP: puerto 5405
+   > * TCP: Puertos 2224, 3121, 21064
+   > * UDP: Puerto 5405
 
 1. Instale paquetes de Pacemaker en cada nodo.
 

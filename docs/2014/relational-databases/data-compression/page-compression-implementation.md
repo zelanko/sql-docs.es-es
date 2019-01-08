@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -13,12 +13,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbc3d3ce9bd665efa78554c98c010ee0952c8e51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123095"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789807"
 ---
 # <a name="page-compression-implementation"></a>Implementación de la compresión de página
   En este tema se resume cómo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa la compresión de página. Este resumen proporciona la información básica para ayudarlo a planear el espacio de almacenamiento que necesita para sus datos.  
@@ -33,7 +33,7 @@ ms.locfileid: "48123095"
   
 3.  Compresión de diccionario  
   
- Al utilizar la compresión de página, las páginas que no están en el nivel hoja de los índices se comprimen usando únicamente la compresión de fila. Para obtener más información acerca de la compresión de fila, vea [Row Compression Implementation](../data-compression/row-compression-implementation.md).  
+ Al usar la compresión de página, las páginas que no están en el nivel hoja de los índices se comprimen usando únicamente la compresión de fila. Para obtener más información acerca de la compresión de fila, vea [Row Compression Implementation](../data-compression/row-compression-implementation.md).  
   
 ## <a name="prefix-compression"></a>Compresión de prefijo  
  Para cada página que se comprime, la compresión de prefijo utiliza los pasos siguientes:  

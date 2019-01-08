@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191475"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810897"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Consideraciones y limitaciones de diseño de los publicadores de Oracle
   La publicación de una base de datos de Oracle se diseña para que funcione casi idénticamente a la publicación de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  
@@ -104,7 +103,7 @@ ms.locfileid: "48191475"
   
  Considere también los siguientes problemas:  
   
--   Oracle y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratan NULL de manera diferente: Oracle admite varias filas con valores NULL para las columnas que permiten NULL y se incluyen en restricciones o índices únicos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplica la singularidad solo permitiendo una única fila con un valor NULL para la misma columna. No puede publicar un índice o restricción únicos que permita el valor NULL porque se produciría una infracción de restricción en el suscriptor si la tabla publicada contiene varias filas con valores NULL para cualquiera de las columnas incluidas en el índice o restricción.  
+-   Oracle y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratan NULL de manera diferente: Oracle permite varias filas con valores NULL para las columnas que admiten valores NULL y se incluyen en restricciones o índices únicos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplica la singularidad solo permitiendo una única fila con un valor NULL para la misma columna. No puede publicar un índice o restricción únicos que permita el valor NULL porque se produciría una infracción de restricción en el suscriptor si la tabla publicada contiene varias filas con valores NULL para cualquiera de las columnas incluidas en el índice o restricción.  
   
 -   Al probar la unicidad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] omite los espacios en blanco de un campo pero Oracle no.  
   

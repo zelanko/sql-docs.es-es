@@ -14,17 +14,17 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f60e644d5896fd25ce57df3326a980b9681ea714
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: ff6e37986378a66d94dc113c4e3fe072fe3c077f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085107"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351121"
 ---
 # <a name="ssvariant-structure"></a>Estructura SSVARIANT
   La estructura `SSVARIANT`, que se define en sqlncli.h, corresponde a un valor DBTYPE_SQLVARIANT en el proveedor OLEDB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- `SSVARIANT` es una unión de discriminación. Según el valor del miembro vt, el consumidor puede determinar qué miembro tiene que leerse. Los valores de vt se corresponden con tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, la estructura `SSVARIANT` puede contener cualquier tipo de SQL Server. Para obtener más información sobre la estructura de datos para los tipos OLE DB estándar, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ `SSVARIANT` es una unión de discriminación. Según el valor del miembro vt, el consumidor puede determinar qué miembro tiene que leerse. Los valores de vt se corresponden con tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, la estructura `SSVARIANT` puede contener cualquier tipo de SQL Server. Para obtener más información sobre la estructura de datos para los tipos OLE DB estándar, consulte [indicadores de tipo](https://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando DataTypeCompat==80, varios subtipos `SSVARIANT` se convierten en cadenas. Por ejemplo, los siguientes valores de vt se mostrarán en `SSVARIANT` como VT_SS_WVARSTRING:  

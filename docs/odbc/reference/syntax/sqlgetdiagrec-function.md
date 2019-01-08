@@ -20,16 +20,16 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683033"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207514"
 ---
 # <a name="sqlgetdiagrec-function"></a>Función SQLGetDiagRec
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
   
  **Resumen**  
  **SQLGetDiagRec** devuelve los valores de varios campos de un registro de diagnóstico que contiene información de error, advertencia y el estado actuales. A diferencia de **SQLGetDiagField**, que devuelve un campo de diagnóstico por llamada, **SQLGetDiagRec** devuelve varios campos más usados de un registro de diagnóstico, incluidos SQLSTATE, el código de error nativo y el texto del mensaje de diagnóstico.  
@@ -100,7 +100,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_INVALID_HANDLE: El identificador indicado por *HandleType* y *controlar* no era un identificador válido.  
   
--   SQL_ERROR: Producido uno de los siguientes:  
+-   SQL_ERROR: Se produjo alguna de las siguientes acciones:  
   
     -   *RecNumber* era 0 o negativo.  
   

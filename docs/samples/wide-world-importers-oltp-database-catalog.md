@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798049"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617634"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos de WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Estos esquemas contienen los datos. Un número de tablas es necesarios para todo
 
 |esquema|Descripción|
 |-----------------------------|---------------------|
-|Aplicación|Toda la aplicación a los usuarios, contactos y parámetros. Esta vista también contiene tablas de referencia con datos que se utilizan varios esquemas|
+|Application|Toda la aplicación a los usuarios, contactos y parámetros. Esta vista también contiene tablas de referencia con datos que se utilizan varios esquemas|
 |Purchasing|Artículo comercial se adquiere de proveedores y los detalles sobre los proveedores.|  
 |Sales|Elemento ventas a clientes particulares y detalles acerca de las personas de ventas y clientes de existencias. |  
 |Warehouse|Elemento existencias de inventario y las transacciones.|  
@@ -161,7 +161,7 @@ El `Reports` y `PowerBI` esquemas están diseñados para reporting services y co
 
 Estos son los procedimientos utilizados por una aplicación cliente, como un front-end Web.
 
-|Procedimiento|Finalidad|
+|Procedimiento|Propósito|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Permite a una persona (desde `Application.People`) para tener acceso al sitio Web.|
 |ChangePassword|Cambia una contraseña de usuario (para usuarios que no usan mecanismos de autenticación externos).|
@@ -183,11 +183,11 @@ Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtie
 
 Simula una carga de trabajo que inserta las compras y ventas. El procedimiento almacenado principal es `PopulateDataToCurrentDate`, que se usa para insertar datos de ejemplo hasta la fecha actual.
 
-|Procedimiento|Finalidad|
+|Procedimiento|Propósito|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Vuelve a crear los procedimientos necesarios para datos de simulación de carga. Esto es necesario para llevar los datos a la fecha actual.|
 |Configuration_RemoveDataLoadSimulationProcedures|Esto quita los procedimientos de nuevo una vez completada la simulación de datos.|
-|DeactiveTemporalTablesBeforeDataLoad|Quita la naturaleza temporal de todas las tablas temporales y si procede, se aplica un desencadenador para que se pueden realizar cambios como si se han aplicado en una fecha antes de permitir que las tablas temporales y sys.|
+|DeactivateTemporalTablesBeforeDataLoad|Quita la naturaleza temporal de todas las tablas temporales y si procede, se aplica un desencadenador para que se pueden realizar cambios como si se han aplicado en una fecha antes de permitir que las tablas temporales y sys.|
 |PopulateDataToCurrentDate|Se usa para incorporar los datos hasta la fecha actual. Se debe ejecutar antes de otras opciones de configuración después de restaurar la base de datos desde una copia de seguridad inicial.|
 |ReactivateTemporalTablesAfterDataLoad|Restablece las tablas temporales, como la comprobación de coherencia de los datos. (Quita los desencadenadores asociados).|
 
@@ -196,7 +196,7 @@ Simula una carga de trabajo que inserta las compras y ventas. El procedimiento a
 
 Estos procedimientos se utilizan para configurar la muestra. Se utilizan para aplicar las características de enterprise edition a la versión de standard edition de la muestra y también para agregar la auditoría y la indización de texto completo.
 
-|Procedimiento|Finalidad|
+|Procedimiento|Propósito|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Agrega a un miembro a una función de si el miembro no está en el rol|
 |Configuration_ApplyAuditing|Agrega la auditoría. Auditoría de servidor se aplica a bases de datos de la edición standard; auditoría de base de datos adicional se agrega para enterprise edition.|
@@ -215,7 +215,7 @@ Estos procedimientos se utilizan para configurar la muestra. Se utilizan para ap
 
 Procedimientos para configurar las secuencias de la base de datos.
 
-|Procedimiento|Finalidad|
+|Procedimiento|Propósito|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Llama al procedimiento ReseedSequenceBeyondTableValue para todas las secuencias.|
 |ReseedSequenceBeyondTableValue|Se utiliza para cambiar la posición del siguiente valor de secuencia más allá del valor de cualquier tabla que utiliza la misma secuencia. (Por ejemplo, un DBCC CHECKIDENT para equivalente de columnas de identidad para las secuencias, pero en potencialmente varias tablas).|

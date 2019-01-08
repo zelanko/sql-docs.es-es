@@ -1,5 +1,5 @@
 ---
-title: Las bases de datos de modelo tabular | Documentos de Microsoft
+title: Bases de datos de modelo tabular de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c6a806dc87afa7e1d26d2bf9070debcdaf53144
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1e53a719c4fef684f4b7ec81f2e5c9266adf942b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045969"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072252"
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>Administrar bases de datos de modelo Tabular implementado
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,18 +35,16 @@ ms.locfileid: "34045969"
     
 ## <a name="see-also"></a>Vea también  
  [Soluciones de modelos tabulares](../../analysis-services/tabular-models/tabular-models-ssas.md)  
-  
- [Acceso a datos de modelo tabular](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 
 [Mover una base de datos de Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   
  [Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Modificar o eliminar una base de datos de Analysis Services](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
- [Documentar y crear scripts de una base de datos de Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+ [Documentar y crear scripts en una base de datos de Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

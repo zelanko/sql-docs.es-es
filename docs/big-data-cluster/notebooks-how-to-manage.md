@@ -1,18 +1,20 @@
 ---
-title: Administración de blocs de notas en Azure Data Studio | Microsoft Docs
-description: ''
+title: Administración de blocs de notas en Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Obtenga información sobre cómo administrar los cuadernos en Azure Data Studio. Esto incluye la apertura de blocs de notas, guardarlos y cambiar la conexión de clúster de macrodatos.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796961"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246594"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Administración de blocs de notas en Azure Data Studio
 
@@ -22,8 +24,11 @@ Este artículo muestra cómo abrir y guardar archivos del Bloc de notas en Azure
 
 En este artículo se da por supuesto que ya tiene un bloc de notas que desea usar en Azure Data Studio. Si desea crear un bloc de notas, consulte [para usar cuadernos en versión preliminar de SQL Server 2019](notebooks-guidance.md). Para usar cuadernos en Azure Data Studio, debe cumplir los siguientes requisitos previos:
 
-- [Instalar las herramientas de macrodatos más recientes para la versión preliminar de SQL Server 2019](deploy-big-data-tools.md).
 - [Implementar un clúster de macrodatos](quickstart-big-data-cluster-deploy.md).
+- [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extensión de SQL Server 2019**
+   - **kubectl**
 
 ## <a name="open-a-notebook"></a>Abre un bloc de notas
 
@@ -43,7 +48,7 @@ Haga clic en **Abrir Bloc de notas** en el panel para abrir el cuadro de diálog
 
 ### <a name="command-palette"></a>Paleta de comandos
 
-Use el comando **archivo: abra** desde la paleta de comandos escribiendo Ctrl + Mayús + P (en Windows) y Cmd + Mayús + P (en Mac).
+Use el comando **archivo: Abra** desde la paleta de comandos escribiendo Ctrl + Mayús + P (en Windows) y Cmd + Mayús + P (en Mac).
 
 ![Abra el cuadro de diálogo Abrir archivo escribiendo File:Open en la paleta de comandos](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -57,7 +62,7 @@ Actualmente hay una manera de guardar un bloc de notas. Debe seleccionar **guard
 > Actualmente los siguientes métodos no guarda los cambios en blocs de notas:
 >
 > - **Archivo/Guardar**, **archivo/Guardar como...**  y **archivo Guardar todo** comandos en el menú archivo.
-> - **Archivo: Guarde** los comandos escritos en la paleta de comandos.
+> - **Archivo: Guardar** los comandos escritos en la paleta de comandos.
 
 ## <a name="change-the-big-data-cluster"></a>Cambiar el clúster de macrodatos
 

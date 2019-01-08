@@ -17,12 +17,12 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf259a06d99b06e431d735e6194e17ae9bb19180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507371"
 ---
 # <a name="tail-log-backups-sql-server"></a>Copias del final del registro (SQL Server)
   Este tema solamente es pertinente para copias de seguridad y restauración de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa.  
@@ -37,7 +37,7 @@ ms.locfileid: "48135614"
 ##  <a name="TailLogScenarios"></a> Escenarios que requieren una copia del final del registro  
  Recomendamos realizar una copia del final del registro en los siguientes escenarios:  
   
--   Si la base de datos está en línea y planea realizar una operación de restauración en la base de datos, comience con una copia del final del registro. Para evitar un error para una base de datos en línea, debe utilizar la opción WITH NORECOVERY de la [copia de seguridad](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción.  
+-   Si la base de datos está en línea y planea realizar una operación de restauración en la base de datos, comience con una copia del final del registro. Para evitar un error para una base de datos en línea, debe usar la opción ... WITH NORECOVERY de la instrucción [BACKUP](/sql/t-sql/statements/backup-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   Si una base de datos está sin conexión y no puede iniciarse y necesita restaurar la base de datos, primero haga una copia del final del registro. Debido a que no pueden producirse otras transacciones en este momento, el uso de WITH NORECOVERY es opcional.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48135614"
 |Opción BACKUP LOG|Comentarios|  
 |-----------------------|--------------|  
 |NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro.  El registro se trunca a menos que también se especifica la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> **\*\* Importante \* \***  le recomendamos que evite usar NO_TRUNCATE, salvo cuando esté dañada la base de datos.|  
-|CONTINUE_AFTER_ERROR|Utilice CONTINUE_AFTER_ERROR solo si va a crear una copia del final de una base de datos dañada.<br /><br /> Nota: Cuando se usa la copia de seguridad del final del registro en una base de datos dañada, algunos de los metadatos que comúnmente se capturan en las copias de seguridad del registro podrían no estar disponible. Para obtener más información, vea [Copias del final del registro con metadatos de copia de seguridad incompletos](#IncompleteMetadata) más adelante en este tema.|  
+|CONTINUE_AFTER_ERROR|Utilice CONTINUE_AFTER_ERROR solo si va a crear una copia del final de una base de datos dañada.<br /><br /> Nota: Al realizar una copia de seguridad del final del registro de una base de datos dañada, es posible que parte de los metadatos que comúnmente se capturan en las copias de seguridad de registros no estén disponibles. Para obtener más información, vea [Copias del final del registro con metadatos de copia de seguridad incompletos](#IncompleteMetadata) más adelante en este tema.|  
   
 ##  <a name="IncompleteMetadata"></a> Copias del final del registro con metadatos de copia de seguridad incompletos  
  Las copias de seguridad de registros después del error capturan el final del registro aunque falten archivos en la base de datos, o la base de datos esté sin conexión o dañada. Sin embargo, esto puede provocar que se obtengan metadatos incompletos de los comandos de información de restauración y **msdb**. Sin embargo, solo los metadatos están incompletos. El registro capturado está completo y en condiciones de uso.  

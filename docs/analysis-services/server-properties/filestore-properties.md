@@ -1,5 +1,5 @@
 ---
-title: FILESTORE, propiedades | Microsoft Docs
+title: Filestore, propiedades de Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a5bf8e90352218b222bbd6a58ad876ca0e1364b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0319006e3ca6d69416746d802c20164da309b188
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975010"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071982"
 ---
 # <a name="filestore-properties"></a>Filestore, propiedades
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la `filestore` en las siguientes tablas muestran las propiedades de servidor. Todas son propiedades avanzadas que no se deben cambiar, salvo bajo la orientación de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Se aplica a:** modo de servidor multidimensional y tabular  
+ **Se aplica a:** Modo de servidor multidimensional y Tabular  
   
 ## <a name="properties"></a>Propiedades  
  **MemoryLimit**  

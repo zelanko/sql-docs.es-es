@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752273"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823149"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,14 +66,14 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0 x 10**|Los permisos de tabla se comprueban en el publicador antes de que las instrucciones INSERT realizadas en el suscriptor se apliquen en el publicador.|  
 ||**0 x 20**|Los permisos de tabla se comprueban en el publicador antes de que las instrucciones UPDATE realizadas en el suscriptor se apliquen en el publicador.|  
 ||**0 x 40**|Los permisos de tabla se comprueban en el publicador antes de que las instrucciones DELETE realizadas en el suscriptor se apliquen en el publicador.|  
-|**column_tracking**|**true**|Activa el seguimiento por columna. Solo se aplica a un artículo de tabla.<br /><br /> Nota: No se puede utilizar el seguimiento de nivel de columna cuando se publican tablas con más de 246 columnas.|  
+|**column_tracking**|**true**|Activa el seguimiento por columna. Solo se aplica a un artículo de tabla.<br /><br /> Nota: El seguimiento por columna no se puede utilizar cuando se publican tablas con más de 246 columnas.|  
 ||**False**|Desactiva el seguimiento por columna y deja la detección de conflictos a nivel de fila. Solo se aplica a un artículo de tabla.|  
 |**compensate_for_errors**|**true**|Las acciones de compensación se ejecutan cuando se producen errores durante la sincronización. Para obtener más información, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 ||**False**|Las acciones de compensación no se ejecutan; éste es el comportamiento predeterminado. Para obtener más información, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Importante \* \***  aunque estén fuera de convergencia, tan pronto como los corrija los errores, puede que aparezcan datos en las filas afectadas, se pueden aplicar los cambios y datos convergerán. Si la tabla de origen para un artículo ya está publicada en otra publicación y, a continuación, el valor de *compensate_for_errors* debe ser el mismo para ambos artículos.|  
 |**creation_script**||Ruta de acceso y nombre de un script opcional del esquema del artículo que se utiliza para crear el artículo en la base de datos de suscripciones.|  
 |**delete_tracking**|**true**|Las instrucciones DELETE se replican; éste es el comportamiento predeterminado.|  
 ||**False**|Las instrucciones DELETE no se replican.<br /><br /> **\*\* Importante \* \***  configuración **delete_tracking** a **false** resultados de no convergencia y eliminadas las filas deben quitarse manualmente.|  
-|**Descripción**||Entrada descriptiva del artículo.|  
+|**description**||Entrada descriptiva del artículo.|  
 |**destination_owner**||Nombre del propietario del objeto en la base de datos de suscripción, si no **dbo**.|  
 |**identity_range**||**bigint** que especifica el tamaño del intervalo que se usará al asignar nuevos valores de identidad si el artículo tiene **identityrangemanagementoption** establecido en **automática** o **auto_identity_ intervalo** establecido en **true**. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "Replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**valor de identityrangemanagementoption**|**Manual**|Deshabilita la administración automática de intervalos de identidad. Marca las columnas de identidad utilizando NOT FOR REPLICATION para habilitar la administración manual de intervalos de identidad. Para más información, vea [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  

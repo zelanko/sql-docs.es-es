@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor
@@ -14,12 +13,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c32d48446c549fbc73913497ec78018292e58074
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b03c94ccfd50dc1c031c7e25f548e61ab1de1ac5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215355"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815728"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o una vista centrada en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
@@ -148,7 +147,7 @@ ms.locfileid: "48215355"
   
 -   Pestaña**Advertencias**   
   
-     Esta pestaña le permite especificar advertencias y alertas para los agentes. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+     Esta pestaña le permite especificar advertencias y alertas para los agentes. Para obtener más información, consulte [establecer umbrales y advertencias en el Monitor de replicación](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 -   Pestaña**Testigos de seguimiento** (solo replicación transaccional)  
   
@@ -220,7 +219,7 @@ ms.locfileid: "48215355"
  Para obtener más información, consulte [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Ver información y realizar tareas relacionadas con perfiles de agente  
- El Monitor de replicación incluye varios cuadros de diálogo para administrar perfiles de agente. Los perfiles de agente son conjuntos de parámetros de un agente que determinan su comportamiento. Para obtener más información, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md). Los cuadros de diálogo son:  
+ El Monitor de replicación incluye varios cuadros de diálogo para administrar perfiles de agente. Los perfiles de agente son conjuntos de parámetros de un agente que determinan su comportamiento. Para más información, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md). Los cuadros de diálogo son:  
   
 -   **Perfiles de agente**  
   

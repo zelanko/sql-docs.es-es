@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: daedd18baf4e4da709b09328826d44722bec04ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 552069daa158ad3c3289cdf03bb3b563beaa9c56
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062685"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800957"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Vea todas las anotaciones o transacciones para un miembro (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede ver las anotaciones (comentarios) y las transacciones de las filas de datos (miembros) cuando quiera ver actualizaciones de los datos a través del tiempo.  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844673"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409742"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>Sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47844673"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Id. de base de datos en el que reside la función.|  
 |**object_id**|**int**|Número de identificación de objeto de la función.|  
-|**Tipo**|**char(2)**|Tipo del objeto: FN = funciones con valores escalares|  
+|**Tipo**|**char(2)**|Tipo del objeto:   FN = funciones con valores escalares|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de objeto: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary (64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de esta función.|  
 |**plan_handle**|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.<br /><br /> Siempre será 0 x 000 cuando una tabla de consultas optimizadas en memoria de la función compilada de forma nativa.|  

@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675104"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819110"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>Sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|SHOWPLAN XML con estadísticas parciales. Acepta valores NULL.|
 
 ## <a name="remarks"></a>Comentarios
-Esta función del sistema está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Esta función del sistema está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Vea KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
 Esta función del sistema que funciona en ambos **estándar** y **ligera** consultar las estadísticas de ejecución de generación de perfiles de infraestructura.  
   
@@ -64,7 +64,7 @@ Esta función del sistema que funciona en ambos **estándar** y **ligera** consu
   -  [SET STATISTICS PROFILE EN](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  el `query_post_execution_showplan` eventos extendidos.  
   
-**Ligero** está disponible en las estadísticas de generación de perfiles de infraestructura [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y se puede habilitar:
+**Ligero** está disponible en las estadísticas de generación de perfiles de infraestructura [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y se puede habilitar:
   -  Globalmente mediante el uso de seguimiento marca 7412.
   -  Mediante el [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) eventos extendidos.
   

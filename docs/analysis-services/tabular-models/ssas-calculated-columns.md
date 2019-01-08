@@ -1,5 +1,5 @@
 ---
-title: Columnas calculadas | Microsoft Docs
+title: Calcula las columnas de modelos tabulares de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982527"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072402"
 ---
 # <a name="calculated-columns"></a>Columnas calculadas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Las columnas calculadas, en los modelos tabulares, podrá agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, se crea una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
+  Las columnas calculadas, en los modelos tabulares, podrá agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, cree una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
  
   
   
@@ -74,7 +74,7 @@ ms.locfileid: "38982527"
   
 ## <a name="see-also"></a>Vea también  
  [Tablas y columnas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Cálculos](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -18,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42af9ddf36f60980ae1bdf2b6152e91159178467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137075"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813987"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "48137075"
   
  Para habilitar las suscripciones actualizables para publicaciones transaccionales, [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
- Para crear suscripciones actualizables para publicaciones transaccionales, vea [crear una suscripción actualizable a una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Para crear suscripciones actualizables para publicaciones transaccionales, vea [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## <a name="switching-between-update-modes"></a>Cambio entre modos de actualización  
  Al utilizar las suscripciones actualizables, puede especificar que una suscripción utilice un modo de actualización y, después, cambie al otro si la aplicación lo requiere. Por ejemplo, puede especificar que una suscripción utilice la actualización inmediata, pero cambie a la actualización en cola si se pierde la conectividad de red por un error del sistema.  
@@ -57,7 +56,7 @@ ms.locfileid: "48137075"
  **Para cambiar entre modos de actualización**  
   
  Para cambiar entre modos de actualización, debe habilitar la publicación y suscripción para ambos modos de actualización y, a continuación, cambiar entre ellos si es necesario. Para obtener más información, vea  
-[Cambiar entre modos de actualización para una suscripción transaccional actualizable](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Consideraciones para el uso de suscripciones actualizables  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48137075"
   
 -   No se admiten los datos de republicación.  
   
--   La replicación agrega la columna **msrepl_tran_version** a las tablas publicadas con fines de seguimiento. Debido a esta columna adicional, todas las `INSERT` instrucciones deben incluir una lista de columnas.  
+-   La replicación agrega la columna **msrepl_tran_version** a las tablas publicadas con fines de seguimiento. A consecuencia de esta columna adicional, todas las instrucciones `INSERT` deben incluir una lista de columnas.  
   
 -   Para realizar cambios de esquema en una tabla de una publicación que admita suscripciones de actualización, se debe detener toda la actividad de la tabla en el publicador y los suscriptores, y se deben propagar los cambios de datos pendientes a todos los nodos antes de realizar cambios de esquema. De esta forma se garantiza que las transacciones pendientes no entren en conflicto con el cambio de esquema pendiente. Una vez propagados los cambios de esquema a todos los nodos, se puede reiniciar la actividad en las tablas publicadas. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48137075"
   
 -   Las actualizaciones en el suscriptor se propagan al publicador incluso cuando una suscripción ha expirado o está inactiva. Asegúrese de que tales suscripciones se quitan o reinicializan.  
   
--   Si `TIMESTAMP` o `IDENTITY` se usan columnas y se replican como sus tipos de base de datos, los valores de estas columnas no se deben actualizar en el suscriptor.  
+-   Si se usan columnas `TIMESTAMP` o `IDENTITY`, y se replican como sus tipos de datos base, los valores de estas columnas no se deben actualizar en el suscriptor.  
   
--   Los suscriptores no pueden actualizar o insertar `text`, `ntext` o `image` valores porque no es posible leer en las tablas insertadas o eliminadas dentro de los desencadenadores de seguimiento de cambios de replicación. De forma similar, los suscriptores no pueden actualizar o insertar `text` o `image` valores utilizando `WRITETEXT` o `UPDATETEXT` porque el publicador sobrescribe los datos. En su lugar, puede dividir la `text` y `image` columnas en otra tabla y modificar las dos tablas en una transacción.  
+-   Los suscriptores no pueden actualizar o insertar valores `text`, `ntext` o `image` porque no es posible leer en las tablas insertadas o eliminadas dentro de los desencadenadores de seguimiento de cambios de replicación. Igualmente, los suscriptores no pueden actualizar o insertar valores `text` o `image` utilizando `WRITETEXT` o `UPDATETEXT` porque el publicador sobrescribe los datos. En su lugar, puede dividir las columnas `text` y `image` en una tabla independiente y modificar las dos tablas en una transacción.  
   
-     Para actualizar los objetos grandes en el suscriptor, utilice los tipos de datos `varchar(max)`, `nvarchar(max)`, `varbinary(max)` en lugar de `text`, `ntext`, y `image` tipos de datos, respectivamente.  
+     Para actualizar los objetos grandes de un suscriptor, utilice los tipos de datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)` en lugar de `text`, `ntext` y `image`, respectivamente.  
   
--   No se permiten actualizaciones de claves únicas (incluidas las claves principales) que generen duplicados (por ejemplo, una actualización con el formato `UPDATE <column> SET <column> =<column>+1` ) y se rechazarán debido a una infracción de unicidad. Esto es porque las actualizaciones de conjuntos realizadas en el suscriptor se propagan por la replicación como persona `UPDATE` instrucciones para cada fila afectada.  
+-   No se permiten actualizaciones de claves únicas (incluidas las claves principales) que generen duplicados (por ejemplo, una actualización con el formato `UPDATE <column> SET <column> =<column>+1` ) y se rechazarán debido a una infracción de unicidad. Esto se debe a que la replicación propaga las actualizaciones de conjuntos realizadas en el suscriptor como instrucciones `UPDATE` individuales para cada fila afectada.  
   
 -   Si se realiza una partición horizontal de la base de datos de suscriptor y hay filas en la partición que existen en el suscriptor pero no en el publicador, el suscriptor no podrá actualizar las filas preexistentes. Si intenta actualizar estas filas, se obtendrá un error. Las filas deben eliminarse de la tabla e insertarse de nuevo.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48137075"
   
 -   Si la aplicación requiere desencadenadores en el suscriptor, éstos se deben definir con la opción `NOT FOR REPLICATION` en el publicador y en el suscriptor. Así se garantiza que los desencadenadores se activen solamente para los cambios de datos originales, pero no cuando el cambio se replique.  
   
-     Asegúrese de que el desencadenador definido por el usuario no se active cuando el desencadenador de replicación actualice la tabla. Esto se logra llamando al procedimiento `sp_check_for_sync_trigger` en el cuerpo del desencadenador definido por el usuario. Para obtener más información, consulte [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
+     Asegúrese de que el desencadenador definido por el usuario no se active cuando el desencadenador de replicación actualice la tabla. Para lograrlo, debe llamar al procedimiento `sp_check_for_sync_trigger` en el cuerpo del desencadenador definido por el usuario. Para obtener más información, consulte [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
   
 ### <a name="immediate-updating"></a>Actualización inmediata  
   
@@ -107,11 +106,11 @@ ms.locfileid: "48137075"
   
 -   No se recomienda realizar actualizaciones en columnas de clave principal al utilizar la actualización en cola, ya que se utiliza la clave principal como localizador de registros para todas las consultas. Cuando la directiva de resolución de conflictos está establecida en El suscriptor gana, las actualizaciones de las claves principales deben realizarse con precaución. Si se realizan actualizaciones de la clave principal en el publicador y en el suscriptor, el resultado serán dos filas con claves principales diferentes.  
   
--   Las columnas de tipo de datos `SQL_VARIANT`: cuando los datos se insertan o actualizan en el suscriptor, que se asigna del siguiente modo por el agente de lector de cola al copiarlos del suscriptor a la cola:  
+-   Para las columnas de tipo de datos `SQL_VARIANT`, cuando los datos se insertan o actualizan en el suscriptor, son asignados del siguiente modo por el Agente de lectura de cola al copiarlos del suscriptor a la cola:  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, y `SMALLMONEY` se asignan a `NUMERIC`.  
+    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` y `SMALLMONEY` se asignan a `NUMERIC`.  
   
-    -   `BINARY` y `VARBINARY` se asignan a `VARBINARY` datos.  
+    -   `BINARY` y `VARBINARY` se asignan a datos `VARBINARY`.  
   
 ### <a name="conflict-detection-and-resolution"></a>Detección y resolución de conflictos  
   

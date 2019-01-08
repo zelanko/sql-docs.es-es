@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531409"
 ---
 # <a name="assl-xml-conventions"></a>Convenciones XML de ASSL
   Analysis Services Scripting Language (ASSL) representa la jerarquía de objetos como un conjunto de tipos de elemento, cada uno de los cuales define los elementos secundarios que puede contener.  
   
  Para representar la jerarquía de objetos, ASSL utiliza las siguientes convenciones XML:  
   
--   Todos los objetos y las propiedades se representan como elementos, salvo los atributos XML estándar como "xml:lang".  
+-   Todos los objetos y propiedades se representan como elementos, salvo los atributos XML estándar, como "XML: lang".  
   
 -   Nombres de elementos y valores de enumeración siguen la convención de nomenclatura de Microsoft .NET Framework de Pascal las mayúsculas y minúsculas sin caracteres de subrayado.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112815"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112815"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112815"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112815"
  Analysis Services utiliza los siguientes tipos de datos del lenguaje de definición de esquema XML (XSD) estándar:  
   
  `Int`  
- Valor entero en el intervalo de -231 a 231 – 1.  
+ Valor entero en el intervalo de -231 a 231-1.  
   
  `Long`  
- Valor entero en el intervalo de -263 a 263 – 1.  
+ Un valor entero del intervalo de-263 a 263-1.  
   
  `String`  
  Valor de cadena que se ajusta a las reglas globales siguientes:  

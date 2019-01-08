@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - removing primary keys
@@ -15,12 +14,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aff2b9f4085e3267bcf7c76462e04af4793d44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221225"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814538"
 ---
 # <a name="delete-primary-keys"></a>Eliminar claves principales
   Puede eliminar (quitar) una clave principal en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando se elimina la clave principal, se elimina el índice correspondiente.  
@@ -37,7 +36,7 @@ ms.locfileid: "48221225"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48221225"
     > [!NOTE]  
     >  Para deshacer esta acción, cierre la tabla sin guardar los cambios. Si se elimina una clave principal, no se podrá deshacer la acción sin perder todos los demás cambios realizados en la tabla.  
   
-3.  En el menú **Archivo**, haga clic en **Guardar***nombre de tabla*.  
+3.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

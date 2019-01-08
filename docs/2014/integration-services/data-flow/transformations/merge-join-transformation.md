@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0620aec0c710e513115455388276c72cc4371e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1a581536bb4f2a07dbbdf3d6ca187ac4a6f5250
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767187"
 ---
 # <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
   La transformación Combinación de mezcla proporciona una salida que se genera combinando dos conjuntos de datos ordenados mediante una combinación FULL, LEFT o INNER. Por ejemplo, puede utilizar una combinación LEFT para combinar una tabla que incluye información de productos con una tabla que incluye el país o la región en que se fabricó un producto. El resultado es una tabla que muestra todos los productos y su país o región de origen.  
@@ -49,23 +48,23 @@ ms.locfileid: "48171048"
  La transformación Combinación de mezcla requiere que las columnas combinadas tengan metadatos coincidentes. Por ejemplo, no puede combinar una columna que tenga un tipo de datos numérico con una columna que tenga un tipo de datos de carácter. Si los datos tienen un tipo de datos de cadena, la longitud de la columna de la segunda entrada debe ser menor o igual que la longitud de la columna de la primera entrada con la que se va a combinar.  
   
 ## <a name="buffer-throttling"></a>Limitación del búfer  
- Ya no tendrá que configurar el valor de la `MaxBuffersPerInput` propiedad porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.  
+ Ya no tiene que configurar el valor de la propiedad `MaxBuffersPerInput` porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener información sobre cómo establecer las propiedades de esta transformación, haga clic en uno de los temas siguientes:  
   
--   [Ampliación de un conjunto de datos con la transformación Combinación de mezcla](merge-join-transformation.md)  
+-   [Ampliar un conjunto de datos con la transformación Combinación de mezcla](merge-join-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de transformación combinación de mezcla](../../merge-join-transformation-editor.md)   
- [Transformación mezclar](merge-transformation.md)   
- [Unión todo, transformación](union-all-transformation.md)   
+ [Editor de transformación Combinación de mezcla](../../merge-join-transformation-editor.md)   
+ [Transformación Mezclar](merge-transformation.md)   
+ [Transformación Unión de todo](union-all-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   
   

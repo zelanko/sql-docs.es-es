@@ -20,16 +20,16 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e5596948a9e764ca0005d6cc41e62d65421866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692305"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208654"
 ---
 # <a name="sqlnativesql-function"></a>Función SQLNativeSql
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLNativeSql** devuelve la cadena SQL como modificada por el controlador. **SQLNativeSql** no se ejecuta la instrucción SQL.  

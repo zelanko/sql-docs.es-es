@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
@@ -16,12 +14,12 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2dfffc59284a0eb2d4f121b2f2328bdadae1d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac0e98924b54a20ad16c183386dd407fc7604c
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189521"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328995"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
   Las acciones **Cuando se llama** de punto de interrupción especifican una tarea personalizada que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] realiza en un punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.  
@@ -31,7 +29,7 @@ ms.locfileid: "48189521"
   
  Los mensajes de impresión se especifican en la opción **Imprimir un mensaje** como una cadena de texto que incluye expresiones con información de la instancia de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está depurando. Estas expresiones pueden ser:  
   
--   Una expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] escrita entre llaves ({}). Las expresiones pueden incluir variables, parámetros y funciones integradas de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Algunos ejemplos son {@MyVariable}, {@NameParameter}, {@@SPID} o {SERVERPROPERTY(‘ProcessID’)}.  
+-   Una expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] escrita entre llaves ({}). Las expresiones pueden incluir variables, parámetros y funciones integradas de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Algunos ejemplos son {@MyVariable}, {@NameParameter}, {@@SPID} o {SERVERPROPERTY('ProcessID')}.  
   
 -   Una de las siguientes palabras clave:  
   
@@ -43,7 +41,7 @@ ms.locfileid: "48189521"
   
     4.  $FUNCTION devuelve el nombre del procedimiento almacenado o la función definida por el usuario donde se ha establecido el punto de interrupción. Si el punto de interrupción está establecido en la ventana del editor, $FUNCTION devuelve en nombre del archivo de script que se está editando.  
   
-    5.  $PID y $PNAME devuelven el identificador y el nombre del proceso del sistema operativo que está ejecutando la instancia del motor de base de datos en la que se está ejecutando [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID devuelve el mismo identificador que SERVERPROPERTY(‘ProcessID’), salvo porque $PID es un valor hexadecimal mientras que SERVERPROPERTY(‘ProcessID’) es un valor decimal.  
+    5.  $PID y $PNAME devuelven el identificador y el nombre del proceso del sistema operativo que está ejecutando la instancia del motor de base de datos en la que se está ejecutando [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID devuelve el mismo identificador que SERVERPROPERTY('ProcessID'), salvo porque $PID es un valor hexadecimal mientras que SERVERPROPERTY('ProcessID') es un valor decimal.  
   
     6.  $TID y $TNAME devuelven el identificador y el nombre del subproceso del sistema operativo en el que se está ejecutando el lote [!INCLUDE[tsql](../../includes/tsql-md.md)] . El subproceso está asociado al proceso que ejecuta la instancia del motor de base de datos. $TID devuelve el mismo valor que SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, salvo que $TID es un valor hexadecimal y kpid es un valor decimal.  
   
@@ -70,5 +68,3 @@ ms.locfileid: "48189521"
 ## <a name="see-also"></a>Vea también  
  [Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)   
  [Especificar un número de llamadas](specify-a-hit-count.md)  
-  
-  

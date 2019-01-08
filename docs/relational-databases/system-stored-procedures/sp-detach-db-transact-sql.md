@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825673"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201914"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Especifica que el archivo de índice de texto completo asociado a la base de datos que se va a separar no se quitará durante la operación de separación de la base de datos. *KeepFulltextIndexFile* es un **nvarchar (10)** valor predeterminado es de **true**. Si *KeepFulltextIndexFile* es **false**, todos los archivos de índice de texto completo asociado a la base de datos y se quitan los metadatos del índice de texto completo, a menos que la base de datos es de solo lectura. Si es NULL o **true**, relacionada con el texto completo se conservan los metadatos.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  El**@keepfulltextindexfile** parámetro se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -114,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para forzar la actual usuarios fuera de la base de datos inmediatamente o dentro de un número especificado de segundos, también debe utilizar la opción ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Para forzar que los usuarios actuales de la base de datos inmediatamente o tras un número especificado de segundos, también puede usar la opción de reversión: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Volver a adjuntar una base de datos  
  Los archivos separados permanecen y se pueden volver a adjuntar utilizando CREATE DATABASE (con la opción FOR ATTACH o FOR ATTACH_REBUILD_LOG). Los archivos se pueden mover a otro servidor y adjuntarse allí.  

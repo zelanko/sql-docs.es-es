@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f71635386de926bcf74b108f6bbebaacd3b10282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133365"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349218"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
   Un clúster de conmutación por error de múltiples subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una configuración donde cada nodo clúster se conecta a una subred diferente o un conjunto de subredes diferente. Estas subredes pueden estar en la misma ubicación o en sitios geográficamente dispersos. A veces se hace referencia a la agrupación en clústeres en sitios geográficamente dispersos como clústeres elásticos. Como no existe ningún almacenamiento compartido al que todos los nodos puedan tener acceso, los datos se deben replicar entre el almacenamiento de datos en las diversas subredes. Con la replicación de datos, hay más de una copia de los datos disponible. Por consiguiente, un clúster de conmutación por error de múltiples subredes proporciona una solución de recuperación ante desastres además de alta disponibilidad.  
@@ -69,7 +69,7 @@ ms.locfileid: "48133365"
 ##  <a name="DNS"></a> Latencia de recuperación de cliente durante conmutaciones por error  
  Una instancia de clúster de conmutación por error de múltiples subredes habilita de forma predeterminada el recurso de clúster RegisterAllProvidersIP para el nombre de red. En una configuración de múltiples subredes, las direcciones IP en línea y sin conexión del nombre red se registra en el servidor DNS. La aplicación cliente recupera a continuación todas las direcciones IP registradas del servidor DNS e intenta la conexión con las direcciones en orden o en paralelo. Esto significa que el tiempo de recuperación de cliente en clústeres de conmutación por error de múltiples subredes deja de depender de las latencias de actualización de DNS. De forma predeterminada, el cliente intenta las direcciones IP en orden. Cuando el cliente utiliza el nuevo parámetro opcional `MultiSubnetFailover=True` en la cadena de conexión, intentará en su lugar las direcciones IP simultáneamente y las conexiones al primer servidor que responda. Esto puede ayudar a reducir al mínimo la latencia de recuperación de cliente cuando se produzcan conmutaciones por error. Para obtener más información, consulte [conectividad de cliente de AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) y [crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- Con las bibliotecas de cliente heredado o proveedores de datos de terceros, no puede usar el `MultiSubnetFailover` parámetro en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.  
+ Con las bibliotecas de cliente heredadas o con proveedores de datos de terceros, no puede utilizar el parámetro `MultiSubnetFailover` en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.  
   
  El período de tiempo de espera predeterminado de la conexión de cliente para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio y **sqlcmd** es de 15 segundos.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "48133365"
 |Instalar un clúster de conmutación por error de SQL Server|[Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Actualización en contexto del clúster de conmutación por error existente de SQL Server|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Mantener el clúster de conmutación por error existente de SQL Server|[Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Clústeres de conmutación por error de Windows|[Windows 2008 R2 conmutación por error de agrupación en clústeres multisitio](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
-|Usar el complemento Administración del clúster de conmutación por error para ver eventos y registros de WSFC|[View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Usar Windows PowerShell para crear un archivo de registro para todos los nodos (o un determinado nodo) en un clúster de conmutación por error de WSFC|[Cmdlet de clúster de conmutación por error Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)|  
+|Clústeres de conmutación por error de Windows|[Windows 2008 R2 conmutación por error de agrupación en clústeres multisitio](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
+|Usar el complemento Administración del clúster de conmutación por error para ver eventos y registros de WSFC|[View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|Usar Windows PowerShell para crear un archivo de registro para todos los nodos (o un determinado nodo) en un clúster de conmutación por error de WSFC|[Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|  
   
  
   

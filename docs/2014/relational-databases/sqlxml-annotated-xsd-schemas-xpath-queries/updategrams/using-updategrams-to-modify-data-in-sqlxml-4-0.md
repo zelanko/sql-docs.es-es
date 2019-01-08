@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, updategrams
@@ -26,12 +24,12 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbaf5d1cad727a31aeb4ad02635e22a00a1844e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afc6b0176145bdb1af499a5de4d0a36527a08de3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059105"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750769"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilizar los diagramas de actualización para modificar datos en SQLXML 4.0
   Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documentos mediante el uso de un diagrama de actualización o la OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  

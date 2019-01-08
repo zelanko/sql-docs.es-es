@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.filegroups.f1
@@ -13,12 +12,12 @@ ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67e1de3aaa877b666d43f39faa92f3cfe89bd4c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799417"
 ---
 # <a name="database-properties-filegroups-page"></a>Propiedades de la base de datos (página Grupos de archivos)
   Utilice esta página para ver los grupos de archivos o para agregar un nuevo grupo de archivos a la base de datos seleccionada. Los tipos de grupo de archivos se separan en grupos de archivos de *filas* , datos FILESTREAM y grupos de archivos optimizados para memoria.  
@@ -32,7 +31,7 @@ ms.locfileid: "48143835"
  Los grupos de archivos optimizados para memoria son necesarios para que una base de datos pueda contener una o más tablas optimizadas para memoria.  
   
 ## <a name="row-and-filestream-data-filegroup-options"></a>Opciones de grupo de archivos de filas y de datos FILESTREAM  
- **Nombre**  
+ **Name**  
  Escriba el nombre del grupo de archivos.  
   
  **Archivos**  
@@ -51,7 +50,7 @@ ms.locfileid: "48143835"
  Quita la fila del grupo de archivos seleccionado de la cuadrícula.  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>Opciones de grupo de archivos de datos con optimización para memoria  
- **Nombre**  
+ **Name**  
  Escriba el nombre del grupo de archivos optimizados para memoria.  
   
  **Archivos FILESTREAM**  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Diagram Designer
@@ -14,12 +14,12 @@ ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7987cb3c2063e823d6b3ae946a7e7e8c17729c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194315"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816927"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Desplazarse por el Diseñador de diagramas de base de datos (Visual Database Tools)
   Puede trabajar en el Diseñador de diagramas de base de datos a través del teclado y el mouse (ratón). Consulte las tablas siguientes para obtener información sobre métodos específicos del Diseñador de diagramas de base de datos.  
@@ -29,7 +29,7 @@ ms.locfileid: "48194315"
 |Obtener acceso al menú Diagrama de base de datos|ALT+M|  
 |Desplazarse entre las tablas y las relaciones si están disponibles|TAB, o MAYÚS+TAB|  
 |Desplazarse entre las columnas de una tabla|Teclas de dirección|  
-|Eliminar la tabla seleccionada en el diagrama|Delete|  
+|Eliminar la tabla seleccionada en el diagrama|SUPRIMIR|  
 |Eliminar una tabla o una relación de la base de datos|MAYÚS+SUPR|  
 |Mover las tablas por la superficie del diagrama|CTRL+ FLECHA ARRIBA o CTRL+FLECHA ABAJO|  
 |Desplazarse de derecha a izquierda y de arriba abajo|RE PÁG/AV PÁG para desplazamiento vertical y CTRL+RE PÁG/AV PÁG para desplazamiento horizontal|  

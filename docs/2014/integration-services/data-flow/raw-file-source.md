@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfilesource.f1
@@ -17,12 +16,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 211a738b6130830a7e60190d8b1e021c037997ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 109880446cf4c30fd3e5cc81e69c768bd8fe94b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151975"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805497"
 ---
 # <a name="raw-file-source"></a>archivo sin formato, origen
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el origen de archivo sin formato puede leer datos más rápidamente que otros orígenes, como el origen de archivo plano o el origen de OLE DB.  
@@ -55,7 +54,7 @@ ms.locfileid: "48151975"
 -   Entrada del blog [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
   
 ## <a name="see-also"></a>Vea también  
- [Destino de archivo sin formato](raw-file-destination.md)   
+ [Raw File Destination](raw-file-destination.md)   
  [Flujo de datos](data-flow.md)  
   
   

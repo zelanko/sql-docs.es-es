@@ -15,25 +15,25 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099035"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203365"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Dirección URL del servicio web (Modo nativo de SSRS)
   Utilice la página Dirección URL del servicio web para configurar o modificar la dirección URL que se usa para tener acceso al servidor de informes. Se creará una *reserva de direcciones URL* dependiendo de la dirección URL que especifique. La reserva de direcciones URL define la sintaxis y las reglas de todas las direcciones URL que se pueden utilizar posteriormente para tener acceso al servicio web del servidor de informes. Especifica el prefijo, host, puerto y directorio virtual para el servicio web del servidor de informes. Según cómo especifique el host, podría haber varias direcciones URL posibles para una única reserva. El valor predeterminado para el host especifica un carácter comodín seguro. Un carácter comodín seguro permite especificar en una dirección URL cualquier nombre de host que se pueda resolver como el equipo que hospeda el servidor de informes. Para obtener más información acerca de la configuración de dirección URL y las reservas de direcciones, vea [configurar una dirección URL &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) y [configurar direcciones URL del servidor de informes &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Para abrir esta página, inicie el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y haga clic en **dirección URL del servicio Web** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y haga clic en **Dirección URL del servicio web** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Esta página proporciona los valores que se suelen usar en las direcciones URL del servidor de informes. Si desea crear más direcciones URL, usar los encabezados de host o especificar la dirección IP en un formato determinado, haga clic en **Avanzadas**.  
   
  Un vínculo al servicio web aparecerá en esta página después de hacer clic en **Aplicar**. Si hace clic en este vínculo antes de que se cree la base de datos del servidor de informes, puede aparecer un error "Página no encontrada". Este error ya no aparecerá una vez que se configure la base de datos. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- Si vuelve a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y encuentra que obtiene errores al intentar utilizar el valor de dirección IP predeterminado todas asignadas y el puerto 80, normalmente puede resolver el error, vuelva a crear la dirección URL después de reiniciar el servicio.  
+ Si vuelve a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y encuentra que obtiene errores al intentar utilizar el valor de dirección IP predeterminado Todas asignadas y el puerto 80, normalmente puede resolver el error volviendo a crear la dirección URL después de reiniciar el servicio.  
   
 ## <a name="options"></a>Opciones  
  **Directorio virtual**  
@@ -58,7 +58,7 @@ ms.locfileid: "48099035"
  **Certificado SSL**  
  Enlaza un certificado a la dirección IP que especificó. El certificado debe estar instalado y configurado en el equipo. Reporting Services no proporciona características para administrar certificados. El certificado se debe emitir para un nombre de host o un nombre de equipo que se resuelva como la dirección IP. Por ejemplo, para usar un certificado emitido para http://salesreports, debe resolver la dirección IP especificada a un servidor denominado "salesreports".  
   
- Si usa un certificado, debe modificar el `UrlRoot` archivo de configuración en el archivo RSReportServer.config para que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Si usa un certificado, debe modificar el valor de configuración `UrlRoot` del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Puerto SSL**  
  Especifica el puerto para las conexiones SSL.  
@@ -69,17 +69,17 @@ ms.locfileid: "48099035"
  **Avanzadas**  
  Haga clic para crear más direcciones URL para la instancia de la aplicación actual.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si tiene enlaces SSL y reservas de direcciones URL existentes y desea cambiar el enlace SSL para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  
->   
+> 
 >  1.  Quite primero todas las reservas de direcciones URL.  
 > 2.  A continuación, quite todos los enlaces SSL.  
 > 3.  Después, vuelva a crear las direcciones URL y los enlaces SSL.  
->   
+> 
 >  El procedimiento anterior se puede realizar mediante el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
->   
+> 
 >  Microsoft Windows admite un enlace para cada combinación de dirección IP y puerto. Si configura un servidor de informes de forma que use un valor de encabezado de host específico y el certificado de la combinación de puerto-dirección IP se envía también a un valor de encabezado de host diferente, aparecerá en el explorador una advertencia en la que se indica que el certificado no coincide con la dirección URL que se está usando.  
->   
+> 
 >  Para corregir el problema, elimine todos los enlaces y, a continuación, cree nuevos enlaces con una configuración única, o configure los registros de direcciones URL de Reporting Services con caracteres comodín.  
   
 ## <a name="see-also"></a>Vea también  

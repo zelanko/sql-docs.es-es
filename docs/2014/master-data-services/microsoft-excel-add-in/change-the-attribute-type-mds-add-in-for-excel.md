@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056085"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783947"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Cambar el tipo de atributo (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden cambiar el tipo de atributo cuando el tipo de datos o el número de caracteres permitido sea incorrecto.  
@@ -31,7 +30,7 @@ ms.locfileid: "48056085"
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Debe haber un modelo, una entidad y un atributo existentes.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48056085"
   
 -   Cambiar el tipo de datos del atributo.  
   
--   Generar una copia del atributo con el sufijo "_old” que no contiene ningún valor. Esto se denomina un **en desuso** atributo.  
+-   Generar una copia del atributo con el sufijo "_old" que no contiene ningún valor. Esto se denomina un **en desuso** atributo.  
   
  Sin embargo, todas las dependencias existentes en el atributo original apuntarán al atributo desusado, no al modificado.  
   

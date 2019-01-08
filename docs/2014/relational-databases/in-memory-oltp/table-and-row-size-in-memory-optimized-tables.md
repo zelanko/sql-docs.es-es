@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a21072b90c0e263e4ac561bdad23aea8f0b1fd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822539"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
   Una tabla optimizada para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla optimizada para memoria, las filas no pueden ser mayores de 8060 bytes. Conocer el tamaño de una tabla optimizada para memoria le ayudará a saber si el equipo tiene memoria suficiente.  
@@ -40,10 +40,10 @@ La tabla con optimización para memoria, que consta de índices y filas.
  El tamaño en memoria de una tabla, en bytes, se calcula de la forma siguiente:  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
- El tamaño de un índice hash se fija en el momento de creación de la tabla y depende del número real de depósitos. El bucket_count especificado con la especificación de índice se redondea a la potencia más cercana de 2 para obtener el [número real de cubos]. Por ejemplo, si el bucket_count especificado es 100000, el [número real de cubos] para el índice es 131072.  
+ El tamaño de un índice hash se fija en el momento de creación de la tabla y depende del número real de cubos. El bucket_count especificado con la especificación de índice se redondea a la potencia más cercana de 2 para obtener el [número real de cubos]. Por ejemplo, si el bucket_count especificado es 100000, el [número real de cubos] para el índice es 131072.  
   
 ```  
 [hash index size] = 8 * [actual bucket count]  
@@ -77,7 +77,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
 |Matriz de desplazamiento para las columnas de tipo profundo|Los valores posibles son:<br /><br /> 0, si no hay columnas de tipos profundos<br /><br /> 2 + 2 * [número de columnas de tipo profundo], en caso contrario|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz NULL|[número de columnas que admiten valores NULL] / 8, redondeado a bytes completos.|La matriz tiene un bit por cada columna que admite valores NULL. Se redondea a bytes completos.|  
 |Relleno de matriz NULL|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño de la matriz NULL es un número de bytes impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
-|Relleno|Si no hay columnas de tipos profundos: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
+|Relleno|Si no hay ninguna columna de tipo profundo: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Columnas de tipo profundo de longitud fija|SUM([tamaño de columnas de tipo profundo de longitud fija])<br /><br /> El tamaño de cada columna es el siguiente:<br /><br /> i para char(i) y binary(i).<br /><br /> 2 * i para nchar(i)|Las columnas de tipo profundo de longitud fija son de tipo char(i), nchar(i) o binary(i).|  
 |Columnas de tipo profundo de longitud variable [tamaño calculado]|SUM([tamaño calculado de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al [tamaño del texto calculado de la fila].<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|  
@@ -93,7 +93,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  ![Estructura de fila para una tabla que tiene dos índices ](../../database-engine/media/hekaton-tables-4.gif "Estructura de fila para una tabla que tiene dos índices.")  
   
- Las marcas de tiempo de inicio y fin indican el periodo en el que una determinada versión de fila es válida. Las transacciones que se inician en este intervalo pueden ver esta versión de fila. Para obtener más información, consulte [transacciones en tablas optimizadas para memoria](memory-optimized-tables.md).  
+ Las marcas de tiempo de inicio y fin indican el periodo en el que una determinada versión de fila es válida. Las transacciones que se inician en este intervalo pueden ver esta versión de fila. Para obtener más detalles, consulte [Transacciones en tablas con optimización para memoria](memory-optimized-tables.md).  
   
  Los punteros de índice señalan a la siguiente fila de la cadena que pertenece al cubo de hash. La ilustración siguiente muestra la estructura de una tabla con dos columnas (name, city) y dos índices, uno en el nombre de columna y en otro en la ciudad de la columna.  
   
@@ -113,7 +113,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
 -   Segundo cubo: (John, París), (Jane, Praga)  
   
- Una marca de tiempo de extremo ∞ (infinito) indica que esta es la versión no válida de la fila. La fila no se ha actualizado ni se ha eliminado desde que esta versión de fila se escribió.  
+ Una marca de tiempo final??? (infinito) indica que se trata de la versión de la fila válida en este momento. La fila no se ha actualizado ni se ha eliminado desde que esta versión de fila se escribió.  
   
  Para un tiempo mayor que 200, la tabla contiene las filas siguientes:  
   
@@ -147,7 +147,7 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- Observe que esta tabla tiene un índice hash y un índice no clúster (la clave principal). También tiene tres columnas de longitud fija y una columna de longitud variable, con una de las columnas que admiten valores NULL (OrderDescription). Imaginemos que la tabla Orders tiene 8379 filas y la longitud promedio de los valores de la columna OrderDescription es de 78 caracteres.  
+ Observe que esta tabla tiene un índice hash y un índice no clúster (la clave principal). También tiene tres columnas de longitud fija y una columna de longitud variable, con una de las columnas que admiten valores NULL (OrderDescription). Supongamos que la tabla Orders tiene 8379 filas y el promedio de longitud de los valores de la columna OrderDescription es de 78 caracteres.  
   
  Para determinar el tamaño de la tabla, primero determine el tamaño de los índices. El bucket_count para ambos índices se especifica como 10000. Se redondea a la potencia más cercana de 2: 16384. Por consiguiente, el tamaño total de los índices de la tabla Orders es:  
   
@@ -168,7 +168,7 @@ GO
 [row header size] = 24 + 8 * [number of indices] = 24 + 8 * 1 = 32 bytes  
 ```  
   
- A continuación, vamos a calcular [tamaño del texto real de la fila]:  
+ A continuación, vamos a calcular [tamaño del cuerpo real de la fila]:  
   
 -   Columnas de tipo superficial:  
   
@@ -196,9 +196,9 @@ GO
   
     -   El múltiplo más cercano de 8 es 24.  
   
-    -   El relleno total es 24 – 22 = 2 bytes.  
+    -   El relleno total es 24 - 22 = 2 bytes.  
   
--   No hay columnas de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0).  
+-   No hay ninguna columna de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0.).  
   
 -   El tamaño real de la columna de tipo profundo es 2 * 78 = 156. La única columna de tipo profundo OrderDescription tiene el tipo nvarchar.  
   

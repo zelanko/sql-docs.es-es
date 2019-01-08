@@ -1,5 +1,6 @@
 ---
-title: Introducción a SQL Server en Ubuntu | Microsoft Docs
+title: Introducción a SQL Server en Ubuntu
+titleSuffix: SQL Server
 description: Este inicio rápido muestra cómo instalar SQL Server 2017 ni SQL Server 2019 en Ubuntu y, a continuación, crear y consultar una base de datos con sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677962"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160553"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalar SQL Server y crear una base de datos en Ubuntu
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalar a SQL Server y crear una base de datos en Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -183,7 +184,7 @@ Use los pasos siguientes para instalar el **mssql-tools** en Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Opcional**: agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
+1. **Opcional**: Agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
 
    Para realizar **sqlcmd y bcp** accesible desde el shell de bash para sesiones de inicio de sesión, modifique su **ruta de acceso** en el **~/.bash_profile** archivo con el siguiente comando:
 

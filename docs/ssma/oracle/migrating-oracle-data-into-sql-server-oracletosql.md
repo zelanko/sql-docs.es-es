@@ -13,12 +13,12 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e3b69ae2b59b3f82025404dd575f0602ea8c02a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ad944432b2a00acb923732863624a69dcbaf227f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668224"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418296"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migración de datos de Oracle a SQL Server (OracleToSQL)
 Después de haber sincronizado correctamente los objetos convertidos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede migrar datos desde Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -87,10 +87,10 @@ Para ver los mensajes de la migración, asegúrese de que está visible el panel
   
     -   Para llevar a cabo **migración de datos del lado servidor**, seleccione el **motor de migración de datos de lado servidor** opción el **configuración del proyecto** cuadro de diálogo.  
   
-4.  Haga clic en **esquemas** en el Explorador de metadatos de Oracle y, a continuación, haga clic en **migrar datos**. También puede migrar datos para objetos individuales o categorías de objetos: haga clic en el objeto o su carpeta primaria; Seleccione el **migrar datos** opción.  
+4.  Haga clic en **esquemas** en el Explorador de metadatos de Oracle y, a continuación, haga clic en **migrar datos**. También puede migrar datos para objetos individuales o categorías de objetos: Haga clic en el objeto o su carpeta primaria; Seleccione el **migrar datos** opción.  
   
     > [!NOTE]  
-    > Si no está instalado SSMA para Oracle: paquete de extensión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y si **motor de migración de datos de lado servidor** está seleccionada, al migrar los datos a la base de datos de destino, se encontró el siguiente error: ' No se encontraron componentes de migración de datos de SSMA en SQL Server, no será posible la migración de datos del servidor. Compruebe si el paquete de extensión se instaló correctamente ". Haga clic en **cancelar** para finalizar la migración de datos.  
+    > Si no está instalado SSMA para Oracle: paquete de extensión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y si **motor de migración de datos de lado servidor** está seleccionada, al migrar los datos a la base de datos de destino, se detectó el error siguiente: ' No se encontraron componentes de migración de datos de SSMA en SQL Server, no será posible la migración de datos del servidor. Compruebe si el paquete de extensión se instaló correctamente ". Haga clic en **cancelar** para finalizar la migración de datos.  
   
 5.  En el **conectar con Oracle** cuadro de diálogo, escriba las credenciales de conexión y, a continuación, haga clic en **Connect**. Para obtener más información sobre cómo conectarse a Oracle, vea [conectarse a Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   

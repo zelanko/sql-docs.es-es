@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220951"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811167"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
   En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla inserted y la tabla deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede utilizar estas tablas temporales residentes en memoria para probar los efectos de determinadas modificaciones de datos y para establecer condiciones para las acciones de los desencadenadores DML. No puede modificar directamente los datos de estas tablas ni realizar en ellas operaciones de lenguaje de definición de datos (DDL), como CREATE INDEX.  
@@ -70,7 +70,7 @@ ms.locfileid: "48220951"
   
 -   Las instrucciones INSERT deben suministrar valores para todas las columnas NOT NULL que no tienen restricciones DEFAULT.  
   
--   Cualquier, excepto para columnas calculadas, de identidad o `timestamp` columnas, los valores son opcionales para cualquier columna que admita valores NULL, o cualquier columna NOT NULL que tiene una definición DEFAULT.  
+-   Los valores son opcionales para cualquier columna que admita valores NULL o para cualquier columna NOT NULL que tenga una definición DEFAULT, excepto para las columnas calculadas, de identidad o `timestamp`.  
   
  Cuando una instrucción INSERT, UPDATE o DELETE hace referencia a una vista que tiene un desencadenador INSTEAD OF, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] llama al desencadenador en lugar de realizar una acción directa en cualquier tabla. El desencadenador utiliza la información de las tablas inserted y deleted a fin de generar las instrucciones necesarias para implementar la acción solicitada en las tablas base, incluso si el formato de la información de las tablas inserted y deleted generadas para la vista es distinto del formato de los datos de las tablas base.  
   

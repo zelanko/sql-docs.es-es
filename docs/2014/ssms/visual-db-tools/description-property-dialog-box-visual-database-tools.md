@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:73728
@@ -13,12 +13,12 @@ ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 177249bc513896405d63e2940eda09f3aff9b257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88134b2bcad38bda180b7a6102df04a9766f392a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210685"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818637"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Propiedad Description (cuadro de diálogo, Visual Database Tools)
   El cuadro de diálogo **Propiedad Description** incluye un área modificable en la que se puede escribir una descripción detallada de los objetos de base de datos, como tablas, columnas y restricciones FOREIGN KEY. Se puede obtener acceso a este cuadro de diálogo desde la ventana Propiedades de ciertos objetos, como tablas y vistas, cuando están seleccionados en un diseñador, desde los cuadros de diálogo de otros objetos, como índices y restricciones CHECK, y desde la pestaña **Propiedades de columna** del Diseñador de tablas para las columnas de las tablas. La descripción se almacena como una propiedad extendida del objeto.  

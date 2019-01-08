@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205754"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 
@@ -71,7 +71,7 @@ sudo systemctl restart mssql-server
 
 Un grupo de disponibilidad usa puntos de conexión TCP para la comunicación. En Linux, solo se admiten los puntos de conexión para un grupo de disponibilidad si se usan certificados para la autenticación. Esto significa que debe restaurarse el certificado de una instancia en todas las demás instancias serán las réplicas que participan en el mismo grupo de disponibilidad. El proceso de certificado es necesario incluso para una réplica de solo configuración. 
 
-Creación de puntos de conexión de seguridad y restauración de los certificados solo pueden realizarse a través de Transact-SQL Puede usar que no sean de[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-también certificados generados. También necesitará un proceso para administrar y reemplazar los certificados que expiran.
+Creación de puntos de conexión de seguridad y restauración de los certificados solo pueden realizarse a través de Transact-SQL Puede usar que no sean de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-también certificados generados. También necesitará un proceso para administrar y reemplazar los certificados que expiran.
 
 > [!IMPORTANT]
 > Si tiene previsto usar el [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] Asistente para crear el grupo de disponibilidad, sigue siendo necesario crear y restaurar los certificados mediante Transact-SQL en Linux.
@@ -315,7 +315,7 @@ En este ejemplo creará certificados para una configuración de tres nodos. Los 
 
 En esta sección se explica cómo usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL para crear el grupo de disponibilidad para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo de clúster externo mediante SSMS con el Asistente para nuevo grupo de disponibilidad.
 
@@ -353,9 +353,9 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
 11. Si se crea un agente de escucha para los escenarios legibles, SSMS 17.3 o posterior permite la creación del enrutamiento de solo lectura en el asistente. También se agregan posteriormente a través de SSMS o Transact-SQL. Para agregar el enrutamiento de solo lectura ahora:
 
-    A.  Seleccione la pestaña enrutamiento de solo lectura.
+    a.  Seleccione la pestaña enrutamiento de solo lectura.
 
-    B.  Escriba las direcciones URL para las réplicas de solo lectura. Estas direcciones URL son similares a los extremos, salvo que usan el puerto de la instancia, no el punto de conexión.
+    b.  Escriba las direcciones URL para las réplicas de solo lectura. Estas direcciones URL son similares a los extremos, salvo que usan el puerto de la instancia, no el punto de conexión.
 
     c.  Seleccione cada dirección URL y en la parte inferior, seleccione las réplicas legibles. Realizar una selección múltiple, mantenga presionada la tecla MAYÚS o haga clic y arrastre.
 
@@ -378,7 +378,7 @@ En esta sección se muestra ejemplos de creación de un grupo de disponibilidad 
 -   [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Crear o configurar un agente de escucha del grupo de disponibilidad (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Réplicas de ejemplo dos: uno con una réplica de solo configuración (tipo de clúster externo)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Réplicas de un segundo ejemplo con una réplica de solo configuración (tipo de clúster externo)
 
 En este ejemplo se muestra cómo crear un grupo de disponibilidad de dos réplicas que usa una réplica de solo configuración.
 
@@ -424,7 +424,7 @@ En este ejemplo se muestra cómo crear un grupo de disponibilidad de dos réplic
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas de ejemplo dos a tres con enrutamiento de solo lectura (tipo de clúster externo)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas de ejemplo dos y tres con enrutamiento de solo lectura (tipo de clúster externo)
 
 En este ejemplo se muestra tres completa las réplicas y el enrutamiento de solo lectura cómo pueden configurarse como parte de la creación inicial del grupo de disponibilidad.
 
@@ -482,7 +482,7 @@ En este ejemplo se muestra tres completa las réplicas y el enrutamiento de solo
     
 3.  Repita el paso 2 para la tercera réplica.
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>Réplicas de ejemplo: dos de tres con enrutamiento de solo lectura (tipo de clúster)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Réplicas de ejemplo dos de tres con enrutamiento de solo lectura (tipo de clúster)
 
 En este ejemplo se muestra la creación de una configuración de dos réplicas con un tipo de clúster ninguno. Se usa para el escenario de escalado de lectura donde no se espera ninguna conmutación por error. Esto crea el agente de escucha es realmente la réplica principal, así como el enrutamiento de solo lectura, mediante la funcionalidad de operación por turnos.
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], Boolean functions
@@ -18,12 +16,12 @@ ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31f26c16e2b1108163d6516001bff0eeb696d5bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f31498e5b73ce639808df6c659250a4ba6268308
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113616"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749997"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones booleanas en consultas XPath (SQLXML 4.0)
   Los ejemplos siguientes muestran cómo se especifican funciones booleanas en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -78,7 +76,7 @@ ms.locfileid: "48113616"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Especificar las funciones booleanas true () y false ()  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>b. Especificar las funciones booleanas true () y false ()  
  Esta consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que no tienen  **\<orden >** elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
   
 ```  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], connection options
@@ -15,12 +14,12 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f65188b6f322d3ee65d3182d135cec367142f4ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e831941097d4614b92c3d6e9b57400f0eab8430
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062905"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641208"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Ver o configurar las opciones de conexión de servidor remoto (SQL Server)
   En este tema se describe cómo ver o configurar las opciones de conexión de servidor remoto en el nivel de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -39,7 +38,7 @@ ms.locfileid: "48062905"
   
 -   **Seguimiento:**  [Después de configurar las opciones de conexión de servidor remoto](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48062905"
   
 #### <a name="to-view-remote-server-connection-options"></a>Para ver las opciones de conexión de servidor remoto  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -76,7 +75,7 @@ EXEC sp_helpserver ;
   
 #### <a name="to-configure-remote-server-connection-options"></a>Para configurar las opciones de conexión de servidor remoto  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -87,7 +86,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de configurar las opciones de conexión de servidor remoto  
+##  <a name="FollowUp"></a> Sigue: Después de configurar las opciones de conexión de servidor remoto  
  El servidor remoto debe detenerse e reiniciarse para que la opción de configuración valor surta efecto.  
   
 ## <a name="see-also"></a>Vea también  

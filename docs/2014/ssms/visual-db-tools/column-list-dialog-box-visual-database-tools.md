@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
@@ -12,22 +12,22 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2018bbfba6d7282c6e9ab27d9d2923bf69e59048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053125"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815777"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Lista de columnas (cuadro de diálogo, Visual Database Tools)
   Al escribir consultas, puede ser útil ver una lista de columnas disponibles en los objetos con valores de tabla seleccionados.  
   
- Para tener acceso a este cuadro de diálogo, en el panel Diagrama del menú **Diseñador de consultas** , haga clic con el botón derecho en el encabezado de un objeto con valores de tabla y, luego, haga clic en **Propiedades**. En la ventana **Propiedades** , haga clic en el campo **Lista de columnas** . A continuación, haga clic en los puntos suspensivos **(...)** que aparecen a la derecha del campo.  
+ Para tener acceso a este cuadro de diálogo, en el panel Diagrama del menú **Diseñador de consultas** , haga clic con el botón derecho en el encabezado de un objeto con valores de tabla y, luego, haga clic en **Propiedades**. En la ventana **Propiedades** , haga clic en el campo **Lista de columnas** . Después, haga clic en los puntos suspensivos **(...)** situados a la derecha del campo.  
   
  Este cuadro de diálogo proporciona una lista de las columnas en el objeto con valores de tabla seleccionado y propiedades básicas, como los tipos de datos y si las columnas permiten valores NULL.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Muestra el nombre de las columnas en el objeto con valores de tabla seleccionado.  
   
  **Tipo de datos**  

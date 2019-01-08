@@ -19,12 +19,12 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847163"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395900"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47847163"
   
 |columna|Tipo|Descripción|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary (8)**|Muestra la dirección de la estructura de NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
+|**handle_context_address**|**varbinary (8)**|Muestra la dirección de la estructura NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
 |**creation_request_id**|**int**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. No admite valores NULL.|  
 |**creation_irp_id**|**int**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. No admite valores NULL|  
 |**handle_id**|**int**|Muestra el identificador único de este controlador asignado por el controlador. No admite valores NULL.|  

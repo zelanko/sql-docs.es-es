@@ -1,5 +1,5 @@
 ---
-title: Crear una columna calculada | Documentos de Microsoft
+title: Crear una columna calculada en Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 25121b53ce050da38a6d19d0c458585acf7a9abd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 705428d2c2a6671452a1d95e06e500f4860574e0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039684"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071942"
 ---
 # <a name="create-a-calculated-column"></a>Crear una columna calculada
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Las columnas calculadas permiten agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, se crea una fórmula DAX que define los valores de nivel de fila de la columna. Los valores de cada fila de una columna calculada se calculan y se rellenan al crear una fórmula válida y hacer clic en ENTRAR. A continuación, la columna calculada se puede agregar a una aplicación de informes o de análisis como cualquier otra columna de datos. En este artículo se describe cómo crear una nueva columna calculada mediante la barra de fórmulas de DAX en el Diseñador de modelos.  
+  Las columnas calculadas permiten agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, cree una fórmula DAX que define los valores de nivel de fila de la columna. Los valores de cada fila de una columna calculada se calculan y se rellenan al crear una fórmula válida y hacer clic en ENTRAR. A continuación, la columna calculada se puede agregar a una aplicación de informes o de análisis como cualquier otra columna de datos. En este artículo se describe cómo crear una nueva columna calculada mediante la barra de fórmulas de DAX en el Diseñador de modelos.  
   
 #### <a name="to-create-a-new-calculated-column"></a>Para crear una nueva columna calculada  
   

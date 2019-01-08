@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -19,12 +18,12 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787837"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bases de datos con Copias de seguridad y restauración
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear una base de datos nueva restaurando una copia de seguridad de una base de datos de usuario creada utilizando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior. Sin embargo, las copias de seguridad de las bases de datos **maestra**, **modelo** y **msdb** creadas utilizando una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueden restaurarse con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Asimismo, las copias de seguridad de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden restaurar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "48057195"
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza una ruta de acceso predeterminada distinta de la de versiones anteriores. Por lo tanto, para restaurar copias de seguridad de una base de datos creadas en la ubicación predeterminada de versiones anteriores es preciso utilizar la opción MOVE. Para obtener información acerca de la nueva ruta de acceso predeterminada, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obtener más información acerca de cómo mover archivos de base de datos, vea el apartado "Mover los archivos de base de datos" que figura más adelante en este tema.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Pasos generales para utilizar las copias de seguridad y restauración para copiar una base de datos  
- Cuando se utilizan las copias de seguridad y restauración para copiar una base de datos a otra versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los equipos de origen y de destino pueden ser de cualquier plataforma en la que se ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Cuando se utilizan las copias de seguridad y restauración para copiar una base de datos a otra versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los equipos de origen y de destino pueden ser de cualquier plataforma en la que se ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Los pasos generales son:  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48057195"
   
     -   Si el archivo existente no se puede sobrescribir, se producirá un error de restauración.  
   
- Para evitar errores y consecuencias no deseadas, antes de la operación de restauración, puede usar el [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabla de historial para buscar los archivos de base de datos y registro en la copia de seguridad que va a restaurar.  
+ Para evitar errores y consecuencias no deseadas, antes de la operación de restauración puede utilizar la tabla de historial [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) para buscar los archivos de base de datos y de registro en la copia de seguridad que va a restaurar.  
   
 ## <a name="moving-the-database-files"></a>Mover los archivos de base de datos  
  Si no se pueden restaurar los archivos de la copia de seguridad de la base de datos en el equipo de destino debido a las razones mencionadas anteriormente, es necesario mover los archivos a una nueva ubicación a medida que se restauran. Por ejemplo:  

@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195565"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395808"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de red neuronal (Tutorial intermedio de minería de datos)
   Para crear un modelo de minería de datos, debe usar en primer lugar el Asistente para minería de datos con el objeto de crear una nueva estructura de minería de datos basada en la nueva vista del origen de datos. En esta tarea, utilizará el asistente para crear una estructura de minería de datos y al mismo tiempo crear el modelo inicial de minería de datos que se basa en el algoritmo de red neuronal de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -88,7 +88,7 @@ ms.locfileid: "48195565"
     |TotalOperators|No debe usarse|  
     |WageType|Entrada|  
   
-     Observe que se han seleccionado varias columnas de predicción. Uno de los puntos fuertes del algoritmo de red neuronal es que puede analizar todas las posibles combinaciones de atributos de entrada y salida. Esto no sería aconsejable para un conjunto de datos grande, ya que podría aumentar exponencialmente el tiempo de procesamiento.  
+     Observe que se han seleccionado varias columnas de predicción. Uno de los puntos fuertes del algoritmo de red neuronal es que puede analizar todas las posibles combinaciones de atributos de entrada y salida. Desearía hacer esto para un amplio conjunto de datos, como podría aumentar exponencialmente el tiempo de procesamiento...  
   
 12. En el **contenido y el tipo de datos de columnas especificar** página, compruebe que la cuadrícula contiene las columnas, tipos de contenido y los tipos de datos tal como se muestra en la tabla siguiente y, a continuación, haga clic en **siguiente**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48195565"
   
  Como resultado, al procesar el modelo los resultados pueden aparecer de forma diferente a la que se espera. Por ejemplo, si utiliza la agrupación en clústeres para identificar los mejores grupos de valores, el algoritmo divide los valores de ServiceGrade en intervalos como éste: 0,0748051948 - 0,09716216215. Aunque esta agrupación es matemáticamente precisa, tales intervalos podrían no ser significativos para los usuarios empresariales.  
   
- En este paso, para que el resultado sea más intuitivo, agrupará los valores numéricos de forma diferente, creando copias de la columna de datos numéricos.  
+ En este paso, para que el resultado sea más intuitivo, agrupará los valores numéricos de manera diferente, creando copias de la columna de datos numéricos.  
   
 ### <a name="how-discretization-works"></a>Cómo funciona la discretización  
  Analysis Services proporciona varios métodos para discretizar o procesar los datos numéricos. La tabla siguiente muestra las diferencias entre los resultados cuando el atributo ServiceGrade de salida se ha procesado de tres maneras diferentes:  
@@ -268,7 +268,7 @@ ms.locfileid: "48195565"
     |**Descripción**|Alias de columna temporal|  
     |**ID**|ServiceGrade Binned|  
     |**Las marcas de modelado**||  
-    |**Nombre**|Service Grade|  
+    |**Name**|Service Grade|  
     |**Id. de SourceColumn**|Service Grade 1|  
     |**Usage**|Predict|  
   
@@ -321,6 +321,6 @@ ms.locfileid: "48195565"
  [Explorar el modelo de centro de llamadas &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

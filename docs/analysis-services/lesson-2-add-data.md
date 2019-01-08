@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034684"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401640"
 ---
 # <a name="lesson-2-add-data"></a>Lección 2: Agregar datos
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +26,7 @@ Con el Asistente para importación de tabla, puede importar datos desde una vari
 Tiempo estimado para completar esta lección: **20 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 1: Crear un nuevo proyecto de modelo tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 1: Cree un nuevo proyecto de modelo Tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Crear una conexión  
   
@@ -57,7 +57,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 7.  En la página **Elegir cómo importar los datos** , compruebe que la opción **Seleccionar de una lista de tablas y vistas para elegir los datos para importar** está seleccionada. Tendrá que seleccionar valores de una lista de tablas y vistas, así que haga clic en **Siguiente** para mostrar una lista de todas las tablas de origen de la base de datos de origen.  
   
-8.  En la página **Seleccionar tablas y vistas** , active la casilla para las siguientes tablas: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**y **FactInternetSales**.  
+8.  En el **seleccionar tablas y vistas** , seleccione la casilla de verificación para las siguientes tablas: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, y **FactInternetSales**.  
   
     **NO** haga clic en **Finalizar**.  
   
@@ -76,7 +76,7 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
   
 3.  Compruebe que el resto de las columnas estén activadas y después haga clic **Aceptar**.  
   
-    Observe que las palabras **Filtros aplicados** se muestran ahora en la columna **Detalles del filtro** en la fila **DimCustomer** ; si hace clic en ese vínculo, verá una descripción textual de los filtros recién aplicados.  
+    Tenga en cuenta las palabras **filtros aplicados** se muestran ahora en el **detalles del filtro** columna en el **DimCustomer** fila; si hace clic en ese vínculo, verá una descripción textual de la filtros que recién aplicados.  
     
     ![como-tabular-lesson2--filtros aplicados](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
@@ -164,7 +164,7 @@ Es importante que guarde frecuentemente el proyecto de modelo.
 -   Click **Archivo** > **Guardar todo**.  
   
 ## <a name="whats-next"></a>¿Qué sigue?
-Vaya a la siguiente lección: [lección 3: marcar como tabla de fechas](../analysis-services/lesson-3-mark-as-date-table.md).
+Vaya a la lección siguiente: [Lección 3: Marcar como tabla de fechas](../analysis-services/lesson-3-mark-as-date-table.md).
 
   
   

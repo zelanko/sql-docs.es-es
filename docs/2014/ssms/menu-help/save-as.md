@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
@@ -14,12 +14,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116803"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203414"
 ---
 # <a name="save-as"></a>Guardar como
   Utilice este cuadro de diálogo para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Para mostrar este cuadro de diálogo, haga clic en **guardar**  *\<archivo >* **como** en el **archivo** menú (donde  *\<archivo >* es el nombre del elemento actual), o bien presione ALT+F, A en el Editor de código.  
@@ -31,8 +31,8 @@ ms.locfileid: "48116803"
  **Nombre de archivo**  
  Utilice esta opción para ver el nombre del archivo actual, cambiar el nombre del archivo o filtrar los archivos y las carpetas que aparecen. Para filtrar los archivos y las carpetas que aparecen, escriba un nombre de archivo parcial o completo que sirva de filtro. Puede usar el asterisco (`*`) como carácter comodín.  
   
-> [!TIP]  
->  Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, "http://mywebsite" muestra los archivos disponibles en la ubicación web "miSitioWeb" y "\\\miServidor\miRecursoCompartido" muestra los archivos disponibles en la ubicación "miRecursoCompartido" en "miServidor".  
+> [!TIP]
+>  Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, "<http://mywebsite>" muestra los archivos disponibles en la ubicación web "miSitioWeb" y "\\\miServidor\miRecursoCompartido" muestra los archivos disponibles en la ubicación "miRecursoCompartido" en "miServidor".  
   
  **Guardar como tipo**  
  Utilice esta opción para seleccionar un nuevo tipo de archivo para el elemento seleccionado. Los tipos de archivo que aparecen incluyen todos los tipos de archivo disponibles a los que puede convertirse el elemento seleccionado.  

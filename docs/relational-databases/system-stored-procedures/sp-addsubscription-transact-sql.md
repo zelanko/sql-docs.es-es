@@ -5,8 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -17,12 +16,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663533"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206394"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|none|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: Esta opción en desuso. En su lugar, utilice replication support only.|  
+|none|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: Esta opción ha quedado desusada. En su lugar, utilice replication support only.|  
 |automatic (predeterminado)|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 |replication support only|Proporciona la generación automática en el suscriptor de los desencadenadores y procedimientos almacenados personalizados de artículos que admiten las suscripciones de actualización, si es apropiado. Supone que el suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas. Al configurar una topología de replicación transaccional punto a punto, asegúrese de que los datos de todos los nodos de la topología son idénticos. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *No se admite para las suscripciones a publicaciones que no sean de SQL Server.*|  
 |initialize with backup|El esquema y los datos iniciales de las tablas publicadas se obtienen de una copia de seguridad de la base de datos de publicaciones. Se da por supuesto que el suscriptor tiene acceso a una copia de seguridad de la base de datos de publicaciones. Especifica la ubicación de la copia de seguridad y tipo de medio para la copia de seguridad *backupdevicename* y *backupdevicetype*. Cuando se utiliza esta opción, la topología de replicación transaccional punto a punto no debe detenerse durante la configuración.<br /><br /> *No se admite para las suscripciones a publicaciones que no sean de SQL Server.*|  
@@ -231,7 +230,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher=] '*publisher*'  
- Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -269,7 +268,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Especifica el número de flujo de registro (LSN) en el que una suscripción debería empezar a entregar cambios a un nodo en una topología de replicación transaccional punto a punto. Puede usar con un @sync_type valor de initialize from lsn para asegurarse de que todas las transacciones pertinentes se replican en un nuevo nodo. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams= ] *subscriptionstreams*  
- Es el número de conexiones permitidas por el agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor, aunque manteniendo muchas de las características transaccionales presentes al utilizar un único subproceso. *subscriptionstreams* es **tinyint**, su valor predeterminado es null. Se admite un intervalo de valores de 1 a 64. Este parámetro no se admite para los suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los publicadores de Oracle ni las suscripciones punto a punto. Cada vez que se usan flujos de suscripción, se agregan filas adicionales en la tabla msreplication_subscriptions (una por cada flujo) con un agent_id establecido en NULL.  
+ Es el número de conexiones permitidas por el agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor, aunque manteniendo muchas de las características transaccionales presentes al utilizar un único subproceso. *subscriptionstreams* es **tinyint**, su valor predeterminado es null. Se admite un intervalo de valores de 1 a 64. Este parámetro no se admite para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores, los publicadores de Oracle o suscripciones punto a punto. Cada vez que se usan flujos de suscripción, se agregan filas adicionales en la tabla msreplication_subscriptions (una por cada flujo) con un agent_id establecido en NULL.  
   
 > [!NOTE]  
 >  Los flujos de suscripción no funcionan en los artículos configurados para entregar [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para usar flujos de suscripción, configure en su lugar los artículos para que entreguen llamadas de procedimiento almacenado.  

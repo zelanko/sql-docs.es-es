@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097585"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215864"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pasar un parámetro de informe en una dirección URL
   Puede pasar parámetros de informe a un informe incluyéndolos en un informe URL. Estos parámetros de dirección URL no tienen prefijo porque se pasan directamente al motor de procesamiento de informes.  
@@ -27,16 +27,16 @@ ms.locfileid: "48097585"
 > [!IMPORTANT]  
 >  Es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El proxy agrega algún contexto a la solicitud HTTP, contexto que es necesario para garantizar la correcta ejecución del informe para los servidores de informes de modo de SharePoint.  
 >   
->  Si no incluye la sintaxis de proxy, debe agregar *rp:* como prefijo del parámetro.  
+>  Si no incluye la sintaxis de proxy, tendrá que agregar *rp:* como prefijo del parámetro.  
   
  Todos los parámetros de consulta pueden tener parámetros de informe correspondientes. Para pasar un parámetro de consulta a un informe, pase el parámetro de informe correspondiente. Para más información, vea [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Los parámetros de informe distinguen entre mayúsculas y minúsculas.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Los parámetros de informe distinguen mayúsculas de minúsculas y usan los caracteres especiales siguientes:  
->   
+> 
 >  -   Cualquier carácter de espacio en blanco en la cadena de dirección URL se reemplaza con los caracteres "% 20", según los estándares de codificación de direcciones URL.  
 > -   Un carácter de espacio en la parte del parámetro de la dirección URL se reemplaza con un carácter más (+).  
 > -   Un punto y coma en cualquier parte de la cadena se reemplaza con los caracteres “%3A”.  
@@ -94,7 +94,7 @@ SalesOrderNumber:isnull=true
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- En el siguiente ejemplo de dirección URL se incluye un parámetro multivalor “OrderID. El formato de un parámetro multivalor es repetir el nombre del parámetro para cada valor.  
+ En el ejemplo siguiente de dirección URL se incluye un parámetro "OrderID" con varios valores. El formato de un parámetro multivalor es repetir el nombre del parámetro para cada valor.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  

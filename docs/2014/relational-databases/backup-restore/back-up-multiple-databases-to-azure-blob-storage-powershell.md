@@ -10,12 +10,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c58a8a9b8f476c55ebce54e8284051fe89d882a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064295"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519538"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Usar PowerShell para hacer la copia de seguridad de varias bases de datos en el servicio Azure Blob Storage
   Este tema proporciona ejemplos de scripts que se pueden utilizar para automatizar las copias de seguridad del servicio de almacenamiento Blob de Windows Azure con los cmdlets de PowerShell.  
@@ -49,16 +49,16 @@ ms.locfileid: "48064295"
   
  A continuación se presentan las consideraciones para los scripts de ejemplo:  
   
-1.  **Navegar por las rutas de acceso de SQL Server PowerShell:** Windows PowerShell implementa cmdlets para navegar por la estructura de ruta de acceso que representa la jerarquía de objetos compatible con un proveedor de PowerShell. Cuando ha navegado a un nodo de la ruta de acceso, puede usar otros cmdlets para realizar operaciones básicas en el objeto actual.  
+1.  **Navegar por las rutas de acceso de SQL Server PowerShell:** Windows PowerShell implementa cmdlets para navegar por la estructura de ruta de acceso que representa la jerarquía de objetos admitidos por un proveedor de PowerShell. Cuando ha navegado a un nodo de la ruta de acceso, puede usar otros cmdlets para realizar operaciones básicas en el objeto actual.  
   
-2.  `Get-ChildItem` cmdlet: la información devuelta por `Get-ChildItem` depende de la ubicación de una ruta de acceso de PowerShell de SQL Server. Por ejemplo, si la ubicación está en el equipo, este cmdlet devuelve todas las instancias del motor de base de datos de SQL Server instaladas en él. Como otro ejemplo, si la ubicación está en un objeto como son las bases de datos, este cmdlet devuelve una lista de objetos de base de datos.  De forma predeterminada el `Get-ChildItem` cmdlet no devuelve los objetos del sistema.  Mediante el parámetro –Force, puede ver los objetos del sistema.  
+2.  `Get-ChildItem` cmdlet: La información devuelta por la `Get-ChildItem` depende de la ubicación en una ruta de acceso de PowerShell de SQL Server. Por ejemplo, si la ubicación está en el equipo, este cmdlet devuelve todas las instancias del motor de base de datos de SQL Server instaladas en él. Como otro ejemplo, si la ubicación está en un objeto como son las bases de datos, este cmdlet devuelve una lista de objetos de base de datos.  De forma predeterminada, el cmdlet `Get-ChildItem` no devuelve los objetos del sistema.  Con el parámetro -Force, puede ver los objetos del sistema.  
   
      Para obtener más información, consulte [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
 3.  Aunque cada ejemplo de código se pueda probar de forma independiente cambiando los valores de las variables, crear una cuenta de Almacenamiento de Windows Azure y una credencial SQL son requisitos previos y es imprescindible para todas las operaciones de copia de seguridad y de restauración en el servicio de almacenamiento Blob de Windows Azure.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Crear una credencial SQL en todas las instancias de SQL Server  
- Hay dos ejemplos de scripts y ambos crean una credencial SQL “mybackupToURL“ en todas las instancias de SQL Server de un equipo. El primer ejemplo es sencillo, crea la credencial y no intercepta las excepciones.  Por ejemplo, si hubiera ya una credencial existente con el mismo nombre en una de las instancias del equipo, el script produciría un error. El segundo ejemplo intercepta los errores y permite que el script continúe.  
+ Hay dos ejemplos de scripts y ambos crean una credencial SQL "mybackupToURL" en todas las instancias de SQL Server de un equipo. El primer ejemplo es sencillo, crea la credencial y no intercepta las excepciones.  Por ejemplo, si hubiera ya una credencial existente con el mismo nombre en una de las instancias del equipo, el script produciría un error. El segundo ejemplo intercepta los errores y permite que el script continúe.  
   
 ```  
   

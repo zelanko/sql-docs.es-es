@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublications_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175d43ed9cd6165ee8670d558a5488f239a39b0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802787"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +58,10 @@ ms.locfileid: "47605173"
 |**centralized_conflicts**|**bit**|Especifica si los registros de conflicto se almacenan en el publicador.<br /><br /> **0** = conflicto entre los registros se almacenan tanto en el publicador y en el suscriptor que provocó el conflicto.<br /><br /> **1** = conflicto entre los registros se almacenan en el publicador.<br /><br /> *No se admite para publicadores que no son SQL.*|  
 |**conflict_retention**|**int**|Especifica el período de retención de conflictos, en días. *No se admite para publicadores que no son SQL.*|  
 |**conflict_policy**|**int**|Especifica la directiva de resolución de conflictos seguida cuando se utiliza la opción de suscriptor de actualización en cola. Puede ser uno de estos valores:<br /><br /> **1** = el publicador gana el conflicto.<br /><br /> **2** = el suscriptor gana el conflicto.<br /><br /> **3** = se reinicializa la suscripción.<br /><br /> *No se admite para publicadores que no son SQL.*|  
-|**queue_type**|**int**|Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **1** = msmq, que utiliza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **2** = sql, que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones.<br /><br /> No se usa esta columna que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.<br /><br /> Nota: El uso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server ha quedado desusado y ya no se admite.<br /><br /> *Esta columna no se admite para publicadores que no son SQL.*|  
+|**queue_type**|**int**|Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **1** = msmq, que utiliza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **2** = sql, que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones.<br /><br /> No se usa esta columna que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.<br /><br /> Nota: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server ha quedado desusado y no se admite.<br /><br /> *Esta columna no se admite para publicadores que no son SQL.*|  
 |**ad_guidname**|**sysname**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificador único global válido (GUID) especifica que la publicación se publica en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory y el GUID es el objeto de publicación de Active Directory correspondiente **objectGUID**. Si es NULL, la publicación no se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *No se admite para publicadores que no son SQL.*|  
 |**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los valores siguientes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *No se admite para publicadores que no son SQL.*|  
-|**Descripción**|**nvarchar(255)**|Entrada descriptiva de la publicación.|  
+|**description**|**nvarchar(255)**|Entrada descriptiva de la publicación.|  
 |**independent_agent**|**bit**|Especifica si hay un Agente de distribución independiente para esta publicación.<br /><br /> **0** = la publicación utiliza un agente de distribución compartido, y cada par de base de datos de publicador y suscriptor de base de datos tiene un único agente compartido.<br /><br /> **1** = hay un agente de distribución independiente para esta publicación.|  
 |**immediate_sync**|**bit**|Indica si los archivos de sincronización se crean o vuelven a crear cada vez que se ejecuta el agente de instantáneas, donde **1** significa que se crean cada vez que se ejecuta el agente.|  
 |**allow_push**|**bit**|Indica si se permiten suscripciones de inserción en la publicación, donde **1** significa que están permitidas.|  

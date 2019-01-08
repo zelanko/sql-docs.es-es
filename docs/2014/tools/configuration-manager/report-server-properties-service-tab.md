@@ -1,22 +1,21 @@
 ---
-title: Propiedades (pestaña servicio) del servidor de informes | Microsoft Docs
+title: Propiedades del servidor de informes (pestaña Servicio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478278f6cc0c097fd8ced85ae42990d31b2578c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159025"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803427"
 ---
 # <a name="report-server-properties-service-tab"></a>Propiedades de Servidor de informes (pestaña Servicio)
   Éste es el servicio Servidor de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
@@ -34,7 +33,7 @@ ms.locfileid: "48159025"
  **Host Name**  
  Muestra el nombre del equipo o clúster que ejecuta la búsqueda de texto completo.  
   
- **Nombre**  
+ **Name**  
  Indica el nombre para mostrar del servicio.  
   
  **Id. del proceso**  
@@ -46,13 +45,13 @@ ms.locfileid: "48159025"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: Este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: El servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: el servicio no se puede iniciar.  
+-   Deshabilitado: No se puede iniciar el servicio.  
   
- **State**  
+ **Estado**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  
   
 ## <a name="see-also"></a>Vea también  

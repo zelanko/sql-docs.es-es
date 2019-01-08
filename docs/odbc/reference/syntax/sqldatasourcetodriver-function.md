@@ -20,12 +20,12 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631dcb0f76346de88a2a48e8dfb00060626d58f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813583"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206264"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Función SQLDataSourceToDriver
 **SQLDataSourceToDriver** supportstranslations para controladores ODBC. Esta función no se invoca mediante aplicaciones habilitadas para ODBC; las aplicaciones solicitan la traducción a través de **SQLSetConnectAttr**. El controlador asociado con el *ConnectionHandle* especificado en **SQLSetConnectAttr** llama a la DLL especificada para llevar a cabo las traducciones de todos los datos que fluyen desde el origen de datos para el controlador. Un archivo DLL de traducción predeterminado puede especificarse en el archivo de inicialización de ODBC.  
@@ -52,7 +52,7 @@ BOOL SQLDataSourceToDriver(
  [Entrada] Valor de opción.  
   
  *fSqlType*  
- [Entrada] El tipo de datos SQL. Este argumento indica al controlador cómo convertir *rgbValueIn* en un formato aceptable por la aplicación. Para obtener una lista de tipos de datos SQL válidos, vea el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) sección en el apéndice D: tipos de datos.  
+ [Entrada] El tipo de datos SQL. Este argumento indica al controlador cómo convertir *rgbValueIn* en un formato aceptable por la aplicación. Para obtener una lista de tipos de datos SQL válidos, vea el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) sección en el apéndice D: Tipos de datos.  
   
  *rgbValueIn*  
  [Entrada] Valor que se va a traducir.  

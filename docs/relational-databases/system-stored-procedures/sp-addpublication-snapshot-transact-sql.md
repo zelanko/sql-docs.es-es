@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpublication_snapshot_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7a56fad97e7716cce4cc52858b6af2b24a6e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5061423f267445c681a00bf059bcc793816faf71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205414"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +122,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  Es el nombre de un trabajo del agente de instantáneas existente, si se está utilizando un trabajo existente. *snapshot_agent_name* es **nvarchar (100)** con un valor predeterminado es null. Este parámetro es solo para uso interno y no se puede especificar al crear una publicación nueva. Si *snapshot_agent_name* se especifica, a continuación, *job_login* y *job_password* debe ser NULL.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- Es el modo de seguridad que el agente utiliza al conectarse al publicador. *publisher_security_mode* es **smallint**, su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Es el modo de seguridad que el agente utiliza al conectarse al publicador. *publisher_security_mode* es **smallint**, su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
  Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, su valor predeterminado es null. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y *publisher_security_mode* es **1**, la cuenta especificada en *job_login* se usará cuando para conectarse al publicador.  
@@ -137,8 +136,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [ **@job_login**=] **'***job_login***'**  
  Es el inicio de sesión para la cuenta bajo la que se ejecuta el agente. En Azure SQL Database Managed Instance, utilice una cuenta de SQL Server. *job_login* es **nvarchar (257)**, su valor predeterminado es null. Esta cuenta siempre se utiliza para las conexiones del agente al distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
-> [!NOTE]  
->  Para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, debe ser el mismo inicio de sesión especificado en [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+> [!NOTE]
+>  Para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, debe ser el mismo inicio de sesión especificado en [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
  [ **@job_password**=] **'***job_password***'**  
  Es la contraseña de la cuenta de Windows en la que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
@@ -147,7 +146,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse al crear un agente de instantáneas en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

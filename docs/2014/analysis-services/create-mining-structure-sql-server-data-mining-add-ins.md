@@ -13,12 +13,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542967"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crear estructura de minería de datos (Complementos de minería de datos de SQL Server)
   ![Botón de crear estructura de minería de datos, cinta de opciones minería de datos](media/dmc-createstruct.gif "botón Crear estructura de minería de datos, cinta de opciones minería de datos")  

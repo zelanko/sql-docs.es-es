@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.locals
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6e79bed7775a55d52382d38eb44f6711ed1050c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22090b4bdb1827be4add47ec2f539cde0ea70827
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221315"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327405"
 ---
 # <a name="locals-window"></a>Ventana de locales
   La ventana **Variables locales** muestra información sobre las expresiones locales en el ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El ámbito está establecido en el marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para mostrar las expresiones locales.  
@@ -35,7 +33,7 @@ ms.locfileid: "48221315"
 -   Haga clic con el botón derecho en la expresión y, después, seleccione **Editar valor**.  
   
 ## <a name="columns"></a>Columnas  
- **Nombre**  
+ **Name**  
  Es el nombre de la expresión local. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] muestra las variables, los parámetros y las funciones de sistema cuyos nombres comienzan por @@.  
   
  **Valor**  
@@ -55,5 +53,3 @@ ms.locfileid: "48221315"
  [Ventana de pila de llamadas](transact-sql-debugger-call-stack-window.md)   
  [Cuadro de diálogo Inspección rápida](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expresiones &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

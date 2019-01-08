@@ -11,12 +11,12 @@ ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc0fe3bef02ebd50558c298ef8d9b3d8565744ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159455"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350899"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Instalar el modo de SharePoint de Reporting Services para SharePoint 2010
   Los procedimientos de este tema le guían en la instalación de un único servidor del servidor de informes de Reporting Services en modo de SharePoint. Los pasos incluyen la ejecución del Asistente de instalación de SQL Server así como tareas de configuración adicionales que usan Administración central de SharePoint 2010. El tema también se puede usar para procedimientos individuales para una instalación existente, como crear una nueva aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener información sobre cómo agregar adicionales [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidores a una granja existente, consulte [agregar un servidor de informes adicional a una granja &#40;escalada SSRS&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [agregar una Web adicional de Reporting Services Front-end para una granja de servidores](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
@@ -91,11 +91,11 @@ ms.locfileid: "48159455"
   
 9. Seleccione lo siguiente en la página **Selección de características** :  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **Reporting Services complemento para productos de SharePoint 2010**. ![Tenga en cuenta](../../../2014/reporting-services/media/rs-fyinote.png "Nota")la opción del Asistente de instalación para instalar el complemento es nueva con el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de versión.  
   
-    -   Si no tiene ya una instancia de SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)], también podría seleccionar **servicios de motor de base de datos** y **herramientas de administración completa** para un entorno completo.  
+    -   Si aún no tiene una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]de SQL Server, también podría seleccionar **Servicios de Motor de base de datos** y **Herramientas de administración - Completa** para un entorno completo.  
   
      Haga clic en **Siguiente**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48159455"
   
 14. Si seleccionó los servicios del Motor de base de datos, verá la página **Configuración del Motor de base de datos** ; agregue las cuentas adecuadas a la lista de administradores de SQL y haga clic en **Siguiente**.  
   
-15. En la página **Configuración de Reporting Services** debe ver que la opción **Solo instalar** está seleccionada. Esta opción instala los archivos del servidor de informes y no configura el entorno de SharePoint para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cuando la instalación de SQL Server se complete, tendrá que seguir las otras secciones de este tema para configurar el entorno de SharePoint. Esto incluye instalar el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y la creación de las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+15. En la página **Configuración de Reporting Services** debe ver que la opción **Solo instalar** está seleccionada. Esta opción instala los archivos del servidor de informes y no configura el entorno de SharePoint para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cuando la instalación de SQL Server se complete, tendrá que seguir las otras secciones de este tema para configurar el entorno de SharePoint. Esto incluye instalar el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y la creación de las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
      ![rs_SQL11_SETUP_SSRS_configpage_withcircles](../../../2014/sql-server/install/media/rs-kj-setup-ssrs-configpage-withcircles.gif "rs_SQL11_SETUP_SSRS_configpage_withcircles")  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48159455"
 > [!NOTE]  
 >  Si va a instalar en una granja de SharePoint existente, **no es necesario** completar los pasos descritos en esta sección. El servicio SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instaló e inició cuando ejecutó el Asistente para la instalación de SQL Server en la sección anterior.  
   
- Los archivos necesarios se instalaron como parte de la instalación del Asistente para la instalación de SQL Server, pero los servicios tienen que ser registrados en la granja de servidores de SharePoint. El [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versión presenta compatibilidad con PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint. Los pasos siguientes le guían a través de la apertura del Shell de administración de SharePoint y de la ejecución de cmdlets:  
+ Los archivos necesarios se instalaron como parte de la instalación del Asistente para la instalación de SQL Server, pero los servicios tienen que ser registrados en la granja de servidores de SharePoint. La versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] incluye la compatibilidad con PowerShell para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint. Los pasos siguientes le guían a través de la apertura del Shell de administración de SharePoint y de la ejecución de cmdlets:  
   
 1.  Haga clic en el botón **Inicio** .  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48159455"
 3.  En el menú Nuevo, haga clic en **Aplicación de servicio de SQL Server Reporting Services**.  
   
     > [!WARNING]  
-    >  Si el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] opción no aparece en la lista, es un **indicación de que el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no está instalado el servicio compartido**. Revise la sección anterior sobre cómo utilizar cmdlts de PowerShell para instalar el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  Si la opción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no aparece en la lista, es **indicativo de que el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no está instalado**. Revise la sección anterior sobre cómo utilizar cmdlts de PowerShell para instalar el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 4.  En la página **Crear aplicación de servicio de SQL Server Reporting Services** , escriba un nombre para la aplicación. Si va a crear varias aplicaciones de servicio de Reporting Services, un nombre descriptivo o una convención de nomenclatura le ayudan a organizar las operaciones y la administración.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "48159455"
 
   
 ### <a name="configure-e-mail-for-a-service-application"></a>Configurar el correo electrónico para una aplicación de servicio  
- La característica de alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] envía alertas en los mensajes de correo electrónico. Para enviar correo electrónico, quizás tenga que configurar la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y modificar la extensión de entrega de correo electrónico para ella. Si piensa usar la extensión de entrega por correo electrónico para la característica de suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , hay que configurar el correo electrónico. Para obtener más información, consulte [configurar correo electrónico para una aplicación de servicio de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+ La característica de alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] envía alertas en los mensajes de correo electrónico. Para enviar correo electrónico, quizás tenga que configurar la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y modificar la extensión de entrega de correo electrónico para ella. Si piensa usar la extensión de entrega por correo electrónico para la característica de suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , hay que configurar el correo electrónico. Para obtener más información, vea [Configurar el correo electrónico para una aplicación de servicio de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).  
   
 
   
@@ -250,7 +250,7 @@ ms.locfileid: "48159455"
   
 ## <a name="see-also"></a>Vea también  
  [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
- [Servicio de SharePoint de Reporting Services y las aplicaciones de servicio](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
+ [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   
   

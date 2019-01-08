@@ -10,12 +10,12 @@ ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04b2d0fdd00d9f3001ce1687744a9ecd992f44dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144625"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406165"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Vistas del sistema, procedimientos almacenados, tipos de espera para OLTP en memoria y DMV
   En este tema se ofrecen vínculos y breves descripciones a los múltiples objetos de base de datos que admiten OLTP en memoria.  
@@ -30,7 +30,7 @@ ms.locfileid: "48144625"
 |[Sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Compruebe si un procedimiento almacenado se compila de forma nativa.|**uses_native_compilation** columna.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Compruebe si un procedimiento almacenado se compila de forma nativa.|**uses_native_compilation** columna.|  
 |[Sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Compruebe si una tabla está optimizada en memoria.|**is_memory_optimized** columna.|  
-|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Compruebe si una tabla está optimizada en memoria y la configuración de durabilidad de una tabla.|**durabilidad**, **durability_desc**, y **is_memory_optimized** columnas.|  
+|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Compruebe si una tabla está optimizada para memoria y compruebe el valor de durabilidad de una tabla.|**durabilidad**, **durability_desc**, y **is_memory_optimized** columnas.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Muestre los índices hash de una tabla optimizada en memoria.|OLTP en memoria específico.|  
   
 ### <a name="metadata-functions"></a>Funciones de metadatos  

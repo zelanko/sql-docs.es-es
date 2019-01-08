@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147860"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352165"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye una característica de sincronización de bases de datos hace que dos bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sean equivalentes; para ello, copia los datos y los metadatos de una base de datos de un servidor de origen en una base de datos de un servidor de destino. Use la característica Sincronizar base de datos para realizar cualquiera de las tareas siguientes:  
@@ -41,7 +41,7 @@ ms.locfileid: "50147860"
  Para sincronizar bases de datos, ejecute el Asistente para sincronizar bases de datos si desea sincronizar inmediatamente las bases de datos o úselo para generar un script de sincronización que puede ejecutar más adelante. Se puede usar cualquier enfoque para aumentar la disponibilidad y escalabilidad de las bases de datos y el cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  Las notas del producto siguientes, escritas para versiones anteriores de Analysis Services, siguen siendo aplicables a las soluciones multidimensionales escalables compiladas con SQL Server 2012. Para obtener más información, vea [Scale-Out Querying with Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) (Consulta de escalado horizontal con Analysis Services) y [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=253137.)(Consulta de escalado horizontal con Analysis Services con bases de datos de solo lectura).  
+>  Las notas del producto siguientes, escritas para versiones anteriores de Analysis Services, siguen siendo aplicables a las soluciones multidimensionales escalables compiladas con SQL Server 2012. Para obtener más información, vea [Scale-Out Querying with Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) (Consulta de escalado horizontal con Analysis Services) y [Scale-Out Querying for Analysis Services with Read-Only Databases](https://go.microsoft.com/fwlink/?LinkId=253137.) (Consulta de escalado horizontal con Analysis Services con bases de datos de solo lectura).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  En el servidor de destino (o destino) desde el que se inicia la sincronización de base de datos, debe ser miembro del rol de administrador del servidor de Analysis Services. En el servidor de origen, su cuenta de usuario de Windows debe tener permisos Control total en la base de datos de origen. Si va a sincronizar la base de datos de forma interactiva, recuerde que la sincronización se ejecuta en el contexto de seguridad de su identidad de usuario de Windows. Si su cuenta tiene denegado el acceso a determinados objetos, esos objetos se excluirán de la operación. Para obtener más información sobre los roles de administrador de servidor y los permisos de base de datos, vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [conceder permisos de base de datos &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "50147860"
  Desactive el procesamiento diferido de agregaciones si lo está usando en el servidor de origen. Las agregaciones que se están procesando en segundo plano pueden interferir con la sincronización de base de datos. Para obtener más información acerca de la configuración de esta propiedad del servidor, vea [OLAP Properties](../server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  El tamaño de la base de datos es un factor que se debe tener en cuenta a la hora de determinar si la sincronización es un método adecuado. No existen requisitos generales, pero si la sincronización es demasiado lento, considere la posibilidad de sincronizar varios servidores en paralelo, como se describe en estas notas del producto: [Procedimientos recomendados para la sincronización de Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
+>  El tamaño de la base de datos es un factor que se debe tener en cuenta a la hora de determinar si la sincronización es un método adecuado. No hay ningún requisito de disco duro, pero si la sincronización es demasiado lento, considere la posibilidad de sincronizar varios servidores en paralelo, como se describe en este documento técnico: [Procedimientos recomendados para la sincronización de Analysis Services](https://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Asistente para sincronizar bases de datos  
  Use el Asistente para sincronizar bases de datos con el fin de realizar una sincronización unidireccional desde una base de datos de origen a una de destino o para generar un script que especifique una operación de sincronización de base de datos. Puede sincronizar tanto particiones locales como remotas durante el proceso de sincronización y elegir si desea incluir roles.  

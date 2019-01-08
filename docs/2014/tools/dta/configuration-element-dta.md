@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a394a390c691b5558b4ecb9036e28d457393b6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076655"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818777"
 ---
 # <a name="configuration-element-dta"></a>Configuration (DTA, elemento)
   Establece una configuración especificada por el usuario compuesta por estructuras de diseño físico existentes e hipotéticas para que el Asistente para la optimización de motor de base de datos la analice al optimizar una carga de trabajo.  
@@ -51,14 +50,14 @@ ms.locfileid: "48076655"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Opcional. Puede utilizar una vez por cada `DTAInput` elemento.|  
+|**Repetición**|Opcional. Se puede utilizar una vez por cada elemento `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Elementos secundarios**|[Elemento de servidor para la configuración &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
+|**Elementos secundarios**|[Elemento Server de Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

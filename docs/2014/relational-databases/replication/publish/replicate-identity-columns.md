@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089857"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810957"
 ---
 # <a name="replicate-identity-columns"></a>Replicar columnas de identidad
   Cuando asigna una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
@@ -57,7 +56,7 @@ ms.locfileid: "48089857"
  Si el publicador agota su intervalo de identidad después de una inserción, puede asignar automáticamente un nuevo intervalo si la inserción la realizó un miembro del rol fijo de base de datos **db_owner** . Si la inserción la realizó un usuario con otro rol, el Agente de registro del LOG, el Agente de mezcla o un usuario miembro del rol **db_owner**, deberá ejecutar [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql). Para las publicaciones transaccionales, el Agente de registro del LOG debe estar ejecutándose para asignar automáticamente un nuevo intervalo (la opción predeterminada es que el agente se ejecute continuamente).  
   
 > [!WARNING]  
->  Durante una inserción por lotes grande, el desencadenador de replicación se desencadena una sola vez, no para cada fila de la inserción. Esto puede provocar un error de la instrucción de inserción si se agota un intervalo de identidad durante una inserción grande, como un `INSERT INTO` instrucción.  
+>  Durante una inserción por lotes grande, el desencadenador de replicación se desencadena una sola vez, no para cada fila de la inserción. Esto puede provocar un error en la instrucción de inserción si se agota un intervalo de identidad durante una inserción grande, como una instrucción `INSERT INTO`.  
   
 |Tipo de datos|Intervalo|  
 |---------------|-----------|  
@@ -99,7 +98,7 @@ ms.locfileid: "48089857"
  Por ejemplo, puede especificar 10000 para **@pub_identity_range**, 1000 para **@identity_range** (suponiendo menos actualizaciones en el suscriptor), y 80 por ciento para **@threshold**. Después de 800 inserciones en el suscriptor (80 por ciento de 1000), al suscriptor se le asigna un nuevo intervalo. Después de 8000 inserciones en el publicador, al publicador se le asigna un nuevo intervalo. Cuando se asigne un nuevo intervalo, habrá un espacio en los valores del intervalo de identidad de la tabla. Si se especifica un umbral mayor, se obtienen menos espacios pero el sistema es menos tolerante a los errores: si el Agente de distribución no se puede ejecutar por alguna razón, es más fácil que un suscriptor se quede sin identidades.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Asignar intervalos para la administración manual del intervalo de identidad  
- Si especifica la administración manual del intervalo de identidad, debe asegurarse de que el publicador y todos los suscriptores utilizan intervalos de identidad diferentes. Por ejemplo, imagine una tabla en el publicador con una columna de identidad definida como `IDENTITY(1,1)`: la columna de identidad comienza en 1 y se incrementa en 1 cada vez que se inserta una fila. Si la tabla del publicador tiene 5.000 filas y prevé que aumentará durante la vida de la aplicación, el publicador podría utilizar el rango 1-10.000. Si hay dos suscriptores, el Suscriptor A podría usar el rango 10.001–20.000 y el Suscriptor B, el rango 20.001-30.000.  
+ Si especifica la administración manual del intervalo de identidad, debe asegurarse de que el publicador y todos los suscriptores utilizan intervalos de identidad diferentes. Por ejemplo, imagine una tabla en el publicador con una columna de identidad definida como `IDENTITY(1,1)`: la columna de identidad comienza en 1 y se incrementa en 1 cada vez que se inserta una fila. Si la tabla del publicador tiene 5.000 filas y prevé que aumentará durante la vida de la aplicación, el publicador podría utilizar el rango 1-10.000. Si hay dos suscriptores, el Suscriptor A podría usar el rango 10.001-20.000 y el Suscriptor B, el rango 20.001-30.000.  
   
  Después de inicializar un suscriptor mediante una instantánea u otro medio, ejecute DBCC CHECKIDENT para asignarle al suscriptor un punto de partida para este intervalo de identidad. Por ejemplo, en el suscriptor A, ejecutaría `DBCC CHECKIDENT('<TableName>','reseed',10001)`. En el suscriptor B, ejecutaría `CHECKIDENT('<TableName>','reseed',20001)`.  
   

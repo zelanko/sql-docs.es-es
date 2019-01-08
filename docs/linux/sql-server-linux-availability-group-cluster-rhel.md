@@ -1,21 +1,22 @@
 ---
-title: Configuración de clúster RHEL para el grupo de disponibilidad de SQL Server | Microsoft Docs
-description: ''
+title: Configuración de clúster RHEL para el grupo de disponibilidad de SQL Server
+titleSuffix: SQL Server
+description: Obtenga información acerca de los clústeres de grupo de disponibilidad cuando está ejecutando Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670824"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160611"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clúster RHEL para el grupo de disponibilidad de SQL Server
 
@@ -112,7 +113,7 @@ Para obtener información acerca de STONITH y vallado, consulte los artículos s
 
 * [Clústeres de pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [Vallado y STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Complemento de alta disponibilidad de Red Hat con Pacemaker: vallado](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Complemento de alta disponibilidad de Red Hat con Pacemaker: Vallado](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Dado que el nivel del nodo Configuración de vallado depende en gran medida en su entorno, deshabilitarla en este tutorial (se puede configurar más adelante). El script siguiente deshabilita la barrera de nivel de nodo:
 

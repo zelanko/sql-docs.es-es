@@ -14,12 +14,12 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530242"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 |||  
@@ -27,7 +27,7 @@ ms.locfileid: "47660593"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuevo registro para un actualizable **Recordset** objeto.|  
 |[Anexar](../../../ado/reference/ado-api/append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, un nuevo **campo** se puede crear el objeto antes de se anexa a la colección.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Anexa datos a un texto grande o datos binarios **campo**, o a un **parámetro** objeto.|  
-|[BeginTrans, CommitTrans y RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Administra el procesamiento de transacciones en un **conexión** objeto como sigue:<br /><br /> **BeginTrans** : inicia una transacción nueva.<br /><br /> **CommitTrans** , guarda los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.<br /><br /> **RollbackTrans** : cancela los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.|  
+|[BeginTrans, CommitTrans y RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Administra el procesamiento de transacciones en un **conexión** objeto como sigue:<br /><br /> **BeginTrans** -inicia una transacción nueva.<br /><br /> **CommitTrans** : guarda los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.<br /><br /> **RollbackTrans** : cancela los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela la ejecución de una pendiente, llamada de método asincrónico.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela una actualización por lotes pendientes.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela los cambios realizados en la fila nueva o actual de un **Recordset** objeto, o el **campos** colección de un **registro** objeto antes de llamar a la  **Actualización** método.|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660593"
  [Colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas de ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Apéndice B: Errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventos de ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Interfaces y los objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

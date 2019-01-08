@@ -1,20 +1,22 @@
 ---
-title: Configuración de Kubernetes con kubeadm para las implementaciones de SQL Server 2019 | Microsoft Docs
+title: Configuración de Kubernetes con kubeadm
+titleSuffix: SQL Server 2019 big data clusters
 description: Obtenga información sobre cómo configurar Kubernetes en varios Ubuntu 16.04 o 18.04 equipos (físicos o virtuales) para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 7b6c6aeced930bfdd17915e2acc130fc4446f4a5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221781"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210284"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>Configuración de Kubernetes en varios equipos para las implementaciones de SQL Server 2019
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configuración de Kubernetes en varios equipos para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019
 
 Este artículo proporciona un ejemplo de cómo usar **kubeadm** configuración de Kubernetes en varios equipos para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019. En este ejemplo, varias Ubuntu 16.04 o 18.04 máquinas LTS (físicas o virtuales) son el destino. Si va a implementar en una plataforma de Linux diferente, debe modificar algunos de los comandos para que coincida con el sistema.  
 
@@ -143,4 +145,4 @@ kubectl get nodes
 
 Los pasos descritos en este artículo, configura un clúster de Kubernetes en varios equipos de Ubuntu. El siguiente paso es implementar el clúster de macrodatos de SQL Server 2019. Para obtener instrucciones, consulte el artículo siguiente:
 
-[Implementar SQL Server 2019 CTP 2.1 en Kubernetes](deployment-guidance.md#deploy)
+[Implementar 2019 CTP 2.2 de SQL Server en Kubernetes](deployment-guidance.md#deploy)

@@ -21,12 +21,12 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bf6602e8ff631831e07d17cf9fc22515f610191
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673724"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203456"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "51673724"
   
  La información devuelta de **sys.dm_os_child_instances** puede utilizarse para determinar el estado de cada instancia de usuario (heart_beat) y obtener el nombre de canalización (instance_pipe_name) que puede usarse para crear una conexión con el usuario Instancia mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o SQLCmd. Solo se puede conectar con una instancia de usuario después de que la inicie un proceso externo, como por ejemplo una aplicación cliente. Las herramientas de administración de SQL no pueden iniciar instancias de usuario.  
   
-> **Nota:** las instancias de usuario son una característica de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] solo.  
-  
+> **NOTA:** Las instancias de usuario son una característica exclusiva de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)].  
+> 
 > **Tenga en cuenta** para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_child_instances**.  
   
 |columna|Data type|Descripción|  

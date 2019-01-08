@@ -1,5 +1,5 @@
 ---
-title: 'Lección 8: Definir acciones | Microsoft Docs'
+title: 'Lección 8: Definición de acciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfdec0d2b77b88cff7fad643606ee3da001a67a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174345"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351264"
 ---
-# <a name="lesson-8-defining-actions"></a>Lección 8: definir acciones
+# <a name="lesson-8-defining-actions"></a>Lección 8: Definir acciones
   En esta lección, aprenderá a definir acciones en el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Una acción es solo una instrucción de Expresiones multidimensionales (MDX) que se almacena en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y que se puede incorporar en las aplicaciones cliente e iniciarse por el usuario.  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](http://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los tipos de acciones descritos en la siguiente tabla.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48174345"
   
  Esta lección incluye la tarea siguiente:  
   
- [Definir y usar una acción de obtención de detalles](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+ [Definir y utilizar una acción de obtención de detalles](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
  En esta tarea, se define, utiliza y modifica una acción de obtención de detalles a través de la relación de dimensión de hecho definida anteriormente en este tutorial.  
   
 ## <a name="next-lesson"></a>Lección siguiente  

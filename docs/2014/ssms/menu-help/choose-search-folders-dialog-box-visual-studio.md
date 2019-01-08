@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095155"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328615"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio)
   Le permite reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda, y especificar el orden en que deben realizarse las búsquedas. Para que se muestre este cuadro de diálogo, seleccione el botón **Examinar (...)** situado junto a la lista desplegable **Buscar en** en Buscar en archivos o Reemplazar en archivos, en la ventana Buscar y reemplazar.  
@@ -56,5 +54,3 @@ ms.locfileid: "48095155"
   
  **Aplicar**  
  Guarde el conjunto de carpetas de búsqueda que se muestran en la lista **Carpetas seleccionadas** como un conjunto de carpetas con nombre. Este conjunto de carpetas podrá seleccionarse después en el campo **Buscar en** de todas las pestañas de la ventana **Buscar y reemplazar** . Cierra el cuadro de diálogo Elegir carpetas de búsqueda.  
-  
-  

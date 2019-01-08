@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992415"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412823"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ StructureColumn('structure column name')
   
  Si es una tabla anidada, la función devuelve un valor de tabla. El valor de tabla devuelto se puede utilizar en la cláusula FROM de una instrucción sub-SELECT.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta función es polimórfica y se puede utilizar en cualquier parte de una instrucción que permita expresiones, por ejemplo en una lista de expresiones SELECT, una expresión de condición WHERE y una expresión ORDER BY.  
   
  El nombre de la columna en la estructura de minería de datos es un valor de cadena y por lo tanto, debe ir entre comillas simples: por ejemplo, `StructureColumn('` **columna 1**`')`. Si hay varias columnas que tienen el mismo nombre, el nombre se resuelve en el contexto de la instrucción SELECT contenedora.  
@@ -49,11 +49,11 @@ StructureColumn('structure column name')
 ## <a name="error-messages"></a>mensajes de error  
  Se produce el error de seguridad siguiente si el usuario no tiene el permiso de obtención de detalles en la estructura de minería de datos primaria:  
   
- El usuario '%{usuario/}' no tiene permiso para obtener detalles de la estructura de minería de datos primaria del modelo de minería de datos ‘%{modelo/}’.  
+ El ' % {usuario /}' usuario no tiene permiso para obtener detalles de la estructura de minería de datos primaria de la ' % {model /}' el modelo de minería de datos.  
   
  Se genera un mensaje de error similar al siguiente si se especifica un nombre de columna de estructura no válido:  
   
- La columna de estructura de minería de datos '‘%{nombre-columna-estructura/}’ no se encontró en la estructura de minería de datos primaria '%{estructura/} ' en el contexto actual (línea %{línea/}, columna %{columna/}).  
+ El ' % {nombre de la columna de estructura /}' no se encontró la columna de estructura de minería de datos en el ' % {estructura /}' primario de la estructura de minería de datos en el contexto actual (línea % {línea /}, columna % {columna /}).  
   
 ## <a name="examples"></a>Ejemplos  
  Utilizaremos la estructura de minería de datos siguiente para estos ejemplos. Observe que la estructura de minería de datos contiene dos columnas de tabla anidada: `Products` y `Hobbies`. La tabla anidada en la columna `Hobbies` tiene una única columna que se utiliza como clave para la misma. La tabla anidada de la columna `Products` es una tabla anidada compleja que tiene una columna de clave y otras columnas que se usan para la entrada. Los ejemplos siguientes muestran cómo una estructura de minería de datos puede diseñarse para incluir muchas columnas diferentes, aunque un modelo no pueda utilizar cada columna. Algunas de estas columnas pueden no ser útiles en el nivel de modelo para generalizar patrones, pero pueden ser muy útiles en la obtención de detalles.  
@@ -98,24 +98,24 @@ WITH FILTER(EXISTS (Products))
  La consulta del ejemplo siguiente devuelve las columnas `CustomerName` y `Age`, que se definen para formar parte del modelo de minería de datos. Sin embargo, la consulta también devuelve la columna `Age`, que forma parte de la estructura pero no del modelo de minería de datos.  
   
 ```  
-SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES   
+SELECT CustomerName, Age, StructureColumn('Occupation') FROM MyModel.CASES   
 WHERE Age > 30  
 ```  
   
  Tenga en cuenta que el filtrado de filas para restringir los casos a los clientes con una edad superior a 30 años tiene lugar en el nivel del modelo. Por consiguiente, esta expresión no devolvería los casos que están incluidos en los datos de la estructura pero que no usa el modelo. Dado que la condición de filtro utilizada para crear el modelo (`EXISTS (Products)`) restringe los casos únicamente a los clientes que compraron productos, podría haber casos en la estructura que no devuelva esta consulta.  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Consulta de ejemplo 2: Aplicar un filtro a la columna de la estructura  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Consulta de ejemplo 2: Aplicar un filtro a la columna de estructura  
  La consulta del ejemplo siguiente no solo devuelve las columnas del modelo `CustomerName` y `Age`, y la tabla anidada `Products`, sino también el valor de la columna `Quantity` de la tabla anidada, que no forma parte del modelo.  
   
 ```  
 SELECT CustomerName, Age,  
-(SELECT ProductName, StructureColumn(‘Quantity’) FROM Products) FROM MA.CASES   
-WHERE StructureColumn(‘Occupation’) = ‘Architect’  
+(SELECT ProductName, StructureColumn('Quantity') FROM Products) FROM MA.CASES   
+WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Tenga en cuenta que, en este ejemplo, se aplica un filtro a la columna de estructura para restringir los casos a los clientes cuya profesión sea 'arquitecto de ' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Dado que la condición de filtro del modelo siempre se aplica a los casos al crearse el modelo, solo se incluyen en los casos del modelo aquellos que tienen en la tabla `Products` por lo menos una fila que la cumpla. Por consiguiente, se aplica tanto el filtro en la tabla anidada `Products` como el filtro en el caso `(‘Occupation’)`.  
+ Tenga en cuenta que, en este ejemplo, se aplica un filtro a la columna de estructura para restringir los casos a los clientes cuya profesión sea 'arquitecto de ' (`WHERE StructureColumn('Occupation') = 'Architect'`). Dado que la condición de filtro del modelo siempre se aplica a los casos al crearse el modelo, solo se incluyen en los casos del modelo aquellos que tienen en la tabla `Products` por lo menos una fila que la cumpla. Por consiguiente, se aplica tanto el filtro en la tabla anidada `Products` como el filtro en el caso `('Occupation')`.  
   
-### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Consulta de ejemplo 3: Seleccionar columnas de una tabla anidada  
+### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Consulta de ejemplo 3: Selecciona las columnas de una tabla anidada  
  La consulta del ejemplo siguiente devuelve los nombres de los clientes que se usaron como casos de entrenamiento del modelo. Para cada cliente, la consulta devuelve también una tabla anidada que contiene los detalles de la compra. Aunque el modelo incluye la `ProductName` columna, el modelo no utiliza el valor de la `ProductName` columna. El modelo solo comprueba si el producto se compró normales (`NOT``OnSale`) precio. Esta consulta no devuelve solo el nombre del producto, sino que también devuelve la cantidad comprada, que no está incluida en el modelo.  
   
 ```  
@@ -126,7 +126,7 @@ FROM MyModel.CASES
   
  Observe que no puede devolver las columnas `ProductName` o `Quantity` a menos que la obtención de detalles esté habilitada en el modelo de minería de datos.  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Consulta de ejemplo 4: Filtrar y devolver columnas de tablas anidadas  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Consulta de ejemplo 4: Filtrar y devolver columnas de tabla anidada  
  La siguiente consulta de ejemplo devuelve las columnas de tabla anidada y los casos que están incluidos en la estructura de minería de datos, pero no en el modelo. El modelo ya se filtra con la presencia de productos `OnSale`, pero esta consulta agrega un filtro en la columna de la estructura de minería de datos, `Quantity`:  
   
 ```  

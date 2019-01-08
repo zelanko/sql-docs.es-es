@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -29,12 +27,12 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796429"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de datos de XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath y esquema XML (XSD) tienen tipos de datos muy diferentes. Por ejemplo, XPath no tiene tipos de datos enteros ni fecha, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y XSD tienen muchos. XSD utiliza la precisión del nanosegundo para los valores de hora y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza a lo sumo una precisión de 1/300 de segundo. Por consiguiente, no siempre es posible asignar un tipo de datos a otro. Para obtener más información sobre la asignación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a tipos de datos XSD, vea [conversiones de tipos de datos y la anotación SQL: DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -65,7 +63,7 @@ ms.locfileid: "48054755"
 |Ninguno es un conjunto de nodos.|Convierta los dos operandos en `number` y, a continuación, compare.|Convierta los dos operandos en un tipo común y, a continuación, compare. Convierta en `boolean` si es `boolean`, en `number` si es `number`; de lo contrario, convierta en `string`.|  
   
 > [!NOTE]  
->  Dado que los operadores relacionales de XPath convierten siempre los operandos en `number`, las comparaciones de `string` no son posibles. Para incluir las comparaciones de fecha, SQL Server 2000 ofrece esta variación a la especificación de XPath: cuando un operador relacional compara un `string` con un `string`, un conjunto de nodos con un `string` o un conjunto de nodos con valores de cadena con un conjunto de nodos con valores de cadena, se realiza una comparación de `string` (no una comparación de `number`).  
+>  Dado que los operadores relacionales de XPath convierten siempre los operandos en `number`, las comparaciones de `string` no son posibles. Para incluir las comparaciones de fecha, SQL Server 2000 ofrece esta variación a la especificación de XPath: Cuando un operador relacional compara un `string` a un `string`, un conjunto de nodos a un `string`, o un conjunto de nodos con valores de cadena en un valor de cadena conjunto de nodos, un `string` comparación (no un `number` comparación) se lleva a cabo.  
   
 ## <a name="node-set-conversions"></a>Conversiones de conjunto de nodos  
  Las conversiones de conjunto de nodos no son siempre intuitivas. Un conjunto de nodos se convierte en un `string` tomando el valor de cadena de únicamente primer nodo del conjunto. Un conjunto de nodos se convierte en `number` convirtiéndolo en `string` y convirtiendo luego el `string` en `number`. Un conjunto de nodos se convierte en `boolean` probando su existencia.  
@@ -149,7 +147,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  El prefijo "E -" se agrega a la cadena y el resultado se compara entonces con `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Realizar varias conversiones de tipos de datos en una consulta de XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>b. Realizar varias conversiones de tipos de datos en una consulta de XPath  
  Considere esta consulta especificada de XPath en un esquema XSD anotado: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Esta consulta XPath devuelve todos los  **\<OrderDetail >** elementos que satisfacen el predicado `@UnitPrice * @OrderQty > 98`. Si el **UnitPrice** se anota con un `fixed14.4` de tipo de datos en el esquema anotado, este predicado es equivalente a la expresión SQL:  

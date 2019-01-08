@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], traces
@@ -15,12 +14,12 @@ ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd10a3dade8cb85b2be1f5087238f9ff6f261dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063295"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641426"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled (opción de configuración del servidor)
   Utilice la opción **default trace enabled** para habilitar o deshabilitar los archivos predeterminados de registro de seguimiento. La funcionalidad de registro de seguimiento predeterminado ofrece un registro completo y persistente de la actividad y los cambios principalmente relacionados con las opciones de configuración.  
@@ -28,7 +27,7 @@ ms.locfileid: "48063295"
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use eventos extendidos en su lugar.  
   
-## <a name="purpose"></a>Finalidad  
+## <a name="purpose"></a>Propósito  
  Los seguimientos predeterminados ofrecen ayuda para la solución de problemas a los administradores de bases de datos al garantizar que disponen de los datos de registro necesarios para diagnosticar los problemas la primera vez que ocurren.  
   
 ## <a name="viewing"></a>Ver  

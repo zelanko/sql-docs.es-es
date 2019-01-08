@@ -19,12 +19,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13a011ab9545b9e5b9f02daf46654b0f8253a66d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776187"
 ---
 # <a name="mapping-data-types-odbc"></a>Asignar tipos de datos (ODBC)
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignaciones de controlador ODBC de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos SQL a tipos de datos SQL de ODBC. En las secciones siguientes se describen los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL y los tipos de datos ODBC SQL a los que se asignan. También se tratan los tipos de datos ODBC SQL y sus tipos de datos ODBC C correspondientes, así como las conversiones compatibles y predeterminadas.  
@@ -35,7 +35,7 @@ ms.locfileid: "48142524"
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>Administrar tipos de datos sql_variant en ODBC  
  El **sql_variant** columna tipo de datos puede contener ninguno de los tipos de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excepto objetos grandes (LOB), como **texto**, **ntext**, y  **imagen**. Por ejemplo, podría contener la columna **smallint** valores para algunas filas, **float** valores en otras filas y **char/nchar** valores en el resto.  
   
- El **sql_variant** tipo de datos es similar a la **Variant** tipo de datos en Microsoft Visual Basic®.  
+ El **sql_variant** tipo de datos es similar a la **Variant** tipo de datos en Microsoft Visual Basic??.  
   
 ### <a name="retrieving-data-from-the-server"></a>Recuperar datos del servidor  
  ODBC no tiene un concepto de tipos variant, limitar el uso de la **sql_variant** tipo de datos con un controlador ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se especifica el enlace, el **sql_variant** tipo de datos debe estar enlazado a uno de los tipos de datos ODBC documentados. **SQL_CA_SS_VARIANT_TYPE**, un nuevo atributo específico para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, devuelve el tipo de datos de una instancia en el **sql_variant** columna para el usuario.  

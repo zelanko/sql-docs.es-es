@@ -1,5 +1,5 @@
 ---
-title: Diseñador de modelos tabulares en SQL Server Data Tools | Documentos de Microsoft
+title: Diseñador de modelos tabulares de Analysis Services en SQL Server Data Tools | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98c836650ef00b283718ddf22834f7e4d4a56e0f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044849"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072572"
 ---
 # <a name="tabular-model-designer"></a>Diseñador de modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
  **Importar del servidor (tabular)**  
  Esta plantilla se puede usar para crear un proyecto de modelo tabular extrayendo los metadatos de uno ya existente en Analysis Services.  
   
- Los modelos más antiguos tienen niveles de compatibilidad más antiguos. Puede actualizar si cambia la propiedad de nivel de compatibilidad después de importar la definición del modelo.  
+ Los modelos más antiguos tienen niveles de compatibilidad más antiguos. Puede actualizar al cambiar la propiedad de nivel de compatibilidad después de importar la definición del modelo.  
   
  **Importar desde [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**  
  Esta plantilla se usa para crear un proyecto de modelo tabular extrayendo los metadatos y los datos de un archivo de [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] .  
@@ -66,13 +66,13 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
  Para ver el Explorador de soluciones, haga clic en el menú **Ver** y, a continuación, haga clic en **Explorador de soluciones**.  
 
 ### <a name="tabular-model-explorer"></a>Explorador de modelos tabulares
-  Primera disponibles en la versión de agosto de 2016 (14.0.60812.0) de [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Explorador de modelos tabulares le ayuda a navegar por los objetos de metadatos en los modelos tabulares.
+  Primera disponible en la versión de agosto de 2016 (14.0.60812.0) de [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Explorador de modelos tabulares le ayuda a navegar por los objetos de metadatos en los modelos tabulares.
 
  Para mostrar el Explorador de modelos tabulares, haga clic en **Ver** > **Otras ventanas**y, a continuación, en el **Explorador de modelos tabulares**.
    
   ![Explorador de modelos tabulares](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- Explorador de modelos tabulares organiza los objetos de metadatos en una estructura de árbol que se parezca al esquema de un modelo tabular. Orígenes de datos, Perspectivas, Relaciones, Roles, Tablas y Traducciones corresponden a objetos de esquema de nivel superior. Existen algunas excepciones, como KPI y Medidas, que técnicamente no son objetos de nivel superior, sino objetos secundarios de las distintas tablas del modelo. Sin embargo, tener contenedores de nivel superior consolidados para todos los KPI y Medidas facilita el trabajo con estos objetos, especialmente si el modelo incluye un número de tablas muy grande. Las Medidas también se enumeran en sus tablas primarias correspondientes para que tenga una visión clara de las relaciones de elementos primarios y secundarios reales. Si selecciona una medida en el contenedor Medidas de nivel superior, también se seleccionará la misma medida en la colección secundaria en su tabla y viceversa.  
+ Explorador de modelos tabulares organiza los objetos de metadatos en una estructura de árbol que se parezca al esquema de un modelo tabular. Orígenes de datos, Perspectivas, Relaciones, Roles, Tablas y Traducciones corresponden a objetos de esquema de nivel superior. Existen algunas excepciones, específicamente los KPI y medidas, que técnicamente no son objetos de nivel superior, pero los objetos secundarios de las distintas tablas en el modelo. Sin embargo, tener contenedores de nivel superior consolidados para todos los KPI y Medidas facilita el trabajo con estos objetos, especialmente si el modelo incluye un número de tablas muy grande. Las Medidas también se enumeran en sus tablas primarias correspondientes para que tenga una visión clara de las relaciones de elementos primarios y secundarios reales. Si selecciona una medida en el contenedor Medidas de nivel superior, también se seleccionará la misma medida en la colección secundaria en su tabla y viceversa.  
  
  Los nodos de objeto del Explorador de modelos tabulares se vinculan a opciones de menú adecuadas que hasta ahora se ocultaban en los menús Modelo, Tabla y Columna en Visual Studio. Puede hacer clic con el botón derecho en un objeto a fin de explorar opciones para el tipo de objeto. No todos los tipos de nodo de objeto gozan ya de un menú contextual, pero mejoras y opciones adicionales llegarán en versiones posteriores. 
 
@@ -85,11 +85,11 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
   
 -   Table  
   
--   Columna  
+-   columna  
   
 -   Measure  
   
- Propiedades del proyecto solo muestran el nombre del proyecto y carpeta del proyecto en la ventana Propiedades. Los proyectos también tienen valores de opciones de implementación y de servidor de implementación adicionales que se pueden establecer mediante un cuadro de diálogo de propiedades modales. Para ver estas propiedades, en el **Explorador de soluciones**, haga clic con el botón secundario en el proyecto y, a continuación, haga clic en **Propiedades**.  
+ Propiedades del proyecto muestran sólo el nombre del proyecto y la carpeta de proyecto en la ventana Propiedades. Los proyectos también tienen valores de opciones de implementación y de servidor de implementación adicionales que se pueden establecer mediante un cuadro de diálogo de propiedades modales. Para ver estas propiedades, en el **Explorador de soluciones**, haga clic con el botón secundario en el proyecto y, a continuación, haga clic en **Propiedades**.  
   
  Los campos de la ventana Propiedades tienen incrustados controles que se abren al hacer clic en ellos. El tipo de control de edición depende de la propiedad concreta. Entre los controles se incluyen cuadros de edición, listas desplegables y vínculos a cuadros de diálogo personalizados. Las propiedades que aparecen atenuadas son de solo lectura.  
   

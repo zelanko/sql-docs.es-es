@@ -1,7 +1,8 @@
 ---
-title: Habilitar o deshabilitar la recopilación de datos de uso y bloqueo reporting de Azure Data Studio | Microsoft Docs
+title: Habilitar o deshabilitar la recopilación de datos de uso y los informes de bloqueo
+titleSuffix: Azure Data Studio
 description: En este artículo se explica cómo controlar si el uso y bloqueo de datos de informes se recopilan y se envían a Microsoft.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0a5adf802ab07e05f1041b1385044e2d580db32
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356486"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030109"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Habilitar o deshabilitar la recopilación de datos de uso para [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,7 +32,7 @@ Para silenciar todos los eventos de telemetría de [!INCLUDE[name-sos](../includ
     "telemetry.enableTelemetry": false
 ```
 
-**Aviso importante**: esta opción requiere un reinicio de [!INCLUDE[name-sos](../includes/name-sos-short.md)] surta efecto. 
+**Aviso importante**: Esta opción requiere un reinicio de [!INCLUDE[name-sos](../includes/name-sos-short.md)] surta efecto. 
 
 ## <a name="how-to-disable-crash-reporting"></a>Cómo deshabilitar los informes de bloqueo
 
@@ -41,7 +42,7 @@ Para deshabilitar los informes de bloqueo, de **archivo** > **preferencias** > *
     "telemetry.enableCrashReporter": false
 ```
 
-**Aviso importante**: esta opción requiere un reinicio de [!INCLUDE[name-sos](../includes/name-sos-short.md)] surta efecto.
+**Aviso importante**: Esta opción requiere un reinicio de [!INCLUDE[name-sos](../includes/name-sos-short.md)] surta efecto.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 - [Configuración de área de trabajo y usuario](settings.md)

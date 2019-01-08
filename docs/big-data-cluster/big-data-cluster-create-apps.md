@@ -1,40 +1,42 @@
 ---
-title: Cómo implementar una aplicación en clúster de macrodatos de SQL Server | Microsoft Docs
+title: Cómo implementar una aplicación
+titleSuffix: SQL Server 2019 big data clusters
 description: Implementar un script de Python o R como una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272563"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246422"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar)
 
 En este artículo se describe cómo implementar y administrar el script de R y Python como una aplicación dentro de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 
-R y Python aplicaciones se implementan y administran con el **mssqlctl pre** utilidad de línea de comandos que se incluye en CTP 2.1. En este artículo se proporciona ejemplos de cómo implementar estos scripts de R y Python, como las aplicaciones de la línea de comandos.
+R y Python aplicaciones se implementan y administran con el **mssqlctl pre** utilidad de línea de comandos que se incluye en CTP 2.2. En este artículo se proporciona ejemplos de cómo implementar estos scripts de R y Python, como las aplicaciones de la línea de comandos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Debe tener un clúster de macrodatos de SQL Server 2019 configurado. Para obtener más información, consulte [cómo implementar SQL Server al clúster de macrodatos en Kubernetes](deployment-guidance.md). 
 
-## <a name="installation"></a>Installation
+## <a name="installation"></a>Instalación
 
 El **mssqlctl pre** se proporciona una utilidad de línea de comandos para obtener una vista previa de la característica de implementación de aplicación de Python y R. Use el siguiente comando para instalar la utilidad:
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>Capabilities
 
-En CTP 2.1 que puede crear, eliminar, enumerar y ejecutar una aplicación de R o Python. En la tabla siguiente se describe los comandos de implementación de aplicación que puede usar con **mssqlctl pre**.
+En CTP 2.2 que puede crear, eliminar, enumerar y ejecutar una aplicación de R o Python. En la tabla siguiente se describe los comandos de implementación de aplicación que puede usar con **mssqlctl pre**.
 
 | Comando | Descripción |
 |---|---|
@@ -54,15 +56,16 @@ Las secciones siguientes describen estos comandos en más detalle.
 
 ## <a name="log-in"></a>Inicia sesión
 
-Antes de configurar las aplicaciones de R y Python, primero inicie sesión en un clúster de macrodatos con SQL Server la `mssqlctl-pre login` comando. Especifique la dirección IP (externo) de la `service-proxy-lb` (por ejemplo: `https://ip-address:30777`) junto con el nombre de usuario y la contraseña para el clúster.
+Antes de configurar las aplicaciones de R y Python, primero inicie sesión en un clúster de macrodatos con SQL Server la `mssqlctl-pre login` comando. Especifique la dirección IP externa de la `service-proxy-lb` o `service-proxy-nodeport` servicios (por ejemplo: `https://ip-address:30777`) junto con el nombre de usuario y la contraseña para el clúster.
 
-Puede obtener la dirección IP del servicio de proxy de servicio de equilibrador de carga, ejecute este comando en una ventana cmd o bash:
+Puede obtener la dirección IP de la **proxy-service-lb** o **proxy-service-nodeport** servicio, ejecute este comando en una ventana cmd o bash:
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>Creación de una aplicación

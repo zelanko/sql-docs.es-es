@@ -22,12 +22,12 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541850"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
   Extrae, restaura, crea y elimina la clave simétrica usada para proteger contra el acceso no autorizado los datos importantes del servidor de informes. Esta utilidad también se usa para unir instancias del servidor de informes en una implementación de ampliación horizontal. Una *implementación escalada del servidor de informes* se refiere a varias instancias del servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -37,11 +37,11 @@ ms.locfileid: "48116901"
 ```  
   
       rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  
@@ -65,7 +65,7 @@ ms.locfileid: "48116901"
  **-a**  
  Reemplaza una clave simétrica existente con una copia proporcionada en un archivo de copia de seguridad protegido mediante contraseña. Todas las instancias de la clave simétrica se actualizan.  
   
- Este argumento no toma ningún valor. Sin embargo, es necesario incluir argumentos adicionales en la línea de comandos para seleccionar el archivo que contiene la clave que va a aplicarse. Los argumentos que se pueden especificar incluyen `-f` y`-p`.  
+ Este argumento no toma ningún valor. Sin embargo, es necesario incluir argumentos adicionales en la línea de comandos para seleccionar el archivo que contiene la clave que va a aplicarse. Los argumentos que puede especificar son `-f` y `-p`.  
   
  **-d**  
  Elimina todas las instancias de la clave simétrica y todos los datos cifrados de una base de datos del servidor de informes. Este argumento no toma ningún valor.  
@@ -90,19 +90,19 @@ ms.locfileid: "48116901"
  (Se requiere para `-f`). Especifica la contraseña que se usa para realizar una copia de seguridad o para aplicar una clave simétrica. Este valor no puede estar en blanco.  
   
  `-i`  
- Especifica una instancia del servidor de informes local. Este argumento es opcional si ha instalado el servidor de informes en el valor predeterminado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia (el valor predeterminado de `-i` es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, `-i` es necesario.  
+ Especifica una instancia del servidor de informes local. Este argumento es opcional si ha instalado el servidor de informes en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada (el valor predeterminado para `-i` es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, se requiere `-i`.  
   
  `-m`  
  Especifica el nombre del equipo remoto que hospeda la instancia del servidor de informes que está uniendo a la implementación de ampliación horizontal del servidor de informes. Utilice el nombre del equipo que lo identifica en la red.  
   
  `-n`  
- Especifica el nombre de la instancia del servidor de informes en un equipo remoto. Este argumento es opcional si ha instalado el servidor de informes en el valor predeterminado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia (el valor predeterminado de `-n` es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, `-n` es necesario.  
+ Especifica el nombre de la instancia del servidor de informes en un equipo remoto. Este argumento es opcional si ha instalado el servidor de informes en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada (el valor predeterminado para `-n` es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, se requiere `-n`.  
   
  `-u`  *USERACCOUNT*  
  Especifica la cuenta de administrador del equipo remoto que está combinando con la implementación escalada. Si no se especifica una cuenta, se usan las credenciales del usuario actual.  
   
  `-v`  *Contraseña*  
- (Necesario para `-u`) especifica la contraseña de una cuenta de administrador en el equipo remoto que desea combinar con la implementación escalada.  
+ (Se requiere para `-u`). Especifica la contraseña de una cuenta de administrador del equipo remoto que desea combinar con la implementación escalada.  
   
  **-t**  *trace*  
  Registra los mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -148,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Implementación de ampliación horizontal del servidor de informes se refiere a un modelo de implementación en el que varias instancias del servidor de informes comparten la misma base de datos del servidor de informes. Una base de datos del servidor de informes la puede usar cualquier instancia del servidor de informes que almacene sus claves simétricas en la base de datos. Por ejemplo, si una base de datos del servidor de informes contiene información de clave para tres instancias del servidor de informes, las tres instancias se consideran miembros de la misma implementación de ampliación horizontal.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Combinar instancias del servidor de informes en el mismo equipo  
- Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca la `-u` y `-v` argumentos si va a combinar instancias del servidor de informes se instalan localmente. Los argumentos `-u` y `-v` se utilizan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, recibirá un error que indica que las credenciales de usuario no se pueden utilizar para las conexiones locales.  
+ Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos `-u` y `-v` si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos `-u` y `-v` se utilizan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, obtendrá el siguiente error: "No se pueden usar las credenciales de usuario para conexiones locales".  
   
- El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, <`initializedinstance`> es el nombre de una instancia que ya está inicializada para utilizar la base de datos del servidor de informes, y <`newinstance`> es el nombre de la instancia que desea agregar a la implementación:  
+ El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, <`initializedinstance`> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes y <`newinstance`> es el nombre de la instancia que desea agregar a la implementación:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -159,7 +159,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>Quitar claves de cifrado para un único servidor de informes en una implementación de ampliación horizontal  
  Este ejemplo muestra cómo quitar claves de cifrado de un único servidor de informes en una implementación de ampliación horizontal del servidor de informes. Las claves se quitan de la base de datos del servidor de informes. Cuando se han quitado las claves de la instancia del servidor de informes, esa instancia del servidor de informes ya no puede tener acceso a los datos cifrados de la base de datos, y así se quita de forma efectiva de la implementación de ampliación horizontal.  
   
- Quitar una instancia del servidor de informes de una implementación escalada le exige que especifique un identificador de instalación. El identificador de instalación es un GUID almacenado en el archivo RSReportserver.config de la instancia del servidor de informes para la que desea quitar claves de cifrado. Debe ejecutar el siguiente comando en el equipo que desea quitar de la implementación de ampliación horizontal. Si el servidor de informes se instala como una instancia con nombre, use la `-i` argumento para especificar la instancia. Para más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
+ Quitar una instancia del servidor de informes de una implementación escalada le exige que especifique un identificador de instalación. El identificador de instalación es un GUID almacenado en el archivo RSReportserver.config de la instancia del servidor de informes para la que desea quitar claves de cifrado. Debe ejecutar el siguiente comando en el equipo que desea quitar de la implementación de ampliación horizontal. Si el servidor de informes está instalado como una instancia con nombre, use el argumento `-i` para especificar la instancia. Para más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ```  
 rskeymgmt -r <installationID>  
@@ -178,7 +178,7 @@ rskeymgmt -r <installationID>
 ## <a name="see-also"></a>Vea también  
  [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Utilidades de símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02bd2846f4425a4849ab16170c76a55af16c2b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b24c20d468cadbe4f4c7268ac6696b366b792e4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130859"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214291"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Publicar datos de Excel en MDS (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede publicar los datos en el repositorio MDS cuando termine de trabajar en Excel y desee guardar los cambios para que otros usuarios tengan acceso a ellos.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Al publicar los cambios, se eliminan los comentarios de las celdas administradas por MDS.  
 > -   Una fórmula no se admite en una celda administrada por MDS. Una fórmula en una celda administrada por MDS se trata como un valor de texto.  
   

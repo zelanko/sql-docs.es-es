@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetVersionInfo
@@ -18,12 +16,12 @@ ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 218253956172b5c8b2879b26c72615b06e59c88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803017"
 ---
 # <a name="localdbgetversioninfo-function"></a>Función LocalDBGetVersionInfo
   Devuelve información de la versión de SQL Server Express LocalDB especificada, por ejemplo si existe y el número de versión completo de LocalDB (incluida la compilación y los números de versión).  
@@ -95,7 +93,7 @@ HRESULT LocalDBGetVersionInfo(
   
 ```  
 LocalDBVersionInfo vi;  
-LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));  
+LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));  
   
 ```  
   

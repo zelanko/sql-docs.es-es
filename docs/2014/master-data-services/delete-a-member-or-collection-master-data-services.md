@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], deleting
@@ -17,12 +16,12 @@ ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04177b96f74efba2b7e856ddb5fddd235758397e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9efe4245fd10e8fc0c5dbd0d114ba429ad13d1dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048965"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758677"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Eliminar un miembro o una colección (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], elimine un miembro o recopilación cuando ya no lo necesite. Si desea eliminar miembros de forma masiva, utilice el proceso de almacenamiento provisional en su lugar. Para obtener más información, consulte [desactivar o eliminar miembros usando el proceso de ensayo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
@@ -62,7 +61,7 @@ ms.locfileid: "48048965"
 7.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Reactivar un miembro o colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   

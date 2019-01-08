@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51e98ef765b230cf9f304473854b48deccabd170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072885"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804455"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Conversation** para informar del progreso de una conversación de Service Broker.  
@@ -32,25 +31,25 @@ ms.locfileid: "48072885"
 |**ApplicationName**|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación en lugar de con el nombre mostrado del programa.|10|Sí|  
 |**ClientProcessID**|`int`|Id. que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
 |**DatabaseID**|`int`|Id. de la base de datos especificada por la instrucción USE *database* . Si no se ha emitido ninguna instrucción USE *database*, el identificador de la base de datos predeterminada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determine el valor de una base de datos con la función **DB_ID** .|3|Sí|  
-|**EventClass**|`int`|Tipo de clase de eventos capturado. Es siempre **124** para **Broker:Conversation**.|27|no|  
-|**EventSequence**|`int`|Número de secuencia de este evento.|51|no|  
+|**EventClass**|`int`|Tipo de clase de eventos capturado. Es siempre **124** para **Broker:Conversation**.|27|No|  
+|**EventSequence**|`int`|Número de secuencia de este evento.|51|No|  
 |**EventSubClass**|`nvarchar`|Tipo de subclase de evento. Proporciona más información sobre cada clase de eventos.|21|Sí|  
-|**GUID**|`uniqueidentifier`|Id. de conversación del diálogo. Este identificador se transmite como parte del mensaje y lo comparten ambas partes de la conversación.|54|no|  
+|**GUID**|`uniqueidentifier`|Id. de conversación del diálogo. Este identificador se transmite como parte del mensaje y lo comparten ambas partes de la conversación.|54|No|  
 |**HostName**|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para averiguar el nombre de host, use la función **HOST_NAME** .|8|Sí|  
-|**IsSystem**|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|no|  
+|**IsSystem**|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|No|  
 |**LoginSid**|`image`|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
-|**MethodName**|`nvarchar`|Grupo de conversación al que pertenece la conversación.|47|no|  
+|**MethodName**|`nvarchar`|Grupo de conversación al que pertenece la conversación.|47|No|  
 |**NTDomainName**|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|`nvarchar`|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
-|**ObjectName**|`nvarchar`|Identificador de conversación del diálogo.|34|no|  
+|**ObjectName**|`nvarchar`|Identificador de conversación del diálogo.|34|No|  
 |**Prioridad**|`int`|Nivel de prioridad de la conversación.|5|Sí|  
-|**RoleName**|`nvarchar`|Rol del identificador de conversación. Es **initiator** o **target**.|38|no|  
-|**ServerName**|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|26|no|  
-|**Severity**|`int`|Gravedad del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si este evento informa de un error.|29|no|  
+|**RoleName**|`nvarchar`|Rol del identificador de conversación. Es **initiator** o **target**.|38|No|  
+|**ServerName**|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|26|No|  
+|**Severity**|`int`|Gravedad del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si este evento informa de un error.|29|No|  
 |**SPID**|`int`|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso relacionado con el cliente.|12|Sí|  
 |**StartTime**|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**TextData**|`ntext`|El estado actual de la conversación. Uno de los siguientes:<br /><br /> **SO**. Salida iniciada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesó una instrucción BEGIN CONVERSATION para esta conversación, pero no se ha enviado ningún mensaje.<br /><br /> **SI**. Entrada iniciada. Otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] inició una nueva conversación con la instancia actual, pero la instancia actual no ha terminado de recibir el primer mensaje. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría crear la conversación en este estado si se fragmenta el primer mensaje o si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe los mensajes sin orden. No obstante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría crear la conversación en el estado CO si la primera transmisión recibida de la conversación contiene el primer mensaje completo.<br /><br /> **CO**. Conversando. La conversación está establecida y los dos lados de la conversación pueden enviar mensajes. La mayor parte de la comunicación de un servicio típico tiene lugar cuando la conversación está en este estado.<br /><br /> **DI**. Entrada desconectada. El lado remoto de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado local de la conversación emite un END CONVERSATION. Una aplicación puede seguir recibiendo mensajes de la conversación. Puesto que el lado remoto de la conversación ha finalizado la conversación, una aplicación no puede enviar mensajes en esta conversación. Cuando una aplicación emite un END CONVERSATION, la conversación pasa al estado CD (Cerrada).<br /><br /> **DO**. Salida desconectada. El lado local de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado remoto de la conversación confirma un END CONVERSATION. Una aplicación no puede seguir enviando ni recibiendo mensajes de la conversación. Cuando el lado remoto de la conversación confirma el END CONVERSATION, la conversación pasa al estado CD (Cerrada).<br /><br /> **ER**. Error. Se ha producido un error en este extremo. Las columnas Error, Severity y State contienen información sobre el error específico que se ha producido.<br /><br /> **CD**. Cerrada. El extremo de la conversación ya no se utiliza.|1|Sí|  
-|**Identificador de transacción**|`bigint`|Identificador de la transacción asignado por el sistema.|4|no|  
+|**Identificador de transacción**|`bigint`|Identificador de la transacción asignado por el sistema.|4|No|  
   
  En la tabla siguiente se indican los valores de la subclase de esta clase de eventos.  
   

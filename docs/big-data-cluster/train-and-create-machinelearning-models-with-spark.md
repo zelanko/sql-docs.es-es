@@ -1,25 +1,27 @@
 ---
-title: Entrenar y crear modelos de aprendizaje automático con Spark
-description: Uso de PySpark para entrenar y crear modelos de aprendizaje automático con Spark | SQL Server
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: Modelos de aprendizaje automático de Train/Create con Spark
+titleSuffix: SQL Server 2019 big data clusters
+description: Usar PySpark para entrenar y crear modelos de aprendizaje automático con Spark en clústeres de macrodatos de SQL Server (versión preliminar).
 author: lgongmsft
 ms.author: shivprashant
+ms.manager: craigg
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: fceced831ba7b100f29e2fc70811f50c95b1b715
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: c1a23ebb390c2276d1ce47c2936b8fe682a4e9b7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753492"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213104"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Entrenar y crear modelos de aprendizaje automático con Spark
+
 Spark en clústeres de macrodatos de SQL Server permite la inteligencia artificial y aprendizaje automático. El ejemplo muestra cómo para entrenar un modelo de aprendizaje automático con Python en Spark (PySpark) con datos almacenados en HDFS. 
 
-El ejemplo es una guía paso a paso con fragmentos de código que se puede usar desde un cuaderno de Studio datos de Azure y cada paso de una ejecución de celda a la vez. Para obtener más información sobre cómo conectar con Spark desde Bloc de notas, consulte [aquí] (cuadernos-guidance.md)
+El ejemplo es una guía paso a paso con fragmentos de código que se puede usar desde un cuaderno de Studio datos de Azure y cada paso de una ejecución de celda a la vez. Para obtener más información sobre cómo conectar con Spark desde Bloc de notas [aquí](notebooks-guidance.md)
 
 En el ejemplo:
 
@@ -33,11 +35,9 @@ En el ejemplo:
 
 Aprendizaje automático de E2E implica varios pasos adicionales, p. ej., exploración de datos, análisis de componentes de selección y una entidad de característica, selección del modelo. Muchos de estos pasos se omiten aquí por razones de brevedad.
 
-
 ## <a name="step-1---understanding-the-data-and-prediction-desired"></a>Paso 1: descripción de los datos y la predicción deseado
 
 Este ejemplo utiliza datos de ingresos del censo de adultos de [aquí]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ). En `AdultCensusIncome.csv`, cada fila representa el intervalo de ingresos y otras características como la edad, horas por semana, educación, ocupación etcetera para un adulto determinado. Crear un modelo que puede predecir si el intervalo de ingresos. El modelo tomará la edad y horas por semana como características y predecir si los ingresos sería > 50 K o < 50 K. 
-
 
 ## <a name="step-2---upload-the-data-to-hdfs-and-basic-explorations-on-data"></a>Paso 2: cargar los datos en HDFS y exploraciones básicas en los datos
 Conectarse a la puerta de enlace de Spark o HDFS desde Azure Data Studio y cree un directorio denominado `spark_ml` en HDFS. Descargar [AdultCensusIncome.csv]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ) a su equipo local y la carga en HDFS. Cargar `AdultCensusIncome.csv` a la carpeta que creó.
@@ -85,7 +85,6 @@ data = data_all.select(select_cols)
 
 ```
 
-
 ## <a name="step-4---split-as-training-and-test-set"></a>Paso 4: dividir como conjunto de entrenamiento y prueba
 
 Utilice el 75% de las filas para entrenar el modelo y el resto del 25% para evaluar el modelo. Además, conservar el entrenamiento y probar los conjuntos de datos en el almacenamiento HDFS. El paso no es necesario, pero se muestra para demostrar cómo guardar y cargar con el formato ORC. Otros formatos, por ejemplo, `Parquet `también pueden usarse.
@@ -109,9 +108,8 @@ print("train and test datasets saved to {} and {}".format(train_data_path, test_
 
 ```
 
-
 ## <a name="step-5---put-together-a-pipeline-and-build-a-model"></a>Paso 5: elaborado una canalización y generar un modelo
-[Canalización Spark ML] ( https://spark.apache.org/docs/2.3.1/ml-pipeline.html ) permite a todos los pasos de secuencia como un flujo de trabajo y que sea más fácil experimentar con distintos algoritmos y sus parámetros. El siguiente código crea primero las fases y, a continuación, reúne estas fases de canalización de aprendizaje automático.  LogisticRegression se utiliza para crear el modelo.
+[Canalización Spark ML](https://spark.apache.org/docs/2.3.1/ml-pipeline.html) permitir que todos los pasos de secuencia como un flujo de trabajo y que sea más fácil experimentar con distintos algoritmos y sus parámetros. El siguiente código crea primero las fases y, a continuación, reúne estas fases de canalización de aprendizaje automático.  LogisticRegression se utiliza para crear el modelo.
 
 ```python
 from pyspark.ml import Pipeline, PipelineModel
@@ -211,6 +209,6 @@ assert str(model2) == str(model)
 print("loaded model from {}".format(model_fs))
 ```
 
-## <a name="references"></a>References
-1. Para obtener una introducción con PySpark consulte cuadernos [aquí.](notebooks-guidance.md)
+## <a name="next-steps"></a>Pasos siguientes
 
+Para obtener más información sobre cómo empezar a trabajar con cuadernos de PySpark, consulte [para usar cuadernos](notebooks-guidance.md).

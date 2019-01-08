@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739913"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266106"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -209,17 +209,17 @@ sp_trace_setevent [ @traceid = ] trace_id
 |178|Audit Database Operation Event|Se produce cuando tienen lugar operaciones en una base de datos, como un punto de comprobación o una notificación de consulta de suscripción.|  
 |180|Audit Database Object Access Event|Se produce cuando se tiene acceso a objetos de base de datos, como esquemas.|  
 |181|TM: Begin Tran starting|Se produce cuando se inicia una solicitud BEGIN TRANSACTION.|  
-|182|TM: Begin Tran completed|Se produce cuando se completa una solicitud BEGIN TRANSACTION.|  
+|182|TM: Begin Tran completado|Se produce cuando se completa una solicitud BEGIN TRANSACTION.|  
 |183|TM: Promote Tran starting|Se produce cuando se inicia una solicitud PROMOTE TRANSACTION.|  
-|184|TM: Promote Tran completed|Se produce cuando se completa una solicitud PROMOTE TRANSACTION.|  
+|184|TM: Promover Tran completado|Se produce cuando se completa una solicitud PROMOTE TRANSACTION.|  
 |185|TM: Commit Tran starting|Se produce cuando se inicia una solicitud COMMIT TRANSACTION.|  
-|186|TM: Commit Tran completed|Se produce cuando se completa una solicitud COMMIT TRANSACTION.|  
-|187|TM: Rollback Tran starting|Se produce cuando se inicia una solicitud ROLLBACK TRANSACTION.|  
-|188|TM: Rollback Tran completed|Se produce cuando se completa una solicitud ROLLBACK TRANSACTION.|  
+|186|TM: Commit Tran completado|Se produce cuando se completa una solicitud COMMIT TRANSACTION.|  
+|187|TM: Rollback TRAN starting|Se produce cuando se inicia una solicitud ROLLBACK TRANSACTION.|  
+|188|TM: Rollback Tran completado|Se produce cuando se completa una solicitud ROLLBACK TRANSACTION.|  
 |189|Lock: Timeout (timeout > 0)|Se produce cuando se agota el tiempo de espera para una solicitud de bloqueo en un recurso, como una página.|  
-|190|Progress Report: Online Index Operation|Informa del progreso de una operación de generación de índice en línea mientras está en ejecución.|  
-|191|TM: Save Tran starting|Se produce cuando se inicia una solicitud SAVE TRANSACTION.|  
-|192|TM: Save Tran completed|Se produce cuando se completa una solicitud SAVE TRANSACTION.|  
+|190|Informe de progreso: Operación de índice en línea|Informa del progreso de una operación de generación de índice en línea mientras está en ejecución.|  
+|191|TM: Guardar Tran starting|Se produce cuando se inicia una solicitud SAVE TRANSACTION.|  
+|192|TM: Guardar Tran completado|Se produce cuando se completa una solicitud SAVE TRANSACTION.|  
 |193|Background Job Error|Se produce cuando un trabajo en segundo plano finaliza de forma anómala.|  
 |194|OLEDB Provider Information|Se produce cuando una consulta distribuida se ejecuta y recopila información correspondiente a la conexión del proveedor.|  
 |195|Mount Tape|Se produce cuando se recibe una solicitud de montaje de cinta.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|Indica que los filtros de mapas de bits se han deshabilitado en una consulta.|  
 |213|Database Suspect Data Page|Indica cuándo se agrega una página a la **suspect_pages** tabla **msdb**.|  
 |214|CPU Threshold Exceeded|Indica cuándo el regulador de recursos detecta que una consulta ha superado el valor de umbral de CPU (REQUEST_MAX_CPU_TIME_SEC).|  
-|215|Indica cuándo se ha iniciado la ejecución de un desencadenador LOGON o de una función clasificadora del regulador de recursos.|Indica cuándo se ha iniciado la ejecución de un desencadenador LOGON o de una función clasificadora del regulador de recursos.|  
+|215|PreConnect:Starting|Indica cuándo se ha iniciado la ejecución de un desencadenador LOGON o de una función clasificadora del regulador de recursos.|  
 |216|PreConnect:Completed|Indica cuándo se ha conpletado la ejecución de un desencadenador LOGON o de una función clasificadora del regulador de recursos.|  
 |217|Guía de plan correcta|Indica que SQL Server generó correctamente un plan de ejecución para una consulta o lote que contenía una guía de plan.|  
 |218|Guía de plan incorrecta|Indica que SQL Server no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. SQL Server intentó generar un plan de ejecución para esta consulta o lote sin aplicar la guía de plan. Una guía de plan no válida puede ser la causa de este problema. Puede utilizar la función del sistema sys.fn_validate_plan_guide para validar la guía de plan.|  
@@ -275,7 +275,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|Tipo de clase de evento que se está registrando.|  
 |28|**ObjectType**|Tipo de objeto, por ejemplo: tabla, función o procedimiento almacenado.|  
 |29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. Consulte [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**State**|Estado del servidor, si se produce un error.|  
+|30|**Estado**|Estado del servidor, si se produce un error.|  
 |31|**Error**|Número de error.|  
 |32|**Modo**|Modo de bloqueo del bloqueo adquirido. Esta columna no se llena con el **bloqueo: publicado** eventos.|  
 |33|**Handle**|Identificador del objeto al que se hace referencia en el evento.|  

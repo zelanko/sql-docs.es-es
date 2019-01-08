@@ -5,8 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helparticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a52ab877f72f8a050e5582756b957e5db30c0ecb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843425"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212514"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_helparticle [ @publication = ] 'publication'
  Especifica si se debe devolver la cláusula de filtro. *returnfilter* es **bit**, su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no se debe especificar al solicitar información sobre un artículo publicado por un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -73,7 +72,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**Tipo**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = la ejecución del procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = function (solo esquema).<br /><br /> **257** = vista indizada basado en registro.<br /><br /> **259** = vista indizada basado en registro con filtro manual.<br /><br /> **261** = vista indizada basado en registro con vista manual.<br /><br /> **263** = vista indizada basado en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
 |**status**|**tinyint**|Puede ser el [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) resultado de una o más estas propiedades del artículo:<br /><br /> **0 x 00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0 x 01** = artículo está activo.<br /><br /> **0 x 08** = incluir el nombre de columna en las instrucciones insert.<br /><br /> **0 x 16** = usar instrucciones con parámetros.<br /><br /> **0 x 32** = usar instrucciones con parámetros e incluir el nombre de columna en las instrucciones insert.|  
 |**filter**|**nvarchar (257)**|Procedimiento almacenado utilizado para filtrar la tabla horizontalmente. Este procedimiento almacenado debe haber sido creado mediante la cláusula FOR REPLICATION.|  
-|**Descripción**|**nvarchar(255)**|Entrada descriptiva del artículo.|  
+|**description**|**nvarchar(255)**|Entrada descriptiva del artículo.|  
 |**insert_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar inserciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar actualizaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar eliminaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  

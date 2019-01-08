@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dbd6a425222c0e3f31d55a590294e9d3554f96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822119"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificar las cuentas de servicios de controlador y de cliente
   En este tema, aprenderá a modificar las cuentas de servicio del cliente y Distributed Replay Controller; y, a continuación, volverá a aplicar las listas de control de acceso (ACL).  
@@ -35,7 +34,7 @@ ms.locfileid: "48181115"
   
 3.  En la ventana **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** , en la pestaña **Iniciar sesión** , seleccione **Esta cuenta**, escriba la nueva cuenta de inicio de sesión o haga clic en **Examinar** para buscarla y, a continuación, haga clic en **Aceptar**.  
   
-     **Importante**: al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+     **Importante**: Al configurar Distributed Replay Controller, puede especificar una o varias cuentas de usuario que se usará para ejecutar los servicios de Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
   
     -   Cuenta de usuario de dominio  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48181115"
   
     1.  Detenga el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller.  
   
-    2.  En el equipo del controlador en el que está instalado el servicio de controlador, desde el símbolo del sistema, escriba `dcomcnfg`.  
+    2.  En el equipo del controlador en el que esté instalado el servicio del controlador, desde el símbolo del sistema, escriba `dcomcnfg`.  
   
     3.  En la ventana **Servicios de componentes**, vaya a **Raíz de consola -> Servicios de componentes -> Equipos -> Mi PC -> DCOM Config ->DReplayController**.  
   

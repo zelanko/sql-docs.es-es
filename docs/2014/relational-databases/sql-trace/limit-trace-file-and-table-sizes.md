@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - maximum file size for traces
@@ -17,12 +16,12 @@ ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a576f191cf02a7af186934fdd67204249f36ec78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754037"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar el tamaño de la tabla y el archivo de seguimiento
   Los resultados de Seguimiento de SQL difieren en cuanto a tamaño en función de las clases de evento que se incluyen en el seguimiento y la forma en que se utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si realiza el seguimiento de clases de evento que se producen con frecuencia, puede minimizar la cantidad de datos que recopila el seguimiento estableciendo el tamaño máximo del archivo o el número máximo de filas. Si especifica el tamaño máximo del archivo o las filas, se garantiza que el archivo o la tabla de seguimiento no crecerán más allá del límite especificado.  

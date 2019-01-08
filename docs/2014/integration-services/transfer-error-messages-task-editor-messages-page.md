@@ -15,12 +15,12 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 590cb6da26f0857c62b87542b7890732416aa486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d83edf8ee65b638525c0ddd5ee994a26cfcfbd70
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545802"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor de la tarea Transferir mensajes de error (página Mensajes)
   Use la página**Mensajes** del cuadro de diálogo **Editor de la tarea Transferir mensajes de error** para especificar propiedades para copiar uno o varios mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a otra. Para obtener más información acerca de esta tarea, vea [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
@@ -46,23 +46,23 @@ ms.locfileid: "48103995"
 |**False**|Copiar solo los mensajes definidos por el usuario especificados.|  
   
  **ErrorMessagesList**  
- Haga clic en el botón para examinar **(…)** para seleccionar los mensajes de error que se van a copiar.  
+ Haga clic en el botón Examinar **(…)** para seleccionar los mensajes de error que quiera copiar.  
   
 > [!NOTE]  
 >  Para poder seleccionar los mensajes de error que se van a copiar, debe especificar el parámetro **SourceConnection** .  
   
  **ErrorMessageLanguagesList**  
- Haga clic en el botón para examinar **(…)** para seleccionar los idiomas para los que se van a copiar mensajes de error definidos por el usuario al servidor de destino. Debe existir una versión en us_english (página de códigos 1033) del mensaje en el servidor de destino para poder transferir versiones en otros idiomas del mensaje a ese servidor.  
+ Haga clic en el botón Examinar **(…)** para seleccionar los idiomas para los que se van a copiar mensajes de error definidos por el usuario al servidor de destino. Debe existir una versión en us_english (página de códigos 1033) del mensaje en el servidor de destino para poder transferir versiones en otros idiomas del mensaje a ese servidor.  
   
 > [!NOTE]  
 >  Para poder seleccionar los mensajes de error que se van a copiar, debe especificar el parámetro **SourceConnection** .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de tareas de mensajes de Error de transferencia &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea Transferir mensajes de error &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
  [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)   
- [Editor de tareas de mensajes de Error de transferencia &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea Transferir mensajes de error &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
  [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
   
   

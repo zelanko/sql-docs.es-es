@@ -15,12 +15,12 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797883"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201794"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al elemento secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar las funciones de agregado en el elemento secundario **Recordset** o un previamente formados **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
@@ -65,7 +65,7 @@ SHAPE child-command [AS] child-alias
  Por ejemplo:  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
  Independientemente de qué manera el elemento primario **Recordset** se forma (mediante COMPUTE o APPEND), contendrá una columna de capítulo se usa para relacionarla con un elemento secundario **Recordset**. Si lo desea, el elemento primario **Recordset** también puede contener columnas que contienen agregados (SUM, MIN, MAX etc.) a través de las filas secundarias. El elemento primario y secundario **Recordset** pueden contener columnas que contienen una expresión en la fila de la **Recordset**, así como las columnas que son nuevos e inicialmente vacía.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactertrans.f1
@@ -18,19 +17,19 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70fbac16859572c8b18f62fe7645ac6f1c5af77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11aaa19aebce21cc8a0ba08038c1dc58f245ec2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055882"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761827"
 ---
 # <a name="character-map-transformation"></a>Transformación Mapa de caracteres
   La transformación Mapa de caracteres se aplica a funciones de cadena que operan sobre datos de caracteres, como la conversión de minúsculas a mayúsculas. Esta transformación solo opera en datos de columnas con un tipo de datos de cadena.  
   
  La transformación Mapa de caracteres puede convertir datos de columna in situ o agregar una columna a la salida de transformación y colocar los datos convertidos en la nueva columna. Puede aplicar distintos conjuntos de operaciones de asignación a la misma columna de entrada y colocar los resultados en columnas diferentes. Por ejemplo, puede convertir la misma columna a mayúsculas y minúsculas, y almacenar el resultado en dos columnas diferentes.  
   
- En algunas situaciones, la asignación puede provocar un truncamiento de datos. Por ejemplo, se puede producir un truncamiento cuando se asignan caracteres de un byte a caracteres representados con varios bytes. La transformación Mapa de caracteres incluye una salida de error que se puede usar para dirigir los datos truncados a otra salida distinta. Para obtener más información, vea [Control de errores en los datos](../error-handling-in-data.md).  
+ En algunas situaciones, la asignación puede provocar un truncamiento de datos. Por ejemplo, se puede producir un truncamiento cuando se asignan caracteres de un byte a caracteres representados con varios bytes. La transformación Mapa de caracteres incluye una salida de error que se puede usar para dirigir los datos truncados a otra salida distinta. Para más información, vea [Control de errores en los datos](../error-handling-in-data.md).  
   
  Esta transformación tiene una entrada, una salida y una salida de error.  
   

@@ -13,12 +13,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528739"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Cuadros de diálogo Crear relación de atributo y Editar relación de atributo (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Crear relación de atributo** para definir nuevas relaciones de atributo y el cuadro de diálogo **Editar relación de atributo** para cambiar una relación de atributo. Para obtener más información, vea [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48141595"
   
 2.  En la barra de herramientas, haga clic en el icono Nueva relación de atributo.  
   
-     O bien  
+     -o bien-  
   
      En el diagrama de relación de los atributos o en la lista **Atributos** , haga clic con el botón derecho en un atributo y, después, haga clic en **Nueva relación de atributo**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48141595"
 2.  En el diagrama de relación de los atributos o en la lista **Relación de los atributos** , haga clic con el botón derecho en una relación de atributo y, después, haga clic en **Editar relación de atributo**.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  En el grupo **Atributo de origen** , especifica el nombre del atributo desde el que se origina la relación.  
   
  En el grupo **Atributo relacionado** , especifica el nombre del atributo al que se dirige la relación.  

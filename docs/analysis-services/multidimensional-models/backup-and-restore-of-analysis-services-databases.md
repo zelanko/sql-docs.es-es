@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad y restauración de bases de datos de Analysis Services | Documentos de Microsoft
+title: Copia de seguridad y restauración de bases de datos de Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e43357e843f28133f7bb2f5cd9db078ee4bace27
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa0e023b32418cd5eabee04819213955c517e0ee
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024452"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984006"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34024452"
   
  Para realizar una copia de seguridad completa que incluya los datos de origen, debe hacer una copia de seguridad de la base de datos que contiene los datos de detalle. Concretamente, si usa el almacenamiento de base de datos ROLAP o DirectQuery, los datos detallados se almacenan en una base de datos relacional de SQL Server que es distinta de la base de datos de Analysis Services. De lo contrario, si todos los objetos son tabulares o multidimensionales, la copia de seguridad de Analysis Services incluirá los metadatos y los datos de origen.  
   
- Una ventaja evidente de las copias de seguridad automáticas es que la instantánea de los datos siempre estará tan actualizada como determina la frecuencia de la copia de seguridad automática. Las programaciones automatizadas garantizan que no se olvida efectuar copias de seguridad. También puede automatizarse la restauración de una base de datos; ésta puede ser una buena forma de hacer replicaciones de los datos, pero no debe olvidar realizar la copia de seguridad del archivo de clave de cifrado en la instancia donde se hace la replicación. La característica de sincronización se ocupa de la replicación de las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero solo para los datos obsoletos. Todas las características aquí mencionadas pueden implementarse a través de la interfaz de usuario, por medio de comandos XML/A o mediante programación que se ejecuta a través de AMO. Para obtener más información acerca de las estrategias de copia de seguridad, vea el tema acerca de las [estrategias de copia de seguridad con SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888).  
+ Una ventaja evidente de las copias de seguridad automáticas es que la instantánea de los datos siempre estará tan actualizada como determina la frecuencia de la copia de seguridad automática. Las programaciones automatizadas garantizan que no se olvida efectuar copias de seguridad. También puede automatizarse la restauración de una base de datos; ésta puede ser una buena forma de hacer replicaciones de los datos, pero no debe olvidar realizar la copia de seguridad del archivo de clave de cifrado en la instancia donde se hace la replicación. La característica de sincronización se ocupa de la replicación de las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero solo para los datos obsoletos. Todas las características aquí mencionadas pueden implementarse a través de la interfaz de usuario, por medio de comandos XML/A o mediante programación que se ejecuta a través de AMO.
   
  En este tema se incluyen las secciones siguientes:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34024452"
  Los administradores pueden hacer copias de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un único archivo de copia de seguridad de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), independientemente del tamaño de la base de datos. Para obtener instrucciones paso a paso, vea en TechMantra [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Cómo hacer una copia de seguridad de una base de datos de Analysis Services) y [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)(Automatizar la copia de seguridad de una base de datos de Analysis Services).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilizado para cargar y consultar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelos de datos en un entorno de SharePoint, carga sus modelos desde bases de datos de contenido de SharePoint. Estas bases de datos de contenido son relacionales y se ejecutan en el motor de base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por tanto, no hay ninguna estrategia de copia de seguridad y restauración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si dispone de un plan de recuperación ante desastres para contenido de SharePoint, ese plan abarca los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenados en las bases de datos de contenido.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], que se usa para cargar y consultar modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un entorno de SharePoint, carga sus modelos desde bases de datos de contenido de SharePoint. Estas bases de datos de contenido son relacionales y se ejecutan en el motor de base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por tanto, no hay ninguna estrategia de copia de seguridad y restauración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si dispone de un plan de recuperación ante desastres para contenido de SharePoint, ese plan abarca los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenados en las bases de datos de contenido.  
   
  **Particiones remotas**  
   

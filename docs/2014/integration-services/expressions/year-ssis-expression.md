@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], YEAR
@@ -14,12 +13,12 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0276dd964bd0ed5a4ea2a703ffc6d32d1ed52bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f228aa02e5537ddd52a7acb0fe4c7d4fbb855d5b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140325"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767906"
 ---
 # <a name="year-ssis-expression"></a>YEAR (expresión de SSIS)
   Devuelve un entero que representa la parte del año de una fecha.  
@@ -41,10 +40,10 @@ YEAR(date)
 ## <a name="remarks"></a>Comentarios  
  YEAR devuelve un resultado NULL si el valor del argumento es NULL.  
   
- Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente en uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
+>  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente a uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
   
  Utilizar la función YEAR es más sencillo pero equivalente a utilizar la función DATEPART("Year", date).  
   

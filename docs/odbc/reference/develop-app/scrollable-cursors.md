@@ -14,21 +14,21 @@ ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70d02b933104a3106d95f6760cbdcf0abb347716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791563"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513478"
 ---
 # <a name="scrollable-cursors"></a>Cursores desplazables
 En las aplicaciones modernas basadas en pantalla, el usuario se desplaza hacia atrás y hacia delante a través de los datos. Para tales aplicaciones, devolver a una fila capturada anteriormente es un problema. Una posibilidad consiste en Cerrar y volver a abrir el cursor y, a continuación, recuperar las filas hasta que llega a la fila requiere el cursor. Otra posibilidad consiste en leer el conjunto de resultados, lo almacena en caché localmente e implementar el desplazamiento en la aplicación. Ambas posibilidades bien solo funcionan con conjuntos de resultados pequeños y la posibilidad de este última es difícil de implementar. Una solución mejor es usar un *cursor desplazable,* que puede avanzar y retroceder en el conjunto de resultados.  
   
  Un *cursor desplazable* se usa normalmente en aplicaciones modernas basadas en pantalla en la que el usuario desplaza hacia delante y hacia atrás a través de los datos. Sin embargo, las aplicaciones deben usar los cursores desplazables solo cuando los cursores de solo avance no realizará el trabajo, como los cursores desplazables son generalmente más caros que los cursores de solo avance.  
   
- ¿La capacidad de desplazarse hacia atrás provoca una pregunta no se aplica a los cursores de solo avance: un cursor desplazable debe detectar los cambios realizados a las filas recuperadas previamente? ¿Es decir, que debe detectar las filas actualizadas, recién insertadas y eliminadas?  
+ La capacidad de retroceder plantea una pregunta no se aplica a los cursores de solo avance: ¿Un cursor desplazable debe detectar los cambios realizados en las filas recuperadas previamente? ¿Es decir, que debe detectar las filas actualizadas, recién insertadas y eliminadas?  
   
- Esta pregunta se produce porque la definición de un resultado configurado: el conjunto de filas que coinciden con determinados criterios, no expone cuando las filas se comprueban para ver si coinciden con ese criterio, ni tampoco estado si filas deben contener los mismos datos cada vez que se han capturado. La omisión anterior hace posible para los cursores desplazables detectar si las filas se han insertado o eliminado, aunque esto último hace les permite detectar datos actualizados.  
+ Esta pregunta se produce porque la definición de un conjunto de resultados: el conjunto de filas que coinciden con determinados criterios - no se expone cuando las filas se comprueban para ver si coinciden con ese criterio, ni tampoco si filas deben contener los mismos datos cada vez que se han capturado de estado. La omisión anterior hace posible para los cursores desplazables detectar si las filas se han insertado o eliminado, aunque esto último hace les permite detectar datos actualizados.  
   
  La capacidad para detectar los cambios a veces es útil, a veces no. Por ejemplo, una aplicación de contabilidad necesita un cursor que se pasa por alto todos los cambios; los libros en pantalla de equilibrio es imposible si el cursor muestra los cambios más recientes. Por otro lado, un sistema de reserva de la línea aérea necesita un cursor que muestra los últimos cambios a los datos; Sin este tipo de cursor, debe requery continuamente la base de datos para mostrar la disponibilidad de vuelos más actualizada.  
   

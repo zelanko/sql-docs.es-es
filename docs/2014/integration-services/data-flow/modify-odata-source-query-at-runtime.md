@@ -4,31 +4,30 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093905"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804857"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modificar una consulta de origen OData en tiempo de ejecución
   Puede modificar la consulta de origen OData en tiempo de ejecución si agrega una expresión a la propiedad **[OData Source].[Query]** de la tarea Flujo de datos.  
   
- Tenga en cuenta que las columnas deben seguir siendo iguales que las que se usaron en tiempo de diseño; de lo contrario, obtendrá un error cuando se ejecute el paquete. Asegúrese de especificar las mismas columnas (en el mismo orden) cuando use la opción de consulta $select. Una alternativa más segura a la opción $select consiste en anular la selección de las columnas que no desea directamente desde la interfaz de usuario del componente de origen.  
+ Tenga en cuenta que las columnas deben seguir siendo iguales que las que se usaron en tiempo de diseño; de lo contrario, obtendrá un error cuando se ejecute el paquete. Asegúrese de especificar las mismas columnas (en el mismo orden) cuando use la opción de consulta $select. Una alternativa más segura a la opción $select consiste en anular la selección de las columnas que no quiera usar directamente desde la interfaz de usuario del componente de origen.  
   
  Hay varias maneras de establecer de forma dinámica el valor de consulta en tiempo de ejecución. A continuación se muestran algunos de los métodos más frecuentes.  
   
 ## <a name="exposing-the-query-as-a-parameter"></a>Exponer la consulta como un parámetro  
  El procedimiento siguiente tiene pasos para exponer la consulta usada por un componente de origen OData como un parámetro del paquete.  
   
-1.  Haga clic con el botón secundario en **Tarea Flujo de datos** y seleccione la opción **Parametrizar…** .  
+1.  Haga clic con el botón derecho en **Tarea Flujo de datos** y seleccione la opción **Parametrizar…**.  
   
 2.  En el diálogo **Parametrizar**, seleccione **[\<Nombre del componente de origen OData>].[Query]** para **Propiedad**.  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48093905"
   
 2.  En la ventana **Propiedades** , resalte la propiedad **Expresiones** .  
   
-3.  Haga clic en el botón … (puntos suspensivos) para abrir el cuadro de diálogo **Editor de expresiones de propiedad**.  
+3.  Haga clic en el... botón (puntos suspensivos) para que aparezca el **Editor de expresiones de propiedad**.  
   
 4.  Seleccione la propiedad **[OData Source].[Query]** .  
   
-5.  Haga clic en el botón … (puntos suspensivos) en el cuadro **Expresión**.  
+5.  Haga clic en el... botón (puntos suspensivos) **expresión**.  
   
 6.  Escriba la **expresión**.  
   

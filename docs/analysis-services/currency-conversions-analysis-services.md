@@ -1,5 +1,5 @@
 ---
-title: Conversiones de moneda (Analysis Services) | Documentos de Microsoft
+title: Conversiones de moneda (Analysis Services) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebcce8d042b7a87771f99bac53b78bb59af6f7e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3e9934345856e3af3c10be5bf2cea38b259ec09d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015772"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207214"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversiones de moneda (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

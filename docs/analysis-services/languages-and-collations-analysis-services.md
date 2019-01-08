@@ -1,5 +1,5 @@
 ---
-title: Idiomas e intercalaciones (Analysis Services) | Documentos de Microsoft
+title: Idiomas e intercalaciones (Analysis Services) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1b066f23c0c5a4e92b6b1f86886cc54c7451f6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018602"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214317"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Las propiedades**Language** y **Collation** se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar posteriormente en diferentes niveles de la jerarquía de objetos.  
   
- (Solo) en un modelo multidimensional, se pueden establecer estas propiedades en una base de datos o un cubo; también se pueden establecer en traducciones que se crean para objetos dentro de un cubo. En un modelo tabular, el idioma y la intercalación se heredan del sistema operativo host.  
+ En una solución multidimensional (solo), puede establecer estas propiedades en una base de datos o un cubo - también se puede establecer en traducciones que se crean para los objetos dentro de un cubo. En un modelo tabular, el idioma y la intercalación se heredan del sistema operativo host.  
   
  Al establecer **Language** y **Collation** en un modelo multidimensional, se especifica la configuración que emplea el modelo de datos durante el procesamiento y la ejecución de la consulta o se equipa un modelo con varias traducciones para que los altavoces en idioma extranjero puedan trabajar con el modelo en su idioma nativo. El establecimiento explícito de las propiedades **Language** y **Collation** en un objeto (base de datos, modelo o cubo) se destina a situaciones en las que el entorno de desarrollo y el servidor de producción se establecen para diferentes configuraciones regionales y se quiere tener la seguridad de que la combinación de idioma e intercalación coincide con la del entorno de destino.  
   
 ##  <a name="bkmk_object"></a> Objetos que admiten propiedades de idioma e intercalación  
- Las propiedades**Language** y **Collation** suelen exponerse unidas: donde se puede establecer **Language**, también se puede establecer **Collation**.  
+ **Lenguaje** y **intercalación** propiedades suelen exponerse unidas: donde puede establecer **lenguaje**, también puede establecer **intercalación**.  
   
  Puede establecer **Language** y **Collation** en estos objetos:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34018602"
 ###  <a name="bkmk_lcid"></a> El valor de la propiedad Language es un identificador de configuración regional (LCID)  
  Los valores válidos incluyen cualquier LCID que aparezca en la lista desplegable. En Management Studio y SQL Server Data Tools, los LCID se representan en equivalentes de cadena. Aparecen los mismos idiomas en cualquier sitio en que se exponga la propiedad **Language** , independientemente de la herramienta. Al contar con una lista idéntica de idiomas se garantiza que las traducciones se pueden implementar y probar de forma coherente en todo el modelo.  
   
- Aunque Analysis Services muestra los idiomas por nombre, el valor real almacenado para la propiedad es un LCID. Al establecer una propiedad de idioma mediante programación o mediante el archivo msmdsrv.ini, use el [identificador de configuración regional (LCID)](http://en.wikipedia.org/wiki/Locale) como valor. Un LCID es un valor de 32 bits que consta de un identificador de idioma, un identificador de ordenación y bits reservados que identifican un idioma determinado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza LCID con el fin de especificar el idioma seleccionado para las instancias y los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Aunque Analysis Services muestra los idiomas por nombre, el valor real almacenado para la propiedad es un LCID. Al establecer una propiedad de idioma mediante programación o mediante el archivo msmdsrv.ini, use el [identificador de configuración regional (LCID)](http://en.wikipedia.org/wiki/Locale) como valor. Un LCID es un valor de 32 bits que consta de un identificador de idioma, un identificador de ordenación y bits reservados que identifican un idioma determinado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza los LCID para especificar el idioma seleccionado para instancias y objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Puede establecer el LCID con formatos hexadecimales o decimales. Entre los ejemplos de valores válidos para la propiedad **Language** se incluyen:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34018602"
 ##  <a name="bkmk_collations"></a> Compatibilidad con intercalaciones en Analysis Services  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa Windows (versiones _90 y _100) e intercalaciones binarias exclusivamente. No utiliza intercalaciones de SQL Server heredadas. Dentro de un cubo, se utiliza una única intercalación en su totalidad, a excepción de las traducciones en el nivel de atributo. Para obtener más información sobre cómo definir traducciones de atributos, vea [Compatibilidad con traducción en Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
- Las intercalaciones controlan la distinción de mayúsculas y minúsculas de todas las cadenas en un alfabeto bicameral del idioma, a excepción de los identificadores de objeto. Si usa mayúsculas y minúsculas en un identificador de objeto, tenga en cuenta que la distinción entre mayúsculas y minúsculas de los identificadores de objeto no está determinada por la intercalación, sino por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para los identificadores de objeto compuestos en el alfabeto del inglés, los identificadores de objeto no distinguen nunca mayúsculas de minúsculas, independientemente de la intercalación. Los alfabetos bicamerales del cirílico y de otros idiomas hacen lo contrario (siempre distinguen mayúsculas de minúsculas). Para obtener información detallada, vea [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
+ Las intercalaciones controlan la distinción de mayúsculas y minúsculas de todas las cadenas en un alfabeto bicameral del idioma, a excepción de los identificadores de objeto. Si usa mayúsculas y minúsculas en un identificador de objeto, tenga en cuenta que la distinción entre mayúsculas y minúsculas de los identificadores de objeto no está determinada por la intercalación, sino por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para los identificadores de objeto compuestos en el alfabeto del inglés, los identificadores de objeto no distinguen nunca mayúsculas de minúsculas, independientemente de la intercalación. Los alfabetos bicamerales del cirílico y de otros idiomas hacen lo contrario (siempre distinguen mayúsculas de minúsculas). Para obtener información detallada, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
  La intercalación de Analysis Services es compatible con el motor de bases de datos relacionales de SQL Server, dando por hecho que se mantiene la paridad en las opciones de ordenación que seleccione para cada servicio. Por ejemplo, si la base de datos relacionales distingue acentos, debe configurar el cubo de la misma manera. Pueden producirse problemas cuando las configuraciones de intercalación difieren. Para obtener un ejemplo y soluciones alternativas, vea [Espacios en blanco en una cadena Unicode tienen distintos resultados de procesamiento en función de la intercalación](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Para obtener más información sobre la intercalación y el motor de base de datos, vea [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -124,7 +124,7 @@ ms.locfileid: "34018602"
   
 -   Volver a procesar las particiones y dimensiones después de actualizar la intercalación.  
   
- Puede usar SQL Server Management Studio o PowerShell AMO para cambiar la configuración de idioma o intercalación predeterminada en el nivel de servidor. Como alternativa, puede modificar el  **\<idioma >** y  **\<nombreDeIntercalación >** valores en el archivo msmdsrv.ini, especificando el LCID del idioma.  
+ Puede usar SQL Server Management Studio o PowerShell AMO para cambiar la configuración de idioma o intercalación predeterminada en el nivel de servidor. Como alternativa, puede modificar el  **\<lenguaje >** y  **\<CollationName >** valores en el archivo msmdsrv.ini, especificando el LCID del idioma.  
   
 1.  En Management Studio, haga clic con el botón derecho en el nombre del servidor | **Propiedades** | **Idioma/Intercalación**.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "34018602"
   
 1.  En Management Studio, haga clic con el botón derecho en la base de datos | **Incluir la base de datos como** | **ALTER para** | **Nueva ventana del Editor de consultas**.  
   
-2.  Busque el idioma o intercalación existente y reemplácelo por un valor alternativo.  
+2.  Busque y reemplace el idioma o la intercalación existente con otro valor.  
   
 3.  Presione F5 para ejecutar el script.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "34018602"
   
 ## <a name="see-also"></a>Vea también  
  [Escenarios de globalización para Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Sugerencias de globalización y mejores prácticas & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
- [Compatibilidad con la intercalación y Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

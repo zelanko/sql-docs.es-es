@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79e21716c4d484aa9dfba994bf1b970fedfe4235
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350825"
 ---
 # <a name="distributed-replay-security"></a>Seguridad de reproducción distribuida
   Antes de instalar y usar la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, debe revisar la importante información de seguridad en este tema. Aquí se describen los pasos para la configuración de seguridad posteriores a la instalación, necesarios para poder utilizar Distributed Replay. En este tema también se describen consideraciones importantes relacionadas con la protección de datos y pasos importantes de eliminación.  
@@ -29,7 +29,7 @@ ms.locfileid: "48181407"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|Puede ser una cuenta de usuario de dominio o una cuenta de usuario local. Si usa una cuenta de usuario local, el controlador, el cliente, y el destino SQL Server deben ejecutarse en el mismo equipo.<br /><br /> **\*\* Nota de seguridad \*\*** Se recomienda que la cuenta no sea un miembro del grupo local Administradores de Windows.|  
 |Cuenta de usuario interactivo que se usa para ejecutar la herramienta de administración de Distributed Replay|Puede ser una cuenta de usuario local o de usuario de dominio. Para utilizar una cuenta de usuario local, la herramienta de administración y el controlador se deben estar ejecutando en el mismo equipo.|  
   
- **Importante**: al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+ **Importante**: Al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
   
 -   Cuenta de usuario de dominio  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48181407"
   
  Para configurar los permisos DCOM del controlador, siga estos pasos.  
   
-1.  **Abra dcomcnfg.exe, el complemento Servicios de componentes**: esta es la herramienta que se usa para configurar permisos DCOM.  
+1.  **Abra dcomcnfg.exe, el componente Servicios de complemento**: Esta es la herramienta que se usa para configurar los permisos de DCOM.  
   
     1.  En el equipo del controlador, haga clic en **Inicio**.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "48181407"
   
     3.  Presione ENTRAR.  
   
-2.  **Configure los permisos DCOM de todos los equipos**: conceda los permisos correspondientes DCOM a todos los equipos para cada cuenta que aparece en la tabla siguiente. Para obtener más información sobre cómo establecer permisos a todos los equipos, vea [Lista de comprobación: administrar aplicaciones DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurar los permisos de DCOM de todo el equipo**: Conceda los permisos de DCOM de todo el equipo correspondientes para cada cuenta que aparece en la tabla siguiente. Para obtener más información acerca de cómo establecer permisos de todo el equipo, consulte [lista de comprobación: Administrar aplicaciones DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configure los permisos DCOM específicos de la aplicación**: conceda los permisos correspondientes DCOM específicos de la aplicación para cada cuenta que aparece en la tabla siguiente. El nombre de aplicación DCOM para el servicio del controlador es **DReplayController**. Para obtener más información sobre cómo establecer permisos específicos de la aplicación, vea [Lista de comprobación: administrar aplicaciones DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurar los permisos DCOM específicos de la aplicación**: Conceda los permisos de DCOM específicos de la aplicación correspondientes para cada cuenta que aparece en la tabla siguiente. El nombre de aplicación DCOM para el servicio del controlador es **DReplayController**. Para obtener más información acerca de cómo establecer permisos específicos de la aplicación, consulte [lista de comprobación: Administrar aplicaciones DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  En la tabla siguiente se describen los permisos DCOM necesarios para la cuenta de usuario interactivo de herramienta de administración y las cuentas de servicio de cliente:  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48181407"
 -   Elimine cualquier archivo de seguimiento, intermedio, de distribución y de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se haya utilizado para realizar pruebas. Los archivos intermedios y de distribución se almacenan en el directorio de trabajo del controlador y el cliente, respectivamente.  
   
 ## <a name="see-also"></a>Vea también  
- [Reproducción distribuida de SQL Server](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Instalar Distributed Replay](install-distributed-replay-overview.md)  
   
   

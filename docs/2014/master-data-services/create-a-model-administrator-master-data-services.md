@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
@@ -13,12 +12,12 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4032a624d49cbf7c70d710b6b4df7373353f1d2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c0ef9c1b18c38b38ddefe900018bd0323956c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797679"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Crear un administrador de modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un administrador de modelo cuando desee que un grupo o usuario tenga **actualización** permiso para todos los objetos de uno o varios modelos.  
@@ -61,10 +60,10 @@ ms.locfileid: "48099165"
  Hay una excepción: si el usuario tiene **actualización** permiso asignado a una jerarquía **raíz** en el **miembros de la jerarquía** ficha, el usuario se sigue considerando un modelo Administrador.  
   
 ## <a name="see-also"></a>Vea también  
- [Los administradores &#40;Master Data Services&#41;](administrators-master-data-services.md)   
+ [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md)   
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Asignar permisos de miembro de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Permisos de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Permisos de miembros de jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [Asignar los permisos de los miembros de una jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Permisos de objeto del modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Permisos de miembros de la jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

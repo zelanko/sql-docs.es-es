@@ -14,17 +14,17 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd35a8bd0e2a9280d16614a3979dc2af05487e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513994"
 ---
 # <a name="outer-joins"></a>Combinaciones externas
 ODBC admite el SQL-92 dejado, sintaxis de combinación externa completa y correcta. Es la secuencia de escape para las combinaciones externas  
   
- **{jugo** *outer-join ***}**  
+ **{jugo** _combinación externa_**}**  
   
  donde *combinación externa* es  
   
@@ -32,7 +32,7 @@ ODBC admite el SQL-92 dejado, sintaxis de combinación externa completa y correc
   
  *referencia de tabla* especifica un nombre de tabla y *condición de búsqueda* especifica la condición de combinación entre la *referencias de tabla*.  
   
- Una solicitud de combinación externa debe aparecer después de la **FROM** palabra clave y antes de la **donde** cláusula (si existe). Para obtener información de la sintaxis completa, consulte [secuencia de Escape de combinación externa](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) en Apéndice C: SQL gramática.  
+ Una solicitud de combinación externa debe aparecer después de la **FROM** palabra clave y antes de la **donde** cláusula (si existe). Para obtener información de la sintaxis completa, consulte [secuencia de Escape de combinación externa](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) en el apéndice C: Gramática de SQL.  
   
  Por ejemplo, las siguientes instrucciones SQL crean el mismo conjunto de resultados que muestra a todos los clientes e indica que tiene pedidos pendientes. La primera instrucción usa la sintaxis de la secuencia de escape. La segunda instrucción utiliza la sintaxis nativa para Oracle y no es interoperable.  
   

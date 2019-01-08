@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538591"
 ---
 # <a name="cross-container-transactions"></a>Transacciones entre contenedores
   Las transacciones entre contenedores son transacciones de usuario implícitas o explícitas que incluyen llamadas a procedimientos almacenados compilados de forma nativa u operaciones en tablas optimizadas para memoria.  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  La coherencia transaccional para un conjunto de lecturas se refiere a si se garantiza que todas las lecturas de versiones de fila incluirán actualizaciones del mismo conjunto de transacciones.  
   
  La estabilidad garantiza que el sistema informa a la transacción T acerca de la lectura de los datos.  
- La estabilidad se refiere a si las lecturas de transacciones son repetibles. Es decir, si las lecturas se repitieran, ¿devolverían las mismas filas y versiones de fila?  
+ Estabilidad se refiere a si las lecturas de transacciones son repetibles. Es decir, si las lecturas se repitieran, ¿devolverían las mismas filas y versiones de fila?  
   
  Algunas garantías hacen referencia a la hora de finalización lógica de la transacción. En general, la hora de finalización lógica es aquella en que la transacción se confirma en la base de datos. Si la transacción tiene acceso a tablas optimizadas para memoria, la hora de finalización lógica es técnicamente el principio de la fase de validación. (Para obtener más información, vea la explicación de duración de la transacción en [transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

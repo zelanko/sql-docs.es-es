@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050215"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801297"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Administrar sesiones de eventos en el Explorador de objetos
   En este tema se describen las acciones que se pueden llevar a cabo en el **Explorador de objetos** que afectan a una sesión de eventos extendidos:  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Importar una plantilla de sesión de eventos extendidos  
  Mediante el **Explorador de objetos**, puede importar una plantilla para una sesión de eventos extendidos. Por ejemplo, puede que desee realizar esta operación para crear una sesión de una plantilla que se exportó desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para importar una sesión de eventos extendidos, debe tener el necesario `ALTER ANY EVENT SESSION` permisos.  
+ Para importar una sesión de eventos extendidos, debe tener los permisos necesarios para `ALTER ANY EVENT SESSION`.  
   
  Antes de importar un archivo de plantilla, asegúrese de que el archivo procede de un origen de confianza. Los archivos de plantilla deben guardarse en una ubicación que use el sistema de archivos NTFS y donde el acceso está restringido a los usuarios que estén autorizados para ver la información.  
   
@@ -97,7 +96,7 @@ STATE = STOP
   
 4.  Expanda la lista desplegable **Plantilla** .  
   
-5.  Haga clic en **\<File From … (Archivo de …) >Abrir** y busque la sesión (archivo XML) que quiere importar.  
+5.  Haga clic en **\<File From ... (Archivo de ...) >Abrir** y busque la sesión (archivo XML) que quiera importar.  
   
  La sesión aparecen bajo el nodo **Sesiones** . De forma predeterminada, no se inicia la sesión.  
   

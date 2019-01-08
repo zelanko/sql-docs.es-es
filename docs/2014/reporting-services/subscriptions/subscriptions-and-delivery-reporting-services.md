@@ -22,12 +22,12 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b9aad137958510f623308ef83f5d18c74d02164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fe55455a8302f4ca8a2784899211b772f2f09e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213494"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
   Una suscripción [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que se especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes.  
@@ -38,7 +38,7 @@ ms.locfileid: "48148935"
   
  Las suscripciones no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>y [usar PowerShell para Change y List Reporting Services Subscription Owners and Run una suscripción](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **En este tema:**  
@@ -104,8 +104,8 @@ ms.locfileid: "48148935"
 |Requisito|Descripción|  
 |-----------------|-----------------|  
 |Permisos|Debe tener acceso al informe. Para poder suscribirse a un informe, debe tener permiso para verlo.<br /><br /> La asignación de roles debe incluir la tarea "Administrar suscripciones individuales".|  
-|Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. La opción**Eventos programados y entrega de informes** debe estar habilitada en el servidor de informes. Para obtener más información, consulte [crear y administrar suscripciones para servidores de informes de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).|  
-|Valores dependientes de usuario en un informe|Únicamente en el caso de las suscripciones estándar, es posible crear suscripciones a informes que incluyan información de cuenta de usuario en un filtro o como texto que aparezca en el informe. En el informe, se especifica el nombre de cuenta de usuario a través de un `User!UserID` expresión que se resuelve como el usuario actual. Cuando se crea una suscripción, se considera que el usuario actual es el que la crea.|  
+|Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. La opción**Eventos programados y entrega de informes** debe estar habilitada en el servidor de informes. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).|  
+|Valores dependientes de usuario en un informe|Únicamente en el caso de las suscripciones estándar, es posible crear suscripciones a informes que incluyan información de cuenta de usuario en un filtro o como texto que aparezca en el informe. En el informe, el nombre de la cuenta de usuario se especifica mediante una expresión `User!UserID` que se resuelve en el usuario actual. Cuando se crea una suscripción, se considera que el usuario actual es el que la crea.|  
 |Sin seguridad de elemento de modelo|No es posible suscribirse a un informe del Generador de informes que utilice como origen de datos un modelo si éste contiene una configuración de seguridad de elementos de modelo. Esta restricción solo se aplica a los informes que utilizan seguridad de elementos de modelo.|  
 |Valores de parámetros|Si el informe utiliza parámetros, se debe especificar un valor de parámetro con el propio informe o en la suscripción que defina. Si se han definido valores predeterminados en el informe, puede establecer el valor del parámetro para que utilice la opción predeterminada.|  
   

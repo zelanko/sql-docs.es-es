@@ -11,12 +11,12 @@ ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538129"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a una base de datos de modelo tabular (SSAS)
   Después de generar un modelo tabular e implementarlo en un servidor de modo tabular de Analysis Services, debe establecer los permisos que permiten que esté disponible para las aplicaciones cliente. Este tema explica cómo establecer permisos y cómo conectarse a una base de datos de aplicaciones cliente.  
@@ -51,7 +51,7 @@ ms.locfileid: "48100095"
   
 1.  En Administración central, abra la página Configurar cuentas de servicio.  
   
-2.  Seleccione el grupo de aplicaciones de servicio que utiliza Excel Services. Puede ser **Grupo de aplicaciones de servicio: Sistema de servicios web de SharePoint** o un grupo de aplicaciones personalizadas. La cuenta administrada que utiliza Excel Services aparecerá en la página.  
+2.  Seleccione el grupo de aplicaciones de servicio que utiliza Excel Services. Es posible que **grupo de aplicaciones de servicio - sistema de SharePoint Web Services** o un grupo de aplicaciones personalizadas. La cuenta administrada que utiliza Excel Services aparecerá en la página.  
   
      Para las granjas de servidores de SharePoint que incluyen Reporting Services en modo de SharePoint, obtenga también la información de cuenta para la aplicación de servicio de Reporting Services.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "48100095"
  En SharePoint, este error de Microsoft Excel tiene lugar cuando se intenta llevar a cabo una interacción con los datos, por ejemplo filtrar los datos, en una tabla dinámica que utilice datos del modelo. El error se produce porque el usuario no tiene suficientes permisos de SharePoint en el libro. El usuario debe tener permisos de **Lectura** o superiores. Los permisos**Solo ver** no son suficientes para el acceso a los datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementación de la solución de modelo tabular &#40;Tabular de SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

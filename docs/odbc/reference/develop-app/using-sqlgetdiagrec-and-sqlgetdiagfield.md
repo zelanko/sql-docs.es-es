@@ -17,12 +17,12 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626043"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204704"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Uso de SQLGetDiagRec y SQLGetDiagField
 Las aplicaciones llaman a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información de diagnóstico. Estas funciones aceptan un identificador de entorno, conexión, instrucción o descriptor y devuelven los diagnósticos desde la función que se usó por última vez ese identificador. Los diagnósticos de un determinado identificador de la sesión se descartan cuando se invoque una función nueva con el mismo identificador. Si la función devuelve varios registros de diagnóstico, la aplicación llama a estas funciones varias veces; el número total de registros de estado se recupera mediante una llamada a **SQLGetDiagField** para el registro de encabezado (registro 0) con la opción SQL_DIAG_NUMBER.  

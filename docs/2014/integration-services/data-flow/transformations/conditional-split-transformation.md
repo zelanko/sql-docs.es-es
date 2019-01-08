@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814917"
 ---
 # <a name="conditional-split-transformation"></a>División condicional, transformación
   La transformación División condicional puede dirigir filas de datos a salidas diferentes en función del contenido de los datos. La implementación de la transformación División condicional es similar a una estructura de decisión CASE de un lenguaje de programación. Evalúa expresiones y, en función de los resultados, dirige la fila de datos a la salida especificada. Esta transformación también proporciona una salida predeterminada, de modo que si una fila no coincide con ninguna expresión, se dirige a la salida predeterminada.  
@@ -47,7 +46,7 @@ ms.locfileid: "48073585"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye funciones y operadores que se pueden utilizar para crear expresiones que evalúen los datos de entrada y dirijan los datos de salida. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md).  
   
- La transformación División condicional incluye la `FriendlyExpression` propiedad personalizada. Esta propiedad se puede actualizar a través de una expresión de propiedad, al cargar el paquete. Para más información, vea [Usar expresiones de propiedad en paquetes](../../expressions/use-property-expressions-in-packages.md) y [Propiedades personalizadas de transformación](transformation-custom-properties.md).  
+ La transformación División condicional incluye la propiedad personalizada `FriendlyExpression`. Esta propiedad se puede actualizar a través de una expresión de propiedad, al cargar el paquete. Para más información, vea [Usar expresiones de propiedad en paquetes](../../expressions/use-property-expressions-in-packages.md) y [Propiedades personalizadas de transformación](transformation-custom-properties.md).  
   
  Esta transformación tiene una entrada, una o más salidas, y una salida de error.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48073585"
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [División de un conjunto de datos con la transformación División condicional](conditional-split-transformation.md)  
+ [Dividir un conjunto de datos usando la transformación División condicional](conditional-split-transformation.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../data-flow.md)   

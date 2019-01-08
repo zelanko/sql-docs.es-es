@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
@@ -13,12 +13,12 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb1efc812503a34d0bace9739a3de93f85059cdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810657"
 ---
 # <a name="sql-server-transactions-object"></a>Transactions (objeto de SQL Server)
   El objeto **Transactions** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar el número de transacciones activas en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]y las consecuencias de estas transacciones en recursos, como el almacén de versiones de fila de aislamiento de instantáneas en **tempdb**. Las transacciones son unidades de trabajo lógicas; un conjunto de operaciones que deben ser todas correctas o se deben borrar de una base de datos para mantener la integridad lógica de los datos. Todas las modificaciones de datos en bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se realizan en transacciones.  
@@ -34,7 +34,7 @@ ms.locfileid: "48196485"
 |**Espacio disponible en tempdb (KB)**|Cantidad de espacio (en kilobytes) disponible en **tempdb**. Debe haber suficiente espacio disponible para incluir el almacén de versiones de nivel de aislamiento de instantáneas y todos los objetos temporales nuevos creados en esta instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tiempo mayor de ejecución de transacción**|Tiempo (en segundos) transcurrido desde el inicio de la transacción que ha estado activa durante más tiempo que las demás transacciones actuales. Este contador solo muestra actividad cuando la base de datos está en el nivel de aislamiento de instantánea de lectura confirmada activa. No registra ninguna actividad si la base de datos está en cualquier otro nivel de aislamiento.|  
 |**Transacciones de versión que no son instantáneas**|Número de transacciones activas actualmente que no utilizan el nivel de aislamiento de instantáneas y que han realizado modificaciones en los datos que, a su vez, han generado versiones de filas en el almacén de versiones de **tempdb** .|  
-|**Transacciones de instantáneas**|Número de transacciones activas actualmente que utilizan el nivel de aislamiento de instantáneas.<br /><br /> Nota: El contador del objeto **Transacciones de instantáneas** responde cuando se produce el primer acceso a los datos, no cuando se emite la instrucción `BEGIN TRANSACTION` .|  
+|**Transacciones de instantáneas**|Número de transacciones activas actualmente que utilizan el nivel de aislamiento de instantáneas.<br /><br /> Nota: El **transacciones de instantánea** objeto contador responde cuando el primer acceso a los datos se produce, no cuando el `BEGIN TRANSACTION` se emite la instrucción.|  
 |**Transactions**|Número de transacciones activas actualmente de todos los tipos.|  
 |**Frecuencia de conflictos de actualización**|Porcentaje de transacciones que utilizan el nivel de aislamiento de instantáneas y que han experimentado conflictos de actualización durante el último segundo. Un conflicto de actualización se produce cuando una transacción de nivel de aislamiento de instantáneas intenta modificar una fila ya modificada por otra transacción y que no se había confirmado al iniciar la transacción de nivel de aislamiento de instantáneas.|  
 |**Transacciones de instantáneas de actualización**|Número de transacciones activas actualmente que utilizan el nivel de aislamiento de instantáneas y que tienen datos modificados.|  

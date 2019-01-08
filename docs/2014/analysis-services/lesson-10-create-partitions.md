@@ -11,20 +11,20 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089656"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391718"
 ---
 # <a name="lesson-11-create-partitions"></a>Lección 11: Crear particiones
-  En esta lección, creará particiones para dividir la tabla Internet Sales en piezas lógicas más pequeñas que puedan procesarse (actualizarse) independientemente de otras particiones. De forma predeterminada, cada tabla que incluye en el modelo tiene una partición que incluye todas las columnas y filas de la tabla. Para las tabla Internet Sales, queremos dividir los datos por año, una partición para cada uno de los cinco años de la tabla.  Cada partición se podrá procesar entonces independientemente. Para obtener más información, consulte [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
+  En esta lección, creará particiones para dividir la tabla Internet Sales en piezas lógicas más pequeñas que puedan procesarse (actualizarse) independientemente de otras particiones. De forma predeterminada, cada tabla que se incluye en el modelo tiene una partición que incluye todas las columnas y filas de la tabla. Para la tabla Internet Sales, queremos dividir los datos por año; una partición para cada uno de cinco años de la tabla.  Cada partición se podrá procesar entonces independientemente. Para obtener más información, consulte [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
   
  Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 10: Crear jerarquías](lesson-9-create-hierarchies.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 10: Crear jerarquías](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Crear particiones  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48089656"
   
 6.  Haga clic en **Validar**.  
   
-     Observe que se muestra una advertencia en la que se indica que algunas columnas no existen en el origen. Esto es porque en [lección 3: cambiar el nombre de columnas](rename-columns.md), cambió el nombre de las columnas de la tabla de ventas por Internet en el modelo sea distinto de las columnas en el origen.  
+     Observe que se muestra una advertencia en la que se indica que algunas columnas no existen en el origen. Esto es porque en [lección 3: Cambiar el nombre de las columnas](rename-columns.md), cambió el nombre de las columnas de la tabla de ventas por Internet en el modelo sea distinto de las columnas en el origen.  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Para crear una partición para el año 2006 en la tabla de ventas por Internet  
   
@@ -154,6 +154,6 @@ ms.locfileid: "48089656"
      El **proceso datos** , a continuación, aparecerá el cuadro de diálogo y muestra los detalles del proceso para cada partición. Observe que se ha transferido un número diferente de filas para cada partición. Esto es porque cada partición incluye solamente las filas del año especificado en la cláusula WHERE de la instrucción SQL. No hay datos para el año 2010.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Para continuar este tutorial, vaya a la lección siguiente: [Lección 12: Crear roles](lesson-11-create-roles.md).  
+ Para continuar este tutorial, vaya a la lección siguiente: Lección: [Lección 12: Crear Roles](lesson-11-create-roles.md).  
   
   

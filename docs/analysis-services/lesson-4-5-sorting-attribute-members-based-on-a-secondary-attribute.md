@@ -1,5 +1,5 @@
 ---
-title: La ordenación de los miembros de atributo en función de un atributo secundario | Documentos de Microsoft
+title: Ordenar los miembros de atributo basado en un atributo secundario | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720920da4dbd935bca493e3a2e76ab9a683fff21
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 010e416115e793c46f8744c7724dc164ca01ec87
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019352"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951697"
 ---
-# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lección 4-5 - Ordenar miembros del atributo en función de un atributo secundario
+# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lección 4-5: ordenar los miembros de atributo basados en un atributo secundario
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 En la lección 3, aprendió a ordenar los miembros de atributo en función de su nombre o valor de clave. También aprendió a utilizar una clave de miembro compuesta que afectaba a todos los miembros de atributo y al criterio de ordenación. Para obtener más información, consulte [Modificar la dimensión Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Sin embargo, si ni el nombre ni la clave del atributo ofrecen el orden que desea, puede usar un atributo secundario para conseguir el criterio de ordenación deseado. Definir una relación entre los atributos, puede usar el segundo atributo para ordenar los miembros del primer atributo.  
   
 Las relaciones de atributo definen las relaciones o dependencias que existen entre los atributos. En una dimensión que se basa en una única tabla relacional, todos los atributos están generalmente relacionados entre sí a través del atributo de clave. Esto es así porque todos los atributos de una dimensión proporcionan información sobre los miembros vinculados por el atributo de clave de la dimensión a los hechos de la tabla de hechos de cada grupo de medida relacionado. En una dimensión que se basa en varias tablas, los atributos generalmente están vinculados en función de la clave de combinación entre las tablas. Si los datos subyacentes lo permiten, los atributos relacionados se pueden utilizar para especificar un criterio de ordenación. Por ejemplo, puede crear un nuevo atributo que proporciona la lógica de ordenación para un atributo relacionado.  
   
-El Diseñador de dimensiones permite definir relaciones adicionales entre atributos o cambiar las relaciones predeterminadas para incrementar el rendimiento. La limitación principal que existe al crear una relación de atributo es asegurarse de que el atributo al que se hace referencia no tiene más de un valor para ningún miembro del atributo con el que está relacionado. Cuando se define una relación entre dos atributos, se puede definir la relación como rígida o flexible, en función de si las relaciones entre los miembros cambiarán con el tiempo. Por ejemplo, un empleado podría cambiar de región de venta, pero una ciudad nunca pasará a formar parte de una provincia distinta. Si se define una relación como rígida, las agregaciones de atributos no se calculan de nuevo cada vez que se procesa la dimensión de forma incremental. No obstante, si la relación entre los miembros cambia, la dimensión debe procesarse por completo. Para obtener más información, consulte [Relaciones de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Definir relaciones de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configurar propiedades de relación de los atributos](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)y [Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
+El Diseñador de dimensiones permite definir relaciones adicionales entre atributos o cambiar las relaciones predeterminadas para incrementar el rendimiento. La limitación principal que existe al crear una relación de atributo es asegurarse de que el atributo al que se hace referencia no tiene más de un valor para ningún miembro del atributo con el que está relacionado. Cuando se define una relación entre dos atributos, se puede definir la relación como rígida o flexible, en función de si las relaciones entre los miembros cambiarán con el tiempo. Por ejemplo, un empleado podría cambiar de región de venta, pero una ciudad nunca pasará a formar parte de una provincia distinta. Si se define una relación como rígida, las agregaciones de atributos no se calculan de nuevo cada vez que se procesa la dimensión de forma incremental. No obstante, si la relación entre los miembros cambia, la dimensión debe procesarse por completo. Para obtener más información, consulte [Relaciones de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Definir relaciones de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configurar propiedades de relación de los atributos](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)y [Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
   
 En las tareas de este tema, definirá un atributo nuevo en la dimensión **Date** basado en una columna existente de la tabla de dimensiones subyacente. Utilizará este atributo nuevo para ordenar los miembros del mes natural cronológicamente en lugar de ordenarlos alfabéticamente. También definirá un atributo nuevo en la dimensión **Customer** basado en el cálculo con nombre que usará para ordenar los miembros del atributo **Commute Distance** . En las tareas del tema siguiente, aprenderá a utilizar las relaciones de atributo para incrementar el rendimiento de las consultas.  
   
@@ -79,7 +79,7 @@ En las tareas de este tema, definirá un atributo nuevo en la dimensión **Date*
   
     En la imagen siguiente se muestran los miembros de la jerarquía de atributo **Commute Distance** , ordenados según los valores ASCII de la clave de miembro.  
   
-    ![Jerarquía de atributo de distancia de viaje al trabajo](../analysis-services/media/l4-memberproperties-4.gif "jerarquía de atributo de distancia de viaje al trabajo")  
+    ![Jerarquía de atributo de distancia de viaje al trabajo](../analysis-services/media/l4-memberproperties-4.gif "jerarquía de atributo Commute Distance")  
   
 2.  Cambie a la pestaña **Estructura de dimensión** del Diseñador de dimensiones de la dimensión Customer, haga clic con el botón secundario en **CommuteDistanceSort** en la tabla **Customer** del panel **Vista del origen de datos** y, después, haga clic en **Nuevo atributo de columna**.  
   
@@ -115,10 +115,10 @@ En las tareas de este tema, definirá un atributo nuevo en la dimensión **Date*
   
     Observe que los miembros de la jerarquía de atributo ahora están clasificados en un orden lógico en función de una distancia cada vez mayor, como es muestra en la imagen siguiente.  
   
-    ![Volver a ordenar la jerarquía de atributo Commute Distance](../analysis-services/media/l4-memberproperties-5.gif "jerarquía de atributo de distancia de viaje al trabajo de Re-sorted")  
+    ![Volver a ordenar la jerarquía de atributo Commute Distance](../analysis-services/media/l4-memberproperties-5.gif "jerarquía de atributo Re-sorted Commute Distance")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

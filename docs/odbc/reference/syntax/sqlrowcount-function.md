@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654933"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502547"
 ---
 # <a name="sqlrowcount-function"></a>Función SQLRowCount
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLRowCount** devuelve el número de filas afectadas por una **actualización**, **insertar**, o **eliminar** instrucción; un SQL_ADD SQL_UPDATE_BY_BOOKMARK o SQL_ Operación DELETE_BY_BOOKMARK en **SQLBulkOperations**; o una operación SQL_UPDATE o SQL_DELETE de **SQLSetPos**.  
@@ -48,7 +48,7 @@ SQLRETURN SQLRowCount(
  [Entrada] Identificador de instrucción.  
   
  *RowCountPtr*  
- [Salida] Señala a un búfer en el que se va a devolver un recuento de filas. Para **actualización**, **insertar**, y **eliminar** las instrucciones para las operaciones SQL_ADD SQL_UPDATE_BY_BOOKMARK y SQL_DELETE_BY_BOOKMARK en  **SQLBulkOperations**y para las operaciones SQL_UPDATE o SQL_DELETE en **SQLSetPos**, el valor devuelto en **RowCountPtr* es el número de filas afectadas por la solicitud o – 1 si el número de filas afectadas no está disponible.  
+ [Salida] Señala a un búfer en el que se va a devolver un recuento de filas. Para **actualización**, **insertar**, y **eliminar** las instrucciones para las operaciones SQL_ADD SQL_UPDATE_BY_BOOKMARK y SQL_DELETE_BY_BOOKMARK en  **SQLBulkOperations**y para las operaciones SQL_UPDATE o SQL_DELETE en **SQLSetPos**, el valor devuelto en **RowCountPtr* es el número de filas afectadas por la solicitud o -1 si el número de filas afectadas no está disponible.  
   
  Cuando **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos o SQLMoreResults** se denomina el SQL_DIAG_ROW_COUNT campo de la estructura de datos de diagnóstico se establece en el recuento de filas y el recuento de filas se almacena en caché de forma depende de la implementación. **SQLRowCount** devuelve el valor de recuento de fila almacenada en caché. El valor de número de fila almacenada en caché es válido hasta que el identificador de instrucción se vuelve a establecer el estado preparado o asignado, se vuelve a ejecutar la instrucción, o **SQLCloseCursor** se llama. Tenga en cuenta que si llama a una función que se ha establecido el campo SQL_DIAG_ROW_COUNT, el valor devuelto por **SQLRowCount** puede ser diferente del valor en el campo SQL_DIAG_ROW_COUNT porque el campo SQL_DIAG_ROW_COUNT se restablece a 0 por cualquier llamada de función.  
   

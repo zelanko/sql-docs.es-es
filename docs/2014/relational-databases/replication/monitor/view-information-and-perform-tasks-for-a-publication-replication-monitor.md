@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing publication information
@@ -15,12 +14,12 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 885c48eaeed59042b431f8c9fd22a3a57ce49e73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 148ad2ba9ad0fb6575b787b992744666010fd3e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200065"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781207"
 ---
 # <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>Ver información y realizar tareas para una publicación (Monitor de replicación)
   El Monitor de replicación proporciona las siguientes pestañas con información acerca de la publicación seleccionada:  

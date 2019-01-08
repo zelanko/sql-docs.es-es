@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.general.f1
@@ -13,18 +12,18 @@ ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6337e69df7b7d6fe0984a843bf82124f90cc4d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b04098ad26cd4cf539fde4f1f826e4e6d1ce5c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112675"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786177"
 ---
 # <a name="publication-properties-general"></a>Propiedades de la publicación, General
   La página **General** del cuadro de diálogo **Propiedades de la publicación** contiene información básica acerca de la publicación, incluido el nombre, la descripción y la directiva de expiración de la suscripción.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Nombre de la publicación (solo lectura).  
   
  **Base de datos**  
@@ -37,7 +36,7 @@ ms.locfileid: "48112675"
  Tipo de publicación (solo lectura).  
   
  **Expiración de la suscripción**  
- Seleccione una de las opciones para la expiración de la suscripción: **Las suscripciones no expiran nunca** o **Las suscripciones expiran**, con un período de tiempo explícito (**Intervalo**).  
+ Seleccione una de las opciones de expiración de suscripción: **Las suscripciones no expiren nunca** o **las suscripciones expiran**, con un período de tiempo explícito (**intervalo**).  
   
  En las publicaciones de instantáneas y transaccionales, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que acepte la opción predeterminada **Las suscripciones no expiran nunca**.  
   

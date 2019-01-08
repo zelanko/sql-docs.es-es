@@ -5,8 +5,7 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843383"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211285"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ sp_table_validation [ @table = ] 'table'
   
  Al realizar una suma de comprobación, la estructura de la tabla debe ser idéntica en los dos servidores; es decir, las tablas deben tener las mismas columnas y en el mismo orden, el mismo tipo de datos y la misma longitud, y las mismas condiciones NULL o NOT NULL. Por ejemplo, si el publicador ejecutó CREATE TABLE y, a continuación, ALTER TABLE para agregar columnas, pero el script aplicado en el suscriptor es simplemente CREATE TABLE, la estructura NO será la misma. Si no está seguro de que la estructura de las dos tablas es idéntica, examine [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) y confirme que el desplazamiento de cada tabla es el mismo.  
   
- Valores de punto flotante suelen provocar diferencias de suma de comprobación de si el modo de carácter **bcp** se utilizó, que es el caso si la publicación tiene que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores. Dichas diferencias se deben a pequeñas e inevitables diferencias de precisión en la conversión desde y hacia el modo de carácter.  
+ Valores de punto flotante suelen provocar diferencias de suma de comprobación de si el modo de carácter **bcp** se utilizó, que es el caso si la publicación tiene que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores. Dichas diferencias se deben a pequeñas e inevitables diferencias de precisión en la conversión desde y hacia el modo de carácter.  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar **sp_table_validation**, debe tener permisos SELECT en la tabla que se está validando.  

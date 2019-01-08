@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CAST function
@@ -17,12 +16,12 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5316ed842e49e0c0077887dd6d980bf05d4b4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6068ef0fea56681048b8a31a9e87b6b01d4f8c96
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229675"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819327"
 ---
 # <a name="cast-ssis-expression"></a>Conversión (expresión de SSIS)
   Convierte explícitamente una expresión de un tipo de datos a otro. El operador de conversión también puede funcionar como un operador de truncamiento.  
@@ -43,7 +42,7 @@ ms.locfileid: "48229675"
  Expresión válida.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- El tipo de datos de *type_spec*. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ El tipo de datos de *type_spec*. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## <a name="remarks"></a>Comentarios  
  El siguiente diagrama muestra operaciones de conversión válidas.  
@@ -144,7 +143,7 @@ ms.locfileid: "48229675"
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Tipos de datos de Integration Services en las expresiones](integration-services-data-types-in-expressions.md)  

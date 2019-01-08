@@ -11,12 +11,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166105"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350478"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
   Puede utilizar la extensión de procesamiento de datos de SQL Server Analysis Services para recuperar datos de un libro PowerPivot publicado en una galería de PowerPivot de SharePoint.  
@@ -26,7 +26,7 @@ ms.locfileid: "48166105"
 ## <a name="prerequisites"></a>Requisitos previos  
  El origen de datos PowerPivot se debe publicar en una galería de PowerPivot en un sitio de SharePoint.  
   
- Para admitir conexiones del Generador de informes con un libro PowerPivot, debe tener SQL Server 2008 R2 ADOMD.NET en su equipo en la estación de trabajo. Esta biblioteca cliente se instala con PowerPivot para Excel, pero si está usando un equipo que no tiene esta aplicación, debe descargar e instalar ADOMD.NET de la página [Microsoft SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565).  
+ Para admitir conexiones del Generador de informes con un libro PowerPivot, debe tener SQL Server 2008 R2 ADOMD.NET en su equipo en la estación de trabajo. Esta biblioteca cliente se instala con PowerPivot para Excel, pero si está usando un equipo que no tiene esta aplicación, debe descargar e instalar ADOMD.NET de la página [Microsoft SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
   
 ## <a name="data-source-type"></a>Tipo de origen de datos  
  Utilice el origen de datos de informe de tipo **Microsoft SQL Server Analysis Services**.  
@@ -53,7 +53,7 @@ ms.locfileid: "48166105"
   
  Los datos de un libro PowerPivot están muy comprimidos. Los datos recuperados del libro PowerPivot para crear un informe no están comprimidos. Use el diseñador de consultas para especificar filtros y parámetros con el fin de limitar los datos a los estrictamente necesarios en el informe.  
   
- A diferencia de la conexión a un cubo de Analysis Services, un modelo de PowerPivot no tiene jerarquías. Para proporcionar una funcionalidad similar a las segmentaciones de datos relacionadas del libro, debe crear colocando parámetros en cascada en el informe. Para obtener más información, consulte [agregar parámetros en cascada a un informe &#40;generador de informes y SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ A diferencia de la conexión a un cubo de Analysis Services, un modelo de PowerPivot no tiene jerarquías. Para proporcionar una funcionalidad similar a las segmentaciones de datos relacionadas del libro, debe crear colocando parámetros en cascada en el informe. Para más información, vea [Agregar parámetros en cascada a un informe &#40;Generador de informes y SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  En algunos casos, podría necesitar ajustar las expresiones para aceptar los valores de datos subyacentes del modelo de PowerPivot. Podría tener que modificar las expresiones para convertir los datos en el tipo de datos correcto, o agregar o quitar una función de agregado. Por ejemplo, para convertir el tipo de datos de cadena en entero, utilice `=CInt`. Compruebe siempre que el informe muestra los valores esperados de los datos del modelo de PowerPivot antes de publicar el informe.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48166105"
 -   El informe solo contiene datos PowerPivot de un origen de datos PowerPivot.  
   
 ## <a name="see-also"></a>Vea también  
- [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services &#40;generador de informes&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services &#40;Generador de informes&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

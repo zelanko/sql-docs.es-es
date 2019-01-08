@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82d306e1359b9f36340ad5084edebc730c5d8e9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca8ed2bc61c75657f8a9ddf95e56df67f84889e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506729"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ HRESULT BCPSetBulkMode (
 |**E_OUTOFMEMORY**|Error de memoria insuficiente.|  
   
 ## <a name="remarks"></a>Comentarios  
- IBCPSession2::BCPSetBulkMode puede utilizarse para copiar de una consulta o una tabla de forma masiva. Cuando IBCPSession2::BCPSetBulkMode se usa para la copia masiva de una instrucción de consulta, es necesario realizar antes una llamada a `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` para especificar la instrucción de consulta.  
+ IBCPSession2::BCPSetBulkMode puede utilizarse para copiar de una consulta o una tabla de forma masiva. Cuando IBCPSession2::BCPSetBulkMode se usa para la copia masiva de una instrucción de consulta, es necesario realizar antes una llamada a `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` para especificar la instrucción de consulta.  
   
  Debe evitarse combinar la sintaxis de llamada RPC con la sintaxis de consulta por lotes (`{rpc func};SELECT * from Tbl`, por ejemplo) en el texto del mismo comando,  Esto hará que ICommandPrepare:: Prepare devolver un error y que no permita recuperar los metadatos. Utilice la sintaxis de ODBC CALL (`{call func}; SELECT * from Tbl`, por ejemplo) si necesita combinar la ejecución del procedimiento almacenado y la consulta por lotes en el texto del mismo comando.  
   
@@ -76,10 +76,10 @@ HRESULT BCPSetBulkMode (
   
 |property|Descripción|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Corresponde a la opción – c de BCP. EXE y a ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Se corresponde con la opción – w de BCP. EXE e ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_SQLNCHAR**.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Especifica los tipos nativos para los tipos no de caracteres y Unicode para los tipos de caracteres.<br /><br /> Se corresponde con la opción – N de BCP. EXE e ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_SQLNCHAR** si el tipo de columna es una cadena o **BCP_TYPE_DEFAULT** si no es una cadena.|  
-|BCP_OUT_NATIVE_MODE|Especifica los tipos de base de datos nativos.<br /><br /> Se corresponde con la opción – n de BCP. EXE e ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_DEFAULT**.|  
+|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Se corresponde con la opción - c en BCP. EXE y a ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Corresponde a la opción -w de BCP. EXE e ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_SQLNCHAR**.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Especifica los tipos nativos para los tipos no de caracteres y Unicode para los tipos de caracteres.<br /><br /> Se corresponde con la opción -N de BCP. EXE e ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_SQLNCHAR** si el tipo de columna es una cadena o **BCP_TYPE_DEFAULT** si no es una cadena.|  
+|BCP_OUT_NATIVE_MODE|Especifica los tipos de base de datos nativos.<br /><br /> Se corresponde con la opción - n de BCP. EXE e ibcpsession:: BCPColFmt con *eUserDataType* propiedad establecida en **BCP_TYPE_DEFAULT**.|  
   
  Se puede llamar IBCPSession::BCPControl y IBCPSession2::BCPSetBulkMode para las opciones de IBCPSession::BCPControl que no entren en conflicto con IBCPSession2::BCPSetBulkMode. Por ejemplo, puede llamar a ibcpsession:: Bcpcontrol con **BCP_OPTION_FIRST** e ibcpsession2:: Bcpsetbulkmode.  
   
@@ -102,7 +102,7 @@ BCPReadFmt();
   
 ```  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPSetBulkMode();  
 ```  
   
@@ -123,7 +123,7 @@ BCPColFmt();
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPReadFmt();  
 ```  
   

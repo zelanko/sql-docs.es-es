@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb53467361cec415b95f2fe3477f3b0730f33b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212205"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768337"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
   El único modo de crear una instantánea de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en usar [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite la creación de instantáneas de base de datos.  
@@ -29,11 +28,11 @@ ms.locfileid: "48212205"
   
      [Seguridad](#Security)  
   
-     [Procedimiento recomendado: asignar nombres a las instantáneas de base de datos](#Naming)  
+     [Procedimiento recomendado: Nomenclatura de las instantáneas de base de datos](#Naming)  
   
--   **Creación de una instantánea de base de datos utilizando lo siguiente:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para crear una base de datos de instantánea, utilizando:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  La base de datos de origen, que puede usar cualquier modelo de recuperación, debe cumplir los siguientes requisitos previos:  
@@ -42,7 +41,7 @@ ms.locfileid: "48212205"
   
 -   La base de datos de origen debe estar en línea, a menos que sea una base de datos reflejada dentro de una sesión de creación de reflejo de la base de datos.  
   
--   Para crear una base de datos de instantánea en una base de datos reflejada, la base de datos debe estar en sincronizado[estado de reflejo](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
+-   Para crear la instantánea de una base de datos en una base de datos reflejada, la base de datos debe encontrarse en el[estado de reflejo](../../database-engine/database-mirroring/mirroring-states-sql-server.md)sincronizado.  
   
 -   La base de datos de origen no se puede configurar como una base de datos compartida escalable.  
   
@@ -52,13 +51,13 @@ ms.locfileid: "48212205"
 ###  <a name="Recommendations"></a> Recomendaciones  
  En esta sección se describen los procedimientos recomendados siguientes:  
   
--   [Procedimiento recomendado: asignar nombres a las instantáneas de base de datos](#Naming)  
+-   [Procedimiento recomendado: Nomenclatura de las instantáneas de base de datos](#Naming)  
   
--   [Procedimiento recomendado: limitar el número de instantáneas de base de datos](#Limiting_Number)  
+-   [Procedimiento recomendado: Limitar el número de instantáneas de base de datos](#Limiting_Number)  
   
--   [Procedimiento recomendado: conexiones de clientes con una instantánea de base de datos](#Client_Connections)  
+-   [Procedimiento recomendado: Conexiones de cliente a una instantánea de base de datos](#Client_Connections)  
   
-####  <a name="Naming"></a> Procedimiento recomendado: asignar nombres a las instantáneas de base de datos  
+####  <a name="Naming"></a> Procedimiento recomendado: Asignar nombres a instantáneas de base de datos  
  Antes de crear instantáneas, es importante pensar cómo asignarles un nombre. Cada instantánea de base de datos necesita un nombre de base de datos único. Para facilitar la administración, el nombre de una instantánea puede incorporar información que identifique la base de datos, por ejemplo:  
   
 -   Nombre de la base de datos de origen.  
@@ -83,13 +82,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> Procedimiento recomendado: limitar el número de instantáneas de base de datos  
+####  <a name="Limiting_Number"></a> Procedimiento recomendado: Limitar el número de instantáneas de base de datos  
  La creación de una serie de instantáneas a lo largo del tiempo permite capturar instantáneas secuenciales de la base de datos de origen. Cada instantánea se conserva hasta que se quite de manera explícita. Las instantáneas siguen creciendo a medida que se actualizan las páginas originales, por lo que seguramente querrá ahorrar espacio en el disco eliminando una instantánea más antigua después de crear una nueva instantánea.  
   
 > [!NOTE]  
 >  Si desea volver a una instantánea de base de datos, debe eliminar cualquier otra instantánea de esa base de datos.  
   
-####  <a name="Client_Connections"></a> Procedimiento recomendado: conexiones de clientes con una instantánea de base de datos  
+####  <a name="Client_Connections"></a> Procedimiento recomendado: Conexiones de clientes con una instantánea de base de datos  
  Para usar una instantánea de base de datos, los clientes deben saber dónde encontrarla. Los usuarios pueden leer de una instantánea de base de datos mientras se crea o elimina otra. Sin embargo, si sustituye una nueva instantánea por otra ya existente, debe redirigir a los clientes a la nueva instantánea. Los usuarios pueden conectarse manualmente a una instantánea de base de datos mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sin embargo, para admitir un entorno de producción, debe crear una solución programática que dirija de un modo transparente a los clientes de escritura de informes a la instantánea de base de datos más reciente de la base de datos.  
   
 ###  <a name="Security"></a> Seguridad  
@@ -137,7 +136,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Crear una instantánea de la base datos AdventureWorks](#Creating_on_AW)  
   
--   B. [Crear una instantánea de la base datos Sales](#Creating_on_Sales)  
+-   b. [Crear una instantánea de la base datos Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Crear una instantánea de la base datos AdventureWorks  
  En este ejemplo se crea una instantánea de base datos `AdventureWorks` . El nombre de la instantánea, `AdventureWorks_dbss_1800`, y el nombre de archivo de su archivo disperso, `AdventureWorks_data_1800.ss`, indican la hora de creación: 6 P.M (1800 horas).  

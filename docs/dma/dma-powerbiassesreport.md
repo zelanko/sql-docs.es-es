@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643973"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208294"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analizar los informes de evaluación consolidada creados por Data Migration Assistant con Power BI
 
@@ -40,7 +40,7 @@ Los siguientes informes se incluyen:
 
 - [Preparación de actualización local](#on-premises-upgrade-readiness--details)
 
-  El origen de datos es la vista de UpgradeSuccessRanking en la base de datos DMAReporting.  Este informe muestra el porcentaje de actualización correcta para las bases de datos evaluados.
+  El origen de datos es la vista de UpgradeSuccessRanking en la base de datos DMAReporting.  Este informe muestra el porcentaje de actualización correcta para las bases de datos evaluados.
 
 - [Paridad de características en el entorno local](#on-premise-feature-parity--details)
 
@@ -48,7 +48,7 @@ Los siguientes informes se incluyen:
 
 - [Preparación de actualización de base de datos SQL Azure](#azure-sql-db-upgrade-readiness--details)
 
-  El origen de datos es la vista de UpgradeSuccessRanking en la base de datos DMAReporting.  Este informe muestra el porcentaje de actualización correcta para bases de datos que se evalúa para las migraciones de base de datos de SQL Azure.
+  El origen de datos es la vista de UpgradeSuccessRanking en la base de datos DMAReporting.  Este informe muestra el porcentaje de actualización correcta para bases de datos que se evalúa para las migraciones de base de datos de SQL Azure.
 
 - [Características de Azure SQL DB no compatibles](#azure-sql-db-unsupported-features--details)
 
@@ -74,17 +74,17 @@ Puede modificar estos informes para que funcione con su entorno al cambiar el or
 
 ![Informe del panel](../dma/media/DashboardReport.png)
 
-El panel muestra detalles acerca de todas sus evaluaciones. Puede usar las segmentaciones de datos en el lado izquierdo para filtrar por instancia o base de datos. Puede usar el gráfico de barras para profundizar en las categorías específicas para ver dónde se encuentran los problemas.
+El panel muestra detalles acerca de todas sus evaluaciones. Puede usar las segmentaciones de datos en el lado izquierdo para filtrar por instancia o base de datos. Puede usar el gráfico de barras para profundizar en las categorías específicas para ver dónde se encuentran los problemas.
 
 Para explorar en profundidad, seleccione el círculo con la flecha hacia abajo en la esquina superior derecha del gráfico de barras.
 
 ![Obtención de detalles de categoría](../dma/media/CategoryDrillDown.png)
 
-La secuencia de obtención de detalles se define como se muestra en la siguiente imagen (bajo **eje**). Para cambiar la secuencia, arrastre las columnas en el orden deseado.
+La secuencia de obtención de detalles se define como se muestra en la siguiente imagen (bajo **eje**). Para cambiar la secuencia, arrastre las columnas en el orden deseado.
 
 ![Visualizaciones, el eje del gráfico de barras](../dma/media/VisualizationsAxis.png)
 
-Esta vista es aún más eficaces cuando primero filtrar por una base de datos específica y, a continuación, explorar en profundidad los problemas de la categoría específica. En el ejemplo siguiente, la base de datos de recursos humanos se selecciona, por ejemplo **SQL01** para ver todos los objetos que impiden las migraciones (cambios importantes).
+Esta vista es aún más eficaces cuando primero filtrar por una base de datos específica y, a continuación, explorar en profundidad los problemas de la categoría específica. En el ejemplo siguiente, la base de datos de recursos humanos se selecciona, por ejemplo **SQL01** para ver todos los objetos que impiden las migraciones (cambios importantes).
 
 ![Importantes cambios para la base de datos de recursos humanos](../dma/media/BreakingChanges.png)
 
@@ -92,9 +92,9 @@ Esta vista es aún más eficaces cuando primero filtrar por una base de datos es
 
 ![Informe de preparación de actualización de local](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Este informe muestra una instantánea del nivel de preparación de las bases de datos son migrar a una versión posterior de SQL Server. Los datos de este informe proceden de dbo. UpgradeSuccessFactor\_vista local en la base de datos DMAReporting.
+Este informe muestra una instantánea del nivel de preparación de las bases de datos son migrar a una versión posterior de SQL Server. Los datos de este informe proceden de dbo. UpgradeSuccessFactor\_vista local en la base de datos DMAReporting.
 
-Filtrado por instancia y el nombre de la base de datos y el uso de las tarjetas de puntuación en la parte superior, puede ver qué versión de la base de datos podría migrarse demasiado. Por ejemplo, si se filtra por la base de datos AdventureWorks 2012, puede ver que la base de datos está listo para mover a todas las versiones de SQL Server que aparecen en el informe. Esto se determina asegurándose de que no hay ningún cambio importante para ese nivel de compatibilidad y la base de datos.
+Filtrado por instancia y el nombre de la base de datos y el uso de las tarjetas de puntuación en la parte superior, puede ver qué versión de la base de datos podría migrarse demasiado. Por ejemplo, si se filtra por la base de datos AdventureWorks 2012, puede ver que la base de datos está listo para mover a todas las versiones de SQL Server que aparecen en el informe. Esto se determina asegurándose de que no hay ningún cambio importante para ese nivel de compatibilidad y la base de datos.
 
 ![Factor de éxito de actualización para la base de datos AdventureWorks](../dma/media/UpgradeSuccessFactor.png)
 
@@ -104,7 +104,7 @@ Filtrado por instancia y el nombre de la base de datos y el uso de las tarjetas 
 
 Use este informe para resaltar las nuevas características que se pueden usar para la base de datos en la versión de SQL Server de destino.
 
-Cuando se selecciona una característica en el gráfico de embudo, los datos en la parte inferior resaltan los objetos que se ven afectados por la característica. En el ejemplo siguiente, la **Stretch database para ahorro de almacenamiento** característica está seleccionada y aparece una tabla que podrían beneficiarse de esta característica.
+Cuando se selecciona una característica en el gráfico de embudo, los datos en la parte inferior resaltan los objetos que se ven afectados por la característica. En el ejemplo siguiente, la **Stretch database para ahorro de almacenamiento** característica está seleccionada y aparece una tabla que podrían beneficiarse de esta característica.
 
 ![Recomendación de característica para Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -112,7 +112,7 @@ Cuando se selecciona una característica en el gráfico de embudo, los datos en 
 
 ![Informe de preparación de actualización de base de datos SQL Azure](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Este informe muestra la preparación para la base de datos para migrar a Azure SQL Database V12. Los datos de este informe proceden de dbo. Vista UpgradeSuccessRanking en la base de datos DMAReporting.
+Este informe muestra la preparación para la base de datos para migrar a Azure SQL Database V12. Los datos de este informe proceden de dbo. Vista UpgradeSuccessRanking en la base de datos DMAReporting.
 
 ### <a name="azure-features-parity-report"></a>Informe de paridad de características de Azure
 
@@ -120,7 +120,7 @@ Este informe muestra la preparación para la base de datos para migrar a Azure S
 
 Use este informe para resaltar el *características de nivel de instancia* que no son compatibles con Azure SQL Database V12.
 
-Cuando se selecciona una característica en el gráfico de embudo, los datos en la parte inferior muestran las instancias y las características de base de datos que no son compatibles. En el ejemplo siguiente, se selecciona esta característica: **siempre en configuración del grupo de disponibilidad no se admite en Azure SQL Database**.  
+Cuando se selecciona una característica en el gráfico de embudo, los datos en la parte inferior muestran las instancias y las características de base de datos que no son compatibles. En el ejemplo siguiente, se selecciona esta característica: **Siempre sobre la disponibilidad de configuración del grupo no se admite en Azure SQL Database**.  
 
 ![Característica de grupo de disponibilidad de AlwaysOn](../dma/media/Feature_AlwaysOnAvailability.png)
 

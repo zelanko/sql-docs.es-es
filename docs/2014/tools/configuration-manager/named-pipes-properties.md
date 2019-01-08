@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - pipes [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de562f78dbf2898267a909524226387096145bee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782567"
 ---
 # <a name="named-pipes-properties"></a>Propiedades de Canalizaciones con nombre
   Utilice la página **Protocolo**del cuadro de diálogo **Named Pipes Properties** (Propiedades de canalizaciones con nombre) para ver o cambiar la canalización con nombre que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha, cuando se utiliza el protocolo Canalizaciones con nombre.  

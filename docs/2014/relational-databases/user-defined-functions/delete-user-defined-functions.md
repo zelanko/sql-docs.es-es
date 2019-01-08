@@ -10,12 +10,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65c45ab0696792268cc6268503054a894161114a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529266"
 ---
 # <a name="delete-user-defined-functions"></a>Eliminar funciones definidas por el usuario
   Puede eliminar (quitar) las funciones definidas por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "48162755"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48162755"
 5.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   
     > [!IMPORTANT]  
-    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo *Dependencias de***nombre_función**. De este modo, mostrará todos los objetos que dependen de la función y todos los objetos de los que la función depende.  
+    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias de _nombre_función_**. De este modo, mostrará todos los objetos que dependen de la función y todos los objetos de los que la función depende.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48162755"
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
-    -- creates function called “Sales.ufn_SalesByStore”  
+    -- creates function called "Sales.ufn_SalesByStore"  
     USE AdventureWorks2012;  
     GO  
     CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  

@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164525"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512774"
 ---
 # <a name="dimension-relationships"></a>Relaciones de dimensión
   El uso de la dimensión define las relaciones entre una dimensión de cubo y los grupos de medida de un cubo. Una dimensión de cubo es una instancia de una dimensión de base de datos que se utiliza en un cubo específico. Un cubo puede y suele tener dimensiones de cubo que no están directamente relacionadas con un grupo de medida, pero que podrían estar indirectamente relacionadas con el grupo de medida a través de otra dimensión o grupo de medida. Cuando se agrega un grupo de medida o dimensión de base de datos a un cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta determinar el uso de dimensiones mediante el examen de las relaciones entre las tablas de dimensiones y tablas de hechos en la vista del origen de datos del cubo y mediante el examen las relaciones entre los atributos de dimensiones. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece automáticamente la configuración del uso de la dimensión para las relaciones que puede detectar.  
@@ -35,7 +35,7 @@ ms.locfileid: "48164525"
  Una relación entre una dimensión y un grupo de medida consta de las tablas de dimensiones y hechos que participan en la relación y un atributo de granularidad que especifica la granularidad de la dimensión del grupo de medida concreto.  
   
 ## <a name="regular-dimension-relationships"></a>Relaciones de dimensión normales  
- Hay una relación de dimensión normal entre una dimensión de cubo y un grupo de medida cuando la columna de clave de la dimensión se combina directamente con la tabla de hechos. Esta relación directa se basa en una relación de clave principal a clave externa de la base de datos relacional subyacente, pero también podría basarse en una relación lógica definida en la vista del origen de datos. Una relación de dimensión normal representa la relación entre tablas de dimensiones y una tabla de hechos en un diseño de esquema en estrella tradicional. Para obtener más información acerca de las relaciones regulares, vea [definir relaciones normales y propiedades de la relación Regular](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
+ Hay una relación de dimensión normal entre una dimensión de cubo y un grupo de medida cuando la columna de clave de la dimensión se combina directamente con la tabla de hechos. Esta relación directa se basa en una relación de clave externa para la clave principal en la base de datos relacional subyacente, pero también podría basarse en una relación lógica que se define en la vista del origen de datos. Una relación de dimensión normal representa la relación entre tablas de dimensiones y una tabla de hechos en un diseño de esquema en estrella tradicional. Para obtener más información acerca de las relaciones regulares, vea [definir relaciones normales y propiedades de la relación Regular](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
   
 ## <a name="reference-dimension-relationships"></a>Relaciones de dimensión de referencia  
  Hay una relación de dimensión de referencia entre una dimensión de cubo y un grupo de medida cuando la columna de clave de la dimensión se combina indirectamente con la tabla de hechos mediante una clave de otra tabla de dimensiones, como se muestra en la siguiente ilustración.  
@@ -61,7 +61,7 @@ ms.locfileid: "48164525"
   
  ![Columnas de hecho tabla puede admitir dimensiones](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "columnas en realidad la tabla puede admitir las dimensiones")  
   
- La tabla contiene información sobre atributos no solo para cada línea de un pedido emitido por un distribuidor, sino sobre el propio pedido. Los atributos en un círculo en el diagrama anterior identifican los datos de la **FactResellerSales** tabla que podría utilizarse como atributos de una dimensión. En este caso, dos piezas adicionales de información, el número de seguimiento del transportista y el número de orden de compra emitido por el distribuidor están representados por las columnas de atributo CarrierTrackingNumber y CustomerPONumber. Esta información es interesante; por ejemplo, los usuarios estarían sin duda interesados en la consulta de la información agregada, como el costo total del producto para todos los pedidos que se envían con un mismo número de seguimiento. Sin embargo, sin una dimensión no se pueden organizar ni agregar datos para estos dos atributos.  
+ La tabla contiene información sobre atributos no solo para cada línea de un pedido emitido por un distribuidor, sino sobre el propio pedido. Los atributos en un círculo en el diagrama anterior identifican los datos de la **FactResellerSales** tabla que podría utilizarse como atributos de una dimensión. En este caso, dos piezas adicionales de información, el número de seguimiento del transportista y el número de orden de compra emitido por el distribuidor están representados por las columnas de atributo CarrierTrackingNumber y CustomerPONumber. Esta información es interesante-por ejemplo, los usuarios definitivamente estaría interesados en ver la información agregada, como el costo de todos los pedidos que se envían con un número de seguimiento único total del producto. Sin embargo, sin una dimensión no se pueden organizar ni agregar datos para estos dos atributos.  
   
  En teoría, se podría crear una tabla de dimensiones que utilizara la misma información de clave que la tabla FactResellerSales y mover las otras dos columnas de atributos, CarrierTrackingNumber y CustomerPONumber, a esa tabla de dimensiones. Sin embargo, así se duplicaría una parte significativa de los datos y se agregaría una complejidad innecesaria al almacenamiento de datos para poder representar solo dos atributos como una dimensión independiente.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48164525"
  Para obtener más información acerca de las relaciones de varios a varios, vea [definir muchos a muchos relación y -to-Many las propiedades de relación](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

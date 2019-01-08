@@ -11,12 +11,12 @@ ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080355"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350870"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Programar tareas administrativas de SSAS con el Agente SQL Server
   Con el servicio Agente SQL Server, puede programar tareas administrativas de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecutan en el orden y a las horas que se necesitan. Las tareas programadas le ayudan a automatizar los procesos que se ejecutan en ciclos normales o predecibles. Puede programar tareas administrativas, como procesamiento de cubos, para que se ejecuten en momentos de poca actividad empresarial. También puede determinar el orden en el que se ejecutarán las tareas creando pasos de trabajo en un trabajo del Agente SQL Server. Por ejemplo, puede procesar un cubo y luego realizar una copia de seguridad del cubo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48080355"
   
  También debe tener una base de datos de prueba para trabajar con ella. Puede implementar la base de datos de ejemplo multidimensional AdventureWorks o un proyecto del tutorial multidimensional de Analysis Services para usarlo en este tutorial. Para más información, consulte [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](../install-sample-data-and-projects.md).  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Ejemplo 1: procesar una dimensión en una tarea programada  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Ejemplo 1: Procesar una dimensión en una tarea programada  
  Este ejemplo muestra cómo crear y programar un trabajo que procesa una dimensión.  
   
  Una tarea programada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es un script XMLA incrustado en un trabajo del Agente SQL Server. Este trabajo se programa para ejecutarse en los momentos y con la frecuencia deseados. Dado que el Agente SQL Server es parte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se trabaja con el motor de base de datos y con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear y programar una tarea administrativa.  
@@ -54,7 +54,7 @@ ms.locfileid: "48080355"
      Este paso copia el script XMLA en el Portapapeles de Windows. Puede dejar el script XMLA en el portapapeles o pegarlo en el Bloc de notas u otro editor de texto. A continuación, se muestra un ejemplo del script XMLA.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -106,7 +106,7 @@ ms.locfileid: "48080355"
   
 15. Cuando finalice el trabajo, haga clic **Cerrar**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Ejemplo 2: procesamiento por lotes de una dimensión y una partición en una tarea programada  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Ejemplo 2: Procesamiento por lotes una dimensión y una partición en una tarea programada  
  Los procedimientos de este ejemplo demuestran cómo crear y programar una trabajo que procese por lotes una dimensión de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y al mismo tiempo procesar una partición de cubo que dependa de la dimensión para la agregación. Para obtener más información sobre el procesamiento por lotes de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Procesamiento por lotes &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Crear un script para el procesamiento por lotes de una dimensión y una partición en un trabajo del Agente SQL Server  
@@ -156,7 +156,7 @@ ms.locfileid: "48080355"
      El ejemplo siguiente muestra el script XMLA revisado.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -223,7 +223,7 @@ ms.locfileid: "48080355"
 16. Cuando finalice el trabajo, haga clic **Cerrar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Configuración y opciones de procesamiento &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Secuencia de comandos de las tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

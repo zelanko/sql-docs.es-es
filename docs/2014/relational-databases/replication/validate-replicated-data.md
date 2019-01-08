@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -20,12 +19,12 @@ ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84ffe2ad4be91f8a05e4bbbd84b2ad5a67cb09a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098105"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792497"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
   La replicación transaccional y la replicación de mezcla le permiten validar que los datos del suscriptor coinciden con los del publicador. Es posible realizar la validación de determinadas suscripciones o de todas las suscripciones a una publicación. Especifique uno de los siguientes tipos de validación y el Agente de distribución o el Agente de mezcla validarán los datos la próxima vez que se ejecuten:  
@@ -45,7 +44,7 @@ ms.locfileid: "48098105"
   
  Para controlar errores de validación, tenga en cuenta lo siguiente:  
   
--   Configure la alerta de replicación **Replicación: el suscriptor no ha superado la validación de datos** para recibir una notificación del error. Para obtener más información, consulte [configurar alertas de replicación predefinidas &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configure la alerta de replicación **replicación: Suscriptor no ha superado la validación de datos** para que se informa del error. Para obtener más información, consulte [configurar alertas de replicación predefinidas &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   ¿Son los errores de validación un problema para su aplicación? Si los errores de validación suponen un problema, actualice manualmente los datos para que se sincronicen o reinicialice la suscripción:  
   

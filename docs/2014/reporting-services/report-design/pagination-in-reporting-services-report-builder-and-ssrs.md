@@ -11,15 +11,15 @@ ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0748fd29a116ee426f17c3cf12ce67ebcd0c519a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 702e5778825ed5b521db4357508e45427af6b56e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098046"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349954"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginación en Reporting Services (Generador de informes y SSRS)
-  La paginación hace referencia al número de páginas de un informe y al modo en que los elementos de informe se organizan en dichas páginas. Paginación en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe fácil de leer para los usuarios que está optimizado para el representador que va a usar para entregar el informe, debe comprender las reglas utilizadas para controlar la paginación en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  La paginación hace referencia al número de páginas de un informe y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  En este tema se describe cómo afecta el tamaño físico de la página y el diseño del informe al modo en que los representadores de saltos de página duros representan el informe. Se pueden establecer propiedades para modificar el tamaño de página físico y los márgenes y dividir el informe en columnas mediante el panel **Propiedades del informe** , el panel **Propiedades** o el cuadro de diálogo **Configurar página** . Se accede al panel **Propiedades del informe** haciendo clic en el área azul fuera del cuerpo del informe. Se accede al cuadro de diálogo **Configurar página** haciendo clic en **Ejecutar** en la pestaña Inicio y luego haciendo clic en **Configurar página** en la pestaña Ejecutar.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48098046"
   
  De manera predeterminada, el tamaño de página es de 8,5 x 11 pulgadas, pero puede cambiarlo en el panel **Propiedades del informe** , en el cuadro de diálogo **Configurar página** o mediante las propiedades PageHeight y PageWidth del panel **Propiedades** . El tamaño de página no aumenta ni se reduce para adaptarse al contenido del cuerpo del informe. Si desea que el informe aparezca en una única página, todo el contenido del cuerpo del informe debe ajustarse a la página física. Si no se ajusta y usa el formato de salto de página duro, el informe requerirá páginas adicionales. Si el cuerpo del informe aumenta más allá del borde derecho de la página física, se inserta un salto de página horizontal. Si el cuerpo del informe aumenta más allá del borde inferior de la página física, se inserta un salto de página vertical.  
   
- Si desea invalidar el tamaño físico de la página definido en el informe, puede especificar otro tamaño físico usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe. Para obtener más información, vea [Reporting Services Device Information Settings](http://go.microsoft.com/fwlink/?LinkId=102515).  
+ Si desea invalidar el tamaño físico de la página definido en el informe, puede especificar otro tamaño físico usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe. Para obtener más información, vea [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515).  
   
 ### <a name="margins"></a>Márgenes  
  Los márgenes se trazan a partir del borde físico de la página hasta la configuración de márgenes especificada. Si un elemento de informe se extiende dentro del área de márgenes, se recorta para que el área superpuesta no se represente. Si especifica tamaños de márgenes que provocan que el ancho horizontal o vertical de la página sea cero, la configuración de los márgenes se establece en cero de forma predeterminada. Los márgenes se especifican en el panel **Propiedades del informe** , el cuadro de diálogo **Configurar página** o si cambia las propiedades TopMargin, BottomMargin, LeftMargin y RightMargin en el panel **Propiedades** . Si desea invalidar el tamaño de margen definido en el informe, puede especificar otro tamaño de margen usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe.  
@@ -76,7 +76,7 @@ ms.locfileid: "48098046"
   
  Puede usar constantes y expresiones simples o complejas para establecer el valor de las propiedades Disabled y ResetPageNumber. En cambio, no puede usar expresiones con la propiedad BreakLocation. Para más información sobre cómo escribir y usar expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- En el informe puede escribir expresiones que hacen referencia a los nombres de página actual o números de página mediante el uso de la `Globals` colección. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ En el informe puede escribir expresiones que hagan referencia a los nombres de página o números de página actuales utilizando la colección `Globals`. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Denominación de las pestañas de las hojas de cálculo de Excel  
  Estas propiedades resultan útiles al exportar informes a libros de Excel. Use la propiedad InitialPage para especificar un nombre predeterminado para la pestaña de hoja de cálculo cuando exporte el informe, y use saltos de página y la propiedad PageName para proporcionar distintos nombres para cada hoja de cálculo. Cada nueva página del informe definida por un salto de página, se exporta a una hoja de cálculo distinta que recibe el nombre del valor de la propiedad PageName. Si PageName está en blanco, pero el informe tiene un nombre de página inicial, todas las hojas de cálculo del libro de Excel usan el nombre de página inicial.  
@@ -84,6 +84,6 @@ ms.locfileid: "48098046"
  Para más información sobre cómo funcionan estas propiedades cuando se exportan informes a Excel, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Representación y diseño de página &#40;generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

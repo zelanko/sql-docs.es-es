@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
@@ -15,12 +14,12 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 712da8b3c08d5bb73913e0585b7d1f87f5ef7396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189184"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815387"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
   Use la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos** para seleccionar y configurar los perfiles que desee calcular. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
@@ -41,7 +40,7 @@ ms.locfileid: "48189184"
 ### <a name="requests-pane-options"></a>Opciones del panel de solicitudes  
  El panel de solicitudes tiene las opciones siguientes:  
   
- **Ver**  
+ **Vista**  
  Seleccione si ver todos los perfiles configurados para la tarea o simplemente uno de los perfiles.  
   
  Las columnas del panel de solicitudes cambia según la **Vista** que seleccione. Para obtener más información sobre cada una de esas columnas, consulte la sección siguiente, "Columnas del panel de solicitudes".  
@@ -49,15 +48,15 @@ ms.locfileid: "48189184"
 ### <a name="requests-pane-columns"></a>Columnas del panel de solicitudes  
  Las columnas que muestra el panel de solicitudes dependen de la **Vista** que haya seleccionado:  
   
--   Si selecciona ver **Todas las solicitudes**, el panel de solicitudes tiene dos columnas: **Tipo de perfil** e **Id. de solicitud**.  
+-   Si selecciona para ver **todas las solicitudes**, el panel de solicitudes tiene dos columnas: **Tipo de perfil** y **Id. de solicitud**.  
   
--   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitud tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna**e **Id. de solicitud**.  
+-   Si selecciona para ver uno de los cinco perfiles de columna, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **tabla o vista**, **columna**, y **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas de clave**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **tabla o vista**, **KeyColumns**, y **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **tabla o vista**, **columnas determinantes**, **columna dependiente**, y **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **Tabla o vista de subconjuntos**, **Tabla o vista de superconjuntos**, **Columnas de subconjunto**, **Columnas de superconjunto**e **Id. de solicitud**.  
+-   Si selecciona para ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **subconjunto tabla o vista**, **vista o tabla de superconjunto**, **columnas de subconjunto**, **columnas de superconjunto**, y **Id. de solicitud**.  
   
  En las secciones siguientes se describe cada una de esas columnas.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48189184"
 |**Solicitud de perfil de distribución de longitud de columnas**|Calcule un perfil de distribución de longitud de columnas.<br /><br /> El perfil de distribución de longitud de columnas indica las diferentes longitudes de los valores de cadena de la columna seleccionada y el porcentaje de filas de la tabla que cada longitud representa. Este perfil puede ayudarle a identificar los problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos de dos caracteres y detecta valores menores de dos caracteres.|  
 |**Solicitud de perfil de proporción de columnas nulas**|Calcule un perfil de proporción de columnas nulas.<br /><br /> El perfil de proporción de columnas nulas notifica el porcentaje de valores nulos en la columna seleccionada. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, genera un perfil de una columna de códigos postales y detecta un porcentaje inaceptablemente alto de códigos que faltan.|  
 |**Solicitud de perfil de patrón de columnas**|Calcule un perfil de patrón de columnas.<br /><br /> El perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle también a identificar problemas de los datos, por ejemplo cadenas que no sean válidas. Este perfil también puede sugerir expresiones regulares que se pueden usar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.|  
-|**Solicitud de perfil de estadísticas de columnas**|Seleccione esta opción para calcular un perfil de estadísticas de columnas utilizando la configuración predeterminada para todas las columnas aplicables de la tabla o vista seleccionada.<br /><br /> El perfil de estadísticas de columnas notifica estadísticas, como mínimo, máximo, promedio y desviación estándar para las columnas numéricas y los valores mínimo y máximo para `datetime` columnas. Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
+|**Solicitud de perfil de estadísticas de columnas**|Seleccione esta opción para calcular un perfil de estadísticas de columnas utilizando la configuración predeterminada para todas las columnas aplicables de la tabla o vista seleccionada.<br /><br /> El perfil de estadísticas de columnas notifica estadísticas, como los valores mínimo, máximo y promedio, y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas `datetime`. Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
 |**Solicitud de perfil de distribución de valores de columna**|Calcule un perfil de distribución de valores de columnas.<br /><br /> El perfil de distribución de valores de columnas notifica todos los valores distintos en la columna seleccionada y el porcentaje de filas en la tabla que cada valor representa. Este perfil también puede notificar valores que representan más de un porcentaje especificado en la tabla. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo un número incorrecto de valores distintos en una columna. Por ejemplo, suponga que genera un perfil de una columna que contiene los estados de Estados Unidos y detecta más de 50 valores distintos.|  
 |**Solicitud de perfil de dependencia funcional**|Calcule un perfil de dependencia funcional.<br /><br /> El perfil de dependencia funcional notifica hasta qué punto los valores de una columna (la columna dependiente) dependen de los valores de otra columna o de un conjunto de columnas (la columna determinante). Este perfil puede ayudarle también a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que genera un perfil de la dependencia entre una columna de códigos postales de Estados Unidos y una columna de los estados. El mismo código postal debería tener siempre el mismo estado, pero el perfil detecta infracciones de esta dependencia.|  
 |**Solicitud de perfil de inclusión de valores**|Calcule un perfil de inclusión de valores.<br /><br /> El perfil de inclusión de valores calcula la superposición en los valores entre dos columnas o conjuntos de columnas. Este perfil también puede determinar si una columna o un conjunto de columnas es adecuado para actuar como una clave externa entre las tablas seleccionadas. Este perfil puede ayudarle igualmente a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, puede generar el perfil de una columna de identificadores de producto de una tabla de ventas y detectar que dicha columna contiene valores que no se encuentran en la columna de identificadores de producto de la tabla de productos.|  
@@ -131,24 +130,24 @@ ms.locfileid: "48189184"
   
  Estas opciones varían según el perfil seleccionado. Para obtener información acerca de las opciones de tipos de perfiles individuales, vea los temas siguientes:  
   
--   [Opciones de solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de proporción de Null de columna &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de estadísticas de columna &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Valor de opciones de solicitud de perfil de inclusión &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

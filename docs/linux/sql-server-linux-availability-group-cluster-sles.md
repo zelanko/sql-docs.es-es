@@ -1,21 +1,22 @@
 ---
-title: Configuración de clúster SLES para el grupo de disponibilidad de SQL Server | Microsoft Docs
-description: ''
+title: Configuración de clúster SLES para el grupo de disponibilidad de SQL Server
+titleSuffix: SQL Server
+description: Aprenda a crear clústeres de grupo de disponibilidad para SQL Server en SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160633"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para el grupo de disponibilidad de SQL Server
 
@@ -118,9 +119,9 @@ En los servidores de Linux, configure el grupo de disponibilidad y luego configu
 
 3. Para configurar la capa de comunicación de clúster (Corosync): 
 
-   A. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propone la dirección de red de eth0. Como alternativa, escriba una dirección de red diferente, por ejemplo, la dirección de bond0. 
+   a. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propone la dirección de red de eth0. Como alternativa, escriba una dirección de red diferente, por ejemplo, la dirección de bond0. 
 
-   B. Escriba una dirección de multidifusión. El script propone una dirección aleatoria que puede usar como valor predeterminado. 
+   b. Escriba una dirección de multidifusión. El script propone una dirección aleatoria que puede usar como valor predeterminado. 
 
    c. Escriba un puerto de multidifusión. El script propone 5405 como valor predeterminado. 
 
@@ -220,7 +221,7 @@ Vallado de nivel de recurso principalmente garantiza que no hay ningún daño de
 
 Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos. Para ello, al restablecer el nodo y su implementación Pacemaker se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Pacemaker es compatible con una gran variedad de dispositivos, como tarjetas de interfaz de una fuente de alimentación o de administración de alimentación ininterrumpida para servidores de barrera.
 
-Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) y [documentación de alta disponibilidad de SUSE: vallado y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) y [documentación de alta disponibilidad de SUSE: Vallado y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 En tiempo de inicialización de clúster, STONITH está deshabilitada si no se detecta ninguna configuración. Se puede habilitar más tarde ejecutando el comando siguiente:
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87fb9b43b723fa489e42f05f5f4f727bafd18dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45aadf2eab3cad31bfc376de59e8cce25126533f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785737"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**||Contraseña que el Agente de mezcla utiliza cuando se conecta al servidor web que hospeda la sincronización web a través de la autenticación básica.|  
 |**internet_security_mode**|**1**|Se utiliza la autenticación de Windows integrada para la sincronización web. Se recomienda utilizar la autenticación básica con sincronización web. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Se utiliza la autenticación básica para la sincronización web.<br /><br /> Nota: La sincronización Web requiere una conexión SSL al servidor Web.|  
+||**0**|Se utiliza la autenticación básica para la sincronización web.<br /><br /> Nota: La sincronización web requiere una conexión SSL al servidor web.|  
 |**internet_timeout**||Período de tiempo, en segundos, antes de que expire una solicitud de sincronización Web.|  
 |**internet_url**||URL que representa la ubicación de la escucha de replicación para la sincronización web.|  
 |**merge_job_login**||Inicio de sesión de la cuenta de Windows con la que se ejecuta el agente.|  

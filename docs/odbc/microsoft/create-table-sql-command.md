@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1451ddc8ec43b1960ed6073fb836b05e8384bb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683016"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213504"
 ---
 # <a name="create-table---sql-command"></a>Crear tabla - comando SQL
 Crea una tabla que tiene los campos especificados.  
@@ -111,12 +111,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  CLAVE principal *eExpression2* etiqueta *TagName2*  
- Especifica un índice principal para crear. *eExpression2* especifica cualquier campo o una combinación de campos de la tabla. Etiqueta *TagName2 s*especifica el nombre de la etiqueta de índice principal que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
+ Especifica un índice principal para crear. *eExpression2* especifica cualquier campo o una combinación de campos de la tabla. Etiqueta *TagName2* especifica el nombre de la etiqueta de índice principal que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
   
  Dado que una tabla puede tener un solo índice principal, no puede incluir esta cláusula si ya ha creado un índice principal para un campo. Visual FoxPro genera un error si incluye más de una cláusula de clave principal en CREATE TABLE.  
   
  ÚNICO *eExpression3*etiqueta *TagName3*  
- Crea un índice de candidato. *eExpression3* especifica cualquier campo o una combinación de campos de la tabla. Sin embargo, si ha creado un índice principal con una de las opciones de clave principal, no puede incluir el campo que se especificó para el índice principal. Etiqueta *TagName3 s*especifica un nombre de etiqueta de la etiqueta de índice candidato que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
+ Crea un índice de candidato. *eExpression3* especifica cualquier campo o una combinación de campos de la tabla. Sin embargo, si ha creado un índice principal con una de las opciones de clave principal, no puede incluir el campo que se especificó para el índice principal. Etiqueta *TagName3* especifica un nombre de etiqueta de la etiqueta de índice candidato que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
   
  Una tabla puede tener varios índices candidatos.  
   

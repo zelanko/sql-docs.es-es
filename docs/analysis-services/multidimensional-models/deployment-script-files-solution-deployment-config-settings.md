@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f711dc12ed5014dbc397e5a72f97f55350da7d38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525662"
 ---
-# <a name="deployment-script-files---solution-deployment-config-settings"></a>Archivos de Script de implementación: valores de configuración de implementación de soluciones
+# <a name="deployment-script-files---solution-deployment-config-settings"></a>Archivos de scripts de implementación: Ajustes de configuración de la implementación de soluciones
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee la partición y el rol de las opciones de implementación que usan en el script de implementación de la \< *nombre del proyecto*> archivo configSettings. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa los valores de configuración del proyecto actual para crear el \< *nombre del proyecto*> archivo configSettings.  
@@ -46,11 +46,11 @@ ms.locfileid: "38002227"
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interactivamente, y en la página **Valores de configuración** , especifique el valor de configuración para los objetos que vaya a implementar.  
   
-     O bien  
+     -o bien-  
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el símbolo del sistema y ajuste el asistente de manera que se ejecute en modo de archivo de respuesta. Para obtener más información acerca del modo de archivo de respuesta, vea [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     O bien  
+     -o bien-  
   
 -   Modificar el \< *nombre del proyecto*> archivo .configsettings con cualquier editor de texto.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69636
@@ -13,12 +13,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ba37a19f072292178ab96d01561004c55383cc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052405"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759965"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propiedades de la consulta (Visual Database Tools)
   Estas propiedades aparecen en la ventana Propiedades cuando hay una consulta abierta en el Diseñador de consultas y vistas. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades.  
@@ -30,7 +30,7 @@ ms.locfileid: "48052405"
  **Categoría Identidad**  
  Se expande para mostrar la propiedad **Nombre** .  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de la consulta actual. No se puede cambiar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Database Name**  
@@ -60,10 +60,10 @@ ms.locfileid: "48052405"
  Especifica que se incluirán todas las columnas de todas las tablas de la consulta actual en el conjunto de resultados. La elección de esta opción equivale a especificar en la instrucción SQL un asterisco (*) en lugar de los nombres de columnas individuales a continuación de la palabra clave SELECT.  
   
  **Lista de parámetros de la consulta**  
- Muestra los parámetros de la consulta. Para editar los parámetros, haga clic en la propiedad y, a continuación, en el botón de puntos suspensivos **(…)** situado a la derecha de la propiedad. (Solo se aplica a OLE DB genérico.)  
+ Muestra los parámetros de la consulta. Para editar los parámetros, haga clic en la propiedad y, después, en el botón de puntos suspensivos **(...)** situado a la derecha de la propiedad. (Solo se aplica a OLE DB genérico.)  
   
  **Comentario de SQL**  
- Muestra una descripción de las instrucciones SQL. Para ver o editar la descripción completa, haga clic en la descripción y después en el botón de puntos suspensivos **(…)** situado a la derecha de la propiedad. Los comentarios pueden incluir información, como quién utiliza la consulta y cuándo. (Solo se aplica a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versiones posteriores.)  
+ Muestra una descripción de las instrucciones SQL. Para ver o editar la descripción completa, haga clic en la descripción y después en el botón de puntos suspensivos **(...)** situado a la derecha de la propiedad. Los comentarios pueden incluir información, como quién utiliza la consulta y cuándo. (Solo se aplica a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versiones posteriores.)  
   
  **Especificación superior (Categoría)**  
  Se expande para mostrar las propiedades **Superior**, **Porcentaje**, **Expresión**y **Con valores equivalentes** .  

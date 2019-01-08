@@ -24,12 +24,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36065984f03980f54cbc6a75162bb007f8b5f772
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a80eb337bfc03d826ab0933ac235f76dd16bfde9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525648"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importar y exportar datos de forma masiva (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la exportación masiva de datos (*conjuntos masivos de datos*) desde una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la importación en bloque de datos en una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La importación y la exportación masivas son esenciales para transferir datos de forma eficaz entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y orígenes de datos heterogéneos. La*exportación masiva* se refiere a la copia de datos de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un archivo de datos. *Importación masiva* significa cargar datos de un archivo de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, puede exportar datos de una aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel a un archivo de datos y, después, importarlos masivamente en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -55,8 +55,8 @@ ms.locfileid: "48124445"
 |Método|Descripción|Importa datos|Exporta datos|  
 |------------|-----------------|------------------|------------------|  
 |[bcp, utilidad](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilidad de línea de comandos (Bcp.exe) que importa y exporta datos masivamente y genera archivos de formato.|Sí|Sí|  
-|[BULK INSERT, instrucción](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa datos directamente de un archivo de datos en una tabla o vista sin particionar de una base de datos.|Sí|no|  
-|[Instrucción INSERT ... Instrucción SELECT * FROM OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa el proveedor de conjuntos de filas BULK OPENROWSET para importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando la función OPENROWSET(BULK…) para seleccionar datos en una instrucción INSERT.|Sí|no|  
+|[BULK INSERT, instrucción](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa datos directamente de un archivo de datos en una tabla o vista sin particionar de una base de datos.|Sí|No|  
+|[Instrucción INSERT ... Instrucción SELECT * FROM OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa el proveedor de conjuntos de filas BULK OPENROWSET para importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando la función OPENROWSET(BULK...) para seleccionar datos en una instrucción INSERT.|Sí|No|  
   
 > [!IMPORTANT]  
 >  Las operaciones de importación masiva de SQL Server no admiten los archivos de valores separados por comas (CSV). Sin embargo, en algunos casos se puede usar un archivo de valores separados por comas (CSV) como archivo de datos para una importación masiva de datos en SQL Server. Tenga en cuenta que el terminador de campo de un archivo CSV no tiene que ser una coma. Para obtener más información, vea [Preparar los datos para exportar o importar en bloque &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "48124445"
   
  Los archivos de formato proporcionan una forma flexible de interpretar los datos con el formato que tienen en el archivo de datos durante la importación, así como para dar formato a los datos del archivo de datos durante la exportación. Esta flexibilidad elimina la necesidad de escribir código para propósitos especiales con el fin de interpretar los datos o volver a darles formato según los requisitos específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la aplicación externa. Por ejemplo, si va a exportar masivamente datos que se van a cargar en una aplicación que requiere valores separados por comas, puede usar un archivo de formato para insertar comas como terminadores de campo en los datos exportados.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de archivos de formato: archivos de formato XML y no XML.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de archivos de formato: Archivos de formato XML y archivos de formato no XML.  
   
  La utilidad **bcp** es la única herramienta que puede generar un archivo de formato. Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md). Para obtener más información sobre archivos de formato, vea [Archivos de formato para importar o exportar datos &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
   

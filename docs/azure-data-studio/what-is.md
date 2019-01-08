@@ -1,7 +1,8 @@
 ---
-title: ¿Qué es Azure Data Studio? | Microsoft Docs
-description: Azure Data Studio es una herramienta gratuita y ligera, que se ejecuta en Windows, macOS y Linux, para la administración de SQL Server, Azure SQL Database y Azure SQL Data Warehouse; siempre que se están ejecutando.
-ms.custom: tools|sos
+title: Información general
+titleSuffix: Azure Data Studio
+description: Azure Data Studio es una herramienta gratuita y ligera, que se ejecuta en Windows, macOS y Linux, para la administración de SQL Server, Azure SQL Database y Azure SQL Data Warehouse.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099787"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030779"
 ---
-# <a name="what-is-includename-sosincludesname-sosmd"></a>¿Qué es [!INCLUDE[name-sos](../includes/name-sos.md)]?
+# <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
 Azure Data Studio es una multiplataforma herramienta de la base de datos para profesionales de datos con la familia de Microsoft de un entorno local y en la nube de plataformas de datos en Windows, MacOS y Linux.
 

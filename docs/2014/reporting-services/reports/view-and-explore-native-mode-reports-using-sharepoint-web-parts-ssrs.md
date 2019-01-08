@@ -11,19 +11,19 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095375"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350021"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varios elementos web que funcionan con versiones específicas de un servidor de informes y en determinados modos de implementación.  
   
--   **Modo nativo:** si desea tener acceso al contenido del servidor de informes en un sitio de SharePoint desde un servidor de informes en modo nativo, use el Explorador de informes de los elementos web de SharePoint 2.0 incluidos con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En este tema se proporcionan instrucciones para instalar y usar los elementos web de la versión 2.0.  
+-   **Modo nativo:** si desea acceder al contenido del servidor de informes en un sitio de SharePoint desde un servidor de informes en modo nativo, use el Explorador de informes de los elementos web de SharePoint 2.0 incluidos con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En este tema se proporcionan instrucciones para instalar y usar los elementos web de la versión 2.0.  
   
--   **Modo de SharePoint:** si quiere tener acceso a un servidor de informes que se ejecuta en modo de SharePoint, use los elementos web que instala el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los productos de SharePoint. Para más información sobre el complemento, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **Modo SharePoint:** si desea acceder a un servidor de informes que se ejecuta en modo de SharePoint, use los elementos web que instala el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los productos de SharePoint. Para más información sobre el complemento, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  El elemento web del visor de informes para el modo nativo (SPViewer.dwp) es un elemento web diferente del que instala el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint (ReportViewer.dwp). Los elementos web tienen implementaciones y esquemas diferentes pero ambos pueden instalarse en la misma granja de SharePoint. Visualmente, puede distinguir los dos elementos web mediante la siguiente característica: el elemento web Visor de informes que se instala mediante el complemento tiene el menú **Acciones** en la barra de herramientas.  
@@ -89,7 +89,7 @@ ms.locfileid: "48095375"
     Install-SPWebPartPack -LiteralPath "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -GlobalInstall  
     ```  
   
-4.  Debería ver un mensaje similar al siguiente, que indica que el elemento web se implementó.  
+4.  Debería ver un mensaje similar al siguiente, que indica que el elemento web se ha implementado.  
   
     > Nombre               Id. solución                                             Implementado  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48095375"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     Para más información sobre cómo usar PowerShell, consulte [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     Para más información sobre cómo usar PowerShell, consulte [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>Instalar elementos web con STSADM.exe  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48095375"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  Debería recibir un mensaje que indique que la operación se completó correctamente.  
+4.  Debería recibir un mensaje que indique que la "operación se ha completado correctamente".  
   
      Al especificar `-globalinstall` , se agregan los elementos web a la caché de ensamblados global (GAC). Este paso es necesario si desea conectar los elementos web.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48095375"
   
 7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De manera predeterminada, la dirección URL del Administrador de informes tiene la siguiente sintaxis: **http://\<nombreDeServidor>/informes**.  
   
-8.  En **Ruta de acceso del informe**, especifique una barra diagonal, seguida de la ruta de acceso a la carpeta y el nombre del informe. **No** incluya el nombre del servidor ni el directorio virtual del Administrador de informes. Por ejemplo, para abrir el informe "Company Sales" de la carpeta Adventure Works, especifique **/Adventure Works/Company Sales**. Aquí se proporciona otro ejemplo en el que el informe "Products" está en la carpeta raíz del servidor de informes **/Products**.  
+8.  En **Ruta de acceso del informe**, especifique una barra diagonal, seguida de la ruta de acceso a la carpeta y el nombre del informe. **No** incluya el nombre del servidor ni el directorio virtual del Administrador de informes. Por ejemplo, para abrir el informe "Company Sales" de la carpeta Adventure Works, especifique **/Adventure Works/Company Sales**. Este es otro ejemplo en el que el informe "Products" está en la carpeta raíz del servidor de informes **/Products**.  
   
 9. Haga clic en **Aceptar**.  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48095375"
     3.  Haga clic en **Visor de informes**.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Servidor de Reporting Services informe &#40;el modo de SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Servidor de informes de Reporting Services &#40;modo de SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

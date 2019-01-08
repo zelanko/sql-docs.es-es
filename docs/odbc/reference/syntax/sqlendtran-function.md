@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855923"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204564"
 ---
 # <a name="sqlendtran-function"></a>Función SQLEndTran
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
   
  **Resumen**  
  **SQLEndTran** solicita una operación de confirmación o reversión para todas las operaciones activas en todas las instrucciones asociadas con una conexión. **SQLEndTran** también puede solicitar que se realiza una operación de confirmación o reversión para todas las conexiones asociadas con un entorno.  
@@ -132,9 +132,9 @@ SQLRETURN SQLEndTran(
   
 -   El controlador no ha devuelto uno de los mensajes siguientes, que confirmación que no se completó la transacción:  
   
-    -   25S03: se revierte la transacción  
+    -   25S03: Se revierte la transacción  
   
-    -   40001: error de serialización.  
+    -   40001: Error de serialización.  
   
     -   40002: restricción de integridad  
   

@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.TextEditor
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
 - Code Editor [SQL Server Management Studio], about Query Editor
@@ -28,12 +26,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df942352f756c1911693ce339498489f88e31a7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132977"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328895"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas y texto (SQL Server Management Studio)
   Es posible usar uno de los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar y probar de forma interactiva un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A o un archivo XML o de texto sin formato. Cada editor depende de un servicio específico del lenguaje que colorea las palabras clave y comprueba si hay errores de sintaxis y de uso. El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] incluye un depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] que puede usar para corregir los problemas de código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -133,5 +131,3 @@ ms.locfileid: "48132977"
   
 ## <a name="see-also"></a>Vea también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

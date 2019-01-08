@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 647fe2c53dfc02bd53a063f49e3bef4b635137ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 139bda733610f7f4ac54b2d438ba73b29831427c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784377"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Coincidencia de calidad de datos en el Complemento MDS para Excel
-  Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos con los datos que ya se administran en MDS, para asegurarse de que no se agregan datos duplicados o imprecisos.  
+  Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos con los que ya se administran en MDS, para asegurarse de que no se agregan datos duplicados o imprecisos.  
   
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] usa la característica Data Quality Services (DQS) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que coincidan los datos similares. Si usa la funcionalidad de coincidencia en el complemento, los registros similares se agrupan y se muestra una puntuación que representa la precisión del resultado. Para obtener más información acerca de la funcionalidad de coincidencia que proporciona DQS, vea [Data Matching](../../data-quality-services/data-matching.md).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48103497"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Combinar los datos externos con los datos administrados con MDS en preparación para compararlos.|[Combinar datos &#40;complemento MDS para Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
+|Combinar los datos externos con los datos administrados con MDS en preparación para compararlos.|[Combinar datos &#40;Complemento MDS para Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
 |Use el conocimiento de DQS para buscar similitudes en los datos.|[Coincidir datos similares &#40;Complemento MDS para Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
@@ -15,12 +14,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959344c0c191f390a6f6ec61f05467af1f88107b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048355"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766667"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
@@ -46,7 +45,7 @@ ms.locfileid: "48048355"
     > [!IMPORTANT]  
     >  Para evitar que se produzcan errores de validación al configurar tareas y componentes de flujo de datos que utilizan este administrador de conexiones con Excel, seleccione un libro de Excel existente en el **Editor del Administrador de conexiones con Excel**. El administrador de conexiones no utilizará ese libro en tiempo de ejecución después de configurar una expresión para la propiedad `ConnectionString` como se describe en los pasos siguientes. Tras crear y configurar el paquete, puede borrar el valor de la propiedad `ConnectionString` en la ventana Propiedades. Sin embargo, si borra este valor, la propiedad de cadena de conexión del administrador de conexiones de Excel deja de ser válido hasta que se ejecuta el bucle Foreach. Por lo tanto, debe establecer la propiedad `DelayValidation` en `True` en las tareas en las que se utiliza el administrador de conexiones, o bien en el paquete, para evitar errores de validación.  
     >   
-    >  También debe usar el valor predeterminado de `False` para el `RetainSameConnection` propiedad del Administrador de conexiones de Excel. Si cambia este valor a `True`, cada iteración del bucle continuará abriendo el primer libro de Excel.  
+    >  También debe utilizar el valor predeterminado de `False` para la propiedad `RetainSameConnection` del administrador de conexiones de Excel. Si cambia este valor a `True`, cada iteración del bucle continuará abriendo el primer libro de Excel.  
   
 8.  Seleccione el nuevo administrador de conexiones de Excel, haga clic en la propiedad **Expresiones** en la ventana Propiedades y luego haga clic en los puntos suspensivos.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48048355"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para crear un bucle entre tablas de Excel con el enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
   
-1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   

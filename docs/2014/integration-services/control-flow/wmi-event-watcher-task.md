@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
@@ -16,12 +15,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb074ec8723eb0f8f35df5d32aaebe9122e1bfc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b76916940175e9a3b3acf7c157ffe05d2b2aebf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203115"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351773"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarea Monitor de eventos WMI
   La tarea Monitor de eventos WMI supervisa un evento de Instrumental de administración de Windows (WMI) mediante una consulta de evento de Lenguaje de consulta de Instrumental de administración (WQL) para especificar los eventos de interés. Puede usar la tarea Monitor de eventos WMI para los siguientes fines:  
@@ -39,7 +38,7 @@ ms.locfileid: "48203115"
 -   [Tarea Lector de datos WMI](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>Consultas WQL  
- WQL es un dialecto de SQL con extensiones para admitir la notificación de eventos de WMI y otras características específicas de WMI. Para obtener más información sobre WQL, vea la documentación sobre Instrumental de administración de Windows en [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ WQL es un dialecto de SQL con extensiones para admitir la notificación de eventos de WMI y otras características específicas de WMI. Para obtener más información sobre WQL, vea la documentación sobre Instrumental de administración de Windows en [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
 >  Las clases de WMI varían en las diferentes versiones de Windows.  
@@ -92,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de tareas de Monitor de eventos WMI &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Monitor de eventos WMI &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de tareas de Monitor de eventos WMI &#40;página Opciones de WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Editor de la tarea Monitor de eventos WMI &#40;página Opciones WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

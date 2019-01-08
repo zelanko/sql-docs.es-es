@@ -1,5 +1,5 @@
 ---
-title: Establece el tipo de datos de una columna | Documentos de Microsoft
+title: Tipo de datos de columna en un modelo tabular de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045809"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071962"
 ---
 # <a name="set-the-data-type-of-a-column"></a>Establecer el tipo de datos de una columna 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "34045809"
   
  Si se admite el tipo de datos, pero el diseñador de modelos detecta valores que no se admiten en el nuevo tipo de datos, obtendrá otro error y deberá corregir los valores de datos antes de continuar.  
   
- Para obtener información detallada sobre los tipos de datos que se utilizan en modelos semánticos de business intelligence, cómo son tipos de datos convierten implícitamente y cómo diferentes se utiliza en las fórmulas, consulte [tipos de datos compatibles](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Para obtener información detallada sobre los tipos de datos utilizados en los modelos semánticos de Business intelligence, cómo se convierten implícitamente y cómo distintos datos se usan tipos en las fórmulas, vea [tipos de datos compatibles](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos compatibles](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  

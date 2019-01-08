@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -17,18 +16,18 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05cbb061c2f0df716458de35b3a1bad9fbae7e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12233854049cf83f809a434b0e28dd4fb06d8d65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198265"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816647"
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
   En este tema se describe cómo administrar columnas de identidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Cuando las inserciones del Suscriptor se replican de nuevo al Publicador, se deben administrar las columnas de identidad para evitar la asignación del mismo valor de identidad en el Suscriptor y el Publicador. La replicación puede administrar automáticamente intervalos de identidad o puede elegir procesar manualmente la administración de intervalos de identidad.  Para obtener información sobre las opciones de administración de intervalos de identidad proporcionadas por la replicación, vea [Replicar columnas de identidad](replicate-identity-columns.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48198265"
     |------------|-----------|-----------------|  
     |**Tamaño de intervalo del publicador**|Valor entero para el tamaño del intervalo (por ejemplo, 20 000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](replicate-identity-columns.md).|  
     |**Tamaño de intervalo del suscriptor**|Valor entero para el tamaño del intervalo (por ejemplo, 10000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](replicate-identity-columns.md).|  
-    |**Porcentaje de umbral del intervalo**|Valor entero para el umbral de porcentaje (por ejemplo, 90 equivale a 90 por ciento).|Porcentaje del total de valores de identidad utilizados en un nodo antes de que se asigne un nuevo intervalo de identidad.<br /><br /> Nota: Este valor se debe especificar, pero solo lo utilizan suscriptores que usan suscripciones de actualización en cola y suscriptores de publicaciones de combinación que ejecuten [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o versiones anteriores de otras ediciones de SQL Server. Para obtener más información, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](replicate-identity-columns.md).|  
+    |**Porcentaje de umbral del intervalo**|Valor entero para el umbral de porcentaje (por ejemplo, 90 equivale a 90 por ciento).|Porcentaje del total de valores de identidad utilizados en un nodo antes de que se asigne un nuevo intervalo de identidad.<br /><br /> Nota: Se debe especificar este valor, pero solo se utiliza en: En la cola los suscriptores que utilizan suscripciones de actualización y suscriptores a publicaciones de ejecución de combinación [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o versiones anteriores de otras ediciones de SQL Server. Para obtener más información, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](replicate-identity-columns.md).|  
     |**Valor de inicio del siguiente intervalo**|Valor entero. Solo lectura.|El valor en el que comenzará el siguiente intervalo. Por ejemplo, si el intervalo actual es 5001-6000, este valor será 6001.|  
     |**Valor máximo de identidad**|Valor entero. Solo lectura.|El valor más grande de la columna de identidad. Está determinado por el tipo de datos base de la columna.|  
     |**Incremento**|Valor entero. Solo lectura.|La cantidad en la que se debe incrementar o reducir el número de la columna de identidad para cada inserción: por lo general se establece en 1.|  
@@ -74,7 +73,7 @@ ms.locfileid: "48198265"
   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, en la sección **Administración de intervalos de identidad**, escriba valores para una o varias de las siguientes propiedades: **Tamaño de intervalo del publicador**, **Tamaño de intervalo del suscriptor** y **Porcentaje de umbral del intervalo**.  
+3.  En el **propiedades** pestaña de la **propiedades del artículo: \<artículo >** cuadro de diálogo el **administración de intervalos de identidad** sección, especifique valores para uno o más de las siguientes propiedades: **Tamaño de intervalo del publicador**, **tamaño de intervalo del suscriptor**, y **intervalo de porcentaje de umbral**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -13,12 +13,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194915"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396369"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Asistente para conversión de proyectos de Integration Services
   El **Asistente para conversión de proyectos de Integration Services** convierte un proyecto al modelo de implementación de proyectos.  
@@ -187,7 +187,7 @@ ms.locfileid: "48194915"
  **Quite las configuraciones de todos los paquetes después de la conversión**  
  Es recomendable que quite todas las configuraciones del proyecto seleccionando esta opción.  
   
- Si no selecciona esta opción, solo se quitan las configuraciones que eligió reemplazar con parámetros.  
+ Si no selecciona esta opción, solo se quitan las configuraciones que haya elegido reemplazar por parámetros.  
   
 ##  <a name="createParameters"></a> Establecer las opciones de la página Crear parámetros  
  Seleccione el nombre y el ámbito de parámetro para cada propiedad de configuración.  
@@ -202,7 +202,7 @@ ms.locfileid: "48194915"
  Seleccione el ámbito del parámetro, un paquete o un proyecto.  
   
 ##  <a name="configureParameters"></a> Establecer las opciones de la página Configurar parámetros  
- **Nombre**  
+ **Name**  
  Muestra el nombre de parámetro.  
   
  **Ámbito**  
@@ -222,7 +222,7 @@ ms.locfileid: "48194915"
 ##  <a name="review"></a> Establecer las opciones en la página Revisar  
  Use la página **Revisar** para confirmar las opciones que ha seleccionado para la conversión del proyecto.  
   
- **Previous**  
+ **Anterior**  
  Haga clic aquí para cambiar una opción.  
   
  **Convertir**  
@@ -243,6 +243,6 @@ ms.locfileid: "48194915"
  Haga clic en esta opción para guardar un resumen de la conversión del proyecto en un archivo .xml.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementar proyectos en el servidor de Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

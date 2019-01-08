@@ -17,12 +17,12 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714381"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533080"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propiedad Item (conjunto de celdas de ADO MD)
 Recupera una celda de un [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) utilizando sus coordenadas.  
@@ -60,7 +60,7 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  La posición ordinal es un número que identifica de forma exclusiva una celda dentro de la **Cellset**. Conceptualmente, las celdas se numeran en un **Cellset** como si el **Cellset** eran un *p*-matriz dimensional, donde *p* es el número de ejes. Las celdas se ordenan por importancia de fila. A continuación encontrará la fórmula para calcular el número ordinal de una celda:  
   
- Si los nombres de miembro se pasan como cadenas a **elemento**, los miembros deben especificarse en orden creciente de los identificadores de eje numérico. Dentro de un eje, los miembros deben especificarse en orden creciente de anidamiento de la dimensión, es decir, miembro de la dimensión más externa suceda primero, seguido de los miembros de las dimensiones interiores. Cada dimensión debe representarse mediante una cadena distinta, y la lista de cadenas de miembro debe estar separada por comas.  
+ Si los nombres de miembro se pasan como cadenas a **elemento**, los miembros deben especificarse en orden creciente de los identificadores de eje numérico. Dentro de un eje, los miembros deben especificarse en orden creciente de anidamiento de dimensión: es decir, miembro de la dimensión más externa suceda primero, seguido de los miembros de las dimensiones interiores. Cada dimensión debe representarse mediante una cadena distinta, y la lista de cadenas de miembro debe estar separada por comas.  
   
 > [!NOTE]
 >  Recuperación de celdas por nombre de miembro no se admite el proveedor de datos. Consulte la documentación del proveedor para obtener más información.  

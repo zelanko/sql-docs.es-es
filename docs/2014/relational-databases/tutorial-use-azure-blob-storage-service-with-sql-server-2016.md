@@ -1,22 +1,21 @@
 ---
-title: 'Tutorial: De archivos de datos SQL Server en el servicio de almacenamiento de Windows Azure | Microsoft Docs'
+title: 'Tutorial: Archivos de datos de SQL Server en el servicio de almacenamiento de Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b30ee8f664f88f0fcd59a3801c1aa612926d1dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095486"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810977"
 ---
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Tutorial: Archivos de datos de SQL Server en el servicio Azure Storage
   Este es el tutorial de Archivos de datos de SQL Server en el servicio Azure Storage. Este tutorial le ayudará a saber cómo almacenar archivos de datos de SQL Server en el servicio de almacenamiento Blob de Windows Azure directamente.  
@@ -28,16 +27,16 @@ ms.locfileid: "48095486"
   
  El tutorial se divide en nueve lecciones:  
   
- **[Lección 1: Crear el contenedor y cuenta de Microsoft Azure Storage](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
+ **[Lección 1: Cree el contenedor y cuenta de Microsoft Azure Storage](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
  En esta lección, creará una cuenta de Azure Storage y un contenedor.  
   
  **[Lección 2. Crear una directiva en el contenedor y generar una firma de acceso compartido &#40;SAS&#41; clave](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
  En esta lección, creará una directiva en el contenedor de blobs y también generará una firma de acceso compartido.  
   
- **[Lección 3: Crear una credencial de SQL Server](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
+ **[Lección 3: Crear una credencial SQL Server](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
  En esta lección, creará una credencial para almacenar la información de seguridad usada para tener acceso a la cuenta de almacenamiento de Windows Azure.  
   
- **[Lección 4: Creación de una base de datos en almacenamiento de Windows Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
+ **[Lección 4: Crear una base de datos en almacenamiento de Windows Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
  En esta lección, creará una base de datos de Azure Storage con la opción FILENAME de la instrucción CREATE DATABASE.  
   
  **[Lección 5. &#40;Opcional&#41; cifrar la base de datos mediante TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  

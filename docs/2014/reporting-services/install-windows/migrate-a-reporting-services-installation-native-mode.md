@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604066"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351853"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51604066"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requiere más pasos, consulte [no se puede usar SQL Server 2005 para hospedar las bases de datos de informe de servidor 2014](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requiere más pasos, consulte [no se puede usar SQL Server 2005 para hospedar las bases de datos de informe de servidor 2014](https://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -182,11 +182,11 @@ ms.locfileid: "51604066"
   
 3.  Modifique los archivos de configuración para agregar las entradas del componente personalizado. Las entradas variarán según el tipo de ensamblado que use. Para obtener instrucciones sobre dónde colocar los archivos y agregar las entradas de configuración, vea lo siguiente:  
   
-    1.  [Implementar un ensamblado personalizado](../custom-assemblies/deploying-a-custom-assembly.md)  
+    1.  [Implementación de un ensamblado personalizado](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [Cómo implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [Cómo: Implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
-    3.  [Implementar una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)  
+    3.  [Implementación de una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   
     4.  [Implementar una extensión de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2bf1563d71938f1596cead97d15e09ea12c6111c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cc4bcad1ca9cd5407cd4b4692fefc41b6922f50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760833"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de vista de suscripciones (Master Data Services)
   Según la entidad o la jerarquía derivada que seleccione, están disponibles los formatos siguientes para la vista de suscripciones.  

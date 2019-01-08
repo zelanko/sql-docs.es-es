@@ -11,12 +11,12 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6a0318d041a43e96246931015ef35edaf7fd74a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162875"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528251"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Resaltar datos en el gráfico agregando franjas (Generador de informes y SSRS)
   Las franjas son intervalos horizontales o verticales que sombrean el fondo del gráfico a intervalos regulares o personalizados. Puede usar las franjas para:  
@@ -50,7 +50,7 @@ ms.locfileid: "48162875"
   
      En la ventana de propiedades se muestran las propiedades del eje.  
   
-2.  En la sección **Apariencia** del panel de propiedades, para la propiedad StripLines, haga clic en el botón para editar colecciones (…) con el objeto de abrir el **Editor de la colección ChartStripLine**.  
+2.  En la sección **Apariencia** del panel de propiedades, para la propiedad StripLines, haga clic en el botón para editar colecciones (...) con el fin de abrir el **Editor de la colección ChartStripLine**.  
   
 3.  Haga clic en **Agregar** para agregar una nueva franja a la colección.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48162875"
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Agregar una media móvil a un gráfico &#40;generador de informes y SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Agregar una media móvil a un gráfico &#40;Generador de informes y SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

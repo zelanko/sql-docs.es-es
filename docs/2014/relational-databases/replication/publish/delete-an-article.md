@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,12 +19,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3d425e069d8a1e942ee5b7fd6277d4fc4037b15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123515"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772098"
 ---
 # <a name="delete-an-article"></a>Eliminar un artículo
   En este tema se describe cómo eliminar un artículo en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). Para obtener información sobre las condiciones en que se pueden quitar artículos, y si la eliminación de un artículo requiere una nueva instantánea o la reinicialización de las suscripciones, vea [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -56,7 +55,7 @@ ms.locfileid: "48123515"
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Puede eliminar artículos mediante programación utilizando Replication Management Objects (RMO). Las clases RMO que usa para eliminar un artículo dependen del tipo de publicación al que pertenece el artículo.  
   
 #### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Para eliminar un artículo que pertenece a una publicación transaccional o de instantáneas  
@@ -69,9 +68,9 @@ ms.locfileid: "48123515"
   
 4.  Establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que el artículo existe. Si el valor de esta propiedad es `false`, las propiedades del artículo en el paso 3 se definieron incorrectamente o el artículo no existe.  
+5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que el artículo existe. Si el valor de esta propiedad es `false`, se definieron incorrectamente las propiedades de artículo en el paso 3, o bien el artículo no existe.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A>.  
   
 7.  Cierre todas las conexiones.  
   
@@ -85,9 +84,9 @@ ms.locfileid: "48123515"
   
 4.  Establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que el artículo existe. Si el valor de esta propiedad es `false`, las propiedades del artículo en el paso 3 se definieron incorrectamente o el artículo no existe.  
+5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que el artículo existe. Si el valor de esta propiedad es `false`, se definieron incorrectamente las propiedades de artículo en el paso 3, o bien el artículo no existe.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A>.  
   
 7.  Cierre todas las conexiones.  
   

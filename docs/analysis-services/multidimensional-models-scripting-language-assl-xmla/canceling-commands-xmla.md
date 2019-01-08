@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207524"
 ---
 # <a name="canceling-commands-xmla"></a>Cancelar comandos (XMLA)
   Dependiendo de los permisos administrativos del usuario que emite el comando, el [cancelar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) de comandos en XML para Analysis (XMLA) puede cancelar un comando en una sesión, una sesión, una conexión, un proceso de servidor o en una sesión asociada o conexión.  
@@ -36,7 +36,7 @@ ms.locfileid: "50145021"
 ## <a name="canceling-connections"></a>Cancelar conexiones  
  Especificando un identificador de conexión en el [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) propiedad de la **cancelar** de comandos, un administrador del servidor puede cancelar todas las sesiones asociadas con una conexión determinada, todos los incluidos ejecución de comandos y cancelar la conexión.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no se puede ubicar y cancelar las sesiones asociadas a una conexión, como cuando el bombeo de datos abre varias sesiones al tiempo que proporciona conectividad HTTP, la instancia no puede cancelar la conexión. Si esto ocurriera durante la ejecución de un **cancelar** comando, se produce un error.  
   
  Un administrador del servidor puede recuperar las conexiones activas para un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia recuperando el conjunto de filas de esquema DISCOVER_CONNECTIONS con XMLA **Discover** método.  

@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9347a38b1289afa3150cb5354aa85e16516947b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049026"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349988"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
   Este tema incluye prácticas recomendadas y sugerencias para la solución de problemas de copias de seguridad y restauraciones de SQL Server en el servicio Blob de Windows Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "48049026"
   
 -   [Copia de seguridad y restauración de SQL Server con el servicio Windows Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore al servicio de Windows Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Administrar copias de seguridad  
  La lista siguiente incluye recomendaciones generales para administrar copias de seguridad:  
@@ -41,7 +41,7 @@ ms.locfileid: "48049026"
   
 ## <a name="handling-large-files"></a>Controlar archivos grandes  
   
--   La operación de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea varios subprocesos para optimizar la transferencia de datos a los servicios de almacenamiento Blob de Windows Azure.  Sin embargo, el rendimiento depende en varios factores, como el ancho de banda del ISV y el tamaño de la base de datos. Si piensa hacer copia de seguridad de bases de datos o grupos de archivos grandes desde una base de datos de SQL Server local, se recomienda que realice primero algunas pruebas de rendimiento. [Del almacenamiento de Windows Azure SLA](http://go.microsoft.com/fwlink/?LinkId=271619) tienen tiempos máximos de procesamiento para los blobs que puede tener en cuenta.  
+-   La operación de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea varios subprocesos para optimizar la transferencia de datos a los servicios de almacenamiento Blob de Windows Azure.  Sin embargo, el rendimiento depende en varios factores, como el ancho de banda del ISV y el tamaño de la base de datos. Si piensa hacer copia de seguridad de bases de datos o grupos de archivos grandes desde una base de datos de SQL Server local, se recomienda que realice primero algunas pruebas de rendimiento. [Del almacenamiento de Windows Azure SLA](https://go.microsoft.com/fwlink/?LinkId=271619) tienen tiempos máximos de procesamiento para los blobs que puede tener en cuenta.  
   
 -   Use la opción `WITH COMPRESSION` como se recomienda en la sección **Administrar copias de seguridad**, ya que es muy importante al realizar la copia de seguridad de archivos grandes.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48049026"
   
 -   WITH CREDENTIAL es una opción nueva que es necesaria para la copia de seguridad o la restauración con el servicio de almacenamiento Blob de Windows Azure. He aquí algunos errores relacionados con las credenciales:  
   
-     La credencial especificada en el `BACKUP` o `RESTORE` comando no existe. Para evitar este problema, puede incluir instrucciones T-SQL para crear la credencial si no existe ninguna en la instrucción de copia de seguridad. He aquí un ejemplo que puede usar:  
+     La credencial especificada en el comando `BACKUP` o `RESTORE` no existe. Para evitar este problema, puede incluir instrucciones T-SQL para crear la credencial si no existe ninguna en la instrucción de copia de seguridad. He aquí un ejemplo que puede usar:  
   
     ```  
     IF NOT EXISTS  
@@ -89,24 +89,24 @@ ms.locfileid: "48049026"
   
         -   `VERIFYONLY`  
   
-    -   También puede encontrar información si examina el registro de eventos de Windows, en los registros de aplicación con el nombre 'SQLBackupToUrl'.  
+    -   También puede encontrar información si examina el registro de eventos Windows - registros en la aplicación con el nombre 'SQLBackupToUrl'.  
   
 -   Al restaurar desde una copia de seguridad comprimida, puede aparecer el siguiente error:  
   
-    -   **SqlException 3284. Gravedad: 16 Estado: 5**  
-        **Marca de archivo del mensaje en el dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: '65536' parece un valor posible.**  
+    -   **SqlException 3284. Gravedad: 16 estado: 5**  
+        **Marca de archivo del mensaje en el dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' no está alineada. Vuelva a emitir la instrucción Restore con el mismo tamaño de bloque usado para crear el backupset: '65536' parece un valor posible.**  
   
          Para resolver este error, vuelva a emitir la instrucción `BACKUP` especificando `BLOCKSIZE = 65536`.  
   
--   Error durante la copia de seguridad porque los blobs tienen una concesión activa: una actividad de copia de seguridad con errores puede dar como resultado blobs con concesiones activas.  
+-   Error durante la copia de seguridad debido a los blobs que ellos tienen una concesión activa: Actividad de copia de seguridad con errores puede dar lugar a blobs con concesiones activas.  
   
      Si se vuelve a intentar una instrucción de copia de seguridad, la operación de copia de seguridad puede producir un error similar al siguiente:  
   
-     **BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: Error en el servidor remoto: (412) Actualmente hay una concesión en el blob y no se especificó ningún identificador de concesión en la solicitud**.  
+     **BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: El servidor remoto devolvió un error: (412) actualmente hay una concesión en el blob y se especificó ningún identificador de concesión en la solicitud**.  
   
      Si se intenta una instrucción de restauración en un archivo de blob de copia de seguridad que tiene una concesión activa, la operación de restauración produce un error similar al siguiente:  
   
-     **Mensaje de la excepción: Error en el servidor remoto: (409) Conflicto.**  
+     **Mensaje de excepción: El servidor remoto devolvió un error: (409) conflicto...**  
   
      Cuando se produce ese error, es necesario eliminar los archivos de blob. Para obtener más información sobre este escenario y cómo corregir este problema, vea [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48049026"
   
  Los servidores proxy pueden tener configuraciones que limitan el número de conexiones por minuto. Copia de seguridad en URL es un proceso multiproceso y, por tanto, puede sobrepasar este límite. Si esto ocurre, el servidor proxy elimina la conexión. Para resolver este problema, cambie la configuración de proxy para que SQL Server no utilice el proxy.   A continuación se muestran algunos ejemplos de los tipos o mensajes de error que puede ver en el registro de errores:  
   
--   Escribir en "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" no se pudo: Backup to URL recibió una excepción del extremo remoto. Mensaje de excepción: No se pueden leer datos de la conexión de transporte: La conexión se cerró.  
+-   Escribir en "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Error: BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: La conexión se cerró.  
   
 -   Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:". No se pudo recopilar el error del punto de conexión remoto.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48049026"
   
      Fin anómalo de BACKUP DATABASE.  
   
--   Backupiorequest:: Reportioerror: error de escritura en el dispositivo de copia de seguridad http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se pueden leer datos de la conexión de transporte: La conexión se cerró.  
+-   Backupiorequest:: Reportioerror: error de escritura en el dispositivo de copia de seguridad http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: La conexión se cerró.  
   
  Si activa el registro detallado mediante la marca de seguimiento 3051, puede ver también el mensaje siguiente en los registros:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48049026"
   
  **Configuración de proxy predeterminada no seleccionada:**  
   
- A veces, la configuración predeterminada no se selecciona, lo que produce errores de autenticación del proxy como el que se muestra a continuación: *Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:". La copia de seguridad en URL recibió una excepción del punto de conexión remoto. Mensaje de excepción: Error en el servidor remoto: (407)* **Se requiere autorización del proxy**.  
+ A veces, la configuración predeterminada no se selecciona, lo que produce errores de autenticación del proxy como el que se muestra a continuación: *Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:". La copia de seguridad en URL recibió una excepción del punto de conexión remoto. Mensaje de excepción: El servidor remoto devolvió un error: (407)*  **Requerida autenticación del proxy**.  
   
  Para resolver este problema, cree un archivo de configuración que permita al proceso Copia de seguridad en URL utilizar la configuración de proxy predeterminada mediante los pasos siguientes:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48049026"
   
     ```  
   
-2.  Coloque el archivo de configuración en la carpeta Binn de la instancia de SQL Server. Por ejemplo, si SQL Server está instalado en la unidad C de la máquina, coloque el archivo de configuración aquí: *C:\Program Files\Microsoft SQL Server\MSSQL12.\< InstanceName > \MSSQL\Binn*.  
+2.  Coloque el archivo de configuración en la carpeta Binn de la instancia de SQL Server. Por ejemplo, si SQL Server está instalado en la unidad C de la máquina, coloque el archivo de configuración aquí: *C:\Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName > \MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure  
  Puesto que Copia de seguridad administrada de SQL Server se basa en Copia de seguridad en URL, las sugerencias para la solución de problemas que se han descrito en las secciones anteriores son aplicables también a las bases de datos o las instancias que utilizan Copia de seguridad administrada de SQL Server.  Información sobre cómo solucionar problemas de SQL Server Managed Backup to Windows Azure se describe detalladamente en [solución de problemas de SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  

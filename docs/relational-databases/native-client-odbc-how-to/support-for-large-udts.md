@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cfe743a7ae0f86477dbbb1b0cee8099d98784b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c0f2dd58d277f8736c3bab2038add94d1b3dd9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623403"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205474"
 ---
 # <a name="support-for-large-udts"></a>Compatibilidad con UDT de gran tamaño
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47623403"
 ## <a name="example"></a>Ejemplo  
  La primera lista de código es el código fuente de C#. Péguelo en un archivo denominado LargeStringUDT.cs y compílelo en una DLL. Copie LargeStringUDT.dll en el directorio raíz de la unidad C:.  
   
- El segundo código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea el ensamblado en la base de datos maestra.  
+ El segundo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código crea el ensamblado en la base de datos maestra.  
   
  Compile la segunda lista de código (C++) con odbc32.lib y user32.lib. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47623403"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- El cuarto código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina el ensamblado de la base de datos maestra.  
+ El cuarto ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código elimina el ensamblado de la base de datos maestra.  
   
 ```  
 // LargeStringUDT.cs  

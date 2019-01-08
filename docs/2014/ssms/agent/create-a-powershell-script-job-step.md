@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], job steps
@@ -15,12 +15,12 @@ ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f671d8c0345db830a6cdac463869b531b39011
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08a27fd6edbfa93fd76ae99186e2425e5279e8aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104615"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818148"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Crear un paso de trabajo para script de PowerShell
   En este tema se describe cómo crear y definir un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecute un script de PowerShell en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -39,10 +39,10 @@ ms.locfileid: "48104615"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
- Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usar SQL Server Management Studio  
   
@@ -93,6 +93,6 @@ ms.locfileid: "48104615"
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
  **Para crear un paso de trabajo para script de PowerShell**  
   
- Use la `JobStep` clase mediante el uso de un lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell.  
+ Utilice la clase `JobStep` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell.  
   
   

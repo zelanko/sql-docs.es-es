@@ -1,5 +1,5 @@
 ---
-title: Configurar el Firewall de Windows para permitir el acceso a Analysis Services | Documentos de Microsoft
+title: Configurar el Firewall de Windows para permitir el acceso a Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5145bda99e7c5518c3904e51485c4053d33a4a58
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019072"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211584"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar Firewall de Windows para permitir el acceso a Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34019072"
   
 -   Para las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecutan en Máquinas virtuales de Windows Azure, use otras instrucciones alternativas para configurar el acceso al servidor. Vea [Business Intelligence de SQL Server en Máquinas virtuales de Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
- Aunque la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en el puerto TCP 2383, puede configurar el servidor para que escuche en otro puerto fijo, conectarse al servidor en este formato: \<nombreDeServidor >:\<númeroDePuerto >.  
+ Aunque la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en el puerto TCP 2383, puede configurar el servidor para que escuche en otro puerto fijo, conectándose al servidor en este formato: \<nombreDeServidor >:\<portnumber >.  
   
  Una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo puede utilizar un puerto TCP. En los equipos que tienen varias tarjetas de red o varias direcciones IP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en un puerto TCP para todas las direcciones IP asignadas o con alias en el equipo. Si tiene requisitos específicos de varios puertos, considere la posibilidad de configurar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para el acceso HTTP. Después puede configurar varios extremos HTTP en los puertos que elija. Vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
@@ -61,9 +61,9 @@ ms.locfileid: "34019072"
   
 -   Inicie el Administrador de tareas y, a continuación, haga clic en **Servicios** para obtener el PID del **MSOLAP$InstanceName**.  
   
--   Ejecute **netstat –ao –p TCP** desde la línea de comandos para ver la información del puerto TCP para ese PID.  
+-   Ejecute **netstat - ao -p TCP** desde la línea de comandos para ver el TCP del puerto información para ese PID.  
   
--   Compruebe el puerto utilizando SQL Server Management Studio y conéctese a un servidor de Analysis Services en este formato: \<IPAddress >:\<númeroDePuerto >.  
+-   Compruebe el puerto con SQL Server Management Studio y conéctese a un servidor de Analysis Services en este formato: \<Dirección IP >:\<portnumber >.  
   
  Aunque una aplicación podría estar escuchando en un puerto concreto, las conexiones no tendrán éxito si un firewall está bloqueando el acceso. Para que las conexiones alcancen una instancia con nombre de Analysis Services, debe desbloquear el acceso a msmdsrv.exe o al puerto fijo en el que está escuchando en el firewall. En las secciones restantes de este tema se proporcionan instrucciones para hacerlo.  
   
@@ -117,15 +117,15 @@ ms.locfileid: "34019072"
   
  Elija uno de los siguientes métodos para habilitar el acceso remoto a una instancia con nombre de Analysis Services:  
   
--   Use asignaciones dinámicas de puertos y el servicio SQL Server Browser. Desbloquee el puerto utilizado por el servicio SQL Server Browser en Firewall de Windows. Conectarse al servidor en este formato: \<servername >\\< instancename\>.  
+-   Use asignaciones dinámicas de puertos y el servicio SQL Server Browser. Desbloquee el puerto utilizado por el servicio SQL Server Browser en Firewall de Windows. Conectarse al servidor en este formato: \<servername >\\< nombreDeInstancia\>.  
   
--   Use un puerto fijo y el servicio SQL Server Browser conjuntamente. Este método le permite conectarse con este formato: \<servername >\\< instancename\>, idéntico para el método de asignación de puertos dinámicos, excepto que en este caso, el servidor escucha en un puerto fijo. En este escenario, el Servicio SQL Server Browser proporciona la resolución de nombres a la instancia de Analysis Services que escucha en el puerto fijo. Para usar este método, configure el servidor para que escuche en un puerto fijo y desbloquee el acceso a dicho puerto y al puerto utilizado por el servicio SQL Server Browser.  
+-   Use un puerto fijo y el servicio SQL Server Browser conjuntamente. Este enfoque le permite conectarse con este formato: \<servername >\\< instancename\>, idéntico al enfoque de asignación de puertos dinámicos, excepto que en este caso, el servidor escucha en un puerto fijo. En este escenario, el Servicio SQL Server Browser proporciona la resolución de nombres a la instancia de Analysis Services que escucha en el puerto fijo. Para usar este método, configure el servidor para que escuche en un puerto fijo y desbloquee el acceso a dicho puerto y al puerto utilizado por el servicio SQL Server Browser.  
   
  El servicio SQL Server Browser solo se usa con instancias con nombre, nunca con la instancia predeterminada. El servicio se instala y habilita de modo automático siempre que se instala una característica de SQL Server como una instancia con nombre. Si elige un método que requiera el servicio SQL Server Browser, asegúrese de que permanece habilitado e iniciado en el servidor.  
   
  Si no puede utilizar el servicio SQL Server Browser, debe asignar un puerto fijo en la cadena de conexión, omitiendo la resolución de nombres de dominio. Sin el servicio SQL Server Browser, todas las conexiones de cliente deben incluir el número de puerto en la cadena de conexión (por ejemplo, AW-SRV01:54321).  
   
- **Opción 1: usar las asignaciones dinámicas de puerto y desbloquear el acceso al servicio SQL Server Browser**  
+ **Opción 1: Usar asignaciones dinámicas de puerto y desbloquear el acceso al servicio de SQL Server Browser**  
   
  **MSOLAP$InstanceName** establece las asignaciones dinámicas de puerto para las instancias con nombre de Analysis Services cuando se inicia el servicio. De forma predeterminada, el servicio reclama el primer número de puerto disponible que encuentra, utilizando un número de puerto diferente cada vez que se reinicia el servicio.  
   
@@ -150,9 +150,9 @@ ms.locfileid: "34019072"
   
 7.  En Nombre, escriba un nombre descriptivo para esta regla, por ejemplo, **Servicio SQL Server Browser (tcp-entrada) 2382**, y haga clic en **Finalizar**.  
   
-8.  Para comprobar que las conexiones remotas están habilitadas, abra SQL Server Management Studio o Excel en un equipo diferente y conéctese a Analysis Services especificando el nombre de red del servidor y el nombre de instancia en este formato: \<servername > \\< instancename\>. Por ejemplo, en un servidor denominado **AW-SRV01** con una instancia con nombre denominada **Finanzas**, el nombre del servidor es **AW-SRV01\Finanzas**.  
+8.  Para comprobar que las conexiones remotas están habilitadas, abra SQL Server Management Studio o Excel en un equipo diferente y conéctese a Analysis Services especificando el nombre de red del servidor y el nombre de instancia en este formato: \<servername > \\< nombreDeInstancia\>. Por ejemplo, en un servidor denominado **AW-SRV01** con una instancia con nombre denominada **Finanzas**, el nombre del servidor es **AW-SRV01\Finanzas**.  
   
- **Opción 2: configurar un puerto fijo para una instancia con nombre**  
+ **Opción 2: Configurar un puerto fijo para una instancia con nombre**  
   
  O bien, puede asignar un puerto fijo y, a continuación, desbloquear el acceso a dicho puerto. Este método proporciona una capacidad de auditoría mejor que si se permite el acceso al programa ejecutable. Por eso, se recomienda utilizar un puerto fijo para acceder a una instancia de Analysis Services.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34019072"
   
 7.  En Nombre, escriba un nombre descriptivo para esta regla, por ejemplo, **SQL Server Analysis Services en puerto 54321**, y haga clic en **Finalizar**.  
   
-8.  Para comprobar que las conexiones remotas están habilitadas, abra SQL Server Management Studio o Excel en un equipo diferente y conéctese a Analysis Services especificando el nombre de red del servidor y el número de puerto en este formato: \<nombreDeServidor >: \<númeroDePuerto >.  
+8.  Para comprobar que las conexiones remotas están habilitadas, abra SQL Server Management Studio o Excel en un equipo diferente y conéctese a Analysis Services especificando el nombre de red del servidor y el número de puerto en este formato: \<nombreDeServidor >: \<portnumber >.  
   
 #### <a name="netsh-advfirewall-syntax"></a>Sintaxis de Netsh AdvFirewall  
   
@@ -195,11 +195,11 @@ ms.locfileid: "34019072"
   
  Tenga en cuenta que el uso de un puerto fijo modificará la sintaxis de conexión para la instancia predeterminada exigiéndole anexar el número de puerto al nombre del servidor. Por ejemplo, la conexión a una instancia predeterminada local de Analysis Services que escucha en el puerto 54321 en SQL Server Management Studio requeriría escribir localhost:54321 como nombre del servidor en el cuadro de diálogo Conectar con el servidor en Management Studio.  
   
- Si está utilizando una instancia con nombre, puede asignar un puerto fijo sin cambios al procedimiento de especificar el nombre del servidor (en concreto, puede usar \<nombreDeServidor ombreDeInstancia > para conectarse a una instancia con nombre que escucha en un puerto fijo). Esto solo funciona si se está ejecutando el servicio SQL Server Browser y se desbloquea el puerto en el que escucha. Servicio SQL Server Browser proporcionará la redirección al puerto fijo en función de \<nombreDeServidor ombreDeInstancia >. Siempre y cuando abra puertos para el servicio SQL Server Browser y para la instancia con nombre de Analysis Services que escucha en el puerto fijo, el servicio SQL Server Browser resolverá la conexión con una instancia con nombre.  
+ Si usa una instancia con nombre, puede asignar un puerto fijo sin cambios cómo se especifica el nombre del servidor (en concreto, puede usar \<nombreDeServidor\nombreDeInstancia > para conectarse a una instancia con nombre escucha en un puerto fijo). Esto solo funciona si se está ejecutando el servicio SQL Server Browser y se desbloquea el puerto en el que escucha. Servicio SQL Server Browser proporcionará la redirección al puerto fijo según \<nombreDeServidor\nombreDeInstancia >. Siempre y cuando abra puertos para el servicio SQL Server Browser y para la instancia con nombre de Analysis Services que escucha en el puerto fijo, el servicio SQL Server Browser resolverá la conexión con una instancia con nombre.  
   
 1.  Determine un puerto TCP/IP disponible para su uso.  
   
-     Para ver una lista de los puertos reservados y registrados cuyo uso debe evitar, vea la página dedicada a los [números de puerto (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469). Para ver una lista de los puertos que ya están en uso en el sistema, abra una ventana de símbolo del sistema y escriba **netstat –a –p TCP** para mostrar una lista de los puertos TCP que están abiertos en el sistema.  
+     Para ver una lista de los puertos reservados y registrados cuyo uso debe evitar, vea la página dedicada a los [números de puerto (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469). Para ver una lista de puertos que ya están en uso en el sistema, abra una ventana de símbolo del sistema y escriba **netstat - a -p TCP** para mostrar una lista de los puertos TCP que están abiertos en el sistema.  
   
 2.  Después de determinar qué puerto va a usar, especifique el puerto modificando el valor de configuración de **Port** en el archivo msmdsrv.ini o en la página Propiedades generales de una instancia de Analysis Services en SQL Server Management Studio.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "34019072"
   
 4.  Configure Firewall de Windows para desbloquear el puerto TCP que especificó. O bien, si está utilizando un puerto fijo para una instancia con nombre, desbloquee el puerto TCP que especificó para esa instancia y también el puerto TCP 2382 para el servicio SQL Server Browser.  
   
-5.  Haga la comprobación conectando localmente (en Management Studio) y después remotamente, desde una aplicación cliente de otro equipo. Para utilizar Management Studio, conéctese a una instancia predeterminada de Analysis Services especificando un nombre de servidor en este formato: \<nombreDeServidor >:\<númeroDePuerto >. Para una instancia con nombre, especifique el nombre del servidor como \<servername >\\< instancename\>.  
+5.  Haga la comprobación conectando localmente (en Management Studio) y después remotamente, desde una aplicación cliente de otro equipo. Para usar Management Studio, conectarse a una instancia predeterminada de Analysis Services especificando un nombre de servidor en este formato: \<nombreDeServidor >:\<portnumber >. Para una instancia con nombre, especifique el nombre del servidor como \<servername >\\< nombreDeInstancia\>.  
   
 ##  <a name="bkmk_cluster"></a> Configuración de puertos para un clúster de Analysis Services  
  Un clúster de conmutación por error de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siempre escucha en el puerto TCP 2383, independientemente de si se ha instalado como una instancia predeterminada o como una instancia con nombre. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no usa asignaciones dinámicas de puerto cuando se instala en un clúster de conmutación por error de Windows. Asegúrese de abrir el puerto TCP 2383 en todos los nodos que ejecuten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el clúster. Para obtener más información acerca de cómo organizar en clúster [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Organizar en clúster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
@@ -225,7 +225,7 @@ ms.locfileid: "34019072"
   
  **SharePoint 2010**  
   
- Si está usando SharePoint 2010, no necesita abrir puertos en Firewall de Windows. SharePoint abre los puertos que necesita, y los complementos como [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint se ejecutan dentro del entorno de SharePoint. En una instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, el Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tiene uso exclusivo de la instancia de servicio local de SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) que se instala con él en el mismo equipo. Utiliza conexiones locales, no conexiones de red, para tener acceso al servicio de motor local de Analysis Services que carga, consulta y procesa datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el servidor de SharePoint. Para solicitar datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de las aplicaciones cliente, las solicitudes se enrutan a través de los puertos abiertos por el programa de instalación de SharePoint (en concreto, se definen reglas de entrada para permitir el acceso a SharePoint - 80, Administración central de SharePoint v4, SharePoint Web Services y SPUserCodeV4). Puesto que los servicios web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se ejecutan dentro de una granja de servidores de SharePoint, las reglas de firewall de SharePoint son suficientes para el acceso remoto a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja de servidores de SharePoint.  
+ Si está usando SharePoint 2010, no necesita abrir puertos en Firewall de Windows. SharePoint abre los puertos que necesita, y los complementos como [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint se ejecutan dentro del entorno de SharePoint. En un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para la instalación de SharePoint 2010, la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servicio del sistema tiene uso exclusivo de la versión local de SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) instancia de servicio que se instala con él en el mismo equipo. Utiliza conexiones locales, no conexiones de red, para tener acceso al servicio de motor local de Analysis Services que carga, consulta y procesa datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el servidor de SharePoint. A solicitud [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] datos desde aplicaciones cliente, las solicitudes se enrutan a través de puertos abiertos por el programa de instalación de SharePoint (en concreto, se definen las reglas de entrada para permitir el acceso a SharePoint - 80, Administración Central de SharePoint v4, SharePoint Web Services y SPUserCodeV4). Puesto que los servicios web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se ejecutan dentro de una granja de servidores de SharePoint, las reglas de firewall de SharePoint son suficientes para el acceso remoto a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja de servidores de SharePoint.  
   
 ## <a name="see-also"></a>Vea también  
  [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

@@ -14,12 +14,12 @@ ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 705c71cd3b6872bfa8fe08509ed3d46b2799c445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41f6e01b027049f5ac418aa9199cf9e576aebd0a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848163"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208514"
 ---
 # <a name="create-user-defined-aggregates"></a>Crear funciones de agregado definidas por el usuario
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47848163"
   
 -   Crear la función de agregado definida por el usuario que hace referencia al ensamblado registrado con la instrucción CREATE AGGREGATE.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La implementación de un proyecto de SQL Server en [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registra un ensamblado en la base de datos especificada para el proyecto. La implementación del proyecto también crea un agregado definido por el usuario en la base de datos para todas las definiciones de clase anotadas con el atributo **SqlUserDefinedAggregate** . Para más información, consulte [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  La capacidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar el código CLR se encuentra desactivada de manera predeterminada. Puede crear, modificar y quitar objetos de base de datos que hacen referencia a los módulos de códigos administrados; pero, estas referencias no se ejecutarán en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que se haya habilitado la opción [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) por medio de [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  **Para crear, modificar o quitar un ensamblado**  
@@ -53,7 +53,7 @@ ms.locfileid: "47848163"
   
 -   [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

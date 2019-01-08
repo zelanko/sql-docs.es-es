@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e923092cbd81bcee6bee7c76f956bae2ede45c35
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543960"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983986"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
   La utilidad rs.exe procesa el script que proporcione en un archivo de entrada. Use esta utilidad para automatizar las tareas de implementación y administración del servidor de informes.  
@@ -56,7 +56,7 @@ rs {-?}
  (Obligatorio) Especifica el archivo .rss que debe ejecutarse. Este valor puede ser una ruta de acceso relativa o una ruta de acceso completa al archivo .rss.  
   
  **-s** *URLDelServidor*  
- (Obligatorio) Especifica el nombre del servidor web y el nombre del directorio virtual del servidor de informes donde debe ejecutarse el archivo. Un ejemplo de una dirección URL de un servidor de informes es `https://examplewebserver/reportserver`. El prefijo https:// o https:// al principio del nombre del servidor es opcional. Si se omite el prefijo, el host de script del servidor de informes intentará usar primero https y, después, http si https no funciona.  
+ (Obligatorio) Especifica el nombre del servidor web y el nombre del directorio virtual del servidor de informes donde debe ejecutarse el archivo. Un ejemplo de una dirección URL de un servidor de informes es `https://examplewebserver/reportserver`. El prefijo http:// o https:// al principio del nombre del servidor es opcional. Si se omite el prefijo, el host de script del servidor de informes intentará usar primero https y, después, http si https no funciona.  
   
  **-u** [*dominio*\\]*nombreDeUsuario*  
  (Opcional) Especifica una cuenta de usuario que se utiliza para conectarse al servidor de informes. Si se omiten **-u** y **-p** , se usará la cuenta de usuario de Windows actual.  
@@ -119,7 +119,7 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
 > [!TIP]  
 >  Para consultar un ejemplo detallado, vea [Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 - [Ejecutar un archivo de script de Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [Script para tareas administrativas y de implementación](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 - [Script con la utilidad rs.exe y el servicio Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   

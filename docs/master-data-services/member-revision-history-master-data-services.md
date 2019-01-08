@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 907c99e6d3acb5bbc66af72ecf594300e27ea14a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18d788e78a58f171a9a6ead5afbe7706eed2111b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813007"
 ---
 # <a name="member-revision-history-master-data-services"></a>Historial de revisiones de miembro (Master Data Services)
 
@@ -72,7 +71,7 @@ ms.locfileid: "47772353"
 |----------------------|-----------|  
 |Revertir el historial de revisiones de miembro|[Reversión del historial de revisiones de miembro &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - architecture [SQL Server], Database Mail
@@ -15,12 +14,12 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fea03f3328d2cf19a0f17d4e4339a670b2af9b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132925"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787977"
 ---
 # <a name="database-mail"></a>Correo electrónico de base de datos
   El Correo electrónico de base de datos es una solución empresarial para enviar mensajes de correo electrónico desde [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. El Correo electrónico de base de datos permite a las aplicaciones de base de datos enviar mensajes de correo electrónico a los usuarios. Los mensajes enviados pueden incluir resultados de consultas y archivos de cualquier recurso de la red.  
@@ -42,37 +41,37 @@ ms.locfileid: "48132925"
   
 ### <a name="scalability"></a>Escalabilidad  
   
--   Entrega en segundo plano: el Correo electrónico de base de datos permite realizar entregas en segundo plano o asincrónicas. Cuando se llama a **sp_send_dbmail** para enviar un mensaje, Correo electrónico de base de datos agrega una solicitud a una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El procedimiento almacenado se devuelve inmediatamente. El componente de correo electrónico externo recibe la solicitud y entrega el mensaje.  
+-   Entrega en segundo plano: El Correo electrónico de base de datos permite realizar entregas en segundo plano o asincrónicas. Cuando se llama a **sp_send_dbmail** para enviar un mensaje, Correo electrónico de base de datos agrega una solicitud a una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El procedimiento almacenado se devuelve inmediatamente. El componente de correo electrónico externo recibe la solicitud y entrega el mensaje.  
   
--   Varios perfiles: el Correo electrónico de base de datos permite crear varios perfiles en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También se puede elegir el perfil del Correo electrónico de base de datos para enviar el mensaje.  
+-   Varios perfiles: El Correo electrónico de base de datos permite crear varios perfiles en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se puede elegir el perfil del Correo electrónico de base de datos para enviar el mensaje.  
   
--   Varias cuentas: cada perfil puede incluir varias cuentas de conmutación por error. Se pueden configurar varios perfiles con distintas cuentas para distribuir el correo electrónico entre varios servidores de correo.  
+-   Varias cuentas: Cada perfil puede incluir varias cuentas de conmutación por error. Se pueden configurar varios perfiles con distintas cuentas para distribuir el correo electrónico entre varios servidores de correo.  
   
--   Compatibilidad con 64 bits: el Correo electrónico de base de datos es totalmente compatible con las versiones de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   compatibilidad con 64 bits: El Correo electrónico de base de datos es totalmente compatible con las versiones de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="security"></a>Seguridad  
   
--   Desactivado de forma predeterminada: para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los procedimientos almacenados del Correo electrónico de base de datos están deshabilitados de forma predeterminada.  
+-   Desactivado de forma predeterminada: Para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los procedimientos almacenados del Correo electrónico de base de datos están deshabilitados de forma predeterminada.  
   
 -   Seguridad de correo electrónico: para enviar Correo electrónico de base de datos debe ser miembro del rol de base de datos **DatabaseMailUserRole** en la base de datos **msdb** .  
   
--   Seguridad de perfil: el Correo electrónico de base de datos aplica la seguridad para los perfiles de correo. El usuario elige cuáles son los usuarios o grupos de la base de datos **msdb** que tienen acceso a los perfiles del Correo electrónico de base de datos. Se puede conceder acceso a usuarios específicos o a todos los usuarios de **msdb**. Un perfil privado restringe el acceso a una lista especificada de usuarios. Un perfil público está disponible para todos los usuarios de la base de datos.  
+-   Seguridad del perfil: El Correo electrónico de base de datos aplica la seguridad para los perfiles de correo. El usuario elige cuáles son los usuarios o grupos de la base de datos **msdb** que tienen acceso a los perfiles del Correo electrónico de base de datos. Se puede conceder acceso a usuarios específicos o a todos los usuarios de **msdb**. Un perfil privado restringe el acceso a una lista especificada de usuarios. Un perfil público está disponible para todos los usuarios de la base de datos.  
   
--   Regulador del tamaño de los datos adjuntos: el Correo electrónico de base de datos aplica un límite configurable para el tamaño de los datos adjuntos. Puede cambiar este límite usando el procedimiento almacenado [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
+-   Regulador del tamaño de los datos adjuntos: El Correo electrónico de base de datos aplica un límite configurable para el tamaño de los datos adjuntos. Puede cambiar este límite usando el procedimiento almacenado [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
   
--   Extensiones de archivo prohibidas: el Correo electrónico de base de datos mantiene una lista de extensiones de archivo prohibidas. Los usuarios no pueden adjuntar archivos con las extensiones de la lista. Puede cambiar esta lista utilizando sysmail_configure_sp.  
+-   Extensiones de archivo prohibidas: El Correo electrónico de base de datos mantiene una lista de extensiones de archivo prohibidas. Los usuarios no pueden adjuntar archivos con las extensiones de la lista. Puede cambiar esta lista utilizando sysmail_configure_sp.  
   
 -   Correo electrónico de base de datos se ejecuta bajo la cuenta de servicio de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para adjuntar un archivo de una carpeta a un mensaje de correo electrónico, la cuenta de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de acceso a la carpeta con el archivo.  
   
 ### <a name="supportability"></a>Compatibilidad  
   
--   Configuración integrada: el Correo electrónico de base de datos mantiene la información de las cuentas de correo electrónico de [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
+-   Configuración integrada: El Correo electrónico de base de datos mantiene la información para las cuentas de correo electrónico del [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
   
 -   Registro. Correo electrónico de base de datos registra la actividad de correo electrónico en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el registro de eventos de aplicación de Microsoft Windows y en las tablas de la base de datos **msdb** .  
   
--   Auditar: El Correo electrónico de base de datos conserva copias de los mensajes y datos adjuntos enviados en la base de datos **msdb** . Puede auditar fácilmente el uso del Correo electrónico de base de datos y revisar los mensajes conservados.  
+-   Auditoría: Correo electrónico de base de datos conserva copias de mensajes y datos adjuntos enviados en la **msdb** base de datos. Puede auditar fácilmente el uso del Correo electrónico de base de datos y revisar los mensajes conservados.  
   
--   Compatibilidad con HTML: el Correo electrónico de base de datos permite enviar mensajes de correo electrónico con el formato HTML.  
+-   Compatibilidad con HTML: El Correo electrónico de base de datos permite enviar mensajes de correo electrónico con el formato HTML.  
   
 
   

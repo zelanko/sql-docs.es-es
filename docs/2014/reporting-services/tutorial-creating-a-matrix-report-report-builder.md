@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un informe de matriz (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Crear un informe de matriz (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159505"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353393"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (Generador de informes)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (generador de informes)
   Este tutorial enseña a crear un informe de matriz básico de acuerdo con los datos de ventas de ejemplo. La matriz ha anidado en grupos de filas y de columnas, así como en un grupos de columnas adyacente. También aprenderá a dar formato a las columnas y a girar el texto. En la siguiente ilustración se muestra un informe similar al que creará.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- Una versión mejorada del informe que creará en este tutorial está disponible como ejemplo en el informe del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Una versión mejorada del informe que creará en este tutorial está disponible como ejemplo en el informe del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Qué aprenderá  
  En este tutorial, aprenderá a:  
@@ -74,7 +74,7 @@ ms.locfileid: "48159505"
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En el **elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y, a continuación, seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener más información acerca de cómo crear un origen de datos incrustados, vea [Tutorial: crear un informe de tabla básico &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En el **elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y, a continuación, seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener más información acerca de cómo crear un origen de datos incrustados, vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48159505"
   
 13. Haga clic en **Finalizar**.  
   
-     La matriz se agrega a la superficie de diseño. El panel Grupos de filas muestra dos grupos de filas: Territory y SalesDate. El panel Grupos de columnas muestra dos grupos de columnas: Subcategory y Product. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+     La matriz se agrega a la superficie de diseño. El panel de grupos de filas muestra dos grupos de filas: Territory y SalesDate. El panel de grupos de columnas muestra dos grupos de columnas: Subcategoría y producto. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 14. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   

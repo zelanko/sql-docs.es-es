@@ -10,12 +10,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065125"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359297"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
   Este tema presenta los conceptos, los requisitos y los componentes necesarios para utilizar el servicio de almacenamiento Blob de Windows Azure como destino de copia de seguridad. La funcionalidad de copia de seguridad y restauración es igual o similar que la que usa DISK o TAPE, con algunas diferencias. En este tema se incluyen las diferencias, excepciones notables y algunos ejemplos de código.  
@@ -52,40 +52,40 @@ ms.locfileid: "48065125"
 -   La cuenta de usuario que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **operador de db_backup** con permisos **Modificar cualquier credencial** .  
   
 ###  <a name="intorkeyconcepts"></a> Introducción a los principales componentes y conceptos  
- Las dos secciones siguientes presentan el servicio de almacenamiento Blob de Windows Azure y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes usados al hacer copia de seguridad o restaurar desde el servicio de Windows Azure Blob storage. Es importante entender los componentes y la interacción entre ellos para realizar una copia de seguridad o una restauración desde el servicio de almacenamiento Blob de Windows Azure.  
+ En las dos secciones siguientes se presentan el servicio de almacenamiento Blob de Windows Azure, y los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se usan al realizar copia de seguridad o restaurar desde el servicio de almacenamiento Blob de Windows Azure. Es importante entender los componentes y la interacción entre ellos para realizar una copia de seguridad o una restauración desde el servicio de almacenamiento Blob de Windows Azure.  
   
- La creación de una cuenta de Windows Azure es el primer paso de este proceso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el **nombre de cuenta de almacenamiento de Windows Azure** y su **clave de acceso** valores para autenticarse, escribir y leer los blobs en el servicio de almacenamiento. La credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena esta información de autenticación y se emplea durante las operaciones de copia de seguridad o restauración. Para obtener un tutorial completo sobre cómo crear una cuenta de almacenamiento y realizar una restauración simple, vea [Tutorial: Introducción a la copia de seguridad y la restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=271615).  
+ La creación de una cuenta de Windows Azure es el primer paso de este proceso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el **nombre de cuenta de almacenamiento de Windows Azure** y su **clave de acceso** valores para autenticarse, escribir y leer los blobs en el servicio de almacenamiento. La credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena esta información de autenticación y se emplea durante las operaciones de copia de seguridad o restauración. Para obtener un tutorial completo sobre cómo crear una cuenta de almacenamiento y realizar una restauración simple, vea [Tutorial: Introducción a la copia de seguridad y la restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
  ![asignación de cuenta de almacenamiento a las credenciales de sql](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "asignar la cuenta de almacenamiento a las credenciales de sql")  
   
 ###  <a name="Blob"></a> Servicio de Windows Azure Blob Storage  
- **Cuenta de almacenamiento** : la cuenta de almacenamiento es el punto de partida para todos los servicios de almacenamiento. Para obtener acceso al servicio de almacenamiento Blob de Windows Azure, cree primero una cuenta de almacenamiento de Windows Azure. El **storage account name** y sus propiedades de **access key** son necesarios para autenticarse en el servicio de almacenamiento Blob de Windows Azure y sus componentes.  
+ **Cuenta de almacenamiento:** La cuenta de almacenamiento es el punto de partida para todos los servicios de almacenamiento. Para obtener acceso al servicio de almacenamiento Blob de Windows Azure, cree primero una cuenta de almacenamiento de Windows Azure. El **storage account name** y sus propiedades de **access key** son necesarios para autenticarse en el servicio de almacenamiento Blob de Windows Azure y sus componentes.  
   
- **Contenedor** : un contenedor proporciona una agrupación de un conjunto de blobs y puede almacenar un número ilimitado de blobs. Para escribir una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Microsoft Azure Blob service, debe haber creado al menos el contenedor raíz.  
+ **Contenedor:** Un contenedor proporciona una agrupación de un conjunto de blobs y puede almacenar un número ilimitado de blobs. Para escribir una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servicio Blob de Windows Azure, debe haber creado al menos el contenedor raíz.  
   
- **Blob** : un archivo de cualquier tipo y tamaño. Se pueden almacenar dos tipos de blobs en el servicio de almacenamiento Blob de Windows Azure: blobs en bloques y blobs en páginas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copia de seguridad usa Blobs en páginas como tipo de Blob. Los blobs son direccionables mediante el siguiente formato de dirección URL: https://\<cuenta de almacenamiento >.blob.core.windows.net/\<contenedor > /\<blob >  
+ **BLOB:** Un archivo de cualquier tipo y tamaño. Se pueden almacenar dos tipos de blobs en el servicio de almacenamiento Blob de Windows Azure: blobs en bloques y blobs en páginas. La copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa blobs en páginas como tipo de blob. Los blobs son direccionables mediante el siguiente formato de dirección URL: https://\<cuenta de almacenamiento >.blob.core.windows.net/\<contenedor > /\<blob >  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
  Para obtener más información sobre el servicio de almacenamiento Blob de Windows Azure, vea [Cómo usar el servicio de almacenamiento Blob de Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
- Para obtener más información sobre los blobs en páginas, vea [Descripción de los blobs en bloques y los blobs en páginas](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
+ Para obtener más información sobre los blobs en páginas, vea [Descripción de los blobs en bloques y los blobs en páginas](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **Dirección URL:** una dirección URL especifica un identificador uniforme de recursos (URI) para un archivo de copia de seguridad único. La dirección URL se emplea para proporcionar la ubicación y el nombre del archivo de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta implementación, la única dirección URL válida es una que apunta a un blob en páginas de una cuenta de almacenamiento de Windows Azure. La dirección URL debe apuntar a un blob real, no solo a un contenedor. Si el blob no existe, se crea. Si se especifica un blob existente, se produce un error en BACKUP, a menos que se especifique la opción “WITH FORMAT”.  
+ **DIRECCIÓN URL:** Una dirección URL especifica un identificador uniforme de recursos (URI) para un archivo de copia de seguridad único. La dirección URL se emplea para proporcionar la ubicación y el nombre del archivo de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta implementación, la única dirección URL válida es una que apunta a un blob en páginas de una cuenta de almacenamiento de Windows Azure. La dirección URL debe apuntar a un blob real, no solo a un contenedor. Si el blob no existe, se crea. Si un Blob existente especificado, copia de seguridad se produce un error, a menos que se especifica la opción "WITH FORMAT".  
   
 > [!WARNING]  
 >  Si elige copiar y cargar un archivo de copia de seguridad en el servicio de almacenamiento Blob de Windows Azure, use un blob en páginas como opción de almacenamiento. No se admiten restauraciones desde blobs en bloques. La instrucción RESTORE desde un tipo de blob en bloques produce un error.  
   
  Este es un valor de dirección URL de ejemplo: http[s]://ACCOUNTNAME.Blob.core.windows.net/\<contenedor > /\<nombreArchivo.bak >. HTTPS no es necesario, pero es recomendable.  
   
- **Credencial:** una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.  En este caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesos de copia de seguridad y restauración usan credenciales para autenticarse al servicio de almacenamiento de blobs de Windows Azure. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para obtener más información sobre cómo ver, copiar o regenerar **access keys**de cuentas de almacenamiento, vea [Ver, copiar y regenerar las claves de acceso de una cuenta de almacenamiento de Windows Azure](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Credencial:** Una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.  Aquí, los procesos de copia de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan credenciales para autenticarse en el servicio de almacenamiento Blob de Windows Azure. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para obtener más información sobre cómo ver, copiar o regenerar **access keys**de cuentas de almacenamiento, vea [Ver, copiar y regenerar las claves de acceso de una cuenta de almacenamiento de Windows Azure](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Para obtener instrucciones paso a paso sobre cómo crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial, vea [crear una credencial](#credential) ejemplo más adelante en este tema.  
+ Para obtener instrucciones paso a paso sobre cómo crear una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea el ejemplo de [Create a Credential](#credential) más adelante en este tema.  
   
  Para obtener información general sobre las credenciales, vea [Credenciales](../security/authentication-access/credentials-database-engine.md).  
   
- Para obtener información sobre otros ejemplos donde se usan las credenciales, vea [crear un Proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+ Para obtener información sobre otros ejemplos donde se usan credenciales, vea [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitaciones  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48065125"
   
     ```  
   
--   Especificar un tamaño de bloque con `BACKUP` no se admite.  
+-   No se admite especificar un tamaño de bloque con `BACKUP`.  
   
 -   No se admite especificar `MAXTRANSFERSIZE`.  
   
@@ -124,13 +124,13 @@ ms.locfileid: "48065125"
 |||||  
 |-|-|-|-|  
 |Instrucción BACKUP/RESTORE|Admitida|Excepciones|Comentarios|  
-|BACKUP|√|No se admiten BLOCKSIZE y MAXTRANSFERSIZE.|Es necesario especificar WITH CREDENTIAL|  
-|RESTORE|√||Es necesario especificar WITH CREDENTIAL|  
-|RESTORE FILELISTONLY|√||Es necesario especificar WITH CREDENTIAL|  
-|RESTORE HEADERONLY|√||Es necesario especificar WITH CREDENTIAL|  
-|RESTORE LABELONLY|√||Es necesario especificar WITH CREDENTIAL|  
-|RESTORE VERIFYONLY|√||Es necesario especificar WITH CREDENTIAL|  
-|RESTORE REWINDONLY|−|||  
+|BACKUP|???|No se admiten BLOCKSIZE y MAXTRANSFERSIZE.|Es necesario especificar WITH CREDENTIAL|  
+|RESTORE|???||Es necesario especificar WITH CREDENTIAL|  
+|RESTORE FILELISTONLY|???||Es necesario especificar WITH CREDENTIAL|  
+|RESTORE HEADERONLY|???||Es necesario especificar WITH CREDENTIAL|  
+|RESTORE LABELONLY|???||Es necesario especificar WITH CREDENTIAL|  
+|RESTORE VERIFYONLY|???||Es necesario especificar WITH CREDENTIAL|  
+|RESTORE REWINDONLY|???|||  
   
  Para conocer la sintaxis y obtener información general sobre las instrucciones de copia de seguridad, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -141,34 +141,34 @@ ms.locfileid: "48065125"
 |||||  
 |-|-|-|-|  
 |Argumento|Admitida|Excepción|Comentarios|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|???|||  
+|LOG|???|||  
 ||  
-|TO (URL)|√|A diferencia de DISK y TAPE, URL no admite especificar o crear un nombre lógico.|Este argumento se emplea para especificar la ruta de acceso de la dirección URL del archivo de copia de seguridad.|  
-|MIRROR TO|−|||  
+|TO (URL)|???|A diferencia de DISK y TAPE, URL no admite especificar o crear un nombre lógico.|Este argumento se emplea para especificar la ruta de acceso de la dirección URL del archivo de copia de seguridad.|  
+|MIRROR TO|???|||  
 |**OPCIONES DE WITH:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL solo se admite cuando se usa la opción BACKUP TO URL para hacer copia de seguridad en el servicio de almacenamiento Blob de Windows Azure.|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||Esta opción se omite si se usa.<br /><br /> No es posible anexar a blobs. Para sobrescribir una copia de seguridad, use el argumento FORMAT.|  
-|NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Esta opción se omite si se usa.<br /><br /> Una copia de seguridad realizada en un blob existente producirá un error a menos que se especifique WITH FORMAT. Se sobrescribe el blob existente si se especifica WITH FORMAT.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|−|||  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|−|||  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|CREDENTIAL|???||WITH CREDENTIAL solo se admite cuando se usa la opción BACKUP TO URL para hacer copia de seguridad en el servicio de almacenamiento Blob de Windows Azure.|  
+|DIFFERENTIAL|???|||  
+|COPY_ONLY|???|||  
+|COMPRESSION&#124;NO_COMPRESSION|???|||  
+|DESCRIPTION|???|||  
+|NAME|???|||  
+|EXPIREDATE &#124; RETAINDAYS|???|||  
+|NOINIT &#124; INIT|???||Esta opción se omite si se usa.<br /><br /> No es posible anexar a blobs. Para sobrescribir una copia de seguridad, use el argumento FORMAT.|  
+|NOSKIP &#124; SKIP|???|||  
+|NOFORMAT &#124; FORMAT|???||Esta opción se omite si se usa.<br /><br /> Una copia de seguridad realizada en un blob existente producirá un error a menos que se especifique WITH FORMAT. Se sobrescribe el blob existente si se especifica WITH FORMAT.|  
+|MEDIADESCRIPTION|???|||  
+|MEDIANAME|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|NO_CHECKSUM &#124; CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|NORECOVERY &#124; STANDBY|???|||  
+|NO_TRUNCATE|???|||  
   
  Para obtener más información sobre los argumentos de copia de seguridad, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -177,35 +177,35 @@ ms.locfileid: "48065125"
 |||||  
 |-|-|-|-|  
 |Argumento|Admitida|Excepciones|Comentarios|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||El argumento FROM URL se emplea para especificar la ruta de acceso de la dirección URL del archivo de copia de seguridad.|  
+|DATABASE|???|||  
+|LOG|???|||  
+|FROM (URL)|???||El argumento FROM URL se emplea para especificar la ruta de acceso de la dirección URL del archivo de copia de seguridad.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL solo se admite cuando se usa la opción RESTORE FROM URL para restaurar desde el servicio de almacenamiento Blob de Windows Azure.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
-|FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|CREDENTIAL|???||WITH CREDENTIAL solo se admite cuando se usa la opción RESTORE FROM URL para restaurar desde el servicio de almacenamiento Blob de Windows Azure.|  
+|PARTIAL|???|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|???|||  
+|LOADHISTORY|???|||  
+|MOVE|???|||  
+|REPLACE|???|||  
+|RESTART|???|||  
+|RESTRICTED_USER|???|||  
+|FILE|???|||  
+|PASSWORD|???|||  
+|MEDIANAME|???|||  
+|MEDIAPASSWORD|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|CHECKSUM &#124; NO_CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|FILESTREAM|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|KEEP_REPLICATION|???|||  
+|KEEP_CDC|???|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|???|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|???|||  
   
  Para obtener más información sobre los argumentos de restauración, vea [RESTORE &#40;argumentos, Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
@@ -218,18 +218,18 @@ ms.locfileid: "48065125"
   
 2.  En la página general, se utiliza la opción **Dirección URL** para crear una copia de seguridad para el almacenamiento de Windows Azure. Al seleccionar esta opción, se ven otras opciones habilitadas en esta página:  
   
-    1.  **Nombre de archivo:** nombre del archivo de copia de seguridad.  
+    1.  **Nombre de archivo:** Nombre del archivo de copia de seguridad.  
   
-    2.  **Credencial SQL:** puede especificar una credencial existente de SQL Server o crear una nueva haciendo clic en **Crear** , junto al cuadro Credencial SQL.  
+    2.  **Credencial SQL:** Puede especificar una credencial existente de SQL Server, o puede crear uno nuevo haciendo clic en el **crear** junto al cuadro credencial SQL.  
   
         > [!IMPORTANT]  
-        >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. SQL Server admite actualmente la versión 2.0 del perfil de publicación. Para descargar la versión compatible del perfil de publicación, vea [Descargar perfil de publicación 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+        >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. SQL Server admite actualmente la versión 2.0 del perfil de publicación. Para descargar la versión compatible del perfil de publicación, vea [Descargar perfil de publicación 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
         >   
         >  Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo de la sección [Crear una credencial](#credential) para crear una credencial mediante Transact-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
   
-    3.  **Contenedor de almacenamiento de Windows Azure:** el nombre del contenedor de almacenamiento de Windows Azure para almacenar los archivos de copia de seguridad.  
+    3.  **Contenedor de almacenamiento de Azure:** El nombre del contenedor de almacenamiento de Microsoft Azure para almacenar los archivos de copia de seguridad.  
   
-    4.  **Prefijo de dirección URL:** se genera automáticamente con la información especificada en los campos que se describen en los pasos anteriores. Si edita este valor manualmente, asegúrese de que coincide con el resto de la información que proporcionó antes. Por ejemplo, si modifica la dirección URL de almacenamiento, asegúrese de que la credencial SQL está establecida para autenticar en la misma cuenta de almacenamiento.  
+    4.  **Prefijo URL:** Se genera automáticamente con la información especificada en los campos que se describen en los pasos anteriores. Si edita este valor manualmente, asegúrese de que coincide con el resto de la información que proporcionó antes. Por ejemplo, si modifica la dirección URL de almacenamiento, asegúrese de que la credencial SQL está establecida para autenticar en la misma cuenta de almacenamiento.  
   
  Al seleccionar la dirección URL como destino, ciertas opciones de la página **Opciones multimedia** están deshabilitadas.  Los temas siguientes tienen más información acerca del cuadro de diálogo Copia de seguridad de la base de datos:  
   
@@ -242,7 +242,7 @@ ms.locfileid: "48065125"
  [Crear credencial - autenticarse en Almacenamiento de Azure](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Copia de seguridad de SQL Server en una dirección URL mediante el Asistente para planes de mantenimiento  
- Al igual que la tarea Copia de seguridad descrita antes, el Asistente para planes de mantenimiento de SQL Server Management Studio se ha mejorado para incluir **Dirección URL** como una de las opciones de destino y otros objetos de compatibilidad necesarios para realizar la copia de seguridad en el almacenamiento de Windows Azure como la credencial SQL. Para obtener más información, consulte el **definir las tareas de copia de seguridad** sección [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Al igual que la tarea Copia de seguridad descrita antes, el Asistente para planes de mantenimiento de SQL Server Management Studio se ha mejorado para incluir **Dirección URL** como una de las opciones de destino y otros objetos de compatibilidad necesarios para realizar la copia de seguridad en el almacenamiento de Windows Azure como la credencial SQL. Para obtener más información, consulte la sección **Definir las tareas de copia de seguridad** en [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 ##  <a name="RestoreSSMS"></a> Restaurar desde el almacenamiento de Windows Azure con SQL Server Management Studio  
  Si restaura una base de datos, **Dirección URL** se incluye como dispositivo desde el que restaurar. Los siguientes pasos describen los cambios de la tarea Restaurar para permitir restaurar desde el almacenamiento de Windows Azure:  
@@ -877,6 +877,6 @@ ms.locfileid: "48065125"
 ## <a name="see-also"></a>Vea también  
  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: SQL Server Backup and Restore al servicio de Windows Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

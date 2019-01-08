@@ -13,12 +13,12 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a4e638ddacc5b112ef819826c3eae7f42c5078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226595"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590569"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lección 1: Publicar datos con la replicación transaccional
   En esta lección, creará una publicación transaccional con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto filtrado de la tabla **Product** en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . También agregará un inicio de sesión de SQL Server que utiliza el Agente de distribución para la lista de acceso a la publicación (PAL). Antes de iniciar este tutorial, deberá haber finalizado el tutorial anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48226595"
   
 10. En la página Seguridad del agente, desactive la casilla **Usar la configuración de seguridad del Agente de instantáneas** .  
   
-11. Haga clic en **Configuración de seguridad** para el Agente de instantáneas, escriba \<*Nombre_De_Equipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, haga clic en **Aceptar**.  
+11. Haga clic en **Configuración de seguridad** para el Agente de instantáneas, escriba \<_nombreDeEquipo>_**\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y luego haga clic en **Aceptar**.  
   
 12. Repita el paso anterior para establecer repl_logreader como la cuenta de proceso para el Agente de registro del LOG y, después, haga clic en **Finalizar**.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "48226595"
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  \En el cuadro de diálogo **Agregar acceso de publicación**, seleccione *<Nombre_De_Equipo>***\repl_distribution** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
+4.  \En el cuadro de diálogo **Agregar acceso de publicación**, seleccione _<nombre_equipo>_**\repl_distribution** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente la publicación transaccional. A continuación se suscribirá a esta publicación. Consulte [Lección 2: Crear una suscripción a la publicación transaccional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ Ha creado correctamente la publicación transaccional. A continuación se suscribirá a esta publicación. Consulte [lección 2: Crear una suscripción a la publicación transaccional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Filtrar datos publicados](publish/filter-published-data.md)   

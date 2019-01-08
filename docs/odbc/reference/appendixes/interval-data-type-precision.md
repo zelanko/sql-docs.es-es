@@ -19,17 +19,17 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706433"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532119"
 ---
 # <a name="interval-data-type-precision"></a>Precisión del tipo de datos de intervalo
 Precisión para un tipo de datos de intervalo incluye iniciales de precisión, la precisión de intervalo y la precisión de segundos del intervalo.  
   
- El campo inicial de un intervalo es un valor numérico con signo. El número máximo de dígitos para el campo inicial viene determinada por una cantidad llamada *precisión, del principio del intervalo* que forma parte de la declaración de tipos de datos. Por ejemplo, la declaración: intervalo HOUR(5) al minuto tiene un intervalo de precisión de 5; inicial el campo de hora puede tomar los valores de –99999 y 99999. El intervalo de precisión del principio se incluye en el campo SQL_DESC_DATETIME_INTERVAL_PRECISION del registro de descriptor.  
+ El campo inicial de un intervalo es un valor numérico con signo. El número máximo de dígitos para el campo inicial viene determinada por una cantidad llamada *precisión, del principio del intervalo* que forma parte de la declaración de tipos de datos. Por ejemplo, la declaración: INTERVALO HOUR(5) al minuto tiene una precisión de intervalo inicial de 5; el campo de hora puede tomar los valores de-99999 y 99999. El intervalo de precisión del principio se incluye en el campo SQL_DESC_DATETIME_INTERVAL_PRECISION del registro de descriptor.  
   
  Se llama a la lista de campos de un tipo de datos de intervalo se compone de *precisión de intervalo*. No es un valor numérico, como el término "precisión" pueda implicar. Por ejemplo, la precisión de intervalo del tipo INTERVAL DAY TO en segundo lugar es la lista de día, hora, minuto, segundo. No hay ningún campo de descriptor que contiene este valor; la precisión de intervalo siempre se puede determinar mediante el tipo de datos de intervalo.  
   

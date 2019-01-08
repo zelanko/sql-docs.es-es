@@ -16,15 +16,15 @@ ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b2ec18b03081d3469e9187db6043ba27406389b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a231e4fcc071338f4fcf168475bde86514470b41
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207685"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590839"
 ---
 # <a name="expression-dialog-box"></a>Expresión (cuadro de diálogo)
-  Use la **expresión** cuadro de diálogo para escribir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] expresiones para informe de propiedades de los elementos. Puede usar expresiones para establecer muchas propiedades, como el color, la fuente y los bordes. En tiempo de ejecución, el procesador de informes evalúa las expresiones y usa el resultado como valor de la propiedad.  
+  Use el cuadro de diálogo **Expresión** para escribir expresiones de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para las propiedades de los elementos de informe. Puede usar expresiones para establecer muchas propiedades, como el color, la fuente y los bordes. En tiempo de ejecución, el procesador de informes evalúa las expresiones y usa el resultado como valor de la propiedad.  
   
  Una expresión puede ser sencilla o compleja. Puede escribir directamente las expresiones simples en un cuadro de texto en la superficie de diseño o en un cuadro de diálogo. Para crear expresiones complejas, use el **expresión** cuadro de diálogo. Puede crear una expresión cada vez. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -37,11 +37,11 @@ ms.locfileid: "48207685"
 ## <a name="expression-constructs"></a>Construcciones de expresiones  
  Las expresiones comienzan por un signo igual (=) y pueden incluir constantes, literales, operadores y referencias a campos integrados, colecciones integradas, funciones integradas, funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], clases de Common Language Runtime de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] y funciones personalizadas. En la lista siguiente se describen las categorías y los valores que puede agregar a una expresión.  
   
- **Establecer expresión para:***\<PropertyName >*   
+ **Establecer expresión para:**  _\<PropertyName >_  
  Nombre de la propiedad cuya expresión está definiendo. También puede establecer esta propiedad, por nombre, en el panel de propiedades.  
   
  **Constantes**  
- Proporciona una lista de valores predefinidos válidos para esta propiedad (para las propiedades que están basadas en constantes). Por ejemplo, una propiedad basada en colores muestra los nombres de los colores válidos. Para una propiedad que es un tipo de datos booleanos, los valores son `True` y `False`.  
+ Proporciona una lista de valores predefinidos válidos para esta propiedad (para las propiedades que están basadas en constantes). Por ejemplo, una propiedad basada en colores muestra los nombres de los colores válidos. Para una propiedad que es un tipo de datos Boolean, los valores son `True` y `False`.  
   
  No todos los elementos que admiten expresiones pueden establecerse en una constante. Si una propiedad no se puede establecer en un valor constante, el panel de descripciones proporciona esta información.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48207685"
  **Parámetros**  
  Proporciona una lista de parámetros de informe.  
   
- **Campos (**  *\<conjunto de datos seleccionado >* **)**  
+ **Campos (**  _\<conjunto de datos seleccionado >_ **)**  
  Muestra la lista de campos para el conjunto de datos seleccionado en la categoría Conjuntos de datos. Haga doble clic en un campo para copiarlo en el cuadro **Expresión** .  
   
  **Conjuntos de datos**  
@@ -90,13 +90,13 @@ ms.locfileid: "48207685"
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;generador de informes y SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Usar referencias a la colección de parámetros &#40;generador de informes y SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Ejemplos de ecuaciones de filtro &#40;generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Colecciones integradas en expresiones &#40;generador de informes y SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
  [Agregar una expresión &#40;Generador de informes y SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

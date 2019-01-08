@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
@@ -13,12 +13,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 498bf394cb896f12a4b246edf42b9b741a0a99b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084717"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756027"
 ---
 # <a name="unicode-compression-implementation"></a>Implementación de la compresión Unicode
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una implementación del algoritmo del esquema de compresión estándar para Unicode (SCSU) para comprimir los valores Unicode que están almacenados en objetos comprimidos de fila o página. Para estos objetos comprimidos, la compresión Unicode es automática para columnas `nchar(n)` y `nvarchar(n)`. [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena los datos Unicode como 2 bytes, independientemente de la configuración regional. Esto se denomina codificación UCS-2. Para algunas configuraciones regionales, la implementación de la compresión SCSU en SQL Server puede ahorrar hasta el 50% de espacio de almacenamiento.  
@@ -27,10 +27,10 @@ ms.locfileid: "48084717"
  La compresión Unicode admite los tipos de datos `nchar(n)` y `nvarchar(n)` de longitud fija. Los valores de datos que no están almacenados de forma consecutiva o en columnas `nvarchar(max)` no se comprimen.  
   
 > [!NOTE]  
->  No se admite la compresión Unicode para `nvarchar(max)` incluso si se almacena en la fila de datos. Sin embargo, este tipo de datos puede seguir beneficiándose de la compresión de página.  
+>  La compresión Unicode no se admite para los datos de `nvarchar(max)` aunque estén almacenados de forma consecutiva. Sin embargo, este tipo de datos puede seguir beneficiándose de la compresión de página.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Actualizar de versiones anteriores de SQL Server  
- Cuando una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualiza a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los cambios relacionados con la compresión Unicode no se llevan a cabo en ningún objeto de base de datos, tanto si está comprimido como si no lo está. Una vez actualizada la base de datos, los objetos se ven afectados de la siguiente forma:  
+ Cuando una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualiza a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los cambios relacionados con la compresión Unicode no se llevan a cabo en ningún objeto de base de datos, tanto si está comprimido como si no. Una vez actualizada la base de datos, los objetos se ven afectados de la siguiente forma:  
   
 -   Si el objeto no está comprimido, no se realiza ningún cambio y sigue funcionando como lo hacía anteriormente.  
   

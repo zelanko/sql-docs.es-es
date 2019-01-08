@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdbf8626ec1eb50218d01b0eefd96cea2cba9dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00ada7a047d323f143403b56632b8863d75e6ac2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108455"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792127"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "48108455"
   
  Un visor de datos puede mostrar los datos en una cuadrícula. Con una cuadrícula, se seleccionan las columnas que se muestran. Los valores de las columnas seleccionadas se muestran en formato tabular.  
   
- También puede incluir varios visores de datos en una ruta. Puede mostrar los mismos datos en diferentes formatos (por ejemplo, crear una vista de gráfico y una vista de cuadrícula de los datos) o crear diferentes visores de datos para diferentes columnas de datos.  
+ También puede incluir varios visores de datos en una ruta. Puede mostrar los mismos datos en distintos formatos (por ejemplo, crear una vista de gráfico y una vista de cuadrícula de los datos), o bien puede crear varios visores de datos para diferentes columnas de datos.  
   
  Cuando se agrega un visor de datos a una ruta, el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] agrega un icono de visor de datos a la superficie de diseño de la pestaña **Flujo de datos** , junto a la ruta. Las transformaciones que pueden tener varias salidas, como la transformación División condicional, pueden incluir un visor de datos en cada ruta.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48108455"
   
 #### <a name="to-add-a-data-viewer"></a>Para agregar un visor de datos  
   
--   [Agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md)  
+-   [agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>Recuentos de filas  
  La cantidad de filas que han pasado por una ruta aparece en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] junto a la ruta. La cantidad se actualiza periódicamente mientras los datos pasan por la ruta.  
@@ -70,6 +69,6 @@ ms.locfileid: "48108455"
 |rojo|Ejecución con errores.|  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas para solucionar problemas del desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  
+ [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  
   
   

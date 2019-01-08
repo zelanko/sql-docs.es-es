@@ -18,12 +18,12 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87093ee870549307e9395c013b2f8727f047ae4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811293"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588839"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=** ] **' *** dbnam* **'**  
+ [  **@dbname=** ] **'**_dbnam_ **'**  
  Es el nombre de la base de datos que se va a adjuntar al servidor. El nombre debe ser único. *dbname* es **sysname**, su valor predeterminado es null.  
   
- [  **@filename1=** ] **'***el argumento filename_n***'**  
+ [  **@filename1=** ] **'**_el argumento filename_n_**'**  
  Es el nombre físico, incluida la ruta de acceso, de un archivo de base de datos. *el argumento filename_n* es **nvarchar (260)**, su valor predeterminado es null. Se pueden especificar hasta 16 nombres de archivo. Los nombres de parámetro comienzan en **@filename1** y se incrementan hasta **@filename16**. La lista de nombres de archivo debe incluir al menos el archivo principal. El archivo principal contiene las tablas del sistema que señalan a otros archivos de la base de datos. La lista también debe contener los archivos que se hayan movido después de separar la base de datos.  
   
 > [!NOTE]  

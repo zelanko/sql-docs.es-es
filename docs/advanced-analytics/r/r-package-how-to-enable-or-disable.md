@@ -1,5 +1,5 @@
 ---
-title: Habilitar o deshabilitar la administración remota del paquete de R para SQL Server Machine Learning | Microsoft Docs
+title: 'Habilitar o deshabilitar la administración de paquetes de R remoto: SQL Server Machine Learning Services'
 description: Habilitar la administración remota del paquete de R en SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a38bd844e56dca4c5096156bde3b544a44038d49
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 5528fc63dd7b7d7382eb9aa7931dcf5f8942da19
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753521"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645430"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar o deshabilitar la administración de un paquete remoto de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ Para habilitar o deshabilitar la administración de paquetes en SQL Server, use 
 
     También puede ejecutar una consulta en sys.database_principals como el siguiente:
 
-    ```SQL
+    ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
         pr.authentication_type_desc, pe.state_desc,   
         pe.permission_name, s.name + '.' + o.name AS ObjectName  

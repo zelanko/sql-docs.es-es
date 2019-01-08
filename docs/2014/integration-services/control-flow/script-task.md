@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
@@ -17,12 +16,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38586615ce582ed4534bf23612bfca64b53af461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224415"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371327"
 ---
 # <a name="script-task"></a>Tarea Script
   La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
@@ -69,13 +68,13 @@ ms.locfileid: "48224415"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Informa sobre los resultados de la implementación del registro en el script. La tarea escribe una entrada de registro para cada llamada a la `Log` método de la `Dts` objeto. La tarea escribe estas entradas cuando se ejecuta el código. Para más información, consulte [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Informa sobre los resultados de la implementación del registro en el script. La tarea escribe una entrada del registro para cada llamada al método `Log` del objeto `Dts`. La tarea escribe estas entradas cuando se ejecuta el código. Para más información, consulte [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea los temas siguientes:  
   
--   [Editor de la tarea script &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Script &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea script &#40;página secuencia de comandos&#41;](../script-task-editor-script-page.md)  
+-   [Editor de la tarea Script &#40;página Script&#41;](../script-task-editor-script-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -90,6 +89,6 @@ ms.locfileid: "48224415"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](http://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
+-   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](https://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
   
   

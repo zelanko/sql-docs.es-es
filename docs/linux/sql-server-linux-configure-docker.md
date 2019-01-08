@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266066"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imágenes de contenedor de SQL Server en Docker
 
@@ -46,11 +46,11 @@ Toda la documentación en imágenes de contenedor de SQL Server Linux de apuntar
 Por ejemplo, el comando siguiente extrae el contenedor de versión preliminar más reciente de SQL Server 2019 que usa RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Esta técnica también le permite compartir y ver los archivos en el host de Docker.
 
 > [!IMPORTANT]
-> Asignación de volumen de host de Docker en Mac con SQL Server en la imagen de Linux no se admite en este momento. Use contenedores de volúmenes de datos en su lugar. Esta restricción es específica para el `/var/opt/mssql` directory. Leer un funciona bien el directorio montado. Por ejemplo, puede montar un directorio de host mediante – v en Mac y restaurar una copia de seguridad desde el archivo .bak que reside en el host.
+> Asignación de volumen de host de Docker en Mac con SQL Server en la imagen de Linux no se admite en este momento. Use contenedores de volúmenes de datos en su lugar. Esta restricción es específica para el `/var/opt/mssql` directory. Leer un funciona bien el directorio montado. Por ejemplo, puede montar un directorio de host mediante - v en Mac y restaurar una copia de seguridad desde el archivo .bak que reside en el host.
 
 ### <a name="use-data-volume-containers"></a>Utilizar contenedores de volúmenes de datos
 

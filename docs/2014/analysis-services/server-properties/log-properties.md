@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b72ef3d7579cdcd8e1d3be83d7caf8d202d1bca7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204845"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374597"
 ---
 # <a name="log-properties"></a>Propiedades de registro
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de registro descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "48204845"
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
   
  **ErrorLog\KeyErrorAction**  
- Especifica la acción realizada por el servidor cuando un `KeyNotFound` se produce el error. Entre las respuestas válidas a este error se incluyen:  
+ Especifica la acción que realiza el servidor cuando se produce un error de `KeyNotFound`. Entre las respuestas válidas a este error se incluyen:  
   
 -   `ConvertToUnknown` indica al servidor que asigne el valor de clave de error al miembro desconocido.  
   
@@ -106,22 +106,22 @@ ms.locfileid: "48204845"
 -   `StopLogging` indica al servidor que detenga el registro de errores cuando se alcance el límite de errores, pero que permita que el procesamiento continúe.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- Especifica la acción realizada por el servidor cuando un `KeyNotFound` se produce el error. Entre las respuestas válidas a este error se incluyen:  
+ Especifica la acción que realiza el servidor cuando se produce un error de `KeyNotFound`. Entre las respuestas válidas a este error se incluyen:  
   
--   `IgnoreError` indica al servidor para continuar procesando sin registrar el error o contarlo de cara al límite de errores. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartan o se agregará al miembro desconocido, según lo determinado por la `KeyErrorAction` propiedad.  
+-   `IgnoreError` indica al servidor que continúe con el procesamiento sin registrar el error o contarlo de cara al límite de errores de clave. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartará o se agregará al Miembro desconocido, según determine la propiedad `KeyErrorAction`.  
   
 -   `ReportAndContinue` indica al servidor que registre el error, lo cuente de cara al límite de errores de clave y continúe con el procesamiento. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
 -   `ReportAndStop` indica al servidor que registre el error y detenga el procesamiento inmediatamente, cualquiera que sea el límite de errores de clave. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- Especifica la acción que realiza el servidor cuando se encuentra una clave duplicada. Los valores válidos incluyen `IgnoreError` continuar el procesamiento como si no hubiera habido ningún error, `ReportAndContinue` para registrar el error y continuar el procesamiento, y `ReportAndStop` para registrar el error y detenga el procesamiento inmediatamente, incluso si el recuento de errores esté por debajo del límite de error.  
+ Especifica la acción que realiza el servidor cuando se encuentra una clave duplicada. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- Especifica la acción que realiza el servidor cuando una clave NULL se ha convertido en Miembro desconocido. Los valores válidos incluyen `IgnoreError` continuar el procesamiento como si no hubiera habido ningún error, `ReportAndContinue` para registrar el error y continuar el procesamiento, y `ReportAndStop` para registrar el error y detenga el procesamiento inmediatamente, incluso si el recuento de errores esté por debajo del límite de error.  
+ Especifica la acción que realiza el servidor cuando una clave NULL se ha convertido en Miembro desconocido. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- Especifica la acción realizada por el servidor cuando `NullProcessing` está establecido en `Error` para un atributo de dimensión. Se genera un error cuando no se permite un valor NULL en un atributo determinado. Esta propiedad de configuración de errores informa al paso siguiente, que es notificar el error y continuar con el procesamiento hasta que se alcance el límite de errores. Los valores válidos incluyen `IgnoreError` continuar el procesamiento como si no hubiera habido ningún error, `ReportAndContinue` para registrar el error y continuar el procesamiento, y `ReportAndStop` para registrar el error y detenga el procesamiento inmediatamente, incluso si el recuento de errores esté por debajo del límite de error.  
+ Especifica la acción que realiza el servidor cuando `NullProcessing` se establece en `Error` para un atributo de dimensión. Se genera un error cuando no se permite un valor NULL en un atributo determinado. Esta propiedad de configuración de errores informa al paso siguiente, que es notificar el error y continuar con el procesamiento hasta que se alcance el límite de errores. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
@@ -172,7 +172,7 @@ ms.locfileid: "48204845"
  El valor predeterminado para esta propiedad está en blanco, que a su vez establece el valor predeterminado en FlightRecorderTraceDef.xml.  
   
 ## <a name="query-log"></a>Registro de consultas  
- **Se aplica a:** modo de servidor multidimensional únicamente  
+ **Se aplica a:** modo de servidor multidimensional  únicamente  
   
  **QueryLog\QueryLogFileName**  
  Una propiedad de cadena que especifica el nombre del archivo de registro de consultas. Esta propiedad solo se aplica cuando se utiliza un archivo de disco para realizar el registro, a diferencia de cuando se utiliza una tabla de base de datos (comportamiento predeterminado).  
@@ -199,7 +199,7 @@ ms.locfileid: "48204845"
  El valor predeterminado para esta propiedad es False, que indica que el servidor no creará automáticamente la tabla del registro y no registrará eventos de consulta.  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo configurar el registro de consultas, vea el tema sobre la [configuración del registro de consultas de Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
+>  Para obtener más información sobre cómo configurar el registro de consultas, vea el tema sobre la [configuración del registro de consultas de Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

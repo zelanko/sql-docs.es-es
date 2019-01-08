@@ -14,23 +14,23 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd74525cda5946fb7c86f21638437ee91c3ac7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211205"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359928"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client extiende SQLGetStmtAttr para exponer atributos de instrucción específicos del controlador.  
   
- [SQLSetStmtAttr](sqlsetstmtattr.md) enumera los atributos de instrucción que ambos son de lectura y escritura. En este tema se enumeran los atributos de instrucción de solo lectura.  
+ [SQLSetStmtAttr](sqlsetstmtattr.md) enumera los atributos de instrucción de lectura y escritura. En este tema se enumeran los atributos de instrucción de solo lectura.  
   
 ## <a name="sqlsoptsscurrentcommand"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  El atributo SQL_SOPT_SS_CURRENT_COMMAND expone el comando actual de un lote de comandos. El retorno es un entero que especifica la ubicación del comando en el lote. El valor de *ValuePtr* es de tipo SQLLEN.  
   
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica el valor actual de la NOCOUNT opción, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectadas por una instrucción cuando [SQLRowCount](sqlrowcount.md) se llama. El valor de *ValuePtr* es de tipo SQLLEN.  
+ El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica el valor actual de la opción NOCOUNT, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectados por una instrucción cuando se llama a [SQLRowCount](sqlrowcount.md) . El valor de *ValuePtr* es de tipo SQLLEN.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "48211205"
  Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLSetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [Función SQLSetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

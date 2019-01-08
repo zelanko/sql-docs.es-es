@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662133"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588979"
 ---
 # <a name="sqlsetcursorname-function"></a>Función SQLSetCursorName
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLSetCursorName** asocia un nombre de cursor con una instrucción activa. Si una aplicación no llama a **SQLSetCursorName**, el controlador generará los nombres de cursor según sea necesario para procesar una instrucción SQL.  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|Controlador no admite esta función|(DM) el controlador asociado con el *StatementHandle* no admite la función.|  
   
 ## <a name="comments"></a>Comentarios  
- Los nombres de cursor solo se usan en actualización posicionada y eliminar instrucciones (por ejemplo, **actualizar** *nombre-tabla* ... **WHERE CURRENT OF** *nombre de cursor*). Para obtener más información, consulte [coloca actualizar y eliminar instrucciones](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si la aplicación no llama a **SQLSetCursorName** para definir un nombre de cursor, en la ejecución de una instrucción de consulta el controlador generará un nombre que comienza con las letras SQL_CUR y no más de 18 caracteres de longitud.  
+ Los nombres de cursor solo se usan en actualización posicionada y eliminar instrucciones (por ejemplo, **actualizar** _nombre-tabla_ ... **WHERE CURRENT OF** _nombre de cursor_). Para obtener más información, consulte [coloca actualizar y eliminar instrucciones](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si la aplicación no llama a **SQLSetCursorName** para definir un nombre de cursor, en la ejecución de una instrucción de consulta el controlador generará un nombre que comienza con las letras SQL_CUR y no más de 18 caracteres de longitud.  
   
  Todos los nombres de cursor dentro de la conexión deben ser únicos. La longitud máxima de un nombre de cursor se define por el controlador. Para obtener la máxima interoperatividad, se recomienda que las aplicaciones limitar los nombres de cursor a no más de 18 caracteres. En ODBC 3 *.x*, si un nombre de cursor es un identificador entre comillas, se trata de una manera distingue mayúsculas de minúsculas y que puede contener caracteres que no permitiría la sintaxis de SQL o trataría especial, como espacios en blanco o palabras clave reservadas. Si un nombre de cursor debe tratarse de una manera de mayúsculas y minúsculas, se debe pasar como un identificador entre comillas.  
   

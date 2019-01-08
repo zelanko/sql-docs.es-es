@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800703"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589319"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@remoteserver =** ] **'***remoteserver***'**  
+ [  **@remoteserver =** ] **'**_remoteserver_**'**  
  Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *remoteserver* es **sysname**, no tiene ningún valor predeterminado. *remoteserver* ya debe existir.  
   
- [ **@loginame =** ] **'***login***'**  
+ [  **@loginame =** ] **'**_inicio de sesión_**'**  
  Es el nombre de inicio de sesión opcional en el servidor local, asociado al servidor remoto. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* ya debe existir si se especifica.  
   
- [  **@remotename =** ] **'***remote_name***'**  
+ [  **@remotename =** ] **'**_remote_name_**'**  
  Es el nombre opcional del inicio de sesión remoto asignado a *inicio de sesión* al iniciar sesión desde el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -77,7 +77,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>B. Quitar una asignación de inicio de sesión  
+### <a name="b-dropping-a-login-mapping"></a>b. Quitar una asignación de inicio de sesión  
  En el siguiente ejemplo se quita la entrada que asigna inicios de sesión remotos del servidor remoto `ACCOUNTS` al nombre de inicio de sesión local `Albert`.  
   
 ```  

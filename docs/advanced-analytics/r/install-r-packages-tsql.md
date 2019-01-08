@@ -1,6 +1,6 @@
 ---
-title: Utilizar T-SQL (crear biblioteca externa) para instalar paquetes de R en SQL Server Machine Learning Services | Documentos de Microsoft
-description: Agregar nuevos paquetes de R a 2017 máquina Learning Services (en bases de datos) de SQL Server
+title: Usar Transact-SQL (CREATE EXTERNAL LIBRARY) para instalar paquetes de R - SQL Server Machine Learning Services
+description: Agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 897bafaaf5ec32c417bb5d9625ce6cef22d6e783
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6e910f1c3b29522b11f1faa83db890d399bf3680
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699393"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645054"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>Utilizar T-SQL (crear biblioteca externa) para instalar paquetes de R en 2017 máquina Learning Services de SQL Server
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Usar Transact-SQL (CREATE EXTERNAL LIBRARY) para instalar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo se explica cómo instalar nuevos paquetes de R en una instancia de SQL Server donde está habilitado el aprendizaje automático. Hay varios enfoques que puede elegir. Utilizar T-SQL funciona mejor para los administradores de servidores que no están familiarizados con R.
@@ -28,7 +28,7 @@ La [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 + Todas las dependencias deben ser identificadas por nombre y versión e incluidas en el archivo zip. La instrucción produce un error si es necesario que los paquetes no están disponibles, incluidas las dependencias de paquete de nivel inferior. 
 
-+ Debe ser **db_owner** o tener el permiso de crear biblioteca externa en una función de base de datos. Para obtener más información, consulte [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
++ Debe ser **db_owner** o tener el permiso CREATE EXTERNAL LIBRARY en un rol de base de datos. Para obtener más información, consulte [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
 ## <a name="download-packages-in-archive-format"></a>Descargue los paquetes en formato de archivo
 
@@ -48,7 +48,7 @@ Ejecute la instrucción SQL de T `CREATE EXTERNAL LIBRARY` para cargar la recopi
 
 Por ejemplo, la siguiente instrucción asigna como origen del paquete un repositorio de miniCRAN que contiene el **randomForest** paquete, junto con sus dependencias. 
 
-```SQL
+```sql
 CREATE EXTERNAL LIBRARY randomForest
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
@@ -60,7 +60,7 @@ No se puede utilizar un nombre arbitrario; el nombre de biblioteca externa debe 
 
 Si la biblioteca se crea correctamente, puede ejecutar el paquete en SQL Server, llamando dentro de un procedimiento almacenado.
     
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language =N'R',
 @script=N'library(randomForest)'

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100955"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359547"
 ---
 # <a name="comparing-string-data"></a>comparar datos de cadena
   Las comparaciones de cadenas son una parte importante de muchas de las transformaciones realizadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y las comparaciones de cadenas también se utilizan en la evaluación de expresiones en variables y expresiones de propiedades. Por ejemplo, la transformación Ordenar compara valores en un conjunto de datos para ordenar datos en orden ascendente o descendente.  
@@ -64,7 +63,7 @@ ms.locfileid: "48100955"
  También puede especificar una configuración regional para un administrador de conexiones de archivos planos y un administrador de conexiones de varios archivos planos.  
   
 ## <a name="setting-comparison-options"></a>Establecer las opciones de comparación  
- La configuración regional proporciona las reglas básicas para comparar los datos de cadenas. Por ejemplo, la configuración regional especifica la posición de ordenación para cada letra del alfabeto. Sin embargo, estas reglas pueden no ser suficientes para las comparaciones realizadas por algunas transformaciones, y [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite un conjunto de opciones de comparación avanzada que van más allá de las reglas de comparación de una configuración regional. Estas opciones de comparación se establecen en el nivel de columna. Por ejemplo, una de las opciones de comparación le permite omitir los caracteres sin espacio. El efecto de esta opción es omitir los signos diacríticos, tales como los acentos, lo que hace que "a" y "á" resulten idénticas en una comparación.  
+ La configuración regional proporciona las reglas básicas para comparar los datos de cadenas. Por ejemplo, la configuración regional especifica la posición de ordenación para cada letra del alfabeto. Sin embargo, estas reglas pueden no ser suficientes para las comparaciones realizadas por algunas transformaciones, y [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite un conjunto de opciones de comparación avanzada que van más allá de las reglas de comparación de una configuración regional. Estas opciones de comparación se establecen en el nivel de columna. Por ejemplo, una de las opciones de comparación le permite omitir los caracteres sin espacio. El efecto de esta opción es omitir los signos diacríticos, como los acentos, con lo que hace que "a" y "å" idénticas para fines de comparación.  
   
  La siguiente tabla describe las opciones de comparación y un estilo de ordenación.  
   

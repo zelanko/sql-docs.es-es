@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Configuración de la distribución | Microsoft Docs'
+title: 'Lección 3: Configurar la distribución | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fbfb6d659aa8bc96ebc13ad0a3b89df750c5f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1ebde4d8b1303e3a845bf4ce9fdc03d3ba6c6a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167475"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589559"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lección 3: Configurar la distribución
   En esta lección configurará la distribución en el publicador y establecerá los permisos requeridos en las bases de datos de publicación y distribución. Si ya ha configurado el distribuidor, debe deshabilitar la publicación y distribución antes de iniciar esta lección. No lo haga si debe mantener una topología de replicación existente.  
@@ -36,11 +36,11 @@ ms.locfileid: "48167475"
   
      Se iniciará el Asistente para configurar la distribución.  
   
-3.  En el **distribuidor** página, seleccione **'***\<ServerName >***' actuará como su propio distribuidor; SQL Server creará una base de datos de distribución y un registro**y, a continuación, haga clic en **siguiente**.  
+3.  En el **distribuidor** página, seleccione **'**_\<ServerName >_**' actuará como su propio distribuidor; SQL Server creará una base de datos de distribución y un registro**y, a continuación, haga clic en **siguiente**.  
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Siguiente**.  
   
-5.  Introduzca **\\\\**\<*Nombre_De_Equipo>***\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde \<*Nombre_De_Equipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
+5.  Introduzca **\\\\**\<_nombreDeEquipo>_**\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde\<*nombreDeEquipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
   
 6.  Acepte los valores predeterminados en las páginas restantes del asistente.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48167475"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y, después, seleccione **Nuevo inicio de sesión**.  
   
-2.  En la página **General**, haga clic en **Buscar**, escriba \<*Nombre_De_Equipo>***\repl_snapshot* en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*Nombre_De_Equipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
+2.  En la página **General**, haga clic en **Buscar**, escriba \<_nombreDeEquipo>_**\repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*nombreDeEquipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
   
 3.  En la página **Asignación de usuarios** , en la lista **Usuarios asignados a este inicio de sesión** , seleccione las bases de datos de **distribución** y de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -66,6 +66,6 @@ ms.locfileid: "48167475"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar distribución](configure-distribution.md)   
- [Replication Agent Security Model](security/replication-agent-security-model.md)  
+ [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md)  
   
   

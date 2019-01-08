@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909515"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527860"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Alimentación del dispositivo o desactivar para Analytics Platform System
 Este tema describe cómo a encendido o apagado su Systemappliance de plataforma de análisis ejecuta con almacenamiento de datos paralelos. Use este tema cuando se mueve una aplicación Analytics Platform System, o a la potencia en un dispositivo tras un error grave de energía.  
@@ -39,15 +39,15 @@ Antes de apagar el dispositivo, debe terminar todas las actividades en el dispos
 > [!WARNING]  
 > Todos los pasos deben realizarse en el orden exacto mostrado y debe completar cada paso antes de realiza el paso siguiente, a menos que se indique lo contrario. Estos pasos desordenados o sin tener que esperar para que completar cada paso pueden provocar errores cuando se encienda el dispositivo en un momento posterior.  
   
-1.  Conéctese al nodo de Control de PDW (***PDW_region *-CTL01** ) e inicie sesión con la cuenta de administrador de dominio de Analytics Platform System appliance.  
+1.  Conéctese al nodo de Control de PDW (**_PDW_region_-CTL01** ) e inicie sesión con la cuenta de administrador de dominio de Analytics Platform System appliance.  
   
 2.  Ejecute `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para abrir el **Configuration Manager**.  
   
 3.  En Configuration Manager, en el **topología de almacenamiento de datos paralela** menú, haga clic en el **estado Services** ficha y haga clic en **detener región** para detener los servicios PDW.   
   
-4.  Conectarse a ***appliance_domain *-HST01** e inicie sesión con la cuenta de administrador de dominio de aplicación.  
+4.  Conectarse a  **_appliance_domain_-HST01** e inicie sesión con la cuenta de administrador de dominio de aplicación.  
   
-5.  Mediante el **Administrador de clústeres de conmutación por error** conectarse a la ***appliance_domain *-WFOHST01** en clúster, si se conecta automáticamente y, a continuación, en el panel de navegación, haga clic en **Roles**. En el **Roles** panel:  
+5.  Mediante el **Administrador de clústeres de conmutación por error** conectarse a la  **_appliance_domain_-WFOHST01** del clúster, si se conecta automáticamente y, a continuación, en el panel de navegación, haga clic en **Roles**. En el **Roles** panel:  
   
     1.  Selección múltiple de todas las máquinas virtuales. El botón derecho y seleccione **apagar**.  
   
@@ -55,9 +55,9 @@ Antes de apagar el dispositivo, debe terminar todas las actividades en el dispos
   
 6.  Cerrar la **Administrador de clústeres de conmutación por error** aplicación.  
   
-7. Apagar todos los servidores excepto ***appliance_domain *-HST01**.  
+7. Apagar todos los servidores excepto  **_appliance_domain_-HST01**.  
   
-8. Apagar el ***appliance_domain *-HST01** server.  
+8. Apagar el  **_appliance_domain_-HST01** server.  
   
 9. Apague las unidades de distribución de energía (PDU).  
   
@@ -70,25 +70,25 @@ Antes de apagar el dispositivo, debe terminar todas las actividades en el dispos
   
 1.  Encienda la unidades de distribución de energía (PDU) y espere a que los conmutadores para iniciarse automáticamente.  
   
-2.  Encender el ***appliance_domain *-HST01** server.  
+2.  Encender el  **_appliance_domain_-HST01** server.  
   
-3.  Inicie sesión en ***appliance_domain *-HST01** como administrador del dominio de aplicación.  
+3.  Inicie sesión en  **_appliance_domain_-HST01** como administrador del dominio de aplicación.  
   
-4.  Iniciar el **Administrador de Hyper-V** programa (**virtmgmt.msc**) y conéctese a ***appliance_domain *-HST01** si no está conectado de forma predeterminada.  
+4.  Iniciar el **Administrador de Hyper-V** programa (**virtmgmt.msc**) y conéctese a  **_appliance_domain_-HST01** si no está conectado de forma predeterminada.  
   
-    1.  Si no se puede conectar por nombre porque el ***PDW_region *-AD01** es no se está ejecutando, intente conectarse mediante el uso de la dirección IP.  
+    1.  Si no se puede conectar por nombre porque el  **_PDW_region_-AD01** es no se está ejecutando, intente conectarse mediante el uso de la dirección IP.  
   
-    2.  En el **máquinas virtuales** panel, busque ***PDW_region *-AD01** y confirme que se está ejecutando. Si no es así, inicie esta máquina virtual y espere a que se haya iniciado totalmente.  
+    2.  En el **máquinas virtuales** panel, busque  **_PDW_region_-AD01** y confirme que se está ejecutando. Si no es así, inicie esta máquina virtual y espere a que se haya iniciado totalmente.  
   
 5.  Encienda el resto de los servidores en el dispositivo.  
   
 6.  Mientras que en **HST01** han iniciado sesión como administrador del dominio de aplicación, **Administrador de Hyper-V**:  
   
-    1.  Conectarse a ***appliance_domain *-HST02**.  
+    1.  Conectarse a  **_appliance_domain_-HST02**.  
   
-    2.  En el **máquinas virtuales** panel, busque ***PDW_region *-AD02** y confirme que se está ejecutando.  Si no es así, inicie esta máquina virtual y espere a que se haya iniciado totalmente.  
+    2.  En el **máquinas virtuales** panel, busque  **_PDW_region_-AD02** y confirme que se está ejecutando.  Si no es así, inicie esta máquina virtual y espere a que se haya iniciado totalmente.  
   
-7.  Mediante el **Administrador de clústeres de conmutación por error** conectarse a la ***appliance_domain *-WFOHST01** en clúster, si se conecta automáticamente y, a continuación, en el **navegación** panel, haga clic en **Roles**. En el **Roles** panel:  
+7.  Mediante el **Administrador de clústeres de conmutación por error** conectarse a la  **_appliance_domain_-WFOHST01** en clúster, si se conecta automáticamente y, a continuación, en el  **Navegación** panel, haga clic en **Roles**. En el **Roles** panel:  
   
     1.  Selección múltiple de todas las máquinas virtuales, haga clic en ellos y, a continuación, haga clic en **iniciar**.  
   
@@ -98,7 +98,7 @@ Antes de apagar el dispositivo, debe terminar todas las actividades en el dispos
   
 8. Desconectarse de **HST01** si lo desea.  
   
-9. Conectarse a ***PDW_region *-CTL01** con la cuenta de administrador de dominio de aplicación.  
+9. Conectarse a  **_PDW_region_-CTL01** con la cuenta de administrador de dominio de aplicación.  
   
 10. Ejecute `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para iniciar el **Configuration Manager**.  
   

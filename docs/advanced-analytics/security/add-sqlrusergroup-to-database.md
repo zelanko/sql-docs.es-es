@@ -1,5 +1,5 @@
 ---
-title: Agregar SQLRUserGroup como un usuario de base de datos (SQL Server Machine Learning) | Microsoft Docs
+title: 'Agregar SQLRUserGroup como un usuario de base de datos: SQL Server Machine Learning Services'
 description: Para las conexiones de bucle invertido mediante autenticación implícita, agregar SQLRUserGroup como un usuario de base de datos para que una cuenta de trabajo puede iniciar sesión en el servidor para la conversión de identidad al usuario que realiza la llamada.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419090"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432358"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Agregar SQLRUserGroup como usuario de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072279"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544635"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
-  Este tema describe cómo proteger una base de datos mediante el uso de cifrado de datos transparente (TDE) y, a continuación, mueva la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra (`master`) del servidor o una clave asimétrica protegida por un módulo EKM.  
+  En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra (`master`) del servidor o una clave asimétrica protegida por un módulo EKM.  
   
  **En este tema**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "49072279"
   
 4.  En el cuadro de diálogo **Nueva base de datos** , en el cuadro **Nombre de la base de datos** , escriba el nombre de la nueva base de datos.  
   
-5.  En el cuadro **Propietario** , escriba el nombre del propietario de la nueva base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar propietario de base de datos** . Para obtener más información sobre la creación de una nueva base de datos, vea [Create a Database](../../databases/create-a-database.md).  
+5.  En el cuadro **Propietario** , escriba el nombre del propietario de la nueva base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar propietario de base de datos**. Para obtener más información sobre la creación de una nueva base de datos, vea [Create a Database](../../databases/create-a-database.md).  
   
 6.  En el Explorador de objetos, haga clic en el signo más para expandir la carpeta **Bases de datos** .  
   
@@ -161,7 +161,7 @@ ms.locfileid: "49072279"
   
 ###  <a name="SSMSMove"></a> Usar SQL Server Management Studio  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos que cifró anteriormente, seleccione **Tareas** y **Separar…**.  
+1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos que cifró anteriormente, seleccione **Tareas** y **Separar...**.  
   
      En el cuadro de diálogo **Separar base de datos** están disponibles las siguientes opciones.  
   
@@ -184,14 +184,14 @@ ms.locfileid: "49072279"
      De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo** . Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Estado**  
-     Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
+     Muestra uno de los siguientes estados: **Listo** o **no está listo**.  
   
      **de mensaje**  
      En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica a continuación:  
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra *<número_de_conexiones_activas>***Conexiones activas** (por ejemplo, **1 conexiones activas**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o más conexiones activas, el **estado** es **no está listo** y **mensaje** columna muestra *< número_de_conexiones_activas > *** conexiones activas**, por ejemplo: **1 conexiones activas**. Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
@@ -205,11 +205,11 @@ ms.locfileid: "49072279"
   
 6.  Vuelva a crear el certificado del servidor mediante el archivo de copia de seguridad del certificado del servidor original. Para obtener más información, vea **Usar Transact-SQL** más adelante.  
   
-7.  En el Explorador de objetos, en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** y, después, seleccione **Adjuntar…**.  
+7.  En el Explorador de objetos, en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** y, después, seleccione **Adjuntar...**.  
   
 8.  En el cuadro de diálogo **Adjuntar bases de datos** , en **Bases de datos que se van a adjuntar**, haga clic en **Agregar**.  
   
-9. En el cuadro de diálogo **Buscar archivos de base de datos –***nombre_servidor*, seleccione el archivo de base de datos que quiera adjuntar al servidor nuevo y haga clic en **Aceptar**.  
+9. En el **buscar archivos de base de datos-*** nombre_servidor* cuadro de diálogo, seleccione la base de datos de archivo para adjuntar al nuevo servidor y haga clic en **Aceptar**.  
   
      En el cuadro de diálogo **Adjuntar bases de datos** están disponibles las siguientes opciones.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "49072279"
     |----------|-----------------|-----------------|  
     |(Sin icono)|(Sin texto)|La operación de adjuntar no se ha iniciado o puede estar pendiente para este objeto. Es la opción predeterminada al abrir el diálogo.|  
     |Triángulo verde hacia la derecha|En curso|La operación de adjuntar se ha iniciado, pero no ha finalizado.|  
-    |Marca de verificación verde|Success|El objeto se ha adjuntado correctamente.|  
+    |Marca de verificación verde|Correcto|El objeto se ha adjuntado correctamente.|  
     |Círculo rojo con una cruz blanca|Error|La operación de adjuntar ha detectado un error y no ha finalizado correctamente.|  
     |Círculo con dos cuadrantes negros (a la izquierda y la derecha) y dos cuadrantes blancos (en la parte superior e inferior)|Detenido|La operación de adjuntar no ha finalizado correctamente porque el usuario la ha detenido.|  
     |Círculo con una flecha curvada que apunta hacia la izquierda|Revertido|La operación de adjuntar se ha ejecutado correctamente, pero se ha revertido debido a un error al adjuntar otro objeto.|  
@@ -253,7 +253,7 @@ ms.locfileid: "49072279"
      Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
      **"** *<database_name>* **" detalles de la base de datos**  
-     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**…**).  
+     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**...**).  
   
     > [!NOTE]  
     >  Si un archivo no existe, la columna **Mensaje** muestra "No se encontró". Si un archivo de registro no se encuentra, indica que se halla en otro directorio o que se ha eliminado. En tal caso, debe actualizar la ruta de acceso del archivo en la cuadrícula **Detalles de la base de datos** para que señale la ubicación correcta o eliminar el archivo de registro de la cuadrícula. Si un archivo de datos .ndf no se encuentra, debe actualizar su ruta de acceso en la cuadrícula para que señale la ubicación correcta.  

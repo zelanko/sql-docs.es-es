@@ -14,12 +14,12 @@ ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6654b7ec23e2aae071a7e4ce6cd360b7ef10e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107495"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358827"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Crear un componente de tiempo de diseño de elemento de informe personalizado
   Un componente de tiempo de diseño de elemento de informe personalizado es un control que se puede utilizar en el entorno de Visual Studio Report Designer. El componente de tiempo de diseño de elemento de informe personalizado proporciona una superficie de diseño activada que puede aceptar las operaciones de arrastrar y colocar, la integración con el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], y la capacidad de proporcionar los editores de propiedades personalizados.  
@@ -29,9 +29,9 @@ ms.locfileid: "48107495"
  Las propiedades que se establecen utilizando el componente de tiempo de diseño en el entorno de desarrollo se serializan y deserializan por el entorno de diseño del host y, a continuación, se guardan como elementos en el archivo de lenguaje RDL (Report Definition Language). Cuando el procesador de informes ejecuta el informe, pasa las propiedades que están establecidas utilizando el componente de tiempo de diseño a un componente de tiempo de ejecución del elemento de informe personalizado, que representa el elemento de informe personalizado y lo devuelve al procesador de informes.  
   
 > [!NOTE]  
->  El componente de tiempo de diseño de elemento de informe personalizado se implementa como un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. En este documento se describirán los detalles de la implementación específicos al componente de tiempo de diseño del elemento de informe personalizado. Para más información sobre cómo desarrollar componentes mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea [Componentes en Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) en MSDN Library.  
+>  El componente de tiempo de diseño de elemento de informe personalizado se implementa como un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. En este documento se describirán los detalles de la implementación específicos al componente de tiempo de diseño del elemento de informe personalizado. Para más información sobre cómo desarrollar componentes mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea [Componentes en Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576) en MSDN Library.  
   
- Para obtener un ejemplo de un elemento de informe personalizado totalmente implementado, vea [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obtener un ejemplo de un elemento de informe personalizado totalmente implementado, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="implementing-a-design-time-component"></a>Implementar un componente de tiempo de diseño  
  La clase principal de un componente de tiempo de diseño de elemento de informe personalizado está heredada de la clase `Microsoft.ReportDesigner.CustomReportItemDesigner`. Además de los atributos estándar utilizados para un control [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], la clase de componente debería definir un atributo `CustomReportItem`. Este atributo debe corresponder al nombre del elemento de informe personalizado como se define en el archivo reportserver.config. Para obtener una lista de atributos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea Atributos en la documentación de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
@@ -186,7 +186,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilizar las opciones gráficas  
- Las clases de elemento de informe personalizado también pueden implementar una clase `Microsoft.ReportDesigner.Design.Adornment`. Una opción gráfica permite al control de elemento de informe personalizado proporcionar las áreas fuera del rectángulo principal de la superficie de diseño. Estas áreas pueden administrar los eventos de interfaz de usuario, como los clics del mouse y las operaciones de arrastrar y colocar. El `Adornment` clase que se define en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` espacio de nombres es una implementación paso a través de la <xref:System.Windows.Forms.Design.Behavior.Adorner> clase se encuentra en Windows Forms. Para obtener documentación completa sobre la `Adorner` de clases, vea [información general sobre el servicio de comportamiento](http://go.microsoft.com/fwlink/?LinkId=116673) en MSDN library. Código de ejemplo que implementa un `Microsoft.ReportDesigner.Design.Adornment` de clases, vea [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Las clases de elemento de informe personalizado también pueden implementar una clase `Microsoft.ReportDesigner.Design.Adornment`. Una opción gráfica permite al control de elemento de informe personalizado proporcionar las áreas fuera del rectángulo principal de la superficie de diseño. Estas áreas pueden administrar los eventos de interfaz de usuario, como los clics del mouse y las operaciones de arrastrar y colocar. El `Adornment` clase que se define en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` espacio de nombres es una implementación paso a través de la <xref:System.Windows.Forms.Design.Behavior.Adorner> clase se encuentra en Windows Forms. Para obtener documentación completa sobre la `Adorner` de clases, vea [información general sobre el servicio de comportamiento](https://go.microsoft.com/fwlink/?LinkId=116673) en MSDN library. Código de ejemplo que implementa un `Microsoft.ReportDesigner.Design.Adornment` de clases, vea [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Para obtener más información acerca de cómo programar y usar Windows Forms en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vea estos temas en MSDN Library:  
   
@@ -194,12 +194,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Componentes de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Tutorial: Crear un control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio  
+-   Tutorial: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio  
   
 ## <a name="see-also"></a>Vea también  
  [Arquitectura de elementos de informe personalizados](custom-report-item-architecture.md)   
  [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](creating-a-custom-report-item-run-time-component.md)   
  [Bibliotecas de clases de elemento de informe personalizado](custom-report-item-class-libraries.md)   
- [Implementación de un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Cómo: Implementar un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
   
   

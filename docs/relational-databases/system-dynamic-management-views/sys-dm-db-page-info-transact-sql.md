@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150206"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732082"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -118,7 +118,7 @@ El `sys.dm_db_page_info` función de administración dinámica devuelve informac
 `sys.dm_db_page_info` se puede usar en lugar de la `DBCC PAGE` instrucción en muchos casos, pero devuelve solo la información de encabezado de página, no el cuerpo de la página. `DBCC PAGE` seguirán siendo necesarios para los casos de uso que se requieren todo el contenido de la página.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>Usar junto con otras DMV
-Uno de los casos de uso importante de `sys.dm_db_page_info` es combinarla con otras DMV que exponen la información de la página.  Para facilitar este caso de uso, una nueva columna denominada `page_resource` se ha agregado que expone la información de la página en un formato hexadecimal de 8 bytes. Se ha agregado a esta columna `sys.dm_exec_processes` y `sys.sysprocesses` y se agregará a otras DMV en el futuro según sea necesario.
+Uno de los casos de uso importante de `sys.dm_db_page_info` es combinarla con otras DMV que exponen la información de la página.  Para facilitar este caso de uso, una nueva columna denominada `page_resource` se ha agregado que expone la información de la página en un formato hexadecimal de 8 bytes. Se ha agregado a esta columna `sys.dm_exec_requests` y `sys.sysprocesses` y se agregará a otras DMV en el futuro según sea necesario.
 
 Una nueva función, `sys.fn_PageResCracker`, toma el `page_resource` como entrada y genera una sola fila que contiene `database_id`, `file_id` y `page_id`.  Esta función, a continuación, se puede usar para facilitar las combinaciones entre `sys.dm_exec_requests` o `sys.sysprocesses` y `sys.dm_db_page_info`.
 
@@ -135,7 +135,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>B. Uso de sys.dm_db_page_info con otras DMV 
+### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>b. Uso de sys.dm_db_page_info con otras DMV 
 
 La siguiente consulta devuelve una fila por cada `wait_resource` expuestos por `sys.dm_exec_requests` cuando la fila contiene un valor no null `page_resource`
 

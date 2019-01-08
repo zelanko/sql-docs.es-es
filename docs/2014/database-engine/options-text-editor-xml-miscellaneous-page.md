@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126675"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328435"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opciones (Editor de texto - XML - Página Varios)
-  El cuadro de diálogo **Opciones** permite modificar las opciones de finalización automática y esquema del Editor XML. Estas opciones se encuentran disponibles cuando, en el menú **Herramientas** , se hace clic en **Opciones**, se expande la carpeta **Editor de texto** , se hace clic en **XML** y después se selecciona **Varios** .  
+
+El cuadro de diálogo **Opciones** permite modificar las opciones de finalización automática y esquema del Editor XML. Estas opciones se encuentran disponibles cuando, en el menú **Herramientas** , se hace clic en **Opciones**, se expande la carpeta **Editor de texto** , se hace clic en **XML** y después se selecciona **Varios** .  
   
 ## <a name="auto-insert"></a>Inserción automática  
  **Etiquetas de cierre**  
@@ -47,5 +46,3 @@ ms.locfileid: "48126675"
 ## <a name="caching"></a>Almacenamiento en memoria caché  
  **Esquemas**  
  Especifica la ubicación de la caché de esquemas. El botón Examinar (...) abre la ubicación de la caché de esquemas actual en una ventana nueva. La ubicación predeterminada es  *\<directorio de instalación de Management Studio >* \Xml\Schemas.  
-  
-  

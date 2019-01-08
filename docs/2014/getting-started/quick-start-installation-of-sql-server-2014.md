@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223385"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366647"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Instalación del tutorial de SQL Server 2014
     
@@ -82,7 +82,7 @@ ms.locfileid: "48223385"
   
      Consulte [instalación de clúster de conmutación por error de SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) para obtener información de procedimientos acerca de cómo instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clúster de conmutación por error.  
   
- De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo para las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no son Express, vea el [sitio web de CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Para obtener información sobre la compatibilidad de las bases de datos y el código muestra de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vea [Información general sobre bases de datos y ejemplos](http://go.microsoft.com/fwlink/?LinkId=110391).  
+ De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo para las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no son Express, vea el [sitio web de CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Para obtener información sobre la compatibilidad de las bases de datos y el código muestra de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vea [Información general sobre bases de datos y ejemplos](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>Instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Independientemente de si usa el Asistente para la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o el símbolo del sistema para instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el programa de instalación incluye uno o varios de los pasos siguientes:  

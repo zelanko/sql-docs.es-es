@@ -1,43 +1,34 @@
 ---
-title: Ver y resumir datos mediante R (tutorial) | Microsoft Docs
+title: 'Ver y resumir datos de SQL Server mediante funciones de R: SQL Server Machine Learning'
+description: Tutorial que muestra cómo visualizar y generar resúmenes estadísticos mediante funciones de R para realizar análisis en bases de datos en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/02/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1d6c225b3ec6b2a7a80dea155b564b94ecab60fb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 368caa21545e534c393aca29ce8fd3a59f9d9837
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032892"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644564"
 ---
-# <a name="view-and-summarize-data-using-r"></a>Ver y resumir datos mediante R
+# <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Ver y resumir datos de SQL Server con R (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Ahora vamos a trabajar con los mismos datos mediante código de R. En esta lección, obtendrá información sobre cómo usar las funciones de la **RevoScaleR** paquete.
+En esta lección le presenta las funciones de la **RevoScaleR** empaquetar y le guiará en las siguientes tareas:
 
-Con este tutorial se proporciona un script de R que incluye todo el código necesario para crear el objeto de datos, generar resúmenes y generar modelos. Puede encontrar el archivo de script de R **RSQL_RWalkthrough.R**en la ubicación donde instaló los archivos de script.
-
-+ Si tiene experiencia con R, puede ejecutar todo el script de una vez.
-+ Para quienes aprenden a usar RevoScaleR, este tutorial recorre la secuencia de comandos línea por línea.
-+ Para ejecutar líneas individuales del script, puede resaltar una o varias líneas en el archivo y presionar Ctrl + ENTRAR.
-
-> [!TIP]
-> Guarde el área de trabajo de R en caso de que quiera completar el resto del tutorial más adelante.  De este modo los objetos de datos y otras variables están listos para su reutilización.
+> [!div class="checklist"]
+> * Conectar a SQL Server
+> * Definir una consulta con los datos que necesita o especificar una tabla o vista
+> * Definir uno o más contextos de cálculo para usarlos al ejecutar código de R
+> * Opcionalmente, puede definir las transformaciones que se aplican al origen de datos mientras se leen desde el origen
 
 ## <a name="define-a-sql-server-compute-context"></a>Definir un contexto de cálculo de SQL Server
 
-Microsoft R facilita la obtención de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar en el código de R. El proceso es el siguiente:
-  
-- Crear una conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-- Definir una consulta con los datos que necesita o especificar una tabla o vista
-- Definir uno o más contextos de cálculo para usarlos al ejecutar código de R
-- Opcionalmente, puede definir las transformaciones que se aplican al origen de datos mientras se leen desde el origen
-
-Los pasos siguientes forman parte del código R y deben ejecutarse en un entorno de R. Microsoft R Client, se usa porque incluye todos los paquetes de RevoScaleR, así como un conjunto de herramientas de R básico y ligero.
+Ejecute las siguientes instrucciones de R en un entorno de R en la estación de trabajo cliente. En esta sección se da por supuesto un [estación de trabajo de ciencia de datos con Microsoft R Client](../r/set-up-a-data-science-client.md), ya que incluye todos los paquetes de RevoScaleR, así como un conjunto de herramientas de R básico y ligero. Por ejemplo, puede usar Rgui.exe para ejecutar el script de R en esta sección.
 
 1. Si el **RevoScaleR** paquete no está ya cargado, ejecutamos esta línea de código de R:
 
@@ -49,13 +40,15 @@ Los pasos siguientes forman parte del código R y deben ejecutarse en un entorno
      
      Si se produce un error, asegúrese de que el entorno de desarrollo de R usa una biblioteca que contiene el paquete RevoScaleR. Use un comando como `.libPaths()` para ver la ruta de acceso de la biblioteca actual.
 
-2. Crea la cadena de conexión para SQL Server y lo guarda en una variable de R, _connStr_.
+2. Crea la cadena de conexión para SQL Server y lo guarda en una variable de R, *connStr*.
+
+   Debe cambiar el marcador de posición "nombreDeSuServidor" por un nombre de instancia de SQL Server válido. Para el nombre del servidor, es posible que pueda usar solo el nombre de instancia o, es posible que deba calificar totalmente el nombre, dependiendo de la red.
     
+   Para la autenticación de SQL Server, la sintaxis de conexión es como sigue:
+
     ```R
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
-
-    Para el nombre del servidor, es posible que pueda usar solo el nombre de instancia o, es posible que deba calificar totalmente el nombre, dependiendo de la red.
 
     Para la autenticación de Windows, la sintaxis es un poco diferente:
     
@@ -63,7 +56,7 @@ Los pasos siguientes forman parte del código R y deben ejecutarse en un entorno
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
-    El script de R disponible para la descarga solo usa inicios de sesión de SQL. Por lo general, se recomienda que use la autenticación de Windows cuando sea posible, evite guardar contraseñas en el código de R. Sin embargo, para asegurarse de que el código de este tutorial coincide con el código descargado desde Github, vamos a usar un inicio de sesión SQL para el resto del tutorial.
+    Por lo general, se recomienda que use la autenticación de Windows cuando sea posible, evite guardar contraseñas en el código de R.
 
 3. Defina las variables que se usará al crear un nuevo *contexto de proceso*. Después de crear el objeto de contexto de proceso, puede utilizarlo para ejecutar código R en la instancia de SQL Server.
 
@@ -75,10 +68,9 @@ Los pasos siguientes forman parte del código R y deben ejecutarse en un entorno
 
     - R usa un directorio temporal cuando serializa los objetos de R entre la estación de trabajo y el equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede especificar el directorio local que se usa como *sqlShareDir*o aceptar el valor predeterminado.
   
-    - Use *sqlWait* para indicar si desea que R espere los resultados desde el servidor.  Para obtener una explicación de espera frente a los trabajos no en espera, consulte [distribuida e informática en paralelo con ScaleR de Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
+    - Use *sqlWait* para indicar si desea que R espere los resultados desde el servidor.  Para obtener una explicación de espera frente a los trabajos no en espera, consulte [distribuida e informática en paralelo con RevoScaleR en Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
   
     - Use el argumento *sqlConsoleOutput* para indicar que no desea ver el resultado de la consola de R.
-
 
 4. Se llama a la [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) constructor para crear el objeto de contexto de proceso con las variables y las cadenas de conexión ya definidas y guardar el nuevo objeto en la variable de R *sqlcc*.
   
@@ -92,14 +84,14 @@ Los pasos siguientes forman parte del código R y deben ejecutarse en un entorno
     rxSetComputeContext(sqlcc)
     ```
 
-    + `rxSetComputeContext` devuelve el contexto de cálculo activo anteriormente invisible para que pueda usarlo
-    + `rxGetComputeContext` devuelve el contexto de cálculo activo
+    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) devuelve el contexto de cálculo activo anteriormente invisible para que se pueda usar
+    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) devuelve el contexto de cálculo activo
     
-    Observe que establecer un contexto de cálculo solo afecta las operaciones que usan funciones en el paquete **RevoScaleR** ; el contexto de cálculo no afecta la manera en que se realizan las operaciones de R de código abierto.
+    Tenga en cuenta que establecer un contexto de cálculo afecta solo a las operaciones que utilizan las funciones de la **RevoScaleR** paquete; el proceso contexto no afecta a la forma en que se realizan las operaciones de R de código abierto.
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>Crear un origen de datos con RxSqlServer
 
-En Microsoft R, un *origen de datos* es un objeto que se crea mediante las funciones de RevoScaleR. El objeto de origen de datos especifica un conjunto de datos que desea usar para una tarea, como la extracción del modelo entrenamiento o característica. Puede obtener datos desde una variedad de orígenes; Para obtener la lista de orígenes admitidos actualmente, consulte [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
+Al usar las bibliotecas de R de Microsoft como RevoScaleR y MicrosoftML, un *origen de datos* es un objeto que se crea mediante las funciones de RevoScaleR. El objeto de origen de datos especifica un conjunto de datos que desea usar para una tarea, como la extracción del modelo entrenamiento o característica. Puede obtener datos desde una variedad de orígenes como SQL Server. Para obtener la lista de orígenes admitidos actualmente, consulte [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
 
 Anteriormente se define una cadena de conexión y había guardado esa información en una variable de R. Puede volver a usar esa información de conexión para especificar los datos que desea obtener.
 
@@ -125,7 +117,7 @@ Anteriormente se define una cadena de conexión y había guardado esa informaci�
     
     + El argumento  *colClasses* especifica los tipos de columna que se usarán al mover los datos entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y R. Esto es importante porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa tipos de datos distintos a los de R y más tipos de datos. Para obtener más información, consulte [bibliotecas de R y tipos de datos](../r/r-libraries-and-data-types.md).
   
-    + El argumento *rowsPerRead* es importante para administrar el uso de memoria y cálculos eficaces.  La mayoría de las funciones analíticas mejoradas de[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] procesan los datos en fragmentos y acumulan los resultados intermedios, devolviendo los cálculos finales después de que se han leído todos los datos.  Agregando el *rowsPerRead* parámetro, puede controlar cuántas filas de datos se leen en cada fragmento para su procesamiento.  Si el valor de este parámetro es demasiado grande, es posible que el acceso a los datos sea lento porque no tiene suficiente memoria para procesar de forma eficaz un fragmento de datos tan grande.  En algunos sistemas, establecer *rowsPerRead* en un valor demasiado pequeño también puede proporcionar un rendimiento más lento.
+    + El argumento *rowsPerRead* es importante para administrar el uso de memoria y cálculos eficaces.  La mayoría de las funciones analíticas mejoradas de[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] procesan los datos en fragmentos y acumulan los resultados intermedios, devolviendo los cálculos finales después de que se han leído todos los datos.  Agregando el *rowsPerRead* parámetro, puede controlar cuántas filas de datos se leen en cada fragmento para su procesamiento.  Si el valor de este parámetro es demasiado grande, el acceso a datos puede ser lenta porque no tiene suficiente memoria para procesar de forma eficaz un gran bloque de datos.  En algunos sistemas, establecer *rowsPerRead* en un valor demasiado pequeño también puede proporcionar un rendimiento más lento.
 
 3. En este momento, ha creado el *inDataSource* objeto, pero no contiene ningún dato. Los datos no se extraen de la consulta SQL en el entorno local hasta que se ejecuta como una función [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) o [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
 
@@ -147,7 +139,7 @@ En esta sección, probará algunas de las funciones proporcionadas en [!INCLUDE[
 
     **Resultado**
     
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: integer
@@ -182,7 +174,7 @@ En esta sección, probará algunas de las funciones proporcionadas en [!INCLUDE[
 
     Si la función rxSummary se ejecuta correctamente, debería ver resultados como estos, seguido de una lista de las estadísticas por categoría. 
 
-    ```
+    ```R
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
@@ -216,10 +208,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > 
 > Otra opción consiste en supervisar trabajos de R que se ejecutan en SQL Server con estos [informes personalizados](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-## <a name="next-lesson"></a>Lección siguiente
+## <a name="next-steps"></a>Pasos siguientes
 
-[Crear gráficos y trazados con R](walkthrough-create-graphs-and-plots-using-r.md)
-
-## <a name="previous-lesson"></a>Lección anterior
-
-[Explorar los datos con SQL](walkthrough-view-and-explore-the-data.md)
+> [!div class="nextstepaction"]
+> [Crear gráficos y trazados con R](walkthrough-create-graphs-and-plots-using-r.md)

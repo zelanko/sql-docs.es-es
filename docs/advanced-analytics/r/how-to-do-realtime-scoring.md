@@ -1,5 +1,5 @@
 ---
-title: Cómo generar predicciones con modelos de aprendizaje automático de SQL Server y previsiones | Microsoft Docs
+title: Generar predicciones con modelos de aprendizaje automático - SQL Server Machine Learning Services y previsiones
 description: Use rxPredict o sp_rxPredict para puntuar en tiempo real o PREDECIR Transact-SQL para la puntuación para las predicciones nativo y la previsión de R y Pythin en SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712477"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432508"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Cómo generar predicciones con modelos de aprendizaje automático de SQL Server y previsiones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ El modelo debe creado mediante una función admitida y luego se serializa en una
 
 La importancia de las extensiones de CLR y C++ está cerca del propio motor de base de datos. El lenguaje nativo del motor de base de datos es de C++, lo que significa que las extensiones escritas en C++ que se ejecute con menos dependencias. En cambio, las extensiones CLR dependen de .NET Core. 
 
-Como cabría esperar, compatibilidad con la plataforma se ve afectado por estos entornos de tiempo de ejecución. Extensiones de motor de base de datos nativa ejecutan desde cualquier lugar la base de datos relacional es compatible: Windows, Linux, Azure. Extensiones CLR con el requisito de .NET Core solo está actualmente Windows.
+Como cabría esperar, compatibilidad con la plataforma se ve afectado por estos entornos de tiempo de ejecución. Extensiones de motor de base de datos nativa ejecutan desde cualquier lugar que es compatible la base de datos relacional: Windows, Linux, Azure. Extensiones CLR con el requisito de .NET Core solo está actualmente Windows.
 
 ## <a name="scoring-overview"></a>Información general de puntuación
 
@@ -99,7 +99,7 @@ Serializar un modelo a un formato binario es útil, pero no es necesario si est�
 Si usas el [servidor independiente](r-server-standalone.md) o un [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), tiene otras opciones además de procedimientos almacenados y funciones de Transact-SQL para generar predicciones rápidamente. El servidor independiente y el servidor de Machine Learning admiten el concepto de un *servicio web* para la implementación de código. Puede agrupar un R o Python modelo previamente entrenado como un servicio web, que se llama en tiempo de ejecución para evaluar las nuevas entradas de datos. Para más información, vea estos artículos:
 
 + [¿Cuáles son los servicios web en Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [¿Qué es la puesta en marcha?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [¿Qué es la puesta en marcha?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Implementar un modelo de Python como un servicio web con Azure ml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publicar un modelo en tiempo real o un bloque de código de R como un servicio web nuevo](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [paquete de mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - max-depth annotation
@@ -23,12 +21,12 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a815a5d5213d4069df6ceda490ee9f4b7e92b279
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189155"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800837"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
   En las bases de datos relacionales, cuando una tabla se relaciona consigo misma, este tipo de relación recibe el nombre de relación recursiva. Por ejemplo, en una relación supervisor-supervisado, una tabla que almacena los registros de empleados se relaciona consigo misma. En este caso, la tabla de empleados desempeña un rol de supervisor en uno de los lados de la relación y un rol de supervisado en el otro lado.  
@@ -148,7 +146,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla. Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -231,7 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>Anotación sql:max-depth  
  En un esquema compuesto de relaciones recursivas, la profundidad de recursión debe especificarse de forma explícita en el esquema. Esto es necesario para generar correctamente la consulta FOR XML EXPLICIT correspondiente que devuelve los resultados solicitados.  
   
- Use la anotación `sql:max-depth` en el esquema para especificar la profundidad de recursión de una relación recursiva que se describa en el esquema. El valor de la anotación `sql:max-depth` es un número entero positivo (de 1 a 50) que indica el número de recursiones: un valor de 1 detiene la recursión en el elemento para el que se especifica la anotación `sql:max-depth`; un valor de 2 detiene la recursión en el siguiente nivel del elemento en el que se especifica `sql:max-depth`; y así sucesivamente.  
+ Use la anotación `sql:max-depth` en el esquema para especificar la profundidad de recursión de una relación recursiva que se describa en el esquema. El valor de la `sql:max-depth` anotación es un entero positivo (de 1 a 50) que indica el número de recursiones:  Un valor de 1 detiene la recursión en el elemento para el que el `sql:max-depth` anotación se especifica; un valor de 2 detiene la recursión en el siguiente nivel del elemento en el que `sql:max-depth` se especifica; y así sucesivamente.  
   
 > [!NOTE]  
 >  En la implementación subyacente, una consulta XPath que se especifique en un esquema de asignación se convierte en una consulta SELECT ... Consulta FOR XML EXPLICIT. Esta consulta exige que se especifique una profundidad finita de recursión. Cuanto mayor sea el valor que especifique para `sql:max-depth`, mayor será la consulta FOR XML EXPLICIT que se genere. Esto puede ralentizar el tiempo de recuperación.  

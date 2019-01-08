@@ -1,170 +1,122 @@
 ---
-title: Crear y ejecutar scripts de R (SQL y R profundización) | Documentos de Microsoft
+title: 'Calcular las estadísticas de resumen RevoScaleR tutorial: SQL Server Machine Learning'
+description: Tutorial del tutorial sobre cómo calcular las estadísticas de resumen Estadísticas usando el lenguaje R en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1ff4b72b535f97ba0132dd5e2712b56f90effb10
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dea877323911b3965f7fef5d52ffc121b3990f7d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204697"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645254"
 ---
-# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>Crear y ejecutar scripts de R (SQL y R profundización)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Calcular las estadísticas de resumen en R (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo forma parte del tutorial exhaustiva de ciencia de datos, acerca de cómo usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+En esta lección forma parte de la [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Ahora que ha configurado los orígenes de datos y ha establecido uno o varios contextos de cálculo, está listo para ejecutar scripts de R de alta potencia mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  En esta lección, se utiliza el contexto de proceso de servidor para realizar algunas tareas de aprendizaje de automático comunes:
+Los orígenes de datos establecidas y contextos de proceso que creó en lecciones anteriores usa para ejecutar scripts de R de alta potencia en este caso. En esta lección, usará los contextos de proceso de servidor local y remoto para las siguientes tareas:
 
-- Visualizar datos y generar estadísticas de resumen
-- Crear un modelo de regresión lineal
-- Crear un modelo de regresión logística
-- Puntuar nuevos datos y crear un histograma de las puntuaciones
+> [!div class="checklist"]
+> * Cambiar el contexto de cálculo a SQL Server
+> * Obtener estadísticas de resumen sobre los objetos de datos remotos
+> * Calcular un resumen local
 
-## <a name="change-compute-context-to-the-server"></a>Cambio de contexto en el servidor de proceso
+Si ha completado las lecciones anteriores, debe tener los siguientes contextos de cálculo remoto: sqlCompute y sqlComputeTrace. Más adelante, que usa sqlCompute y local calculará contexto en lecciones posteriores.
 
-Antes de ejecutar cualquier código R, debe especificar el contexto de cálculo *actual* o *activo* .
+Usar un IDE de R o **Rgui** para ejecutar el script de R en esta lección.
 
-1. Para activar un contexto de cálculo que ya ha definido mediante R, use la función **rxSetComputeContext** como se muestra aquí:
+## <a name="compute-summary-statistics-on-remote-data"></a>Calcular las estadísticas de resumen de datos remotos
+
+Antes de que puede ejecutar cualquier código R de forma remota, deberá especificar el contexto de proceso remoto. Todos los cálculos posteriores tienen lugar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo especificado en el *sqlCompute* parámetro.
+
+Un contexto de proceso permanece activo hasta que la cambie. Sin embargo, los scripts de R que *no* ejecución en un contexto de servidor remoto se ejecutará automáticamente localmente.
+
+Para ver cómo funciona un contexto de cálculo, generar estadísticas de resumen sobre el origen de datos sqlFraudDS en el servidor SQL remoto. Se creó este objeto de origen de datos en [lección dos](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) y representa la tabla ccFraudSmall en la base de datos RevoDeepDive. 
+
+1. Cambiar el contexto de cálculo a sqlCompute que creó en la lección anterior:
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
-  
-    En cuanto se ejecuta esta instrucción, todos los cálculos posteriores tienen lugar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo especificado en el *sqlCompute* parámetro.
-  
-2. Si decide que prefiere ejecutar el código R en su estación de trabajo, puede cambiar el contexto de cálculo al equipo local mediante la palabra clave  **local** .
-  
-    ```R
-    rxSetComputeContext ("local")
-    ```
-  
-    Para obtener una lista de otras palabras clave admitidas por esta función, escriba `help("rxSetComputeContext")` desde una línea de comandos de R.
-  
-3. Después de especificar un contexto de cálculo, permanece activo hasta que lo cambie. Pero todos los scripts de R que *no* se puedan ejecutar en un contexto de servidor remoto se ejecutarán localmente.
 
-## <a name="compute-some-summary-statistics"></a>Proceso de algunas estadísticas de resumen
-
-Para ver cómo funciona el contexto de proceso, intente generar algunas estadísticas de resumen utilizando el `sqlFraudDS` origen de datos.  Recuerde que el objeto de origen de datos solo define los datos que se utilice; no cambia el contexto de proceso.
-
-+ Para realizar el resumen de forma local, utilice **rxSetComputeContext** y especifique la _local_ palabra clave.
-+ Para crear los mismos cálculos en el equipo de SQL Server, cambie al contexto de cálculo de SQL que ha definido anteriormente.
-
-1. Llame a la [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) función y pasar los argumentos necesarios, por ejemplo, la fórmula y el origen de datos y asigne los resultados a la variable `sumOut`.
+2. Llame a la [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) funcionando y pase los argumentos necesarios, como la fórmula y el origen de datos y asigne los resultados a la variable `sumOut`.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    El lenguaje R proporciona muchas funciones de resumen, pero **rxSummary** admite la ejecución en varios contextos de proceso remoto, incluidos los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información acerca de funciones similares, vea [resúmenes de los datos con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    El lenguaje R proporciona muchas funciones de resumen, pero **rxSummary** en **RevoScaleR** admite la ejecución en varios contextos de cálculo remoto, incluidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información sobre funciones similares, vea [resúmenes de los datos con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-2. Cuando se realiza el procesamiento, puede imprimir el contenido de la `sumOut` variable en la consola.
+3. Imprimir el contenido de sumOut en la consola.
   
     ```R
     sumOut
     ```
-  
     > [!NOTE]
-    > No intente imprimir los resultados antes de que se devuelvan desde el equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o es posible que se produzca un error.
+    > Si se produce un error, espere unos minutos para que finalice antes de reintentar el comando de la ejecución.
 
 **Resultado**
 
-*Summary Statistics Results for: ~gender + balance + numTrans +*
+```R
+Summary Statistics Results for: ~gender + balance + numTrans + numIntlTrans + creditLine
+Data: sqlFraudDS (RxSqlServerData Data Source)
+Number of valid observations: 10000
 
- *numIntlTrans + creditLine*
+ Name  Mean    StdDev  Min Max ValidObs    MissingObs
+ balance       4075.0318 3926.558714            0   25626 100000
+ numTrans        29.1061   26.619923 0     100 10000    0           100000
+ numIntlTrans     4.0868    8.726757 0      60 10000    0           100000
+ creditLine       9.1856    9.870364 1      75 10000    0          100000
+ 
+ Category Counts for gender
+ Number of categories: 2
+ Number of valid observations: 10000
+ Number of missing observations: 0
 
- *Data: sqlFraudDS (RxSqlServerData Data Source)*
+ gender Counts
+  Male   6154
+  Female 3846
+```
 
- *Number of valid observations: 10000*
+## <a name="create-a-local-summary"></a>Crear un resumen local
 
- *Name  Mean    StdDev  Min Max ValidObs    MissingObs*
-
- *balance       4075,0318 3926,558714            0   25626 100000*
-
- *numTrans        29,1061   26,619923 0     100 10000    0           100000*
-
- *numIntlTrans     4,0868    8,726757 0      60 10000    0           100000*
-
- *creditLine 9.1856 9.870364 1 75 10000 0 100000*
-
- *Recuentos de categoría género*
-
- *Number of categories: 2*
-
- *Number of valid observations: 10000*
-
- *Number of missing observations: 0*
-
- *gender Counts*
-
- *Male   6154*
-
-  *Female 3846*
-
-## <a name="add-maximum-and-minimum-values"></a>Agregar los valores máximos y mínimos
-
-Según las estadísticas de resumen calculadas, ha descubierto información útil sobre los datos que quiere incluir en el origen de datos para su uso en cálculos adicionales. Por ejemplo, los valores mínimo y máximos se pueden utilizar para calcular los histogramas. Por este motivo, vamos a agregar los valores máximo y mínimo para el **RxSqlServerData** origen de datos.
-
-Afortunadamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] incluye funciones optimizadas que pueden convertir eficazmente los datos enteros a los datos de categorías factor.
-
-1. Empiece por configurar algunas variables temporales.
+1. Cambie el contexto de proceso para hacer todo el trabajo localmente.
   
     ```R
-    sumDF <- sumOut$sDataFrame
-    var <- sumDF$Name
+    rxSetComputeContext ("local")
     ```
   
-2. Use la variable `ccColInfo` que creó anteriormente para definir las columnas del origen de datos.
-  
-    También, agregar algunas de las columnas calculan nuevas (`numTrans`, `numIntlTrans`, y `creditLine`) a la colección de columnas.
-  
-    ```R 
-    ccColInfo <- list(
-        gender = list(type = "factor",
-          levels = c("1", "2"), 
-          newLevels = c("Male", "Female")),
-        cardholder = list(type = "factor",
-          levels = c("1", "2"), 
-          newLevels = c("Principal", "Secondary")), 
-        state = list(type = "factor", 
-          levels = as.character(1:51), 
-          newLevels = stateAbb), 
-        balance  = list(type = "numeric"),
-        numTrans = list(type = "factor", 
-          levels = as.character(sumDF[var == "numTrans", "Min"]:sumDF[var == "numTrans", "Max"])),
-        numIntlTrans = list(type = "factor",  
-            levels = as.character(sumDF[var == "numIntlTrans", "Min"]:sumDF[var =="numIntlTrans", "Max"])),
-        creditLine = list(type = "numeric")
-            )
-    ```
-  
-3. Necesidad de actualizar la colección de columnas, se aplica la siguiente instrucción para crear una versión actualizada de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos que definió anteriormente.
+2. Al extraer datos de SQL Server, a menudo encontrará un mejor rendimiento si aumenta el número de filas que se extraen para cada lectura, suponiendo que se puede incluir el tamaño del mayor bloque de memoria. Ejecute el siguiente comando para aumentar el valor para el *rowsPerRead* parámetro en el origen de datos. Antes, el valor de *rowsPerRead* estaba establecido en 5000.
   
     ```R
-    sqlFraudDS <- RxSqlServerData(
-        connectionString = sqlConnString,
-        table = sqlFraudTable,
-        colInfo = ccColInfo,
-        rowsPerRead = sqlRowsPerRead)
+    sqlServerDS1 <- RxSqlServerData(
+       connectionString = sqlConnString,
+       table = sqlFraudTable,
+       colInfo = ccColInfo,
+       rowsPerRead = 10000)
+    ```
+
+3. Llame a **rxSummary** en el nuevo origen de datos.
+  
+    ```R
+    rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
     ```
   
-    El `sqlFraudDS` origen de datos ahora incluye las nuevas columnas que se agregan mediante `ccColInfo`.
-  
+   Los resultados actuales deben ser los mismos que cuando ejecuta **rxSummary** en el contexto del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En cambio, la operación puede ser más rápida o más lenta. Depende en gran medida de la conexión a la base de datos, ya que los datos se transfieren al equipo local para el análisis.
 
-En este momento, las modificaciones afectan únicamente al objeto de origen de datos en R; No hay nuevos datos se ha escrito aún en la tabla de base de datos. Sin embargo, puede usar los datos capturados en el `sumOut` variable para crear visualizaciones y resúmenes. En el paso siguiente aprenderá a hacerlo al cambio de contextos de proceso.
+4. Vuelva a remoto el contexto de proceso para el siguientes varias lecciones.
 
-> [!TIP]
-> Si olvida qué contexto de proceso que está usando, ejecute `rxGetComputeContext()`.  Un valor devuelto de "Contexto de cálculo de RxLocalSeq" indica que está ejecutando en el contexto de proceso local.
+    ```R
+    rxSetComputeContext(sqlCompute)
+    ```
 
-## <a name="next-step"></a>Paso siguiente
+## <a name="next-steps"></a>Pasos siguientes
 
-[Visualizar datos de SQL Server con R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-
-## <a name="previous-step"></a>Paso anterior
-
-[Definir y usar contextos de cálculo](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
+> [!div class="nextstepaction"]
+> [Visualizar datos de SQL Server con R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

@@ -1,18 +1,20 @@
 ---
-title: Persistencia de datos con SQL Server al clúster de macrodatos en Kubernetes | Microsoft Docs
+title: Persistencia de los datos en Kubernetes
+titleSuffix: SQL Server 2019 big data clusters
 description: Obtenga información sobre cómo funciona la persistencia de los datos en un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 75cf78e7c73ad61e5e28ed6f0707639899d8ec19
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221791"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207674"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con el clúster de macrodatos de SQL Server en Kubernetes
 
@@ -23,8 +25,7 @@ ms.locfileid: "51221791"
 El clúster de macrodatos de SQL Server consume estos volúmenes persistentes de forma es mediante [clases de almacenamiento](https://kubernetes.io/docs/concepts/storage/storage-classes/). Puede crear clases de almacenamiento diferentes para diferentes tipos de almacenamiento y especificarlos en el momento de implementación del clúster de macrodatos. Puede configurar qué clase de almacenamiento para usar con qué propósito (grupo). Crea el clúster de SQL Server macrodatos [notificaciones de volumen persistente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con el nombre de clase de almacenamiento especificada para cada pod que requiere volúmenes persistentes. A continuación, monte los volúmenes persistentes correspondientes en el pod.
 
 > [!NOTE]
-
-> Para CTP 2.1, sólo `ReadWriteOnce` se admite el modo de acceso para todo el clúster.
+> Para CTP 2.2, sólo `ReadWriteOnce` se admite el modo de acceso para todo el clúster.
 
 ## <a name="deployment-settings"></a>Configuración de implementación
 
@@ -65,7 +66,7 @@ Kubeadm no viene con una clase de almacenamiento integrada. Puede elegir crear s
 
 Clústeres locales obviamente no se suministran con cualquier clase de almacenamiento integrada, por lo tanto, debe configurar [volúmenes persistentes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[aprovisionadores](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) con antelación y, a continuación, utilice el correspondiente clases de almacenamiento durante la implementación de clúster de macrodatos de SQL Server.
 
-# <a name="customize-storage-size-for-each-pool"></a>Personalizar el tamaño de cada grupo de almacenamiento
+## <a name="customize-storage-size-for-each-pool"></a>Personalizar el tamaño de cada grupo de almacenamiento
 De forma predeterminada, el tamaño del volumen persistente aprovisionado para cada uno de los pods aprovisionados en el clúster es 6 GB. Esto es configurable mediante el establecimiento de la variable de entorno `STORAGE_SIZE` en un valor diferente. Por ejemplo, puede ejecutar comando siguiente para establecer el valor a 10 GB, antes de ejecutar el `mssqlctl create cluster command`.
 
 ```bash

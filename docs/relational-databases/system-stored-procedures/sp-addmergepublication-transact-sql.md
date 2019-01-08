@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepublication
@@ -17,12 +16,12 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da75521685e31c60c238af9903a763de836075fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75390bbbc490046af6db4e47a7ca10cefac2546c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816113"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591879"
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,10 +76,10 @@ sp_addmergepublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicación***'**  
+ [  **@publication =** ] **'**_publicación_**'**  
  Es el nombre de la publicación de mezcla que se va a crear. *publicación* es **sysname**, no tiene ningún valor predeterminado y debe no ser la palabra clave todas. El nombre de la publicación debe ser único en la base de datos.  
   
- [  **@description =** ] **'***descripción***'**  
+ [  **@description =** ] **'**_descripción_**'**  
  Es la descripción de la publicación. *descripción* es **nvarchar (255)**, su valor predeterminado es null.  
   
  [  **@retention =** ] *retención*  
@@ -89,7 +88,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  El período de retención para las publicaciones de combinación tiene un plazo de gracia de 24 horas para adaptarse a los suscriptores de las diferentes zonas horarias. Si, por ejemplo, se establece un período de retención de un día, el período de retención real será de 48 horas.  
   
- [  **@sync_mode =** ] **'***sync_mode***'**  
+ [  **@sync_mode =** ] **'**_sync_mode_**'**  
  Es el modo de la sincronización inicial de suscriptores con la publicación. *valor de sync_mode* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
@@ -97,49 +96,49 @@ sp_addmergepublication [ @publication = ] 'publication'
 |**nativo** (valor predeterminado)|Genera la salida de todas las tablas mediante un programa de copia masiva en modo nativo.|  
 |**carácter**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo de caracteres. Debe admitir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] y no-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.|  
   
- [  **@allow_push =** ] **'***allow_push***'**  
+ [  **@allow_push =** ] **'**_allow_push_**'**  
  Especifica si es posible crear suscripciones de inserción para la publicación indicada. *allow_push* es **nvarchar (5)**, su valor predeterminado es TRUE, que permite suscripciones de inserción en la publicación.  
   
- [  **@allow_pull =** ] **'***allow_pull***'**  
+ [  **@allow_pull =** ] **'**_allow_pull_**'**  
  Especifica si es posible crear suscripciones de extracción para la publicación indicada. *allow_pull* es **nvarchar (5)**, su valor predeterminado es TRUE, que permite suscripciones de extracción en la publicación. Debe especificar True para soporte técnico [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores.  
   
- [  **@allow_anonymous =** ] **'***allow_anonymous***'**  
+ [  **@allow_anonymous =** ] **'**_allow_anonymous_**'**  
  Especifica si es posible crear suscripciones anónimas para la publicación indicada. *allow_anonymous* es **nvarchar (5)**, su valor predeterminado es TRUE, que permite suscripciones anónimas en la publicación. Para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores, debe especificar **true**.  
   
- [  **@enabled_for_internet =** ] **'***enabled_for_internet***'**  
+ [  **@enabled_for_internet =** ] **'**_enabled_for_internet_**'**  
  Especifica si la publicación está habilitada para Internet y determina si se puede utilizar el protocolo de transferencia de archivos (FTP) para transferir los archivos de instantánea a un suscriptor. *enabled_for_internet* es **nvarchar (5)**, su valor predeterminado es False. Si **true**, los archivos de sincronización para la publicación se colocan en el directorio C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp. El usuario debe crear el directorio Ftp. Si **false**, la publicación no está habilitada para el acceso a Internet.  
   
- [  **@centralized_conflicts =**] **'***centralized_conflicts***'**  
+ [  **@centralized_conflicts =**] **'**_centralized_conflicts_**'**  
  Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Use *conflict_logging* para especificar la ubicación donde se almacenan los registros de conflictos.  
   
- [  **@dynamic_filters =**] **'***dynamic_filters***'**  
+ [  **@dynamic_filters =**] **'**_dynamic_filters_**'**  
  Permite que la publicación de mezcla use filtros de filas con parámetros. *dynamic_filters* es **nvarchar (5)**, su valor predeterminado es False.  
   
 > [!NOTE]  
 >  No se recomienda especificar este parámetro; es mejor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determine de forma automática si se están utilizando filtros de fila con parámetros. Si especifica un valor de **true** para *dynamic_filters*, debe definir un filtro de fila con parámetros para el artículo. Para más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
- [  **@snapshot_in_defaultfolder =** ] **'***snapshot_in_default_folder***'**  
+ [  **@snapshot_in_defaultfolder =** ] **'**_snapshot_in_default_folder_**'**  
  Especifica si los archivos de instantáneas se almacenan en la carpeta predeterminada. *snapshot_in_default_folder* es **nvarchar (5)**, su valor predeterminado es true. Si **true**, los archivos de instantáneas pueden encontrarse en la carpeta predeterminada. Si **false**, se almacenarán los archivos de instantánea en la ubicación alternativa especificada por *alternate_snapshot_folder*. Las ubicaciones alternativas pueden encontrarse en otro servidor, en una unidad de red o en medios extraíbles (como CD-ROM o discos extraíbles). También puede guardar los archivos de instantáneas en un sitio FTP (Protocolo de transferencia de archivos), para que el suscriptor los recupere más tarde. Tenga en cuenta que este parámetro puede ser true y seguir teniendo una ubicación especificada por *alt_snapshot_folder*. Esta combinación especifica que los archivos de instantáneas se almacenarán tanto en la ubicación predeterminada como en la alternativa.  
   
- [  **@alt_snapshot_folder =** ] **'***alternate_snapshot_folder***'**  
+ [  **@alt_snapshot_folder =** ] **'**_alternate_snapshot_folder_**'**  
  Especifica la ubicación de la carpeta alternativa de la instantánea. *alternate_snapshot_folder* es **nvarchar (255)**, su valor predeterminado es null.  
   
- [  **@pre_snapshot_script =** ] **'***pre_snapshot_script***'**  
+ [  **@pre_snapshot_script =** ] **'**_pre_snapshot_script_**'**  
  Especifica un puntero a un **.sql** ubicación del archivo. *pre_snapshot_script* es **nvarchar (255)**, su valor predeterminado es null. El Agente de mezcla ejecutará el script previo a la instantánea antes que cualquiera de los scripts de objetos replicados al aplicar la instantánea en un suscriptor. El script se ejecuta en el contexto de seguridad utilizado por el Agente de mezcla durante la conexión con la base de datos de suscripciones. Las secuencias de comandos anterior a la instantánea no se ejecutan en [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores.  
   
- [  **@post_snapshot_script =** ] **'***post_snapshot_script***'**  
+ [  **@post_snapshot_script =** ] **'**_post_snapshot_script_**'**  
  Especifica un puntero a un **.sql** ubicación del archivo. *post_snapshot_script* es **nvarchar (255)**, su valor predeterminado es null. El Agente de mezcla ejecutará el script posterior a la instantánea después de que se apliquen los demás scripts y datos de objetos replicados durante una sincronización inicial. El script se ejecuta en el contexto de seguridad utilizado por el Agente de mezcla durante la conexión con la base de datos de suscripciones. Scripts posteriores a la instantánea no se ejecutan en [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores.  
   
- [  **@compress_snapshot =** ] **'***compress_snapshot***'**  
+ [  **@compress_snapshot =** ] **'**_compress_snapshot_**'**  
  Especifica que la instantánea escrita en el **@alt_snapshot_folder** ubicación está comprimida en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* es **nvarchar (5)**, su valor predeterminado es False. **false** especifica que no se comprimirá la instantánea; **true** especifica que la instantánea está comprimida. No se pueden comprimir archivos de instantáneas superiores a 2 GB. Los archivos de instantáneas comprimidos se descomprimen en la ubicación en la que se ejecuta el Agente de mezcla; normalmente, se utilizan suscripciones de extracción con las instantáneas comprimidas para descomprimir los archivos en el suscriptor. La instantánea de la carpeta predeterminada no se puede comprimir. Para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores, debe especificar **false**.  
   
- [  **@ftp_address =** ] **'***ftp_address***'**  
+ [  **@ftp_address =** ] **'**_ftp_address_**'**  
  Es la dirección de red del servicio FTP para el distribuidor. *ftp_address* es **sysname**, su valor predeterminado es null. Especifica dónde se encuentran el agente de mezcla de un suscriptor para recoger los archivos de instantánea de publicación. Puesto que esta propiedad se almacena para todas las publicaciones, cada publicación puede tener diferentes *ftp_address*. La publicación debe ser compatible con la propagación de instantáneas mediante FTP.  
   
  [  **@ftp_port=** ] *ftp_port*  
  Es el número de puerto del servicio FTP para el distribuidor. *ftp_port* es **int**, su valor predeterminado es 21. Especifica dónde se encuentran los archivos de instantánea de la publicación para que los recoja el Agente de mezcla de un suscriptor. Puesto que esta propiedad se almacena para todas las publicaciones, cada publicación puede tener su propio *ftp_port*.  
   
- [  **@ftp_subdirectory =** ] **'***ftp_subdirectory***'**  
+ [  **@ftp_subdirectory =** ] **'**_ftp_subdirectory_**'**  
  Especifica dónde estarán disponibles los archivos de instantánea para que los recupere el Agente de mezcla del suscriptor si la publicación admite la propagación de instantáneas mediante FTP. *ftp_subdirectory* es **nvarchar (255)**, su valor predeterminado es null. Puesto que esta propiedad se almacena para todas las publicaciones, cada publicación puede tener su propio *ftp_subdirctory* o elegir que ningún subdirectorio, indicándolo con un valor NULL.  
   
  En la generación previa de instantáneas para publicaciones con filtros con parámetros, la instantánea de datos de cada partición del suscriptor debe estar en su propia carpeta. La estructura de directorios para las instantáneas generadas previamente mediante FTP debe ser la siguiente:  
@@ -149,10 +148,10 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  Los valores indicados en cursiva dependen de la configuración específica de la publicación y partición del suscriptor.  
   
- [  **@ftp_login =** ] **'***ftp_login***'**  
+ [  **@ftp_login =** ] **'**_ftp_login_**'**  
  Se usa el nombre de usuario para conectarse al servicio FTP. *ftp_login* es **sysname**, su valor predeterminado es 'anonymous'.  
   
- [  **@ftp_password =** ] **'***ftp_password***'**  
+ [  **@ftp_password =** ] **'**_ftp_password_**'**  
  Es la contraseña del usuario que se utiliza para conectarse al servicio FTP. *ftp_password* es **sysname**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
@@ -161,7 +160,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@conflict_retention =** ] *conflict_retention*  
  Especifica el período de retención, expresado en días, durante el que se conservan los conflictos. *conflict_retention* es **int**, su valor predeterminado de 14 días antes el conflicto se purga la fila desde la tabla de conflictos.  
   
- [  **@keep_partition_changes =** ] **'***keep_partition_changes***'**  
+ [  **@keep_partition_changes =** ] **'**_keep_partition_changes_**'**  
  Especifica si se permiten optimizaciones de cambio de particiones cuando no se pueden usar las particiones precalculadas. *keep_partition_changes* es **nvarchar (5)**, su valor predeterminado es true. **false** significa que los cambios de partición no está optimizado y cuando no se utilizan particiones precalculadas, las particiones enviadas a todos los suscriptores se comprobarán cuando cambien los datos en una partición. **True** significa que los cambios de partición está optimizado y solo los suscriptores con filas en las particiones modificadas se ven afectados. Al utilizar particiones precalculadas, establezca *use_partition_groups* a **true** y establecer *keep_partition_changes* a **false**. Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 > [!NOTE]  
@@ -169,19 +168,19 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Con [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores, *keep_partition_changes* debe establecerse en true para garantizar que las eliminaciones se propagan correctamente. Si se establece en false, el suscriptor puede tener más filas de las esperadas.  
   
- [  **@allow_subscription_copy=** ] **'***allow_subscription_copy***'**  
+ [  **@allow_subscription_copy=** ] **'**_allow_subscription_copy_**'**  
  Habilita o deshabilita la funcionalidad de copia de las bases de datos de suscripciones suscritas a esta publicación. *allow_subscription_copy* es **nvarchar (5)**, su valor predeterminado es False. El tamaño de la base de datos de suscripciones que se va a copiar debe ser inferior a 2 gigabytes (GB).  
   
- [  **@allow_synctoalternate =** ] **'***allow_synctoalternate***'**  
+ [  **@allow_synctoalternate =** ] **'**_allow_synctoalternate_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@validate_subscriber_info =** ] **'***validate_subscriber_info***'**  
+ [  **@validate_subscriber_info =** ] **'**_validate_subscriber_info_**'**  
  Muestra las funciones que se usan para definir una partición de suscriptor de los datos publicados cuando se usan filtros de fila con parámetros. *validate_subscriber_info* es **nvarchar (500)**, su valor predeterminado es null. El Agente de mezcla utiliza esta información para validar la partición del suscriptor. Por ejemplo, si [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) se usa en el filtro de fila con parámetros, el parámetro debe ser `@validate_subscriber_info=N'SUSER_SNAME()'`.  
   
 > [!NOTE]  
 >  No se recomienda especificar este parámetro; es mejor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determine de forma automática el criterio de filtrado.  
   
- [  **@add_to_active_directory =** ] **'***add_to_active_directory***'**  
+ [  **@add_to_active_directory =** ] **'**_add_to_active_directory_**'**  
  Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Ya no se puede agregar información de publicación a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.  
   
  [  **@max_concurrent_merge =** ] *maximum_concurrent_merge*  
@@ -190,7 +189,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@max_concurrent_dynamic_snapshots =**] *max_concurrent_dynamic_snapshots*  
  Número máximo de sesiones del Agente de instantáneas que se pueden ejecutar simultáneamente para generar instantáneas de datos filtrados en particiones del suscriptor. *maximum_concurrent_dynamic_snapshots* es **int** con el valor predeterminado es 0. Si **0**, no hay ningún límite en las sesiones de instantánea número. Si hay más procesos de instantánea programados al mismo tiempo que los que permite ejecutar el valor, los trabajos sobrantes se colocarán en una cola y esperarán hasta que finalice el proceso de instantánea que se está ejecutando actualmente.  
   
- [  **@use_partition_groups =** ] **'***use_partition_groups***'**  
+ [  **@use_partition_groups =** ] **'**_use_partition_groups_**'**  
  Especifica que se deben usar particiones precalculadas para optimizar el proceso de sincronización. *use_partition_groups* es **nvarchar (5)**, y puede tener uno de estos valores:  
   
 |Valor|Descripción|  
@@ -220,22 +219,22 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 -   Cuando una instrucción DDL agrega una nueva columna, sysarticlecolumns no incluye la nueva columna. Las instrucciones DML no intentarán replicar datos para la nueva columna. Se respeta el parámetro porque la DDL es aceptable se realice o no la replicación.  
   
- [  **@allow_subscriber_initiated_snapshot =** ] **'***allow_subscriber_initiated_snapshot***'**  
+ [  **@allow_subscriber_initiated_snapshot =** ] **'**_allow_subscriber_initiated_snapshot_**'**  
  Indica si los suscriptores de esta publicación pueden iniciar el proceso de instantánea para generar instantáneas filtradas para su partición de datos. *allow_subscriber_initiated_snapshot* es **nvarchar (5)**, su valor predeterminado es False. **True** indica que los suscriptores pueden iniciar el proceso de instantáneas.  
   
- [  **@allow_web_synchronization =** ] **'***allow_web_synchronization***'**  
+ [  **@allow_web_synchronization =** ] **'**_allow_web_synchronization_**'**  
  Especifica si la publicación se habilita para sincronización web. *allow_web_synchronization* es **nvarchar (5)**, su valor predeterminado es False. **True** especifica que se pueden sincronizar las suscripciones a esta publicación a través de HTTPS. Para más información, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores, debe especificar **true**.  
   
- [  **@web_synchronization_url=** ] **'***web_synchronization_url***'**  
+ [  **@web_synchronization_url=** ] **'**_web_synchronization_url_**'**  
  Especifica el valor predeterminado de la dirección URL de Internet utilizada para la sincronización web. *web_synchronization_url*s **nvarchar (500)**, su valor predeterminado es null. Define la dirección URL de Internet predeterminada si no establece explícitamente una cuando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) se ejecuta.  
   
- [  **@allow_partition_realignment =** ] **'***allow_partition_realignment***'**  
+ [  **@allow_partition_realignment =** ] **'**_allow_partition_realignment_**'**  
  Determina si se envían eliminaciones al suscriptor cuando una modificación de la fila del publicador provoca que se modifique su partición. *allow_partition_realignment* es **nvarchar (5)**, su valor predeterminado es true. **True** envía las eliminaciones al suscriptor para reflejar los resultados de un cambio en la partición mediante la eliminación de datos que ya no forma parte de la partición del suscriptor. **false** deja los datos de una partición antigua en el suscriptor, donde no se replicarán los cambios realizados en estos datos en el publicador al suscriptor, pero los cambios realizados en el suscriptor se replicarán al publicador. Establecer *allow_partition_realignment* a **false** se usa para conservar los datos en una suscripción de una partición antigua cuando los datos deben ser accesibles para fines históricos.  
   
 > [!NOTE]  
 >  Los datos que permanecen en el suscriptor como resultado de establecer *allow_partition_realignment* a **false** deben tratarse como si fueran de solo lectura; sin embargo, esto no se aplica el sistema de replicación.  
   
- [  **@retention_period_unit =** ] **'***retention_period_unit***'**  
+ [  **@retention_period_unit =** ] **'**_retention_period_unit_**'**  
  Especifica las unidades para el período de retención establecido *retención*. *retention_period_unit* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
   
 |Valor|Versión|  
@@ -254,7 +253,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!IMPORTANT]  
 >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
   
- [  **@conflict_logging =** ] **'***conflict_logging***'**  
+ [  **@conflict_logging =** ] **'**_conflict_logging_**'**  
  Especifica dónde se almacenan los registros conflictivos. *conflict_logging* es **nvarchar (15)**, y puede tener uno de los siguientes valores:  
   
 |Valor|Descripción|  
@@ -276,7 +275,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Para [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores, el valor de *alternate_snapshot_folder* solamente se utiliza cuando el valor de *snapshot_in_default_folder* es **false**.  
   
- Con la replicación DDL habilitada (* replicate_ddl ***= 1**) para una publicación, con el fin de realizar sin replicación DDL cambios en la publicación, [sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)primero debe ejecutar para establecer *replicate_ddl* a **0**. Después de que se ha ejecutado las instrucciones de DDL sin replicación, **sp_changemergepublication** puede ejecutarse de nuevo para volver a activar la replicación DDL.  
+ Con la replicación DDL habilitada (_replicate_ddl_**= 1**) para una publicación, con el fin de realizar sin replicación DDL cambios en la publicación, [sp_changemergepublication &#40; Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) primero debe ejecutar para establecer *replicate_ddl* a **0**. Después de que se ha ejecutado las instrucciones de DDL sin replicación, **sp_changemergepublication** puede ejecutarse de nuevo para volver a activar la replicación DDL.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  

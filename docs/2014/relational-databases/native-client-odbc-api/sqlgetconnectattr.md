@@ -14,17 +14,17 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089425"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375647"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define los atributos de conexión específicos del controlador. Algunos de los atributos están disponibles para `SQLGetConnectAttr`, y la función se utiliza para notificar sus valores actuales. Los valores presentados para estos atributos no se garantizan hasta que una vez que se ha realizado una conexión o se ha establecido el atributo mediante [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define los atributos de conexión específicos del controlador. Algunos de los atributos están disponibles para `SQLGetConnectAttr`, y la función se utiliza para notificar sus valores actuales. Los valores presentados para estos atributos no se garantizan hasta que se haya realizado una conexión o el atributo se haya establecido mediante [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
- En este tema se enumeran los atributos de solo lectura. Para obtener información acerca de las demás [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atributos de conexión específicos del controlador ODBC de Native Client, vea [SQLSetConnectAttr](sqlsetconnectattr.md).  
+ En este tema se enumeran los atributos de solo lectura. Para obtener información sobre otros atributos de conexión específicos del controlador de ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vea [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  El atributo SQL_COPT_SS_CONNECTION_DEAD notifica el estado de una conexión a un servidor. El controlador consulta el estado actual de la conexión en la red.  
@@ -82,7 +82,7 @@ ms.locfileid: "48089425"
  Para obtener más información acerca de los SPN, vea [Service Principal Names &#40;SPN&#41; en conexiones cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLGetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [Función SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Detalles de implementación de API de ODBC](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   

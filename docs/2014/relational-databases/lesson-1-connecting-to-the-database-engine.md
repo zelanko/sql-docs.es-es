@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375307"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: conectarse al motor de base de datos
   Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
@@ -28,7 +27,7 @@ ms.locfileid: "48132401"
   
 ### <a name="basic-tools"></a>Herramientas básicas  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es la herramienta principal para administrar [!INCLUDE[ssDE](../includes/ssde-md.md)] y escribir código de [!INCLUDE[tsql](../includes/tsql-md.md)]. Se hospeda en el shell de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . No se incluye en [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] pero está disponible como descarga independiente en [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es la herramienta principal para administrar [!INCLUDE[ssDE](../includes/ssde-md.md)] y escribir código de [!INCLUDE[tsql](../includes/tsql-md.md)]. Se hospeda en el shell de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . No se incluye en [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , pero está disponible como descarga independiente en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se instala con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y las herramientas cliente. Permite habilitar protocolos de servidor, configurar opciones de protocolo, como los puertos TCP, configurar servicios de servidor para que se inicien automáticamente y configurar equipos cliente para que se conecten de la forma preferida. Esta herramienta configura los elementos de conectividad más avanzados, pero no habilita las características.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48132401"
   
 ##### <a name="to-start-sql-server-management-studio"></a>Para iniciar SQL Server Management Studio  
   
--   En el **iniciar** menú, elija **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
+-   En el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar el Administrador de configuración de SQL Server  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48132401"
 1.  Inicie una sesión en Windows como miembro del grupo Administradores y abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Si se conecta a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] en [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (o más reciente), es posible que deba haga [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y, a continuación, haga clic en **ejecutar como administrador** con el fin de conectarse con el administrador credenciales. A partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], el programa de instalación agrega inicios de sesión seleccionados a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por lo que las credenciales de administrador no son necesarias.  
+    >  Si se conecta a  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] en [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (o más reciente), es posible que tenga que hacer clic con el botón secundario en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y luego hacer clic en **Ejecutar como administrador** para conectarse usando sus credenciales de administrador. A partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], el programa de instalación agrega inicios de sesión seleccionados a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por lo que las credenciales de administrador no son necesarias.  
   
 2.  En el cuadro de diálogo **Conectar con el servidor** , haga clic en **Cancelar**.  
   

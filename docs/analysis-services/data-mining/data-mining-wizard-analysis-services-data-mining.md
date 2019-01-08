@@ -1,5 +1,5 @@
 ---
-title: 'Asistente para minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Asistente para minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936a09c286b3732b6259d1ada9c8e720ab812074
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0f2773117b2578f22af63ed022a61f1eeb283295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016882"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511468"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Asistente para minería de datos (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "34016882"
   
  A continuación, creará un modelo de minería de datos asociado y la estructura de minería de datos. También puede crear solo la estructura de minería de datos y agregar modelos después, pero normalmente es más fácil crear un modelo de prueba primero.  
   
-###  <a name="BKMK_Relational"></a>Soluciones relacionales y. modelos OLAP de minería de datos  
+###  <a name="BKMK_Relational"></a> Soluciones relacionales y. modelos OLAP de minería de datos  
  La siguiente opción importante que tiene es si se debe usar un origen de datos relacional o basar el modelo en los datos multidimensionales (OLAP).  
   
- El Asistente para minería de datos se bifurca en dos caminos en este momento, en función de si el origen de datos es relacional o está en un cubo. Todo lo demás excepto el proceso de selección de los datos es igual: la elección de los algoritmo, la capacidad agregar un conjunto de exclusión, etc. Pero la selección de los datos del cubo es un poco más compleja que con los datos relacionales. (También obtiene algunas opciones adicionales al final si crea un modelo basado en un cubo).  
+ El Asistente para minería de datos se bifurca en dos caminos en este momento, en función de si el origen de datos es relacional o está en un cubo. Todo lo demás, excepto el proceso de selección de datos es la misma, la elección del algoritmo, la capacidad de agregar un conjunto de datos de exclusión, seleccionar datos de cubo etc., pero están un poco más complejos que el uso de datos relacionales. (También obtiene algunas opciones adicionales al final si crea un modelo basado en un cubo).  
   
  Vea los siguientes temas para obtener un tutorial de cada opción con más detalle:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34016882"
 ### <a name="choosing-an-algorithm"></a>Elegir un algoritmo  
  A continuación, debe decidir qué algoritmo utilizar en el procesamiento de los datos. Esta decisión puede ser difícil de tomar. Cada algoritmo proporcionado en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene características diferentes y produce resultados distintos, de modo que puede experimentar y probar varios modelos antes de determinar cuál es el más adecuado para sus datos y su problema empresarial. Vea el tema siguiente para obtener una explicación de las tareas en las que cada algoritmo es más adecuado:  
   
- [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  De nuevo, puede crear varios modelos utilizando algoritmos diferentes o cambiar los parámetros de los algoritmos para crear modelos distintos. No está limitado en su elección de algoritmo y es recomendable crear varios modelos con los mismos datos.  
   
@@ -77,13 +77,13 @@ ms.locfileid: "34016882"
 ### <a name="additional-features"></a>Características adicionales  
  Para ayudarle a elegir los datos correctos y a configurar los orígenes de datos correctamente, el Asistente para minería de datos proporciona estas características adicionales:  
   
--   **Detección automática de tipos de datos**: el asistente examinará la exclusividad y la distribución de los valores de columna y después recomendará el mejor tipo de datos, y sugerirá un tipo de uso para estos. Puede invalidar estas sugerencias seleccionando los valores de una lista.  
+-   **Auto - detección de tipos de datos**: El asistente examinará la exclusividad y la distribución de valores de columna y, a continuación, recomendará el mejor tipo de datos y sugerirá un tipo de uso para los datos. Puede invalidar estas sugerencias seleccionando los valores de una lista.  
   
--   **Sugerencias para las variables**: puede hacer clic en un cuadro de diálogo e iniciar un analizador que calcule las correlaciones entre las columnas incluidas en el modelo y determine si las columnas son predicciones probables del atributo de resultados, dado el modelo hasta el momento. Puede invalidar estas sugerencias escribiendo valores diferentes.  
+-   **Sugerencias para las variables**: Puede haga clic en un cuadro de diálogo e iniciar un analizador que calcule las correlaciones entre las columnas incluidas en el modelo y determina si las columnas son predicciones probables del atributo resultado, dada la configuración del modelo hasta ahora. Puede invalidar estas sugerencias escribiendo valores diferentes.  
   
--   **Selección de características**: la mayoría de los algoritmos detectarán automáticamente las columnas que son adecuadas para la predicción y usará esas de forma preferente. En las columnas que contienen demasiados valores, se aplicará la *selección de características* para reducir la cardinalidad de los datos y mejorar las posibilidades de buscar un patrón significativo. Puede modificar el comportamiento de la selección de características mediante parámetros del modelo.  
+-   **Selección de características**: Mayoría de los algoritmos detectarán automáticamente las columnas que son adecuadas para la predicción y usará esas de forma preferente. En las columnas que contienen demasiados valores, se aplicará la *selección de características* para reducir la cardinalidad de los datos y mejorar las posibilidades de buscar un patrón significativo. Puede modificar el comportamiento de la selección de características mediante parámetros del modelo.  
   
--   **Segmentación automática del cubo**: si el modelo de minería de datos se basa en un origen de datos OLAP, la capacidad para segmentar el modelo utilizando atributos de cubo se proporciona automáticamente. Es recomendable para los modelos de empaquetamiento basados en los subconjuntos de datos de cubo.  
+-   **Segmentación automática del cubo**: Si el modelo de minería de datos se basa en un origen de datos OLAP, automáticamente se proporciona la capacidad para segmentar el modelo utilizando atributos de cubo. Es recomendable para los modelos de empaquetamiento basados en los subconjuntos de datos de cubo.  
   
 ### <a name="completing-the-wizard"></a>Finalizar el Asistente  
  El último paso del asistente es dar nombre a la estructura de minería de datos y al modelo asociado. Según el tipo de modelo que creó, podría tener las siguientes opciones importantes:  
@@ -99,15 +99,15 @@ ms.locfileid: "34016882"
 ## <a name="related-content"></a>Contenido relacionado  
  Para obtener más información sobre las decisiones que debe tomar al crear un modelo de minería de datos, vea los vínculos siguientes:  
   
- [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Contenido tipos & #40; minería de datos & #41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [Tipos de datos & #40; minería de datos & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipos de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [Selección de características & #40; minería de datos & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [Selección de características &#40;minería de datos&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [Los valores que faltan & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [Obtención de detalles en modelos de minería de datos](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   

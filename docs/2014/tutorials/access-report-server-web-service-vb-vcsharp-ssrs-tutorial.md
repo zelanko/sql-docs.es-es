@@ -17,12 +17,12 @@ ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366687"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Obtener acceso al servicio web del servidor de informes mediante Visual Basic o Visual C# (Tutorial de SSRS)
   El siguiente tutorial muestra cómo tener acceso el servicio Web del servidor de informes en una aplicación creada con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -47,19 +47,19 @@ ms.locfileid: "48167635"
   
 -   Permisos suficientes para tener acceso al servicio web del servidor de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo en que se encuentre el servidor de informes.  
   
--   Un informe instalado en el servidor de informes. En este tutorial se utiliza el informe de muestra Company Sales. Para obtener más información acerca de los informes de ejemplo, vea [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Un informe instalado en el servidor de informes. En este tutorial se utiliza el informe de muestra Company Sales. Para obtener más información acerca de los informes de ejemplo, vea [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  Los ejemplos no se instalan automáticamente durante la ejecución del programa de instalación, pero puede instalarlos en cualquier momento. Para obtener información acerca de los ejemplos, vea [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  Los ejemplos no se instalan automáticamente durante la ejecución del programa de instalación, pero puede instalarlos en cualquier momento. Para obtener información acerca de los ejemplos, vea [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Tiempo estimado para completar el tutorial:** 60 minutos  
   
 ## <a name="tasks"></a>Tareas  
- [Lección 1: Crear el proyecto cliente del servicio web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Lección 1: Crear el proyecto de cliente de servicio Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Lección 2: Agregar una referencia web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Lección 2: Agregar una referencia Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Lección 3: Obtener acceso al servicio web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Lección 3: Obtener acceso al servicio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
  [Lección 4: Ejecutar la aplicación &#40;VC de VB&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   

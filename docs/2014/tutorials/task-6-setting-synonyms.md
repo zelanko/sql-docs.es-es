@@ -13,15 +13,15 @@ ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00640766d7a19c91f517d8e96e6de9f863d5ed54
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211412"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365708"
 ---
 # <a name="task-6-setting-synonyms"></a>Tarea 6: establecer sinónimos
-  En esta tarea, establecerá dos valores de dominio, **USA** y **United States**, del dominio **País** como sinónimos, siendo **United States** el valor inicial. Como se seleccionó la opción **Usar valores iniciales** al crear el dominio **País** , todos los valores **USA** del dominio **País** se mostrarán como **United States** (ya que United States es el valor inicial). Vea el tema [Cambiar valores de dominio](http://msdn.microsoft.com/library/hh510408.aspx) para obtener más detalles.  
+  En esta tarea, establecerá dos valores de dominio, **USA** y **United States**, del dominio **País** como sinónimos, siendo **United States** el valor inicial. Como se seleccionó la opción **Usar valores iniciales** al crear el dominio **País** , todos los valores **USA** del dominio **País** se mostrarán como **United States** (ya que United States es el valor inicial). Vea el tema [Cambiar valores de dominio](https://msdn.microsoft.com/library/hh510408.aspx) para obtener más detalles.  
   
 1.  Seleccione **País** en la lista de dominios.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48211412"
      ![Estados Unidos y EE. UU. como sinónimos](../../2014/tutorials/media/et-settingsynonyms-02.jpg "Estados Unidos y EE. UU. como sinónimos")  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 7: Crear una regla de dominio compuesto](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+ [Tarea 7: Crear un dominio compuesto](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

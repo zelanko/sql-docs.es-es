@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_help_agent_default
@@ -17,12 +16,12 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f23718246b78a7a199eaed4716da76a92a69761
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ee9596b578396786da8562f2ecf73c3b85f0241
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792068"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588039"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id=**] *profile_id *** salida**  
+ [  **@profile_id=**] _profile_id_**salida**  
  Es el identificador de la configuración predeterminada del tipo de agente. *profile_id* es **int**, no tiene ningún valor predeterminado. *profile_id* también es un parámetro OUTPUT y devuelve el identificador de la configuración predeterminada para el tipo de agente.  
   
- [  **@agent_type=**] **'***agent_type***'**  
+ [  **@agent_type=**] **'**_agent_type_**'**  
  Es el tipo de agente. *agent_type* es **int**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
 |Valor|Descripción|  

@@ -19,12 +19,12 @@ ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c303a4108994100387981c1c2ab86f6b5f596c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db5d75d08fbcbbba4bb888af9a8b6cb640d6321a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198601"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367747"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Aspectos básicos de las consultas MDX (Analysis Services)
   Las expresiones multidimensionales (MDX) permiten consultar objetos multidimensionales, como los cubos, y devolver conjuntos de celdas multidimensionales que contengan los datos del cubo. Este tema y los temas secundarios proporcionan información general sobre las consultas MDX.  
@@ -32,7 +32,7 @@ ms.locfileid: "48198601"
  En los temas siguientes se describen las consultas MDX y los conjuntos de celdas que generan, y proporcionan información más detallada acerca de la sintaxis básica de MDX.  
   
 > [!NOTE]  
->  Para obtener más información acerca de los problemas de rendimiento relacionados con las consultas y cálculos de MDX, vea la sección sobre escritura de MDX eficaz en la [guía de rendimiento de SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Para obtener más información acerca de los problemas de rendimiento relacionados con los cálculos y consultas MDX, vea la sección "Escritura de MDX eficaz" en el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -42,14 +42,14 @@ ms.locfileid: "48198601"
 |[Restringir la consulta con ejes de consulta y segmentador &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|Describe los ejes de consulta y segmentador y cómo especificarlos.|  
 |[Establecer el contexto de cubo en una consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)|Proporciona una descripción del objetivo de la cláusula FROM en las instrucciones MDX SELECT.|  
 |[Crear conjuntos con nombre en MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)|Describe el objetivo de los conjuntos con nombre en MDX así como las técnicas necesarias para crearlos y utilizarlos en consultas MDX.|  
-|[Creación de miembros calculados en MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)|Proporciona información acerca de los miembros calculados en MDX, incluidas las técnicas necesarias para crearlos y utilizarlos en expresiones MDX.|  
-|[Creación de cálculos de celdas en MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)|Detalla el proceso de creación y uso de las celdas calculadas.|  
-|[Creación y uso de los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)|Detalla el proceso de creación y uso de las propiedades de dimensión, nivel, miembro y celda.|  
+|[Generar miembros calculados en MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)|Proporciona información acerca de los miembros calculados en MDX, incluidas las técnicas necesarias para crearlos y utilizarlos en expresiones MDX.|  
+|[Generar cálculos de celdas en MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)|Detalla el proceso de creación y uso de las celdas calculadas.|  
+|[Crear y usar los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)|Detalla el proceso de creación y uso de las propiedades de dimensión, nivel, miembro y celda.|  
 |[Manipular datos &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)|Describe los aspectos básicos para la manipulación de datos mediante la obtención de datos y resúmenes, además del orden de paso y resolución en MDX.|  
 |[Modificar datos &#40;MDX&#41;](mdx-data-modification-modifying-data.md)|Describe cómo utilizar las reescrituras para cambiar temporal o permanentemente datos multidimensionales.|  
-|[Usar Variables y parámetros &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|Describe cómo utilizar las variables y los parámetros en consultas MDX.|  
+|[Usar variables y parámetros &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|Describe cómo utilizar las variables y los parámetros en consultas MDX.|  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones multidimensionales &#40;MDX&#41; referencia](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Referencia de expresiones multidimensionales &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

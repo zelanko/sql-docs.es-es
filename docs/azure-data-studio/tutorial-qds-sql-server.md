@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Ejemplo de consultas más lentas de habilitar los cinco widget - Studio de datos de Azure | Microsoft Docs'
+title: 'Tutorial: Habilitar el widget de ejemplo de las consultas más lentas cinco'
+titleSuffix: Azure Data Studio
 description: Este tutorial muestra cómo habilitar el widget de ejemplo de las consultas más lentas cinco en el panel de la base de datos.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356246"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030789"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Agregar el *cinco consultas más lentas* widget de ejemplo en el panel de la base de datos
 
@@ -54,7 +55,7 @@ El widget en este ejemplo requiere *Query Store* esté habilitado.
 Para agregar el *lenta widget consultas* al panel, edite el *dashboard.database.widgets* en su *configuración de usuario* archivo.
 
 1. Abra *configuración de usuario* presionando **Ctrl + Mayús + P** para abrir el *paleta de comandos*.
-2. Tipo *configuración* en el cuadro de búsqueda y seleccione **preferencias: abrir la configuración de usuario**.
+2. Tipo *configuración* en el cuadro de búsqueda y seleccione **preferencias: Abrir configuración de usuario**.
 
    ![Comando de configuración de usuario abiertos](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -171,7 +172,7 @@ Para agregar el *lenta widget consultas* al panel, edite el *dashboard.database.
 
 
 ## <a name="next-steps"></a>Pasos siguientes
-En este tutorial, ha aprendido cómo:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 > * Habilitar la consulta Store en una base de datos
 > * Agregar un widget de información en el panel de la base de datos

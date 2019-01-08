@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -19,12 +18,12 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6ded31664a8eaf6b11bc630754752677d46d7ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750337"
 ---
 # <a name="install-integration-services"></a>Instalar Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único programa de instalación para instalar alguno de sus componentes o todos, incluido [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Mediante el programa de instalación puede instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con o sin otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un único equipo.  
@@ -125,6 +124,6 @@ ms.locfileid: "48204805"
  Las características de 64 bits se instalan en el directorio **Archivos de programa** y las de 32 bits se instalan aparte, en el directorio **Archivos de programa (x86)** . (Este comportamiento no es específico de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se admite en el sistema operativo de 64 bits de [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] y no se instala en los servidores [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , no se admite en el sistema operativo de 64 bits de [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] y no se instala en los servidores [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] .  
   
   

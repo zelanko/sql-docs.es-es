@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades de proyecto de Analysis Services (SSDT) | Documentos de Microsoft
+title: Configurar las propiedades de proyecto de Analysis Services (SSDT) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51e5c2ebb72cce6b7a02fb9be226620f2d4cb06f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 90fd3a238d7b4ab3e573c4ecef76bdbdd3bde7f1
+ms.sourcegitcommit: 3f19c843b38d3835d07921612f0143620eb9a0e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023224"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709808"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurar las propiedades de un proyecto de Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ ms.locfileid: "34023224"
 ## <a name="property-description"></a>Descripción de propiedad  
  En la siguiente tabla se describe cada una de las propiedades del proyecto, se muestra su valor predeterminado y se ofrece información sobre cómo cambiar su valor.  
   
-|Propiedad|Valor predeterminado|Description|  
+|Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
 |Build / Deployment Server Edition|Edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizada para desarrollar el proyecto|Especifica la edición del servidor en que se implementarán finalmente los proyectos. Si se trabaja con varios desarrolladores de software simultáneamente en un proyecto, éstos deben saber cuál es la edición del servidor para saber qué características se deben incluir en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|Build / Deployment Server Edition|Versión utilizada para desarrollar los proyectos|Especifica la versión del servidor en el que se implementarán finalmente los proyectos.|  
+|Compilación / versión del servidor de implementación|Versión utilizada para desarrollar los proyectos|Especifica la versión del servidor en el que se implementarán finalmente los proyectos.|  
 |Build / Outputs|/bin|Ruta de acceso relativa de la salida del proceso de generación del proyecto.|  
 |Build / Remove Passwords|True|Especifica si las contraseñas conocidas se eliminarán de las cadenas de conexión que se escriban en el directorio de salida durante el proceso de generación. Las contraseñas se eliminan para aumentar la seguridad. Si se eliminan las contraseñas, deberán proporcionarse cuando se procese el proyecto implementado para que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenga acceso al origen de datos.|  
 |Debugging / Start Object|\<Objeto activo >|Determina el objeto que se iniciará al iniciar la depuración.|  
 |Deployment / Deployment Mode|Implementar solo cambios|De manera predeterminada, solo se implementan los cambios de los objetos del proyecto (siempre que no se hayan hecho otros cambios en los objetos directamente fuera del proyecto). También puede optar por implementar todos los objetos del proyecto durante cada implementación. Para que el rendimiento sea mejor, use Implementar solo cambios.|  
-|Deployment / Processing Option|Valor de DB-Library|De manera predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determinará el tipo de procesamiento necesario cuando se implementen los cambios de los objetos. Eso se suele traducir en el tiempo de implementación más breve. Sin embargo, también puede elegir un procesamiento completo o ningún procesamiento durante cada implementación.|  
+|Deployment / Processing Option|Default|De manera predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determinará el tipo de procesamiento necesario cuando se implementen los cambios de los objetos. Eso se suele traducir en el tiempo de implementación más breve. Sin embargo, también puede elegir un procesamiento completo o ningún procesamiento durante cada implementación.|  
 |Deployment / Transactional Deployment|False|De manera predeterminada, la implementación de los objetos modificados o de todos los objetos no es transaccional con el procesamiento de los objetos implementados. La implementación puede ser correcta y persistir aunque se produzca un error de procesamiento. Puede cambiar este valor predeterminado para incluir la implementación y el procesamiento en una sola transacción.|  
 |Implementación / Servidor de destino|localhost|De manera predeterminada, los objetos de base de datos del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se implementarán en la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del equipo local en el que se está usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Puede cambiar este valor predeterminado para especificar una instancia con nombre del equipo local o cualquier instancia de un equipo remoto en que tenga permiso para crear objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Deployment / Database|\<nombre del proyecto >|De manera predeterminada, el nombre de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se crearán las instancias de los objetos del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tras la implementación es el nombre del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cuando se definió. Puede cambiar esta propiedad para cambiar el nombre de la base de datos en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada por la propiedad Server.|  
@@ -43,10 +43,10 @@ ms.locfileid: "34023224"
   
  Un proyecto se crea inicialmente con una sola configuración, conocida como Programación. Puede crear otras configuraciones y pasar de una a otra en el Administrador de configuración.  
   
- Hasta que se creen configuraciones adicionales, todos los programadores utilizan la configuración común. Con todo, en las distintas fases de desarrollo del proyecto, por ejemplo durante la programación inicial y la fase de pruebas de un proyecto, cada uno de los programadores puede usar orígenes de datos distintos e implementar el proyecto en distintos servidores para objetivos distintos. Las configuraciones le permiten conservar estos valores distintos en distintos archivos de configuración.  
+ Hasta que se creen configuraciones adicionales, todos los programadores utilizan la configuración común. Sin embargo, durante las distintas fases de desarrollo: del proyecto, como durante el desarrollo inicial y las pruebas de un proyecto - diferentes a los desarrolladores se puede usar diferentes orígenes de datos e implementar el proyecto en servidores diferentes para distintos fines. Las configuraciones le permiten conservar estos valores distintos en distintos archivos de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Compilar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Implementar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Generar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

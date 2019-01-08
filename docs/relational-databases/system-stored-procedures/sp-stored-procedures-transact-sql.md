@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636903"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588474"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sp_name =** ] **'***nombre***'**  
+ [  **@sp_name =** ] **'**_nombre_**'**  
  Es el nombre del procedimiento que se utiliza para devolver información de catálogo. *nombre* es **nvarchar(390)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín.  
   
- [  **@sp_owner =** ] **'***esquema***'**  
+ [  **@sp_owner =** ] **'**_esquema_**'**  
  Es el nombre del esquema al que pertenece el procedimiento. *esquema* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el esquema actual contiene un procedimiento con el nombre especificado, se devuelve ese procedimiento. Si se especifica un procedimiento almacenado no calificado, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] busca el procedimiento siguiendo este orden:  
@@ -57,10 +57,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   El esquema **dbo** de la base de datos actual.  
   
- [  **@qualifier =** ] **'***calificador***'**  
- Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (*calificador ***.*** esquema ***.*** nombre*. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ [  **@qualifier =** ] **'**_calificador_**'**  
+ Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
- [  **@fUsePattern =** ] **'***fUsePattern***'**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
  Determina si los caracteres de subrayado (_), porcentaje (%) y corchete ([ ]) se interpretan como caracteres comodín. *fUsePattern* es **bit**, su valor predeterminado es 1.  
   
  **0** = patrón coincidente está desactivada.  
@@ -104,7 +104,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>B. Devolver un solo procedimiento almacenado  
+### <a name="b-returning-a-single-stored-procedure"></a>b. Devolver un solo procedimiento almacenado  
  En el ejemplo siguiente se devuelve un conjunto de resultados para el procedimiento almacenado `uspLogError`.  
   
 ```  

@@ -11,12 +11,12 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1028dc0f73c6acb9832ce83bc5fad82e11322a13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365827"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot para SharePoint (SSAS)
   PowerPivot para SharePoint es un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. PowerPivot para SharePoint proporciona hospedaje de servidor de datos PowerPivot en una granja de SharePoint. Los datos de PowerPivot son un modelo de datos analíticos que se genera mediante uno de los siguientes procedimientos:  
@@ -89,7 +89,7 @@ ms.locfileid: "48209865"
  [Costes y topologías de licencia de ejemplo de inteligencia empresarial de autoasistencia de SQL Server 2014](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Planeación de PowerPivot e implementación](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Recuperación ante desastres de PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Planeación de PowerPivot e implementación](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [Recuperación ante desastres de PowerPivot para SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

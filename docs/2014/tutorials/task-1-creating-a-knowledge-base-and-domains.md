@@ -13,14 +13,14 @@ ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1222d6d217c004790336a6a234d7f52154e148ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53b67f363f076108a3b3add6950b14e37e0bd1ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132445"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373207"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>TArea 1: crear una base de conocimiento y dominios
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tarea 1: crear una base de conocimiento y dominios
   En esta tarea, creará el **proveedores** base de conocimiento y creará dominios que se usa para la limpieza y coincidencia de datos para quitar duplicados.  
   
 1.  Iniciar **Data Quality Client**. Haga clic en **iniciar**, apunte a **todos los programas**, haga clic en **Microsoft SQL Server 2012**, haga clic en **Data Quality Services**y, a continuación, haga clic en  **Data Quality Client**.  
@@ -49,7 +49,7 @@ ms.locfileid: "48132445"
   
      ![Crear el cuadro de diálogo dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "crear el cuadro de diálogo dominio")  
   
-9. Repita el paso anterior para crear los dominios siguientes con toda la configuración predeterminada. Para simplificar el tutorial, configuró el **tipo de datos** de todos los dominios como **cadena**. Los otros tipos de datos permitidos son: Integer, Decimal y Date. Cuando el **usar valores iniciales** opción está activada (valor predeterminado), todos los sinónimos se reemplazan con el valor inicial del grupo de sinónimos en la salida. Establecer **normalizar cadena** (valor predeterminado) quita todos los caracteres especiales en los valores de dominio. El **formato de salida para** opción le permite seleccionar el formato que se aplica cuando los valores de los datos en el dominio. Seleccione **Habilitar corrector ortográfico** (valor predeterminado) para ejecutar el corrector ortográfico en todos los valores de cadena al rellenar el dominio. El **lenguaje** configuración especifica la versión de idioma de la **corrector ortográfico** que desea aplicar. Seleccione **deshabilitar algoritmos de Error de sintaxis** para rellenar el dominio sin comprobar los valores de cadena para errores de sintaxis. Consulte [crear un dominio](http://msdn.microsoft.com/library/hh510401.aspx) tema en MSDN library para obtener más detalles.  
+9. Repita el paso anterior para crear los dominios siguientes con toda la configuración predeterminada. Para simplificar el tutorial, configuró el **tipo de datos** de todos los dominios como **cadena**. Los demás tipos de datos permitidos son: Entero, Decimal y Fecha. Cuando el **usar valores iniciales** opción está activada (valor predeterminado), todos los sinónimos se reemplazan con el valor inicial del grupo de sinónimos en la salida. Establecer **normalizar cadena** (valor predeterminado) quita todos los caracteres especiales en los valores de dominio. El **formato de salida para** opción le permite seleccionar el formato que se aplica cuando los valores de los datos en el dominio. Seleccione **Habilitar corrector ortográfico** (valor predeterminado) para ejecutar el corrector ortográfico en todos los valores de cadena al rellenar el dominio. El **lenguaje** configuración especifica la versión de idioma de la **corrector ortográfico** que desea aplicar. Seleccione **deshabilitar algoritmos de Error de sintaxis** para rellenar el dominio sin comprobar los valores de cadena para errores de sintaxis. Consulte [crear un dominio](https://msdn.microsoft.com/library/hh510401.aspx) tema en MSDN library para obtener más detalles.  
   
     -   Nombre de proveedor  
   
@@ -66,6 +66,6 @@ ms.locfileid: "48132445"
     -   Zip  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 2: Agregar valores de dominio manualmente](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [Tarea 2: Agregar manualmente los valores de dominio](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0939540af0c302832925a7a1bef6367718b8c1be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145330"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369287"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover una base de datos de Analysis Services
   Con frecuencia, se producen situaciones en las que un administrador de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere mover una base de datos modelo multidimensional o tabular a otra ubicación. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145330"
   
 1.  Localice la base de datos que desea mover en el panel izquierdo o derecho de SSMS.  
   
-2.  Haga clic con el botón derecho del mouse en la base de datos y seleccione **Separar…**  
+2.  Haga doble clic en la base de datos y seleccione **separar...**  
   
 3.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145330"
   
 5.  Localice la carpeta **Bases de datos** en el panel izquierdo o derecho de SSMS.  
   
-6.  Haga clic con el botón derecho en la carpeta **Bases de datos** y seleccione **Asociar…**  
+6.  Haga doble clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
   
-7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. También puede usar el botón Examinar (**…**) para buscar la carpeta de la base de datos.  
+7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...** ) para buscar la carpeta de base de datos.  
   
 8.  Seleccione el `ReadWrite` modo para la base de datos.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50145330"
   
 2.  Copie la plantilla de script siguiente para XMLA  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +128,11 @@ ms.locfileid: "50145330"
   
 4.  Copie la plantilla de script siguiente para XMLA en una nueva pestaña XMLA  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

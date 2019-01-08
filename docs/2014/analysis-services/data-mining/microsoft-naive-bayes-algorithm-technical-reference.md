@@ -19,12 +19,12 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4121f988d8cdaa22d2249a76aeb542f80fbebd8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086355"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376937"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Referencia técnica del algoritmo Bayes naive de Microsoft
   El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clasificación que proporciona [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para el modelado predictivo. Este algoritmo calcula la probabilidad condicional entre columnas de entrada y de predicción y supone que las columnas son independientes. Esta suposición de independencia conduce al nombre Bayes naive.  
@@ -32,7 +32,7 @@ ms.locfileid: "48086355"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementación del algoritmo Bayes naive de Microsoft  
  Desde el punto de vista computacional, el algoritmo es menos complejo que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] y, por tanto, resulta útil para generar rápidamente modelos de minería de datos que detectan las relaciones entre las columnas de entrada y las columnas de predicción. El algoritmo considera cada par de valores de atributos de entrada y de atributos de salida.  
   
- La descripción de las propiedades matemáticas del Teorema de Bayes queda fuera del ámbito de esta documentación; para obtener más información, vea el documento de Microsoft Research titulado [Redes bayesianas: la combinación de conocimiento y datos estadísticos](http://go.microsoft.com/fwlink/?LinkId=207029).  
+ Una descripción de las propiedades matemáticas del teorema de Bayes queda fuera del ámbito de esta documentación; Para obtener más información, consulte el documento de Microsoft Research titulado [las redes bayesianas: La combinación de conocimiento y datos estadísticos](https://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Para obtener la descripción de cómo se ajustan las probabilidades en todos los modelos para tener en cuenta los valores ausentes posibles, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48086355"
  El valor predeterminado es 0,5.  
   
  *MAXIMUM_STATES*  
- Especifica el número máximo de estados de atributo que admite el algoritmo. Si el número de estados que tiene un atributo es mayor que el número máximo de estados, el algoritmo utiliza los estados más conocidos del atributo e interpreta que faltan los estados restantes.  
+ Especifica el número máximo de estados de atributo que admite el algoritmo. Si el número de Estados que tiene un atributo es mayor que el número máximo de Estados, el algoritmo utiliza los estados más populares del atributo e interpreta que faltan los Estados restantes.  
   
  El valor predeterminado es 100.  
   
@@ -100,8 +100,8 @@ ms.locfileid: "48086355"
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm.md)   
+ [Algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm.md)   
  [Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md)   
- [Para los modelos Bayes Naive contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518277"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usar datos de tabla anidada como entrada para un gráfico de precisión
   Al probar la precisión de un modelo de minería de datos usando datos externos, si el modelo de minería de datos contiene tablas anidadas, los datos externos también deben contener una tabla de casos y una tabla anidada asociada.  
@@ -44,7 +44,7 @@ ms.locfileid: "48196695"
   
 3.  En **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar ( **…** ) para elegir el conjunto de datos externos en una lista de vistas del origen de datos del servidor actual.  
+4.  Haga clic en el botón Examinar **(...)**  para elegir el conjunto de datos externos en una lista de vistas del origen de datos en el servidor actual.  
   
 5.  Haga clic en **Seleccionar tabla de casos**. En el cuadro de diálogo **Seleccionar tabla** , elija la tabla en la vista del origen de datos que contiene los datos de los casos y, a continuación, haga clic en **Aceptar**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48196695"
      Si tiene que modificar la relación entre la tabla anidada y la tabla de casos, haga clic en **Modificar combinación** para abrir el cuadro de diálogo **Crear relación** .  
   
 ## <a name="see-also"></a>Vea también  
- [Elegir y asignar el modelo de datos de prueba](choose-and-map-model-testing-data.md)   
+ [Elegir y asignar datos de prueba para el modelo](choose-and-map-model-testing-data.md)   
  [Aplicar filtros a los datos de prueba del modelo](apply-filters-to-model-testing-data.md)  
   
   

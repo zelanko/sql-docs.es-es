@@ -13,12 +13,12 @@ ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535878"
 ---
 # <a name="integration-services-deployment-wizard"></a>Asistente para implementación de Integration Services
   El Asistente para la implementación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] implementa proyectos en el catálogo de SSISDB en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el modelo de implementación de proyectos.  
@@ -29,9 +29,9 @@ ms.locfileid: "48086305"
   
 1.  **Seleccionar origen** : seleccione el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyecto que desea implementar.  
   
-2.  **Seleccionar destino** : seleccione el destino del proyecto.  
+2.  **Seleccionar destino** -seleccionar el destino del proyecto.  
   
-3.  **Revisión** – mostrará sus selecciones.  
+3.  **Revisión** -mostrará sus selecciones.  
   
 4.  **Implementar/resultados** : implementa el proyecto y muestra los resultados.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -15,15 +14,15 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217815"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756817"
 ---
 # <a name="data-import-master-data-services"></a>Importación de datos (Master Data Services)
-  Una vez que haya creado un modelo para los datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede empezar a agregar datos y realizar cambios en los datos en el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.   Puede usar tablas de almacenamiento provisional de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimientos almacenados y Master Data Manager.  
+  Una vez que haya creado un modelo para los datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede empezar a agregar datos y a realizar cambios en los datos de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Puede usar tablas de almacenamiento provisional de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimientos almacenados y Master Data Manager.  
   
  También puede usar el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]para agregar datos al repositorio de MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos). Para obtener más información, consulte [publicar datos &#40;complemento MDS para Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48217815"
      Puede usar los procedimientos almacenados de almacenamiento provisional o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para cargar los datos.  
   
 > [!NOTE]  
->  En [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], la compatibilidad con los procesos de almacenamiento provisional de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] está en desuso.  
+>  En [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], el soporte para los procesos de almacenamiento provisional de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] está en desuso.  
   
 ## <a name="deactivating-and-deleting-members"></a>Desactivación y eliminación de miembros  
  La desactivación significa que el miembro se puede reactivar. Si reactiva un miembro, se restauran sus atributos y su pertenencia a jerarquías y colecciones. Todas las transacciones anteriores quedan intactas. Las transacciones desactivación son visibles para los administradores en el área funcional de **Administración de versiones** de Master Data Manager.  
@@ -70,11 +69,11 @@ ms.locfileid: "48217815"
 ## <a name="staging-tables-and-stored-procedures"></a>Tablas y procedimientos almacenados de de almacenamiento provisional  
  La base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] incluye los siguientes tipos de tablas de almacenamiento provisional que puede rellenar con sus datos.  
   
--   [Hoja tabla de ensayo de miembros &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Consolidado de la tabla de ensayo de miembros &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Tabla de ensayo de relaciones &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  Para cada entidad del modelo, hay una tabla de almacenamiento provisional. El nombre de la tabla indica la entidad correspondiente y el tipo de entidad, como miembro hoja. La siguiente imagen muestra las tablas de almacenamiento provisional de las entidades de moneda, cliente y producto.  
   
@@ -105,6 +104,6 @@ ms.locfileid: "48217815"
   
 -   [Validación &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

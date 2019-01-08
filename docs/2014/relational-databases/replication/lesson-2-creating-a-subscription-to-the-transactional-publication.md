@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Creación de una suscripción a la publicación transaccional | Microsoft Docs'
+title: 'Lección 2: Crear una suscripción a la publicación transaccional | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ace792a76e1bcdbcc7aa6b372d96de1f92c570f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de13dc6bcae1dbca26edec889a988b3085de9195
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072255"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590861"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lección 2: Crear una suscripción a la publicación transaccional
-  En esta lección, creará una suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para realizar esta lección es necesario haber completado la lección anterior, [Lección 1: Publicar datos con la replicación transaccional](lesson-1-publishing-data-using-transactional-replication.md).  
+  En esta lección, creará una suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta lección es necesario que haya completado la lección anterior, [lección 1: Publicación de datos con la replicación transaccional](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Para crear la suscripción  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072255"
   
 7.  En el cuadro de diálogo **Nueva base de datos** , escriba **ProductReplica** en el cuadro **Nombre de la base de datos** , haga clic en **Aceptar**y luego, en **Siguiente**.  
   
-8.  En el cuadro de diálogo **Seguridad del Agente de distribución**, haga clic en el botón de puntos suspensivos (**…**), escriba \<*Nombre_De_Equipo>***\repl_distribution** en el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, haga clic en **Aceptar** y luego en **Siguiente**.  
+8.  En el **seguridad del agente de distribución** diálogo cuadro, haga clic en el botón de puntos suspensivos (**...** ) botón, escriba \< _nombre_equipo >_**\repl_distribution** en el **cuenta de proceso** , escriba la contraseña para este cuenta y, a continuación, haga clic en **Aceptar**y, a continuación, haga clic en **siguiente**.  
   
 9. Haga clic en **Finalizar** para aceptar los valores predeterminados en las páginas restantes y finalizar el asistente.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48072255"
   
 2.  En la página **General** , en la lista **Tipo de usuario** , seleccione **Usuario de Windows**.  
   
-3.  Seleccione el cuadro **Nombre de usuario** y haga clic en el botón de puntos suspensivos, en el cuadro **Escriba el nombre del objeto que quiere seleccionar** escriba <nombre_equipo>**\repl_distribution**, haga clic en **Comprobar nombres** y luego en **Aceptar**.  
+3.  Seleccione el **nombre de usuario** cuadro y haga clic en el botón de puntos suspensivos (...), en el **escriba el nombre de objeto a seleccionar** cuadro, escriba < nombre_equipo >**\repl_distribution**, haga clic en  **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
   
-4.  En la página **Pertenencia**, en el área **Pertenencia al rol de la base de datos**, seleccione **db_owner** y haga clic en **Aceptar** para crear el usuario.  
+4.  En la página **Pertenencia** , en el área **Pertenencia al rol de la base de datos** , seleccione **db_owner**y haga clic en **Aceptar** para crear el usuario.  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Para ver el estado de sincronización de la suscripción  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48072255"
 3.  Si la suscripción no está visible en **AdvWorksProductTrans**, presione F5 para actualizar la lista.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente una suscripción a la publicación transaccional. Dado que el Agente de distribución para esta suscripción se ejecuta continuamente, la suscripción se inicializa cuando se crea. A continuación, utilizará testigos de seguimiento para comprobar que los cambios se replican en el suscriptor y para determinar la latencia. Vea [Lesson 3: Validating the Subscription and Measuring Latency](lesson-3-validating-the-subscription-and-measuring-latency.md).  
+ Ha creado correctamente una suscripción a la publicación transaccional. Dado que el Agente de distribución para esta suscripción se ejecuta continuamente, la suscripción se inicializa cuando se crea. A continuación, utilizará testigos de seguimiento para comprobar que los cambios se replican en el suscriptor y para determinar la latencia. Consulte [lección 3: Validación de la suscripción y medir la latencia](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Inicializar una suscripción con una instantánea](initialize-a-subscription-with-a-snapshot.md)   

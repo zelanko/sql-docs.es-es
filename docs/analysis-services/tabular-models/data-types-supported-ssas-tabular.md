@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b70cb96a7ed5f0b7df229a0d5de59e14a4e6f77
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414842"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipos de datos admitidos en los modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +33,7 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
 |**Tipo de datos en el modelo**|**Tipo de datos en DAX**|**Descripción**|  
 |Whole Number|Valor entero de 64 bits (ocho bytes)*<br /><br /> Nota:<br />         Las fórmulas DAX no admiten tipos de datos que son demasiado pequeños para contener el valor mínimo que aparece en la descripción.|Números que no tienen posiciones decimales. Los enteros pueden ser números positivos o negativos, pero deben ser números enteros comprendidos entre -9.223.372.036.854.775.808 (-2^63) y 9.223.372.036.854.775.807 (2^63-1).|  
 |Decimal Number|Número real de 64 bits (ocho bytes)*<br /><br /> Nota:<br />         Las fórmulas DAX no admiten tipos de datos que son demasiado pequeños para contener el valor mínimo que aparece en la descripción.|Los números reales son aquellos que pueden tener posiciones decimales. Abarcan un amplio intervalo de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Cero<br /><br /> Valores positivos desde 2,23E -308 hasta 1,79E + 308<br /><br /> Sin embargo, el número de dígitos significativos se limita a 17 dígitos decimales.|  
-|Booleano|Boolean|Valor True o False.|  
+|Boolean|Boolean|Valor True o False.|  
 |Texto|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
 |date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
@@ -41,7 +41,7 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
   
  \* Si intenta importar datos con valores numéricos grandes, puede producir un error de importación con el siguiente error:  
   
- Error de base de datos en memoria: el '\<nombre de columna >' columna de la '\<nombre de tabla >' tabla contiene un valor, ' 1.7976931348623157e + 308', que no se admite. Se canceló la operación.  
+ Error de base de datos en memoria: El '\<nombre de columna >' columna de la '\<nombre de tabla >' tabla contiene un valor, ' 1.7976931348623157e + 308', que no se admite. Se canceló la operación.  
   
  Este error se produce porque el diseñador de modelos utiliza ese valor para representar los valores NULL. Los valores de la siguiente lista son sinónimos del valor NULL mencionado anteriormente:  
   
@@ -67,7 +67,7 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
   
  Si los datos en la columna que se especifica como un argumento no están compatibles con el tipo de datos requerido por la función, en muchos casos DAX devolverá un error. Sin embargo, dondequiera que sea posible DAX intenta convertir implícitamente los datos en el tipo de datos necesarios. Por ejemplo:  
   
--   Puede escribir un número, por ejemplo, “123”, como una cadena. DAX se analiza la cadena y se intentará especificarla como tipo de datos numérico.  
+-   Puede escribir un número, por ejemplo, "123", como una cadena. DAX se analiza la cadena y se intentará especificarla como tipo de datos numérico.  
   
 -   Se pueden sumar TRUE + 1 y obtener el resultado 2, ya que TRUE se convierte implícitamente al número 1 y se realiza la operación 1+1.  
   
@@ -155,7 +155,7 @@ Se admite solo un conjunto limitado de combinaciones de tipos mixtos de datos pa
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|En blanco|Error|  
-|BLANK AND BLANK|BLANK|Error|  
+|BLANK AND BLANK|En blanco|Error|  
   
  Para obtener información detallada sobre cómo una determinada función u operador trata los valores en blanco, vea los temas de cada función DAX en la sección [Referencia de funciones DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   

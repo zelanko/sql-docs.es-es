@@ -17,12 +17,12 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f778380427f0c542346442a6f694b87a04d4dd80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f036bc08cf9510eac3befc8fefdfb189dfe6490
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159555"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373477"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar un servidor de informes para la administración remota
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede configurar las instancias del servidor de informes local o remotamente. Para configurar una instancia del servidor de informes remota, se puede utilizar la herramienta Configuración de Reporting Services o escribir código personalizado que utilice el proveedor de Instrumental de administración de Windows (WMI) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La herramienta de configuración de Reporting Services proporciona una interfaz gráfica para el proveedor WMI, de modo que se puede configurar un servidor de informes sin tener que escribir código. Al iniciar la herramienta, se puede especificar el servidor remoto con el que se desea establecer la conexión.  
@@ -42,7 +42,7 @@ ms.locfileid: "48159555"
   
  Algunas organizaciones tienen directivas de grupo que impiden la administración remota de servidores para algunos sistemas operativos o usuarios. Antes de modificar la configuración del firewall, pregunte al administrador de la red si existen restricciones en cuanto a la administración remota.  
   
- Para obtener más información, vea [Connecting Through Windows Firewall](http://go.microsoft.com/fwlink/?LinkId=63615) en la documentación de Plataform SDK en MSDN.  
+ Para obtener más información, vea [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) en la documentación de Plataform SDK en MSDN.  
   
 ## <a name="tasks"></a>Tareas  
  Entre las tareas que habilitan la configuración del servidor de informes remoto figuran las siguientes:  

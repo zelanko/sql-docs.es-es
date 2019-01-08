@@ -1,5 +1,5 @@
 ---
-title: 'Rendimiento de SQL Server R Services: optimización de datos | Microsoft Docs'
+title: 'Optimización del rendimiento para la optimización de datos: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699513"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432408"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Rendimiento de R Services: optimización de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Cuando se trabaja con grandes conjuntos de datos, se debe usar siempre el contex
 
 ## <a name="factors"></a>Factores
 
-El lenguaje R tiene el concepto de *factores*, que son variables especiales para datos de categorías. Los científicos de datos a menudo usan variables de factor en sus fórmulas, dado que las variables de categorías como factores de control garantiza que los datos se procesó correctamente funciones de machine learning. Para obtener más información, consulte [R para Dummies: Variables de Factor](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+El lenguaje R tiene el concepto de *factores*, que son variables especiales para datos de categorías. Los científicos de datos a menudo usan variables de factor en sus fórmulas, dado que las variables de categorías como factores de control garantiza que los datos se procesó correctamente funciones de machine learning. Para obtener más información, consulte [R para Dummies: Variables de factor](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Por diseño, variables de factor pueden convertirse de cadenas en enteros y vuelva a intentarlo para almacenarlos o procesarlos. R `data.frame` función controla todas las cadenas como variables de factor, a menos que el argumento *stringsAsFactors* está establecido en **False**. Esto significa si las cadenas tienen automáticamente se convierte en un entero para el procesamiento y, a continuación, asignar a la cadena original.
 
@@ -149,13 +149,13 @@ Muchos algoritmos RevoScaleR admiten parámetros para controlar cómo se genera 
 
 Para obtener orientación adicional sobre la optimización de RevoScaleR, consulte estos artículos:
 
-+ Artículo de soporte técnico: [opciones de rxdforest/rxDTree de optimización del rendimiento](https://support.microsoft.com/kb/3104235)
++ Artículo de soporte técnico: [Opciones de rxdforest/rxDTree de optimización del rendimiento](https://support.microsoft.com/kb/3104235)
 
-+ Métodos para controlar el modelo caben en un modelo de árbol ampliado: [estimar modelos utilizando estocástico potenciación del gradiente](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Métodos para controlar el modelo que caben en un modelo de árbol ampliado: [Estimación de los modelos de uso de potenciación del gradiente estocástico](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Información general sobre cómo RevoScaleR mueve y procesa los datos: [escribir algoritmos personalizados de fragmentación de ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Información general de cómo se mueve y procesa datos RevoScaleR: [Escribir algoritmos personalizados de fragmentación de ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Modelo de programación para RevoScaleR: [administración de subprocesos de RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Modelo de programación para RevoScaleR: [Administración de subprocesos de RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
 + Referencia de función para [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
@@ -173,13 +173,13 @@ También recomendamos que observa en el nuevo **MicrosoftML** paquete, que propo
 
 Si su escenario implica la predicción rápida mediante un modelo almacenado o la integración de aprendizaje automático en una aplicación, puede usar el [operacionalización](https://docs.microsoft.com/r-server/what-is-operationalization) características de Microsoft R Server (anteriormente conocidas como DeployR).
 
-+ Como un **científico de datos**, utilice el [paquete mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) para compartir código de R con otros equipos e integrar análisis de R en aplicaciones web, escritorio, móviles y panel: [cómo publicar y administrar servicios web de R en R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Como un **científico de datos**, utilice el [paquete mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) para compartir código de R con otros equipos e integrar análisis de R en aplicaciones web, escritorio, móviles y panel: [Cómo publicar y administrar servicios web de R en R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Como un **administrador**, obtenga información sobre cómo administrar paquetes, supervisar nodos de web y nodos de proceso y controlar la seguridad de los trabajos de R: [cómo interactúan y consumir servicios web en R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Como un **administrador**, obtenga información sobre cómo administrar paquetes, supervisar nodos de web y nodos de proceso y controlar la seguridad de los trabajos de R: [Cómo interactúan y consumir servicios web en R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Artículos de esta serie
 
-[Performance tuning para R – Introducción](sql-server-r-services-performance-tuning.md)
+[Performance tuning para R - Introducción](sql-server-r-services-performance-tuning.md)
 
 [Optimización del rendimiento de R - configuración de SQL Server](sql-server-configuration-r-services.md)
 

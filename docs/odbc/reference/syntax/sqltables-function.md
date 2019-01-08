@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708363"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212409"
 ---
 # <a name="sqltables-function"></a>Función SQLTables
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: Abrir grupo  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Abrir grupo  
   
  **Resumen**  
  **SQLTables** devuelve la lista de nombres de tabla, catálogo o esquema y los tipos de tabla, almacenados en un origen de datos específico. El controlador devuelve la información como un conjunto de resultados.  

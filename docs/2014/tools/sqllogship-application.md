@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
@@ -13,12 +12,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8e31a24d54b9f1c8013c67628fbe6e279604a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123645"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590059"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
   La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
@@ -31,29 +30,29 @@ ms.locfileid: "48123645"
   
 sqllogship  
 -server  
-instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ –verboselevellevel ] [ –logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
+instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ -verboselevellevel ] [ -logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] donde se ejecutará la operación. La instancia del servidor que se va a especificar depende de la operación de trasvase de registros indicada. Para **-backup**, *instance_name* debe ser el nombre del servidor principal en una configuración de trasvase de registros. Para **-copy** o **-restore**, *instance_name* debe ser el nombre de un servidor secundario en una configuración de trasvase de registros.  
   
- **-backup** *primary_id*  
- Realiza una operación de copia de seguridad de la base de datos principal cuyo identificador principal se especifica en *primary_id*. Puede obtener este identificador, selecciónelo en la [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) tabla del sistema o mediante el [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) procedimiento almacenado.  
+ **-backup** _primary_id_  
+ Realiza una operación de copia de seguridad de la base de datos principal cuyo identificador principal se especifica en *primary_id*. Para obtener este identificador, selecciónelo en la tabla del sistema [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) o use el procedimiento almacenado [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) .  
   
- La operación de copia de seguridad crea la copia de seguridad del registro en el directorio de copia de seguridad. A continuación, la aplicación **sqllogship** limpia los archivos de copia de seguridad antiguos, basándose en el período de retención de archivos. Más tarde, la aplicación registra el historial de la operación de copia de seguridad en el servidor principal y en el servidor de supervisión. Por último, se ejecuta la aplicación [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql), que limpia la información del historial antigua, basándose en el período de retención.  
+ La operación de copia de seguridad crea la copia de seguridad del registro en el directorio de copia de seguridad. A continuación, la aplicación **sqllogship** limpia los archivos de copia de seguridad antiguos, basándose en el período de retención de archivos. Más tarde, la aplicación registra el historial de la operación de copia de seguridad en el servidor principal y en el servidor de supervisión. Por último, la aplicación ejecuta [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql), que limpia la información del historial antigua, basándose en el período de retención.  
   
- **-copy** *secondary_id*  
- Realiza una operación de copia para copiar copias de seguridad desde el servidor secundario especificado de la base de datos o bases de datos secundarias cuyo identificador secundario se indica en *secondary_id*. Puede obtener este identificador, selecciónelo en la [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) tabla del sistema o mediante el [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) procedimiento almacenado.  
+ **-copy** _secondary_id_  
+ Realiza una operación de copia para copiar copias de seguridad desde el servidor secundario especificado de la base de datos o bases de datos secundarias cuyo identificador secundario se indica en *secondary_id*. Para obtener este identificador, selecciónelo en la tabla del sistema [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) o use el procedimiento almacenado [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .  
   
  La operación copia los archivos de copia de seguridad desde el directorio de copia de seguridad al directorio de destino. A continuación, la aplicación **sqllogship** registra el historial de la operación de copia en el servidor secundario y en el servidor de supervisión.  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  Realiza una operación de restauración en el servidor secundario especificado de la base de datos o bases de datos secundarias cuyo identificador secundario se indica en *secondary_id*. Para obtener este identificador, use el procedimiento almacenado **sp_help_log_shipping_secondary_database** .  
   
  Los archivos de copia de seguridad del directorio de destino creados después del punto de restauración más reciente se restauran en la base de datos o bases de datos secundarias. A continuación, la aplicación **sqllogship** limpia los archivos de copia de seguridad antiguos, basándose en el período de retención de archivos. Más tarde, la aplicación registra el historial de la operación de restauración en el servidor secundario y en el servidor de supervisión. Por último, la aplicación ejecuta **sp_cleanup_log_shipping_history**, que limpia la información del historial antigua, basándose en el período de retención.  
   
- **–verboselevel** *level*  
+ **-verboselevel** _nivel_  
  Especifica el nivel de mensajes agregados al historial de trasvase de registros. *level* es uno de los siguientes enteros:  
   
 |level|Descripción|  
@@ -64,14 +63,14 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |**3**|Se obtienen mensajes de control de errores, advertencias e informativos. Este es el valor predeterminado.|  
 |4|Se obtienen todos los mensajes de depuración y traza.|  
   
- **–logintimeout** *timeout_value*  
- Especifica la cantidad de tiempo asignado al intento de iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es de tipo **int***.*  
+ **-logintimeout** _timeout_value_  
+ Especifica la cantidad de tiempo asignado al intento de iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es de tipo **int**_._  
   
- **-querytimeout** *timeout_value*  
- Especifica la cantidad de tiempo asignado para iniciar la operación especificada antes de que se agote el tiempo de espera. El valor predeterminado es sin tiempo de espera. *timeout_value* es de tipo **int***.*  
+ **-querytimeout** _timeout_value_  
+ Especifica la cantidad de tiempo asignado para iniciar la operación especificada antes de que se agote el tiempo de espera. El valor predeterminado es sin tiempo de espera. *timeout_value* es de tipo **int**_._  
   
 ## <a name="remarks"></a>Comentarios  
- Se recomienda que use los trabajos de copia de seguridad, copia y restauración para realizar la copia de seguridad, copia y restauración cuando sea posible. Para iniciar estos trabajos desde una operación por lotes u otra aplicación, llame a la [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) procedimiento almacenado.  
+ Se recomienda que use los trabajos de copia de seguridad, copia y restauración para realizar la copia de seguridad, copia y restauración cuando sea posible. Para iniciar estos trabajos desde una operación por lotes u otra aplicación, llame al procedimiento almacenado [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  El historial de trasvase de registros creado por **sqllogship** se combina con el historial creado por los trabajos de copia de seguridad, copia y restauración de trasvase de registros. Si tiene previsto usar **sqllogship** repetidamente para realizar operaciones de copia de seguridad, copia y restauración para una configuración de trasvase de registros, considere la posibilidad de deshabilitar los trabajos de trasvase de registros correspondientes. Para obtener más información, consulte [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
@@ -83,7 +82,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |Opción|Acceso al directorio|Permisos|  
 |------------|----------------------|-----------------|  
 |**-backup**|Requiere acceso de lectura/escritura al directorio de copia de seguridad.|Requiere los mismos permisos que la instrucción BACKUP. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
-|**-copy**|Requiere acceso de lectura al directorio de copia de seguridad y acceso de escritura al directorio de copia.|Requiere los mismos permisos que el [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) procedimiento almacenado.|  
+|**-copy**|Requiere acceso de lectura al directorio de copia de seguridad y acceso de escritura al directorio de copia.|Requiere los mismos permisos que el procedimiento almacenado [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  
 |**-restore**|Requiere acceso de lectura/escritura al directorio de copia.|Requiere los mismos permisos que la instrucción RESTORE. Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
   
 > [!NOTE]  

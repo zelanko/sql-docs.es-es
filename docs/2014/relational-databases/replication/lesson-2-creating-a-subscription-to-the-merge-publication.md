@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Creación de una suscripción a la publicación de combinación | Microsoft Docs'
+title: 'Lección 2: Crear una suscripción a la publicación de combinación | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7f1ab51a53e91a069e4d2a137d4908fa820df0f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8634606ba3eaba8a38aefb66043c0d00e33660a2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186615"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590999"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lección 2: Crear una suscripción a la publicación de combinación
-  En esta lección, creará una suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Luego establecerá los permisos en la base de datos de suscripciones y generará manualmente la instantánea de datos filtrados para la nueva suscripción. Para realizar esta lección es necesario haber completado la lección anterior, [Lección 1: Publicar datos con la replicación de mezcla](lesson-1-publishing-data-using-merge-replication.md).  
+  En esta lección, creará una suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Luego establecerá los permisos en la base de datos de suscripciones y generará manualmente la instantánea de datos filtrados para la nueva suscripción. Esta lección es necesario que haya completado la lección anterior, [lección 1: Publicación de datos con replicación de mezcla](lesson-1-publishing-data-using-merge-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Para crear la suscripción  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48186615"
   
 7.  En el cuadro de diálogo **Nueva base de datos** , escriba **SalesOrdersReplica** en el cuadro **Nombre de la base de datos** , haga clic en **Aceptar**y, después, haga clic en **Siguiente**.  
   
-8.  En la página Seguridad del Agente de mezcla, haga clic en el botón de puntos suspensivos (**…**), escriba \<*Nombre_De_Equipo>***\repl_merge* en el cuadro **Cuenta de proceso**, escriba la contraseña de esta cuenta, haga clic en **Aceptar**, en **Siguiente** y, después, otra vez en **Siguiente**.  
+8.  En la página seguridad del agente de mezcla, haga clic en el botón de puntos suspensivos (**...** ) botón, escriba \< _nombre_equipo >_**\repl_merge** en el **cuenta de proceso** cuadro, proporcione la contraseña para esta cuenta, haga clic en **Aceptar**, haga clic en **siguiente**y, a continuación, haga clic en **siguiente** nuevo.  
   
 9. En la página Inicializar suscripciones, seleccione **En la primera sincronización** de la lista **Inicializar cuando** , haga clic en **Siguiente**y, después, otra vez en **Siguiente** .  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48186615"
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Bases de datos**, **SalesOrdersReplica**y **Seguridad**, haga clic con el botón derecho en **Usuarios**y, después, seleccione **Nuevo usuario**.  
   
-2.  En la página **General**, escriba \<*Nombre_De_Equipo>***\repl_merge** en el cuadro **Nombre de usuario**, haga clic en el botón de puntos suspensivos (**…**), haga clic en **Examinar**, seleccione \<*Nombre_De_Equipo>***\repl_merge**, haga clic en **Aceptar**, en **Comprobar nombres** y luego en **Aceptar**.  
+2.  En el **General** , escriba \< _nombre_equipo >_**\repl_merge** en el **nombre de usuario** cuadro, haga clic en el botón de puntos suspensivos () **...** ) botón, haga clic en **examinar**, seleccione \< _nombre_equipo >_**\repl_merge**, haga clic en **Aceptar**, haga clic en **comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
   
 3.  En **Pertenencia al rol de la base de datos**, seleccione **db_owner**y haga clic en **Aceptar** para crear el usuario.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48186615"
 5.  Seleccione la partición agregada recientemente, haga clic en **Generar instantáneas seleccionadas ahora**y, después, haga clic en **Aceptar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente una suscripción a la publicación de combinación y ha generado la instantánea filtrada para la nueva partición de datos de la suscripción, de manera que esté disponible cuando se inicialice la suscripción. A continuación, concederá derechos al Agente de mezcla en la base de datos de suscripciones y ejecutará el Agente de mezcla para iniciar la sincronización e inicializar la suscripción. Vea [Lección 3: Sincronizar la suscripción con la publicación de combinación](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
+ Ha creado correctamente una suscripción a la publicación de combinación y ha generado la instantánea filtrada para la nueva partición de datos de la suscripción, de manera que esté disponible cuando se inicialice la suscripción. A continuación, concederá derechos al Agente de mezcla en la base de datos de suscripciones y ejecutará el Agente de mezcla para iniciar la sincronización e inicializar la suscripción. Consulte [lección 3: Sincronizar la suscripción con la publicación de combinación](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Subscribe to Publications](subscribe-to-publications.md)   

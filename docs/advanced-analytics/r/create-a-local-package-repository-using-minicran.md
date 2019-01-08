@@ -1,5 +1,6 @@
 ---
-title: Crear un repositorio de paquetes de R local mediante miniCRAN (SQL Server Machine Learning) | Microsoft Docs
+title: Crear un repositorio de paquete de R local mediante miniCRAN - SQL Server Machine Learning Services
+description: Use miniCran para detectar, ensamblar e instalar las dependencias de paquetes de R en un único paquete consolidado.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ef84cc3c08f461745e30fa2ce65e468263ded18d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699403"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431758"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Crear un repositorio de paquetes de R local mediante miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,16 +33,16 @@ El objetivo de crear un repositorio de paquetes local es proporcionar una ubicac
 
 Repositorios de paquetes son útiles en estos escenarios:
 
-- **Seguridad**: R muchos usuarios están acostumbrados a descargar e instalar nuevos paquetes de R a voluntad, desde CRAN o uno de sus sitios de réplica. Sin embargo, por motivos de seguridad, los servidores de producción que ejecutan [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] normalmente no tiene conectividad a internet.
+- **Seguridad**: Muchos usuarios de R están acostumbrados a descargar e instalar nuevos paquetes de R a voluntad, desde CRAN o uno de sus sitios de réplica. Sin embargo, por motivos de seguridad, los servidores de producción que ejecutan [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] normalmente no tiene conectividad a internet.
 
-- **Instalación sin conexión sea más fácil**: para instalar el paquete en un servidor sin conexión requiere que también descargar todas las dependencias de paquete, Using miniCRAN resulta más fácil obtener todas las dependencias en el formato correcto.
+- **Instalación sin conexión sea más fácil**: Para instalar el paquete en un servidor sin conexión requiere que también descargar todas las dependencias de paquete, Using miniCRAN resulta más fácil obtener todas las dependencias en el formato correcto.
 
     Mediante el uso de miniCRAN, puede evitar errores de dependencia del paquete al preparar los paquetes se instalan con el [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrucción.
 
-- **Mejor administración de versión**: en un entorno multiusuario, existen buenas razones para evitar la instalación sin restricciones de varias versiones de paquete en el servidor. Usar un repositorio local para proporcionar un conjunto coherente de los paquetes para su uso por los analistas. 
+- **Mejor administración de versión**: En un entorno multiusuario, existen buenas razones para evitar la instalación sin restricciones de varias versiones de paquete en el servidor. Usar un repositorio local para proporcionar un conjunto coherente de los paquetes para su uso por los analistas. 
 
 > [!TIP]
-> También puede usar miniCRAN para preparar los paquetes para su uso en Azure Machine Learning. Para obtener más información, consulte este blog: [mediante miniCRAN en Azure ML, por Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
+> También puede usar miniCRAN para preparar los paquetes para su uso en Azure Machine Learning. Para obtener más información, consulte este blog: [Uso de miniCRAN en Azure Machine Learning por Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="install-minicran"></a>Instalar miniCRAN
 
@@ -99,7 +100,7 @@ Hacer **no** agregar dependencias a esta lista inicial. El **igraph** paquete ut
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   De esta información, el paquete de miniCRAN crea la estructura de carpetas que necesita para copiar los paquetes a la [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] más adelante.
+   De esta información, el paquete de miniCRAN crea la estructura de carpetas que necesita para copiar los paquetes a la [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] más adelante.
 
 En este momento debe tener una carpeta que contiene los paquetes que necesita, y los paquetes adicionales que eran necesarios. La ruta de acceso debe ser similar a este ejemplo: C:\mylocalrepo\bin\windows\contrib\3.3 y deben contener una colección de los paquetes comprimidos. No se descomprima los paquetes o cambiar el nombre de los archivos.
 

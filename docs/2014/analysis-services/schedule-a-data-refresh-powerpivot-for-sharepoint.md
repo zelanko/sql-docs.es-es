@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178465"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363847"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Programar una actualización de datos (PowerPivot para SharePoint)
   Puede programar la actualización de datos para obtener actualizaciones automáticas de los datos PowerPivot dentro de un libro de Excel que publicara en un sitio de SharePoint.  
@@ -47,7 +47,7 @@ ms.locfileid: "48178465"
   
  El origen de datos no puede ser un documento de Office ni una base de datos de Access. Office no admite el uso de los componentes de conectividad de Office en un entorno de servidor. Si el libro contiene datos de estos orígenes, asegúrese de quitar esos orígenes de la lista de orígenes de datos en la programación de actualización de datos.  
   
- El libro debe ser una versión de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Si usa los libros creados en la versión anterior de PowerPivot para Excel, la actualización de datos de la programación no funcionará a menos que actualice la base de datos a la nueva versión.  
+ El libro debe ser una versión de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . Si usa los libros creados en la versión anterior de PowerPivot para Excel, la actualización de datos de la programación no funcionará a menos que actualice la base de datos a la nueva versión.  
   
  El libro se debe proteger en el momento en que la operación de actualización finalice. Para ello, una vez finalizada la actualización de los datos, se realiza un bloqueo del libro del archivo. Este bloqueo se ejecuta cuando se guarda el archivo, y no cuando se inicia la actualización.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "48178465"
   
  Si ve un mensaje de estado inesperado (por ejemplo, que informa acerca de un error o de la cancelación de la operación de actualización), puede investigar el problema comprobando los permisos y la disponibilidad del servidor.  
   
- Revise la página de solución de problemas de actualización de datos PowerPivot en el WIKI de TechNet de ayuda para resolver problemas de actualización de datos. Para obtener más información vea [Solucionar problemas de la actualización de datos PowerPivot](http://go.microsoft.com/fwlink/?LinkId=251594).  
+ Revise la página de solución de problemas de actualización de datos PowerPivot en el WIKI de TechNet de ayuda para resolver problemas de actualización de datos. Para obtener más información vea [Solucionar problemas de la actualización de datos PowerPivot](https://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
->  Los administradores de SharePoint pueden ayudarle a solucionar los problemas de la actualización de datos viendo los informes de la actualización de datos consolidados en el Panel de administración de PowerPivot en Administración central. Para obtener más información, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+>  Los administradores de SharePoint pueden ayudarle a solucionar los problemas de la actualización de datos viendo los informes de la actualización de datos consolidados en el Panel de administración de PowerPivot en Administración central. Para obtener más información, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualización de datos PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   

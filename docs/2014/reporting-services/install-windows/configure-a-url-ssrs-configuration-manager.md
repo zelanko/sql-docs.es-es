@@ -13,15 +13,15 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8c23c3216bc7bdff86a9e508de87c2086f6f6b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ab343a4c6f70d97aa5e770b8ca21dd4d835f05c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162775"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375937"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
-  Para poder utilizar el Administrador de informes o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación. Si tiene un servidor de informes que está configurado para utilizar el modo integrado de SharePoint y actualiza la dirección URL del servicio web del servidor de informes utilizando la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], también debe actualizar la dirección URL en la Administración central de SharePoint.  
+  Para poder utilizar el Administrador de informes o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación. Si tiene un servidor de informes que está configurado para utilizar el modo integrado de SharePoint y actualiza la dirección URL del servicio web del servidor de informes utilizando la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , también debe actualizar la dirección URL en la Administración central de SharePoint.  
   
  Utilice la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar las direcciones URL. Todas las partes de la dirección URL se definen en esta herramienta. A diferencia de las versiones anteriores, los sitios web de Internet Information Services (IIS) ya no proporcionan acceso a las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "48162775"
   
 -   Si IIS 6.0 ó IIS 7.0 está instalado en el mismo equipo, compruebe los nombres de los directorios virtuales de cualquier sitio web que use el puerto 80. Si ve algún directorio virtual que utilice los nombres de directorios virtuales predeterminados de Reporting Services (es decir, "Reports" y "ReportServer"), elija otros nombres de directorios virtuales para las direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que configure.  
   
--   Debe utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la dirección URL. No utilice una utilidad de sistema. No modifique nunca reservas de direcciones URL en la `URLReservations` sección del archivo RSReportServer.config directamente. El uso de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es necesario para actualizar la reserva de direcciones URL subyacente que está almacenada internamente y para sincronizar la configuración de direcciones URL que se almacena en el archivo RSReportServer.config.  
+-   Debe utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la dirección URL. No utilice una utilidad de sistema. No modifique nunca directamente las reservas de direcciones URL en la sección `URLReservations` del archivo RSReportServer.config. El uso de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es necesario para actualizar la reserva de direcciones URL subyacente que está almacenada internamente y para sincronizar la configuración de direcciones URL que se almacena en el archivo RSReportServer.config.  
   
 -   Elija una hora en la que haya poca actividad con los informes. Cada vez que la reserva de direcciones URL cambie, puede esperar que los dominios de aplicación para el servicio web del servidor de informes y el Administrador de informes se pudieran reciclar.  
   
--   Para obtener información general de la construcción de la dirección URL y el uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [configurar direcciones URL del servidor de informes &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Para obtener información general de la construcción de la dirección URL y el uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Para configurar una dirección URL para el servicio web del servidor de informes  
   
@@ -80,11 +80,11 @@ ms.locfileid: "48162775"
   
     -   Desde un símbolo del sistema, escriba el comando siguiente para devolver una lista de los puertos TCP que se estén utilizando:  
   
-         `netstat –a –n -p tcp`  
+         `netstat -a -n -p tcp`  
   
-    -   Revise el artículo de soporte técnico de Microsoft, [Información acerca de las asignaciones de puertos TCP/IP](http://support.microsoft.com/kb/174904), para leer sobre las asignaciones de puertos TCP y las diferencias entre los puertos conocidos (0 a 1023), los puertos registrados (1024 a 49151) y los puertos dinámicos o los privados (49152 a 65535).  
+    -   Revise el artículo de soporte técnico de Microsoft, [Información acerca de las asignaciones de puertos TCP/IP](https://support.microsoft.com/kb/174904), para leer sobre las asignaciones de puertos TCP y las diferencias entre los puertos conocidos (0 a 1023), los puertos registrados (1024 a 49151) y los puertos dinámicos o los privados (49152 a 65535).  
   
-    -   Si usa Firewall de Windows, debe abierto el puerto. Para obtener instrucciones, consulte [configurar un Firewall para el acceso al servidor de informes](../report-server/configure-a-firewall-for-report-server-access.md).  
+    -   Si usa Firewall de Windows, debe abierto el puerto. Para obtener instrucciones, consulte [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  Si aún no lo ha hecho, compruebe que IIS (si está instalado) no tiene un directorio virtual con el mismo nombre que piensa utilizar.  
   

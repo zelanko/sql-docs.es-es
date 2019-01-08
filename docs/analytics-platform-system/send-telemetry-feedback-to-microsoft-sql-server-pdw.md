@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701733"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591147"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft para Analytics Platform System
 Analytics Platform System tiene una característica opcional de telemetría que envía datos de la consola de administración a Microsoft. 
@@ -26,14 +26,14 @@ Analytics Platform System tiene una característica opcional de telemetría que 
 Para proporcionar la protección de privacidad máximo, puntos de acceso se incluye sin habilitar la telemetría. Antes de habilitar esta característica, revise el [declaración de privacidad de Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). Para participar en, ejecute el script de PowerShell que se describe a continuación.  
   
 ## <a name="enable"></a>Habilitar la telemetría  
-**El reenvío de DNS:** requiere que envían datos de telemetría a Microsoft Analytics Platform System para conectarse a internet a través de un reenviador DNS. Para habilitar esta característica, debe habilitar en todos los hosts y máquinas virtuales de carga de trabajo de reenvío de DNS. Invocar el `Enable-RemoteMonitoring` comando con el `SetupDnsForwarder` opción para configurar el reenvío de DNS y habilitar la telemetría correctamente. Invocar el `Enable-RemoteMonitoring` comando sin el `SetupDnsForwarder` opción cuando el reenvío de DNS ya está configurado y desea habilitar la supervisión de latido.  
+**Reenvío de DNS:** Requiere que envían datos de telemetría a Microsoft Analytics Platform System para conectarse a internet a través de un reenviador DNS. Para habilitar esta característica, debe habilitar en todos los hosts y máquinas virtuales de carga de trabajo de reenvío de DNS. Invocar el `Enable-RemoteMonitoring` comando con el `SetupDnsForwarder` opción para configurar el reenvío de DNS y habilitar la telemetría correctamente. Invocar el `Enable-RemoteMonitoring` comando sin el `SetupDnsForwarder` opción cuando el reenvío de DNS ya está configurado y desea habilitar la supervisión de latido.  
   
 > [!IMPORTANT]  
 > Habilitar el reenvío de DNS, abre la conexión a internet para todos los hosts y máquinas virtuales de carga de trabajo.  
   
 #### <a name="to-enable-feedback"></a>Para habilitar los comentarios  
   
-1.  Con una cuenta de administrador de dominio de aplicación, conéctese al nodo de Control (***appliance_domain *-CTL01**) y abra un símbolo del sistema con sus credenciales de administrador de Windows.  
+1.  Con una cuenta de administrador de dominio de aplicación, conéctese al nodo de Control (<strong>*appliance_domain*-CTL01</strong>) y abra un símbolo del sistema con sus credenciales de administrador de Windows.  
   
 2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -83,7 +83,7 @@ Deshabilitación de la telemetría se detendrá todas las operaciones que se com
   
 #### <a name="to-disable-telemetry"></a>Para deshabilitar la telemetría  
   
-1.  Con una cuenta de administrador de dominio de aplicación, conéctese al nodo de Control (***appliance_domain *-CTL01**) y abra una ventana de PowerShell con privilegios de administrador.  
+1.  Con una cuenta de administrador de dominio de aplicación, conéctese al nodo de Control (<strong>*appliance_domain*-CTL01</strong>) y abra una ventana de PowerShell con privilegios de administrador.  
   
 2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   

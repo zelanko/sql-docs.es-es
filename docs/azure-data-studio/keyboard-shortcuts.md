@@ -1,7 +1,8 @@
 ---
-title: Crear y personalizar métodos abreviados de teclado en Azure Data Studio | Microsoft Docs
-description: Obtenga información sobre cómo crear y personalizar métodos abreviados de teclado en Azure Data Studio.
-ms.custom: tools|sos
+title: Crear y personalizar métodos abreviados de teclado
+titleSuffix: Azure Data Studio
+description: Obtenga información sobre cómo crear y personalizar métodos abreviados de teclado en Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3452e2e19d237f8ba5135c723e9971c0932ba61c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356476"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030259"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Métodos abreviados de teclado [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -28,9 +29,9 @@ Dado que [!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su funcional
 
 Para ver todos los métodos abreviados de teclado actualmente definidas:
 
-Abra el **métodos abreviados de teclado** editor desde la **archivo** menú: **archivo** > **preferencias**  >   **Métodos abreviados de teclado** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **preferencias** > **métodos abreviados de teclado** en Mac).
+Abra el **métodos abreviados de teclado** editor desde la **archivo** menú: **Archivo** > **preferencias** > **métodos abreviados de teclado** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Preferencias** > **métodos abreviados de teclado** en Mac).
 
-Además de mostrar los enlaces de teclado actual, el **métodos abreviados de teclado** editor enumera los comandos disponibles que no tienen métodos abreviados de teclado definidos. El **métodos abreviados de teclado** editor le permite fácilmente cambiar, quitar, restablecer y definir los enlaces de teclado nuevo.  
+Además de mostrar los enlaces de teclado actuales, el **métodos abreviados de teclado** editor enumera los comandos disponibles que no tienen métodos abreviados de teclado definidos. El **métodos abreviados de teclado** editor le permite fácilmente cambiar, quitar, restablecer y definir nuevos enlaces de teclado.  
 
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>Editar accesos directos de teclado existentes
@@ -41,7 +42,7 @@ Para cambiar el enlace de teclado para un método abreviado de teclado existente
    > [!TIP]
    > Buscar por clave, el comando, por origen, etc. para devolver todos los métodos abreviados de teclado correspondiente.
 
-1. Haga clic en la entrada deseada y seleccione **Keybinding de cambio**
+1. Haga clic en la entrada deseada y seleccione **enlace cambiar la clave**
 
    ![editar el método abreviado de teclado](media/keyboard-shortcuts/change-keybinding.png)
 
@@ -53,7 +54,7 @@ Para cambiar el enlace de teclado para un método abreviado de teclado existente
 
 Para crear nuevos métodos abreviados de teclado:
 
-1. Haga clic en un comando que no hay ningún enlace de teclado y seleccione **agregar Keybinding**.
+1. Haga clic en un comando que no tiene ninguna clave de enlace y seleccione **enlace Agregar clave**.
 
    ![Crear método abreviado de teclado](media/keyboard-shortcuts/add-keybinding.png)
 

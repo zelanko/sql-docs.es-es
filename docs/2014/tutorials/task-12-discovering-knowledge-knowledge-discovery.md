@@ -13,17 +13,17 @@ ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167705"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367187"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: detectar conocimiento (detección de conocimiento)
   En esta tarea, realizará la **Knowledgediscovery** actividad en **Id. de proveedor** y **Supplier Name** dominios. En este escenario, el proceso de detección de conocimiento importa principalmente valores de estos dos dominios.  
   
- En este tutorial, empezó a crear la base de conocimiento desde el principio. También puede empezar a crear una base de conocimiento realizando una actividad de detección de conocimiento. Al hacer clic en **crear una Base de conocimiento** en la página principal, el cliente DQS le lleva a una página con **Domain Management** actividad seleccionada para la actividad. Puede cambiar el **actividad** a **Knowledgediscovery** y, a continuación, en la página siguiente puede crear dominios como parte del proceso de detección de conocimiento. Consulte [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) para obtener más detalles.  
+ En este tutorial, empezó a crear la base de conocimiento desde el principio. También puede empezar a crear una base de conocimiento realizando una actividad de detección de conocimiento. Al hacer clic en **crear una Base de conocimiento** en la página principal, el cliente DQS le lleva a una página con **Domain Management** actividad seleccionada para la actividad. Puede cambiar el **actividad** a **Knowledgediscovery** y, a continuación, en la página siguiente puede crear dominios como parte del proceso de detección de conocimiento. Consulte [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) para obtener más detalles.  
   
 1.  En la página principal del cliente de DQS, en el **Base de conocimiento reciente** sección, haga clic en **flecha derecha** junto a la **proveedores** knowledge base y haga clic en **conocimiento Detección**. Como alternativa, puede hacer clic en **abrir Base de conocimiento**, seleccione **proveedores** desde el **lista de bases de conocimiento**, seleccione **Knowledgediscovery**como **actividad** y haga clic en **siguiente**.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "48167705"
      Ha completado la primera lección del tutorial.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Lección 2: Limpiar datos de proveedor con la base de conocimiento Proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Lección 2: Limpieza de datos de proveedor con la Base de conocimiento proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

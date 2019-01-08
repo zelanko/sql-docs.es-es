@@ -1,5 +1,5 @@
 ---
-title: Definir y examinar traducciones | Documentos de Microsoft
+title: Definir y examinar traducciones | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63fd44d7ec62b9033f4371e7e2d38306757c647
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535012"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lección 9-2: definir y examinar traducciones
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +45,9 @@ En las tareas de este tema, se definen las traducciones de metadatos de un conju
   
 6.  En la fila para el objeto **Caption** del atributo **Month Name** , escriba **Mes del año** en la columna de traducción **Español (España)** y **Mois d'Année** en la columna de traducción **Francés (Francia)** .  
   
-    Observe que, al escribir estas traducciones, aparecen puntos suspensivos (**…**). Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
+    Tenga en cuenta que al escribir estas traducciones, un botón de puntos suspensivos (**...** ) aparece. Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
   
-7.  Haga clic en los puntos suspensivos (**…**) de la traducción **Español (España)** del atributo **Month Name** .  
+7.  Haga clic en el botón de puntos suspensivos (**...** ) para el **español (España)** traducción para el **Month Name** atributo.  
   
     Aparecerá el cuadro de diálogo **Traducción de datos de atributos** .  
   
@@ -55,7 +55,7 @@ En las tareas de este tema, se definen las traducciones de metadatos de un conju
   
     ![Cuadro de diálogo traducción de datos de atributo](../analysis-services/media/l9-translations-4.gif "cuadro de diálogo traducción de datos de atributo")  
   
-9. Haga clic en **Aceptar**y, después, en los puntos suspensivos (**…**) de la traducción **Francés (Francia)** del atributo **Month Name** .  
+9. Haga clic en **Aceptar**y, a continuación, haga clic en el botón de puntos suspensivos (**...** ) para el **francés (Francia)** traducción para el **Month Name** atributo.  
   
 10. En la lista **Columnas de traducción** , seleccione **FrenchMonthName**y, después, haga clic en **Aceptar**.  
   
@@ -105,7 +105,7 @@ En las tareas de este tema, se definen las traducciones de metadatos de un conju
   
     Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparecerá en español en una nueva carpeta para mostrar denominada **Venta por Internet**, tal como se muestra en la siguiente imagen.  
   
-    ![Panel de metadatos de Repopulated](../analysis-services/media/l9-translations-6.gif "Repopulated panel de metadatos")  
+    ![Panel de metadatos Repopulated](../analysis-services/media/l9-translations-6.gif "Repopulated el panel de metadatos")  
   
 6.  En el panel de metadatos, haga clic con el botón derecho en **Importe de venta por Internet** y seleccione **Agregar a consulta**.  
   
@@ -117,7 +117,7 @@ En las tareas de este tema, se definen las traducciones de metadatos de un conju
   
     Observe que los nombres de los meses aparecen en español, tal como se muestra en la siguiente imagen.  
   
-    ![Nombres de los meses en español en el panel de datos](../analysis-services/media/l9-translations-7.gif "nombres de los meses en español en el panel de datos")  
+    ![Nombres de los meses en español en el panel datos](../analysis-services/media/l9-translations-7.gif "nombres de los meses en español en el panel de datos")  
   
 10. En la barra de herramientas, seleccione **Francés (Francia)** en la lista **Idioma** .  
   

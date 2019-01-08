@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.createpartition.partitionscheme.f1
@@ -28,12 +28,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed0ac1ebc529544959b25e00c26502637acc3b92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078351"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748467"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
   Puede crear una tabla o índice con particiones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos en tablas e índices con particiones se dividen horizontalmente en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
@@ -62,7 +62,7 @@ ms.locfileid: "48078351"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48078351"
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos en la que quiere crear una tabla con particiones y seleccione **Propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades de la base de datos:** *nombre_base_de_datos* , en **Seleccionar una página**, haga clic en **Grupos de archivos**.  
+2.  En el cuadro de diálogo **Propiedades de la base de datos -** *nombre_base_de_datos*, en **Seleccionar una página**, haga clic en **Grupos de archivos**.  
   
 3.  En **Filas**, haga clic en **Agregar**. En la nueva fila, escriba el nombre del grupo de archivos.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48078351"
   
 #### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   
-1.  Haga clic con el botón derecho en la tabla donde quiere crear particiones, seleccione **Almacenamiento**y, después, haga clic en **Crear partición…**.  
+1.  Haga clic con el botón derecho en la tabla donde quiere crear las particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición...**.  
   
 2.  En el **Asistente para la creación de particiones**, en la página **Asistente para la creación de particiones** , haga clic en **Siguiente**.  
   
@@ -127,11 +127,11 @@ ms.locfileid: "48078351"
   
      Después de seleccionar la columna de partición y otras opciones, haga clic en **Siguiente**.  
   
-4.  En la página **Seleccionar una función de partición** , en **Seleccionar una función de partición**, haga clic en **Nueva función de partición** o en **Función de partición existente**. Si elige **Nueva función de partición**, escriba el nombre de la función. Si elige **Función de partición existente**, seleccione el nombre de la función que desee usar en la lista. La opción **Función de partición existente** no estará disponible si no hay otras funciones de partición en la base de datos.  
+4.  En la página **Seleccionar una función de partición** , en **Seleccionar una función de partición**, haga clic en **Nueva función de partición** o en **Función de partición existente**. Si elige **Nueva función de partición**, escriba el nombre de la función. Si elige **Función de partición existente**, seleccione el nombre de la función que quiera usar en la lista. La opción **Función de partición existente** no estará disponible si no hay otras funciones de partición en la base de datos.  
   
      Después de completar esta página, haga clic en **Siguiente**.  
   
-5.  En la página **Seleccionar un esquema de partición** , en **Seleccionar un esquema de partición**, haga clic en **Nuevo esquema de partición** o **Esquema de partición existente**. Si elige **Nuevo esquema de partición**, escriba el nombre del esquema. Si elige **Esquema de partición existente**, seleccione el nombre del esquema que desee usar en la lista. La opción **Esquema de partición existente** no estará disponible si no hay otros esquemas de partición en la base de datos.  
+5.  En la página **Seleccionar un esquema de partición** , en **Seleccionar un esquema de partición**, haga clic en **Nuevo esquema de partición** o **Esquema de partición existente**. Si elige **Nuevo esquema de partición**, escriba el nombre del esquema. Si elige **Esquema de partición existente**, seleccione el nombre del esquema que quiera usar en la lista. La opción **Esquema de partición existente** no estará disponible si no hay otros esquemas de partición en la base de datos.  
   
      Después de completar esta página, haga clic en **Siguiente**.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48078351"
   
      Si selecciona **Programar**, haga clic en **Cambiar programación**.  
   
-    1.  En el cuadro de diálogo **Nueva programación de trabajo** , en el cuadro **Nombre** , escriba el nombre de la programación de trabajo.  
+    1.  En el cuadro de diálogo **Nueva programación de trabajo**, en el cuadro **Nombre**, escriba el nombre de la programación de trabajo.  
   
     2.  En la lista **Tipo de programación** , seleccione el tipo de la programación:  
   
@@ -199,15 +199,15 @@ ms.locfileid: "48078351"
   
             -   Si selecciona **Mensual**, seleccione **Día** o **El**.  
   
-                -   Si selecciona **Día**, especifique la fecha del mes que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si desea que la programación de trabajo se ejecute el decimoquinto día de cada mes, seleccione **Día** y escriba "15" en el primer cuadro y "2" en el segundo cuadro. Tenga en cuenta que el mayor número permitido en el segundo cuadro es "99".  
+                -   Si selecciona **Día**, especifique la fecha del mes que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el decimoquinto día de cada mes, seleccione **Día** y escriba "15" en el primer cuadro y "2" en el segundo. Tenga en cuenta que el mayor número permitido en el segundo cuadro es "99".  
   
-                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si desea que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda lista y, a continuación, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero**o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
+                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda y, después, escriba "2" en el último cuadro. También puede seleccionar **primera**, **segundo**, **tercer**, o **cuarto**, así como los días laborables específicos (por ejemplo: El domingo o el miércoles) desde las primeras dos listas. Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
   
         2.  Debajo de **Frecuencia diaria**, especifique la frecuencia con que se repite la programación de trabajo en el día en que se ejecuta:  
   
             -   Si selecciona **Sucede una vez a las**, escriba la hora concreta en que debe ejecutarse la programación de trabajo en el cuadro **Sucede una vez a las** . Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
   
-            -   Si selecciona **Sucede cada**, especifique la frecuencia con que se ejecuta la programación de trabajo durante el día seleccionado en **Frecuencia**. Por ejemplo, si quiere que la programación de trabajo se repita cada 2 horas al día cuando se ejecuta, seleccione **Sucede cada**, escriba "2" en el primer cuadro y, después, seleccione **horas** en la lista. En esta lista también puede seleccionar **minutos** y **segundos**. Tenga en cuenta que el mayor número permitido en el primer cuadro es "100".  
+            -   Si selecciona **Sucede cada**, especifique la frecuencia con que se ejecuta la programación de trabajo durante el día seleccionado en **Frecuencia**. Por ejemplo, si quiere que la programación de trabajo se repita cada dos horas al día cuando se ejecuta, seleccione **Sucede cada**, escriba "2" en el primer cuadro y, después, seleccione **horas** en la lista. En esta lista también puede seleccionar **minutos** y **segundos**. Tenga en cuenta que el mayor número permitido en el primer cuadro es "100".  
   
                  En el cuadro **A partir de** , especifique la hora en que la programación de trabajo debe iniciar su ejecución. En el cuadro **Finaliza** , especifique la hora en que la programación de trabajo debe dejar de repetirse. Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
   

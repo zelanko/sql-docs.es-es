@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370657"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de acción (Generador de informes y SSRS)
   El cuadro de diálogo **Acción** se puede usar para habilitar las opciones de hipervínculo para los elementos de gráfico, medidor y mapa que admitan vínculos. Defina una acción para que un usuario pueda hacer clic en el informe y vincularse a una dirección URL, a un informe diferente en el mismo servidor de informes o a un sitio de SharePoint integrado con un servidor de informes, o a una ubicación diferente del mismo informe.  
@@ -61,7 +61,7 @@ ms.locfileid: "48093635"
   
  En el caso de un informe publicado en un servidor de informes configurado en el modo integrado de SharePoint, utilice una dirección URL completa, incluida la extensión del nombre de archivo (.rdl). Por ejemplo, http://*\<Nombredeservidorsharepoint > /\<sitio >*/Documents/Report1.rdl. No se admiten las rutas de acceso relativas.  
   
- Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) en la [la documentación del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
+ Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) en la [la documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
  **Use estos parámetros para ejecutar el informe**  
  Agregue una lista de parámetros para pasárselos al informe detallado. Los nombres de los parámetros deben coincidir con los de los parámetros definidos para el informe de destino. Use los botones **Agregar** y **Eliminar** para agregar y quitar parámetros, y las flechas hacia arriba y hacia abajo para ordenar la lista de parámetros.  
@@ -78,7 +78,7 @@ ms.locfileid: "48093635"
  **Flecha abajo**  
  Mueve el parámetro hacia abajo en la lista.  
   
- **Nombre**  
+ **Name**  
  Escriba el nombre de un parámetro definido en el informe detallado.  
   
  **Valor**  
@@ -106,6 +106,6 @@ ms.locfileid: "48093635"
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Agregar un subinforme y parámetros &#40;Generador de informes y SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Ordenación interactiva, mapas de documento y vínculos &#40;generador de informes y SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

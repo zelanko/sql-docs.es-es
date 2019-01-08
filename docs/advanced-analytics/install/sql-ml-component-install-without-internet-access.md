@@ -1,6 +1,6 @@
 ---
-title: Instalar los componentes de R y Python sin acceso a internet de aprendizaje de automático de SQL Server | Microsoft Docs
-description: Sin conexión o desconectada R de Machine Learning y Python el programa de instalación en la instancia de SQL Server aislado.
+title: 'Instalar el lenguaje R y componentes de Python sin acceso a internet: SQL Server Machine Learning'
+description: Sin conexión o desconectada R de Machine Learning y Python el programa de instalación en una instancia de SQL Server aislado detrás de un firewall de red.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150555"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596996"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar SQL Server de aprendizaje automático R y Python en equipos sin acceso a internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Servidor de Python de Microsoft    |[SPS_9.2.0.24_1033.cab](https://go.microsoft
 
 ## <a name="sql-server-2016-offline-install"></a>Instalación sin conexión de SQL Server 2016
 
-Análisis en bases de datos de SQL Server 2016 es sólo R, con sólo dos CAB los archivos de paquetes de productos y la distribución de Microsoft de R de código abierto, respectivamente. Comience por instalar cualquiera de estas versiones: RTM, Service Pack 1, SP 2. Una vez que una instalación básica está en su lugar, se pueden aplicar las actualizaciones acumulativas como paso siguiente.
+Análisis en bases de datos de SQL Server 2016 es sólo R, con sólo dos CAB los archivos de paquetes de productos y la distribución de Microsoft de R de código abierto, respectivamente. Comience por instalar cualquiera de estas versiones: RTM, SERVICE PACK 1, SERVICE PACK 2. Una vez que una instalación básica está en su lugar, se pueden aplicar las actualizaciones acumulativas como paso siguiente.
 
 En un equipo que tiene una conexión a internet, descargue los archivos CAB que se usa el programa de instalación para instalar el análisis en bases de datos en SQL Server 2016. 
 
@@ -121,9 +121,22 @@ Se recomienda que aplique la actualización acumulativa más reciente para el mo
 
 6. Ejecute el programa de instalación. Acepte los términos de licencia y, en la página de selección de características, revise las características para el que se aplican las actualizaciones acumulativas. Debería ver todas las características instaladas para la instancia actual, incluidas características de aprendizaje automático.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Seleccione las características en el árbol de características](media/cumulative-update-feature-selection.png "lista de características")
 
 5. Continúe con el asistente, acepte los términos de licencia para las distribuciones de R y Python. Durante la instalación, deberá elegir la ubicación de la carpeta que contiene los archivos CAB actualizados.
+
+## <a name="set-environment-variables"></a>Establezca variables de entorno
+
+Para solo integración de características de R, se debe establecer el **MKL_CBWR** variable de entorno [garantizar resultados coherentes](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de cálculos de Intel Math Kernel Library (MKL).
+
+1. En el Panel de Control, haga clic en **sistema y seguridad** > **sistema** > **configuración avanzada del sistema**  >   **Las Variables de entorno**.
+
+2. Crear una nueva variable de usuario o del sistema. 
+
+  + Establezca el nombre de variable en `MKL_CBWR`
+  + Establece el valor de la variable en `AUTO`
+
+Este paso requiere un reinicio del servidor. Si va a habilitar la ejecución del script, puede contener en el reinicio hasta que se hace todo el trabajo de configuración.
 
 ## <a name="post-install-configuration"></a>Configuración posterior a la instalación
 

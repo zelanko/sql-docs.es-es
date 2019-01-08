@@ -11,12 +11,12 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fce2675b361b3b6d4d8ffc46afdabb0b6d128cc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321c0f95d92536d816b365362cd119a292ac1004
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370607"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Función RunningValue (Generador de informes y SSRS)
   Devuelve un agregado actualizado de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  
@@ -36,20 +36,20 @@ RunningValue(expression, function, scope)
  Expresión en la que se lleva a cabo la agregación; por ejemplo, `[Quantity]`.  
   
  *function*  
- (`Enum`) El nombre de la función de agregado para aplicar a la expresión, por ejemplo, `Sum`. Esta función no puede ser `RunningValue`, `RowNumber`, o `Aggregate`.  
+ (`Enum`). Nombre de la función de agregado que se aplica a la expresión; por ejemplo, `Sum`. Esta función no puede ser `RunningValue`, `RowNumber` ni `Aggregate`.  
   
  *ámbito*  
- (`String`) Constante de cadena que es el nombre de un conjunto de datos, grupo, región de datos o NULL (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el contexto en el que evaluar la agregación. `Nothing` Especifica el contexto más externo, normalmente el conjunto de datos de informe.  
+ (`String`) Constante de cadena que es el nombre de un conjunto de datos, grupo, región de datos o NULL (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el contexto en el que evaluar la agregación. `Nothing` especifica el contexto más externo, normalmente el conjunto de datos de informe.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  Viene determinado por la función de agregado especificada en el parámetro *function* .  
   
 ## <a name="remarks"></a>Comentarios  
- El valor de `RunningValue` restablece en 0 para cada nueva instancia del ámbito. Si se especifica un grupo, el valor actual se restablece cuando cambia la expresión de grupo. Si se especifica una región de datos, el valor actual se restablece en cada instancia nueva de la región de datos. Si se especifica un conjunto de datos, el valor actual no se restablece en todo el conjunto de datos.  
+ El valor para `RunningValue` se restablece en 0 para cada nueva instancia del ámbito. Si se especifica un grupo, el valor actual se restablece cuando cambia la expresión de grupo. Si se especifica una región de datos, el valor actual se restablece en cada instancia nueva de la región de datos. Si se especifica un conjunto de datos, el valor actual no se restablece en todo el conjunto de datos.  
   
  `RunningValue` no se puede utilizar en un filtro o expresión de ordenación.  
   
- El conjunto de datos para los que se calcula el valor en ejecución debe tener el mismo tipo de datos. Para convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como `CInt`, `CDbl` o `CDec`. Para obtener más información, vea [Funciones de conversión de tipos](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ El conjunto de datos para los que se calcula el valor en ejecución debe tener el mismo tipo de datos. Si desea convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como `CInt`, `CDbl` o `CDec`. Para obtener más información, vea [Funciones de conversión de tipos](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  *Scope* no puede ser una expresión.  
   
@@ -89,9 +89,9 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

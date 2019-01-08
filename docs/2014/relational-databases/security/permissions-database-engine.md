@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141975"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355015"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
   Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Este tema proporciona la siguiente información:  
@@ -92,7 +92,7 @@ ms.locfileid: "48141975"
      El permiso de REFERENCES es necesario en un objeto para crear FUNCTION o VIEW con la cláusula `WITH SCHEMABINDING` que hace referencia a ese objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
- Para ver un gráfico de tamaño cartel de todos los permisos del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en formato PDF, vea [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para ver un gráfico de tamaño cartel de todos los permisos del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en formato PDF, vea [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ##  <a name="_securables"></a> Permisos aplicables a elementos protegibles específicos  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
@@ -102,9 +102,9 @@ ms.locfileid: "48141975"
 |SELECT|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla, [!INCLUDE[tsql](../../includes/tsql-md.md)] y Common Language Runtime (CLR), y columnas<br /><br /> Vistas y columnas|  
 |VIEW CHANGE TRACKING|Tablas<br /><br /> Esquemas|  
 |UPDATE|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Vistas y columnas<br /><br /> Objetos de secuencia|  
-|REFERENCES|Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR) y columnas<br /><br /> Tipos<br /><br /> Vistas y columnas<br /><br /> Objetos de secuencia|  
+|REFERENCES|Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), y columnas<br /><br /> Tipos<br /><br /> Vistas y columnas<br /><br /> Objetos de secuencia|  
 |INSERT|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Vistas y columnas|  
-|Delete|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Vistas y columnas|  
+|SUPRIMIR|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Vistas y columnas|  
 |Ejecute|Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Sinónimos<br /><br /> Tipos CLR|  
 |RECEIVE|Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |VIEW DEFINITION|Grupos de disponibilidad<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Inicios de sesión, usuarios y roles<br /><br /> Sinónimos<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas<br /><br /> Objetos de secuencia|  
@@ -201,7 +201,7 @@ ms.locfileid: "48141975"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
+|DATABASE|SUPRIMIR|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Ejecute|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: Solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
@@ -239,7 +239,7 @@ ms.locfileid: "48141975"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|SUPRIMIR|DL|SCHEMA|SUPRIMIR|  
 |OBJECT|Ejecute|EX|SCHEMA|Ejecute|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -269,7 +269,7 @@ ms.locfileid: "48141975"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|Delete|DL|DATABASE|Delete|  
+|SCHEMA|SUPRIMIR|DL|DATABASE|SUPRIMIR|  
 |SCHEMA|Ejecute|EX|DATABASE|Ejecute|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -407,7 +407,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. Devolver los permisos de una clase de objetos concreta  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>b. Devolver los permisos de una clase de objetos concreta  
  En el ejemplo siguiente se usa `fn_builtin_permissions` para ver todos los permisos que están disponibles para una categoría de elemento protegible. El ejemplo devuelve permisos de ensamblados.  
   
 ```  

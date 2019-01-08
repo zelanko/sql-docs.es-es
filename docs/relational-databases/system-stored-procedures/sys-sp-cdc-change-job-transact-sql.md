@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2aa4413bd9f226bd0bbdf5b676da0da866fde32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705863"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591749"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_job_type_**'**  
  Tipo de trabajo para modificar. *job_type* es **nvarchar (20)** con un valor predeterminado es 'capture'. Las entradas válidas son 'capture' y 'cleanup'.  
   
- [ **@maxtrans** ] **= *** max_trans*  
+ [ **@maxtrans** ] **=** _max_trans_  
  Número máximo de transacciones para procesar en cada ciclo de recorrido. *max_trans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
   
  *max_trans* solo es válida para los trabajos de captura.  
   
- [ **@maxscans** ] **= *** max_scans*  
+ [ **@maxscans** ] **=** _max_scans_  
  Número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
  *max_scan* solo es válida para los trabajos de captura.  
   
- [ **@continuous** ] **= *** continua*  
+ [ **@continuous** ] **=** _continua_  
  Indica si el trabajo de captura se ejecutará continuamente (1), o solo una vez (0). *continua* es **bit** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
  Cuando *continua* = 1, el [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro de trabajo y procesa hasta (*max_trans* \* *max_scans*) transacciones. A continuación, espera a que el número de segundos especificado en *polling_interval* antes de comenzar el recorrido del registro siguiente.  
@@ -74,17 +74,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *continua* solo es válida para los trabajos de captura.  
   
- [ **@pollinginterval** ] **= *** polling_interval*  
+ [ **@pollinginterval** ] **=** _polling_interval_  
  Número de segundos entre los ciclos de recorrido del registro. *polling_interval* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
  *polling_interval* es válido sólo para la captura de los trabajos cuando *continua* está establecido en 1.  
   
- [ **@retention** ] **= *** retención*  
+ [ **@retention** ] **=** _retención_  
  Número de minutos durante los que las filas de cambio deben retenerse en las tablas de cambio. *retención* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
   
  *retención* solo es válida para los trabajos de limpieza.  
   
- [  **@threshold=** ] **'***eliminar umbral***'**  
+ [  **@threshold=** ] **'**_eliminar umbral_**'**  
  Número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *eliminar umbral* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. *eliminar umbral* solo es válida para los trabajos de limpieza.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -118,7 +118,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>B. Cambiar un trabajo de limpieza  
+### <a name="b-changing-a-cleanup-job"></a>b. Cambiar un trabajo de limpieza  
  En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Todos los parámetros válidos para este tipo de trabajo, excepto **@threshold**, se especifican. El valor de **@threshold** no se modifica.  
   
 ```  

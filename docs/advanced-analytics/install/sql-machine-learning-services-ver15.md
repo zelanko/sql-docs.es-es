@@ -1,5 +1,6 @@
 ---
-title: Las diferencias en la instalación de SQL Server de 2019 Machine Learning Services | Microsoft Docs
+title: 'Diferencias en SQL Server 2019: SQL Server Machine Learning Services'
+description: Obtenga información sobre cuáles son las novedades para R y Python de SQL Server machine learning las extensiones en la versión preliminar de SQL Server 2019.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/08/2018
@@ -8,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bd03c4c1dfb019238785b5284b4cceffc95c3a2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878158"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432838"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Diferencias en la instalación de SQL Server Machine Learning Services en SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

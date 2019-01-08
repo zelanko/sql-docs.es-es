@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -20,12 +20,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57b266d8b5e825e784a74e25e5801b7bd9f0cc22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221925"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806577"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utilizar cláusulas HAVING y WHERE en la misma consulta (Visual Database Tools)
   En algunas ocasiones, será conveniente excluir algunas filas de los grupos (utilizando una cláusula WHERE) antes de aplicar una condición a los grupos como un todo (utilizando una cláusula HAVING).  
@@ -36,7 +36,7 @@ ms.locfileid: "48221925"
   
 -   La cláusula HAVING se aplica a continuación a las filas del conjunto de resultados. Solo aparecen en el resultado de la consulta los grupos que cumplen las condiciones HAVING. Solo puede aplicar una cláusula HAVING a las columnas que también aparecen en la cláusula GROUP BY o en una función de agregado.  
   
- Imagine, por ejemplo, que va a combinar las tablas `titles` y `publishers` para crear una consulta que muestre el precio medio de los libros de un conjunto de editoriales. Solo desea ver el precio medio de un conjunto específico de editoriales: las del estado de California, por ejemplo. Y además, solo quiere ver el precio medio si éste es superior a 10,00 USD.  
+ Imagine, por ejemplo, que va a combinar las tablas `titles` y `publishers` para crear una consulta que muestre el precio medio de los libros de un conjunto de editoriales. Solo quiere ver el precio medio de un conjunto específico de editores: los del estado de California, por ejemplo. Y además, solo quiere ver el precio medio si éste es superior a 10,00 USD.  
   
  Puede establecer la primera condición incluyendo una cláusula WHERE, que descarta todas las editoriales que no están en California, antes de calcular los precios medios. La segunda condición requiere una cláusula HAVING, ya que se basa en los resultados de la agrupación y del resumen de los datos. La instrucción SQL resultante podría tener la forma siguiente:  
   

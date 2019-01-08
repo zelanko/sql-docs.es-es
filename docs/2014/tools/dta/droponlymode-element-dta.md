@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4c0c0ce3c367ad557584bfbed222e93bc616d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171081"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764577"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode (DTA, elemento)
   Especifica que el Asistente para la optimización de motor de base de datos solo debe quitar índices, vistas indizadas o particiones ya existentes durante la sesión de optimización. Cuando se especifica esta opción de optimización, no se consideran nuevas estructuras de diseño físico.  
@@ -41,17 +40,17 @@ ms.locfileid: "48171081"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Opcional. Puede utilizar una sola vez por cada `TuningOptions` elemento. No se puede usar si se especifican los siguientes elementos en el `TuningOptions` elemento:<br /><br /> [FeatureSet, elemento &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Creación de particiones elemento &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting &#40;DTA, elemento&#41;](keepexisting-element-dta.md) se establece en **ALL**|  
+|**Repetición**|Opcional. Se puede utilizar una sola vez por cada elemento `TuningOptions`. No se puede utilizar si se especifican los siguientes elementos en el elemento `TuningOptions`:<br /><br /> [FeatureSet &#40;DTA, elemento&#41;](featureset-element-dta.md)<br /><br /> [Partitioning &#40;DTA, elemento&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting &#40;DTA, elemento&#41;](keepexisting-element-dta.md) se establece en **ALL**|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[TuningOptions, elemento &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se muestra el `TuningOptions` sección de un archivo de entrada XML del Asesor de optimización de motor de base de datos donde el `DropOnlyMode` se especifica. En este ejemplo, la hora de optimización se limita a 24 horas (1440 minutos) y se considerará la eliminación de todos los clúster y no clúster existentes:  
+ El ejemplo siguiente muestra la sección `TuningOptions` de un archivo de entrada XML del Asistente para la optimización de motor de base de datos donde se especifica `DropOnlyMode`. En este ejemplo, la hora de optimización se limita a 24 horas (1440 minutos) y se considerará la eliminación de todos los clúster y no clúster existentes:  
   
 ```xml  
 <TuningOptions  

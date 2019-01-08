@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
@@ -15,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372757"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
   Los procedimientos descritos en este tema son el segundo paso para configurar la sincronización web para la replicación de mezcla. Este paso se lleva a cabo después de habilitar una publicación para la sincronización web. Para obtener información general sobre el proceso de configuración, vea [Configurar sincronización web](configure-web-synchronization.md). Una vez terminados los procedimientos de este tema, siga con el tercer paso: configurar una suscripción para usar la sincronización web. El tercer paso se describe en los siguientes temas:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Cómo configurar una suscripción para usar la sincronización web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Cómo: Configurar una suscripción para utilizar la sincronización Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programación de la replicación con [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Cómo configurar una suscripción para usar la sincronización web (programación de la replicación con Transact-SQL)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programación de la replicación [!INCLUDE[tsql](../../includes/tsql-md.md)]: [Cómo: Configurar una suscripción para utilizar la sincronización Web (programación de replicación Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Cómo configurar una suscripción para usar la sincronización web (programación con RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Cómo: Configurar una suscripción para utilizar la sincronización Web (programación con RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  La sincronización web utiliza un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para sincronizar las suscripciones de extracción con las publicaciones de combinación. Las versiones 5.0, 6.0 y 7.0 de IIS son compatibles. El Asistente para configurar la sincronización web no se admite en la versión 7.0 de IIS.  
   
 > [!IMPORTANT]  
->  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir errores. Entre estos errores se incluyen los siguientes: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web".  
+>  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir errores. Entre ellas, figuran: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web".  
   
 > [!CAUTION]  
 >  No use WebSync y las ubicaciones alternativas de carpeta de instantáneas a la vez.  
@@ -83,7 +82,7 @@ ms.locfileid: "48176077"
   
 4.  Haga clic en **Aceptar**.  
   
- Si no puede obtener un certificado de servidor de una CA, puede especificar un certificado para comprobación. Para configurar IIS 6.0 para comprobación, instale un certificado mediante la utilidad SelfSSL. Esta utilidad está disponible en el kit de recursos de IIS 6.0. Puede descargar las herramientas del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Para IIS 5.0, vaya a [Ayuda y soporte técnico de Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Si no puede obtener un certificado de servidor de una CA, puede especificar un certificado para comprobación. Para configurar IIS 6.0 para comprobación, instale un certificado mediante la utilidad SelfSSL. Esta utilidad está disponible en el kit de recursos de IIS 6.0. Puede descargar las herramientas del [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Para IIS 5.0, vaya a [Ayuda y soporte técnico de Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Un sitio web debe asociarse a un certificado antes de que pueda usar SSL. SelfSSL asocia automáticamente el certificado al sitio web predeterminado. Si ya dispone de un certificado o instala uno de una CA más adelante, deberá asociar explícitamente ese certificado al sitio web que se utilice en la sincronización web. Asegúrese de que solo hay un certificado asociado al sitio web que se utiliza para sincronizar suscripciones. Si hay varios certificados, el suscriptor utilizará el primer sitio web que esté disponible.  
@@ -170,7 +169,7 @@ ms.locfileid: "48176077"
   
 8.  En la página **Acceso a directorio** :  
   
-    1.  Haga clic en **Agregar**y, a continuación, en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue las cuentas con las que los suscriptores se conectarán a IIS. Estas son las cuentas que especificará en el **información del servidor Web** página del Asistente para nueva suscripción o como el valor de la [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* parámetro.  
+    1.  Haga clic en **Agregar**y, a continuación, en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue las cuentas con las que los suscriptores se conectarán a IIS. Estas son las cuentas que especificará en la página **Información del servidor web** del Asistente para nueva suscripción o como el valor del parámetro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* .  
   
 9. En la página **Acceso a recurso compartido de instantáneas** , escriba el recurso compartido de instantáneas: en este recurso compartido se establecen los permisos adecuados para que los suscriptores puedan obtener acceso a los archivos de instantáneas. Para obtener más información sobre los permisos del recurso compartido, vea [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).  
   

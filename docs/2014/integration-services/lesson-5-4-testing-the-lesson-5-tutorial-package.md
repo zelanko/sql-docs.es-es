@@ -1,22 +1,21 @@
 ---
-title: 'Paso 4: Probar el paquete del tutorial de la lección 5 | Microsoft Docs'
+title: 'Paso 4: Probar el paquete del Tutorial lección 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c9054cdbba90a3d0323a46e29aa4a860fbca7c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29154120646f74da7471f44a1630b3d99afefa4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060895"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747487"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Paso 4: Probar el paquete del tutorial de la lección 5
   Durante la ejecución, el paquete obtendrá el valor de la propiedad `Directory` de una variable actualizada en tiempo de ejecución, en lugar de utilizar el nombre de directorio original especificado al crear el paquete. El valor de la variable lo rellena el archivo SSISTutorial.dtsConfig.  
@@ -41,6 +40,6 @@ ms.locfileid: "48060895"
 2.  Una vez que haya finalizado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 6: Usar parámetros con el modelo de implementación de proyectos](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Lección 6: Usar parámetros con el modelo de implementación del proyecto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

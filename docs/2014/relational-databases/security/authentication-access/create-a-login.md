@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190495"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374767"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
   En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48190495"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Pasos que se deben realizar después de crear un inicio de sesión](#FollowUp)  
+-   **Seguimiento:**  [Pasos para realizar después de crear un inicio de sesión](#FollowUp)  
   
 ##  <a name="Background"></a> Información previa  
  Un inicio de sesión es una entidad de seguridad o una entidad que puede ser autenticada por un sistema seguro. Los usuarios necesitan iniciar sesión para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede crear un inicio de sesión basado en una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows) o puede crear un inicio de sesión que no lo esté (como un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
@@ -54,7 +54,7 @@ ms.locfileid: "48190495"
 > [!NOTE]  
 >  Para usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe utilizar la autenticación de modo mixto. Para obtener más información, vea [Elegir un modo de autenticación](../choose-an-authentication-mode.md).  
   
- Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen como ámbito la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el `CREATE ENDPOINT` permiso) se pueden conceder a un inicio de sesión.  
+ Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen como ámbito la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el permiso `CREATE ENDPOINT`) se pueden conceder a un inicio de sesión.  
   
 ##  <a name="Security"></a> Seguridad  
   
@@ -67,19 +67,19 @@ ms.locfileid: "48190495"
   
 1.  En el Explorador de objetos, expanda la carpeta de la instancia de servidor en la que desea crear el nuevo inicio de sesión.  
   
-2.  Haga clic con el botón derecho en la carpeta **Seguridad** , seleccione **Nuevo**y, después, seleccione **Inicio de sesión…**.  
+2.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y, después, haga clic en **Inicio de sesión...**.  
   
-3.  En el cuadro de diálogo **Inicio de sesión - Nuevo** , en la página **General** , escriba el nombre de un usuario en el cuadro **Nombre de inicio de sesión** . Como alternativa, haga clic en **(Buscar)** para abrir el cuadro de diálogo **Seleccionar usuarios o grupos** .  
+3.  En el cuadro de diálogo **Inicio de sesión - Nuevo**, en la página **General**, escriba el nombre de un usuario en el cuadro **Nombre de inicio de sesión**. Como alternativa, haga clic en **Buscar...** para abrir el cuadro de diálogo **Seleccionar usuarios o grupos**.  
   
-     Si hace clic en **Buscar**:  
+     Si hace clic en **Buscar...**:  
   
-    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto** para abrir el cuadro de diálogo **Tipos de objeto** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos**y **Usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
+    1.  En **Seleccione este tipo de objeto**, haga clic en **tipos de objeto...**  para abrir el **tipos de objeto** diálogo cuadro y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **grupos**, y **usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
   
-    2.  En **Desde esta ubicación**, haga clic en **Ubicaciones** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
+    2.  En **Desde esta ubicación**, haga clic en **Ubicaciones...** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
   
-    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, escriba el usuario o el nombre de grupo que quiere buscar. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo)](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, escriba el usuario o el nombre de grupo que quiere buscar. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo)](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Haga clic en **Avanzadas** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo): página Opciones avanzadas](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Haga clic en **Avanzadas...** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo): página Opciones avanzadas](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Haga clic en **Aceptar**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48190495"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El cuadro de diálogo **Inicio de sesión - Nuevo** también proporciona opciones de cuatro páginas adicionales: **Roles del servidor**, **Asignación de usuarios**, **Elementos protegibles**y **Estado**.  
+ El **inicio de sesión - nuevo** cuadro de diálogo también proporciona opciones en cuatro páginas adicionales: **Roles de servidor**, **asignación de usuarios**, **elementos protegibles**, y **estado**.  
   
 ### <a name="server-roles"></a>Roles del servidor  
  La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Las siguientes opciones están disponibles:  
@@ -176,26 +176,26 @@ ms.locfileid: "48190495"
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos…**, **Todos los objetos de los tipos…** o **El servidor***nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el **agregar objetos** cuadro de diálogo, seleccione una de las siguientes opciones: **Objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor *** nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Selección de **el servidor *** nombre_servidor* rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
   
-3.  Si selecciona **Objetos específicos**:  
+3.  Si selecciona **Objetos específicos...**:  
   
-    1.  En el cuadro de diálogo **Seleccionar objetos** , en **Seleccionar estos tipos de objeto**, haga clic en **Tipos de objeto**.  
+    1.  En el cuadro de diálogo **Seleccionar objetos**, en **Seleccionar estos tipos de objeto**, haga clic en **Tipos de objeto...**.  
   
-    2.  En el cuadro de diálogo **Seleccionar tipos de objeto** , seleccione alguno o todos los tipos de objeto siguientes: **Extremos**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad**y **Roles del servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  En el **seleccionar tipos de objeto** diálogo cuadro, seleccione alguno o todos los tipos de objeto siguientes: **Los puntos de conexión**, **inicios de sesión**, **servidores**, **grupos de disponibilidad**, y **roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, haga clic en **Examinar…**.  
+    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, haga clic en **Examinar...**.  
   
     4.  En el cuadro de diálogo **Buscar objetos** , seleccione cualquiera de los objetos disponibles del tipo que seleccionó en el cuadro de diálogo **Seleccionar tipos de objeto** y haga clic en **Aceptar**.  
   
     5.  En el cuadro de diálogo **Seleccionar objetos** , haga clic en **Aceptar**.  
   
-4.  Si selecciona **Todos los objetos de los tipos**en el cuadro de diálogo **Seleccionar tipos de objeto** , seleccione alguno o todos los tipos de objeto siguientes: **Extremos**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad**y **Roles del servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si selecciona **todos los objetos de los tipos...** , en el **seleccionar tipos de objeto** diálogo cuadro, seleccione alguno o todos los tipos de objeto siguientes: **Los puntos de conexión**, **inicios de sesión**, **servidores**, **grupos de disponibilidad**, y **roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Nombre**  
+ **Name**  
  El nombre de cada entidad de seguridad o elemento protegible que se agrega a la cuadrícula.  
   
  **Tipo**  
@@ -278,7 +278,7 @@ ms.locfileid: "48190495"
   
  Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Seguimiento: pasos que se deben realizar después de crear un inicio de sesión  
+##  <a name="FollowUp"></a> Sigue: Pasos que se deben realizar después de crear un inicio de sesión  
  Después de crear un inicio de sesión, este puede conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero no necesariamente tiene permisos suficientes para realizar ningún trabajo útil. En la lista siguiente se proporcionan vínculos a las acciones de inicio de sesión comunes.  
   
 -   Para combinar el inicio de sesión con un rol, vea [Combinar un rol](join-a-role.md).  

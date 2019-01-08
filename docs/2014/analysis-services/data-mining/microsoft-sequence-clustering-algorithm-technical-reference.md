@@ -17,12 +17,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060435"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367768"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
   El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
@@ -113,7 +113,7 @@ ms.locfileid: "48060435"
  Se aplica a la columna de estructura de minería de datos.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que la columna se tratará como si tuviera dos estados posibles: `Missing` y `Existing`. Un valor null se trata como un `Missing` valor.  
+ Significa que la columna se tratará como si tuviera dos estados posibles: `Missing` y `Existing`. Un valor NULL se trata como un valor `Missing`.  
   
  Se aplica a la columna de modelo de minería de datos.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48060435"
 ## <a name="requirements"></a>Requisitos  
  La tabla de casos debe tener una columna de identificador de caso. Opcionalmente, dicha tabla puede contener otras columnas que almacenen atributos sobre el caso.  
   
- El algoritmo de clústeres de secuencia de Microsoft requiere información de secuencia, almacenada como una tabla anidada. La tabla anidada debe tener una única columna Key Sequence. Un `Key Sequence` columna puede contener cualquier tipo de datos que se puedan ordenar, incluyendo tipos de datos de cadena, pero la columna debe contener valores únicos para cada caso. Es más, antes de procesar el modelo, debe asegurarse de que la tabla de casos y la tabla anidada están ordenadas de manera ascendente por la clave que relaciona las tablas.  
+ El algoritmo de clústeres de secuencia de Microsoft requiere información de secuencia, almacenada como una tabla anidada. La tabla anidada debe tener una única columna Key Sequence. Una columna `Key Sequence` puede contener cualquier tipo de datos que se puedan ordenar, incluyendo tipos de datos de cadena, pero la columna debe contener valores únicos para cada caso. Es más, antes de procesar el modelo, debe asegurarse de que la tabla de casos y la tabla anidada están ordenadas de manera ascendente por la clave que relaciona las tablas.  
   
 > [!NOTE]  
 >  Si crea un modelo que usa el algoritmo de clústeres de secuencia de Microsoft pero no emplea una columna de secuencia, el modelo resultante no contendrá ninguna secuencia, sino que simplemente creará clústeres de casos en función de otros atributos incluidos en el modelo.  
@@ -137,15 +137,15 @@ ms.locfileid: "48060435"
   
 ## <a name="remarks"></a>Comentarios  
   
--   Use la función [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use la función [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no admite el uso del lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite la obtención de detalles y el uso de modelos de minería de datos OLAP y de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
- [Ejemplos de consultas de modelo de clústeres de secuencia](clustering-model-query-examples.md)   
- [Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

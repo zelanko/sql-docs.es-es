@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677684"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979921"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -274,10 +274,10 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo firewall-cmd --reload
    ```
 
-   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
+   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, los puertos siguientes es necesario abrir para que Pacemaker pueda comunicarse con otros nodos del clúster
    >
-   > * TCP: puertos 2224, 3121, 21064
-   > * UDP: puerto 5405
+   > * TCP: Puertos 2224, 3121, 21064
+   > * UDP: Puerto 5405
 
 1. Instale paquetes de Pacemaker en cada nodo.
 
@@ -285,7 +285,7 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. Establezca la contraseña para el usuario predeterminado que se crea al instalar paquetes de Pacemaker y Corosync. Use la misma contraseña en ambos nodos. 
 
@@ -293,7 +293,7 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. Habilite e inicie el servicio `pcsd` y Pacemaker. Esto permitirá que los nodos se unan al clúster después del reinicio. Ejecute el comando siguiente en ambos nodos.
 
@@ -314,8 +314,8 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
 1. En uno de los nodos, cree el clúster.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
 
 2. Configurar los recursos de clúster de SQL Server, el sistema de archivos y recursos IP virtuales e inserte la configuración en el clúster. Necesita la siguiente información:
 
-   - **Nombre del recurso de SQL Server**: un nombre para el recurso de SQL Server en clúster. 
-   - **Nombre del recurso IP de flotante**: un nombre para el recurso de dirección IP virtual.
-   - **Dirección IP**: la dirección IP que los clientes usarán para conectarse a la instancia en clúster de SQL Server. 
-   - **Nombre del recurso del sistema de archivos**: un nombre para el recurso de sistema de archivos.
-   - **dispositivo**: ruta de acceso de recurso compartido de NFS el
-   - **dispositivo**: la ruta de acceso local que está montado en el recurso compartido
-   - **fsType**: tipo de recurso compartido de archivo (es decir, nfs)
+   - **Nombre del recurso SQL Server**: Un nombre para el recurso de SQL Server en clúster. 
+   - **Nombre del recurso IP de flotante**: Un nombre para el recurso de dirección IP virtual.
+   - **Dirección IP**: La dirección IP que los clientes usarán para conectarse a la instancia en clúster de SQL Server. 
+   - **Nombre del recurso del sistema de archivos**: Un nombre para el recurso de sistema de archivos.
+   - **dispositivo**: El recurso compartido NFS ruta de acceso
+   - **dispositivo**: La ruta de acceso local que está montado en el recurso compartido
+   - **fsType**: Tipo de recurso compartido de archivo (es decir, nfs)
 
    Actualice los valores de la siguiente secuencia de comandos para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.  
 
@@ -370,7 +370,7 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo pcs status 
    ```
 
-   Siguiente ejemplos se muestra los resultados cuando Pacemaker tiene correctamente, inicia una instancia agrupada de SQL Server. 
+   Los ejemplos siguientes muestran los resultados cuando Pacemaker se ha iniciado correctamente una instancia agrupada de SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

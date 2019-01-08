@@ -13,12 +13,12 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a35a70da1dac3d6dd2ff5e37f696654960883810
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229025"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371537"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
   Un archivo de datos puede contener campos organizados en un orden diferente al de las columnas correspondientes en la tabla. Este tema trata los archivos de formato XML y no XML que se han modificado para alojar un archivo de datos cuyos campos están organizados en un orden diferente al de las columnas de la tabla. El archivo de formato modificado asigna los campos de datos a las columnas correspondientes de la tabla.  
@@ -100,7 +100,7 @@ GO
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -122,7 +122,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  Para obtener más información sobre la sintaxis del esquema XML y ejemplos adicionales de archivos de formato XML, vea [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="example"></a>Ejemplo  
- El siguiente ejemplo utiliza el proveedor de conjuntos de filas BULK `OPENROWSET` para importar datos del archivo de datos `myTestOrder-c.txt` a la tabla de ejemplo `myTestOrder` utilizando el archivo de formato XML `myTestOrder.xml` . La instrucción `INSERT… SELECT` especifica la lista de columnas en la lista de selección.  
+ El siguiente ejemplo utiliza el proveedor de conjuntos de filas BULK `OPENROWSET` para importar datos del archivo de datos `myTestOrder-c.txt` a la tabla de ejemplo `myTestOrder` utilizando el archivo de formato XML `myTestOrder.xml` . La instrucción `INSERT... SELECT` especifica la lista de columnas en la lista de selección.  
   
  En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ejecute el siguiente código:  
   

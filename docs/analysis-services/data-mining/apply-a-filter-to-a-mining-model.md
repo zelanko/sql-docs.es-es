@@ -1,5 +1,5 @@
 ---
-title: Aplicar un filtro a un modelo de minería de datos | Documentos de Microsoft
+title: Aplicar un filtro a un modelo de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014602"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519251"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar un filtro a un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Seleccione el modelo y haga clic con el botón secundario del mouse para abrir el menú contextual.  
   
-     O bien  
+     -o bien-  
   
      Seleccione el modelo. A continuación, en el menú **Modelo de minería de datos** , seleccione **Establecer filtro de modelos**.  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Éstas son las únicas condiciones disponibles para la tabla anidada en el cuadro de diálogo **Filtro de modelos** , porque se está restringiendo la tabla de casos a únicamente los casos que contienen un cierto valor en la tabla anidada. En el paso siguiente, se establecerá el valor de la condición en la tabla anidada.  
   
-4.  Haga clic en el cuadro **Valor** y, después, seleccione el botón **(…)** para crear una expresión.  
+4.  Haga clic en el **valor** cuadro y, a continuación, haga clic en el **(...)**  botón para crear una expresión.  
   
      El  **\<nombre > filtro** abre el cuadro de diálogo. Este cuadro de diálogo solo puede establecer condiciones en la tabla actual, que en este caso es la tabla anidada.  
   
@@ -120,8 +120,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Si cambia manualmente una parte de la expresión de filtro, la cuadrícula se deshabilitará y a partir de este momento deberá trabajar solo con la expresión de filtro en modo de edición de texto. Para restaurar el modo de edición de cuadrícula, debe borrar la expresión de filtro y comenzar de nuevo.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516098"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor de la tarea Cola de mensajes (página Enviar)
   Utilice la página **Enviar** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea Cola de mensajes para enviar mensajes desde un paquete de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -53,22 +53,22 @@ ms.locfileid: "48095945"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
  **DataFileMessage**  
- Escriba la ruta de acceso del archivo de datos o haga clic en el botón de puntos suspensivos **(…)** para ubicar el archivo.  
+ Escriba la ruta de acceso del archivo de datos, o bien haga clic en el botón de puntos suspensivos **(…)** y busque el archivo.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
  **VariableMessage**  
- Escriba los nombres de las variables o haga clic en el botón de puntos suspensivos **(…)** para seleccionar las variables. Las variables se separan con comas.  
+ Escriba los nombres de variable, o bien haga clic en el botón de puntos suspensivos **(…)** y seleccione las variables. Las variables se separan con comas.  
   
  **Temas relacionados:** Seleccionar variables  
   
 ### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
  **StringMessage**  
- Escriba el mensaje de cadena o haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena** .  
+ Escriba el mensaje de cadena, o bien haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena**.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea cola de mensajes &#40;página de recepción&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea Cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea Cola de mensajes &#40;página Recibir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

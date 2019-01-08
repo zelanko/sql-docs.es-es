@@ -11,12 +11,12 @@ ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6f6611271a6f8bc637e1fa0032d868a1347b5ef5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27b5e569ff69261be616f28b38bcdb9bde429363
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082085"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377923"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Puntos de datos vacíos y nulos en los gráficos (Generador de informes y SSRS)
   Si decide mostrar los campos con valores vacíos o nulos en su gráfico, el gráfico podría no tener el aspecto esperado. Los gráficos procesan los valores vacíos de forma distinta según el tipo de gráfico especificado:  
@@ -29,13 +29,13 @@ ms.locfileid: "48082085"
   
 -   En los tipos de gráfico de formas, los valores NULL se omiten.  
   
- Un ejemplo de gráfico con puntos de datos vacíos está disponible como informe de ejemplo. Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un ejemplo de gráfico con puntos de datos vacíos está disponible como informe de ejemplo. Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="removing-empty-or-null-values"></a>Quitar los valores vacíos o nulos  
- Para evitar ocultar datos importantes, considere la posibilidad de quitar los valores vacíos del conjunto de datos. Para filtrar los valores NULL, puede usar la cláusula NOT IS NULL en la consulta. También puede agregar una expresión de filtro que especifique que solo desea mostrar los valores distintos de cero. Para obtener más información, consulte [agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;el generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Para evitar ocultar datos importantes, considere la posibilidad de quitar los valores vacíos del conjunto de datos. Para filtrar los valores NULL, puede usar la cláusula NOT IS NULL en la consulta. También puede agregar una expresión de filtro que especifique que solo desea mostrar los valores distintos de cero. Para obtener más información, vea [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 ## <a name="fields-with-no-values-in-a-chart"></a>Campos sin valores en un gráfico  
  Si un campo no contiene ningún valor en el conjunto de datos devuelto, el gráfico muestra un gráfico vacío sin puntos de datos, pero se agrega el nombre de la serie (normalmente el nombre del campo) como un elemento de leyenda.  
@@ -45,7 +45,7 @@ ms.locfileid: "48082085"
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Agregar un gráfico a un informe &#40;generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Solucionar problemas de gráficos &#40;generador de informes y SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [Solucionar problemas de gráficos &#40;Generador de informes y SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

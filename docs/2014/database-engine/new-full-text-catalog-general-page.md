@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d9fe261aefff3013f9a97b1a3f8d2b4ce0b1453e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052475"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374537"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuevo catálogo de texto completo (página General)
   Use este cuadro de diálogo para crear un nuevo catálogo de texto completo.  
@@ -38,7 +38,7 @@ ms.locfileid: "48052475"
  Active esta opción para establecer este catálogo como predeterminado para los nuevos catálogos de texto completo.  
   
  **Distinción de acentos**  
- Indica si el catálogo distingue las marcas diacríticas, como la tilde (**~**), el acento agudo (**'**) o la diéresis (**¨**). Si selecciona **Sin distinción**, las marcas diacríticas se omiten en los índices de texto asociados a este catálogo de texto completo. Para obtener información acerca de las marcas diacríticas, vea[marca diacrítica](http://go.microsoft.com/fwlink/?LinkId=154091) en la enciclopedia MSN Encarta.  
+ Indica si el catálogo distingue las marcas diacríticas, como la tilde (**~**), el acento agudo (**'**) o la diéresis (**¨**). Si selecciona **Sin distinción**, las marcas diacríticas se omiten en los índices de texto asociados a este catálogo de texto completo. Para obtener información acerca de las marcas diacríticas, vea[marca diacrítica](https://go.microsoft.com/fwlink/?LinkId=154091) en la enciclopedia MSN Encarta.  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

@@ -10,12 +10,12 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 048dbd899f8c330e053ce9e97ee78d38b7f4e336
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177185"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349297"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar datos de blob a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
   En este ejemplo se muestra cómo usar IRowsetFastLoad para transmitir flujos de datos BLOB de longitud variable por fila.  
@@ -24,7 +24,7 @@ ms.locfileid: "48177185"
   
  En el código fuente, cuando se quite el comentario de #define USE_ISEQSTREAM , el ejemplo utilizará ISequentialStream. La implementación del flujo se define en el ejemplo. Se pueden enviar datos BLOB de cualquier tamaño con solo cambiar MAX_BLOB. Los datos del flujo no tienen que limitarse al tamaño de la memoria ni estar disponibles en un bloque. Llame a este proveedor mediante IRowsetFastLoad::InsertRow. Pase un puntero mediante IRowsetFastLoad::InsertRow a la implementación del flujo en el búfer de datos (desplazamiento rgBinding.obValue) junto con la cantidad de datos disponibles que han de leerse del flujo. Es posible que algunos proveedores no necesiten saber la longitud de los datos cuando se produce el enlace. En este caso, la longitud se puede omitir en el enlace.  
   
- En el ejemplo no se usa la interfaz de flujo del proveedor para escribir los datos en el proveedor. En su lugar, el ejemplo pasa un puntero al objeto de flujo que el proveedor utilizará para leer los datos. Normalmente, los proveedores de Microsoft (SQLOLEDB y SQLNCLI) leerán los datos del objeto en fragmentos de 1024 bytes hasta que se hayan procesado todos los datos. SQLOLEDB y SQLNCLI no tienen implementaciones completas que permitan al consumidor escribir los datos en el objeto de flujo del proveedor. Únicamente se pueden enviar datos de longitud cero a través del objeto de flujo del proveedor.  
+ El ejemplo no utiliza la interfaz del proveedor secuencia para escribir datos en el proveedor. En su lugar, el ejemplo pasa un puntero al objeto de flujo que el proveedor utilizará para leer los datos. Normalmente, los proveedores de Microsoft (SQLOLEDB y SQLNCLI) leerán los datos del objeto en fragmentos de 1024 bytes hasta que se hayan procesado todos los datos. SQLOLEDB y SQLNCLI no tienen implementaciones completas que permitan al consumidor escribir los datos en el objeto de flujo del proveedor. Únicamente se pueden enviar datos de longitud cero a través del objeto de flujo del proveedor.  
   
  El objeto ISequentialStream implementado por el consumidor se puede usar con datos del conjunto de filas (IRowsetChange::InsertRow, IRowsetChange::SetData) y con parámetros mediante el enlace de un parámetro como DBTYPE_IUNKNOWN.  
   
@@ -33,12 +33,12 @@ ms.locfileid: "48177185"
  Para obtener más información, consulte [BLOB y objetos OLE](../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Ejemplo  
  Ejecute la primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para crear la tabla utilizada por la aplicación.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  Ejecute la tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para eliminar la tabla utilizada por la aplicación.  
   

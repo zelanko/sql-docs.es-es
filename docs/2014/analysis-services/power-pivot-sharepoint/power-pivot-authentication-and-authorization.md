@@ -11,12 +11,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165755"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377865"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
   Una implementación de PowerPivot para SharePoint que se ejecuta dentro de una granja de servidores de SharePoint 2010 usa el subsistema de autenticación y el modelo de autorización que proporcionan los servidores de SharePoint. La infraestructura de seguridad de SharePoint se extiende al contenido y a las operaciones de PowerPivot porque todo el contenido relacionado con PowerPivot está almacenado en bases de datos de contenido de SharePoint, y todas las operaciones relacionadas con PowerPivot las realizan los servicios compartidos de PowerPivot en la granja. Los usuarios que solicitan un libro que contiene los datos PowerPivot se autentican usando una identidad de usuario de SharePoint que se basa en su identidad de usuario de Windows. Los permisos para ver el libro determinan si la solicitud se concede o se deniega.  
@@ -25,7 +25,7 @@ ms.locfileid: "48165755"
   
  Haga clic en los siguientes vínculos para leer secciones concretas de este tema:  
   
- [Autenticación de Windows con el requisito de inicio de sesión de modo clásico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Autenticación de Windows mediante el inicio de sesión en modo clásico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [Operaciones de PowerPivot que requieren la autorización del usuario](#UserConnections)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48165755"
 |Administrador de granja o de servicio|Instalar, habilitar y configurar servicios y aplicaciones.<br /><br /> Usar el panel de administración de PowerPivot y ver informes administrativos.|  
 |Control total|Activar la integración de características de PowerPivot en el nivel de colección de sitios.<br /><br /> Crear una biblioteca de la galería de PowerPivot.<br /><br /> Crear una biblioteca de fuentes de distribución de datos.|  
 |Contribución|Agregar, modificar, eliminar y descargar libros PowerPivot.<br /><br /> Configurar actualización de datos.<br /><br /> Crear nuevos libros e informes basados en libros PowerPivot en un sitio de SharePoint.<br /><br /> Crear documentos de servicio de datos en una biblioteca de fuentes de distribución de datos.|  
-|Lectura|Acceder a libros PowerPivot como origen de datos externo, donde la URL del libro se escribe explícitamente en un cuadro de diálogo de conexión (por ejemplo, en el Asistente para conexión de datos de Excel).|  
+|Lectura|Tener acceso a los libros PowerPivot como origen de datos externo, donde la dirección URL del libro se escribe explícitamente en un cuadro de diálogo de conexión (por ejemplo, en el Asistente para la conexión de datos de Excel).|  
 |Solo ver|Ver libros PowerPivot.<br /><br /> Ver el historial de la actualización de datos.<br /><br /> Conectarse con un libro local a un libro PowerPivot en un sitio de SharePoint, para cambiar sus datos de otras maneras.<br /><br /> Descargue una instantánea del libro. La instantánea es una copia estática de los datos, segmentaciones de datos, filtros, fórmulas ni conexiones de datos. El contenido de la instantánea es parecido al que se obtiene al copiar los valores de las celdas de la ventana del explorador.|  
   
 ##  <a name="excel"></a> Consideraciones de seguridad de Excel Services para los libros PowerPivot  
@@ -115,6 +115,6 @@ ms.locfileid: "48165755"
  [Configurar cuentas de servicio PowerPivot](configure-power-pivot-service-accounts.md)   
  [Configurar PowerPivot cuenta de actualización de datos desatendida &#40;PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Arquitectura de seguridad de PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Arquitectura de seguridad de PowerPivot](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

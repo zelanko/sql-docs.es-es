@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185455"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374577"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
   La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,17 +68,17 @@ ms.locfileid: "48185455"
   
 -   Edición de SQL Server:  
   
--   Agrupado: (True o False)  
+-   En el clúster: (True o False)  
   
 -   Directorio de copia de seguridad:  
   
 -   Intercalación:  
   
--   Distinción de mayúsculas y minúsculas: (True o False)  
+-   Distingue mayúsculas de minúsculas: (True o False)  
   
 -   Idioma:  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
+-   Última hora notificada: Esta columna muestra el UCP fecha y hora local mediante el tipo de datos de fecha y hora. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de CPU muestra gráficos en paralelo de datos históricos para la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y el uso de la CPU del sistema informático.  
@@ -96,7 +96,7 @@ ms.locfileid: "48185455"
 -   1 año; se muestra en intervalos de 1 mes.  
   
  Pestaña Uso del almacenamiento  
- La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de la utilización del almacenamiento. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
+ La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de la utilización del almacenamiento. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
  La presentación se puede agrupar según la base de datos o según el volumen. Para utilizar la vista de árbol de la base de datos, seleccione el botón de opción **Base de datos** en **Agrupar archivos por:** selección. Para ver el estado de la utilización del almacenamiento para los archivos de base de datos individuales, haga clic en el signo más junto a un nombre de base de datos en la vista de árbol. Los archivos de base de datos incluyen todas las bases de datos del usuario y del sistema que pertenecen a la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ha seleccionado en la vista de lista.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "48185455"
   
 -   Edición de SQL Server:  
   
--   Agrupado: (True o False)  
+-   En el clúster: (True o False)  
   
 -   Directorio de copia de seguridad:  
   
 -   Intercalación:  
   
--   Distinción de mayúsculas y minúsculas: (True o False)  
+-   Distingue mayúsculas de minúsculas: (True o False)  
   
 -   Idioma:  
   

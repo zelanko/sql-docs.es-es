@@ -1,6 +1,6 @@
 ---
-title: Instalar nuevos paquetes de R en SQL Server Machine Learning Services | Microsoft Docs
-description: Agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database)
+title: Usar los administradores de paquetes de R - SQL Server Machine Learning Services
+description: Use los comandos de R estándar como install.packages para agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864353"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432888"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Uso de R administradores de paquetes para instalar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Este procedimiento utiliza RGui pero puede usar RTerm o cualquier otro R línea 
 
 1. Haga clic en RGui.exe y seleccione **ejecutar como administrador**. Si no tiene los permisos necesarios, póngase en contacto con el Administrador de base de datos y proporcionar una lista de los paquetes que necesita.
 
-1. En la línea de comandos, si conoce el nombre del paquete, puede escribir: `install.packages("the_package-name")` las comillas dobles son necesarias para el nombre del paquete.
+1. Desde la línea de comandos, si conoce el nombre del paquete, puede escribir: `install.packages("the_package-name")` Las comillas dobles son necesarias para el nombre del paquete.
 
 1. Cuando se le pida un sitio de réplica, seleccione cualquier sitio que es conveniente para su ubicación.
 

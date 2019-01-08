@@ -1,5 +1,6 @@
 ---
-title: Aplicar el código de R en SQL Server Machine Learning Services | Microsoft Docs
+title: 'Aplicar el código de R mediante procedimientos almacenados: SQL Server Machine Learning Services'
+description: Insertar código de lenguaje de R en un procedimiento almacenado de SQL Server para que esté disponible para cualquier aplicación cliente que tengan acceso a una base de datos de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
-ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
+ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952468"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432188"
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Aplicar el código de R (Machine Learning Services)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ Por supuesto, convertir el código de R en SQL es más fácil si algunas optimiz
 
 + [Convertir código de R para usarlo en R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Generar una R procedimiento almacenado mediante sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Uso de funciones auxiliares de sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Integración de R y Python con aplicaciones
 
@@ -63,7 +64,7 @@ En este tutorial se proporciona ejemplos de puntuación mediante un procedimient
 Consulte estas plantillas de solución para obtener ejemplos de cómo integrar una aplicación de puntuación:
 
 + [Previsión de ventas](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
-+ [Detección de fraudes](https://github.com/Microsoft/r-server-fraud-detection)
++ [Detección de fraude](https://github.com/Microsoft/r-server-fraud-detection)
 + [Agrupación en clústeres de cliente](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## <a name="boost-performance-and-scale"></a>Mejorar el rendimiento y escalabilidad

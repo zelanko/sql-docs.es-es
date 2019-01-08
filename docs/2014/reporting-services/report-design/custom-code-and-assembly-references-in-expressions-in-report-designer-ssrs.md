@@ -20,12 +20,12 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 834fdb8af069a43f8c0ba1c3960d4516f8400767
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a6f3951ac5b23a84424813b699b2512c15def9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372827"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
   Puede agregar referencias al código personalizado incrustado en un informe o a los ensamblados personalizados que haya generado y guardado en el equipo e implementado en el servidor de informes. El código incrustado se utiliza en constantes, funciones complejas o funciones personalizadas que se usan varias veces en un único informe. Use ensamblados de código personalizados para mantener el código en un único lugar y compartirlo con el fin de utilizarlos en múltiples informes. El código personalizado puede incluir nuevas constantes, variables, funciones o subrutinas personalizadas. Puede incluir referencias de solo lectura en las colecciones integradas, como la colección Parameters. Sin embargo, no puede pasar conjuntos de valores de datos de informe a las funciones personalizadas; concretamente, no se admiten agregados personalizados.  
@@ -51,30 +51,30 @@ ms.locfileid: "48152865"
 2.  Obtener una vista previa de un informe con referencias a ensamblados personalizados en modo local.  
   
 ##  <a name="Common"></a> Incluir referencias a funciones de uso frecuente  
- Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert> , así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
+ Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert> , así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Para mayor comodidad, puede ver las funciones más usadas en el **expresión** cuadro de diálogo, donde se muestran por categoría: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
   
  Para usar una función integrada, haga doble clic en el nombre de la función en el panel Elemento. En el panel Descripción, aparece una descripción de la función; en el panel Ejemplo, aparece un ejemplo de la llamada a la función. En el panel de código, al escribir el nombre de la función seguido por un paréntesis izquierdo **(**, la Ayuda de IntelliSense muestra la sintaxis válida para la llamada a la función. Por ejemplo, para calcular el valor máximo de un campo denominado `Quantity` en una tabla, agregue la expresión simple `=Max(` al panel de código y, a continuación, use las etiquetas inteligentes para ver todas las posibles sintaxis válidas para la llamada a la función. Para completar este ejemplo, escriba `=Max(Fields!Quantity.Value)`.  
   
- Para más información sobre cada función, vea <xref:System.Math>, <xref:System.Convert>y [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
+ Para más información sobre cada función, vea <xref:System.Math>, <xref:System.Convert>y [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
   
 ##  <a name="NotCommon"></a> Incluir referencias a funciones de uso menos frecuente  
  Para incluir una referencia a otros espacios de nombres de CLR de uso menos frecuente es necesario usar una referencia completa (por ejemplo, <xref:System.Text.StringBuilder>. IntelliSense no se admite en el panel de código del cuadro de diálogo **Expresión** para estas funciones menos frecuentes.  
   
- Para obtener más información, vea [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
+ Para obtener más información, vea [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
   
 ##  <a name="External"></a> Incluir referencias a ensamblados externos  
  Para incluir una referencia a una clase de un ensamblado externo, debe identificar el ensamblado para el procesador de informes. Use la página **Referencias** del cuadro de diálogo **Propiedades del informe** para especificar el nombre completo del ensamblado que se va a agregar al informe. En la expresión, debe usar el nombre completo para la clase del ensamblado. Las clases de un ensamblado externo no aparecen en el cuadro de diálogo **Expresión** ; es necesario que proporcione el nombre correcto de la clase. Un nombre completo incluye el espacio de nombres, el nombre de la clase y el nombre del miembro.  
   
 ##  <a name="Embedded"></a> Incluir código incrustado  
- Para agregar código incrustado a un informe, use la pestaña Código del cuadro de diálogo **Propiedades del informe** . El bloque de código que cree puede contener varios métodos. Es necesario que los métodos del código incrustado estén escritos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y que estén basados en instancias. El procesador de informes agrega automáticamente referencias para los espacios de nombres System.Convert y System.Math. Use la página **Referencias** del cuadro de diálogo **Propiedades del informe** para agregar referencias de ensamblado adicionales. Para obtener más información, vea [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
+ Para agregar código incrustado a un informe, use la pestaña Código del cuadro de diálogo **Propiedades del informe** . El bloque de código que cree puede contener varios métodos. Es necesario que los métodos del código incrustado estén escritos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y que estén basados en instancias. El procesador de informes agrega automáticamente referencias para los espacios de nombres System.Convert y System.Math. Use la página **Referencias** del cuadro de diálogo **Propiedades del informe** para agregar referencias de ensamblado adicionales. Para más información, vea [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Los métodos del código incrustado están disponibles a través del miembro `Code` definido globalmente. Poder acceder a ellos mediante una referencia a la `Code` miembro y el nombre del método. El ejemplo siguiente llama al método `ToUSD`, que convierte el valor en el `StandardCost` campo en un valor de moneda:  
+ Los métodos del código incrustado están disponibles a través del miembro `Code` definido globalmente. Para tener acceso a ellos, se hace referencia al miembro `Code` y al nombre del método. En el siguiente ejemplo, se llama al método `ToUSD`, que convierte el valor del campo `StandardCost` en un valor de moneda:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- Para hacer referencia a colecciones integradas en el código personalizado, incluya una referencia a la integrada `Report` objeto:  
+ Para hacer referencia a colecciones integradas en el código personalizado, incluya una referencia al objeto integrado `Report`:  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -89,7 +89,7 @@ Public Dim  MyVersion As String = "123.456"
 Public Dim MyDoubleVersion As Double = 123.456  
 ```  
   
- Aunque las constantes personalizadas no aparecen en la categoría **Constantes** del cuadro de diálogo **Expresión** (que solo muestra las constantes integradas), se pueden agregar referencias a ellas desde cualquier expresión, como se muestra en los ejemplos siguientes. En una expresión, una constante personalizada se trata como un `Variant`.  
+ Aunque las constantes personalizadas no aparecen en la categoría **Constantes** del cuadro de diálogo **Expresión** (que solo muestra las constantes integradas), se pueden agregar referencias a ellas desde cualquier expresión, como se muestra en los ejemplos siguientes. En una expresión, una constante personalizada se trata como `Variant`.  
   
 ```  
 =Code.MyNote  
@@ -98,7 +98,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- El ejemplo siguiente incluye la referencia del código y la implementación del código de la función `FixSpelling`, que sustituye el texto `"Bicycle"` todas las apariciones del texto "Bike" en el `SubCategory` campo.  
+ En el ejemplo siguiente se incluyen tanto la referencia a código como la implementación en el código de la función `FixSpelling`, que sustituye por el texto `"Bicycle"` todas las repeticiones del texto "Bike" en el campo `SubCategory`.  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -130,7 +130,7 @@ End Function
 ##  <a name="Custom"></a> Incluir referencias al código desde ensamblados personalizados  
  Para utilizar ensamblados personalizados en un informe, primero debe crear el ensamblado, hacer que esté disponible para el Diseñador de informes, agregar una referencia a él en el informe y, a continuación, utilizar una expresión en el informe que haga referencia a los métodos de dicho ensamblado. Cuando implemente el informe en el servidor de informes, también debe implementar el ensamblado personalizado.  
   
- Para obtener información sobre cómo crear un ensamblado personalizado y ponerlo a disposición [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [usar ensamblados personalizados con informes](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+ Para obtener información sobre cómo crear un ensamblado personalizado y hacer que esté disponible en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Usar ensamblados personalizados con informes](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
  Para incluir en una expresión una referencia a código personalizado, debe llamar al miembro de una clase dentro del ensamblado. La manera de hacerlo depende de si el método es estático o se basa en instancias. Los métodos estáticos de un ensamblado de código están disponibles globalmente en el informe. El acceso a estos métodos estáticos en expresiones se lleva a cabo a través de la especificación del espacio de nombres, la clase y el nombre del método. El ejemplo siguiente llama al método `ToGBP`, que convierte el valor de la **StandardCost** valor de dólares a libras esterlinas:  
   
@@ -156,7 +156,7 @@ End Function
   
 -   **Ensamblado (informe local):** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
--   **Ensamblado (informe de servidor):** Microsoft.ReportViewer.ProcessingObjectModel.dll  
+-   **Ensamblado (informe local):** Microsoft.ReportViewer.ProcessingObjectModel.dll  
   
  Como el contenido de las colecciones *Fields* y *ReportItems* puede cambiar dinámicamente en tiempo de ejecución, no las incluya en las llamadas al ensamblado personalizado (por ejemplo, en una variable miembro). La misma recomendación se aplica normalmente a todas las colecciones integradas.  
   
@@ -166,6 +166,6 @@ End Function
  [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Ejemplos de informes (Generador de informes y SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Ejemplos de informes (Generador de informes y SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

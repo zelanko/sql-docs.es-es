@@ -1,5 +1,5 @@
 ---
-title: Instalar modelos de aprendizaje automático entrenado previamente en SQL Server | Microsoft Docs
+title: 'Instalar previamente entrenado modelos de machine learning: SQL Server Machine Learning'
 description: Agregar modelos previamente entrenados para características de imagen y el análisis de opinión a SQL Server 2017 Machine Learning Services (R o Python) o SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216836"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645444"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar previamente entrenado modelos de machine learning en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +104,7 @@ En primer lugar, busque los nuevos archivos en el [mxlibs carpeta](#file-locatio
 
 2. Pegue el siguiente script de R en el símbolo del sistema.
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ En primer lugar, busque los nuevos archivos en el [mxlibs carpeta](#file-locatio
 
 3. Presione ENTRAR para ver las puntuaciones de opinión. Salida debería ser como sigue:
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ En primer lugar, busque los nuevos archivos en el [mxlibs carpeta](#file-locatio
 
 3. Presione ENTRAR para imprimir las puntuaciones. Salida debería ser como sigue:
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH
@@ -190,7 +190,7 @@ Los siguientes vínculos incluyen código de ejemplo y tutoriales de invocación
 
   El modelo previamente entrenado para las imágenes es compatible con características de las imágenes que suministre. Para usar el modelo, llame a la **featurizeImage** transformar. Se carga la imagen, el tamaño y caracterizar el modelo entrenado. La salida de la caracterizador de DNN, a continuación, se usa para entrenar un modelo lineal para la clasificación de imágenes. Para usar este modelo, todas las imágenes deben cambiarse para cumplir los requisitos del modelo entrenado. Por ejemplo, si usa un modelo AlexNet, la imagen debe ajustarse 227 x 227 px.
 
-+ [Ejemplo de código: análisis de sentimiento mediante Caracterizador de texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [Ejemplo de código: Análisis de sentimiento mediante Caracterizador de texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 

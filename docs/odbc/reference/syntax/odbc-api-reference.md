@@ -12,17 +12,17 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680833"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525056"
 ---
 # <a name="odbc-api-reference"></a>Referencia de API ODBC
 Los temas de esta sección describen cada función ODBC en orden alfabético. Cada función se define como una función de lenguaje de programación de C. Las descripciones siguientes:  
   
--   Finalidad  
+-   Propósito  
   
 -   Versión de ODBC  
   
@@ -42,7 +42,7 @@ Los temas de esta sección describen cada función ODBC en orden alfabético. Ca
   
 -   Referencias a otras funciones relacionadas  
   
- El nivel de conformidad con CLI estándar puede ser uno de los siguientes: 92 ISO, Open Group, ODBC o en desuso. Una función etiquetada como compatible con ISO 92 también aparece en Open Group versión 1, porque Open Group es un superconjunto de ISO 92. Una función etiquetada como grupo conforme abra también aparece en ODBC 3. *x*, ya que ODBC 3. *x* es un superconjunto de la versión 1 de Open Group. Una función que se etiquetan como compatible con ODBC aparece en ninguno estándar. Una función que se etiquetan como en desuso en desuso en ODBC 3. *x*.  
+ El nivel de conformidad con CLI estándar puede ser uno de los siguientes: 92 de ISO, abra el grupo, ODBC, o en desuso. Una función etiquetada como conforme a ISO 92 también aparece en Open Group versión 1, porque Open Group es un superconjunto de ISO 92. Una función etiquetada como grupo conforme abra también aparece en ODBC 3. *x*, ya que ODBC 3. *x* es un superconjunto de la versión 1 de Open Group. Una función que se etiquetan como compatible con ODBC aparece en ninguno estándar. Una función que se etiquetan como en desuso en desuso en ODBC 3. *x*.  
   
  Control de información de diagnóstico se describe en el [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descripción de la función. El texto asociado con los valores de SQLSTATE se incluye para proporcionar una descripción de la condición, pero no está pensado para prescribir un texto específico.  
   

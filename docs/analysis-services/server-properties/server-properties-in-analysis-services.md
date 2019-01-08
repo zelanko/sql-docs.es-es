@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975103"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785826"
 ---
 # <a name="server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ Las páginas de propiedades de SQL Server Management Studio muestran un subconju
 > 
 > Otras propiedades que afectan a la configuración del servidor incluyen las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información sobre estas propiedades, vea [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
-##  <a name="bkmk_config"></a> Configurar propiedades en Management Studio 
+## <a name="configure-properties-in-management-studio"></a>Configurar propiedades en Management Studio 
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -40,12 +40,11 @@ Las páginas de propiedades de SQL Server Management Studio muestran un subconju
   
      La modificación de las propiedades de servidor solo se admite en los servidores en modo tabular y modo multidimensional. Si ha instalado [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use siempre los valores predeterminados, a menos que el servicio de soporte técnico de Microsoft le indique lo contrario.  
   
-     Para obtener información sobre cómo resolver problemas de funcionamiento o de rendimiento mediante las propiedades de servidor, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     También puede leer sobre las propiedades del servidor (que en gran parte no se han cambiado en las últimas versiones) en estas notas del producto de Microsoft, [SQL Server 2005 Analysis Services (SSAS) Server Properties (Propiedades del servidor SQL Server 2005 Analysis Services (SSAS))](http://go.microsoft.com/fwlink/?LinkID=199102).    
+## <a name="configure-properties-in-msmdsrvini"></a>Configurar propiedades en msmdsrv.ini
   
-##  <a name="bkmk_msmdsrvini"></a> Configurar propiedades en msmdsrv.ini
-  Algunas propiedades se pueden establecer solo en el archivo msmdrsrv.ini. Si la propiedad que desea establecer no está visible incluso después de mostrar las propiedades avanzadas, es posible que tenga que modificar el archivo msmdsrv.ini directamente.
+Algunas propiedades se pueden establecer solo en el archivo msmdrsrv.ini. Estas propiedades no se aplican a Azure Analysis Services.
+Si la propiedad que desea establecer no está visible incluso después de mostrar las propiedades avanzadas, es posible que tenga que modificar el archivo msmdsrv.ini directamente. 
   
 1.  Compruebe la propiedad **DataDir** en la página de propiedades General de Management Studio para comprobar la ubicación de los archivos de programa de Analysis Services, incluido el archivo msmdsrv.ini.
 
@@ -59,7 +58,7 @@ Las páginas de propiedades de SQL Server Management Studio muestran un subconju
   
 5.  Guarde el archivo y reinicie el servicio.  
   
-##  <a name="bkmk_ref"></a> Referencia de las propiedades de servidor  
+##  <a name="server-property-reference"></a>Referencia de las propiedades de servidor  
   
  En los siguientes temas se explican las diversas propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   

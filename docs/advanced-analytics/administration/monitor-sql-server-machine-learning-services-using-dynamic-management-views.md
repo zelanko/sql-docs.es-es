@@ -1,6 +1,6 @@
 ---
-title: Supervisar el uso de vistas de administración dinámica (DMV) de SQL Server Machine Learning Services | Microsoft Docs
-description: Usar vistas de administración dinámica (DMV) para supervisar SQL Server Machine Learning Services.
+title: 'Supervisar la ejecución de script de R y Python mediante vistas de administración dinámica (DMV): SQL Server Machine Learning'
+description: Usar vistas de administración dinámica (DMV) para supervisar la ejecución de scripts externos de R y Python en SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aa05c78f8bac4af5187b815126e0ec9e4b6fff4e
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743458"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645554"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar el uso de vistas de administración dinámica (DMV) de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ Ver las opciones de configuración y la configuración de la instalación de Mac
 
 Ejecute la consulta siguiente para obtener este resultado. Para obtener más información sobre las vistas y funciones que se usan, vea [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), y [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -93,7 +93,7 @@ Ver las sesiones activas de ejecución de scripts externos.
 
 Ejecute la consulta siguiente para obtener este resultado. Para obtener más información sobre las vistas de administración dinámica usa, consulte [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), y [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -133,7 +133,7 @@ Ver las estadísticas de ejecución externos en tiempo de ejecución de R y Pyth
 
 Ejecute la consulta siguiente para obtener este resultado. Para obtener más información sobre la vista de administración dinámica utilizada, consulte [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). La consulta devuelve sólo las funciones que se han ejecutado más de una vez.
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -156,7 +156,7 @@ Ver los contadores de rendimiento relacionados con la ejecución de scripts exte
 
 Ejecute la consulta siguiente para obtener este resultado. Para obtener más información sobre la vista de administración dinámica utilizada, consulte [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -182,7 +182,7 @@ Ver información acerca de la memoria utilizada por el sistema operativo, SQL Se
 
 Ejecute la consulta siguiente para obtener este resultado. Para obtener más información sobre las vistas de administración dinámica usa, consulte [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) y [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -206,7 +206,7 @@ Ver información sobre la configuración de memoria máxima en porcentaje de SQL
 
 Ejecute la consulta siguiente para obtener este resultado. Para obtener más información sobre las vistas que se usan, vea [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) y [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -234,7 +234,7 @@ En [regulador de recursos de SQL Server](../../relational-databases/resource-gov
 
 Ejecute la consulta siguiente para obtener este resultado. Para obtener más información sobre las vistas de administración dinámica usa, consulte [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) y [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -265,7 +265,7 @@ Ver los paquetes de R instalados en SQL Server Machine Learning Services.
 
 Ejecute la consulta siguiente para obtener este resultado. El uso de consultas de un script de R para determinar los paquetes de R se instala con SQL Server.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -291,7 +291,7 @@ Ver los paquetes de Python instalados en SQL Server Machine Learning Services.
 
 Ejecute la consulta siguiente para obtener este resultado. La consulta use un script de Python para determinar los paquetes de Python instalados con SQL Server.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
@@ -17,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ffe50320214f9d2d21c28612d5ac3ffb348dda6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163765"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375637"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
   En este tema se describe cómo ver y modificar la configuración de seguridad de la replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). Por ejemplo, puede que desee cambiar la conexión del Agente de registro del LOG al publicador de la autenticación de SQL Server a la autenticación de Windows integrada, o puede que necesite cambiar las credenciales utilizadas para ejecutar un trabajo de agente cuando la contraseña de la cuenta de Windows ha cambiado. Para obtener información sobre los permisos que necesita cada agente, vea [Modelo de seguridad del agente de replicación](replication-agent-security-model.md).  
@@ -43,9 +42,9 @@ ms.locfileid: "48163765"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
--   **Seguimiento:**  [después de modificar la configuración de seguridad de la replicación](#FollowUp)  
+-   **Seguimiento:**  [Después de modificar la configuración de seguridad de replicación](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -143,9 +142,9 @@ ms.locfileid: "48163765"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, después, haga clic en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
@@ -155,11 +154,11 @@ ms.locfileid: "48163765"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **Conexión del distribuidor** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **Conexión del distribuidor** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48163765"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al publicador y al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al publicador y al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -177,15 +176,15 @@ ms.locfileid: "48163765"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al suscriptor, haga clic en la fila **Conexión de publicador** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Para cambiar la cuenta con la que se ejecuta el Agente de lectura de cola  
   
-1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**, haga clic en el botón de propiedades (**…**) situado junto a la base de datos de distribución.  
+1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**, haga clic en el botón de propiedades (**...**) situado junto a la base de datos de distribución.  
   
 2.  En el cuadro de diálogo **Propiedades de base de datos de distribución: \<Base de datos>**, haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Cuenta de proceso del agente**.  
   
@@ -217,7 +216,7 @@ ms.locfileid: "48163765"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para cambiar la configuración de seguridad para una suscripción de extracción de actualización inmediata  
   
-1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y, después, haga clic en el botón de propiedades (**…**) de la fila.  
+1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades (**...**) de la fila.  
   
 2.  En el cuadro de diálogo **Escribir información de conexión** , seleccione una de las siguientes opciones:  
   
@@ -413,10 +412,10 @@ ms.locfileid: "48163765"
   
 2.  En cada publicador que use este distribuidor remoto, ejecute [sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql), especificando la contraseña del paso 1 para **@password**.  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
->  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](http://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>Para cambiar todas las instancias de una contraseña almacenadas en un servidor de replicación  
   
@@ -433,7 +432,7 @@ ms.locfileid: "48163765"
     -   *password* - el nuevo valor de contraseña.  
   
         > [!IMPORTANT]  
-        >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](http://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por Windows .NET Framework.  
+        >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por Windows .NET Framework.  
   
         > [!NOTE]  
         >  Solo un miembro del rol fijo de servidor `sysadmin` puede llamar a este método.  
@@ -448,7 +447,7 @@ ms.locfileid: "48163765"
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>y <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> para la suscripción y establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de suscripción en el paso 3 se definieron incorrectamente o la suscripción no existe.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de suscripción del paso 3 se definieron incorrectamente, o bien que la suscripción no existe.  
   
 5.  Establezca una o más de las propiedades de seguridad siguientes en la instancia de <xref:Microsoft.SqlServer.Replication.TransSubscription>:  
   
@@ -461,17 +460,17 @@ ms.locfileid: "48163765"
         > [!NOTE]  
         >  La conexión de agente al distribuidor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  
   
-6.  (Opcional) Si especifica un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar los cambios en el servidor. Si especifica un valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valor predeterminado), los cambios se envían al servidor inmediatamente.  
+6.  (Opcional) Si especificara un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>Para cambiar la configuración de seguridad del Agente de distribución para una suscripción de extracción a una publicación transaccional  
   
-1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para la suscripción y establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de suscripción en el paso 3 se definieron incorrectamente o la suscripción no existe.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de suscripción del paso 3 se definieron incorrectamente, o bien que la suscripción no existe.  
   
 5.  Establezca una o más de las propiedades de seguridad siguientes en la instancia de <xref:Microsoft.SqlServer.Replication.TransPullSubscription>:  
   
@@ -484,7 +483,7 @@ ms.locfileid: "48163765"
         > [!NOTE]  
         >  La conexión de agente al suscriptor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  
   
-6.  (Opcional) Si especifica un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar los cambios en el servidor. Si especifica un valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valor predeterminado), los cambios se envían al servidor inmediatamente.  
+6.  (Opcional) Si especificara un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>Para cambiar la configuración de seguridad del Agente de mezcla para una suscripción de extracción a una publicación de combinación  
   
@@ -494,7 +493,7 @@ ms.locfileid: "48163765"
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para la suscripción y establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de suscripción en el paso 3 se definieron incorrectamente o la suscripción no existe.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de suscripción del paso 3 se definieron incorrectamente, o bien que la suscripción no existe.  
   
 5.  Establezca una o más de las propiedades de seguridad siguientes en la instancia de <xref:Microsoft.SqlServer.Replication.MergePullSubscription>:  
   
@@ -504,14 +503,14 @@ ms.locfileid: "48163765"
   
     -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al distribuidor, establezca el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo de la <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> propiedad `false`y especifique las credenciales de inicio de sesión del distribuidor para el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
-    -   Para especificar la autenticación integrada de Windows como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo de la <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> propiedad `true`.  
+    -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> en `true`.  
   
     -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo de la <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> propiedad `false`y especifique las credenciales de inicio de sesión del publicador para la <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
         > [!NOTE]  
         >  La conexión de agente al suscriptor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  
   
-6.  (Opcional) Si especifica un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar los cambios en el servidor. Si especifica un valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valor predeterminado), los cambios se envían al servidor inmediatamente.  
+6.  (Opcional) Si especificara un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>Para cambiar la configuración de seguridad del Agente de mezcla para una suscripción de inserción a una publicación de combinación  
   
@@ -521,7 +520,7 @@ ms.locfileid: "48163765"
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>y <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> para la suscripción y establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de suscripción en el paso 3 se definieron incorrectamente o la suscripción no existe.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de suscripción del paso 3 se definieron incorrectamente, o bien que la suscripción no existe.  
   
 5.  Establezca una o más de las propiedades de seguridad siguientes en la instancia de <xref:Microsoft.SqlServer.Replication.MergeSubscription>:  
   
@@ -531,22 +530,22 @@ ms.locfileid: "48163765"
   
     -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al suscriptor, establezca el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo de la <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> propiedad `false`y especifique las credenciales de inicio de sesión del suscriptor para el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
-    -   Para especificar la autenticación integrada de Windows como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo de la <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> propiedad `true`.  
+    -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> en `true`.  
   
     -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> campo de la <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> propiedad `false`y especifique las credenciales de inicio de sesión del publicador para la <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>y <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> campos.  
   
         > [!NOTE]  
         >  La conexión de agente al distribuidor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  
   
-6.  (Opcional) Si especifica un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar los cambios en el servidor. Si especifica un valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valor predeterminado), los cambios se envían al servidor inmediatamente.  
+6.  (Opcional) Si especificara un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>Para cambiar la información de inicio de sesión utilizada por un suscriptor de actualización inmediata cuando se conecta al publicador transaccional  
   
-1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> para la base de datos de suscripciones. Especifique <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> y <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de la base de datos en el paso 2 se definieron incorrectamente o no existe la base de datos de suscripción.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente, o bien que la base de datos de suscripciones no existe.  
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> , pasando los parámetros siguientes:  
   
@@ -567,7 +566,7 @@ ms.locfileid: "48163765"
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Seguimiento: después de modificar la configuración de seguridad de la replicación  
+##  <a name="FollowUp"></a> Sigue: Después de modificar la configuración de seguridad de replicación  
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
 ## <a name="see-also"></a>Vea también  

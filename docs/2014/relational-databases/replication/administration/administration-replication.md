@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, administering
@@ -17,12 +16,12 @@ ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0fbd2bc3ee7390bc2187afa6f3cb6ce0b6b6462
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51b0626e9a5f8027c57862a3cbeb4c56252a169d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070045"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759417"
 ---
 # <a name="administration-replication"></a>Administración (replicación)
   Esta sección contiene información sobre cómo administrar topologías de replicación. Se recomienda leer primero el tema de prácticas recomendadas y, a continuación, seguir los vínculos de ese tema a la información más detallada en esta y otras secciones.  

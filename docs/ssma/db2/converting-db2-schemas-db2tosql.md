@@ -10,12 +10,12 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ff31e00ecb56138239a1d6d87de276754e84a5e6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657867"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520667"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversión de esquemas de DB2 (DB2ToSQL)
 Después de haberse conectado a DB2, conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y establecer el proyecto y las opciones de asignación de datos, puede convertir los objetos de base de datos DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de base de datos.  
@@ -34,19 +34,19 @@ La siguiente tabla muestra qué objetos de DB2 se convierten y resultante [!INCL
 |Objetos de DB2|Objetos de SQL Server resultantes|  
 |-----------|----------------------------|  
 |Tipos de datos|**SSMA asigna todos los tipos excepto lo siguiente:**<br /><br />CLOB: Algunas funciones para trabajar con este tipo nativos no son compatibles (por ejemplo, CLOB_EMPTY())<br /><br />BLOB: Algunas funciones para trabajar con este tipo nativos no son compatibles (por ejemplo, BLOB_EMPTY())<br /><br />DBLOB: Algunas funciones para trabajar con este tipo nativos no son compatibles (por ejemplo, DBLOB_EMPTY())|  
-|Tipos definidos por el usuario|**SSMA asigna la siguiente definido por el usuario:**<br /><br />Tipo distinto<br /><br />Tipo estructurado<br /><br />Nota: los tipos de datos SQL PL: no se admiten el tipo de cursor débil.|  
+|Tipos definidos por el usuario|**SSMA asigna la siguiente definido por el usuario:**<br /><br />Tipo distinto<br /><br />Tipo estructurado<br /><br />Tipos de datos SQL PL - Nota: No se admiten el tipo de cursor débil.|  
 |Registros especiales|**SSMA solo asigna los registros que se enumeran a continuación:**<br /><br />MARCA DE TIEMPO ACTUAL<br /><br />FECHA ACTUAL<br /><br />HORA ACTUAL<br /><br />ZONA HORARIA ACTUAL<br /><br />USUARIO ACTUAL<br /><br />SESSION_USER y usuario<br /><br />SYSTEM_USER<br /><br />CLIENT_APPLNAME ACTUAL<br /><br />CLIENT_WRKSTNNAME ACTUAL<br /><br />TIEMPO DE ESPERA DE BLOQUEO ACTUAL<br /><br />ESQUEMA ACTUAL<br /><br />SERVIDOR ACTUAL<br /><br />AISLAMIENTO ACTUAL<br /><br />No se asignan otros registra especiales con semántica de SQL server.|  
 |CREATE TABLE|**SSMA CREATE TABLE asigna con las siguientes excepciones:**<br /><br />Tablas de agrupación en clústeres (MDC) multidimensionales<br /><br />Intervalo agrupado de tablas (RCT)<br /><br />Tablas con particiones<br /><br />Tabla desasociado<br /><br />Cláusula de captura de datos<br /><br />Opción IMPLICITLY OCULTAS<br /><br />Opción volátil|  
 |CREATE VIEW|SSMA asigna CREATE VIEW con 'WITH LOCAL CHECK OPTION', pero otras opciones no están asignadas a la semántica SQL server|  
 |CREATE INDEX|**SSMA asigna CREATE INDEX con las siguientes excepciones:**<br /><br />Índice XML<br /><br />Opción BUSINESS_TIME sin SUPERPOSICIONES<br /><br />Cláusula con particiones<br /><br />Opción sólo de especificación<br /><br />EXTENDER utilizando la opción<br /><br />Opción MINPCTUSED<br /><br />Opción de división de página|  
 |Desencadenadores|**SSMA asigna la semántica de desencadenador siguiente:**<br /><br />Después de / para los desencadenadores de cada fila<br /><br />Después de /FOR se desencadena cada instrucción<br /><br />ANTES de / para cada fila y, en lugar de / para cada fila desencadenadores|  
 |Secuencias|Se asignan.|  
-|Instrucción SELECT|**Seleccione SSMA mapas con las siguientes excepciones:**<br /><br />Cláusula de datos-cambio de referencia de tabla: hayan asignado parcialmente, pero las tablas FINAL no admitidos<br /><br />Cláusula de referencia de tabla: hayan asignado parcialmente, pero solo-table-reference, referencia de tabla externa, analyze_table-expression, tabla derivada de recopilación, xmltable-expression no se asignan a la semántica SQL server<br /><br />Cláusula de especificación de período: no asignada.<br /><br />Cláusula de controlador continuar: no asignada.<br /><br />Cláusula de correlación con tipo: no asignada.<br /><br />Cláusula de resolución de acceso simultáneo – no asignada.|  
+|Instrucción SELECT|**Seleccione SSMA mapas con las siguientes excepciones:**<br /><br />Cláusula de datos-cambio de referencia de tabla: hayan asignado parcialmente, pero las tablas FINAL no admitidos<br /><br />Cláusula de referencia de tabla: hayan asignado parcialmente, pero solo-table-reference, referencia de tabla externa, analyze_table-expression, tabla derivada de recopilación, xmltable-expression no se asignan a la semántica SQL server<br /><br />Cláusula de especificación de período: no asignada.<br /><br />Cláusula de controlador continuar: no asignada.<br /><br />Cláusula de correlación con tipo: no asignada.<br /><br />Cláusula de resolución de acceso simultáneas: no asignada.|  
 |Instrucción de valores|Se ha asignado.|  
 |Instrucción INSERT|Se ha asignado.|  
-|Instrucción UPDATE|S**SMA asigna la actualización con las siguientes excepciones:**<br /><br />Cláusula, referencia de tabla: solo-tabla-referencia no está asignado a la semántica SQL server<br /><br />Cláusula período: no está asignada.|  
+|Instrucción UPDATE|S**SMA asigna la actualización con las siguientes excepciones:**<br /><br />Cláusula de referencia de tabla: solo--referencia de tabla no está asignado a la semántica SQL server<br /><br />Cláusula período: no está asignada.|  
 |Instrucción MERGE|**SSMA asigna fusión mediante combinación con las siguientes excepciones:**<br /><br />Único frente a varias apariciones de cada cláusula: se asigna a la semántica SQL server limitados apariciones de cada cláusula<br /><br />Cláusula de señal: no se asigna a la semántica de SQL Server<br /><br />Mixto actualizar y eliminar cláusulas: no se asigna a la semántica de SQL Server<br /><br />Cláusula de período: no se asigna a la semántica de SQL Server|  
-|La instrucción DELETE|**ELIMINACIÓN asignaciones SSMA con las siguientes excepciones:**<br /><br />Cláusula, referencia de tabla: solo-tabla-referencia no está asignado a la semántica SQL server<br /><br />Cláusula período: no se asigna a la semántica de SQL Server|  
+|La instrucción DELETE|**ELIMINACIÓN asignaciones SSMA con las siguientes excepciones:**<br /><br />Cláusula de referencia de tabla: solo--referencia de tabla no está asignado a la semántica SQL server<br /><br />Cláusula período: no se asigna a la semántica de SQL Server|  
 |Nivel de aislamiento y el tipo de bloqueo|Se ha asignado.|  
 |Procedimientos (SQL)|Se asignan.|  
 |Procedimientos (externo)|Requerir actualización manual.|  
@@ -65,8 +65,8 @@ La siguiente tabla muestra qué objetos de DB2 se convierten y resultante [!INCL
 |RETURN (instrucción)|Se ha asignado.|  
 |Instrucción de señal|No se admiten condiciones. Los mensajes pueden ser opcionales.|  
 |WHILE (instrucción)|Se ha asignado.|  
-|GET (instrucción) diagnósticos|**SSMA asigna obtener diagnósticos con las siguientes excepciones:**<br /><br />ROW_COUNT: se ha asignado.<br /><br />DB2_RETURN_STATUS: se ha asignado.<br /><br />MESSAGE_TEXT: se ha asignado.<br /><br />DB2_SQL_NESTING_LEVEL - no se asigna a la semántica de SQL Server<br /><br />DB2_TOKEN_STRING - no se asigna a la semántica de SQL Server|  
-|Cursores|**SSMA asigna los CURSORES con las siguientes excepciones:**<br /><br />Declaración de CURSOR ALLOCATE: no se asigna a la semántica de SQL Server<br /><br />Declaración de asociar los LOCALIZADORES: no se asigna a la semántica de SQL Server<br /><br />Instrucción DECLARE CURSOR - cláusula Returnability no está asignado a la semántica SQL server<br /><br />La instrucción FETCH: una asignación parcial. Solo se admiten variables como destino. DESCRIPTOR de SQLDA no está asignado a la semántica SQL server|  
+|GET (instrucción) diagnósticos|**SSMA asigna obtener diagnósticos con las siguientes excepciones:**<br /><br />ROW_COUNT - se ha asignado.<br /><br />DB2_RETURN_STATUS - se ha asignado.<br /><br />MESSAGE_TEXT - se ha asignado.<br /><br />DB2_SQL_NESTING_LEVEL - no se asigna a la semántica de SQL Server<br /><br />DB2_TOKEN_STRING - no se asigna a la semántica de SQL Server|  
+|Cursores|**SSMA asigna los CURSORES con las siguientes excepciones:**<br /><br />Declaración de CURSOR ALLOCATE: no se asigna a la semántica de SQL Server<br /><br />Declaración de asociar los LOCALIZADORES: no se asigna a la semántica de SQL Server<br /><br />Instrucción DECLARE CURSOR - cláusula Returnability no está asignado a la semántica SQL server<br /><br />La instrucción FETCH - una asignación parcial. Solo se admiten variables como destino. DESCRIPTOR de SQLDA no está asignado a la semántica SQL server|  
 |Variables|Se asignan.|  
 |Excepciones, los controladores y condiciones|**SSMA asigna "excepciones" con las siguientes excepciones:**<br /><br />SALIR de controladores: se asignan.<br /><br />Deshacer controladores: se asignan.<br /><br />Controladores de continuar: no se asignan.<br /><br />Condiciones: no se asigna a la semántica SQL server.|  
 |SQL dinámico|No se ha asignado.|  

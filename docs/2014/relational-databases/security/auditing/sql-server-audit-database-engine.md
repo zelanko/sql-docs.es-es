@@ -15,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175355"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373527"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
   La*auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  
@@ -61,7 +61,7 @@ ms.locfileid: "48175355"
 > [!IMPORTANT]  
 >  Cualquier usuario autenticado puede leer y escribir en el registro de eventos de aplicación Windows. El registro de eventos de aplicación requiere permisos más bajos que el registro de eventos de seguridad de Windows, por lo que es menos seguro que éste.  
   
- La escritura en el registro de seguridad de Windows requiere que se agregue la cuenta del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la directiva **Generar auditorías de seguridad** . De forma predeterminada, el sistema local, el servicio local y el servicio de red forman parte de esta directiva. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). Además, la directiva de seguridad **Auditar el acceso a objetos** debe estar habilitada tanto para **Correcto** como para **Error**. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). En [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, puede establecer más granulares **aplicación generada** directiva desde la línea de comandos mediante el programa de directiva de auditoría (`AuditPol.exe)`. Para obtener más información sobre los pasos necesarios para habilitar la escritura en el registro de seguridad de Windows, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md). Para obtener más información sobre el programa Auditpol.exe, vea el artículo 921469 de Knowledge Base que describe [cómo usar la directiva de grupo para configurar las opciones detalladas de auditoría de seguridad](http://support.microsoft.com/kb/921469/). Los registros de eventos de Windows son globales para el sistema operativo Windows. Para obtener más información sobre los registros de eventos de Windows, vea [Información general sobre el Visor de eventos](http://go.microsoft.com/fwlink/?LinkId=101455). Si necesita permisos más concretos en la auditoría, utilice el destino de archivo binario.  
+ La escritura en el registro de seguridad de Windows requiere que se agregue la cuenta del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la directiva **Generar auditorías de seguridad** . De forma predeterminada, el sistema local, el servicio local y el servicio de red forman parte de esta directiva. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). Además, la directiva de seguridad **Auditar el acceso a objetos** debe estar habilitada tanto para **Correcto** como para **Error**. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). En [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, puede establecer más granulares **aplicación generada** directiva desde la línea de comandos mediante el programa de directiva de auditoría (`AuditPol.exe)`. Para obtener más información sobre los pasos necesarios para habilitar la escritura en el registro de seguridad de Windows, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md). Para obtener más información sobre el programa Auditpol.exe, vea el artículo 921469 de Knowledge Base que describe [cómo usar la directiva de grupo para configurar las opciones detalladas de auditoría de seguridad](https://support.microsoft.com/kb/921469/). Los registros de eventos de Windows son globales para el sistema operativo Windows. Para obtener más información sobre los registros de eventos de Windows, vea [Información general sobre el Visor de eventos](https://go.microsoft.com/fwlink/?LinkId=101455). Si necesita permisos más concretos en la auditoría, utilice el destino de archivo binario.  
   
  Al guardar información de auditoría en un archivo, para tratar de impedir su alteración, puede restringir el acceso a la ubicación del archivo de las maneras siguientes:  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48175355"
  Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md) y [Crear una especificación de auditoría de servidor y de auditoría de base de datos](create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Consideraciones  
- Si se produce un error al comenzar la auditoría, el servidor no se iniciará. En este caso, se podrá iniciar el servidor usando la opción **–f** en la línea de comandos.  
+ Si se produce un error al comenzar la auditoría, el servidor no se iniciará. En este caso, se puede iniciar el servidor con la opción **-f** en la línea de comandos.  
   
- Si un error de auditoría hace que el servidor se cierre o no se inicie porque se ha especificado ON_FAILURE=SHUTDOWN para la auditoría, se escribirá en el registro el evento MSG_AUDIT_FORCED_SHUTDOWN. Dado que el apagado se producirá en la primera aparición de este valor, el evento se escribirá una vez. Este evento se escribirá después de la aparición del mensaje del error para la auditoría que ha provocado el cierre. El administrador puede hacer caso omiso de los cierres provocados por auditorías iniciando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en modo de usuario único mediante la marca **–m** . De esta forma, indicará al sistema que cualquier auditoría en la que se haya especificado ON_FAILURE=SHUTDOWN debe ejecutarse en esa sesión como ON_FAILURE=CONTINUE. Cuando se inicia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando la marca **–m** , se escribe el mensaje MSG_AUDIT_SHUTDOWN_BYPASSED en el registro de errores.  
+ Si un error de auditoría hace que el servidor se cierre o no se inicie porque se ha especificado ON_FAILURE=SHUTDOWN para la auditoría, se escribirá en el registro el evento MSG_AUDIT_FORCED_SHUTDOWN. Dado que el apagado se producirá en la primera aparición de este valor, el evento se escribirá una vez. Este evento se escribirá después de la aparición del mensaje del error para la auditoría que ha provocado el cierre. El administrador puede omitir los cierres provocados por auditorías si inicia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en modo de usuario único mediante la marca **-m**. De esta forma, indicará al sistema que cualquier auditoría en la que se haya especificado ON_FAILURE=SHUTDOWN debe ejecutarse en esa sesión como ON_FAILURE=CONTINUE. Cuando se inicia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con la marca **-m**, se escribe el mensaje MSG_AUDIT_SHUTDOWN_BYPASSED en el registro de errores.  
   
  Para obtener más información sobre las opciones de inicio del servicio, vea [Opciones de inicio del servicio de motor de base de datos](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48175355"
  [Desencadenadores DDL](../../triggers/ddl-triggers.md)  
  Explica cómo puede usar los desencadenadores del Lenguaje de definición de datos (DDL) para realizar el seguimiento de los cambios en sus bases de datos.  
   
- [Microsoft TechNet: SQL Server TechCenter: Seguridad y protección de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: TechCenter de SQL Server: Protección y seguridad de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Proporciona información actualizada sobre la seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  

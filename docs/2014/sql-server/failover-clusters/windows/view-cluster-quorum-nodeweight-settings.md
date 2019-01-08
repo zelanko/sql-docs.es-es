@@ -13,19 +13,19 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c83c2d1aa07a93ff4b6109d43f074f5c0da1d0db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07db329a7ba6cb65e5beb94d34f90d1e55582915
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222425"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367787"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Ver la configuración de NodeWeight de quórum de clúster
   En este tema se describe cómo ver la configuración de NodeWeight para cada nodo miembro en un clúster de clústeres de conmutación por error de Windows Server (WSFC). La configuración de NodeWeight durante el voto de quórum para admitir los escenarios de recuperación de desastres y de múltiples subredes para las instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Antes de empezar:**  [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
+-   **Antes de empezar:**  [Requisitos previos](#Prerequisites), [seguridad](#Security)  
   
--   **Para ver la configuración de NodeWeight de quórum con:** [Usar Transact-SQL](#TsqlProcedure), [Usar PowerShell](#PowerShellProcedure), [Usar Cluster.exe](#CommandPromptProcedure)  
+-   **Para ver la configuración de NodeWeight de quórum mediante:** [Uso de Transact-SQL](#TsqlProcedure), [mediante Powershell](#PowerShellProcedure), [usar Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48222425"
 > [!IMPORTANT]  
 >  Para usar la configuración de NodeWeight, se debe aplicar la siguiente revisión a todos los servidores del clúster de WSFC:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): hay disponible una revisión para permitir configurar un nodo de clúster que no tiene votos de quórum en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): hay disponible una revisión para permitir configurar un nodo de clúster que no tiene votos de quórum en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Si esta revisión no está instalada, los ejemplos de este tema devolverán valores vacíos o NULL para NodeWeight.  
@@ -52,7 +52,7 @@ ms.locfileid: "48222425"
 2.  Consulte la vista [sys].[dm_hadr_cluster_members].  
   
 ### <a name="example-transact-sql"></a>Ejemplo (Transact-SQL)  
- En el siguiente ejemplo se consulta una vista de sistema para devolver valores para todos los nodos del clúster de dicha instancia.  
+ En el ejemplo siguiente se consulta una vista del sistema para devolver valores para todos los nodos del clúster de esa instancia.  
   
 ```tsql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
@@ -72,7 +72,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  Enviar las propiedades de nodo de clúster en un formato legible.  
   
 ### <a name="example-powershell"></a>Ejemplo (PowerShell)  
- En el siguiente ejemplo se envían algunas de las propiedades de nodo para el clúster denominado “Cluster001”.  
+ En el ejemplo siguiente se envían algunas de las propiedades de nodo para el clúster denominado "Cluster001".  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -86,7 +86,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Usar Cluster.exe  
   
 > [!NOTE]  
->  La utilidad cluster.exe se ha desusado en la versión de [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Use PowerShell con clústeres de conmutación por error para el desarrollo futuro.  La utilidad cluster.exe se quitará en la siguiente versión de Windows Server. Para obtener más información, vea [Asignar comandos de Cluster.exe a cmdlets de Windows PowerShell para clústeres de conmutación por error](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
+>  La utilidad cluster.exe se ha desusado en la versión de [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Use PowerShell con clústeres de conmutación por error para el desarrollo futuro.  La utilidad cluster.exe se quitará en la siguiente versión de Windows Server. Para obtener más información, vea [Asignar comandos de Cluster.exe a cmdlets de Windows PowerShell para clústeres de conmutación por error](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
 ##### <a name="to-view-nodeweight-settings"></a>Para ver la configuración de NodeWeight  
   
@@ -95,7 +95,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Use **cluster.exe** para devolver el estado de nodo y los valores de NodeWeight  
   
 ### <a name="example-clusterexe"></a>Ejemplo (Cluster.exe)  
- En el siguiente ejemplo se envían algunas de las propiedades de nodo para el clúster denominado “Cluster001”.  
+ En el ejemplo siguiente se envían algunas de las propiedades de nodo para el clúster denominado "Cluster001".  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
@@ -105,6 +105,6 @@ cluster.exe Cluster001 node /status /properties
  [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Configurar los valores de NodeWeight de quórum de clúster](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   
- [Cmdlets de clúster de conmutación por error en Windows PowerShell enumerados por tarea](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Cmdlets de clúster de conmutación por error en Windows PowerShell enumerados por tarea](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

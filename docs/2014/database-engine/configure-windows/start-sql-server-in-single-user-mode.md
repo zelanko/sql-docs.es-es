@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
@@ -14,12 +13,12 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeb0e1c28885e8611c1ae57a21a05c1265b6349c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090155"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640896"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar SQL Server en modo de usuario único
   En determinadas circunstancias, puede que sea necesario iniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único mediante la **opción de inicio -m.** Por ejemplo, es posible que desee cambiar las opciones de configuración del servidor o recuperar una base de datos maestra dañada u otra base de datos del sistema. Ambas acciones requieren que se inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único.  
@@ -47,7 +46,7 @@ ms.locfileid: "48090155"
   
  Para solucionar el problema, utilice el procedimiento siguiente:  
   
-1.  Quite el parámetro de inicio –m de las propiedades avanzadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Quite el parámetro de inicio -m de las propiedades avanzadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Ponga sin conexión el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48090155"
   
 4.  Compruebe en el administrador de clústeres o en la consola de administración de clústeres de conmutación por error que el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sigue estando sin conexión.  
   
-5.  Conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ahora el siguiente comando y realice la operación necesaria: SQLCMD -E -S\<nombreDeServidor>.  
+5.  Conectarse a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ahora el siguiente comando y realice la operación necesaria: SQLCMD -E -S\<servername >.  
   
 6.  Una vez completada la operación, cierre el símbolo del sistema y vuelva a poner en línea SQL y otros recursos mediante el administrador de clústeres.  
   

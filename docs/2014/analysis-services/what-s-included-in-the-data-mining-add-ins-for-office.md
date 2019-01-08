@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519088"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>¿Qué&#39;incluido en los datos a los complementos de minería de datos para Office
   Al instalar los Complementos de minería de datos para Office 2013 y seleccionar todas las opciones de instalación, se agregarán las barras de herramientas y las plantillas siguientes:  
@@ -31,7 +31,7 @@ ms.locfileid: "48157635"
   
 -   [Cliente de minería de datos para Excel &#40;complementos de minería de datos de SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     Este complemento proporciona herramientas para casi todas las tareas de minería de datos que podría necesitar, desde limpiar y muestrear datos a generar modelos, probar su precisión y realizar la validación cruzada. También puede administrar y documentar los modelos y crear consultas DMX a partir de plantillas.  
+     Este complemento proporciona herramientas para prácticamente cada tarea de minería de datos que puede necesitar - desde limpiar y muestrear los datos, para generar modelos, probar la exactitud del modelo y realizar la validación cruzada. También puede administrar y documentar los modelos y crear consultas DMX a partir de plantillas.  
   
      Los usuarios experimentados de minería de datos disfrutarán del acceso a todas las herramientas disponibles de minería de datos de SQL Server, incluidas la importación y exportación de modelos, consultas de predicción y consultas de contenido.  
   

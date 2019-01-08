@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa647aabd7e2048c6f56e5518dde8a2edc12dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661233"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591809"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_schedule
  [ **@schedule_id =** ] *schedule_id*  
  Identificador de la programación que se va a modificar. *schedule_id* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
   
- [  **@name =** ] **'***schedule_name***'**  
+ [  **@name =** ] **'**_schedule_name_**'**  
  Nombre de la programación que se va a modificar. *schedule_name*es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
   
  [ **@new_name**= ] *new_name*  
@@ -135,7 +135,7 @@ sp_update_schedule
  [  **@active_end_time =** ] *active_end_time*  
  La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time*es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@owner_login_name**=] **'***owner_login_name***'**]  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
  Nombre de la entidad de seguridad del servidor a la que pertenece la programación. *owner_login_name* es **sysname**, su valor predeterminado es NULL, lo que indica que la programación pertenece al creador.  
   
  [ **@automatic_post =**] *automatic_post*  

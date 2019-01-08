@@ -13,12 +13,12 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fc5177fda3562efe4561f9d165629419f8a629b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520182"
 ---
 # <a name="odbc-programmer39s-reference"></a>Programador de ODBC&#39;s referencia
 El *referencia del programador de ODBC* contiene las siguientes secciones.  
@@ -40,7 +40,7 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
 -   [Apéndices ODBC](../../odbc/reference/appendixes/odbc-appendixes.md) contienen detalles técnicos y hacer referencia a tablas de la gramática de SQL, tipos de datos y códigos de error ODBC.  
   
 ## <a name="working-with-the-odbc-documentation"></a>Trabajar con la documentación de ODBC  
- La interfaz ODBC está diseñada para su uso con el lenguaje de programación de C. Uso de la interfaz ODBC abarca tres áreas: instrucciones SQL, ODBC funcionan las llamadas y la programación de C. Esta documentación asume lo siguiente:  
+ La interfaz ODBC está diseñada para su uso con el lenguaje de programación de C. Uso de la interfaz ODBC abarca tres áreas: Las instrucciones SQL, llamadas a funciones ODBC y programación de C. Esta documentación asume lo siguiente:  
   
 -   Conocimiento práctico del lenguaje de programación C.  
   
@@ -66,29 +66,29 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
 ## <a name="recommended-reading"></a>Lecturas recomendadas  
  Para obtener más información acerca de SQL, están disponibles los siguientes estándares:  
   
--   Lenguaje de base de datos: SQL con integridad mejora, ANSI, 1989 ANSI X3.135-1989.  
+-   SQL con integridad mejora, ANSI, 1989 ANSI X3.135-1989 - idioma de la base de datos.  
   
--   Lenguaje de base de datos: SQL: X3H2 ANSI e ISO/IEC 9075:1992 JTC1/SC21/WG3 (SQL-92).  
+-   Lenguaje de base de datos: SQL: ANSI X3H2 y ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
--   Abrir grupo, la administración de datos: Lenguaje de consulta estructurado (SQL), versión 2 (The Open Group, 1996).  
+-   Open Group Data Management: Lenguaje de consulta estructurado (SQL), versión 2 (The Open Group, 1996).  
   
  Además de los estándares y guías de SQL específicas del proveedor, describen muchos libros SQL, incluidos:  
   
--   Fecha, J. C., con Darwen, Hugh: *una guía para el estándar SQL* (Addison-Wesley, 1993).  
+-   Fecha, J. C., con Darwen, Hugh: *Una guía para el estándar SQL* (Addison-Wesley, 1993).  
   
--   Emerson, L. Sandra, Darnovsky, María y Bowman, Judith S.: *el manual de SQL práctico* (Addison-Wesley, 1989).  
+-   Emerson, L. Sandra, Darnovsky, María y Bowman, Judith S.: *El manual de SQL práctico* (Addison-Wesley, 1989).  
   
--   Groff, R. James y Weinberg, Paul N.: *mediante SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, R. James y Weinberg, Paul N.: *Mediante SQL* (Osborne McGraw-Hill, 1990).  
   
--   Gruber, Martin: *descripción SQL* (Sybex, 1990).  
+-   Gruber, Martin: *Descripción de SQL* (Sybex, 1990).  
   
 -   Hursch, Jack l y J. Carolina: *SQL, el lenguaje de consulta estructurado* (PESTAÑA libros, 1988).  
   
--   Melton, Jim y Simon, R. Alan: *entender el nuevo SQL: una guía completa* (Morgan Kaufmann Publishers, 1993).  
+-   Melton, Jim y Simon, R. Alan: *Cómo entender el nuevo SQL: Una guía completa* (Morgan Kaufmann Publishers, 1993).  
   
--   Como en Pascal, Fabian: *SQL y los conceptos básicos de relacionales* (M & T libros, 1990).  
+-   Fabian de Pascal: *SQL y los conceptos básicos de relacionales* (M & T libros, 1990).  
   
--   Trimble, J. Harvey, Jr. y Chappell, David: *una introducción Visual a SQL* (Wiley, 1989).  
+-   Trimble, J. Harvey, Jr. y Chappell, David: *Una introducción Visual a SQL* (Wiley, 1989).  
   
 -   LAN van der, Rick F.: *Introducción a SQL* (Addison-Wesley, 1988).  
   
@@ -98,9 +98,9 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
  Para obtener más información sobre el procesamiento de transacciones, vea:  
   
--   Gris, N. J. y Reuter, Andreas: *procesamiento de transacciones: conceptos y técnicas* (Morgan Kaufmann Publishers, 1993).  
+-   Gris, N. J. y Reuter, Andreas: *Procesamiento de transacciones: Conceptos y técnicas* (Morgan Kaufmann Publishers, 1993).  
   
--   Hackathorn, Richard D.: *conectividad de base de datos empresarial* (Wiley & Sons, 1993).  
+-   Hackathorn, Richard D.: *Conectividad de base de datos empresarial* (Wiley & Sons, 1993).  
   
  Para obtener más información sobre las Interfaces de nivel de llamada, están disponibles los siguientes estándares:  
   
@@ -110,16 +110,16 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
  Para obtener más información acerca de ODBC, un número de los libros en pantalla está disponible, incluyendo:  
   
--   Geiger, Kyle: *dentro de ODBC* (Microsoft Press®, 1995).  
+-   Geiger, Kyle: *Dentro de ODBC* (Microsoft Press®, 1995).  
   
--   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, cruz, Jim y Lilley, W. Albert: *mediante ODBC 2* (Que, 1994).  
+-   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, cruz, Jim y Lilley, W. Albert: *Uso de ODBC 2* (Que, 1994).  
   
--   Johnston, Tom y Osborne, marca: *guía para desarrolladores de ODBC* (Howard W. Sams & compañía, 1994).  
+-   Johnston, Tom y Osborne, marca: *Guía para desarrolladores de ODBC* (Howard W. Sams & compañía, 1994).  
   
--   Norte, Ken: *Windows Multi-DBMS programación: con C++, Visual Basic, ODBC, OLE 2 y herramientas para proyectos DBMS* (John Wiley & Sons, Inc., 1995).  
+-   Norte, Ken: *Programación de Multi-DBMS de Windows: Uso de C++, Visual Basic, ODBC, OLE 2 y herramientas para proyectos DBMS* (John Wiley & Sons, Inc., 1995).  
   
--   Stegman, O. Michael, Signore, Robert y crema, John: *la solución ODBC, conectividad abierta de base de datos en entornos distribuidos* (McGraw-Hill, 1995).  
+-   Stegman, O. Michael, Signore, Robert y crema, John: *La solución ODBC, conectividad abierta de base de datos en entornos distribuidos* (McGraw-Hill, 1995).  
   
--   Welch, Keith: *mediante ODBC 2* (Que, 1994).  
+-   Welch, Keith: *Uso de ODBC 2* (Que, 1994).  
   
--   Merlán, Bill: *enseñar ODBC en 21 días* (Howard W. Sams & compañía, 1994).
+-   Merlán, factura: *Enseñar ODBC en 21 días* (Howard W. Sams & compañía, 1994).

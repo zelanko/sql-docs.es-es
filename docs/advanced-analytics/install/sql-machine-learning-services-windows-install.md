@@ -1,6 +1,6 @@
 ---
-title: Instalar SQL Server Machine Learning Services (en bases de datos) en Windows | Microsoft Docs
-description: R en SQL Server o Python en SQL Server está disponible al instalar SQL Server 2017 Machine Learning Services en Windows.
+title: 'Instalar SQL Server Machine Learning Services (en bases de datos) en Windows: SQL Server Machine Learning'
+description: R en SQL Server o Python en los pasos de instalación de SQL Server para SQL Server 2017 Machine Learning Services en Windows.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878098"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645354"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalar SQL Server Machine Learning Services en Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A partir de SQL Server 2017, R y Python ofrece compatibilidad para análisis en bases de datos están en SQL Server Machine Learning Services, el sucesor de [SQL Server R Services](../r/sql-server-r-services.md) introducidas en SQL Server 2016. Bibliotecas de funciones están disponibles en R y Python y de identificación de script externo en una instancia del motor de base de datos. 
+A partir de SQL Server 2017, R y Python ofrece compatibilidad para análisis en bases de datos están en **SQL Server Machine Learning Services**, el sucesor de [SQL Server R Services](../r/sql-server-r-services.md) introducidas en SQL Server 2016. Bibliotecas de funciones están disponibles en R y Python y de identificación de script externo en una instancia del motor de base de datos. 
 
 En este artículo se explica cómo instalar el componente de machine learning mediante la ejecución de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para la instalación y seguir las indicaciones en pantalla.
 
@@ -54,7 +54,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
   
 2. En el **instalación** ficha, seleccione **instalación independiente del nuevo servidor SQL Server o agregar características a una instalación existente**.
 
-   ![Instalar servicios de base de datos de aprendizaje automático](media/2017setup-installation-page-mlsvcs.PNG)
+   ![Nueva instalación independiente de SQL Server](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. En la página **Selección de características** , seleccione estas opciones:
   
@@ -101,6 +101,19 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 
 7. Una vez completada la instalación, si se indica que reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+## <a name="set-environment-variables"></a>Establezca variables de entorno
+
+Para solo integración de características de R, se debe establecer el **MKL_CBWR** variable de entorno [garantizar resultados coherentes](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de cálculos de Intel Math Kernel Library (MKL).
+
+1. En el Panel de Control, haga clic en **sistema y seguridad** > **sistema** > **configuración avanzada del sistema**  >   **Las Variables de entorno**.
+
+2. Crear una nueva variable de usuario o del sistema. 
+
+  + Establezca el nombre de variable en `MKL_CBWR`
+  + Establece el valor de la variable en `AUTO`
+
+Este paso requiere un reinicio del servidor. Si va a habilitar la ejecución del script, puede contener en el reinicio hasta que se hace todo el trabajo de configuración.
+
 <a name="bkmk_enableFeature"></a>
 
 ## <a name="enable-script-execution"></a>Habilitar la ejecución del script
@@ -108,13 +121,13 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 1. Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Puede descargar e instalar la versión adecuada desde esta página: [descargar SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Puede descargar e instalar la versión adecuada de esta página: [Descargue SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > También puede probar la versión preliminar de [Azure Data Studio](../../azure-data-studio/what-is.md), que es compatible con las tareas administrativas y las consultas en SQL Server.
   
 2. Conéctese a la instancia donde instaló Servicios Machine Learning, haga clic en **nueva consulta** para abrir una ventana de consulta y ejecute el siguiente comando:
 
-   ```SQL
+   ```sql
    sp_configure
    ```
 
@@ -122,7 +135,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
     
 3.  Para habilitar la característica de scripting externo, ejecute la siguiente instrucción:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -145,7 +158,7 @@ Use los pasos siguientes para comprobar que se están ejecutando todos los compo
 
 1. En SQL Server Management Studio, abra una nueva ventana de consulta y ejecute el siguiente comando:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -159,7 +172,7 @@ Use los pasos siguientes para comprobar que se están ejecutando todos los compo
     
     + Para R
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -171,7 +184,7 @@ Use los pasos siguientes para comprobar que se están ejecutando todos los compo
 
     + Para Python
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
     OutputDataSet = InputDataSet;
@@ -205,15 +218,15 @@ En los dispositivos conectados a internet, normalmente se aplican las actualizac
 
 En los servidores sin conexión, se necesitan pasos adicionales. Para obtener más información, consulte [instalar en equipos sin acceso a internet > aplicar actualizaciones acumulativas](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Comience con una instancia de la línea base ya instalada: versión inicial de SQL Server 2017
+1. Comience con una instancia de la línea base ya instalada: Versión inicial de SQL Server 2017
 
-2. Vaya a la lista de actualizaciones acumulativas: [actualiza SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. Vaya a la lista de actualización acumulativa: [Actualizaciones de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
 
 3. Seleccione la actualización acumulativa más reciente. Un archivo ejecutable se descargan y extraen automáticamente.
 
 4. Ejecute el programa de instalación. Acepte los términos de licencia y, en la página de selección de características, revise las características para el que se aplican las actualizaciones acumulativas. Debería ver todas las características instaladas para la instancia actual, incluidas características de aprendizaje automático. Programa de instalación descarga los archivos CAB necesarios para actualizar todas las características.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Resumen de las características instaladas](media/cumulative-update-feature-selection.png)
 
 5. Continúe con el asistente, acepte los términos de licencia para las distribuciones de R y Python. 
 
@@ -275,12 +288,12 @@ El proceso para instalar y administrar paquetes de R es diferente en SQL Server 
 
 Los desarrolladores de R pueden empezar a trabajar con algunos ejemplos sencillos y conozca los aspectos básicos del funcionamiento de R con SQL Server. Para el siguiente paso, vea los siguientes vínculos:
 
-+ [Tutorial: Ejecución de R en T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Análisis de en bases de datos para los desarrolladores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Ejecutar R en T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Análisis en bases de datos para los desarrolladores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Los desarrolladores de Python pueden aprender a usar Python con SQL Server, siga estos tutoriales:
 
 + [Tutorial: Ejecución de Python en T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: Análisis de en bases de datos para desarrolladores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutorial: Análisis en bases de datos para desarrolladores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Para ver ejemplos de aprendizaje automático que se basan en escenarios del mundo real, consulte [tutoriales de aprendizaje automático](../tutorials/machine-learning-services-tutorials.md).

@@ -1,5 +1,5 @@
 ---
-title: Bidireccional entre los filtros en los modelos tabulares | Microsoft Docs
+title: Bidireccional entre los filtros en los modelos tabulares de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033313"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072312"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados bidireccionales en los modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "38033313"
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- Hay dos tipos de filtros cruzados: filtrado unidireccional y bidireccional. El filtrado unidireccional es la dirección de filtrado tradicional de varios a uno entre las tablas de hechos y dimensiones de una relación. El filtrado bidireccional es un filtro cruzado que permite usar el contexto de filtro de una relación como contexto de filtro para otra relación de tabla, con una tabla común a ambas relaciones.  
+ Hay dos tipos de filtros cruzados: Filtrado unidireccional y bidireccional. El filtrado unidireccional es la dirección de filtrado tradicional de varios a uno entre las tablas de hechos y dimensiones de una relación. El filtrado bidireccional es un filtro cruzado que permite usar el contexto de filtro de una relación como contexto de filtro para otra relación de tabla, con una tabla común a ambas relaciones.  
   
  Dados **DimDate** y **DimProduct** con relaciones de clave externa con **FactOnlineSales**, un filtro cruzado bidireccional equivale al uso simultáneo de **FactOnlineSales-to-DimDate** más **FactOnlineSales-to-DimProduct** .  
   
- Los filtros cruzados bidireccionales pueden ser una solución fácil para el problema del diseño de consultas varios a varios que supuso todo un reto en el pasado para los desarrolladores de modelos tabulares y de Power Pivot. Si ha usado la solución DAX para las relaciones varios a varios en modelos tabulares o de Power Pivot, puede intentar aplicar un filtro bidireccional para ver si se generan los resultados previstos.  
+ Los filtros cruzados bidireccionales pueden ser una solución fácil para el problema del diseño de consultas varios a varios que supuso todo un reto en el pasado para los desarrolladores de modelos tabulares y de Power Pivot. Si ha usado la solución DAX para las relaciones de varios a varios en tabular o modelos de PowerPivot, puede intentar aplicar un filtro bidireccional para ver si se generan los resultados esperados.  
   
  Al crear un filtro cruzado bidireccional, debe tener en cuenta los puntos siguientes:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "38033313"
   
  Siempre y cuando las medidas se extraigan de la tabla de hechos y el contexto de filtro finalice en la tabla de hechos, las agregaciones se filtrarán correctamente para este modelo. Pero ¿qué ocurre si quiere crear medidas en otra parte, como un recuento distintivo en la tabla de productos o clientes, o un promedio de descuento en la tabla de promociones, y le interesa que el contexto de filtro existente se extienda a esa medida?  
   
- Probemos a agregar un recuento distintivo de **DimProducts** a la tabla dinámica. Observe los valores que se repiten en **Count Products**(Recuento de productos). A primera vista, parece como si faltara alguna relación de tabla, pero en nuestro modelo podemos ver que todas las relaciones están completamente definidas y activas. En este caso, los valores se repiten porque no hay ningún filtro de fecha en las filas de la tabla de productos.  
+ Vamos a probarlo mediante la adición de un recuento distintivo de **DimProducts** a la tabla dinámica. Observe los valores que se repiten en **Count Products**(Recuento de productos). A primera vista, parece como si faltara alguna relación de tabla, pero en nuestro modelo podemos ver que todas las relaciones están completamente definidas y activas. En este caso, los valores se repiten porque no hay ningún filtro de fecha en las filas de la tabla de productos.  
   
  ![ssas-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "38033313"
  ![SSAS-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
 ## <a name="learn-step-by-step"></a>Obtenga información paso a paso  
- Puede probar los filtros cruzados bidireccionales llevando a cabo los pasos de este tutorial. Para poder continuar, necesita:  
+ Puede probar los filtros cruzados bidireccionales llevando a cabo los pasos de este tutorial. Para poder continuar, necesitará:  
   
 -   Instancia de SQL Server 2016 Analysis Services, modo tabular y última versión de CTP.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "38033313"
  Si se producen errores, confirme que la cuenta usada para conectarse a la base de datos tiene un inicio de sesión de SQL Server con permisos de lectura en el almacenamiento de datos de Contoso. En una conexión remota, también podría interesarle comprobar la configuración del puerto en el firewall para SQL Server.  
   
 ### <a name="review-default-table-relationships"></a>Revisar las relaciones de tabla predeterminadas  
- Cambie a la vista de diagrama: **Modelo** > **Vista de modelo** > **Vista de diagrama**. La cardinalidad y las relaciones activas se indican visualmente. Todas las relaciones son relaciones uno a varios entre dos tablas cualesquiera relacionadas.  
+ Cambiar a vista de diagrama: **Modelo** > **vista de modelo** > **vista de diagrama**. La cardinalidad y las relaciones activas se indican visualmente. Todas las relaciones son relaciones uno a varios entre dos tablas cualesquiera relacionadas.  
   
  ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
@@ -147,7 +147,7 @@ ms.locfileid: "38033313"
  ![SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### <a name="create-measures"></a>Crear medidas  
- Necesitará una agregación para sumar las cantidades de ventas por distintas facetas de datos dimensionales. En **DimProduct,** puede crear una medida que cuente los productos y usarla después en un análisis de comercialización de productos que muestre un recuento de cuántos productos participaron en las ventas de un año determinado, una región determinada o un tipo de cliente.  
+ Necesitará una agregación para importes de venta suma por distintas facetas de datos dimensional. En **DimProduct,** puede crear una medida que cuente los productos y usarla después en un análisis de comercialización de productos que muestre un recuento de cuántos productos participaron en las ventas de un año determinado, una región determinada o un tipo de cliente.  
   
 1.  Haga clic en **Modelo** > **Vista de modelo** > **Vista de diagrama**.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "38033313"
   
 4.  Seleccione **Fecha** > **Año natural**.  
   
- Observe que las ventas se dividen por año y fabricante, según lo esperado. Esto se debe a que el contexto de filtro predeterminado entre **FactOnlineSales**, **DimProduct**y **DimDate** funciona correctamente para las medidas del lado de "varios" de la relación.  
+ Observe que las ventas se dividen por año y fabricante, según lo esperado. Esto es porque el valor predeterminado Filtrar contexto entre **FactOnlineSales**, **DimProduct**, y **DimDate** funciona correctamente para las medidas en el lado "varios" de la relación.  
   
  Al mismo tiempo, puede ver que el recuento de productos no selecciona el mismo contexto de filtro que las ventas. Aunque los recuentos de productos están filtrados correctamente por fabricante (el fabricante y los recuentos de productos están en la misma tabla), el filtro de fecha no se propaga al recuento de productos.  
   
@@ -192,14 +192,14 @@ ms.locfileid: "38033313"
  Ahora debería ver que los recuentos de productos y las ventas se filtran según el mismo contexto de filtro, que incluye no solo los fabricantes de **DimProducts** sino el año natural de **DimDate**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Para entender cómo y cuándo se usa un filtro cruzado bidireccional, puede que tenga que realizar una serie de pruebas para ver cómo funciona en su escenario. En ocasiones, considerará que los comportamientos integrados no son suficientes y tendrá que recurrir a cálculos DAX para realizar el trabajo. En la sección **Vea también** , encontrará varios vínculos a recursos adicionales sobre este tema.  
+ Para entender cómo y cuándo se usa un filtro cruzado bidireccional, puede que tenga que realizar una serie de pruebas para ver cómo funciona en su escenario. En ocasiones, encontrará que los comportamientos integrados no son suficientes y tendrá que recurrir a cálculos DAX para realizar el trabajo. En el **Vea también** sección, encontrará varios vínculos a recursos adicionales sobre este tema.  
   
- En la práctica, el filtrado cruzado puede habilitar formas de exploración de datos que normalmente solo se ofrecen a través de una construcción varios a varios. Dicho esto, es importante reconocer que el filtrado cruzado bidireccional no es una construcción varios a varios.  En el diseñador de modelos tabulares de esta versión sigue sin admitirse una configuración real de tabla varios a varios.  
+ En la práctica, el filtrado cruzado puede habilitar formas de exploración de datos que normalmente solo se ofrecen a través de una construcción varios a varios. Una vez dicho esto, que es importante reconocer que bidireccionales filtrado cruzado no es una construcción varios a varios.  En el diseñador de modelos tabulares de esta versión sigue sin admitirse una configuración real de tabla varios a varios.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar relaciones en Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [Un ejemplo práctico de cómo controlar las relaciones de varios a many simples en modelos tabulares y PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Resolver-to-many relationships leveraging DAX entre-Table tablas filtrado](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
- [Muchos a muchos revolution (SQLBI blog)](http://www.sqlbi.com/articles/many2many/)  
+ [Resolving many-to-many relationships leveraging DAX cross-table filtering (Resolver relaciones de varios a varios aprovechando el filtrado de tablas cruzadas de DAX)](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [Many to many revolution (SQLBI blog) (La revolución de varios a varios [blog de SQLBI])](http://www.sqlbi.com/articles/many2many/)  
   
   

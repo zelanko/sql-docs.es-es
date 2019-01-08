@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
@@ -15,12 +14,12 @@ ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3a3f53b08f3ecaa15f9afb6c7e0155354b4fd4eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6faced4ac5f4d585c48571833a61b1ca96bccb3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790167"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Asignar permisos del área funcional (Master Data Services)
 
@@ -53,7 +52,7 @@ ms.locfileid: "47693513"
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   

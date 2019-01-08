@@ -5,20 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 8544f91e62343ea5e1be6a1191b73db298cce7af
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 737872cdf8d05d75a7849c107089f30d25650572
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158903"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380076"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,5 +58,5 @@ En la siguiente tabla se describen los objetos de rendimiento **FileTable** de S
 |**BASE de tiempo para obtener elemento de FileTable**|Exclusivamente para uso interno.|
 |**BASE de tiempo de actualización de elemento de FileTable**|Exclusivamente para uso interno.| 
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Supervisar el uso de recursos (Monitor de sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

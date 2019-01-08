@@ -18,12 +18,12 @@ ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5b2cc4e32272a337a196d93df8c3101a3bbbad8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0769e3435cf09b4c69ddbc2f75f3e866e2a61a3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808363"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588749"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (permisos de tipo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Especifica un permiso que se puede conceder para un tipo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  Especifica el tipo en el que se va a conceder el permiso. El calificador de ámbito (**::**) es obligatorio. Si no se especifica *schema_name*, se usará el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (**.**).  
   
  TO \<database_principal> especifica la entidad de seguridad a la que se concede el permiso.  
@@ -141,7 +141,7 @@ GRANT VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DENY &#40;permisos de tipo de Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
  [REVOKE &#40;permisos de tipo de Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   

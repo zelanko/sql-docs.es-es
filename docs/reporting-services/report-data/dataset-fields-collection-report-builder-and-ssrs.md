@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90b1e966a2f62877e658658048b12427bca109cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031864"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202414"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  
@@ -55,7 +55,7 @@ ms.locfileid: "50031864"
 ### <a name="using-extended-field-properties"></a>Usar propiedades de campo extendidas  
  Los orígenes de datos que admiten consultas multidimensionales, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], admiten las propiedades de campo en los campos. Las propiedades de campo aparecen en el conjunto de resultados para una consulta, pero no están visibles en el panel **Datos de informe** . Sí que están disponibles para usarlas en el informe. Para hacer referencia a una propiedad de un campo, arrastre el campo al informe y cambie la propiedad predeterminada **Value** por el nombre de campo de la propiedad que desee. Por ejemplo, en un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede definir los formatos para los valores de las celdas del cubo. El valor con formato está disponible mediante la propiedad de campo **FormattedValue**. Para usar directamente el valor en lugar de usar un valor y establecer la propiedad de formato del cuadro de texto, arrastre el campo al cuadro de texto y cambie la expresión predeterminada `=Fields!FieldName.Value` a `=Fields!FieldName.FormattedValue`.  
   
-> [!NOTE]  
+> [!NOTE]
 >  No todas las propiedades **Field** pueden utilizarse para todos los orígenes de datos. Las propiedades **Value** y **IsMissing** se definen para todos los orígenes de datos. Otras propiedades predefinidas (como **Key**, **UniqueName**y **ParentUniqueName** para orígenes de datos multidimensionales) solo se admiten si el origen de datos las proporciona. Algunos proveedores de datos admiten las propiedades personalizadas. Para obtener más información, vea los temas sobre las propiedades de campo extendidas para cada tipo de origen de datos en [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Por ejemplo, para un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
@@ -105,7 +105,7 @@ ms.locfileid: "50031864"
  Cuando se procesa el informe, es posible que el conjunto de resultados para un conjunto de datos no contenga valores para todas las columnas especificadas porque éstas ya no existen en el origen de datos. Puede usar la propiedad de campo IsMissing para detectar si se devolvieron valores para un campo en tiempo de ejecución. Para obtener más información, vea [Referencias a la colección de campos de conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

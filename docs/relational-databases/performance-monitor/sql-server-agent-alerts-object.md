@@ -5,21 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Alerts object
 - SQLAgent:Alerts
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: d55a1cb1e918dde94862202de0fa54aed5ff4d54
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: ca1234a9b70c3da26ed9146e4c5eda51ca431f80
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158513"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53379876"
 ---
 # <a name="sql-server-agent-alerts-object"></a>Alerts (objeto del Agente SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52158513"
 > [!NOTE]  
 >  Para usar este objeto del Agente SQL Server, los usuarios deben ser miembros del rol fijo de servidor **sysadmin** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Alerts](../../ssms/agent/alerts.md)   
  [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

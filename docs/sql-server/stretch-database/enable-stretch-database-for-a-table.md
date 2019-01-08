@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4fdb8995798b408e0418e2170631f3b331acff0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824223"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596696"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47824223"
   
  **Permisos**. Para habilitar Stretch Database en una base de datos o tabla, se requieren permisos db_owner. Además, para habilitar Stretch Database en una tabla, también se requieren permisos ALTER en la tabla.  
 
- >   [!NOTE]
+ > [!NOTE]
  > Posteriormente, si deshabilita Stretch Database, recuerde que al deshabilitar Stretch Database para una tabla o una base de datos no se elimina el objeto remoto. Si quiere eliminar la tabla o la base de datos remotas, tiene que quitarlas mediante el Portal de administración de Azure. Los objetos remotos siguen acumulando gastos de Azure hasta que se eliminan manualmente.
  
 ##  <a name="EnableWizardTable"></a> Uso del asistente para habilitar Stretch Database en una tabla  
@@ -71,7 +71,7 @@ ms.locfileid: "47824223"
 -   Si la tabla contiene datos activos e inactivos, puede usar opcionalmente la cláusula `FILTER_PREDICATE = <function>` para especificar una función y seleccionar las filas que se migrarán. El predicado debe llamar a una función con valores de tabla insertada. Para obtener más información, vea [Select rows to migrate by using a filter function (Seleccionar las filas que se van a migrar mediante una función de filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Si no se especifica una función de filtro, se migrará toda la tabla.  
   
     > [!IMPORTANT]  
-    >  Si se indica una función de filtro que tiene un rendimiento bajo, la migración de datos también tendrá un rendimiento bajo. Stretch Database aplica la función de filtro a la tabla por medio del operador CROSS APPLY.  
+    > Si se indica una función de filtro que tiene un rendimiento bajo, la migración de datos también tendrá un rendimiento bajo. Stretch Database aplica la función de filtro a la tabla por medio del operador CROSS APPLY.  
   
 -   Especifique `MIGRATION_STATE = OUTBOUND` para iniciar la migración de datos de inmediato o  `MIGRATION_STATE = PAUSED` si desea posponer el inicio de la migración.  
   
@@ -131,7 +131,7 @@ GO
   
  Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   

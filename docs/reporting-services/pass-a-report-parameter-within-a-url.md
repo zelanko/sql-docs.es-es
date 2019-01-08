@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390488"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211214"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pasar un parámetro de informe en una dirección URL
   Puede pasar parámetros de informe a un informe incluyéndolos en un informe URL. Estos parámetros de dirección URL no tienen prefijo porque se pasan directamente al motor de procesamiento de informes.  
@@ -28,12 +28,12 @@ ms.locfileid: "52390488"
   
  Todos los parámetros de consulta pueden tener parámetros de informe correspondientes. Para pasar un parámetro de consulta a un informe, pase el parámetro de informe correspondiente. Para más información, vea [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Los parámetros de informe distinguen entre mayúsculas y minúsculas.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Los parámetros de informe distinguen mayúsculas de minúsculas y usan los caracteres especiales siguientes:  
->   
+> 
 >  -   Cualquier carácter de espacio en blanco en la cadena de dirección URL se reemplaza con los caracteres "% 20", según los estándares de codificación de direcciones URL.  
 > -   Un carácter de espacio en la parte del parámetro de la dirección URL se reemplaza con un carácter más (+).  
 > -   Un punto y coma en cualquier parte de la cadena se reemplaza con los caracteres “%3A”.  
@@ -103,7 +103,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)  
   

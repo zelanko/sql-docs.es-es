@@ -29,12 +29,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f7d1e7476e014b1ad3d865bd2b322dd0b9030e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9e216fdf05bd473ad05a55469858ee9a053bd75
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831913"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213684"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,7 +70,7 @@ CREATE DATABASE ENCRYPTION KEY
 ## <a name="arguments"></a>Argumentos  
 WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
 Especifica el algoritmo de cifrado utilizado para la clave de cifrado.   
->  [!NOTE]
+> [!NOTE]
 >    A partir de SQL Server 2016, todos los algoritmos están en desuso, excepto AES_128, AES_192 y AES_256. Para usar algoritmos anteriores (no se recomienda), debe establecer la base de datos en el nivel de compatibilidad de base de datos 120 o inferior.  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
@@ -107,7 +107,7 @@ ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
 [Cifrado de SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
 [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   

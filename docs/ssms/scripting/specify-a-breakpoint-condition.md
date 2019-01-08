@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
@@ -15,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e28dbabec000b809d8f16f1a15565f82de6de3d9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c3aa9eb773b173d093528a567b56dddf481da241
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643608"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328345"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar una condición de punto de interrupción
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,8 +44,6 @@ ms.locfileid: "51643608"
     > [!NOTE]  
     >  El depurador no evalúa la expresión booleana hasta la primera vez que se alcanza el punto de interrupción. Si elige **Ha cambiado**, el depurador no considerará la primera evaluación como cambio, por lo que el depurador no interrumpirá le ejecución en la primera evaluación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Especificar un número de llamadas](../../relational-databases/scripting/specify-a-hit-count.md)   
  [Especificar una acción del punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
-  
-  

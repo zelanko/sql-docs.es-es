@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba81029a195bcee0e747bfe517fa5d6b27e4ead1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401630"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588393"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar el factor de relleno para un índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52401630"
   
 7.  Haga clic en **Cerrar**.  
   
-8.  En el menú **Archivo** , seleccione **Guardar***nombre_de_tabla*.  
+8.  En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Para especificar un factor de relleno en un índice mediante el Explorador de objetos  
   

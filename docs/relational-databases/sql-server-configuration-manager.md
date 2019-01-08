@@ -5,7 +5,7 @@ ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: configure
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], managing
@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af1072755ee81dfb506840e164218cb92290d63e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510582"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203856"
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "52510582"
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
 |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-> [!NOTE]  
+> [!NOTE]
 >  Como el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un complemento del programa [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console y no un programa independiente, el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no aparece como aplicación en las versiones más recientes de Windows.  
->   
+> 
 >  -   **Windows 10**:  
 >          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escriba SQLServerManager13.msc (para **) en la**página de inicio [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]. Para versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , reemplace el 13 por un número inferior. Al hacer clic en SQLServerManager13.msc, se abre el Administrador de configuración. Para anclar el Administrador de configuración a la página de inicio o a la barra de tareas, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Abrir ubicación del archivo**. En el Explorador de archivos de Windows, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Anclar a Inicio** o **Anclar a la barra de tareas**.  
 > -   **Windows 8**:  

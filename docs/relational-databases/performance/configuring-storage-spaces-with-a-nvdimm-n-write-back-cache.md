@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: abe4c1e52fbb43f7c2c1ffbe4a7e6c40c45fda78
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c7d2e9a53d002013551e24d2aaa0ff70bc266772
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528341"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328276"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Espacios de almacenamiento en Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
  [Introducción a los espacios de almacenamiento](https://technet.microsoft.com/library/hh831739.aspx)   
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   

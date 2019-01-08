@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10aad145473d2b47ad0f845def3f71da23c8430d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a30b96b42aabdd8511dcad542fed498c4ca26516
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725543"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589279"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT (credencial de ámbito de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Especifica un permiso que se puede otorgar en una credencial de ámbito de base de datos. Se muestra a continuación.  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  Especifica la credencial de ámbito de bases de datos en la que se va a conceder el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  
@@ -110,7 +110,7 @@ AS *granting_principal*
   
  Los beneficiarios del permiso CONTROL SERVER, como por ejemplo, los miembros del rol fijo de servidor **sysadmin**, pueden conceder cualquier permiso para cualquier elemento protegible en el servidor. Los beneficiarios del permiso CONTROL para una base de datos, como por ejemplo, los miembros del rol fijo de base de datos **db_owner**, pueden conceder cualquier permiso para cualquier elemento protegible en la base de datos. Los receptores del permiso CONTROL en un esquema pueden conceder los permisos en cualquier objeto del esquema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE (credencial de ámbito de base de datos de Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [DENY (credencial de ámbito de base de datos de Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   

@@ -5,21 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7c85c58f5dc5bb494669721a6ac86ca1f682c708
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 1a1218e5d27abd72acef7967e0a71284384fed89
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158803"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380306"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Statistics (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52158803"
 |**Recompilaciones SQL/seg.**|Número de recompilaciones de instrucciones por segundo. Cuenta el número de veces que se desencadenan las recompilaciones de instrucciones. En general, es conveniente que el número de recompilaciones sea bajo.|  
 |**Parametrizaciones automáticas no seguras/seg.**|Número de intentos de parametrización automática no segura por segundo. Por ejemplo, la consulta dispone de algunas características que impiden compartir el plan almacenado en caché. Estas parametrizaciones se designan como no seguras. Esta opción no cuenta el número de parametrizaciones forzadas.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Plan Cache (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

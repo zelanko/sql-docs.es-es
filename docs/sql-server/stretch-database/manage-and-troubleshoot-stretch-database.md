@@ -11,15 +11,15 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6de10b5f30073a33a23549cb4522d90a162ace7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25d4931d1be987c69ca2fc80445ea0aa1edd1ac
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698563"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596966"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Administrar y solucionar problemas de Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -129,7 +129,7 @@ GO
    
  -   **STAGE_ONLY**. Solo se actualizan o eliminan los datos de la tabla en los que Stretch Database almacena provisionalmente las filas aptas para la migración y retiene las filas migradas durante el período especificado después de la migración.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisión y solución de problemas de migración de datos &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)   
 [Copia de seguridad de bases de datos habilitadas para Stretch (Stretch Database)](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
 [Restore Stretch-enabled databases (Stretch Database) (Restauración de bases de datos habilitadas para Stretch (Stretch Database))](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  

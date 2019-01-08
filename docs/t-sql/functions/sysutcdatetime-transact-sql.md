@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 305fbf35deccf81c127e6b53f2c2b2f946c06aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ef7e85b7ae4734c78c40723abc11594c416d524
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658073"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265956"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,12 +68,12 @@ SYSUTCDATETIME ( )
  En el ejemplo siguiente se muestran los distintos formatos que devuelven las funciones de fecha y hora.  
   
 ```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
+SELECT SYSDATETIME() AS [SYSDATETIME()]  
+    ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
+    ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
+    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
+    ,GETDATE() AS [GETDATE()]  
+    ,GETUTCDATE() AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -87,7 +87,7 @@ GETDATE()          2007-04-30 13:10:02.047
 GETUTCDATE()       2007-04-30 20:10:02.047
 ```  
   
-### <a name="b-converting-date-and-time-to-date"></a>B. Convertir valores de fecha y hora en date  
+### <a name="b-converting-date-and-time-to-date"></a>b. Convertir valores de fecha y hora en date  
  En el ejemplo siguiente se muestra cómo convertir valores de fecha y hora en `date`.  
   
 ```  
@@ -127,7 +127,7 @@ Time             Date Time
 13:49:33.6330000 2009-04-22 13:49:33.633
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  

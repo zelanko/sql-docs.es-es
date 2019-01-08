@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5190e1b6fdcd83719b84142bee49dff55c824c55
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018240"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979541"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ ms.locfileid: "51018240"
 ### <a name="accepted-instances"></a>Instancias aceptadas  
  Para que se acepte una instancia de **MultiLineString** , debe estar vacío o estar formada solo por instancias de **LineString** aceptadas. Para obtener más información sobre instancias **LineString** aceptadas, vea [LineString](../../relational-databases/spatial/linestring.md). A continuación se enumeran ejemplos de instancias **MultiLineString** aceptadas.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- En el siguiente ejemplo se produce una excepción `System.FormatException` porque la segunda instancia de **LineString** no es válida.  
+En el siguiente ejemplo se produce una excepción `System.FormatException` porque la segunda instancia de **LineString** no es válida.  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Para que una instancia de **MultiLineString** sea válida debe cumplir los siguientes criterios:  
+Para que una instancia de **MultiLineString** sea válida debe cumplir los siguientes criterios:  
   
 1.  Todas las instancias que forman la instancia de **MultiLineString** deben ser instancias válidas de **LineString** .  
   
 2.  Dos de las instancias de **LineString** que forman la instancia de **MultiLineString** pueden superponerse durante un intervalo. Las instancias de **LineString** solo pueden formar una intersección o tocarse una a la otra o a otra instancia de **LineString** en un número finito de puntos.  
   
- En el ejemplo siguiente se muestran tres instancias válidas de **MultiLineString** y una instancia de **MultiLineString** que no es válida.  
+En el ejemplo siguiente se muestran tres instancias válidas de **MultiLineString** y una instancia de **MultiLineString** que no es válida.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
@@ -77,25 +77,25 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` no es válido porque la segunda instancia de **LineString** se superpone a la primera instancia de **LineString** en un intervalo. Se tocan en un número infinito de puntos.  
+`@g4` no es válido porque la segunda instancia de **LineString** se superpone a la primera instancia de **LineString** en un intervalo. Se tocan en un número infinito de puntos.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente crea una instancia sencilla de `geometry``MultiLineString` que contiene dos elementos `LineString` con un SRID de 0.  
+El ejemplo siguiente crea una instancia sencilla de `geometry``MultiLineString` que contiene dos elementos `LineString` con un SRID de 0.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- Para crear instancias de esta instancia con otro SRID, utilice `STGeomFromText()` o `STMLineStringFromText()`. También puede utilizar `Parse()` y, a continuación, modificar el SRID, como se muestra en el ejemplo siguiente.  
+Para crear instancias de esta instancia con otro SRID, utilice `STGeomFromText()` o `STMLineStringFromText()`. También puede utilizar `Parse()` y, a continuación, modificar el SRID, como se muestra en el ejemplo siguiente.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [STLength &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

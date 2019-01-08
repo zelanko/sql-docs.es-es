@@ -18,20 +18,20 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ac4984fca803cbcf5d18fa4b34fdd8629dfe8c9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bbc07306f0079adbe90f22eb25a73f750258ebd4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640039"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210104"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB, administrador de conexiones
   Un administrador de conexiones OLE DB permite a un paquete conectarse a un origen de datos mediante un proveedor OLE DB. Por ejemplo, un administrador de conexiones OLE DB que se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar el proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
-> [!NOTE]    
+> [!NOTE]
 >  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 no admite las nuevas palabras clave de cadena de conexión (MultiSubnetFailover=True) para la agrupación en clústeres de conmutación por error de varias subredes. Para obtener más información, vea las [Notas de la versión de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) y la entrada de blog [Always On Multi-Subnet Failover and SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)(Clúster de conmutación de varias subredes y SSIS de AlwaysOn), en www.mattmasson.com.    
-    
-> [!NOTE]    
+> 
+> [!NOTE]
 >  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, el origen de datos requiere un proveedor de datos distinto al de las versiones anteriores de Excel o Access. Para obtener más información, vea [Conectarse a un libro de Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) y [Conectarse a una base de datos de Access](../../integration-services/connection-manager/connect-to-an-access-database.md).    
     
  Varias tareas y componentes de flujo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usan un administrador de conexiones OLE DB. Por ejemplo, un origen de OLE DB y un destino de OLE DB usan este administrador de conexiones para extraer y cargar datos, y la tarea Ejecutar SQL puede usar este administrador de conexiones para conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar consultas.    
@@ -87,7 +87,7 @@ ms.locfileid: "51640039"
  **Eliminar**  
  Permite seleccionar una conexión de datos y, después, eliminarla con el botón **Eliminar** .  
   
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)     
  [Destino de OLE DB](../../integration-services/data-flow/ole-db-destination.md)     
  [Tarea Ejecutar SQL](../../integration-services/control-flow/execute-sql-task.md)     

@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835926"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991798"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concatenación de cadenas) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  Debe utilizarse una conversión explícita a datos caracteres cuando se concatenan cadenas binarias y cualesquiera caracteres entre las cadenas binarias. En el ejemplo siguiente se muestra cuándo se debe usar `CONVERT` o `CAST` con la concatenación binaria y cuándo no es necesario usar `CONVERT` o `CAST`.  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. Usar la concatenación de cadenas  
  En el siguiente ejemplo se crea una sola columna en el encabezado de columna `Name` de varias columnas de caracteres, con el apellido de la persona seguido de una coma, un solo espacio y, a continuación, el nombre de la persona. El conjunto de resultados está en orden alfabético ascendente por el apellido y, a continuación, por el nombre.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -86,10 +86,10 @@ FROM Person.Person
 ORDER BY LastName ASC, FirstName ASC;  
 ```  
   
-### <a name="b-combining-numeric-and-date-data-types"></a>B. Combinar los tipos de datos numeric y date  
+### <a name="b-combining-numeric-and-date-data-types"></a>b. Combinar los tipos de datos numeric y date  
  En el siguiente ejemplo se usa la función `CONVERT` para concatenar los tipos de datos **numeric** y **date**.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>C. Usar la concatenación de varias cadenas  
  En el siguiente ejemplo se concatenan varias cadenas para formar una cadena larga que muestra el apellido y la primera inicial de los vicepresidentes de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Se agrega una coma después del apellido y un punto después de la primera inicial.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>D. Usar cadenas grandes en una concatenación
 En el siguiente ejemplo se concatenan varias cadenas para formar una cadena larga y, luego, se intenta calcular la longitud de la cadena final. La longitud final del conjunto de resultados es 16 000, porque la evaluación de la expresión comienza por la izquierda, esto es, @x + @z + @y = > (@x + @z) + @y. En este caso, el resultado de (@x + @z) se trunca a 8000 bytes y, luego, @y se suma al conjunto de resultados, lo que hace que la longitud final de la cadena sea 16 000. Como @y es una cadena de tipo de valor grande, no se produce ningún truncamiento.
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>E. Usar la concatenación de varias cadenas  
  En el siguiente ejemplo se concatenan varias cadenas para formar una cadena larga que muestra el apellido y la primera inicial de los vicepresidentes en una base de datos de ejemplo. Se agrega una coma después del apellido y un punto después de la primera inicial.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  
@@ -178,7 +178,7 @@ Hamilton, J.       Vice President of Production
 Welcker, B.        Vice President of Sales  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [+= &#40;Asignación de concatenación de cadenas&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643561"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211814"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modificar scripts SQLCMD con el Editor de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51643561"
   
 -   El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es compatible con las variables de entorno y las variables definidas como parte de un script SQLCMD, aunque no es compatible con variables SQLCMD no integradas ni variables **osql** . El procesamiento de SQLCMD por [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] distingue entre mayúsculas y minúsculas para las variables. Por ejemplo, PRINT '$(COMPUTERNAME)' genera el resultado correcto, pero PRINT '$(ComputerName)' devuelve un error.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient para la ejecución en los modos normal y SQLCMD. Cuando se ejecuta desde la línea de comandos, SQLCMD utiliza el proveedor OLE DB. Puesto que se pueden aplicar diferentes opciones predeterminadas, es posible observar diferentes comportamientos al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y en la herramienta SQLCMD.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Sintaxis SQLCMD compatible  
@@ -161,7 +161,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

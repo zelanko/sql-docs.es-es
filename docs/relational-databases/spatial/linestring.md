@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c7765138f3ff4fd1ef31b6d3a606d427020c376d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018640"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979831"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018640"
   
  ![Ejemplos de instancias LineString de geometry](../../relational-databases/spatial/media/linestring.gif "Ejemplos de instancias LineString de geometry")  
   
- Como se muestra en la ilustración:  
+Como se muestra en la ilustración:  
   
 -   La figura 1 es una instancia de **LineString** sencilla y sin cerrar.  
   
@@ -41,69 +41,69 @@ ms.locfileid: "51018640"
 -   La figura 4 es una instancia de **LineString** cerrada y no sencilla; por ello, no es un anillo.  
   
 ### <a name="accepted-instances"></a>Instancias aceptadas  
- Las instancias de **LineString** aceptadas se pueden especificar en una variable geometry, pero puede que no sean instancias de **LineString** válidas. Los siguientes criterios se deben cumplir para que una instancia de **LineString** sea aceptada. La instancia de estar formada como mínimo por dos puntos o debe estar vacía. Se aceptan las siguientes instancias de LineString.  
+Las instancias de **LineString** aceptadas se pueden especificar en una variable geometry, pero puede que no sean instancias de **LineString** válidas. Los siguientes criterios se deben cumplir para que una instancia de **LineString** sea aceptada. La instancia de estar formada como mínimo por dos puntos o debe estar vacía. Se aceptan las siguientes instancias de LineString.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` muestra que se puede aceptar una instancia de **LineString** , pero no es válida.  
+`@g3` muestra que se puede aceptar una instancia de **LineString** , pero no es válida.  
   
- No se acepta la siguiente instancia de **LineString** . Producirá una `System.FormatException`.  
+No se acepta la siguiente instancia de **LineString** . Producirá una `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Para que una instancia de **LineString** sea válida debe cumplir los siguientes criterios.  
+Para que una instancia de **LineString** sea válida debe cumplir los siguientes criterios.  
   
 1.  La instancia de **LineString** debe ser aceptada.  
-  
 2.  Si una instancia de **LineString** no está vacía debe contener dos puntos distintos por lo menos.  
-  
 3.  La instancia de **LineString** no se puede superponer sobre un intervalo de dos o más puntos consecutivos.  
   
- Las siguientes instancias de **LineString** son válidas.  
+Las siguientes instancias de **LineString** son válidas.  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- Las siguientes instancias de **LineString** no son válidas.  
+Las siguientes instancias de **LineString** no son válidas.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  La detección de superposiciones de **LineString** se basa en los cálculos de coma flotante, que no son exactos.  
+> La detección de superposiciones de **LineString** se basa en los cálculos de coma flotante, que no son exactos.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra cómo crear una instancia de `geometry``LineString` con tres puntos y un SRID de 0:  
+### <a name="example-a"></a>Ejemplo A.    
+En el ejemplo siguiente se muestra cómo crear una instancia de `geometry``LineString` con tres puntos y un SRID de 0:  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- Cada punto de la instancia de `LineString` puede contener valores Z (elevación) y M (medida). Este ejemplo agrega valores M a la instancia de `LineString` creada en el ejemplo anterior. M y Z pueden ser valores nulos.  
+### <a name="example-b"></a>Ejemplo B.   
+Cada punto de la instancia de `LineString` puede contener valores Z (elevación) y M (medida). Este ejemplo agrega valores M a la instancia de `LineString` creada en el ejemplo anterior. M y Z pueden ser valores nulos.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- En el ejemplo siguiente se muestra cómo crear una instancia de `geometry LineString` con dos puntos que son iguales. Una llamada a `IsValid` indica que la instancia de **LineString** no es válida y una llamada a `MakeValid` convertirá la instancia de **LineString** en un **Point**.  
+### <a name="example-c"></a>Ejemplo C.   
+En el ejemplo siguiente se muestra cómo crear una instancia de `geometry LineString` con dos puntos que son iguales. Una llamada a `IsValid` indica que la instancia de **LineString** no es válida y una llamada a `MakeValid` convertirá la instancia de **LineString** en un **Point**.  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,17 +118,16 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- El fragmento de código anterior devolverá lo siguiente:  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [STLength &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

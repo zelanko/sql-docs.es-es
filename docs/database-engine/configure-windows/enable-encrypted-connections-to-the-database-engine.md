@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed6454a6bce8f9f0942e5427910c2942bfa838e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788503"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589299"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexiones cifradas en el motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ ms.locfileid: "47788503"
   
 ##  <a name="ConfigureServerConnections"></a> Para configurar el servidor para forzar conexiones cifradas  
   
-1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<instancia de servidor>* y, después, seleccione **Propiedades**.  
+1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<instancia de servidor>_ y, después, seleccione **Propiedades**.  
   
-2.  En el cuadro de diálogo **Protocolos de** *\<nombre de instancia>* **Propiedades**, en la pestaña **Certificado**, seleccione el certificado que quiera en el menú desplegable del cuadro **Certificado** y, después, haga clic en **Aceptar**.  
+2.  En el cuadro de diálogo **Protocolos de** _\<nombre de instancia>_ **Propiedades**, en la pestaña **Certificado**, seleccione el certificado que quiera en el menú desplegable del cuadro **Certificado** y, después, haga clic en **Aceptar**.  
   
 3.  En la pestaña **Marcas** , en el cuadro **ForceEncryption** , seleccione **Sí**y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
@@ -115,7 +115,7 @@ A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!IN
   
 3.  En la pestaña **Propiedades de conexión** , haga clic en **Cifrar conexión**.  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244)  
 

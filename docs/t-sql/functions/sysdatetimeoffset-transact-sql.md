@@ -31,12 +31,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4b1d36e60213fc9c2e10614a886eb46d53fe201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20dc86a49d00a800c2befd85e59027568f36728f
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667163"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265936"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,12 +71,12 @@ SYSDATETIMEOFFSET ( )
  En el ejemplo siguiente se muestran los distintos formatos que devuelven las funciones de fecha y hora.  
   
 ```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
+SELECT SYSDATETIME() AS [SYSDATETIME()]  
+    ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
+    ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
     ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
+    ,GETDATE() AS [GETDATE()]  
+    ,GETUTCDATE() AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -90,7 +90,7 @@ GETDATE()          2007-04-30 13:10:02.047
 GETUTCDATE()       2007-04-30 20:10:02.047
 ```  
   
-### <a name="b-converting-date-and-time-to-date"></a>B. Convertir valores de fecha y hora en date  
+### <a name="b-converting-date-and-time-to-date"></a>b. Convertir valores de fecha y hora en date  
  En el ejemplo siguiente se muestra cómo convertir valores de fecha y hora en `date`.  
   
 ```  
@@ -117,12 +117,12 @@ SELECT CONVERT (date, SYSDATETIME())
  En el ejemplo siguiente se muestra cómo convertir valores de fecha y hora en `time`.  
   
 ```  
-SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()  
-    ,CONVERT (time, SYSDATETIMEOFFSET()) AS SYSDATETIMEOFFSET()  
-    ,CONVERT (time, SYSUTCDATETIME()) AS SYSUTCDATETIME()  
-    ,CONVERT (time, CURRENT_TIMESTAMP) AS CURRENT_TIMESTAMP  
-    ,CONVERT (time, GETDATE()) AS GETDATE()  
-    ,CONVERT (time, GETUTCDATE()) AS GETUTCDATE();  
+SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
+    ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
+    ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  
+    ,CONVERT (time, CURRENT_TIMESTAMP) AS [CURRENT_TIMESTAMP]  
+    ,CONVERT (time, GETDATE()) AS [GETDATE()]  
+    ,CONVERT (time, GETUTCDATE()) AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -136,7 +136,7 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   

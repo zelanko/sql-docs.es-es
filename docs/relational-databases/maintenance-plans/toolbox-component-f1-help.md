@@ -7,20 +7,18 @@ ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: reference
-f1_keywords:
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a948e4a1e787756517482c5b62b46cdab625e6bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 40e4dac5c3efaf4df04b8afec3d028d39978e397
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667384"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328805"
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +39,6 @@ ms.locfileid: "51667384"
 ## <a name="add-azure-components-to-the-toolbox"></a>Agregar componentes de Azure al cuadro de herramientas  
  Azure Feature Pack para Integration Services contiene administradores de conexiones para conectarse a orígenes de datos de Azure y tareas para realizar operaciones comunes de Azure. Instale el Feature Pack para agregar estos elementos al cuadro de herramientas. Para obtener más información, vea [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el cuadro de herramientas](../../ssms/use-the-toolbox.md)   
  [Elegir elementos del cuadro de herramientas &#40;página Tareas de mantenimiento&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
-  
-  

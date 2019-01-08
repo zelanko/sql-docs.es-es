@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834763"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979951"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -160,15 +160,15 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. Crear una auditoría de servidor con destino a un archivo  
- En el ejemplo siguiente se crea una auditoría de servidor denominada `HIPPA_Audit` con un archivo binario como destino y sin ninguna opción.  
+ En el ejemplo siguiente se crea una auditoría de servidor denominada `HIPAA_Audit` con un archivo binario como destino y sin ninguna opción.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Crear una auditoría de servidor con destino al registro de la aplicación Windows y con opciones  
- En el ejemplo siguiente se crea una auditoría de servidor denominada `HIPPA_Audit` con destino al registro de la aplicación Windows. La cola se escribe cada segundo y apaga el motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se produce un error.  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>b. Crear una auditoría de servidor con destino al registro de la aplicación Windows y con opciones  
+ En el ejemplo siguiente se crea una auditoría de servidor denominada `HIPAA_Audit` con destino al registro de la aplicación Windows. La cola se escribe cada segundo y apaga el motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se produce un error.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
@@ -216,7 +216,7 @@ SELECT * FROM fn_get_audit_file('C:\SQLAudit\AuditDataAccess_*.sqlaudit',default
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

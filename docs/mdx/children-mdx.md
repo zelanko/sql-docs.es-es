@@ -1,5 +1,5 @@
 ---
-title: Los elementos secundarios (MDX) | Documentos de Microsoft
+title: Los elementos secundarios (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d61eb168b01e9b6d48c4c003ba28d0f977026906
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740104"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533412"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -29,11 +29,11 @@ Member_Expression.Children
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
- El **elementos secundarios** función devuelve un conjunto ordenado de forma natural que contiene los elementos secundarios de un miembro especificado. Si el miembro especificado no tiene elementos secundarios, esta función devuelve un conjunto vacío.  
+## <a name="remarks"></a>Comentarios  
+ El **hijos** función devuelve un conjunto ordenado de forma natural que contiene los elementos secundarios de un miembro especificado. Si el miembro especificado no tiene elementos secundarios, esta función devuelve un conjunto vacío.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve los elementos secundarios del miembro United States de la jerarquía Geography de la dimensión Geography.  
@@ -43,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- El ejemplo siguiente devuelve todos los miembros de la **medidas** dimensión en el eje de columna, esto incluye todos los miembros calculados y el conjunto de todos los elementos secundarios de la `[Product].[Model Name]` atributo la jerarquía del eje de fila de la **Adventure Works** cubo.  
+ El ejemplo siguiente devuelve todos los miembros de la **medidas** dimensión en el eje de columna, esto incluye todos los miembros calculados y el conjunto de todos los elementos secundarios de la `[Product].[Model Name]` jerarquía del eje de fila del atributo desde el **Adventure Works** cubo.  
   
 ```  
 SELECT  
@@ -56,7 +56,7 @@ FROM
   
 |Versión|Historial|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Contenido modificado:**<br /> : Actualiza la sintaxis y los argumentos para mejorar la claridad.<br /><br /> : Agregado ejemplos actualizados.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Contenido modificado:**<br /> -Actualizar la sintaxis y los argumentos para mejorar la claridad.<br /><br /> -Se ha agregado ejemplos actualizados.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

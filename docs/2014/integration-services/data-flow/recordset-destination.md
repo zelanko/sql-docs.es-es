@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.recordsetdest.f1
@@ -18,12 +17,12 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfbf931bc28893b328ce4ac869278b012c6658c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdf206c36bdb9956c6444fe6b22f229ef4fdf6e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063907"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805027"
 ---
 # <a name="recordset-destination"></a>destino de conjunto de registros
   El destino de conjunto de registros crea y llena un conjunto de registros ADO almacenado en la memoria. La forma del conjunto de registros se define según la entrada al destino de conjunto de registros en el tiempo de diseño.  
@@ -39,7 +38,7 @@ ms.locfileid: "48063907"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas del destino de conjunto de registros](recordset-destination-custom-properties.md)  
   

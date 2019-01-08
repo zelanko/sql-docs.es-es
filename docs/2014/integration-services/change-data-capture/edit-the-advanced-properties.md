@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - advanced
@@ -13,12 +12,12 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae2bab96234a52ba58de68f87bf24455b12256d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94476576eac6c466a0667af8cf1b5e166eaec941
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183775"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804625"
 ---
 # <a name="edit-the-advanced-properties"></a>Editar las propiedades avanzadas
   Use la pestaña **Avanzadas** para agregar propiedades especiales a la instancia CDC.  
@@ -35,7 +34,7 @@ ms.locfileid: "48183775"
  Para obtener una descripción de las propiedades que puede especificar, vea la tabla de opciones disponibles en [cdc.xdbcdc_config](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config).  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo administrar una instancia CDC](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Cómo editar las propiedades de la instancia CDC](how-to-edit-the-cdc-instance-properties.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
@@ -15,12 +14,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107215"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798937"
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
   Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento. Las columnas dispersas y los conjuntos de columnas se definen mediante las instrucciones [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) o [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -44,7 +43,7 @@ ms.locfileid: "48107215"
   
 -   Las vistas de catálogo para una tabla con columnas dispersas son las mismas que para una tabla típica. La vista de catálogo sys.columns contiene una fila por cada columna de la tabla e incluye un conjunto de columnas si se ha definido alguno.  
   
--   Las columnas dispersas son una propiedad del nivel de almacenamiento, en lugar de la tabla lógica. Por consiguiente una instrucción SELECT.INTO no copia sobre la propiedad de columna dispersa en una nueva tabla.  
+-   Las columnas dispersas son una propiedad del nivel de almacenamiento, en lugar de la tabla lógica. Por tanto, una instrucción SELECT...INTO no copia la propiedad de columna dispersa a una tabla nueva.  
   
 -   La función COLUMNS_UPDATED devuelve un valor `varbinary` para indicar todas las columnas que se actualizaron durante una acción DML. Los bits devueltos por la función COLUMNS_UPDATED son los siguientes:  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48107215"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Tipos de datos con longitud dependiente de la precisión**  
+ **Tipos de datos de longitud dependiente de la precisión**  
   
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
@@ -100,7 +99,7 @@ ms.locfileid: "48107215"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Utilice el tipo `decimal` como un cálculo moderado.|||  
   
- **Tipos de datos con longitud dependiente de los datos**  
+ **Tipos de datos de longitud dependiente de los datos**  
   
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
@@ -116,12 +115,12 @@ ms.locfileid: "48107215"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga en memoria necesaria para las actualizaciones de columnas dispersas  
  A la hora de diseñar tablas con columnas dispersas, tenga en cuenta que se necesita una sobrecarga adicional de 2 bytes para cada columna dispersa que no sea NULL de la tabla cuando se está actualizando una fila. Debido a este requisito de memoria adicional, se puede producir inesperadamente un error 576 en las actualizaciones cuando el tamaño total de fila (incluida esta sobrecarga de memoria) es superior a 8019 y no se puede insertar ninguna columna de manera no consecutiva.  
   
- Considere el ejemplo de una tabla que tiene 600 columnas dispersas de tipo bigint. Si hay 571 columnas no NULL, el tamaño total en disco es de 571 * 12 = 6852 bytes. Después de incluir la sobrecarga de fila adicional y el encabezado de columna dispersa, asciende a unos 6895 bytes. La página todavía tiene 1124 bytes disponibles en disco. Esto puede dar la impresión de que se pueden actualizar correctamente columnas adicionales. Pero durante la actualización hay una sobrecarga adicional en memoria de 2\*(número de columnas dispersas no NULL). En este ejemplo, incluida la sobrecarga adicional – 2 \* 571 = 1142 bytes – el tamaño de fila en disco aumenta hasta 8037 bytes. Este tamaño supera el tamaño máximo permitido de 8019 bytes. Puesto que todas las columnas tienen tipos de datos de longitud fija, no se pueden insertar de manera no consecutiva. Por tanto, se producirá el error 576 en la actualización.  
+ Considere el ejemplo de una tabla que tiene 600 columnas dispersas de tipo bigint. Si hay 571 columnas no NULL, el tamaño total en disco es de 571 * 12 = 6852 bytes. Después de incluir la sobrecarga de fila adicional y el encabezado de columna dispersa, asciende a unos 6895 bytes. La página todavía tiene 1124 bytes disponibles en disco. Esto puede dar la impresión de que se pueden actualizar correctamente columnas adicionales. Pero durante la actualización hay una sobrecarga adicional en memoria de 2\*(número de columnas dispersas no NULL). En este ejemplo, incluida la sobrecarga adicional (2 \* 571 = 1142 bytes) el tamaño de fila en disco aumenta hasta 8037 bytes. Este tamaño supera el tamaño máximo permitido de 8019 bytes. Puesto que todas las columnas tienen tipos de datos de longitud fija, no se pueden insertar de manera no consecutiva. Por tanto, se producirá el error 576 en la actualización.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restricciones de uso de las columnas dispersas  
  Las columnas dispersas pueden adoptar cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y comportarse como cualquier otra columna, con las restricciones siguientes:  
   
--   Deben aceptar valores NULL y no pueden tener las propiedades ROWGUIDCOL ni IDENTITY. Una columna dispersa no puede ser de los siguientes tipos de datos: `text`, `ntext`, `image`, `timestamp`, tipo de datos definido por el usuario, `geometry`, o `geography`; ni tener el atributo FILESTREAM.  
+-   Deben aceptar valores NULL y no pueden tener las propiedades ROWGUIDCOL ni IDENTITY. No pueden adoptar los tipos de datos siguientes: `text`, `ntext`, `image`, `timestamp`, tipo de datos definido por el usuario, `geometry` ni `geography`; ni tener el atributo FILESTREAM.  
   
 -   No pueden tener un valor predeterminado.  
   

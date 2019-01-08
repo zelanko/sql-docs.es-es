@@ -1,5 +1,5 @@
 ---
-title: 'Copia de seguridad en Windows Azure administrada de SQL Server: interoperabilidad y coexistencia | Microsoft Docs'
+title: 'SQL Server copia de seguridad administrada en Windows Azure: Interoperabilidad y coexistencia | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509133"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Copia de seguridad administrada de SQL Server en Microsoft Azure: interoperabilidad y coexistencia
-  En este tema se describen la interoperabilidad y la coexistencia de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con varias características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Estas características son: Grupos de disponibilidad AlwaysOn, creación de reflejo de la base de datos, planes de mantenimiento de copia de seguridad, trasvase de registros, copias de seguridad ad hoc, separar base de datos y quitar base de datos.  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server copia de seguridad administrada en Windows Azure: Interoperabilidad y coexistencia
+  En este tema se describen la interoperabilidad y la coexistencia de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con varias características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Entre estas características figuran las siguientes: Grupos de disponibilidad AlwaysOn, creación de reflejo de base de datos, planes de mantenimiento de copia de seguridad, trasvase de registros, copias de seguridad Ad hoc, separar base de datos y Drop Database.  
   
 ### <a name="alwayson-availability-groups"></a>Grupos de disponibilidad AlwaysOn  
- Los Grupos de disponibilidad AlwaysOn configurados como una solución solo de Windows Azure admitida para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Las configuraciones solo en local o Grupo de disponibilidad AlwaysOn híbrido no se admiten. Para obtener más información y otras consideraciones, consulte [configuración de SQL Server Managed Backup to Windows Azure para grupos de disponibilidad](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Grupos de disponibilidad AlwaysOn configurados como una solución solo de Azure compatibles con Windows [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Las configuraciones solo en local o Grupo de disponibilidad AlwaysOn híbrido no se admiten. Para obtener más información y otras consideraciones, consulte [configuración de SQL Server Managed Backup to Windows Azure para grupos de disponibilidad](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Creación de reflejo de base de datos  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] solo se admite en la base de datos principal. Si configura tanto la entidad de seguridad como el reflejo para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], la base de datos reflejada se omite y no se realiza su copia de seguridad. Sin embargo, en caso de conmutación por error, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] iniciará el proceso de copia de seguridad una vez que el reflejo haya completado la conmutación de roles y esté en línea. Las copias de seguridad se almacenarán en un nuevo contenedor en este caso. Si el reflejo no está configurado para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], en caso de que se produzca una conmutación por error, no se realiza ninguna copia de seguridad. Se recomienda configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tanto en la entidad de seguridad como en el reflejo de modo que las copias de seguridad continúen en caso de que se produzca una conmutación por error.  
@@ -55,7 +55,7 @@ ms.locfileid: "48184245"
   
  **Data Protection Manager (DPM) en función de las copias de seguridad:** Microsoft Data Protection Manager permite realizar copias de seguridad completas e incrementales. Las copias de seguridad incrementales son copias de seguridad de registros que realizan un truncamiento del registro después de crear una copia de seguridad de registros T. Por tanto, no se admite la configuración de DPM y [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para la misma base de datos.  
   
- **Herramientas de terceros o secuencias de comandos:** cualquier herramienta de terceros o scripts que realizan copias de seguridad de registros que producen el truncamiento del registro no es compatible con [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]y no se admite.  
+ **Herramientas de terceros o secuencias de comandos:** Cualquier herramienta de terceros o scripts que realizan copias de seguridad de registros que producen el truncamiento del registro no es compatible con [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]y no se admite.  
   
  Si tiene [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] habilitado para una instancia de base de datos, y desea realizar una copia de seguridad ad hoc se puede usar el [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) procedimiento almacenado como se describe en las versiones anteriores sección. Si también tiene necesidad de programar o hacer copias de seguridad periódicamente fuera de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], puede utilizar la Copia de seguridad de solo copia.  Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   

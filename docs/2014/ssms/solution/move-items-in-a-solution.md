@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - moving items
@@ -14,12 +14,12 @@ ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfcf09131c7c9cf421e274b240a71eeb1e9176df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c6711b736f0313508f74b6c30253e7b2e2a3f93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167325"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795717"
 ---
 # <a name="move-items-in-a-solution"></a>Mover elementos en una solución
   Los elementos de proyecto en los proyectos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] son las consultas, las conexiones y los archivos varios. Puede mover consultas y archivos varios entre proyectos en el Explorador de soluciones. Sin embargo, las conexiones no se pueden mover.  

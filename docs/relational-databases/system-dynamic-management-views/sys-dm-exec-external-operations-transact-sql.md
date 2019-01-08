@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae94de96cc36c4b53204d76049df6079a5690a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3488a7137e03d3ffdec71f068697c96a151a1301
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517517"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>Sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "51656485"
 |execution_id|**nvarchar(32)**|Identificador de consulta único asociado con la consulta de PolyBase|Vea el Id. de [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|Índice del paso de consulta|Vea step_index en [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |tipo de operation_|**nvarchar(128)**|Describe una operación de Hadoop o en otra operación externa|'Operación externa de Hadoop'|  
-|nombre de operation_|**nvarchar(4000)**|Indica cómo el estado de trabajo como un porcentaje (cuánto es la entrada consumida)|0-1: multiplicado por el factor de 100 (completado)|  
-|progreso map_|**float**|Indica cómo el estado de una reducción del trabajo en porcentaje, si existe|0-1: multiplicado por el factor de 100 (completado)|  
+|nombre de operation_|**nvarchar(4000)**|Indica cómo el estado de trabajo como un porcentaje (cuánto es la entrada consumida)|0-1 - multiplicado por el factor de 100 (completado)|  
+|progreso map_|**float**|Indica cómo el estado de una reducción del trabajo en porcentaje, si existe|0-1 - multiplicado por el factor de 100 (completado)|  
   
 ## <a name="see-also"></a>Vea también  
  [Solución de problemas con las vistas de administración dinámica de PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

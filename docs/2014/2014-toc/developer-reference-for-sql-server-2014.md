@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196815"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351473"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Material de referencia de SQL Server 2014
   Las características y tecnologías siguientes le permiten desarrollar aplicaciones que tienen acceso a los datos de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -25,7 +25,7 @@ ms.locfileid: "48196815"
 ## <a name="programming-reference-sections"></a>Secciones de referencia de programación  
  ![Icono carpeta de archivos pequeños](../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [Common Language Runtime &#40;CLR&#41; conceptos de programación de integración](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Icono carpeta de archivos pequeños](../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [XML nativo](http://technet.microsoft.com/library/ms191274.aspx)  
+ ![Icono carpeta de archivos pequeños](../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [XML nativo](https://technet.microsoft.com/library/ms191274.aspx)  
   
  ![Icono carpeta de archivos pequeños](../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") [programación de SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
@@ -62,10 +62,10 @@ ms.locfileid: "48196815"
 ## <a name="other-programming-resources"></a>Otros recursos de programación  
  Desarrollar una aplicación de acceso a datos puede exigir el uso de una o varias de las siguientes tecnologías:  
   
- [Acceso a datos en Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  
+ [Acceso a datos en Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
- [SQL Server Driver para PHP](http://go.microsoft.com/fwlink/?LinkID=119889)  
+ [SQL Server Driver para PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   
- [JDBC](http://go.microsoft.com/fwlink/?LinkId=129903)  
+ [JDBC](https://go.microsoft.com/fwlink/?LinkId=129903)  
   
   

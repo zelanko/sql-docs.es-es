@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512252"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,8 +46,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
-## <a name="remarks"></a>Notas  
- El **SELECT FROM**  *\<modelo > ***. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores en la columna NODE_RULE del modelo.  
+## <a name="remarks"></a>Comentarios  
+ El **SELECT FROM**  _\<modelo >_**. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores en la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Resultados esperados:  
   
- Dado que el modelo es de árboles de decisión, los descendientes del nodo primario del modelo incluyen un único nodo de estadísticas marginal, un nodo que representa el atributo de predicción y varios nodos que contienen los atributos de entrada y los valores. Para obtener más información, vea [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Dado que el modelo es de árboles de decisión, los descendientes del nodo primario del modelo incluyen un único nodo de estadísticas marginal, un nodo que representa el atributo de predicción y varios nodos que contienen los atributos de entrada y los valores. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="using-the-flattened-keyword"></a>Usar la palabra clave FLATTENED  
  El contenido del modelo de minería de datos suele contener información interesante sobre el modelo en columnas de tablas anidadas. La palabra clave FLATTENED le permite recuperar los datos de una columna de tabla anidada sin utilizar un proveedor que admita conjuntos de filas jerárquicos.  
@@ -137,7 +137,7 @@ WHERE NODE_TYPE = 26
   
  Resultados del ejemplo:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  

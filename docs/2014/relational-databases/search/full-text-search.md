@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,23 +12,23 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788647"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
-  La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que las consultas de texto completo se puedan ejecutar en una tabla determinada, el administrador de bases de datos debe crear un índice de texto completo en la tabla. El índice de texto completo incluye una o varias columnas de caracteres en la tabla. Estas columnas pueden tener cualquiera de los siguientes tipos de datos: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` y FILESTREAM. Cada índice de texto completo indiza una o varias columnas de la tabla base y cada columna puede usar un idioma concreto.  
+  La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que las consultas de texto completo se puedan ejecutar en una tabla determinada, el administrador de bases de datos debe crear un índice de texto completo en la tabla. El índice de texto completo incluye una o varias columnas de caracteres en la tabla. Estas columnas pueden tener cualquiera de los siguientes tipos de datos: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` o `varbinary(max)`, y FILESTREAM. Cada índice de texto completo indiza una o varias columnas de la tabla base y cada columna puede usar un idioma concreto.  
   
  Las consultas de texto completo realizan las búsquedas lingüísticas en los datos de texto de los índices de texto completo sobre palabras y frases basándose en las reglas de un idioma determinado, como inglés o japonés. Las consultas de texto completo pueden contener palabras y frases sencillas, o formas diversas de una palabra o frase. Una consulta de texto completo devuelve todos los documentos que contienen por lo menos una coincidencia (también se conoce como *acierto*). Se produce una coincidencia cuando un documento de destino contiene todas las condiciones especificadas en la consulta de texto completo y cumple cualquier otra condición de búsqueda, como la distancia entre los términos que coinciden.  
   
 > [!NOTE]  
->  Búsqueda de texto completo es un componente opcional de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos. Para obtener más información, consulte [instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
+>  La búsqueda de texto completo es un componente opcional del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
 ##  <a name="benefits"></a> ¿Qué puedo hacer con la búsqueda de texto completo?  
- La búsqueda de texto completo es aplicable a una amplia gama de escenarios empresariales, como e-business: búsqueda de elementos en un sitio web; bufetes de abogados: búsqueda de historiales de casos legales en un repositorio de datos; o departamentos de recursos humanos: comparación de descripciones de trabajos con curriculum vitae almacenados. Las tareas administrativas y de desarrollo básicas de la búsqueda de texto completo son equivalentes independientemente de los escenarios empresariales. Sin embargo, en un escenario empresarial determinado, el índice y las consultas de texto completo se pueden ajustar a los objetivos empresariales. Por ejemplo, para un e-business podría ser más importante la maximización del rendimiento que la clasificación de resultados, la exactitud de la recuperación (cuántas de las coincidencias existentes devuelve realmente una consulta de texto completo) o la admisión de varios idiomas. Para un bufete de abogados, recuperar cada posible acierto (*recuperación total* de información) podría ser la consideración más importante.  
+ Búsqueda de texto completo es aplicable a una amplia gama de escenarios empresariales como e-empresas-búsqueda de elementos en un sitio web; Ley de historiales de casos en un repositorio de datos legal; buscando empresas o descripciones de trabajos de coincidencia de los departamentos de recursos humanos con vitae almacenados. Las tareas administrativas y de desarrollo básicas de la búsqueda de texto completo son equivalentes independientemente de los escenarios empresariales. Sin embargo, en un escenario empresarial determinado, el índice y las consultas de texto completo se pueden ajustar a los objetivos empresariales. Por ejemplo, para un e-business podría ser más importante la maximización del rendimiento que la clasificación de resultados, la exactitud de la recuperación (cuántas de las coincidencias existentes devuelve realmente una consulta de texto completo) o la admisión de varios idiomas. Para un bufete de abogados, recuperar cada posible acierto (*recuperación total* de información) podría ser la consideración más importante.  
   
  [En este tema](#top)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48144195"
   
  Las consultas de texto completo usan un pequeño conjunto de predicados [!INCLUDE[tsql](../../../includes/tsql-md.md)] (CONTAINS y FREETEXT) y funciones  (CONTAINSTABLE y FREETEXTTABLE). Sin embargo, los objetivos de la búsqueda en un escenario empresarial determinado influyen en la estructura de las consultas de texto completo. Por ejemplo:  
   
--   e-business - búsqueda de un producto en un sitio web:  
+-   e-business: búsqueda de un producto en un sitio web:  
   
     ```  
     SELECT product_id   
@@ -62,7 +62,7 @@ ms.locfileid: "48144195"
     AND product_cost < 200 ;  
     ```  
   
--   Escenario de contratación de empleados – búsqueda de candidatos para un puesto de trabajo que tengan experiencia en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+-   Escenario de contratación de empleados: búsqueda de candidatos para un puesto de trabajo que tengan experiencia en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   

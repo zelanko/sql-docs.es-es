@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541871"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinámicos de ODBC
 Un cursor dinámico es justamente eso: dinámica. Puede detectar los cambios realizados en la pertenencia, el orden y los valores del conjunto una vez abierto el cursor de resultados. Por ejemplo, suponga que un cursor dinámico obtiene dos filas y otra aplicación, a continuación, actualiza una de esas filas y elimina la otra. Si el cursor dinámico, a continuación, intenta volver a obtener esas filas, no encontrará la fila eliminada pero devolverá los nuevos valores de la fila actualizada.  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- Esta instrucción crea un segundo conjunto de resultados, el primer conjunto de filas de los cuales es el siguiente conjunto de filas en el conjunto de resultados original, en este caso, el conjunto de filas en la tabla Customers. El cursor devuelve este conjunto de filas a la aplicación.  
+ Esta instrucción crea un segundo conjunto de resultados, el primer conjunto de filas de los cuales es el siguiente conjunto de filas en el conjunto de resultados original - en este caso, el conjunto de filas en la tabla Customers. El cursor devuelve este conjunto de filas a la aplicación.  
   
  Es interesante tener en cuenta que un cursor dinámico implementado de esta manera realmente crea muchos conjuntos de resultados, que le permite detectar los cambios realizados en el conjunto de resultados original. La aplicación nunca se entera de la existencia de estos conjuntos de resultados auxiliar; simplemente aparece como si el cursor es capaz de detectar los cambios realizados en el conjunto de resultados original.

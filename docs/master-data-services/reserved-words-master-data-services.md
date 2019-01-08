@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reserved words [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 833c275846c3dde6d98542cf94b5c17f06fca16c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1e59c83160b3a6e5f21c9713d023b451e27dd5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698403"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752117"
 ---
 # <a name="reserved-words-master-data-services"></a>Palabras reservadas (Master Data Services)
 
@@ -81,7 +80,7 @@ ms.locfileid: "47698403"
 ##  <a name="members"></a> Miembros  
  Para los miembros, no puede usar **MDMMemberStatus**, **MDMUnused**o **ROOT** para el valor de atributo **Code** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

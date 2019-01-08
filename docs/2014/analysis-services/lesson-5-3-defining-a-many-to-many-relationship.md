@@ -11,12 +11,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50997645272c5ec900a8a89a8da41a1da421ac5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c05e45f5641c2d325c5e7d05472e3881ee7c807
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531157"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definir una relación de varios a varios
   Generalmente, cuando se define una dimensión cada hecho se combina con un único miembro de dimensión, mientras que un mismo miembro puede estar asociado a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como *relación uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.  
@@ -26,7 +26,7 @@ ms.locfileid: "48105435"
  Con una dimensión de varios a varios, los valores distintos se suman, lo que significa que no se agregan más de una vez al miembro Todos.  
   
 > [!NOTE]  
->  Para poder admitir una relación de dimensiones de varios a varios, debe definir una relación de clave principal a clave externa en la vista del origen de datos entre todas las tablas implicadas. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **Uso de dimensiones** del Diseñador de cubos.  
+>  Para admitir una relación de dimensión varios a varios, debe definirse una relación de clave externa para la clave principal en la vista del origen de datos entre todas las tablas que están implicados. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **Uso de dimensiones** del Diseñador de cubos.  
   
  Para obtener más información, consulte [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)y [Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48105435"
   
 5.  En el cuadro de diálogo **Agregar o quitar tablas** , agregue la tabla **DimSalesReason** y la tabla **FactInternetSalesReason** a la lista **Objetos incluidos** y haga clic en **Aceptar**.  
   
-     Observe que las relaciones de clave principal a clave externa entre las tablas que están implicadas se establecen automáticamente, ya que dichas relaciones están definidas en la base de datos relacional subyacente. Si dichas relaciones no se hubiesen definido en la base de datos relacional subyacente, tendría que definirlas en la vista del origen de datos.  
+     Tenga en cuenta que las relaciones de clave externa para la clave principales entre las tablas implicadas se establecen automáticamente porque esas relaciones se definen en la base de datos relacional subyacente. Si dichas relaciones no se hubiesen definido en la base de datos relacional subyacente, tendría que definirlas en la vista del origen de datos.  
   
 6.  En el menú **Formato** , seleccione **Diseño automático**y haga clic en **Diagrama**.  
   

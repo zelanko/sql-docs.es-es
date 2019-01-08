@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061275"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509227"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
-  Si va a crear una nueva tabla optimizada para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] o va a migrar una tabla basada en disco existente a una tabla optimizada para memoria, es importante contar con una estimación razonable de la memoria que necesita cada tabla, para poder aprovisionar el servidor con suficiente memoria. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla optimizada para memoria.  
+  Si va a crear un nuevo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabla optimizada para memoria o migrar una tabla basada en disco existente a una tabla optimizada para memoria, es importante tener una estimación razonable de necesidades de memoria de cada tabla de modo que pueda aprovisionar el servidor con suficiente memoria. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla optimizada para memoria.  
   
  Si va a realizar la migración desde tablas basadas en disco a tablas optimizadas para memoria, antes de continuar en este tema, vea el tema [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obtener información sobre qué tablas son más adecuadas para la migración. Todos los temas de [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md) ofrecen instrucciones sobre la migración de tablas basadas en disco a tablas optimizadas para memoria.  
   
@@ -111,11 +111,11 @@ SELECT COUNT(DISTINCT [Col2])
   
 ```  
   
- Si va a crear una tabla nueva, necesitará estimar el tamaño de la matriz o recopilar datos de la prueba antes de la implementación.  
+ Si va a crear una tabla, tendrá que estimar el tamaño de la matriz o recopilar datos de la prueba antes de la implementación.  
   
  Para obtener información sobre cómo funcionan los índices de hash en las tablas optimizadas para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , vea [Indexes for Memory-Optimized Tables (Índices para tablas optimizadas para memoria)](../../database-engine/hash-indexes.md).  
   
- **Nota:** no se puede cambiar el tamaño de matriz de índices de hash sobre la marcha. Para cambiar el tamaño de la matriz de índices hash debe quitar la tabla, cambiar el valor de bucket_count y volver a crear la tabla.  
+ **Nota:** No puede cambiar el tamaño de la matriz de índices de hash sobre la marcha. Para cambiar el tamaño de la matriz de índices hash debe quitar la tabla, cambiar el valor de bucket_count y volver a crear la tabla.  
   
  **Establecer el tamaño de matriz de índices de hash**  
   

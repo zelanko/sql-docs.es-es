@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350280"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507249"
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajo con datos multidimensionales
 Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y normalmente sólo dos o tres. Un *eje* es una colección de miembros de una o varias dimensiones, que se usa para buscar o filtrar valores específicos de un cubo.  
@@ -33,13 +33,13 @@ Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta
   
 -   Empleado de ventas  
   
--   Zona geográfica (jerarquía natural): continentes, países, Estados etc.  
+-   Zona geográfica (jerarquía natural) - continentes, países, Estados etc.  
   
--   Trimestres: Días de trimestres, meses,  
+-   Trimestres de trimestres, meses, días  
   
 -   Years  
   
--   Medidas: Ventas, CambioPorcentual, VentasPresupuestadas  
+-   Medidas: ventas, CambioPorcentual, VentasPresupuestadas  
   
 -   Productos  
   
@@ -50,19 +50,19 @@ Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta
   
  Las características de este conjunto de celdas son los siguientes:  
   
--   Dimensiones de eje: trimestres, vendedor, Geography  
+-   Dimensiones de eje: Trimestres, vendedor, Geography  
   
--   Filtrar las dimensiones: medidas, años, productos  
+-   Dimensiones de filtro: Las medidas, años, productos  
   
--   Dos ejes: columna (x, o eje 0) y fila (y o eje 1)  
+-   Dos ejes: COLUMNA (x, o eje 0) y fila (y o eje 1)  
   
 -   eje x: dos dimensiones anidadas, vendedor y Geography  
   
--   eje y: dimensión trimestres  
+-   eje y: Dimensión trimestres  
   
- El eje x tiene dos dimensiones anidadas: vendedor y geografía. Desde la ubicación geográfica, se seleccionan los cuatro miembros: Seattle, Boston, sur de EE. UU. y Japón. De vendedor se seleccionan dos miembros: Valentine y Nash. Esto da como resultado un total de ocho posiciones en este eje (8 = 4 * 2).  
+ El eje x tiene dos dimensiones anidadas: Vendedor y Geography. Desde la ubicación geográfica, se seleccionan los cuatro miembros: Seattle, Boston, sur de EE. UU. y Japón. De vendedor se seleccionan dos miembros: Valentine y Nash. Esto da como resultado un total de ocho posiciones en este eje (8 = 4 * 2).  
   
- Cada coordenada se representa como una posición con dos miembros: uno de la dimensión vendedor y otro de la dimensión Geography:  
+ Cada coordenada se representa como una posición con dos miembros: uno de la dimensión de empleado de ventas y otro de la dimensión Geography:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,7 +76,7 @@ Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Conjuntos de celdas, las celdas, ejes y posiciones se representan en ADO MD mediante los objetos correspondientes: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md), y [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Conjuntos de celdas, las celdas, ejes y posiciones se representan en ADO MD mediante los objetos correspondientes: [Conjunto de celdas](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md), y [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Modelo de objetos ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

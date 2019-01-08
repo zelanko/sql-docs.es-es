@@ -11,12 +11,12 @@ ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541241"
 ---
 # <a name="exploring-and-cleaning-data"></a>Explorar y limpiar datos
   La preparación de los datos es mucho más que limpiarlos. Recuerde que el modo en que los datos se preparan también afecta al modo en que los resultados se interpretan en el extremo. La preparación de los datos implica estas tareas:  
@@ -69,7 +69,7 @@ ms.locfileid: "48080475"
   
 -   Discretizar datos mediante la creación de grupos que representen intervalos de números.  
   
-     Por ejemplo, desea reemplazar una columna de números de ingresos por etiquetas como **ingresos – moderados** y **ingresos-altos**.  
+     Por ejemplo, desea reemplazar una columna de números de ingresos por etiquetas como **ingresos - moderado** y **ingresos - altos**.  
   
 -   Contraer valores discretos en categorías.  
   

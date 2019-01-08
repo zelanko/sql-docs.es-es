@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350449"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538157"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
 El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO para conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio de Microsoft Windows NT 4.0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio Novell. ADSI se basa en un modelo de proveedor, por lo que si hay un nuevo proveedor proporcionar acceso a otro directorio, la aplicación ADO podrán acceder a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -65,7 +65,7 @@ ADSDSOObject
 |*Root*|Indica el **ADsPath** objeto desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
 |*Filter*|Indica el filtro de búsqueda en el formato RFC 1960.|  
 |*Atributos*|Indica una lista delimitada por comas de atributos que se va a devolver.|  
-|*Ámbito*|Opcional. Un **cadena** que especifica el ámbito de la búsqueda. Puede ser uno de los valores siguientes:<br /><br /> -Base: Busca sólo el objeto base (raíz de la búsqueda).<br />-OneLevel: Buscar un solo nivel.<br />-Subárbol, Busque en todo el subárbol.|  
+|*Ámbito*|Opcional. Un **cadena** que especifica el ámbito de la búsqueda. Puede ser uno de los valores siguientes:<br /><br /> -Base - busca sólo el objeto base (raíz de la búsqueda).<br />-OneLevel - sólo un nivel de búsqueda.<br />-Subárbol - Buscar todo el subárbol.|  
   
  Por ejemplo:  
   
@@ -110,20 +110,20 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lectura/escritura|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|solo lectura|  
 |[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|  
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|solo lectura|  
+|[Estado](../../../ado/reference/ado-api/state-property-ado.md)|solo lectura|  
 |[Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md)|solo lectura|  
   
  **Disponibilidad de los métodos de conjunto de registros ADO estándar:**  
   
 |Método|¿Está disponible?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|no|  
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|no|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|no|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|no|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
 |[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|  
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|  
-|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|no|  
+|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|  
 |[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
@@ -135,8 +135,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Sí|  
 |[Resincronización](../../../ado/reference/ado-api/resync-method.md)|Sí|  
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|no|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|no|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|No|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   
  Para obtener más información acerca de ADSI y los detalles del proveedor, consulte la documentación de Active Directory Service Interfaces o visite la página Web de ADSI.  
   

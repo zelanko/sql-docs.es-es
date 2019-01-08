@@ -10,15 +10,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72c72dc551aa31dc22def397fb38fe09793478ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084515"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712466"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
-  Los procedimientos almacenados compilados de forma nativa no implementan el área expuesta completa de programación y consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Hay ciertas construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que no se pueden usar en los procedimientos almacenados compilados de forma nativa. Para obtener más información, consulte [construcciones admitidas en Natively Compiled Stored Procedures](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
+  Los procedimientos almacenados compilados de forma nativa no implementan el área expuesta completa de programación y consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Hay ciertas construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que no se pueden usar en los procedimientos almacenados compilados de forma nativa. Para obtener más información, consulte [construcciones admitidas en Natively Compiled Stored Procedures](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  Sin embargo, hay varias características de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se admiten solo para los procedimientos almacenados compilados de forma nativa:  
   
@@ -51,7 +51,7 @@ end
 go  
 ```  
   
- En el ejemplo de código, `NATIVE_COMPILATION` indica que este [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado es un procedimiento almacenado compilado de forma nativa. Se requieren las siguientes opciones:  
+ En el ejemplo de código, `NATIVE_COMPILATION` indica que este procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] es un procedimiento almacenado compilado de forma nativa. Se requieren las siguientes opciones:  
   
 |Opción|Descripción|  
 |------------|-----------------|  
@@ -59,7 +59,7 @@ go
 |`EXECUTE AS`|Los procedimientos almacenados compilados de forma nativa no admiten `EXECUTE AS CALLER`, que es el contexto de ejecución predeterminado. Por tanto, se deberá especificar el contexto de ejecución. Las opciones `EXECUTE AS OWNER`, `EXECUTE AS` *usuario*, y `EXECUTE AS SELF` son compatibles.|  
 |`BEGIN ATOMIC`|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> `TRANSACTION ISOLATION LEVEL`  Consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) para los niveles de aislamiento admitidos.<br /><br /> `LANGUAGE`  El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
   
- En relación con `EXECUTE AS` y los inicios de sesión de Windows, puede aparecer un error debido a la suplantación realizada con `EXECUTE AS`. Si una cuenta de usuario usa la autenticación de Windows, debe haber plena confianza entre la cuenta de servicio utilizada para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el dominio del inicio de sesión de Windows. Si no hay plena confianza, se devuelve el mensaje de error siguiente al crear un procedimiento almacenado compilado de forma nativa: Mensaje 15404, no se pudo obtener información acerca del grupo o usuario “nombredeusuario” de Windows NT, código de error 0x5.  
+ En relación con `EXECUTE AS` y los inicios de sesión de Windows, puede aparecer un error debido a la suplantación realizada con `EXECUTE AS`. Si una cuenta de usuario usa la autenticación de Windows, debe haber plena confianza entre la cuenta de servicio utilizada para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el dominio del inicio de sesión de Windows. Si no hay plena confianza, se devuelve el siguiente mensaje de error al crear compilado de forma nativa de procedimiento almacenado: Mensaje 15404, no se pudo obtener información acerca de Windows NT grupo o usuario 'nombreDeUsuario', código de error 0 x 5.  
   
  Para resolver este error, use uno de los siguientes:  
   

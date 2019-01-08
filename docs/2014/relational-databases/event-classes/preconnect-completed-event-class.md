@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16720db613815d5c8cce501c1cee2d5d3cc9b3cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755987"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, clase de eventos
   La clase de eventos PreConnect:Completed indica cuándo finaliza la ejecución de un desencadenador de LOGON o la función clasificadora de Regulador de recursos.  
@@ -29,7 +28,7 @@ ms.locfileid: "48150635"
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|`int`|216|27|no|  
+|EventClass|`int`|216|27|No|  
 |SPID|`int`|El Id. del proceso de servidor que dispara este evento.|12|Sí|  
 |EventSubClass|`int`|1 para la función clasificadora definida por el usuario.|21|Sí|  
 |StartTime|`datetime`|La hora en la que se inicia la función clasificadora definida por el usuario.|14|Sí|  

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520861"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>Sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47732779"
 |**column_id**|**int**|Identificador de la columna de almacén de columnas.|  
 |**dictionary_id**|**int**|Identificador del diccionario.|  
 |**version**|**int**|Versión del formato de diccionario.|  
-|**Tipo**|**int**|Tipo de diccionario:<br /><br /> 1 – diccionario que contiene de hash **int** valores<br /><br /> 2 - No se utiliza<br /><br /> 3 - Diccionario hash que contiene valores de cadena<br /><br /> 4 – diccionario que contiene de hash de **float** valores|  
+|**Tipo**|**int**|Tipo de diccionario:<br /><br /> 1 - diccionario que contiene de hash **int** valores<br /><br /> 2 - no utilizado<br /><br /> 3 - diccionario de hash que contiene los valores de cadena<br /><br /> 4 - diccionario que contiene de hash de **float** valores|  
 |**last_id**|**int**|El último identificador de datos del diccionario.|  
 |**entry_count**|**bigint**|Número de entradas en el diccionario.|  
 |**on_disc_size**|**bigint**|Tamaño del diccionario en bytes.|  

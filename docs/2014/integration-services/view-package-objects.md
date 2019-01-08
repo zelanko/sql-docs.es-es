@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -20,12 +19,12 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 568773a255c6a1d264544ef540d88fa6afa0d277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d082c78aeaff76d314d90351851f745a3cddd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163255"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786707"
 ---
 # <a name="view-package-objects"></a>Ver objetos de paquete
   En el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la pestaña **Explorador de paquetes** proporciona una vista de explorador del paquete. La vista refleja la jerarquía de contenedores de la arquitectura de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El contenedor de paquetes se encuentra en la parte superior de la jerarquía y puede expandir el paquete para ver las conexiones, ejecutables, controladores de eventos, proveedores de registro, restricciones de precedencia y variables del paquete.  
@@ -48,7 +47,7 @@ ms.locfileid: "48163255"
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Contenedores de Integration Services](control-flow/integration-services-containers.md)   
  [Restricciones de precedencia](control-flow/precedence-constraints.md)   
- [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

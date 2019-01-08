@@ -17,17 +17,17 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 132ee99180595dca5e203a6821c5f87aa616530d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510591"
 ---
 # <a name="rowset-size"></a>Tamaño del conjunto de filas
 Qué tamaño del conjunto de filas que se usará depende de la aplicación. Normalmente, las aplicaciones basadas en la pantalla siguen uno de dos estrategias. La primera consiste en establecer el tamaño del conjunto de filas en el número de filas que se muestran en la pantalla; Si el usuario cambia el tamaño de la pantalla, la aplicación cambia el tamaño del conjunto de filas según corresponda. El segundo es establecer el tamaño del conjunto de filas en un número mayor, como 100, lo que reduce el número de llamadas al origen de datos. La aplicación se desplaza localmente en el conjunto de filas cuando sea posible y recupera nuevas filas solo cuando desplaza fuera del conjunto de filas.  
   
- Otras aplicaciones, como informes, tienden a establecer el tamaño del conjunto de filas para el mayor número de filas de la aplicación puede controlar razonablemente, con un conjunto de filas más grande, a veces se reduce la red sobrecarga por fila. Exactamente cómo de grande un conjunto de filas puede ser depende del tamaño de cada fila y la cantidad de memoria disponible.  
+ Otras aplicaciones, como informes, tienden a establecer el tamaño del conjunto de filas para el mayor número de filas de la aplicación puede controlar razonablemente - con un conjunto de filas más grande, a veces se reduce la red sobrecarga por fila. Exactamente cómo de grande un conjunto de filas puede ser depende del tamaño de cada fila y la cantidad de memoria disponible.  
   
  Tamaño del conjunto de filas se establece mediante una llamada a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_ROW_ARRAY_SIZE. La aplicación puede cambiar el tamaño del conjunto de filas, enlazar nuevos búferes de conjunto de filas (mediante una llamada a **SQLBindCol** o especificando un desplazamiento de enlace) incluso después de que las filas se han capturado, o ambos. Las implicaciones de cambiar el tamaño del conjunto de filas dependen de la función:  
   

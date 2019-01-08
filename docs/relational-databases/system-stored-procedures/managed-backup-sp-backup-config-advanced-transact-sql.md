@@ -21,12 +21,12 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3f19fed072e693de6bbebb53354eae8c0bfaa0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827913"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536403"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ EXEC managed_backup.sp_backup_config_advanced
  El nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica. Si es NULL o *, a continuación, esta copia de seguridad administrada se aplica a todas las bases de datos en el servidor.  
   
  @encryption_algorithm  
- El nombre del algoritmo de cifrado utilizado durante la copia de seguridad para cifrar el archivo de copia de seguridad. El @encryption_algorithm es **SYSNAME**. Es un parámetro obligatorio al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez para la base de datos. Especificar **NO_ENCRYPTION** si no desea cifrar el archivo de copia de seguridad. Al cambiar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], este parámetro es opcional, si se conserva el parámetro y no se especifica, los valores de configuración existentes se conservan. Los valores permitidos para este parámetro son:  
+ El nombre del algoritmo de cifrado utilizado durante la copia de seguridad para cifrar el archivo de copia de seguridad. El @encryption_algorithm es **SYSNAME**. Es un parámetro obligatorio al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez para la base de datos. Especificar **NO_ENCRYPTION** si no desea cifrar el archivo de copia de seguridad. Al cambiar el [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] opciones de configuración, este parámetro es opcional: si no se especifica el parámetro, a continuación, se conservan los valores de configuración existente. Los valores permitidos para este parámetro son:  
   
 -   AES_128  
   

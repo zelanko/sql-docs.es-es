@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851870"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527708"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar el servidor de informes en modo nativo de Reporting Services
   Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o desde la línea de comandos. En el Asistente para la instalación, puede seleccionar 1) instalar archivos y configurar el servidor con los valores predeterminados o 1) instalar solo los archivos y el Asistente para la instalación no configura el servidor. En este tema se examina la *configuración predeterminada para el modo nativo* donde el programa de instalación instala y configura una instancia del servidor de informes. Cuando finalice el programa de instalación, el servidor de informes estará en ejecución y listo para ser utilizado. Un servidor de informes en modo nativo se ejecuta como servidor de aplicaciones independiente. El modo nativo es el modo de servidor predeterminado.  
@@ -60,7 +60,7 @@ ms.locfileid: "48851870"
   
 -   Dirección URL del servicio web del servidor de informes.  
   
--   La dirección URL del Administrador de informes.   
+-   La dirección URL del Administrador de informes.  
   
 -   La base de datos del servidor de informes.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48851870"
 -   http://+:80/reports, proporciona acceso al administrador de informes.  
   
 ##  <a name="bkmk_installwithwizard"></a> Instalar el modo nativo mediante el Asistente para la instalación de SQL Server  
- En la lista siguiente se describen los pasos y las opciones específicos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se seleccionan en el Asistente para la instalación de SQL Server. En la lista no se describe cada página que aparece en el asistente para la instalación, solo las páginas relacionadas con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que forman parte de una instalación de modo nativo.  
+ En la lista siguiente se describen los pasos y las opciones específicos de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se seleccionan en el Asistente para la instalación de SQL Server. En la lista no se describe cada página que aparece en el asistente para la instalación, solo las páginas relacionadas con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que forman parte de una instalación de modo nativo.  
   
 1.  En la página **Rol de instalación** , seleccione **Instalación de características de SQL Server**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48851870"
   
     -   **Reporting Services: nativo**.  
   
-    -   **Herramientas de administración: básicas**. Las herramientas de administración no se requieren pero se recomiendan a menos que tenga otra instalación de herramientas de administración. La opción de configuración predeterminado dará como resultado un servidor de informes funciona, pero es posible que desee cambiar las opciones de configuración en una fecha posterior. Algunas opciones como "Mis informes" se administran mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **Herramientas de administración - básica**. Las herramientas de administración no se requieren pero se recomiendan a menos que tenga otra instalación de herramientas de administración. La opción de configuración predeterminado dará como resultado un servidor de informes funciona, pero es posible que desee cambiar las opciones de configuración en una fecha posterior. Algunas opciones, como "Mis informes" se administran a través de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![Selección del modo nativo de SSRS en Selección de características](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "Selección del modo nativo de SSRS en Selección de características")  
   
@@ -135,9 +135,9 @@ ms.locfileid: "48851870"
   
     -   Abra el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y confirme que se puede conectar con el servidor de informes.  
   
-    -   Abra el explorador con privilegios de administrador y conéctese al Administrador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], por ejemplo `http://loclahost/Reports`.  
+    -   Abra el explorador con privilegios de administrador y conéctese al Administrador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , por ejemplo `http://loclahost/Reports`.  
   
-    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Por ejemplo,  `http://loclahost/ReportServer`  
+    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo,  `http://loclahost/ReportServer`  
   
  Para obtener más información, consulte la sección Nativo de los dos temas siguientes:  
   

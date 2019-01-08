@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f77df631098f106dd0fb0ff848e66eb4257ff2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85bab82173ce0caa5997774978b616340d6e5a30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195371"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772967"
 ---
 # <a name="connection-to-sql-server"></a>Conexión con SQL Server
   Cuando un inicio de sesión sin un rol de base de datos que incluye el permiso de escritura (por ejemplo, el rol **db_owner**) para la base de datos MSXDBCDC intenta crear una instancia CDC de Oracle, se muestra el cuadro de diálogo Conectar con SQL Server.  
@@ -33,18 +32,18 @@ ms.locfileid: "48195371"
   
 -   Autenticación de Windows  
   
--   **Autenticación de SQL Server**: si selecciona esta opción, es necesario que escriba el **Inicio de sesión** y la **Contraseña** del usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se conecta.  
+-   **Autenticación de SQL Server**: Si selecciona esta opción, debe escribir el **inicio de sesión** y **contraseña** para el usuario en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se conecta.  
   
 ### <a name="options"></a>Opciones  
  Haga clic en la flecha para ver las opciones disponibles que se pueden configurar. Puede elegir dejar estas opciones con el valor predeterminado. Las opciones disponibles son:  
   
--   **Tiempo de espera de la conexión**: escriba el tiempo (en segundos) que el programa espera hasta que se establezca una conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de producir un error de tiempo de espera. El valor predeterminado es **15**.  
+-   **Tiempo de espera de conexión**: Escriba el tiempo (en segundos) en el programa espera la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexión para establecerse antes de producir un error de tiempo de espera. El valor predeterminado es **15**.  
   
--   **Tiempo de espera de ejecución**: escriba el tiempo (en segundos) que el programa espera hasta que finalice la ejecución de un comando SQL antes de producir un error de tiempo de espera. El valor predeterminado es **30**.  
+-   **Tiempo de espera de ejecución**: Escriba el tiempo (en segundos) que el programa espera que finalice antes de producir un error de tiempo de espera la ejecución del comando SQL. El valor predeterminado es **30**.  
   
--   **Cifrar conexión**: seleccione **Cifrar conexión** para asegurarse de que la conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se establece está cifrada para garantizar la privacidad.  
+-   **Cifrar conexión**: Seleccione **cifrar conexión** para asegurarse de que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexión que se está estableciendo está cifrada para garantizar la privacidad.  
   
--   **Avanzadas**: haga clic en **Avanzadas** y escriba cualquier propiedad de conexión adicional en el cuadro de diálogo Propiedades avanzadas de conexión, si es necesario.  
+-   **Avanzadas**: Haga clic en **Avanzadas** y escriba cualquier propiedad de conexión adicional en el cuadro de diálogo Propiedades avanzadas de conexión, si es necesario.  
   
 ## <a name="see-also"></a>Vea también  
  [Permisos de conexión con SQL Server necesarios para el servicio CDC](sql-server-connection-required-permissions-for-the-cdc-service.md)  

@@ -11,12 +11,12 @@ ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 04c0170d33b07ea39b8c08ee194eb0cd63b4e64e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522846"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importar las directivas a una instancia única
   En esta tarea, importará las directivas de prácticas recomendadas que desea programar en la administración basada en directivas en una única instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48128315"
   
 3.  Haga clic con el botón secundario en **Directivas**y, a continuación, haga clic en **Importar directiva**.  
   
-4.  En el cuadro de diálogo **Importar** , junto al cuadro **Archivos para importar** , haga clic en el botón de puntos suspensivos (**...**).  
+4.  En el **importar** cuadro de diálogo, junto a la **archivos para importar** cuadro, haga clic en el botón de puntos suspensivos (**...** ) botón.  
   
 5.  En la lista **Buscar en** , busque la carpeta siguiente, que contiene las directivas de prácticas recomendadas:  
   

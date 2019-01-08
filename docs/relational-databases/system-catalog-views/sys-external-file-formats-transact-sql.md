@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9d7d8e73dc61afc90485c0d5cd36b3bb009fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658953"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532357"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>Sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47658953"
 |field_terminator|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, esto es el terminador de campo.||  
 |string_delimiter|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, es el delimitador de cadena.||  
 |date_format|**nvarchar(50)**|Para obtener más format_type = DELIMITEDTEXT, esto es el formato de hora y fecha definido por el usuario.||  
-|use_type_default|**bit**|Para format_type = texto DELIMITADO, especifica cómo controlar los valores que faltan cuando PolyBase está importando datos desde archivos de texto HDFS a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0: almacenar los valores que faltan, como la cadena 'NULL'.<br /><br /> 1: almacenar los valores que faltan, como el valor predeterminado de columna.|  
+|use_type_default|**bit**|Para format_type = texto DELIMITADO, especifica cómo controlar los valores que faltan cuando PolyBase está importando datos desde archivos de texto HDFS a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 - almacenar los valores que faltan, como la cadena 'NULL'.<br /><br /> 1: almacenar los valores que faltan como el valor predeterminado de columna.|  
 |serde_method|**nvarchar(255)**|Para obtener más format_type = RCFILE, este es el método de serialización y deserialización.||  
 |row_terminator|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, se trata de la cadena de caracteres que finaliza cada fila en el archivo externo de Hadoop.|Siempre '\n'.|  
 |codificación|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, este es el método de codificación para el archivo externo de Hadoop.|Siempre 'UTF8'.|  

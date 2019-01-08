@@ -1,5 +1,5 @@
 ---
-title: Conceptos clave para MDX (Analysis Services) | Documentos de Microsoft
+title: Conceptos clave para MDX (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 72033d700bb86f8ef2ce17b55880666a6903e67d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024592"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527821"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Para poder utilizar las expresiones multidimensionales (MDX) para consultar datos multidimensionales o crear expresiones MDX en un cubo, viene bien conocer los conceptos y los términos multidimensionales.  
   
- La mejor forma de empezar es con un ejemplo de resumen de datos que ya conozca y, entonces, ver cómo se relacionan con él las MDX. Esta es una tabla dinámica creada en Excel que contiene datos extraídos de un cubo de muestras de Analysis Services.  
+ La mejor forma de empezar es con un ejemplo de resumen de datos que ya conozca y, entonces, ver cómo se relacionan con él las MDX. Esta es una tabla dinámica creada en Excel, se rellena con datos de un cubo de ejemplo de Analysis Services.  
   
- ![Tabla dinámica con medidas y dimensiones mencionadas](../../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabla dinámica con medidas y dimensiones que se menciona dónde se encuentra")  
+ ![PivotTable con medidas y dimensiones que se mencionan](../../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable con medidas y dimensiones que se mencionan")  
   
 ## <a name="measures-and-dimensions"></a>Medidas y dimensiones  
  Un cubo de Analysis Services consta de medidas, dimensiones y atributos de dimensiones, los cuales resultan evidentes en el ejemplo de tabla dinámica.  
@@ -36,7 +36,7 @@ ms.locfileid: "34024592"
  Cada atributo tiene una colección de valores de datos, o miembros, asociada. En nuestro ejemplo, los miembros del atributo Grupo de países son Europa, América del Norte y Pacífico. Los**miembros** son los valores de datos que pertenecen a un atributo.  
   
 > [!NOTE]  
->  Un aspecto de los modelos de datos es formalizar las pautas y las relaciones que ya existen en los propios datos. Cuando se trabaja con datos clasificados en una jerarquía natural, como es el caso de países-regiones-ciudades, se puede formalizar esa relación creando una **relación de atributos**. Una relación de atributos es una relación de uno a varios entre atributos, por ejemplo, una relación entre un estado y una ciudad. Un estado tiene muchas ciudades, pero una ciudad solo pertenece a un estado. La creación de relaciones de atributos en el modelo acelera los resultados de una consulta, por lo que es recomendable crearlas siempre que los datos lo permitan. Puede crear una relación de atributos en el Diseñador de dimensiones en SQL Server Data Tools. Vea [Define Attribute Relationships](../../../analysis-services/multidimensional-models/attribute-relationships-define.md).  
+>  Un aspecto de los modelos de datos es formalizar las pautas y las relaciones que ya existen en los propios datos. Cuando se trabaja con datos clasificados en una jerarquía natural, como es el caso de países-regiones-ciudades, se puede formalizar esa relación creando una **relación de atributos**. Una relación de atributo es una relación uno a varios entre atributos, por ejemplo, una relación entre un estado y una ciudad: un estado tiene muchas ciudades, pero una ciudad pertenece a un solo estado. Creación de relaciones de atributo en el modelo acelera el rendimiento de las consultas, por lo que es una práctica recomendada para crearlos si los datos lo admiten. Puede crear una relación de atributos en el Diseñador de dimensiones en SQL Server Data Tools. Vea [Define Attribute Relationships](../../../analysis-services/multidimensional-models/attribute-relationships-define.md).  
   
  En Excel, los metadatos del modelo aparecen en la lista de campos de las tablas dinámicas.  Compare la tabla dinámica anterior con la lista de campos siguiente. Observe que la lista de campos contienen Territorio de ventas, Grupo, País, Región (metadatos), mientras que la tabla dinámica solo contiene miembros (valores de datos). Conocer la forma de los iconos puede ayudarnos a relacionar fácilmente los elementos de un modelo multidimensional con una tabla dinámica de Excel.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "34024592"
   
  Las agregaciones como estas están precalculadas y se almacenan con antelación, lo que forma parte del secreto de la rápida respuesta de las consultas de Analysis Services.  
   
- ![Tabla dinámica con todos los miembros que se menciona dónde se encuentra](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "tabla dinámica con todos los miembros que se menciona dónde se encuentra")  
+ ![Tabla dinámica con todos los miembros que se mencionan](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "tabla dinámica con todos los miembros que se mencionan")  
   
  Vaya expandiendo la jerarquía y llegará al nivel más bajo. Es lo que se conoce como el **miembro "hoja"**. Un miembro hoja es un miembro de una jerarquía que no posee miembros secundarios. En este ejemplo, Australia es el miembro hoja.  
   
- ![Tabla dinámica con indicado de calle de miembro hoja](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "tabla dinámica con indicado de calle de miembro hoja")  
+ ![Tabla dinámica con documentos de calle de miembro hoja](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "tabla dinámica con documentos de calle de miembro hoja")  
   
  Todo lo que está por encima se denomina **miembro "primario"**. Pacífico es el miembro primario de Australia.  
   
@@ -71,10 +71,10 @@ ms.locfileid: "34024592"
   
 -   Niveles intermedios si la jerarquía de atributo es una jerarquía de elementos primarios y secundarios (se aborda en detalle más adelante).  
   
--   Un miembro (Todos) que contiene el valor agregado de todos los atributos secundarios. Opcionalmente, puede ocultar o desactivar el nivel (Todos) cuando no tenga sentido para unos datos en particular. Por ejemplo, aunque el Código de producto es un valor numérico, no tendría sentido sumar ni sacar el promedio, ni agregar de ninguna otra forma, todos los códigos de producto.  
+-   Un miembro (Todos) que contiene el valor agregado de todos los atributos secundarios. Si lo desea, puede ocultar o desactivar el nivel (All) cuando no tiene sentido para los datos. Por ejemplo, aunque el código de producto es numérico, no sería sentido suma o promedio ni agregar todos los códigos de producto.  
   
 > [!NOTE]  
->  Los programadores de BI suelen definir las propiedades de la jerarquía de atributo para conseguir ciertos comportamientos en las aplicaciones cliente o conseguir determinadas ventajas en la actuación. Por ejemplo, sería recomendable definir AttributeHierarchyEnabled=False en atributos para los que no tenga sentido la existencia del miembro (Todos). Otra opción sería, sencillamente, ocultar el miembro (Todos), en cuyo caso se definiría AttributeHierarchyVisible=False. Vea [Dimension Attribute Properties Reference](../../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md) para conocer más detalles de las propiedades.  
+>  Los programadores de BI suelen definir las propiedades de la jerarquía de atributo para conseguir ciertos comportamientos en las aplicaciones cliente o conseguir determinadas ventajas en la actuación. Por ejemplo, establecería AttributeHierarchyEnabled = False en atributos para el que el miembro (All) no tiene sentido. Otra opción sería, sencillamente, ocultar el miembro (Todos), en cuyo caso se definiría AttributeHierarchyVisible=False. Vea [Dimension Attribute Properties Reference](../../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md) para conocer más detalles de las propiedades.  
   
 ## <a name="navigation-hierarchies"></a>Navegación por las jerarquías  
  En la tabla dinámica (al menos en este ejemplo), los ejes de fila y columna se expanden para mostrar los niveles inferiores de los atributos. Se puede conseguir un árbol expandible mediante la navegación por las jerarquías creadas en un modelo.  En el modelo de ejemplo AdventureWorks, la dimensión Territorio de ventas tiene una jerarquía multinivel que comienza por Grupo de países, seguido por País y Región.  
@@ -91,18 +91,18 @@ ms.locfileid: "34024592"
   
 |||  
 |-|-|  
-|![PivotTable con jerarquía desigual mencionada](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable con jerarquía desigual mencionada")|Una **jerarquía desigual** o **desequilibrada** es una jerarquía en la que el número de niveles entre el nivel superior y los miembros hoja es distinto. También esta es una jerarquía creada por el programador de BI, pero en este caso existen espacios en los datos.<br /><br /> En el modelo de ejemplo AdventureWorks, Territorio de ventas ilustra una jerarquía desigual porque Estados Unidos tiene un nivel adicional (Regiones) que no existe en otros países del ejemplo.<br /><br /> Las jerarquías desiguales plantean un reto para los programadores de BI si la aplicación cliente no controla las jerarquías desiguales con elegancia. En el modelo de Analysis Services, se puede crear una **jerarquía de elementos primarios y secundarios** que defina explícitamente una relación entre datos de varios niveles, eliminando toda ambigüedad en lo que respecta a cómo se relaciona un nivel con el siguiente. Vea [Dimensiones de elementos primarios y secundarios](../../../analysis-services/multidimensional-models/parent-child-dimension.md) para obtener más información.|  
+|![PivotTable con jerarquía desigual mencionada](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable con jerarquía desigual mencionada")|Una **jerarquía desigual** o **desequilibrada** es una jerarquía en la que el número de niveles entre el nivel superior y los miembros hoja es distinto. Nuevamente, es una jerarquía creada por el programador de BI, pero en este caso existen espacios en los datos.<br /><br /> En el modelo de ejemplo AdventureWorks, Territorio de ventas ilustra una jerarquía desigual porque Estados Unidos tiene un nivel adicional (Regiones) que no existe en otros países del ejemplo.<br /><br /> Las jerarquías desiguales plantean un reto para los programadores de BI si la aplicación cliente no controla las jerarquías desiguales con elegancia. En el modelo de Analysis Services, se puede crear una **jerarquía de elementos primarios y secundarios** que defina explícitamente una relación entre datos de varios niveles, eliminando toda ambigüedad en lo que respecta a cómo se relaciona un nivel con el siguiente. Vea [Dimensiones de elementos primarios y secundarios](../../../analysis-services/multidimensional-models/parent-child-dimension.md) para obtener más información.|  
   
 ## <a name="key-attributes"></a>Atributos clave  
  Los modelos son una colección de objetos relacionados que requieren claves e índices para establecer las asociaciones. Los modelos de Analysis Services no son diferentes. Para cada dimensión (recuerde que es equivalente a una tabla en un modelo relacional), hay un atributo clave. El **atributo clave** se usa en relaciones de clave externa con la tabla de hechos (grupo de medidas). Todos los atributos sin clave de la dimensión están enlazados (directa o indirectamente) con el atributo clave.  
   
- Con frecuencia, aunque no siempre, el atributo clave es también el **Atributo de granularidad**. Granularidad significa el nivel de detalle o precisión dentro de los datos. También en esta ocasión poner un ejemplo común es la mejor forma de entenderlo. Considere los valores de fecha: para las ventas diarias, necesita valores de fecha que especifiquen el día. En el caso de las cuotas, quizás sea suficiente hablar de trimestres, pero si los datos analíticos hacen referencia a los resultados de una carrera en un evento deportivo, será necesario que el "grano" sea de milisegundos. El nivel de precisión en los valores de datos se conoce como grano.  
+ Con frecuencia, aunque no siempre, el atributo clave es también el **Atributo de granularidad**. Granularidad significa el nivel de detalle o precisión dentro de los datos. También en esta ocasión poner un ejemplo común es la mejor forma de entenderlo. Piense en los valores de fecha: Para las ventas diarias, necesita valores de fecha que especifiquen el día. En el caso de las cuotas, quizás sea suficiente hablar de trimestres, pero si los datos analíticos hacen referencia a los resultados de una carrera en un evento deportivo, será necesario que el "grano" sea de milisegundos. El nivel de precisión en los valores de datos se conoce como grano.  
   
- La moneda es otro ejemplo: una aplicación financiera puede realizar un registro de los valores monetarios hasta muchas posiciones decimales, mientras que un evento para recaudar dinero para un colegio solo necesitará valores próximos al euro. Comprender el concepto de grano es importante para evitar el almacenamiento de datos innecesarios. Recortar los milisegundos de una marca de tiempo o céntimos del importe de ventas puede ahorrar espacio de almacenamiento y tiempo de procesamiento cuando el nivel de detalle no es importante para el análisis que se hará.  
+ Moneda es otro ejemplo: una aplicación financiera puede realizar un seguimiento de los valores monetarios hasta muchas posiciones decimales, mientras que el captador de fondos de tu escuela local es posible que solo necesitará valores próximos al euro. Comprender el concepto de grano es importante para evitar el almacenamiento de datos innecesarios. Recortar los milisegundos de una marca de tiempo o céntimos del importe de ventas puede ahorrar espacio de almacenamiento y tiempo de procesamiento cuando el nivel de detalle no es importante para el análisis que se hará.  
   
  Para definir el atributo de granularidad, use la pestaña Uso de dimensiones en el Diseñador de cubos de SQL Server Data Tools. En el modelo de ejemplo AdventureWorks, el atributo clave de la dimensión Fecha es la clave Fecha. En Pedidos de ventas, el atributo de granularidad es equivalente al atributo clave. En Objetivos de ventas, el nivel de granularidad es trimestral y, por tanto, el atributo de granularidad se define en Trimestre natural.  
   
- ![Modelo que muestra el atributo de granularidad](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-granularityattrib.png "que muestra el atributo de granularidad de modelo")  
+ ![Modelo que muestra el atributo de granularidad](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-granularityattrib.png "que muestra el atributo de granularidad del modelo")  
   
 > [!NOTE]  
 >  Si el atributo de granularidad y el atributo clave son diferentes, los atributos que no son clave deben vincularse, directa o indirectamente, con el atributo de granularidad. Dentro de un cubo, el atributo de granularidad define la granularidad de una dimensión.  
@@ -117,36 +117,36 @@ ms.locfileid: "34024592"
  La**celda** es el espacio en la intersección de un miembro del miembro de dimensión de medidas y un miembro de cada jerarquía de atributo en un cubo.  
   
 ## <a name="other-modeling-terms"></a>Otros términos sobre los modelos  
- En esta sección se recoge un compendio de conceptos y términos que difícilmente encajarían en otras secciones y que, a pesar de todo, es necesario conocer.  
+ En esta sección es una colección de los conceptos y términos que difícilmente encajarían en otras secciones, pero debe saber acerca de.  
   
  Un**miembro calculado** es un miembro de dimensión que se define y calcula en tiempo de consulta. Un miembro calculado puede definirse en una consulta de usuario o en el script de cálculo MDX; se almacena en el servidor. Un miembro calculado corresponde a filas de la tabla de dimensiones de la dimensión en la que se define.  
   
  Un**recuento distintivo** es un tipo especial de medida que se utiliza para elementos de datos que solo se deben contar una vez. En el modelo de ejemplo AdventureWorks se incluyen medidas de recuento distintivo para los Pedidos por Internet, los Pedidos de distribuidores y los Pedidos de ventas.  
   
- Los**grupos de medidas** son una colección de una o más medidas. Principalmente, son definidos por el usuario y se usan para mantener juntas medidas relacionadas entre sí. Las medidas de recuentos distintivos son una excepción. Estas se colocan siempre en un grupo de medidas exclusivo que contiene únicamente la medida distintiva. No se puede ver el grupo de medidas en la ilustración del ejemplo de tabla dinámica, pero sí aparece en una lista de campos de las tablas dinámicas con el nombre de "colección de medidas".  
+ Los**grupos de medidas** son una colección de una o más medidas. Principalmente, son definidos por el usuario y se usan para mantener juntas medidas relacionadas entre sí. Las medidas de recuentos distintivos son una excepción. Estas se colocan siempre en un grupo de medidas exclusivo que contiene únicamente la medida distintiva. No puede ver el grupo de medida en la ilustración de ejemplo de tabla dinámica, pero aparece en una lista de campos de tabla dinámica, como una colección de medidas.  
   
- Una**dimensión de medidas** es la dimensión que contiene todas las medidas de un cubo. No se expone en un modelo multidimensional creado en SQL Server Data Tools, pero existe exactamente igual. Como contiene medidas, todos los miembros de una dimensión de medidas suelen agregarse (por lo general mediante una operación de suma o de recuento).  
+ Una**dimensión de medidas** es la dimensión que contiene todas las medidas de un cubo. No se expone en un modelo multidimensional que se crean en SQL Server Data Tools, pero existe exactamente igual. Como contiene medidas, todos los miembros de una dimensión de medidas suelen agregarse (por lo general mediante una operación de suma o de recuento).  
   
- **Dimensiones de bases de datos y dimensiones de cubos**. En un modelo, se puede definir dimensiones independientes que después se incluyen en cualquier número de cubos en el mismo modelo. Cuando se agrega una dimensión a un cubo, se denomina dimensión de cubo. Por sí misma en un proyecto, como elemento independiente en el Explorador de objetos, se denomina dimensión de base de datos. ¿Por qué es necesario hacer una distinción? Porque se pueden definir las propiedades independientemente. En la documentación del producto, verá que se usan ambos términos, así que merece la pena entender qué significan.  
+ **Dimensiones de bases de datos y dimensiones de cubos**. En un modelo, se puede definir dimensiones independientes que después se incluyen en cualquier número de cubos en el mismo modelo. Cuando se agrega una dimensión a un cubo, se denomina una dimensión de cubo. Por sí mismo dentro de un proyecto, como un elemento independiente en el Explorador de objetos, denomina dimensión de base de datos. ¿Por qué es necesario hacer una distinción? Porque se pueden definir las propiedades independientemente. En la documentación del producto, verá usan ambos términos, por lo que merece la pena entender su significado.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Ahora que tiene ciertos conocimientos de los conceptos y la terminología más importante, puede continuar con otros temas, en los que se explican mejor conceptos fundamentales de Analysis Services:  
   
--   [Consulta de MDX básica & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
+-   [Consulta de MDX básica &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
--   [El Script MDX básico & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+-   [Script MDX básico &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [Modelado multidimensional & #40; Tutorial de Adventure Works & #41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Espacio de cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuplas](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Trabajar con miembros, tuplas y conjuntos de & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Los totales visuales y totales no visuales](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Aspectos básicos de Scripting de MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Referencia del lenguaje MDX & #40; MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Expresiones multidimensionales & #40; MDX & #41; Referencia](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Totales visuales y totales no visuales](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Referencia del lenguaje MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Referencia de expresiones multidimensionales &#40;MDX&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

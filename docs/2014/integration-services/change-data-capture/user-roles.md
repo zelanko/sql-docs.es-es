@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b62f749bf308684a5d47386011339505b8a23bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2dcccbdf117b52f32801020bb7a119ee429dbd7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222895"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780067"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity
   En esta sección se describen los roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity. Los roles descritos son roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , roles de Windows o roles de base de datos de Oracle.  
@@ -24,7 +23,7 @@ ms.locfileid: "48222895"
 ## <a name="windows-user-roles"></a>Roles de usuario de Windows  
  A continuación se describen los roles de usuario de Windows que el servicio CDC de Oracle emplea.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Administrador del equipo: Servicio CDC de Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Administrador de equipo: servicio CDC de Oracle  
  El administrador del equipo es un usuario de Windows responsable de crear y mantener el servicio CDC en el equipo. Este usuario debe pertenecer al grupo Administradores del equipo local.  
   
  Entre las tareas realizadas por el administrador del equipo del servicio CDC de Oracle se incluyen:  
@@ -53,7 +52,7 @@ ms.locfileid: "48222895"
   
 -   Actuar como administrador del equipo autorizado como administrador en el equipo donde está instalado el servicio CDC para Oracle. Esta persona instala el servicio CDC para Oracle y emplea la Consola de configuración del servicio CDC para configurar un servicio CDC para Oracle en un equipo local.  
   
-### <a name="service-account-oracle-cdc-service"></a>Cuenta de servicio: Servicio CDC de Oracle  
+### <a name="service-account-oracle-cdc-service"></a>Cuenta de servicio: servicio CDC de Oracle  
  Esta cuenta de servicio de Windows de servicio CDC de Oracle es una cuenta de Windows que se usa para ejecutar el servicio CDC de Oracle (la cuenta de servicio).  
   
  El único privilegio necesario para la cuenta de servicio es poder usar el cliente de Oracle y el proveedor ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Esta cuenta no necesita tener acceso a archivos, a menos que lo necesiten determinados proveedores (por ejemplo, si la cadena de conexión de cliente de Oracle hace referencia a instancias de base de datos de Oracle en un archivo **tnsnames.ora** , la cuenta de servicio necesita tener acceso de lectura a ese archivo).  
@@ -129,7 +128,7 @@ ms.locfileid: "48222895"
   
  El administrador de bases de datos de Oracle puede obtener scripts SQL de Oracle que hay que ejecutar para que se puedan evaluar antes de ejecutarlos. El administrador de base de datos de Oracle también puede ejecutar directamente scripts SQL de Oracle desde la Consola del diseñador CDC de Oracle.  
   
- Si el administrador de base de datos de Oracle elige usar la Consola del diseñador CDC de Oracle, las credenciales del administrador no se conservan, a excepción del contexto (diálogo) en el que se usaron.  
+ Si el administrador de base de datos de Oracle elige usar la Consola del diseñador CDC de Oracle, las credenciales del administrador no se conservan, a excepción del contexto (cuadro de diálogo) en el que se hayan usado.  
   
  El administrador de base de datos de Oracle trabaja en coordinación con el administrador del servicio CDC de Oracle en la configuración de las instancias CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

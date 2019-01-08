@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600115"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534743"
 ---
 # <a name="namespaces"></a>Espacios de nombres
 El formato de persistencia de XML en ADO utiliza los siguientes espacios de nombres de cuatro.  
@@ -38,7 +38,7 @@ El formato de persistencia de XML en ADO utiliza los siguientes espacios de nomb
 > [!IMPORTANT]
 >  El identificador de la etiqueta de esquema debe ser "RowsetSchema" y el espacio de nombres utilizado para hacer referencia al esquema del conjunto de filas actual debe apuntar a "#RowsetSchema."  
   
- Tenga en cuenta que el prefijo del espacio de nombres, la parte situada entre los dos puntos y el signo igual, es arbitrario.  
+ Tenga en cuenta que el prefijo del espacio de nombres, la parte entre los dos puntos y el signo igual: es arbitrario.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

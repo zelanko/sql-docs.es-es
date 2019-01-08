@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48fd9be77e8b72ee25211bbf52a70f7989785f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514245"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
   En este tema contiene una lista de características admitidas en procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -34,9 +34,9 @@ ms.locfileid: "48091245"
   
 -   [Limitaciones de ordenación](#los)  
   
- Para obtener información sobre los tipos de datos admitidos de forma nativa en los procedimientos almacenados compilados, consulte [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
+ Para obtener información sobre los tipos de datos que se admiten en los procedimientos almacenados compilados de forma nativa, consulte [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
- Para obtener información completa sobre las construcciones no admitidas y para obtener información acerca de cómo evitar algunas de las características no admitidas en procedimientos almacenados compilados de forma nativa, vea [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Para obtener información completa sobre las construcciones no admitidas y sobre cómo evitar algunas de las características no admitidas en los procedimientos almacenados compilados de forma nativa, vea [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="pncsp"></a> Programación en procedimientos almacenados compilados de forma nativa  
  Se admite lo siguiente:  
@@ -81,7 +81,7 @@ ms.locfileid: "48091245"
 ##  <a name="bfncsp"></a> Funciones integradas en procedimientos almacenados compilados de forma nativa  
  Se admiten las funciones siguientes en restricciones DEFAULT de tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa.  
   
--   Funciones matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANES, RAND, SIN, SQRT, SQUARE y TAN  
+-   Funciones matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE y TAN  
   
 -   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
   
@@ -130,31 +130,31 @@ ms.locfileid: "48091245"
   
 -   Asignación de variable de la lista de selección.  
   
--   WHERE … y  
+-   WHERE... y  
   
  <sup>1</sup> ORDER BY y TOP se admiten en procedimientos almacenados compilados de forma nativa, con algunas restricciones:  
   
--   No hay compatibilidad para `DISTINCT` en el `SELECT` o `ORDER BY` cláusula.  
+-   No hay compatibilidad con `DISTINCT` en la cláusula `SELECT` ni `ORDER BY`.  
   
 -   No hay compatibilidad con `WITH TIES` ni `PERCENT` en la cláusula `TOP`.  
   
--   `TOP` combinado con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en el `TOP` cláusula. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
+-   `TOP` combinada con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en la cláusula `TOP`. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
   
      Puede obtener más de 8.192 resultados si almacena el número de filas en una variable:  
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  Sin embargo, una constante en la cláusula `TOP` produce un rendimiento mejor en comparación con el uso de una variable.  
   
- Estas restricciones no se aplican a interpretado [!INCLUDE[tsql](../../includes/tsql-md.md)] acceso a las tablas optimizadas para memoria.  
+ Estas restricciones no se aplican al acceso mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria.  
   
 ##  <a name="auditing"></a> Auditoría  
  Se admite la auditoría a nivel de procedimiento en los procedimientos almacenados compilados de forma nativa. La auditoría de nivel de instrucción no se admite.  
   
- Para obtener más información sobre la auditoría, vea [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Para obtener más información sobre la auditoría, vea [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../security/auditing/create-a-server-audit-and-database-audit-specification.md)  
   
 ##  <a name="tqh"></a> Tabla, consulta y las sugerencias de combinación  
  Se admite lo siguiente:  
@@ -172,7 +172,7 @@ ms.locfileid: "48091245"
 ##  <a name="los"></a> Limitaciones de ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
   
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombreDeProcedimiento>*, línea *\<númeroDeLínea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>*.**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtiene el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento  *\<NombreDeProcedimiento >*, línea  *\<lineNumber >* el operador TOP puede devolver un máximo de 8192 filas;  *\<número >* se solicitó.**  
   
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
   
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Ejemplo con TOP N > 8192: error al compilar.  
+ Ejemplo con TOP n > 8192: no se compila.  
   
 ```tsql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  La limitación de 8192 filas solo se aplica a `TOP N` donde `N` es una constante, como en los ejemplos anteriores.  Si necesita un número `N` mayor que 8192 puede asignar el valor a una variable y utilizar esa variable con `TOP`.  
   
- Ejemplo usando una variable: se compila  
+ Ejemplo con una variable: se compila  
   
 ```tsql  
 CREATE PROCEDURE testTop  

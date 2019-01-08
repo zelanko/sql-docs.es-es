@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - partitions [SMO]
@@ -17,20 +15,20 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f98d4337dbd5a43adf1e83d80b24b8286193e19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787167"
 ---
 # <a name="using-table-and-index-partitioning"></a>Utilizar particiones de tabla e índice
-  Se pueden almacenar datos mediante el uso de los algoritmos de almacenamiento proporcionados por [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
+  Los datos se pueden almacenar usando los algoritmos de almacenamiento proporcionados por [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
   
 ## <a name="index-and-table-partitioning"></a>Particiones de tabla e índice  
  Esta característica permite expandir el índice y los datos de la tabla en varios grupos de archivos en distintas particiones. Una función de partición define la forma de asignar las filas de una tabla o un índice a un conjunto de particiones a partir de los valores de determinadas columnas, denominadas columnas de partición. Un esquema de particiones asigna cada partición especificada con la función de partición a un grupo de archivos. Esto le permite desarrollar estrategias de archivado que permiten escalar las tablas en los grupos de archivos y por consiguiente en los dispositivos físicos.  
   
- El <xref:Microsoft.SqlServer.Management.Smo.Database> objeto contiene una colección de <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> objetos que representan las funciones de partición implementadas y una colección de <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> objetos que describen cómo los datos se asignan a grupos de archivos.  
+ El objeto <xref:Microsoft.SqlServer.Management.Smo.Database> contiene una colección de los objetos <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> que representan las funciones de partición implementadas y una colección de los objetos <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> que describen cómo están asignados los datos a los grupos de archivos.  
   
  Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Table> y <xref:Microsoft.SqlServer.Management.Smo.Index> especifica qué esquema de partición utiliza en la propiedad <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> y especifica las columnas en <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
@@ -38,12 +36,12 @@ ms.locfileid: "48166115"
  Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Configurar un esquema de partición para una tabla en Visual Basic  
- El ejemplo de código muestra cómo crear una función de partición y un esquema de partición para el `TransactionHistory` tabla el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos de ejemplo. Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
+ En el ejemplo de código se muestra cómo crear una función de partición y un esquema de partición para la tabla `TransactionHistory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBPartition1](SMO How to#SMO_VBPartition1)]  -->  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Configurar un esquema de partición para una tabla en Visual C#  
- El ejemplo de código muestra cómo crear una función de partición y un esquema de partición para el `TransactionHistory` tabla el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos de ejemplo. Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
+ En el ejemplo de código se muestra cómo crear una función de partición y un esquema de partición para la tabla `TransactionHistory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
   
 ```  
 {   
@@ -91,7 +89,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>Configurar un esquema de partición para una tabla en PowerShell  
- El ejemplo de código muestra cómo crear una función de partición y un esquema de partición para el `TransactionHistory` tabla el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos de ejemplo. Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
+ En el ejemplo de código se muestra cómo crear una función de partición y un esquema de partición para la tabla `TransactionHistory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

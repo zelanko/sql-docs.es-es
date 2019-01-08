@@ -16,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 046017ed9e7a9f99f2fde48426888045b4a02890
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78d3d96e1340bb3cd8e57a930129e2c70157e61b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512412"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funciones usadas en nodos: namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Usar namespace-uri() sin argumento en un predicado  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>b. Usar namespace-uri() sin argumento en un predicado  
  La siguiente consulta se especifica para la columna xml con tipo CatalogDescription. La expresión devuelve todos los nodos de elementos cuyo URI del espacio de nombres es `https://www.adventure-works.com/schemas/OtherFeatures`. El espacio de nombres -**uri()** se especifica sin un argumento de función y usa el nodo de contexto.  
   
 ```  
@@ -96,7 +96,7 @@ WHERE ProductModelID=19
 <p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
 <p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
   <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
-…  
+...  
 ```  
   
  Puede cambiar el URI del espacio de nombres de la consulta anterior por `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. En este caso, recibirá todos los elementos secundarios del nodo del elemento <`ProductDescription`> cuya parte del URI del espacio de nombres del QName expandido es `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  

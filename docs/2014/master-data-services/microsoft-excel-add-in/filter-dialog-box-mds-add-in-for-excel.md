@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabc7fef47a3d80427e9a4c0ef4587f4dc13f405
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140555"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784597"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Cuadro de diálogo Filtrar (Complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use el cuadro de diálogo **Filtro** para restringir la lista de datos administrados por MDS antes de cargarla en Excel.  
   
- Este cuadro de diálogo contiene tres secciones: **Columnas**, **Filas**, y **Resumen**.  
+ Este cuadro de diálogo contiene tres secciones: **Columnas**, **filas**, y **resumen**.  
   
 ## <a name="columns"></a>Columnas  
  Use la sección **Columnas** para determinar los atributos (columnas) que quiere mostrar en Excel.  
@@ -32,7 +31,7 @@ ms.locfileid: "48140555"
 |Jerarquía explícita|Si elige el tipo de atributo **Consolidado** , elija la jerarquía a la que pertenecen los miembros consolidados. Para obtener más información, consulte [Jerarquías explícitas &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
 |Grupos de atributos|Los grupos de atributos son una manera de agrupar subconjuntos de atributos. Elija un grupo de atributos si desea mostrar un subconjunto de atributos disponibles. Para obtener más información sobre los grupos de atributos, consulte [Grupos de atributos &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md).|  
 |Seleccionar todo|Haga clic para seleccionar todos los atributos mostrados en la lista.|  
-|Borrar todo|Haga clic para borrar los atributos seleccionados mostrados en la lista.<br /><br /> Nota: No se puede borrar **nombre** y **código**.|  
+|Borrar todo|Haga clic para borrar los atributos seleccionados mostrados en la lista.<br /><br /> Nota: No puede borrar **Nombre** ni **Código**.|  
 |Flecha arriba|Haga clic para mover el atributo seleccionado hacia arriba en la lista. El orden de arriba a abajo corresponde al orden de izquierda a derecha en el que se muestran las columnas en la hoja.|  
 |Flecha abajo|Haga clic para mover el atributo seleccionado hacia abajo en la lista. El orden de arriba a abajo corresponde al orden de izquierda a derecha en el que se muestran las columnas en la hoja.|  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48140555"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|Attribute|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar los atributos que no tiene previsto mostrar en la hoja de cálculo.|  
+|Attribute|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar por los atributos que no va a mostrar en la hoja de cálculo.|  
 |Operador|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
 |Criterios|Los criterios por los que desea filtrar.|  
 |Resumen de actualización|Cuando trabaje con conjuntos de datos grandes, haga clic para actualizar la sección **Resumen** con detalles de la cantidad de datos que se cargarán.|  

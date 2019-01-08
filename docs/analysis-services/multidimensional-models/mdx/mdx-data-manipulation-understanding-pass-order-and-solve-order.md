@@ -1,5 +1,5 @@
 ---
-title: Descripción de orden de paso y orden de resolución (MDX) | Documentos de Microsoft
+title: Descripción, orden de paso y orden (MDX) de resolución | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4b865293cb9c76fb46e8fe12befb2a000d21907
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025962"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545404"
 ---
-# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulación de datos MDX - descripción paso ordenar y el orden de resolución
+# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulación de datos MDX: descripción de la fase de orden y orden de resolución
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Cuando un cubo se calcula como el resultado de un script de MDX, puede atravesar varias fases de computación según el uso de varias características relativas al cálculo. Cada una de estas fases se denomina paso de cálculo.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34025962"
 > [!NOTE]  
 >  Puede ejecutar estas consultas MDX con la base de datos multidimensional de ejemplo de Adventure Works. Puede descargar el ejemplo de [modelos multidimensionales AdventureWorks SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) del sitio de codeplex.  
   
-### <a name="query-1differences-in-income-and-expenses"></a>Consulta 1—Diferencias de Income y Expenses  
+### <a name="query-1-differences-in-income-and-expenses"></a>Consulta 1-diferencias de Income y Expenses  
  En la primera consulta MDX, calcule la diferencia de ventas y costos de cada año creando una consulta MDX simple similar al siguiente ejemplo:  
   
 ```  
@@ -86,7 +86,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>Consulta 2: porcentaje de ingresos después de gastos  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Consulta 2: porcentaje de ingresos después de gastos  
  En la segunda consulta, calcule el porcentaje de ingresos después de gastos para cada año con la siguiente consulta MDX:  
   
 ```  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
  La diferencia de los conjuntos de resultados entre la primera y la segunda consulta radica en la distinta colocación del miembro calculado. En la primera consulta, el miembro calculado se encuentra en el eje ROWS, mientras que en la segunda consulta se encuentra en el eje COLUMNS. Esta distinta colocación adquiere importancia en la siguiente consulta, en la que se combinan dos miembros calculados en una única consulta MDX.  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Consulta 3—Cálculos combinados de Year Difference y Net Income  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Consulta 3: combinar Year Difference y cálculos de ingresos netos  
  En esta consulta final que combina los dos ejemplos previos en una sola consulta MDX, el orden de resolución es importante debido a los cálculos de ambas columnas y filas. Para asegurarse de que los cálculos se realizan en la secuencia correcta, defina la secuencia en la que se realizan los cálculos con la palabra clave **SOLVE_ORDER** .  
   
  La palabra clave **SOLVE_ORDER** especifica el orden de resolución de los miembros calculados en una consulta MDX o en un comando **CREATE MEMBER** . Los valores enteros usados con la palabra clave **SOLVE_ORDER** son relativos, no necesitan empezar por cero y no tienen que ser consecutivos. El valor ordena a MDX calcular un miembro según los valores resultantes del cálculo de miembros con un valor superior. Si se define un miembro calculado sin la palabra clave **SOLVE_ORDER** , su valor predeterminado es cero.  
@@ -141,7 +141,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- En este ejemplo combinado de consulta MDX, `Profit Margin` posee el orden de resolución superior, por lo que tendrá prioridad si interactúan las dos expresiones. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa dicha celda mediante la fórmula `Profit Margin`. Los resultados de este cálculo anidado pueden verse en la siguiente tabla.  
+ En este ejemplo combinado de consulta MDX, `Profit Margin` posee el orden de resolución superior, por lo que tendrá prioridad si interactúan las dos expresiones. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa dicha celda mediante la fórmula `Profit Margin` . Los resultados de este cálculo anidado pueden verse en la siguiente tabla.  
   
 ||Internet Sales Amount|Costo total del producto por Internet|Margen de beneficio|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -155,7 +155,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- o bien  
+ o Administrador de configuración de  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -205,9 +205,9 @@ FROM [Adventure Works]
  El orden de resolución puede ser un aspecto muy complicado, especialmente en cubos con un gran número de dimensiones que tienen miembros calculados, fórmulas de resúmenes personalizados o celdas calculadas. Cuando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa una consulta MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tiene en cuenta los valores del orden de resolución de todos los elementos implicados en un paso determinado, incluidas las dimensiones del cubo especificado en la consulta MDX.  
   
 ## <a name="see-also"></a>Vea también  
- [CalculationCurrentPass & #40; MDX & #41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue & #40; MDX & #41;](../../../mdx/calculationpassvalue-mdx.md)   
- [CREATE MEMBER, instrucción & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Manipulación de datos & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue &#40;MDX&#41;](../../../mdx/calculationpassvalue-mdx.md)   
+ [CREATE MEMBER &#40;instrucción MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Manipular datos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

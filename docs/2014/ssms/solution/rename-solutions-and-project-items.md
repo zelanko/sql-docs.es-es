@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], renaming
@@ -15,12 +15,12 @@ ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae0ead24c485c01a2eae759e5f25042cccc9425a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227295"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760807"
 ---
 # <a name="rename-solutions-and-project-items"></a>Cambiar el nombre de las soluciones y los elementos de un proyecto
   Es posible cambiar el nombre de una solución y de los elementos de proyecto en el Explorador de soluciones.  

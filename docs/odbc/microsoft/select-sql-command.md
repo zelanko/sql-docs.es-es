@@ -13,12 +13,12 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f44eb85e80135f81d0e2ca1f37657818843a237
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710063"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540244"
 ---
 # <a name="select---sql-command"></a>Seleccione - comando SQL
 Recupera datos de una o varias tablas.  
@@ -35,7 +35,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -82,7 +82,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Las siguientes funciones de campo están disponibles para su uso con un elemento que es un campo o una expresión que contenga un campo:  
   
--   AVG (*Select_Item*), calcula el promedio de una columna de datos numéricos.  
+-   AVG (*Select_Item*): calcula el promedio de una columna de datos numéricos.  
   
 -   RECUENTO (*Select_Item*): cuenta el número de selección de elementos en una columna. Count(*) cuenta el número de filas de la salida de la consulta.  
   
@@ -90,7 +90,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   MAX (*Select_Item*): determina el valor más grande de *Select_Item* en una columna.  
   
--   SUM (*Select_Item*), los totales de una columna de datos numéricos.  
+-   SUM (*Select_Item*)-totales de una columna de datos numéricos.  
   
  No se pueden anidar las funciones de campo.  
   

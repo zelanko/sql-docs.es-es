@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - distributed transactions [SQL Server], unresolved transactions
@@ -15,12 +14,12 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c30ca21d997d95058e034dbe36d601b601670a4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 648f142eb80607412e13151098418c22e45f04bd
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058625"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640155"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution (opción de configuración del servidor)
   Use la opción **in-doubt xact resolution** para controlar el resultado predeterminado de las transacciones que el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) no consigue resolver. La incapacidad de resolver estas transacciones puede estar relacionada con un tiempo de inactividad de MS DTC o con un resultado de transacción inesperado en el momento de la recuperación.  
@@ -40,7 +39,7 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 2 -– presume abort  
+sp_configure 'in-doubt xact resolution', 2 -- presume abort  
 GO  
 RECONFIGURE  
 GO  
@@ -58,13 +57,13 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 1 -– presume commit  
+sp_configure 'in-doubt xact resolution', 1 -- presume commit  
 GO  
 reconfigure  
 GO  
-ALTER DATABASE pubs SET ONLINE –- run recovery again  
+ALTER DATABASE pubs SET ONLINE -- run recovery again  
 GO  
-sp_configure 'in-doubt xact resolution', 0 –- back to no assumptions  
+sp_configure 'in-doubt xact resolution', 0 -- back to no assumptions  
 GO  
 sp_configure 'show advanced options', 0  
 GO  

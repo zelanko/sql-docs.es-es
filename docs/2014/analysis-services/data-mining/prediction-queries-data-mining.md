@@ -11,12 +11,12 @@ ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892ea8d21d03eafc21a98ec6799aa840fddf96a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520170"
 ---
 # <a name="prediction-queries-data-mining"></a>Consultas de predicción (minería de datos)
   El objetivo de un proyecto de minería de datos típico es usar el modelo de minería de datos para realizar predicciones. Por ejemplo, quizás desee predecir el tiempo de inactividad esperado para un clúster de servidores determinado, o generar una puntuación que indique si es probable que los segmentos de clientes respondan a una campaña de publicidad. Para hacer todas estas cosas, crearía una consulta de predicción.  
@@ -59,7 +59,7 @@ ms.locfileid: "48094565"
 ###  <a name="bkmk_PredFunc"></a> Agregar funciones de predicción  
  Además de predecir un valor concreto, puede personalizar una consulta de predicción para que devuelva diversos tipos de información relacionados con la predicción. Por ejemplo, si la predicción crea una lista de productos para recomendar a un cliente, es posible que también desee devolver la probabilidad de cada predicción, de modo que pueda clasificarlas y mostrar únicamente las principales recomendaciones al usuario.  
   
- Para ello, agregue *funciones de predicción* a la consulta. Cada modelo o tipo de consulta admite unas determinadas funciones. Por ejemplo, los modelos de agrupación en clústeres admiten funciones de predicción especiales que proporcionan detalles adicionales sobre los clústeres creados por el modelo, mientras que los modelos de serie temporal tienen funciones que calculan las diferencias a lo largo del tiempo. También existen funciones de predicción generales que funcionan con casi todos los tipos de modelos. Para obtener una lista de las funciones de predicción admitidas en los diferentes tipos de consultas, vea este tema en la referencia de DMX: [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
+ Para ello, agregue *funciones de predicción* a la consulta. Cada modelo o tipo de consulta admite unas determinadas funciones. Por ejemplo, los modelos de agrupación en clústeres admiten funciones de predicción especiales que proporcionan detalles adicionales sobre los clústeres creados por el modelo, mientras que los modelos de serie temporal tienen funciones que calculan las diferencias a lo largo del tiempo. También existen funciones de predicción generales que funcionan con casi todos los tipos de modelos. Para obtener una lista de las funciones de predicción admitidas en los diferentes tipos de consultas, vea este tema en la referencia DMX:  [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Crear consultas de predicción singleton  
  Las consultas de predicción singleton resultan de gran utilidad para crear predicciones rápidas en tiempo real. Un escenario habitual podría ser en el que ha obtenido información de un cliente, quizás mediante un formulario en un sitio web, y desea enviar dicha información como entrada a una consulta de predicción singleton. Por ejemplo, cuando un cliente elige un producto de una lista, podría utilizar esa selección como la entrada a una consulta que prediga los mejores productos que puede recomendar.  
@@ -67,7 +67,7 @@ ms.locfileid: "48094565"
  Las consultas de predicción singleton no requieren ninguna tabla independiente que contenga la entrada. En su lugar, se proporcionan una o varias filas de valores como entrada para el modelo, y las predicciones se devuelven en tiempo real.  
   
 > [!WARNING]  
->  A pesar de su nombre, las consultas de predicción singleton no realizan solamente predicciones únicas, puede generar varias predicciones para cada conjunto de entradas. Puede proporcionar varios casos de entrada creando una instrucción SELECT para cada caso de entrada y combinándolas con el operador UNION.  
+>  A pesar del nombre, consultas de predicción singleton no solamente predicciones únicas-puede generar varias predicciones para cada conjunto de entradas. Puede proporcionar varios casos de entrada creando una instrucción SELECT para cada caso de entrada y combinándolas con el operador UNION.  
   
  Al crear una consulta de predicción singleton, debe proporcionar los nuevos datos al modelo con el formato PREDICTION JOIN. Esto significa que, aunque no se esté realizando una asignación a una tabla real, hay que asegurarse de que los nuevos datos coinciden con las columnas existentes en el modelo de minería de datos. Si las nuevas columnas de datos y los nuevos datos coinciden exactamente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asignará las columnas. Esto se denomina *NATURAL PREDICTION JOIN*. Sin embargo, si las columnas no coinciden, o si los nuevos datos no contienen el mismo tipo y cantidad de datos que hay en el modelo, deberá especificar qué columnas del modelo se asignan a los nuevos datos, o especificar los valores que faltan.  
   

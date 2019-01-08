@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529364"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Crear un gráfico de mejora respecto al modelo predictivo, un gráfico de beneficios o una matriz de clasificación
   Puede crear un gráfico de precisión para un modelo de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siguiendo cinco pasos básicos:  
@@ -70,7 +70,7 @@ ms.locfileid: "48069435"
   
     -   Seleccione la opción **Usar casos de pruebas de estructura de minería de datos**para utilizar el conjunto completo de casos de prueba que se definieron como parte del conjunto de datos de exclusión de las estructuras de minería de datos.  
   
-    -   Seleccione la opción **Especificar otro conjunto de datos**si desea utilizar datos externos.  El conjunto de datos debe estar disponible como vista del origen de datos.   Haga clic en el botón Examinar (**…**) para elegir las tablas de datos que quiere usar en el gráfico de precisión. Para más información, consulte [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Seleccione la opción **Especificar otro conjunto de datos**si desea utilizar datos externos.  El conjunto de datos debe estar disponible como vista del origen de datos.   Haga clic en el (**...** ) botón para elegir las tablas de datos que se usará para el gráfico de precisión. Para más información, consulte [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          Si está utilizando un conjunto de datos externos, opcionalmente puede filtrar el conjunto de datos de entrada. Para obtener más información, vea [Aplicar filtros a los datos de prueba del modelo](apply-filters-to-model-testing-data.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48069435"
      Cantidad de ingresos asociados con cada venta realizada con éxito.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráfico de elevación &#40;Analysis Services - minería de datos&#41;](lift-chart-analysis-services-data-mining.md)   
- [Matriz de clasificación &#40;Analysis Services - minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](lift-chart-analysis-services-data-mining.md)   
+ [Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

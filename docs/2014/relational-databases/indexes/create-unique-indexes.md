@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35ef352eda0d712098ce0453caccf4bc2422b4b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540911"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
   En este tema se describe cómo crear un índice único en una tabla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice único garantiza que la clave de índice no contiene valores duplicados y, por tanto, cada fila de la tabla es en cierta forma única. No existen diferencias significativas entre crear una restricción UNIQUE y crear un índice único que es independiente de una restricción. La validación de datos se produce de igual modo y el optimizador de consultas no distingue entre un índice único creado mediante una restricción o creado manualmente. Sin embargo, la creación de una restricción UNIQUE en la columna aclara el objetivo del índice. Para obtener más información acerca de las restricciones UNIQUE, vea [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48122625"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Benefits"></a> Ventajas de un índice único  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48122625"
   
 7.  En la cuadrícula principal, en **(General)**, seleccione **Tipo** y luego **Índice** en la lista.  
   
-8.  Seleccione **Columnas**y luego haga clic en el botón de puntos suspensivos **(…)**.  
+8.  Seleccione **Columnas** y luego haga clic en el botón de puntos suspensivos **(...)**.  
   
 9. En el cuadro de diálogo **Columnas de índice** , debajo de **Nombre de columna**, seleccione las columnas que desea indizar. Puede seleccionar hasta 16 columnas. Para obtener un rendimiento óptimo, no seleccione más de una o dos columnas por cada índice. Para cada columna que seleccione, puede indicar si el índice organiza los valores de esta columna en orden ascendente o descendente.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48122625"
   
 11. En la cuadrícula, en **(General)**, seleccione **Es Unique** y luego **Sí** en la lista.  
   
-12. Opcional: en la cuadrícula principal, debajo de **Diseñador de tablas**, seleccione **Omitir claves duplicadas** y elija **Sí** en la lista. Haga esto si desea omitir los intentos de agregar datos que crearían una clave duplicada en el índice único.  
+12. Opcional: En la cuadrícula principal, en **Diseñador de tablas**, seleccione **Omitir claves duplicadas** y, a continuación, elija **Sí** en la lista. Haga esto si desea omitir los intentos de agregar datos que crearían una clave duplicada en el índice único.  
   
 13. Haga clic en **Cerrar**.  
   
@@ -134,13 +134,13 @@ ms.locfileid: "48122625"
   
 3.  Expanda la tabla en la que desea crear un índice único.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices** , seleccione **Nuevo índice**y luego **Índice no agrupado…**  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
 6.  Active la casilla **Único** .  
   
-7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
+7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
 8.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active las casillas de las columnas de tabla que se van a agregar al índice único.  
   

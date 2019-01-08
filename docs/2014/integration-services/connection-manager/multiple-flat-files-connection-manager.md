@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
@@ -18,19 +17,19 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9c9bd0573a3a6fa8211324066e86446b85ec0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 575bf85a81557e7a0a974dd1fc2210e58f34bde0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790537"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>administrador de conexiones de varios archivos planos
   Un administrador de conexiones de varios archivos planos permite a un paquete obtener acceso a datos de varios archivos planos. Por ejemplo, un origen de archivos planos puede utilizar un administrador de conexiones para varios archivos planos cuando la tarea Flujo de datos se encuentra en un contenedor de bucles, como el contenedor de bucles For. En cada bucle del contenedor, el origen de archivos planos carga los datos del siguiente nombre de archivo que proporciona el administrador de conexiones de varios archivos planos.  
   
  Cuando se agrega un administrador de conexiones de varios archivos planos a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como una conexión de varios archivos planos en tiempo de ejecución, Establece las propiedades en el Administrador de conexiones de varios archivos planos, y Agrega el Administrador de conexiones de varios archivos planos a la `Connections` recopilación del paquete.  
   
- El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `MULTIFLATFILE`.  
+ La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `MULTIFLATFILE`.  
   
  Puede configurar el administrador de conexiones de varios archivos planos de las maneras siguientes:  
   
@@ -63,19 +62,19 @@ ms.locfileid: "48185667"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor del Administrador de conexiones de varios archivos planos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor del Administrador de conexiones de varios archivos planos &#40;página columnas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor del Administrador de conexiones de varios archivos planos &#40;página Opciones avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor del Administrador de conexiones de varios archivos planos &#40;vista previa de página&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- Para obtener información acerca de cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Origen de archivo plano](../data-flow/flat-file-source.md)   
  [Destino de archivo plano](../data-flow/flat-file-destination.md)   
- [Servicios de integración &#40;SSIS&#41; conexiones](integration-services-ssis-connections.md)  
+ [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

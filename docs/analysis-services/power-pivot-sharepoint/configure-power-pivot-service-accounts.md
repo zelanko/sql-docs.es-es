@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984847"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509549"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar las cuentas de servicio Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "38984847"
   
  [Requisitos de cuentas y permisos](#requirements)  
   
- [Solucionar problemas: conceder los permisos administrativos manualmente](#updatemanually)  
+ [Solución de problemas: Conceder permisos administrativos manualmente](#updatemanually)  
   
- [Solución de problemas: resolver los errores HTTP 503 debidos a que las contraseñas han expirado para Administración central o para el servicio de aplicación web de SharePoint Foundation](#expired)  
+ [Solución de problemas: Resolver HTTP 503 errores debido a las contraseñas han expirado para Administración Central o SharePoint Foundation de servicio de aplicación Web](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> Actualización de una contraseña expirada para la instancia de SQL Server Analysis Services (Power Pivot)  
   
@@ -110,12 +110,12 @@ ms.locfileid: "38984847"
   
 |Requisito|Descripción|  
 |-----------------|-----------------|  
-|Requisito del aprovisionamiento|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es un recurso compartido en la granja que pasa a estar disponible al crear una aplicación de servicio. Cuando se crea la aplicación de servicio se debe especificar el grupo de aplicaciones del servicio. Se puede especificar de dos maneras: mediante la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o mediante comandos de PowerShell.<br /><br /> Puede haber configurado la identidad del grupo de aplicaciones para que se ejecute en una cuenta única. Pero si no lo ha hecho, considere la posibilidad de cambiarla para que se ejecute en una cuenta diferente.|  
+|Requisito del aprovisionamiento|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es un recurso compartido en la granja que pasa a estar disponible al crear una aplicación de servicio. Cuando se crea la aplicación de servicio se debe especificar el grupo de aplicaciones del servicio. Se puede especificar de dos maneras: mediante la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o mediante comandos de PowerShell.<br /><br /> Puede haber configurado la identidad del grupo de aplicaciones para que se ejecute en una cuenta única. Pero si no lo hizo, considere la posibilidad de cambiarla para ejecutarse bajo una cuenta diferente.|  
 |Requisito de la cuenta de usuario de dominio|La identidad del grupo de aplicaciones debe ser una cuenta de usuario de dominio de Windows. Las cuentas de equipo integradas (como Servicio de red o Servicio local) están prohibidas.|  
 |Requisitos de permisos|Esta cuenta no necesita permisos de administrador del sistema local en el equipo. Sin embargo, debe tener los permisos de administrador del sistema de Analysis Services en el [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local que está instalado en el mismo equipo. El programa de instalación de SQL Server concede estos permisos automáticamente, o bien se conceden al establecer o cambiar la identidad del grupo de aplicaciones de servicio PowerPivot en Administración central.<br /><br /> Los permisos administrativos son necesarios para reenviar consultas a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. También se requieren para supervisar el estado, cerrar las sesiones inactivas y escuchar los eventos de seguimiento.<br /><br /> La cuenta debe tener permisos de conexión, lectura y escritura para la base de datos de aplicaciones del servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Estos permisos se conceden automáticamente cuando se crea la aplicación y se actualizan automáticamente al cambiar cuentas o contraseñas en Administración central.<br /><br /> La aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comprobará que un usuario de SharePoint esté autorizado a ver los datos antes de recuperar el archivo, pero no suplantará al usuario. No hay ningún requisito de permiso para la suplantación.|  
 |Requisitos de escalamiento|Ninguno.|  
   
-##  <a name="updatemanually"></a> Solucionar problemas: conceder los permisos administrativos manualmente  
+##  <a name="updatemanually"></a> Solución de problemas: Conceder manualmente permisos administrativos  
  Los permisos administrativos no podrán actualizarse si ella persona que actualiza las credenciales no es administrador local en el equipo. Si ocurre esto, puede conceder los permisos administrativos manualmente. La manera más fácil para ello es ejecutar el trabajo de temporizador de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en Administración central. Con esta solución, puede restablecer los permisos para todos los servidores de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. Observe que este enfoque solo funcionará si el trabajo de temporizador de SharePoint se ejecuta como administrador de la granja y como administrador local en el equipo.  
   
 1.  Para Supervisión, haga clic en **Revisar definiciones de trabajo**.  
@@ -150,7 +150,7 @@ ms.locfileid: "38984847"
   
 11. Escriba el nombre de la cuenta que se usa para el grupo de aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y haga clic en **Aceptar**.  
   
-##  <a name="expired"></a> Solución de problemas: resolver los errores HTTP 503 debidos a que las contraseñas han expirado para Administración central o para el servicio de aplicación web de SharePoint Foundation  
+##  <a name="expired"></a> Solución de problemas: Resolver los errores HTTP 503 debidos a que las contraseñas han expirado para Administración central o el servicio de la aplicación web de SharePoint Foundation  
  Si el servicio Administración central o el servicio de aplicación web de SharePoint Foundation dejan de funcionar debido a que la cuenta se restablece o expira la contraseña, encontrará mensajes de error HTTP 503 "Servicio no disponible" al intentar abrir Administración central de SharePoint o un sitio de SharePoint. Siga estos pasos para volver a poner el servidor en línea. Cuando Administración central está disponible, puede continuar actualizando la información de la cuenta que ha expirado.  
   
 1.  En Herramientas administrativas, haga clic en **Administrador de Internet Information Services**.  
@@ -159,7 +159,7 @@ ms.locfileid: "38984847"
   
     1.  Haga clic con el botón derecho en el nombre del grupo de aplicaciones y seleccione **Configuración avanzada**.  
   
-    2.  Seleccione **Identidad** y haga clic en el botón ... para abrir el cuadro de diálogo Identidad del grupo de aplicaciones.  
+    2.  Seleccione **identidad** y haga clic en el... el botón para abrir el cuadro de diálogo de la identidad del grupo de aplicaciones.  
   
     3.  Haga clic en **Conjunto**.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "38984847"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar o detener un servidor de Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Configuración de la combinación de PowerPivot (PowerPivot para SharePoint) de la cuenta de actualización de datos desatendida](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

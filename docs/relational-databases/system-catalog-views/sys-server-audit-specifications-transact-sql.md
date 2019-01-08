@@ -20,12 +20,12 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780323"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509998"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47780323"
 |**server_specification_id**|**Int**|Id. de la **server_specification**.|  
 |**create_date**|**Fecha y hora**|Fecha en la que se creó la especificación de auditoría de servidor.|  
 |**modified_date**|**Fecha y hora**|Fecha en la que se modificó por última vez la especificación de auditoría de servidor.|  
-|**is_state_enabled**|**tinyint**|Estado de la especificación de auditoría:<br /><br /> 0 – Deshabilitada<br /><br /> 1 – Habilitada|  
+|**is_state_enabled**|**tinyint**|Estado de la especificación de auditoría:<br /><br /> 0 - DESHABILITADO<br /><br /> 1 - HABILITADO|  
 |**audit_GUID**|**uniqueidentifier**|GUID de la auditoría que contiene esta especificación. Se usa durante la enumeración de especificaciones de auditoría de servidores miembro al iniciar el servidor.|  
   
 ## <a name="permissions"></a>Permisos  

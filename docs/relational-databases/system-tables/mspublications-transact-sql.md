@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpublications
@@ -19,12 +18,12 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c576bd5ce66661eb601984638c0608ae2eef8f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb939681cb97b80a7bd0498a2e0c1fa30202c404
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791547"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47732623"
 |**allow_push**|**bit**|Indica si es posible crear suscripciones de inserción para la publicación indicada.|  
 |**allow_pull**|**bit**|Indica si es posible crear suscripciones de extracción para la publicación indicada.|  
 |**allow_anonymous**|**bit**|Indica si es posible crear suscripciones anónimas para la publicación indicada.|  
-|**Descripción**|**nvarchar(255)**|Descripción de la publicación.|  
+|**description**|**nvarchar(255)**|Descripción de la publicación.|  
 |**$vendor_name**|**Nvarchar (100)**|Nombre del proveedor si el publicador no es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**retención**|**int**|Período de retención de la publicación, expresado en horas.|  
 |**sync_method**|**int**|Método de sincronización:<br /><br /> **0** = nativo (produce la salida de copia masiva en modo nativo de todas las tablas).<br /><br /> **1** = carácter (produce una salida de copia masiva en modo de carácter de todas las tablas).<br /><br /> **3** = simultáneo (produce salida de copia masiva en modo nativo de todas las tablas, pero no bloquea la tabla durante la instantánea).<br /><br /> **4** = Concurrent_c (produce una salida de copia masiva en modo de carácter de todas las tablas, pero no bloquea la tabla durante la instantánea)<br /><br /> Los valores **3** y **4** están disponibles para la replicación transaccional y replicación de mezcla, pero no para replicación de instantáneas.|  

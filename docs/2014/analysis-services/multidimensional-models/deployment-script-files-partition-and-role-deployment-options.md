@@ -23,12 +23,12 @@ ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14a547098cf72ac4b4f1c49044aba1bb2f024adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c2683bd383ebd3d0a9278cb008b6909dc80007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055537"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527116"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Especificar opciones de implementación de roles y particiones
   El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee las opciones de implementación de particiones y roles en el \< *nombre del proyecto*> .deploymentoptions file. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa las opciones de implementación de roles y particiones del actual proyecto cuando el \< *nombre del proyecto*> .deploymentoptions file se crea. Para obtener más información acerca de los valores de configuración, vea [Comprender los archivos de entrada utilizados para crear el script de implementación](deployment-script-files-input-used-to-create-deployment-script.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48055537"
   
 -   Los roles y miembros de roles existentes en la base de datos de destino se conservan, y no se implementan los roles nuevos.  
   
--   **Nota** Cuando se conservan los roles y los miembros existentes, los permisos asociados con esos roles se restablecen en ninguno. Los permisos de seguridad están incluidos en los objetos que protegen, no en los roles de seguridad a los que están asociados. Para obtener más información acerca de cómo trabajar con este comportamiento mediante el Asistente para la implementación de Analysis Service, consulte el artículo sobre la retención de roles y miembros de Microsoft Knowledge Base.  
+-   **Nota** Cuando se conservan los roles y los miembros existentes, los permisos asociados con esos roles se restablecen en ninguno. Los permisos de seguridad están incluidos en los objetos que protegen, no en los roles de seguridad a los que están asociados. Para obtener más información sobre cómo trabajar con este comportamiento mediante el Asistente para la implementación del servicio de análisis, vea "Retención de Roles y miembros" en Microsoft Knowledge Base.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modificar las opciones de implementación de roles y particiones  
  Es posible que deba implementar el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto usando las opciones de particiones y roles diferentes a las almacenadas en el \< *nombre del proyecto*> .deploymentoptions file. Por ejemplo, es posible que desee conservar las particiones existentes, los roles y los miembros del rol, en lugar de reemplazar todos los miembros, roles y particiones existentes según lo indicado en el \< *nombre del proyecto*> .deploymentoptions file.  
@@ -62,17 +62,17 @@ ms.locfileid: "48055537"
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de forma interactiva, y en la página **Opciones de implementación de particiones y roles** , especifique nuevas opciones de implementación para las particiones y los roles.  
   
-     O bien  
+     -o bien-  
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el símbolo del sistema y ajuste el asistente de manera que se ejecute en modo de archivo de respuesta. (Para más información sobre el modo de archivo de respuesta, vea [Ejecutar el Asistente para la implementación de Analysis Services](running-the-analysis-services-deployment-wizard.md)).  
   
-     O bien  
+     -o bien-  
   
 -   Abra el \< *nombre del proyecto*> .deploymentoptions en cualquier editor de texto y manualmente cambiar las opciones.  
   
 ## <a name="see-also"></a>Vea también  
  [Especificar el destino de instalación](deployment-script-files-specifying-the-installation-target.md)   
- [Especificar la configuración de implementación de la solución](deployment-script-files-solution-deployment-config-settings.md)   
+ [Especificar la configuración para la implementación de soluciones](deployment-script-files-solution-deployment-config-settings.md)   
  [Especificar opciones de procesamiento](deployment-script-files-specifying-processing-options.md)  
   
   

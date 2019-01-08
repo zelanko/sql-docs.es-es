@@ -1,5 +1,5 @@
 ---
-title: Crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación | Documentos de Microsoft
+title: Crear un gráfico de elevación, gráfico de beneficios o matriz de clasificación | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57d8dac4999f5b788b1114e6e7aa4156b6cd6419
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015392"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519123"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Crear un gráfico de mejora respecto al modelo predictivo, un gráfico de beneficios o una matriz de clasificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "34015392"
   
     -   Seleccione la opción **Usar casos de pruebas de estructura de minería de datos**para utilizar el conjunto completo de casos de prueba que se definieron como parte del conjunto de datos de exclusión de las estructuras de minería de datos.  
   
-    -   Seleccione la opción **Especificar otro conjunto de datos**si desea utilizar datos externos.  El conjunto de datos debe estar disponible como vista del origen de datos.   Haga clic en el botón Examinar (**…**) para elegir las tablas de datos que quiere usar en el gráfico de precisión. Para más información, consulte [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
+    -   Seleccione la opción **Especificar otro conjunto de datos**si desea utilizar datos externos.  El conjunto de datos debe estar disponible como vista del origen de datos.   Haga clic en el (**...** ) botón para elegir las tablas de datos que se usará para el gráfico de precisión. Para más información, consulte [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
   
          Si está utilizando un conjunto de datos externos, opcionalmente puede filtrar el conjunto de datos de entrada. Para obtener más información, vea [Aplicar filtros a los datos de prueba del modelo](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34015392"
      Cantidad de ingresos asociados con cada venta realizada con éxito.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráfico de elevación & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [Matriz de clasificación & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

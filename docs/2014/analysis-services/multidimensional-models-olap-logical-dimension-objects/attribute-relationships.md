@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081612"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512780"
 ---
 # <a name="attribute-relationships"></a>Relaciones de atributo
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], atributos dentro de una dimensión siempre se relacionan con directa o indirectamente con el atributo clave. Al definir una dimensión basada en un esquema en estrella, donde todos los atributos de la dimensión se derivan de la misma tabla relacional, se define automáticamente una relación de atributo entre el atributo clave y cada atributo no clave de la dimensión. Al definir una dimensión basada en un esquema de copo de nieve, donde los atributos de la dimensión se derivan de varias tablas relacionadas, se define automáticamente una relación de atributo del modo siguiente:  
@@ -80,7 +80,7 @@ ms.locfileid: "48081612"
   
 -   El atributo City como una relación de atributo con el atributo Customer.  
   
- Para navegar por los datos del cubo, también puede crear una jerarquía definida por el usuario que no representa una jerarquía natural en los datos (que se denomina un *ad hoc* o *reporting* jerarquía). Por ejemplo, podría crear una jerarquía definida por el usuario basada en `{Age, Gender}`. los usuarios no ven ninguna diferencia en el comportamiento de las dos jerarquías, aunque la jerarquía natural se beneficia de las estructuras de agregación e indizado (ocultas al usuario) que explican las relaciones naturales de los datos de origen.  
+ Para navegar por los datos del cubo, también puede crear una jerarquía definida por el usuario que no representa una jerarquía natural en los datos (que se denomina un *ad hoc* o *reporting* jerarquía). Por ejemplo, podría crear una jerarquía definida por el usuario basada en `{Age, Gender}`. Los usuarios no ven ninguna diferencia en cómo se comportan las dos jerarquías, aunque la jerarquía natural se beneficia de agregación e indizado estructuras - ocultas al usuario - esa cuenta para las relaciones naturales de los datos de origen.  
   
  La propiedad `SourceAttribute` de un nivel determina qué atributo se utiliza para describir el nivel. La propiedad `KeyColumns` del atributo especifica la columna de la vista del origen de datos que proporciona los miembros. La propiedad `NameColumn` del atributo puede especificar una columna de nombre diferente para los miembros.  
   
@@ -95,8 +95,8 @@ ms.locfileid: "48081612"
  Puede usar las consultas MDX para recuperar datos de las relaciones de atributo, en formato de propiedades de miembro, por medio de la palabra clave `PROPERTIES` de la instrucción `SELECT` de MDX. Para obtener más información acerca de cómo utilizar MDX para recuperar las propiedades de miembro, vea [mediante propiedades de miembro &#40;MDX&#41;](../multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos y jerarquías de atributo](attributes-and-attribute-hierarchies.md)   
- [Referencia de propiedades de atributos de dimensión](../multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Atributos y jerarquías de atributos](attributes-and-attribute-hierarchies.md)   
+ [Referencia de las propiedades de los atributos de dimensión](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Jerarquías de usuario](user-hierarchies.md)   
  [Propiedades de jerarquía de usuario](user-hierarchies-properties.md)  
   

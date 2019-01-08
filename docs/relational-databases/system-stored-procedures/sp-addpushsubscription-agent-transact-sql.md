@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832323"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209812"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -188,19 +187,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
  [  **@subscriber_provider=** ] **'***subscriber_provider***'**  
- Es el identificador de programación (PROGID) único mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_provider* es **sysname**, su valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es el identificador de programación único (PROGID) con el que el proveedor OLE DB para que no sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está registrado el origen de datos. *subscriber_provider* es **sysname**, su valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- Es el nombre del origen de datos tal y como lo entiende el proveedor OLE DB. *subscriber_datasrc* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_datasrc* se pasa como la propiedad DBPROP_INIT_DATASOURCE para inicializar el proveedor OLE DB. *subscriber_datasrc* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es el nombre del origen de datos tal y como lo entiende el proveedor OLE DB. *subscriber_datasrc* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_datasrc* se pasa como la propiedad DBPROP_INIT_DATASOURCE para inicializar el proveedor OLE DB. *subscriber_datasrc* solo se admite para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_location=** ] **'***subscriber_location***'**  
- Es la ubicación de la base de datos tal y como la entiende el proveedor OLE DB. *subscriber_location* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_location* se pasa como la propiedad DBPROP_INIT_LOCATION para inicializar el proveedor OLE DB. *subscriber_location* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es la ubicación de la base de datos tal y como la entiende el proveedor OLE DB. *subscriber_location* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_location* se pasa como la propiedad DBPROP_INIT_LOCATION para inicializar el proveedor OLE DB. *subscriber_location* solo se admite para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- Es la cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *subscriber_provider_string* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_provider_string* se pasa a IDataInitialize o se establece como la propiedad DBPROP_INIT_PROVIDERSTRING para inicializar el proveedor OLE DB. *subscriber_provider_string* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es la cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *subscriber_provider_string* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_provider_string* se pasa a IDataInitialize o se establece como la propiedad DBPROP_INIT_PROVIDERSTRING para inicializar el proveedor OLE DB. *subscriber_provider_string* solo se admite para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_catalog=** ] **'***subscriber_catalog***'**  
- Es el catálogo que debe utilizarse al establecer una conexión con el proveedor OLE DB. *subscriber_catalog* es **sysname**, su valor predeterminado es NULL. *subscriber_catalog* se pasa como la propiedad DBPROP_INIT_CATALOG para inicializar el proveedor OLE DB. *subscriber_catalog* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es el catálogo que debe utilizarse al establecer una conexión con el proveedor OLE DB. *subscriber_catalog* es **sysname**, su valor predeterminado es NULL. *subscriber_catalog* se pasa como la propiedad DBPROP_INIT_CATALOG para inicializar el proveedor OLE DB. *subscriber_catalog* solo se admite para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

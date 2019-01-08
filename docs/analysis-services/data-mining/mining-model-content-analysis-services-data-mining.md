@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64aeaec2c78360fa082f98db33ebd47a91171348
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508541"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenido del modelo de minería de datos (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "50146230"
   
  Por ejemplo, en un árbol de clasificación, el valor de compatibilidad indica el número de casos que tienen la combinación descrita de atributos.  
   
- En un árbol de decisión, la suma de compatibilidad en cada nivel de un árbol suma la compatibilidad de su nodo primario. Por ejemplo, si un modelo que contiene 1200 casos se divide igualmente por género y, a continuación, se subdivide igualmente por tres valores para Ingresos (Bajos, Medios y Altos), los nodos secundarios del nodo (2), que son los nodos (4), (5) y (6), siempre suman el mismo número de casos que el nodo (2).  
+ En un árbol de decisión, la suma de compatibilidad en cada nivel de un árbol suma la compatibilidad de su nodo primario. Por ejemplo, si un modelo que contiene 1200 casos se divide igualmente por género y, a continuación, se subdivide igualmente por tres valores para los nodos de ingresos bajo, medio y alto, el elemento secundario del nodo (2), que son nodos (4), (5) y (6), siempre suman el mismo número de casos como nodo (2).  
   
 |Identificador de nodo y atributos de nodo|Recuento de soporte|  
 |---------------------------------|-------------------|  
@@ -208,7 +208,7 @@ ms.locfileid: "50146230"
 |3|Continuous|Indica que el valor del atributo es un valor numérico continuo y, por consiguiente, puede ser representado por una media, junto con la varianza y la desviación estándar.|  
 |4|Discrete|Indica un valor, numérico o de texto, que se trata como discreto.<br /><br /> **Nota** Los valores discretos también pueden ser ausentes; sin embargo, se tratan de forma diferente al realizar cálculos. Para obtener información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
 |5|Discretized|Indica que el atributo contiene valores numéricos que se han convertido en datos discretos. El valor será una cadena con formato que describe los depósitos de discretización.|  
-|6|Existente|Indica que el atributo tiene valores numéricos continuos y que los valores se han proporcionado en los datos, frente a los valores que están ausentes o se han deducido.|  
+|6|Existing|Indica que el atributo tiene valores numéricos continuos y que los valores se han proporcionado en los datos, frente a los valores que están ausentes o se han deducido.|  
 |7|Coeficiente|Indica un valor numérico que representa un coeficiente.<br /><br /> Un coeficiente es un valor que se aplica al calcular el valor de la variable dependiente. Por ejemplo, si un modelo crea una fórmula de regresión que predice los ingresos según la edad, el coeficiente se utiliza en la fórmula que relaciona la edad con los ingresos.|  
 |8|Ganancia de puntuación|Indica un valor numérico que representa la ganancia de puntuación para un atributo.|  
 |9|Estadísticas|Indica un valor numérico que representa una estadística para un regresor.|  
@@ -238,9 +238,9 @@ ms.locfileid: "50146230"
   
 -   **La probabilidad de nodo** siempre es mayor o igual que **la probabilidad marginal**.  
   
- Por ejemplo, si la población de todos los clientes en un árbol de decisión está dividida por igual por el género (y no falta ningún valor), la probabilidad de los nodos secundarios debería ser 5. Sin embargo, suponga que cada uno de los nodos correspondientes al género se divide por igual en los niveles de ingresos: Altos, Medios y Bajos. En este caso, la puntuación MARGINAL_PROBABILITY de cada nodo secundario siempre debería ser 0,33, pero el valor NODE_PROBABILTY será el producto de todas las probabilidades que conducen a ese nodo y, por tanto, siempre será menor que el valor de MARGINAL_PROBABILITY.  
+ Por ejemplo, si la población de todos los clientes en un árbol de decisión está dividida por igual por el género (y no falta ningún valor), la probabilidad de los nodos secundarios debería ser 5. Sin embargo, suponga que cada uno de los nodos correspondientes al género se divide por igual por niveles de ingresos-altos, medios y bajos. En este caso, la puntuación MARGINAL_PROBABILITY de cada nodo secundario siempre debería ser 0,33, pero el valor NODE_PROBABILTY será el producto de todas las probabilidades que conducen a ese nodo y, por tanto, siempre será menor que el valor de MARGINAL_PROBABILITY.  
   
-|Nivel de nodo/atributo y valor|Probabilidad marginal|La probabilidad de nodo|  
+|Nivel de nodo/atributo y valor|La probabilidad marginal|La probabilidad de nodo|  
 |----------------------------------------|--------------------------|----------------------|  
 |Raíz del modelo<br /><br /> Todos los clientes de destino|1|1|  
 |Los clientes de destino divididos por género|.5|.5|  
@@ -256,9 +256,9 @@ ms.locfileid: "50146230"
   
  En la tabla siguiente se proporcionan vínculos a temas correspondientes a cada tipo de algoritmo.  
   
--   **Temas de contenido del modelo:** explican el significado de cada tipo de nodo para cada tipo de algoritmo y proporcionan orientación sobre qué nodos son de más interés en un tipo de modelo determinado.  
+-   **Temas de contenido del modelo:** Explica el significado de cada tipo de nodo para cada tipo de algoritmo y proporcionan orientación sobre qué nodos son de más interés en un tipo de modelo determinado.  
   
--   **Temas de consulta:** proporcionan ejemplos de consultas de un tipo de modelo determinado y orientación para interpretar los resultados.  
+-   **Temas de consulta:** Se proporcionan ejemplos de consultas de un tipo de modelo determinado y orientación sobre cómo interpretar los resultados.  
   
 |Algoritmo o tipo de modelo|contenido del modelo|Consultar modelos de minería de datos|  
 |-----------------------------|-------------------|----------------------------|  

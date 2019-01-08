@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergeschemaarticles_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 397608f755e302c1500cb2b94f18f3e8cbc98ffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721553"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802817"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47721553"
 |**Tipo**|**tinyint**|Indica el tipo de artículo solo de esquema, que puede ser uno de los siguientes:<br /><br /> **0 x 20** = el artículo de sólo esquema de procedimiento almacenado.<br /><br /> **0 x 40** = artículo solo de esquema de vista o un artículo de vista indizada solo de esquema.|  
 |**ObjID**|**int**|Identificador de objeto del objeto base del artículo. Puede ser el identificador de objeto de un procedimiento, una vista, una vista indizada o una función de usuario.|  
 |**artid**|**uniqueidentifier**|El identificador de artículo.|  
-|**Descripción**|**nvarchar(255)**|Descripción del artículo.|  
+|**description**|**nvarchar(255)**|Descripción del artículo.|  
 |**pre_creation_command**|**tinyint**|Acción predeterminada que se debe realizar cuando se crea el artículo en la base de datos de suscripciones.<br /><br /> **0 =** none: si la tabla ya existe en el suscriptor, se realiza ninguna acción.<br /><br /> **1** = drop: quita la tabla antes de volver a crearla.<br /><br /> **2** = delete: emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.<br /><br /> **3** = Truncate-igual que **2**, pero elimina páginas en lugar de filas. Sin embargo, no precisa la cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|El identificador único de la publicación.|  
 |**status**|**tinyint**|Indica el estado del artículo solo de esquema, que puede ser uno de los siguientes:<br /><br /> **1** = Unsynced - el script de procesamiento inicial para publicar la próxima vez que se ejecuta el agente de instantáneas de las ejecuciones de la tabla.<br /><br /> **2** = active - se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive - va a agregar.<br /><br /> **6** = New_active - va a agregar.|  

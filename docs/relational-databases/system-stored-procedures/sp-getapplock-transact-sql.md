@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851890"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617585"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Una vez que se ha adquirido un bloqueo de aplicación, solo los primeros 32 caracteres pueden recuperarse como texto simple; al resto se le aplicará el algoritmo hash.  
   
  [ @LockMode=] '*lock_mode*'  
- Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser cualquiera de las siguientes acciones: **Shared**, **actualización**, **IntentShared**, **IntentExclusive**, o **exclusivo** .  
+ Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser uno de los siguientes: **Compartido**, **actualización**, **IntentShared**, **IntentExclusive**, o **exclusivo**.  
   
  [ @LockOwner=] '*lock_owner*'  
  Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el *lock_owner* valor es **transacciones**, de manera predeterminada o especificándolo explícitamente, sp_getapplock debe ejecutarse desde dentro de una transacción.  
@@ -92,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  Solo un miembro de la entidad de seguridad de base de datos indicado en el parámetro @DbPrincipal puede adquirir bloqueos de aplicación que especifiquen dicha entidad de seguridad. Los miembros de los roles dbo y db_owner se consideran, de manera implícita, miembros de todos los roles.  
   
- Es posible liberar los bloqueos de forma explícita con sp_releaseapplock. Si una aplicación llama a sp_getapplock varias veces para el mismo recurso de bloqueo, es necesario llamar a sp_releaseapplock el mismo número de veces para liberar el bloqueo.  
+ Es posible liberar los bloqueos de forma explícita con sp_releaseapplock. Si una aplicación llama a sp_getapplock varias veces para el mismo recurso de bloqueo, es necesario llamar a sp_releaseapplock el mismo número de veces para liberar el bloqueo.  Cuando se abre un bloqueo con el `Transaction` propietario de bloqueo, que se libere el bloqueo cuando se confirma o revierte la transacción.
   
  Si se llama al parámetro sp_getapplock varias veces para el mismo recurso de bloqueo, pero el modo de bloqueo especificado en cualquiera de las solicitudes es diferente del modo existente, el efecto sobre el recurso es la unión de los dos modos de bloqueo. En la mayoría de los casos, esto significa que el modo de bloqueo se promociona al más fuerte de los modos: el modo existente o el recién solicitado. Este modo de bloqueo más fuerte se mantiene hasta su liberación, incluso si anteriormente se han efectuado llamadas para liberar. Por ejemplo, en la siguiente secuencia de llamadas, el recurso se mantiene en modo `Exclusive`, en lugar de `Shared`.  
   
@@ -112,7 +112,7 @@ GO
   
  Un interbloqueo con un bloqueo de aplicación no revierte la transacción que solicitó el bloqueo de aplicación. Cualquier reversión que pueda solicitarse como resultado del valor devuelto debe realizarse manualmente. Por tanto, se recomienda incluir la comprobación de errores en el código de forma que si se devuelven determinados valores (por ejemplo, -3), se inicie una acción ROLLBACK TRANSACTION u otra alternativa.  
   
- A continuación se muestra un ejemplo:  
+ A continuación, se muestra un ejemplo:  
   
 ```  
 USE AdventureWorks2012;  

@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146561"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529232"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Crear predicciones en un modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
   Una vez que comprenda el mejor modelo de clústeres examinando en el Visor de secuencia, puede crear consultas de predicción utilizando el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en el Diseñador de minería de datos. Para crear una predicción, seleccione primero el modelo de agrupación en clústeres de secuencia y, a continuación, seleccione los datos de entrada. Para las entradas, puede utilizar un origen de datos externo o puede crear una consulta singleton y proporcionar los valores en un cuadro de diálogo.  
@@ -196,7 +196,7 @@ NATURAL PREDICTION JOIN
  Ha completado el tutorial sobre modelos de agrupación en clústeres de secuencia.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Si ya ha terminado todas las secciones de la [Tutorial intermedio de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), podría ser el siguiente paso aprender a usar las instrucciones de extensiones de minería de datos (DMX) para crear modelos y generar predicciones. Para obtener más información, consulte [crear y consultar datos de modelos de minería con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
+ Si ya ha terminado todas las secciones de la [Tutorial intermedio de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), podría ser el siguiente paso aprender a usar las instrucciones de extensiones de minería de datos (DMX) para crear modelos y generar predicciones. Para obtener más información, consulte [crear y consultar datos de modelos de minería con DMX: Tutoriales &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
  Si tiene algunos conceptos de programación, también puede utilizar Objetos de administración de análisis (AMO) para trabajar mediante programación con objetos de minería de datos. Para obtener más información, vea [Clases de minería de datos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   

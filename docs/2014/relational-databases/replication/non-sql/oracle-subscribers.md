@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145155"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786375"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
   A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite las suscripciones de inserción a Oracle a través del proveedor Oracle OLE DB suministrado por Oracle.  
@@ -86,7 +85,7 @@ ms.locfileid: "48145155"
   
     -   Asegúrese de que las cadenas vacías no se insertan como valores de columna en la tabla publicada.  
   
-    -   Utilice el parámetro **–SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle (**-SkipErrors1400**).  
+    -   Use el parámetro **-SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle (**-SkipErrors1400**).  
   
     -   Modifique el script de la tabla generada, quitando el atributo NOT NULL de cualquier columna de caracteres a la que puedan haberse asociado cadenas vacías y suministre el script modificado como script personalizado para el artículo mediante el parámetro @creation_script de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   

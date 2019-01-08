@@ -14,12 +14,12 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541845"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (controlador de Excel)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47802363"
   
  **SQLGetInfo** es compatible con el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica el modo en que el controlador trata directamente los archivos en un origen de datos:  
   
--   SQL_FILE_NOT_SUPPORTED: El controlador no es un controlador de nivel único.  
+-   SQL_FILE_NOT_SUPPORTED - el controlador no es un controlador de nivel único.  
   
--   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos de origen de datos como tablas.  
+-   SQL_FILE_TABLE - un controlador de nivel único trata los archivos de origen de datos como tablas.  
   
--   SQL_FILE_QUALIFIER: Un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
+-   SQL_FILE_QUALIFIER - un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
   
  El controlador ODBC devuelve SQL_FILE_TABLE para Microsoft Exceldriver porque cada archivo es una tabla.  
   

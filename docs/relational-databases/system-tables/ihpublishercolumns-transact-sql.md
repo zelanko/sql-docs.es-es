@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublishercolumns
@@ -19,12 +18,12 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a8a2c4d6850b814d79b360ff9748579cf44b7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f965bb76f13c01531ba5007d82de9e42c8138f05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757573"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802499"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "47757573"
 |**Nombre**|**sysname**|El nombre de la columna publicada.|  
 |**column_ordinal**|**int**|Identifica la columna por orden.|  
 |**Tipo**|**varchar (255)**|El tipo de datos de la columna de origen del publicador.|  
-|**Longitud**|**bigint**|La longitud de la columna de origen del publicador.|  
+|**length**|**bigint**|La longitud de la columna de origen del publicador.|  
 |**Prec**|**int**|La precisión de la columna de origen del publicador.|  
-|**Escala**|**int**|La escala de la columna de origen del publicador.|  
+|**escala**|**int**|La escala de la columna de origen del publicador.|  
 |**IsNullable**|**bit**|Indica si la columna acepta valores NULL, donde **1** significa que se aceptan valores NULL.|  
 |**iscaptured**|**bit**|Indica si hay un desencadenador en la columna. Puede haberlo aunque la columna no esté publicada en un artículo. Un valor de **1** significa que el desencadenador existe en la columna.|  
   

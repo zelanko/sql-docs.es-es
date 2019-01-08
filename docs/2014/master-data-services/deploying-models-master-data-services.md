@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
@@ -14,12 +13,12 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5e33eca3c4be7d766d85862ccb66a4ab76a9d17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58f946f89691a6e26ba4402166b8ad725e7a977c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761787"
 ---
 # <a name="deploying-models-master-data-services"></a>Implementar modelos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un paquete es un archivo XML que contiene una estructura del modelo implementable y, opcionalmente, los datos del modelo. Use los paquetes del modelo para mover las copias de modelos desde un entorno de MDS a otro, o para crear nuevos modelos en el entorno de MDS existente.  
@@ -30,11 +29,11 @@ ms.locfileid: "48066335"
 ## <a name="tools-for-deploying-models"></a>Herramientas para implementar modelos  
  Para trabajar con paquetes de modelos, puede usar una de tres herramientas, dependiendo de sus necesidades.  
   
--   **Herramienta MDSModelDeploy**: para crear e implementar objetos y datos del modelo, use la herramienta MDSModelDeploy.exe. Si ha seleccionado la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Herramienta MDSModelDeploy**: Para crear e implementar los datos y objetos de modelo, use la herramienta MDSModelDeploy.exe. Si ha seleccionado la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
--   **Asistente para implementación de modelos**: para crear e implementar paquetes de la estructura del modelo únicamente, use el asistente de la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . No puede usar este asistente para la implementación de datos.  
+-   **Asistente para modelo de implementación**: Para crear e implementar paquetes de la estructura del modelo únicamente, use el Asistente de la [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] aplicación web. No puede usar este asistente para la implementación de datos.  
   
--   **Modelo editor de paquetes**: para modificar un modelo de paquetes, use ModelPackageEditor.exe que inicia el asistente de modelo editor de paquetes. Utilice este asistente para modificar un paquete que haya creado la herramienta MDSModelDeploy o el asistente para implementación de modelos. Si ha seleccionado la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Editor de paquetes modelo**: Para editar un paquete de modelo, use ModelPackageEditor.exe que inicia al Asistente de modelo Editor de paquetes. Utilice este asistente para modificar un paquete que haya creado la herramienta MDSModelDeploy o el asistente para implementación de modelos. Si ha seleccionado la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  Puede usar MDSDeployModel para crear un nuevo modelo, crear un clon de un modelo o actualizar un modelo existente y sus datos. Si usa la herramienta MDSModelDeploy para actualizar un modelo existente y sus datos, y el paquete no contiene una entidad, un atributo o un miembro que exista en el modelo de destino, MDSModelDeploy no eliminará dicha entidad, atributo o miembro del modelo.  
@@ -77,6 +76,6 @@ ms.locfileid: "48066335"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Opciones de implementación de modelos &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
+-   [Opciones de la implementación de modelos &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
   
   

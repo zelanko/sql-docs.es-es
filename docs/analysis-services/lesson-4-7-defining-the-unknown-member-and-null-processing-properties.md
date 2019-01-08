@@ -1,5 +1,5 @@
 ---
-title: Definir el miembro desconocido y propiedades de procesamiento de valores Null | Documentos de Microsoft
+title: Definir el miembro desconocido y propiedades de procesamiento de valores Null | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525921"
 ---
-# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lección 4-7-definir el miembro desconocido y propiedades de procesamiento de valores Null
+# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lección 4-7: definir el miembro desconocido y propiedades de procesamiento de valores Null
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Cuando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procesa una dimensión, todos los valores distintos de las columnas subyacentes de las tablas o las vistas de la vista del origen de datos rellenan los atributos de la dimensión. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encuentra una valor NULL durante el procesamiento, de forma predeterminada, convierte este valor NULL en un cero en las columnas numéricas o en una cadena vacía en las columnas de cadena. Puede modificar estas opciones predeterminadas o convertir los valores NULL en el proceso de extracción, transformación y carga (si existe) del almacenamiento de datos relacional subyacente. También puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convierta el valor NULL en un valor determinado configurando tres propiedades: las propiedades **UnknownMember** y **UnknownMemberName** de la dimensión y la propiedad **NullProcessing** del atributo clave de la dimensión.  
@@ -60,7 +60,7 @@ En las tareas de este tema, agregará los atributos de categoría de producto y 
   
     Este nivel contiene los componentes de ensamblado que se usan al crear otros componentes, empezando por el producto **Adjustable Race** , como se muestra en la imagen siguiente.  
   
-    ![Componentes de ensamblado que se utilizan para generar otros componentes](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "componentes de ensamblado que se utilizan para generar otros componentes")  
+    ![Componentes del ensamblado usados para generar otros componentes](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "componentes del ensamblado usados para generar otros componentes")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Definir los atributos de tablas de copo de nieve y una jerarquía definida por el usuario Product Category  
   
@@ -90,7 +90,7 @@ En las tareas de este tema, agregará los atributos de categoría de producto y 
   
 9. En el panel **Atributos** , cambie el nombre de este nuevo atributo por **Category**.  
   
-10. En la ventana Propiedades, haga clic en el campo de la propiedad **NameColumn** y, después, haga clic en el botón Examinar (**…**) para abrir el cuadro de diálogo **Columna de nombre** .  
+10. En la ventana Propiedades, haga clic en el **NameColumn** propiedad de campo y, a continuación, haga clic en el (**...** ) para abrir el **nombre de columna** cuadro de diálogo.  
   
 11. Seleccione **EnglishProductCategoryName** en la lista **Columna de origen** y haga clic en **Aceptar**.  
   
@@ -98,11 +98,11 @@ En las tareas de este tema, agregará los atributos de categoría de producto y 
   
 13. En el panel **Atributos** , cambie el nombre de este nuevo atributo por **Subcategory**.  
   
-14. En la ventana Propiedades, haga clic en el campo de la propiedad **NameColumn** y, después, haga clic en el botón Examinar **(…)** para abrir el cuadro de diálogo **Columna de nombre** .  
+14. En la ventana Propiedades, haga clic en el **NameColumn** propiedad de campo y, a continuación, haga clic en el **(...)**  botón para abrir el **nombre de columna** cuadro de diálogo.  
   
 15. Seleccione **EnglishProductSubcategoryName** en la lista **Columna de origen** y haga clic en **Aceptar**.  
   
-16. Cree una nueva jerarquía definida por el usuario denominada **Product Categories** con los niveles siguientes, por orden de arriba a abajo: **Category**, **Subcategory**y **Product Name**.  
+16. Crear una nueva jerarquía definida por el usuario denominada **Product Categories** con los niveles siguientes, en orden de arriba a abajo: **Categoría**, **subcategoría**, y **nombre de producto**.  
   
 17. Especifique **All Products** como valor para la propiedad **AllMemberName** de la jerarquía definida por el usuario Product Categories.  
   
@@ -176,10 +176,10 @@ Para modificar el comportamiento mencionado en la tarea anterior, habilitará la
   
     Observe que todos los componentes de ensamblado ahora aparecen en el nivel **Product Name** , como se muestra en la ilustración siguiente.  
   
-    ![Nivel de nombre de producto que muestra los componentes del ensamblado](../analysis-services/media/l4-assemblycomponents-1.gif "nivel Product Name que muestra los componentes del ensamblado")  
+    ![Nivel Product Name, que muestra los componentes de ensamblado](../analysis-services/media/l4-assemblycomponents-1.gif "nivel Product Name que muestra los componentes de ensamblado")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 5: Definir relaciones entre las dimensiones y grupos de medida](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Lección 5: Definir relaciones entre dimensiones y grupos de medida](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

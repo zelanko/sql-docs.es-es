@@ -1,5 +1,5 @@
 ---
-title: Definir una relación de varios a varios | Documentos de Microsoft
+title: Definir una relación muchos a muchos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518019"
 ---
-# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lección 5: 3: definir una relación de varios a varios
+# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lección 5-3: definir una relación varios a varios
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Generalmente, cuando se define una dimensión cada hecho se combina con un único miembro de dimensión, mientras que un mismo miembro puede estar asociado a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como *relación uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.  
@@ -26,7 +26,7 @@ En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], para definir una 
 Con una dimensión de varios a varios, los valores distintos se suman, lo que significa que no se agregan más de una vez al miembro Todos.  
   
 > [!NOTE]  
-> Para poder admitir una relación de dimensiones de varios a varios, debe definir una relación de clave principal a clave externa en la vista del origen de datos entre todas las tablas implicadas. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **Uso de dimensiones** del Diseñador de cubos.  
+> Para admitir una relación de dimensión varios a varios, debe definirse una relación de clave externa para la clave principal en la vista del origen de datos entre todas las tablas que están implicados. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **Uso de dimensiones** del Diseñador de cubos.  
   
 Para obtener más información, consulte [Relaciones de dimensión](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)y [Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
 5.  En el cuadro de diálogo **Agregar o quitar tablas** , agregue la tabla **DimSalesReason** y la tabla **FactInternetSalesReason** a la lista **Objetos incluidos** y haga clic en **Aceptar**.  
   
-    Observe que las relaciones de clave principal a clave externa entre las tablas que están implicadas se establecen automáticamente, ya que dichas relaciones están definidas en la base de datos relacional subyacente. Si dichas relaciones no se hubiesen definido en la base de datos relacional subyacente, tendría que definirlas en la vista del origen de datos.  
+    Tenga en cuenta que las relaciones de clave externa para la clave principales entre las tablas implicadas se establecen automáticamente porque esas relaciones se definen en la base de datos relacional subyacente. Si dichas relaciones no se hubiesen definido en la base de datos relacional subyacente, tendría que definirlas en la vista del origen de datos.  
   
 6.  En el menú **Formato** , seleccione **Diseño automático**y haga clic en **Diagrama**.  
   
@@ -62,7 +62,7 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
     Observe que, para cada número de línea de cada pedido, un valor clave identifica el motivo de venta para la compra del artículo de la línea, como se muestra en la imagen siguiente.  
   
-    ![Valor para identificar el motivo de venta para las compras de la clave](../analysis-services/media/l5-many-to-many-1.gif "valor para identificar el motivo de venta para las compras de clave")  
+    ![Valor para identificar el motivo de venta de las compras de la clave](../analysis-services/media/l5-many-to-many-1.gif "clave, valor para identificar el motivo de venta para adquisiciones")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>Definir el grupo de medida intermedio  
   
@@ -80,7 +80,7 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
 5.  Seleccione **Internet Sales Reason Count** y revise las propiedades de esta medida en la ventana Propiedades.  
   
-    Observe que la propiedad **AggregateFunction** para esta medida está definida como **Recuento** en lugar de como **Suma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eligió **recuento** porque el tipo de datos subyacente es un tipo de datos de cadena. Las otras dos columnas de la tabla de hechos subyacente no estaban seleccionadas como medias porque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] las detectó como claves numéricas y no como medidas reales. Para obtener más información, consulte [Definir el comportamiento de suma parcial](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Observe que la propiedad **AggregateFunction** para esta medida está definida como **Recuento** en lugar de como **Suma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccionó **Recuento** porque el tipo de datos subyacente es un tipo de datos de cadena. Las otras dos columnas de la tabla de hechos subyacente no estaban seleccionadas como medias porque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] las detectó como claves numéricas y no como medidas reales. Para obtener más información, consulte [Definir el comportamiento de suma parcial](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  En la ventana Propiedades, cambie la propiedad **Visible** de la medida **Internet Sales Reason Count** a **False**.  
   
@@ -88,7 +88,7 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
     En la ilustración siguiente se muestran las propiedades de la medida **Internet Sales Reason Count** .  
   
-    ![Propiedades de medida Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "propiedades de medida Internet Sales Reason Count")  
+    ![Las propiedades de la medida Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "propiedades para la medida Internet Sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definir la dimensión de varios a varios  
   
@@ -171,10 +171,10 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
     ![Paneles filtro y datos del Diseñador de cubos](../analysis-services/media/l5-many-to-many-5.gif "paneles filtro y datos del Diseñador de cubos")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Definir la granularidad de dimensión en un grupo de medida](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definir la granularidad de las dimensiones en un grupo de medida](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas en el Diseñador de vistas del origen de datos & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relaciones de dimensión](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

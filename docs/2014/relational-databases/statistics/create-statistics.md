@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527721"
 ---
 # <a name="create-statistics"></a>Crear estadísticas
   Puede crear estadísticas de optimización de consultas en una o más columnas de una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para la mayoría de las consultas, el optimizador de consultas ya genera las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados es necesario crear estadísticas adicionales.  
@@ -42,7 +42,7 @@ ms.locfileid: "48066845"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48066845"
   
 3.  Haga clic en el signo más para expandir la tabla en la que desea crear una nueva estadística.  
   
-4.  Haga clic con el botón derecho en la carpeta **Estadísticas** y, después, seleccione **Nueva estadística…**.  
+4.  Haga clic con el botón derecho en la carpeta **Estadísticas** y, después, seleccione **Nueva estadística...**.  
   
      Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **Nuevas estadísticas de tabla***nombre_tabla*.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48066845"
      **Columnas de estadísticas**  
      Esta cuadrícula muestra las columnas descritas por este conjunto de estadísticas. Todos los valores de la cuadrícula son de solo lectura.  
   
-     **Nombre**  
+     **Name**  
      Muestra el nombre de la columna descrita por las estadísticas. Puede ser una sola columna o una combinación de columnas de una sola tabla.  
   
      **Tipo de datos**  
@@ -122,7 +122,7 @@ ms.locfileid: "48066845"
   
      Las propiedades siguientes se muestran en el cuadro de diálogo **Seleccionar columnas** . Esta información es de solo lectura.  
   
-     **Nombre**  
+     **Name**  
      Muestra el nombre de la columna descrita por las estadísticas. Puede ser una sola columna o una combinación de columnas de una sola tabla.  
   
      **Tipo de datos**  

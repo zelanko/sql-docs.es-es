@@ -15,12 +15,12 @@ ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ec2b3a48dc76e4dd1d56128933841cdb7699996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048805"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530512"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualizar el esquema de una vista del origen de datos (Analysis Services)
   Después de definir una vista del origen de datos (DSV) en un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], el esquema de un origen de datos subyacente puede cambiar. Estos cambios no se detectan ni se actualizan automáticamente en un proyecto de desarrollo. Además, si implementó el proyecto en un servidor y Analysis Services no puede establecer conexión con el origen de datos externo, se producirán errores de procesamiento.  
@@ -42,7 +42,7 @@ ms.locfileid: "48048805"
   
 -   Adición de nuevas restricciones únicas. Si existe una clave principal lógica para una tabla en la DSV y se agrega una clave física a la tabla del origen de datos, la clave lógica se quita y se reemplaza por la clave física.  
   
- El proceso de actualización nunca agrega nuevas tablas a la DSV. Si desea agregar una nueva tabla, debe hacerlo manualmente. Para obtener más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ El proceso de actualización nunca agrega nuevas tablas a la DSV. Si desea agregar una nueva tabla, debe hacerlo manualmente. Para más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_DSVrefresh"></a> Actualizar una DSV en SQL Server Data Tools  
  Para actualizar una DSV, haga doble clic en ella desde el Explorador de soluciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y, después, haga clic en el botón Actualizar vista del origen de datos o elija **Actualizar** en el menú Vista del origen de datos.  
@@ -53,7 +53,7 @@ ms.locfileid: "48048805"
   
  El cuadro de diálogo muestra las tablas, columnas, restricciones y relaciones que se eliminarán o agregarán en la DSV. El informe también muestra cualquier cálculo o consulta con nombre que no se haya preparado correctamente. Los objetos afectados se muestran en una vista de árbol con columnas y relaciones anidadas bajo tablas y el tipo de cambio (eliminación o adición) indicado para cada objeto. Los iconos de objeto de vista del origen de datos estándar indican el tipo de objeto afectado.  
   
- La actualización se basa completamente en los nombres de los objetos subyacentes. Por lo tanto, si se cambia el nombre a un objeto subyacente en el origen de datos, el Diseñador de vistas del origen de datos trata el objeto con el nombre cambiado como dos operaciones independientes: una eliminación y una adición. En este caso, es posible que deba volver a agregar manualmente el objeto con el nombre cambiado a la vista del origen de datos. También es posible que tenga que volver a crear relaciones o claves principales lógicas.  
+ La actualización se basa completamente en los nombres de los objetos subyacentes. Por lo tanto, si se cambia el nombre de un objeto subyacente del origen de datos, Diseñador de vistas del origen de datos trata el objeto cuyo nombre ha cambiado como dos eliminación de una de las operaciones independientes y una adición. En este caso, es posible que deba volver a agregar manualmente el objeto con el nombre cambiado a la vista del origen de datos. También es posible que tenga que volver a crear relaciones o claves principales lógicas.  
   
 > [!IMPORTANT]  
 >  Si es consciente de que ha cambiado el nombre a una tabla de un origen de datos, es posible que desee usar el comando **Reemplazar tabla** para reemplazar la tabla por la tabla con el nuevo nombre antes de actualizar la vista del origen de datos. Para obtener más información, vea [Reemplazar una tabla o una consulta con nombre en una vista del origen de datos &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  

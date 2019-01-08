@@ -13,12 +13,12 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b58446a00300548b0b61defefb71d3207359787a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d5704a43e1ede850a225c4ec2b4df9a3563606b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540111"
 ---
 # <a name="what-is-a-cursor"></a>¿Qué es un Cursor?
 Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. El conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Aplicaciones, especialmente aquellas que son interactivas y en línea, no siempre pueden trabajar eficazmente con el completo conjunto de resultados como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
@@ -61,7 +61,7 @@ Las operaciones de una base de datos relacional actúan en un conjunto completo 
   
  Los cursores de solo lectura, ayudar a los usuarios examinar el conjunto de resultados y los cursores pueden implementar las actualizaciones de filas individuales de lectura/escritura. Cursores complejos pueden definirse con conjuntos de claves que apuntan a filas de tablas base. Aunque algunos cursores son de solo lectura hacia delante, otros usuarios pueden avanzar o retroceder y proporcionar una actualización dinámica del conjunto de resultados según los cambios que realizan otras aplicaciones de la base de datos.  
   
- No todas las aplicaciones deben usar cursores para acceder o actualizar datos. Algunas consultas simplemente no requieren actualización directa de filas mediante un cursor. Los cursores deben ser una de las últimas técnicas empleadas para recuperar datos, y, a continuación, debe elegir el cursor de menor impacto posible. Cuando se crea un conjunto de resultados, mediante un procedimiento almacenado, el conjunto de resultados no es actualizable con cursor editar o actualizar los métodos.  
+ No todas las aplicaciones deben usar cursores para acceder o actualizar datos. Algunas consultas simplemente no requieren actualización directa de filas mediante un cursor. Los cursores deben ser una de las últimas técnicas empleadas para recuperar datos- y, a continuación, debe elegir el cursor de menor impacto posible. Cuando se crea un conjunto de resultados, mediante un procedimiento almacenado, el conjunto de resultados no es actualizable con cursor editar o actualizar los métodos.  
   
 ## <a name="concurrency"></a>Simultaneidad  
  En algunas aplicaciones multiusuario es muy importante para los datos presentados al usuario final sea tan actualizados como sea posible. Un ejemplo clásico de este sistema es un sistema de reserva de líneas aéreas, donde muchos usuarios podrían ser compiten por el mismo asiento en un vuelo determinado (y por lo tanto, un único registro). En un caso como éste, el diseño de la aplicación debe controlar las operaciones simultáneas en un único registro.  

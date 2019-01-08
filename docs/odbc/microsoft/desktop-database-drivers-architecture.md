@@ -15,12 +15,12 @@ ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01de6a3707ea2ed96399c678625f3e94c13fc5db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649573"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516867"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Arquitectura de controladores de escritorio de la base de datos
 Estos controladores están diseñados para uso en Microsoft Windows 95 o versiones posteriores, o Windows NT 4.0 y Windows 2000. Las aplicaciones de 32 bits sola se admiten en Windows 95 o versiones posteriores; se admiten las aplicaciones de 16 bits y 32 bits en Windows NT 4.0 y Windows 2000.  
@@ -40,9 +40,9 @@ Estos controladores están diseñados para uso en Microsoft Windows 95 o version
   
  ![Aplicación&#47;arquitectura de controladores: NT 4.0 y Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
- Los controladores de base de datos de escritorio son dos niveles. En una configuración de dos niveles, el controlador no realiza el proceso de análisis, validación, optimizar y ejecutar la consulta. En su lugar, Microsoft Jet realiza estas tareas. Procesa las llamadas de API de ODBC y actúa como un motor SQL. Microsoft Jet se ha convertido en una parte integral, inseparable de los controladores: que se incluye con los controladores y reside con los controladores, incluso si lo no usa ninguna otra aplicación en el equipo.  
+ Los controladores de base de datos de escritorio son dos niveles. En una configuración de dos niveles, el controlador no realiza el proceso de análisis, validación, optimizar y ejecutar la consulta. En su lugar, Microsoft Jet realiza estas tareas. Procesa las llamadas de API de ODBC y actúa como un motor SQL. Microsoft Jet se ha convertido en una parte integral, inseparable de los controladores: Se incluye con los controladores y reside con los controladores, incluso si lo no usa ninguna otra aplicación en el equipo.  
   
- Constan de los controladores de base de datos de escritorio de seis controladores diferentes, o, más concretamente, un controlador de archivo (Odbcjt32.dll) que ODBC [Administrador de controladores](../../odbc/reference/the-driver-manager.md) usa seis maneras diferentes. La marca DRIVERID en la entrada del registro para un origen de datos determina qué controlador en Odbcjt32.dll se utiliza el Administrador de controladores. Una aplicación pasa esta marca en la cadena de conexión incluida en una llamada a **SQLDriverConnect**. De forma predeterminada, la marca es el identificador del controlador de Microsoft Access.  
+ Los controladores de base de datos de escritorio constan de distintos seis controladores - o, más concretamente, uno (Odbcjt32.dll) del archivo de controlador que ODBC [Administrador de controladores](../../odbc/reference/the-driver-manager.md) usa seis maneras diferentes. La marca DRIVERID en la entrada del registro para un origen de datos determina qué controlador en Odbcjt32.dll se utiliza el Administrador de controladores. Una aplicación pasa esta marca en la cadena de conexión incluida en una llamada a **SQLDriverConnect**. De forma predeterminada, la marca es el identificador del controlador de Microsoft Access.  
   
  El archivo de instalación del controlador cambia la marca DRIVERID durante la instalación. Todos los controladores, excepto el controlador de Microsoft Access tienen un archivo DLL de configuración asociada. Al hacer clic en **instalación** en el [Administrador de orígenes de datos ODBC de Microsoft](../../odbc/admin/odbc-data-source-administrator.md) para un origen de datos, el programa de instalación ODBC DLL (Odbcinst.dll) carga el archivo DLL de configuración. El programa de instalación de DLL exporta la función del instalador ODBC **SQLConfigDataSource**. Si se pasa un identificador de ventana a **SQLConfigDataSource**, esta función muestra una ventana de configuración y cambia la marca DRIVERID según el controlador seleccionado desde la interfaz de usuario.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
@@ -13,12 +13,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c30244128ea15d010c9fe179b06424434325574d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160005"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768547"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Crear consultas a partir de otro objeto distinto de una tabla (Visual Database Tools)
   Al escribir una consulta de recuperación, puede enunciar qué columnas y qué filas desea obtener y dónde tiene que buscar el procesador de consultas los datos originales. Normalmente, estos datos originales están formados por una o varias tablas combinadas entre sí. Pero los datos originales pueden proceder de orígenes que no sean tablas. De hecho, pueden provenir de vistas, consultas, sinónimos o funciones definidas por el usuario que devuelven una tabla.  
@@ -136,7 +136,7 @@ FROM
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Usar una función definida por el usuario en lugar de una tabla  
  En SQL Server 2000 o superior, puede crear una función definida por el usuario que devuelva una tabla. Estas funciones son útiles para la realización de lógica compleja o de procedimientos.  
   
- Por ejemplo, suponga que la tabla employee (empleados) contiene una columna adicional, employee.manager_emp_id, y que existe una clave externa de manager_emp_id a employee.emp_id. Dentro de cada fila de la tabla employee, la columna manager_emp_id se refiere al jefe del empleado. Para ser más exactos, se referirá al emp_id del jefe del empleado. Puede crear una función definida por el usuario que devuelva una tabla que contenga una fila para cada empleado que trabaje en una determinada jerarquía organizativa de un director de alto nivel. Puede llamar a la función fn_GetWholeTeam y diseñarla para que acepte una variable de entrada: el emp_id del director cuyo equipo desea recuperar.  
+ Por ejemplo, suponga que la tabla employee (empleados) contiene una columna adicional, employee.manager_emp_id, y que existe una clave externa de manager_emp_id a employee.emp_id. Dentro de cada fila de la tabla employee, la columna manager_emp_id se refiere al jefe del empleado. Para ser más exactos, se referirá al emp_id del jefe del empleado. Puede crear una función definida por el usuario que devuelva una tabla que contenga una fila para cada empleado que trabaje en una determinada jerarquía organizativa de un director de alto nivel. Puede llamar a la función fn_GetWholeTeam y diseñarla para que acepte una variable de entrada: el valor emp_id del director cuyo equipo quiere recuperar.  
   
  Puede escribir una consulta que utilice la función fn_GetWholeTeam como origen de datos. El código SQL resultante puede presentar el siguiente aspecto:  
   

@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de asociación | Documentos de Microsoft
+title: Ejemplos de consultas de modelo de asociación | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb268ffeb4b7f997876b7fc28dfb773b971aaf1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0c4f09cf3110c202caeaa5079a3124bd64ffedae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519222"
 ---
 # <a name="association-model-query-examples"></a>Ejemplos de consultas del modelo de asociación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34020022"
 ##  <a name="bkmk_top2"></a> Buscar información sobre el modelo  
  Todos los modelos de minería de datos exponen el contenido aprendido por el algoritmo de acuerdo con un esquema normalizado, denominado conjunto de filas de esquema del modelo de minería de datos. Puede crear consultas en el conjunto de filas de esquema del modelo de minería de datos utilizando instrucciones de Extensiones de minería de datos (DMX) o los procedimientos almacenados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], también se pueden consultar directamente los conjuntos de filas de esquema como tablas del sistema, utilizando una sintaxis parecida a SQL.  
   
-###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: obtener metadatos del modelo usando DMX  
+###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: Obtener metadatos del modelo usando DMX  
  La consulta siguiente devuelve metadatos básicos sobre el modelo de asociación, `Association`, como el nombre del modelo, la base de datos en la que se encuentra almacenado y el número de nodos secundarios existentes en él. Esta consulta usa una consulta de contenido DMX para recuperar los metadatos del nodo primario del modelo:  
   
 ```  
@@ -71,7 +71,7 @@ WHERE NODE_TYPE = 1
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: obtener metadatos adicionales del conjunto de filas de esquema  
+###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: Obtener metadatos adicionales del conjunto de filas de esquema  
  Mediante una consulta al conjunto de filas de esquema de minería de datos, puede obtener la misma información que a través de una consulta de contenido DMX. Sin embargo, el conjunto de filas de esquema proporciona algunas columnas adicionales, como la fecha en que se procesó el modelo por última vez, la estructura de minería de datos y el nombre de la columna usada como atributo de predicción.  
   
 ```  
@@ -94,7 +94,7 @@ WHERE MODEL_NAME = 'Association'
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: recuperar los parámetros originales para el modelo  
+###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: Recuperar los parámetros originales para el modelo  
  La consulta siguiente devuelve una única columna con detalles sobre la configuración de parámetros utilizada cuando se creó el modelo.  
   
 ```  
@@ -112,7 +112,7 @@ WHERE MODEL_NAME = 'Association'
 ## <a name="finding-information-about-rules-and-itemsets"></a>Buscar información sobre las reglas y los conjuntos de elementos  
  Los usos más comunes de un modelo de asociación son dos: detectar información sobre conjuntos de elementos frecuentes y extraer detalles sobre reglas y conjuntos de elementos concretos. Por ejemplo, puede que desee extraer una lista de reglas puntuadas como especialmente interesantes, o crear una lista de los conjuntos de elementos más comunes. Esta información se recupera utilizando una consulta de contenido DMX. También se puede examinar esta información utilizando el **Visor de asociación de Microsoft**.  
   
-###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: recuperar una lista de conjuntos de elementos y productos  
+###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: Recuperando lista de conjuntos de elementos y productos  
  La consulta siguiente recupera todos los conjuntos de elementos junto con una tabla anidada que contiene la lista de productos incluidos en cada conjunto de elementos. La columna NODE_NAME contiene el identificador único del conjunto de elementos existente en el modelo, mientras que NODE_CAPTION proporciona una descripción de los elementos. En este ejemplo, se ha quitado la información de estructura jerárquica de la tabla anidada para que el conjunto de elementos que contenga dos productos genere dos filas en los resultados. Se puede omitir la palabra clave FLATTENED si el cliente admite datos jerárquicos.  
   
 ```  
@@ -135,7 +135,7 @@ WHERE NODE_TYPE = 7
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: devolver los 10 primeros conjuntos de elementos  
+###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: Devuelve los primeros 10 conjuntos de elementos  
  En este ejemplo se muestra cómo utilizar algunas de las funciones de agrupación y ordenación que DMX proporciona de forma predeterminada. La consulta devuelve los 10 mejores conjuntos de elementos ordenados según el soporte para cada nodo. Observe que no necesita agrupar explícitamente los resultados, tal como haría en Transact-SQL; sin embargo, puede utilizar solo una función de agregado en cada consulta.  
   
 ```  
@@ -159,8 +159,8 @@ WHERE NODE_TYPE = 7
   
  Otro ejemplo de dónde podrían resultar útiles las consultas en un modelo de asociación consiste en devolver la confianza para diversas reglas y conjuntos de elementos con objeto de poder comparar la efectividad de distintas estrategias de ventas cruzadas. En los ejemplos siguientes se muestra cómo crear tales consultas.  
   
-###  <a name="bkmk_Query6"></a> Consulta de ejemplo 6: predecir elementos asociados  
- En este ejemplo se usa el modelo de asociación creado en el [Tutorial intermedio de minería de datos &#40;Analysis Services - Minería de datos&#41;](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b). Muestra cómo crear una consulta de predicción que indica qué productos se deben recomendar a un cliente que ha comprado un producto determinado. Este tipo de consulta, donde se deben proporcionar valores para el modelo en una instrucción **SELECT…UNION** , se denomina consulta singleton. Como la columna del modelo de predicción correspondiente a los nuevos valores es una tabla anidada, es necesario usar una cláusula **SELECT** para asignar el nuevo valor a la columna de tabla anidada, `[Model]`, y otra cláusula **SELECT** para asignar la columna de tabla anidada a la columna de nivel de caso, `[v Assoc Seq Line Items]`. Si agrega la palabra clave INCLUDE-STATISTICS a la consulta, podrá ver la probabilidad y el soporte para las recomendaciones.  
+###  <a name="bkmk_Query6"></a> Consulta de ejemplo 6: Predecir elementos asociados  
+ En este ejemplo se usa el modelo de asociación creado en el [Tutorial intermedio de minería de datos &#40;Analysis Services - Minería de datos&#41;](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b). Muestra cómo crear una consulta de predicción que indica qué productos se deben recomendar a un cliente que ha comprado un producto determinado. Este tipo de consulta, donde se deben proporcionar valores para el modelo en un **seleccione... Unión** instrucción, se denomina consulta singleton. Como la columna del modelo de predicción correspondiente a los nuevos valores es una tabla anidada, es necesario usar una cláusula **SELECT** para asignar el nuevo valor a la columna de tabla anidada, `[Model]`, y otra cláusula **SELECT** para asignar la columna de tabla anidada a la columna de nivel de caso, `[v Assoc Seq Line Items]`. Si agrega la palabra clave INCLUDE-STATISTICS a la consulta, podrá ver la probabilidad y el soporte para las recomendaciones.  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -182,7 +182,7 @@ AS t
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> Consulta de ejemplo 7: determinar la confianza para los conjuntos de elementos relacionados  
+###  <a name="bkmk_Query7"></a> Consulta de ejemplo 7: Determinar la confianza para los conjuntos de elementos relacionados  
  Mientras que las reglas son útiles para generar recomendaciones, los conjuntos de elementos resultan más interesantes para realizar análisis más profundos de los patrones existentes en el conjunto de datos. Por ejemplo, si no quedó satisfecho con las recomendaciones devueltas por la consulta de ejemplo anterior, podría examinar otros conjuntos de elementos que contuviesen el Producto A para tener una idea más clara de si dicho producto es un accesorio que se compra con todo tipo de productos, o si se trata de un producto estrechamente relacionado con las compras de determinados productos. La manera más fácil de explorar estas relaciones es filtrando los conjuntos de elementos en el Visor de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ; sin embargo, se puede recuperar la misma información con una consulta.  
   
  La consulta de ejemplo siguiente devuelve todos los conjuntos de elementos que incluyen el elemento Water Bottle, incluido el elemento Water Bottle por sí solo.  
@@ -218,20 +218,20 @@ ORDER BY NODE_SUPPORT DESC
   
 |||  
 |-|-|  
-|Función de predicción|Uso|  
-|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo en el gráfico de red neuronal.|  
-|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|Indica si el nodo especificado contiene el caso actual.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
-|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|Predice los miembros de un conjunto de datos asociativo.|  
-|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla de valores relacionados con el valor de predicción actual.|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID de cada caso.|  
-|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza del valor de predicción.|  
+|función de predicción|Uso|  
+|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo en el gráfico de red neuronal.|  
+|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Indica si el nodo especificado contiene el caso actual.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
+|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Predice los miembros de un conjunto de datos asociativo.|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla de valores relacionados con el valor de predicción actual.|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID de cada caso.|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza del valor de predicción.|  
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Referencia técnica del algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para modelos de asociación & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 59e81112a0c9cc4075f0110c92676f75f80f0117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528390"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
   Describe cómo habilitar o deshabilitar la indización semántica estadística de las columnas seleccionadas que contienen documentos o texto.  
@@ -42,9 +42,9 @@ ms.locfileid: "48229955"
   
 -   Puede crear un índice en columnas que contenga cualquiera de los tipos de datos admitidos para la indización de texto completo. Para obtener más información, vea [Crear y administrar índices de texto completo](create-and-manage-full-text-indexes.md).  
   
--   Puede especificar cualquier tipo de documento admitido para la indización de texto completo `varbinary(max)` columnas. Para obtener más información, vea [Cómo: determinar qué tipos de documento se pueden indizar](#doctypes) más adelante en este tema.  
+-   Puede especificar cualquier tipo de documento admitido para la indización de texto completo para las columnas `varbinary(max)`. Para obtener más información, consulte [How To: Determinar que documento tipos se pueden indizar](#doctypes) en este tema.  
   
--   La indización semántica crea dos tipos de índices para las columnas que seleccione: un índice de frases clave y un índice de similitud de documentos. No puede seleccionar solo uno de los tipos de índice o el otro cuando habilite la indización semántica. Sin embargo, puede consultar estos dos índices por separado. Para obtener más información, vea [Buscar frases clave en documentos con la búsqueda semántica](find-key-phrases-in-documents-with-semantic-search.md) y [Buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md).  
+-   La indexación semántica crea dos tipos de índices para las columnas que seleccione: un índice de frases clave y un índice de similitud de documentos. No puede seleccionar solo uno de los tipos de índice o el otro cuando habilite la indización semántica. Sin embargo, puede consultar estos dos índices por separado. Para obtener más información, vea [Buscar frases clave en documentos con la búsqueda semántica](find-key-phrases-in-documents-with-semantic-search.md) y [Buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md).  
   
 -   Si no especifica explícitamente ningún LCID para un índice semántico, solo se usan las estadísticas del idioma principal y de su idioma asociado para la indización semántica.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48229955"
  **Crear un nuevo índice semántico con Transact-SQL**  
  Llame a la instrucción **CREATE FULLTEXT INDEX** y especifique **STATISTICAL_SEMANTICS** para cada columna en la que quiera crear un índice semántico. Para obtener más información sobre todas las opciones de esta instrucción, vea [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql).  
   
- **Ejemplo 1: crear un índice único, un índice de texto completo y un índice semántico**  
+ **Ejemplo 1: Crear un índice único, un índice de texto completo y un índice semántico**  
   
  En el ejemplo siguiente, se crea un catálogo de texto completo predeterminado, **ft**. Después, se crea un índice único en la columna **JobCandidateID** de la tabla **HumanResources.JobCandidate** de la base de datos de ejemplo AdventureWorks2012. Este índice único se requiere como columna de clave de un índice de texto completo. Después, en el ejemplo se crea un índice de texto completo y un índice semántico en la columna **Resume** .  
   
@@ -129,7 +129,7 @@ GO
   
 -   Para agregar una indexación semántica a una columna que ya esté habilitada para la indexación de texto completo, use la opción **ADD STATISTICAL_SEMANTICS** . Solo puede agregar una indización semántica a una columna en una única instrucción **ALTER** .  
   
- **Ejemplo: agregar una indización semántica a una columna que ya tenga indización de texto completo**  
+ **Ejemplo: Agregar una indización semántica a una columna que ya tenga indización de texto completo**  
   
  En el ejemplo siguiente se modifica un índice de texto completo existente en la tabla **Production.Document** de la base de datos de ejemplo AdventureWorks2012. En el ejemplo se agrega un índice semántico en la columna **Document** de la tabla **Production.Document** , que ya tiene un índice de texto completo. En el ejemplo se especifica que el índice no se volverá a rellenar automáticamente.  
   
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="dropping"></a> Quitar un índice semántico  
   
-###  <a name="drophow"></a> Cómo: quitar un índice semántico  
+###  <a name="drophow"></a> Cómo: Quitar un índice semántico  
  Puede quitar la indexación semántica cuando modifique un índice de texto completo existente con la instrucción **ALTER FULLTEXT INDEX** . También puede quitar la indización semántica con varios cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Quitar un índice semántico con Transact-SQL**  
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>Determinar qué se puede indizar para la búsqueda semántica  
   
-###  <a name="HowToCheckLanguages"></a> Cómo: Comprobar qué lenguajes se admiten para la búsqueda semántica  
+###  <a name="HowToCheckLanguages"></a> Cómo: Compruebe qué lenguajes se admiten para la búsqueda semántica  
   
 > [!IMPORTANT]  
 >  Hay menos idiomas que sean compatibles con la indización semántica que con la indización de texto completo. Como resultado, puede haber columnas que pueda indizar para la búsqueda de texto completo, pero que no para la búsqueda semántica.  
@@ -253,7 +253,7 @@ GO
   
  Los siguientes idiomas se admiten para la indización semántica. En esta lista se representa la salida de la vista de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql), ordenada por LCID.  
   
-|Idioma|LCID|  
+|Lenguaje|LCID|  
 |--------------|----------|  
 |German|1031|  
 |Inglés (Estados Unidos)|3082|  

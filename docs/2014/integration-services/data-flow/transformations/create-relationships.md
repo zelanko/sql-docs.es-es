@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095796"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804927"
 ---
 # <a name="create-relationships"></a>Crear relaciones
   Utilice el cuadro de diálogo **Crear relaciones** para editar asignaciones entre las columnas de origen y las columnas de la tabla de búsqueda configuradas en el Editor de transformación Búsqueda aproximada, el Editor de transformación Búsqueda y el Editor de transformación Búsqueda de términos.  
@@ -50,9 +49,9 @@ ms.locfileid: "48095796"
  Especifique el nombre de una nueva columna de salida que contendrá los resultados de similitud de la columna seleccionada. Si este valor se deja vacío, la columna de salida no se crea.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../integration-services-error-and-message-reference.md)   
  [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Editor de transformación Búsqueda &#40;página Columnas&#41;](../../lookup-transformation-editor-columns-page.md)   
- [Editor de transformación Búsqueda de términos &#40;pestaña búsqueda de términos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Editor de transformación Búsqueda de términos &#40;pestaña Búsqueda de términos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

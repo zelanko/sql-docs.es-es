@@ -13,12 +13,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166385"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523473"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Editor de Formulario de KPI** de la pestaña **KPI** del Diseñador de cubos para crear o modificar el indicador clave de rendimiento (KPI) seleccionado.  
@@ -27,7 +27,7 @@ ms.locfileid: "48166385"
 >  Este panel solo se muestra en la vista de formulario.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre del KPI.  
   
  **Grupo de medida asociado**  
@@ -61,10 +61,10 @@ ms.locfileid: "48166385"
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
   
- Se recomienda que esta expresión devuelva un número decimal entre -1 y 1. Un número menor representa una situación negativa, mientras que un número mayor representa una situación positiva.  
+ Se recomienda que esta expresión devuelva un número decimal comprendido entre -1 y 1. Un número menor representa una situación negativa, mientras que un número mayor representa una situación positiva.  
   
 > [!NOTE]  
->  Los valores inferiores a –1 y superiores a 1 son posibles, pero es posible que las aplicaciones cliente de terceros no los interpreten correctamente.  
+>  Los valores inferiores a -1 y superiores a 1 son posibles, pero no se pueden interpretar correctamente las aplicaciones cliente de terceros.  
   
  **Tendencia**  
  Expanda para ver las opciones **Gráfico de tendencia** y **Expresión de tendencia** .  
@@ -80,10 +80,10 @@ ms.locfileid: "48166385"
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
   
- La expresión de tendencia puede basarse en cualquier criterio basado en el tiempo que tenga sentido en un contexto empresarial determinado. Se recomienda que esta expresión devuelva un número decimal entre -1 y 1. Un número menor representa una tendencia negativa a lo largo del tiempo; un número mayor representa una tendencia positiva a lo largo del tiempo.  
+ La expresión de tendencia puede basarse en cualquier criterio basado en el tiempo que tenga sentido en un contexto empresarial determinado. Se recomienda que esta expresión devuelva un número decimal comprendido entre -1 y 1. Un número menor representa una tendencia negativa a lo largo del tiempo; un número mayor representa una tendencia positiva a lo largo del tiempo.  
   
 > [!NOTE]  
->  Los valores inferiores a –1 y superiores a 1 son posibles, pero es posible que las aplicaciones cliente de terceros no los interpreten correctamente.  
+>  Los valores inferiores a -1 y superiores a 1 son posibles, pero no se pueden interpretar correctamente las aplicaciones cliente de terceros.  
   
  **Propiedades adicionales**  
  Expanda para ver las opciones **Carpeta para mostrar**, **KPI primario**, **Miembro de hora actual**, **Peso**y **Descripción** .  

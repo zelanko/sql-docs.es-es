@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188405"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539749"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
   En los campos de datos de caracteres, los caracteres de terminación opcionales permiten marcar el final de cada campo de un archivo de datos con un *terminador de campo* y el final de cada fila con un *terminador de fila*. Los caracteres de terminación son una forma de indicar a los programas que leen el archivo de datos dónde termina un campo o una fila y dónde comienza otro.  
@@ -40,7 +40,7 @@ ms.locfileid: "48188405"
 |Barra diagonal inversa<sup>1</sup>|\\\|  
 |Terminador null (terminador invisible)<sup>2</sup>|\0|  
 |Cualquier carácter imprimible (los caracteres de control no se pueden imprimir, excepto los valores NULL, tabulaciones, caracteres de nueva línea y retornos de carro)|(*, A, t, l, etc.)|  
-|Una cadena de hasta 10 caracteres imprimibles, incluidos algunos o todos los terminadores enumerados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t—\n, etc.)|  
+|Una cadena de hasta 10 caracteres imprimibles, incluidos algunos o todos los terminadores enumerados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t-\n, etc.)|  
   
  <sup>1</sup> sólo el t, n, r, 0 y '\0' caracteres trabajar con el carácter de escape de barra diagonal inversa para generar un carácter de control.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188405"
   
          `Enter field terminator [none]:`  
   
-         Generalmente, el valor predeterminado es una opción apropiada. Sin embargo, para `char` o `nchar` campos de datos, vea la siguiente subsección, "Directrices para utilizar terminadores". Para obtener un ejemplo que muestra esta solicitud en contexto, vea [Especificar formatos de datos por razones de compatibilidad mediante bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+         Generalmente, el valor predeterminado es una opción apropiada. Sin embargo, para los campos de datos `char` o `nchar`, vea la siguiente subsección, "Directrices para utilizar terminadores". Para obtener un ejemplo que muestra esta solicitud en contexto, vea [Especificar formatos de datos por razones de compatibilidad mediante bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
         > [!NOTE]  
         >  Después de que se especifiquen de forma interactiva todos los campos de un comando **bcp**, el comando solicita que guarde sus respuestas para cada campo en un archivo que no tenga el formato XML. Para obtener más información sobre los archivos de formato no XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Directrices para utilizar terminadores  
- En algunas situaciones, un terminador resulta útil para un `char` o `nchar` campo de datos. Por ejemplo:  
+ En algunas situaciones, un terminador resulta útil para un campo de datos `char` o `nchar`. Por ejemplo:  
   
 -   En el caso de una columna de datos que contiene un valor NULL de un archivo de datos que se va a importar a un programa que no entiende la información sobre la longitud de prefijo.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48188405"
   
  El comando **bcp** contiene los siguientes modificadores.  
   
-|Switch|Descripción|  
+|Modificador|Descripción|  
 |------------|-----------------|  
 |**-c**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
 |**-t** `,`|Especifica una coma (,) como terminador de campo.|  
@@ -164,7 +164,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Usar BULK INSERT para especificar terminadores interactivamente  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Usar BULK INSERT para especificar terminadores interactivamente  
  En el ejemplo siguiente se importa de forma masiva el archivo de datos `Department-c-t.txt` mediante una instrucción `BULK INSERT` que utiliza los calificadores que figuran en la siguiente tabla:  
   
 |Opción|Attribute|  

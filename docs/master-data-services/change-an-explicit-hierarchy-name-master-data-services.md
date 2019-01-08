@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
@@ -14,12 +13,12 @@ ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6ec68dfefbae6f521ec411418cb0612afe1df34c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20850dfb044fc39270644c0e52c8d35de0bdd4c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819953"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774157"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Cambiar el nombre de una jerarquía explícita (Master Data Services)
 
@@ -50,7 +49,7 @@ ms.locfileid: "47819953"
   
 7.  Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Crear una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Eliminar una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

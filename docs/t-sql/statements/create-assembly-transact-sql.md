@@ -24,19 +24,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b81e8cb39a9520697af41624dfda2609bdbbef9f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697154"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207664"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Crea un módulo de aplicación administrada que contiene metadatos de clase y código administrado como un objeto en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mediante este módulo, puede crear en la base de datos funciones CLR (Common Language Runtime), procedimientos almacenados, desencadenadores, funciones de agregado definidas por el usuario y tipos definidos por el usuario.  
   
->  [!WARNING]
+> [!WARNING]
 >  CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Para obtener más información, vea [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,8 +85,8 @@ Especifica la ruta de acceso local o ubicación de red en la que se encuentra el
  Es una expresión de tipo **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
- >  [!IMPORTANT]  
- >  La opción `PERMISSION_SET` se ve afectada por la opción `clr strict security`, descrita en la advertencia inicial. Cuando `clr strict security` está habilitada, todos los ensamblados se tratan como `UNSAFE`.
+> [!IMPORTANT]
+>  La opción `PERMISSION_SET` se ve afectada por la opción `clr strict security`, descrita en la advertencia inicial. Cuando `clr strict security` está habilitada, todos los ensamblados se tratan como `UNSAFE`.
  
  Especifica un conjunto de permisos de acceso a código que se conceden al ensamblado cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene acceso al mismo. Si no se especifica, el valor SAFE se aplica de forma predeterminada.  
   
@@ -129,7 +129,7 @@ Cuando se intenta obtener acceso al ensamblado especificado en \<especificador_d
   
 -   El binario del ensamblado está formado por metadatos y segmentos de código válidos; los segmentos de código tienen instrucciones MSIL (Lenguaje intermedio de Microsoft) válidas.  
   
--   El conjunto de ensamblados del sistema al que se hace referencia es uno de los siguientes ensamblados admitidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll y System.Xml.Linq.dll. Se puede hacer referencia a otros ensamblados del sistema, pero deben estar registrados de forma explícita en la base de datos.  
+-   El conjunto de ensamblados del sistema al que hace referencia es uno de los siguientes ensamblados admitidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll y System.Xml.Linq.dll. Se puede hacer referencia a otros ensamblados del sistema, pero deben estar registrados de forma explícita en la base de datos.  
   
 -   Para ensamblados creados mediante los conjuntos de permisos SAFE o EXTERNAL ACCESS:  
   
@@ -143,7 +143,7 @@ Cuando se intenta obtener acceso al ensamblado especificado en \<especificador_d
   
  Además de las comprobaciones previas realizadas al ejecutar CREATE ASSEMBLY, existen comprobaciones adicionales que se realizan en el tiempo de ejecución del código en el ensamblado:  
   
--   Si se llama a determinadas API de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que requieren un permiso de acceso a código específico, puede dar error si el conjunto de permisos del ensamblado no incluye tal permiso.  
+-   Se puede producir un error en la llamada a determinadas API de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que requieren un permiso de acceso a código específico si el conjunto de permisos del ensamblado no incluye ese permiso.  
   
 -   En el caso de ensamblados SAFE y EXTERNAL_ACCESS, cualquier intento de llamada a las API [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] anotadas con HostProtectionAttributes dará error.  
   
@@ -168,7 +168,7 @@ Los siguientes permisos son necesarios para crear un ensamblado CLR cuando la op
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Ejemplo A: creación de un ensamblado desde un archivo dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Ejemplo A: Creación de un ensamblado desde un archivo dll  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -183,7 +183,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > Azure SQL Database no admite la creación de un ensamblado desde un archivo.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Ejemplo B: creación de un ensamblado a partir de bits de ensamblado  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Ejemplo B: Creación de un ensamblado desde bits de ensamblado  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -195,7 +195,7 @@ CREATE ASSEMBLY HelloWorld
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   

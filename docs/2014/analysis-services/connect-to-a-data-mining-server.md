@@ -14,12 +14,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196995"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420396"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Conectar con un servidor de minería de datos
   ![Botón conexiones](media/misc-connection.gif "botón conexiones")  
@@ -68,7 +68,7 @@ ms.locfileid: "48196995"
   
  **Se perdió la conexión; ¿perdí todo mi trabajo?**  
   
- Si termina la conexión con el servidor, los resultados y los datos no se perderán, ya que se almacenan en Excel. Sin embargo, si ha creado algunos modelos temporales, estos se eliminarán del servidor después de un breve período de tiempo. Por ello, si pierde la conexión temporalmente, es posible que los modelos no se hayan eliminado todavía.  
+ Si termina la conexión con el servidor, los resultados y los datos no se perderán, ya que se almacenan en Excel. Sin embargo, si ha creado algunos modelos temporales, estos se eliminarán del servidor después de un breve período de tiempo. Por lo que si pierde la conexión temporalmente, en algún momento los modelos no se eliminará todavía.  
   
  Los datos o los resultados generados no se perderán, ya que todos los informes y las tablas se almacenan en Excel.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48196995"
   
 2.  Vea el registro de actividad de conexión y busque el modelo revisando las columnas y las salidas de predicción (por ejemplo).  
   
-     Usuarios avanzados: si está familiarizado con DMX o XMLA, puede copiar las instrucciones en un archivo para usarlas posteriormente.  
+     Usuarios avanzados: Si está familiarizado con DMX o XMLA, puede copiar las instrucciones en un archivo para su uso posterior.  
   
 3.  Cuando haya encontrado el nombre del modelo temporal y de estructura, abrir **Administrar modelo** y seleccione el modelo.  
   

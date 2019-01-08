@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809083"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396028"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47809083"
 |rol|**tinyint**|Rol de replicación geográfica, uno de:<br /><br /> 0 = primary. El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.<br /><br /> 1 = la base de datos secundaria.  El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de:<br /><br /> 0 no = directa se permiten las conexiones a la base de datos secundaria y la base de datos no está disponible para acceso de lectura.<br /><br /> 2 = all se permiten conexiones a la base de datos en el repl secundaria; ication para acceso de solo lectura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
 |last_commit|**datetimeoffset**|La hora de última transacción confirmada en la base de datos. Si puede recuperar la base de datos principal, indica la última hora de confirmación en la base de datos principal. Si puede recuperar la base de datos secundaria, indica la última hora de confirmación en la base de datos secundaria. Si puede recuperar la base de datos secundaria cuando el elemento principal del vínculo de replicación está inactivo, indica hasta qué punto la base de datos secundaria se puso al día.|
   
 > [!NOTE]  

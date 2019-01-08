@@ -20,19 +20,19 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23a81ceda914bb43d4361e9c6fb8a2409bf2556e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809073"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517410"
 ---
 # <a name="sqlputdata-function"></a>Función SQLPutData
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
- **SQLPutData** permite que una aplicación enviar datos de un parámetro o columna a del controlador en el tiempo de ejecución de la instrucción. Esta función puede utilizarse para enviar los valores de caracteres o datos binarios en partes a una columna con un tipo de datos específico del origen character, binary o datos (por ejemplo, los parámetros de los tipos de SQL_LONGVARBINARY y SQL_LONGVARCHAR). **SQLPutData** admite el enlace a un tipo de datos Unicode C, incluso si el controlador subyacente no admite datos Unicode.  
+ **SQLPutData** permite que una aplicación enviar datos de un parámetro o columna a del controlador en el tiempo de ejecución de la instrucción. Esta función puede utilizarse para enviar los valores de caracteres o datos binarios en partes a una columna con un tipo de datos específicos del origen de carácter, binario o datos (por ejemplo, los parámetros de los tipos de SQL_LONGVARBINARY y SQL_LONGVARCHAR). **SQLPutData** admite el enlace a un tipo de datos Unicode C, incluso si el controlador subyacente no admite datos Unicode.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   El tipo de datos C es SQL_C_DEFAULT, y el tipo de datos C predeterminado para el tipo de datos SQL especificado es SQL_C_CHAR o SQL_C_BINARY.  
   
- Para los demás tipos de datos de C, si *StrLen_or_Ind* no es SQL_NULL_DATA o SQL_DEFAULT_PARAM, el controlador se da por supuesto que el tamaño de la \* *DataPtr* búfer es el tamaño del tipo de datos C especificado con *ValueType* o *TargetType* y envía el valor de datos completo. Para obtener más información, consulte [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en Apéndice D: tipos de datos.  
+ Para los demás tipos de datos de C, si *StrLen_or_Ind* no es SQL_NULL_DATA o SQL_DEFAULT_PARAM, el controlador se da por supuesto que el tamaño de la \* *DataPtr* búfer es el tamaño del tipo de datos C especificado con *ValueType* o *TargetType* y envía el valor de datos completo. Para obtener más información, consulte [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en el apéndice D: Tipos de datos.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -75,7 +75,7 @@ SQLRETURN SQLPutData(
 |07006|Infracción del atributo de tipo de datos restringido|El valor de datos identificado por el *ValueType* argumento en **SQLBindParameter** para el parámetro dependiente no se pudo convertir al tipo de datos identificado por el *ParameterType*argumento en **SQLBindParameter**.|  
 |07S01|Uso no válido de parámetro predeterminado|Establece un valor de parámetro, con **SQLBindParameter**, era SQL_DEFAULT_PARAM y el parámetro correspondiente no tiene un valor predeterminado.|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos a la que se ha conectado el controlador antes del procesamiento de la función se ha completado.|  
-|22001|Cadena de datos, truncamiento por la derecha|La asignación de un carácter o un valor binario a una columna producía el truncamiento de no están en blanco (carácter) o distinto de null (binarios) caracteres o bytes.<br /><br /> El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se ha enviado más datos para un parámetro largo (el tipo de datos era un tipo de datos específico del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se ha especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**.<br /><br /> El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se ha enviado más datos para una columna long (el tipo de datos era un tipo de datos específico del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se especificó en el búfer de longitud correspondiente a una columna en una fila de datos que se ha agregado o actualizado con **SQLBulkOperations** o actualizados con **SQLSetPos**.|  
+|22001|Cadena de datos, truncamiento por la derecha|La asignación de un carácter o un valor binario a una columna producía el truncamiento de no están en blanco (carácter) o distinto de null (binarios) caracteres o bytes.<br /><br /> El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se ha enviado más datos para un parámetro largo (el tipo de datos era un tipo de datos específicos del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se ha especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**.<br /><br /> El tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S" y se ha enviado más datos para una columna long (el tipo de datos era un tipo de datos específicos del origen de datos long, SQL_LONGVARBINARY o SQL_LONGVARCHAR) que se especificó en el búfer de longitud correspondiente a una columna en una fila de datos que se ha agregado o actualizado con **SQLBulkOperations** o actualizados con **SQLSetPos**.|  
 |22003|Valor numérico fuera del intervalo|Los datos enviaron para un parámetro numérico enlazado o columna provocó la parte entera (en contraposición a fraccionarios) el número que se truncan cuando se asigna a la columna de tabla asociada.<br /><br /> Devuelve un valor numérico (como numérico o cadena) para uno o más parámetros de entrada y salida o de salida habría causado la parte entera (en contraposición a fraccionarios) del número que se va a truncar.|  
 |22007|Formato de datetime no válido|Los datos enviados para un parámetro o columna que estaba enlazada a una fecha, hora o estructura de marca de tiempo eran, respectivamente, una fecha no válida, la hora o marca de tiempo.<br /><br /> Un parámetro de entrada y salida o de salida estaba enlazado a una fecha, hora o estructura de marca de tiempo C, y un valor en el parámetro devuelto era, respectivamente, una fecha no válida, la hora o marca de tiempo. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |22008|Desbordamiento del campo DateTime|Calcula una expresión de fecha y hora para una entrada y salida o parámetro de salida dieron lugar a una fecha, hora o estructura de C de la marca de tiempo que no era válido.|  
@@ -88,7 +88,7 @@ SQLRETURN SQLPutData(
 |HY009|Uso no válido del puntero nulo|(DM) el argumento *DataPtr* era un puntero nulo y el argumento *StrLen_or_Ind* no era 0, SQL_DEFAULT_PARAM o SQL_NULL_DATA.|  
 |HY010|Error de secuencia de función|(DM) la llamada de función anterior no era una llamada a **SQLPutData** o **SQLParamData**.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado el *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función SQLPutData.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llamó para el *StatementHandle* y devuelven SQL_PARAM_DATA_ ESTÁ DISPONIBLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.<br /><br /> (DM) se llamó a una función que se ejecuta asincrónicamente (no ésta) para el *StatementHandle* y aún se estaba ejecutando cuando se llamó a esta función.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos de memoria subyacente no se podrían tener acceso, posiblemente debido a memoria insuficiente.|  
-|HY019|Datos no binarios ni de caracteres que se enviaron por partes|**SQLPutData** fue llamado más de una vez para un parámetro o columna, y no se usaba para enviar datos de caracteres de C a una columna con un tipo de carácter, binario o datos específicos del origen de datos o para enviar datos binarios de C a una columna con un carácter , binario o tipo de datos específico del origen de datos.|  
+|HY019|Datos no binarios ni de caracteres que se enviaron por partes|**SQLPutData** fue llamado más de una vez para un parámetro o columna, y no se usaba para enviar datos de caracteres de C a una columna con un tipo de carácter, binario o datos específicos del origen de datos o para enviar datos binarios de C a una columna con un carácter , binario o tipo de datos específicos del origen de datos.|  
 |HY020|Intento de concatenar un valor null|**SQLPutData** se llamó a más de una vez desde la llamada que devuelve SQL_NEED_DATA y en una de esas llamadas, el *StrLen_or_Ind* argumento contenidos SQL_NULL_DATA o SQL_DEFAULT_PARAM.|  
 |HY090|Longitud de búfer o cadena no válida|El argumento *DataPtr* no era un puntero nulo y el argumento *StrLen_or_Ind* era menor que 0 pero no es igual a SQL_NTS o SQL_NULL_DATA.|  
 |HY117|Conexión está suspendida debido al estado de transacción desconocido. Solo se desconecte y se permiten funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  

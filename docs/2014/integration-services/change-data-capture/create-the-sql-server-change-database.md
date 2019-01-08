@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraIns
@@ -13,12 +12,12 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6381c494f1f5ecc95eb2e06d34959e43a9133726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770977"
 ---
 # <a name="create-the-sql-server-change-database"></a>Crear la base de datos de cambios de SQL Server
   Cuando se inicia el Asistente para nueva instancia, se abre la página Crear base de datos CDC. Use la página Crear base de datos CDC para proporcionar información sobre la nueva instancia CDC y crear una nueva base de datos Cambios.  
@@ -36,23 +35,23 @@ ms.locfileid: "48139631"
  **Instancia CDC de Oracle**  
  Escriba la siguiente información sobre la instancia de CDC que está creando.  
   
--   **Nombre**: escriba un nombre para el nuevo servicio. También será el nombre de la nueva base de datos Cambios.  
+-   **Nombre**: Escriba un nombre para el nuevo servicio. También será el nombre de la nueva base de datos Cambios.  
   
--   **Descripción**: escriba una descripción de la nueva instancia como ayuda para identificarla. Esto es opcional.  
+-   **Descripción**: Escriba una descripción para la nueva instancia que le ayude a identificarla. Esto es opcional.  
   
  **Base de datos de cambios de SQL Server**  
  Esta sección se emplea para crear la base de datos.  
   
-1.  **Base de datos de cambios**: el nombre de la nueva base de datos de cambios. El nombre de la base de datos es el mismo que el que asignó a la instancia. Este campo de solo lectura muestra la ruta de acceso completa a la base de datos.  
+1.  **Cambiar base de datos**: El nombre de la nueva base de datos de cambio. El nombre de la base de datos es el mismo que el que asignó a la instancia. Este campo de solo lectura muestra la ruta de acceso completa a la base de datos.  
   
-2.  **Crear base de datos**: haga clic en **Crear base de datos** para crear la base de datos.  
+2.  **Crear base de datos**: Haga clic en **Create Database** para crear la base de datos.  
   
      Para crear la base de datos, el inicio de sesión debe tener el rol de servidor `sysasmin` . Vea la nota de seguridad anterior para obtener más información.  
   
      Después de crear la base de datos, puede hacer clic en **Siguiente** para [Connect to an Oracle Source Database](connect-to-an-oracle-source-database.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de la instancia de base de datos de cambios SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Cómo crear la instancia de base de datos de cambios de SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [El servicio CDC de Oracle](the-oracle-cdc-service.md)  
   
   

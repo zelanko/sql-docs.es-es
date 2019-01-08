@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -16,12 +15,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169795"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772207"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabajar con perfiles del Agente de replicación
   En este tema, se describe cómo trabajar con perfiles de agente de replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). El comportamiento de cada agente de replicación está controlado por un conjunto de parámetros que se pueden establecer a través de perfiles de agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos; solo hay un perfil activo para un agente en cada momento.  
@@ -62,7 +61,7 @@ ms.locfileid: "48169795"
   
     -   Eliminar un perfil  
   
--   **Seguimiento:**  [después de cambiar los parámetros de agente](#FollowUp)  
+-   **Seguimiento:**  [Después de cambiar los parámetros de agente](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48169795"
   
 1.  Si el cuadro de diálogo **Perfiles de agente** muestra perfiles para varios agentes, seleccione un agente.  
   
-2.  Haga clic en el botón Propiedades (**…**) que aparece junto a un perfil.  
+2.  Haga clic en el botón Propiedades (**...**) que aparece junto a un perfil.  
   
 3.  Vea los parámetros y los valores del cuadro de diálogo **Propiedades del perfil \<NombrePerfil>**.  
   
@@ -245,7 +244,7 @@ ms.locfileid: "48169795"
   
     -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> : una descripción del perfil.  
   
-    -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> : establezca esta propiedad en `true` si todos los nuevos trabajos de agente para <xref:Microsoft.SqlServer.Replication.AgentType> van a utilizar este perfil de forma predeterminada.  
+    -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A>: establezca esta propiedad en `true` si todos los nuevos trabajos de agente para <xref:Microsoft.SqlServer.Replication.AgentType> van a utilizar de forma predeterminada este perfil.  
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> para crear el perfil en el servidor.  
   
@@ -259,9 +258,9 @@ ms.locfileid: "48169795"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creado en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, compruebe que el distribuidor existe.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, compruebe que el distribuidor existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> . Pase un valor <xref:Microsoft.SqlServer.Replication.AgentType> para reducir los perfiles devueltos a un tipo específico de agente de replicación.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A>. Pase un valor <xref:Microsoft.SqlServer.Replication.AgentType> para reducir los perfiles devueltos a un tipo específico de agente de replicación.  
   
 5.  Obtenga el objeto <xref:Microsoft.SqlServer.Replication.AgentProfile> que desea del <xref:System.Collections.ArrayList>devuelto, donde la propiedad <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> del objeto coincide con el nombre del perfil.  
   
@@ -279,13 +278,13 @@ ms.locfileid: "48169795"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.AgentProfile> . Establezca el nombre del perfil para <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> y la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, ya sea el nombre especificado era incorrecto o el perfil no existe en el servidor.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, significa que el nombre especificado era incorrecto o el perfil no existe en el servidor.  
   
 4.  Compruebe que la propiedad <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> está establecida en <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>, que indica un perfil del cliente. No debería quitar ningún perfil que tenga un valor de <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> para <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>.  
   
 5.  Llame al método <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> para quitar el perfil definido por el usuario representado por este objeto del servidor.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de cambiar los parámetros de agente  
+##  <a name="FollowUp"></a> Sigue: Después de cambiar los parámetros de agente  
  Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo.  
   
 ## <a name="see-also"></a>Vea también  

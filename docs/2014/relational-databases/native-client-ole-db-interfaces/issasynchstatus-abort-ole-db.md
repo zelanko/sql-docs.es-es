@@ -16,12 +16,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d161786019750aae9740ce42ab0a15464b0dfc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160875"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532055"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
   Cancela una operación que se ejecuta de forma asincrónica.  
@@ -42,7 +42,7 @@ HRESULT Abort(
  *eOperation*[in]  
  Operación para anular. El valor debe ser el siguiente:  
   
- DBASYNCHOP_OPEN—La solicitud para cancelar se aplica a la apertura o rellenado asincrónico de un conjunto de filas o a la inicialización asincrónica de un objeto de origen de datos.  
+ DBASYNCHOP_OPEN: la solicitud de cancelación se aplica a la apertura o rellenado asincrónico de un conjunto de filas o a la inicialización asincrónica de un objeto de origen de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  

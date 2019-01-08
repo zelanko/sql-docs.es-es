@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -21,12 +20,12 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ee84e7cd1e8d652283eb758af7396257fecf7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35376c36361bd7453ed925c8b0be5721aa120037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761207"
 ---
 # <a name="security-overview-integration-services"></a>Información general sobre seguridad (Integration Services)
   La seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consta de varios niveles que proporcionan un entorno de seguridad rico y flexible. Estos niveles de seguridad incluyen el uso de firmas digitales, propiedades de paquete, roles de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y permisos del sistema operativo. La mayoría de estas características de seguridad pertenecen a las categorías de identidad y control de acceso.  
@@ -76,7 +75,7 @@ ms.locfileid: "48228585"
 ### <a name="controlling-access-to-files-used-by-packages"></a>Controlar el acceso a los archivos usados por los paquetes  
  Los paquetes configurados para usar configuraciones, puntos de comprobación y registros generan información que se almacena fuera del paquete. Esta información puede ser confidencial y debe protegerse. Los archivos de puntos de comprobación únicamente se pueden guardar en el sistema de archivos, pero las configuraciones y los registros se pueden guardar en el sistema de archivos o en tablas de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las configuraciones y los registros que se guardan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están sujetos a la configuración de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero la información guardada en el sistema de archivos requiere una seguridad adicional.  
   
- Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  
+ Para más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  
   
 #### <a name="storing-package-configurations-securely"></a>Almacenar configuraciones de paquetes de forma segura  
  Las configuraciones de paquetes se pueden guardar en una tabla de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en el sistema de archivos.  

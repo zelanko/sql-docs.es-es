@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
@@ -13,12 +13,12 @@ ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 276c377b6963c2c58be26187079bc60bf619a90a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141655"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778967"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Crear combinaciones externas (Visual Database Tools)
   De forma predeterminada, el [Diseñador de consultas y vistas](visual-database-tools.md) crea una combinación interna entre tablas. Las combinaciones internas eliminan las filas que no coinciden con alguna fila de la otra tabla. Sin embargo, las combinaciones externas devuelven todas las filas de una de las tablas o vistas mencionadas en la cláusula FROM, como mínimo, siempre que tales filas cumplan alguna de las condiciones de búsqueda de WHERE o HAVING. Si desea incluir filas de datos en el conjunto de resultados que no se correspondan con ninguna fila de la tabla combinada, puede crear una combinación externa.  

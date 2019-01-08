@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cb82752697453f5179ac4d3432e60cbc8398c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e14c23741f5473e6c9eaae46140a2f7a0668bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615052"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406182"
 ---
 # <a name="using-user-defined-types"></a>Usar tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47615052"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Admite<sup>6</sup>|N/D<sup>2</sup>|Admite<sup>4</sup>|N/D<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Admite<sup>3,6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
   
- <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_UDT con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_UDT, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED; el estado del parámetro es DBSTATUS_E_BADACCESSOR). De lo contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de UDT al tipo de datos del parámetro.  
+ <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_UDT con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_UDT, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED; el estado del parámetro es DBSTATUS_E_BADACCESSOR). En caso contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de UDT al tipo de datos del parámetro.  
   
  <sup>2</sup>fuera del ámbito de este tema.  
   

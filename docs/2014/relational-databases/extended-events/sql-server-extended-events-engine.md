@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], engine
@@ -13,12 +12,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee2464f2900eab70546a1074fb2ff07d48cab871
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131105"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775697"
 ---
 # <a name="sql-server-extended-events-engine"></a>Motor de SQL Server Extended Events
   El motor de Extended Events [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de servicios y objetos que:  
@@ -37,7 +36,7 @@ ms.locfileid: "48131105"
   
  ![Arquitectura de eventos extendidos detallada](../../database-engine/media/xearchitecturedetailed.gif "Arquitectura de eventos extendidos detallada")  
   
- Observe lo siguiente:  
+ Tenga en cuenta lo siguiente:  
   
 -   Cada proceso de Windows puede tener uno o más módulos (**proceso Win32**, **módulo Win32**). También se les conoce como módulos *binarios* o *ejecutables*.  
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3fee962111dd6b1316e6740f76f02bf3862745e4
+ms.sourcegitcommit: 9e722cc8d10ecbdb93efc2fc1886fe7b20dbc13c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221541"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52282027"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "51221541"
 |**null_on_null_input**|**bit**|Módulo declarado para generar una salida NULL en cualquier entrada NULL.|  
 |**execute_as_principal_id**|**Int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> Id. de la entidad de seguridad especificado si EXECUTE AS SELF o EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = no está compilado de forma nativa<br /><br /> 1 = está compilado de forma nativa<br /><br /> El valor predeterminado es 0.|  
-|**is_inlineable**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores.<br/><br />Indica si el módulo es inlineable o no. Capacidad de alineación se basa en las condiciones especificadas [aquí](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = no inlineable<br /><br /> 1 = es inlineable. <br /><br /> Para UDF escalares, el valor será 1 si la UDF es inlineable y 0 en caso contrario. Siempre contiene un valor de 1 para funciones TVF en línea y 0 para todos los demás tipos de módulo.<br />|  
-|**inline_type**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores.<br /><br />Indica si la inserción está activado para el módulo actualmente. <br /><br />0 = inserción está desactivado<br /><br /> 1 = inserción está activado.<br /><br /> Para UDF escalares, el valor será 1 si la inserción está activado (explícita o implícitamente). El valor siempre será 1 para las funciones TVF insertadas y 0 para otros tipos de módulo.<br />|  
+|**is_inlineable**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] y versiones posteriores.<br/><br />Indica si el módulo es inlineable o no. Capacidad de alineación se basa en las condiciones especificadas [aquí](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = no inlineable<br /><br /> 1 = es inlineable. <br /><br /> Para UDF escalares, el valor será 1 si la UDF es inlineable y 0 en caso contrario. Siempre contiene un valor de 1 para funciones TVF en línea y 0 para todos los demás tipos de módulo.<br />|  
+|**inline_type**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] y versiones posteriores.<br /><br />Indica si la inserción está activado para el módulo actualmente. <br /><br />0 = inserción está desactivado<br /><br /> 1 = inserción está activado.<br /><br /> Para UDF escalares, el valor será 1 si la inserción está activado (explícita o implícitamente). El valor siempre será 1 para las funciones TVF insertadas y 0 para otros tipos de módulo.<br />|  
 
   
 ## <a name="remarks"></a>Comentarios  

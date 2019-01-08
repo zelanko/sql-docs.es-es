@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,12 +17,12 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62479a884be565fd58bc931f821cb049ea0bf8a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102944"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762857"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
   En este tema se describe cómo asignar alertas del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los operadoes para que puedan recibir notificaciones de trabajos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "48102944"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48102944"
   
 3.  Haga clic en el signo más para expandir la carpeta **Operadores** .  
   
-4.  Haga clic con el botón derecho en el operador al que desea asignar una alerta y seleccione **Propiedades**y, luego, la página **Notificaciones** .  
+4.  Haga clic con el botón derecho en el operador al que desea asignar una alerta y seleccione **Propiedades** y, luego, la página **Notificaciones**.  
   
-5.  En el cuadro de diálogo*Propiedades de***nombre_de_operador*, en **Seleccionar una página**,seleccione **Notificaciones**.  
+5.  En el cuadro de diálogo**Propiedades** de _nombre_operador_, en **Seleccionar una página**,seleccione **Notificaciones**.  
   
-6.  En **Ver las notificaciones enviadas a este usuario por**, seleccione **Alertas** para ver una lista de las alertas enviadas a este operador o seleccione **Trabajos** para ver una lista de los trabajos que envían notificaciones a este operador. Active una o varias de las siguientes casillas para definir el método de notificación de cada notificación según corresponda: **Correo electrónico**, **Buscapersonas**o **Net send**.  
+6.  En **Ver las notificaciones enviadas a este usuario por**, seleccione **Alertas** para ver una lista de las alertas enviadas a este operador o seleccione **Trabajos** para ver una lista de los trabajos que envían notificaciones a este operador. Seleccione una o varias de las siguientes casillas para definir el método de notificación para cada notificación según sea necesario: **Correo electrónico**, **buscapersonas**, o **Net send**.  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   
@@ -86,13 +86,13 @@ ms.locfileid: "48102944"
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_add_notification  
      @alert_name = N'Test Alert',  
-     @operator_name = N'François Ajenstat',  
+     @operator_name = N'Fran??ois Ajenstat',  
      @notification_method = 1 ;  
     GO  
     ```  

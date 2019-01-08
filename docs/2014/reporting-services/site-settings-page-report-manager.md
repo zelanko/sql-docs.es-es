@@ -11,12 +11,12 @@ ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d8e61f4f82df496a475717b34f0ce54db07d4a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065303"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413700"
 ---
 # <a name="site-settings-page-report-manager"></a>Página Configuración del sitio (Administrador de informes)
   Use la página Configuración del sitio para cambiar el título de la aplicación, establecer los valores predeterminados para los valores de tiempo de espera de procesamiento de informes y límites del historial de informes, administrar asignaciones de roles del nivel del sistema y administrar programaciones compartidas. Debe tener permisos de Administrador de contenido y Administrador del sistema para ver esta página.  
@@ -33,11 +33,11 @@ ms.locfileid: "48065303"
   
 2.  En la parte superior de la página, haga clic en **Configuración del sitio**. Esto abre la página de propiedades General del sitio.  
   
-     **Nota:** si no ve el **configuración del sitio** opción en el menú, no tiene los permisos necesarios, para obtener más información, consulte la sección "configuración del sitio" de [configurar un servidor de informes de modo nativo de Administración local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Nota:** Si no ve el **configuración del sitio** opción en el menú, no tiene los permisos necesarios, para obtener más información, consulte la sección "configuración del sitio" de [configurar un servidor de informes de modo nativo para la administración Local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
- Especifique el título que se utilizará para esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el Administrador de informes. De forma predeterminada, el título es "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
+ **Name**  
+ Especifique el título que se utilizará para esta instancia del Administrador de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . De forma predeterminada, el título es "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
   
  **Seleccione la configuración predeterminada para el historial de informes**  
  Seleccione un valor predeterminado para el número de copias del historial del informe que deben guardarse. El valor predeterminado proporciona un valor inicial que establece los límites del historial del informe. Esta configuración se puede modificar en el nivel de informe. Para más información, vea [Página de propiedades de opciones de instantánea &#40;Administrador de informes&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md).  
@@ -54,9 +54,9 @@ ms.locfileid: "48065303"
  **URL de inicio del generador de informes personalizado**  
  Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes como aplicación ClickOnce. La dirección URL predeterminada es una de las siguientes:  
   
- **Servidor de informes en modo nativo:** en una instalación en modo nativo, la dirección URL predeterminada adoptará el formato http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
+ **Servidor de informes de modo nativo:** En una instalación en modo nativo, la dirección URL predeterminada adoptará el formato http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
- El modo integrado de SharePoint: la dirección URL predeterminada adoptará el formato http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
+ Modo integrado de SharePoint: La dirección URL predeterminada adoptará el formato http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
   
  **Aplicar**  
  Haga clic para guardar los cambios en el servidor de informes.  
@@ -68,7 +68,7 @@ ms.locfileid: "48065303"
  Haga clic en este vínculo para abrir la página Programaciones compartidas, en la que puede predefinir las programaciones compartidas que los usuarios pueden seleccionar para sus informes y suscripciones.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Conceder permisos en un servidor de informes en modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Roles predefinidos](security/role-definitions-predefined-roles.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  

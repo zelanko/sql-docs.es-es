@@ -11,19 +11,19 @@ ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e074a41f6d9f5053562dd7b6be453644cb5fa176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519889"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Examinar los datos y metadatos de un cubo
   Use la pestaña **Explorador** del Diseñador de cubos para examinar los datos de un cubo. Puede usar esta vista para examinar la estructura de un cubo y comprobar los datos, el cálculo, el formato y la seguridad de los objetos de la base de datos. Puede examinar rápidamente un cubo tal como lo ven los usuarios finales con las herramientas de elaboración de informes o con otras aplicaciones cliente. Si examina los datos de un cubo, podrá ver las distintas dimensiones, explorar en profundidad los miembros y segmentar las dimensiones.  
   
  Para poder examinar un cubo, debe procesarlo y conectarse de nuevo a él. Una vez procesado, abra la pestaña **Explorador** del Diseñador de cubos. Haga clic en el botón Volver a conectar de la barra de herramientas para actualizar la conexión.  
   
- La pestaña **Explorador** tiene tres recuadros: el recuadro Metadatos, el recuadro Filtro y el recuadro Datos. Use el panel Metadatos para examinar la estructura del cubo en formato de árbol. Use el recuadro Filtro situado en la parte superior de la pestaña **Explorador** para definir cualquier subcubo que desee examinar. Use el recuadro Datos para ver el conjunto de resultados y explorar en profundidad las jerarquías de dimensión.  
+ El **explorador** pestaña tiene tres paneles: el panel metadatos, el panel de filtro y el panel de datos. Use el panel Metadatos para examinar la estructura del cubo en formato de árbol. Use el recuadro Filtro situado en la parte superior de la pestaña **Explorador** para definir cualquier subcubo que desee examinar. Use el recuadro Datos para ver el conjunto de resultados y explorar en profundidad las jerarquías de dimensión.  
   
 ## <a name="setting-up-the-browser"></a>Configurar el Explorador  
  Para prepararse para examinar un cubo, puede especificar la perspectiva o la traducción que desea usar. Las medidas y las dimensiones se agregan al panel Datos y los filtros se especifican en el panel Filtro.  

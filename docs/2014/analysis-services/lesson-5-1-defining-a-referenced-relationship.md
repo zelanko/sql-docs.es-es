@@ -11,12 +11,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519897"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definir una relación referenciada
   Hasta este punto del tutorial, cada dimensión de cubo que definió se basaba en una tabla que estaba directamente vinculada a la tabla de hechos para un grupo de medida a través de una relación de clave principal a clave externa. En las tareas de este tema, debe vincular la dimensión **Geography** a la tabla de hechos de ventas por distribuidor a través de la dimensión **Reseller** , denominada *dimensión de referencia*. Esto permite a los usuarios dimensionar las ventas de distribuidor por geografía. Para obtener más información, consulte [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48141895"
   
      Observe que la dimensión del cubo **Geography** actualmente no tiene ninguna relación con el grupo de medida **Internet Sales** ni con el grupo de medida **Reseller Sales** .  
   
-8.  Haga clic en el botón de puntos suspensivos (**…**) de la celda **Full Name** de la intersección de la dimensión **Customer** y el grupo de medida **Internet Sales** .  
+8.  Haga clic en el botón de puntos suspensivos (**...** ) en el **nombre completo** celda en la intersección de la **cliente** dimensión y el **Internet Sales** grupo de medida.  
   
      En el cuadro de diálogo **Definir relación** , observe que hay una relación **Regular** definida entre la tabla de la dimensión **DimCustomer** y la tabla del grupo de medida **FactInternetSales** basada en la columna **CustomerKey** de cada una de estas tablas. Todas las demás relaciones que ha definido en este tutorial hasta este punto han sido relaciones regulares.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48141895"
   
 9. Haga clic en **Cancelar**.  
   
-10. Haga clic en el botón de puntos suspensivos (**…**) de la celda sin nombre que se encuentra en la intersección de la dimensión **Geography** y el grupo de medida **Reseller Sales** .  
+10. Haga clic en el botón de puntos suspensivos (**...** ) en la celda sin nombre en la intersección de la **Geography** dimensión y el **Reseller Sales** grupo de medida.  
   
      En el cuadro de diálogo **Definir relación** , observe que actualmente no hay ninguna relación definida entre la dimensión del cubo Geography y el grupo de medida Reseller Sales. No se puede definir una relación regular porque no existe ninguna relación directa entre la tabla de dimensiones de la dimensión Geography y la tabla de hechos del grupo de medida Reseller Sales.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48141895"
   
      El atributo Geography Key de la dimensión Reseller solamente se utilizará para vincular la dimensión Geography a la tabla de hechos Reseller Sales. Puesto que no se utilizará para examinar, definir esta jerarquía de atributo como visible no aporta ningún valor. Además, ordenar y optimizar la jerarquía de atributo solo afectaría negativamente al proceso. No obstante, el atributo debe estar habilitado para poder servir como vínculo entre las dos dimensiones.  
   
-4.  Cambie al Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , haga clic en la pestaña **Uso de dimensiones** y, después, haga clic en el botón de puntos suspensivos (**…**) que se encuentra en la intersección del grupo de medida **Reseller Sales** y la dimensión de cubo **Geography** .  
+4.  Cambie al diseñador de cubos para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo del Tutorial, haga clic en el **uso de dimensiones** pestaña y, a continuación, haga clic en el botón de puntos suspensivos (**...** ) en la intersección de la **Reseller Sales** grupo de medida y la **Geography** dimensión de cubo.  
   
 5.  En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48141895"
  [Definir una relación de hechos](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Relaciones de atributo](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [Relación de los atributos](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

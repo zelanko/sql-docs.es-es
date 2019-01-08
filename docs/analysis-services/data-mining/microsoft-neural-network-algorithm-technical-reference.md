@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de red neuronal de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de red neuronal de Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018252"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525493"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Referencia técnica del algoritmo de red neuronal de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  La red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa una red de tipo *perceptrón multinivel*, que también se denomina *red de tipo regla delta de propagación hacia atrás*, compuesta por tres niveles de neuronas o *perceptrones*. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
+  La red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa una red de tipo *perceptrón multinivel* , que también se denomina *red de tipo regla delta de propagación hacia atrás*, compuesta por tres niveles de neuronas o *perceptrones*. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
   
  Esta documentación no abarca una discusión detallada sobre redes neuronales de tipo perceptrón multinivel. En este tema, se explica la implementación básica del algoritmo, incluido el método usado para normalizar los valores de entrada y de salida, y los métodos de selección de características usados para reducir la cardinalidad de los atributos. En este tema, se describen los parámetros y otros valores que se pueden usar para personalizar el comportamiento del algoritmo; además, se proporcionan vínculos a información adicional sobre cómo consultar el modelo.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34018252"
   
  Una neurona recibe la entrada de otras neuronas o de otros datos, dependiendo del nivel de la red en que se encuentra. Una neurona de entrada recibe entradas de los datos originales. Las neuronas ocultas y las neuronas de salida reciben entradas de la salida de otras neuronas de la red neuronal. Las entradas establecen relaciones entre neuronas; estas relaciones sirven como ruta de análisis para un conjunto específico de escenarios.  
   
- Cada entrada tiene un valor asignado denominado *peso*, que describe la relevancia o importancia de dicha entrada en la neurona oculta o en la neurona de salida. Cuanto mayor sea el peso asignado a una entrada, más importante o relevante será el valor de dicha entrada. Los pesos pueden ser negativos, lo cual implica que la entrada puede desactivar, en lugar de activar, una neurona específica. El valor de cada entrada se multiplica por el peso para poner de relieve la importancia de la entrada de una neurona específica. En el caso de pesos negativos, el efecto de multiplicar el valor por el peso es una pérdida de importancia.  
+ Cada entrada tiene un valor asignado denominado *peso*, que describe la relevancia o importancia de dicha entrada en la neurona oculta o en la neurona de salida. Cuanto mayor sea el peso asignado a una entrada, más importante o relevante será el valor de dicha entrada. Los pesos pueden ser negativos, lo cual implica que la entrada puede impedir, en lugar de activar, una neurona específica. El valor de cada entrada se multiplica por el peso para poner de relieve la importancia de la entrada de una neurona específica. En el caso de pesos negativos, el efecto de multiplicar el valor por el peso es una pérdida de importancia.  
   
  Cada neurona tiene una función no lineal sencilla asignada denominada *función de activación*que describe la relevancia o importancia de una neurona específica para ese nivel de una red neuronal. Las neuronas ocultas usan una función *tangente hiperbólica* (tanh) para su función de activación, mientras que las neuronas de salida usan una función *sigmoidea* para la activación. Ambas son funciones no lineales continuas que permiten que la red neuronal modele relaciones no lineales entre neuronas de entrada y salida.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34018252"
   
  **Valores discretos**  
   
- `μ = p` (la probabilidad anterior de un estado)  
+ `μ = p` -la probabilidad de un estado anterior  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34018252"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente.  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Table y Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized y Ordered|  
@@ -184,7 +184,7 @@ ms.locfileid: "34018252"
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Contenido del modelo de minería de datos para los modelos de red neuronal & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Ejemplos de consultas de modelo de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Ejemplos de consultas de modelos de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

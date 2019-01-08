@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e350687f69ea8e6a8ab70f5fa2eb5a1552058525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069925"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780457"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir una relación de registros lógicos entre artículos de tabla de mezcla
   En este tema se describe cómo definir una relación de registros lógicos entre los artículos de tabla de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -44,7 +43,7 @@ ms.locfileid: "48069925"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -161,7 +160,7 @@ ms.locfileid: "48069925"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> , establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 2 se definieron incorrectamente o no existe la publicación.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
 4.  Si la propiedad <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> está establecida en <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>, cámbiela a <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "48069925"
   
      Para más información, consulte [Define an Article](define-an-article.md).  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Create%2A> .  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Create%2A>.  
   
 7.  Repita los pasos 5 y 6 para cada artículo que comprende el registro lógico.  
   

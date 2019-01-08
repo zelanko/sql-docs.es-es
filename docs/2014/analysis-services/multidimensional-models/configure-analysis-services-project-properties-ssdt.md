@@ -15,12 +15,12 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513029"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurar las propiedades de un proyecto de Analysis Services (SSDT)
   En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se define con ciertas propiedades predeterminadas que afectan a la generación e implementación del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -48,10 +48,10 @@ ms.locfileid: "48118305"
   
  Un proyecto se crea inicialmente con una sola configuración, conocida como Programación. Puede crear otras configuraciones y pasar de una a otra en el Administrador de configuración.  
   
- Hasta que se creen configuraciones adicionales, todos los programadores utilizan la configuración común. Con todo, en las distintas fases de desarrollo del proyecto, por ejemplo durante la programación inicial y la fase de pruebas de un proyecto, cada uno de los programadores puede usar orígenes de datos distintos e implementar el proyecto en distintos servidores para objetivos distintos. Las configuraciones le permiten conservar estos valores distintos en distintos archivos de configuración.  
+ Hasta que se creen configuraciones adicionales, todos los programadores utilizan la configuración común. Sin embargo, durante las distintas fases de desarrollo: del proyecto, como durante el desarrollo inicial y las pruebas de un proyecto - diferentes a los desarrolladores se puede usar diferentes orígenes de datos e implementar el proyecto en servidores diferentes para distintos fines. Las configuraciones le permiten conservar estos valores distintos en distintos archivos de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Compilar proyectos de Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Generar proyectos de Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Implementar proyectos de Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

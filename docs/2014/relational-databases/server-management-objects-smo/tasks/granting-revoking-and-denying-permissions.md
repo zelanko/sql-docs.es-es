@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - granting permissions [SMO]
@@ -17,12 +15,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0405d1695681d7a4fc56f526392ebf7422d89553
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164965"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758357"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Conceder, revocar y denegar permisos
   El objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> se utiliza para asignar un conjunto de permisos o un permiso de servidor individual al objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Para los permisos en el nivel de servidor, el cesionario hace referencia a un inicio de sesión. Se hace una lista de los inicios de sesión autenticados por Windows como nombres de usuario de Windows. Cuando este ejemplo de código se ejecuta, revoca el permiso del cesionario y comprueba se ha quitado con el método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepublication
@@ -17,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26c19d33b9834d2a8cdf1ee0b05530138c3fa006
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717933"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754135"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Especifica dónde se encuentran los archivos de instantánea para que los recoja el Agente de mezcla cuando se envía la instantánea mediante FTP.|  
 |ftp_login|**sysname**|Se usa el nombre de usuario para conectarse al servicio FTP.|  
 |conflict_retention|**int**|Especifica el período de retención, expresado en días, durante el que se conservan los conflictos. Transcurrido el número de días especificado, se purga la fila del conflicto de la tabla de conflictos.|  
-|keep_partition_changes|**int**|Especifica si se está optimizando la sincronización para esta publicación. **keep_partition_changes** tiene un valor predeterminado de **0**. Un valor de **0** significa que la sincronización no se optimiza y las particiones enviadas a todos los suscriptores se comprueban cuando cambian los datos en una partición.<br /><br /> **1** significa que la sincronización se optimiza y solo los suscriptores con filas en la partición modificada se ven afectados.<br /><br /> Nota: De forma predeterminada, las publicaciones de combinación utilizan particiones precalculadas, que proporciona un mayor grado de optimización que esta opción. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) y [optimizar el rendimiento de filtro con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**int**|Especifica si se está optimizando la sincronización para esta publicación. **keep_partition_changes** tiene un valor predeterminado de **0**. Un valor de **0** significa que la sincronización no se optimiza y las particiones enviadas a todos los suscriptores se comprueban cuando cambian los datos en una partición.<br /><br /> **1** significa que la sincronización se optimiza y solo los suscriptores con filas en la partición modificada se ven afectados.<br /><br /> Nota: De manera predeterminada, las publicaciones de combinación utilizan particiones previamente calculadas, lo que proporciona un mayor grado de optimización que esta opción. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) y [optimizar el rendimiento de filtro con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Especifica si se ha habilitado la capacidad de copiar las bases de datos de suscripciones que se suscriben a esta publicación. Un valor de **0** significa que no se permite la copia.|  
 |allow_synctoalternate|**int**|Especifica si se permite un asociado de sincronización alternativo para sincronizar con este publicador. Un valor de **0** significa que no se permite un asociado de sincronización.|  
 |validate_subscriber_info|**nvarchar(500)**|Enumera las funciones que se están utilizando para recuperar información del suscriptor y validar los criterios de filtrado de filas con parámetros del suscriptor. Ayuda a comprobar que se hayan creado particiones de la información de manera coherente con cada combinación.|  

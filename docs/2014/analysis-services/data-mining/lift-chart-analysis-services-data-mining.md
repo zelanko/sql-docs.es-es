@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119405"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398019"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
-  Un **gráfico de elevación** gráficamente representa la mejora que un modelo de minería de datos proporciona cuando se compara con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Al comparar las puntuaciones de mejora respecto al modelo predictivo para las distintas partes del conjunto de datos y para los distintos modelos, puede determinar cuál es el mejor modelo y qué porcentaje de casos del conjunto de datos se beneficiaría de aplicar las predicciones del modelo.  
+  Un **gráfico de elevación** gráficamente representa la mejora que un modelo de minería de datos proporciona cuando se compara con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Al comparar las puntuaciones de elevación para las distintas partes del conjunto de datos y para los distintos modelos, puede determinar qué modelo es mejor, y qué porcentaje de los casos del conjunto de datos se beneficiaría de aplicar las predicciones del modelo.  
   
  Con un gráfico de mejora respecto al modelo predictivo, puede comparar la precisión de las predicciones para varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
   
@@ -71,8 +71,8 @@ ms.locfileid: "48119405"
 |Correo destinado a todos|0.71|47,40 %|61,38 %|  
 |Correo destinado a menores de 30|0.85|51,81 %|46.62 %|  
 |Modelo de estimación aleatoria||31.00 %||  
-|Modelo ideal para: correo destinado a todos||62.48 %||  
-|Modelo ideal para: correo destinado a menores de 30||65.28 %||  
+|Modelo ideal para: Correo destinado a todos||62.48 %||  
+|Modelo ideal para: Correo destinado a menores de 30||65.28 %||  
   
  [Volver al principio](#bkmk_Top)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48119405"
  [Volver al principio](#bkmk_Top)  
   
 ## <a name="see-also"></a>Vea también  
- [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

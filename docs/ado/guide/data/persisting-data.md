@@ -16,21 +16,21 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722993"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527633"
 ---
 # <a name="persisting-data"></a>Conservar los datos
 Equipos portátiles (por ejemplo, con equipos portátiles) ha generado la necesidad de las aplicaciones que se pueden ejecutar en un estado conectado y desconectado. ADO ha agregado compatibilidad para esto proporcionando al programador la capacidad de guardar un cursor de cliente **Recordset** en el disco y vuelva a cargar más adelante.  
   
  Hay varios escenarios en los que podría usar este tipo de característica, incluidos los siguientes:  
   
--   **Viaje:** al tomar la aplicación en la carretera, es fundamental para proporcionar la capacidad de realizar cambios y agregar nuevos registros que, a continuación, se vuelve a conectar a la base de datos más adelante y confirmados.  
+-   **Viaje:** Al tomar la aplicación en la carretera, es fundamental para proporcionar la capacidad de realizar cambios y agregar nuevos registros que, a continuación, se vuelve a conectar a la base de datos más adelante y confirmados.  
   
--   **Actualizan con poca frecuencia de búsquedas:** a menudo en una aplicación, se usan tablas como búsquedas, por ejemplo, tablas de impuestos de estado. Se actualizan con poca frecuencia y son de solo lectura. En lugar de volver a leer estos datos desde el servidor cada vez que se inicia la aplicación, simplemente la aplicación puede cargar los datos desde persistente localmente **Recordset**.  
+-   **Búsquedas se actualizan con frecuencia:** A menudo en una aplicación, se usan tablas como búsquedas-por ejemplo, tablas de impuestos de estado. Se actualizan con poca frecuencia y son de solo lectura. En lugar de volver a leer estos datos desde el servidor cada vez que se inicia la aplicación, simplemente la aplicación puede cargar los datos desde persistente localmente **Recordset**.  
   
  En ADO, para guardar y cargar **conjuntos de registros**, utilice el **Recordset.Save** y **Recordset.Open(,,,adCmdFile)** métodos en ADO **Recordset**objeto.  
   

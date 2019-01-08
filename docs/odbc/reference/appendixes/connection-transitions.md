@@ -15,12 +15,12 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46d480683a2d10f760a02049ab28bc590353fcbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537496"
 ---
 # <a name="connection-transitions"></a>Transiciones de conexión
 Las conexiones de ODBC tienen los siguientes estados.  
@@ -266,7 +266,7 @@ Las conexiones de ODBC tienen los siguientes estados.
   
  [1] en la conexión estaba en modo de confirmación automática, o el origen de datos no ha iniciado una transacción.  
   
- [2] en la conexión estaba en modo de confirmación: manual, y el origen de datos comenzó una transacción.  
+ [2] en la conexión estaba en modo de confirmación manual, y el origen de datos comenzó una transacción.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   

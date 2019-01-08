@@ -10,12 +10,12 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a68b60a954e6cd89698d4e906f8272f08d6b11e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673163"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399908"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectarse a MySQL (MySQLToSQL)
 Use la **conectar con MySQL** cuadro de diálogo para conectarse a la base de datos MySQL que se va a migrar.  
@@ -60,11 +60,11 @@ Proporciona una opción para configurar la conexión a MySQL a través de la cap
   
 Al hacer clic en el botón "Configurar", aparece un cuadro de diálogo. Para usar el cifrado mientras se conecta a la base de datos MySQL, ruta de acceso a los siguientes archivos de tres certificado presentes en el cuadro de diálogo debe ser definido [privacidad mejorada correo certificados (PEM)]:  
   
--   **Entidad emisora de certificados SSL:** especifica la ruta de acceso a un archivo con una lista de confianza de entidades emisoras de certificados SSL.  
+-   **Entidad emisora de certificados SSL:** Especifica la ruta de acceso a un archivo con una lista de confianza de entidades emisoras de certificados SSL.  
   
--   **Certificado SSL:** especifica el nombre del archivo de certificado SSL que se utilizará para establecer una conexión segura.  
+-   **Certificado SSL:** Especifica el nombre del archivo de certificado SSL que se utilizará para establecer una conexión segura.  
   
--   **CLAVE SSL:** especifica el nombre del archivo de clave SSL que se utilizará para establecer una conexión segura.  
+-   **CLAVE SSL:** Especifica el nombre del archivo de clave SSL que se utilizará para establecer una conexión segura.  
   
 > [!NOTE]  
 > -   El **Aceptar** botón se habilita cuando se ha proporcionado la información necesaria. Si cualquiera de las rutas de acceso de archivo son válida, el botón "Aceptar" permanecerá deshabilitado.  

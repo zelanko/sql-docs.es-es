@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,12 +19,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5de6cba6d67f6b023f14306bfc41a85dbae8023d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162095"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763267"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Actualizar scripts de replicación (programación de la replicación con Transact-SQL)
   Los archivos de script[!INCLUDE[tsql](../../../includes/tsql-md.md)] se pueden utilizar para configurar mediante programación una topología de replicación. Para obtener más información, consulte [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación).  
@@ -92,7 +91,7 @@ ms.locfileid: "48162095"
   
     -   Para una suscripción de extracción, actualice la ejecución de [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) para proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de distribución en el suscriptor para **@job_name** y **@job_password**. Esto se hace después de la ejecución de [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Para obtener más información, consulte [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
-    -   Para una suscripción de inserción, ejecute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) en el publicador. Especifique **@subscriber**, **@subscriber_db**, **@publication**, credenciales de Windows bajo las que se ejecuta el Agente de distribución en el distribuidor para **@job_name** y **@job_password**, y una programación para este trabajo del agente. Para obtener más información, consulte [Specify Synchronization Schedules](../specify-synchronization-schedules.md). Esto se hace después de la ejecución de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Para obtener más información, consulte [Create a Push Subscription](../create-a-push-subscription.md).  
+    -   Para una suscripción de inserción, ejecute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) en el publicador. Especifique **@subscriber**, **@subscriber_db**, **@publication**, credenciales de Windows bajo las que se ejecuta el Agente de distribución en el distribuidor para **@job_name** y **@job_password**, y una programación para este trabajo del agente. Para más información, consulte [Specify Synchronization Schedules](../specify-synchronization-schedules.md). Esto se hace después de la ejecución de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Para más información, consulte [Create a Push Subscription](../create-a-push-subscription.md).  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>Para actualizar scripts que configuran una publicación de combinación  
   

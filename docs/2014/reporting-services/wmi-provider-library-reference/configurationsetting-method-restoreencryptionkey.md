@@ -19,12 +19,12 @@ ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: baf827dbedeb8a822a729e27d08fca4fa6b7f95a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acdd99c590f05fbe21777416dcd56234a6a797d0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172095"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417446"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Vuelve a aplicar la clave de cifrado especificada a la base de datos del servidor de informes.  
@@ -62,9 +62,9 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
 ## <a name="remarks"></a>Comentarios  
- Si ya existe una entrada para el servidor de informes en la base de datos del servidor de informes, se elimina. A continuación, se crea la nueva entrada utilizando la clave de cifrado especificada y la clave pública del servidor de informes.  
+ Si ya existe una entrada para el servidor de informes en la base de datos del servidor de informes, se elimina. Después, se crea la entrada con la clave de cifrado especificada y la clave pública del servidor de informes.  
   
- El método es más efectivo cuando se llama después de la [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) método, que borra la lista de las claves de cifrado.  
+ El método es más efectivo cuando se llama después del método [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) , que borra la lista de claves de cifrado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

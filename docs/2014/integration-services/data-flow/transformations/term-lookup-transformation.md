@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
@@ -21,12 +20,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e721fa24a987d0978c2c89f0c0fc81046c113560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2286ba205d6ca12f025c8ac154b77a11e1754ff2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147405"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749877"
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -55,7 +54,7 @@ ms.locfileid: "48147405"
   
 -   Si el texto de la columna de entrada es una frase lematizada, solo la última palabra en la frase se ve afectada por la normalización. Por ejemplo, la versión lematizada de *citas con los médicos* es *cita con los médicos*.  
   
- Cuando un elemento de la búsqueda contiene términos que se superponen en el conjunto de referencia (es decir, un subtérmino se encuentra en más de un registro de referencia) la transformación Búsqueda de términos solo devuelve un resultado de búsqueda. En el siguiente ejemplo se muestra el resultado cuando un elemento de la búsqueda contiene un subtérmino que se superpone. El subtérmino que se superpone en este caso es *Windows*, que se encuentra en dos términos de referencia. Sin embargo, la transformación no devuelve dos resultados, sino únicamente un solo término de referencia, *Windows*. No se devuelve el segundo término de referencia, *Windows 7 Professional*.  
+ Cuando un elemento de búsqueda contiene términos que se superponen en el conjunto de referencia (es decir, un subtérmino se encuentra en más de un registro de referencia), la transformación Búsqueda de términos solo devuelve un resultado de búsqueda. En el siguiente ejemplo se muestra el resultado cuando un elemento de la búsqueda contiene un subtérmino que se superpone. El subtérmino que se superpone en este caso es *Windows*, que se encuentra en dos términos de referencia. Sin embargo, la transformación no devuelve dos resultados, sino únicamente un solo término de referencia, *Windows*. No se devuelve el segundo término de referencia, *Windows 7 Professional*.  
   
 |Elemento|Valor|  
 |----------|-----------|  
@@ -63,7 +62,7 @@ ms.locfileid: "48147405"
 |Términos de referencia|Windows, Windows 7 Professional|  
 |Salida|Windows|  
   
- La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ y ‘.  
+ La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " y '.  
   
 ## <a name="data-types"></a>Tipos de datos  
  La transformación Búsqueda de términos solo puede usar una columna que tenga el tipo de datos DT_WSTR o DT_NTEXT. Si una columna contiene texto, pero no tiene uno de estos tipos de datos, la transformación Conversión de datos puede agregar una columna con el tipo de datos DT_WSTR o DT_NTEXT al flujo de datos y copiar los valores de columnas en la nueva columna. La salida de transformación Conversión de datos posteriormente se puede usar como la entrada para la transformación Búsqueda de términos. Para más información, consulte [Data Conversion Transformation](data-conversion-transformation.md).  
@@ -79,7 +78,7 @@ ms.locfileid: "48147405"
   
  Las columnas de salida de transformación cuya propiedad InputColumnType se establece en 0 o 2 incluyen la propiedad CustomLineageID para una columna, que contiene el identificador de linaje asignado a la columna por un componente de flujo de datos requerido.  
   
- La transformación Búsqueda de términos agrega dos columnas a la salida de transformación, denominada de forma predeterminada `Term` y `Frequency`. `Term` contiene un término de la tabla de búsqueda y `Frequency` contiene el número de veces que el término en la tabla de referencia aparece en el conjunto de datos de entrada establecidos. Estas columnas no incluyen la propiedad CustomLineageID.  
+ La transformación Búsqueda de términos agrega dos columnas a la salida de transformación, que se denomina de forma predeterminada `Term` y `Frequency`. `Term` contiene un término de la tabla de búsqueda y `Frequency` contiene el número de veces que el término en la tabla de referencia aparece en el conjunto de datos de entrada establecidos. Estas columnas no incluyen la propiedad CustomLineageID.  
   
  La tabla de búsqueda debe ser una tabla en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Access. Si la salida de transformación Extracción de términos se guarda en una tabla, esta tabla se puede usar como tabla de referencia, pero también se pueden usar otras tablas. El texto en archivos planos, libros de Excel u otros orígenes se debe importar a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Access antes de poder usar la transformación Búsqueda de términos.  
   
@@ -95,11 +94,11 @@ ms.locfileid: "48147405"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de transformación Búsqueda de términos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación Búsqueda de términos &#40;pestaña tabla de referencia&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformación Búsqueda de términos &#40;pestaña Tabla de referencia&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Editor de transformación Búsqueda de términos &#40;pestaña búsqueda de términos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [Editor de transformación Búsqueda de términos &#40;pestaña Búsqueda de términos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Editor de transformación Búsqueda de términos &#40;ficha Opciones avanzadas&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Búsqueda de términos &#40;pestaña Avanzadas&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -107,6 +106,6 @@ ms.locfileid: "48147405"
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
   

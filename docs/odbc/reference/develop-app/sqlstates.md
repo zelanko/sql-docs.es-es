@@ -14,12 +14,12 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aa0875017c4b7a099af8da1c6f8eca105006aca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682953"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527731"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 SQLSTATE proporciona información detallada sobre la causa de una advertencia o error. El SQLSTATE en este manual se basa en los que se encuentran en la especificación ISO/IEF CLI, aunque esos SQLSTATE que comienzan con la mensajería instantánea es específica de ODBC.  
@@ -28,7 +28,7 @@ SQLSTATE proporciona información detallada sobre la causa de una advertencia o 
   
 -   **Estado incompleto** aunque este manual muestra un gran número de errores y advertencias y posibles causas de dichos errores y advertencias, no está completo y probablemente nunca será; las implementaciones de controladores simplemente varían demasiado. Cualquier controlador determinado probablemente no devolverá todos los SQLSTATEs enumeran en este manual y podrían devolverse SQLState no aparece en este manual.  
   
--   **Complejidad** algunos motores de base de datos, los motores de base de datos relacional especialmente: devolver literalmente miles de errores y advertencias. Los controladores de estos motores están poco probable que se asignan todos estos errores y advertencias para SQLSTATE debido a los esfuerzos implicados, la inexactness de las asignaciones, el gran tamaño del código resultante y el valor bajo del código resultante, que a menudo devuelve la programación errores que nunca deben encontrarse en tiempo de ejecución. Por lo tanto, los controladores deben asignar todos los errores y advertencias como parece razonable y asegúrese de asignar esos errores y advertencias en la lógica de aplicación que podrían basarse, como SQLSTATE 01004 (datos truncados).  
+-   **Complejidad** algunos motores de base de datos - motores de base de datos relacional especialmente - devuelvan literalmente miles de errores y advertencias. Los controladores de estos motores están poco probable que se asignan todos estos errores y advertencias para SQLSTATE debido a los esfuerzos implicados, la inexactness de las asignaciones, el gran tamaño del código resultante y el valor bajo del código resultante, que a menudo devuelve la programación errores que nunca deben encontrarse en tiempo de ejecución. Por lo tanto, los controladores deben asignar todos los errores y advertencias como parece razonable y asegúrese de asignar esos errores y advertencias en la lógica de aplicación que podrían basarse, como SQLSTATE 01004 (datos truncados).  
   
  Dado que SQLState no se devuelve de forma confiable, mayoría de las aplicaciones simplemente mostrarlos al usuario junto con su mensaje de diagnóstico asociado, que a menudo se adapta para el error o advertencia que se produjeron y el código de error nativo. No hay rara vez ninguna pérdida de funcionalidad en hacerlo, porque las aplicaciones no pueden basar la lógica de programación en la mayoría de SQLSTATE de todos modos. Por ejemplo, supongamos que **SQLExecDirect** devuelve SQLSTATE 42000 (sintaxis o infracción de acceso). Si la instrucción SQL que causó este error está codificado de forma rígida o generada por la aplicación, se trata de un error de programación y el código debe solucionarse. Si la instrucción SQL escrita por el usuario, se trata de un error de usuario y la aplicación se ha realizado todo lo que es posible si se informa al usuario del problema.  
   
@@ -48,4 +48,4 @@ SQLSTATE proporciona información detallada sobre la causa de una advertencia o 
   
  SQLSTATE HYC00 (característica opcional no implementada) es especialmente importante porque es la única manera en que una aplicación puede determinar si un controlador es compatible con un atributo de instrucción o de conexión determinado.  
   
- Para obtener una lista completa de códigos SQLState y las funciones que devuelven, consulte [Apéndice A: códigos de Error de ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obtener una explicación detallada de las condiciones en las que cada función puede devolver un determinado valor de SQLSTATE, consulte esa función.
+ Para obtener una lista completa de códigos SQLState y las funciones que devuelven, consulte [Apéndice A: Códigos de Error ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obtener una explicación detallada de las condiciones en las que cada función puede devolver un determinado valor de SQLSTATE, consulte esa función.

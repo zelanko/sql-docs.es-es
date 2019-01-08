@@ -15,12 +15,12 @@ ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f8c4992477fa5bdbf533f3a1933c4092f1d162c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5608877b30f453502bd9c6f0da74a8c5a68c71a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089511"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510198"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor de la tarea Enviar correo (página Correo)
   Use la página **Correo** del cuadro de diálogo **Editor de la tarea Enviar correo** para especificar los destinatarios, el tipo de mensaje y la prioridad de un mensaje. También puede adjuntar archivos al mensaje. El texto del mensaje puede consistir en una cadena que proporcione, una conexión de archivo a un archivo con el texto o el nombre de una variable con el texto.  
@@ -73,23 +73,23 @@ ms.locfileid: "48089511"
   
 ### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Entrada directa  
  **MessageSource**  
- Escriba el texto del mensaje, o bien haga clic en el botón Examinar (…) y escriba el mensaje en el cuadro de diálogo **Origen del mensaje** .  
+ Escriba el texto del mensaje, o bien haga clic en el botón Examinar (…) y escriba el mensaje en el cuadro de diálogo **Origen del mensaje**.  
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexión de archivos  
  **MessageSource**  
- Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en\<**Nueva conexión…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del Administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [agregar Variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Enviar correo electrónico de Editor de la tarea &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea Enviar correo &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

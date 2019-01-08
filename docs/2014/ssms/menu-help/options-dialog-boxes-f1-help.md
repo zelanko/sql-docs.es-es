@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
@@ -13,12 +13,12 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58d35a101994c94b695ce1cb2443486af632fcf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071515"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772827"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Opciones (Ayuda F1 de cuadros de diálogos)
   Esta sección contiene la Ayuda F1 de los cuadros de diálogo disponibles cuando se hace clic en **Opciones** en el menú **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48071515"
   
  [Opciones de &#40;diseñadores de tabla y página diseñadores de base de datos&#41;](options-designers-table-and-database-designers-page.md)  
   
- [Opciones de &#40;entorno: página fuentes y colores&#41;](options-environment-fonts-and-colors-page.md)  
+ [Opciones de &#40;entorno: Página fuentes y colores&#41;](options-environment-fonts-and-colors-page.md)  
   
  [Opciones de &#40;página General del entorno&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

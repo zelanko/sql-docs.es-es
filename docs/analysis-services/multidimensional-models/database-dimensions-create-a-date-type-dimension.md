@@ -1,5 +1,5 @@
 ---
-title: Crear una dimensión de tipo de fecha | Documentos de Microsoft
+title: Crear una dimensión de tipo fecha | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 957f47bbb185f6d9029b9dfbb036aa3738448098
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92f7748478695ccb9cfe8a6474eb83839170657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024512"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524369"
 ---
-# <a name="database-dimensions---create-a-date-type-dimension"></a>Dimensiones de base de datos: crear una dimensión de tipo de fecha
+# <a name="database-dimensions---create-a-date-type-dimension"></a>Las dimensiones de base de datos: creación de una dimensión de tipo Date
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una dimensión de tiempo es un tipo de dimensión cuyos atributos representan periodos de tiempo, como horas, semestres, trimestres, meses y días. Los periodos en una dimensión de tiempo proporcionan niveles de granularidad basados en tiempo para la elaboración de análisis e informes. Los atributos se organizan en jerarquías y la granularidad de la dimensión de tiempo se determina en gran parte según los requisitos empresariales y de informes de los datos históricos. Por ejemplo, la mayoría de datos financieros y de ventas en las aplicaciones de Business Intelligence utilizan una granularidad mensual o trimestral.  
   
@@ -40,19 +40,19 @@ ms.locfileid: "34024512"
 ### <a name="calendars"></a>Calendarios  
  En una dimensión de tiempo o una dimensión de tiempo de servidor, los atributos de periodo se agrupan en jerarquías. A estas jerarquías se las conoce normalmente como calendarios.  
   
- Las aplicaciones de Business Intelligence necesitan a menudo varias definiciones de calendarios. Por ejemplo, un departamento de recursos humanos puede realizar un seguimiento de los empleados mediante un calendario *estándar* : un calendario gregoriano de doce meses que empieza el 1 de enero y termina el 31 de diciembre. Pero el mismo departamento de recursos humanos puede hacer un seguimiento de los gastos mediante un calendario *fiscal* : un calendario de doce meses que define el año fiscal usado por la organización.  
+ Las aplicaciones de Business Intelligence necesitan a menudo varias definiciones de calendarios. Por ejemplo, un departamento de recursos humanos puede realizar un seguimiento de los empleados mediante el uso de un *estándar* un calendario gregoriano calendario de doce meses a partir del 1 de enero y termina el 31 de diciembre de. Sin embargo, ese mismo departamento de recursos humanos puede realizar un seguimiento de los gastos mediante el uso de un *fiscal* calendario, un calendario de doce meses que define el año fiscal usado por la organización.  
   
  Estos calendarios pueden construirse manualmente en el Diseñador de dimensiones. Sin embargo, el Asistente para dimensiones proporciona varias plantillas de jerarquías que pueden usarse para generar automáticamente diferentes tipos de calendarios cuando se crea una dimensión de tiempo o una dimensión de tiempo de servidor. En la siguiente tabla se describen los diferentes calendarios que el Asistente para dimensiones puede generar.  
   
-|Calendario|Description|  
+|Calendario|Descripción|  
 |--------------|-----------------|  
 |Calendario estándar|Calendario gregoriano de doce meses que empieza el 1 de enero y termina el 31 de diciembre.<br /><br /> Con independencia de si utiliza el Asistente para dimensiones para crear una dimensión de tiempo o una dimensión de tiempo de servidor, el asistente genera una jerarquía para un calendario estándar una vez definidos los atributos que representan los periodos de tiempo para la dimensión. Si utiliza el Asistente para dimensiones para crear una dimensión de tiempo de servidor, puede ajustar la fecha inicial del calendario estándar para que empiece otra día que no sea el 1 de enero.|  
-|Calendario fiscal|Calendario fiscal de doce meses. Cuando se selecciona este calendario, deben especificarse el día y el mes de inicio del año fiscal que utilice la organización.<br /><br /> Nota: Este calendario solo está disponible si se utiliza el Asistente para dimensiones para crear una dimensión temporal del servidor.|  
-|Calendario de informes (o calendario de marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral que se repite. Cuando se selecciona este calendario, deben especificarse el día y el mes de inicio y un patrón de repetición trimestral de 4–4–5, 4–5–4 ó 5–4–4 semanas, donde cada dígito representa el número de semanas de un mes.<br /><br /> Nota: Este calendario solo está disponible si se utiliza el Asistente para dimensiones para crear una dimensión temporal del servidor.|  
-|Calendario de fabricación|Calendario que utiliza 13 periodos de cuatro semanas, divididos en tres trimestres de tres periodos y un trimestre de cuatro periodos. Cuando se selecciona este calendario, se debe especificar la semana (entre 1 y 4) y el mes de inicio del año de fabricación que utiliza la organización, así como identificar el trimestre que contiene cuatro periodos.<br /><br /> Nota: Este calendario solo está disponible si se utiliza el Asistente para dimensiones para crear una dimensión temporal del servidor.|  
-|Calendario ISO 8601|Calendario estándar (8601) de Representación de fechas y horas de la Organización internacional de normalización (ISO). Este calendario tiene un número integral de semanas de siete días. El año nuevo puede empezar varios días antes o después del inicio del año nuevo según el calendario gregoriano. La primera semana de este calendario la determina la primera semana del calendario gregoriano que incluye un jueves. Por lo tanto, el primer día de esa semana, lunes, puede en realidad pertenecer al año anterior.<br /><br /> Nota: Este calendario solo está disponible si se utiliza el Asistente para dimensiones para crear una dimensión temporal del servidor.|  
+|Calendario fiscal|Calendario fiscal de doce meses. Cuando se selecciona este calendario, deben especificarse el día y el mes de inicio del año fiscal que utilice la organización.<br /><br /> Nota: Este calendario solamente está disponible si utiliza el Asistente para dimensiones para crear una dimensión de tiempo de servidor.|  
+|Calendario de informes (o calendario de marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral que se repite. Cuando se selecciona este calendario, especifique el primer día y mes, el patrón de tres meses de 4-4-5, 4-5-4 o 5-4-4 semanas, donde cada dígito representa el número de semanas en un mes.<br /><br /> Nota: Este calendario solamente está disponible si utiliza el Asistente para dimensiones para crear una dimensión de tiempo de servidor.|  
+|Calendario de fabricación|Calendario que utiliza 13 periodos de cuatro semanas, divididos en tres trimestres de tres periodos y un trimestre de cuatro periodos. Cuando se selecciona este calendario, se debe especificar la semana (entre 1 y 4) y el mes de inicio del año de fabricación que utiliza la organización, así como identificar el trimestre que contiene cuatro periodos.<br /><br /> Nota: Este calendario solamente está disponible si utiliza el Asistente para dimensiones para crear una dimensión de tiempo de servidor.|  
+|Calendario ISO 8601|Calendario estándar (8601) de Representación de fechas y horas de la Organización internacional de normalización (ISO). Este calendario tiene un número integral de semanas de siete días. El año nuevo puede empezar varios días antes o después del inicio del año nuevo según el calendario gregoriano. La primera semana de este calendario la determina la primera semana del calendario gregoriano que incluye un jueves. Por lo tanto, el primer día de esa semana, lunes, puede en realidad pertenecer al año anterior.<br /><br /> Nota: Este calendario solamente está disponible si utiliza el Asistente para dimensiones para crear una dimensión de tiempo de servidor.|  
   
- Cuando se crea una dimensión de tiempo de servidor y se especifican los periodos de tiempo y los calendarios que se utilizarán en esa dimensión, el Asistente para dimensiones agrega atributos a los periodos de tiempo adecuados para cada calendario especificado. Por ejemplo, si se crea una dimensión de tiempo de servidor cuyos periodos son años, e incluye dos calendarios, fiscal y de informes, el asistente agregará los atributos FiscalYear y ReportingYears, junto con el atributo Years estándar, a la dimensión. Una dimensión de tiempo de servidor también incluirá atributos para las combinaciones de periodos de tiempo seleccionados, como un atributo DayOfWeek para una dimensión que contiene días y semanas. El Asistente para dimensiones crea una jerarquía de calendarios mediante la combinación de atributos que pertenece a un solo tipo de calendario. Por ejemplo, una jerarquía de calendarios fiscales puede contener los niveles siguientes: Fiscal Year, Fiscal Half Year, Fiscal Quarter, Fiscal Month y Fiscal Day.  
+ Cuando se crea una dimensión de tiempo de servidor y se especifican los periodos de tiempo y los calendarios que se utilizarán en esa dimensión, el Asistente para dimensiones agrega atributos a los periodos de tiempo adecuados para cada calendario especificado. Por ejemplo, si se crea una dimensión de tiempo de servidor cuyos periodos son años, e incluye dos calendarios, fiscal y de informes, el asistente agregará los atributos FiscalYear y ReportingYears, junto con el atributo Years estándar, a la dimensión. Una dimensión de tiempo de servidor también incluirá atributos para las combinaciones de periodos de tiempo seleccionados, como un atributo DayOfWeek para una dimensión que contiene días y semanas. El Asistente para dimensiones crea una jerarquía de calendarios mediante la combinación de atributos que pertenece a un solo tipo de calendario. Por ejemplo, una jerarquía de calendarios fiscales puede contener los siguientes niveles: El año fiscal, semestre Fiscal, trimestre Fiscal, mes Fiscal y día Fiscal.  
   
 ## <a name="adding-time-intelligence-with-the-business-intelligence-wizard"></a>Agregar inteligencia de tiempo mediante el Asistente de Business Intelligence  
  Después de definir una dimensión de tiempo y agregar esa dimensión a un cubo, puede utilizar el Asistente de Business Intelligence para agregar funcionalidad de inteligencia de tiempo, como las medidas periodo hasta fecha, periodo a periodo y media rotatoria. Para obtener más información, vea [Definir cálculos de inteligencia de tiempo mediante el Asistente de Business Intelligence](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "34024512"
   
 ## <a name="see-also"></a>Vea también  
  [Crear una dimensión de tiempo generando una tabla de tiempos](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Ayuda de F1 de Asistente de Business Intelligence](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
- [Tipos de dimensión](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
+ [Asistente de Business Intelligence (Ayuda F1)](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
+ [Tipos de dimensiones](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

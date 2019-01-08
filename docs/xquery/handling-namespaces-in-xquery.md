@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528003"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Controlar espacios de nombres en XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  Tenga en cuenta que el **espacio de nombres** palabra clave se utiliza para definir un nuevo prefijo de espacio de nombres, "AWMI:". Este prefijo debe utilizarse después en la consulta para todos los elementos que se encuentren dentro del ámbito de dicho espacio de nombres.  
   
-### <a name="b-declaring-a-default-namespace"></a>B. Declarar un espacio de nombres predeterminado  
+### <a name="b-declaring-a-default-namespace"></a>b. Declarar un espacio de nombres predeterminado  
  En la consulta anterior, se definía un nuevo prefijo de espacio de nombres. Ese prefijo tenía que utilizarse después en la consulta para seleccionar las estructuras XML previstas. También puede declarar un espacio de nombres como espacio de nombres predeterminado, tal y como se muestra en la siguiente consulta modificada:  
   
 ```  
@@ -68,7 +68,7 @@ where ProductModelID=7
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  Tenga en cuenta que, en este ejemplo, el espacio de nombres definido, `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, sirve para reemplazar al espacio de nombres predeterminado o vacío. Por este motivo, ya no hay un prefijo de espacio de nombres en la expresión de ruta de acceso que se utiliza para la consulta. Ya no hay tampoco un prefijo de espacio de nombres en los nombres de elemento que aparecen en los resultados. Además, el espacio de nombres predeterminado se aplica a todos los elementos, pero no a sus atributos.  
@@ -88,7 +88,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
   
@@ -130,7 +130,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
   

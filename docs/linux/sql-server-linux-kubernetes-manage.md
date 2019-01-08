@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518494"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>Administrar SQL Server Always On Kubernetes del grupo de disponibilidad
 
@@ -37,7 +37,7 @@ Para mover una réplica principal a otro nodo en un grupo de disponibilidad o co
 
   Actualice el archivo para su entorno.
 
-  - Reemplace `<containerName>` con el nombre del destino del grupo de disponibilidad esperada.
+  - Reemplace `<containerName>` con el nombre del pod (por ejemplo, mssql2-0) del destino del grupo de disponibilidad esperada.
   - Si el grupo de disponibilidad no está en el `ag1` espacio de nombres, reemplace `ag1` con el espacio de nombres.
 
   Este archivo define un trabajo de conmutación por error con el nombre `manual-failover`.
@@ -63,7 +63,7 @@ Para mover una réplica principal a otro nodo en un grupo de disponibilidad o co
   El ejemplo siguiente devuelve el estado del trabajo denominado `manual-failover`.
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. Eliminar el trabajo de conmutación por error manual. 
@@ -76,7 +76,7 @@ Para mover una réplica principal a otro nodo en un grupo de disponibilidad o co
   El siguiente comando elimina el trabajo.
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## <a name="rotate-credentials"></a>Rotar las credenciales
@@ -127,7 +127,7 @@ Complete los pasos siguientes para cada instancia de SQL Server que necesita la 
 
   Kubernetes actualiza la clave maestra y `sa` contraseña para una instancia de SQL Server en un grupo de disponibilidad.
 
-1. Compruebe que se ha completado el trabajo. Ejecute el siguiente comando: para comprobar que se ha completado el trabajo, ejecute 
+1. Compruebe que se ha completado el trabajo. Ejecute el siguiente comando: Para comprobar que se ha completado el trabajo, ejecute 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1

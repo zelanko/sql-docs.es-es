@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120482"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519485"
 ---
 # <a name="glossary"></a>Glosario
   
@@ -175,10 +175,10 @@ ms.locfileid: "49120482"
 |emisor de certificado|Entidad de certificación que emitió el certificado al sujeto.|  
 |Certificate Lifecycle Manager Client|Conjunto de herramientas de Certificate Lifecycle Manager (CLM) Client que ayudan a los usuarios finales a administrar sus tarjetas inteligentes. Las herramientas incluyen Smart Card Self Service Control, Smart Card Personalization Control y Certificate Profile Update Control. Véase Smart Card Self-Service Control, Smart Card Personalization Control y Certificate Profile Update Control.|  
 |administrador de certificados|Usuario de Certificate Lifecycle Manager (CLM) que tiene los permisos CLM adecuados para administrar a otros usuarios CLM o para administrar la propia aplicación CLM.|  
-|portal web de administradores de certificados|Aplicación web que se ejecuta en el servidor Certificate Lifecycle Manager (CLM). Este portal permite a los administradores de certificados administrar los certificados y tarjetas inteligentes de otros usuarios. Se accede a los portales web de suscriptores de certificados y administradores de certificados a través del mismo localizador universal de recursos (URL); sin embargo, el contenido mostrado depende de los roles y permisos del usuario.|  
+|portal web de administradores de certificados|Aplicación web que se ejecuta en el servidor Certificate Lifecycle Manager (CLM). Este portal permite a los administradores de certificados administrar certificados y tarjetas inteligentes de otros usuarios. Se accede a los portales web de suscriptores de certificados y administradores de certificados a través del mismo localizador universal de recursos (URL); sin embargo, el contenido mostrado depende de los roles y permisos del usuario.|  
 |Certificate Profile Update Control|Control ActiveX que automatiza la actualización de perfiles de Certificate Lifecycle Manager (CLM) en equipos clientes.|  
 |revocación de certificado|Proceso de revocar un certificado digital.|  
-|suscriptor de certificados|Usuario que necesita certificados con o sin tarjetas inteligentes. Los suscriptores de certificados pueden acceder a un número pequeño de funciones que solo se pueden realizar para los certificados propios del usuario.|  
+|suscriptor de certificados|Usuario que necesita certificados con o sin tarjetas inteligentes. Los suscriptores de certificados pueden tener acceso a un número pequeño de funciones que solo se pueden realizar para los certificados del usuario.|  
 |portal web de suscriptores de certificados|Aplicación web que se ejecuta en el servidor Certificate Lifecycle Manager (CLM). Este componente del servidor CLM interactúa directamente con los usuarios en un modo de autoservicio. La funcionalidad concreta depende de los permisos y pertenencias a grupos de Active Directory. Se accede a los portales web de suscriptores de certificados y administradores de certificados a través del mismo localizador universal de recursos (URL); sin embargo, el contenido mostrado depende de los roles y permisos del usuario.|  
 |plantilla de certificado|Construcción de Windows que especifica el formato y el contenido de los certificados en función de su uso previsto. Cuando se solicita un certificado de una entidad de certificación (CA) empresarial de Windows, los solicitantes del certificado pueden seleccionar entre una variedad de tipos de certificado basados en plantillas de certificado.|  
 |aplicador de cambios|Objeto que realiza la detección de conflictos, el control de conflictos y la aplicación de cambios para un lote de cambios.|  
@@ -193,7 +193,7 @@ ms.locfileid: "49120482"
 |suma de comprobación|Valor calculado que se usa para detectar en los datos la presencia de errores que se pueden producir cuando se transmiten o escriben los datos en el disco. La suma de comprobación se calcula para un fragmento determinado de datos mediante la combinación secuencial de todos los bytes de datos con una serie de operaciones lógicas o aritméticas. Una vez transmitidos o almacenan los datos, una nueva suma de comprobación se calcula de la misma manera mediante los datos almacenados o transmitidos (posiblemente defectuosos). Si las dos sumas de comprobación no coinciden, se ha producido un error y los datos se deben transmitir o almacenar de nuevo. Las sumas de comprobación no pueden detectar todos los errores y no se pueden usar para corregir datos erróneos.|  
 |child|En una estructura de árbol, la relación de un nodo con su predecesor inmediato.|  
 |crónica|Tabla que almacena la información sobre el estado de una sola aplicación. Un ejemplo es una crónica de eventos, que puede almacenar datos de eventos para su uso con suscripciones programadas.|  
-|fragmento|Una cantidad especificada de datos.|  
+|fragmento|Una cantidad especificada de datos.|  
 |Shell CIDER|Contenedor de interfaz de usuario con pestañas para hospedar el componente de TSQLEditor y la salida relacionada de la ejecución de consulta de TSQL.|  
 |identidad basada en notificaciones|Identificador único que representa a un usuario, una aplicación, un equipo u otra entidad específicos, permitiendo obtener acceso a varios recursos, como aplicaciones y recursos de red, sin especificar las credenciales varias veces. También permite que los recursos validen solicitudes de una entidad.|  
 |cierre correcto|Cierre del sistema que se produce sin errores.|  
@@ -212,16 +212,16 @@ ms.locfileid: "49120482"
 |CLM Audit|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la generación y presentación de plantillas de directiva CLM, definiendo directivas de administración dentro de una plantilla de perfil y generando informes CLM.|  
 |credenciales CLM|Información de cuenta de usuario que se puede usar para autenticar a un usuario en Certificate Lifecycle Manager (CLM). Estas credenciales pueden tener el formato de credenciales de dominio o contraseñas de un solo uso.|  
 |CLM Enroll|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite al usuario especificar el flujo de trabajo y los datos que se van a recopilar en la emisión de certificados mediante una plantilla. Este permiso extendido solo se aplica a plantillas de perfil.|  
-|CLM Enrollment Agent|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite a un usuario o un grupo realizar solicitudes de certificados en nombre de otro usuario. El sujeto del certificado emitido contendrá el nombre del usuario de destino, en lugar del nombre del solicitante.|  
+|CLM Enrollment Agent|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite a un usuario o un grupo realizar solicitudes de certificados en nombre de otro usuario. Asunto del certificado emitido contendrá el nombre del usuario de destino, en lugar del nombre del solicitante.|  
 |CLM Recover|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite iniciar la recuperación de la clave de cifrado de la base de datos de entidad de certificación.|  
-|CLM Renew|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la iniciación, ejecución o realización de una solicitud de inscripción. La solicitud de renovación reemplaza el certificado de un usuario cuya fecha de expiración está próxima por un nuevo certificado que tiene un nuevo período de validez.|  
+|CLM Renew|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la iniciación, ejecución o realización de una solicitud de inscripción. La solicitud de renovación reemplaza el certificado de un usuario que esté cerca de su fecha de expiración con un nuevo certificado que tiene un nuevo período de validez.|  
 |informes CLM|Información de auditoría que pertenece a las actividades de administración de credenciales dentro de Certificate Lifecycle Manager (CLM).|  
 |CLM Request Enroll|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la iniciación, ejecución o realización de una solicitud de inscripción.|  
 |CLM Request Recover|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite iniciar la recuperación de la clave de cifrado de la base de datos de entidad de certificación.|  
-|CLM Request Renew|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la iniciación, ejecución o realización de una solicitud de inscripción. La solicitud de renovación reemplaza el certificado de un usuario cuya fecha de expiración está próxima por un nuevo certificado que tiene un nuevo período de validez.|  
-|CLM Request Revoke|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la revocación de un certificado antes de la expiración del período de validez del certificado. Un ejemplo de cuándo esto es necesario es si se pone en peligro (se roba) el equipo o la tarjeta inteligente de un usuario.|  
-|CLM Request Unblock Smart Card|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite restablecer el número de identificación personal (PIN) del usuario de una tarjeta inteligente, permitiendo el acceso al material de la clave en una tarjeta inteligente y el restablecimiento de ese material.|  
-|CLM Revoke|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la revocación de un certificado antes de la expiración del período de validez del certificado. Un ejemplo de cuándo esto es necesario es si se pone en peligro (se roba) el equipo o la tarjeta inteligente de un usuario.|  
+|CLM Request Renew|Permiso extendido de Certificate Lifecycle Manager (CLM) en Active Directory que permite la iniciación, ejecución o realización de una solicitud de inscripción. La solicitud de renovación reemplaza el certificado de un usuario que esté cerca de su fecha de expiración con un nuevo certificado que tiene un nuevo período de validez.|  
+|CLM Request Revoke|Permiso en Active Directory que permite la revocación de un certificado antes de la expiración del período de validez del certificado de extendido de Certificate Lifecycle Manager (CLM). Un ejemplo de cuándo esto es necesario es si el equipo de un usuario o una tarjeta inteligente está comprometido (descartada).|  
+|CLM Request Unblock Smart Card|Certificate Lifecycle Manager (CLM) permiso extendido en Active Directory que permite usuario identificación número Personal (NIP una tarjeta inteligente) que se restablezca, permitir el acceso al material de clave en una tarjeta inteligente y de ese material se restablecerán.|  
+|CLM Revoke|Permiso en Active Directory que permite la revocación de un certificado antes de la expiración del período de validez del certificado de extendido de Certificate Lifecycle Manager (CLM). Un ejemplo de cuándo esto es necesario es si el equipo de un usuario o una tarjeta inteligente está comprometido (descartada).|  
 |vector de reloj|Colección de elementos de vector de reloj que representa las actualizaciones a una réplica. Los cambios que se produzcan entre 0 y el contador estarán contenidos en el vector.|  
 |elemento de vector de reloj|Un par de valores, formado por una clave de réplica y un contador, que representa un cambio en una réplica.|  
 |función CLR|Función creada en un ensamblado de SQL Server cuya implementación se define en un ensamblado creado en Common Language Runtime (CLR) de .NET Framework.|  
@@ -263,7 +263,7 @@ ms.locfileid: "49120482"
 |intercalación de columna|Admitir varias intercalaciones en una sola instancia.|  
 |restricción de columna|Definición de una restricción que se especifica en una definición de columna cuando se crea o modifica una tabla.|  
 |cuadrícula Columnas|Estructura de cuadrícula modificable del Diseñador de tablas que muestra las columnas de una tabla e información adicional sobre cada columna.|  
-|índice de almacén de columnas|Almacena cada columna en un conjunto independiente de páginas de disco en lugar de almacenar varias filas por página.|  
+|columnstore index|Almacena cada columna en un conjunto independiente de páginas de disco en lugar de almacenar varias filas por página.|  
 |COM|Modelo de programación basado en objetos diseñado para fomentar la interoperabilidad del software; permite que dos o más aplicaciones o componentes cooperen fácilmente entre sí, aunque hayan sido escritos por distintos proveedores, en momentos diferentes y lenguajes de programación distintos, o aunque se ejecuten en equipos diferentes con sistemas operativos distintos.|  
 |búfer de comandos|Área de memoria en la que se conservan los comandos escritos por el usuario. Un búfer de comandos puede permitir al usuario repetir comandos sin reescribirlos completamente, modificar comandos pasados para cambiar algún argumento o corregir un error, deshacer comandos u obtener una lista de comandos pasados.|  
 |símbolo del sistema|Interfaz entre el sistema operativo y el usuario en la que el usuario escribe cadenas de texto de lenguaje de comandos que se pasan al intérprete de comandos para la ejecución.|  
@@ -737,7 +737,7 @@ ms.locfileid: "49120482"
 |valor máximo|Valor máximo que no es un valor atípico en un diagrama de caja.|  
 |sugerencia|Opción o estrategia especificada para que el procesador de consultas de SQL Server las aplique en instrucciones SELECT, INSERT, UPDATE o DELETE. La sugerencia invalida cualquier plan de ejecución que pueda seleccionar el optimizador de consultas para una consulta.|  
 |historial|Lista de las acciones del usuario dentro de un programa, como los comandos escritos en un shell del sistema operativo, los menús que se pasan a través mediante Gopher o los vínculos seguidos mediante un explorador web.|  
-|capacidad de alojamiento|Hace referencia a la posibilidad de dejar abiertos ("en espera") los conjuntos de resultados que se han procesado y permanecen normalmente cerrados después de esta operación. Por ejemplo: "SQL Server solo admite capacidad de alojamiento en el nivel de conexión".|  
+|capacidad de alojamiento|Hace referencia a la posibilidad de dejar abiertos ("en espera") los conjuntos de resultados que se han procesado y permanecen normalmente cerrados después de esta operación. Por ejemplo:  "SQL Server solo admite capacidad de alojamiento en el nivel de conexión".|  
 |exclusión|Porcentaje de los datos de aprendizaje que se reserva para su uso en la medición de la precisión de la estructura del modelo de minería de datos.|  
 |datos de exclusión|Porcentaje de los datos de aprendizaje que se reserva para su uso en la medición de la precisión de la estructura del modelo de minería de datos.|  
 |almacén de datos de exclusión|Estructura de minería de datos que se usa para almacenar en caché los datos de exclusión. Contiene referencias a los datos de exclusión.|  
@@ -782,7 +782,7 @@ ms.locfileid: "49120482"
 |cinta inicial|En un conjunto de medios que usan dispositivos de copia de seguridad de cinta, la primera cinta de una familia de medios.|  
 |combinación interna|Operación que recupera filas de varias tablas de origen mediante la comparación de los valores de las columnas compartidas entre las tablas de origen. Una combinación interna excluye las filas de una tabla de origen que no tienen filas coincidentes en las demás tablas de origen.|  
 |autenticación en persona|Autenticación física para completar una transacción de solicitud de certificado. Por ejemplo, si un usuario final que solicita su número de identificación personal (PIN) está bloqueado visitará un administrador de certificados en persona para proporcionar autenticación en persona con identificación, como un distintivo de empleado o un permiso de conducir.|  
-|InProc|Circunstancia en que el código del objeto COM se carga desde un archivo DLL y se ubica en el mismo proceso que el cliente.|  
+|InProc|Una circunstancia donde el código del objeto COM se carga desde un archivo DLL y se encuentra en el mismo proceso que el cliente.|  
 |adaptador de entrada|Adaptador de software que acepta flujos de eventos de entrada de orígenes externos como bases de datos, archivos, fuentes de tableros de cotizaciones, puertos de red, dispositivos de fabricación, etc.|  
 |miembro de entrada|Miembro cuyo valor se carga directamente desde el origen de datos, en lugar de calcularse a partir de otros datos.|  
 |conjunto de entrada|Conjunto de datos en el que opera una expresión de valor MDX (Expresiones multidimensionales).|  
@@ -832,20 +832,20 @@ ms.locfileid: "49120482"
 |tabla de unión|Tabla que establece una relación entre otras tablas.|  
 |gráfico Kagi|Gráfico, independiente del tiempo, que se usa para realizar el seguimiento de los movimientos de precios y para tomar decisiones sobre la compra de acciones.|  
 |clave|Cadena que identifica un objeto en la memoria caché. Esta cadena debe ser única dentro de una región. Los objetos se asocian con una clave cuando se agregan y, a continuación, se recuperan con la misma clave.|  
-|clave|En cifrado, autenticación y firmas digitales, valor que se usa en combinación con un algoritmo para cifrar o descifrar información.|  
-|clave|En una matriz, campo por el que se accede a los datos almacenados y éstos se organizan.|  
-|clave|Columna o grupo de columnas que identifica de forma única una fila (clave principal), define la relación entre dos tablas (clave externa) o se usa para generar un índice.|  
+|Key|En cifrado, autenticación y firmas digitales, valor que se usa en combinación con un algoritmo para cifrar o descifrar información.|  
+|Key|En una matriz, campo por el que se accede a los datos almacenados y éstos se organizan.|  
+|Key|Columna o grupo de columnas que identifica de forma única una fila (clave principal), define la relación entre dos tablas (clave externa) o se usa para generar un índice.|  
 |atributo clave|Atributo de una dimensión que vincula los atributos que no son clave en la dimensión con medidas relacionadas.|  
 |columna de clave|Columna cuyo contenido identifica de forma exclusiva cada fila en una tabla.|  
 |generador de claves|Componente de hardware o de software que se usa para generar material de clave de cifrado.|  
 |indicador clave de rendimiento|Medida predefinida que se usa para realizar el seguimiento del rendimiento de un objetivo, plan, iniciativa o proceso de negocio estratégicos. Un KPI se evalúa frente a un destino. Valor explícito y que se puede medir tomado directamente de un origen de datos. Los indicadores clave de rendimiento (KPI) se usan para medir el rendimiento en un área concreta, por ejemplo, los ingresos por cliente.|  
 |bloqueo de rangos con clave|Bloqueo usado con el fin de bloquear los rangos entre los registros de una tabla para evitar inserciones o eliminaciones fantasma en un conjunto de registros. Garantiza transacciones serializables.|  
 |recuperación de clave|El proceso de recuperar la clave privada de un usuario.|  
-|Key Recovery Agent|Usuario designado que trabaja con un administrador de certificados para recuperar la clave privada de un usuario. Se aplica una plantilla de certificado concreta a un agente Key Recovery Agent.|  
+|Key Recovery Agent|Un usuario designado que trabaja con un administrador de certificados para recuperar la clave privada de un usuario. Se aplica una plantilla de certificado concreta a un agente Key Recovery Agent.|  
 |cursor controlado por conjunto de claves|Cursor que muestra los efectos de las actualizaciones que realizan en sus filas miembro otros usuarios mientras el cursor está abierto, pero que no muestra los efectos de las inserciones o eliminaciones.|  
 |conocimiento|Metadatos acerca de todos los cambios que un participante ha visto y mantiene.|  
 |KPI|Medida predefinida que se usa para realizar el seguimiento del rendimiento de un objetivo, plan, iniciativa o proceso de negocio estratégicos. Un KPI se evalúa frente a un destino. Valor explícito y que se puede medir tomado directamente de un origen de datos. Los indicadores clave de rendimiento (KPI) se usan para medir el rendimiento en un área concreta, por ejemplo, los ingresos por cliente.|  
-|KRA|Usuario designado que trabaja con un administrador de certificados para recuperar la clave privada de un usuario. Se aplica una plantilla de certificado concreta a un agente Key Recovery Agent.|  
+|KRA|Un usuario designado que trabaja con un administrador de certificados para recuperar la clave privada de un usuario. Se aplica una plantilla de certificado concreta a un agente Key Recovery Agent.|  
 |idioma para programas no Unicode|Configuración de opciones de lenguaje y configuración regional que especifica las páginas de códigos predeterminadas y los archivos de fuente de mapa de bits asociados para un equipo concreto que afecta a todos los usuarios de ese equipo. Las páginas de códigos y predeterminadas y las fuentes habilitan una aplicación no Unicode escrita para una versión de lenguaje del sistema operativo con el fin de ejecutarse correctamente en otra versión de lenguaje del sistema operativo.|  
 |analizador del servicio de lenguaje|Componente que se usa para describir las funciones y el ámbito de los token en código fuente.|  
 |escáner del servicio de lenguaje|Componente que se usa para identificar tipos de token en código fuente. Esta información se usa para resaltar la sintaxis y para identificar rápidamente los tipos de token que pueden desencadenar otras operaciones, por ejemplo, la concordancia de llaves.|  
@@ -969,7 +969,7 @@ ms.locfileid: "49120482"
 |Microsoft SQL Server|Familia de sistemas de análisis y administración de bases de datos relacionales de Microsoft para soluciones de comercio electrónico, línea de negocio y almacenamiento de datos.|  
 |Microsoft SQL Server 2008 Express|Versión ligera e incrustable de Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express con Advanced Services|Sistema de diseño y administración de bases de datos relacionales de Microsoft para soluciones de comercio electrónico, línea de negocio y almacenamiento de datos.|  
-|Microsoft SQL Server 2008 Express with Tools|Versión gratuita fácil de usar de la plataforma de datos SQL Server Express que incluye la herramienta de administración gráfica: SQL Server Management Studio Express (SMSS).|  
+|Microsoft SQL Server 2008 Express with Tools|Versión gratuita fácil de usar de la plataforma de datos SQL Server Express que incluye la herramienta de administración gráfica: SQL Server Management Studio (SMSS) Express.|  
 |Libros en pantalla de Microsoft SQL Server|Colección de documentación electrónica que incluye la documentación completa que se distribuye con Microsoft SQL Server.|  
 |Microsoft SQL Server Business Intelligence|Infraestructura de datos basada en Microsoft SQL Server y plataforma de Business Intelligence que consta de Microsoft SQL Server Integration Services, Relational Engine, Master Data Services, Reporting Services y Analysis Services.|  
 |Microsoft SQL Server Compact|Sistema de administración y análisis de bases de datos relacionales de Microsoft para soluciones de comercio electrónico, línea de negocio y almacenamiento de datos.|  
@@ -1028,7 +1028,7 @@ ms.locfileid: "49120482"
 |nickname|Cuando se usa con tablas de sistema de replicación de mezcla, nombre de otro suscriptor que ya tiene una generación especificada de datos actualizados.|  
 |funciones niládicas|Funciones que no tienen ningún parámetro de entrada.|  
 |NLS API|Conjunto de funciones de sistema de Windows de 32 bits que contiene información basada en el idioma y las convenciones culturales.|  
-|node|Proveedor de sincronización y su réplica asociada.|  
+|Nodo|Proveedor de sincronización y su réplica asociada.|  
 |palabra irrelevante|Palabra como "el" o "un" que no es útil para las búsquedas o que un rastreador (crawler) debe omitir al crear un índice.|  
 |índice no clúster|Crea un índice de árbol B en el que el orden lógico de los valores de clave del índice son diferentes al orden físico de las filas correspondientes de la tabla. El índice contiene localizadores de filas que señalan a la ubicación de almacenamiento de los datos de la tabla.|  
 |base de datos dependiente|Base de datos de SQL Server que almacena metadatos y valores de configuración de base de datos con la instancia del motor de base de datos de SQL Server donde se instala la base de datos. Requiere inicios de sesión en la base de datos maestra para la autenticación.|  
@@ -1112,7 +1112,7 @@ ms.locfileid: "49120482"
 |instrucción de paso a través|Instrucción SELECT que se pasa directamente a la base de datos de origen sin modificación ni retraso.|  
 |directiva de contraseñas|Colección de configuraciones de directivas que definen los requisitos de contraseña de un objeto de directiva de grupo (GPO).|  
 |proveedor de contraseñas|Generación de contraseña de un solo uso y componente de validación para la autenticación de usuario.|  
-|ruta de acceso|Elemento de flujo de datos que conecta la salida de un componente de flujo de datos con la entrada de otro componente de flujo de datos.|  
+|path|Elemento de flujo de datos que conecta la salida de un componente de flujo de datos con la entrada de otro componente de flujo de datos.|  
 |PBM|Conjunto de funciones integradas que devuelven información de estado de servidor sobre valores, objetos y configuraciones de SQL Server. La administración basada en directivas permite a un administrador de bases de datos declarar el estado deseado del sistema y comprueba si el sistema cumple con ese estado.|  
 |replicación punto a punto|Tipo de replicación transaccional. En contraposición a la replicación transaccional de solo lectura y la replicación transaccional con actualización de suscripciones, las relaciones entre nodos en una topología de replicación punto a punto son relaciones del mismo nivel en vez de jerárquicas, en las que cada nodo contiene esquemas y datos idénticos.|  
 |herramientas de rendimiento|Herramientas que se pueden usar para evaluar el rendimiento de una solución. Las herramientas de rendimiento pueden tener fines diferentes; algunas están diseñadas para evaluar el rendimiento de un extremo a otro mientras que otras se centran en evaluar el rendimiento de un aspecto determinado de una solución.|  
@@ -1186,7 +1186,7 @@ ms.locfileid: "49120482"
 |clave privada|Mitad confidencial de un par de clave criptográfica que se usa con un algoritmo de clave pública. Las claves privadas se usan normalmente para descifrar una clave de sesión simétrica, datos firmados digitalmente, o descifrar datos que se han cifrado con la clave pública correspondiente.|  
 |almacenamiento en caché automático|Sistema que administra la obsolescencia de los datos de un cubo mediante el cual los objetos de almacenamiento MOLAP se actualizan y procesan automáticamente en caché mientras que las consultas se redirigen al almacenamiento ROLAP.|  
 |caché de procedimientos|Parte del bloque de memoria de SQL Server que se usa para almacenar planes de ejecución de lotes de Transact-SQL, procedimientos almacenados y desencadenadores.|  
-|plantilla de perfil|Núcleo de todas las actividades de administración de Certificate Lifecycle Manager (CLM). La plantilla de perfil proporciona una unidad administrativa única que incluye toda la información necesaria para administrar los múltiples certificados que podrían ser requeridos por una comunidad de usuarios a lo largo del ciclo de vida del certificado. También incluye información acerca de la ubicación final de esos certificados, que pueden estar basados en software (es decir, almacenados en el equipo local) o basados en hardware (almacenados en una tarjeta inteligente). Una plantilla de perfil no puede incluir certificados basados en software y basados en tarjeta inteligente.|  
+|plantilla de perfil|Núcleo de todas las actividades de administración de Certificate Lifecycle Manager (CLM). La plantilla de perfil proporciona una unidad administrativa única que incluye toda la información necesaria para administrar los múltiples certificados que pueden ser necesarios por una comunidad de usuarios a lo largo del ciclo de vida del certificado. También incluye información acerca de la ubicación final de esos certificados, que pueden estar basados en software (es decir, almacenados en el equipo local) o basados en hardware (almacenados en una tarjeta inteligente). Una plantilla de perfil no puede incluir certificados basados en software y basados en tarjeta inteligente.|  
 |gráfico de beneficios|Diagrama que muestra el aumento teórico de beneficios asociado al uso de varios modelos de datos.|  
 |programable|Capaz de aceptar instrucciones para realizar una tarea o una operación. Ser programable es una característica de los equipos.|  
 |página de propiedades|Cuadro de diálogo que muestra información sobre un objeto de la interfaz.|  
@@ -1464,10 +1464,10 @@ ms.locfileid: "49120482"
 |en suspensión|Operación de suspender sin finalizar.|  
 |segmento|Subconjunto de datos de un cubo, especificado mediante la limitación de una o más dimensiones por los miembros de la dimensión.|  
 |Segmentaciones de datos|Característica que proporciona controles de filtrado de un solo clic y que hacen que sea fácil limitar la parte de un conjunto de datos que se está examinando.|  
-|ventana deslizante|Ventana con la longitud fija L que avanza por una escala de tiempo en función de los eventos del flujo. Con cada evento de la escala de tiempo, se crea una nueva ventana, a partir de la hora de inicio del evento.|  
+|ventana deslizante|Una ventana de longitud fija L que avanza por una escala de tiempo según los eventos del flujo. Con todos los eventos en la escala de tiempo, se crea una nueva ventana, empezando por la hora de inicio del evento.|  
 |instalación integrada|Integrar actualizaciones, revisiones o Service Pack en los archivos de instalación base del software original, para que los archivos resultantes permitan una instalación paso a paso del software actualizado.|  
 |instalación integrada|Tipo de instalación que integra los archivos de instalación base para un sistema operativo o programa con sus Service Pack, actualizaciones o revisiones, y permite la instalación paso a paso.|  
-|tarjeta inteligente|Un dispositivo de plástico (del tamaño de una tarjeta de crédito o menor) con un microprocesador incrustado y una cantidad pequeña de almacenamiento que se usa, con código de acceso, para habilitar la autenticación basada en certificados. Las tarjetas inteligentes almacenan de forma segura certificados, claves privadas y públicas, contraseñas y otros tipos de datos personales.|  
+|tarjeta inteligente|Dispositivo plástico (tamaño de una tarjeta de crédito o inferior) con un microprocesador incrustado y una pequeña cantidad de almacenamiento que se usa con un código de acceso, para habilitar la autenticación basada en certificados. Las tarjetas inteligentes almacenan de forma segura certificados, claves privadas y públicas, contraseñas y otros tipos de datos personales.|  
 |Smart Card Personalization Control|Control ActiveX que realiza todas las actividades de aplicación de tarjetas inteligentes de Certificate Lifecycle Manager (CLM) en un equipo cliente.|  
 |perfil de tarjeta inteligente|Perfil de Certificate Lifecycle Manager (CLM) que se crea cuando se realiza una solicitud mediante una plantilla de perfil que solo incluye plantillas de certificado basadas en tarjeta inteligente.|  
 |lector de tarjeta inteligente|Dispositivo que se instala en equipos para habilitar el uso de tarjetas inteligentes mejorando las características de seguridad.|  
@@ -1785,7 +1785,7 @@ ms.locfileid: "49120482"
 |eje X|Línea de referencia horizontal en una cuadrícula o un gráfico que tiene dimensiones horizontal y vertical.|  
 |XML for Analysis|Especificación que describe un estándar abierto que admite el acceso a datos a orígenes de datos que residen en World Wide Web.|  
 |XMLA|Especificación que describe un estándar abierto que admite el acceso a datos a orígenes de datos que residen en World Wide Web.|  
-|XQuery|Lenguaje de consulta funcional que se aplica ampliamente a una variedad de tipos de datos XML derivados de Quilt, XPath y XQL. Tanto Ipedo como Software AG implementan sus propias versiones de la especificación propuesta de W3C para el lenguaje XQuery También se denomina: consulta XML y XQL.|  
+|XQuery|Lenguaje de consulta funcional que se aplica ampliamente a una variedad de tipos de datos XML derivados de Quilt, XPath y XQL. Tanto Ipedo como Software AG implementan sus propias versiones de la especificación propuesta de W3C para el lenguaje XQuery También llamado consulta XML, XQL.|  
 |XSL|Vocabulario XML usado para transformar los datos XML a otro formato, como HTML, mediante una hoja de estilos que define las reglas de presentación.|  
 |Transformación XSL|Lenguaje basado en XML declarativo que se usa para presentar o transformar datos XML.|  
 |XSLT|Lenguaje basado en XML declarativo que se usa para presentar o transformar datos XML.|  

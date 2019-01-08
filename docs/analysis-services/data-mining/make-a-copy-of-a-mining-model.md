@@ -1,5 +1,5 @@
 ---
-title: Realizar una copia de un modelo de minería de datos | Documentos de Microsoft
+title: Realizar una copia de un modelo de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014592"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502164"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Realizar una copia de un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34014592"
   
 3.  Seleccione el modelo y haga clic con el botón secundario del mouse para abrir el menú contextual.  
   
-     O bien  
+     -o bien-  
   
      Seleccione el modelo. En el menú **Modelo de minería de datos** , seleccione **Nuevo modelo de minería de datos**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014592"
   
 1.  Seleccione el modelo de minería de datos.  
   
-2.  En la ventana **Propiedades** , haga clic en el cuadro de texto de la propiedad **Filter** y luego haga clic en el botón de generación **(…)** .  
+2.  En el **propiedades** ventana, haga clic en el cuadro de texto para el **filtro** propiedad y haga clic en la compilación **(...)**  botón.  
   
 3.  Cambiar las condiciones de los filtros.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "34014592"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

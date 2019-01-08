@@ -14,12 +14,12 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219865"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509418"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor
   Al actualizar instancias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una sola conmutación por error manual realizando una actualización secuencial, conocido como un *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
@@ -69,22 +69,22 @@ ms.locfileid: "48219865"
     > [!IMPORTANT]  
     >  Si el servidor reflejado está geográficamente distante del servidor principal, puede no ser conveniente realizar una actualización gradual.  
   
-    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Seguridad alta sin conmutación automática por error (sincrónico)** mediante la página [Creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos**. Para obtener información sobre cómo obtener acceso a esta página, vea [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
+    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Cambiar el **modo de funcionamiento** opción a **seguridad alta sin conmutación automática por error (sincrónico)** mediante el uso de la [página creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) de la **base de datos Propiedades** cuadro de diálogo. Para obtener información sobre cómo obtener acceso a esta página, vea [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: establezca la seguridad de transacciones en FULL. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: Seguridad de las transacciones se establece en FULL. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>Para quitar un testigo de una sesión  
   
 1.  Si una sesión de creación de reflejo conlleva un testigo, recomendamos que lo quite antes de realizar una actualización gradual. Si no lo hace, al actualizar la instancia del servidor reflejado, la disponibilidad de la base de datos depende del testigo que sigue estando conectado a la instancia del servidor principal. Después de quitar un testigo, puede actualizarlo en cualquier momento durante el proceso de actualización gradual sin aumentar el tiempo de inactividad de la base de datos.  
   
     > [!NOTE]  
-    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obtener más información, consulte [quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
     -   [Quitar el testigo de una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>Para realizar la actualización gradual  
   
-1.  Para minimizar el tiempo de inactividad, recomendamos que inicie la actualización gradual actualizando todos los asociados de creación de reflejo que sean actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
+1.  Para minimizar el tiempo de inactividad, se recomienda lo siguiente: Inicie la actualización gradual actualizando cualquier asociado de creación de reflejo que es actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
   
     > [!NOTE]  
     >  Un testigo se puede actualizar en cualquier momento del proceso de actualización gradual. Por ejemplo, si una instancia del servidor es un servidor reflejado en la Sesión 1 y es un testigo en la Sesión 2, puede actualizar ahora la instancia del servidor.  
@@ -126,9 +126,9 @@ ms.locfileid: "48219865"
   
 1.  Si lo desea, vuelva al modo de alto rendimiento utilizando uno de los métodos siguientes:  
   
-    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Rendimiento alto (asincrónico)** mediante la página [Creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos** .  
+    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Cambio la **modo de funcionamiento** opción a **rendimiento alto (asincrónico)** mediante el uso de la [página creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) de la **propiedades de la base de datos**cuadro de diálogo.  
   
-    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: utilice [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)para desactivar la seguridad de las transacciones.  
+    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)para establecer la seguridad de las transacciones en OFF.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Para volver a agregar un testigo a una sesión de creación de reflejo  
   
@@ -149,6 +149,6 @@ ms.locfileid: "48219865"
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Forzar el servicio en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)  
   
   

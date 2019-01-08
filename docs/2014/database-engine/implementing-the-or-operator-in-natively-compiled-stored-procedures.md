@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7125a7b90a8b47c3c9a71a05dd724b452170a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508989"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementar el operador OR en procedimientos almacenados compilados de forma nativa
   No se admiten operadores OR en predicados de consulta en procedimientos almacenados compilados de forma nativa. Puesto que tampoco se admiten operadores NOT en los predicados de consulta en los procedimientos almacenados compilados de forma nativa, los efectos de los operadores OR no se pueden simular mediante el uso de operadores lógicos equivalentes solamente. Sin embargo, los efectos de un operador OR se pueden simular con variables de tabla optimizada para memoria.  

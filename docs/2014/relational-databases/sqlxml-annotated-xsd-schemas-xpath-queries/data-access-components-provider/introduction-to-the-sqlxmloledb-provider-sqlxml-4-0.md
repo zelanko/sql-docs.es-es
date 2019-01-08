@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, properties
@@ -16,12 +14,12 @@ ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63badb45984b754e8f586e30f2d659a840db5d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ec13acbaa0025b871475675140e83363eb64b81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134731"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759077"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introducción al proveedor SQLXMLOLEDB (SQLXML 4.0)
   El proveedor SQLXMLOLEDB es un proveedor OLE DB que expone la funcionalidad de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML a través de objetos de datos ActiveX (ADO). Sin embargo, el proveedor solamente puede ejecutar comandos en el modo "escribir en un flujo de salida" de ADO. El proveedor SQLXMLOLEDB no es un proveedor de conjunto de filas. Cuando se ejecuta un comando, debe especificar la marca adExecuteStream, que indica a ADO que use el flujo de salida que ha especificado.  
@@ -41,7 +39,7 @@ oTestCommand.Execute , , adExecuteStream
   
 |Conexión<br /><br /> propiedad|Default<br /><br /> (si existe)|Descripción|  
 |-----------------------------|----------------------------|-----------------|  
-|Proveedor de datos||Proporciona el PROGID del proveedor OLE DB a través del que SQLXMLOLEDB ejecuta los comandos. A partir de SQLXML 4.0 y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], este proveedor se incluye con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client; por lo tanto, este valor de propiedad se restringe a "SQLNCLI11". Para obtener más información, vea [Programación de SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).|  
+|Proveedor de datos||Proporciona el PROGID del proveedor OLE DB a través del que SQLXMLOLEDB ejecuta los comandos. A partir de SQLXML 4.0 y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], este proveedor se incluye con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client; por lo tanto, este valor de propiedad se restringe a "SQLNCLI11". Para obtener más información, consulte [Programación de SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).|  
   
  El proveedor SQLXMLOLEDB expone las siguientes propiedades de comando específicas del proveedor.  
   

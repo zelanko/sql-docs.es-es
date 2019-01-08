@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -20,12 +19,12 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50d488f4de5dc3581dae12655790bc935265d8f2
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991288"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776717"
 ---
 # <a name="considerations-for-using-test-servers"></a>Consideraciones acerca del uso de servidores de prueba
   El uso de un servidor de prueba para optimizar una base de datos en un servidor de producción es una ventaja importante del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Mediante esta característica se puede descargar la sobrecarga de optimización en un servidor de prueba sin copiar los datos reales del servidor de producción a ese servidor de prueba.  

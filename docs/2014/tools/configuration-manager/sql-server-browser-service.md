@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -16,12 +15,12 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204815"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763777"
 ---
 # <a name="sql-server-browser-service"></a>servicio SQL Server Browser
   El programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser se ejecuta como un servicio de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha las solicitudes entrantes de recursos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona información acerca de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser permite efectuar las siguientes acciones:  
@@ -126,7 +125,7 @@ ms.locfileid: "48204815"
  Las instancias ocultas son instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que solo admiten las conexiones de memoria compartida. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], establezca la marca `HideInstance` para señalar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no debería responder con información acerca de esta instancia del servidor.  
   
 ### <a name="using-a-firewall"></a>Utilizar un firewall  
- Para comunicarse con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser en un servidor protegido por un firewall, abra el puerto UDP 1434 y el puerto TCP utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (p. ej., 1433). Para obtener información sobre cómo trabajar con un firewall, consulte "Cómo configurar un firewall para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Para comunicarse con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser en un servidor protegido por un firewall, abra el puerto UDP 1434 y el puerto TCP utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (p. ej., 1433). Para obtener información sobre cómo trabajar con un firewall, consulte "Cómo: Configurar un firewall para el acceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Protocolos de red y bibliotecas de red](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  

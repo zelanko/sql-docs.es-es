@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769167"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Desplazarse por el Diseñador de consultas y vistas (Visual Database Tools)
   En el Diseñador de consultas y vistas puede trabajar tanto con el teclado como con el mouse (ratón). En las tablas siguientes se describen los métodos específicos.  
@@ -42,7 +42,7 @@ ms.locfileid: "48123197"
 |Desplazarse por las columnas de una tabla o un objeto con estructura de tabla|Teclas de dirección|En la columna a la que desea ir|  
 |Elegir la columna de datos seleccionada para obtener resultados|BARRA ESPACIADORA o la tecla MÁS|En la casilla situada junto al nombre de la columna|  
 |Quitar de los resultados de la consulta la columna de datos seleccionada|BARRA ESPACIADORA o la tecla MENOS|En la casilla situada junto al nombre de la columna|  
-|Quitar de la consulta la tabla, el objeto con estructura de tabla o la línea de combinación que haya seleccionado|Delete|Haga clic con el botón derecho y después elija **Quitar**|  
+|Quitar de la consulta la tabla, el objeto con estructura de tabla o la línea de combinación que haya seleccionado|SUPRIMIR|Haga clic con el botón derecho y después elija **Quitar**|  
   
 > [!NOTE]  
 >  Si hay varios elementos seleccionados, cuando presione esta tecla se verán afectados todos ellos. Para seleccionar varios elementos, haga clic en cada elemento mientras mantiene presionada la tecla CTRL.  
@@ -66,8 +66,8 @@ ms.locfileid: "48123197"
 |Pegar texto del Portapapeles (en modo de edición)|CTRL+V||  
 |Alternar entre el modo de inserción y el modo de sobreimpresión mientras se edita una celda|INS||  
 |Activar o desactivar la casilla en la columna de resultados|BARRA ESPACIADORA|En la casilla|  
-|Borrar el contenido seleccionado de una celda|Delete||  
-|Borrar todos los valores de la columna de cuadrícula seleccionada|Delete||  
+|Borrar el contenido seleccionado de una celda|SUPRIMIR||  
+|Borrar todos los valores de la columna de cuadrícula seleccionada|SUPRIMIR||  
 |Insertar una fila entre las filas existentes|INS después de seleccionar la fila de cuadrícula||  
 |Agregar una columna O...|INS tras seleccionar una columna O...||  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48123197"
 |Seleccionar hasta el último carácter de una celda|MAYÚS+FIN||  
 |Alternar entre el modo de edición y el modo de selección de celda|F2||  
 |Alternar entre el modo de inserción y el modo de sobreimpresión mientras se edita una celda|INS||  
-|Eliminar una fila de la tabla|Delete||  
+|Eliminar una fila de la tabla|SUPRIMIR||  
 |Deshacer los cambios realizados en la celda actual|ESC en la celda modificada||  
 |Deshacer los cambios realizados en la fila actual|ESC en cualquier celda que no se haya modificado||  
 |Escribir un valor NULL en una celda|CTRL+0||  

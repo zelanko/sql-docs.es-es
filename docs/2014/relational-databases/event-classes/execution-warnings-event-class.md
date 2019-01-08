@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00e7ed45939bedad31aabce87eb5fcbd85eece20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766787"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings, clase de eventos
   La clase de eventos Execution Warnings indica las advertencias de concesión de memoria que han tenido lugar durante la ejecución de una instrucción o procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta clase de evento puede supervisarse para determinar si las consultas han tenido que esperar uno o más segundos para obtener memoria antes de continuar, o si el intento inicial de obtener memoria no ha sido satisfactorio. La información sobre los períodos de espera de las consultas puede servir de ayuda para descubrir problemas de contención en el sistema que pueden afectar al rendimiento.  
@@ -35,8 +34,8 @@ ms.locfileid: "48060245"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duración|`bigint`|Tiempo (en milisegundos) que la consulta ha esperado para obtener la memoria necesaria. Válido solamente cuando EventSubClass = 1 (Espera de consulta).|13|Sí|  
 |Error|`int`|No se usa.|31|Sí|  
-|EventClass|`int`|Tipo de evento = 67.|27|no|  
-|EventSequence|`int`|Secuencia de un determinado evento en un seguimiento.|51|no|  
+|EventClass|`int`|Tipo de evento = 67.|27|No|  
+|EventSequence|`int`|Secuencia de un determinado evento en un seguimiento.|51|No|  
 |EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 1 = Espera de consulta<br /><br /> 2 = Tiempo de espera de consulta|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -46,7 +45,7 @@ ms.locfileid: "48060245"
 |NTDomainName|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|26|no|  
+|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  

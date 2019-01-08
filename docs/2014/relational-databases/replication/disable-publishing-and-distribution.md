@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
@@ -19,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c21b53f55f0fe32c71e6d2e4f08d068f96431fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765447"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deshabilitar la publicación y la distribución
   En este tema se describe cómo deshabilitar la publicación y la distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -51,7 +50,7 @@ ms.locfileid: "48111421"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48111421"
   
  [!code-sql[HowTo#sp_DropDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_dropdistpub)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
   
@@ -111,13 +110,13 @@ ms.locfileid: "48111421"
   
 4.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Especifique la propiedad <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> y pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 3.  
   
-5.  (Opcional) Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto y compruebe que el Publicador existe. Si este método devuelve `false`, el nombre del publicador establecido en el paso 4 era incorrecto o este distribuidor no usa el publicador.  
+5.  (Opcional) Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto y compruebe que el Publicador existe. Si este método devuelve `false`, el nombre del Publicador establecido en el paso 4 era incorrecto o este Distribuidor no usa el Publicador.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Pase un valor de `true` para *forzar* si el publicador y distribuidor están en servidores diferentes, y cuando el publicador se debería desinstalar en el distribuidor sin comprobar primero que las publicaciones ya no existen en el Publicador.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>. Pase un valor de `true` para *forzar* si el publicador y distribuidor están en servidores diferentes, y cuando el publicador se debería desinstalar en el distribuidor sin comprobar primero que las publicaciones ya no existen en el Publicador.  
   
 7.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 3.  
   
-8.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Pase un valor de `true` para *forzar* para quitar todos los objetos de replicación en el distribuidor sin comprobar primero que todas las bases de datos de publicación locales se han deshabilitado y se han desinstalado las bases de datos de distribución.  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A>. Pase un valor de `true` para *forzar* para quitar todos los objetos de replicación en el distribuidor sin comprobar primero que todas las bases de datos de publicación locales se han deshabilitado y se han desinstalado las bases de datos de distribución.  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo quita el registro del Publicador en el Distribuidor, coloca la base de datos de distribución y desinstala el Distribuidor.  

@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508867"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Cambios de comportamiento en la búsqueda de texto completo
   En este tema se describen los cambios de comportamiento en la búsqueda de texto completo. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "49461020"
 |**Término**|**Resultados con anterior separador de palabras y lematizadores**|**Resultados con separadores de palabras y lematizadores**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |jěˊÿqℭžl<br /><br /> *(donde los términos no son caracteres válidos en inglés)*|'jěˊÿqℭžl'|je yq zl|  
-|table's|table’s<br /><br /> table|table’s|  
+|table's|table's<br /><br /> table|table's|  
 |gato-|cat<br /><br /> gato-|cat|  
 |v-z *(donde v y z son palabras irrelevantes)*|*(sin resultados)*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461020"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Cambios de comportamiento de búsqueda de texto completo en SQL Server 2008  
  En [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y versiones posteriores, el motor de texto completo se integra como un servicio de base de datos en la base de datos relacional como parte de la infraestructura del motor de consulta y el almacenamiento de servidor. La nueva arquitectura de búsqueda de texto completo logra los objetivos siguientes:  
   
--   Administración y almacenamiento integrados: búsqueda de texto completo se integra ahora directamente con las características de almacenamiento y administración inherentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y el servicio MSFTESQL ya no existe.  
+-   Almacenamiento integrado y búsqueda de texto completo de administración ahora se integra directamente con las características de almacenamiento y administración inherentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y el servicio MSFTESQL ya no existe.  
   
     -   Los índices de texto completo se almacenan en grupos de archivos de base de datos en lugar de hacerlo en el sistema de archivos. Las operaciones administrativas que se llevan a cabo en una base de datos, como la creación de una copia de seguridad, afectan a los índices de texto completo de forma automática.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461020"
         > [!NOTE]  
         >  Las instrucciones DDL [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] de [!INCLUDE[tsql](../includes/tsql-md.md)] que especifican los catálogos de texto completo funcionan correctamente.  
   
--   Procesamiento de consultas integrado: el nuevo procesador de búsqueda de texto completo forma parte del motor de base de datos y está totalmente integrado con el procesador de consultas de SQL Server. Esto significa que, el optimizador de consultas reconoce los predicados de consulta de texto completo y los ejecuta automáticamente de la forma más eficaz posible.  
+-   El procesamiento de consulta integrada nuevo: procesador de consultas de búsqueda de texto completo es parte del motor de base de datos y está totalmente integrado con el procesador de consultas de SQL Server. Esto significa que, el optimizador de consultas reconoce los predicados de consulta de texto completo y los ejecuta automáticamente de la forma más eficaz posible.  
   
--   Administración y solución de problemas mejoradas: la búsqueda de texto completo integrada pone a su disposición herramientas con las que podrá analizar las estructuras de búsqueda, como el índice de texto completo, el resultado de un separador de palabras determinado, la configuración de las palabras irrelevantes, etc.  
+-   Administración mejorada e integradas de solución de problemas de búsqueda de texto completo proporciona herramientas para ayudarle a analizar las estructuras de búsqueda, como el índice de texto completo, la salida de un separador de palabras determinado, configuración de palabras irrelevantes y así sucesivamente.  
   
 -   Las listas de palabras irrelevantes han reemplazado a los archivos de palabras irrelevantes. Una lista de palabras irrelevantes es un objeto de base de datos que facilita las tareas de administración de las palabras irrelevantes y mejora la integridad entre instancias de servidor y entornos diferentes. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   

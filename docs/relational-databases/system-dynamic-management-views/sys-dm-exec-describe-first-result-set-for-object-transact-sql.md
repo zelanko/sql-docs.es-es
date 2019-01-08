@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c63c004b3a7ac631a4914c681f7613b0bb010dd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728193"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409171"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**int**|Contiene el system_type_id del tipo de datos de la columna tal como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene el nombre del tipo de datos. Incluye los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo definido por el usuario de CLR, NULL se devuelve en esta columna.|  
 |**max_length**|**smallint**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16 o el valor establecido por **sp_tableoption 'text in row'**.|  
-|**Precisión**|**tinyint**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
-|**Escala**|**tinyint**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
+|**precisión**|**tinyint**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
+|**escala**|**tinyint**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación de la columna, si está basada en caracteres. En caso contrario, devuelve NULL.|  
 |**user_type_id**|**int**|Para los tipos de alias y CLR, contiene el user_type_id del tipo de datos de la columna tal y como se especifica en sys.types. De lo contrario, es NULL.|  
 |**user_type_database**|**sysname**|Para los tipos de alias y CLR, contiene el nombre de la base de datos en la que se define el tipo. De lo contrario, es NULL.|  
@@ -111,7 +111,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |5|CLR_PROCEDURE|El resultado no se pudo determinar porque un procedimiento almacenado CLR podría devolver el primer resultado.|  
 |6|CLR_TRIGGER|El resultado no se pudo determinar porque un desencadenador CLR podría devolver el primer resultado.|  
 |7|EXTENDED_PROCEDURE|El resultado no se pudo determinar porque un procedimiento almacenado extendido podría devolver el primer resultado.|  
-|8|UNDECLARED_PARAMETER|El resultado no se pudo determinar porque el tipo de datos de una o varias columnas del conjunto de resultados depende potencialmente de un parámetro no declarado.|  
+|8|UNDECLARED_PARAMETER|No se pudo determinar el resultado porque el tipo de datos de una o varias de las columnas del conjunto de resultados depende potencialmente de un parámetro no declarado.|  
 |9|RECURSION|El resultado no se pudo determinar porque el lote contiene una instrucción recursiva.|  
 |10|TEMPORARY_TABLE|No se pudo determinar el resultado porque el lote contiene una tabla temporal y no es compatible con **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|No se pudo determinar el resultado porque el lote contiene una instrucción que no es compatible con **sp_describe_first_result_set** (por ejemplo, FETCH, REVERT etcetera.).|  
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>B. Combinar la función sys.dm_exec_describe_first_result_set_for_object y una tabla o vista  
+### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>b. Combinar la función sys.dm_exec_describe_first_result_set_for_object y una tabla o vista  
  En el ejemplo siguiente se usa tanto la vista de catálogo del sistema de sys.procedures y **sys.dm_exec_describe_first_result_set_for_object** función para mostrar los metadatos para los conjuntos de resultados de todos los procedimientos almacenados en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.  
   
 ```  

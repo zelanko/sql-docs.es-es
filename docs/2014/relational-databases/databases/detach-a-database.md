@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.detachdatabase.f1
@@ -16,12 +15,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b6f227a9ece5133917f435a79895092294df616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20dce5a584d7ae990b25dd10312c9474bd08c873
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175855"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749067"
 ---
 # <a name="detach-a-database"></a>Separar una base de datos
   En este tema se describe cómo separar una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los archivos separados permanecen y se pueden volver a adjuntar utilizando CREATE DATABASE con la opción FOR ATTACH o FOR ATTACH_REBUILD_LOG. Los archivos se pueden mover a otro servidor y adjuntarse allí.  
@@ -40,7 +39,7 @@ ms.locfileid: "48175855"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Para obtener una lista de las limitaciones y restricciones, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md).  
@@ -79,27 +78,27 @@ ms.locfileid: "48175855"
      De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo** . Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Estado**  
-     Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
+     Muestra uno de los siguientes estados: **Listo** o **no está listo**.  
   
      **de mensaje**  
      En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica a continuación:  
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra *<número_de_conexiones_activas>***Conexiones activas** (por ejemplo, **1 conexiones activas**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o más conexiones activas, el **estado** es **no está listo** y **mensaje** columna muestra *< número_de_conexiones_activas > *** conexiones activas**, por ejemplo: **1 conexiones activas**. Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
 4.  Cuando esté listo para separar la base de datos, haga clic en **Aceptar**.  
   
 > [!NOTE]  
->  La base de datos recién separada permanecerá visible en el nodo **Bases de datos** del Explorador de objetos hasta que se actualice la vista. Puede actualizar la vista en cualquier momento haciendo clic en el panel del Explorador de objetos y seleccionando a continuación **Ver** y por último **Actualizar**de la barra de menús.  
+>  La base de datos recién separada permanecerá visible en el nodo **Bases de datos** del Explorador de objetos hasta que se actualice la vista. Puede actualizar la vista en cualquier momento: Haga clic en el panel Explorador de objetos y la barra de menús, seleccione **vista** y, a continuación, **actualizar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-detach-a-database"></a>Para separar una base de datos  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

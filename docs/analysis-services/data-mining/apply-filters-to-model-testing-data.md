@@ -1,5 +1,5 @@
 ---
-title: Aplicar filtros para modelar los datos de prueba | Documentos de Microsoft
+title: Aplicar filtros a los datos de prueba de modelo | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03eb6a8b8a459f0d5d0769d1f7af16f06b81f560
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539949"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a los datos de prueba del modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34020042"
   
  Para determinar si un modelo contiene un filtro predefinido que puede afectar a los resultados, busque la propiedad **Filter** en el panel **Propiedad** o consulte el modelo utilizando los conjuntos de filas de esquema de minería de datos. Por ejemplo, la consulta siguiente devuelve el texto del filtro para el modelo especificado:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Si desea quitar el filtro de un modelo de minería de datos existente, o cambiar las condiciones del filtro, deberá volver a procesar dicho modelo.  
@@ -57,7 +57,7 @@ ms.locfileid: "34020042"
   
 3.  En la pestaña **Selección de entrada** , en **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar **(…)** para abrir un cuadro de diálogo y seleccionar el conjunto de datos externo.  
+4.  Haga clic en el botón Examinar **(...)**  para abrir un cuadro de diálogo y elegir el conjunto de datos externos.  
   
 5.  Elija la tabla de casos y agregue una tabla anidada si fuera necesario. Asigne columnas del modelo a columnas del conjunto de datos externos según sea necesario. Cierre el cuadro de diálogo **Especificar asignación de columna** para guardar la definición de la tabla de origen.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34020042"
   
 9. Haga clic en el cuadro de texto **Y/O** y seleccione un operador lógico para definir cómo se combinan varias condiciones.  
   
-10. También puede hacer clic en el botón Examinar **(…)** a la derecha del cuadro de texto **Valor** para abrir el cuadro de diálogo **Filtro** y establecer las condiciones en la tabla anidada o en las columnas de la tabla de casos.  
+10. Si lo desea, haga clic en el botón Examinar **(...)**  a la derecha de la **valor** cuadro de texto para abrir el **filtro** diálogo cuadro y establecer las condiciones en la tabla anidada o en las columnas de tabla de casos.  
   
 11. Vea el texto que aparece en el panel **Expresión** para comprobar que las condiciones de filtro completadas son correctas.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34020042"
   
 ## <a name="see-also"></a>Vea también  
  [Elegir y asignar datos de prueba para el modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Uso de datos de tabla anidada como entrada para un gráfico de precisión](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Elegir un tipo de gráfico de precisión y establecer opciones del gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Usar datos de tabla anidada como entrada para un gráfico de precisión](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

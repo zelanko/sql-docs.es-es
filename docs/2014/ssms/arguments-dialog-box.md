@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Arguments dialog box
@@ -13,12 +13,12 @@ ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a22f95aa77c47c62a1bed517d2dbe84724522d24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768497"
 ---
 # <a name="arguments-dialog-box"></a>Argumentos, cuadro de diálogo
   El cuadro de diálogo **Argumentos** especifica argumentos nuevos o existentes de una herramienta. Este cuadro de diálogo aparece al iniciar una herramienta externa que tenga la opción **Solicitar argumentos** del cuadro de diálogo **Herramientas externas** activada.  

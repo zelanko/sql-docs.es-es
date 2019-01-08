@@ -14,12 +14,12 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a5f45b4f453780b1c3a0f87d6ec898650ffd8037
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca6d2e98bc631a675aee3d4968103c9981775019
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521770"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Enlazar un informe o un modelo con un origen de datos compartido (SSRS)
   En algunos casos (por ejemplo, al mover un informe o un modelo de un servidor de prueba a un servidor de producción), puede que desee guardar el archivo en el equipo local y, a continuación, cargarlo en otro servidor de informes. Al cargar el informe o el modelo en el servidor nuevo, debe volver a enlazarlo con un origen de datos compartido almacenado en el servidor de informes nuevo. Si no vuelve a enlazar el informe o el modelo, no funcionará correctamente cuando se obtenga acceso a él desde el servidor de informes nuevo.  
@@ -55,7 +55,7 @@ ms.locfileid: "48100355"
   
 5.  En el área **Tipo de conexión** , compruebe si está seleccionado **Origen de datos compartido** .  
   
-6.  En el área **Vínculo a origen de datos** , haga clic en el botón de puntos suspensivos (…).  
+6.  En el área **Vínculo a origen de datos**, haga clic en el botón de puntos suspensivos (...).  
   
 7.  Busque el origen de datos que desee usar.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "48100355"
 10. Haga clic en **Cerrar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Cargar un archivo o informe &#40;el Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md)   
- [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Crear y administrar orígenes de datos compartidos &#40;modo integrado de Reporting Services en SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en modo de SharePoint&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
+ [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

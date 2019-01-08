@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergesubscription
@@ -17,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e74e6b5b921439f905197795aa50e5c0f8181f4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685404"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779377"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = both|  
 |**priority**|**float(8)**|Número que indica la prioridad de la suscripción.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de la suscripción.|  
-|**Descripción**|**nvarchar(255)**|Breve descripción de esta suscripción de mezcla.|  
+|**description**|**nvarchar(255)**|Breve descripción de esta suscripción de mezcla.|  
 |**merge_jobid**|**binary (16)**|Id. de trabajo del Agente de mezcla.|  
 |**full_publication**|**tinyint**|Indica si la suscripción es a una publicación completa o filtrada.|  
 |**offload_enabled**|**bit**|Especifica si se ha establecido que la ejecución de la descarga de un agente de replicación se lleve a cabo en el suscriptor. Si es NULL, la ejecución se lleva a cabo en el publicador.|  

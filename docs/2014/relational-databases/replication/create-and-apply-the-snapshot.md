@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], applying
@@ -14,12 +13,12 @@ ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc0654f4526ebd816b0b76dd7b2629a5bf2e1393
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd78bf7da1a68e7e053af52c4fa8f9cf0cd71094
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135781"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755647"
 ---
 # <a name="create-and-apply-the-snapshot"></a>Crear y aplicar una instantánea
   El Agente de instantáneas genera instantáneas una vez creada la publicación. Se pueden generar de la siguiente manera:  
@@ -44,9 +43,9 @@ ms.locfileid: "48135781"
   
  Para ver o modificar la ubicación de la carpeta de instantáneas predeterminada, vea  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Especificar la ubicación predeterminada de instantáneas &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Especifique la ubicación predeterminada de instantáneas &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
--   Programación de la replicación y programación con RMO: [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
+-   Programación de la replicación y programación con RMO: [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Inicializar una suscripción con una instantánea](initialize-a-subscription-with-a-snapshot.md)   

@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668333"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524108"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@severity =** ]*gravedad*  
  Es el nivel de gravedad del error. *gravedad* es **smallint** con el valor predeterminado es NULL. Los niveles válidos son de 1 a 25. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **@msgtext =** ] **'***msg***'**  
+ [  **@msgtext =** ] **'**_msg_**'**  
  Es el texto del mensaje de error. *msg* es **nvarchar (255)** con el valor predeterminado es NULL.  
   
- [  **@lang =** ] **'***lenguaje***'**  
+ [  **@lang =** ] **'**_lenguaje_**'**  
  Es el idioma de este mensaje. *lenguaje* es **sysname** con el valor predeterminado es NULL. Dado que se pueden instalar varios idiomas en el mismo servidor, *lenguaje* especifica el idioma en que está escrito cada mensaje. Cuando *lenguaje* es el idioma se omite, es el idioma predeterminado para la sesión.  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
@@ -61,7 +61,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Si se escribe un mensaje en el registro de aplicación Windows, también se escribe en el archivo de registro de errores del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [ **@replace** *=* ] **'***reemplazar***'**  
+ [ **@replace** *=* ] **'**_reemplazar_**'**  
  Si se especifica como la cadena *reemplazar*, un mensaje de error existente se sobrescribe con el nuevo nivel de texto y la gravedad del mensaje. *Reemplace* es **varchar(7)** con el valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si se sustituye un mensaje en inglés de EE.UU., Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en todos los otros lenguajes que tienen el mismo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -98,7 +98,7 @@ EXEC sp_addmessage 50001, 16,
 GO  
 ```  
   
-### <a name="b-adding-a-message-in-two-languages"></a>B. Agregar un mensaje en dos idiomas  
+### <a name="b-adding-a-message-in-two-languages"></a>b. Agregar un mensaje en dos idiomas  
  En el ejemplo siguiente se agrega primero un mensaje en inglés de EE.UU. y luego se agrega el mismo mensaje en francés`.`  
   
 ```  

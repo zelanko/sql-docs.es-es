@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122845"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751127"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Controladores de eventos de Integration Services (SSIS)
   En el tiempo de ejecución, los ejecutables (paquetes y contenedores de bucles Foreach, bucles For, de secuencia y de host de tarea) producen eventos. Por ejemplo un evento OnError se produce cuando se genera un error. Puede crear controladores de eventos personalizados para estos eventos con el fin de ampliar la funcionalidad de paquetes y facilitar la administración de paquetes en el tiempo de ejecución. Los controladores de eventos pueden realizar tareas tales como las siguientes:  
@@ -46,7 +45,7 @@ ms.locfileid: "48122845"
   
  ![Paquete, bucle For, host de la tarea y tarea Ejecutar SQL](media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
- Solo el paquete tiene un controlador de eventos, para su evento `OnError`. Si se produce un error cuando se ejecuta la tarea Ejecutar SQL, el `OnError` se ejecuta el controlador de eventos para el paquete. El diagrama siguiente muestra la secuencia de llamadas que produce el `OnError` controlador de eventos para que se ejecute el paquete.  
+ Solo el paquete tiene un controlador de eventos, para su evento `OnError`. Si se produce un error cuando se ejecuta una tarea Ejecutar SQL, se ejecuta el controlador de eventos `OnError` para el paquete. El siguiente diagrama muestra la secuencia de llamadas que produce el controlador de eventos `OnError` para que se ejecute el paquete.  
   
  ![Flujo del controlador de eventos](media/mw-dts-eventhandlers.gif "Event handler flow")  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48122845"
 |**OnProgress**|El controlador de eventos para el evento **OnProgress** . Este evento es desencadenado por un ejecutable cuando el ejecutable realiza un progreso que se puede medir.|  
 |**OnQueryCancel**|El controlador de eventos para el evento **OnQueryCancel** . Este evento es desencadenado por un ejecutable para determinar si debe dejar de ejecutarse.|  
 |**OnTaskFailed**|El controlador de eventos para el evento **OnTaskFailed** . Este evento es desencadenado por una tarea cuando se produce un error.|  
-|**OnVariableValueChanged**|El controlador de eventos para el evento **OnVariableValueChanged** . Este evento es desencadenado por un ejecutable cuando se modifica el valor de una variable. El evento es desencadenado por el ejecutable en el que se define la variable. Este evento no se desencadena si establece la **RaiseChangeEvent** propiedad de la variable en `False`. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|El controlador de eventos para el evento **OnVariableValueChanged** . Este evento es desencadenado por un ejecutable cuando se modifica el valor de una variable. El evento es desencadenado por el ejecutable en el que se define la variable. Este evento no se desencadena si establece la **RaiseChangeEvent** propiedad de la variable en `False`. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
 |**OnWarning**|El controlador de eventos para el evento **OnWarning** . Este evento es desencadenado por un ejecutable cuando se produce una advertencia.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configuración de un controlador de eventos  

@@ -14,12 +14,12 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a72bb27e95da931fac146fe6bc827b71cdb8460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828623"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520646"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Registro actual y el tamaño del conjunto de registros
 En esta sección se describe cómo buscar la posición actual del cursor en el ejemplo **Recordset** en [ejemplo de código JScript para devolver un conjunto de registros](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
@@ -38,7 +38,7 @@ En esta sección se describe cómo buscar la posición actual del cursor en el e
   
  En algunos casos, un proveedor o el cursor no puede determinar el **RecordCount** valor sin obtener primero todos los registros desde el origen de datos. Para garantizar un recuento preciso, llame a la **Recordset**. **MoveLast** método antes de llamar a **Recordset.RecordCount**.  
   
- El ejemplo **Recordset** objeto obtenido mediante la [ejemplo de código JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) utiliza un cursor de solo avance, por lo que una llamada a **RecordCount** en este objeto siempre da lugar a – 1. Si cambia la línea de código que llama el **Recordset**. **Abra** método tal como se muestra en el ejemplo siguiente, la **RecordCount** propiedad devolverá el número real de registros recuperados.  
+ El ejemplo **Recordset** objeto obtenido mediante la [ejemplo de código JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) utiliza un cursor de solo avance, por lo que una llamada a **RecordCount** en este objeto siempre da lugar a -1. Si cambia la línea de código que llama el **Recordset**. **Abra** método tal como se muestra en el ejemplo siguiente, la **RecordCount** propiedad devolverá el número real de registros recuperados.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   

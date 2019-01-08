@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510020"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instrucciones para los niveles de aislamiento de transacciones con tablas con optimización para memoria
   En muchos casos, debe especificar el nivel de aislamiento de transacción. El aislamiento de transacción para las tablas optimizadas para memoria difiere de las tablas basadas en disco.  
@@ -56,7 +56,7 @@ ms.locfileid: "48050046"
   
  La garantía que proporciona el nivel de aislamiento SNAPSHOT (el menor nivel de aislamiento que se admite en las tablas optimizadas para memoria) incluye las garantías de READ COMMITTED. Cada instrucción de la transacción lee la misma versión coherente de la base de datos. No solo todas las filas leídas por la transacción se confirman en la base de datos, sino que todas las operaciones de lectura ven el conjunto de cambios realizados por el mismo conjunto de transacciones.  
   
- **Directriz**: si solo se requiere la garantía de aislamiento READ COMMITTED, use el aislamiento SNAPSHOT con procedimientos almacenados compilados de forma nativa y obtener acceso a tablas optimizadas para memoria mediante interpreta [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Directriz**: Si solo se requiere la garantía de aislamiento READ COMMITTED, use el aislamiento SNAPSHOT con procedimientos almacenados compilados de forma nativa y obtener acceso a tablas optimizadas para memoria mediante interpreta [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  En las transacciones de confirmación automática, el nivel de aislamiento READ COMMITTED se asigna implícitamente en SNAPSHOT para las tablas optimizadas para memoria. Por tanto, si la configuración de sesión TRANSACTION ISOLATION LEVEL se establece en READ COMMITTED, no es necesario especificar el nivel de aislamiento mediante una sugerencia de tabla al tener acceso a tablas optimizadas para memoria.  
   
@@ -80,7 +80,7 @@ BEGIN TRAN
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   
@@ -91,13 +91,13 @@ COMMIT
   
      Algunas aplicaciones pueden suponer que los lectores siempre esperan hasta que los escritores confirmen la operación, especialmente si hay algún tipo de sincronización entre las dos transacciones en el nivel de aplicación.  
   
-     **Directriz:** aplicaciones no pueden confiar en comportamiento de bloqueo. Si una aplicación necesita sincronización entre transacciones simultáneas, esa lógica se puede implementar en la capa de aplicación o en el nivel de base de datos a través de [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Instrucciones:** Las aplicaciones no pueden confiar en comportamiento de bloqueo. Si una aplicación necesita sincronización entre transacciones simultáneas, esa lógica se puede implementar en la capa de aplicación o en el nivel de base de datos a través de [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   En las transacciones que utilizan el aislamiento READ COMMITTED, cada instrucción ve la versión más reciente de las filas de la base de datos. Por consiguiente, las instrucciones posteriores ven los cambios en el estado de la base de datos.  
   
      Sondear una tabla con un bucle WHILE hasta que se encuentra una nueva fila es un ejemplo de un patrón de aplicación que utiliza esta suposición. Con cada iteración del bucle, la consulta verá las últimas actualizaciones de la base de datos.  
   
-     **Directriz:** si una aplicación debe sondear una tabla optimizada en memoria para obtener las filas más recientes que se escriben en la tabla, mueva el bucle de sondeo fuera del ámbito de la transacción.  
+     **Instrucciones:** Si una aplicación debe sondear una tabla optimizada en memoria para obtener las filas más recientes que se escriben en la tabla, mueva el bucle de sondeo fuera del ámbito de la transacción.  
   
      A continuación se muestra un patrón de aplicación de ejemplo que utiliza esta suposición. Sondear una tabla con un bucle WHILE hasta encontrar una nueva fila. En cada iteración del bucle, la consulta tendrá acceso a las últimas actualizaciones de la base de datos.  
   

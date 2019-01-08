@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], command prompt parameters
@@ -13,12 +12,12 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efac904be2e062cc2c3ebdbbd32a09d57294de4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155075"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758347"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Ver y modificar parámetros del símbolo del sistema de los agentes de replicación (SQL Server Management Studio)
   Los agentes de replicación son ejecutables que aceptan parámetros en la línea de comandos. De forma predeterminada, los agentes se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de modo que estos parámetros se pueden ver y modificar mediante el cuadro de diálogo **Propiedades del trabajo: \<trabajo>**. Este cuadro de diálogo está disponible en la carpeta **Trabajos** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en la pestaña **Agentes** en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../monitor/start-the-replication-monitor.md).  
@@ -30,7 +29,7 @@ ms.locfileid: "48155075"
   
  Si tiene acceso a trabajos de agente en la carpeta **Trabajos** , utilice la siguiente tabla para determinar el nombre del trabajo del agente y los parámetros disponibles para cada agente.  
   
-|Agente|Nombre del trabajo|Para obtener una lista de parámetros, vea…|  
+|Agente|Nombre del trabajo|Para obtener una lista de parámetros, vea...|  
 |-----------|--------------|------------------------------------|  
 |Agente de instantáneas|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<entero>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
 |Agente de replicación para una partición de publicación de combinación|**Dyn_\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  

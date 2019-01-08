@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_REPL027183 error
@@ -13,12 +12,12 @@ ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd3c0f4af8cf29d2da68009b036b8119f2557dd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87adf79d9420f70e132fd9a6c41a9ddacf298fa7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776977"
 ---
 # <a name="mssqlrepl027183"></a>MSSQL_REPL027183
     
@@ -59,11 +58,11 @@ ms.locfileid: "48197605"
   
 -   Especifique el valor más bajo posible para el período de retención de la publicación, ya que la replicación no puede limpiar los metadatos de las bases de datos de suscripciones y publicaciones hasta que se alcance el período de retención. Para más información, consulte [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
--   Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../indexes/indexes.md).  
+-   Como parte del mantenimiento de replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, y **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, y **MSmerge_ past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../indexes/indexes.md).  
   
 -   Asegúrese de que las columnas utilizadas para filtrar están correctamente indizadas y vuelva a generar dichos índices en caso necesario. Para obtener más información, vea [Reorganizar y volver a generar índices](../indexes/indexes.md).  
   
--   Establezca la propiedad **join_unique_key** para los filtros combinados basados en columnas únicas. Para más información, vea [Join Filters](merge/join-filters.md).  
+-   Establezca la propiedad **join_unique_key** para los filtros combinados basados en columnas únicas. Para más información, consulte [Join Filters](merge/join-filters.md).  
   
 -   Limite el número de tablas de la jerarquía del filtro de combinación. Si va a generar filtros de combinación de cinco tablas o más, considere otras soluciones, como no filtrar tablas pequeñas, que no estén sometidas a cambios o que sean principalmente tablas de búsqueda. Utilice filtros combinados solo entre tablas que deben particionarse entre las suscripciones.  
   

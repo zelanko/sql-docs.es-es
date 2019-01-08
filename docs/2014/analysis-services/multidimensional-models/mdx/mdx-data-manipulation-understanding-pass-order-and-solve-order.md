@@ -19,12 +19,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d8d1797bc1ffdf937e37fb1ffae075691a892ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083015"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511013"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Descripción de orden de paso y orden de resolución (MDX)
   Cuando un cubo se calcula como el resultado de un script de MDX, puede atravesar varias fases de computación según el uso de varias características relativas al cálculo. Cada una de estas fases se denomina paso de cálculo.  
@@ -70,7 +70,7 @@ ms.locfileid: "48083015"
 > [!NOTE]  
 >  Puede ejecutar estas consultas MDX con la base de datos multidimensional de ejemplo de Adventure Works. Puede descargar el ejemplo de [modelos multidimensionales AdventureWorks SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) del sitio de codeplex.  
   
-### <a name="query-1differences-in-income-and-expenses"></a>Consulta 1—Diferencias de Income y Expenses  
+### <a name="query-1-differences-in-income-and-expenses"></a>Consulta 1-diferencias de Income y Expenses  
  En la primera consulta MDX, calcule la diferencia de ventas y costos de cada año creando una consulta MDX simple similar al siguiente ejemplo:  
   
 ```  
@@ -95,7 +95,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>Consulta 2: porcentaje de ingresos después de gastos  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Consulta 2: porcentaje de ingresos después de gastos  
  En la segunda consulta, calcule el porcentaje de ingresos después de gastos para cada año con la siguiente consulta MDX:  
   
 ```  
@@ -119,14 +119,14 @@ FROM [Adventure Works]
 ||Internet Sales Amount|Costo total del producto por Internet|Margen de beneficio|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60 %|  
-|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
+|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
   
  La diferencia de los conjuntos de resultados entre la primera y la segunda consulta radica en la distinta colocación del miembro calculado. En la primera consulta, el miembro calculado se encuentra en el eje ROWS, mientras que en la segunda consulta se encuentra en el eje COLUMNS. Esta distinta colocación adquiere importancia en la siguiente consulta, en la que se combinan dos miembros calculados en una única consulta MDX.  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Consulta 3—Cálculos combinados de Year Difference y Net Income  
- En esta consulta final que combina los dos ejemplos previos en una sola consulta MDX, el orden de resolución es importante debido a los cálculos de ambas columnas y filas. Para asegurarse de que los cálculos se realizan en la secuencia correcta, defina la secuencia en que los cálculos se realizan con el `SOLVE_ORDER` palabra clave.  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Consulta 3: combinar Year Difference y cálculos de ingresos netos  
+ En esta consulta final que combina los dos ejemplos previos en una sola consulta MDX, el orden de resolución es importante debido a los cálculos de ambas columnas y filas. Para asegurarse de que los cálculos se realizan en la secuencia correcta, defina la secuencia en la que se realizan los cálculos con la palabra clave `SOLVE_ORDER`.  
   
- La palabra clave `SOLVE_ORDER` especifica el orden de resolución de los miembros calculados en una consulta MDX o en un comando `CREATE MEMBER`. Los valores enteros usados con el `SOLVE_ORDER` palabra clave son relativos, no necesitan empieza en cero y tienen que ser consecutivos. El valor ordena a MDX calcular un miembro según los valores resultantes del cálculo de miembros con un valor superior. Si se define un miembro calculado sin la `SOLVE_ORDER` palabra clave, el valor predeterminado es cero.  
+ La palabra clave `SOLVE_ORDER` especifica el orden de resolución de los miembros calculados en una consulta MDX o en un comando `CREATE MEMBER`. Los valores de entero utilizados con la palabra clave `SOLVE_ORDER` son relativos, no necesitan comenzar en cero y no tienen que ser consecutivos. El valor ordena a MDX calcular un miembro según los valores resultantes del cálculo de miembros con un valor superior. Si se define un miembro calculado sin la palabra clave `SOLVE_ORDER`, su valor predeterminado es cero.  
   
  Por ejemplo, si combina los cálculos utilizados en las dos primeras consultas de ejemplo, la intersección de los dos miembros calculados, `Year Difference` y `Profit Margin`, se produce en una única celda en el conjunto de datos de resultados del ejemplo de consulta MDX. La única manera de determinar cómo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evaluará esta celda es mediante el orden de resolución. Las fórmulas utilizadas para crear esta celda ofrecerán resultados diferentes según del orden de resolución de los dos miembros calculados.  
   
@@ -216,7 +216,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Vea también  
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
- [Instrucción CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [Manipular datos &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

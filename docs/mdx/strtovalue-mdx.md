@@ -1,5 +1,5 @@
 ---
-title: StrToValue (MDX) | Documentos de Microsoft
+title: StrToValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5a46b68ac8e93a00c7730b32593331a28655c1c5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: c327dc55420cc89f5e76b6fae7822fad3a4e95f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743074"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524353"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 
 
-  Devuelve el valor numérico especificado por una cadena con formato MDX (Expresiones multidimensionales).  
+  Devuelve el valor numérico especificado por una cadena con formato de expresiones multidimensionales MDX.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,10 +32,10 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  Expresión de cadena válida que se resuelve, directa o indirectamente, en una sola celda.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **StrToValue** función devuelve el valor numérico especificado por la expresión MDX. El **StrToValue** función normalmente se utiliza con funciones definidas por el usuario para devolver una expresión MDX desde una función externa a una instrucción MDX que se puede resolver en una sola celda.  
   
--   Cuando se utiliza la marca CONSTRAINED, la expresión MDX debe contener solo un valor escalar. La marca CONSTRAINED se utiliza para reducir el riesgo de ataques por inyección de código mediante la cadena especificada. Si se proporciona una expresión MDX que no se resuelve directamente en un valor escalar, aparece el siguiente error: "Se infringieron las restricciones impuestas por la marca CONSTRAINED en la función STRTOVALUE."  
+-   Cuando se utiliza la marca CONSTRAINED, la expresión MDX debe contener solo un valor escalar. La marca CONSTRAINED se utiliza para reducir el riesgo de ataques por inyección de código mediante la cadena especificada. Si una expresión MDX es siempre no sea de resolverse directamente en un valor escalar, aparece el siguiente error: "Las restricciones impuestas por la CONSTRAINED se han infringido la marca en la función STRTOVALUE."  
   
 -   Cuando no se utiliza la marca CONSTRAINED, la expresión MDX especificada puede ser tan compleja como se desee, siempre que se resuelva en una expresión MDX (Expresiones multidimensionales) válida que devuelva una única celda.  
   

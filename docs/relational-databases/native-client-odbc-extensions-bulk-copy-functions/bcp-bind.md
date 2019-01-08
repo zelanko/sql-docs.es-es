@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fac6931d7645a778bd332f8bc5e1ef3d2f5059ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ae1ad6aabc87d1cf0d7d92da5b97092c23bc02d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511931"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
   
  El *eDataType* enumeran el parámetro el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de datos en sqlncli.h, no los enumeradores de tipo de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo la compatibilidad con tokens de tipo de datos SQLXML y SQLUDT en el ***eDataType*** parámetro.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo la compatibilidad con tokens de tipo de datos SQLXML y SQLUDT en el **_eDataType_** parámetro.  
  
  En esta tabla se muestran los tipos de datos enumerados válidos y los tipos de datos ODBC C correspondientes.
   
@@ -177,7 +177,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Comentarios  
  Use **bcp_bind** para una forma rápida y eficaz copiar datos de una variable de programa en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o cualquier otra función de copia masiva. Una llamada a **bcp_init** establece el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Al llamar a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** *szDataFile*parámetro, que indica el archivo de datos, se establece en NULL; el **bcp_init *** eDirection* parámetro se establece en DB_IN.  
+ Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o cualquier otra función de copia masiva. Una llamada a **bcp_init** establece el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Al llamar a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** *szDataFile*parámetro, que indica el archivo de datos, se establece en NULL; el **bcp_init**_eDirection_ parámetro se establece en DB_IN.  
   
  Realice otra **bcp_bind** llamar para cada columna de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla en la que van a copiar. Después de la necesaria **bcp_bind** llamadas se realizaron y, después, llamar a **bcp_sendrow** para enviar una fila de datos desde las variables de programa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No se permite volver a enlazar una columna.  
   

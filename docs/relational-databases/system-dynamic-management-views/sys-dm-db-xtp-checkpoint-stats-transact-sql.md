@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503190"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|Marca de tiempo del último punto de comprobación cerrado.|  
 |hardened_recovery_lsn|**numeric(38)**|Se iniciará la recuperación desde este LSN.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID del archivo raíz que protege como resultado el último punto de comprobación completado.|  
-|hardened_root_file_watermark|**bigint**|**Interno sólo**. Cuánto es válido para leer el archivo raíz hasta (este es un tipo pertinente internamente solo – llamado BSN).|  
+|hardened_root_file_watermark|**bigint**|**Interno sólo**. Cuánto es válido para leer el archivo raíz hasta (este es un tipo pertinente internamente solo - llamado BSN).|  
 |hardened_truncation_lsn|**numeric(38)**|LSN del punto de truncamiento.|  
 |log_bytes_since_last_close|**bigint**|Bytes desde el último cierre al final del registro actual.|  
 |time_since_last_close_in_ms|**bigint**|Hora desde el último cierre del punto de control.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Maintenance Plan Design Surface
@@ -13,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5906e66db0ab0cee320aed86a90e82b85a8fa73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775797"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
   En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
@@ -33,7 +32,7 @@ ms.locfileid: "48142891"
   
 -   [Crear un plan de mantenimiento mediante la superficie de diseño del plan de mantenimiento](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48142891"
      **Servidores**  
      Muestra el cuadro de diálogo **Servidores** , que se usa para seleccionar los servidores en los que se ejecutarán las tareas del subplan. Esta opción está habilitada solo en servidores maestros en entornos multiservidor. Para obtener más información, vea [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md) y [Maintenance Plan &#40;Servers&#41; (Plan de mantenimiento &#40;servidores&#41;)](maintenance-plan-servers.md).  
   
-     **Nombre**  
+     **Name**  
      Muestra el nombre del plan de mantenimiento. En los nuevos planes de mantenimiento, el nombre se especifica en un cuadro de diálogo antes de que se abra el diseñador de planes de mantenimiento. Para cambiar el nombre de un plan de mantenimiento, haga clic con el botón derecho en el plan en el Explorador de objetos y, luego, haga clic en **Cambiar nombre**.  
   
      **Descripción**  
@@ -99,7 +98,7 @@ ms.locfileid: "48142891"
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Propiedades del subplán** .  
   
-     **Nombre**  
+     **Name**  
      Nombre del subplán.  
   
      **Descripción**  
@@ -161,10 +160,10 @@ ms.locfileid: "48142891"
          Define cómo funciona una restricción entre dos tareas.  
   
          Lista**Operación de evaluación**    
-         Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción**, y **Expresión o restricción**.  
+         Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **expresión**, **expresión y restricción**, y **expresión o restricción**.  
   
          Lista**Valor**   
-         Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**. **Correcto** es el valor predeterminado.  
+         Especifique el valor de restricción: **Éxito**, **error**, o **finalización**. **Correcto** es el valor predeterminado.  
   
         > [!NOTE]  
         >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error**y azul para **Conclusión**.  
@@ -200,7 +199,7 @@ ms.locfileid: "48142891"
   
     3.  En el cuadro de diálogo **Propiedades de conexión** , en el cuadro **Nombre de la conexión** , escriba el nombre de la conexión que va a crear.  
   
-    4.  En **Especificar lo siguiente para conectarse a los datos de SQL Server**, en el cuadro **Seleccionar o especificar un nombre de servidor** , escriba el nombre del servidor SQL Server que quiere usar o haga clic en los puntos suspensivos **(…)** y seleccione un servidor en el cuadro de diálogo **SQL Server** . Si selecciona un servidor en el cuadro de diálogo **SQL Server** , haga clic en **Aceptar**.  
+    4.  En **Especificar lo siguiente para conectarse a los datos de SQL Server**, en el cuadro **Seleccionar o especificar un nombre de servidor**, escriba el nombre del servidor SQL Server que quiere usar o haga clic en los puntos suspensivos **(...)** y seleccione un servidor en el cuadro de diálogo **SQL Server**. Si selecciona un servidor en el cuadro de diálogo **SQL Server** , haga clic en **Aceptar**.  
   
     5.  En **Especificar información para iniciar sesión en el servidor**, seleccione **Usar seguridad integrada de Windows NT** o **Usar un nombre de usuario y contraseña específicos**. Si elige usar un nombre de usuario y una contraseña específicos, escriba esa información en los cuadros **Nombre de usuario** y **Contraseña** , respectivamente.  
   
@@ -216,7 +215,7 @@ ms.locfileid: "48142891"
   
         1.  Si selecciona **Generar un informe de archivo de texto**, seleccione **Crear un nuevo archivo** o **Anexar a archivo**.  
   
-        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(…)** y seleccione la ruta de acceso a la carpeta o el nombre de archivo en los cuadros de diálogo **Buscar carpeta –***nombre_de_servidor* o *Buscar archivos de base de datos –***nombre_de_servidor*.  
+        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(...)**  y seleccione la ruta de acceso a la carpeta o el nombre de la **Buscar carpeta-*** nombre_servidor* o **buscar archivos de base de datos-*** nombre_servidor* cuadros de diálogo.  
   
         3.  Si selecciona **Enviar informe a un destinatario de correo electrónico**, en la lista de **Operador del agente** , seleccione el destinatario del informe enviado por correo electrónico.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "48142891"
   
 12. Para ver los resultados en el visor del archivo de registro, en el **Explorador de objetos**, haga clic con el botón derecho en la carpeta **Planes de mantenimiento** o en el plan de mantenimiento específico y, luego, selecciones **Ver historial**.  
   
-     Las siguientes opciones están disponibles en el cuadro de diálogo *Visor de archivos de registro –***nombre_de_servidor*.  
+     Las siguientes opciones están disponibles en el **Log File Viewer-*** nombre_servidor* cuadro de diálogo.  
   
      **Cargar registro**  
      Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  

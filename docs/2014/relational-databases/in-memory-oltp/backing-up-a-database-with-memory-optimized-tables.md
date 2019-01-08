@@ -10,25 +10,25 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190295"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408632"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Hacer copia de seguridad de una base de datos con tablas con optimización para memoria
   La copia de seguridad de las tablas con optimización para memoria se realiza como parte de las copias de seguridad periódicas de las bases de datos. En cuanto a las tablas basadas en disco, la función CHECKSUM de los pares de archivos de datos y delta se valida como parte de la copia de seguridad de la base de datos para detectar si hay daños en el almacenamiento.  
   
 > [!NOTE]  
->  Durante una copia de seguridad, si detecta un error de suma de comprobación en uno o más archivos de un grupo de archivos optimizados para memoria, no podrá restaurar y reiniciar la base de datos. En esa situación, debe restaurar la base de datos con la última copia de seguridad buena conocida. Si no tiene una copia de seguridad, puede exportar los datos de las tablas optimizadas para memoria y las tablas basadas en disco y recargarlos después de quitar y volver a crear la base de datos.  
+>  Durante una copia de seguridad, si detecta un error de suma de comprobación en uno o más archivos de un grupo de archivos optimizados para memoria, no podrá restaurar y reiniciar la base de datos. En esa situación, debe restaurar la base de datos con la última copia de seguridad buena conocida. Si no tiene una copia de seguridad, puede exportar los datos de las tablas optimizadas para memoria y las tablas basadas en disco, y recargarlos después de quitar y volver a crear la base de datos.  
   
  Una copia de seguridad completa de una base de datos con una o más tablas optimizadas para memoria consta del almacenamiento asignado para las tablas basadas en disco (si existen), el registro de transacciones activo, y los pares de archivos de datos y delta (también conocidos como pares de archivos de punto de comprobación) para las tablas optimizadas para memoria. Pero como se describe en [Durabilidad de las tablas optimizadas para memoria](memory-optimized-tables.md), el almacenamiento que usan las tablas optimizadas para memoria puede ser mucho mayor que el tamaño de la memoria y eso afecta al tamaño de la copia de seguridad de la base de datos.  
   
 ## <a name="full-database-backup"></a>Copia de seguridad completa de base de datos  
  Esta explicación se centrará en las copias de seguridad de las bases de datos que solo tienen tablas durables optimizadas para memoria, ya que la copia de seguridad para las tablas basadas en disco es igual. Los pares de archivos de punto de comprobación del grupo de archivos optimizados para memoria pueden estar en varios estados. En la tabla siguiente se describe de qué parte de los archivos se hace copia de seguridad.  
   
-|Estado del par de archivos de punto de comprobación|Backup|  
+|Estado del par de archivos de punto de comprobación|Copia de seguridad|  
 |--------------------------------|------------|  
 |PRECREATED|Solo metadatos de archivo|  
 |UNDER CONSTRUCTION|Solo metadatos de archivo|  
@@ -48,7 +48,7 @@ ms.locfileid: "48190295"
   
  El primer escenario de carga de trabajo es (principalmente) para operaciones de inserción. En este escenario, la mayoría de los archivos de datos estarán en el estado Active, totalmente cargados y con muy pocas filas eliminadas. El tamaño de la copia de seguridad de base de datos será similar al tamaño de los datos en memoria.  
   
- El segundo escenario de carga de trabajo es para operaciones frecuentes de inserción, eliminación y actualización: en el peor de los casos, cada uno de los pares de archivos de punto de comprobación están cargados al 50 %, después de contar las filas eliminadas. Por tanto, el tamaño de la copia de seguridad de base de datos será al menos el doble que el tamaño de los datos en memoria. Además, habrá pocos pares de archivos de punto de comprobación en los estados Merge source y Required for backup/high availability que aumenten el tamaño de la copia de seguridad de base de datos.  
+ El segundo escenario de carga de trabajo es para las operaciones frecuentes de inserción, eliminación y actualización: En el peor de los casos, cada uno de los pares de archivos de punto de comprobación se carga al 50 %, después de tener en cuenta las filas eliminadas. Por tanto, el tamaño de la copia de seguridad de base de datos será al menos el doble que el tamaño de los datos en memoria. Además, habrá pocos pares de archivos de punto de comprobación en los estados Merge source y Required for backup/high availability que aumenten el tamaño de la copia de seguridad de base de datos.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Copias de seguridad diferenciales de bases de datos con tablas con optimización para memoria  
  El almacenamiento de las tablas optimizadas para memoria consta de archivos delta y de datos como se describe en [Durabilidad de las tablas optimizadas para memoria](memory-optimized-tables.md). La copia de seguridad diferencial de una base de datos con tablas optimizadas para memoria contiene los datos siguientes:  

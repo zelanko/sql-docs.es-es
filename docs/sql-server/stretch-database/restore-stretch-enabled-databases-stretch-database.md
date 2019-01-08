@@ -6,15 +6,15 @@ ms.prod: sql
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ac64701d800bd20eea93dee6c688296cee1e975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764349"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596586"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restore Stretch-enabled databases (Restauración de bases de datos habilitadas para Stretch)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -78,7 +78,7 @@ Haga lo siguiente para restaurar una base de datos de Azure eliminada al momento
     GO  
     ```  
     
-  ## <a name="see-also"></a>Ver también  
+  ## <a name="see-also"></a>Consulte también  
  [Copia de seguridad y restauración de bases de datos habilitadas para Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
  [Administrar y solucionar problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 

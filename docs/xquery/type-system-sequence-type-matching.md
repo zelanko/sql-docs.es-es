@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511455"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de tipo: Equiparación de tipos de secuencia
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668654"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Comparar el tipo de valor atómico devuelto por una expresión  
  Si una expresión devuelve una secuencia de valores atómicos, es posible que se deba buscar el tipo del valor en la secuencia. Los ejemplos siguientes muestran cómo se puede utilizar la sintaxis de tipo de secuencia para evaluar el tipo de valor atómico devuelto por una expresión.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>Ejemplo: determinar si una secuencia está vacía  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>Ejemplo: Determinar si una secuencia está vacía  
  El **empty() de** tipo de secuencia se puede usar en una expresión de tipo de secuencia para determinar si la secuencia devuelta por la expresión especificada es una secuencia vacía.  
   
  En el ejemplo siguiente, el esquema XML permite que el elemento <`root`> tenga el atributo nillable:  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>Ejemplo: determinar el tipo de un valor de atributo  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>Ejemplo: Determinar el tipo de un valor de atributo  
  En ocasiones se desea evaluar el tipo de secuencia devuelto por una expresión antes de su procesamiento. Por ejemplo, puede haber un esquema XML en el que se defina un nodo como tipo de unión. En el ejemplo siguiente, el esquema XML de la colección define el atributo `a` como un tipo de unión cuyo valor puede ser de tipo decimal o de cadena.  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>Ejemplo: cardinalidad en expresiones de secuencia  
+### <a name="example-cardinality-in-sequence-expressions"></a>Ejemplo: Cardinalidad en expresiones de secuencia  
  Este ejemplo ilustra el efecto de la cardinalidad en una expresión de secuencia. El siguiente esquema XML define un elemento <`root`> de tipo byte que es nillable.  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  Si se dan ambas condiciones, la expresión `instance of` devuelve True.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>Ejemplo: realizar una consulta contra una columna de tipo XML  
+### <a name="example-querying-against-an-xml-type-column"></a>Ejemplo: Realizar una consulta en una columna de tipo xml  
  En el ejemplo siguiente, se especifica una consulta en una columna Instructions de **xml** escriba en el [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos. Es una columna XML con tipo, porque tiene un esquema asociado. El esquema XML define el atributo `LocationID` del tipo entero. Por lo tanto, en la expresión de secuencia, el `instance of xs:integer?` devuelve True.  
   
 ```  
@@ -174,19 +174,19 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>Comparar el tipo de nodo devuelto por una expresión  
  Si una expresión devuelve una secuencia de nodos, es posible que se deba determinar el tipo del nodo en la secuencia. Los ejemplos siguientes muestran cómo se puede utilizar la sintaxis de tipo de secuencia para evaluar el tipo de nodo devuelto por una expresión. Puede utilizar los siguientes tipos de secuencia:  
   
--   **Item()** : coincide con cualquier elemento de la secuencia.  
+-   **Item()** -coincide con cualquier elemento de la secuencia.  
   
--   **Node()** : determina si la secuencia es un nodo.  
+-   **Node()** -determina si la secuencia es un nodo.  
   
--   **//processing-instruction ()** : determina si la expresión devuelve una instrucción de procesamiento.  
+-   **//processing-instruction ()** -determina si la expresión devuelve una instrucción de procesamiento.  
   
--   **Comment()** : determina si la expresión devuelve un comentario.  
+-   **Comment()** -determina si la expresión devuelve un comentario.  
   
--   **Document-Node()** : determina si la expresión devuelve un nodo de documento.  
+-   **Document-Node()** -determina si la expresión devuelve un nodo de documento.  
   
  El siguiente ejemplo ilustra estos tipos de secuencia.  
   
-### <a name="example-using-sequence-types"></a>Ejemplo: utilizar los tipos de secuencia  
+### <a name="example-using-sequence-types"></a>Ejemplo: Uso de tipos de secuencia  
  En este ejemplo, se ejecutan varias consultas en una variable XML sin tipo. Estas consultas ilustran el uso de tipos de secuencia.  
   
 ```  

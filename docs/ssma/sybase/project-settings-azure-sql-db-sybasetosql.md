@@ -10,12 +10,12 @@ ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f26c89839c1ae4ff958aa65d293a1bb18962eb76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14fa0cb949505ab2aeb15d1236add9acba9a1ab1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807923"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416616"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Configuración del proyecto (Azure SQL DB ) (SybaseToSQL)
 La configuración del proyecto de base de datos de SQL Azure le permite configurar el sufijo de la base de datos de Azure SQL DB para agregarse en el cuadro de diálogo de conexión y también permite implementar el mecanismo de latidos de conexión de Azure SQL DB.  

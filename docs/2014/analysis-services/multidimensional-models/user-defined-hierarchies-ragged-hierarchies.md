@@ -13,12 +13,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69c39bb516c198005246d7d3dde5c588fd68cef1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502889"
 ---
 # <a name="ragged-hierarchies"></a>Jerarquías desiguales
   Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
@@ -40,11 +40,11 @@ ms.locfileid: "48087895"
 ##  <a name="bkmk_approach"></a> Enfoques para modificar la navegación de obtención de detalles en una jerarquía desigual  
  La presencia de una jerarquía desigual se convierte en un problema cuando la navegación de obtención de detalles no devuelve los valores esperados o se percibe como difícil de usar. Para corregir los problemas de navegación resultantes de jerarquías desiguales, considere las siguientes opciones:  
   
--   Use una jerarquía normal pero establezca la propiedad `HideMemberIf` en cada nivel para especificar si un nivel que falta se muestra al usuario. Al establecer `HideMemberIf`, también debe establecer `MDXCompatibility` en la cadena de conexión para invalidar los comportamientos de navegación predeterminados. En este tema se ofrecen instrucciones para establecer estas propiedades.  
+-   Use una jerarquía normal pero establezca la propiedad `HideMemberIf` en cada nivel para especificar si un nivel que falta se muestra al usuario. Al establecer `HideMemberIf`, debe establecer también `MDXCompatibility` en la cadena de conexión para reemplazar los comportamientos de navegación predeterminados. En este tema se ofrecen instrucciones para establecer estas propiedades.  
   
 -   Cree una jerarquía de elementos primarios y secundarios que administre explícitamente los miembros del nivel. Para conocer esta técnica, vea la entrada de blog [Ragged Hierarchy in SSAS (Jerarquía desigual en SSAS)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Para obtener más información en los libros en línea, consulte [jerarquía de elementos primarios y secundarios](parent-child-dimension.md). Las desventajas de crear una jerarquía de elementos primarios y secundarios son que solo puede tener una por dimensión y que normalmente disminuye el rendimiento cuando se calculan agregaciones para los miembros intermedios.  
   
- Si la dimensión contiene más de una jerarquía desigual, debe usar el primer enfoque y establecer `HideMemberIf`. Los desarrolladores de BI que tienen experiencia práctica en el trabajo con jerarquías desiguales van más allá y son partidarios de realizar cambios adicionales en las tablas de datos físicas, creando tablas diferentes para cada nivel. Para más información sobre esta técnica, vea la entrada del blog de Martin Mason [The SSAS Financial Cube–Part 1a–Ragged Hierarchies (El cubo financiero de SSAS - Parte 1a: Jerarquías desiguales)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) .  
+ Si la dimensión contiene más de una jerarquía desigual, debe usar el primer enfoque y establecer `HideMemberIf`. Los desarrolladores de BI que tienen experiencia práctica en el trabajo con jerarquías desiguales van más allá y son partidarios de realizar cambios adicionales en las tablas de datos físicas, creando tablas diferentes para cada nivel. Consulte [Martin Mason de las jerarquías de SSAS Financial Cube-parte 1a-desiguales (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obtener más información sobre esta técnica.  
   
 ##  <a name="bkmk_Hide"></a> Establecer HideMemberIf para ocultar miembros en una jerarquía normal  
  En la tabla de una dimensión desigual, los miembros que faltan de manera lógica se pueden representar de distintos modos. Las celdas de la tabla pueden contener valores NULL o cadenas vacías o bien pueden contener el mismo valor que su elemento primario para servir de marcador de posición. La representación de los marcadores de posición está determinada por el estado de los marcadores de posición de los miembros secundarios, según determina la propiedad `HideMemberIf`, y la propiedad de cadena de conexión `MDX Compatibility` de la aplicación cliente.  
@@ -64,7 +64,7 @@ ms.locfileid: "48087895"
     |**ParentName**|Un miembro del nivel está oculto cuando su nombre es idéntico al de su primario.|  
   
 ##  <a name="bkmk_Mdx"></a> Establecer MDX Compatibility para determinar cómo se representan los marcadores de posición en las aplicaciones cliente  
- Después de establecer `HideMemberIf` en un nivel de jerarquía, debe establecer también la `MDX Compatibility` propiedad en la cadena de conexión enviada desde la aplicación cliente. El valor de `MDX Compatibility` determina si se usa `HideMemberIf` o no.  
+ Después de establecer `HideMemberIf` en un nivel de jerarquía, debe establecer también la propiedad `MDX Compatibility` en la cadena de conexión enviada desde la aplicación cliente. El valor de `MDX Compatibility` determina si se usa `HideMemberIf` o no.  
   
 |Valor de MDX Compatibility|Descripción|Uso|  
 |-------------------------------|-----------------|-----------|  

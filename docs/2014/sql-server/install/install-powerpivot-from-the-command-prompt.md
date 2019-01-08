@@ -11,12 +11,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f0853eb502d810a693e4cc2872710a62c784268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159405"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393422"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar PowerPivot desde el símbolo del sistema
   Puede ejecutar el programa de instalación desde la línea de comandos para instalar SQL Server PowerPivot para SharePoint. Debe incluir el parámetro `/ROLE` en el comando y excluir el parámetro `/FEATURES`.  
@@ -37,7 +37,7 @@ ms.locfileid: "48159405"
   
  Ambos roles instalan los archivos de aplicación, configuración e implementación que permiten que PowerPivot para SharePoint se ejecute en una granja de SharePoint. Si se especifica uno de los dos roles, el programa de instalación comprobará los requisitos de hardware y software necesarios para la integración de SharePoint.  
   
- La opción de granja existente supone que ya hay una granja de servidores de SharePoint. La nueva opción de granja supone que creará una nueva granja; admite la incorporación de una instancia del Motor de base de datos en la sintaxis de la línea de comandos para que pueda utilizar la instancia del Motor de base de datos igual que el servidor de bases de datos de la granja.  
+ La opción de granja existente supone que ya hay una granja de servidores de SharePoint. La nueva opción de granja de servidores, se da por supuesto que va a crear una nueva granja; admite la adición de una instancia del motor de base de datos en la sintaxis de línea de comandos para que pueda usar la instancia del motor de base de datos como servidor de base de datos de la granja de servidores.  
   
  A diferencia de las versiones anteriores, todas las tareas de configuración del servidor se realizan como tareas posteriores a la instalación. Si está automatizando los pasos de instalación y configuración, puede utilizar PowerShell para configurar el servidor. Para obtener más información, consulte [configuración de PowerPivot mediante Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
   

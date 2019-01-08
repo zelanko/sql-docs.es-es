@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
@@ -28,12 +27,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3297457db7fb0d363e8122cab9b4d02abcd87ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080425"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756277"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
   En este tema se describe cómo mover bases de datos del sistema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover bases de datos del sistema puede resultar útil en las situaciones siguientes:  
@@ -44,9 +43,9 @@ ms.locfileid: "48080425"
   
 -   Reubicación para el mantenimiento planeado del disco.  
   
- Los siguientes procedimientos se aplican para mover archivos de base de datos dentro de una misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a otro servidor, use la [de copia de seguridad y restauración](../backup-restore/back-up-and-restore-of-sql-server-databases.md) o [separar y adjuntar](move-a-database-using-detach-and-attach-transact-sql.md) operaciones.  
+ Los siguientes procedimientos se aplican para mover archivos de base de datos dentro de una misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a otro servidor, utilice las operaciones [copias de seguridad y restauración](../backup-restore/back-up-and-restore-of-sql-server-databases.md) o [separar y adjuntar](move-a-database-using-detach-and-attach-transact-sql.md) .  
   
- Los procedimientos descritos en este tema requieren el nombre lógico de los archivos de la base de datos. Para obtener el nombre, consulte la columna de nombre de la vista de catálogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  
+ Los procedimientos descritos en este tema requieren el nombre lógico de los archivos de la base de datos. Para obtener el nombre, consulte la columna de nombre de la vista de catálogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql).  
   
 > [!IMPORTANT]  
 >  Si se mueve una base de datos del sistema y posteriormente se vuelve a generar la base de datos maestra, se debe mover de nuevo la base de datos del sistema porque la operación de regeneración instala todas las bases de datos del sistema en su ubicación predeterminada.  
@@ -159,11 +158,11 @@ ms.locfileid: "48080425"
   
 3.  En el cuadro de diálogo **Propiedades de (***nombre_de_instancia***) de SQL Server**, haga clic en la pestaña **Parámetros de inicio**.  
   
-4.  En el cuadro **Parámetros existentes** , seleccione el parámetro –d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
+4.  En el cuadro **Parámetros existentes**, seleccione el parámetro -d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
   
      En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   
-5.  En el cuadro **Parámetros existentes** , seleccione el parámetro –l para mover el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
+5.  En el cuadro **Parámetros existentes**, seleccione el parámetro -l para mover el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
   
      En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "48080425"
 ##  <a name="Resource"></a> Mover la base de datos Resource  
  La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombreDeInstancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
   
-##  <a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
+##  <a name="Follow"></a> Seguimiento: Después de mover todas las bases de datos del sistema  
  Si ha movido todas las bases de datos del sistema a una nueva unidad o volumen o a otro servidor con una letra de unidad diferente, realice las actualizaciones siguientes.  
   
 -   Cambie la ruta de acceso del registro del Agente SQL Server. Si no actualiza esta ruta de acceso, el Agente SQL Server no se podrá iniciar.  

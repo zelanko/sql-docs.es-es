@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595703"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507643"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_describe_parameter_encryption
 |**parameter_ordinal**|**int**|Id. de la fila del conjunto de resultados.|  
 |**parameter_name**|**sysname**|Nombre de uno de los parámetros especificados en el  *\@params* argumento.|  
 |**column_encryption_algorithm**|**tinyint**|Que indica el algoritmo de cifrado configurado para la columna, el parámetro que se corresponde con el código. Los valores admitidos actualmente son: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Código que indica el tipo de cifrado configurado para la columna, el parámetro corresponde al. Los valores admitidos son:<br /><br /> 0 – plaintext (la columna no está cifrada)<br /><br /> 1 – el cifrado aleatorio<br /><br /> 2 – determinista cifrado.|  
+|**column_encryption_type**|**tinyint**|Código que indica el tipo de cifrado configurado para la columna, el parámetro corresponde al. Los valores admitidos son:<br /><br /> 0 - plaintext (la columna no está cifrada)<br /><br /> 1 - el cifrado aleatorio<br /><br /> 2 - determinista cifrado.|  
 |**column_encryption_key_ordinal**|**int**|Establece el código de la fila en el primer resultado. La fila que se hace referencia describe la clave de cifrado de columna configurada para la columna, se corresponde con el parámetro.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versión del algoritmo de normalización de tipo.|  
   

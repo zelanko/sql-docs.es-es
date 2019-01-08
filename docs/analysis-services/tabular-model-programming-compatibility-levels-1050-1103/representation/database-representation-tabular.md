@@ -1,5 +1,5 @@
 ---
-title: Base de datos (tabular) | Documentos de Microsoft
+title: Base de datos (tabular) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6a55afa2c152fe5a97c474f0a23af1fda12ff57
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 807e1f2c864f4e6574188e3f3d717e9bdf571c93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040089"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525671"
 ---
 # <a name="database-representationtabular"></a>Representación de la base de datos (tabular)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  En el modo Tabular, la base de datos es el contenedor para todos los objetos en el modelo tabular.  
+  En el modo Tabular, la base de datos es el contenedor para todos los objetos del modelo tabular.  
   
 ## <a name="database-representation"></a>Representación de la base de datos  
  La base de datos es el lugar donde residen todos los objetos que forman un modelo tabular. Contenidos en la base de datos, el desarrollador encuentra objetos como conexiones, tablas, roles y muchos otros.  
@@ -36,10 +36,10 @@ ms.locfileid: "34040089"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>Base de datos en AMO  
  Cuando se usa AMO para administrar un objeto de base de datos, comience con un objeto <xref:Microsoft.AnalysisServices.Server>. Después, busque la base de datos en la colección de bases de datos o cree una nueva base de datos agregando una a la colección.  
   
- En el fragmento de código siguiente se muestran los pasos necesarios para conectarse a un servidor y crear una base de datos vacía después de comprobar que la base de datos no existe:  
+ El fragmento de código siguiente muestra los pasos para conectarse a un servidor y crear una base de datos vacía, después de comprobar la base de datos no existe:  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Para tener un conocimiento práctico sobre cómo usar AMO para crear y manipular representaciones de la base de datos, vea el código fuente del ejemplo AMO 2012 Tabular; concreto, revise el siguiente archivo fuente: Database.cs. El ejemplo está disponible en Codeplex. El código de ejemplo se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción.  
+ Para saber de forma práctica cómo usar AMO para crear y tratar representaciones de bases de datos, vea el código fuente en el ejemplo de AMO 2012 tabular; en concreto, examine el siguiente archivo de código fuente: Database.cs. El ejemplo está disponible en Codeplex. El código de ejemplo se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción.  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526795"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>Descripción del modelo de objetos tabulares en niveles de 1050 a 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "50146420"
   
  Consulte [representación de jerarquía &#40;Tabular&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de jerarquía.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Representación de indicadores de rendimiento clave (KPI)  
+### <a name="key-performance-indicator--kpi--representation"></a>La clave de rendimiento de representación de KPI - indicadores  
  Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino. En términos de objetos de AMO, una representación de KPI tiene una relación de asignación uno a varios. Los KPI se representa mediante el uso de los siguientes objetos AMO: `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` y `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` son los objetos necesarios principales.  Es importante tener en cuenta que esto no significa que todos los objetos contenidos en los objetos de AMO mencionados anteriormente se puedan usar para realizar el modelado.  
   
 > [!NOTE]  

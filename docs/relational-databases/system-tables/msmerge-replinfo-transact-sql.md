@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_replinfo_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7257ce7d12fe4797c09836de2de45829500afd6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790663"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775427"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47790663"
 |**repid**|**uniqueidentifier**|Id. único de la réplica.|  
 |**use_interactive_resolver**|**bit**|Especifica si se utiliza el solucionador interactivo durante la reconciliación.<br /><br /> **0** = no no utiliza el solucionador interactivo.<br /><br /> **1** = utilice el solucionador interactivo.|  
 |**validation_level**|**int**|Tipo de validación que se llevará a cabo en la suscripción. El nivel de validación especificado puede ser uno de estos valores:<br /><br /> **0** no = ninguna validación.<br /><br /> **1** = validación solo del recuento de filas.<br /><br /> **2** = validación del recuento de filas y suma de comprobación.<br /><br /> **3** = recuento de filas y validación de suma de comprobación binaria.|  
-|**resync_gen**|**bigint**|El número de generación que se utiliza para volver a sincronizar la suscripción. Un valor de **– 1** indica que la suscripción no está marcada para la resincronización.|  
+|**resync_gen**|**bigint**|El número de generación que se utiliza para volver a sincronizar la suscripción. Un valor de **-1** indica que la suscripción no está marcada para la resincronización.|  
 |**login_name**|**sysname**|Nombre del usuario que creó la suscripción.|  
 |**Nombre de host**|**sysname**|El valor que utiliza el filtro de fila con parámetros al generar la partición de la suscripción.|  
 |**merge_jobid**|**binary (16)**|Id. de trabajo de mezcla para esta suscripción.|  

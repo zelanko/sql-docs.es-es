@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6757868bf492a08caec1b8062776d6634331f868
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666733"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534723"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuevas características de fecha y hora con versiones de SQL Server anteriores (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47666733"
   Este tema describe el comportamiento esperado cuando una aplicación cliente que utiliza fecha mejorada y funciones de tiempo se comunica con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y cuando un cliente compilado con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envía comandos a un servidor que admite mejora las funciones de fecha y hora.  
   
 ## <a name="down-level-client-behavior"></a>Comportamiento del cliente de nivel inferior  
- Aplicaciones cliente que utilizan una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ver los tipos de fecha y hora nuevas como **nvarchar** columnas. El contenido de las columnas son representaciones de literales. Para obtener más información, consulte la sección "Datos formatos: cadenas literales y" de [compatibilidad de tipos de datos para OLE DB fecha y mejore el tiempo de](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). El tamaño de columna es la longitud máxima del literal para la precisión especificada para la columna.  
+ Aplicaciones cliente que utilizan una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ver los tipos de fecha y hora nuevas como **nvarchar** columnas. El contenido de las columnas son representaciones de literales. Para obtener más información, consulte la "formatos de datos: Sección de cadenas y literales"de [compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). El tamaño de columna es la longitud máxima del literal para la precisión especificada para la columna.  
   
  API de catálogo devolverá metadatos coherente con el código de tipo de datos de nivel inferior que devuelve al cliente (por ejemplo, **nvarchar**) y la representación de bajo nivel asociada (por ejemplo, el formato literal adecuado). Sin embargo, el nombre del tipo de datos devuelto será el nombre del tipo real de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47666733"
 |DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Si el campo de hora no es cero, se producirá un error de IRowsetChange debido al truncamiento de las cadenas.|  
 |DBTYPE_DBTIME||Time(0)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Si las fracciones de segundo son distintos de cero, se producirá un error de IRowsetChange debido al truncamiento de las cadenas.<br /><br /> Se omite la fecha.|  
-|DBTYPE_DBTIME||Time(7)|Se produce un error: literal de hora no válido.|Aceptar|  
-|DBTYPE_DBTIMESTAMP|||Se produce un error: literal de hora no válido.|Aceptar|  
+|DBTYPE_DBTIME||Time(7)|Se produce un error - literal de hora no válido.|Aceptar|  
+|DBTYPE_DBTIMESTAMP|||Se produce un error - literal de hora no válido.|Aceptar|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP||datetime2 (7)|Aceptar|Aceptar|  
 |DBTYPE_DBDATE|Smalldatetime|date|Aceptar|Aceptar|  
@@ -136,8 +136,8 @@ ms.locfileid: "47666733"
 |TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

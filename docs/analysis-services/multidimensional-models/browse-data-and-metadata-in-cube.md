@@ -1,5 +1,5 @@
 ---
-title: Examinar los datos y metadatos de un cubo | Documentos de Microsoft
+title: Examinar los datos y metadatos en cubo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022612"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537278"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Examinar los datos y metadatos de un cubo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022612"
   
  Para poder examinar un cubo, debe procesarlo y conectarse de nuevo a él. Una vez procesado, abra la pestaña **Explorador** del Diseñador de cubos. Haga clic en el botón Volver a conectar de la barra de herramientas para actualizar la conexión.  
   
- La pestaña **Explorador** tiene tres recuadros: el recuadro Metadatos, el recuadro Filtro y el recuadro Datos. Use el panel Metadatos para examinar la estructura del cubo en formato de árbol. Use el recuadro Filtro situado en la parte superior de la pestaña **Explorador** para definir cualquier subcubo que desee examinar. Use el recuadro Datos para ver el conjunto de resultados y explorar en profundidad las jerarquías de dimensión.  
+ El **explorador** pestaña tiene tres paneles: el panel metadatos, el panel de filtro y el panel de datos. Use el panel Metadatos para examinar la estructura del cubo en formato de árbol. Use el recuadro Filtro situado en la parte superior de la pestaña **Explorador** para definir cualquier subcubo que desee examinar. Use el recuadro Datos para ver el conjunto de resultados y explorar en profundidad las jerarquías de dimensión.  
   
 ## <a name="setting-up-the-browser"></a>Configurar el Explorador  
  Para prepararse para examinar un cubo, puede especificar la perspectiva o la traducción que desea usar. Las medidas y las dimensiones se agregan al panel Datos y los filtros se especifican en el panel Filtro.  
@@ -55,13 +55,13 @@ ms.locfileid: "34022612"
   
 -   Expanda una dimensión en el panel Metadatos y arrastre una jerarquía al panel Filtro.  
   
-     \- O bien  
+     \- o -  
   
 -   En el **dimensión** columna de la **filtro** panel, haga clic en  **\<Seleccionar dimensión >** y seleccione una dimensión en la lista, a continuación, haga clic en  **\<Seleccionar jerarquía >** en el **jerarquía** columna y seleccione una jerarquía en la lista.  
   
  Después de especificar la jerarquía, especifique el operador y la expresión de filtro. En la tabla siguiente se describen los operadores y las expresiones de filtro.  
   
-|Operador|Expresión de filtro|Description|  
+|Operador|Expresión de filtro|Descripción|  
 |--------------|-----------------------|-----------------|  
 |Igual|Uno o varios miembros|Los valores deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
 |No igual|Uno o varios miembros|Los valores no deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  

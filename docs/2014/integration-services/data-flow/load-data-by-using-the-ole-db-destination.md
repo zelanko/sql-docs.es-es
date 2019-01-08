@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - loading data
@@ -15,12 +14,12 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b1c32cfebdfb1ca3237764d88eedfd70803652d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865ff640cb64fe212afa5ece8bbdaa7f0be4a14c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749517"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Cargar datos mediante el destino de OLE DB
   Para agregar y configurar un destino de OLE DB, el paquete ya debe incluir al menos una tarea Flujo de datos y un origen.  
@@ -43,7 +42,7 @@ ms.locfileid: "48072745"
   
     -   **Tabla o vista** Seleccione una tabla o vista en la base de datos que contiene los datos.  
   
-    -   **Carga rápida de tabla o vista** Seleccione una tabla o una vista en la base de datos que contiene los datos y, después, establezca las opciones de carga rápida: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Restricción CHECK**, **Filas por lote**o **Tamaño máximo de confirmación de inserción**.  
+    -   **Tabla o vista - carga rápida** seleccione una tabla o vista en la base de datos que contiene los datos y, a continuación, establezca las opciones de carga rápida: **Mantener valores de identidad**, **mantener null**, **bloqueo de tabla**, **restricción Check**, **filas por lote**, o **máximo tamaño de confirmación de inserción**.  
   
     -   **Variable de nombre de tabla o nombre de vista** Seleccione la variable definida por el usuario que contiene el nombre de una tabla o vista en la base de datos.  
   

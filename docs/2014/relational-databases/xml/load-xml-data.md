@@ -13,12 +13,12 @@ ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43c1286077b940516ca849fb3ad7ec847ba04ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50063c63ce7e541e997f23a4995620dc6d003823
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153697"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517121"
 ---
 # <a name="load-xml-data"></a>Cargar datos XML
   Puede transferir los datos XML a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de varias maneras. Por ejemplo:  
@@ -27,12 +27,12 @@ ms.locfileid: "48153697"
   
 -   Puede realizar una copia masiva de los datos desde otra base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante bcp out y, después, hacer una inserción masiva de los datos en la versión posterior de la base de datos mediante bcp in.  
   
--   Si tiene datos en columnas relacionales de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cree una tabla nueva con una columna [n]text y, si lo desea, una columna de clave principal para disponer de un identificador de fila. Usar programación para recuperar el XML que se genera en el servidor con FOR XML del lado cliente y escribirlo en el `[n]text` columna. A continuación, use las técnicas mencionadas previamente para transferir datos a una base de datos de una versión posterior. Puede optar por escribir el XML directamente en una columna XML en la base de datos de la versión posterior.  
+-   Si tiene datos en columnas relacionales de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cree una tabla nueva con una columna [n]text y, si lo desea, una columna de clave principal para disponer de un identificador de fila. Use programación del lado cliente para recuperar el XML que se genera en el servidor con FOR XML y escribirlo en la columna `[n]text`. A continuación, use las técnicas mencionadas previamente para transferir datos a una base de datos de una versión posterior. Puede optar por escribir el XML directamente en una columna XML en la base de datos de la versión posterior.  
   
 ## <a name="bulk-loading-xml-data"></a>Carga masiva de datos XML  
  Puede realizar una carga masiva de datos XML en el servidor mediante las funciones de carga masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como bcp. OPENROWSET permite cargar datos en una columna XML desde archivos. El siguiente ejemplo muestra esta función.  
   
-##### <a name="example-loading-xml-from-files"></a>Ejemplo: cargar XML desde archivos  
+##### <a name="example-loading-xml-from-files"></a>Ejemplo: Cargar XML desde archivos  
  Este ejemplo muestra cómo insertar una fila en la tabla T. El valor de la columna XML se carga desde el archivo C:\MyFile\xmlfile.xml como CLOB y se suministra el valor 10 a la columna de enteros.  
   
 ```  
@@ -50,10 +50,10 @@ FROM    (SELECT *
   
 -   Si la codificación no es Unicode y está implícita, debido a la página de códigos original, la página de códigos de cadena de la base de datos debe coincidir o ser compatible con los puntos de código que desea cargar. Si es necesario, use COLLATE. Si no existe tal página de códigos de servidor, deberá agregar una declaración XML explícita con la codificación correcta.  
   
--   Para usar una codificación explícita, use el `varbinary()` escriba, que no tiene interacción con páginas de códigos, o utilice un tipo de cadena de la página de códigos apropiada. A continuación, asigne los datos a una columna, una variable o un parámetro XML.  
+-   Para usar una codificación explícita, utilice el tipo `varbinary()`, que no tiene interacción con páginas de códigos, o un tipo de cadena de la página de códigos apropiada. A continuación, asigne los datos a una columna, una variable o un parámetro XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: especificar explícitamente una codificación  
- Suponga que tiene un documento XML, vcdoc, almacenado como `varchar(max)`, que no dispone de una declaración XML explícita. La siguiente instrucción agrega una declaración XML con la codificación "iso8859-1", concatena el documento XML, convierte el resultado a `varbinary(max)` para que se conserva la representación de bytes y, finalmente, convierte a XML. De este modo, se habilita el procesador XML para analizar los datos según la codificación especificada "iso8859-1" y generar la representación UTF-16 correspondiente para los valores de cadena.  
+### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: Especificar explícitamente una codificación  
+ Suponga que tiene un documento XML, vcdoc, almacenado como `varchar(max)`, que no dispone de una declaración XML explícita. La instrucción siguiente agrega una declaración XML con la codificación "iso8859-1", concatena el documento XML, convierte el resultado a `varbinary(max)` de modo que se preserve la representación de bytes y, finalmente, lo convierte a XML. De este modo, se habilita el procesador XML para analizar los datos según la codificación especificada "iso8859-1" y generar la representación UTF-16 correspondiente para los valores de cadena.  
   
 ```  
 SELECT CAST(   
@@ -66,7 +66,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
-  <xsd:schema …  
+  <xsd:schema ...  
 ```  
   
  Debe incluirse una N a continuación para que la instancia XML sea una instancia de Unicode. Por ejemplo:  
@@ -74,11 +74,11 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
 -- Assign XML instance to a variable.  
 DECLARE @X XML  
-SET @X = N'…'  
+SET @X = N'...'  
 -- Insert XML instance into an xml type column.  
-INSERT INTO T VALUES (N'…')  
+INSERT INTO T VALUES (N'...')  
 -- Create an XML schema collection  
-CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
+CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
 ## <a name="see-also"></a>Vea también  

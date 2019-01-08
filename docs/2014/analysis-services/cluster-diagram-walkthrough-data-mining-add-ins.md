@@ -17,12 +17,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057095"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420010"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama del clúster (Complementos de minería de datos)
   Después de haber creado un modelo de agrupación en clústeres, puede importarlo en Visio con el **clúster** dar forma y, a continuación, seguir personalizando y mejorando el diseño. El **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de minería de datos:  
@@ -75,7 +75,7 @@ ms.locfileid: "48057095"
   
      Esta opción no cambia el número de clústeres del modelo; simplemente limita el número de atributos que se pueden mostrar como características de cada clúster.  
   
-     Sin embargo, la opción actúa a modo de filtro para los datos del gráfico, de forma que, más adelante, no podrá aumentar el número de elementos.  
+     Sin embargo, la opción actúa como un filtro en los datos del gráfico, por lo que no puede aumentar el número de elementos más adelante.  
   
 8.  Haga clic en **Avanzadas**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48057095"
   
      ![Haga clic en Avanzadas para seleccionar colores de forma](media/dm13-visio-clusteroptions-advanced.gif "haga clic en Avanzadas para seleccionar los colores de las formas")  
   
-     **Sugerencia:** algunos colores se pueden modificar posteriormente mediante el uso de los temas de Visio y la forma que los controles de edición. Sin embargo, los temas de Visio también invalidarán algunas de estas selecciones de color, por lo que se recomienda comenzar con los colores predeterminados e ir aplicando cambios paulatinamente.  
+     **Sugerencia:** Algunos colores se pueden modificar posteriormente mediante el uso de los temas de Visio y la forma que los controles de edición. Sin embargo, los temas de Visio también invalidarán algunas de estas selecciones de color, por lo que se recomienda comenzar con los colores predeterminados e ir aplicando cambios paulatinamente.  
   
 9. Haga clic en **finalizar** para crear el gráfico.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48057095"
   
      Sin embargo, si aplica algún formato especial distinto del predeterminado que genera el asistente, lo cual incluye algunos fondos, es posible que estos números no estén visibles.  
   
-     **Control deslizante**  
+     **Slider**  
      Filtra las líneas entre los clústeres. Si se sube el control deslizante, se quitan todas las asociaciones salvo las más importantes.  
   
      **Sombreado**  

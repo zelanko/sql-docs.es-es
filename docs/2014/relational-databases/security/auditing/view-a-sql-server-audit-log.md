@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75de66ef1759cc9e20b98f1f38c9ffa6361d31a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229707"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519191"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Ver un registro de SQL Server Audit
   Este tema describe cómo ver un registro de auditoría de SQL Server en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "48229707"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48229707"
   
 2.  Expanda la carpeta **Auditorías** .  
   
-3.  Haga clic con el botón derecho en el registro de auditoría que quiera ver y seleccione **Ver registros de auditoría**. Así, se abre el cuadro de diálogo **Visor del archivo de registros –***nombre_servidor*. Para más información, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Haga clic con el botón derecho en el registro de auditoría que quiera ver y seleccione **Ver registros de auditoría**. Se abrirá el **Log File Viewer-*** nombre_servidor* cuadro de diálogo. Para más información, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Cuando termine, haga clic en **Cerrar**.  
   

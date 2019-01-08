@@ -12,14 +12,14 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0dfc543659bdb8476d880bbe6021d0f3fd27bfd
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032492"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520347"
 ---
-# <a name="domain-management-domain-list"></a>Administración de dominios: lista de dominios
+# <a name="domain-management-domain-list"></a>Administración de dominios: Lista de dominios
   En este tema se describen los controles de la lista de dominios de la página **Administración de dominios** de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilice este panel para seleccionar el dominio en el que va a realizar las operaciones de administración. Este mismo panel se utiliza en todas las páginas con pestañas de la página **Administración de dominios** .  
   
 ## <a name="options"></a>Opciones  
@@ -35,7 +35,7 @@ ms.locfileid: "51032492"
  Crea un nuevo dominio en la base de conocimiento. Este comando muestra el cuadro de diálogo **Crear dominio** . Este comando está disponible al hacer clic con el botón secundario en un dominio o al hacer clic en el icono situado encima de la lista de dominios. Para más información, consulte [Crear un dominio](../../2014/data-quality-services/create-a-domain.md).  
   
  **Crear una copia del dominio seleccionado**  
- Crea una copia exacta del dominio seleccionado y lo agrega a la base de conocimiento. El nombre del nuevo dominio estará formado por el nombre del dominio a partir del cual se creó, más la palabra “ – Copia” agregada al nombre. Este comando está disponible cuando se hace clic con el botón secundario en un dominio y, a continuación, se hace clic en **Crear una copia**, o cuando se hace clic en el icono situado encima de la lista de dominios. No está disponible para un dominio compuesto.  
+ Crea una copia exacta del dominio seleccionado y lo agrega a la base de conocimiento. El nombre del nuevo dominio estará formado por el nombre del dominio a partir del que se ha creado, más la palabra " - Copia" agregada al nombre. Este comando está disponible cuando se hace clic con el botón secundario en un dominio y, a continuación, se hace clic en **Crear una copia**, o cuando se hace clic en el icono situado encima de la lista de dominios. No está disponible para un dominio compuesto.  
   
  **Importar dominio del archivo de datos**  
  Importa un dominio desde un archivo .dqs. Este comando muestra el cuadro de diálogo **Importar de archivo de datos** , que permite examinar el sistema de archivos y seleccionar un archivo .dqs para un dominio individual o para un dominio compuesto. Este comando está disponible cuando se hace clic en el icono situado encima de la lista de dominios. Para más información, consulte [Importa un dominio desde un archivo .dqs](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md).  

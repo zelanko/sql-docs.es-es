@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
@@ -15,15 +14,15 @@ ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e7a228062035772b9c394a246de0452f36239b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158645"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758937"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportar datos (Master Data Services)
-  Puede exportar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] datos a sistemas de suscripción creando vistas de suscripciones. Cualquier sistema de suscripción podrá ver los datos publicados en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Para obtener más información sobre las vistas, consulte [Vistas](../relational-databases/views/views.md).  
+  Puede exportar datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a sistemas de suscripción creando vistas de suscripciones. Cualquier sistema de suscripción podrá ver los datos publicados en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obtener más información sobre las vistas, consulte [Vistas](../relational-databases/views/views.md).  
   
 ## <a name="subscription-view-formats"></a>Formatos de vista de suscripciones  
  Al crear una vista en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], elige entre un conjunto de formatos de vistas estándar proporcionados por [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Puede utilizar estos formatos para crear vistas que muestren:  

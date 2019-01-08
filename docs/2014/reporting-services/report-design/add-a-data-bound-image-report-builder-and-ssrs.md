@@ -11,12 +11,12 @@ ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a82bf63ca0c70543d816cbd191b1ff9a36ced317
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9883e7e21e58424fbc6280ad99ac323becd9b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526339"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Agregar una imagen enlazada a datos (Generador de informes y SSRS)
   Un informe puede incluir una referencia a una imagen que está almacenada en una base de datos. Este tipo de imagen se conoce como *imagen enlazada a datos*. Las imágenes que aparecen junto a los nombres de producto de una lista de productos son ejemplos de imágenes enlazadas a datos.  
@@ -49,9 +49,9 @@ ms.locfileid: "48211475"
      Aparece un marcador de posición para la imagen en la superficie de diseño del informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Imágenes &#40;generador de informes y SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Incrustar una imagen en un informe &#40;generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Agregar una imagen externa &#40;generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Imágenes &#40;Generador de informes y SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [Cuadro de diálogo de Propiedades de la imagen, General &#40;Generador de informes y SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

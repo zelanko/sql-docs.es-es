@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee55ca66cdddcc6fcb2a130bfd3427d210297aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806853"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409642"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "47806853"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**int**|Identificador interno del agente de escucha. No admite valores NULL.<br /><br /> Clave principal.|  
-|**ip_address**|**nvarchar48**|La dirección IP del agente de escucha que está en línea y que está siendo objeto de escucha actualmente. Se permite IPv4 e IPv6. Si un agente de escucha posee ambos tipos de direcciones, se enumeran por separado. Un carácter comodín IPv4, se muestra como “0.0.0.0”. Un carácter comodín IPv6, se muestra como “::”.<br /><br /> No admite valores NULL.|  
+|**listener_id**|**int**|Identificador interno del agente de escucha No admite valores NULL.<br /><br /> Clave principal.|  
+|**ip_address**|**nvarchar48**|La dirección IP del agente de escucha que está en línea y que está siendo objeto de escucha actualmente. Se permite IPv4 e IPv6. Si un agente de escucha posee ambos tipos de direcciones, se enumeran por separado. Un carácter comodín IPv4, se muestra como "0.0.0.0". Un carácter comodín IPv6, se muestra como "::".<br /><br /> No admite valores NULL.|  
 |**is_ipv4**|**bit**|Tipo de dirección IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|Número de puerto en el que escucha el agente de escucha. No admite valores NULL.|  
 |**Tipo**|**tinyint**|Tipo de agente de escucha, uno de los siguientes:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Creación de reflejo de base de datos<br /><br /> No admite valores NULL.|  

@@ -15,19 +15,19 @@ ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e3b99c917b6f272f4af325a35712f059313742c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172565"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400468"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Buscar objetivo (escenario de Herramientas de análisis de tabla para Excel)
   ![Botón de búsqueda de objetivo en herramientas de análisis de tabla](media/tat-goalseek.gif "botón Buscar objetivo en herramientas de análisis de tabla")  
   
  El **Buscar objetivo** herramienta de escenario es complementaria a la [¿qué ocurre si](what-if-scenario-table-analysis-tools-for-excel.md) herramienta de escenario. El **hipótesis** herramienta informa del impacto de realizar un cambio, mientras que el **Buscar objetivo** informa de los factores subyacentes que se deben cambiar para lograr un resultado deseado.  
   
- Por ejemplo, suponga que su objetivo es aumentar la satisfacción de los clientes. Puede usar **Buscar objetivo** análisis para determinar qué factores sería probablemente aumente la satisfacción del cliente, y decidir si esos cambios son rentables.  
+ Por ejemplo, supongamos que su objetivo es aumentar la satisfacción del cliente. Puede usar **Buscar objetivo** análisis para determinar qué factores sería probablemente aumente la satisfacción del cliente, y decidir si esos cambios son rentables.  
   
  Cuando la herramienta finaliza su análisis, crea dos columnas nuevas en la tabla de datos de origen. Estas columnas muestran el *probabilidad* que se puede lograr el resultado deseado y el cambio recomendado, si existe.  
   

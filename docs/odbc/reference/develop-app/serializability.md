@@ -16,15 +16,15 @@ ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f138988e0b01d6408a7aec96d09ceff65a6f5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757723"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518290"
 ---
 # <a name="serializability"></a>La posibilidad de serializar
-Idealmente, deberían ser transacciones *serializable*. Las transacciones se dice que ser serializable si los resultados de ejecutar al mismo tiempo las transacciones son los mismos que los resultados de su ejecución en serie, es decir, una tras otra. No es importante qué transacción se ejecuta en primer lugar, solo que el resultado no refleja cualquier combinación de las transacciones.  
+Idealmente, deberían ser transacciones *serializable*. Las transacciones se dice que ser serializable si los resultados de ejecutar al mismo tiempo las transacciones son los mismos que los resultados de su ejecución en serie: es decir, una tras otra. No es importante qué transacción se ejecuta en primer lugar, solo que el resultado no refleja cualquier combinación de las transacciones.  
   
  Por ejemplo, suponga que la transacción A multiplica los valores de datos por 2 y la transacción B agrega 1 a valores de datos. Ahora suponga que hay dos valores de datos: 0 y 10. Si estas transacciones se ejecutan una tras otra, los nuevos valores será 1 y 21 Si una transacción se ejecuta en primer lugar, o 2 y 22 si la transacción B se ejecuta primera. Pero ¿qué ocurre si el orden en que se ejecutan las dos transacciones es diferente para cada valor? Si la transacción A se ejecuta primera en el primer valor y la transacción B se ejecutan primeros en el segundo valor, los nuevos valores son 1 y 22. Si se invierte este orden, los nuevos valores son 2 y 21. Las transacciones son serializables si 1, 21 y 2, 22 se muestran los resultados solo es posibles. Las transacciones no son serializable si 22, 1 o 2, 21 es un resultado.  
   

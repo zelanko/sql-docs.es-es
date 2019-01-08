@@ -19,12 +19,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb836b93a48317ad6573cace0546cb90fa9f370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 189d6c83eee8caa891585f051d4ee66f4d22e44f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603723"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413747"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47603723"
   
  El subproceso principal de recolección de elementos no utilizados (el subproceso inactivo) hace un seguimiento de las filas actualizadas, eliminadas e insertadas de todas las transacciones completadas desde la última invocación del subproceso principal de recolección de elementos no utilizados. Cuando el subproceso de recolección de elementos no utilizados se reactiva, determina si la marca de tiempo de la transacción activa más antigua ha cambiado. Si la transacción activa más antigua ha cambiado, el subproceso inactivo pone en cola elementos de trabajo (en fragmentos de 16 filas) para las transacciones cuyos conjuntos de escritura no son ya necesarios. Por ejemplo, si elimina 1.024 filas, en la cola habrá 64 elementos de trabajo no utilizados recopilados, cada uno de los cuales contiene 16 filas eliminadas.  Una vez que una transacción de usuario se confirma, selecciona todos los elementos puestos en cola en su programador. Si no hay ningún elemento en cola en su programador, la transacción de usuario buscará en todas las colas del nodo NUMA actual.  
   
- Es posible determinar si la recolección de elementos no utilizados está liberando memoria para las filas eliminadas; para ello, ejecute sys.dm_xtp_gc_queue_stats para ver si el trabajo puesto en cola se está procesando. Si las entradas de current_queue_depth no se están procesando o si no hay nuevos elementos de trabajo se agregan a current_queue_depth, esto es un valor que indica que la recolección no está liberando memoria. Por ejemplo, la recolección de elementos no utilizados no se puede realizar si hay una transacción de ejecución prolongada.  
+ Es posible determinar si la recolección de elementos no utilizados está liberando memoria para las filas eliminadas; para ello, ejecute sys.dm_xtp_gc_queue_stats para ver si el trabajo puesto en cola se está procesando. Si las entradas de current_queue_depth no se están procesando o si no hay nuevos elementos de trabajo se agregan a current_queue_depth, esto es un valor que indica que la recolección no está liberando memoria. Por ejemplo, la recolección de elementos no puede realizarse si hay una transacción de larga ejecución.  
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667994"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408872"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de SLES para SQL Server
 
@@ -102,7 +102,7 @@ Otra opción de almacenamiento es usar el recurso compartido de archivos SMB:
 
 ### <a name="configure-an-nfs-server"></a>Configurar un servidor NFS
 
-Para configurar un servidor NFS, consulte los pasos siguientes en la documentación de SUSE: [configuración del servidor NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Para configurar un servidor NFS, consulte los pasos siguientes en la documentación de SUSE: [Configurar el servidor NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configurar todos los nodos del clúster para conectarse al almacenamiento compartido NFS
 
@@ -123,7 +123,7 @@ Antes de configurar el cliente NFS para montar la ruta de acceso de los archivos
     - [Configuración de clientes](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > Se recomienda seguir los procedimientos recomendados y recomendaciones de almacenamiento altamente disponible NFS de SUSE: [altamente disponible almacenamiento NFS con DRBD y Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > Se recomienda seguir los procedimientos recomendados y recomendaciones de almacenamiento altamente disponible NFS de SUSE: [Almacenamiento NFS de alta disponibilidad con DRBD y Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
 2. Compruebe que SQL Server se inicia correctamente con la nueva ruta de acceso. Hacer esto en cada nodo. En este momento sólo un nodo debe ejecutar SQL Server a la vez. No pueden ambos ejecutar al mismo tiempo ya que ambos intentará tener acceso a los archivos de datos al mismo tiempo (para evitar accidentalmente iniciar SQL Server en ambos nodos, use un recurso de clúster del sistema de archivos para asegurarse de que no se monta el recurso compartido de dos veces por los diferentes nodos). Los siguientes comandos iniciar SQL Server, comprueban el estado y, a continuación, detener SQL Server.
 
@@ -196,8 +196,8 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
 
 Los pasos siguientes explican cómo configurar el recurso de clúster de SQL Server. Hay dos opciones de configuración que necesita para personalizar.
 
-- **Nombre del recurso de SQL Server**: un nombre para el recurso de SQL Server en clúster. 
-- **Valor de tiempo de espera**: el valor de tiempo de espera es la cantidad de tiempo que el clúster de espera mientras se conecta un recurso. Para SQL Server, este es el tiempo que necesita SQL Server debe tomar para mejorar la `master` en línea de base de datos. 
+- **Nombre del recurso SQL Server**: Un nombre para el recurso de SQL Server en clúster. 
+- **Valor de tiempo de espera**: El valor de tiempo de espera es la cantidad de tiempo que el clúster de espera mientras se conecta un recurso. Para SQL Server, este es el tiempo que necesita SQL Server debe tomar para mejorar la `master` en línea de base de datos. 
 
 Actualice los valores de la siguiente secuencia de comandos para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.
 
@@ -248,7 +248,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>Administración de recursos de clúster
 
-Para administrar los recursos del clúster, consulte el siguiente tema SUSE: [administración de recursos de clúster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Para administrar los recursos del clúster, consulte el siguiente tema SUSE: [Administración de recursos de clúster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>conmutación por error manual
 

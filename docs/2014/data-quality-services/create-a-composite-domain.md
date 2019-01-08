@@ -13,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9b2efda76c0e1005a298e67b139233a96796522b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030332"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413782"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
   En este tema se describe cómo crear un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de uno o varios dominios individuales que se aplican a un único campo de datos. Para más información sobre los dominios compuestos, vea [Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -79,21 +79,21 @@ ms.locfileid: "51030332"
   
 4.  En **Método de análisis**, seleccione una de las opciones siguientes:  
   
-    -   **Datos de referencia**: analiza los valores del campo dependiendo del formato que Reference Data Service (RDS) haya dado a los datos de referencia. Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
+    -   **Datos de referencia**: Analizar los valores del campo según el formato de los datos por el servicio de datos de referencia (RDS). Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
   
-    -   **En orden**: analiza los valores de los campos según el orden que tienen los dominios en el dominio compuesto. El primer valor se incluirá en el primer dominio, el segundo valor en el segundo dominio, y así sucesivamente.  
+    -   **En orden**: Analizar los valores del campo según el orden de los dominios en el dominio compuesto. El primer valor se incluirá en el primer dominio, el segundo valor en el segundo dominio, y así sucesivamente.  
   
-    -   **Delimitadores**: analiza los valores del campo según el delimitador seleccionado en los botones de opción que se muestran cuando se selecciona Delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
+    -   **Delimitadores**: Analiza los valores del campo según el delimitador seleccionado en los botones de radio que muestra cuando se selecciona delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
   
 5.  Si selecciona **Delimitadores** como método de análisis, también puede seleccionar **Usar el análisis de bases de conocimiento**. Para obtener más información, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: después de crear un dominio compuesto  
+##  <a name="FollowUp"></a> Sigue: Después de crear un dominio compuesto  
  Una vez creado el dominio compuesto, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services permite analizar los datos en función del conocimiento, no solo en función de los delimitadores o el orden. El análisis basado en conocimiento se utiliza cuando los datos de origen complejos están asignados a un dominio compuesto y no se están utilizando los servicios de datos de referencia. Puede utilizar el análisis basado en conocimiento para analizar los datos del origen de datos en los dominios individuales correspondientes. Con el análisis basado en conocimiento, DQS primero intentará utilizar el conocimiento para analizar datos complejos en dominios individuales. Si es posible, identificará partes de la cadena como pertenecientes a uno o varios dominios, y analizará la cadena en sus distintos dominios. Por ejemplo, supongamos que tiene “John B. Doe” como valor complejo en un campo de nombre completo representado por un dominio compuesto denominado Nombre completo. Si DQS identifica “John” como en el dominio Nombre y “Doe” como en el dominio Apellidos, DQS agregará “B.” al dominio Segundo nombre según el conocimiento de los dominios.  
+ Data Quality Services permite analizar los datos en función del conocimiento, no solo en función de los delimitadores o el orden. El análisis basado en conocimiento se utiliza cuando los datos de origen complejos están asignados a un dominio compuesto y no se están utilizando los servicios de datos de referencia. Puede utilizar el análisis basado en conocimiento para analizar los datos del origen de datos en los dominios individuales correspondientes. Con el análisis basado en conocimiento, DQS primero intentará utilizar el conocimiento para analizar datos complejos en dominios individuales. Si es posible, identificará partes de la cadena como pertenecientes a uno o varios dominios, y analizará la cadena en sus distintos dominios. Por ejemplo, supongamos que tiene "John B. Doe" como valor complejo en un campo de nombre completo representado por un dominio compuesto denominado Nombre completo. Si DQS identifica "John" como en el dominio Nombre y "Doe" como en el dominio Apellidos, DQS agregará "B". al dominio Segundo nombre según el conocimiento de los dominios.  
   
  Solo puede utilizar el análisis basado en conocimiento si también selecciona el análisis basado en delimitadores. El análisis basado en conocimiento no reemplaza al análisis basado en delimitadores, sino que lo mejora. DQS solo utilizará un delimitador para realizar el análisis si no existe ningún conocimiento para hacerlo. En algunos casos, DQS puede determinar parte del análisis mediante el análisis basado en conocimiento y después determinar otra parte del análisis mediante el análisis basado en delimitadores.  
   

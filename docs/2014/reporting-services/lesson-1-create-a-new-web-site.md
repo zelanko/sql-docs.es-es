@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear un sitio Web nuevo | Microsoft Docs'
+title: 'Lección 1: Crear un nuevo sitio Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79cb440796801e7557b59d75c07b72ed7fc06f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11fb6cf816a665bb641671cb79b575367e63e63f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121285"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403830"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Lección 1: Crear un sitio Web nuevo
-  En esta lección aprenderá a crear un proyecto nuevo de sitio Web usando el sitio Web ASP.NET para Visual C#.  
+# <a name="lesson-1-create-a-new-web-site"></a>Lección 1: Crear un nuevo sitio Web
+  En esta lección aprenderá a crear un proyecto de sitio web mediante la plantilla de sitio web de ASP.NET para Visual C#.  
   
 ### <a name="to-create-a-new-website"></a>Para crear un sitio Web nuevo  
   
@@ -34,6 +34,6 @@ ms.locfileid: "48121285"
  El proyecto del sitio Web se abre.  
   
 ## <a name="next-task"></a>Tarea siguiente  
- Ha creado correctamente un nuevo proyecto de sitio Web. A continuación, creará una conexión de datos y una tabla de datos para el informe primario. Consulte [lección 2: definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Ha creado correctamente un proyecto de sitio web. A continuación, creará una conexión de datos y una tabla de datos para el informe primario. Consulte [lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

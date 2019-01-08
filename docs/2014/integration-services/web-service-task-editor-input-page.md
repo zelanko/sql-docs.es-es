@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515150"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor de la tarea Servicio web (página Entrada)
   Use la página **Entrada** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar el servicio web, el método web y los valores que se deben proporcionar como entrada para el método web. Los valores se pueden proporcionar mediante la especificación directa de cadenas o la selección de variables en la columna Valor.  
@@ -35,9 +35,9 @@ ms.locfileid: "48056695"
  Seleccione en la lista un método web para la tarea que se va a ejecutar.  
   
  **Documentación del método web**  
- Escriba una descripción del método web o haga clic en el botón Examinar **(…)** y escriba una descripción en el cuadro de diálogo **Documentación del método web** .  
+ Escriba una descripción del método web, o bien haga clic en el botón Examinar **(…)** y escriba una descripción en el cuadro de diálogo **Documentación del método web**.  
   
- **Nombre**  
+ **Name**  
  Muestra los nombres de las entradas del método web.  
   
  **Tipo**  
@@ -53,9 +53,9 @@ ms.locfileid: "48056695"
  Si las casillas de Variable están activadas, seleccione las variables de la lista para proporcionar entradas; en caso contrario, escriba los valores que se usarán en las entradas.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea servicio Web &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea servicio Web &#40;página de salida&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea Servicio web &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea Servicio web &#40;página Salida&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

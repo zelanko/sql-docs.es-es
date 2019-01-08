@@ -11,12 +11,12 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4c00c9d9881e7775ec311c103ca156eb555b70f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096155"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352385"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
   La extensión de representación de Excel [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] representa un informe en el formato nativo de [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Con la extensión de representación de Excel, el ancho de las columnas de Excel refleja más exactamente el ancho de las columnas de los informes.  
@@ -26,16 +26,16 @@ ms.locfileid: "48096155"
  Puede cambiar parte de la configuración predeterminada de este representador cambiando los valores de configuración de la información del dispositivo. Para obtener más información, consulte [Excel Device Information Settings](../excel-device-information-settings.md).  
   
 > [!IMPORTANT]  
->  Para evitar mensajes de error al exportar a Excel un informe con un tamaño superior a 10 MB, instale el service pack más reciente para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. El problema se ha corregido en SP2.  
+>  Para evitar mensajes de error al exportar a Excel un informe con un tamaño superior a 10 MB, instale el service pack más reciente para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. El problema se ha corregido en SP2.  
 >   
->  Para obtener más información sobre el problema, consulte [CORRECIÓN: SSRS 2012 no puede exportar un informe de más de 10 MB a formato Excel](http://go.microsoft.com/fwlink/p/?LinkId=402513)  
+>  Para obtener más información sobre el problema, consulte [corregir: SSRS 2012 no se puede exportar un informe que es mayor que 10 MB a formato de Excel](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->  Para obtener el service pack más reciente para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vea [cómo obtener el service pack más reciente para SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
+>  Para obtener el service pack más reciente para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vea [Cómo obtener el service pack más reciente para SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
->  Al definir un parámetro de tipo `String`, se presentará al usuario un cuadro de texto que puede tomar cualquier valor. Si un parámetro de informe no está vinculado a un parámetro de consulta y los valores del parámetro se incluyen en el informe, un usuario del informe puede escribir sintaxis de expresión, un script o una dirección URL en el valor del parámetro y representar el informe en Excel. Si, posteriormente, otro usuario visualiza el informe y hace clic en el contenido del parámetro representado, el usuario podría ejecutar accidentalmente el script o el vínculo malintencionados.  
+>  Cuando se define un parámetro de tipo `String`, el usuario ve un cuadro de texto que admite cualquier valor. Si un parámetro de informe no está vinculado a un parámetro de consulta y los valores del parámetro se incluyen en el informe, un usuario del informe puede escribir sintaxis de expresión, un script o una dirección URL en el valor del parámetro y representar el informe en Excel. Si, posteriormente, otro usuario visualiza el informe y hace clic en el contenido del parámetro representado, el usuario podría ejecutar accidentalmente el script o el vínculo malintencionados.  
 >   
->  Para reducir el riesgo de ejecución accidental de scripts malintencionados, abra los informes representados exclusivamente desde orígenes de confianza. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md).  
+>  Para reducir el riesgo de ejecución accidental de scripts malintencionados, abra los informes representados exclusivamente desde orígenes de confianza. Para obtener más información sobre cómo proteger informes, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -72,7 +72,7 @@ ms.locfileid: "48096155"
   
 -   El efecto de texto "Suprarrayado" no está admitido en Excel.  
   
--   Excel agrega un relleno predeterminado de aproximadamente 3,75 puntos en los lados izquierdo y derecho de las celdas. Si la configuración de relleno de un cuadro de texto es menor que 3,75 puntos, y el texto cabe muy justo en él, es posible que se produzca el ajuste del texto en Excel.  
+-   Excel agrega un relleno predeterminado de aproximadamente 3,75 puntos en los lados izquierdo y derecho de las celdas. Si la configuración de relleno de un cuadro de texto es menor que 3,75 puntos, y el texto cabe muy justo en su interior, es posible que se produzca el ajuste del texto en Excel.  
   
     > [!NOTE]  
     >  Para evitar este problema, aumente el ancho del cuadro de texto en el informe.  
@@ -94,7 +94,7 @@ ms.locfileid: "48096155"
   
 -   Los encabezados y pies de página de Excel admiten un máximo de 256 caracteres, incluido el marcado. La extensión de presentación trunca la cadena en los 256 caracteres.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no admite márgenes en los encabezados de informe y pies de página. Cuando se exportan a Excel, estos valores de margen se configuran en cero y cualquier encabezado o pie de página que contenga varias filas de datos no podría imprimir varias filas, dependiendo de la configuración de la impresora.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no admite márgenes en los encabezados y pies de página del informe. Cuando se exportan a Excel, estos valores de margen se configuran en cero y cualquier encabezado o pie de página que contenga varias filas de datos no podría imprimir varias filas, dependiendo de la configuración de la impresora.  
   
 -   Los cuadros de texto de un encabezado o pie de página mantienen el formato, pero no su alineación, cuando se exportan a Excel. Esto se produce porque los espacios iniciales y finales se recortan cuando el informe se representa en Excel.  
   
@@ -129,14 +129,14 @@ ms.locfileid: "48096155"
 ## <a name="excel-renderer"></a>Representador de Excel  
   
 ### <a name="excel-2007-2010-renderer"></a>Representador de Excel 2007-2010  
- En [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], el representador de Excel de forma predeterminada es la versión compatible con [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Es la opción de **Excel** que aparece en los menús de **Exportar** del Administrador de informes y SharePoint.  
+ En [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], el representador predeterminado de Excel es la versión compatible con [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Es la opción de **Excel** que aparece en los menús de **Exportar** del Administrador de informes y SharePoint.  
   
  Si va a usar un representador Excel predeterminado, en lugar del representador Excel 2003 anterior, instale el Paquete de compatibilidad de Microsoft Office para Word, Excel y PowerPoint con el fin de que las versiones anteriores de Excel puedan abrir los archivos que se exportan.  
   
 ### <a name="excel-2003-renderer"></a>Representador de Excel 2003  
   
 > [!IMPORTANT]  
->  El [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] extensión de representación 2003 está en desuso. Para obtener más información, consulte [características desusadas de SQL Server Reporting Services en SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  La extensión de representación de [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para obtener más información, consulte [características desusadas de SQL Server Reporting Services en SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  La versión anterior del representador de Excel, compatible con Excel 2003, se denomina ahora Excel 2003 y aparece en los menús con ese nombre. El tipo de contenido de los archivos generados por este representador es **application/vnd.ms-excel** y la extensión del nombre de los archivos es .xls.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "48096155"
   
 -   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración.  
   
-     Esto es así en el [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y versiones independientes del generador de informes.  
+     Esto es así en las versiones independiente y [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] del Generador de informes.  
   
--   Elemento de Web del Visor de informes en modo local y la granja de SharePoint no está integrado con un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servidor de informes. Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  Si el representador de la opción de menú **Excel 2003** se configura para que esté visible, las opciones de Excel y de Excel 2003 están disponibles en los escenarios siguientes:  
   
@@ -156,9 +156,9 @@ ms.locfileid: "48096155"
   
 -   Sitio de SharePoint si Reporting Services está instalado en modo integrado de SharePoint.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y obtener una vista previa de informes.  
+-   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y obtiene una vista previa del informe.  
   
--   Generador de informes está conectado a un servidor de informes. Esto puede ser un [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] o una versión independiente del generador de informes.  
+-   Generador de informes está conectado a un servidor de informes. Puede tratarse de una versión de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] o independiente del Generador de informes.  
   
 -   El elemento web Visor de informes en modo remoto.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48096155"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- La extensión EXCELOPENXML define el representador de Excel para Excel 2007-2010. La extensión EXCEL define la versión de Excel 2003. `Visible = “false”` indica que el representador de Excel 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ La extensión EXCELOPENXML define el representador de Excel para Excel 2007-2010. La extensión EXCEL define la versión de Excel 2003. `Visible = "false"` indica que el representador de Excel 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Diferencias entre los representadores de Excel 2007-2010 y de Excel 2003  
  Los informes, representados con los representadores de Excel o Excel 2003, suelen ser idénticos y solo en raras ocasiones observará diferencias entre los dos formatos. En la tabla siguiente se comparan los representadores de Excel y de Excel 2003.  
@@ -226,7 +226,7 @@ ms.locfileid: "48096155"
  Las secciones de encabezados y pies de página de Excel admiten un máximo de 256 caracteres, incluido el marcado. Si se supera este límite, el representador de Excel quita caracteres de marcado comenzando al final de la cadena de encabezado, la cadena de pie de página o ambas cadenas; de este modo, reduce el número total de caracteres. Si se quitan todos los caracteres de marcado y la longitud todavía supera el máximo, la cadena se trunca comenzando por la derecha.  
   
 ### <a name="simplepageheader-settings"></a>Configuración de SimplePageHeader  
- De forma predeterminada, la configuración de SimplePageHeaders de información de dispositivo se establece en `False`; por lo tanto, los encabezados de página se representan como filas en el informe en la superficie de la hoja de cálculo de Excel. Las filas de la hoja de cálculo que contienen los encabezados se convierten en filas bloqueadas. Puede inmovilizar o movilizar el panel en Excel.  
+ De forma predeterminada, el parámetro SimplePageHeaders de información del dispositivo se establece en `False`; por consiguiente, los encabezados de página se representan como filas en el informe en la superficie de la hoja de cálculo de Excel. Las filas de la hoja de cálculo que contienen los encabezados se convierten en filas bloqueadas. Puede inmovilizar o movilizar el panel en Excel.  
   
 > [!NOTE]  
 >  Si está seleccionada la opción **Imprimir títulos** , estos encabezados se imprimen en cada página de la hoja de cálculo de manera automática.  
@@ -280,7 +280,7 @@ ms.locfileid: "48096155"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

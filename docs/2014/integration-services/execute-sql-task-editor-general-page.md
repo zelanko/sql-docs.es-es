@@ -15,12 +15,12 @@ ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f983b412b6ef4a91293e07b66a8a0cab6d15a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531369"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor de la tarea Ejecutar SQL (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para configurar la tarea Ejecutar SQL y proporcionar la instrucción SQL de ejecución de la tarea.  
@@ -28,7 +28,7 @@ ms.locfileid: "48079445"
  Para obtener información sobre esta tarea, vea [Tarea Ejecutar SQL](control-flow/execute-sql-task.md), [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) y [Conjuntos de resultados en la tarea Ejecutar SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis, vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference).  
   
 ## <a name="static-options"></a>Opciones estáticas  
- **Nombre**  
+ **Name**  
  Escriba un nombre único para la tarea Ejecutar SQL en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descripción**  
@@ -47,7 +47,7 @@ ms.locfileid: "48079445"
 >  Cuando la tarea Ejecutar SQL utiliza un administrador de conexiones ADO u ODBC, la propiedad **CodePage** no está disponible. Si la solución requiere el uso de una página de códigos, utilice un administrador de conexiones OLE DB o ADO.NET con la tarea Ejecutar SQL.  
   
  **TypeConversionMode**  
- Al establecer esta propiedad `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y resultados a los datos de tipo de la variable de los resultados de consulta que se asignan. Esto se aplica al tipo de conjunto de resultados de **Fila única** .  
+ Cuando establece esta propiedad en `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y los resultados de la consulta al tipo de datos de la variable a la que se asignan los resultados. Esto se aplica al tipo de conjunto de resultados de **Fila única** .  
   
  **ResultSet**  
  Especifique el tipo de resultados esperado tras la ejecución de la instrucción SQL. Elija **Fila única**, **Conjunto de resultados completo**, **XML**o **Ninguno**.  
@@ -55,7 +55,7 @@ ms.locfileid: "48079445"
  **ConnectionType**  
  Elija el tipo de administrador de conexiones que desea utilizar para conectarse al origen de datos. Entre los tipos de conexión disponibles se encuentran **OLE DB**, **ODBC**, **ADO**, **ADO.NET** y **SQLMOBILE**.  
   
- **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md), [Administrador de conexiones ADO](connection-manager/ado-connection-manager.md), [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md), [Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md), [Administrador de conexiones ADO](connection-manager/ado-connection-manager.md), [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md), [SQL Server Administrador de conexiones de Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexión**  
  Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…**>.  
@@ -65,7 +65,7 @@ ms.locfileid: "48079445"
   
  Dependiendo del tipo de administrador de conexiones que utiliza la tarea Ejecutar SQL, debe utilizar marcadores de parámetros específicos en instrucciones SQL con parámetros.  
   
- **Temas relacionados:** sección Ejecutar comandos SQL con parámetros en [Execute SQL Task](control-flow/execute-sql-task.md)  
+ **Temas relacionados:** Sección de comandos SQL con parámetros de ejecución en [tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48079445"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Entrada directa  
  **SQLStatement**  
- Escriba la instrucción SQL que quiere ejecutar en el cuadro de opción (o haga clic en el botón Examinar […] para escribir la instrucción SQL en el cuadro de diálogo **Escribir consulta SQL** ), o bien haga clic en **Generar consulta** para escribir la instrucción en el cuadro de diálogo **Generador de consultas** .  
+ Escriba la instrucción SQL que quiere ejecutar en el cuadro de opción, o bien haga clic en el botón Examinar […] para escribir la instrucción SQL en el cuadro de diálogo **Escribir consulta SQL**; también puede hacer clic en **Generar consulta** para escribir la instrucción en el cuadro de diálogo **Generador de consultas**.  
   
  **Temas relacionados:** [Generador de consultas](../../2014/integration-services/query-builder.md)  
   
@@ -104,16 +104,16 @@ ms.locfileid: "48079445"
  **FileConnection**  
  Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del Administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
  Seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [agregar Variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ejecutar el Editor de la tarea SQL &#40;página asignación de parámetros&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Ejecutar el Editor de la tarea SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089675"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772649"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
-  Correo electrónico de base de datos tiene dos objetos de configuración. Los objetos de configuración de base de datos proporcionan una manera de configurar los valores que Correo electrónico de base de datos debe usar al enviar un correo electrónico de la aplicación de base de datos o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Correo electrónico de base de datos tiene dos objetos de configuración: Los objetos de configuración de la base de datos proporcionan una manera para que pueda configurar las opciones de esa base de datos de correo electrónico debe usar al enviar un correo electrónico desde la aplicación de base de datos o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 -   Cuentas de Correo electrónico de base de datos  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48089675"
   
  Correo electrónico de base de datos permite el uso de tres métodos de autenticación para comunicarse con un servidor SMTP:  
   
--   Autenticación de Windows: el Correo electrónico de base de datos utiliza las mismas credenciales de la cuenta de servicio de Windows [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para la autenticación en el servidor SMTP.  
+-   Autenticación de Windows: Correo electrónico de base de datos utiliza las credenciales de la [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] cuenta para la autenticación en el servidor SMTP del servicio de Windows.  
   
--   Autenticación básica: el Correo electrónico de base de datos utiliza el nombre de usuario y la contraseña especificados para la autenticación en el servidor SMTP.  
+-   Autenticación básica:  Correo electrónico de base de datos utiliza el nombre de usuario y la contraseña especificados para la autenticación en el servidor SMTP.  
   
--   Autenticación anónima: el servidor SMTP no requiere autenticación.  Correo electrónico de base de datos no utilizará ninguna credencial para la autenticación en el servidor SMTP.  
+-   Autenticación anónima:  El servidor SMTP no requiere ninguna autenticación.  Correo electrónico de base de datos no utilizará ninguna credencial para la autenticación en el servidor SMTP.  
   
  La información de la cuenta se almacena en la base de datos **msdb** . Cada cuenta contiene la siguiente información:  
   

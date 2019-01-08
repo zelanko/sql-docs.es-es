@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying filters, static row
@@ -15,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 73c0e6d0ab47960aae61955cc4c432f2a883ae42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184935"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771557"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir y modificar un filtro de fila estático
   En este tema se describe cómo definir y modificar un filtro de fila estático en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -39,7 +38,7 @@ ms.locfileid: "48184935"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -112,7 +111,7 @@ ms.locfileid: "48184935"
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Especifique el nombre del artículo para **@article**, el nombre de la publicación para **@publication**, un nombre de filtro para **@filter_name**y la cláusula de filtrado para **@filter_clause** (no se incluye `WHERE`).  
   
-3.  Si todavía debe definirse un filtro de columna, vea [Definir y modificar un filtro de columna](define-and-modify-a-column-filter.md). De lo contrario, ejecute [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Especifique el nombre de la publicación para **@publication**, el nombre del artículo filtrado para **@article**y la cláusula de filtro especificada en el paso 2 para **@filter_clause**. Esto crea los objetos de sincronización para el artículo filtrado.  
+3.  Si todavía debe definirse un filtro de columna, vea [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). De lo contrario, ejecute [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Especifique el nombre de la publicación para **@publication**, el nombre del artículo filtrado para **@article**y la cláusula de filtro especificada en el paso 2 para **@filter_clause**. Esto crea los objetos de sincronización para el artículo filtrado.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para modificar un filtro de fila estático para una publicación transaccional o de instantáneas  
   

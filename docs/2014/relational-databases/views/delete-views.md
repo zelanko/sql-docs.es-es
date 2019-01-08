@@ -15,19 +15,19 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e52ab35b0f75f80a6117995a353b66c320a5294
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513489"
 ---
 # <a name="delete-views"></a>Eliminar vistas
   Puede eliminar (quitar) vistas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48085595"
 3.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   
     > [!IMPORTANT]  
-    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo *nombre_de_vista***Dependencias**. Esto mostrará todos los objetos que dependen de la vista y todos los objetos de los que depende la vista.  
+    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias de _view_name_**. Esto mostrará todos los objetos que dependen de la vista y todos los objetos de los que depende la vista.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

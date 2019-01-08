@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
@@ -16,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4eddd53df9d9a373a9a4101686dd016a09d20e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3e66397a61dc6cf5679e089bc03ce0e2d252cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785037"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tarea Consulta de minería de datos ejecuta consultas de predicción basadas en modelos de minería de datos integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La consulta de predicción crea una predicción para datos nuevos a partir de modelos de minería de datos. Por ejemplo, una consulta de predicción puede predecir cuántos barcos de vela es probable vender durante los meses de verano, así como generar una lista de clientes que podrían estar interesados en comprar uno.  
@@ -32,7 +31,7 @@ ms.locfileid: "48225165"
   
 -   [Tarea Ejecutar DDL de Analysis Services](analysis-services-execute-ddl-task.md)  
   
--   [Tarea de procesamiento de Analysis Services](analysis-services-processing-task.md)  
+-   [Tarea Procesamiento de Analysis Services](analysis-services-processing-task.md)  
   
 ## <a name="prediction-queries"></a>Consultas de predicción  
  La consulta es una instrucción de Extensiones de minería de datos (DMX). El lenguaje DMX es una extensión del lenguaje SQL que permite trabajar con modelos de minería de datos. Para más información sobre cómo usar el lenguaje DMX, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
@@ -52,11 +51,11 @@ ms.locfileid: "48225165"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de tareas de consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Editor de la tarea Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor de tareas de consulta de minería de datos &#40;ficha consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor de la tarea Consulta de minería de datos &#40;pestaña Consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor de tareas de consulta de minería de datos &#40;salida (pestaña)&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor de la tarea Consulta de minería de datos &#40;pestaña Salida&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  El Editor de la tarea Consulta de minería de datos no tiene página Expresiones. Utilice en su lugar la ventana **Propiedades** para tener acceso a las herramientas de creación y administración de expresiones de propiedades para las propiedades de la tarea Consulta de minería de datos.  

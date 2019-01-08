@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532184"
 ---
 # <a name="save-a-copy-of-a-package"></a>Guardar una copia de un paquete
   Este procedimiento describe cómo guardar una copia de un paquete en el sistema de archivos, en el almacén de paquetes o en la base de datos **msdb** en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al especificar una ubicación para guardar la copia del paquete, puede actualizar también el nombre del paquete.  
@@ -46,7 +46,7 @@ ms.locfileid: "48193415"
   
 5.  Si se guarda en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], especifique el tipo de autenticación y, si se usa la Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-6.  Para especificar la ruta de acceso del paquete, escríbala o haga clic en el botón **(…)** para especificar la ubicación del paquete. El nombre predeterminado del paquete es Paquete. Opcionalmente, cambie el nombre del paquete a uno que satisfaga sus necesidades.  
+6.  Para especificar la ruta de acceso del paquete, escríbala o haga clic en el botón Examinar **(…)** para especificar la ubicación del paquete. El nombre predeterminado del paquete es Paquete. Opcionalmente, cambie el nombre del paquete a uno que satisfaga sus necesidades.  
   
      Si selecciona **SQL Server** como opción de **Ruta de acceso del paquete** , la ruta de acceso del paquete consta de carpetas lógicas de **msdb** y el nombre del paquete. Por ejemplo, si el paquete DownloadMonthlyData está asociado con la carpeta Finance dentro de la carpeta MSDB (nombre predeterminado de la carpeta lógica raíz de **msdb**), la ruta del paquete DownloadMonthlyData es MSDB/Finance/DownloadMonthlyData.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48193415"
   
 7.  Revise el nivel de protección del paquete.  
   
-8.  Opcionalmente, haga clic en el botón para examinar **(…)** junto al cuadro **Nivel de protección** para cambiar el nivel de protección.  
+8.  También puede hacer clic en el botón Examinar **(…)** junto al cuadro **Nivel de protección** para cambiar el nivel de protección.  
   
     -   En el cuadro de diálogo **Nivel de protección de paquetes** , seleccione un nivel de protección diferente.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193415"
 9. Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; paquetes](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Configurar la integración de servicios de Service &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

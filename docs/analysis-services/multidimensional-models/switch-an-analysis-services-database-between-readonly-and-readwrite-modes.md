@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147920"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525878"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "50147920"
   
      Tenga en cuenta la ubicación. Una ubicación de almacenamiento de la base de datos vacía indica que la carpeta de la base de datos está ubicada en la carpeta de datos del servidor.  
   
-2.  Haga clic con el botón derecho en la base de datos y seleccione **Separar…**  
+2.  Haga clic en la base de datos y seleccione **separar...**  
   
 3.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
-4.  En el Explorador de objetos, haga clic con el botón derecho en la carpeta **Bases de datos** y, después, seleccione **Asociar…**  
+4.  En el Explorador de objetos, haga clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
   
-5.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. También puede usar el botón Examinar (**…**) para buscar la carpeta de la base de datos.  
+5.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...** ) para buscar la carpeta de base de datos.  
   
 6.  Seleccione el modo de lectura/escritura para la base de datos.  
   
@@ -93,7 +93,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      Tenga en cuenta la ubicación. Una ubicación de almacenamiento de la base de datos vacía indica que la carpeta de la base de datos está ubicada en la carpeta de datos del servidor.  
   
-2.  Haga clic con el botón derecho en la base de datos y seleccione **Separar…**  
+2.  Haga clic en la base de datos y seleccione **separar...**  
   
 3.  Abra una nueva pestaña XMLA en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   

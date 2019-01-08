@@ -10,12 +10,12 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 759c2eb56bb437f17c06229b7b6a85f22b040319
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f271f8c3c2d3371326b1ffe8d7f1f55bf5ee89c4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031802"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396545"
 ---
 # <a name="data-matching"></a>Coincidencia de datos
   El proceso de búsqueda de coincidencias de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite reducir la duplicación de datos y mejorar la precisión de estos en un origen de datos. Este proceso analiza el grado de duplicación de todos los registros de un único origen de datos, y devuelve las probabilidades ponderadas de una coincidencia entre cada conjunto de registros comparados. A continuación, puede decidir qué registros son coincidencias y tomar las medidas apropiadas en los datos de origen.  
@@ -64,7 +64,7 @@ ms.locfileid: "51031802"
   
  Un proyecto de búsqueda de coincidencias de datos consta de un proceso asistido por PC y de un proceso interactivo. El proyecto de búsqueda de coincidencias aplica las reglas de coincidencia de la directiva correspondiente al origen de datos que se va a evaluar. Este proceso evalúa la probabilidad de que dos filas cualesquiera sean coincidencias valiéndose de una puntuación de coincidencia. Solo aquellos registros con una probabilidad de coincidencia superior a un valor establecido por el administrador de datos en la directiva de coincidencia se considerarán una coincidencia.  
   
- Cuando DQS realiza el análisis de coincidencia, crea clústeres de registros que considera como coincidencias. DQS identifica de forma aleatoria uno de los registros de cada clúster como el registro dinámico, o inicial. El administrador de datos comprueba los resultados de búsqueda de coincidencias y rechaza aquellos registros que no sean una coincidencia apropiada para un clúster. A continuación, el administrador de datos seleccionará una regla de permanencia que DQS utilizará para determinar el registro que permanecerá tras el proceso de búsqueda de coincidencias y reemplazará a los registros coincidentes. La regla de permanencia puede ser “Registro dinámico” (la regla predeterminada), “Registro más completo y más largo”, “Registro más completo” o “Registro más largo”. DQS determina el registro que permanece (inicial) de cada clúster en función del registro que coincide con mayor exactitud con los criterios de la regla de permanencia. Si hay varios registros de un determinado clúster que cumplen la regla de permanencia, DQS selecciona uno de ellos de forma aleatoria. DQS le ofrece la posibilidad de mostrar los clústeres que tienen registros en común como un único clúster; para ello, seleccione “Mostrar clústeres no superpuestos”. Debe ejecutar el proceso de búsqueda de coincidencias para poder mostrar los resultados de acuerdo con este valor.  
+ Cuando DQS realiza el análisis de coincidencia, crea clústeres de registros que considera como coincidencias. DQS identifica de forma aleatoria uno de los registros de cada clúster como el registro dinámico, o inicial. El administrador de datos comprueba los resultados de búsqueda de coincidencias y rechaza aquellos registros que no sean una coincidencia apropiada para un clúster. A continuación, el administrador de datos seleccionará una regla de permanencia que DQS utilizará para determinar el registro que permanecerá tras el proceso de búsqueda de coincidencias y reemplazará a los registros coincidentes. La regla de permanencia puede ser "Registro dinámico" (la predeterminada), "Registro más completo y más largo", "Registro más completo" o "Registro más largo". DQS determina el registro que permanece (inicial) de cada clúster en función del registro que coincide con mayor exactitud con los criterios de la regla de permanencia. Si hay varios registros de un determinado clúster que cumplen la regla de permanencia, DQS selecciona uno de ellos de forma aleatoria. DQS ofrece la posibilidad de mostrar los clústeres que tienen registros en común como un único clúster; para ello, seleccione "Mostrar clústeres no superpuestos". Debe ejecutar el proceso de búsqueda de coincidencias para poder mostrar los resultados de acuerdo con este valor.  
   
  Puede exportar los resultados del proceso de búsqueda de coincidencias a una tabla de SQL Server o a un archivo .csv. Es posible exportar los resultados de búsqueda de coincidencias de dos formas: la primera consiste en exportar los registros coincidentes y los no coincidentes, y la segunda en exportar los registros de permanencia que incluyen solo el registro que permanece de un clúster y los resultados no coincidentes. En los registros de permanencia, si el mismo registro se identifica como el que permanece para varios clústeres, dicho registro solo se exportará una vez.  
   

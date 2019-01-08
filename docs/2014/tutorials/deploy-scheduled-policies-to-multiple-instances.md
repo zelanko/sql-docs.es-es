@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128275"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518622"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implementar directivas programadas en varias instancias
   Mediante el uso de servidores registrados puede implementar directivas programadas en servidores administrados desde una ubicación central. Puede implementar directivas programadas desde un grupo de servidores locales o desde un Servidor de administración central.  
@@ -36,7 +36,7 @@ ms.locfileid: "48128275"
   
 -   Las instancias en las que desee implementar las directivas programadas deben ejecutar [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] o una versión posterior. Automation requiere que las directivas estén almacenadas localmente, lo que no se admite en versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
--   Los servidores donde desea implementar las directivas programadas deben estar registrados en servidores registrados en el el **grupos de servidores locales** o **servidores de Administración Central** nodo. Para obtener más información, consulte los temas siguientes:  
+-   Los servidores donde desea implementar las directivas programadas deben estar registrados en servidores registrados en el el **grupos de servidores locales** o **servidores de Administración Central** nodo. Para obtener más información, vea los temas siguientes:  
   
     -   [Crear o editar un grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48128275"
  Este tutorial le ha mostrado la forma de realizar evaluaciones tanto programadas como a petición de las directivas de prácticas recomendadas en una o varias instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Siguiente  
- Este tutorial ha finalizado. Para volver al principio, vea [Tutorial: evaluar las prácticas recomendadas mediante administración basada en](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ Este tutorial ha finalizado. Para volver al principio, vea [Tutorial: Evaluar las prácticas recomendadas usando administración basada en directivas](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Para ver una lista de [!INCLUDE[ssDE](../includes/ssde-md.md)] tutoriales, haga clic en [tutoriales del motor de base de datos](../relational-databases/database-engine-tutorials.md).  
   

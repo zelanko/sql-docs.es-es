@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear un nuevo proyecto de modelo Tabular | Microsoft Docs'
+title: 'Lección 1: Cree un nuevo proyecto de modelo Tabular | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 873b4cce7a2bd72c74bb7aff3147351b0062eb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7ab0a864d99e3cade96b7715adf7d307ca355c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124925"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394178"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lección 1: Crear un nuevo proyecto de modelo tabular
   En esta lección, creará un nuevo proyecto de modelo tabular en blanco en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Una vez creado el nuevo proyecto, puede comenzar a agregar datos usando el Asistente para la importación de tablas. Además de crear un nuevo proyecto, esta lección incluye también una breve introducción al entorno de creación de modelos tabulares en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "48124925"
 4.  Haga clic en **Aceptar**.  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Descripción del entorno de creación de modelos tabulares con las herramientas de datos de SQL Server  
- Ahora que ha creado un nuevo proyecto de modelo tabular, dedique un momento a examinar el entorno de creación de modelos tabulares de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 o posterior).  
+ Ahora que ha creado un nuevo proyecto de modelo tabular, dedique un momento a examinar el entorno en de creación de modelos tabulares [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 o posterior).  
   
  Después de crear el proyecto, este se abre en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Aparecerá un modelo vacío en el diseñador de modelos y el archivo **Model.bim** se seleccionará en la ventana **Explorador de soluciones** . Cuando agregue datos, aparecerán tablas y columnas en el diseñador. Si no ve el diseñador (la ventana vacía con la pestaña Model.bim), en **el Explorador de soluciones**, en `AW Internet Sales Tabular Model`, haga doble clic en el **Model.bim** archivo.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "48124925"
   
  En **el Explorador de soluciones**, haga clic en el `AW Internet Sales Tabular Model` del proyecto y, a continuación, haga clic en **propiedades**. Aparece el cuadro de diálogo **Páginas de propiedades del Modelo tabular de ventas por Internet de AW** . Estas son las propiedades avanzadas del proyecto. Establecerá alguna de estas propiedades más adelante cuando esté preparado para implementar el modelo.  
   
- Ahora, examinemos las propiedades del modelo. En el **Explorador de soluciones**, haga clic en **Model.bim**. En la ventana **Propiedades** verá ahora las propiedades del modelo, de las cuales la más importante es **Modo DirectQuery** . Esta propiedad especifica si el modelo se va a implementar en modo de almacenamiento en memoria (desactivada) o en modo DirectQuery (activada). En este tutorial, creará e implementará el modelo en modo de almacenamiento en memoria.  
+ Ahora, echemos un vistazo a las propiedades del modelo. En el **Explorador de soluciones**, haga clic en **Model.bim**. En la ventana **Propiedades** verá ahora las propiedades del modelo, de las cuales la más importante es **Modo DirectQuery** . Esta propiedad especifica si el modelo se va a implementar en modo de almacenamiento en memoria (desactivada) o en modo DirectQuery (activada). En este tutorial, creará e implementará el modelo en modo de almacenamiento en memoria.  
   
  Cuando crea un modelo nuevo, algunas propiedades del modelo se establecen automáticamente según la configuración del modelo de datos, que puede especificarse en Herramientas\cuadro de diálogo Opciones. Las propiedades Copia de seguridad de datos, Retención de área de trabajo y Servidor del área de trabajo especifican cómo y dónde se realiza una copia de seguridad, se conserva en memoria y se crea la base de datos del área de trabajo (la base de datos de creación del modelo). Puede cambiar esta configuración más adelante si es necesario, pero de momento deje estas propiedades tal como están.  
   
- Cuando instaló [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], se agregaron varios elementos de menú nuevos al entorno de Visual Studio. Examinemos los nuevos elementos de menú que son específicos de la creación de modelos tabulares. Haga clic en el menú **Modelo** . Desde aquí, puede iniciar el Asistente para la importación de tablas, ver y editar conexiones existentes, actualizar los datos del área de trabajo, examinar el modelo en [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel con la característica Analizar de Excel, crear perspectivas y roles, seleccionar la vista del modelo y definir opciones de cálculo.  
+ Cuando instaló [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], se agregaron varios elementos de menú nuevos al entorno de Visual Studio. Echemos un vistazo a los nuevos elementos de menú que son específicos de creación de modelos tabulares. Haga clic en el menú **Modelo** . Desde aquí, puede iniciar el Asistente para la importación de tablas, ver y editar conexiones existentes, actualizar los datos del área de trabajo, examinar el modelo en [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel con la característica Analizar de Excel, crear perspectivas y roles, seleccionar la vista del modelo y definir opciones de cálculo.  
   
  Haga clic en el menú **Tabla**. Aquí puede crear y administrar las relaciones entre tablas, crear y administrar tablas, especificar la configuración de las tablas de datos, crear particiones y editar las propiedades de tabla.  
   

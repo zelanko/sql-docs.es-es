@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server replication]
@@ -13,12 +12,12 @@ ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35ae15fc44acfd7b9b203c4af2b9e436edecb9d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2fdfc3f9db9b0d404bb1c7dc60fa568198ec2aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124247"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753999"
 ---
 # <a name="technical-reference-replication"></a>Referencia técnica (replicación)
   Esta sección contiene los vínculos a la documentación de la referencia técnica para la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,14 +32,14 @@ ms.locfileid: "48124247"
   
  [New Publication Wizard](new-publication-wizard.md)  
   
- [Más…](properties-reference-replication.md)  
+ [Más...](properties-reference-replication.md)  
   
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Agentes de replicación**  
  [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
- [Más…](agents/replication-agents.md)  
+ [Más...](agents/replication-agents.md)  
   
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Procedimientos almacenados de replicación**  
  [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)  
@@ -53,7 +52,7 @@ ms.locfileid: "48124247"
   
  [sp_addsubscriber &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)  
   
- [Más…](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)  
+ [Más...](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)  
   
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Tablas de replicación**  
  [MSmerge_conflicts_info &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msmerge-conflicts-info-transact-sql)  
@@ -62,14 +61,14 @@ ms.locfileid: "48124247"
   
  [syssubscriptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/syssubscriptions-transact-sql)  
   
- [Más…](/sql/relational-databases/system-tables/replication-tables-transact-sql)  
+ [Más...](/sql/relational-databases/system-tables/replication-tables-transact-sql)  
   
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Vistas de replicación**  
  [syspublications &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](/sql/relational-databases/system-views/syspublications-system-view-transact-sql)  
   
  [syssubscriptions &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](/sql/relational-databases/system-views/syssubscriptions-system-view-transact-sql)  
   
- [Más…](/sql/relational-databases/system-views/replication-views-transact-sql)  
+ [Más...](/sql/relational-databases/system-views/replication-views-transact-sql)  
   
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Biblioteca de clases de replicación**  
  <xref:Microsoft.SqlServer.Replication>  

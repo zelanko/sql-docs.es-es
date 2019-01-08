@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b271da0d9abc35d9733c257452b5f9eb2e317942
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eb075777b65a410f27e318e2d923f0b0882822d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205489"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784267"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Enviar por correo electrónico un archivo de consulta de acceso directo (complemento MDS para Excel)
-  En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede enviar por correo electrónico un archivo de consulta de acceso directo a alguien si desea asegurarse de que trabajará con los mismos datos que usted. Debe compartir las consultas en lugar de guardar la hoja de cálculo y enviarla por correo electrónico.  
+  En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede enviar por correo electrónico un archivo de consulta de acceso directo a alguien si quiere asegurarse de que va a trabajar con los mismos datos que usted. Debe compartir las consultas en lugar de guardar la hoja de cálculo y enviarla por correo electrónico.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  

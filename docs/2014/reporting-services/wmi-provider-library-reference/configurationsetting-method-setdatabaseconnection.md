@@ -19,12 +19,12 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68907320922f0181521a9ff30de708f660e8dd8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207105"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518626"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Método SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
   Define la conexión de la base de datos del servidor de informes a una base de datos de servidor de informes concreta.  
@@ -55,7 +55,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2 - Servicio de Windows  
   
@@ -76,15 +76,15 @@ public void BackupEncryptionKey(string Server,
   
  Cuando el parámetro *CredentialsType* se establece en 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), el valor pasado en el parámetro *UserName* debe cumplir los requisitos de un nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Cuando el parámetro *CredentialsType* se establece en 2 (servicio de Windows), el servidor de informes usa la seguridad integrada para conectarse a la base de datos del servidor de informes y se omiten los parámetros *UserName* y *Password* . El servicio web del servidor de informes utilizará la cuenta [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] o una cuenta de un grupo de aplicaciones y la cuenta del servicio de Windows para tener acceso a la base de datos del servidor de informes.  
+ Cuando el parámetro *CredentialsType* se establece en 2 (servicio de Windows), el servidor de informes usa la seguridad integrada para conectarse a la base de datos del servidor de informes y se omiten los parámetros *UserName* y *Password* . El servicio web del servidor de informes usará la cuenta [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] o una cuenta de un grupo de aplicaciones y la cuenta del servicio de Windows para acceder a la base de datos del servidor de informes.  
   
  Cuando se llama, el método SetDatabaseConnection cifra y almacena las credenciales y la información de la base de datos en el archivo de configuración del servidor de informes especificado.  
   
  El método SetDatabaseConnection no comprueba que el servidor de informes pueda conectarse a la base de datos del servidor de informes usando los datos especificados.  
   
- Cuando se establece por primera vez, la propiedad ConnectionPoolSize se establece en función de los procesadores siguientes: ConnectionPoolSize = #Processors * 75.  
+ Cuando se establece por primera vez, el ConnectionPoolSize se establece la propiedad en función de los procesadores siguientes: ConnectionPoolSize = #Processors * 75.  
   
- El método SetDatabaseConnection no concede permisos a las cuentas especificadas. Debe llamar a la [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) método para cada cuenta que requiere acceso a la base de datos del servidor de informes y ejecuta el script resultante.  
+ El método SetDatabaseConnection no concede permisos a las cuentas especificadas. Debe llamar al método [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) para cada cuenta que requiera el acceso a la base de datos del servidor de informes y ejecutar el script resultante.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

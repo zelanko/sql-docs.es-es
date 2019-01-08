@@ -13,12 +13,12 @@ ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1a3d143148b912379f81a65d73f9f8895f2d10e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 676b5a8d8d05c5cb26a30eaa1b1fe9426ac30ea7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140876"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510040"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formatos de datos para importación o exportación masivas (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aceptar datos en formato de datos de caracteres o binarios nativos. Use el formato de caracteres al mover datos entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otra aplicación (como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) u otro servidor de bases de datos (como Oracle o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Solo puede usar el formato nativo al transferir datos entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,12 +34,12 @@ ms.locfileid: "48140876"
   
 |Operación|Nativa|Unicode nativo|Carácter|carácter Unicode|  
 |---------------|------------|--------------------|---------------|-----------------------|  
-|Transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que no contenga caracteres del juego de caracteres de doble byte (DBCS). A menos que se use un archivo de formato, estas tablas deben definirse de forma idéntica.|Sí<sup>1</sup>|—|—|—|  
-|Para las columnas `sql_variant`, es mejor el uso del formato de datos nativo, ya que preserva los metadatos de cada valor `sql_variant`, a diferencia de los formatos de caracteres o Unicode.|Sí|—|—|—|  
-|Transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga caracteres DBCS o extendidos.|—|Sí|—|—|  
-|Importación masiva de datos desde un archivo de texto generado por otro programa.|—|—|Sí|—|  
-|Exportación masiva de datos a un archivo de texto para usarlo en otro programa.|—|—|Sí|—|  
-|Transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga datos Unicode y no contenga caracteres DBCS o extendidos.|—|—|—|Sí|  
+|Transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que no contenga caracteres del juego de caracteres de doble byte (DBCS). A menos que se use un archivo de formato, estas tablas deben definirse de forma idéntica.|Sí<sup>1</sup>|-|-|-|  
+|Para las columnas `sql_variant`, es mejor el uso del formato de datos nativo, ya que preserva los metadatos de cada valor `sql_variant`, a diferencia de los formatos de caracteres o Unicode.|Sí|-|-|-|  
+|Transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga caracteres DBCS o extendidos.|-|Sí|-|-|  
+|Importación masiva de datos desde un archivo de texto generado por otro programa.|-|-|Sí|-|  
+|Exportación masiva de datos a un archivo de texto para usarlo en otro programa.|-|-|Sí|-|  
+|Transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga datos Unicode y no contenga caracteres DBCS o extendidos.|-|-|-|Sí|  
   
  <sup>1</sup> método más rápido para la exportación masiva de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al usar **bcp**.  
   

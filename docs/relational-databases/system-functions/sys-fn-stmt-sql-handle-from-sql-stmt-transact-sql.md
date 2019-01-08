@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9eddf5cb58b18651acd77afe44758a47b1fd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602854"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537892"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 -   0: ninguno  
   
--   1: usuario  
+-   1 - usuario  
   
--   2 – simple  
+-   2 - simple  
   
--   3 – forzada  
+-   3 - forzada  
   
 ## <a name="columns-returned"></a>Columnas devueltas  
  La tabla siguiente enumeran las columnas que sys.fn_stmt_sql_handle_from_sql_stmt devuelve.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -16,12 +15,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cca83a20c7559a8b7192fd345b559226c9c7d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749407"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
   Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](master-database.md), [modelo](model-database.md), [msdb](msdb-database.md)o de [recursos](resource-database.md) , o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -46,7 +45,7 @@ ms.locfileid: "48135505"
   
      [Solucionar errores de recompilación](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se vuelven a generar las bases de datos maestra, modelo, msdb y tempdb del sistema, las bases de datos se quitan y se vuelven a crear en su ubicación original. Si se especifica una nueva intercalación en la instrucción para volver a generar las bases de datos del sistema, estas se crearán con esa configuración de intercalación. Se perderán las modificaciones que los usuarios hayan realizado en esas bases de datos. Por ejemplo, es posible que haya objetos definidos por los usuarios en la base de datos maestra, trabajos programados en msdb o cambios en la configuración predeterminada de la base de datos modelo.  
@@ -105,8 +104,8 @@ ms.locfileid: "48135505"
     |/QUIET o /Q|Especifica que el programa de instalación se ejecute sin ninguna interfaz de usuario.|  
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
     |/INSTANCENAME=*InstanceName*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o grupos de Windows para agregar a la `sysadmin` rol fijo de servidor. Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Por ejemplo, escriba `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta `sa` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **\*\* Nota de seguridad \* \***  el `sa` cuenta es una cuenta conocida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta y a menudo el objetivo de usuarios malintencionados. Es muy importante que utilice una contraseña segura para la `sa` inicio de sesión.<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor `sysadmin`. Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Por ejemplo, escriba `NT AUTHORITY\SYSTEM`:|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta `sa` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **\*\* Nota de seguridad \* \***  el `sa` cuenta es una cuenta conocida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta y a menudo el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de `sa`.<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \* \***  cambiar la intercalación de nivel de servidor no cambia la intercalación de bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Una vez completada la regeneración de las bases de datos del sistema, el programa de instalación regresa al símbolo del sistema sin mostrar ningún mensaje. Examine el archivo de registro Summary.txt para comprobar que el proceso se completó correctamente. Este archivo se encuentra en C:\Archivos de programa\Microsoft SQL Server\120\Setup Bootstrap\Logs.  

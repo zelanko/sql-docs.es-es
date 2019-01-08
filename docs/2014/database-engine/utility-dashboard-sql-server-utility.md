@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101515"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351653"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Panel de la utilidad (utilidad de SQL Server)
   Para ver los datos en el panel de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione el nodo superior en el árbol del explorador de la utilidad (identificado como "Utilidad<UCP_Name>\\(nombreDeEquipo\UCP)"). El panel incluye un resumen y datos detallados de todas las instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de todas las aplicaciones de capa de datos en la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para actualizar los datos en el panel, haga clic con el botón derecho en el nodo superior del árbol del explorador de la utilidad y seleccione **Actualizar**.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101515"
  El estado detallado de cada parámetro de estado se muestra en indicadores deslizantes. La zona a la derecha de los indicadores deslizantes muestra el número de aplicaciones de capa de datos que se encuentran en cada categoría de estado. Para obtener más información sobre cómo ver el estado de mantenimiento de aplicaciones de capa de datos individuales o para ver o cambiar la configuración de la directiva, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
  Historial de la utilización del almacenamiento de la utilidad  
- El historial de utilización se muestra en un gráfico cronológico en la parte inferior del panel de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
+ El historial de utilización se muestra en un gráfico cronológico en la parte inferior del panel de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
  Utilice los botones de radio a la izquierda del área de presentación para cambiar los periodos de notificación del gráfico.  
   

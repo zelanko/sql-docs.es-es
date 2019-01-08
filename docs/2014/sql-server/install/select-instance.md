@@ -13,12 +13,12 @@ ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 769ae8cd5abab02fd2ae253e6165ad4d6b89b974
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511554"
 ---
 # <a name="select-instance"></a>Seleccionar instancia
   Utilice la página Seleccionar instancia del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de especificar la instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que desea actualizar a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -26,9 +26,9 @@ ms.locfileid: "48182095"
 ## <a name="options"></a>Opciones  
  Utilice los botones de opción para especificar si desea actualizar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus componentes compartidos, o si solo desea actualizar los componentes compartidos. Los componentes compartidos de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son los siguientes:  
   
--   Herramientas de administración – Básica  
+-   Herramientas de administración: básicas  
   
--   Herramientas de administración: completas  
+-   Herramientas de administración - Completa  
   
 -   Conectividad con las herramientas de cliente  
   

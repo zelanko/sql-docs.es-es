@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
@@ -14,12 +13,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351465"
 ---
 # <a name="upgrade-integration-services-packages"></a>Actualizar paquetes de Integration Services
   Cuando se actualiza una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], existentes [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] paquetes no se actualizan automáticamente al formato de paquete que la versión actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se utiliza. Tendrá que seleccionar un método de actualización y actualizar manualmente los paquetes.  
@@ -47,7 +46,7 @@ ms.locfileid: "49072209"
   
 -   Migre los paquetes a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]y después actualice los paquetes a [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
-     Para obtener información sobre cómo migrar paquetes DTS a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] y a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], vea [Migrar paquetes de Servicios de transformación de datos](http://go.microsoft.com/fwlink/?LinkId=251870) (2005) y [Migrar paquetes de Servicios de transformación de datos](http://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
+     Para obtener información sobre cómo migrar paquetes DTS a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] y a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], vea [Migrar paquetes de Servicios de transformación de datos](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) y [Migrar paquetes de Servicios de transformación de datos](https://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
   
 -   Vuelva a crear los paquetes DTS mediante [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
@@ -64,8 +63,8 @@ ms.locfileid: "49072209"
 |Use la utilidad **dtexec** (dtexec.exe) que se instala con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> Para más información, consulte [dtexec Utility](../packages/dtexec-utility.md).|La actualización del paquete es temporal. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es temporal.<br /><br /> No se pueden guardar los cambios.|  
 |Abra un archivo de paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|La actualización del paquete es definitiva si guarda el paquete; de lo contrario, es temporal.<br /><br /> En el caso de un paquete [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración del script es definitiva si guarda el paquete; de lo contrario, es temporal.|  
 |Agregar un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a un proyecto existente en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es definitiva.|  
-|Abra un archivo de proyecto [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y luego use el Asistente para actualizar paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] para actualizar varios paquetes en el proyecto.<br /><br /> Para obtener más información, vea [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md) y [Ayuda F1 del Asistente para actualización del paquete SSIS](../ssis-package-upgrade-wizard-f1-help.md).|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la migración de scripts es definitiva.|  
-|Use la utilidad <xref:Microsoft.SqlServer.Dts.Runtime.Application.Upgrade%2A> para actualizar uno o más paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la migración de scripts es definitiva.|  
+|Abra un archivo de proyecto [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y luego use el Asistente para actualizar paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] para actualizar varios paquetes en el proyecto.<br /><br /> Para obtener más información, vea [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md) y [Ayuda F1 del Asistente para actualización del paquete SSIS](../ssis-package-upgrade-wizard-f1-help.md).|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es definitiva.|  
+|Use la utilidad <xref:Microsoft.SqlServer.Dts.Runtime.Application.Upgrade%2A> para actualizar uno o más paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es definitiva.|  
   
 ## <a name="custom-applications-and-custom-components"></a>Aplicaciones y componentes personalizados  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] no funcionarán con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -84,7 +83,7 @@ ms.locfileid: "49072209"
   
  Para usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes personalizados, deberá modificar el archivo devenv.exe.config que se encuentra en  *\<unidad >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información sobre la redirección de la versión de ensamblado, vea [Elemento \<assemblyBinding> para \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información sobre la redirección de la versión de ensamblado, vea [Elemento \<assemblyBinding> para \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Buscar los ensamblados  
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una memoria caché global de ensamblados diferente para .NET 4, que se encuentra en *\<unidad>*:\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
@@ -108,10 +107,10 @@ ms.locfileid: "49072209"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Artículo técnico, [5 sugerencias para realizar una actualización sin problemas de SSIS a SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=235321), en msdn.microsoft.com.  
+-   Artículo técnico, [5 sugerencias para realizar una actualización sin problemas de SSIS a SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=235321), en msdn.microsoft.com.  
   
--   Entrada de blog [Hacer que las extensiones y aplicaciones personalizadas existentes de SSIS funcionen en Denali](http://go.microsoft.com/fwlink/?LinkId=238157), en blogs.msdn.com.  
+-   Entrada de blog [Hacer que las extensiones y aplicaciones personalizadas existentes de SSIS funcionen en Denali](https://go.microsoft.com/fwlink/?LinkId=238157), en blogs.msdn.com.  
   
--   Difusión por web [Actualizar paquetes de SSIS a SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=258674), en channel9.msdn.com.  
+-   Difusión por web [Actualizar paquetes de SSIS a SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=258674), en channel9.msdn.com.  
   
   

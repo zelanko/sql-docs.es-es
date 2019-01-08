@@ -22,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657544"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515367"
 ---
 # <a name="xml-construction-xquery"></a>Construcción de XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Aunque la construcción de elementos a partir de expresiones constantes, tal como se muestra en este ejemplo, resulta útil, la auténtica ventaja de esta característica del lenguaje XQuery es la capacidad de construir XML que extrae datos de una base de datos de forma dinámica. Puede utilizar llaves para especificar expresiones de consulta. En el XML resultante, se sustituye la expresión por su valor. Por ejemplo, la consulta siguiente construye un elemento <`NewRoot`> con un elemento secundario (<`e`>). El valor del elemento <`e`> se calcula mediante la especificación de una expresión de ruta de acceso dentro de llaves ("{...} }").  
+ Aunque la construcción de elementos a partir de expresiones constantes, tal como se muestra en este ejemplo, resulta útil, la auténtica ventaja de esta característica del lenguaje XQuery es la capacidad de construir XML que extrae datos de una base de datos de forma dinámica. Puede utilizar llaves para especificar expresiones de consulta. En el XML resultante, se sustituye la expresión por su valor. Por ejemplo, la consulta siguiente construye un elemento <`NewRoot`> con un elemento secundario (<`e`>). El valor del elemento <`e`> se calcula mediante la especificación de una expresión de ruta de acceso dentro de llaves ("{...}").  
   
 ```sql
 DECLARE @x xml;  
@@ -89,7 +89,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Las llaves actúan como tokens de cambio de contexto y cambian la consulta de construcción de XML a evaluación de consulta. En este caso, se evalúa la expresión de ruta de acceso de XQuery entre llaves, `/root`, y se sustituyen los resultados por la misma.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 <NewRoot>  
@@ -112,7 +112,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 <NewRoot>  
@@ -131,7 +131,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
@@ -150,7 +150,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 <FirstLocation>  
@@ -253,7 +253,7 @@ SET @y = (SELECT @x.query('<NewRoot attr="{ data(/root) }" ></NewRoot>'));
 SELECT @y;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 <NewRoot attr="5" />  
@@ -278,7 +278,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  
@@ -309,7 +309,7 @@ where ProductModelID=7;
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
-         El resultado es el siguiente:  
+         Éste es el resultado:  
   
         ```xml
         <a attr="Item 5" />  
@@ -323,7 +323,7 @@ where ProductModelID=7;
   
          En este caso, no se agrega un espacio entre los dos valores de cadena. Si desea agregarlo, debe indicarlo explícitamente.  
   
-         El resultado es el siguiente:  
+         Éste es el resultado:  
   
         ```xml
         <a attr="Item5" />  
@@ -351,7 +351,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
-     El resultado es el siguiente:  
+     Éste es el resultado:  
   
     ```xml
     <a attr="Item 5" />  
@@ -393,7 +393,7 @@ select @x.query( '
   </a>' )   
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 <a xmlns="a">  
@@ -412,7 +412,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 <x:a xmlns:x="a">  
@@ -474,7 +474,7 @@ select @x.query( '
  Tenga en cuenta que en la construcción del elemento <`b`>, se especifica el atributo de declaración de espacio de nombres con una cadena vacía como su valor. Esta acción anula la declaración del espacio de nombres predeterminado que se declara en el principal.  
   
 
-El resultado es el siguiente:  
+Éste es el resultado:  
 
 ```xml
 <a xmlns="a">  
@@ -524,7 +524,7 @@ test
   
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 -- result  

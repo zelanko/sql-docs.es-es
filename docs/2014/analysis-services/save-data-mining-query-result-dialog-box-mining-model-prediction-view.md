@@ -15,12 +15,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090288"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511213"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Guardar resultado de consulta de minería de datos (cuadro de diálogo de la vista Predicción de modelo de minería de datos)
   Use el cuadro de diálogo **Guardar resultado de consulta de minería de datos** para guardar los resultados de una consulta de minería de datos en una tabla nueva.  
@@ -53,10 +53,10 @@ ms.locfileid: "48090288"
  **Agregar a la DSV**  
  (Opcional) Seleccione una vista del origen de datos que contenga el proyecto si desea agregar la tabla a un origen de datos existente.  
   
- Esta opción es útil si desea conservar todas las tablas relacionadas para un modelo, como los datos de entrenamiento, los datos del origen de predicción y los resultados de la consulta, en el mismo origen de datos.  
+ Esta opción es útil si desea conservar todas las tablas relacionadas para un modelo, como datos de entrenamiento, datos de origen de predicción y consulta los resultados de mismo origen de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Generador de consultas de predicción &#40;minería de datos&#41;](prediction-query-builder-data-mining.md)   
+ [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de consultas de minería de datos](data-mining/data-mining-query-tools.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   

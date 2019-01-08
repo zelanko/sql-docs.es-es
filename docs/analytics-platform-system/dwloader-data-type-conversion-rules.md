@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1553c02c7d7ff7c1095d4c7217bc628339168a77
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703983"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519583"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Tipo de datos de reglas de conversión de dwloader - almacenamiento de datos paralelos
 En este tema se describe los formatos de datos de entrada y las conversiones de tipos de datos implícitas que [del cargador de la línea de comandos de dwloader](dwloader.md) admite cuando carga datos en PDW. Las conversiones de datos implícitas se producen cuando los datos de entrada no coincide con el tipo de datos en la tabla de destino PDW de SQL Server. Utilice esta información al diseñar el proceso de carga para garantizar que los datos se cargará correctamente en PDW de SQL Server.  
@@ -45,7 +45,7 @@ La siguiente tabla define el formato predeterminado y las reglas para cargar los
   
 |Tipo de datos de entrada|Ejemplos de datos de entrada|Conversión a tipo de datos smalldatetime|  
 |-------------------|-----------------------|-----------------------------------------|  
-|Literal de cadena de **smalldatetime** formato|'aaaa-MM-dd hh: mm' o 'aaaa-MM-dd hh: mm:'<br /><br />Ejemplo: ' 2007-05-08 12:00 ' o ' 2007-05-08:00-12:15 "|Los datos de origen deben tener los valores de año, mes, fecha, hora y minuto. Segundos son opcionales y, si está presente, se deben establecer en el valor 00. Cualquier otro valor genera un error.<br /><br />Los segundos son opcionales. Cuando se cargan en una columna de smalldatetime, dwloader redondeará hacia arriba los segundos y fracciones de segundo. Por ejemplo, se cargará 20:10:35.123 1999-05-01 como 01-05 20:11.|  
+|Literal de cadena de **smalldatetime** formato|'aaaa-MM-dd hh: mm' o 'aaaa-MM-dd hh: mm:'<br /><br />Ejemplo: "2007-05-08 12:00 ' o ' 2007-05-08:00-12:15"|Los datos de origen deben tener los valores de año, mes, fecha, hora y minuto. Segundos son opcionales y, si está presente, se deben establecer en el valor 00. Cualquier otro valor genera un error.<br /><br />Los segundos son opcionales. Cuando se cargan en una columna de smalldatetime, dwloader redondeará hacia arriba los segundos y fracciones de segundo. Por ejemplo, se cargará 20:10:35.123 1999-05-01 como 01-05 20:11.|  
 |Literal de cadena de **fecha** formato|'aaaa-MM-dd'<br /><br />Ejemplo: ' 2007-05-08'|Los valores de tiempo (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor.|  
   
 ### <a name="date-data-type"></a>Tipo de datos date  
@@ -103,7 +103,7 @@ Dwloader admite los siguientes formatos de datos para los datos de entrada que s
   
 Detalles:  
   
--   Para separar los valores de mes, día y año, puede usar '–', '/' o '. '. Para simplificar, en la tabla solo se usa el separador ' – '.  
+-   Para separar los valores de mes, día y año, puede usar '-', '/' o '. '. Para simplificar, en la tabla solo se usa el separador “-”.  
   
 -   Para especificar el mes como texto use tres o más caracteres. Los meses con 1 o 2 caracteres se interpretará como un número.  
   

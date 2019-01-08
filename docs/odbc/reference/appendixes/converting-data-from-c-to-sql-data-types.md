@@ -21,12 +21,12 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f68b53dd77305163aa2595c60a1994a13bb9964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793813"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509398"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Convertir datos de C en tipos de datos SQL
 Cuando una aplicación llama **SQLExecute** o **SQLExecDirect**, el controlador JDBC recupera los datos para los parámetros enlazan con **SQLBindParameter** desde ubicaciones de almacenamiento en la aplicación. Cuando una aplicación llama **SQLSetPos**, el controlador recupera los datos de una actualización o agregar la operación de las columnas enlazadas con **SQLBindCol**. Para los parámetros de datos en ejecución, la aplicación envía los datos del parámetro con **SQLPutData**. Si es necesario, el controlador convierte los datos de tipo de datos especificado por el *ValueType* argumento en **SQLBindParameter** al tipo de datos especificado por el *ParameterType*argumento en **SQLBindParameter**y, a continuación, envía los datos al origen de datos.  
@@ -45,37 +45,37 @@ Cuando una aplicación llama **SQLExecute** o **SQLExecDirect**, el controlador 
   
  Los siguientes términos se usan en las tablas:  
   
--   **Longitud de bytes de datos** : número de bytes de datos SQL disponibles para enviar al origen de datos, si no se truncarán los datos antes de enviarla al origen de datos. Para los datos de cadena, esto no incluye espacio para el carácter de terminación null.  
+-   **Longitud de bytes de datos** : número de bytes de datos SQL disponibles para enviar al origen de datos, si los datos se truncará antes de enviarla al origen de datos. Para los datos de cadena, esto no incluye espacio para el carácter de terminación null.  
   
--   **Longitud de bytes de la columna** : número de bytes necesarios para almacenar los datos en el origen de datos.  
+-   **Longitud de bytes de la columna** -número de bytes necesarios para almacenar los datos en el origen de datos.  
   
--   **Longitud de bytes de caracteres** : número máximo de bytes necesario para mostrar datos en formato de caracteres. Esto es como se define para cada tipo de datos SQL en [Mostrar tamaño](../../../odbc/reference/appendixes/display-size.md), excepto en que es de longitud de bytes de caracteres en bytes, mientras que el tamaño de pantalla es en caracteres.  
+-   **Longitud de bytes de caracteres** - máximo número de bytes necesarios para mostrar datos en formato de caracteres. Esto es como se define para cada tipo de datos SQL en [Mostrar tamaño](../../../odbc/reference/appendixes/display-size.md), excepto en que es de longitud de bytes de caracteres en bytes, mientras que el tamaño de pantalla es en caracteres.  
   
 -   **Número de dígitos** : número de caracteres que se usan para representar un número, incluido el signo menos, un separador decimal y un exponente (si es necesario).  
   
 -   **Palabras en**   
-     ***cursiva*** : elementos de la gramática SQL. Para obtener la sintaxis de elementos de gramática, consulte [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***cursiva*** -elementos de la gramática SQL. Para obtener la sintaxis de elementos de gramática, consulte [Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Esta sección contiene los temas siguientes.  
   
--   [C a SQL: caracteres](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C a SQL: Carácter](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C a SQL: numérico](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C a SQL: Numérico](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C a SQL: bits](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C a SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C a SQL: binario](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C a SQL: archivo binario](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C a SQL: fecha](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C a SQL: Fecha](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
 -   [C a SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [C a SQL: hora](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [C a SQL: Tiempo](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
 -   [C a SQL: marca de tiempo](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C a SQL: intervalos de mes del año](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C a SQL: Intervalos de mes del año](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C a SQL: intervalos de tiempo del día](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C a SQL: Intervalos de tiempo del día](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [Ejemplos de conversión de datos de C en SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
